@@ -28,7 +28,7 @@ class BookingPerson extends BookingNamedEntity
     * Gets the emailAddress
     * The email address of the person.
     *
-    * @return string|null The emailAddress
+    * @return string The emailAddress
     */
     public function getEmailAddress()
     {

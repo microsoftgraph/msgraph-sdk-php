@@ -28,7 +28,7 @@ class IosVppAppAssignedLicense extends Entity
     * Gets the userEmailAddress
     * The user email address.
     *
-    * @return string|null The userEmailAddress
+    * @return string The userEmailAddress
     */
     public function getUserEmailAddress()
     {
@@ -57,7 +57,7 @@ class IosVppAppAssignedLicense extends Entity
     * Gets the userId
     * The user ID.
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {
@@ -86,7 +86,7 @@ class IosVppAppAssignedLicense extends Entity
     * Gets the userName
     * The user name.
     *
-    * @return string|null The userName
+    * @return string The userName
     */
     public function getUserName()
     {
@@ -115,7 +115,7 @@ class IosVppAppAssignedLicense extends Entity
     * Gets the userPrincipalName
     * The user principal name.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

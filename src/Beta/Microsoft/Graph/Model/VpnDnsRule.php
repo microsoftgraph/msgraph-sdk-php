@@ -27,7 +27,7 @@ class VpnDnsRule extends Entity
     * Gets the autoTrigger
     * Automatically connect to the VPN when the device connects to this domain: Default False.
     *
-    * @return bool|null The autoTrigger
+    * @return bool The autoTrigger
     */
     public function getAutoTrigger()
     {
@@ -55,7 +55,7 @@ class VpnDnsRule extends Entity
     * Gets the name
     * Name.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -83,7 +83,7 @@ class VpnDnsRule extends Entity
     * Gets the persistent
     * Keep this rule active even when the VPN is not connected: Default False
     *
-    * @return bool|null The persistent
+    * @return bool The persistent
     */
     public function getPersistent()
     {
@@ -111,7 +111,7 @@ class VpnDnsRule extends Entity
     * Gets the proxyServerUri
     * Proxy Server Uri.
     *
-    * @return string|null The proxyServerUri
+    * @return string The proxyServerUri
     */
     public function getProxyServerUri()
     {
@@ -139,7 +139,7 @@ class VpnDnsRule extends Entity
     * Gets the servers
     * Servers.
     *
-    * @return string|null The servers
+    * @return string The servers
     */
     public function getServers()
     {

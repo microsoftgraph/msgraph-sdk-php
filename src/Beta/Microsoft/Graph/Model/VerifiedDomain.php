@@ -27,7 +27,7 @@ class VerifiedDomain extends Entity
     * Gets the capabilities
     * For example, 'Email', 'OfficeCommunicationsOnline'.
     *
-    * @return string|null The capabilities
+    * @return string The capabilities
     */
     public function getCapabilities()
     {
@@ -55,7 +55,7 @@ class VerifiedDomain extends Entity
     * Gets the isDefault
     * true if this is the default domain associated with the tenant; otherwise, false.
     *
-    * @return bool|null The isDefault
+    * @return bool The isDefault
     */
     public function getIsDefault()
     {
@@ -83,7 +83,7 @@ class VerifiedDomain extends Entity
     * Gets the isInitial
     * true if this is the initial domain associated with the tenant; otherwise, false
     *
-    * @return bool|null The isInitial
+    * @return bool The isInitial
     */
     public function getIsInitial()
     {
@@ -111,7 +111,7 @@ class VerifiedDomain extends Entity
     * Gets the name
     * The domain name; for example, 'contoso.onmicrosoft.com'
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -139,7 +139,7 @@ class VerifiedDomain extends Entity
     * Gets the type
     * For example, 'Managed'.
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {

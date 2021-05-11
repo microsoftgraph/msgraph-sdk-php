@@ -28,7 +28,7 @@ class MobileAppSupersedence extends MobileAppRelationship
     * Gets the supersededAppCount
     * The total number of apps directly or indirectly superseded by the child app.
     *
-    * @return int|null The supersededAppCount
+    * @return int The supersededAppCount
     */
     public function getSupersededAppCount()
     {
@@ -57,12 +57,12 @@ class MobileAppSupersedence extends MobileAppRelationship
     * Gets the supersedenceType
     * The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
     *
-    * @return MobileAppSupersedenceType|null The supersedenceType
+    * @return MobileAppSupersedenceType The supersedenceType
     */
     public function getSupersedenceType()
     {
         if (array_key_exists("supersedenceType", $this->_propDict)) {
-            if (is_a($this->_propDict["supersedenceType"], "\Beta\Microsoft\Graph\Model\MobileAppSupersedenceType") || is_null($this->_propDict["supersedenceType"])) {
+            if (is_a($this->_propDict["supersedenceType"], "\Beta\Microsoft\Graph\Model\MobileAppSupersedenceType")) {
                 return $this->_propDict["supersedenceType"];
             } else {
                 $this->_propDict["supersedenceType"] = new MobileAppSupersedenceType($this->_propDict["supersedenceType"]);
@@ -90,7 +90,7 @@ class MobileAppSupersedence extends MobileAppRelationship
     * Gets the supersedingAppCount
     * The total number of apps directly or indirectly superseding the parent app.
     *
-    * @return int|null The supersedingAppCount
+    * @return int The supersedingAppCount
     */
     public function getSupersedingAppCount()
     {

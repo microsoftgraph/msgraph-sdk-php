@@ -29,7 +29,7 @@ class WindowsPhone81AppXBundle extends WindowsPhone81AppX
      * Gets the appXPackageInformationList
     * The list of AppX Package Information.
      *
-     * @return array|null The appXPackageInformationList
+     * @return array The appXPackageInformationList
      */
     public function getAppXPackageInformationList()
     {
@@ -50,7 +50,7 @@ class WindowsPhone81AppXBundle extends WindowsPhone81AppX
     */
     public function setAppXPackageInformationList($val)
     {
-        $this->_propDict["appXPackageInformationList"] = $val;
+		$this->_propDict["appXPackageInformationList"] = $val;
         return $this;
     }
     

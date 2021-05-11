@@ -28,7 +28,7 @@ class AccessPackageAssignmentResourceRole extends Entity
     * Gets the originId
     * A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
     *
-    * @return string|null The originId
+    * @return string The originId
     */
     public function getOriginId()
     {
@@ -57,7 +57,7 @@ class AccessPackageAssignmentResourceRole extends Entity
     * Gets the originSystem
     * The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
     *
-    * @return string|null The originSystem
+    * @return string The originSystem
     */
     public function getOriginSystem()
     {
@@ -86,7 +86,7 @@ class AccessPackageAssignmentResourceRole extends Entity
     * Gets the status
     * The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
     *
-    * @return string|null The status
+    * @return string The status
     */
     public function getStatus()
     {
@@ -116,7 +116,7 @@ class AccessPackageAssignmentResourceRole extends Entity
      * Gets the accessPackageAssignments
     * The access package assignments resulting in this role assignment. Read-only. Nullable.
      *
-     * @return array|null The accessPackageAssignments
+     * @return array The accessPackageAssignments
      */
     public function getAccessPackageAssignments()
     {
@@ -137,7 +137,7 @@ class AccessPackageAssignmentResourceRole extends Entity
     */
     public function setAccessPackageAssignments($val)
     {
-        $this->_propDict["accessPackageAssignments"] = $val;
+		$this->_propDict["accessPackageAssignments"] = $val;
         return $this;
     }
     
@@ -145,12 +145,12 @@ class AccessPackageAssignmentResourceRole extends Entity
     * Gets the accessPackageResourceRole
     * Read-only. Nullable.
     *
-    * @return AccessPackageResourceRole|null The accessPackageResourceRole
+    * @return AccessPackageResourceRole The accessPackageResourceRole
     */
     public function getAccessPackageResourceRole()
     {
         if (array_key_exists("accessPackageResourceRole", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResourceRole"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceRole") || is_null($this->_propDict["accessPackageResourceRole"])) {
+            if (is_a($this->_propDict["accessPackageResourceRole"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceRole")) {
                 return $this->_propDict["accessPackageResourceRole"];
             } else {
                 $this->_propDict["accessPackageResourceRole"] = new AccessPackageResourceRole($this->_propDict["accessPackageResourceRole"]);
@@ -178,12 +178,12 @@ class AccessPackageAssignmentResourceRole extends Entity
     * Gets the accessPackageResourceScope
     * Read-only. Nullable.
     *
-    * @return AccessPackageResourceScope|null The accessPackageResourceScope
+    * @return AccessPackageResourceScope The accessPackageResourceScope
     */
     public function getAccessPackageResourceScope()
     {
         if (array_key_exists("accessPackageResourceScope", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResourceScope"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceScope") || is_null($this->_propDict["accessPackageResourceScope"])) {
+            if (is_a($this->_propDict["accessPackageResourceScope"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceScope")) {
                 return $this->_propDict["accessPackageResourceScope"];
             } else {
                 $this->_propDict["accessPackageResourceScope"] = new AccessPackageResourceScope($this->_propDict["accessPackageResourceScope"]);
@@ -211,12 +211,12 @@ class AccessPackageAssignmentResourceRole extends Entity
     * Gets the accessPackageSubject
     * Read-only. Nullable.
     *
-    * @return AccessPackageSubject|null The accessPackageSubject
+    * @return AccessPackageSubject The accessPackageSubject
     */
     public function getAccessPackageSubject()
     {
         if (array_key_exists("accessPackageSubject", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageSubject"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject") || is_null($this->_propDict["accessPackageSubject"])) {
+            if (is_a($this->_propDict["accessPackageSubject"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
                 return $this->_propDict["accessPackageSubject"];
             } else {
                 $this->_propDict["accessPackageSubject"] = new AccessPackageSubject($this->_propDict["accessPackageSubject"]);

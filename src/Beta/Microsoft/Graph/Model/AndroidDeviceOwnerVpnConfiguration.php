@@ -28,7 +28,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     * Gets the alwaysOn
     * Whether or not to enable always-on VPN connection.
     *
-    * @return bool|null The alwaysOn
+    * @return bool The alwaysOn
     */
     public function getAlwaysOn()
     {
@@ -57,7 +57,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     * Gets the alwaysOnLockdown
     * If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
     *
-    * @return bool|null The alwaysOnLockdown
+    * @return bool The alwaysOnLockdown
     */
     public function getAlwaysOnLockdown()
     {
@@ -86,12 +86,12 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     * Gets the connectionType
     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility, microsoftProtect.
     *
-    * @return AndroidVpnConnectionType|null The connectionType
+    * @return AndroidVpnConnectionType The connectionType
     */
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\AndroidVpnConnectionType") || is_null($this->_propDict["connectionType"])) {
+            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\AndroidVpnConnectionType")) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new AndroidVpnConnectionType($this->_propDict["connectionType"]);
@@ -120,7 +120,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
      * Gets the customData
     * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
      *
-     * @return array|null The customData
+     * @return array The customData
      */
     public function getCustomData()
     {
@@ -141,7 +141,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     */
     public function setCustomData($val)
     {
-        $this->_propDict["customData"] = $val;
+		$this->_propDict["customData"] = $val;
         return $this;
     }
     
@@ -150,7 +150,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
      * Gets the customKeyValueData
     * Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
      *
-     * @return array|null The customKeyValueData
+     * @return array The customKeyValueData
      */
     public function getCustomKeyValueData()
     {
@@ -171,7 +171,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     */
     public function setCustomKeyValueData($val)
     {
-        $this->_propDict["customKeyValueData"] = $val;
+		$this->_propDict["customKeyValueData"] = $val;
         return $this;
     }
     
@@ -179,7 +179,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     * Gets the microsoftTunnelSiteId
     * Microsoft Tunnel site ID.
     *
-    * @return string|null The microsoftTunnelSiteId
+    * @return string The microsoftTunnelSiteId
     */
     public function getMicrosoftTunnelSiteId()
     {
@@ -208,12 +208,12 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     * Gets the proxyServer
     * Proxy server.
     *
-    * @return VpnProxyServer|null The proxyServer
+    * @return VpnProxyServer The proxyServer
     */
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\VpnProxyServer") || is_null($this->_propDict["proxyServer"])) {
+            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\VpnProxyServer")) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new VpnProxyServer($this->_propDict["proxyServer"]);
@@ -242,7 +242,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
      * Gets the targetedMobileApps
     * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The targetedMobileApps
+     * @return array The targetedMobileApps
      */
     public function getTargetedMobileApps()
     {
@@ -263,7 +263,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     */
     public function setTargetedMobileApps($val)
     {
-        $this->_propDict["targetedMobileApps"] = $val;
+		$this->_propDict["targetedMobileApps"] = $val;
         return $this;
     }
     
@@ -271,7 +271,7 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     * Gets the targetedPackageIds
     * Targeted App package IDs.
     *
-    * @return string|null The targetedPackageIds
+    * @return string The targetedPackageIds
     */
     public function getTargetedPackageIds()
     {
@@ -300,12 +300,12 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     * Gets the derivedCredentialSettings
     * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @return DeviceManagementDerivedCredentialSettings|null The derivedCredentialSettings
+    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
     */
     public function getDerivedCredentialSettings()
     {
         if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings") || is_null($this->_propDict["derivedCredentialSettings"])) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
                 return $this->_propDict["derivedCredentialSettings"];
             } else {
                 $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
@@ -333,12 +333,12 @@ class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration
     * Gets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
     *
-    * @return AndroidDeviceOwnerCertificateProfileBase|null The identityCertificate
+    * @return AndroidDeviceOwnerCertificateProfileBase The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerCertificateProfileBase") || is_null($this->_propDict["identityCertificate"])) {
+            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerCertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new AndroidDeviceOwnerCertificateProfileBase($this->_propDict["identityCertificate"]);

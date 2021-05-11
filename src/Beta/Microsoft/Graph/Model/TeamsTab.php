@@ -28,12 +28,12 @@ class TeamsTab extends Entity
     * Gets the configuration
     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
     *
-    * @return TeamsTabConfiguration|null The configuration
+    * @return TeamsTabConfiguration The configuration
     */
     public function getConfiguration()
     {
         if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "\Beta\Microsoft\Graph\Model\TeamsTabConfiguration") || is_null($this->_propDict["configuration"])) {
+            if (is_a($this->_propDict["configuration"], "\Beta\Microsoft\Graph\Model\TeamsTabConfiguration")) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new TeamsTabConfiguration($this->_propDict["configuration"]);
@@ -61,7 +61,7 @@ class TeamsTab extends Entity
     * Gets the displayName
     * Name of the tab.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -89,7 +89,7 @@ class TeamsTab extends Entity
     /**
     * Gets the messageId
     *
-    * @return string|null The messageId
+    * @return string The messageId
     */
     public function getMessageId()
     {
@@ -117,7 +117,7 @@ class TeamsTab extends Entity
     * Gets the sortOrderIndex
     * Index of the order used for sorting tabs.
     *
-    * @return string|null The sortOrderIndex
+    * @return string The sortOrderIndex
     */
     public function getSortOrderIndex()
     {
@@ -145,7 +145,7 @@ class TeamsTab extends Entity
     /**
     * Gets the teamsAppId
     *
-    * @return string|null The teamsAppId
+    * @return string The teamsAppId
     */
     public function getTeamsAppId()
     {
@@ -173,7 +173,7 @@ class TeamsTab extends Entity
     * Gets the webUrl
     * Deep link URL of the tab instance. Read only.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {
@@ -200,14 +200,14 @@ class TeamsTab extends Entity
     
     /**
     * Gets the teamsApp
-    * The application that is linked to the tab. This cannot be changed after tab creation.
+    * The application that is linked to the tab.
     *
-    * @return TeamsApp|null The teamsApp
+    * @return TeamsApp The teamsApp
     */
     public function getTeamsApp()
     {
         if (array_key_exists("teamsApp", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsApp"], "\Beta\Microsoft\Graph\Model\TeamsApp") || is_null($this->_propDict["teamsApp"])) {
+            if (is_a($this->_propDict["teamsApp"], "\Beta\Microsoft\Graph\Model\TeamsApp")) {
                 return $this->_propDict["teamsApp"];
             } else {
                 $this->_propDict["teamsApp"] = new TeamsApp($this->_propDict["teamsApp"]);
@@ -219,7 +219,7 @@ class TeamsTab extends Entity
     
     /**
     * Sets the teamsApp
-    * The application that is linked to the tab. This cannot be changed after tab creation.
+    * The application that is linked to the tab.
     *
     * @param TeamsApp $val The teamsApp
     *

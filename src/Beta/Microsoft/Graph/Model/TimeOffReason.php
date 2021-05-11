@@ -28,7 +28,7 @@ class TimeOffReason extends ChangeTrackedEntity
     * Gets the displayName
     * The name of the timeOffReason. Required.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,12 +57,12 @@ class TimeOffReason extends ChangeTrackedEntity
     * Gets the iconType
     * Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
     *
-    * @return TimeOffReasonIconType|null The iconType
+    * @return TimeOffReasonIconType The iconType
     */
     public function getIconType()
     {
         if (array_key_exists("iconType", $this->_propDict)) {
-            if (is_a($this->_propDict["iconType"], "\Beta\Microsoft\Graph\Model\TimeOffReasonIconType") || is_null($this->_propDict["iconType"])) {
+            if (is_a($this->_propDict["iconType"], "\Beta\Microsoft\Graph\Model\TimeOffReasonIconType")) {
                 return $this->_propDict["iconType"];
             } else {
                 $this->_propDict["iconType"] = new TimeOffReasonIconType($this->_propDict["iconType"]);
@@ -90,7 +90,7 @@ class TimeOffReason extends ChangeTrackedEntity
     * Gets the isActive
     * Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
     *
-    * @return bool|null The isActive
+    * @return bool The isActive
     */
     public function getIsActive()
     {

@@ -28,7 +28,7 @@ class ApplicationSignInSummary extends Entity
     * Gets the appDisplayName
     * Name of the application that the user signed in to.
     *
-    * @return string|null The appDisplayName
+    * @return string The appDisplayName
     */
     public function getAppDisplayName()
     {
@@ -57,7 +57,7 @@ class ApplicationSignInSummary extends Entity
     * Gets the failedSignInCount
     * Count of failed sign-ins made by the application.
     *
-    * @return int|null The failedSignInCount
+    * @return int The failedSignInCount
     */
     public function getFailedSignInCount()
     {
@@ -86,7 +86,7 @@ class ApplicationSignInSummary extends Entity
     * Gets the successfulSignInCount
     * Count of successful sign-ins made by the application.
     *
-    * @return int|null The successfulSignInCount
+    * @return int The successfulSignInCount
     */
     public function getSuccessfulSignInCount()
     {
@@ -115,7 +115,7 @@ class ApplicationSignInSummary extends Entity
     * Gets the successPercentage
     * Percentage of successful sign-ins made by the application.
     *
-    * @return float|null The successPercentage
+    * @return float The successPercentage
     */
     public function getSuccessPercentage()
     {
@@ -136,7 +136,7 @@ class ApplicationSignInSummary extends Entity
     */
     public function setSuccessPercentage($val)
     {
-        $this->_propDict["successPercentage"] = floatval($val);
+        $this->_propDict["successPercentage"] = $val;
         return $this;
     }
     

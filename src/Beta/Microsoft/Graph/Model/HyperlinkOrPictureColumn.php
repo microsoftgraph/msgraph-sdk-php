@@ -27,7 +27,7 @@ class HyperlinkOrPictureColumn extends Entity
     * Gets the isPicture
     * Specifies whether the display format used for URL columns is an image or a hyperlink.
     *
-    * @return bool|null The isPicture
+    * @return bool The isPicture
     */
     public function getIsPicture()
     {

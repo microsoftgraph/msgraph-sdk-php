@@ -27,7 +27,7 @@ class EncryptionReportPolicyDetails extends Entity
     * Gets the policyId
     * Policy Id for Encryption Report
     *
-    * @return string|null The policyId
+    * @return string The policyId
     */
     public function getPolicyId()
     {
@@ -55,7 +55,7 @@ class EncryptionReportPolicyDetails extends Entity
     * Gets the policyName
     * Policy Name for Encryption Report
     *
-    * @return string|null The policyName
+    * @return string The policyName
     */
     public function getPolicyName()
     {

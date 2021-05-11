@@ -26,7 +26,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the collate
     *
-    * @return bool|null The collate
+    * @return bool The collate
     */
     public function getCollate()
     {
@@ -53,12 +53,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the colorMode
     *
-    * @return PrintColorMode|null The colorMode
+    * @return PrintColorMode The colorMode
     */
     public function getColorMode()
     {
         if (array_key_exists("colorMode", $this->_propDict)) {
-            if (is_a($this->_propDict["colorMode"], "\Beta\Microsoft\Graph\Model\PrintColorMode") || is_null($this->_propDict["colorMode"])) {
+            if (is_a($this->_propDict["colorMode"], "\Beta\Microsoft\Graph\Model\PrintColorMode")) {
                 return $this->_propDict["colorMode"];
             } else {
                 $this->_propDict["colorMode"] = new PrintColorMode($this->_propDict["colorMode"]);
@@ -83,7 +83,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the copies
     *
-    * @return int|null The copies
+    * @return int The copies
     */
     public function getCopies()
     {
@@ -109,7 +109,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the dpi
     *
-    * @return int|null The dpi
+    * @return int The dpi
     */
     public function getDpi()
     {
@@ -136,12 +136,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the duplexMode
     *
-    * @return PrintDuplexMode|null The duplexMode
+    * @return PrintDuplexMode The duplexMode
     */
     public function getDuplexMode()
     {
         if (array_key_exists("duplexMode", $this->_propDict)) {
-            if (is_a($this->_propDict["duplexMode"], "\Beta\Microsoft\Graph\Model\PrintDuplexMode") || is_null($this->_propDict["duplexMode"])) {
+            if (is_a($this->_propDict["duplexMode"], "\Beta\Microsoft\Graph\Model\PrintDuplexMode")) {
                 return $this->_propDict["duplexMode"];
             } else {
                 $this->_propDict["duplexMode"] = new PrintDuplexMode($this->_propDict["duplexMode"]);
@@ -167,12 +167,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the feedDirection
     *
-    * @return PrinterFeedDirection|null The feedDirection
+    * @return PrinterFeedDirection The feedDirection
     */
     public function getFeedDirection()
     {
         if (array_key_exists("feedDirection", $this->_propDict)) {
-            if (is_a($this->_propDict["feedDirection"], "\Beta\Microsoft\Graph\Model\PrinterFeedDirection") || is_null($this->_propDict["feedDirection"])) {
+            if (is_a($this->_propDict["feedDirection"], "\Beta\Microsoft\Graph\Model\PrinterFeedDirection")) {
                 return $this->_propDict["feedDirection"];
             } else {
                 $this->_propDict["feedDirection"] = new PrinterFeedDirection($this->_propDict["feedDirection"]);
@@ -198,12 +198,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the feedOrientation
     *
-    * @return PrinterFeedOrientation|null The feedOrientation
+    * @return PrinterFeedOrientation The feedOrientation
     */
     public function getFeedOrientation()
     {
         if (array_key_exists("feedOrientation", $this->_propDict)) {
-            if (is_a($this->_propDict["feedOrientation"], "\Beta\Microsoft\Graph\Model\PrinterFeedOrientation") || is_null($this->_propDict["feedOrientation"])) {
+            if (is_a($this->_propDict["feedOrientation"], "\Beta\Microsoft\Graph\Model\PrinterFeedOrientation")) {
                 return $this->_propDict["feedOrientation"];
             } else {
                 $this->_propDict["feedOrientation"] = new PrinterFeedOrientation($this->_propDict["feedOrientation"]);
@@ -229,12 +229,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the finishings
     *
-    * @return PrintFinishing|null The finishings
+    * @return PrintFinishing The finishings
     */
     public function getFinishings()
     {
         if (array_key_exists("finishings", $this->_propDict)) {
-            if (is_a($this->_propDict["finishings"], "\Beta\Microsoft\Graph\Model\PrintFinishing") || is_null($this->_propDict["finishings"])) {
+            if (is_a($this->_propDict["finishings"], "\Beta\Microsoft\Graph\Model\PrintFinishing")) {
                 return $this->_propDict["finishings"];
             } else {
                 $this->_propDict["finishings"] = new PrintFinishing($this->_propDict["finishings"]);
@@ -259,7 +259,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the fitPdfToPage
     *
-    * @return bool|null The fitPdfToPage
+    * @return bool The fitPdfToPage
     */
     public function getFitPdfToPage()
     {
@@ -285,7 +285,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the inputBin
     *
-    * @return string|null The inputBin
+    * @return string The inputBin
     */
     public function getInputBin()
     {
@@ -312,12 +312,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the margin
     *
-    * @return PrintMargin|null The margin
+    * @return PrintMargin The margin
     */
     public function getMargin()
     {
         if (array_key_exists("margin", $this->_propDict)) {
-            if (is_a($this->_propDict["margin"], "\Beta\Microsoft\Graph\Model\PrintMargin") || is_null($this->_propDict["margin"])) {
+            if (is_a($this->_propDict["margin"], "\Beta\Microsoft\Graph\Model\PrintMargin")) {
                 return $this->_propDict["margin"];
             } else {
                 $this->_propDict["margin"] = new PrintMargin($this->_propDict["margin"]);
@@ -342,7 +342,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the mediaSize
     *
-    * @return string|null The mediaSize
+    * @return string The mediaSize
     */
     public function getMediaSize()
     {
@@ -368,7 +368,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the mediaType
     *
-    * @return string|null The mediaType
+    * @return string The mediaType
     */
     public function getMediaType()
     {
@@ -395,12 +395,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the multipageLayout
     *
-    * @return PrintMultipageLayout|null The multipageLayout
+    * @return PrintMultipageLayout The multipageLayout
     */
     public function getMultipageLayout()
     {
         if (array_key_exists("multipageLayout", $this->_propDict)) {
-            if (is_a($this->_propDict["multipageLayout"], "\Beta\Microsoft\Graph\Model\PrintMultipageLayout") || is_null($this->_propDict["multipageLayout"])) {
+            if (is_a($this->_propDict["multipageLayout"], "\Beta\Microsoft\Graph\Model\PrintMultipageLayout")) {
                 return $this->_propDict["multipageLayout"];
             } else {
                 $this->_propDict["multipageLayout"] = new PrintMultipageLayout($this->_propDict["multipageLayout"]);
@@ -426,12 +426,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the orientation
     *
-    * @return PrintOrientation|null The orientation
+    * @return PrintOrientation The orientation
     */
     public function getOrientation()
     {
         if (array_key_exists("orientation", $this->_propDict)) {
-            if (is_a($this->_propDict["orientation"], "\Beta\Microsoft\Graph\Model\PrintOrientation") || is_null($this->_propDict["orientation"])) {
+            if (is_a($this->_propDict["orientation"], "\Beta\Microsoft\Graph\Model\PrintOrientation")) {
                 return $this->_propDict["orientation"];
             } else {
                 $this->_propDict["orientation"] = new PrintOrientation($this->_propDict["orientation"]);
@@ -456,7 +456,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the outputBin
     *
-    * @return string|null The outputBin
+    * @return string The outputBin
     */
     public function getOutputBin()
     {
@@ -483,12 +483,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the pageRanges
     *
-    * @return IntegerRange|null The pageRanges
+    * @return IntegerRange The pageRanges
     */
     public function getPageRanges()
     {
         if (array_key_exists("pageRanges", $this->_propDict)) {
-            if (is_a($this->_propDict["pageRanges"], "\Beta\Microsoft\Graph\Model\IntegerRange") || is_null($this->_propDict["pageRanges"])) {
+            if (is_a($this->_propDict["pageRanges"], "\Beta\Microsoft\Graph\Model\IntegerRange")) {
                 return $this->_propDict["pageRanges"];
             } else {
                 $this->_propDict["pageRanges"] = new IntegerRange($this->_propDict["pageRanges"]);
@@ -513,7 +513,7 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the pagesPerSheet
     *
-    * @return int|null The pagesPerSheet
+    * @return int The pagesPerSheet
     */
     public function getPagesPerSheet()
     {
@@ -540,12 +540,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the quality
     *
-    * @return PrintQuality|null The quality
+    * @return PrintQuality The quality
     */
     public function getQuality()
     {
         if (array_key_exists("quality", $this->_propDict)) {
-            if (is_a($this->_propDict["quality"], "\Beta\Microsoft\Graph\Model\PrintQuality") || is_null($this->_propDict["quality"])) {
+            if (is_a($this->_propDict["quality"], "\Beta\Microsoft\Graph\Model\PrintQuality")) {
                 return $this->_propDict["quality"];
             } else {
                 $this->_propDict["quality"] = new PrintQuality($this->_propDict["quality"]);
@@ -571,12 +571,12 @@ class PrinterDocumentConfiguration extends Entity
     /**
     * Gets the scaling
     *
-    * @return PrintScaling|null The scaling
+    * @return PrintScaling The scaling
     */
     public function getScaling()
     {
         if (array_key_exists("scaling", $this->_propDict)) {
-            if (is_a($this->_propDict["scaling"], "\Beta\Microsoft\Graph\Model\PrintScaling") || is_null($this->_propDict["scaling"])) {
+            if (is_a($this->_propDict["scaling"], "\Beta\Microsoft\Graph\Model\PrintScaling")) {
                 return $this->_propDict["scaling"];
             } else {
                 $this->_propDict["scaling"] = new PrintScaling($this->_propDict["scaling"]);

@@ -28,7 +28,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     * Gets the appReliabilityScore
     * The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
-    * @return float|null The appReliabilityScore
+    * @return float The appReliabilityScore
     */
     public function getAppReliabilityScore()
     {
@@ -49,7 +49,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     */
     public function setAppReliabilityScore($val)
     {
-        $this->_propDict["appReliabilityScore"] = floatval($val);
+        $this->_propDict["appReliabilityScore"] = $val;
         return $this;
     }
     
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     * Gets the deviceName
     * The user experience analytics device name.
     *
-    * @return string|null The deviceName
+    * @return string The deviceName
     */
     public function getDeviceName()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     * Gets the endpointAnalyticsScore
     * The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
-    * @return float|null The endpointAnalyticsScore
+    * @return float The endpointAnalyticsScore
     */
     public function getEndpointAnalyticsScore()
     {
@@ -107,7 +107,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     */
     public function setEndpointAnalyticsScore($val)
     {
-        $this->_propDict["endpointAnalyticsScore"] = floatval($val);
+        $this->_propDict["endpointAnalyticsScore"] = $val;
         return $this;
     }
     
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     * Gets the manufacturer
     * The user experience analytics device manufacturer.
     *
-    * @return string|null The manufacturer
+    * @return string The manufacturer
     */
     public function getManufacturer()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     * Gets the model
     * The user experience analytics device model.
     *
-    * @return string|null The model
+    * @return string The model
     */
     public function getModel()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     * Gets the startupPerformanceScore
     * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
-    * @return float|null The startupPerformanceScore
+    * @return float The startupPerformanceScore
     */
     public function getStartupPerformanceScore()
     {
@@ -194,7 +194,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     */
     public function setStartupPerformanceScore($val)
     {
-        $this->_propDict["startupPerformanceScore"] = floatval($val);
+        $this->_propDict["startupPerformanceScore"] = $val;
         return $this;
     }
     

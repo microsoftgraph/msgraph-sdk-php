@@ -28,12 +28,12 @@ class GroupPolicyDefinitionValue extends Entity
     * Gets the configurationType
     * Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
     *
-    * @return GroupPolicyConfigurationType|null The configurationType
+    * @return GroupPolicyConfigurationType The configurationType
     */
     public function getConfigurationType()
     {
         if (array_key_exists("configurationType", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationType"], "\Beta\Microsoft\Graph\Model\GroupPolicyConfigurationType") || is_null($this->_propDict["configurationType"])) {
+            if (is_a($this->_propDict["configurationType"], "\Beta\Microsoft\Graph\Model\GroupPolicyConfigurationType")) {
                 return $this->_propDict["configurationType"];
             } else {
                 $this->_propDict["configurationType"] = new GroupPolicyConfigurationType($this->_propDict["configurationType"]);
@@ -61,12 +61,12 @@ class GroupPolicyDefinitionValue extends Entity
     * Gets the createdDateTime
     * The date and time the object was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -94,7 +94,7 @@ class GroupPolicyDefinitionValue extends Entity
     * Gets the enabled
     * Enables or disables the associated group policy definition.
     *
-    * @return bool|null The enabled
+    * @return bool The enabled
     */
     public function getEnabled()
     {
@@ -123,12 +123,12 @@ class GroupPolicyDefinitionValue extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -156,12 +156,12 @@ class GroupPolicyDefinitionValue extends Entity
     * Gets the definition
     * The associated group policy definition with the value.
     *
-    * @return GroupPolicyDefinition|null The definition
+    * @return GroupPolicyDefinition The definition
     */
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinition") || is_null($this->_propDict["definition"])) {
+            if (is_a($this->_propDict["definition"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new GroupPolicyDefinition($this->_propDict["definition"]);
@@ -190,7 +190,7 @@ class GroupPolicyDefinitionValue extends Entity
      * Gets the presentationValues
     * The associated group policy presentation values with the definition value.
      *
-     * @return array|null The presentationValues
+     * @return array The presentationValues
      */
     public function getPresentationValues()
     {
@@ -211,7 +211,7 @@ class GroupPolicyDefinitionValue extends Entity
     */
     public function setPresentationValues($val)
     {
-        $this->_propDict["presentationValues"] = $val;
+		$this->_propDict["presentationValues"] = $val;
         return $this;
     }
     

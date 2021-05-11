@@ -27,12 +27,12 @@ class ExternalItemContent extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the type
     *
-    * @return ExternalItemContentType|null The type
+    * @return ExternalItemContentType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContentType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContentType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new ExternalItemContentType($this->_propDict["type"]);
@@ -57,7 +57,7 @@ class ExternalItemContent extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the value
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

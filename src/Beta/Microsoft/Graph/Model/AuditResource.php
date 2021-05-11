@@ -27,7 +27,7 @@ class AuditResource extends Entity
     * Gets the displayName
     * Display name.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -56,12 +56,12 @@ class AuditResource extends Entity
     * Gets the modifiedProperties
     * List of modified properties.
     *
-    * @return AuditProperty|null The modifiedProperties
+    * @return AuditProperty The modifiedProperties
     */
     public function getModifiedProperties()
     {
         if (array_key_exists("modifiedProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedProperties"], "\Beta\Microsoft\Graph\Model\AuditProperty") || is_null($this->_propDict["modifiedProperties"])) {
+            if (is_a($this->_propDict["modifiedProperties"], "\Beta\Microsoft\Graph\Model\AuditProperty")) {
                 return $this->_propDict["modifiedProperties"];
             } else {
                 $this->_propDict["modifiedProperties"] = new AuditProperty($this->_propDict["modifiedProperties"]);
@@ -88,7 +88,7 @@ class AuditResource extends Entity
     * Gets the resourceId
     * Audit resource's Id.
     *
-    * @return string|null The resourceId
+    * @return string The resourceId
     */
     public function getResourceId()
     {
@@ -116,7 +116,7 @@ class AuditResource extends Entity
     * Gets the type
     * Audit resource's type.
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {

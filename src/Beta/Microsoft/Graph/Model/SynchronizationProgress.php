@@ -27,7 +27,7 @@ class SynchronizationProgress extends Entity
     * Gets the completedUnits
     * The numerator of a progress ratio; the number of units of changes already processed.
     *
-    * @return int|null The completedUnits
+    * @return int The completedUnits
     */
     public function getCompletedUnits()
     {
@@ -56,12 +56,12 @@ class SynchronizationProgress extends Entity
     * Gets the progressObservationDateTime
     * The time of a progress observation as an offset in minutes from UTC.
     *
-    * @return \DateTime|null The progressObservationDateTime
+    * @return \DateTime The progressObservationDateTime
     */
     public function getProgressObservationDateTime()
     {
         if (array_key_exists("progressObservationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["progressObservationDateTime"], "\DateTime") || is_null($this->_propDict["progressObservationDateTime"])) {
+            if (is_a($this->_propDict["progressObservationDateTime"], "\DateTime")) {
                 return $this->_propDict["progressObservationDateTime"];
             } else {
                 $this->_propDict["progressObservationDateTime"] = new \DateTime($this->_propDict["progressObservationDateTime"]);
@@ -88,7 +88,7 @@ class SynchronizationProgress extends Entity
     * Gets the totalUnits
     * The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
     *
-    * @return int|null The totalUnits
+    * @return int The totalUnits
     */
     public function getTotalUnits()
     {
@@ -116,7 +116,7 @@ class SynchronizationProgress extends Entity
     * Gets the units
     * An optional description of the units.
     *
-    * @return string|null The units
+    * @return string The units
     */
     public function getUnits()
     {

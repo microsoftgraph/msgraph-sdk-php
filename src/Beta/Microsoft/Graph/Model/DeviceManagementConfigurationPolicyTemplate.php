@@ -28,7 +28,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the allowUnmanagedSettings
     * Allow unmanaged setting templates
     *
-    * @return bool|null The allowUnmanagedSettings
+    * @return bool The allowUnmanagedSettings
     */
     public function getAllowUnmanagedSettings()
     {
@@ -57,7 +57,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the baseId
     * Template base identifier
     *
-    * @return string|null The baseId
+    * @return string The baseId
     */
     public function getBaseId()
     {
@@ -86,7 +86,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the description
     * Template description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -115,7 +115,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the displayName
     * Template display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -144,7 +144,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the displayVersion
     * Description of template version
     *
-    * @return string|null The displayVersion
+    * @return string The displayVersion
     */
     public function getDisplayVersion()
     {
@@ -173,12 +173,12 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the lifecycleState
     * Indicate current lifecycle state of template
     *
-    * @return DeviceManagementTemplateLifecycleState|null The lifecycleState
+    * @return DeviceManagementTemplateLifecycleState The lifecycleState
     */
     public function getLifecycleState()
     {
         if (array_key_exists("lifecycleState", $this->_propDict)) {
-            if (is_a($this->_propDict["lifecycleState"], "\Beta\Microsoft\Graph\Model\DeviceManagementTemplateLifecycleState") || is_null($this->_propDict["lifecycleState"])) {
+            if (is_a($this->_propDict["lifecycleState"], "\Beta\Microsoft\Graph\Model\DeviceManagementTemplateLifecycleState")) {
                 return $this->_propDict["lifecycleState"];
             } else {
                 $this->_propDict["lifecycleState"] = new DeviceManagementTemplateLifecycleState($this->_propDict["lifecycleState"]);
@@ -206,12 +206,12 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the platforms
     * Platforms for this template
     *
-    * @return DeviceManagementConfigurationPlatforms|null The platforms
+    * @return DeviceManagementConfigurationPlatforms The platforms
     */
     public function getPlatforms()
     {
         if (array_key_exists("platforms", $this->_propDict)) {
-            if (is_a($this->_propDict["platforms"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms") || is_null($this->_propDict["platforms"])) {
+            if (is_a($this->_propDict["platforms"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms")) {
                 return $this->_propDict["platforms"];
             } else {
                 $this->_propDict["platforms"] = new DeviceManagementConfigurationPlatforms($this->_propDict["platforms"]);
@@ -239,7 +239,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the settingTemplateCount
     * Number of setting templates. Valid values 0 to 2147483647. This property is read-only.
     *
-    * @return int|null The settingTemplateCount
+    * @return int The settingTemplateCount
     */
     public function getSettingTemplateCount()
     {
@@ -268,12 +268,12 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the technologies
     * Technologies for this template
     *
-    * @return DeviceManagementConfigurationTechnologies|null The technologies
+    * @return DeviceManagementConfigurationTechnologies The technologies
     */
     public function getTechnologies()
     {
         if (array_key_exists("technologies", $this->_propDict)) {
-            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies") || is_null($this->_propDict["technologies"])) {
+            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies")) {
                 return $this->_propDict["technologies"];
             } else {
                 $this->_propDict["technologies"] = new DeviceManagementConfigurationTechnologies($this->_propDict["technologies"]);
@@ -301,12 +301,12 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the templateFamily
     * TemplateFamily for this template
     *
-    * @return DeviceManagementConfigurationTemplateFamily|null The templateFamily
+    * @return DeviceManagementConfigurationTemplateFamily The templateFamily
     */
     public function getTemplateFamily()
     {
         if (array_key_exists("templateFamily", $this->_propDict)) {
-            if (is_a($this->_propDict["templateFamily"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTemplateFamily") || is_null($this->_propDict["templateFamily"])) {
+            if (is_a($this->_propDict["templateFamily"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTemplateFamily")) {
                 return $this->_propDict["templateFamily"];
             } else {
                 $this->_propDict["templateFamily"] = new DeviceManagementConfigurationTemplateFamily($this->_propDict["templateFamily"]);
@@ -334,7 +334,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     * Gets the version
     * Template version. Valid values 1 to 2147483647. This property is read-only.
     *
-    * @return int|null The version
+    * @return int The version
     */
     public function getVersion()
     {
@@ -364,7 +364,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
      * Gets the settingTemplates
     * Setting templates
      *
-     * @return array|null The settingTemplates
+     * @return array The settingTemplates
      */
     public function getSettingTemplates()
     {
@@ -385,7 +385,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     */
     public function setSettingTemplates($val)
     {
-        $this->_propDict["settingTemplates"] = $val;
+		$this->_propDict["settingTemplates"] = $val;
         return $this;
     }
     

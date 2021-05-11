@@ -27,7 +27,7 @@ class ApprovalStage extends Entity
     * Gets the approvalStageTimeOutInDays
     * The number of days that a request can be pending a response before it is automatically denied.
     *
-    * @return int|null The approvalStageTimeOutInDays
+    * @return int The approvalStageTimeOutInDays
     */
     public function getApprovalStageTimeOutInDays()
     {
@@ -56,12 +56,12 @@ class ApprovalStage extends Entity
     * Gets the escalationApprovers
     * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
     *
-    * @return UserSet|null The escalationApprovers
+    * @return UserSet The escalationApprovers
     */
     public function getEscalationApprovers()
     {
         if (array_key_exists("escalationApprovers", $this->_propDict)) {
-            if (is_a($this->_propDict["escalationApprovers"], "\Beta\Microsoft\Graph\Model\UserSet") || is_null($this->_propDict["escalationApprovers"])) {
+            if (is_a($this->_propDict["escalationApprovers"], "\Beta\Microsoft\Graph\Model\UserSet")) {
                 return $this->_propDict["escalationApprovers"];
             } else {
                 $this->_propDict["escalationApprovers"] = new UserSet($this->_propDict["escalationApprovers"]);
@@ -88,7 +88,7 @@ class ApprovalStage extends Entity
     * Gets the escalationTimeInMinutes
     * If escalation is required, the time a request can be pending a response from a primary approver.
     *
-    * @return int|null The escalationTimeInMinutes
+    * @return int The escalationTimeInMinutes
     */
     public function getEscalationTimeInMinutes()
     {
@@ -116,7 +116,7 @@ class ApprovalStage extends Entity
     * Gets the isApproverJustificationRequired
     * Indicates whether the approver is required to provide a justification for approving a request.
     *
-    * @return bool|null The isApproverJustificationRequired
+    * @return bool The isApproverJustificationRequired
     */
     public function getIsApproverJustificationRequired()
     {
@@ -144,7 +144,7 @@ class ApprovalStage extends Entity
     * Gets the isEscalationEnabled
     * If true, then one or more escalation approvers are configured in this approval stage.
     *
-    * @return bool|null The isEscalationEnabled
+    * @return bool The isEscalationEnabled
     */
     public function getIsEscalationEnabled()
     {
@@ -173,12 +173,12 @@ class ApprovalStage extends Entity
     * Gets the primaryApprovers
     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
     *
-    * @return UserSet|null The primaryApprovers
+    * @return UserSet The primaryApprovers
     */
     public function getPrimaryApprovers()
     {
         if (array_key_exists("primaryApprovers", $this->_propDict)) {
-            if (is_a($this->_propDict["primaryApprovers"], "\Beta\Microsoft\Graph\Model\UserSet") || is_null($this->_propDict["primaryApprovers"])) {
+            if (is_a($this->_propDict["primaryApprovers"], "\Beta\Microsoft\Graph\Model\UserSet")) {
                 return $this->_propDict["primaryApprovers"];
             } else {
                 $this->_propDict["primaryApprovers"] = new UserSet($this->_propDict["primaryApprovers"]);

@@ -25,9 +25,9 @@ class ExtensionSchemaProperty extends Entity
 {
     /**
     * Gets the name
-    * The name of the strongly-typed property defined as part of a schema extension.
+    * The name of the strongly typed property defined as part of a schema extension.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -40,7 +40,7 @@ class ExtensionSchemaProperty extends Entity
 
     /**
     * Sets the name
-    * The name of the strongly-typed property defined as part of a schema extension.
+    * The name of the strongly typed property defined as part of a schema extension.
     *
     * @param string $val The value of the name
     *
@@ -55,7 +55,7 @@ class ExtensionSchemaProperty extends Entity
     * Gets the type
     * The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {

@@ -36,7 +36,7 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     * Gets the allowTeachersInMultipleSchools
     * Indicates whether the source has multiple identifiers for a single student or teacher.
     *
-    * @return bool|null The allowTeachersInMultipleSchools
+    * @return bool The allowTeachersInMultipleSchools
     */
     public function getAllowTeachersInMultipleSchools()
     {
@@ -64,7 +64,7 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     * Gets the clientId
     * The client ID used to connect to PowerSchool.
     *
-    * @return string|null The clientId
+    * @return string The clientId
     */
     public function getClientId()
     {
@@ -92,7 +92,7 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     * Gets the clientSecret
     * The client secret to authenticate the connection to the PowerSchool instance.
     *
-    * @return string|null The clientSecret
+    * @return string The clientSecret
     */
     public function getClientSecret()
     {
@@ -120,7 +120,7 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     * Gets the connectionUrl
     * The connection URL to the PowerSchool instance.
     *
-    * @return string|null The connectionUrl
+    * @return string The connectionUrl
     */
     public function getConnectionUrl()
     {
@@ -149,12 +149,12 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     * Gets the customizations
     * Optional customization to be applied to the synchronization profile.
     *
-    * @return EducationSynchronizationCustomizations|null The customizations
+    * @return EducationSynchronizationCustomizations The customizations
     */
     public function getCustomizations()
     {
         if (array_key_exists("customizations", $this->_propDict)) {
-            if (is_a($this->_propDict["customizations"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationCustomizations") || is_null($this->_propDict["customizations"])) {
+            if (is_a($this->_propDict["customizations"], "\Beta\Microsoft\Graph\Model\EducationSynchronizationCustomizations")) {
                 return $this->_propDict["customizations"];
             } else {
                 $this->_propDict["customizations"] = new EducationSynchronizationCustomizations($this->_propDict["customizations"]);
@@ -181,7 +181,7 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     * Gets the schoolsIds
     * The list of schools to sync.
     *
-    * @return string|null The schoolsIds
+    * @return string The schoolsIds
     */
     public function getSchoolsIds()
     {
@@ -209,7 +209,7 @@ class EducationPowerSchoolDataProvider extends EducationSynchronizationDataProvi
     * Gets the schoolYear
     * The school year to sync.
     *
-    * @return string|null The schoolYear
+    * @return string The schoolYear
     */
     public function getSchoolYear()
     {

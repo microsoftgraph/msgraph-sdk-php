@@ -27,7 +27,7 @@ class VppTokenLicenseSummary extends Entity
     * Gets the appleId
     * The Apple Id associated with the given Apple Volume Purchase Program Token.
     *
-    * @return string|null The appleId
+    * @return string The appleId
     */
     public function getAppleId()
     {
@@ -55,7 +55,7 @@ class VppTokenLicenseSummary extends Entity
     * Gets the availableLicenseCount
     * The number of VPP licenses available.
     *
-    * @return int|null The availableLicenseCount
+    * @return int The availableLicenseCount
     */
     public function getAvailableLicenseCount()
     {
@@ -83,7 +83,7 @@ class VppTokenLicenseSummary extends Entity
     * Gets the organizationName
     * The organization associated with the Apple Volume Purchase Program Token.
     *
-    * @return string|null The organizationName
+    * @return string The organizationName
     */
     public function getOrganizationName()
     {
@@ -111,7 +111,7 @@ class VppTokenLicenseSummary extends Entity
     * Gets the usedLicenseCount
     * The number of VPP licenses in use.
     *
-    * @return int|null The usedLicenseCount
+    * @return int The usedLicenseCount
     */
     public function getUsedLicenseCount()
     {
@@ -139,7 +139,7 @@ class VppTokenLicenseSummary extends Entity
     * Gets the vppTokenId
     * Identifier of the VPP token.
     *
-    * @return string|null The vppTokenId
+    * @return string The vppTokenId
     */
     public function getVppTokenId()
     {

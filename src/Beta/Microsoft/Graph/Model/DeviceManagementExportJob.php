@@ -28,12 +28,12 @@ class DeviceManagementExportJob extends Entity
     * Gets the expirationDateTime
     * Time that the exported report expires
     *
-    * @return \DateTime|null The expirationDateTime
+    * @return \DateTime The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -61,7 +61,7 @@ class DeviceManagementExportJob extends Entity
     * Gets the filter
     * Filters applied on the report
     *
-    * @return string|null The filter
+    * @return string The filter
     */
     public function getFilter()
     {
@@ -90,12 +90,12 @@ class DeviceManagementExportJob extends Entity
     * Gets the format
     * Format of the exported report. Possible values are: csv, pdf.
     *
-    * @return DeviceManagementReportFileFormat|null The format
+    * @return DeviceManagementReportFileFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportFileFormat") || is_null($this->_propDict["format"])) {
+            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportFileFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new DeviceManagementReportFileFormat($this->_propDict["format"]);
@@ -123,12 +123,12 @@ class DeviceManagementExportJob extends Entity
     * Gets the localizationType
     * Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
     *
-    * @return DeviceManagementExportJobLocalizationType|null The localizationType
+    * @return DeviceManagementExportJobLocalizationType The localizationType
     */
     public function getLocalizationType()
     {
         if (array_key_exists("localizationType", $this->_propDict)) {
-            if (is_a($this->_propDict["localizationType"], "\Beta\Microsoft\Graph\Model\DeviceManagementExportJobLocalizationType") || is_null($this->_propDict["localizationType"])) {
+            if (is_a($this->_propDict["localizationType"], "\Beta\Microsoft\Graph\Model\DeviceManagementExportJobLocalizationType")) {
                 return $this->_propDict["localizationType"];
             } else {
                 $this->_propDict["localizationType"] = new DeviceManagementExportJobLocalizationType($this->_propDict["localizationType"]);
@@ -156,7 +156,7 @@ class DeviceManagementExportJob extends Entity
     * Gets the reportName
     * Name of the report
     *
-    * @return string|null The reportName
+    * @return string The reportName
     */
     public function getReportName()
     {
@@ -185,12 +185,12 @@ class DeviceManagementExportJob extends Entity
     * Gets the requestDateTime
     * Time that the exported report was requested
     *
-    * @return \DateTime|null The requestDateTime
+    * @return \DateTime The requestDateTime
     */
     public function getRequestDateTime()
     {
         if (array_key_exists("requestDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestDateTime"], "\DateTime") || is_null($this->_propDict["requestDateTime"])) {
+            if (is_a($this->_propDict["requestDateTime"], "\DateTime")) {
                 return $this->_propDict["requestDateTime"];
             } else {
                 $this->_propDict["requestDateTime"] = new \DateTime($this->_propDict["requestDateTime"]);
@@ -218,7 +218,7 @@ class DeviceManagementExportJob extends Entity
     * Gets the select
     * Columns selected from the report
     *
-    * @return string|null The select
+    * @return string The select
     */
     public function getSelect()
     {
@@ -247,7 +247,7 @@ class DeviceManagementExportJob extends Entity
     * Gets the snapshotId
     * A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
     *
-    * @return string|null The snapshotId
+    * @return string The snapshotId
     */
     public function getSnapshotId()
     {
@@ -276,12 +276,12 @@ class DeviceManagementExportJob extends Entity
     * Gets the status
     * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
-    * @return DeviceManagementReportStatus|null The status
+    * @return DeviceManagementReportStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DeviceManagementReportStatus($this->_propDict["status"]);
@@ -309,7 +309,7 @@ class DeviceManagementExportJob extends Entity
     * Gets the url
     * Temporary location of the exported report
     *
-    * @return string|null The url
+    * @return string The url
     */
     public function getUrl()
     {

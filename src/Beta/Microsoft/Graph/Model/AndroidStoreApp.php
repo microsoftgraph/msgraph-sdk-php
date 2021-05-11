@@ -28,7 +28,7 @@ class AndroidStoreApp extends MobileApp
     * Gets the appIdentifier
     * The Identity Name.
     *
-    * @return string|null The appIdentifier
+    * @return string The appIdentifier
     */
     public function getAppIdentifier()
     {
@@ -57,7 +57,7 @@ class AndroidStoreApp extends MobileApp
     * Gets the appStoreUrl
     * The Android app store URL.
     *
-    * @return string|null The appStoreUrl
+    * @return string The appStoreUrl
     */
     public function getAppStoreUrl()
     {
@@ -86,12 +86,12 @@ class AndroidStoreApp extends MobileApp
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *
-    * @return AndroidMinimumOperatingSystem|null The minimumSupportedOperatingSystem
+    * @return AndroidMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Beta\Microsoft\Graph\Model\AndroidMinimumOperatingSystem") || is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Beta\Microsoft\Graph\Model\AndroidMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new AndroidMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -119,7 +119,7 @@ class AndroidStoreApp extends MobileApp
     * Gets the packageId
     * The package identifier.
     *
-    * @return string|null The packageId
+    * @return string The packageId
     */
     public function getPackageId()
     {

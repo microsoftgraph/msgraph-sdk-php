@@ -27,7 +27,7 @@ class MobileAppSupportedDeviceType extends Entity
     * Gets the maximumOperatingSystemVersion
     * Maximum OS version
     *
-    * @return string|null The maximumOperatingSystemVersion
+    * @return string The maximumOperatingSystemVersion
     */
     public function getMaximumOperatingSystemVersion()
     {
@@ -55,7 +55,7 @@ class MobileAppSupportedDeviceType extends Entity
     * Gets the minimumOperatingSystemVersion
     * Minimum OS version
     *
-    * @return string|null The minimumOperatingSystemVersion
+    * @return string The minimumOperatingSystemVersion
     */
     public function getMinimumOperatingSystemVersion()
     {
@@ -84,12 +84,12 @@ class MobileAppSupportedDeviceType extends Entity
     * Gets the type
     * Device type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, linux, blackberry, palm, unknown, cloudPC.
     *
-    * @return DeviceType|null The type
+    * @return DeviceType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\DeviceType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\DeviceType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new DeviceType($this->_propDict["type"]);

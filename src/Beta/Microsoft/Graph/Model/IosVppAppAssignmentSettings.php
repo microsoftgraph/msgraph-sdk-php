@@ -36,7 +36,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the isRemovable
     * Whether or not the app can be removed by the user.
     *
-    * @return bool|null The isRemovable
+    * @return bool The isRemovable
     */
     public function getIsRemovable()
     {
@@ -64,7 +64,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the uninstallOnDeviceRemoval
     * Whether or not to uninstall the app when device is removed from Intune.
     *
-    * @return bool|null The uninstallOnDeviceRemoval
+    * @return bool The uninstallOnDeviceRemoval
     */
     public function getUninstallOnDeviceRemoval()
     {
@@ -92,7 +92,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the useDeviceLicensing
     * Whether or not to use device licensing.
     *
-    * @return bool|null The useDeviceLicensing
+    * @return bool The useDeviceLicensing
     */
     public function getUseDeviceLicensing()
     {
@@ -120,7 +120,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the vpnConfigurationId
     * The VPN Configuration Id to apply for this app.
     *
-    * @return string|null The vpnConfigurationId
+    * @return string The vpnConfigurationId
     */
     public function getVpnConfigurationId()
     {

@@ -28,12 +28,12 @@ class RubricQuality extends Entity
     * Gets the criteria
     * The collection of criteria for this rubric quality.
     *
-    * @return RubricCriterion|null The criteria
+    * @return RubricCriterion The criteria
     */
     public function getCriteria()
     {
         if (array_key_exists("criteria", $this->_propDict)) {
-            if (is_a($this->_propDict["criteria"], "\Beta\Microsoft\Graph\Model\RubricCriterion") || is_null($this->_propDict["criteria"])) {
+            if (is_a($this->_propDict["criteria"], "\Beta\Microsoft\Graph\Model\RubricCriterion")) {
                 return $this->_propDict["criteria"];
             } else {
                 $this->_propDict["criteria"] = new RubricCriterion($this->_propDict["criteria"]);
@@ -61,12 +61,12 @@ class RubricQuality extends Entity
     * Gets the description
     * The description of this rubric quality.
     *
-    * @return EducationItemBody|null The description
+    * @return EducationItemBody The description
     */
     public function getDescription()
     {
         if (array_key_exists("description", $this->_propDict)) {
-            if (is_a($this->_propDict["description"], "\Beta\Microsoft\Graph\Model\EducationItemBody") || is_null($this->_propDict["description"])) {
+            if (is_a($this->_propDict["description"], "\Beta\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["description"];
             } else {
                 $this->_propDict["description"] = new EducationItemBody($this->_propDict["description"]);
@@ -93,7 +93,7 @@ class RubricQuality extends Entity
     * Gets the displayName
     * The name of this rubric quality.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -121,7 +121,7 @@ class RubricQuality extends Entity
     * Gets the qualityId
     * The ID of this resource.
     *
-    * @return string|null The qualityId
+    * @return string The qualityId
     */
     public function getQualityId()
     {
@@ -145,32 +145,37 @@ class RubricQuality extends Entity
         $this->_propDict["qualityId"] = $val;
         return $this;
     }
+
     /**
     * Gets the weight
     * If present, a numerical weight for this quality.  Weights must add up to 100.
     *
-    * @return float|null The weight
+    * @return Single The weight
     */
     public function getWeight()
     {
         if (array_key_exists("weight", $this->_propDict)) {
-            return $this->_propDict["weight"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["weight"], "\Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["weight"];
+            } else {
+                $this->_propDict["weight"] = new Single($this->_propDict["weight"]);
+                return $this->_propDict["weight"];
+            }
         }
+        return null;
     }
 
     /**
     * Sets the weight
     * If present, a numerical weight for this quality.  Weights must add up to 100.
     *
-    * @param float $val The value of the weight
+    * @param Single $val The value to assign to the weight
     *
-    * @return RubricQuality
+    * @return RubricQuality The RubricQuality
     */
     public function setWeight($val)
     {
         $this->_propDict["weight"] = $val;
-        return $this;
+         return $this;
     }
 }

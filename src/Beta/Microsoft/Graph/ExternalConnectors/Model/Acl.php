@@ -27,12 +27,12 @@ class Acl extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the accessType
     *
-    * @return AccessType|null The accessType
+    * @return AccessType The accessType
     */
     public function getAccessType()
     {
         if (array_key_exists("accessType", $this->_propDict)) {
-            if (is_a($this->_propDict["accessType"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\AccessType") || is_null($this->_propDict["accessType"])) {
+            if (is_a($this->_propDict["accessType"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\AccessType")) {
                 return $this->_propDict["accessType"];
             } else {
                 $this->_propDict["accessType"] = new AccessType($this->_propDict["accessType"]);
@@ -58,12 +58,12 @@ class Acl extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the identitySource
     *
-    * @return IdentitySourceType|null The identitySource
+    * @return IdentitySourceType The identitySource
     */
     public function getIdentitySource()
     {
         if (array_key_exists("identitySource", $this->_propDict)) {
-            if (is_a($this->_propDict["identitySource"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\IdentitySourceType") || is_null($this->_propDict["identitySource"])) {
+            if (is_a($this->_propDict["identitySource"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\IdentitySourceType")) {
                 return $this->_propDict["identitySource"];
             } else {
                 $this->_propDict["identitySource"] = new IdentitySourceType($this->_propDict["identitySource"]);
@@ -89,12 +89,12 @@ class Acl extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the type
     *
-    * @return AclType|null The type
+    * @return AclType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\AclType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\AclType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new AclType($this->_propDict["type"]);
@@ -119,7 +119,7 @@ class Acl extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the value
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

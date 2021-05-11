@@ -27,7 +27,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     /**
     * Gets the defaultLength
     *
-    * @return int|null The defaultLength
+    * @return int The defaultLength
     */
     public function getDefaultLength()
     {
@@ -54,7 +54,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     /**
     * Gets the defaultLifetimeInMinutes
     *
-    * @return int|null The defaultLifetimeInMinutes
+    * @return int The defaultLifetimeInMinutes
     */
     public function getDefaultLifetimeInMinutes()
     {
@@ -81,7 +81,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     /**
     * Gets the isUsableOnce
     *
-    * @return bool|null The isUsableOnce
+    * @return bool The isUsableOnce
     */
     public function getIsUsableOnce()
     {
@@ -108,7 +108,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     /**
     * Gets the maximumLifetimeInMinutes
     *
-    * @return int|null The maximumLifetimeInMinutes
+    * @return int The maximumLifetimeInMinutes
     */
     public function getMaximumLifetimeInMinutes()
     {
@@ -135,7 +135,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     /**
     * Gets the minimumLifetimeInMinutes
     *
-    * @return int|null The minimumLifetimeInMinutes
+    * @return int The minimumLifetimeInMinutes
     */
     public function getMinimumLifetimeInMinutes()
     {
@@ -163,7 +163,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
      /** 
      * Gets the includeTargets
      *
-     * @return array|null The includeTargets
+     * @return array The includeTargets
      */
     public function getIncludeTargets()
     {
@@ -183,7 +183,7 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     */
     public function setIncludeTargets($val)
     {
-        $this->_propDict["includeTargets"] = $val;
+		$this->_propDict["includeTargets"] = $val;
         return $this;
     }
     

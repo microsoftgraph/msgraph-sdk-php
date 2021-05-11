@@ -27,7 +27,7 @@ class LogonUser extends Entity
     * Gets the accountDomain
     * Domain of user account used to logon.
     *
-    * @return string|null The accountDomain
+    * @return string The accountDomain
     */
     public function getAccountDomain()
     {
@@ -55,7 +55,7 @@ class LogonUser extends Entity
     * Gets the accountName
     * Account name of user account used to logon.
     *
-    * @return string|null The accountName
+    * @return string The accountName
     */
     public function getAccountName()
     {
@@ -84,12 +84,12 @@ class LogonUser extends Entity
     * Gets the accountType
     * User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
     *
-    * @return UserAccountSecurityType|null The accountType
+    * @return UserAccountSecurityType The accountType
     */
     public function getAccountType()
     {
         if (array_key_exists("accountType", $this->_propDict)) {
-            if (is_a($this->_propDict["accountType"], "\Beta\Microsoft\Graph\Model\UserAccountSecurityType") || is_null($this->_propDict["accountType"])) {
+            if (is_a($this->_propDict["accountType"], "\Beta\Microsoft\Graph\Model\UserAccountSecurityType")) {
                 return $this->_propDict["accountType"];
             } else {
                 $this->_propDict["accountType"] = new UserAccountSecurityType($this->_propDict["accountType"]);
@@ -117,12 +117,12 @@ class LogonUser extends Entity
     * Gets the firstSeenDateTime
     * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The firstSeenDateTime
+    * @return \DateTime The firstSeenDateTime
     */
     public function getFirstSeenDateTime()
     {
         if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime") || is_null($this->_propDict["firstSeenDateTime"])) {
+            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime")) {
                 return $this->_propDict["firstSeenDateTime"];
             } else {
                 $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
@@ -150,12 +150,12 @@ class LogonUser extends Entity
     * Gets the lastSeenDateTime
     * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The lastSeenDateTime
+    * @return \DateTime The lastSeenDateTime
     */
     public function getLastSeenDateTime()
     {
         if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime") || is_null($this->_propDict["lastSeenDateTime"])) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSeenDateTime"];
             } else {
                 $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
@@ -182,7 +182,7 @@ class LogonUser extends Entity
     * Gets the logonId
     * User logon ID.
     *
-    * @return string|null The logonId
+    * @return string The logonId
     */
     public function getLogonId()
     {
@@ -211,12 +211,12 @@ class LogonUser extends Entity
     * Gets the logonTypes
     * Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
     *
-    * @return LogonType|null The logonTypes
+    * @return LogonType The logonTypes
     */
     public function getLogonTypes()
     {
         if (array_key_exists("logonTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["logonTypes"], "\Beta\Microsoft\Graph\Model\LogonType") || is_null($this->_propDict["logonTypes"])) {
+            if (is_a($this->_propDict["logonTypes"], "\Beta\Microsoft\Graph\Model\LogonType")) {
                 return $this->_propDict["logonTypes"];
             } else {
                 $this->_propDict["logonTypes"] = new LogonType($this->_propDict["logonTypes"]);

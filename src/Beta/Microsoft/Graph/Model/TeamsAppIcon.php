@@ -28,7 +28,7 @@ class TeamsAppIcon extends Entity
     * Gets the webUrl
     * The web URL that can be used for downloading the image.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {
@@ -57,12 +57,12 @@ class TeamsAppIcon extends Entity
     * Gets the hostedContent
     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
     *
-    * @return TeamworkHostedContent|null The hostedContent
+    * @return TeamworkHostedContent The hostedContent
     */
     public function getHostedContent()
     {
         if (array_key_exists("hostedContent", $this->_propDict)) {
-            if (is_a($this->_propDict["hostedContent"], "\Beta\Microsoft\Graph\Model\TeamworkHostedContent") || is_null($this->_propDict["hostedContent"])) {
+            if (is_a($this->_propDict["hostedContent"], "\Beta\Microsoft\Graph\Model\TeamworkHostedContent")) {
                 return $this->_propDict["hostedContent"];
             } else {
                 $this->_propDict["hostedContent"] = new TeamworkHostedContent($this->_propDict["hostedContent"]);

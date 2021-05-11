@@ -27,12 +27,12 @@ class MembershipRuleEvaluationDetails extends Entity
     /**
     * Gets the membershipRuleEvaluationDetails
     *
-    * @return ExpressionEvaluationDetails|null The membershipRuleEvaluationDetails
+    * @return ExpressionEvaluationDetails The membershipRuleEvaluationDetails
     */
     public function getMembershipRuleEvaluationDetails()
     {
         if (array_key_exists("membershipRuleEvaluationDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["membershipRuleEvaluationDetails"], "\Beta\Microsoft\Graph\Model\ExpressionEvaluationDetails") || is_null($this->_propDict["membershipRuleEvaluationDetails"])) {
+            if (is_a($this->_propDict["membershipRuleEvaluationDetails"], "\Beta\Microsoft\Graph\Model\ExpressionEvaluationDetails")) {
                 return $this->_propDict["membershipRuleEvaluationDetails"];
             } else {
                 $this->_propDict["membershipRuleEvaluationDetails"] = new ExpressionEvaluationDetails($this->_propDict["membershipRuleEvaluationDetails"]);

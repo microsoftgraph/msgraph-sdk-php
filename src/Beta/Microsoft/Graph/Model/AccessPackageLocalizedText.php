@@ -27,7 +27,7 @@ class AccessPackageLocalizedText extends Entity
     * Gets the languageCode
     * The ISO code for the intended language. Required.
     *
-    * @return string|null The languageCode
+    * @return string The languageCode
     */
     public function getLanguageCode()
     {
@@ -55,7 +55,7 @@ class AccessPackageLocalizedText extends Entity
     * Gets the text
     * The text in the specific language. Required.
     *
-    * @return string|null The text
+    * @return string The text
     */
     public function getText()
     {

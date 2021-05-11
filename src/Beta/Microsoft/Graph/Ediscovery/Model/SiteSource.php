@@ -28,12 +28,12 @@ class SiteSource extends DataSource
     * Gets the site
     * The SharePoint site associated with the siteSource.
     *
-    * @return \Beta\Microsoft\Graph\Model\Site|null The site
+    * @return \Beta\Microsoft\Graph\Model\Site The site
     */
     public function getSite()
     {
         if (array_key_exists("site", $this->_propDict)) {
-            if (is_a($this->_propDict["site"], "\Beta\Microsoft\Graph\Model\Site") || is_null($this->_propDict["site"])) {
+            if (is_a($this->_propDict["site"], "\Beta\Microsoft\Graph\Model\Site")) {
                 return $this->_propDict["site"];
             } else {
                 $this->_propDict["site"] = new \Beta\Microsoft\Graph\Model\Site($this->_propDict["site"]);

@@ -27,7 +27,7 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
     * Gets the maxOSVersion
     * Max OS version for Applicability Rule.
     *
-    * @return string|null The maxOSVersion
+    * @return string The maxOSVersion
     */
     public function getMaxOSVersion()
     {
@@ -55,7 +55,7 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
     * Gets the minOSVersion
     * Min OS version for Applicability Rule.
     *
-    * @return string|null The minOSVersion
+    * @return string The minOSVersion
     */
     public function getMinOSVersion()
     {
@@ -83,7 +83,7 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
     * Gets the name
     * Name for object.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -112,12 +112,12 @@ class DeviceManagementApplicabilityRuleOsVersion extends Entity
     * Gets the ruleType
     * Applicability Rule type. Possible values are: include, exclude.
     *
-    * @return DeviceManagementApplicabilityRuleType|null The ruleType
+    * @return DeviceManagementApplicabilityRuleType The ruleType
     */
     public function getRuleType()
     {
         if (array_key_exists("ruleType", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleType"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleType") || is_null($this->_propDict["ruleType"])) {
+            if (is_a($this->_propDict["ruleType"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleType")) {
                 return $this->_propDict["ruleType"];
             } else {
                 $this->_propDict["ruleType"] = new DeviceManagementApplicabilityRuleType($this->_propDict["ruleType"]);

@@ -28,7 +28,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the appleIdDisabled
     * Indicates if Apple id setup pane is disabled
     *
-    * @return bool|null The appleIdDisabled
+    * @return bool The appleIdDisabled
     */
     public function getAppleIdDisabled()
     {
@@ -57,7 +57,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the applePayDisabled
     * Indicates if Apple pay setup pane is disabled
     *
-    * @return bool|null The applePayDisabled
+    * @return bool The applePayDisabled
     */
     public function getApplePayDisabled()
     {
@@ -86,7 +86,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the awaitDeviceConfiguredConfirmation
     * Indicates if the device will need to wait for configured confirmation
     *
-    * @return bool|null The awaitDeviceConfiguredConfirmation
+    * @return bool The awaitDeviceConfiguredConfirmation
     */
     public function getAwaitDeviceConfiguredConfirmation()
     {
@@ -115,7 +115,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the diagnosticsDisabled
     * Indicates if diagnostics setup pane is disabled
     *
-    * @return bool|null The diagnosticsDisabled
+    * @return bool The diagnosticsDisabled
     */
     public function getDiagnosticsDisabled()
     {
@@ -144,7 +144,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the enableSharedIPad
     * This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
     *
-    * @return bool|null The enableSharedIPad
+    * @return bool The enableSharedIPad
     */
     public function getEnableSharedIPad()
     {
@@ -173,7 +173,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the isDefault
     * Indicates if this is the default profile
     *
-    * @return bool|null The isDefault
+    * @return bool The isDefault
     */
     public function getIsDefault()
     {
@@ -202,7 +202,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the isMandatory
     * Indicates if the profile is mandatory
     *
-    * @return bool|null The isMandatory
+    * @return bool The isMandatory
     */
     public function getIsMandatory()
     {
@@ -231,12 +231,12 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the iTunesPairingMode
     * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
     *
-    * @return ITunesPairingMode|null The iTunesPairingMode
+    * @return ITunesPairingMode The iTunesPairingMode
     */
     public function getITunesPairingMode()
     {
         if (array_key_exists("iTunesPairingMode", $this->_propDict)) {
-            if (is_a($this->_propDict["iTunesPairingMode"], "\Beta\Microsoft\Graph\Model\ITunesPairingMode") || is_null($this->_propDict["iTunesPairingMode"])) {
+            if (is_a($this->_propDict["iTunesPairingMode"], "\Beta\Microsoft\Graph\Model\ITunesPairingMode")) {
                 return $this->_propDict["iTunesPairingMode"];
             } else {
                 $this->_propDict["iTunesPairingMode"] = new ITunesPairingMode($this->_propDict["iTunesPairingMode"]);
@@ -264,7 +264,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the locationDisabled
     * Indicates if Location service setup pane is disabled
     *
-    * @return bool|null The locationDisabled
+    * @return bool The locationDisabled
     */
     public function getLocationDisabled()
     {
@@ -293,7 +293,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the macOSFileVaultDisabled
     * Indicates if Mac OS file vault is disabled
     *
-    * @return bool|null The macOSFileVaultDisabled
+    * @return bool The macOSFileVaultDisabled
     */
     public function getMacOSFileVaultDisabled()
     {
@@ -322,7 +322,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the macOSRegistrationDisabled
     * Indicates if Mac OS registration is disabled
     *
-    * @return bool|null The macOSRegistrationDisabled
+    * @return bool The macOSRegistrationDisabled
     */
     public function getMacOSRegistrationDisabled()
     {
@@ -352,7 +352,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
      * Gets the managementCertificates
     * Management certificates for Apple Configurator
      *
-     * @return array|null The managementCertificates
+     * @return array The managementCertificates
      */
     public function getManagementCertificates()
     {
@@ -373,7 +373,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     */
     public function setManagementCertificates($val)
     {
-        $this->_propDict["managementCertificates"] = $val;
+		$this->_propDict["managementCertificates"] = $val;
         return $this;
     }
     
@@ -381,7 +381,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the passCodeDisabled
     * Indicates if Passcode setup pane is disabled
     *
-    * @return bool|null The passCodeDisabled
+    * @return bool The passCodeDisabled
     */
     public function getPassCodeDisabled()
     {
@@ -410,7 +410,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the profileRemovalDisabled
     * Indicates if the profile removal option is disabled
     *
-    * @return bool|null The profileRemovalDisabled
+    * @return bool The profileRemovalDisabled
     */
     public function getProfileRemovalDisabled()
     {
@@ -439,7 +439,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the restoreBlocked
     * Indicates if Restore setup pane is blocked
     *
-    * @return bool|null The restoreBlocked
+    * @return bool The restoreBlocked
     */
     public function getRestoreBlocked()
     {
@@ -468,7 +468,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the restoreFromAndroidDisabled
     * Indicates if Restore from Android is disabled
     *
-    * @return bool|null The restoreFromAndroidDisabled
+    * @return bool The restoreFromAndroidDisabled
     */
     public function getRestoreFromAndroidDisabled()
     {
@@ -497,7 +497,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the sharedIPadMaximumUserCount
     * This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
     *
-    * @return int|null The sharedIPadMaximumUserCount
+    * @return int The sharedIPadMaximumUserCount
     */
     public function getSharedIPadMaximumUserCount()
     {
@@ -526,7 +526,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the siriDisabled
     * Indicates if siri setup pane is disabled
     *
-    * @return bool|null The siriDisabled
+    * @return bool The siriDisabled
     */
     public function getSiriDisabled()
     {
@@ -555,7 +555,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the supervisedModeEnabled
     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
-    * @return bool|null The supervisedModeEnabled
+    * @return bool The supervisedModeEnabled
     */
     public function getSupervisedModeEnabled()
     {
@@ -584,7 +584,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the supportDepartment
     * Support department information
     *
-    * @return string|null The supportDepartment
+    * @return string The supportDepartment
     */
     public function getSupportDepartment()
     {
@@ -613,7 +613,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the supportPhoneNumber
     * Support phone number
     *
-    * @return string|null The supportPhoneNumber
+    * @return string The supportPhoneNumber
     */
     public function getSupportPhoneNumber()
     {
@@ -642,7 +642,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the termsAndConditionsDisabled
     * Indicates if 'Terms and Conditions' setup pane is disabled
     *
-    * @return bool|null The termsAndConditionsDisabled
+    * @return bool The termsAndConditionsDisabled
     */
     public function getTermsAndConditionsDisabled()
     {
@@ -671,7 +671,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the touchIdDisabled
     * Indicates if touch id setup pane is disabled
     *
-    * @return bool|null The touchIdDisabled
+    * @return bool The touchIdDisabled
     */
     public function getTouchIdDisabled()
     {
@@ -700,7 +700,7 @@ class DepEnrollmentProfile extends EnrollmentProfile
     * Gets the zoomDisabled
     * Indicates if zoom setup pane is disabled
     *
-    * @return bool|null The zoomDisabled
+    * @return bool The zoomDisabled
     */
     public function getZoomDisabled()
     {

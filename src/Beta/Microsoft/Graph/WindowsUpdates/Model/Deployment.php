@@ -28,12 +28,12 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the content
     * Specifies what content to deploy. Cannot be changed. Returned by default.
     *
-    * @return DeployableContent|null The content
+    * @return DeployableContent The content
     */
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeployableContent") || is_null($this->_propDict["content"])) {
+            if (is_a($this->_propDict["content"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeployableContent")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = new DeployableContent($this->_propDict["content"]);
@@ -61,12 +61,12 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdDateTime
     * The date and time the deployment was created. Returned by default. Read-only.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -94,12 +94,12 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the lastModifiedDateTime
     * The date and time the deployment was last modified. Returned by default. Read-only.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -127,12 +127,12 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the settings
     * Settings specified on the specific deployment governing how to deploy content. Returned by default.
     *
-    * @return DeploymentSettings|null The settings
+    * @return DeploymentSettings The settings
     */
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentSettings") || is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new DeploymentSettings($this->_propDict["settings"]);
@@ -160,12 +160,12 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the state
     * Execution status of the deployment. Returned by default.
     *
-    * @return DeploymentState|null The state
+    * @return DeploymentState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new DeploymentState($this->_propDict["state"]);
@@ -193,12 +193,12 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the audience
     * Specifies the audience to which content is deployed.
     *
-    * @return DeploymentAudience|null The audience
+    * @return DeploymentAudience The audience
     */
     public function getAudience()
     {
         if (array_key_exists("audience", $this->_propDict)) {
-            if (is_a($this->_propDict["audience"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentAudience") || is_null($this->_propDict["audience"])) {
+            if (is_a($this->_propDict["audience"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentAudience")) {
                 return $this->_propDict["audience"];
             } else {
                 $this->_propDict["audience"] = new DeploymentAudience($this->_propDict["audience"]);

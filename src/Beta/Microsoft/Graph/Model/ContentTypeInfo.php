@@ -27,7 +27,7 @@ class ContentTypeInfo extends Entity
     * Gets the id
     * The id of the content type.
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -55,7 +55,7 @@ class ContentTypeInfo extends Entity
     * Gets the name
     * The name of the content type.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {

@@ -28,12 +28,12 @@ class DeviceSetupConfiguration extends Entity
     * Gets the createdDateTime
     * DateTime the object was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class DeviceSetupConfiguration extends Entity
     * Gets the description
     * Admin provided description of the Device Configuration.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class DeviceSetupConfiguration extends Entity
     * Gets the displayName
     * Admin provided name of the device configuration.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class DeviceSetupConfiguration extends Entity
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -152,7 +152,7 @@ class DeviceSetupConfiguration extends Entity
     * Gets the version
     * Version of the device configuration.
     *
-    * @return int|null The version
+    * @return int The version
     */
     public function getVersion()
     {

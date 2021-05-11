@@ -27,7 +27,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the activityIdentifier
     * Identifier of the job run.
     *
-    * @return string|null The activityIdentifier
+    * @return string The activityIdentifier
     */
     public function getActivityIdentifier()
     {
@@ -55,7 +55,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countEntitled
     * Count of processed entries that were assigned for this application.
     *
-    * @return int|null The countEntitled
+    * @return int The countEntitled
     */
     public function getCountEntitled()
     {
@@ -83,7 +83,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countEntitledForProvisioning
     * Count of processed entries that were assigned for provisioning.
     *
-    * @return int|null The countEntitledForProvisioning
+    * @return int The countEntitledForProvisioning
     */
     public function getCountEntitledForProvisioning()
     {
@@ -111,7 +111,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countEscrowed
     * Count of entries that were escrowed (errors).
     *
-    * @return int|null The countEscrowed
+    * @return int The countEscrowed
     */
     public function getCountEscrowed()
     {
@@ -139,7 +139,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countEscrowedRaw
     * Count of entries that were escrowed, including system-generated escrows.
     *
-    * @return int|null The countEscrowedRaw
+    * @return int The countEscrowedRaw
     */
     public function getCountEscrowedRaw()
     {
@@ -167,7 +167,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countExported
     * Count of exported entries.
     *
-    * @return int|null The countExported
+    * @return int The countExported
     */
     public function getCountExported()
     {
@@ -195,7 +195,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countExports
     * Count of entries that were expected to be exported.
     *
-    * @return int|null The countExports
+    * @return int The countExports
     */
     public function getCountExports()
     {
@@ -223,7 +223,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countImported
     * Count of imported entries.
     *
-    * @return int|null The countImported
+    * @return int The countImported
     */
     public function getCountImported()
     {
@@ -251,7 +251,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countImportedDeltas
     * Count of imported delta-changes.
     *
-    * @return int|null The countImportedDeltas
+    * @return int The countImportedDeltas
     */
     public function getCountImportedDeltas()
     {
@@ -279,7 +279,7 @@ class SynchronizationTaskExecution extends Entity
     * Gets the countImportedReferenceDeltas
     * Count of imported delta-changes pertaining to reference changes.
     *
-    * @return int|null The countImportedReferenceDeltas
+    * @return int The countImportedReferenceDeltas
     */
     public function getCountImportedReferenceDeltas()
     {
@@ -308,12 +308,12 @@ class SynchronizationTaskExecution extends Entity
     * Gets the error
     * If an error was encountered, contains a synchronizationError object with details.
     *
-    * @return SynchronizationError|null The error
+    * @return SynchronizationError The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\SynchronizationError") || is_null($this->_propDict["error"])) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\SynchronizationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new SynchronizationError($this->_propDict["error"]);
@@ -341,12 +341,12 @@ class SynchronizationTaskExecution extends Entity
     * Gets the state
     * Code summarizing the result of this run. Possible values are: Succeeded, Failed, EntryLevelErrors.
     *
-    * @return SynchronizationTaskExecutionResult|null The state
+    * @return SynchronizationTaskExecutionResult The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SynchronizationTaskExecutionResult") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SynchronizationTaskExecutionResult")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SynchronizationTaskExecutionResult($this->_propDict["state"]);
@@ -374,12 +374,12 @@ class SynchronizationTaskExecution extends Entity
     * Gets the timeBegan
     * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The timeBegan
+    * @return \DateTime The timeBegan
     */
     public function getTimeBegan()
     {
         if (array_key_exists("timeBegan", $this->_propDict)) {
-            if (is_a($this->_propDict["timeBegan"], "\DateTime") || is_null($this->_propDict["timeBegan"])) {
+            if (is_a($this->_propDict["timeBegan"], "\DateTime")) {
                 return $this->_propDict["timeBegan"];
             } else {
                 $this->_propDict["timeBegan"] = new \DateTime($this->_propDict["timeBegan"]);
@@ -407,12 +407,12 @@ class SynchronizationTaskExecution extends Entity
     * Gets the timeEnded
     * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The timeEnded
+    * @return \DateTime The timeEnded
     */
     public function getTimeEnded()
     {
         if (array_key_exists("timeEnded", $this->_propDict)) {
-            if (is_a($this->_propDict["timeEnded"], "\DateTime") || is_null($this->_propDict["timeEnded"])) {
+            if (is_a($this->_propDict["timeEnded"], "\DateTime")) {
                 return $this->_propDict["timeEnded"];
             } else {
                 $this->_propDict["timeEnded"] = new \DateTime($this->_propDict["timeEnded"]);

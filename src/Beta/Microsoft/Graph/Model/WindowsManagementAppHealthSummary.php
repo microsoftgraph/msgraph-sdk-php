@@ -28,7 +28,7 @@ class WindowsManagementAppHealthSummary extends Entity
     * Gets the healthyDeviceCount
     * Healthy device count.
     *
-    * @return int|null The healthyDeviceCount
+    * @return int The healthyDeviceCount
     */
     public function getHealthyDeviceCount()
     {
@@ -57,7 +57,7 @@ class WindowsManagementAppHealthSummary extends Entity
     * Gets the unhealthyDeviceCount
     * Unhealthy device count.
     *
-    * @return int|null The unhealthyDeviceCount
+    * @return int The unhealthyDeviceCount
     */
     public function getUnhealthyDeviceCount()
     {
@@ -86,7 +86,7 @@ class WindowsManagementAppHealthSummary extends Entity
     * Gets the unknownDeviceCount
     * Unknown device count.
     *
-    * @return int|null The unknownDeviceCount
+    * @return int The unknownDeviceCount
     */
     public function getUnknownDeviceCount()
     {

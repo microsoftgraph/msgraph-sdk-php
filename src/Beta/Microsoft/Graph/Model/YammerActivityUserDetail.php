@@ -27,7 +27,7 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the assignedProducts
     *
-    * @return string|null The assignedProducts
+    * @return string The assignedProducts
     */
     public function getAssignedProducts()
     {
@@ -54,7 +54,7 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -81,12 +81,12 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \DateTime The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -112,7 +112,7 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the likedCount
     *
-    * @return int|null The likedCount
+    * @return int The likedCount
     */
     public function getLikedCount()
     {
@@ -139,7 +139,7 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the postedCount
     *
-    * @return int|null The postedCount
+    * @return int The postedCount
     */
     public function getPostedCount()
     {
@@ -166,7 +166,7 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the readCount
     *
-    * @return int|null The readCount
+    * @return int The readCount
     */
     public function getReadCount()
     {
@@ -193,7 +193,7 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -220,12 +220,12 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -251,12 +251,12 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the stateChangeDate
     *
-    * @return \DateTime|null The stateChangeDate
+    * @return \DateTime The stateChangeDate
     */
     public function getStateChangeDate()
     {
         if (array_key_exists("stateChangeDate", $this->_propDict)) {
-            if (is_a($this->_propDict["stateChangeDate"], "\DateTime") || is_null($this->_propDict["stateChangeDate"])) {
+            if (is_a($this->_propDict["stateChangeDate"], "\DateTime")) {
                 return $this->_propDict["stateChangeDate"];
             } else {
                 $this->_propDict["stateChangeDate"] = new \DateTime($this->_propDict["stateChangeDate"]);
@@ -282,7 +282,7 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -309,7 +309,7 @@ class YammerActivityUserDetail extends Entity
     /**
     * Gets the userState
     *
-    * @return string|null The userState
+    * @return string The userState
     */
     public function getUserState()
     {

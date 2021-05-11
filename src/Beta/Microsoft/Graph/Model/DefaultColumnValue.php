@@ -27,7 +27,7 @@ class DefaultColumnValue extends Entity
     * Gets the formula
     * The formula used to compute the default value for this column.
     *
-    * @return string|null The formula
+    * @return string The formula
     */
     public function getFormula()
     {
@@ -55,7 +55,7 @@ class DefaultColumnValue extends Entity
     * Gets the value
     * The direct value to use as the default value for this column.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

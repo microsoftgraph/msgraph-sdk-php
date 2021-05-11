@@ -28,12 +28,12 @@ class ConfigurationManagerActionResult extends DeviceActionResult
     * Gets the actionDeliveryStatus
     * State of the action being delivered to on-prem server. Possible values are: unknown, pendingDelivery, deliveredToConnectorService, failedToDeliverToConnectorService, deliveredToOnPremisesServer.
     *
-    * @return ConfigurationManagerActionDeliveryStatus|null The actionDeliveryStatus
+    * @return ConfigurationManagerActionDeliveryStatus The actionDeliveryStatus
     */
     public function getActionDeliveryStatus()
     {
         if (array_key_exists("actionDeliveryStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["actionDeliveryStatus"], "\Beta\Microsoft\Graph\Model\ConfigurationManagerActionDeliveryStatus") || is_null($this->_propDict["actionDeliveryStatus"])) {
+            if (is_a($this->_propDict["actionDeliveryStatus"], "\Beta\Microsoft\Graph\Model\ConfigurationManagerActionDeliveryStatus")) {
                 return $this->_propDict["actionDeliveryStatus"];
             } else {
                 $this->_propDict["actionDeliveryStatus"] = new ConfigurationManagerActionDeliveryStatus($this->_propDict["actionDeliveryStatus"]);
@@ -60,7 +60,7 @@ class ConfigurationManagerActionResult extends DeviceActionResult
     * Gets the errorCode
     * Error code of Configuration Manager action from client
     *
-    * @return int|null The errorCode
+    * @return int The errorCode
     */
     public function getErrorCode()
     {

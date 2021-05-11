@@ -27,7 +27,7 @@ class AssignmentFilterValidationResult extends Entity
     * Gets the isValidRule
     * Indicator to valid or invalid rule.
     *
-    * @return bool|null The isValidRule
+    * @return bool The isValidRule
     */
     public function getIsValidRule()
     {

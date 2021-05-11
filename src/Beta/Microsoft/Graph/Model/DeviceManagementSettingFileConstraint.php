@@ -36,7 +36,7 @@ class DeviceManagementSettingFileConstraint extends DeviceManagementConstraint
     * Gets the supportedExtensions
     * Acceptable file extensions to upload for this setting
     *
-    * @return string|null The supportedExtensions
+    * @return string The supportedExtensions
     */
     public function getSupportedExtensions()
     {

@@ -27,7 +27,7 @@ class AirPrintDestination extends Entity
     * Gets the forceTls
     * If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
     *
-    * @return bool|null The forceTls
+    * @return bool The forceTls
     */
     public function getForceTls()
     {
@@ -55,7 +55,7 @@ class AirPrintDestination extends Entity
     * Gets the ipAddress
     * The IP Address of the AirPrint destination.
     *
-    * @return string|null The ipAddress
+    * @return string The ipAddress
     */
     public function getIpAddress()
     {
@@ -83,7 +83,7 @@ class AirPrintDestination extends Entity
     * Gets the port
     * The listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port. Available in iOS 11.0 and later.
     *
-    * @return int|null The port
+    * @return int The port
     */
     public function getPort()
     {
@@ -111,7 +111,7 @@ class AirPrintDestination extends Entity
     * Gets the resourcePath
     * The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer.
     *
-    * @return string|null The resourcePath
+    * @return string The resourcePath
     */
     public function getResourcePath()
     {

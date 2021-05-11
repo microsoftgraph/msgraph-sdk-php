@@ -27,7 +27,7 @@ class MessageRulePredicates extends Entity
     * Gets the bodyContains
     * Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
     *
-    * @return string|null The bodyContains
+    * @return string The bodyContains
     */
     public function getBodyContains()
     {
@@ -55,7 +55,7 @@ class MessageRulePredicates extends Entity
     * Gets the bodyOrSubjectContains
     * Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
     *
-    * @return string|null The bodyOrSubjectContains
+    * @return string The bodyOrSubjectContains
     */
     public function getBodyOrSubjectContains()
     {
@@ -83,7 +83,7 @@ class MessageRulePredicates extends Entity
     * Gets the categories
     * Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
     *
-    * @return string|null The categories
+    * @return string The categories
     */
     public function getCategories()
     {
@@ -112,12 +112,12 @@ class MessageRulePredicates extends Entity
     * Gets the fromAddresses
     * Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
     *
-    * @return Recipient|null The fromAddresses
+    * @return Recipient The fromAddresses
     */
     public function getFromAddresses()
     {
         if (array_key_exists("fromAddresses", $this->_propDict)) {
-            if (is_a($this->_propDict["fromAddresses"], "\Beta\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["fromAddresses"])) {
+            if (is_a($this->_propDict["fromAddresses"], "\Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["fromAddresses"];
             } else {
                 $this->_propDict["fromAddresses"] = new Recipient($this->_propDict["fromAddresses"]);
@@ -144,7 +144,7 @@ class MessageRulePredicates extends Entity
     * Gets the hasAttachments
     * Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
     *
-    * @return bool|null The hasAttachments
+    * @return bool The hasAttachments
     */
     public function getHasAttachments()
     {
@@ -172,7 +172,7 @@ class MessageRulePredicates extends Entity
     * Gets the headerContains
     * Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
     *
-    * @return string|null The headerContains
+    * @return string The headerContains
     */
     public function getHeaderContains()
     {
@@ -201,12 +201,12 @@ class MessageRulePredicates extends Entity
     * Gets the importance
     * The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
     *
-    * @return Importance|null The importance
+    * @return Importance The importance
     */
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\Importance") || is_null($this->_propDict["importance"])) {
+            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -233,7 +233,7 @@ class MessageRulePredicates extends Entity
     * Gets the isApprovalRequest
     * Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
     *
-    * @return bool|null The isApprovalRequest
+    * @return bool The isApprovalRequest
     */
     public function getIsApprovalRequest()
     {
@@ -261,7 +261,7 @@ class MessageRulePredicates extends Entity
     * Gets the isAutomaticForward
     * Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
     *
-    * @return bool|null The isAutomaticForward
+    * @return bool The isAutomaticForward
     */
     public function getIsAutomaticForward()
     {
@@ -289,7 +289,7 @@ class MessageRulePredicates extends Entity
     * Gets the isAutomaticReply
     * Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
     *
-    * @return bool|null The isAutomaticReply
+    * @return bool The isAutomaticReply
     */
     public function getIsAutomaticReply()
     {
@@ -317,7 +317,7 @@ class MessageRulePredicates extends Entity
     * Gets the isEncrypted
     * Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
     *
-    * @return bool|null The isEncrypted
+    * @return bool The isEncrypted
     */
     public function getIsEncrypted()
     {
@@ -345,7 +345,7 @@ class MessageRulePredicates extends Entity
     * Gets the isMeetingRequest
     * Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
     *
-    * @return bool|null The isMeetingRequest
+    * @return bool The isMeetingRequest
     */
     public function getIsMeetingRequest()
     {
@@ -373,7 +373,7 @@ class MessageRulePredicates extends Entity
     * Gets the isMeetingResponse
     * Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
     *
-    * @return bool|null The isMeetingResponse
+    * @return bool The isMeetingResponse
     */
     public function getIsMeetingResponse()
     {
@@ -401,7 +401,7 @@ class MessageRulePredicates extends Entity
     * Gets the isNonDeliveryReport
     * Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
     *
-    * @return bool|null The isNonDeliveryReport
+    * @return bool The isNonDeliveryReport
     */
     public function getIsNonDeliveryReport()
     {
@@ -429,7 +429,7 @@ class MessageRulePredicates extends Entity
     * Gets the isPermissionControlled
     * Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
     *
-    * @return bool|null The isPermissionControlled
+    * @return bool The isPermissionControlled
     */
     public function getIsPermissionControlled()
     {
@@ -457,7 +457,7 @@ class MessageRulePredicates extends Entity
     * Gets the isReadReceipt
     * Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
     *
-    * @return bool|null The isReadReceipt
+    * @return bool The isReadReceipt
     */
     public function getIsReadReceipt()
     {
@@ -485,7 +485,7 @@ class MessageRulePredicates extends Entity
     * Gets the isSigned
     * Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
     *
-    * @return bool|null The isSigned
+    * @return bool The isSigned
     */
     public function getIsSigned()
     {
@@ -513,7 +513,7 @@ class MessageRulePredicates extends Entity
     * Gets the isVoicemail
     * Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
     *
-    * @return bool|null The isVoicemail
+    * @return bool The isVoicemail
     */
     public function getIsVoicemail()
     {
@@ -542,12 +542,12 @@ class MessageRulePredicates extends Entity
     * Gets the messageActionFlag
     * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
     *
-    * @return MessageActionFlag|null The messageActionFlag
+    * @return MessageActionFlag The messageActionFlag
     */
     public function getMessageActionFlag()
     {
         if (array_key_exists("messageActionFlag", $this->_propDict)) {
-            if (is_a($this->_propDict["messageActionFlag"], "\Beta\Microsoft\Graph\Model\MessageActionFlag") || is_null($this->_propDict["messageActionFlag"])) {
+            if (is_a($this->_propDict["messageActionFlag"], "\Beta\Microsoft\Graph\Model\MessageActionFlag")) {
                 return $this->_propDict["messageActionFlag"];
             } else {
                 $this->_propDict["messageActionFlag"] = new MessageActionFlag($this->_propDict["messageActionFlag"]);
@@ -574,7 +574,7 @@ class MessageRulePredicates extends Entity
     * Gets the notSentToMe
     * Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
     *
-    * @return bool|null The notSentToMe
+    * @return bool The notSentToMe
     */
     public function getNotSentToMe()
     {
@@ -602,7 +602,7 @@ class MessageRulePredicates extends Entity
     * Gets the recipientContains
     * Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
     *
-    * @return string|null The recipientContains
+    * @return string The recipientContains
     */
     public function getRecipientContains()
     {
@@ -630,7 +630,7 @@ class MessageRulePredicates extends Entity
     * Gets the senderContains
     * Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
     *
-    * @return string|null The senderContains
+    * @return string The senderContains
     */
     public function getSenderContains()
     {
@@ -659,12 +659,12 @@ class MessageRulePredicates extends Entity
     * Gets the sensitivity
     * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
     *
-    * @return Sensitivity|null The sensitivity
+    * @return Sensitivity The sensitivity
     */
     public function getSensitivity()
     {
         if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "\Beta\Microsoft\Graph\Model\Sensitivity") || is_null($this->_propDict["sensitivity"])) {
+            if (is_a($this->_propDict["sensitivity"], "\Beta\Microsoft\Graph\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -691,7 +691,7 @@ class MessageRulePredicates extends Entity
     * Gets the sentCcMe
     * Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
     *
-    * @return bool|null The sentCcMe
+    * @return bool The sentCcMe
     */
     public function getSentCcMe()
     {
@@ -719,7 +719,7 @@ class MessageRulePredicates extends Entity
     * Gets the sentOnlyToMe
     * Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
     *
-    * @return bool|null The sentOnlyToMe
+    * @return bool The sentOnlyToMe
     */
     public function getSentOnlyToMe()
     {
@@ -748,12 +748,12 @@ class MessageRulePredicates extends Entity
     * Gets the sentToAddresses
     * Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
     *
-    * @return Recipient|null The sentToAddresses
+    * @return Recipient The sentToAddresses
     */
     public function getSentToAddresses()
     {
         if (array_key_exists("sentToAddresses", $this->_propDict)) {
-            if (is_a($this->_propDict["sentToAddresses"], "\Beta\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["sentToAddresses"])) {
+            if (is_a($this->_propDict["sentToAddresses"], "\Beta\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["sentToAddresses"];
             } else {
                 $this->_propDict["sentToAddresses"] = new Recipient($this->_propDict["sentToAddresses"]);
@@ -780,7 +780,7 @@ class MessageRulePredicates extends Entity
     * Gets the sentToMe
     * Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
     *
-    * @return bool|null The sentToMe
+    * @return bool The sentToMe
     */
     public function getSentToMe()
     {
@@ -808,7 +808,7 @@ class MessageRulePredicates extends Entity
     * Gets the sentToOrCcMe
     * Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
     *
-    * @return bool|null The sentToOrCcMe
+    * @return bool The sentToOrCcMe
     */
     public function getSentToOrCcMe()
     {
@@ -836,7 +836,7 @@ class MessageRulePredicates extends Entity
     * Gets the subjectContains
     * Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
     *
-    * @return string|null The subjectContains
+    * @return string The subjectContains
     */
     public function getSubjectContains()
     {
@@ -865,12 +865,12 @@ class MessageRulePredicates extends Entity
     * Gets the withinSizeRange
     * Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
     *
-    * @return SizeRange|null The withinSizeRange
+    * @return SizeRange The withinSizeRange
     */
     public function getWithinSizeRange()
     {
         if (array_key_exists("withinSizeRange", $this->_propDict)) {
-            if (is_a($this->_propDict["withinSizeRange"], "\Beta\Microsoft\Graph\Model\SizeRange") || is_null($this->_propDict["withinSizeRange"])) {
+            if (is_a($this->_propDict["withinSizeRange"], "\Beta\Microsoft\Graph\Model\SizeRange")) {
                 return $this->_propDict["withinSizeRange"];
             } else {
                 $this->_propDict["withinSizeRange"] = new SizeRange($this->_propDict["withinSizeRange"]);

@@ -27,7 +27,7 @@ class ApprovalWorkflowProvider extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class ApprovalWorkflowProvider extends Entity
      /** 
      * Gets the businessFlows
      *
-     * @return array|null The businessFlows
+     * @return array The businessFlows
      */
     public function getBusinessFlows()
     {
@@ -75,7 +75,7 @@ class ApprovalWorkflowProvider extends Entity
     */
     public function setBusinessFlows($val)
     {
-        $this->_propDict["businessFlows"] = $val;
+		$this->_propDict["businessFlows"] = $val;
         return $this;
     }
     
@@ -83,7 +83,7 @@ class ApprovalWorkflowProvider extends Entity
      /** 
      * Gets the businessFlowsWithRequestsAwaitingMyDecision
      *
-     * @return array|null The businessFlowsWithRequestsAwaitingMyDecision
+     * @return array The businessFlowsWithRequestsAwaitingMyDecision
      */
     public function getBusinessFlowsWithRequestsAwaitingMyDecision()
     {
@@ -103,7 +103,7 @@ class ApprovalWorkflowProvider extends Entity
     */
     public function setBusinessFlowsWithRequestsAwaitingMyDecision($val)
     {
-        $this->_propDict["businessFlowsWithRequestsAwaitingMyDecision"] = $val;
+		$this->_propDict["businessFlowsWithRequestsAwaitingMyDecision"] = $val;
         return $this;
     }
     
@@ -111,7 +111,7 @@ class ApprovalWorkflowProvider extends Entity
      /** 
      * Gets the policyTemplates
      *
-     * @return array|null The policyTemplates
+     * @return array The policyTemplates
      */
     public function getPolicyTemplates()
     {
@@ -131,7 +131,7 @@ class ApprovalWorkflowProvider extends Entity
     */
     public function setPolicyTemplates($val)
     {
-        $this->_propDict["policyTemplates"] = $val;
+		$this->_propDict["policyTemplates"] = $val;
         return $this;
     }
     

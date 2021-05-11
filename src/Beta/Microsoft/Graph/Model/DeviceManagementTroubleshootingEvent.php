@@ -29,7 +29,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
      * Gets the additionalInformation
     * A set of string key and string value pairs which provides additional information on the Troubleshooting event
      *
-     * @return array|null The additionalInformation
+     * @return array The additionalInformation
      */
     public function getAdditionalInformation()
     {
@@ -50,7 +50,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
     */
     public function setAdditionalInformation($val)
     {
-        $this->_propDict["additionalInformation"] = $val;
+		$this->_propDict["additionalInformation"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
     * Gets the correlationId
     * Id used for tracing the failure in the service.
     *
-    * @return string|null The correlationId
+    * @return string The correlationId
     */
     public function getCorrelationId()
     {
@@ -87,12 +87,12 @@ class DeviceManagementTroubleshootingEvent extends Entity
     * Gets the eventDateTime
     * Time when the event occurred .
     *
-    * @return \DateTime|null The eventDateTime
+    * @return \DateTime The eventDateTime
     */
     public function getEventDateTime()
     {
         if (array_key_exists("eventDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["eventDateTime"], "\DateTime") || is_null($this->_propDict["eventDateTime"])) {
+            if (is_a($this->_propDict["eventDateTime"], "\DateTime")) {
                 return $this->_propDict["eventDateTime"];
             } else {
                 $this->_propDict["eventDateTime"] = new \DateTime($this->_propDict["eventDateTime"]);
@@ -120,7 +120,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
     * Gets the eventName
     * Event Name corresponding to the Troubleshooting Event. It is an Optional field
     *
-    * @return string|null The eventName
+    * @return string The eventName
     */
     public function getEventName()
     {
@@ -149,12 +149,12 @@ class DeviceManagementTroubleshootingEvent extends Entity
     * Gets the troubleshootingErrorDetails
     * Object containing detailed information about the error and its remediation.
     *
-    * @return DeviceManagementTroubleshootingErrorDetails|null The troubleshootingErrorDetails
+    * @return DeviceManagementTroubleshootingErrorDetails The troubleshootingErrorDetails
     */
     public function getTroubleshootingErrorDetails()
     {
         if (array_key_exists("troubleshootingErrorDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["troubleshootingErrorDetails"], "\Beta\Microsoft\Graph\Model\DeviceManagementTroubleshootingErrorDetails") || is_null($this->_propDict["troubleshootingErrorDetails"])) {
+            if (is_a($this->_propDict["troubleshootingErrorDetails"], "\Beta\Microsoft\Graph\Model\DeviceManagementTroubleshootingErrorDetails")) {
                 return $this->_propDict["troubleshootingErrorDetails"];
             } else {
                 $this->_propDict["troubleshootingErrorDetails"] = new DeviceManagementTroubleshootingErrorDetails($this->_propDict["troubleshootingErrorDetails"]);

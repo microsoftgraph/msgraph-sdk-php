@@ -28,7 +28,7 @@ class EducationAssignmentResource extends Entity
     * Gets the distributeForStudentWork
     * Indicates whether this resource should be copied to each student submission for modification and submission.
     *
-    * @return bool|null The distributeForStudentWork
+    * @return bool The distributeForStudentWork
     */
     public function getDistributeForStudentWork()
     {
@@ -57,12 +57,12 @@ class EducationAssignmentResource extends Entity
     * Gets the resource
     * Resource object that has been associated with this assignment.
     *
-    * @return EducationResource|null The resource
+    * @return EducationResource The resource
     */
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\EducationResource") || is_null($this->_propDict["resource"])) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\EducationResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new EducationResource($this->_propDict["resource"]);

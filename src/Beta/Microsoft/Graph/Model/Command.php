@@ -27,7 +27,7 @@ class Command extends Entity
     /**
     * Gets the appServiceName
     *
-    * @return string|null The appServiceName
+    * @return string The appServiceName
     */
     public function getAppServiceName()
     {
@@ -54,7 +54,7 @@ class Command extends Entity
     /**
     * Gets the error
     *
-    * @return string|null The error
+    * @return string The error
     */
     public function getError()
     {
@@ -81,7 +81,7 @@ class Command extends Entity
     /**
     * Gets the packageFamilyName
     *
-    * @return string|null The packageFamilyName
+    * @return string The packageFamilyName
     */
     public function getPackageFamilyName()
     {
@@ -108,12 +108,12 @@ class Command extends Entity
     /**
     * Gets the payload
     *
-    * @return PayloadRequest|null The payload
+    * @return PayloadRequest The payload
     */
     public function getPayload()
     {
         if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "\Beta\Microsoft\Graph\Model\PayloadRequest") || is_null($this->_propDict["payload"])) {
+            if (is_a($this->_propDict["payload"], "\Beta\Microsoft\Graph\Model\PayloadRequest")) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = new PayloadRequest($this->_propDict["payload"]);
@@ -139,7 +139,7 @@ class Command extends Entity
     /**
     * Gets the permissionTicket
     *
-    * @return string|null The permissionTicket
+    * @return string The permissionTicket
     */
     public function getPermissionTicket()
     {
@@ -166,7 +166,7 @@ class Command extends Entity
     /**
     * Gets the postBackUri
     *
-    * @return string|null The postBackUri
+    * @return string The postBackUri
     */
     public function getPostBackUri()
     {
@@ -193,7 +193,7 @@ class Command extends Entity
     /**
     * Gets the status
     *
-    * @return string|null The status
+    * @return string The status
     */
     public function getStatus()
     {
@@ -220,7 +220,7 @@ class Command extends Entity
     /**
     * Gets the type
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {
@@ -247,12 +247,12 @@ class Command extends Entity
     /**
     * Gets the responsepayload
     *
-    * @return PayloadResponse|null The responsepayload
+    * @return PayloadResponse The responsepayload
     */
     public function getResponsepayload()
     {
         if (array_key_exists("responsepayload", $this->_propDict)) {
-            if (is_a($this->_propDict["responsepayload"], "\Beta\Microsoft\Graph\Model\PayloadResponse") || is_null($this->_propDict["responsepayload"])) {
+            if (is_a($this->_propDict["responsepayload"], "\Beta\Microsoft\Graph\Model\PayloadResponse")) {
                 return $this->_propDict["responsepayload"];
             } else {
                 $this->_propDict["responsepayload"] = new PayloadResponse($this->_propDict["responsepayload"]);

@@ -28,7 +28,7 @@ class TermsAndConditionsGroupAssignment extends Entity
     * Gets the targetGroupId
     * Unique identifier of a group that the T&amp;C policy is assigned to.
     *
-    * @return string|null The targetGroupId
+    * @return string The targetGroupId
     */
     public function getTargetGroupId()
     {
@@ -57,12 +57,12 @@ class TermsAndConditionsGroupAssignment extends Entity
     * Gets the termsAndConditions
     * Navigation link to the terms and conditions that are assigned.
     *
-    * @return TermsAndConditions|null The termsAndConditions
+    * @return TermsAndConditions The termsAndConditions
     */
     public function getTermsAndConditions()
     {
         if (array_key_exists("termsAndConditions", $this->_propDict)) {
-            if (is_a($this->_propDict["termsAndConditions"], "\Beta\Microsoft\Graph\Model\TermsAndConditions") || is_null($this->_propDict["termsAndConditions"])) {
+            if (is_a($this->_propDict["termsAndConditions"], "\Beta\Microsoft\Graph\Model\TermsAndConditions")) {
                 return $this->_propDict["termsAndConditions"];
             } else {
                 $this->_propDict["termsAndConditions"] = new TermsAndConditions($this->_propDict["termsAndConditions"]);

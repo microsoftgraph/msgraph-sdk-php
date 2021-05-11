@@ -27,12 +27,12 @@ class ExactMatchClassificationRequest extends Entity
     /**
     * Gets the contentClassifications
     *
-    * @return ContentClassification|null The contentClassifications
+    * @return ContentClassification The contentClassifications
     */
     public function getContentClassifications()
     {
         if (array_key_exists("contentClassifications", $this->_propDict)) {
-            if (is_a($this->_propDict["contentClassifications"], "\Beta\Microsoft\Graph\Model\ContentClassification") || is_null($this->_propDict["contentClassifications"])) {
+            if (is_a($this->_propDict["contentClassifications"], "\Beta\Microsoft\Graph\Model\ContentClassification")) {
                 return $this->_propDict["contentClassifications"];
             } else {
                 $this->_propDict["contentClassifications"] = new ContentClassification($this->_propDict["contentClassifications"]);
@@ -57,7 +57,7 @@ class ExactMatchClassificationRequest extends Entity
     /**
     * Gets the sensitiveTypeIds
     *
-    * @return string|null The sensitiveTypeIds
+    * @return string The sensitiveTypeIds
     */
     public function getSensitiveTypeIds()
     {
@@ -83,7 +83,7 @@ class ExactMatchClassificationRequest extends Entity
     /**
     * Gets the text
     *
-    * @return string|null The text
+    * @return string The text
     */
     public function getText()
     {
@@ -109,7 +109,7 @@ class ExactMatchClassificationRequest extends Entity
     /**
     * Gets the timeoutInMs
     *
-    * @return int|null The timeoutInMs
+    * @return int The timeoutInMs
     */
     public function getTimeoutInMs()
     {

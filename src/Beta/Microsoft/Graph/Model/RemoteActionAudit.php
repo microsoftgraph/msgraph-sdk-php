@@ -28,12 +28,12 @@ class RemoteActionAudit extends Entity
     * Gets the action
     * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName, activateDeviceEsim.
     *
-    * @return RemoteAction|null The action
+    * @return RemoteAction The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\RemoteAction") || is_null($this->_propDict["action"])) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\RemoteAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new RemoteAction($this->_propDict["action"]);
@@ -61,12 +61,12 @@ class RemoteActionAudit extends Entity
     * Gets the actionState
     * Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
-    * @return ActionState|null The actionState
+    * @return ActionState The actionState
     */
     public function getActionState()
     {
         if (array_key_exists("actionState", $this->_propDict)) {
-            if (is_a($this->_propDict["actionState"], "\Beta\Microsoft\Graph\Model\ActionState") || is_null($this->_propDict["actionState"])) {
+            if (is_a($this->_propDict["actionState"], "\Beta\Microsoft\Graph\Model\ActionState")) {
                 return $this->_propDict["actionState"];
             } else {
                 $this->_propDict["actionState"] = new ActionState($this->_propDict["actionState"]);
@@ -94,7 +94,7 @@ class RemoteActionAudit extends Entity
     * Gets the deviceDisplayName
     * Intune device name.
     *
-    * @return string|null The deviceDisplayName
+    * @return string The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -123,7 +123,7 @@ class RemoteActionAudit extends Entity
     * Gets the deviceIMEI
     * IMEI of the device.
     *
-    * @return string|null The deviceIMEI
+    * @return string The deviceIMEI
     */
     public function getDeviceIMEI()
     {
@@ -152,7 +152,7 @@ class RemoteActionAudit extends Entity
     * Gets the deviceOwnerUserPrincipalName
     * Upn of the device owner.
     *
-    * @return string|null The deviceOwnerUserPrincipalName
+    * @return string The deviceOwnerUserPrincipalName
     */
     public function getDeviceOwnerUserPrincipalName()
     {
@@ -181,7 +181,7 @@ class RemoteActionAudit extends Entity
     * Gets the initiatedByUserPrincipalName
     * User who initiated the device action, format is UPN.
     *
-    * @return string|null The initiatedByUserPrincipalName
+    * @return string The initiatedByUserPrincipalName
     */
     public function getInitiatedByUserPrincipalName()
     {
@@ -210,7 +210,7 @@ class RemoteActionAudit extends Entity
     * Gets the managedDeviceId
     * Action target.
     *
-    * @return string|null The managedDeviceId
+    * @return string The managedDeviceId
     */
     public function getManagedDeviceId()
     {
@@ -239,12 +239,12 @@ class RemoteActionAudit extends Entity
     * Gets the requestDateTime
     * Time when the action was issued, given in UTC.
     *
-    * @return \DateTime|null The requestDateTime
+    * @return \DateTime The requestDateTime
     */
     public function getRequestDateTime()
     {
         if (array_key_exists("requestDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestDateTime"], "\DateTime") || is_null($this->_propDict["requestDateTime"])) {
+            if (is_a($this->_propDict["requestDateTime"], "\DateTime")) {
                 return $this->_propDict["requestDateTime"];
             } else {
                 $this->_propDict["requestDateTime"] = new \DateTime($this->_propDict["requestDateTime"]);
@@ -272,7 +272,7 @@ class RemoteActionAudit extends Entity
     * Gets the userName
     * [deprecated] Please use InitiatedByUserPrincipalName instead.
     *
-    * @return string|null The userName
+    * @return string The userName
     */
     public function getUserName()
     {

@@ -28,7 +28,7 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the emails
     * Emails to which the scheduled reports are delivered
     *
-    * @return string|null The emails
+    * @return string The emails
     */
     public function getEmails()
     {
@@ -57,12 +57,12 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the endDateTime
     * Time that the delivery of the scheduled reports ends
     *
-    * @return \DateTime|null The endDateTime
+    * @return \DateTime The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -90,7 +90,7 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the filter
     * Filters applied on the report
     *
-    * @return string|null The filter
+    * @return string The filter
     */
     public function getFilter()
     {
@@ -119,12 +119,12 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the format
     * Format of the scheduled report. Possible values are: csv, pdf.
     *
-    * @return DeviceManagementReportFileFormat|null The format
+    * @return DeviceManagementReportFileFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportFileFormat") || is_null($this->_propDict["format"])) {
+            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportFileFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new DeviceManagementReportFileFormat($this->_propDict["format"]);
@@ -152,7 +152,7 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the orderBy
     * Ordering of columns in the report
     *
-    * @return string|null The orderBy
+    * @return string The orderBy
     */
     public function getOrderBy()
     {
@@ -181,12 +181,12 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the recurrence
     * Frequency of scheduled report delivery. Possible values are: none, daily, weekly, monthly.
     *
-    * @return DeviceManagementScheduledReportRecurrence|null The recurrence
+    * @return DeviceManagementScheduledReportRecurrence The recurrence
     */
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\DeviceManagementScheduledReportRecurrence") || is_null($this->_propDict["recurrence"])) {
+            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\DeviceManagementScheduledReportRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new DeviceManagementScheduledReportRecurrence($this->_propDict["recurrence"]);
@@ -214,7 +214,7 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the reportName
     * Name of the report
     *
-    * @return string|null The reportName
+    * @return string The reportName
     */
     public function getReportName()
     {
@@ -243,7 +243,7 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the reportScheduleName
     * Name of the schedule
     *
-    * @return string|null The reportScheduleName
+    * @return string The reportScheduleName
     */
     public function getReportScheduleName()
     {
@@ -272,7 +272,7 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the select
     * Columns selected from the report
     *
-    * @return string|null The select
+    * @return string The select
     */
     public function getSelect()
     {
@@ -301,12 +301,12 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the startDateTime
     * Time that the delivery of the scheduled reports starts
     *
-    * @return \DateTime|null The startDateTime
+    * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -334,7 +334,7 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the subject
     * Subject of the scheduled reports that are delivered
     *
-    * @return string|null The subject
+    * @return string The subject
     */
     public function getSubject()
     {
@@ -363,7 +363,7 @@ class DeviceManagementReportSchedule extends Entity
     * Gets the userId
     * The Id of the User who created the report
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {

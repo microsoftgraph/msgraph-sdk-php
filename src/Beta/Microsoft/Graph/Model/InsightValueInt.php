@@ -27,7 +27,7 @@ class InsightValueInt extends UserExperienceAnalyticsInsightValue
     * Gets the value
     * Not yet documented
     *
-    * @return int|null The value
+    * @return int The value
     */
     public function getValue()
     {

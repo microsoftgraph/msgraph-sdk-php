@@ -28,7 +28,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     * Gets the configurationDeployedUserCount
     * Not yet documented
     *
-    * @return int|null The configurationDeployedUserCount
+    * @return int The configurationDeployedUserCount
     */
     public function getConfigurationDeployedUserCount()
     {
@@ -58,7 +58,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
      * Gets the configurationDeploymentSummaryPerApp
     * Not yet documented
      *
-     * @return array|null The configurationDeploymentSummaryPerApp
+     * @return array The configurationDeploymentSummaryPerApp
      */
     public function getConfigurationDeploymentSummaryPerApp()
     {
@@ -79,7 +79,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     */
     public function setConfigurationDeploymentSummaryPerApp($val)
     {
-        $this->_propDict["configurationDeploymentSummaryPerApp"] = $val;
+		$this->_propDict["configurationDeploymentSummaryPerApp"] = $val;
         return $this;
     }
     
@@ -87,7 +87,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     * Gets the displayName
     * Not yet documented
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -116,12 +116,12 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     * Gets the lastRefreshTime
     * Not yet documented
     *
-    * @return \DateTime|null The lastRefreshTime
+    * @return \DateTime The lastRefreshTime
     */
     public function getLastRefreshTime()
     {
         if (array_key_exists("lastRefreshTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastRefreshTime"], "\DateTime") || is_null($this->_propDict["lastRefreshTime"])) {
+            if (is_a($this->_propDict["lastRefreshTime"], "\DateTime")) {
                 return $this->_propDict["lastRefreshTime"];
             } else {
                 $this->_propDict["lastRefreshTime"] = new \DateTime($this->_propDict["lastRefreshTime"]);
@@ -149,7 +149,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     * Gets the version
     * Version of the entity.
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {

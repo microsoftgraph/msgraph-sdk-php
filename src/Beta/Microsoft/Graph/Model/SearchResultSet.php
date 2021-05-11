@@ -28,12 +28,12 @@ class SearchResultSet extends Entity
     * Gets the hitsContainers
     * A collection of search results.
     *
-    * @return SearchHitsContainer|null The hitsContainers
+    * @return SearchHitsContainer The hitsContainers
     */
     public function getHitsContainers()
     {
         if (array_key_exists("hitsContainers", $this->_propDict)) {
-            if (is_a($this->_propDict["hitsContainers"], "\Beta\Microsoft\Graph\Model\SearchHitsContainer") || is_null($this->_propDict["hitsContainers"])) {
+            if (is_a($this->_propDict["hitsContainers"], "\Beta\Microsoft\Graph\Model\SearchHitsContainer")) {
                 return $this->_propDict["hitsContainers"];
             } else {
                 $this->_propDict["hitsContainers"] = new SearchHitsContainer($this->_propDict["hitsContainers"]);
@@ -60,7 +60,7 @@ class SearchResultSet extends Entity
     * Gets the searchTerms
     * Contains the search terms sent in the initial search query.
     *
-    * @return string|null The searchTerms
+    * @return string The searchTerms
     */
     public function getSearchTerms()
     {

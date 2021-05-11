@@ -27,7 +27,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     * Gets the allowDeviceUseBeforeProfileAndAppInstallComplete
     * Allow or block user to use device before profile and app installation complete
     *
-    * @return bool|null The allowDeviceUseBeforeProfileAndAppInstallComplete
+    * @return bool The allowDeviceUseBeforeProfileAndAppInstallComplete
     */
     public function getAllowDeviceUseBeforeProfileAndAppInstallComplete()
     {
@@ -55,7 +55,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     * Gets the allowDeviceUseOnInstallFailure
     * Allow the user to continue using the device on installation failure
     *
-    * @return bool|null The allowDeviceUseOnInstallFailure
+    * @return bool The allowDeviceUseOnInstallFailure
     */
     public function getAllowDeviceUseOnInstallFailure()
     {
@@ -83,7 +83,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     * Gets the allowLogCollectionOnInstallFailure
     * Allow or block log collection on installation failure
     *
-    * @return bool|null The allowLogCollectionOnInstallFailure
+    * @return bool The allowLogCollectionOnInstallFailure
     */
     public function getAllowLogCollectionOnInstallFailure()
     {
@@ -111,7 +111,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     * Gets the blockDeviceSetupRetryByUser
     * Allow the user to retry the setup on installation failure
     *
-    * @return bool|null The blockDeviceSetupRetryByUser
+    * @return bool The blockDeviceSetupRetryByUser
     */
     public function getBlockDeviceSetupRetryByUser()
     {
@@ -139,7 +139,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     * Gets the customErrorMessage
     * Set custom error message to show upon installation failure
     *
-    * @return string|null The customErrorMessage
+    * @return string The customErrorMessage
     */
     public function getCustomErrorMessage()
     {
@@ -167,7 +167,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     * Gets the hideInstallationProgress
     * Show or hide installation progress to user
     *
-    * @return bool|null The hideInstallationProgress
+    * @return bool The hideInstallationProgress
     */
     public function getHideInstallationProgress()
     {
@@ -195,7 +195,7 @@ class WindowsEnrollmentStatusScreenSettings extends Entity
     * Gets the installProgressTimeoutInMinutes
     * Set installation progress timeout in minutes
     *
-    * @return int|null The installProgressTimeoutInMinutes
+    * @return int The installProgressTimeoutInMinutes
     */
     public function getInstallProgressTimeoutInMinutes()
     {

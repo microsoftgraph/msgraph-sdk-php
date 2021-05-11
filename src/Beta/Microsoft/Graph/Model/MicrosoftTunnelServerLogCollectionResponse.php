@@ -28,12 +28,12 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
     * Gets the endDateTime
     * The end time of the logs collected
     *
-    * @return \DateTime|null The endDateTime
+    * @return \DateTime The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -61,12 +61,12 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
     * Gets the expiryDateTime
     * The time when the log collection is expired
     *
-    * @return \DateTime|null The expiryDateTime
+    * @return \DateTime The expiryDateTime
     */
     public function getExpiryDateTime()
     {
         if (array_key_exists("expiryDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expiryDateTime"], "\DateTime") || is_null($this->_propDict["expiryDateTime"])) {
+            if (is_a($this->_propDict["expiryDateTime"], "\DateTime")) {
                 return $this->_propDict["expiryDateTime"];
             } else {
                 $this->_propDict["expiryDateTime"] = new \DateTime($this->_propDict["expiryDateTime"]);
@@ -94,12 +94,12 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
     * Gets the requestDateTime
     * The time when the log collection was requested
     *
-    * @return \DateTime|null The requestDateTime
+    * @return \DateTime The requestDateTime
     */
     public function getRequestDateTime()
     {
         if (array_key_exists("requestDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestDateTime"], "\DateTime") || is_null($this->_propDict["requestDateTime"])) {
+            if (is_a($this->_propDict["requestDateTime"], "\DateTime")) {
                 return $this->_propDict["requestDateTime"];
             } else {
                 $this->_propDict["requestDateTime"] = new \DateTime($this->_propDict["requestDateTime"]);
@@ -127,7 +127,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
     * Gets the serverId
     * ID of the server the log collection is requested upon
     *
-    * @return string|null The serverId
+    * @return string The serverId
     */
     public function getServerId()
     {
@@ -156,7 +156,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
     * Gets the sizeInBytes
     * The size of the logs in bytes
     *
-    * @return int|null The sizeInBytes
+    * @return int The sizeInBytes
     */
     public function getSizeInBytes()
     {
@@ -185,12 +185,12 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
     * Gets the startDateTime
     * The start time of the logs collected
     *
-    * @return \DateTime|null The startDateTime
+    * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -218,12 +218,12 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
     * Gets the status
     * The status of log collection. Possible values are: pending, completed, failed.
     *
-    * @return MicrosoftTunnelLogCollectionStatus|null The status
+    * @return MicrosoftTunnelLogCollectionStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\MicrosoftTunnelLogCollectionStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\MicrosoftTunnelLogCollectionStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new MicrosoftTunnelLogCollectionStatus($this->_propDict["status"]);

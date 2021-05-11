@@ -28,7 +28,7 @@ class DeviceManagementSettingCategory extends Entity
     * Gets the displayName
     * The category name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class DeviceManagementSettingCategory extends Entity
     * Gets the hasRequiredSetting
     * The category contains top level required setting
     *
-    * @return bool|null The hasRequiredSetting
+    * @return bool The hasRequiredSetting
     */
     public function getHasRequiredSetting()
     {
@@ -87,7 +87,7 @@ class DeviceManagementSettingCategory extends Entity
      * Gets the settingDefinitions
     * The setting definitions this category contains
      *
-     * @return array|null The settingDefinitions
+     * @return array The settingDefinitions
      */
     public function getSettingDefinitions()
     {
@@ -108,7 +108,7 @@ class DeviceManagementSettingCategory extends Entity
     */
     public function setSettingDefinitions($val)
     {
-        $this->_propDict["settingDefinitions"] = $val;
+		$this->_propDict["settingDefinitions"] = $val;
         return $this;
     }
     

@@ -27,7 +27,7 @@ class ExactMatchSession extends ExactMatchSessionBase
     /**
     * Gets the checksum
     *
-    * @return string|null The checksum
+    * @return string The checksum
     */
     public function getChecksum()
     {
@@ -54,7 +54,7 @@ class ExactMatchSession extends ExactMatchSessionBase
     /**
     * Gets the dataUploadURI
     *
-    * @return string|null The dataUploadURI
+    * @return string The dataUploadURI
     */
     public function getDataUploadURI()
     {
@@ -81,7 +81,7 @@ class ExactMatchSession extends ExactMatchSessionBase
     /**
     * Gets the fields
     *
-    * @return string|null The fields
+    * @return string The fields
     */
     public function getFields()
     {
@@ -108,7 +108,7 @@ class ExactMatchSession extends ExactMatchSessionBase
     /**
     * Gets the fileName
     *
-    * @return string|null The fileName
+    * @return string The fileName
     */
     public function getFileName()
     {
@@ -135,7 +135,7 @@ class ExactMatchSession extends ExactMatchSessionBase
     /**
     * Gets the rowsPerBlock
     *
-    * @return int|null The rowsPerBlock
+    * @return int The rowsPerBlock
     */
     public function getRowsPerBlock()
     {
@@ -162,7 +162,7 @@ class ExactMatchSession extends ExactMatchSessionBase
     /**
     * Gets the salt
     *
-    * @return string|null The salt
+    * @return string The salt
     */
     public function getSalt()
     {
@@ -189,7 +189,7 @@ class ExactMatchSession extends ExactMatchSessionBase
     /**
     * Gets the uploadAgentId
     *
-    * @return string|null The uploadAgentId
+    * @return string The uploadAgentId
     */
     public function getUploadAgentId()
     {
@@ -216,12 +216,12 @@ class ExactMatchSession extends ExactMatchSessionBase
     /**
     * Gets the uploadAgent
     *
-    * @return ExactMatchUploadAgent|null The uploadAgent
+    * @return ExactMatchUploadAgent The uploadAgent
     */
     public function getUploadAgent()
     {
         if (array_key_exists("uploadAgent", $this->_propDict)) {
-            if (is_a($this->_propDict["uploadAgent"], "\Beta\Microsoft\Graph\Model\ExactMatchUploadAgent") || is_null($this->_propDict["uploadAgent"])) {
+            if (is_a($this->_propDict["uploadAgent"], "\Beta\Microsoft\Graph\Model\ExactMatchUploadAgent")) {
                 return $this->_propDict["uploadAgent"];
             } else {
                 $this->_propDict["uploadAgent"] = new ExactMatchUploadAgent($this->_propDict["uploadAgent"]);

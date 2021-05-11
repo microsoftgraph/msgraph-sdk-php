@@ -27,7 +27,7 @@ class UnifiedRbacResourceAction extends Entity
     /**
     * Gets the actionVerb
     *
-    * @return string|null The actionVerb
+    * @return string The actionVerb
     */
     public function getActionVerb()
     {
@@ -54,7 +54,7 @@ class UnifiedRbacResourceAction extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -81,7 +81,7 @@ class UnifiedRbacResourceAction extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -108,7 +108,7 @@ class UnifiedRbacResourceAction extends Entity
     /**
     * Gets the resourceScopeId
     *
-    * @return string|null The resourceScopeId
+    * @return string The resourceScopeId
     */
     public function getResourceScopeId()
     {
@@ -135,12 +135,12 @@ class UnifiedRbacResourceAction extends Entity
     /**
     * Gets the resourceScope
     *
-    * @return UnifiedRbacResourceScope|null The resourceScope
+    * @return UnifiedRbacResourceScope The resourceScope
     */
     public function getResourceScope()
     {
         if (array_key_exists("resourceScope", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceScope"], "\Beta\Microsoft\Graph\Model\UnifiedRbacResourceScope") || is_null($this->_propDict["resourceScope"])) {
+            if (is_a($this->_propDict["resourceScope"], "\Beta\Microsoft\Graph\Model\UnifiedRbacResourceScope")) {
                 return $this->_propDict["resourceScope"];
             } else {
                 $this->_propDict["resourceScope"] = new UnifiedRbacResourceScope($this->_propDict["resourceScope"]);

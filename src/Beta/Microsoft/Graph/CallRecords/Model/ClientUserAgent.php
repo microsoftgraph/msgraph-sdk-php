@@ -28,12 +28,12 @@ class ClientUserAgent extends UserAgent
     * Gets the platform
     * Identifies the platform used by this endpoint. Possible values are: unknown, windows, macOS, iOS, android, web, ipPhone, roomSystem, surfaceHub, holoLens, unknownFutureValue.
     *
-    * @return ClientPlatform|null The platform
+    * @return ClientPlatform The platform
     */
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\CallRecords\Model\ClientPlatform") || is_null($this->_propDict["platform"])) {
+            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\CallRecords\Model\ClientPlatform")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new ClientPlatform($this->_propDict["platform"]);
@@ -61,12 +61,12 @@ class ClientUserAgent extends UserAgent
     * Gets the productFamily
     * Identifies the family of application software used by this endpoint. Possible values are: unknown, teams, skypeForBusiness, lync, unknownFutureValue.
     *
-    * @return ProductFamily|null The productFamily
+    * @return ProductFamily The productFamily
     */
     public function getProductFamily()
     {
         if (array_key_exists("productFamily", $this->_propDict)) {
-            if (is_a($this->_propDict["productFamily"], "\Beta\Microsoft\Graph\CallRecords\Model\ProductFamily") || is_null($this->_propDict["productFamily"])) {
+            if (is_a($this->_propDict["productFamily"], "\Beta\Microsoft\Graph\CallRecords\Model\ProductFamily")) {
                 return $this->_propDict["productFamily"];
             } else {
                 $this->_propDict["productFamily"] = new ProductFamily($this->_propDict["productFamily"]);

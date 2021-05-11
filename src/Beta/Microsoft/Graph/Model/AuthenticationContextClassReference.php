@@ -27,7 +27,7 @@ class AuthenticationContextClassReference extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -54,7 +54,7 @@ class AuthenticationContextClassReference extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -81,7 +81,7 @@ class AuthenticationContextClassReference extends Entity
     /**
     * Gets the isAvailable
     *
-    * @return bool|null The isAvailable
+    * @return bool The isAvailable
     */
     public function getIsAvailable()
     {

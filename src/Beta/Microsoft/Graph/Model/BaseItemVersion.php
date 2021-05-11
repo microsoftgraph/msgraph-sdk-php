@@ -28,12 +28,12 @@ class BaseItemVersion extends Entity
     * Gets the lastModifiedBy
     * Identity of the user which last modified the version. Read-only.
     *
-    * @return IdentitySet|null The lastModifiedBy
+    * @return IdentitySet The lastModifiedBy
     */
     public function getLastModifiedBy()
     {
         if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["lastModifiedBy"])) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -61,12 +61,12 @@ class BaseItemVersion extends Entity
     * Gets the lastModifiedDateTime
     * Date and time the version was last modified. Read-only.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -94,12 +94,12 @@ class BaseItemVersion extends Entity
     * Gets the publication
     * Indicates the publication status of this particular version. Read-only.
     *
-    * @return PublicationFacet|null The publication
+    * @return PublicationFacet The publication
     */
     public function getPublication()
     {
         if (array_key_exists("publication", $this->_propDict)) {
-            if (is_a($this->_propDict["publication"], "\Beta\Microsoft\Graph\Model\PublicationFacet") || is_null($this->_propDict["publication"])) {
+            if (is_a($this->_propDict["publication"], "\Beta\Microsoft\Graph\Model\PublicationFacet")) {
                 return $this->_propDict["publication"];
             } else {
                 $this->_propDict["publication"] = new PublicationFacet($this->_propDict["publication"]);

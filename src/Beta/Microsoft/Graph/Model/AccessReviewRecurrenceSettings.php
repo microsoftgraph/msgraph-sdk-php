@@ -27,7 +27,7 @@ class AccessReviewRecurrenceSettings extends Entity
     * Gets the durationInDays
     * The duration in days for recurrence.
     *
-    * @return int|null The durationInDays
+    * @return int The durationInDays
     */
     public function getDurationInDays()
     {
@@ -55,7 +55,7 @@ class AccessReviewRecurrenceSettings extends Entity
     * Gets the recurrenceCount
     * The count of recurrences, if the value of recurrenceEndType is occurrences, or 0 otherwise.
     *
-    * @return int|null The recurrenceCount
+    * @return int The recurrenceCount
     */
     public function getRecurrenceCount()
     {
@@ -83,7 +83,7 @@ class AccessReviewRecurrenceSettings extends Entity
     * Gets the recurrenceEndType
     * How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it is never, then there is no explicit end of the recurrence series. If it is endBy, then the recurrence ends at a certain date. If it is occurrences, then the series ends after recurrenceCount instances of the review have completed.
     *
-    * @return string|null The recurrenceEndType
+    * @return string The recurrenceEndType
     */
     public function getRecurrenceEndType()
     {
@@ -111,7 +111,7 @@ class AccessReviewRecurrenceSettings extends Entity
     * Gets the recurrenceType
     * The recurrence interval. Possible vaules: onetime, weekly, monthly, quarterly, halfyearly or annual.
     *
-    * @return string|null The recurrenceType
+    * @return string The recurrenceType
     */
     public function getRecurrenceType()
     {

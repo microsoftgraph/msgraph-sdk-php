@@ -27,7 +27,7 @@ class VpnRoute extends Entity
     * Gets the destinationPrefix
     * Destination prefix (IPv4/v6 address).
     *
-    * @return string|null The destinationPrefix
+    * @return string The destinationPrefix
     */
     public function getDestinationPrefix()
     {
@@ -55,7 +55,7 @@ class VpnRoute extends Entity
     * Gets the prefixSize
     * Prefix size. (1-32). Valid values 1 to 32
     *
-    * @return int|null The prefixSize
+    * @return int The prefixSize
     */
     public function getPrefixSize()
     {

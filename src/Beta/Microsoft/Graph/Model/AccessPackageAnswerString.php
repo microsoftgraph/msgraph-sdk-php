@@ -36,7 +36,7 @@ class AccessPackageAnswerString extends AccessPackageAnswer
     * Gets the value
     * The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

@@ -29,7 +29,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
      * Gets the accessRules
     * The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
      *
-     * @return array|null The accessRules
+     * @return array The accessRules
      */
     public function getAccessRules()
     {
@@ -50,7 +50,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     */
     public function setAccessRules($val)
     {
-        $this->_propDict["accessRules"] = $val;
+		$this->_propDict["accessRules"] = $val;
         return $this;
     }
     
@@ -58,12 +58,12 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     * Gets the defaultAccessLevel
     * Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine.
     *
-    * @return DeviceManagementExchangeAccessLevel|null The defaultAccessLevel
+    * @return DeviceManagementExchangeAccessLevel The defaultAccessLevel
     */
     public function getDefaultAccessLevel()
     {
         if (array_key_exists("defaultAccessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultAccessLevel"], "\Beta\Microsoft\Graph\Model\DeviceManagementExchangeAccessLevel") || is_null($this->_propDict["defaultAccessLevel"])) {
+            if (is_a($this->_propDict["defaultAccessLevel"], "\Beta\Microsoft\Graph\Model\DeviceManagementExchangeAccessLevel")) {
                 return $this->_propDict["defaultAccessLevel"];
             } else {
                 $this->_propDict["defaultAccessLevel"] = new DeviceManagementExchangeAccessLevel($this->_propDict["defaultAccessLevel"]);
@@ -92,7 +92,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
      * Gets the knownDeviceClasses
     * The list of device classes known to Exchange
      *
-     * @return array|null The knownDeviceClasses
+     * @return array The knownDeviceClasses
      */
     public function getKnownDeviceClasses()
     {
@@ -113,7 +113,7 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     */
     public function setKnownDeviceClasses($val)
     {
-        $this->_propDict["knownDeviceClasses"] = $val;
+		$this->_propDict["knownDeviceClasses"] = $val;
         return $this;
     }
     
@@ -121,12 +121,12 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     * Gets the notificationContent
     * Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The notificationContent
+    * @return \GuzzleHttp\Psr7\Stream The notificationContent
     */
     public function getNotificationContent()
     {
         if (array_key_exists("notificationContent", $this->_propDict)) {
-            if (is_a($this->_propDict["notificationContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["notificationContent"])) {
+            if (is_a($this->_propDict["notificationContent"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["notificationContent"];
             } else {
                 $this->_propDict["notificationContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["notificationContent"]);
@@ -154,12 +154,12 @@ class DeviceManagementExchangeOnPremisesPolicy extends Entity
     * Gets the conditionalAccessSettings
     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
     *
-    * @return OnPremisesConditionalAccessSettings|null The conditionalAccessSettings
+    * @return OnPremisesConditionalAccessSettings The conditionalAccessSettings
     */
     public function getConditionalAccessSettings()
     {
         if (array_key_exists("conditionalAccessSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessSettings"], "\Beta\Microsoft\Graph\Model\OnPremisesConditionalAccessSettings") || is_null($this->_propDict["conditionalAccessSettings"])) {
+            if (is_a($this->_propDict["conditionalAccessSettings"], "\Beta\Microsoft\Graph\Model\OnPremisesConditionalAccessSettings")) {
                 return $this->_propDict["conditionalAccessSettings"];
             } else {
                 $this->_propDict["conditionalAccessSettings"] = new OnPremisesConditionalAccessSettings($this->_propDict["conditionalAccessSettings"]);

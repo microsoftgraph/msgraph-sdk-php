@@ -26,7 +26,7 @@ class EncryptWithTemplate extends EncryptContent
     /**
     * Gets the availableForEncryption
     *
-    * @return bool|null The availableForEncryption
+    * @return bool The availableForEncryption
     */
     public function getAvailableForEncryption()
     {
@@ -52,7 +52,7 @@ class EncryptWithTemplate extends EncryptContent
     /**
     * Gets the templateId
     *
-    * @return string|null The templateId
+    * @return string The templateId
     */
     public function getTemplateId()
     {

@@ -27,7 +27,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the activeFileCount
     *
-    * @return int|null The activeFileCount
+    * @return int The activeFileCount
     */
     public function getActiveFileCount()
     {
@@ -54,7 +54,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the anonymousLinkCount
     *
-    * @return int|null The anonymousLinkCount
+    * @return int The anonymousLinkCount
     */
     public function getAnonymousLinkCount()
     {
@@ -81,7 +81,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the companyLinkCount
     *
-    * @return int|null The companyLinkCount
+    * @return int The companyLinkCount
     */
     public function getCompanyLinkCount()
     {
@@ -108,7 +108,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the externalSharing
     *
-    * @return bool|null The externalSharing
+    * @return bool The externalSharing
     */
     public function getExternalSharing()
     {
@@ -135,7 +135,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the fileCount
     *
-    * @return int|null The fileCount
+    * @return int The fileCount
     */
     public function getFileCount()
     {
@@ -162,7 +162,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the geolocation
     *
-    * @return string|null The geolocation
+    * @return string The geolocation
     */
     public function getGeolocation()
     {
@@ -189,7 +189,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the isDeleted
     *
-    * @return bool|null The isDeleted
+    * @return bool The isDeleted
     */
     public function getIsDeleted()
     {
@@ -216,12 +216,12 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \DateTime The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -247,7 +247,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the ownerDisplayName
     *
-    * @return string|null The ownerDisplayName
+    * @return string The ownerDisplayName
     */
     public function getOwnerDisplayName()
     {
@@ -274,7 +274,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the ownerPrincipalName
     *
-    * @return string|null The ownerPrincipalName
+    * @return string The ownerPrincipalName
     */
     public function getOwnerPrincipalName()
     {
@@ -301,7 +301,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the pageViewCount
     *
-    * @return int|null The pageViewCount
+    * @return int The pageViewCount
     */
     public function getPageViewCount()
     {
@@ -328,7 +328,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -355,12 +355,12 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -386,7 +386,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the rootWebTemplate
     *
-    * @return string|null The rootWebTemplate
+    * @return string The rootWebTemplate
     */
     public function getRootWebTemplate()
     {
@@ -413,7 +413,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the secureLinkForGuestCount
     *
-    * @return int|null The secureLinkForGuestCount
+    * @return int The secureLinkForGuestCount
     */
     public function getSecureLinkForGuestCount()
     {
@@ -440,7 +440,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the secureLinkForMemberCount
     *
-    * @return int|null The secureLinkForMemberCount
+    * @return int The secureLinkForMemberCount
     */
     public function getSecureLinkForMemberCount()
     {
@@ -467,7 +467,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the siteId
     *
-    * @return string|null The siteId
+    * @return string The siteId
     */
     public function getSiteId()
     {
@@ -494,7 +494,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the siteSensitivityLabelId
     *
-    * @return string|null The siteSensitivityLabelId
+    * @return string The siteSensitivityLabelId
     */
     public function getSiteSensitivityLabelId()
     {
@@ -521,7 +521,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the siteUrl
     *
-    * @return string|null The siteUrl
+    * @return string The siteUrl
     */
     public function getSiteUrl()
     {
@@ -548,7 +548,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the storageAllocatedInBytes
     *
-    * @return int|null The storageAllocatedInBytes
+    * @return int The storageAllocatedInBytes
     */
     public function getStorageAllocatedInBytes()
     {
@@ -575,7 +575,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the storageUsedInBytes
     *
-    * @return int|null The storageUsedInBytes
+    * @return int The storageUsedInBytes
     */
     public function getStorageUsedInBytes()
     {
@@ -602,7 +602,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the unmanagedDevicePolicy
     *
-    * @return string|null The unmanagedDevicePolicy
+    * @return string The unmanagedDevicePolicy
     */
     public function getUnmanagedDevicePolicy()
     {
@@ -629,7 +629,7 @@ class SharePointSiteUsageDetail extends Entity
     /**
     * Gets the visitedPageCount
     *
-    * @return int|null The visitedPageCount
+    * @return int The visitedPageCount
     */
     public function getVisitedPageCount()
     {

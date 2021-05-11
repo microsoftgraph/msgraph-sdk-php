@@ -27,7 +27,7 @@ class SharedEmailDomain extends Entity
     /**
     * Gets the provisioningStatus
     *
-    * @return string|null The provisioningStatus
+    * @return string The provisioningStatus
     */
     public function getProvisioningStatus()
     {

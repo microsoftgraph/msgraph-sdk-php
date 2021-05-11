@@ -28,12 +28,12 @@ class EducationStudent extends Entity
     * Gets the birthDate
     * Birth date of the student.
     *
-    * @return \DateTime|null The birthDate
+    * @return \DateTime The birthDate
     */
     public function getBirthDate()
     {
         if (array_key_exists("birthDate", $this->_propDict)) {
-            if (is_a($this->_propDict["birthDate"], "\DateTime") || is_null($this->_propDict["birthDate"])) {
+            if (is_a($this->_propDict["birthDate"], "\DateTime")) {
                 return $this->_propDict["birthDate"];
             } else {
                 $this->_propDict["birthDate"] = new \DateTime($this->_propDict["birthDate"]);
@@ -60,7 +60,7 @@ class EducationStudent extends Entity
     * Gets the externalId
     * ID of the student in the source system.
     *
-    * @return string|null The externalId
+    * @return string The externalId
     */
     public function getExternalId()
     {
@@ -87,14 +87,14 @@ class EducationStudent extends Entity
 
     /**
     * Gets the gender
-    * The possible values are: female, male, other, unknownFutureValue.
+    * Possible values are: female, male, other.
     *
-    * @return EducationGender|null The gender
+    * @return EducationGender The gender
     */
     public function getGender()
     {
         if (array_key_exists("gender", $this->_propDict)) {
-            if (is_a($this->_propDict["gender"], "\Beta\Microsoft\Graph\Model\EducationGender") || is_null($this->_propDict["gender"])) {
+            if (is_a($this->_propDict["gender"], "\Beta\Microsoft\Graph\Model\EducationGender")) {
                 return $this->_propDict["gender"];
             } else {
                 $this->_propDict["gender"] = new EducationGender($this->_propDict["gender"]);
@@ -106,7 +106,7 @@ class EducationStudent extends Entity
 
     /**
     * Sets the gender
-    * The possible values are: female, male, other, unknownFutureValue.
+    * Possible values are: female, male, other.
     *
     * @param EducationGender $val The value to assign to the gender
     *
@@ -121,7 +121,7 @@ class EducationStudent extends Entity
     * Gets the grade
     * Current grade level of the student.
     *
-    * @return string|null The grade
+    * @return string The grade
     */
     public function getGrade()
     {
@@ -149,7 +149,7 @@ class EducationStudent extends Entity
     * Gets the graduationYear
     * Year the student is graduating from the school.
     *
-    * @return string|null The graduationYear
+    * @return string The graduationYear
     */
     public function getGraduationYear()
     {
@@ -177,7 +177,7 @@ class EducationStudent extends Entity
     * Gets the studentNumber
     * Student Number.
     *
-    * @return string|null The studentNumber
+    * @return string The studentNumber
     */
     public function getStudentNumber()
     {

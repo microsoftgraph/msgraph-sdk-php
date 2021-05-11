@@ -27,12 +27,12 @@ class CustomerPayment extends Entity
     /**
     * Gets the amount
     *
-    * @return Decimal|null The amount
+    * @return Decimal The amount
     */
     public function getAmount()
     {
         if (array_key_exists("amount", $this->_propDict)) {
-            if (is_a($this->_propDict["amount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["amount"])) {
+            if (is_a($this->_propDict["amount"], "\Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["amount"];
             } else {
                 $this->_propDict["amount"] = new Decimal($this->_propDict["amount"]);
@@ -58,7 +58,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the appliesToInvoiceId
     *
-    * @return string|null The appliesToInvoiceId
+    * @return string The appliesToInvoiceId
     */
     public function getAppliesToInvoiceId()
     {
@@ -85,7 +85,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the appliesToInvoiceNumber
     *
-    * @return string|null The appliesToInvoiceNumber
+    * @return string The appliesToInvoiceNumber
     */
     public function getAppliesToInvoiceNumber()
     {
@@ -112,7 +112,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the comment
     *
-    * @return string|null The comment
+    * @return string The comment
     */
     public function getComment()
     {
@@ -139,7 +139,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the contactId
     *
-    * @return string|null The contactId
+    * @return string The contactId
     */
     public function getContactId()
     {
@@ -166,7 +166,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the customerId
     *
-    * @return string|null The customerId
+    * @return string The customerId
     */
     public function getCustomerId()
     {
@@ -193,7 +193,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the customerNumber
     *
-    * @return string|null The customerNumber
+    * @return string The customerNumber
     */
     public function getCustomerNumber()
     {
@@ -220,7 +220,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -247,7 +247,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the documentNumber
     *
-    * @return string|null The documentNumber
+    * @return string The documentNumber
     */
     public function getDocumentNumber()
     {
@@ -274,7 +274,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the externalDocumentNumber
     *
-    * @return string|null The externalDocumentNumber
+    * @return string The externalDocumentNumber
     */
     public function getExternalDocumentNumber()
     {
@@ -301,7 +301,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the journalDisplayName
     *
-    * @return string|null The journalDisplayName
+    * @return string The journalDisplayName
     */
     public function getJournalDisplayName()
     {
@@ -328,12 +328,12 @@ class CustomerPayment extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -359,7 +359,7 @@ class CustomerPayment extends Entity
     /**
     * Gets the lineNumber
     *
-    * @return int|null The lineNumber
+    * @return int The lineNumber
     */
     public function getLineNumber()
     {
@@ -386,12 +386,12 @@ class CustomerPayment extends Entity
     /**
     * Gets the postingDate
     *
-    * @return \DateTime|null The postingDate
+    * @return \DateTime The postingDate
     */
     public function getPostingDate()
     {
         if (array_key_exists("postingDate", $this->_propDict)) {
-            if (is_a($this->_propDict["postingDate"], "\DateTime") || is_null($this->_propDict["postingDate"])) {
+            if (is_a($this->_propDict["postingDate"], "\DateTime")) {
                 return $this->_propDict["postingDate"];
             } else {
                 $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
@@ -417,12 +417,12 @@ class CustomerPayment extends Entity
     /**
     * Gets the customer
     *
-    * @return Customer|null The customer
+    * @return Customer The customer
     */
     public function getCustomer()
     {
         if (array_key_exists("customer", $this->_propDict)) {
-            if (is_a($this->_propDict["customer"], "\Beta\Microsoft\Graph\Model\Customer") || is_null($this->_propDict["customer"])) {
+            if (is_a($this->_propDict["customer"], "\Beta\Microsoft\Graph\Model\Customer")) {
                 return $this->_propDict["customer"];
             } else {
                 $this->_propDict["customer"] = new Customer($this->_propDict["customer"]);

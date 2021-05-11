@@ -28,7 +28,7 @@ class WorkbookChartLineFormat extends Entity
     * Gets the color
     * HTML color code representing the color of lines in the chart.
     *
-    * @return string|null The color
+    * @return string The color
     */
     public function getColor()
     {

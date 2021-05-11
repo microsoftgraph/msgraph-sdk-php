@@ -28,12 +28,12 @@ class PrinterBase extends Entity
     * Gets the capabilities
     * The capabilities of the printer/printerShare.
     *
-    * @return PrinterCapabilities|null The capabilities
+    * @return PrinterCapabilities The capabilities
     */
     public function getCapabilities()
     {
         if (array_key_exists("capabilities", $this->_propDict)) {
-            if (is_a($this->_propDict["capabilities"], "\Beta\Microsoft\Graph\Model\PrinterCapabilities") || is_null($this->_propDict["capabilities"])) {
+            if (is_a($this->_propDict["capabilities"], "\Beta\Microsoft\Graph\Model\PrinterCapabilities")) {
                 return $this->_propDict["capabilities"];
             } else {
                 $this->_propDict["capabilities"] = new PrinterCapabilities($this->_propDict["capabilities"]);
@@ -61,12 +61,12 @@ class PrinterBase extends Entity
     * Gets the defaults
     * The default print settings of printer/printerShare.
     *
-    * @return PrinterDefaults|null The defaults
+    * @return PrinterDefaults The defaults
     */
     public function getDefaults()
     {
         if (array_key_exists("defaults", $this->_propDict)) {
-            if (is_a($this->_propDict["defaults"], "\Beta\Microsoft\Graph\Model\PrinterDefaults") || is_null($this->_propDict["defaults"])) {
+            if (is_a($this->_propDict["defaults"], "\Beta\Microsoft\Graph\Model\PrinterDefaults")) {
                 return $this->_propDict["defaults"];
             } else {
                 $this->_propDict["defaults"] = new PrinterDefaults($this->_propDict["defaults"]);
@@ -94,7 +94,7 @@ class PrinterBase extends Entity
     * Gets the displayName
     * The name of the printer/printerShare.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -123,7 +123,7 @@ class PrinterBase extends Entity
     * Gets the isAcceptingJobs
     * Whether the printer/printerShare is currently accepting new print jobs.
     *
-    * @return bool|null The isAcceptingJobs
+    * @return bool The isAcceptingJobs
     */
     public function getIsAcceptingJobs()
     {
@@ -152,12 +152,12 @@ class PrinterBase extends Entity
     * Gets the location
     * The physical and/or organizational location of the printer/printerShare.
     *
-    * @return PrinterLocation|null The location
+    * @return PrinterLocation The location
     */
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Beta\Microsoft\Graph\Model\PrinterLocation") || is_null($this->_propDict["location"])) {
+            if (is_a($this->_propDict["location"], "\Beta\Microsoft\Graph\Model\PrinterLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new PrinterLocation($this->_propDict["location"]);
@@ -185,7 +185,7 @@ class PrinterBase extends Entity
     * Gets the manufacturer
     * The manufacturer of the printer/printerShare.
     *
-    * @return string|null The manufacturer
+    * @return string The manufacturer
     */
     public function getManufacturer()
     {
@@ -214,7 +214,7 @@ class PrinterBase extends Entity
     * Gets the model
     * The model name of the printer/printerShare.
     *
-    * @return string|null The model
+    * @return string The model
     */
     public function getModel()
     {
@@ -242,7 +242,7 @@ class PrinterBase extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -270,12 +270,12 @@ class PrinterBase extends Entity
     * Gets the status
     * The processing status of the printer/printerShare, including any errors.
     *
-    * @return PrinterStatus|null The status
+    * @return PrinterStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\PrinterStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\PrinterStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PrinterStatus($this->_propDict["status"]);
@@ -304,7 +304,7 @@ class PrinterBase extends Entity
      * Gets the jobs
     * The list of jobs that are queued for printing by the printer/printerShare.
      *
-     * @return array|null The jobs
+     * @return array The jobs
      */
     public function getJobs()
     {
@@ -325,7 +325,7 @@ class PrinterBase extends Entity
     */
     public function setJobs($val)
     {
-        $this->_propDict["jobs"] = $val;
+		$this->_propDict["jobs"] = $val;
         return $this;
     }
     

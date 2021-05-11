@@ -28,7 +28,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the androidPhone
     * The number of users who were active on the Teams mobile client for Android.
     *
-    * @return int|null The androidPhone
+    * @return int The androidPhone
     */
     public function getAndroidPhone()
     {
@@ -57,7 +57,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the chromeOS
     * The number of users who were active in the Teams desktop client on a ChromeOS computer.
     *
-    * @return int|null The chromeOS
+    * @return int The chromeOS
     */
     public function getChromeOS()
     {
@@ -86,7 +86,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the ios
     * The number of users who were active on the Teams mobile client for iOS.
     *
-    * @return int|null The ios
+    * @return int The ios
     */
     public function getIos()
     {
@@ -115,7 +115,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the linux
     * The number of users who were active in the Teams desktop client on a Linux computer.
     *
-    * @return int|null The linux
+    * @return int The linux
     */
     public function getLinux()
     {
@@ -144,7 +144,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the mac
     * The number of users who were active in the Teams desktop client on a macOS computer.
     *
-    * @return int|null The mac
+    * @return int The mac
     */
     public function getMac()
     {
@@ -173,12 +173,12 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the reportDate
     * The date on which the users performed the activities.
     *
-    * @return \DateTime|null The reportDate
+    * @return \DateTime The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -206,7 +206,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the reportPeriod
     * The number of days the report covers.
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -235,12 +235,12 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -268,7 +268,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the web
     * The number of users who were active in the Teams web client on devices.
     *
-    * @return int|null The web
+    * @return int The web
     */
     public function getWeb()
     {
@@ -297,7 +297,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the windows
     * The number of users who were active in the Teams desktop client on a Windows-based computer.
     *
-    * @return int|null The windows
+    * @return int The windows
     */
     public function getWindows()
     {
@@ -326,7 +326,7 @@ class TeamsDeviceUsageUserCounts extends Entity
     * Gets the windowsPhone
     * The number of users who were active on the Teams mobile client for Windows phone.
     *
-    * @return int|null The windowsPhone
+    * @return int The windowsPhone
     */
     public function getWindowsPhone()
     {

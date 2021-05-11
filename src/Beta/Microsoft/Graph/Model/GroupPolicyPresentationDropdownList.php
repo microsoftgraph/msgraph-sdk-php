@@ -28,12 +28,12 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
     * Gets the defaultItem
     * Localized string value identifying the default choice of the list of items.
     *
-    * @return GroupPolicyPresentationDropdownListItem|null The defaultItem
+    * @return GroupPolicyPresentationDropdownListItem The defaultItem
     */
     public function getDefaultItem()
     {
         if (array_key_exists("defaultItem", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultItem"], "\Beta\Microsoft\Graph\Model\GroupPolicyPresentationDropdownListItem") || is_null($this->_propDict["defaultItem"])) {
+            if (is_a($this->_propDict["defaultItem"], "\Beta\Microsoft\Graph\Model\GroupPolicyPresentationDropdownListItem")) {
                 return $this->_propDict["defaultItem"];
             } else {
                 $this->_propDict["defaultItem"] = new GroupPolicyPresentationDropdownListItem($this->_propDict["defaultItem"]);
@@ -62,7 +62,7 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
      * Gets the items
     * Represents a set of localized display names and their associated values.
      *
-     * @return array|null The items
+     * @return array The items
      */
     public function getItems()
     {
@@ -83,7 +83,7 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
     */
     public function setItems($val)
     {
-        $this->_propDict["items"] = $val;
+		$this->_propDict["items"] = $val;
         return $this;
     }
     
@@ -91,7 +91,7 @@ class GroupPolicyPresentationDropdownList extends GroupPolicyPresentation
     * Gets the required
     * Requirement to enter a value in the parameter box. The default value is false.
     *
-    * @return bool|null The required
+    * @return bool The required
     */
     public function getRequired()
     {

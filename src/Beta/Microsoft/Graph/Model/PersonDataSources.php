@@ -26,7 +26,7 @@ class PersonDataSources extends Entity
     /**
     * Gets the type
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {

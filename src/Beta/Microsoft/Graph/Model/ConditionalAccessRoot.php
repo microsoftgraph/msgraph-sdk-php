@@ -28,7 +28,7 @@ class ConditionalAccessRoot extends Entity
      /** 
      * Gets the authenticationContextClassReferences
      *
-     * @return array|null The authenticationContextClassReferences
+     * @return array The authenticationContextClassReferences
      */
     public function getAuthenticationContextClassReferences()
     {
@@ -48,7 +48,7 @@ class ConditionalAccessRoot extends Entity
     */
     public function setAuthenticationContextClassReferences($val)
     {
-        $this->_propDict["authenticationContextClassReferences"] = $val;
+		$this->_propDict["authenticationContextClassReferences"] = $val;
         return $this;
     }
     
@@ -56,7 +56,7 @@ class ConditionalAccessRoot extends Entity
      /** 
      * Gets the namedLocations
      *
-     * @return array|null The namedLocations
+     * @return array The namedLocations
      */
     public function getNamedLocations()
     {
@@ -76,7 +76,7 @@ class ConditionalAccessRoot extends Entity
     */
     public function setNamedLocations($val)
     {
-        $this->_propDict["namedLocations"] = $val;
+		$this->_propDict["namedLocations"] = $val;
         return $this;
     }
     
@@ -84,7 +84,7 @@ class ConditionalAccessRoot extends Entity
      /** 
      * Gets the policies
      *
-     * @return array|null The policies
+     * @return array The policies
      */
     public function getPolicies()
     {
@@ -104,7 +104,7 @@ class ConditionalAccessRoot extends Entity
     */
     public function setPolicies($val)
     {
-        $this->_propDict["policies"] = $val;
+		$this->_propDict["policies"] = $val;
         return $this;
     }
     

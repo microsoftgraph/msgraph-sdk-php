@@ -28,7 +28,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
     * Gets the deviceName
     * The device name.
     *
-    * @return string|null The deviceName
+    * @return string The deviceName
     */
     public function getDeviceName()
     {
@@ -57,7 +57,7 @@ class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense
     * Gets the managedDeviceId
     * The managed device ID.
     *
-    * @return string|null The managedDeviceId
+    * @return string The managedDeviceId
     */
     public function getManagedDeviceId()
     {

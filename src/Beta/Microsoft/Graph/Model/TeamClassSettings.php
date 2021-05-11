@@ -27,7 +27,7 @@ class TeamClassSettings extends Entity
     * Gets the notifyGuardiansAboutAssignments
     * If set to true, enables sending of weekly assignments digest emails to parents/guardians, provided the tenant admin has enabled the setting globally.
     *
-    * @return bool|null The notifyGuardiansAboutAssignments
+    * @return bool The notifyGuardiansAboutAssignments
     */
     public function getNotifyGuardiansAboutAssignments()
     {

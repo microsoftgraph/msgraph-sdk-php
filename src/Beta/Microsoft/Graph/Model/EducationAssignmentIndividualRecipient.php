@@ -36,7 +36,7 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
     * Gets the recipients
     * A collection of ids of the recipients.
     *
-    * @return string|null The recipients
+    * @return string The recipients
     */
     public function getRecipients()
     {

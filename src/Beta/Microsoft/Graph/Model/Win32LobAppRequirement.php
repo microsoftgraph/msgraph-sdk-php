@@ -27,7 +27,7 @@ class Win32LobAppRequirement extends Entity
     * Gets the detectionValue
     * The detection value
     *
-    * @return string|null The detectionValue
+    * @return string The detectionValue
     */
     public function getDetectionValue()
     {
@@ -56,12 +56,12 @@ class Win32LobAppRequirement extends Entity
     * Gets the operator
     * The operator for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
     *
-    * @return Win32LobAppDetectionOperator|null The operator
+    * @return Win32LobAppDetectionOperator The operator
     */
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "\Beta\Microsoft\Graph\Model\Win32LobAppDetectionOperator") || is_null($this->_propDict["operator"])) {
+            if (is_a($this->_propDict["operator"], "\Beta\Microsoft\Graph\Model\Win32LobAppDetectionOperator")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new Win32LobAppDetectionOperator($this->_propDict["operator"]);

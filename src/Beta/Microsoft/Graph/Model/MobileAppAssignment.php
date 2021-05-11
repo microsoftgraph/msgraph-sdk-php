@@ -28,12 +28,12 @@ class MobileAppAssignment extends Entity
     * Gets the intent
     * The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
-    * @return InstallIntent|null The intent
+    * @return InstallIntent The intent
     */
     public function getIntent()
     {
         if (array_key_exists("intent", $this->_propDict)) {
-            if (is_a($this->_propDict["intent"], "\Beta\Microsoft\Graph\Model\InstallIntent") || is_null($this->_propDict["intent"])) {
+            if (is_a($this->_propDict["intent"], "\Beta\Microsoft\Graph\Model\InstallIntent")) {
                 return $this->_propDict["intent"];
             } else {
                 $this->_propDict["intent"] = new InstallIntent($this->_propDict["intent"]);
@@ -61,12 +61,12 @@ class MobileAppAssignment extends Entity
     * Gets the settings
     * The settings for target assignment defined by the admin.
     *
-    * @return MobileAppAssignmentSettings|null The settings
+    * @return MobileAppAssignmentSettings The settings
     */
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\MobileAppAssignmentSettings") || is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\MobileAppAssignmentSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new MobileAppAssignmentSettings($this->_propDict["settings"]);
@@ -94,12 +94,12 @@ class MobileAppAssignment extends Entity
     * Gets the source
     * The resource type which is the source for the assignment. Possible values are: direct, policySets.
     *
-    * @return DeviceAndAppManagementAssignmentSource|null The source
+    * @return DeviceAndAppManagementAssignmentSource The source
     */
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentSource") || is_null($this->_propDict["source"])) {
+            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentSource")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new DeviceAndAppManagementAssignmentSource($this->_propDict["source"]);
@@ -127,7 +127,7 @@ class MobileAppAssignment extends Entity
     * Gets the sourceId
     * The identifier of the source of the assignment.
     *
-    * @return string|null The sourceId
+    * @return string The sourceId
     */
     public function getSourceId()
     {
@@ -156,12 +156,12 @@ class MobileAppAssignment extends Entity
     * Gets the target
     * The target group assignment defined by the admin.
     *
-    * @return DeviceAndAppManagementAssignmentTarget|null The target
+    * @return DeviceAndAppManagementAssignmentTarget The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget") || is_null($this->_propDict["target"])) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);

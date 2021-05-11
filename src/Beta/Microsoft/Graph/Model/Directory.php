@@ -28,7 +28,7 @@ class Directory extends Entity
      /** 
      * Gets the administrativeUnits
      *
-     * @return array|null The administrativeUnits
+     * @return array The administrativeUnits
      */
     public function getAdministrativeUnits()
     {
@@ -48,7 +48,7 @@ class Directory extends Entity
     */
     public function setAdministrativeUnits($val)
     {
-        $this->_propDict["administrativeUnits"] = $val;
+		$this->_propDict["administrativeUnits"] = $val;
         return $this;
     }
     
@@ -57,7 +57,7 @@ class Directory extends Entity
      * Gets the deletedItems
     * Recently deleted items. Read-only. Nullable.
      *
-     * @return array|null The deletedItems
+     * @return array The deletedItems
      */
     public function getDeletedItems()
     {
@@ -78,7 +78,7 @@ class Directory extends Entity
     */
     public function setDeletedItems($val)
     {
-        $this->_propDict["deletedItems"] = $val;
+		$this->_propDict["deletedItems"] = $val;
         return $this;
     }
     
@@ -86,7 +86,7 @@ class Directory extends Entity
      /** 
      * Gets the sharedEmailDomains
      *
-     * @return array|null The sharedEmailDomains
+     * @return array The sharedEmailDomains
      */
     public function getSharedEmailDomains()
     {
@@ -106,7 +106,7 @@ class Directory extends Entity
     */
     public function setSharedEmailDomains($val)
     {
-        $this->_propDict["sharedEmailDomains"] = $val;
+		$this->_propDict["sharedEmailDomains"] = $val;
         return $this;
     }
     
@@ -115,7 +115,7 @@ class Directory extends Entity
      * Gets the featureRolloutPolicies
     * Nullable.
      *
-     * @return array|null The featureRolloutPolicies
+     * @return array The featureRolloutPolicies
      */
     public function getFeatureRolloutPolicies()
     {
@@ -136,7 +136,7 @@ class Directory extends Entity
     */
     public function setFeatureRolloutPolicies($val)
     {
-        $this->_propDict["featureRolloutPolicies"] = $val;
+		$this->_propDict["featureRolloutPolicies"] = $val;
         return $this;
     }
     

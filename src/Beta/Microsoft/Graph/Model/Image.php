@@ -27,7 +27,7 @@ class Image extends Entity
     * Gets the height
     * Optional. Height of the image, in pixels. Read-only.
     *
-    * @return int|null The height
+    * @return int The height
     */
     public function getHeight()
     {
@@ -55,7 +55,7 @@ class Image extends Entity
     * Gets the width
     * Optional. Width of the image, in pixels. Read-only.
     *
-    * @return int|null The width
+    * @return int The width
     */
     public function getWidth()
     {

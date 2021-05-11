@@ -27,12 +27,12 @@ class ClassificationJobResponse extends JobResponseBase
     /**
     * Gets the result
     *
-    * @return DetectedSensitiveContentWrapper|null The result
+    * @return DetectedSensitiveContentWrapper The result
     */
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "\Beta\Microsoft\Graph\Model\DetectedSensitiveContentWrapper") || is_null($this->_propDict["result"])) {
+            if (is_a($this->_propDict["result"], "\Beta\Microsoft\Graph\Model\DetectedSensitiveContentWrapper")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new DetectedSensitiveContentWrapper($this->_propDict["result"]);

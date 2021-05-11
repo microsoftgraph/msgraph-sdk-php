@@ -28,12 +28,12 @@ class DeviceHealthScriptRemediationHistory extends Entity
     * Gets the historyData
     * The number of devices remediated by the device health script on the given date.
     *
-    * @return DeviceHealthScriptRemediationHistoryData|null The historyData
+    * @return DeviceHealthScriptRemediationHistoryData The historyData
     */
     public function getHistoryData()
     {
         if (array_key_exists("historyData", $this->_propDict)) {
-            if (is_a($this->_propDict["historyData"], "\Beta\Microsoft\Graph\Model\DeviceHealthScriptRemediationHistoryData") || is_null($this->_propDict["historyData"])) {
+            if (is_a($this->_propDict["historyData"], "\Beta\Microsoft\Graph\Model\DeviceHealthScriptRemediationHistoryData")) {
                 return $this->_propDict["historyData"];
             } else {
                 $this->_propDict["historyData"] = new DeviceHealthScriptRemediationHistoryData($this->_propDict["historyData"]);
@@ -61,12 +61,12 @@ class DeviceHealthScriptRemediationHistory extends Entity
     * Gets the lastModifiedDateTime
     * The date on which the results history is calculated for the healthscript.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);

@@ -27,7 +27,7 @@ class ScheduleInformation extends Entity
     * Gets the availabilityView
     * Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
     *
-    * @return string|null The availabilityView
+    * @return string The availabilityView
     */
     public function getAvailabilityView()
     {
@@ -56,12 +56,12 @@ class ScheduleInformation extends Entity
     * Gets the error
     * Error information from attempting to get the availability of the user, distribution list, or resource.
     *
-    * @return FreeBusyError|null The error
+    * @return FreeBusyError The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\FreeBusyError") || is_null($this->_propDict["error"])) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\FreeBusyError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new FreeBusyError($this->_propDict["error"]);
@@ -88,7 +88,7 @@ class ScheduleInformation extends Entity
     * Gets the scheduleId
     * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
     *
-    * @return string|null The scheduleId
+    * @return string The scheduleId
     */
     public function getScheduleId()
     {
@@ -117,12 +117,12 @@ class ScheduleInformation extends Entity
     * Gets the scheduleItems
     * Contains the items that describe the availability of the user or resource.
     *
-    * @return ScheduleItem|null The scheduleItems
+    * @return ScheduleItem The scheduleItems
     */
     public function getScheduleItems()
     {
         if (array_key_exists("scheduleItems", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleItems"], "\Beta\Microsoft\Graph\Model\ScheduleItem") || is_null($this->_propDict["scheduleItems"])) {
+            if (is_a($this->_propDict["scheduleItems"], "\Beta\Microsoft\Graph\Model\ScheduleItem")) {
                 return $this->_propDict["scheduleItems"];
             } else {
                 $this->_propDict["scheduleItems"] = new ScheduleItem($this->_propDict["scheduleItems"]);
@@ -150,12 +150,12 @@ class ScheduleInformation extends Entity
     * Gets the workingHours
     * The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
     *
-    * @return WorkingHours|null The workingHours
+    * @return WorkingHours The workingHours
     */
     public function getWorkingHours()
     {
         if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "\Beta\Microsoft\Graph\Model\WorkingHours") || is_null($this->_propDict["workingHours"])) {
+            if (is_a($this->_propDict["workingHours"], "\Beta\Microsoft\Graph\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);

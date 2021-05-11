@@ -28,12 +28,12 @@ class DeviceManagementReusablePolicySetting extends Entity
     * Gets the createdDateTime
     * reusable setting creation date and time. This property is read-only.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class DeviceManagementReusablePolicySetting extends Entity
     * Gets the description
     * reusable setting description supplied by user.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class DeviceManagementReusablePolicySetting extends Entity
     * Gets the displayName
     * reusable setting display name supplied by user.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class DeviceManagementReusablePolicySetting extends Entity
     * Gets the lastModifiedDateTime
     * date and time when reusable setting was last modified. This property is read-only.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -152,7 +152,7 @@ class DeviceManagementReusablePolicySetting extends Entity
     * Gets the referencingConfigurationPolicyCount
     * count of configuration policies referencing the current reusable setting. Valid values 0 to 2147483647. This property is read-only.
     *
-    * @return int|null The referencingConfigurationPolicyCount
+    * @return int The referencingConfigurationPolicyCount
     */
     public function getReferencingConfigurationPolicyCount()
     {
@@ -181,7 +181,7 @@ class DeviceManagementReusablePolicySetting extends Entity
     * Gets the settingDefinitionId
     * setting definition id associated with this reusable setting.
     *
-    * @return string|null The settingDefinitionId
+    * @return string The settingDefinitionId
     */
     public function getSettingDefinitionId()
     {
@@ -210,12 +210,12 @@ class DeviceManagementReusablePolicySetting extends Entity
     * Gets the settingInstance
     * reusable setting configuration instance
     *
-    * @return DeviceManagementConfigurationSettingInstance|null The settingInstance
+    * @return DeviceManagementConfigurationSettingInstance The settingInstance
     */
     public function getSettingInstance()
     {
         if (array_key_exists("settingInstance", $this->_propDict)) {
-            if (is_a($this->_propDict["settingInstance"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstance") || is_null($this->_propDict["settingInstance"])) {
+            if (is_a($this->_propDict["settingInstance"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstance")) {
                 return $this->_propDict["settingInstance"];
             } else {
                 $this->_propDict["settingInstance"] = new DeviceManagementConfigurationSettingInstance($this->_propDict["settingInstance"]);
@@ -243,7 +243,7 @@ class DeviceManagementReusablePolicySetting extends Entity
     * Gets the version
     * version number for reusable setting. Valid values 0 to 2147483647. This property is read-only.
     *
-    * @return int|null The version
+    * @return int The version
     */
     public function getVersion()
     {
@@ -273,7 +273,7 @@ class DeviceManagementReusablePolicySetting extends Entity
      * Gets the referencingConfigurationPolicies
     * configuration policies referencing the current reusable setting
      *
-     * @return array|null The referencingConfigurationPolicies
+     * @return array The referencingConfigurationPolicies
      */
     public function getReferencingConfigurationPolicies()
     {
@@ -294,7 +294,7 @@ class DeviceManagementReusablePolicySetting extends Entity
     */
     public function setReferencingConfigurationPolicies($val)
     {
-        $this->_propDict["referencingConfigurationPolicies"] = $val;
+		$this->_propDict["referencingConfigurationPolicies"] = $val;
         return $this;
     }
     

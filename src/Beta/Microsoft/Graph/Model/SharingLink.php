@@ -28,12 +28,12 @@ class SharingLink extends Entity
     * Gets the application
     * The app the link is associated with.
     *
-    * @return Identity|null The application
+    * @return Identity The application
     */
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["application"])) {
+            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new Identity($this->_propDict["application"]);
@@ -59,7 +59,7 @@ class SharingLink extends Entity
     /**
     * Gets the configuratorUrl
     *
-    * @return string|null The configuratorUrl
+    * @return string The configuratorUrl
     */
     public function getConfiguratorUrl()
     {
@@ -86,7 +86,7 @@ class SharingLink extends Entity
     * Gets the preventsDownload
     * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
     *
-    * @return bool|null The preventsDownload
+    * @return bool The preventsDownload
     */
     public function getPreventsDownload()
     {
@@ -114,7 +114,7 @@ class SharingLink extends Entity
     * Gets the scope
     * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
     *
-    * @return string|null The scope
+    * @return string The scope
     */
     public function getScope()
     {
@@ -142,7 +142,7 @@ class SharingLink extends Entity
     * Gets the type
     * The type of the link created.
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {
@@ -170,7 +170,7 @@ class SharingLink extends Entity
     * Gets the webHtml
     * For embed links, this property contains the HTML code for an &amp;lt;iframe&amp;gt; element that will embed the item in a webpage.
     *
-    * @return string|null The webHtml
+    * @return string The webHtml
     */
     public function getWebHtml()
     {
@@ -198,7 +198,7 @@ class SharingLink extends Entity
     * Gets the webUrl
     * A URL that opens the item in the browser on the OneDrive website.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

@@ -28,12 +28,12 @@ class CustomUpdateTimeWindow extends Entity
     * Gets the endDay
     * End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
-    * @return DayOfWeek|null The endDay
+    * @return DayOfWeek The endDay
     */
     public function getEndDay()
     {
         if (array_key_exists("endDay", $this->_propDict)) {
-            if (is_a($this->_propDict["endDay"], "\Beta\Microsoft\Graph\Model\DayOfWeek") || is_null($this->_propDict["endDay"])) {
+            if (is_a($this->_propDict["endDay"], "\Beta\Microsoft\Graph\Model\DayOfWeek")) {
                 return $this->_propDict["endDay"];
             } else {
                 $this->_propDict["endDay"] = new DayOfWeek($this->_propDict["endDay"]);
@@ -61,12 +61,12 @@ class CustomUpdateTimeWindow extends Entity
     * Gets the endTime
     * End time of the time window
     *
-    * @return TimeOfDay|null The endTime
+    * @return TimeOfDay The endTime
     */
     public function getEndTime()
     {
         if (array_key_exists("endTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["endTime"])) {
+            if (is_a($this->_propDict["endTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["endTime"];
             } else {
                 $this->_propDict["endTime"] = new TimeOfDay($this->_propDict["endTime"]);
@@ -94,12 +94,12 @@ class CustomUpdateTimeWindow extends Entity
     * Gets the startDay
     * Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     *
-    * @return DayOfWeek|null The startDay
+    * @return DayOfWeek The startDay
     */
     public function getStartDay()
     {
         if (array_key_exists("startDay", $this->_propDict)) {
-            if (is_a($this->_propDict["startDay"], "\Beta\Microsoft\Graph\Model\DayOfWeek") || is_null($this->_propDict["startDay"])) {
+            if (is_a($this->_propDict["startDay"], "\Beta\Microsoft\Graph\Model\DayOfWeek")) {
                 return $this->_propDict["startDay"];
             } else {
                 $this->_propDict["startDay"] = new DayOfWeek($this->_propDict["startDay"]);
@@ -127,12 +127,12 @@ class CustomUpdateTimeWindow extends Entity
     * Gets the startTime
     * Start time of the time window
     *
-    * @return TimeOfDay|null The startTime
+    * @return TimeOfDay The startTime
     */
     public function getStartTime()
     {
         if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["startTime"])) {
+            if (is_a($this->_propDict["startTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["startTime"];
             } else {
                 $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);

@@ -27,7 +27,7 @@ class WorkbookSessionInfo extends Entity
     * Gets the id
     * Id of the workbook session.
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -55,7 +55,7 @@ class WorkbookSessionInfo extends Entity
     * Gets the persistChanges
     * true for persistent session. false for non-persistent session (view mode)
     *
-    * @return bool|null The persistChanges
+    * @return bool The persistChanges
     */
     public function getPersistChanges()
     {

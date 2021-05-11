@@ -27,7 +27,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -54,12 +54,12 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \DateTime The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -85,7 +85,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -112,12 +112,12 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -143,12 +143,12 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the stateChangeDate
     *
-    * @return \DateTime|null The stateChangeDate
+    * @return \DateTime The stateChangeDate
     */
     public function getStateChangeDate()
     {
         if (array_key_exists("stateChangeDate", $this->_propDict)) {
-            if (is_a($this->_propDict["stateChangeDate"], "\DateTime") || is_null($this->_propDict["stateChangeDate"])) {
+            if (is_a($this->_propDict["stateChangeDate"], "\DateTime")) {
                 return $this->_propDict["stateChangeDate"];
             } else {
                 $this->_propDict["stateChangeDate"] = new \DateTime($this->_propDict["stateChangeDate"]);
@@ -174,7 +174,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the usedAndroidPhone
     *
-    * @return bool|null The usedAndroidPhone
+    * @return bool The usedAndroidPhone
     */
     public function getUsedAndroidPhone()
     {
@@ -201,7 +201,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the usediPad
     *
-    * @return bool|null The usediPad
+    * @return bool The usediPad
     */
     public function getUsediPad()
     {
@@ -228,7 +228,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the usediPhone
     *
-    * @return bool|null The usediPhone
+    * @return bool The usediPhone
     */
     public function getUsediPhone()
     {
@@ -255,7 +255,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the usedOthers
     *
-    * @return bool|null The usedOthers
+    * @return bool The usedOthers
     */
     public function getUsedOthers()
     {
@@ -282,7 +282,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the usedWeb
     *
-    * @return bool|null The usedWeb
+    * @return bool The usedWeb
     */
     public function getUsedWeb()
     {
@@ -309,7 +309,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the usedWindowsPhone
     *
-    * @return bool|null The usedWindowsPhone
+    * @return bool The usedWindowsPhone
     */
     public function getUsedWindowsPhone()
     {
@@ -336,7 +336,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -363,7 +363,7 @@ class YammerDeviceUsageUserDetail extends Entity
     /**
     * Gets the userState
     *
-    * @return string|null The userState
+    * @return string The userState
     */
     public function getUserState()
     {

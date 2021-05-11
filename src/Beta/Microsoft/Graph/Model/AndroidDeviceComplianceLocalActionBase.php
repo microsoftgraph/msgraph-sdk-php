@@ -28,7 +28,7 @@ class AndroidDeviceComplianceLocalActionBase extends Entity
     * Gets the gracePeriodInMinutes
     * Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
     *
-    * @return int|null The gracePeriodInMinutes
+    * @return int The gracePeriodInMinutes
     */
     public function getGracePeriodInMinutes()
     {

@@ -27,7 +27,7 @@ class VpnServer extends Entity
     * Gets the address
     * Address (IP address, FQDN or URL)
     *
-    * @return string|null The address
+    * @return string The address
     */
     public function getAddress()
     {
@@ -55,7 +55,7 @@ class VpnServer extends Entity
     * Gets the description
     * Description.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -83,7 +83,7 @@ class VpnServer extends Entity
     * Gets the isDefaultServer
     * Default server.
     *
-    * @return bool|null The isDefaultServer
+    * @return bool The isDefaultServer
     */
     public function getIsDefaultServer()
     {

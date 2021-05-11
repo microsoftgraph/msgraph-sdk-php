@@ -28,12 +28,12 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the dataType
     * The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
     *
-    * @return AndroidForWorkAppConfigurationSchemaItemDataType|null The dataType
+    * @return AndroidForWorkAppConfigurationSchemaItemDataType The dataType
     */
     public function getDataType()
     {
         if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "\Beta\Microsoft\Graph\Model\AndroidForWorkAppConfigurationSchemaItemDataType") || is_null($this->_propDict["dataType"])) {
+            if (is_a($this->_propDict["dataType"], "\Beta\Microsoft\Graph\Model\AndroidForWorkAppConfigurationSchemaItemDataType")) {
                 return $this->_propDict["dataType"];
             } else {
                 $this->_propDict["dataType"] = new AndroidForWorkAppConfigurationSchemaItemDataType($this->_propDict["dataType"]);
@@ -60,7 +60,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the defaultBoolValue
     * Default value for boolean type items, if specified by the app developer
     *
-    * @return bool|null The defaultBoolValue
+    * @return bool The defaultBoolValue
     */
     public function getDefaultBoolValue()
     {
@@ -88,7 +88,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the defaultIntValue
     * Default value for integer type items, if specified by the app developer
     *
-    * @return int|null The defaultIntValue
+    * @return int The defaultIntValue
     */
     public function getDefaultIntValue()
     {
@@ -116,7 +116,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the defaultStringArrayValue
     * Default value for string array type items, if specified by the app developer
     *
-    * @return string|null The defaultStringArrayValue
+    * @return string The defaultStringArrayValue
     */
     public function getDefaultStringArrayValue()
     {
@@ -144,7 +144,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the defaultStringValue
     * Default value for string type items, if specified by the app developer
     *
-    * @return string|null The defaultStringValue
+    * @return string The defaultStringValue
     */
     public function getDefaultStringValue()
     {
@@ -172,7 +172,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the description
     * Description of what the item controls within the application
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -200,7 +200,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the displayName
     * Human readable name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -228,7 +228,7 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the schemaItemKey
     * Unique key the application uses to identify the item
     *
-    * @return string|null The schemaItemKey
+    * @return string The schemaItemKey
     */
     public function getSchemaItemKey()
     {
@@ -257,12 +257,12 @@ class AndroidForWorkAppConfigurationSchemaItem extends Entity
     * Gets the selections
     * List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
     *
-    * @return KeyValuePair|null The selections
+    * @return KeyValuePair The selections
     */
     public function getSelections()
     {
         if (array_key_exists("selections", $this->_propDict)) {
-            if (is_a($this->_propDict["selections"], "\Beta\Microsoft\Graph\Model\KeyValuePair") || is_null($this->_propDict["selections"])) {
+            if (is_a($this->_propDict["selections"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["selections"];
             } else {
                 $this->_propDict["selections"] = new KeyValuePair($this->_propDict["selections"]);

@@ -26,7 +26,7 @@ class MediaConfig extends Entity
     /**
     * Gets the removeFromDefaultAudioGroup
     *
-    * @return bool|null The removeFromDefaultAudioGroup
+    * @return bool The removeFromDefaultAudioGroup
     */
     public function getRemoveFromDefaultAudioGroup()
     {

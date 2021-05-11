@@ -28,7 +28,7 @@ class OutlookTaskGroup extends Entity
     * Gets the changeKey
     * The version of the task group.
     *
-    * @return string|null The changeKey
+    * @return string The changeKey
     */
     public function getChangeKey()
     {
@@ -57,7 +57,7 @@ class OutlookTaskGroup extends Entity
     * Gets the groupKey
     * The unique GUID identifier for the task group.
     *
-    * @return string|null The groupKey
+    * @return string The groupKey
     */
     public function getGroupKey()
     {
@@ -86,7 +86,7 @@ class OutlookTaskGroup extends Entity
     * Gets the isDefaultGroup
     * True if the task group is the default task group.
     *
-    * @return bool|null The isDefaultGroup
+    * @return bool The isDefaultGroup
     */
     public function getIsDefaultGroup()
     {
@@ -115,7 +115,7 @@ class OutlookTaskGroup extends Entity
     * Gets the name
     * The name of the task group.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -145,7 +145,7 @@ class OutlookTaskGroup extends Entity
      * Gets the taskFolders
     * The collection of task folders in the task group. Read-only. Nullable.
      *
-     * @return array|null The taskFolders
+     * @return array The taskFolders
      */
     public function getTaskFolders()
     {
@@ -166,7 +166,7 @@ class OutlookTaskGroup extends Entity
     */
     public function setTaskFolders($val)
     {
-        $this->_propDict["taskFolders"] = $val;
+		$this->_propDict["taskFolders"] = $val;
         return $this;
     }
     

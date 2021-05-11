@@ -28,12 +28,12 @@ class GroupPolicyUploadedLanguageFile extends Entity
     * Gets the content
     * The contents of the uploaded ADML file.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The content
+    * @return \GuzzleHttp\Psr7\Stream The content
     */
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
@@ -60,7 +60,7 @@ class GroupPolicyUploadedLanguageFile extends Entity
     * Gets the fileName
     * The file name of the uploaded ADML file.
     *
-    * @return string|null The fileName
+    * @return string The fileName
     */
     public function getFileName()
     {
@@ -88,7 +88,7 @@ class GroupPolicyUploadedLanguageFile extends Entity
     * Gets the id
     * Key of the entity.
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -116,7 +116,7 @@ class GroupPolicyUploadedLanguageFile extends Entity
     * Gets the languageCode
     * The language code of the uploaded ADML file.
     *
-    * @return string|null The languageCode
+    * @return string The languageCode
     */
     public function getLanguageCode()
     {
@@ -145,12 +145,12 @@ class GroupPolicyUploadedLanguageFile extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);

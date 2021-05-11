@@ -28,12 +28,12 @@ class ManagedEBook extends Entity
     * Gets the createdDateTime
     * The date and time when the eBook file was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class ManagedEBook extends Entity
     * Gets the description
     * Description.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class ManagedEBook extends Entity
     * Gets the displayName
     * Name of the eBook.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,7 +119,7 @@ class ManagedEBook extends Entity
     * Gets the informationUrl
     * The more information Url.
     *
-    * @return string|null The informationUrl
+    * @return string The informationUrl
     */
     public function getInformationUrl()
     {
@@ -148,12 +148,12 @@ class ManagedEBook extends Entity
     * Gets the largeCover
     * Book cover.
     *
-    * @return MimeContent|null The largeCover
+    * @return MimeContent The largeCover
     */
     public function getLargeCover()
     {
         if (array_key_exists("largeCover", $this->_propDict)) {
-            if (is_a($this->_propDict["largeCover"], "\Beta\Microsoft\Graph\Model\MimeContent") || is_null($this->_propDict["largeCover"])) {
+            if (is_a($this->_propDict["largeCover"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["largeCover"];
             } else {
                 $this->_propDict["largeCover"] = new MimeContent($this->_propDict["largeCover"]);
@@ -181,12 +181,12 @@ class ManagedEBook extends Entity
     * Gets the lastModifiedDateTime
     * The date and time when the eBook was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -214,7 +214,7 @@ class ManagedEBook extends Entity
     * Gets the privacyInformationUrl
     * The privacy statement Url.
     *
-    * @return string|null The privacyInformationUrl
+    * @return string The privacyInformationUrl
     */
     public function getPrivacyInformationUrl()
     {
@@ -243,12 +243,12 @@ class ManagedEBook extends Entity
     * Gets the publishedDateTime
     * The date and time when the eBook was published.
     *
-    * @return \DateTime|null The publishedDateTime
+    * @return \DateTime The publishedDateTime
     */
     public function getPublishedDateTime()
     {
         if (array_key_exists("publishedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["publishedDateTime"], "\DateTime") || is_null($this->_propDict["publishedDateTime"])) {
+            if (is_a($this->_propDict["publishedDateTime"], "\DateTime")) {
                 return $this->_propDict["publishedDateTime"];
             } else {
                 $this->_propDict["publishedDateTime"] = new \DateTime($this->_propDict["publishedDateTime"]);
@@ -276,7 +276,7 @@ class ManagedEBook extends Entity
     * Gets the publisher
     * Publisher.
     *
-    * @return string|null The publisher
+    * @return string The publisher
     */
     public function getPublisher()
     {
@@ -306,7 +306,7 @@ class ManagedEBook extends Entity
      * Gets the assignments
     * The list of assignments for this eBook.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -327,7 +327,7 @@ class ManagedEBook extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -336,7 +336,7 @@ class ManagedEBook extends Entity
      * Gets the categories
     * The list of categories for this eBook.
      *
-     * @return array|null The categories
+     * @return array The categories
      */
     public function getCategories()
     {
@@ -357,7 +357,7 @@ class ManagedEBook extends Entity
     */
     public function setCategories($val)
     {
-        $this->_propDict["categories"] = $val;
+		$this->_propDict["categories"] = $val;
         return $this;
     }
     
@@ -366,7 +366,7 @@ class ManagedEBook extends Entity
      * Gets the deviceStates
     * The list of installation states for this eBook.
      *
-     * @return array|null The deviceStates
+     * @return array The deviceStates
      */
     public function getDeviceStates()
     {
@@ -387,7 +387,7 @@ class ManagedEBook extends Entity
     */
     public function setDeviceStates($val)
     {
-        $this->_propDict["deviceStates"] = $val;
+		$this->_propDict["deviceStates"] = $val;
         return $this;
     }
     
@@ -395,12 +395,12 @@ class ManagedEBook extends Entity
     * Gets the installSummary
     * Mobile App Install Summary.
     *
-    * @return EBookInstallSummary|null The installSummary
+    * @return EBookInstallSummary The installSummary
     */
     public function getInstallSummary()
     {
         if (array_key_exists("installSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["installSummary"], "\Beta\Microsoft\Graph\Model\EBookInstallSummary") || is_null($this->_propDict["installSummary"])) {
+            if (is_a($this->_propDict["installSummary"], "\Beta\Microsoft\Graph\Model\EBookInstallSummary")) {
                 return $this->_propDict["installSummary"];
             } else {
                 $this->_propDict["installSummary"] = new EBookInstallSummary($this->_propDict["installSummary"]);
@@ -429,7 +429,7 @@ class ManagedEBook extends Entity
      * Gets the userStateSummary
     * The list of installation states for this eBook.
      *
-     * @return array|null The userStateSummary
+     * @return array The userStateSummary
      */
     public function getUserStateSummary()
     {
@@ -450,7 +450,7 @@ class ManagedEBook extends Entity
     */
     public function setUserStateSummary($val)
     {
-        $this->_propDict["userStateSummary"] = $val;
+		$this->_propDict["userStateSummary"] = $val;
         return $this;
     }
     

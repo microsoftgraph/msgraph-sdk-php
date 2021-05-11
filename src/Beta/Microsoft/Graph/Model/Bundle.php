@@ -28,12 +28,12 @@ class Bundle extends Entity
     * Gets the album
     * If the bundle is an [album][], then the album property is included
     *
-    * @return Album|null The album
+    * @return Album The album
     */
     public function getAlbum()
     {
         if (array_key_exists("album", $this->_propDict)) {
-            if (is_a($this->_propDict["album"], "\Beta\Microsoft\Graph\Model\Album") || is_null($this->_propDict["album"])) {
+            if (is_a($this->_propDict["album"], "\Beta\Microsoft\Graph\Model\Album")) {
                 return $this->_propDict["album"];
             } else {
                 $this->_propDict["album"] = new Album($this->_propDict["album"]);
@@ -60,7 +60,7 @@ class Bundle extends Entity
     * Gets the childCount
     * Number of children contained immediately within this container.
     *
-    * @return int|null The childCount
+    * @return int The childCount
     */
     public function getChildCount()
     {

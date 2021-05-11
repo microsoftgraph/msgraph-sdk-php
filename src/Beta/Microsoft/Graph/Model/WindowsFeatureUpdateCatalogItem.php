@@ -28,7 +28,7 @@ class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem
     * Gets the version
     * The feature update version
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {

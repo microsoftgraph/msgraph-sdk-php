@@ -28,7 +28,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
     * Gets the packageId
     * Android For Work app configuration package id.
     *
-    * @return string|null The packageId
+    * @return string The packageId
     */
     public function getPackageId()
     {
@@ -57,7 +57,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
     * Gets the payloadJson
     * Android For Work app configuration JSON payload.
     *
-    * @return string|null The payloadJson
+    * @return string The payloadJson
     */
     public function getPayloadJson()
     {
@@ -87,7 +87,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
      * Gets the permissionActions
     * List of Android app permissions and corresponding permission actions.
      *
-     * @return array|null The permissionActions
+     * @return array The permissionActions
      */
     public function getPermissionActions()
     {
@@ -108,7 +108,7 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
     */
     public function setPermissionActions($val)
     {
-        $this->_propDict["permissionActions"] = $val;
+		$this->_propDict["permissionActions"] = $val;
         return $this;
     }
     
@@ -116,12 +116,12 @@ class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfigu
     * Gets the profileApplicability
     * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
     *
-    * @return AndroidProfileApplicability|null The profileApplicability
+    * @return AndroidProfileApplicability The profileApplicability
     */
     public function getProfileApplicability()
     {
         if (array_key_exists("profileApplicability", $this->_propDict)) {
-            if (is_a($this->_propDict["profileApplicability"], "\Beta\Microsoft\Graph\Model\AndroidProfileApplicability") || is_null($this->_propDict["profileApplicability"])) {
+            if (is_a($this->_propDict["profileApplicability"], "\Beta\Microsoft\Graph\Model\AndroidProfileApplicability")) {
                 return $this->_propDict["profileApplicability"];
             } else {
                 $this->_propDict["profileApplicability"] = new AndroidProfileApplicability($this->_propDict["profileApplicability"]);

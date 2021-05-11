@@ -28,7 +28,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the adDomainName
     * The fully qualified domain name (FQDN) of the Active Directory domain you want to join.
     *
-    * @return string|null The adDomainName
+    * @return string The adDomainName
     */
     public function getAdDomainName()
     {
@@ -57,7 +57,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the adDomainPassword
     * The password associated with adDomainUsername.
     *
-    * @return string|null The adDomainPassword
+    * @return string The adDomainPassword
     */
     public function getAdDomainPassword()
     {
@@ -86,7 +86,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the adDomainUsername
     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
     *
-    * @return string|null The adDomainUsername
+    * @return string The adDomainUsername
     */
     public function getAdDomainUsername()
     {
@@ -115,7 +115,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the displayName
     * The display name for the on-premises connection.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -144,12 +144,12 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the healthCheckStatus
     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
     *
-    * @return CloudPcOnPremisesConnectionStatus|null The healthCheckStatus
+    * @return CloudPcOnPremisesConnectionStatus The healthCheckStatus
     */
     public function getHealthCheckStatus()
     {
         if (array_key_exists("healthCheckStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["healthCheckStatus"], "\Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionStatus") || is_null($this->_propDict["healthCheckStatus"])) {
+            if (is_a($this->_propDict["healthCheckStatus"], "\Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionStatus")) {
                 return $this->_propDict["healthCheckStatus"];
             } else {
                 $this->_propDict["healthCheckStatus"] = new CloudPcOnPremisesConnectionStatus($this->_propDict["healthCheckStatus"]);
@@ -177,12 +177,12 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the healthCheckStatusDetails
     * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
     *
-    * @return CloudPcOnPremisesConnectionStatusDetails|null The healthCheckStatusDetails
+    * @return CloudPcOnPremisesConnectionStatusDetails The healthCheckStatusDetails
     */
     public function getHealthCheckStatusDetails()
     {
         if (array_key_exists("healthCheckStatusDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["healthCheckStatusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionStatusDetails") || is_null($this->_propDict["healthCheckStatusDetails"])) {
+            if (is_a($this->_propDict["healthCheckStatusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcOnPremisesConnectionStatusDetails")) {
                 return $this->_propDict["healthCheckStatusDetails"];
             } else {
                 $this->_propDict["healthCheckStatusDetails"] = new CloudPcOnPremisesConnectionStatusDetails($this->_propDict["healthCheckStatusDetails"]);
@@ -210,7 +210,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the inUse
     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
     *
-    * @return bool|null The inUse
+    * @return bool The inUse
     */
     public function getInUse()
     {
@@ -239,7 +239,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the organizationalUnit
     * The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
     *
-    * @return string|null The organizationalUnit
+    * @return string The organizationalUnit
     */
     public function getOrganizationalUnit()
     {
@@ -268,7 +268,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the resourceGroupId
     * The ID of the target resource group. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}'.
     *
-    * @return string|null The resourceGroupId
+    * @return string The resourceGroupId
     */
     public function getResourceGroupId()
     {
@@ -297,7 +297,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the subnetId
     * The ID of the target subnet. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}'.
     *
-    * @return string|null The subnetId
+    * @return string The subnetId
     */
     public function getSubnetId()
     {
@@ -326,7 +326,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the subscriptionId
     * The ID of the target Azure subscription that’s associated with your tenant.
     *
-    * @return string|null The subscriptionId
+    * @return string The subscriptionId
     */
     public function getSubscriptionId()
     {
@@ -355,7 +355,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the subscriptionName
     * The name of the target Azure subscription. Read-only.
     *
-    * @return string|null The subscriptionName
+    * @return string The subscriptionName
     */
     public function getSubscriptionName()
     {
@@ -384,7 +384,7 @@ class CloudPcOnPremisesConnection extends Entity
     * Gets the virtualNetworkId
     * The ID of the target virtual network. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'.
     *
-    * @return string|null The virtualNetworkId
+    * @return string The virtualNetworkId
     */
     public function getVirtualNetworkId()
     {

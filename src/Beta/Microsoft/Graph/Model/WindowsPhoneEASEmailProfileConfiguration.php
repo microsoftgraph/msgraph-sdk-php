@@ -28,7 +28,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the accountName
     * Account name.
     *
-    * @return string|null The accountName
+    * @return string The accountName
     */
     public function getAccountName()
     {
@@ -57,7 +57,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the applyOnlyToWindowsPhone81
     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
     *
-    * @return bool|null The applyOnlyToWindowsPhone81
+    * @return bool The applyOnlyToWindowsPhone81
     */
     public function getApplyOnlyToWindowsPhone81()
     {
@@ -86,12 +86,12 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the durationOfEmailToSync
     * Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
     *
-    * @return EmailSyncDuration|null The durationOfEmailToSync
+    * @return EmailSyncDuration The durationOfEmailToSync
     */
     public function getDurationOfEmailToSync()
     {
         if (array_key_exists("durationOfEmailToSync", $this->_propDict)) {
-            if (is_a($this->_propDict["durationOfEmailToSync"], "\Beta\Microsoft\Graph\Model\EmailSyncDuration") || is_null($this->_propDict["durationOfEmailToSync"])) {
+            if (is_a($this->_propDict["durationOfEmailToSync"], "\Beta\Microsoft\Graph\Model\EmailSyncDuration")) {
                 return $this->_propDict["durationOfEmailToSync"];
             } else {
                 $this->_propDict["durationOfEmailToSync"] = new EmailSyncDuration($this->_propDict["durationOfEmailToSync"]);
@@ -119,12 +119,12 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the emailAddressSource
     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
     *
-    * @return UserEmailSource|null The emailAddressSource
+    * @return UserEmailSource The emailAddressSource
     */
     public function getEmailAddressSource()
     {
         if (array_key_exists("emailAddressSource", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddressSource"], "\Beta\Microsoft\Graph\Model\UserEmailSource") || is_null($this->_propDict["emailAddressSource"])) {
+            if (is_a($this->_propDict["emailAddressSource"], "\Beta\Microsoft\Graph\Model\UserEmailSource")) {
                 return $this->_propDict["emailAddressSource"];
             } else {
                 $this->_propDict["emailAddressSource"] = new UserEmailSource($this->_propDict["emailAddressSource"]);
@@ -152,12 +152,12 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the emailSyncSchedule
     * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
     *
-    * @return EmailSyncSchedule|null The emailSyncSchedule
+    * @return EmailSyncSchedule The emailSyncSchedule
     */
     public function getEmailSyncSchedule()
     {
         if (array_key_exists("emailSyncSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["emailSyncSchedule"], "\Beta\Microsoft\Graph\Model\EmailSyncSchedule") || is_null($this->_propDict["emailSyncSchedule"])) {
+            if (is_a($this->_propDict["emailSyncSchedule"], "\Beta\Microsoft\Graph\Model\EmailSyncSchedule")) {
                 return $this->_propDict["emailSyncSchedule"];
             } else {
                 $this->_propDict["emailSyncSchedule"] = new EmailSyncSchedule($this->_propDict["emailSyncSchedule"]);
@@ -185,7 +185,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the hostName
     * Exchange location that (URL) that the native mail app connects to.
     *
-    * @return string|null The hostName
+    * @return string The hostName
     */
     public function getHostName()
     {
@@ -214,7 +214,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the requireSsl
     * Indicates whether or not to use SSL.
     *
-    * @return bool|null The requireSsl
+    * @return bool The requireSsl
     */
     public function getRequireSsl()
     {
@@ -243,7 +243,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the syncCalendar
     * Whether or not to sync the calendar.
     *
-    * @return bool|null The syncCalendar
+    * @return bool The syncCalendar
     */
     public function getSyncCalendar()
     {
@@ -272,7 +272,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the syncContacts
     * Whether or not to sync contacts.
     *
-    * @return bool|null The syncContacts
+    * @return bool The syncContacts
     */
     public function getSyncContacts()
     {
@@ -301,7 +301,7 @@ class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileConfigurat
     * Gets the syncTasks
     * Whether or not to sync tasks.
     *
-    * @return bool|null The syncTasks
+    * @return bool The syncTasks
     */
     public function getSyncTasks()
     {

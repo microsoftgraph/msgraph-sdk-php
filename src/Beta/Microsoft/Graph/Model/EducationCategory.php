@@ -28,7 +28,7 @@ class EducationCategory extends Entity
     * Gets the displayName
     * Unique identifier for the category.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {

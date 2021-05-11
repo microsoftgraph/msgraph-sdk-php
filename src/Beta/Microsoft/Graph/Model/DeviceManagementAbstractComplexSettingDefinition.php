@@ -28,7 +28,7 @@ class DeviceManagementAbstractComplexSettingDefinition extends DeviceManagementS
     * Gets the implementations
     * List of definition IDs for all possible implementations of this abstract complex setting
     *
-    * @return string|null The implementations
+    * @return string The implementations
     */
     public function getImplementations()
     {

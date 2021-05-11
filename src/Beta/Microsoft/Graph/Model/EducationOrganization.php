@@ -28,7 +28,7 @@ class EducationOrganization extends Entity
     * Gets the description
     * Organization description.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class EducationOrganization extends Entity
     * Gets the displayName
     * Organization display name.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -84,14 +84,14 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the externalSource
-    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
+    * Where this user was created from. Possible values are: sis, lms, or manual.
     *
-    * @return EducationExternalSource|null The externalSource
+    * @return EducationExternalSource The externalSource
     */
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "\Beta\Microsoft\Graph\Model\EducationExternalSource") || is_null($this->_propDict["externalSource"])) {
+            if (is_a($this->_propDict["externalSource"], "\Beta\Microsoft\Graph\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -103,7 +103,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the externalSource
-    * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
+    * Where this user was created from. Possible values are: sis, lms, or manual.
     *
     * @param EducationExternalSource $val The externalSource
     *
@@ -117,8 +117,9 @@ class EducationOrganization extends Entity
     
     /**
     * Gets the externalSourceDetail
+    * The name of the external source this resources was generated from.
     *
-    * @return string|null The externalSourceDetail
+    * @return string The externalSourceDetail
     */
     public function getExternalSourceDetail()
     {
@@ -131,6 +132,7 @@ class EducationOrganization extends Entity
     
     /**
     * Sets the externalSourceDetail
+    * The name of the external source this resources was generated from.
     *
     * @param string $val The externalSourceDetail
     *

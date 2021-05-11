@@ -28,7 +28,7 @@ class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends AndroidDe
     * Gets the passcode
     * Passcode to reset to Android device. This property is read-only.
     *
-    * @return string|null The passcode
+    * @return string The passcode
     */
     public function getPasscode()
     {
@@ -57,7 +57,7 @@ class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends AndroidDe
     * Gets the passcodeSignInFailureCountBeforeWipe
     * Number of sign in failures before wiping device, the value can be 4-11. Valid values 4 to 11
     *
-    * @return int|null The passcodeSignInFailureCountBeforeWipe
+    * @return int The passcodeSignInFailureCountBeforeWipe
     */
     public function getPasscodeSignInFailureCountBeforeWipe()
     {

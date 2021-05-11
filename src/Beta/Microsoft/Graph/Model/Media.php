@@ -26,7 +26,7 @@ class Media extends Entity
     /**
     * Gets the isTranscriptionShown
     *
-    * @return bool|null The isTranscriptionShown
+    * @return bool The isTranscriptionShown
     */
     public function getIsTranscriptionShown()
     {
@@ -53,12 +53,12 @@ class Media extends Entity
     /**
     * Gets the mediaSource
     *
-    * @return MediaSource|null The mediaSource
+    * @return MediaSource The mediaSource
     */
     public function getMediaSource()
     {
         if (array_key_exists("mediaSource", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaSource"], "\Beta\Microsoft\Graph\Model\MediaSource") || is_null($this->_propDict["mediaSource"])) {
+            if (is_a($this->_propDict["mediaSource"], "\Beta\Microsoft\Graph\Model\MediaSource")) {
                 return $this->_propDict["mediaSource"];
             } else {
                 $this->_propDict["mediaSource"] = new MediaSource($this->_propDict["mediaSource"]);

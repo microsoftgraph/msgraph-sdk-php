@@ -27,7 +27,7 @@ class VariableManagementConditionExpression extends ManagementConditionExpressio
     * Gets the managementConditionId
     * The management condition id that is used to evaluate the expression.
     *
-    * @return string|null The managementConditionId
+    * @return string The managementConditionId
     */
     public function getManagementConditionId()
     {

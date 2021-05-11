@@ -27,7 +27,7 @@ class MobileAppIntentAndStateDetail extends Entity
     * Gets the applicationId
     * MobieApp identifier.
     *
-    * @return string|null The applicationId
+    * @return string The applicationId
     */
     public function getApplicationId()
     {
@@ -55,7 +55,7 @@ class MobileAppIntentAndStateDetail extends Entity
     * Gets the displayName
     * The admin provided or imported title of the app.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -83,7 +83,7 @@ class MobileAppIntentAndStateDetail extends Entity
     * Gets the displayVersion
     * Human readable version of the application
     *
-    * @return string|null The displayVersion
+    * @return string The displayVersion
     */
     public function getDisplayVersion()
     {
@@ -112,12 +112,12 @@ class MobileAppIntentAndStateDetail extends Entity
     * Gets the installState
     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
-    * @return ResultantAppState|null The installState
+    * @return ResultantAppState The installState
     */
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\ResultantAppState") || is_null($this->_propDict["installState"])) {
+            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\ResultantAppState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new ResultantAppState($this->_propDict["installState"]);
@@ -145,12 +145,12 @@ class MobileAppIntentAndStateDetail extends Entity
     * Gets the mobileAppIntent
     * Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude.
     *
-    * @return MobileAppIntent|null The mobileAppIntent
+    * @return MobileAppIntent The mobileAppIntent
     */
     public function getMobileAppIntent()
     {
         if (array_key_exists("mobileAppIntent", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppIntent"], "\Beta\Microsoft\Graph\Model\MobileAppIntent") || is_null($this->_propDict["mobileAppIntent"])) {
+            if (is_a($this->_propDict["mobileAppIntent"], "\Beta\Microsoft\Graph\Model\MobileAppIntent")) {
                 return $this->_propDict["mobileAppIntent"];
             } else {
                 $this->_propDict["mobileAppIntent"] = new MobileAppIntent($this->_propDict["mobileAppIntent"]);
@@ -178,12 +178,12 @@ class MobileAppIntentAndStateDetail extends Entity
     * Gets the supportedDeviceTypes
     * The supported platforms for the app.
     *
-    * @return MobileAppSupportedDeviceType|null The supportedDeviceTypes
+    * @return MobileAppSupportedDeviceType The supportedDeviceTypes
     */
     public function getSupportedDeviceTypes()
     {
         if (array_key_exists("supportedDeviceTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedDeviceTypes"], "\Beta\Microsoft\Graph\Model\MobileAppSupportedDeviceType") || is_null($this->_propDict["supportedDeviceTypes"])) {
+            if (is_a($this->_propDict["supportedDeviceTypes"], "\Beta\Microsoft\Graph\Model\MobileAppSupportedDeviceType")) {
                 return $this->_propDict["supportedDeviceTypes"];
             } else {
                 $this->_propDict["supportedDeviceTypes"] = new MobileAppSupportedDeviceType($this->_propDict["supportedDeviceTypes"]);

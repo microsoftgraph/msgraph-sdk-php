@@ -28,12 +28,12 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the deployableUntilDateTime
     * The date on which the content is no longer available to deploy using the service. Read-only.
     *
-    * @return \DateTime|null The deployableUntilDateTime
+    * @return \DateTime The deployableUntilDateTime
     */
     public function getDeployableUntilDateTime()
     {
         if (array_key_exists("deployableUntilDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deployableUntilDateTime"], "\DateTime") || is_null($this->_propDict["deployableUntilDateTime"])) {
+            if (is_a($this->_propDict["deployableUntilDateTime"], "\DateTime")) {
                 return $this->_propDict["deployableUntilDateTime"];
             } else {
                 $this->_propDict["deployableUntilDateTime"] = new \DateTime($this->_propDict["deployableUntilDateTime"]);
@@ -61,7 +61,7 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the displayName
     * The display name of the content. Read-only.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -90,12 +90,12 @@ class CatalogEntry extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the releaseDateTime
     * The release date for the content. Read-only.
     *
-    * @return \DateTime|null The releaseDateTime
+    * @return \DateTime The releaseDateTime
     */
     public function getReleaseDateTime()
     {
         if (array_key_exists("releaseDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["releaseDateTime"], "\DateTime") || is_null($this->_propDict["releaseDateTime"])) {
+            if (is_a($this->_propDict["releaseDateTime"], "\DateTime")) {
                 return $this->_propDict["releaseDateTime"];
             } else {
                 $this->_propDict["releaseDateTime"] = new \DateTime($this->_propDict["releaseDateTime"]);

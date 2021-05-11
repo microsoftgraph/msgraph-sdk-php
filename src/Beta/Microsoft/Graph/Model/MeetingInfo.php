@@ -26,7 +26,7 @@ class MeetingInfo extends Entity
     /**
     * Gets the allowConversationWithoutHost
     *
-    * @return bool|null The allowConversationWithoutHost
+    * @return bool The allowConversationWithoutHost
     */
     public function getAllowConversationWithoutHost()
     {

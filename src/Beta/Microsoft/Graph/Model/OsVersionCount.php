@@ -27,7 +27,7 @@ class OsVersionCount extends Entity
     * Gets the deviceCount
     * Count of devices with malware for the OS version
     *
-    * @return int|null The deviceCount
+    * @return int The deviceCount
     */
     public function getDeviceCount()
     {
@@ -56,12 +56,12 @@ class OsVersionCount extends Entity
     * Gets the lastUpdateDateTime
     * The Timestamp of the last update for the device count in UTC
     *
-    * @return \DateTime|null The lastUpdateDateTime
+    * @return \DateTime The lastUpdateDateTime
     */
     public function getLastUpdateDateTime()
     {
         if (array_key_exists("lastUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdateDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdateDateTime"])) {
+            if (is_a($this->_propDict["lastUpdateDateTime"], "\DateTime")) {
                 return $this->_propDict["lastUpdateDateTime"];
             } else {
                 $this->_propDict["lastUpdateDateTime"] = new \DateTime($this->_propDict["lastUpdateDateTime"]);
@@ -88,7 +88,7 @@ class OsVersionCount extends Entity
     * Gets the osVersion
     * OS version
     *
-    * @return string|null The osVersion
+    * @return string The osVersion
     */
     public function getOsVersion()
     {

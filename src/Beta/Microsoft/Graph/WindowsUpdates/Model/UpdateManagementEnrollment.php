@@ -37,12 +37,12 @@ class UpdateManagementEnrollment extends UpdatableAssetEnrollment
     * Gets the updateCategory
     * The category of updates that the service manages. Supports a subset of the values for updateCategory. Possible values are: feature.
     *
-    * @return UpdateCategory|null The updateCategory
+    * @return UpdateCategory The updateCategory
     */
     public function getUpdateCategory()
     {
         if (array_key_exists("updateCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["updateCategory"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\UpdateCategory") || is_null($this->_propDict["updateCategory"])) {
+            if (is_a($this->_propDict["updateCategory"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\UpdateCategory")) {
                 return $this->_propDict["updateCategory"];
             } else {
                 $this->_propDict["updateCategory"] = new UpdateCategory($this->_propDict["updateCategory"]);

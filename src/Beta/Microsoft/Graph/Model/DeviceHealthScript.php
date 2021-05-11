@@ -28,12 +28,12 @@ class DeviceHealthScript extends Entity
     * Gets the createdDateTime
     * The timestamp of when the device health script was created. This property is read-only.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class DeviceHealthScript extends Entity
     * Gets the description
     * Description of the device health script
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,12 +90,12 @@ class DeviceHealthScript extends Entity
     * Gets the detectionScriptContent
     * The entire content of the detection powershell script
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The detectionScriptContent
+    * @return \GuzzleHttp\Psr7\Stream The detectionScriptContent
     */
     public function getDetectionScriptContent()
     {
         if (array_key_exists("detectionScriptContent", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionScriptContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["detectionScriptContent"])) {
+            if (is_a($this->_propDict["detectionScriptContent"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["detectionScriptContent"];
             } else {
                 $this->_propDict["detectionScriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["detectionScriptContent"]);
@@ -124,7 +124,7 @@ class DeviceHealthScript extends Entity
      * Gets the detectionScriptParameters
     * List of ComplexType DetectionScriptParameters objects.
      *
-     * @return array|null The detectionScriptParameters
+     * @return array The detectionScriptParameters
      */
     public function getDetectionScriptParameters()
     {
@@ -145,7 +145,7 @@ class DeviceHealthScript extends Entity
     */
     public function setDetectionScriptParameters($val)
     {
-        $this->_propDict["detectionScriptParameters"] = $val;
+		$this->_propDict["detectionScriptParameters"] = $val;
         return $this;
     }
     
@@ -153,7 +153,7 @@ class DeviceHealthScript extends Entity
     * Gets the displayName
     * Name of the device health script
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -182,7 +182,7 @@ class DeviceHealthScript extends Entity
     * Gets the enforceSignatureCheck
     * Indicate whether the script signature needs be checked
     *
-    * @return bool|null The enforceSignatureCheck
+    * @return bool The enforceSignatureCheck
     */
     public function getEnforceSignatureCheck()
     {
@@ -211,7 +211,7 @@ class DeviceHealthScript extends Entity
     * Gets the highestAvailableVersion
     * Highest available version for a Microsoft Proprietary script
     *
-    * @return string|null The highestAvailableVersion
+    * @return string The highestAvailableVersion
     */
     public function getHighestAvailableVersion()
     {
@@ -240,7 +240,7 @@ class DeviceHealthScript extends Entity
     * Gets the isGlobalScript
     * Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
     *
-    * @return bool|null The isGlobalScript
+    * @return bool The isGlobalScript
     */
     public function getIsGlobalScript()
     {
@@ -269,12 +269,12 @@ class DeviceHealthScript extends Entity
     * Gets the lastModifiedDateTime
     * The timestamp of when the device health script was modified. This property is read-only.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -302,7 +302,7 @@ class DeviceHealthScript extends Entity
     * Gets the publisher
     * Name of the device health script publisher
     *
-    * @return string|null The publisher
+    * @return string The publisher
     */
     public function getPublisher()
     {
@@ -331,12 +331,12 @@ class DeviceHealthScript extends Entity
     * Gets the remediationScriptContent
     * The entire content of the remediation powershell script
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The remediationScriptContent
+    * @return \GuzzleHttp\Psr7\Stream The remediationScriptContent
     */
     public function getRemediationScriptContent()
     {
         if (array_key_exists("remediationScriptContent", $this->_propDict)) {
-            if (is_a($this->_propDict["remediationScriptContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["remediationScriptContent"])) {
+            if (is_a($this->_propDict["remediationScriptContent"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["remediationScriptContent"];
             } else {
                 $this->_propDict["remediationScriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["remediationScriptContent"]);
@@ -365,7 +365,7 @@ class DeviceHealthScript extends Entity
      * Gets the remediationScriptParameters
     * List of ComplexType RemediationScriptParameters objects.
      *
-     * @return array|null The remediationScriptParameters
+     * @return array The remediationScriptParameters
      */
     public function getRemediationScriptParameters()
     {
@@ -386,7 +386,7 @@ class DeviceHealthScript extends Entity
     */
     public function setRemediationScriptParameters($val)
     {
-        $this->_propDict["remediationScriptParameters"] = $val;
+		$this->_propDict["remediationScriptParameters"] = $val;
         return $this;
     }
     
@@ -394,7 +394,7 @@ class DeviceHealthScript extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for the device health script
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -423,7 +423,7 @@ class DeviceHealthScript extends Entity
     * Gets the runAs32Bit
     * Indicate whether PowerShell script(s) should run as 32-bit
     *
-    * @return bool|null The runAs32Bit
+    * @return bool The runAs32Bit
     */
     public function getRunAs32Bit()
     {
@@ -452,12 +452,12 @@ class DeviceHealthScript extends Entity
     * Gets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
     *
-    * @return RunAsAccountType|null The runAsAccount
+    * @return RunAsAccountType The runAsAccount
     */
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType") || is_null($this->_propDict["runAsAccount"])) {
+            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
@@ -485,7 +485,7 @@ class DeviceHealthScript extends Entity
     * Gets the version
     * Version of the device health script
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {
@@ -515,7 +515,7 @@ class DeviceHealthScript extends Entity
      * Gets the assignments
     * The list of group assignments for the device health script
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -536,7 +536,7 @@ class DeviceHealthScript extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -545,7 +545,7 @@ class DeviceHealthScript extends Entity
      * Gets the deviceRunStates
     * List of run states for the device health script across all devices
      *
-     * @return array|null The deviceRunStates
+     * @return array The deviceRunStates
      */
     public function getDeviceRunStates()
     {
@@ -566,7 +566,7 @@ class DeviceHealthScript extends Entity
     */
     public function setDeviceRunStates($val)
     {
-        $this->_propDict["deviceRunStates"] = $val;
+		$this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     
@@ -574,12 +574,12 @@ class DeviceHealthScript extends Entity
     * Gets the runSummary
     * High level run summary for device health script.
     *
-    * @return DeviceHealthScriptRunSummary|null The runSummary
+    * @return DeviceHealthScriptRunSummary The runSummary
     */
     public function getRunSummary()
     {
         if (array_key_exists("runSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceHealthScriptRunSummary") || is_null($this->_propDict["runSummary"])) {
+            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceHealthScriptRunSummary")) {
                 return $this->_propDict["runSummary"];
             } else {
                 $this->_propDict["runSummary"] = new DeviceHealthScriptRunSummary($this->_propDict["runSummary"]);

@@ -28,7 +28,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the activeFirewallRequired
     * Require active firewall on Windows devices.
     *
-    * @return bool|null The activeFirewallRequired
+    * @return bool The activeFirewallRequired
     */
     public function getActiveFirewallRequired()
     {
@@ -57,7 +57,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the antiSpywareRequired
     * Require any AntiSpyware solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
     *
-    * @return bool|null The antiSpywareRequired
+    * @return bool The antiSpywareRequired
     */
     public function getAntiSpywareRequired()
     {
@@ -86,7 +86,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the antivirusRequired
     * Require any Antivirus solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
     *
-    * @return bool|null The antivirusRequired
+    * @return bool The antivirusRequired
     */
     public function getAntivirusRequired()
     {
@@ -115,7 +115,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the bitLockerEnabled
     * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
     *
-    * @return bool|null The bitLockerEnabled
+    * @return bool The bitLockerEnabled
     */
     public function getBitLockerEnabled()
     {
@@ -144,7 +144,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the codeIntegrityEnabled
     * Require devices to be reported as healthy by Windows Device Health Attestation.
     *
-    * @return bool|null The codeIntegrityEnabled
+    * @return bool The codeIntegrityEnabled
     */
     public function getCodeIntegrityEnabled()
     {
@@ -173,7 +173,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the configurationManagerComplianceRequired
     * Require to consider SCCM Compliance state into consideration for Intune Compliance State.
     *
-    * @return bool|null The configurationManagerComplianceRequired
+    * @return bool The configurationManagerComplianceRequired
     */
     public function getConfigurationManagerComplianceRequired()
     {
@@ -202,7 +202,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the defenderEnabled
     * Require Windows Defender Antimalware on Windows devices.
     *
-    * @return bool|null The defenderEnabled
+    * @return bool The defenderEnabled
     */
     public function getDefenderEnabled()
     {
@@ -231,7 +231,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the defenderVersion
     * Require Windows Defender Antimalware minimum version on Windows devices.
     *
-    * @return string|null The defenderVersion
+    * @return string The defenderVersion
     */
     public function getDefenderVersion()
     {
@@ -260,12 +260,12 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the deviceCompliancePolicyScript
     * Not yet documented
     *
-    * @return DeviceCompliancePolicyScript|null The deviceCompliancePolicyScript
+    * @return DeviceCompliancePolicyScript The deviceCompliancePolicyScript
     */
     public function getDeviceCompliancePolicyScript()
     {
         if (array_key_exists("deviceCompliancePolicyScript", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCompliancePolicyScript"], "\Beta\Microsoft\Graph\Model\DeviceCompliancePolicyScript") || is_null($this->_propDict["deviceCompliancePolicyScript"])) {
+            if (is_a($this->_propDict["deviceCompliancePolicyScript"], "\Beta\Microsoft\Graph\Model\DeviceCompliancePolicyScript")) {
                 return $this->_propDict["deviceCompliancePolicyScript"];
             } else {
                 $this->_propDict["deviceCompliancePolicyScript"] = new DeviceCompliancePolicyScript($this->_propDict["deviceCompliancePolicyScript"]);
@@ -293,7 +293,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the deviceThreatProtectionEnabled
     * Require that devices have enabled device threat protection.
     *
-    * @return bool|null The deviceThreatProtectionEnabled
+    * @return bool The deviceThreatProtectionEnabled
     */
     public function getDeviceThreatProtectionEnabled()
     {
@@ -322,12 +322,12 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the deviceThreatProtectionRequiredSecurityLevel
     * Require Device Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
-    * @return DeviceThreatProtectionLevel|null The deviceThreatProtectionRequiredSecurityLevel
+    * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
     */
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel") || is_null($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"])) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
@@ -355,7 +355,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the earlyLaunchAntiMalwareDriverEnabled
     * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
     *
-    * @return bool|null The earlyLaunchAntiMalwareDriverEnabled
+    * @return bool The earlyLaunchAntiMalwareDriverEnabled
     */
     public function getEarlyLaunchAntiMalwareDriverEnabled()
     {
@@ -384,7 +384,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the mobileOsMaximumVersion
     * Maximum Windows Phone version.
     *
-    * @return string|null The mobileOsMaximumVersion
+    * @return string The mobileOsMaximumVersion
     */
     public function getMobileOsMaximumVersion()
     {
@@ -413,7 +413,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the mobileOsMinimumVersion
     * Minimum Windows Phone version.
     *
-    * @return string|null The mobileOsMinimumVersion
+    * @return string The mobileOsMinimumVersion
     */
     public function getMobileOsMinimumVersion()
     {
@@ -442,7 +442,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMaximumVersion
     * Maximum Windows 10 version.
     *
-    * @return string|null The osMaximumVersion
+    * @return string The osMaximumVersion
     */
     public function getOsMaximumVersion()
     {
@@ -471,7 +471,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMinimumVersion
     * Minimum Windows 10 version.
     *
-    * @return string|null The osMinimumVersion
+    * @return string The osMinimumVersion
     */
     public function getOsMinimumVersion()
     {
@@ -500,7 +500,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordBlockSimple
     * Indicates whether or not to block simple password.
     *
-    * @return bool|null The passwordBlockSimple
+    * @return bool The passwordBlockSimple
     */
     public function getPasswordBlockSimple()
     {
@@ -529,7 +529,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordExpirationDays
     * The password expiration in days.
     *
-    * @return int|null The passwordExpirationDays
+    * @return int The passwordExpirationDays
     */
     public function getPasswordExpirationDays()
     {
@@ -558,7 +558,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
     *
-    * @return int|null The passwordMinimumCharacterSetCount
+    * @return int The passwordMinimumCharacterSetCount
     */
     public function getPasswordMinimumCharacterSetCount()
     {
@@ -587,7 +587,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumLength
     * The minimum password length.
     *
-    * @return int|null The passwordMinimumLength
+    * @return int The passwordMinimumLength
     */
     public function getPasswordMinimumLength()
     {
@@ -616,7 +616,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
     *
-    * @return int|null The passwordMinutesOfInactivityBeforeLock
+    * @return int The passwordMinutesOfInactivityBeforeLock
     */
     public function getPasswordMinutesOfInactivityBeforeLock()
     {
@@ -645,7 +645,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordPreviousPasswordBlockCount
     * The number of previous passwords to prevent re-use of.
     *
-    * @return int|null The passwordPreviousPasswordBlockCount
+    * @return int The passwordPreviousPasswordBlockCount
     */
     public function getPasswordPreviousPasswordBlockCount()
     {
@@ -674,7 +674,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequired
     * Require a password to unlock Windows device.
     *
-    * @return bool|null The passwordRequired
+    * @return bool The passwordRequired
     */
     public function getPasswordRequired()
     {
@@ -703,7 +703,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequiredToUnlockFromIdle
     * Require a password to unlock an idle device.
     *
-    * @return bool|null The passwordRequiredToUnlockFromIdle
+    * @return bool The passwordRequiredToUnlockFromIdle
     */
     public function getPasswordRequiredToUnlockFromIdle()
     {
@@ -732,12 +732,12 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
-    * @return RequiredPasswordType|null The passwordRequiredType
+    * @return RequiredPasswordType The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -765,7 +765,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the requireHealthyDeviceReport
     * Require devices to be reported as healthy by Windows Device Health Attestation.
     *
-    * @return bool|null The requireHealthyDeviceReport
+    * @return bool The requireHealthyDeviceReport
     */
     public function getRequireHealthyDeviceReport()
     {
@@ -794,7 +794,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the rtpEnabled
     * Require Windows Defender Antimalware Real-Time Protection on Windows devices.
     *
-    * @return bool|null The rtpEnabled
+    * @return bool The rtpEnabled
     */
     public function getRtpEnabled()
     {
@@ -823,7 +823,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the secureBootEnabled
     * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
     *
-    * @return bool|null The secureBootEnabled
+    * @return bool The secureBootEnabled
     */
     public function getSecureBootEnabled()
     {
@@ -852,7 +852,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the signatureOutOfDate
     * Require Windows Defender Antimalware Signature to be up to date on Windows devices.
     *
-    * @return bool|null The signatureOutOfDate
+    * @return bool The signatureOutOfDate
     */
     public function getSignatureOutOfDate()
     {
@@ -881,7 +881,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the storageRequireEncryption
     * Require encryption on windows devices.
     *
-    * @return bool|null The storageRequireEncryption
+    * @return bool The storageRequireEncryption
     */
     public function getStorageRequireEncryption()
     {
@@ -910,7 +910,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     * Gets the tpmRequired
     * Require Trusted Platform Module(TPM) to be present.
     *
-    * @return bool|null The tpmRequired
+    * @return bool The tpmRequired
     */
     public function getTpmRequired()
     {
@@ -940,7 +940,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
      * Gets the validOperatingSystemBuildRanges
     * The valid operating system build ranges on Windows devices. This collection can contain a maximum of 10000 elements.
      *
-     * @return array|null The validOperatingSystemBuildRanges
+     * @return array The validOperatingSystemBuildRanges
      */
     public function getValidOperatingSystemBuildRanges()
     {
@@ -961,7 +961,7 @@ class Windows10CompliancePolicy extends DeviceCompliancePolicy
     */
     public function setValidOperatingSystemBuildRanges($val)
     {
-        $this->_propDict["validOperatingSystemBuildRanges"] = $val;
+		$this->_propDict["validOperatingSystemBuildRanges"] = $val;
         return $this;
     }
     

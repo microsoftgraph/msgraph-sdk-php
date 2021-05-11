@@ -36,7 +36,7 @@ class DeviceManagementSettingCollectionConstraint extends DeviceManagementConstr
     * Gets the maximumLength
     * The maximum number of elements in the collection
     *
-    * @return int|null The maximumLength
+    * @return int The maximumLength
     */
     public function getMaximumLength()
     {
@@ -64,7 +64,7 @@ class DeviceManagementSettingCollectionConstraint extends DeviceManagementConstr
     * Gets the minimumLength
     * The minimum number of elements in the collection
     *
-    * @return int|null The minimumLength
+    * @return int The minimumLength
     */
     public function getMinimumLength()
     {

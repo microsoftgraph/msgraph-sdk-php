@@ -39,10 +39,7 @@ class IdentityProtectionRoot implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-        if (!is_array($propDict)) {
-           $propDict = array();
-        }
-        $this->_propDict = $propDict;
+		$this->_propDict = $propDict;
     }
 
     /**
@@ -59,7 +56,7 @@ class IdentityProtectionRoot implements \JsonSerializable
      /** 
      * Gets the riskDetections
      *
-     * @return array|null The riskDetections
+     * @return array The riskDetections
      */
     public function getRiskDetections()
     {
@@ -79,7 +76,7 @@ class IdentityProtectionRoot implements \JsonSerializable
     */
     public function setRiskDetections($val)
     {
-        $this->_propDict["riskDetections"] = $val;
+		$this->_propDict["riskDetections"] = $val;
         return $this;
     }
     
@@ -87,7 +84,7 @@ class IdentityProtectionRoot implements \JsonSerializable
      /** 
      * Gets the riskyUsers
      *
-     * @return array|null The riskyUsers
+     * @return array The riskyUsers
      */
     public function getRiskyUsers()
     {
@@ -107,7 +104,7 @@ class IdentityProtectionRoot implements \JsonSerializable
     */
     public function setRiskyUsers($val)
     {
-        $this->_propDict["riskyUsers"] = $val;
+		$this->_propDict["riskyUsers"] = $val;
         return $this;
     }
     
@@ -136,7 +133,7 @@ class IdentityProtectionRoot implements \JsonSerializable
     
     /**
     * Serializes the object by property array
-    * Manually serialize DateTime into RFC3339 format
+	* Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */

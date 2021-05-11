@@ -26,7 +26,7 @@ class OverallPrintUsageSummary extends Entity
     /**
     * Gets the activePrintersCount
     *
-    * @return int|null The activePrintersCount
+    * @return int The activePrintersCount
     */
     public function getActivePrintersCount()
     {
@@ -52,7 +52,7 @@ class OverallPrintUsageSummary extends Entity
     /**
     * Gets the activeUsersCount
     *
-    * @return int|null The activeUsersCount
+    * @return int The activeUsersCount
     */
     public function getActiveUsersCount()
     {
@@ -78,7 +78,7 @@ class OverallPrintUsageSummary extends Entity
     /**
     * Gets the daysInPeriod
     *
-    * @return int|null The daysInPeriod
+    * @return int The daysInPeriod
     */
     public function getDaysInPeriod()
     {
@@ -105,12 +105,12 @@ class OverallPrintUsageSummary extends Entity
     /**
     * Gets the topPrinters
     *
-    * @return PrinterUsageSummary|null The topPrinters
+    * @return PrinterUsageSummary The topPrinters
     */
     public function getTopPrinters()
     {
         if (array_key_exists("topPrinters", $this->_propDict)) {
-            if (is_a($this->_propDict["topPrinters"], "\Beta\Microsoft\Graph\Model\PrinterUsageSummary") || is_null($this->_propDict["topPrinters"])) {
+            if (is_a($this->_propDict["topPrinters"], "\Beta\Microsoft\Graph\Model\PrinterUsageSummary")) {
                 return $this->_propDict["topPrinters"];
             } else {
                 $this->_propDict["topPrinters"] = new PrinterUsageSummary($this->_propDict["topPrinters"]);
@@ -136,12 +136,12 @@ class OverallPrintUsageSummary extends Entity
     /**
     * Gets the topUsers
     *
-    * @return UserPrintUsageSummary|null The topUsers
+    * @return UserPrintUsageSummary The topUsers
     */
     public function getTopUsers()
     {
         if (array_key_exists("topUsers", $this->_propDict)) {
-            if (is_a($this->_propDict["topUsers"], "\Beta\Microsoft\Graph\Model\UserPrintUsageSummary") || is_null($this->_propDict["topUsers"])) {
+            if (is_a($this->_propDict["topUsers"], "\Beta\Microsoft\Graph\Model\UserPrintUsageSummary")) {
                 return $this->_propDict["topUsers"];
             } else {
                 $this->_propDict["topUsers"] = new UserPrintUsageSummary($this->_propDict["topUsers"]);
@@ -166,7 +166,7 @@ class OverallPrintUsageSummary extends Entity
     /**
     * Gets the totalIncompleteJobs
     *
-    * @return int|null The totalIncompleteJobs
+    * @return int The totalIncompleteJobs
     */
     public function getTotalIncompleteJobs()
     {
@@ -192,7 +192,7 @@ class OverallPrintUsageSummary extends Entity
     /**
     * Gets the totalJobsProcessed
     *
-    * @return int|null The totalJobsProcessed
+    * @return int The totalJobsProcessed
     */
     public function getTotalJobsProcessed()
     {

@@ -25,9 +25,9 @@ class Hashes extends Entity
 {
     /**
     * Gets the crc32Hash
-    * The CRC32 value of the file in little endian (if available). Read-only.
+    * The CRC32 value of the file (if available). Read-only.
     *
-    * @return string|null The crc32Hash
+    * @return string The crc32Hash
     */
     public function getCrc32Hash()
     {
@@ -40,7 +40,7 @@ class Hashes extends Entity
 
     /**
     * Sets the crc32Hash
-    * The CRC32 value of the file in little endian (if available). Read-only.
+    * The CRC32 value of the file (if available). Read-only.
     *
     * @param string $val The value of the crc32Hash
     *
@@ -55,7 +55,7 @@ class Hashes extends Entity
     * Gets the quickXorHash
     * A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
     *
-    * @return string|null The quickXorHash
+    * @return string The quickXorHash
     */
     public function getQuickXorHash()
     {
@@ -83,7 +83,7 @@ class Hashes extends Entity
     * Gets the sha1Hash
     * SHA1 hash for the contents of the file (if available). Read-only.
     *
-    * @return string|null The sha1Hash
+    * @return string The sha1Hash
     */
     public function getSha1Hash()
     {
@@ -111,7 +111,7 @@ class Hashes extends Entity
     * Gets the sha256Hash
     * SHA256 hash for the contents of the file (if available). Read-only.
     *
-    * @return string|null The sha256Hash
+    * @return string The sha256Hash
     */
     public function getSha256Hash()
     {

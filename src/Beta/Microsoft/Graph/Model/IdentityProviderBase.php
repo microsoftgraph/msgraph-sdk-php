@@ -28,7 +28,7 @@ class IdentityProviderBase extends Entity
     * Gets the displayName
     * The display name of the identity provider.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {

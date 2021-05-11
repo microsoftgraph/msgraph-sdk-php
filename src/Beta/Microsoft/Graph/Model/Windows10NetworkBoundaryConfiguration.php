@@ -28,12 +28,12 @@ class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration
     * Gets the windowsNetworkIsolationPolicy
     * Windows Network Isolation Policy
     *
-    * @return WindowsNetworkIsolationPolicy|null The windowsNetworkIsolationPolicy
+    * @return WindowsNetworkIsolationPolicy The windowsNetworkIsolationPolicy
     */
     public function getWindowsNetworkIsolationPolicy()
     {
         if (array_key_exists("windowsNetworkIsolationPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsNetworkIsolationPolicy"], "\Beta\Microsoft\Graph\Model\WindowsNetworkIsolationPolicy") || is_null($this->_propDict["windowsNetworkIsolationPolicy"])) {
+            if (is_a($this->_propDict["windowsNetworkIsolationPolicy"], "\Beta\Microsoft\Graph\Model\WindowsNetworkIsolationPolicy")) {
                 return $this->_propDict["windowsNetworkIsolationPolicy"];
             } else {
                 $this->_propDict["windowsNetworkIsolationPolicy"] = new WindowsNetworkIsolationPolicy($this->_propDict["windowsNetworkIsolationPolicy"]);

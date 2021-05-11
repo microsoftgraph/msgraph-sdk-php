@@ -36,7 +36,7 @@ class EducationPowerPointResource extends EducationResource
     * Gets the fileUrl
     * Location of the file on disk.
     *
-    * @return string|null The fileUrl
+    * @return string The fileUrl
     */
     public function getFileUrl()
     {

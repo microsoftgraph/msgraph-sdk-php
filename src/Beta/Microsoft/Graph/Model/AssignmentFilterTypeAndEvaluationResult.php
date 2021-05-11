@@ -28,12 +28,12 @@ class AssignmentFilterTypeAndEvaluationResult extends Entity
     * Gets the assignmentFilterType
     * Represents the filter type. Possible values are: none, include, exclude.
     *
-    * @return DeviceAndAppManagementAssignmentFilterType|null The assignmentFilterType
+    * @return DeviceAndAppManagementAssignmentFilterType The assignmentFilterType
     */
     public function getAssignmentFilterType()
     {
         if (array_key_exists("assignmentFilterType", $this->_propDict)) {
-            if (is_a($this->_propDict["assignmentFilterType"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentFilterType") || is_null($this->_propDict["assignmentFilterType"])) {
+            if (is_a($this->_propDict["assignmentFilterType"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentFilterType")) {
                 return $this->_propDict["assignmentFilterType"];
             } else {
                 $this->_propDict["assignmentFilterType"] = new DeviceAndAppManagementAssignmentFilterType($this->_propDict["assignmentFilterType"]);
@@ -61,12 +61,12 @@ class AssignmentFilterTypeAndEvaluationResult extends Entity
     * Gets the evaluationResult
     * Represents the evalaution result of the filter. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated.
     *
-    * @return AssignmentFilterEvaluationResult|null The evaluationResult
+    * @return AssignmentFilterEvaluationResult The evaluationResult
     */
     public function getEvaluationResult()
     {
         if (array_key_exists("evaluationResult", $this->_propDict)) {
-            if (is_a($this->_propDict["evaluationResult"], "\Beta\Microsoft\Graph\Model\AssignmentFilterEvaluationResult") || is_null($this->_propDict["evaluationResult"])) {
+            if (is_a($this->_propDict["evaluationResult"], "\Beta\Microsoft\Graph\Model\AssignmentFilterEvaluationResult")) {
                 return $this->_propDict["evaluationResult"];
             } else {
                 $this->_propDict["evaluationResult"] = new AssignmentFilterEvaluationResult($this->_propDict["evaluationResult"]);

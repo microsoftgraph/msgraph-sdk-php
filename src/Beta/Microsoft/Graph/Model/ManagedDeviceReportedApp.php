@@ -27,7 +27,7 @@ class ManagedDeviceReportedApp extends Entity
     * Gets the appId
     * The application or bundle identifier of the application
     *
-    * @return string|null The appId
+    * @return string The appId
     */
     public function getAppId()
     {

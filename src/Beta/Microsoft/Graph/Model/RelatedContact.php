@@ -27,7 +27,7 @@ class RelatedContact extends Entity
     * Gets the accessConsent
     * Indicates whether the user has been consented to access student data.
     *
-    * @return bool|null The accessConsent
+    * @return bool The accessConsent
     */
     public function getAccessConsent()
     {
@@ -55,7 +55,7 @@ class RelatedContact extends Entity
     * Gets the displayName
     * Name of the contact. Required.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -81,9 +81,9 @@ class RelatedContact extends Entity
     }
     /**
     * Gets the emailAddress
-    * Primary email address of the contact.
+    * Email address of the contact.
     *
-    * @return string|null The emailAddress
+    * @return string The emailAddress
     */
     public function getEmailAddress()
     {
@@ -96,7 +96,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the emailAddress
-    * Primary email address of the contact.
+    * Email address of the contact.
     *
     * @param string $val The value of the emailAddress
     *
@@ -111,7 +111,7 @@ class RelatedContact extends Entity
     * Gets the id
     * Identity of the contact within Azure Active Directory.
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -139,7 +139,7 @@ class RelatedContact extends Entity
     * Gets the mobilePhone
     * Mobile phone number of the contact.
     *
-    * @return string|null The mobilePhone
+    * @return string The mobilePhone
     */
     public function getMobilePhone()
     {
@@ -166,14 +166,14 @@ class RelatedContact extends Entity
 
     /**
     * Gets the relationship
-    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+    * Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
     *
-    * @return ContactRelationship|null The relationship
+    * @return ContactRelationship The relationship
     */
     public function getRelationship()
     {
         if (array_key_exists("relationship", $this->_propDict)) {
-            if (is_a($this->_propDict["relationship"], "\Beta\Microsoft\Graph\Model\ContactRelationship") || is_null($this->_propDict["relationship"])) {
+            if (is_a($this->_propDict["relationship"], "\Beta\Microsoft\Graph\Model\ContactRelationship")) {
                 return $this->_propDict["relationship"];
             } else {
                 $this->_propDict["relationship"] = new ContactRelationship($this->_propDict["relationship"]);
@@ -185,7 +185,7 @@ class RelatedContact extends Entity
 
     /**
     * Sets the relationship
-    * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
+    * Relationship to the user. Possible values are: parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
     *
     * @param ContactRelationship $val The value to assign to the relationship
     *

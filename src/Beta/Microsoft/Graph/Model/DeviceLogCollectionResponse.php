@@ -28,7 +28,7 @@ class DeviceLogCollectionResponse extends Entity
     * Gets the errorCode
     * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
     *
-    * @return int|null The errorCode
+    * @return int The errorCode
     */
     public function getErrorCode()
     {
@@ -57,12 +57,12 @@ class DeviceLogCollectionResponse extends Entity
     * Gets the expirationDateTimeUTC
     * The DateTime of the expiration of the logs
     *
-    * @return \DateTime|null The expirationDateTimeUTC
+    * @return \DateTime The expirationDateTimeUTC
     */
     public function getExpirationDateTimeUTC()
     {
         if (array_key_exists("expirationDateTimeUTC", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTimeUTC"], "\DateTime") || is_null($this->_propDict["expirationDateTimeUTC"])) {
+            if (is_a($this->_propDict["expirationDateTimeUTC"], "\DateTime")) {
                 return $this->_propDict["expirationDateTimeUTC"];
             } else {
                 $this->_propDict["expirationDateTimeUTC"] = new \DateTime($this->_propDict["expirationDateTimeUTC"]);
@@ -90,7 +90,7 @@ class DeviceLogCollectionResponse extends Entity
     * Gets the initiatedByUserPrincipalName
     * The UPN for who initiated the request
     *
-    * @return string|null The initiatedByUserPrincipalName
+    * @return string The initiatedByUserPrincipalName
     */
     public function getInitiatedByUserPrincipalName()
     {
@@ -119,7 +119,7 @@ class DeviceLogCollectionResponse extends Entity
     * Gets the managedDeviceId
     * The device Id
     *
-    * @return string|null The managedDeviceId
+    * @return string The managedDeviceId
     */
     public function getManagedDeviceId()
     {
@@ -148,12 +148,12 @@ class DeviceLogCollectionResponse extends Entity
     * Gets the receivedDateTimeUTC
     * The DateTime the request was received
     *
-    * @return \DateTime|null The receivedDateTimeUTC
+    * @return \DateTime The receivedDateTimeUTC
     */
     public function getReceivedDateTimeUTC()
     {
         if (array_key_exists("receivedDateTimeUTC", $this->_propDict)) {
-            if (is_a($this->_propDict["receivedDateTimeUTC"], "\DateTime") || is_null($this->_propDict["receivedDateTimeUTC"])) {
+            if (is_a($this->_propDict["receivedDateTimeUTC"], "\DateTime")) {
                 return $this->_propDict["receivedDateTimeUTC"];
             } else {
                 $this->_propDict["receivedDateTimeUTC"] = new \DateTime($this->_propDict["receivedDateTimeUTC"]);
@@ -181,12 +181,12 @@ class DeviceLogCollectionResponse extends Entity
     * Gets the requestedDateTimeUTC
     * The DateTime of the request
     *
-    * @return \DateTime|null The requestedDateTimeUTC
+    * @return \DateTime The requestedDateTimeUTC
     */
     public function getRequestedDateTimeUTC()
     {
         if (array_key_exists("requestedDateTimeUTC", $this->_propDict)) {
-            if (is_a($this->_propDict["requestedDateTimeUTC"], "\DateTime") || is_null($this->_propDict["requestedDateTimeUTC"])) {
+            if (is_a($this->_propDict["requestedDateTimeUTC"], "\DateTime")) {
                 return $this->_propDict["requestedDateTimeUTC"];
             } else {
                 $this->_propDict["requestedDateTimeUTC"] = new \DateTime($this->_propDict["requestedDateTimeUTC"]);
@@ -214,7 +214,7 @@ class DeviceLogCollectionResponse extends Entity
     * Gets the size
     * The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
-    * @return float|null The size
+    * @return float The size
     */
     public function getSize()
     {
@@ -235,7 +235,7 @@ class DeviceLogCollectionResponse extends Entity
     */
     public function setSize($val)
     {
-        $this->_propDict["size"] = floatval($val);
+        $this->_propDict["size"] = $val;
         return $this;
     }
     
@@ -243,7 +243,7 @@ class DeviceLogCollectionResponse extends Entity
     * Gets the status
     * The status of the log collection request
     *
-    * @return string|null The status
+    * @return string The status
     */
     public function getStatus()
     {

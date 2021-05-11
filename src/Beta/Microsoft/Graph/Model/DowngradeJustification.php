@@ -27,7 +27,7 @@ class DowngradeJustification extends Entity
     * Gets the isDowngradeJustified
     * Indicates whether the downgrade is or is not justified.
     *
-    * @return bool|null The isDowngradeJustified
+    * @return bool The isDowngradeJustified
     */
     public function getIsDowngradeJustified()
     {
@@ -55,7 +55,7 @@ class DowngradeJustification extends Entity
     * Gets the justificationMessage
     * Message that indicates why a downgrade is justified. The message will appear in administrative logs.
     *
-    * @return string|null The justificationMessage
+    * @return string The justificationMessage
     */
     public function getJustificationMessage()
     {

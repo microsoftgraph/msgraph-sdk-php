@@ -27,12 +27,12 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the customKeyIdentifier
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The customKeyIdentifier
+    * @return \GuzzleHttp\Psr7\Stream The customKeyIdentifier
     */
     public function getCustomKeyIdentifier()
     {
         if (array_key_exists("customKeyIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["customKeyIdentifier"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customKeyIdentifier"])) {
+            if (is_a($this->_propDict["customKeyIdentifier"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["customKeyIdentifier"];
             } else {
                 $this->_propDict["customKeyIdentifier"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["customKeyIdentifier"]);
@@ -57,7 +57,7 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -84,12 +84,12 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the endDateTime
     *
-    * @return \DateTime|null The endDateTime
+    * @return \DateTime The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -115,12 +115,12 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the key
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The key
+    * @return \GuzzleHttp\Psr7\Stream The key
     */
     public function getKey()
     {
         if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["key"])) {
+            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["key"];
             } else {
                 $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
@@ -145,7 +145,7 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the keyId
     *
-    * @return string|null The keyId
+    * @return string The keyId
     */
     public function getKeyId()
     {
@@ -172,12 +172,12 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the startDateTime
     *
-    * @return \DateTime|null The startDateTime
+    * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -202,7 +202,7 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the thumbprint
     *
-    * @return string|null The thumbprint
+    * @return string The thumbprint
     */
     public function getThumbprint()
     {
@@ -228,7 +228,7 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the type
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {
@@ -254,7 +254,7 @@ class SelfSignedCertificate extends Entity
     /**
     * Gets the usage
     *
-    * @return string|null The usage
+    * @return string The usage
     */
     public function getUsage()
     {

@@ -28,12 +28,12 @@ class OrganizationSettings extends Entity
     * Gets the itemInsights
     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. Get itemInsightsSettings through this navigation property.
     *
-    * @return ItemInsightsSettings|null The itemInsights
+    * @return ItemInsightsSettings The itemInsights
     */
     public function getItemInsights()
     {
         if (array_key_exists("itemInsights", $this->_propDict)) {
-            if (is_a($this->_propDict["itemInsights"], "\Beta\Microsoft\Graph\Model\ItemInsightsSettings") || is_null($this->_propDict["itemInsights"])) {
+            if (is_a($this->_propDict["itemInsights"], "\Beta\Microsoft\Graph\Model\ItemInsightsSettings")) {
                 return $this->_propDict["itemInsights"];
             } else {
                 $this->_propDict["itemInsights"] = new ItemInsightsSettings($this->_propDict["itemInsights"]);
@@ -62,7 +62,7 @@ class OrganizationSettings extends Entity
      * Gets the profileCardProperties
     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
      *
-     * @return array|null The profileCardProperties
+     * @return array The profileCardProperties
      */
     public function getProfileCardProperties()
     {
@@ -83,7 +83,7 @@ class OrganizationSettings extends Entity
     */
     public function setProfileCardProperties($val)
     {
-        $this->_propDict["profileCardProperties"] = $val;
+		$this->_propDict["profileCardProperties"] = $val;
         return $this;
     }
     

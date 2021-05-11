@@ -28,7 +28,7 @@ class Security extends Entity
      /** 
      * Gets the providerStatus
      *
-     * @return array|null The providerStatus
+     * @return array The providerStatus
      */
     public function getProviderStatus()
     {
@@ -48,7 +48,7 @@ class Security extends Entity
     */
     public function setProviderStatus($val)
     {
-        $this->_propDict["providerStatus"] = $val;
+		$this->_propDict["providerStatus"] = $val;
         return $this;
     }
     
@@ -57,7 +57,7 @@ class Security extends Entity
      * Gets the alerts
     * Read-only. Nullable.
      *
-     * @return array|null The alerts
+     * @return array The alerts
      */
     public function getAlerts()
     {
@@ -78,7 +78,7 @@ class Security extends Entity
     */
     public function setAlerts($val)
     {
-        $this->_propDict["alerts"] = $val;
+		$this->_propDict["alerts"] = $val;
         return $this;
     }
     
@@ -86,7 +86,7 @@ class Security extends Entity
      /** 
      * Gets the cloudAppSecurityProfiles
      *
-     * @return array|null The cloudAppSecurityProfiles
+     * @return array The cloudAppSecurityProfiles
      */
     public function getCloudAppSecurityProfiles()
     {
@@ -106,7 +106,7 @@ class Security extends Entity
     */
     public function setCloudAppSecurityProfiles($val)
     {
-        $this->_propDict["cloudAppSecurityProfiles"] = $val;
+		$this->_propDict["cloudAppSecurityProfiles"] = $val;
         return $this;
     }
     
@@ -114,7 +114,7 @@ class Security extends Entity
      /** 
      * Gets the domainSecurityProfiles
      *
-     * @return array|null The domainSecurityProfiles
+     * @return array The domainSecurityProfiles
      */
     public function getDomainSecurityProfiles()
     {
@@ -134,7 +134,7 @@ class Security extends Entity
     */
     public function setDomainSecurityProfiles($val)
     {
-        $this->_propDict["domainSecurityProfiles"] = $val;
+		$this->_propDict["domainSecurityProfiles"] = $val;
         return $this;
     }
     
@@ -142,7 +142,7 @@ class Security extends Entity
      /** 
      * Gets the fileSecurityProfiles
      *
-     * @return array|null The fileSecurityProfiles
+     * @return array The fileSecurityProfiles
      */
     public function getFileSecurityProfiles()
     {
@@ -162,7 +162,7 @@ class Security extends Entity
     */
     public function setFileSecurityProfiles($val)
     {
-        $this->_propDict["fileSecurityProfiles"] = $val;
+		$this->_propDict["fileSecurityProfiles"] = $val;
         return $this;
     }
     
@@ -170,7 +170,7 @@ class Security extends Entity
      /** 
      * Gets the hostSecurityProfiles
      *
-     * @return array|null The hostSecurityProfiles
+     * @return array The hostSecurityProfiles
      */
     public function getHostSecurityProfiles()
     {
@@ -190,7 +190,7 @@ class Security extends Entity
     */
     public function setHostSecurityProfiles($val)
     {
-        $this->_propDict["hostSecurityProfiles"] = $val;
+		$this->_propDict["hostSecurityProfiles"] = $val;
         return $this;
     }
     
@@ -198,7 +198,7 @@ class Security extends Entity
      /** 
      * Gets the ipSecurityProfiles
      *
-     * @return array|null The ipSecurityProfiles
+     * @return array The ipSecurityProfiles
      */
     public function getIpSecurityProfiles()
     {
@@ -218,7 +218,7 @@ class Security extends Entity
     */
     public function setIpSecurityProfiles($val)
     {
-        $this->_propDict["ipSecurityProfiles"] = $val;
+		$this->_propDict["ipSecurityProfiles"] = $val;
         return $this;
     }
     
@@ -226,7 +226,7 @@ class Security extends Entity
      /** 
      * Gets the providerTenantSettings
      *
-     * @return array|null The providerTenantSettings
+     * @return array The providerTenantSettings
      */
     public function getProviderTenantSettings()
     {
@@ -246,7 +246,7 @@ class Security extends Entity
     */
     public function setProviderTenantSettings($val)
     {
-        $this->_propDict["providerTenantSettings"] = $val;
+		$this->_propDict["providerTenantSettings"] = $val;
         return $this;
     }
     
@@ -254,7 +254,7 @@ class Security extends Entity
      /** 
      * Gets the secureScoreControlProfiles
      *
-     * @return array|null The secureScoreControlProfiles
+     * @return array The secureScoreControlProfiles
      */
     public function getSecureScoreControlProfiles()
     {
@@ -274,7 +274,7 @@ class Security extends Entity
     */
     public function setSecureScoreControlProfiles($val)
     {
-        $this->_propDict["secureScoreControlProfiles"] = $val;
+		$this->_propDict["secureScoreControlProfiles"] = $val;
         return $this;
     }
     
@@ -282,7 +282,7 @@ class Security extends Entity
      /** 
      * Gets the secureScores
      *
-     * @return array|null The secureScores
+     * @return array The secureScores
      */
     public function getSecureScores()
     {
@@ -302,7 +302,7 @@ class Security extends Entity
     */
     public function setSecureScores($val)
     {
-        $this->_propDict["secureScores"] = $val;
+		$this->_propDict["secureScores"] = $val;
         return $this;
     }
     
@@ -310,7 +310,7 @@ class Security extends Entity
      /** 
      * Gets the securityActions
      *
-     * @return array|null The securityActions
+     * @return array The securityActions
      */
     public function getSecurityActions()
     {
@@ -330,7 +330,7 @@ class Security extends Entity
     */
     public function setSecurityActions($val)
     {
-        $this->_propDict["securityActions"] = $val;
+		$this->_propDict["securityActions"] = $val;
         return $this;
     }
     
@@ -338,7 +338,7 @@ class Security extends Entity
      /** 
      * Gets the tiIndicators
      *
-     * @return array|null The tiIndicators
+     * @return array The tiIndicators
      */
     public function getTiIndicators()
     {
@@ -358,7 +358,7 @@ class Security extends Entity
     */
     public function setTiIndicators($val)
     {
-        $this->_propDict["tiIndicators"] = $val;
+		$this->_propDict["tiIndicators"] = $val;
         return $this;
     }
     
@@ -366,7 +366,7 @@ class Security extends Entity
      /** 
      * Gets the userSecurityProfiles
      *
-     * @return array|null The userSecurityProfiles
+     * @return array The userSecurityProfiles
      */
     public function getUserSecurityProfiles()
     {
@@ -386,7 +386,7 @@ class Security extends Entity
     */
     public function setUserSecurityProfiles($val)
     {
-        $this->_propDict["userSecurityProfiles"] = $val;
+		$this->_propDict["userSecurityProfiles"] = $val;
         return $this;
     }
     

@@ -28,12 +28,12 @@ class CloudPcStatusDetails extends Entity
     * Gets the additionalInformation
     * Any additional information about the cloud PC status.
     *
-    * @return KeyValuePair|null The additionalInformation
+    * @return KeyValuePair The additionalInformation
     */
     public function getAdditionalInformation()
     {
         if (array_key_exists("additionalInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["additionalInformation"], "\Beta\Microsoft\Graph\Model\KeyValuePair") || is_null($this->_propDict["additionalInformation"])) {
+            if (is_a($this->_propDict["additionalInformation"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["additionalInformation"];
             } else {
                 $this->_propDict["additionalInformation"] = new KeyValuePair($this->_propDict["additionalInformation"]);
@@ -60,7 +60,7 @@ class CloudPcStatusDetails extends Entity
     * Gets the code
     * The code associated with the cloud PC status.
     *
-    * @return string|null The code
+    * @return string The code
     */
     public function getCode()
     {
@@ -88,7 +88,7 @@ class CloudPcStatusDetails extends Entity
     * Gets the message
     * The status message.
     *
-    * @return string|null The message
+    * @return string The message
     */
     public function getMessage()
     {

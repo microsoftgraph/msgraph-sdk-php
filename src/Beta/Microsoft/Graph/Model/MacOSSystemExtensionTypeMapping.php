@@ -28,12 +28,12 @@ class MacOSSystemExtensionTypeMapping extends Entity
     * Gets the allowedTypes
     * Gets or sets the allowed macOS system extension types. Possible values are: driverExtensionsAllowed, networkExtensionsAllowed, endpointSecurityExtensionsAllowed.
     *
-    * @return MacOSSystemExtensionType|null The allowedTypes
+    * @return MacOSSystemExtensionType The allowedTypes
     */
     public function getAllowedTypes()
     {
         if (array_key_exists("allowedTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedTypes"], "\Beta\Microsoft\Graph\Model\MacOSSystemExtensionType") || is_null($this->_propDict["allowedTypes"])) {
+            if (is_a($this->_propDict["allowedTypes"], "\Beta\Microsoft\Graph\Model\MacOSSystemExtensionType")) {
                 return $this->_propDict["allowedTypes"];
             } else {
                 $this->_propDict["allowedTypes"] = new MacOSSystemExtensionType($this->_propDict["allowedTypes"]);
@@ -60,7 +60,7 @@ class MacOSSystemExtensionTypeMapping extends Entity
     * Gets the teamIdentifier
     * Gets or sets the team identifier used to sign the system extension.
     *
-    * @return string|null The teamIdentifier
+    * @return string The teamIdentifier
     */
     public function getTeamIdentifier()
     {

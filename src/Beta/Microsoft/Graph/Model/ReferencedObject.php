@@ -27,7 +27,7 @@ class ReferencedObject extends Entity
     * Gets the referencedObjectName
     * Name of the referenced object. Must match one of the objects in the directory definition.
     *
-    * @return string|null The referencedObjectName
+    * @return string The referencedObjectName
     */
     public function getReferencedObjectName()
     {
@@ -55,7 +55,7 @@ class ReferencedObject extends Entity
     * Gets the referencedProperty
     * Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.
     *
-    * @return string|null The referencedProperty
+    * @return string The referencedProperty
     */
     public function getReferencedProperty()
     {

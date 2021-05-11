@@ -28,12 +28,12 @@ class DeviceHealthScriptRemediationHistoryData extends Entity
     * Gets the date
     * The date on which devices were remediated by the device health script.
     *
-    * @return \DateTime|null The date
+    * @return \DateTime The date
     */
     public function getDate()
     {
         if (array_key_exists("date", $this->_propDict)) {
-            if (is_a($this->_propDict["date"], "\DateTime") || is_null($this->_propDict["date"])) {
+            if (is_a($this->_propDict["date"], "\DateTime")) {
                 return $this->_propDict["date"];
             } else {
                 $this->_propDict["date"] = new \DateTime($this->_propDict["date"]);
@@ -60,7 +60,7 @@ class DeviceHealthScriptRemediationHistoryData extends Entity
     * Gets the noIssueDeviceCount
     * The number of devices that were found to have no issue by the device health script.
     *
-    * @return int|null The noIssueDeviceCount
+    * @return int The noIssueDeviceCount
     */
     public function getNoIssueDeviceCount()
     {
@@ -88,7 +88,7 @@ class DeviceHealthScriptRemediationHistoryData extends Entity
     * Gets the remediatedDeviceCount
     * The number of devices remediated by the device health script.
     *
-    * @return int|null The remediatedDeviceCount
+    * @return int The remediatedDeviceCount
     */
     public function getRemediatedDeviceCount()
     {

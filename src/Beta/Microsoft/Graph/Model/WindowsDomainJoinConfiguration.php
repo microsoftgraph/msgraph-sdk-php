@@ -28,7 +28,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     * Gets the activeDirectoryDomainName
     * Active Directory domain name to join.
     *
-    * @return string|null The activeDirectoryDomainName
+    * @return string The activeDirectoryDomainName
     */
     public function getActiveDirectoryDomainName()
     {
@@ -57,7 +57,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     * Gets the computerNameStaticPrefix
     * Fixed prefix to be used for computer name.
     *
-    * @return string|null The computerNameStaticPrefix
+    * @return string The computerNameStaticPrefix
     */
     public function getComputerNameStaticPrefix()
     {
@@ -86,7 +86,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     * Gets the computerNameSuffixRandomCharCount
     * Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
     *
-    * @return int|null The computerNameSuffixRandomCharCount
+    * @return int The computerNameSuffixRandomCharCount
     */
     public function getComputerNameSuffixRandomCharCount()
     {
@@ -115,7 +115,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     * Gets the organizationalUnit
     * Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
     *
-    * @return string|null The organizationalUnit
+    * @return string The organizationalUnit
     */
     public function getOrganizationalUnit()
     {
@@ -145,7 +145,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
      * Gets the networkAccessConfigurations
     * Reference to device configurations required for network connectivity
      *
-     * @return array|null The networkAccessConfigurations
+     * @return array The networkAccessConfigurations
      */
     public function getNetworkAccessConfigurations()
     {
@@ -166,7 +166,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
     */
     public function setNetworkAccessConfigurations($val)
     {
-        $this->_propDict["networkAccessConfigurations"] = $val;
+		$this->_propDict["networkAccessConfigurations"] = $val;
         return $this;
     }
     

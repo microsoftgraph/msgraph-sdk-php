@@ -26,8 +26,9 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
 {
     /**
     * Gets the action
+    * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
     *
-    * @return string|null The action
+    * @return string The action
     */
     public function getAction()
     {
@@ -40,6 +41,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the action
+    * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
     *
     * @param string $val The action
     *
@@ -53,8 +55,9 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the appScopeId
+    * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
-    * @return string|null The appScopeId
+    * @return string The appScopeId
     */
     public function getAppScopeId()
     {
@@ -67,6 +70,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the appScopeId
+    * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The appScopeId
     *
@@ -80,8 +84,9 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the directoryScopeId
+    * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
-    * @return string|null The directoryScopeId
+    * @return string The directoryScopeId
     */
     public function getDirectoryScopeId()
     {
@@ -94,6 +99,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the directoryScopeId
+    * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The directoryScopeId
     *
@@ -107,8 +113,9 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the isValidationOnly
+    * A boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
     *
-    * @return bool|null The isValidationOnly
+    * @return bool The isValidationOnly
     */
     public function getIsValidationOnly()
     {
@@ -121,6 +128,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the isValidationOnly
+    * A boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
     *
     * @param bool $val The isValidationOnly
     *
@@ -134,8 +142,9 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the justification
+    * A message provided by users and administrators when create the request about why it is needed.
     *
-    * @return string|null The justification
+    * @return string The justification
     */
     public function getJustification()
     {
@@ -148,6 +157,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the justification
+    * A message provided by users and administrators when create the request about why it is needed.
     *
     * @param string $val The justification
     *
@@ -161,8 +171,9 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the principalId
+    * Objectid of the principal to which the assignment is being granted to.
     *
-    * @return string|null The principalId
+    * @return string The principalId
     */
     public function getPrincipalId()
     {
@@ -175,6 +186,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the principalId
+    * Objectid of the principal to which the assignment is being granted to.
     *
     * @param string $val The principalId
     *
@@ -188,8 +200,9 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the roleDefinitionId
+    * ID of the unifiedRoleDefinition the assignment is for. Read only.
     *
-    * @return string|null The roleDefinitionId
+    * @return string The roleDefinitionId
     */
     public function getRoleDefinitionId()
     {
@@ -202,6 +215,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the roleDefinitionId
+    * ID of the unifiedRoleDefinition the assignment is for. Read only.
     *
     * @param string $val The roleDefinitionId
     *
@@ -215,13 +229,14 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the scheduleInfo
+    * The schedule object of the role assignment request.
     *
-    * @return RequestSchedule|null The scheduleInfo
+    * @return RequestSchedule The scheduleInfo
     */
     public function getScheduleInfo()
     {
         if (array_key_exists("scheduleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleInfo"], "\Beta\Microsoft\Graph\Model\RequestSchedule") || is_null($this->_propDict["scheduleInfo"])) {
+            if (is_a($this->_propDict["scheduleInfo"], "\Beta\Microsoft\Graph\Model\RequestSchedule")) {
                 return $this->_propDict["scheduleInfo"];
             } else {
                 $this->_propDict["scheduleInfo"] = new RequestSchedule($this->_propDict["scheduleInfo"]);
@@ -233,6 +248,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the scheduleInfo
+    * The schedule object of the role assignment request.
     *
     * @param RequestSchedule $val The scheduleInfo
     *
@@ -246,8 +262,9 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the targetScheduleId
+    * ID of the schedule object attached to the assignment.
     *
-    * @return string|null The targetScheduleId
+    * @return string The targetScheduleId
     */
     public function getTargetScheduleId()
     {
@@ -260,6 +277,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the targetScheduleId
+    * ID of the schedule object attached to the assignment.
     *
     * @param string $val The targetScheduleId
     *
@@ -273,13 +291,14 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the ticketInfo
+    * The ticketInfo object attached to the role assignment request which includes details of the ticket number and ticket system.
     *
-    * @return TicketInfo|null The ticketInfo
+    * @return TicketInfo The ticketInfo
     */
     public function getTicketInfo()
     {
         if (array_key_exists("ticketInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["ticketInfo"], "\Beta\Microsoft\Graph\Model\TicketInfo") || is_null($this->_propDict["ticketInfo"])) {
+            if (is_a($this->_propDict["ticketInfo"], "\Beta\Microsoft\Graph\Model\TicketInfo")) {
                 return $this->_propDict["ticketInfo"];
             } else {
                 $this->_propDict["ticketInfo"] = new TicketInfo($this->_propDict["ticketInfo"]);
@@ -291,6 +310,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the ticketInfo
+    * The ticketInfo object attached to the role assignment request which includes details of the ticket number and ticket system.
     *
     * @param TicketInfo $val The ticketInfo
     *
@@ -304,13 +324,14 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the activatedUsing
+    * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation.
     *
-    * @return UnifiedRoleEligibilitySchedule|null The activatedUsing
+    * @return UnifiedRoleEligibilitySchedule The activatedUsing
     */
     public function getActivatedUsing()
     {
         if (array_key_exists("activatedUsing", $this->_propDict)) {
-            if (is_a($this->_propDict["activatedUsing"], "\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilitySchedule") || is_null($this->_propDict["activatedUsing"])) {
+            if (is_a($this->_propDict["activatedUsing"], "\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilitySchedule")) {
                 return $this->_propDict["activatedUsing"];
             } else {
                 $this->_propDict["activatedUsing"] = new UnifiedRoleEligibilitySchedule($this->_propDict["activatedUsing"]);
@@ -322,6 +343,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the activatedUsing
+    * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation.
     *
     * @param UnifiedRoleEligibilitySchedule $val The activatedUsing
     *
@@ -335,13 +357,14 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the appScope
+    * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
     *
-    * @return AppScope|null The appScope
+    * @return AppScope The appScope
     */
     public function getAppScope()
     {
         if (array_key_exists("appScope", $this->_propDict)) {
-            if (is_a($this->_propDict["appScope"], "\Beta\Microsoft\Graph\Model\AppScope") || is_null($this->_propDict["appScope"])) {
+            if (is_a($this->_propDict["appScope"], "\Beta\Microsoft\Graph\Model\AppScope")) {
                 return $this->_propDict["appScope"];
             } else {
                 $this->_propDict["appScope"] = new AppScope($this->_propDict["appScope"]);
@@ -353,6 +376,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the appScope
+    * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
     *
     * @param AppScope $val The appScope
     *
@@ -366,13 +390,14 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the directoryScope
+    * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
     *
-    * @return DirectoryObject|null The directoryScope
+    * @return DirectoryObject The directoryScope
     */
     public function getDirectoryScope()
     {
         if (array_key_exists("directoryScope", $this->_propDict)) {
-            if (is_a($this->_propDict["directoryScope"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["directoryScope"])) {
+            if (is_a($this->_propDict["directoryScope"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["directoryScope"];
             } else {
                 $this->_propDict["directoryScope"] = new DirectoryObject($this->_propDict["directoryScope"]);
@@ -384,6 +409,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the directoryScope
+    * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
     *
     * @param DirectoryObject $val The directoryScope
     *
@@ -397,13 +423,14 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the principal
+    * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
     *
-    * @return DirectoryObject|null The principal
+    * @return DirectoryObject The principal
     */
     public function getPrincipal()
     {
         if (array_key_exists("principal", $this->_propDict)) {
-            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["principal"])) {
+            if (is_a($this->_propDict["principal"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["principal"];
             } else {
                 $this->_propDict["principal"] = new DirectoryObject($this->_propDict["principal"]);
@@ -415,6 +442,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the principal
+    * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
     *
     * @param DirectoryObject $val The principal
     *
@@ -428,13 +456,14 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Gets the roleDefinition
+    * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
     *
-    * @return UnifiedRoleDefinition|null The roleDefinition
+    * @return UnifiedRoleDefinition The roleDefinition
     */
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition") || is_null($this->_propDict["roleDefinition"])) {
+            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new UnifiedRoleDefinition($this->_propDict["roleDefinition"]);
@@ -446,6 +475,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     
     /**
     * Sets the roleDefinition
+    * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
     *
     * @param UnifiedRoleDefinition $val The roleDefinition
     *
@@ -460,12 +490,12 @@ class UnifiedRoleAssignmentScheduleRequest extends Request
     /**
     * Gets the targetSchedule
     *
-    * @return UnifiedRoleAssignmentSchedule|null The targetSchedule
+    * @return UnifiedRoleAssignmentSchedule The targetSchedule
     */
     public function getTargetSchedule()
     {
         if (array_key_exists("targetSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["targetSchedule"], "\Beta\Microsoft\Graph\Model\UnifiedRoleAssignmentSchedule") || is_null($this->_propDict["targetSchedule"])) {
+            if (is_a($this->_propDict["targetSchedule"], "\Beta\Microsoft\Graph\Model\UnifiedRoleAssignmentSchedule")) {
                 return $this->_propDict["targetSchedule"];
             } else {
                 $this->_propDict["targetSchedule"] = new UnifiedRoleAssignmentSchedule($this->_propDict["targetSchedule"]);

@@ -27,7 +27,7 @@ class DeviceManagementConfigurationReferredSettingInformation extends Entity
     * Gets the settingDefinitionId
     * Setting definition id that is being referred to a setting. Applicable for reusable setting
     *
-    * @return string|null The settingDefinitionId
+    * @return string The settingDefinitionId
     */
     public function getSettingDefinitionId()
     {

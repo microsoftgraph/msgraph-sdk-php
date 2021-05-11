@@ -27,7 +27,7 @@ class Package extends Entity
     * Gets the type
     * A string indicating the type of package. While oneNote is the only currently defined value, you should expect other package types to be returned and handle them accordingly.
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {

@@ -28,7 +28,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the appCrashCount
     * The number of app crashes for the device. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The appCrashCount
+    * @return int The appCrashCount
     */
     public function getAppCrashCount()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the appHangCount
     * The number of app hangs for the device. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The appHangCount
+    * @return int The appHangCount
     */
     public function getAppHangCount()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the crashedAppCount
     * The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The crashedAppCount
+    * @return int The crashedAppCount
     */
     public function getCrashedAppCount()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the deviceAppHealthScore
     * The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
-    * @return float|null The deviceAppHealthScore
+    * @return float The deviceAppHealthScore
     */
     public function getDeviceAppHealthScore()
     {
@@ -136,7 +136,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     */
     public function setDeviceAppHealthScore($val)
     {
-        $this->_propDict["deviceAppHealthScore"] = floatval($val);
+        $this->_propDict["deviceAppHealthScore"] = $val;
         return $this;
     }
     
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the deviceAppHealthStatus
     * The overall app health status of the device.
     *
-    * @return string|null The deviceAppHealthStatus
+    * @return string The deviceAppHealthStatus
     */
     public function getDeviceAppHealthStatus()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the deviceDisplayName
     * The name of the device.
     *
-    * @return string|null The deviceDisplayName
+    * @return string The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the deviceId
     * The id of the device.
     *
-    * @return string|null The deviceId
+    * @return string The deviceId
     */
     public function getDeviceId()
     {
@@ -231,7 +231,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the deviceManufacturer
     * The manufacturer name of the device.
     *
-    * @return string|null The deviceManufacturer
+    * @return string The deviceManufacturer
     */
     public function getDeviceManufacturer()
     {
@@ -260,7 +260,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the deviceModel
     * The model name of the device.
     *
-    * @return string|null The deviceModel
+    * @return string The deviceModel
     */
     public function getDeviceModel()
     {
@@ -289,7 +289,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     * Gets the meanTimeToFailureInMinutes
     * The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The meanTimeToFailureInMinutes
+    * @return int The meanTimeToFailureInMinutes
     */
     public function getMeanTimeToFailureInMinutes()
     {

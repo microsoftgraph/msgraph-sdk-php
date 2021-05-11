@@ -27,7 +27,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the activeFileCount
     *
-    * @return int|null The activeFileCount
+    * @return int The activeFileCount
     */
     public function getActiveFileCount()
     {
@@ -54,7 +54,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the fileCount
     *
-    * @return int|null The fileCount
+    * @return int The fileCount
     */
     public function getFileCount()
     {
@@ -81,7 +81,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the isDeleted
     *
-    * @return bool|null The isDeleted
+    * @return bool The isDeleted
     */
     public function getIsDeleted()
     {
@@ -108,12 +108,12 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \DateTime The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -139,7 +139,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the ownerDisplayName
     *
-    * @return string|null The ownerDisplayName
+    * @return string The ownerDisplayName
     */
     public function getOwnerDisplayName()
     {
@@ -166,7 +166,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the ownerPrincipalName
     *
-    * @return string|null The ownerPrincipalName
+    * @return string The ownerPrincipalName
     */
     public function getOwnerPrincipalName()
     {
@@ -193,7 +193,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -220,12 +220,12 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -251,7 +251,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the siteUrl
     *
-    * @return string|null The siteUrl
+    * @return string The siteUrl
     */
     public function getSiteUrl()
     {
@@ -278,7 +278,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the storageAllocatedInBytes
     *
-    * @return int|null The storageAllocatedInBytes
+    * @return int The storageAllocatedInBytes
     */
     public function getStorageAllocatedInBytes()
     {
@@ -305,7 +305,7 @@ class OneDriveUsageAccountDetail extends Entity
     /**
     * Gets the storageUsedInBytes
     *
-    * @return int|null The storageUsedInBytes
+    * @return int The storageUsedInBytes
     */
     public function getStorageUsedInBytes()
     {

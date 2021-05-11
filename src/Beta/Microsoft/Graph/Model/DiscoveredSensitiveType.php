@@ -27,12 +27,12 @@ class DiscoveredSensitiveType extends Entity
     /**
     * Gets the classificationAttributes
     *
-    * @return ClassificationAttribute|null The classificationAttributes
+    * @return ClassificationAttribute The classificationAttributes
     */
     public function getClassificationAttributes()
     {
         if (array_key_exists("classificationAttributes", $this->_propDict)) {
-            if (is_a($this->_propDict["classificationAttributes"], "\Beta\Microsoft\Graph\Model\ClassificationAttribute") || is_null($this->_propDict["classificationAttributes"])) {
+            if (is_a($this->_propDict["classificationAttributes"], "\Beta\Microsoft\Graph\Model\ClassificationAttribute")) {
                 return $this->_propDict["classificationAttributes"];
             } else {
                 $this->_propDict["classificationAttributes"] = new ClassificationAttribute($this->_propDict["classificationAttributes"]);
@@ -57,7 +57,7 @@ class DiscoveredSensitiveType extends Entity
     /**
     * Gets the confidence
     *
-    * @return int|null The confidence
+    * @return int The confidence
     */
     public function getConfidence()
     {
@@ -83,7 +83,7 @@ class DiscoveredSensitiveType extends Entity
     /**
     * Gets the count
     *
-    * @return int|null The count
+    * @return int The count
     */
     public function getCount()
     {
@@ -109,7 +109,7 @@ class DiscoveredSensitiveType extends Entity
     /**
     * Gets the id
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {

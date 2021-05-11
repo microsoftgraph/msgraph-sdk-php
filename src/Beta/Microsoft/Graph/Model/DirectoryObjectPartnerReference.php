@@ -28,7 +28,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
     * Gets the description
     * Description of the object returned. Read-only.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
     * Gets the displayName
     * Name of directory object being returned, like group or application. Read-only.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
     * Gets the externalPartnerTenantId
     * The tenant identifier for the partner tenant. Read-only.
     *
-    * @return string|null The externalPartnerTenantId
+    * @return string The externalPartnerTenantId
     */
     public function getExternalPartnerTenantId()
     {
@@ -115,7 +115,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject
     * Gets the objectType
     * The type of the referenced object in the partner tenant. Read-only.
     *
-    * @return string|null The objectType
+    * @return string The objectType
     */
     public function getObjectType()
     {

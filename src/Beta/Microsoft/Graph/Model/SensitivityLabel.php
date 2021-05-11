@@ -27,12 +27,12 @@ class SensitivityLabel extends Entity
     /**
     * Gets the applicableTo
     *
-    * @return SensitivityLabelTarget|null The applicableTo
+    * @return SensitivityLabelTarget The applicableTo
     */
     public function getApplicableTo()
     {
         if (array_key_exists("applicableTo", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableTo"], "\Beta\Microsoft\Graph\Model\SensitivityLabelTarget") || is_null($this->_propDict["applicableTo"])) {
+            if (is_a($this->_propDict["applicableTo"], "\Beta\Microsoft\Graph\Model\SensitivityLabelTarget")) {
                 return $this->_propDict["applicableTo"];
             } else {
                 $this->_propDict["applicableTo"] = new SensitivityLabelTarget($this->_propDict["applicableTo"]);
@@ -58,12 +58,12 @@ class SensitivityLabel extends Entity
     /**
     * Gets the applicationMode
     *
-    * @return ApplicationMode|null The applicationMode
+    * @return ApplicationMode The applicationMode
     */
     public function getApplicationMode()
     {
         if (array_key_exists("applicationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationMode"], "\Beta\Microsoft\Graph\Model\ApplicationMode") || is_null($this->_propDict["applicationMode"])) {
+            if (is_a($this->_propDict["applicationMode"], "\Beta\Microsoft\Graph\Model\ApplicationMode")) {
                 return $this->_propDict["applicationMode"];
             } else {
                 $this->_propDict["applicationMode"] = new ApplicationMode($this->_propDict["applicationMode"]);
@@ -90,7 +90,7 @@ class SensitivityLabel extends Entity
      /** 
      * Gets the assignedPolicies
      *
-     * @return array|null The assignedPolicies
+     * @return array The assignedPolicies
      */
     public function getAssignedPolicies()
     {
@@ -110,19 +110,19 @@ class SensitivityLabel extends Entity
     */
     public function setAssignedPolicies($val)
     {
-        $this->_propDict["assignedPolicies"] = $val;
+		$this->_propDict["assignedPolicies"] = $val;
         return $this;
     }
     
     /**
     * Gets the autoLabeling
     *
-    * @return AutoLabeling|null The autoLabeling
+    * @return AutoLabeling The autoLabeling
     */
     public function getAutoLabeling()
     {
         if (array_key_exists("autoLabeling", $this->_propDict)) {
-            if (is_a($this->_propDict["autoLabeling"], "\Beta\Microsoft\Graph\Model\AutoLabeling") || is_null($this->_propDict["autoLabeling"])) {
+            if (is_a($this->_propDict["autoLabeling"], "\Beta\Microsoft\Graph\Model\AutoLabeling")) {
                 return $this->_propDict["autoLabeling"];
             } else {
                 $this->_propDict["autoLabeling"] = new AutoLabeling($this->_propDict["autoLabeling"]);
@@ -148,7 +148,7 @@ class SensitivityLabel extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -175,7 +175,7 @@ class SensitivityLabel extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -202,7 +202,7 @@ class SensitivityLabel extends Entity
     /**
     * Gets the isDefault
     *
-    * @return bool|null The isDefault
+    * @return bool The isDefault
     */
     public function getIsDefault()
     {
@@ -229,7 +229,7 @@ class SensitivityLabel extends Entity
     /**
     * Gets the isEndpointProtectionEnabled
     *
-    * @return bool|null The isEndpointProtectionEnabled
+    * @return bool The isEndpointProtectionEnabled
     */
     public function getIsEndpointProtectionEnabled()
     {
@@ -257,7 +257,7 @@ class SensitivityLabel extends Entity
      /** 
      * Gets the labelActions
      *
-     * @return array|null The labelActions
+     * @return array The labelActions
      */
     public function getLabelActions()
     {
@@ -277,14 +277,14 @@ class SensitivityLabel extends Entity
     */
     public function setLabelActions($val)
     {
-        $this->_propDict["labelActions"] = $val;
+		$this->_propDict["labelActions"] = $val;
         return $this;
     }
     
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -311,7 +311,7 @@ class SensitivityLabel extends Entity
     /**
     * Gets the priority
     *
-    * @return int|null The priority
+    * @return int The priority
     */
     public function getPriority()
     {
@@ -338,7 +338,7 @@ class SensitivityLabel extends Entity
     /**
     * Gets the toolTip
     *
-    * @return string|null The toolTip
+    * @return string The toolTip
     */
     public function getToolTip()
     {
@@ -366,7 +366,7 @@ class SensitivityLabel extends Entity
      /** 
      * Gets the sublabels
      *
-     * @return array|null The sublabels
+     * @return array The sublabels
      */
     public function getSublabels()
     {
@@ -386,7 +386,7 @@ class SensitivityLabel extends Entity
     */
     public function setSublabels($val)
     {
-        $this->_propDict["sublabels"] = $val;
+		$this->_propDict["sublabels"] = $val;
         return $this;
     }
     

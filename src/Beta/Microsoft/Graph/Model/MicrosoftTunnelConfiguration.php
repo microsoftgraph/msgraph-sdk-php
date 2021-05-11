@@ -29,7 +29,7 @@ class MicrosoftTunnelConfiguration extends Entity
      * Gets the advancedSettings
     * Additional settings that may be applied to the server
      *
-     * @return array|null The advancedSettings
+     * @return array The advancedSettings
      */
     public function getAdvancedSettings()
     {
@@ -50,7 +50,7 @@ class MicrosoftTunnelConfiguration extends Entity
     */
     public function setAdvancedSettings($val)
     {
-        $this->_propDict["advancedSettings"] = $val;
+		$this->_propDict["advancedSettings"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the defaultDomainSuffix
     * The Default Domain appendix that will be used by the clients
     *
-    * @return string|null The defaultDomainSuffix
+    * @return string The defaultDomainSuffix
     */
     public function getDefaultDomainSuffix()
     {
@@ -87,7 +87,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the description
     * The MicrosoftTunnelConfiguration's description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -116,7 +116,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the displayName
     * The MicrosoftTunnelConfiguration's display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -145,7 +145,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the dnsServers
     * The DNS servers that will be used by the clients
     *
-    * @return string|null The dnsServers
+    * @return string The dnsServers
     */
     public function getDnsServers()
     {
@@ -174,12 +174,12 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the lastUpdateDateTime
     * When the MicrosoftTunnelConfiguration was last updated
     *
-    * @return \DateTime|null The lastUpdateDateTime
+    * @return \DateTime The lastUpdateDateTime
     */
     public function getLastUpdateDateTime()
     {
         if (array_key_exists("lastUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdateDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdateDateTime"])) {
+            if (is_a($this->_propDict["lastUpdateDateTime"], "\DateTime")) {
                 return $this->_propDict["lastUpdateDateTime"];
             } else {
                 $this->_propDict["lastUpdateDateTime"] = new \DateTime($this->_propDict["lastUpdateDateTime"]);
@@ -207,7 +207,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the listenPort
     * The port that both TCP and UPD will listen over on the server
     *
-    * @return int|null The listenPort
+    * @return int The listenPort
     */
     public function getListenPort()
     {
@@ -236,7 +236,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the network
     * The subnet that will be used to allocate virtual address for the clients
     *
-    * @return string|null The network
+    * @return string The network
     */
     public function getNetwork()
     {
@@ -265,7 +265,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -294,7 +294,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the routesExclude
     * Subsets of the routes that will not be routed by the server
     *
-    * @return string|null The routesExclude
+    * @return string The routesExclude
     */
     public function getRoutesExclude()
     {
@@ -323,7 +323,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the routesInclude
     * The routs that will be routed by the server
     *
-    * @return string|null The routesInclude
+    * @return string The routesInclude
     */
     public function getRoutesInclude()
     {
@@ -352,7 +352,7 @@ class MicrosoftTunnelConfiguration extends Entity
     * Gets the splitDNS
     * The domains that will be resolved using the provided dns servers
     *
-    * @return string|null The splitDNS
+    * @return string The splitDNS
     */
     public function getSplitDNS()
     {

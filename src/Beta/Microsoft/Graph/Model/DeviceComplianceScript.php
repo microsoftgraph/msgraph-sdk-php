@@ -28,12 +28,12 @@ class DeviceComplianceScript extends Entity
     * Gets the createdDateTime
     * The timestamp of when the device compliance script was created. This property is read-only.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class DeviceComplianceScript extends Entity
     * Gets the description
     * Description of the device compliance script
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,12 +90,12 @@ class DeviceComplianceScript extends Entity
     * Gets the detectionScriptContent
     * The entire content of the detection powershell script
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The detectionScriptContent
+    * @return \GuzzleHttp\Psr7\Stream The detectionScriptContent
     */
     public function getDetectionScriptContent()
     {
         if (array_key_exists("detectionScriptContent", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionScriptContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["detectionScriptContent"])) {
+            if (is_a($this->_propDict["detectionScriptContent"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["detectionScriptContent"];
             } else {
                 $this->_propDict["detectionScriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["detectionScriptContent"]);
@@ -123,7 +123,7 @@ class DeviceComplianceScript extends Entity
     * Gets the displayName
     * Name of the device compliance script
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -152,7 +152,7 @@ class DeviceComplianceScript extends Entity
     * Gets the enforceSignatureCheck
     * Indicate whether the script signature needs be checked
     *
-    * @return bool|null The enforceSignatureCheck
+    * @return bool The enforceSignatureCheck
     */
     public function getEnforceSignatureCheck()
     {
@@ -181,12 +181,12 @@ class DeviceComplianceScript extends Entity
     * Gets the lastModifiedDateTime
     * The timestamp of when the device compliance script was modified. This property is read-only.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -214,7 +214,7 @@ class DeviceComplianceScript extends Entity
     * Gets the publisher
     * Name of the device compliance script publisher
     *
-    * @return string|null The publisher
+    * @return string The publisher
     */
     public function getPublisher()
     {
@@ -243,7 +243,7 @@ class DeviceComplianceScript extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for the device compliance script
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -272,7 +272,7 @@ class DeviceComplianceScript extends Entity
     * Gets the runAs32Bit
     * Indicate whether PowerShell script(s) should run as 32-bit
     *
-    * @return bool|null The runAs32Bit
+    * @return bool The runAs32Bit
     */
     public function getRunAs32Bit()
     {
@@ -301,12 +301,12 @@ class DeviceComplianceScript extends Entity
     * Gets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
     *
-    * @return RunAsAccountType|null The runAsAccount
+    * @return RunAsAccountType The runAsAccount
     */
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType") || is_null($this->_propDict["runAsAccount"])) {
+            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
@@ -334,7 +334,7 @@ class DeviceComplianceScript extends Entity
     * Gets the version
     * Version of the device compliance script
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {
@@ -364,7 +364,7 @@ class DeviceComplianceScript extends Entity
      * Gets the assignments
     * The list of group assignments for the device compliance script
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -385,7 +385,7 @@ class DeviceComplianceScript extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -394,7 +394,7 @@ class DeviceComplianceScript extends Entity
      * Gets the deviceRunStates
     * List of run states for the device compliance script across all devices
      *
-     * @return array|null The deviceRunStates
+     * @return array The deviceRunStates
      */
     public function getDeviceRunStates()
     {
@@ -415,7 +415,7 @@ class DeviceComplianceScript extends Entity
     */
     public function setDeviceRunStates($val)
     {
-        $this->_propDict["deviceRunStates"] = $val;
+		$this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     
@@ -423,12 +423,12 @@ class DeviceComplianceScript extends Entity
     * Gets the runSummary
     * High level run summary for device compliance script.
     *
-    * @return DeviceComplianceScriptRunSummary|null The runSummary
+    * @return DeviceComplianceScriptRunSummary The runSummary
     */
     public function getRunSummary()
     {
         if (array_key_exists("runSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceComplianceScriptRunSummary") || is_null($this->_propDict["runSummary"])) {
+            if (is_a($this->_propDict["runSummary"], "\Beta\Microsoft\Graph\Model\DeviceComplianceScriptRunSummary")) {
                 return $this->_propDict["runSummary"];
             } else {
                 $this->_propDict["runSummary"] = new DeviceComplianceScriptRunSummary($this->_propDict["runSummary"]);

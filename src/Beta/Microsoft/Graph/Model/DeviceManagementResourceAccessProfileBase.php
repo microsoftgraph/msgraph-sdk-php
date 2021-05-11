@@ -28,12 +28,12 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     * Gets the creationDateTime
     * DateTime profile was created
     *
-    * @return \DateTime|null The creationDateTime
+    * @return \DateTime The creationDateTime
     */
     public function getCreationDateTime()
     {
         if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime") || is_null($this->_propDict["creationDateTime"])) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
                 return $this->_propDict["creationDateTime"];
             } else {
                 $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
@@ -61,7 +61,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     * Gets the description
     * Profile description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     * Gets the displayName
     * Profile display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     * Gets the lastModifiedDateTime
     * DateTime profile was last modified
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -152,7 +152,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     * Gets the roleScopeTagIds
     * Scope Tags
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -181,7 +181,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     * Gets the version
     * Version of the profile
     *
-    * @return int|null The version
+    * @return int The version
     */
     public function getVersion()
     {
@@ -211,7 +211,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
      * Gets the assignments
     * The list of assignments for the device configuration profile.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -232,7 +232,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

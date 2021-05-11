@@ -26,7 +26,7 @@ class IpCategory extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -52,7 +52,7 @@ class IpCategory extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -78,7 +78,7 @@ class IpCategory extends Entity
     /**
     * Gets the vendor
     *
-    * @return string|null The vendor
+    * @return string The vendor
     */
     public function getVendor()
     {

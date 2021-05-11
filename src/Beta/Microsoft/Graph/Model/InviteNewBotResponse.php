@@ -27,7 +27,7 @@ class InviteNewBotResponse extends ParticipantJoiningResponse
     * Gets the inviteUri
     * URI to receive new incoming call notification.
     *
-    * @return string|null The inviteUri
+    * @return string The inviteUri
     */
     public function getInviteUri()
     {

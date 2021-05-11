@@ -27,7 +27,7 @@ class UserRegistrationMethodCount extends Entity
     * Gets the authenticationMethod
     * Name of authentication method.
     *
-    * @return string|null The authenticationMethod
+    * @return string The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
@@ -55,7 +55,7 @@ class UserRegistrationMethodCount extends Entity
     * Gets the userCount
     * Number of users registered.
     *
-    * @return int|null The userCount
+    * @return int The userCount
     */
     public function getUserCount()
     {

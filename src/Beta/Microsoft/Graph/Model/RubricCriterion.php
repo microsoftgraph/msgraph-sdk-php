@@ -28,12 +28,12 @@ class RubricCriterion extends Entity
     * Gets the description
     * The description of this criterion.
     *
-    * @return EducationItemBody|null The description
+    * @return EducationItemBody The description
     */
     public function getDescription()
     {
         if (array_key_exists("description", $this->_propDict)) {
-            if (is_a($this->_propDict["description"], "\Beta\Microsoft\Graph\Model\EducationItemBody") || is_null($this->_propDict["description"])) {
+            if (is_a($this->_propDict["description"], "\Beta\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["description"];
             } else {
                 $this->_propDict["description"] = new EducationItemBody($this->_propDict["description"]);

@@ -26,7 +26,7 @@ class SynchronizationError extends Entity
     /**
     * Gets the code
     *
-    * @return string|null The code
+    * @return string The code
     */
     public function getCode()
     {
@@ -52,7 +52,7 @@ class SynchronizationError extends Entity
     /**
     * Gets the message
     *
-    * @return string|null The message
+    * @return string The message
     */
     public function getMessage()
     {
@@ -78,7 +78,7 @@ class SynchronizationError extends Entity
     /**
     * Gets the tenantActionable
     *
-    * @return bool|null The tenantActionable
+    * @return bool The tenantActionable
     */
     public function getTenantActionable()
     {

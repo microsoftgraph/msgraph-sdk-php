@@ -28,12 +28,12 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the ocr
     * The OCR (Optical Character Recognition) settings for the case.
     *
-    * @return OcrSettings|null The ocr
+    * @return OcrSettings The ocr
     */
     public function getOcr()
     {
         if (array_key_exists("ocr", $this->_propDict)) {
-            if (is_a($this->_propDict["ocr"], "\Beta\Microsoft\Graph\Ediscovery\Model\OcrSettings") || is_null($this->_propDict["ocr"])) {
+            if (is_a($this->_propDict["ocr"], "\Beta\Microsoft\Graph\Ediscovery\Model\OcrSettings")) {
                 return $this->_propDict["ocr"];
             } else {
                 $this->_propDict["ocr"] = new OcrSettings($this->_propDict["ocr"]);
@@ -61,12 +61,12 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the redundancyDetection
     * The redundancy (near duplicate and email threading) detection settings for the case.
     *
-    * @return RedundancyDetectionSettings|null The redundancyDetection
+    * @return RedundancyDetectionSettings The redundancyDetection
     */
     public function getRedundancyDetection()
     {
         if (array_key_exists("redundancyDetection", $this->_propDict)) {
-            if (is_a($this->_propDict["redundancyDetection"], "\Beta\Microsoft\Graph\Ediscovery\Model\RedundancyDetectionSettings") || is_null($this->_propDict["redundancyDetection"])) {
+            if (is_a($this->_propDict["redundancyDetection"], "\Beta\Microsoft\Graph\Ediscovery\Model\RedundancyDetectionSettings")) {
                 return $this->_propDict["redundancyDetection"];
             } else {
                 $this->_propDict["redundancyDetection"] = new RedundancyDetectionSettings($this->_propDict["redundancyDetection"]);
@@ -94,12 +94,12 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the topicModeling
     * The Topic Modeling (Themes) settings for the case.
     *
-    * @return TopicModelingSettings|null The topicModeling
+    * @return TopicModelingSettings The topicModeling
     */
     public function getTopicModeling()
     {
         if (array_key_exists("topicModeling", $this->_propDict)) {
-            if (is_a($this->_propDict["topicModeling"], "\Beta\Microsoft\Graph\Ediscovery\Model\TopicModelingSettings") || is_null($this->_propDict["topicModeling"])) {
+            if (is_a($this->_propDict["topicModeling"], "\Beta\Microsoft\Graph\Ediscovery\Model\TopicModelingSettings")) {
                 return $this->_propDict["topicModeling"];
             } else {
                 $this->_propDict["topicModeling"] = new TopicModelingSettings($this->_propDict["topicModeling"]);

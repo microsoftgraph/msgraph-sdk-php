@@ -28,12 +28,12 @@ class Permission extends Entity
     * Gets the expirationDateTime
     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
     *
-    * @return \DateTime|null The expirationDateTime
+    * @return \DateTime The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -61,12 +61,12 @@ class Permission extends Entity
     * Gets the grantedTo
     * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
     *
-    * @return IdentitySet|null The grantedTo
+    * @return IdentitySet The grantedTo
     */
     public function getGrantedTo()
     {
         if (array_key_exists("grantedTo", $this->_propDict)) {
-            if (is_a($this->_propDict["grantedTo"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["grantedTo"])) {
+            if (is_a($this->_propDict["grantedTo"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["grantedTo"];
             } else {
                 $this->_propDict["grantedTo"] = new IdentitySet($this->_propDict["grantedTo"]);
@@ -95,7 +95,7 @@ class Permission extends Entity
      * Gets the grantedToIdentities
     * For link type permissions, the details of the users to whom permission was granted. Read-only.
      *
-     * @return array|null The grantedToIdentities
+     * @return array The grantedToIdentities
      */
     public function getGrantedToIdentities()
     {
@@ -116,7 +116,7 @@ class Permission extends Entity
     */
     public function setGrantedToIdentities($val)
     {
-        $this->_propDict["grantedToIdentities"] = $val;
+		$this->_propDict["grantedToIdentities"] = $val;
         return $this;
     }
     
@@ -124,7 +124,7 @@ class Permission extends Entity
     * Gets the hasPassword
     * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
     *
-    * @return bool|null The hasPassword
+    * @return bool The hasPassword
     */
     public function getHasPassword()
     {
@@ -153,12 +153,12 @@ class Permission extends Entity
     * Gets the inheritedFrom
     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
     *
-    * @return ItemReference|null The inheritedFrom
+    * @return ItemReference The inheritedFrom
     */
     public function getInheritedFrom()
     {
         if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "\Beta\Microsoft\Graph\Model\ItemReference") || is_null($this->_propDict["inheritedFrom"])) {
+            if (is_a($this->_propDict["inheritedFrom"], "\Beta\Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -186,12 +186,12 @@ class Permission extends Entity
     * Gets the invitation
     * Details of any associated sharing invitation for this permission. Read-only.
     *
-    * @return SharingInvitation|null The invitation
+    * @return SharingInvitation The invitation
     */
     public function getInvitation()
     {
         if (array_key_exists("invitation", $this->_propDict)) {
-            if (is_a($this->_propDict["invitation"], "\Beta\Microsoft\Graph\Model\SharingInvitation") || is_null($this->_propDict["invitation"])) {
+            if (is_a($this->_propDict["invitation"], "\Beta\Microsoft\Graph\Model\SharingInvitation")) {
                 return $this->_propDict["invitation"];
             } else {
                 $this->_propDict["invitation"] = new SharingInvitation($this->_propDict["invitation"]);
@@ -219,12 +219,12 @@ class Permission extends Entity
     * Gets the link
     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
     *
-    * @return SharingLink|null The link
+    * @return SharingLink The link
     */
     public function getLink()
     {
         if (array_key_exists("link", $this->_propDict)) {
-            if (is_a($this->_propDict["link"], "\Beta\Microsoft\Graph\Model\SharingLink") || is_null($this->_propDict["link"])) {
+            if (is_a($this->_propDict["link"], "\Beta\Microsoft\Graph\Model\SharingLink")) {
                 return $this->_propDict["link"];
             } else {
                 $this->_propDict["link"] = new SharingLink($this->_propDict["link"]);
@@ -252,7 +252,7 @@ class Permission extends Entity
     * Gets the roles
     * The type of permission, e.g. read. See below for the full list of roles. Read-only.
     *
-    * @return string|null The roles
+    * @return string The roles
     */
     public function getRoles()
     {
@@ -279,9 +279,9 @@ class Permission extends Entity
     
     /**
     * Gets the shareId
-    * A unique token that can be used to access this shared item via the **shares** API. Read-only.
+    * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
     *
-    * @return string|null The shareId
+    * @return string The shareId
     */
     public function getShareId()
     {
@@ -294,7 +294,7 @@ class Permission extends Entity
     
     /**
     * Sets the shareId
-    * A unique token that can be used to access this shared item via the **shares** API. Read-only.
+    * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
     *
     * @param string $val The shareId
     *

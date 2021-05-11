@@ -28,7 +28,7 @@ class DeviceManagementIntent extends Entity
     * Gets the description
     * The user given description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class DeviceManagementIntent extends Entity
     * Gets the displayName
     * The user given display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class DeviceManagementIntent extends Entity
     * Gets the isAssigned
     * Signifies whether or not the intent is assigned to users
     *
-    * @return bool|null The isAssigned
+    * @return bool The isAssigned
     */
     public function getIsAssigned()
     {
@@ -115,12 +115,12 @@ class DeviceManagementIntent extends Entity
     * Gets the lastModifiedDateTime
     * When the intent was last modified
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -148,7 +148,7 @@ class DeviceManagementIntent extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -177,7 +177,7 @@ class DeviceManagementIntent extends Entity
     * Gets the templateId
     * The ID of the template this intent was created from (if any)
     *
-    * @return string|null The templateId
+    * @return string The templateId
     */
     public function getTemplateId()
     {
@@ -207,7 +207,7 @@ class DeviceManagementIntent extends Entity
      * Gets the assignments
     * Collection of assignments
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -228,7 +228,7 @@ class DeviceManagementIntent extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -237,7 +237,7 @@ class DeviceManagementIntent extends Entity
      * Gets the categories
     * Collection of setting categories within the intent
      *
-     * @return array|null The categories
+     * @return array The categories
      */
     public function getCategories()
     {
@@ -258,7 +258,7 @@ class DeviceManagementIntent extends Entity
     */
     public function setCategories($val)
     {
-        $this->_propDict["categories"] = $val;
+		$this->_propDict["categories"] = $val;
         return $this;
     }
     
@@ -267,7 +267,7 @@ class DeviceManagementIntent extends Entity
      * Gets the deviceSettingStateSummaries
     * Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
      *
-     * @return array|null The deviceSettingStateSummaries
+     * @return array The deviceSettingStateSummaries
      */
     public function getDeviceSettingStateSummaries()
     {
@@ -288,7 +288,7 @@ class DeviceManagementIntent extends Entity
     */
     public function setDeviceSettingStateSummaries($val)
     {
-        $this->_propDict["deviceSettingStateSummaries"] = $val;
+		$this->_propDict["deviceSettingStateSummaries"] = $val;
         return $this;
     }
     
@@ -297,7 +297,7 @@ class DeviceManagementIntent extends Entity
      * Gets the deviceStates
     * Collection of states of all devices that the intent is applied to
      *
-     * @return array|null The deviceStates
+     * @return array The deviceStates
      */
     public function getDeviceStates()
     {
@@ -318,7 +318,7 @@ class DeviceManagementIntent extends Entity
     */
     public function setDeviceStates($val)
     {
-        $this->_propDict["deviceStates"] = $val;
+		$this->_propDict["deviceStates"] = $val;
         return $this;
     }
     
@@ -326,12 +326,12 @@ class DeviceManagementIntent extends Entity
     * Gets the deviceStateSummary
     * A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
     *
-    * @return DeviceManagementIntentDeviceStateSummary|null The deviceStateSummary
+    * @return DeviceManagementIntentDeviceStateSummary The deviceStateSummary
     */
     public function getDeviceStateSummary()
     {
         if (array_key_exists("deviceStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStateSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementIntentDeviceStateSummary") || is_null($this->_propDict["deviceStateSummary"])) {
+            if (is_a($this->_propDict["deviceStateSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementIntentDeviceStateSummary")) {
                 return $this->_propDict["deviceStateSummary"];
             } else {
                 $this->_propDict["deviceStateSummary"] = new DeviceManagementIntentDeviceStateSummary($this->_propDict["deviceStateSummary"]);
@@ -360,7 +360,7 @@ class DeviceManagementIntent extends Entity
      * Gets the settings
     * Collection of all settings to be applied
      *
-     * @return array|null The settings
+     * @return array The settings
      */
     public function getSettings()
     {
@@ -381,7 +381,7 @@ class DeviceManagementIntent extends Entity
     */
     public function setSettings($val)
     {
-        $this->_propDict["settings"] = $val;
+		$this->_propDict["settings"] = $val;
         return $this;
     }
     
@@ -390,7 +390,7 @@ class DeviceManagementIntent extends Entity
      * Gets the userStates
     * Collection of states of all users that the intent is applied to
      *
-     * @return array|null The userStates
+     * @return array The userStates
      */
     public function getUserStates()
     {
@@ -411,7 +411,7 @@ class DeviceManagementIntent extends Entity
     */
     public function setUserStates($val)
     {
-        $this->_propDict["userStates"] = $val;
+		$this->_propDict["userStates"] = $val;
         return $this;
     }
     
@@ -419,12 +419,12 @@ class DeviceManagementIntent extends Entity
     * Gets the userStateSummary
     * A summary of user states and counts of users that belong to corresponding state for all users that the intent is applied to
     *
-    * @return DeviceManagementIntentUserStateSummary|null The userStateSummary
+    * @return DeviceManagementIntentUserStateSummary The userStateSummary
     */
     public function getUserStateSummary()
     {
         if (array_key_exists("userStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userStateSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementIntentUserStateSummary") || is_null($this->_propDict["userStateSummary"])) {
+            if (is_a($this->_propDict["userStateSummary"], "\Beta\Microsoft\Graph\Model\DeviceManagementIntentUserStateSummary")) {
                 return $this->_propDict["userStateSummary"];
             } else {
                 $this->_propDict["userStateSummary"] = new DeviceManagementIntentUserStateSummary($this->_propDict["userStateSummary"]);

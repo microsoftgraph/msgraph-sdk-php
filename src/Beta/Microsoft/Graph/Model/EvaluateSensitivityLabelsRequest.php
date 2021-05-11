@@ -27,12 +27,12 @@ class EvaluateSensitivityLabelsRequest extends Entity
     /**
     * Gets the currentLabel
     *
-    * @return CurrentLabel|null The currentLabel
+    * @return CurrentLabel The currentLabel
     */
     public function getCurrentLabel()
     {
         if (array_key_exists("currentLabel", $this->_propDict)) {
-            if (is_a($this->_propDict["currentLabel"], "\Beta\Microsoft\Graph\Model\CurrentLabel") || is_null($this->_propDict["currentLabel"])) {
+            if (is_a($this->_propDict["currentLabel"], "\Beta\Microsoft\Graph\Model\CurrentLabel")) {
                 return $this->_propDict["currentLabel"];
             } else {
                 $this->_propDict["currentLabel"] = new CurrentLabel($this->_propDict["currentLabel"]);
@@ -58,12 +58,12 @@ class EvaluateSensitivityLabelsRequest extends Entity
     /**
     * Gets the discoveredSensitiveTypes
     *
-    * @return DiscoveredSensitiveType|null The discoveredSensitiveTypes
+    * @return DiscoveredSensitiveType The discoveredSensitiveTypes
     */
     public function getDiscoveredSensitiveTypes()
     {
         if (array_key_exists("discoveredSensitiveTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["discoveredSensitiveTypes"], "\Beta\Microsoft\Graph\Model\DiscoveredSensitiveType") || is_null($this->_propDict["discoveredSensitiveTypes"])) {
+            if (is_a($this->_propDict["discoveredSensitiveTypes"], "\Beta\Microsoft\Graph\Model\DiscoveredSensitiveType")) {
                 return $this->_propDict["discoveredSensitiveTypes"];
             } else {
                 $this->_propDict["discoveredSensitiveTypes"] = new DiscoveredSensitiveType($this->_propDict["discoveredSensitiveTypes"]);

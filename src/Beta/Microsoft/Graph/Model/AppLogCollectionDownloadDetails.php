@@ -28,12 +28,12 @@ class AppLogCollectionDownloadDetails extends Entity
     * Gets the appLogDecryptionAlgorithm
     * DecryptionAlgorithm for Content. Possible values are: aes256.
     *
-    * @return AppLogDecryptionAlgorithm|null The appLogDecryptionAlgorithm
+    * @return AppLogDecryptionAlgorithm The appLogDecryptionAlgorithm
     */
     public function getAppLogDecryptionAlgorithm()
     {
         if (array_key_exists("appLogDecryptionAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["appLogDecryptionAlgorithm"], "\Beta\Microsoft\Graph\Model\AppLogDecryptionAlgorithm") || is_null($this->_propDict["appLogDecryptionAlgorithm"])) {
+            if (is_a($this->_propDict["appLogDecryptionAlgorithm"], "\Beta\Microsoft\Graph\Model\AppLogDecryptionAlgorithm")) {
                 return $this->_propDict["appLogDecryptionAlgorithm"];
             } else {
                 $this->_propDict["appLogDecryptionAlgorithm"] = new AppLogDecryptionAlgorithm($this->_propDict["appLogDecryptionAlgorithm"]);
@@ -60,7 +60,7 @@ class AppLogCollectionDownloadDetails extends Entity
     * Gets the decryptionKey
     * DecryptionKey as string
     *
-    * @return string|null The decryptionKey
+    * @return string The decryptionKey
     */
     public function getDecryptionKey()
     {
@@ -88,7 +88,7 @@ class AppLogCollectionDownloadDetails extends Entity
     * Gets the downloadUrl
     * Download SAS Url for completed AppLogUploadRequest
     *
-    * @return string|null The downloadUrl
+    * @return string The downloadUrl
     */
     public function getDownloadUrl()
     {

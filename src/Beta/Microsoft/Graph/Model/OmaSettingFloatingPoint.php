@@ -32,32 +32,37 @@ class OmaSettingFloatingPoint extends OmaSetting
         $this->setODataType("#microsoft.graph.omaSettingFloatingPoint");
     }
 
+
     /**
     * Gets the value
     * Value.
     *
-    * @return float|null The value
+    * @return Single The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            return $this->_propDict["value"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["value"];
+            } else {
+                $this->_propDict["value"] = new Single($this->_propDict["value"]);
+                return $this->_propDict["value"];
+            }
         }
+        return null;
     }
 
     /**
     * Sets the value
     * Value.
     *
-    * @param float $val The value of the value
+    * @param Single $val The value to assign to the value
     *
-    * @return OmaSettingFloatingPoint
+    * @return OmaSettingFloatingPoint The OmaSettingFloatingPoint
     */
     public function setValue($val)
     {
         $this->_propDict["value"] = $val;
-        return $this;
+         return $this;
     }
 }

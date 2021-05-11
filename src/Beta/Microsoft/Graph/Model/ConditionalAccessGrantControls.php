@@ -28,12 +28,12 @@ class ConditionalAccessGrantControls extends Entity
     * Gets the builtInControls
     * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
     *
-    * @return ConditionalAccessGrantControl|null The builtInControls
+    * @return ConditionalAccessGrantControl The builtInControls
     */
     public function getBuiltInControls()
     {
         if (array_key_exists("builtInControls", $this->_propDict)) {
-            if (is_a($this->_propDict["builtInControls"], "\Beta\Microsoft\Graph\Model\ConditionalAccessGrantControl") || is_null($this->_propDict["builtInControls"])) {
+            if (is_a($this->_propDict["builtInControls"], "\Beta\Microsoft\Graph\Model\ConditionalAccessGrantControl")) {
                 return $this->_propDict["builtInControls"];
             } else {
                 $this->_propDict["builtInControls"] = new ConditionalAccessGrantControl($this->_propDict["builtInControls"]);
@@ -58,9 +58,9 @@ class ConditionalAccessGrantControls extends Entity
     }
     /**
     * Gets the customAuthenticationFactors
-    * List of custom controls IDs required by the policy. For more information, see Custom controls.
+    * List of custom controls IDs required by the policy. Learn more about custom controls here: https://docs.microsoft.com/azure/active-directory/conditional-access/controls#custom-controls-preview
     *
-    * @return string|null The customAuthenticationFactors
+    * @return string The customAuthenticationFactors
     */
     public function getCustomAuthenticationFactors()
     {
@@ -73,7 +73,7 @@ class ConditionalAccessGrantControls extends Entity
 
     /**
     * Sets the customAuthenticationFactors
-    * List of custom controls IDs required by the policy. For more information, see Custom controls.
+    * List of custom controls IDs required by the policy. Learn more about custom controls here: https://docs.microsoft.com/azure/active-directory/conditional-access/controls#custom-controls-preview
     *
     * @param string $val The value of the customAuthenticationFactors
     *
@@ -88,7 +88,7 @@ class ConditionalAccessGrantControls extends Entity
     * Gets the operator
     * Defines the relationship of the grant controls. Possible values: AND, OR.
     *
-    * @return string|null The operator
+    * @return string The operator
     */
     public function getOperator()
     {
@@ -116,7 +116,7 @@ class ConditionalAccessGrantControls extends Entity
     * Gets the termsOfUse
     * List of terms of use IDs required by the policy.
     *
-    * @return string|null The termsOfUse
+    * @return string The termsOfUse
     */
     public function getTermsOfUse()
     {

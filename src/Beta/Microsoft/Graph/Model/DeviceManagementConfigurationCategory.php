@@ -28,7 +28,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the childCategoryIds
     * List of child ids of the category.
     *
-    * @return string|null The childCategoryIds
+    * @return string The childCategoryIds
     */
     public function getChildCategoryIds()
     {
@@ -57,7 +57,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the description
     * Description of the item
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -86,7 +86,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the displayName
     * Display name of the item
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -115,7 +115,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the helpText
     * Help text of the item
     *
-    * @return string|null The helpText
+    * @return string The helpText
     */
     public function getHelpText()
     {
@@ -144,7 +144,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the name
     * Name of the item
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -173,7 +173,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the parentCategoryId
     * Parent id of the category.
     *
-    * @return string|null The parentCategoryId
+    * @return string The parentCategoryId
     */
     public function getParentCategoryId()
     {
@@ -202,12 +202,12 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the platforms
     * Platforms types, which settings in the category have. Possible values are: none, macOS, windows10X, windows10.
     *
-    * @return DeviceManagementConfigurationPlatforms|null The platforms
+    * @return DeviceManagementConfigurationPlatforms The platforms
     */
     public function getPlatforms()
     {
         if (array_key_exists("platforms", $this->_propDict)) {
-            if (is_a($this->_propDict["platforms"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms") || is_null($this->_propDict["platforms"])) {
+            if (is_a($this->_propDict["platforms"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms")) {
                 return $this->_propDict["platforms"];
             } else {
                 $this->_propDict["platforms"] = new DeviceManagementConfigurationPlatforms($this->_propDict["platforms"]);
@@ -235,7 +235,7 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the rootCategoryId
     * Root id of the category.
     *
-    * @return string|null The rootCategoryId
+    * @return string The rootCategoryId
     */
     public function getRootCategoryId()
     {
@@ -264,12 +264,12 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the settingUsage
     * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration.
     *
-    * @return DeviceManagementConfigurationSettingUsage|null The settingUsage
+    * @return DeviceManagementConfigurationSettingUsage The settingUsage
     */
     public function getSettingUsage()
     {
         if (array_key_exists("settingUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["settingUsage"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingUsage") || is_null($this->_propDict["settingUsage"])) {
+            if (is_a($this->_propDict["settingUsage"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingUsage")) {
                 return $this->_propDict["settingUsage"];
             } else {
                 $this->_propDict["settingUsage"] = new DeviceManagementConfigurationSettingUsage($this->_propDict["settingUsage"]);
@@ -297,12 +297,12 @@ class DeviceManagementConfigurationCategory extends Entity
     * Gets the technologies
     * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager.
     *
-    * @return DeviceManagementConfigurationTechnologies|null The technologies
+    * @return DeviceManagementConfigurationTechnologies The technologies
     */
     public function getTechnologies()
     {
         if (array_key_exists("technologies", $this->_propDict)) {
-            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies") || is_null($this->_propDict["technologies"])) {
+            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies")) {
                 return $this->_propDict["technologies"];
             } else {
                 $this->_propDict["technologies"] = new DeviceManagementConfigurationTechnologies($this->_propDict["technologies"]);

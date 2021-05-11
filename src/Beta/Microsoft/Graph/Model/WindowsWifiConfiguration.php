@@ -28,7 +28,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the connectAutomatically
     * Specify whether the wifi connection should connect automatically when in range.
     *
-    * @return bool|null The connectAutomatically
+    * @return bool The connectAutomatically
     */
     public function getConnectAutomatically()
     {
@@ -57,7 +57,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the connectToPreferredNetwork
     * Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
     *
-    * @return bool|null The connectToPreferredNetwork
+    * @return bool The connectToPreferredNetwork
     */
     public function getConnectToPreferredNetwork()
     {
@@ -86,7 +86,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the connectWhenNetworkNameIsHidden
     * Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
     *
-    * @return bool|null The connectWhenNetworkNameIsHidden
+    * @return bool The connectWhenNetworkNameIsHidden
     */
     public function getConnectWhenNetworkNameIsHidden()
     {
@@ -115,7 +115,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the forceFIPSCompliance
     * Specify whether to force FIPS compliance.
     *
-    * @return bool|null The forceFIPSCompliance
+    * @return bool The forceFIPSCompliance
     */
     public function getForceFIPSCompliance()
     {
@@ -144,12 +144,12 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the meteredConnectionLimit
     * Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
     *
-    * @return MeteredConnectionLimitType|null The meteredConnectionLimit
+    * @return MeteredConnectionLimitType The meteredConnectionLimit
     */
     public function getMeteredConnectionLimit()
     {
         if (array_key_exists("meteredConnectionLimit", $this->_propDict)) {
-            if (is_a($this->_propDict["meteredConnectionLimit"], "\Beta\Microsoft\Graph\Model\MeteredConnectionLimitType") || is_null($this->_propDict["meteredConnectionLimit"])) {
+            if (is_a($this->_propDict["meteredConnectionLimit"], "\Beta\Microsoft\Graph\Model\MeteredConnectionLimitType")) {
                 return $this->_propDict["meteredConnectionLimit"];
             } else {
                 $this->_propDict["meteredConnectionLimit"] = new MeteredConnectionLimitType($this->_propDict["meteredConnectionLimit"]);
@@ -177,7 +177,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the networkName
     * Specify the network configuration name.
     *
-    * @return string|null The networkName
+    * @return string The networkName
     */
     public function getNetworkName()
     {
@@ -206,7 +206,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the preSharedKey
     * This is the pre-shared key for WPA Personal Wi-Fi network.
     *
-    * @return string|null The preSharedKey
+    * @return string The preSharedKey
     */
     public function getPreSharedKey()
     {
@@ -235,7 +235,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the proxyAutomaticConfigurationUrl
     * Specify the URL for the proxy server configuration script.
     *
-    * @return string|null The proxyAutomaticConfigurationUrl
+    * @return string The proxyAutomaticConfigurationUrl
     */
     public function getProxyAutomaticConfigurationUrl()
     {
@@ -264,7 +264,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the proxyManualAddress
     * Specify the IP address for the proxy server.
     *
-    * @return string|null The proxyManualAddress
+    * @return string The proxyManualAddress
     */
     public function getProxyManualAddress()
     {
@@ -293,7 +293,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the proxyManualPort
     * Specify the port for the proxy server.
     *
-    * @return int|null The proxyManualPort
+    * @return int The proxyManualPort
     */
     public function getProxyManualPort()
     {
@@ -322,12 +322,12 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the proxySetting
     * Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
     *
-    * @return WiFiProxySetting|null The proxySetting
+    * @return WiFiProxySetting The proxySetting
     */
     public function getProxySetting()
     {
         if (array_key_exists("proxySetting", $this->_propDict)) {
-            if (is_a($this->_propDict["proxySetting"], "\Beta\Microsoft\Graph\Model\WiFiProxySetting") || is_null($this->_propDict["proxySetting"])) {
+            if (is_a($this->_propDict["proxySetting"], "\Beta\Microsoft\Graph\Model\WiFiProxySetting")) {
                 return $this->_propDict["proxySetting"];
             } else {
                 $this->_propDict["proxySetting"] = new WiFiProxySetting($this->_propDict["proxySetting"]);
@@ -355,7 +355,7 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the ssid
     * Specify the SSID of the wifi connection.
     *
-    * @return string|null The ssid
+    * @return string The ssid
     */
     public function getSsid()
     {
@@ -384,12 +384,12 @@ class WindowsWifiConfiguration extends DeviceConfiguration
     * Gets the wifiSecurityType
     * Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
     *
-    * @return WiFiSecurityType|null The wifiSecurityType
+    * @return WiFiSecurityType The wifiSecurityType
     */
     public function getWifiSecurityType()
     {
         if (array_key_exists("wifiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wifiSecurityType"], "\Beta\Microsoft\Graph\Model\WiFiSecurityType") || is_null($this->_propDict["wifiSecurityType"])) {
+            if (is_a($this->_propDict["wifiSecurityType"], "\Beta\Microsoft\Graph\Model\WiFiSecurityType")) {
                 return $this->_propDict["wifiSecurityType"];
             } else {
                 $this->_propDict["wifiSecurityType"] = new WiFiSecurityType($this->_propDict["wifiSecurityType"]);

@@ -35,7 +35,7 @@ class ProtectGroup extends LabelActionBase
     /**
     * Gets the allowEmailFromGuestUsers
     *
-    * @return bool|null The allowEmailFromGuestUsers
+    * @return bool The allowEmailFromGuestUsers
     */
     public function getAllowEmailFromGuestUsers()
     {
@@ -61,7 +61,7 @@ class ProtectGroup extends LabelActionBase
     /**
     * Gets the allowGuestUsers
     *
-    * @return bool|null The allowGuestUsers
+    * @return bool The allowGuestUsers
     */
     public function getAllowGuestUsers()
     {
@@ -88,12 +88,12 @@ class ProtectGroup extends LabelActionBase
     /**
     * Gets the privacy
     *
-    * @return GroupPrivacy|null The privacy
+    * @return GroupPrivacy The privacy
     */
     public function getPrivacy()
     {
         if (array_key_exists("privacy", $this->_propDict)) {
-            if (is_a($this->_propDict["privacy"], "\Beta\Microsoft\Graph\Model\GroupPrivacy") || is_null($this->_propDict["privacy"])) {
+            if (is_a($this->_propDict["privacy"], "\Beta\Microsoft\Graph\Model\GroupPrivacy")) {
                 return $this->_propDict["privacy"];
             } else {
                 $this->_propDict["privacy"] = new GroupPrivacy($this->_propDict["privacy"]);

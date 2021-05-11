@@ -27,7 +27,7 @@ class UnmanagedDevice extends Entity
     * Gets the deviceName
     * Device name.
     *
-    * @return string|null The deviceName
+    * @return string The deviceName
     */
     public function getDeviceName()
     {
@@ -55,7 +55,7 @@ class UnmanagedDevice extends Entity
     * Gets the domain
     * Domain.
     *
-    * @return string|null The domain
+    * @return string The domain
     */
     public function getDomain()
     {
@@ -83,7 +83,7 @@ class UnmanagedDevice extends Entity
     * Gets the ipAddress
     * IP address.
     *
-    * @return string|null The ipAddress
+    * @return string The ipAddress
     */
     public function getIpAddress()
     {
@@ -111,7 +111,7 @@ class UnmanagedDevice extends Entity
     * Gets the lastLoggedOnUser
     * Last logged on user.
     *
-    * @return string|null The lastLoggedOnUser
+    * @return string The lastLoggedOnUser
     */
     public function getLastLoggedOnUser()
     {
@@ -140,12 +140,12 @@ class UnmanagedDevice extends Entity
     * Gets the lastSeenDateTime
     * Last seen date and time.
     *
-    * @return \DateTime|null The lastSeenDateTime
+    * @return \DateTime The lastSeenDateTime
     */
     public function getLastSeenDateTime()
     {
         if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime") || is_null($this->_propDict["lastSeenDateTime"])) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSeenDateTime"];
             } else {
                 $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
@@ -172,7 +172,7 @@ class UnmanagedDevice extends Entity
     * Gets the location
     * Location.
     *
-    * @return string|null The location
+    * @return string The location
     */
     public function getLocation()
     {
@@ -200,7 +200,7 @@ class UnmanagedDevice extends Entity
     * Gets the macAddress
     * MAC address.
     *
-    * @return string|null The macAddress
+    * @return string The macAddress
     */
     public function getMacAddress()
     {
@@ -228,7 +228,7 @@ class UnmanagedDevice extends Entity
     * Gets the manufacturer
     * Manufacturer.
     *
-    * @return string|null The manufacturer
+    * @return string The manufacturer
     */
     public function getManufacturer()
     {
@@ -256,7 +256,7 @@ class UnmanagedDevice extends Entity
     * Gets the model
     * Model.
     *
-    * @return string|null The model
+    * @return string The model
     */
     public function getModel()
     {
@@ -284,7 +284,7 @@ class UnmanagedDevice extends Entity
     * Gets the os
     * Operating system.
     *
-    * @return string|null The os
+    * @return string The os
     */
     public function getOs()
     {
@@ -312,7 +312,7 @@ class UnmanagedDevice extends Entity
     * Gets the osVersion
     * Operating system version.
     *
-    * @return string|null The osVersion
+    * @return string The osVersion
     */
     public function getOsVersion()
     {

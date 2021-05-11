@@ -27,7 +27,7 @@ class PrintTaskStatus extends Entity
     * Gets the description
     * A human-readable description of the current processing state of the printTask.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -56,12 +56,12 @@ class PrintTaskStatus extends Entity
     * Gets the state
     * The current processing state of the printTask. Valid values are described in the following table.
     *
-    * @return PrintTaskProcessingState|null The state
+    * @return PrintTaskProcessingState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\PrintTaskProcessingState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\PrintTaskProcessingState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new PrintTaskProcessingState($this->_propDict["state"]);

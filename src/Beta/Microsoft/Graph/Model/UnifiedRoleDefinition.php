@@ -28,7 +28,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the description
     * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -55,9 +55,9 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the displayName
-    * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
+    * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -70,7 +70,7 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the displayName
-    * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
+    * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
     *
     * @param string $val The displayName
     *
@@ -84,9 +84,9 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the isBuiltIn
-    * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
+    * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
     *
-    * @return bool|null The isBuiltIn
+    * @return bool The isBuiltIn
     */
     public function getIsBuiltIn()
     {
@@ -99,7 +99,7 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the isBuiltIn
-    * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
+    * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
     *
     * @param bool $val The isBuiltIn
     *
@@ -115,7 +115,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the isEnabled
     * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
     *
-    * @return bool|null The isEnabled
+    * @return bool The isEnabled
     */
     public function getIsEnabled()
     {
@@ -142,9 +142,9 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the resourceScopes
-    * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
+    * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
     *
-    * @return string|null The resourceScopes
+    * @return string The resourceScopes
     */
     public function getResourceScopes()
     {
@@ -157,7 +157,7 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the resourceScopes
-    * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
+    * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
     *
     * @param string $val The resourceScopes
     *
@@ -174,7 +174,7 @@ class UnifiedRoleDefinition extends Entity
      * Gets the rolePermissions
     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      *
-     * @return array|null The rolePermissions
+     * @return array The rolePermissions
      */
     public function getRolePermissions()
     {
@@ -195,7 +195,7 @@ class UnifiedRoleDefinition extends Entity
     */
     public function setRolePermissions($val)
     {
-        $this->_propDict["rolePermissions"] = $val;
+		$this->_propDict["rolePermissions"] = $val;
         return $this;
     }
     
@@ -203,7 +203,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the templateId
     * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
     *
-    * @return string|null The templateId
+    * @return string The templateId
     */
     public function getTemplateId()
     {
@@ -232,7 +232,7 @@ class UnifiedRoleDefinition extends Entity
     * Gets the version
     * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {
@@ -260,8 +260,9 @@ class UnifiedRoleDefinition extends Entity
 
      /** 
      * Gets the inheritsPermissionsFrom
+    * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
      *
-     * @return array|null The inheritsPermissionsFrom
+     * @return array The inheritsPermissionsFrom
      */
     public function getInheritsPermissionsFrom()
     {
@@ -274,6 +275,7 @@ class UnifiedRoleDefinition extends Entity
     
     /** 
     * Sets the inheritsPermissionsFrom
+    * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
     *
     * @param UnifiedRoleDefinition $val The inheritsPermissionsFrom
     *
@@ -281,7 +283,7 @@ class UnifiedRoleDefinition extends Entity
     */
     public function setInheritsPermissionsFrom($val)
     {
-        $this->_propDict["inheritsPermissionsFrom"] = $val;
+		$this->_propDict["inheritsPermissionsFrom"] = $val;
         return $this;
     }
     

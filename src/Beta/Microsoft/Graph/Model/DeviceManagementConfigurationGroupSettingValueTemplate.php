@@ -28,12 +28,12 @@ class DeviceManagementConfigurationGroupSettingValueTemplate extends Entity
     * Gets the children
     * Group setting value children
     *
-    * @return DeviceManagementConfigurationSettingInstanceTemplate|null The children
+    * @return DeviceManagementConfigurationSettingInstanceTemplate The children
     */
     public function getChildren()
     {
         if (array_key_exists("children", $this->_propDict)) {
-            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstanceTemplate") || is_null($this->_propDict["children"])) {
+            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstanceTemplate")) {
                 return $this->_propDict["children"];
             } else {
                 $this->_propDict["children"] = new DeviceManagementConfigurationSettingInstanceTemplate($this->_propDict["children"]);
@@ -60,7 +60,7 @@ class DeviceManagementConfigurationGroupSettingValueTemplate extends Entity
     * Gets the settingValueTemplateId
     * Setting Value Template Id
     *
-    * @return string|null The settingValueTemplateId
+    * @return string The settingValueTemplateId
     */
     public function getSettingValueTemplateId()
     {

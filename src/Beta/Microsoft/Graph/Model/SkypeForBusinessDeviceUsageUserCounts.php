@@ -27,7 +27,7 @@ class SkypeForBusinessDeviceUsageUserCounts extends Entity
     /**
     * Gets the androidPhone
     *
-    * @return int|null The androidPhone
+    * @return int The androidPhone
     */
     public function getAndroidPhone()
     {
@@ -54,7 +54,7 @@ class SkypeForBusinessDeviceUsageUserCounts extends Entity
     /**
     * Gets the iPad
     *
-    * @return int|null The iPad
+    * @return int The iPad
     */
     public function getIPad()
     {
@@ -81,7 +81,7 @@ class SkypeForBusinessDeviceUsageUserCounts extends Entity
     /**
     * Gets the iPhone
     *
-    * @return int|null The iPhone
+    * @return int The iPhone
     */
     public function getIPhone()
     {
@@ -108,12 +108,12 @@ class SkypeForBusinessDeviceUsageUserCounts extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime|null The reportDate
+    * @return \DateTime The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -139,7 +139,7 @@ class SkypeForBusinessDeviceUsageUserCounts extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -166,12 +166,12 @@ class SkypeForBusinessDeviceUsageUserCounts extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -197,7 +197,7 @@ class SkypeForBusinessDeviceUsageUserCounts extends Entity
     /**
     * Gets the windows
     *
-    * @return int|null The windows
+    * @return int The windows
     */
     public function getWindows()
     {
@@ -224,7 +224,7 @@ class SkypeForBusinessDeviceUsageUserCounts extends Entity
     /**
     * Gets the windowsPhone
     *
-    * @return int|null The windowsPhone
+    * @return int The windowsPhone
     */
     public function getWindowsPhone()
     {

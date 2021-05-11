@@ -27,7 +27,7 @@ class SettingSource extends Entity
     * Gets the displayName
     * Not yet documented
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class SettingSource extends Entity
     * Gets the id
     * Not yet documented
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -84,12 +84,12 @@ class SettingSource extends Entity
     * Gets the sourceType
     * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
     *
-    * @return SettingSourceType|null The sourceType
+    * @return SettingSourceType The sourceType
     */
     public function getSourceType()
     {
         if (array_key_exists("sourceType", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceType"], "\Beta\Microsoft\Graph\Model\SettingSourceType") || is_null($this->_propDict["sourceType"])) {
+            if (is_a($this->_propDict["sourceType"], "\Beta\Microsoft\Graph\Model\SettingSourceType")) {
                 return $this->_propDict["sourceType"];
             } else {
                 $this->_propDict["sourceType"] = new SettingSourceType($this->_propDict["sourceType"]);

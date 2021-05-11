@@ -39,10 +39,7 @@ class OfficeConfiguration implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-        if (!is_array($propDict)) {
-           $propDict = array();
-        }
-        $this->_propDict = $propDict;
+		$this->_propDict = $propDict;
     }
 
     /**
@@ -59,7 +56,7 @@ class OfficeConfiguration implements \JsonSerializable
      /** 
      * Gets the tenantCheckinStatuses
      *
-     * @return array|null The tenantCheckinStatuses
+     * @return array The tenantCheckinStatuses
      */
     public function getTenantCheckinStatuses()
     {
@@ -79,19 +76,19 @@ class OfficeConfiguration implements \JsonSerializable
     */
     public function setTenantCheckinStatuses($val)
     {
-        $this->_propDict["tenantCheckinStatuses"] = $val;
+		$this->_propDict["tenantCheckinStatuses"] = $val;
         return $this;
     }
     
     /**
     * Gets the tenantUserCheckinSummary
     *
-    * @return OfficeUserCheckinSummary|null The tenantUserCheckinSummary
+    * @return OfficeUserCheckinSummary The tenantUserCheckinSummary
     */
     public function getTenantUserCheckinSummary()
     {
         if (array_key_exists("tenantUserCheckinSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["tenantUserCheckinSummary"], "\Beta\Microsoft\Graph\Model\OfficeUserCheckinSummary") || is_null($this->_propDict["tenantUserCheckinSummary"])) {
+            if (is_a($this->_propDict["tenantUserCheckinSummary"], "\Beta\Microsoft\Graph\Model\OfficeUserCheckinSummary")) {
                 return $this->_propDict["tenantUserCheckinSummary"];
             } else {
                 $this->_propDict["tenantUserCheckinSummary"] = new OfficeUserCheckinSummary($this->_propDict["tenantUserCheckinSummary"]);
@@ -118,7 +115,7 @@ class OfficeConfiguration implements \JsonSerializable
      /** 
      * Gets the clientConfigurations
      *
-     * @return array|null The clientConfigurations
+     * @return array The clientConfigurations
      */
     public function getClientConfigurations()
     {
@@ -138,7 +135,7 @@ class OfficeConfiguration implements \JsonSerializable
     */
     public function setClientConfigurations($val)
     {
-        $this->_propDict["clientConfigurations"] = $val;
+		$this->_propDict["clientConfigurations"] = $val;
         return $this;
     }
     
@@ -167,7 +164,7 @@ class OfficeConfiguration implements \JsonSerializable
     
     /**
     * Serializes the object by property array
-    * Manually serialize DateTime into RFC3339 format
+	* Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */

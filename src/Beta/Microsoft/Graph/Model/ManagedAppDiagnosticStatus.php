@@ -27,7 +27,7 @@ class ManagedAppDiagnosticStatus extends Entity
     * Gets the mitigationInstruction
     * Instruction on how to mitigate a failed validation
     *
-    * @return string|null The mitigationInstruction
+    * @return string The mitigationInstruction
     */
     public function getMitigationInstruction()
     {
@@ -55,7 +55,7 @@ class ManagedAppDiagnosticStatus extends Entity
     * Gets the state
     * The state of the operation
     *
-    * @return string|null The state
+    * @return string The state
     */
     public function getState()
     {
@@ -83,7 +83,7 @@ class ManagedAppDiagnosticStatus extends Entity
     * Gets the validationName
     * The validation friendly name
     *
-    * @return string|null The validationName
+    * @return string The validationName
     */
     public function getValidationName()
     {

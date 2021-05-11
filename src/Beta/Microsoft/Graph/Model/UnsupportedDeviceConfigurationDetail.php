@@ -27,7 +27,7 @@ class UnsupportedDeviceConfigurationDetail extends Entity
     * Gets the message
     * A message explaining why an entity is unsupported.
     *
-    * @return string|null The message
+    * @return string The message
     */
     public function getMessage()
     {
@@ -55,7 +55,7 @@ class UnsupportedDeviceConfigurationDetail extends Entity
     * Gets the propertyName
     * If message is related to a specific property in the original entity, then the name of that property.
     *
-    * @return string|null The propertyName
+    * @return string The propertyName
     */
     public function getPropertyName()
     {

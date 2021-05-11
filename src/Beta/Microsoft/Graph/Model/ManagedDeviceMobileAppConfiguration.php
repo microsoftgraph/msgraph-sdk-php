@@ -28,12 +28,12 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the createdDateTime
     * DateTime the object was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the description
     * Admin provided description of the Device Configuration.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the displayName
     * Admin provided name of the device configuration.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -152,7 +152,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this App configuration entity.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -181,7 +181,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the targetedMobileApps
     * the associated app.
     *
-    * @return string|null The targetedMobileApps
+    * @return string The targetedMobileApps
     */
     public function getTargetedMobileApps()
     {
@@ -210,7 +210,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the version
     * Version of the device configuration.
     *
-    * @return int|null The version
+    * @return int The version
     */
     public function getVersion()
     {
@@ -240,7 +240,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
      * Gets the assignments
     * The list of group assignemenets for app configration.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -261,7 +261,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -270,7 +270,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
      * Gets the deviceStatuses
     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      *
-     * @return array|null The deviceStatuses
+     * @return array The deviceStatuses
      */
     public function getDeviceStatuses()
     {
@@ -291,7 +291,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     */
     public function setDeviceStatuses($val)
     {
-        $this->_propDict["deviceStatuses"] = $val;
+		$this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
     
@@ -299,12 +299,12 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the deviceStatusSummary
     * App configuration device status summary.
     *
-    * @return ManagedDeviceMobileAppConfigurationDeviceSummary|null The deviceStatusSummary
+    * @return ManagedDeviceMobileAppConfigurationDeviceSummary The deviceStatusSummary
     */
     public function getDeviceStatusSummary()
     {
         if (array_key_exists("deviceStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStatusSummary"], "\Beta\Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationDeviceSummary") || is_null($this->_propDict["deviceStatusSummary"])) {
+            if (is_a($this->_propDict["deviceStatusSummary"], "\Beta\Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationDeviceSummary")) {
                 return $this->_propDict["deviceStatusSummary"];
             } else {
                 $this->_propDict["deviceStatusSummary"] = new ManagedDeviceMobileAppConfigurationDeviceSummary($this->_propDict["deviceStatusSummary"]);
@@ -333,7 +333,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
      * Gets the userStatuses
     * List of ManagedDeviceMobileAppConfigurationUserStatus.
      *
-     * @return array|null The userStatuses
+     * @return array The userStatuses
      */
     public function getUserStatuses()
     {
@@ -354,7 +354,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     */
     public function setUserStatuses($val)
     {
-        $this->_propDict["userStatuses"] = $val;
+		$this->_propDict["userStatuses"] = $val;
         return $this;
     }
     
@@ -362,12 +362,12 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the userStatusSummary
     * App configuration user status summary.
     *
-    * @return ManagedDeviceMobileAppConfigurationUserSummary|null The userStatusSummary
+    * @return ManagedDeviceMobileAppConfigurationUserSummary The userStatusSummary
     */
     public function getUserStatusSummary()
     {
         if (array_key_exists("userStatusSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userStatusSummary"], "\Beta\Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationUserSummary") || is_null($this->_propDict["userStatusSummary"])) {
+            if (is_a($this->_propDict["userStatusSummary"], "\Beta\Microsoft\Graph\Model\ManagedDeviceMobileAppConfigurationUserSummary")) {
                 return $this->_propDict["userStatusSummary"];
             } else {
                 $this->_propDict["userStatusSummary"] = new ManagedDeviceMobileAppConfigurationUserSummary($this->_propDict["userStatusSummary"]);

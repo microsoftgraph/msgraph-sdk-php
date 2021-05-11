@@ -27,7 +27,7 @@ class UserActivationCounts extends Entity
     * Gets the activatedOnSharedComputer
     * True if the user used the product on a shared computer before.
     *
-    * @return bool|null The activatedOnSharedComputer
+    * @return bool The activatedOnSharedComputer
     */
     public function getActivatedOnSharedComputer()
     {
@@ -55,7 +55,7 @@ class UserActivationCounts extends Entity
     * Gets the android
     * The activation count on an Android device.
     *
-    * @return int|null The android
+    * @return int The android
     */
     public function getAndroid()
     {
@@ -83,7 +83,7 @@ class UserActivationCounts extends Entity
     * Gets the ios
     * The activation count on iOS.
     *
-    * @return int|null The ios
+    * @return int The ios
     */
     public function getIos()
     {
@@ -112,12 +112,12 @@ class UserActivationCounts extends Entity
     * Gets the lastActivatedDate
     * The date of the latest activation.
     *
-    * @return \DateTime|null The lastActivatedDate
+    * @return \DateTime The lastActivatedDate
     */
     public function getLastActivatedDate()
     {
         if (array_key_exists("lastActivatedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivatedDate"], "\DateTime") || is_null($this->_propDict["lastActivatedDate"])) {
+            if (is_a($this->_propDict["lastActivatedDate"], "\DateTime")) {
                 return $this->_propDict["lastActivatedDate"];
             } else {
                 $this->_propDict["lastActivatedDate"] = new \DateTime($this->_propDict["lastActivatedDate"]);
@@ -144,7 +144,7 @@ class UserActivationCounts extends Entity
     * Gets the mac
     * The activation count on Mac OS.
     *
-    * @return int|null The mac
+    * @return int The mac
     */
     public function getMac()
     {
@@ -172,7 +172,7 @@ class UserActivationCounts extends Entity
     * Gets the productType
     * The product type, such as 'Microsoft 365 ProPlus'or 'Project Client'.
     *
-    * @return string|null The productType
+    * @return string The productType
     */
     public function getProductType()
     {
@@ -200,7 +200,7 @@ class UserActivationCounts extends Entity
     * Gets the windows
     * The activation count on Windows. This number includes every activation on any Windows computer.
     *
-    * @return int|null The windows
+    * @return int The windows
     */
     public function getWindows()
     {
@@ -228,7 +228,7 @@ class UserActivationCounts extends Entity
     * Gets the windows10Mobile
     * The activation count on Windows 10 mobile.
     *
-    * @return int|null The windows10Mobile
+    * @return int The windows10Mobile
     */
     public function getWindows10Mobile()
     {

@@ -29,7 +29,7 @@ class DeviceManagementReports extends Entity
      * Gets the cachedReportConfigurations
     * Entity representing the configuration of a cached report
      *
-     * @return array|null The cachedReportConfigurations
+     * @return array The cachedReportConfigurations
      */
     public function getCachedReportConfigurations()
     {
@@ -50,7 +50,7 @@ class DeviceManagementReports extends Entity
     */
     public function setCachedReportConfigurations($val)
     {
-        $this->_propDict["cachedReportConfigurations"] = $val;
+		$this->_propDict["cachedReportConfigurations"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class DeviceManagementReports extends Entity
      * Gets the exportJobs
     * Entity representing a job to export a report
      *
-     * @return array|null The exportJobs
+     * @return array The exportJobs
      */
     public function getExportJobs()
     {
@@ -80,7 +80,7 @@ class DeviceManagementReports extends Entity
     */
     public function setExportJobs($val)
     {
-        $this->_propDict["exportJobs"] = $val;
+		$this->_propDict["exportJobs"] = $val;
         return $this;
     }
     
@@ -89,7 +89,7 @@ class DeviceManagementReports extends Entity
      * Gets the reportSchedules
     * Entity representing a schedule for which reports are delivered
      *
-     * @return array|null The reportSchedules
+     * @return array The reportSchedules
      */
     public function getReportSchedules()
     {
@@ -110,7 +110,7 @@ class DeviceManagementReports extends Entity
     */
     public function setReportSchedules($val)
     {
-        $this->_propDict["reportSchedules"] = $val;
+		$this->_propDict["reportSchedules"] = $val;
         return $this;
     }
     

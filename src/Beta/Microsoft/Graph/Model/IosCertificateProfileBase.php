@@ -28,12 +28,12 @@ class IosCertificateProfileBase extends IosCertificateProfile
     * Gets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
-    * @return CertificateValidityPeriodScale|null The certificateValidityPeriodScale
+    * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
     public function getCertificateValidityPeriodScale()
     {
         if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale") || is_null($this->_propDict["certificateValidityPeriodScale"])) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodScale"];
             } else {
                 $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
@@ -61,7 +61,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     * Gets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period.
     *
-    * @return int|null The certificateValidityPeriodValue
+    * @return int The certificateValidityPeriodValue
     */
     public function getCertificateValidityPeriodValue()
     {
@@ -90,7 +90,7 @@ class IosCertificateProfileBase extends IosCertificateProfile
     * Gets the renewalThresholdPercentage
     * Certificate renewal threshold percentage. Valid values 1 to 99
     *
-    * @return int|null The renewalThresholdPercentage
+    * @return int The renewalThresholdPercentage
     */
     public function getRenewalThresholdPercentage()
     {
@@ -119,12 +119,12 @@ class IosCertificateProfileBase extends IosCertificateProfile
     * Gets the subjectAlternativeNameType
     * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
-    * @return SubjectAlternativeNameType|null The subjectAlternativeNameType
+    * @return SubjectAlternativeNameType The subjectAlternativeNameType
     */
     public function getSubjectAlternativeNameType()
     {
         if (array_key_exists("subjectAlternativeNameType", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectAlternativeNameType"], "\Beta\Microsoft\Graph\Model\SubjectAlternativeNameType") || is_null($this->_propDict["subjectAlternativeNameType"])) {
+            if (is_a($this->_propDict["subjectAlternativeNameType"], "\Beta\Microsoft\Graph\Model\SubjectAlternativeNameType")) {
                 return $this->_propDict["subjectAlternativeNameType"];
             } else {
                 $this->_propDict["subjectAlternativeNameType"] = new SubjectAlternativeNameType($this->_propDict["subjectAlternativeNameType"]);
@@ -152,12 +152,12 @@ class IosCertificateProfileBase extends IosCertificateProfile
     * Gets the subjectNameFormat
     * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
     *
-    * @return AppleSubjectNameFormat|null The subjectNameFormat
+    * @return AppleSubjectNameFormat The subjectNameFormat
     */
     public function getSubjectNameFormat()
     {
         if (array_key_exists("subjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectNameFormat"], "\Beta\Microsoft\Graph\Model\AppleSubjectNameFormat") || is_null($this->_propDict["subjectNameFormat"])) {
+            if (is_a($this->_propDict["subjectNameFormat"], "\Beta\Microsoft\Graph\Model\AppleSubjectNameFormat")) {
                 return $this->_propDict["subjectNameFormat"];
             } else {
                 $this->_propDict["subjectNameFormat"] = new AppleSubjectNameFormat($this->_propDict["subjectNameFormat"]);

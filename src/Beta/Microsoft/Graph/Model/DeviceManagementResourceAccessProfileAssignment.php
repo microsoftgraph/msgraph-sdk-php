@@ -28,12 +28,12 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
     * Gets the intent
     * The assignment intent for the resource access profile. Possible values are: apply, remove.
     *
-    * @return DeviceManagementResourceAccessProfileIntent|null The intent
+    * @return DeviceManagementResourceAccessProfileIntent The intent
     */
     public function getIntent()
     {
         if (array_key_exists("intent", $this->_propDict)) {
-            if (is_a($this->_propDict["intent"], "\Beta\Microsoft\Graph\Model\DeviceManagementResourceAccessProfileIntent") || is_null($this->_propDict["intent"])) {
+            if (is_a($this->_propDict["intent"], "\Beta\Microsoft\Graph\Model\DeviceManagementResourceAccessProfileIntent")) {
                 return $this->_propDict["intent"];
             } else {
                 $this->_propDict["intent"] = new DeviceManagementResourceAccessProfileIntent($this->_propDict["intent"]);
@@ -61,7 +61,7 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
     * Gets the sourceId
     * The identifier of the source of the assignment.
     *
-    * @return string|null The sourceId
+    * @return string The sourceId
     */
     public function getSourceId()
     {
@@ -90,12 +90,12 @@ class DeviceManagementResourceAccessProfileAssignment extends Entity
     * Gets the target
     * The assignment target for the resource access profile.
     *
-    * @return DeviceAndAppManagementAssignmentTarget|null The target
+    * @return DeviceAndAppManagementAssignmentTarget The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget") || is_null($this->_propDict["target"])) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);

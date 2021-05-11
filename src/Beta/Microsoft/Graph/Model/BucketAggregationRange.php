@@ -27,7 +27,7 @@ class BucketAggregationRange extends Entity
     * Gets the from
     * Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
     *
-    * @return string|null The from
+    * @return string The from
     */
     public function getFrom()
     {
@@ -55,7 +55,7 @@ class BucketAggregationRange extends Entity
     * Gets the to
     * Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
     *
-    * @return string|null The to
+    * @return string The to
     */
     public function getTo()
     {

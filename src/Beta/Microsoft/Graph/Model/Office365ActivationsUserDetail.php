@@ -28,7 +28,7 @@ class Office365ActivationsUserDetail extends Entity
     * Gets the displayName
     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,12 +57,12 @@ class Office365ActivationsUserDetail extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -91,7 +91,7 @@ class Office365ActivationsUserDetail extends Entity
      * Gets the userActivationCounts
     * The user's latest product activation counts on all the platforms for all the assigned product types.
      *
-     * @return array|null The userActivationCounts
+     * @return array The userActivationCounts
      */
     public function getUserActivationCounts()
     {
@@ -112,7 +112,7 @@ class Office365ActivationsUserDetail extends Entity
     */
     public function setUserActivationCounts($val)
     {
-        $this->_propDict["userActivationCounts"] = $val;
+		$this->_propDict["userActivationCounts"] = $val;
         return $this;
     }
     
@@ -120,7 +120,7 @@ class Office365ActivationsUserDetail extends Entity
     * Gets the userPrincipalName
     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

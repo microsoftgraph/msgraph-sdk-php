@@ -28,7 +28,7 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
     * Gets the authenticationCertificateId
     * ID to the Authentication Certificate
     *
-    * @return string|null The authenticationCertificateId
+    * @return string The authenticationCertificateId
     */
     public function getAuthenticationCertificateId()
     {
@@ -57,12 +57,12 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
     * Gets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The customXml
+    * @return \GuzzleHttp\Psr7\Stream The customXml
     */
     public function getCustomXml()
     {
         if (array_key_exists("customXml", $this->_propDict)) {
-            if (is_a($this->_propDict["customXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customXml"])) {
+            if (is_a($this->_propDict["customXml"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["customXml"];
             } else {
                 $this->_propDict["customXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["customXml"]);
@@ -90,7 +90,7 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
     * Gets the customXmlFileName
     * Custom Xml file name.
     *
-    * @return string|null The customXmlFileName
+    * @return string The customXmlFileName
     */
     public function getCustomXmlFileName()
     {

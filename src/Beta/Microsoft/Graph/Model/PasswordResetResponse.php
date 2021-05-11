@@ -26,7 +26,7 @@ class PasswordResetResponse extends Entity
     /**
     * Gets the newPassword
     *
-    * @return string|null The newPassword
+    * @return string The newPassword
     */
     public function getNewPassword()
     {

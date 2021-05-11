@@ -27,7 +27,7 @@ class WindowsKioskDesktopApp extends WindowsKioskAppBase
     * Gets the desktopApplicationId
     * Define the DesktopApplicationID of the app
     *
-    * @return string|null The desktopApplicationId
+    * @return string The desktopApplicationId
     */
     public function getDesktopApplicationId()
     {
@@ -55,7 +55,7 @@ class WindowsKioskDesktopApp extends WindowsKioskAppBase
     * Gets the desktopApplicationLinkPath
     * Define the DesktopApplicationLinkPath of the app
     *
-    * @return string|null The desktopApplicationLinkPath
+    * @return string The desktopApplicationLinkPath
     */
     public function getDesktopApplicationLinkPath()
     {
@@ -83,7 +83,7 @@ class WindowsKioskDesktopApp extends WindowsKioskAppBase
     * Gets the path
     * Define the path of a desktop app
     *
-    * @return string|null The path
+    * @return string The path
     */
     public function getPath()
     {

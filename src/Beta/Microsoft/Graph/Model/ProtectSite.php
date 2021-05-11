@@ -36,12 +36,12 @@ class ProtectSite extends LabelActionBase
     /**
     * Gets the accessType
     *
-    * @return SiteAccessType|null The accessType
+    * @return SiteAccessType The accessType
     */
     public function getAccessType()
     {
         if (array_key_exists("accessType", $this->_propDict)) {
-            if (is_a($this->_propDict["accessType"], "\Beta\Microsoft\Graph\Model\SiteAccessType") || is_null($this->_propDict["accessType"])) {
+            if (is_a($this->_propDict["accessType"], "\Beta\Microsoft\Graph\Model\SiteAccessType")) {
                 return $this->_propDict["accessType"];
             } else {
                 $this->_propDict["accessType"] = new SiteAccessType($this->_propDict["accessType"]);
@@ -66,7 +66,7 @@ class ProtectSite extends LabelActionBase
     /**
     * Gets the conditionalAccessProtectionLevelId
     *
-    * @return string|null The conditionalAccessProtectionLevelId
+    * @return string The conditionalAccessProtectionLevelId
     */
     public function getConditionalAccessProtectionLevelId()
     {

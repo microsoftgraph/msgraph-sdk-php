@@ -27,12 +27,12 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the createdDate
     *
-    * @return \DateTime|null The createdDate
+    * @return \DateTime The createdDate
     */
     public function getCreatedDate()
     {
         if (array_key_exists("createdDate", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDate"], "\DateTime") || is_null($this->_propDict["createdDate"])) {
+            if (is_a($this->_propDict["createdDate"], "\DateTime")) {
                 return $this->_propDict["createdDate"];
             } else {
                 $this->_propDict["createdDate"] = new \DateTime($this->_propDict["createdDate"]);
@@ -58,12 +58,12 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the deletedDate
     *
-    * @return \DateTime|null The deletedDate
+    * @return \DateTime The deletedDate
     */
     public function getDeletedDate()
     {
         if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime") || is_null($this->_propDict["deletedDate"])) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
                 return $this->_propDict["deletedDate"];
             } else {
                 $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
@@ -89,7 +89,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the deletedItemCount
     *
-    * @return int|null The deletedItemCount
+    * @return int The deletedItemCount
     */
     public function getDeletedItemCount()
     {
@@ -116,7 +116,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the deletedItemSizeInBytes
     *
-    * @return int|null The deletedItemSizeInBytes
+    * @return int The deletedItemSizeInBytes
     */
     public function getDeletedItemSizeInBytes()
     {
@@ -143,7 +143,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -170,7 +170,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the isDeleted
     *
-    * @return bool|null The isDeleted
+    * @return bool The isDeleted
     */
     public function getIsDeleted()
     {
@@ -197,7 +197,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the issueWarningQuotaInBytes
     *
-    * @return int|null The issueWarningQuotaInBytes
+    * @return int The issueWarningQuotaInBytes
     */
     public function getIssueWarningQuotaInBytes()
     {
@@ -224,7 +224,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the itemCount
     *
-    * @return int|null The itemCount
+    * @return int The itemCount
     */
     public function getItemCount()
     {
@@ -251,12 +251,12 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \DateTime The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -282,7 +282,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the prohibitSendQuotaInBytes
     *
-    * @return int|null The prohibitSendQuotaInBytes
+    * @return int The prohibitSendQuotaInBytes
     */
     public function getProhibitSendQuotaInBytes()
     {
@@ -309,7 +309,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the prohibitSendReceiveQuotaInBytes
     *
-    * @return int|null The prohibitSendReceiveQuotaInBytes
+    * @return int The prohibitSendReceiveQuotaInBytes
     */
     public function getProhibitSendReceiveQuotaInBytes()
     {
@@ -336,7 +336,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -363,12 +363,12 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -394,7 +394,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the storageUsedInBytes
     *
-    * @return int|null The storageUsedInBytes
+    * @return int The storageUsedInBytes
     */
     public function getStorageUsedInBytes()
     {
@@ -421,7 +421,7 @@ class MailboxUsageDetail extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

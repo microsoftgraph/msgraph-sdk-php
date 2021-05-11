@@ -28,12 +28,12 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     * Gets the content
     * The contents of the uploaded ADMX file.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The content
+    * @return \GuzzleHttp\Psr7\Stream The content
     */
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
@@ -61,7 +61,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     * Gets the defaultLanguageCode
     * The default language of the uploaded ADMX file.
     *
-    * @return string|null The defaultLanguageCode
+    * @return string The defaultLanguageCode
     */
     public function getDefaultLanguageCode()
     {
@@ -90,7 +90,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     * Gets the fileName
     * The file name of the uploaded ADML file.
     *
-    * @return string|null The fileName
+    * @return string The fileName
     */
     public function getFileName()
     {
@@ -120,7 +120,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * Gets the groupPolicyUploadedLanguageFiles
     * The list of ADML files associated with the uploaded ADMX file.
      *
-     * @return array|null The groupPolicyUploadedLanguageFiles
+     * @return array The groupPolicyUploadedLanguageFiles
      */
     public function getGroupPolicyUploadedLanguageFiles()
     {
@@ -141,7 +141,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     */
     public function setGroupPolicyUploadedLanguageFiles($val)
     {
-        $this->_propDict["groupPolicyUploadedLanguageFiles"] = $val;
+		$this->_propDict["groupPolicyUploadedLanguageFiles"] = $val;
         return $this;
     }
     
@@ -149,12 +149,12 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     * Gets the status
     * The upload status of the uploaded ADMX file. Possible values are: none, uploadInProgress, available, assigned, removalInProgress, uploadFailed, removalFailed.
     *
-    * @return GroupPolicyUploadedDefinitionFileStatus|null The status
+    * @return GroupPolicyUploadedDefinitionFileStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\GroupPolicyUploadedDefinitionFileStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\GroupPolicyUploadedDefinitionFileStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new GroupPolicyUploadedDefinitionFileStatus($this->_propDict["status"]);
@@ -182,12 +182,12 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     * Gets the uploadDateTime
     * The uploaded time of the uploaded ADMX file.
     *
-    * @return \DateTime|null The uploadDateTime
+    * @return \DateTime The uploadDateTime
     */
     public function getUploadDateTime()
     {
         if (array_key_exists("uploadDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["uploadDateTime"], "\DateTime") || is_null($this->_propDict["uploadDateTime"])) {
+            if (is_a($this->_propDict["uploadDateTime"], "\DateTime")) {
                 return $this->_propDict["uploadDateTime"];
             } else {
                 $this->_propDict["uploadDateTime"] = new \DateTime($this->_propDict["uploadDateTime"]);
@@ -216,7 +216,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * Gets the groupPolicyOperations
     * The list of operations on the uploaded ADMX file.
      *
-     * @return array|null The groupPolicyOperations
+     * @return array The groupPolicyOperations
      */
     public function getGroupPolicyOperations()
     {
@@ -237,7 +237,7 @@ class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     */
     public function setGroupPolicyOperations($val)
     {
-        $this->_propDict["groupPolicyOperations"] = $val;
+		$this->_propDict["groupPolicyOperations"] = $val;
         return $this;
     }
     

@@ -26,7 +26,7 @@ class AddIn extends Entity
     /**
     * Gets the id
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -53,12 +53,12 @@ class AddIn extends Entity
     /**
     * Gets the addInProperties
     *
-    * @return KeyValue|null The addInProperties
+    * @return KeyValue The addInProperties
     */
     public function getAddInProperties()
     {
         if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\Model\KeyValue") || is_null($this->_propDict["properties"])) {
+            if (is_a($this->_propDict["properties"], "\Beta\Microsoft\Graph\Model\KeyValue")) {
                 return $this->_propDict["properties"];
             } else {
                 $this->_propDict["properties"] = new KeyValue($this->_propDict["properties"]);
@@ -83,7 +83,7 @@ class AddIn extends Entity
     /**
     * Gets the type
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {

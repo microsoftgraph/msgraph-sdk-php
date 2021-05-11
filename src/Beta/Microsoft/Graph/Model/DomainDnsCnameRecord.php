@@ -28,7 +28,7 @@ class DomainDnsCnameRecord extends DomainDnsRecord
     * Gets the canonicalName
     * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
     *
-    * @return string|null The canonicalName
+    * @return string The canonicalName
     */
     public function getCanonicalName()
     {

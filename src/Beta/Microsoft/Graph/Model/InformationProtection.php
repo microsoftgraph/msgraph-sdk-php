@@ -27,12 +27,12 @@ class InformationProtection extends Entity
     /**
     * Gets the bitlocker
     *
-    * @return Bitlocker|null The bitlocker
+    * @return Bitlocker The bitlocker
     */
     public function getBitlocker()
     {
         if (array_key_exists("bitlocker", $this->_propDict)) {
-            if (is_a($this->_propDict["bitlocker"], "\Beta\Microsoft\Graph\Model\Bitlocker") || is_null($this->_propDict["bitlocker"])) {
+            if (is_a($this->_propDict["bitlocker"], "\Beta\Microsoft\Graph\Model\Bitlocker")) {
                 return $this->_propDict["bitlocker"];
             } else {
                 $this->_propDict["bitlocker"] = new Bitlocker($this->_propDict["bitlocker"]);
@@ -59,7 +59,7 @@ class InformationProtection extends Entity
      /** 
      * Gets the dataLossPreventionPolicies
      *
-     * @return array|null The dataLossPreventionPolicies
+     * @return array The dataLossPreventionPolicies
      */
     public function getDataLossPreventionPolicies()
     {
@@ -79,7 +79,7 @@ class InformationProtection extends Entity
     */
     public function setDataLossPreventionPolicies($val)
     {
-        $this->_propDict["dataLossPreventionPolicies"] = $val;
+		$this->_propDict["dataLossPreventionPolicies"] = $val;
         return $this;
     }
     
@@ -87,7 +87,7 @@ class InformationProtection extends Entity
      /** 
      * Gets the sensitivityLabels
      *
-     * @return array|null The sensitivityLabels
+     * @return array The sensitivityLabels
      */
     public function getSensitivityLabels()
     {
@@ -107,19 +107,19 @@ class InformationProtection extends Entity
     */
     public function setSensitivityLabels($val)
     {
-        $this->_propDict["sensitivityLabels"] = $val;
+		$this->_propDict["sensitivityLabels"] = $val;
         return $this;
     }
     
     /**
     * Gets the sensitivityPolicySettings
     *
-    * @return SensitivityPolicySettings|null The sensitivityPolicySettings
+    * @return SensitivityPolicySettings The sensitivityPolicySettings
     */
     public function getSensitivityPolicySettings()
     {
         if (array_key_exists("sensitivityPolicySettings", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivityPolicySettings"], "\Beta\Microsoft\Graph\Model\SensitivityPolicySettings") || is_null($this->_propDict["sensitivityPolicySettings"])) {
+            if (is_a($this->_propDict["sensitivityPolicySettings"], "\Beta\Microsoft\Graph\Model\SensitivityPolicySettings")) {
                 return $this->_propDict["sensitivityPolicySettings"];
             } else {
                 $this->_propDict["sensitivityPolicySettings"] = new SensitivityPolicySettings($this->_propDict["sensitivityPolicySettings"]);
@@ -145,12 +145,12 @@ class InformationProtection extends Entity
     /**
     * Gets the policy
     *
-    * @return InformationProtectionPolicy|null The policy
+    * @return InformationProtectionPolicy The policy
     */
     public function getPolicy()
     {
         if (array_key_exists("policy", $this->_propDict)) {
-            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\InformationProtectionPolicy") || is_null($this->_propDict["policy"])) {
+            if (is_a($this->_propDict["policy"], "\Beta\Microsoft\Graph\Model\InformationProtectionPolicy")) {
                 return $this->_propDict["policy"];
             } else {
                 $this->_propDict["policy"] = new InformationProtectionPolicy($this->_propDict["policy"]);
@@ -177,7 +177,7 @@ class InformationProtection extends Entity
      /** 
      * Gets the threatAssessmentRequests
      *
-     * @return array|null The threatAssessmentRequests
+     * @return array The threatAssessmentRequests
      */
     public function getThreatAssessmentRequests()
     {
@@ -197,7 +197,7 @@ class InformationProtection extends Entity
     */
     public function setThreatAssessmentRequests($val)
     {
-        $this->_propDict["threatAssessmentRequests"] = $val;
+		$this->_propDict["threatAssessmentRequests"] = $val;
         return $this;
     }
     

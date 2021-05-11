@@ -28,7 +28,7 @@ class GovernanceRoleAssignment extends Entity
     * Gets the assignmentState
     * The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
     *
-    * @return string|null The assignmentState
+    * @return string The assignmentState
     */
     public function getAssignmentState()
     {
@@ -57,12 +57,12 @@ class GovernanceRoleAssignment extends Entity
     * Gets the endDateTime
     * For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime|null The endDateTime
+    * @return \DateTime The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -90,7 +90,7 @@ class GovernanceRoleAssignment extends Entity
     * Gets the externalId
     * The external ID the resource that is used to identify the role assignment in the provider.
     *
-    * @return string|null The externalId
+    * @return string The externalId
     */
     public function getExternalId()
     {
@@ -119,7 +119,7 @@ class GovernanceRoleAssignment extends Entity
     * Gets the linkedEligibleRoleAssignmentId
     * If this is an active assignment and created due to activation on an eligible assignment, it represents the ID of that eligible assignment; Otherwise, the value is null.
     *
-    * @return string|null The linkedEligibleRoleAssignmentId
+    * @return string The linkedEligibleRoleAssignmentId
     */
     public function getLinkedEligibleRoleAssignmentId()
     {
@@ -148,7 +148,7 @@ class GovernanceRoleAssignment extends Entity
     * Gets the memberType
     * The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
     *
-    * @return string|null The memberType
+    * @return string The memberType
     */
     public function getMemberType()
     {
@@ -177,7 +177,7 @@ class GovernanceRoleAssignment extends Entity
     * Gets the resourceId
     * Required. The ID of the resource which the role assignment is associated with.
     *
-    * @return string|null The resourceId
+    * @return string The resourceId
     */
     public function getResourceId()
     {
@@ -206,7 +206,7 @@ class GovernanceRoleAssignment extends Entity
     * Gets the roleDefinitionId
     * Required. The ID of the role definition which the role assignment is associated with.
     *
-    * @return string|null The roleDefinitionId
+    * @return string The roleDefinitionId
     */
     public function getRoleDefinitionId()
     {
@@ -235,12 +235,12 @@ class GovernanceRoleAssignment extends Entity
     * Gets the startDateTime
     * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime|null The startDateTime
+    * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -267,7 +267,7 @@ class GovernanceRoleAssignment extends Entity
     /**
     * Gets the status
     *
-    * @return string|null The status
+    * @return string The status
     */
     public function getStatus()
     {
@@ -295,7 +295,7 @@ class GovernanceRoleAssignment extends Entity
     * Gets the subjectId
     * Required. The ID of the subject which the role assignment is associated with.
     *
-    * @return string|null The subjectId
+    * @return string The subjectId
     */
     public function getSubjectId()
     {
@@ -324,12 +324,12 @@ class GovernanceRoleAssignment extends Entity
     * Gets the linkedEligibleRoleAssignment
     * Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
     *
-    * @return GovernanceRoleAssignment|null The linkedEligibleRoleAssignment
+    * @return GovernanceRoleAssignment The linkedEligibleRoleAssignment
     */
     public function getLinkedEligibleRoleAssignment()
     {
         if (array_key_exists("linkedEligibleRoleAssignment", $this->_propDict)) {
-            if (is_a($this->_propDict["linkedEligibleRoleAssignment"], "\Beta\Microsoft\Graph\Model\GovernanceRoleAssignment") || is_null($this->_propDict["linkedEligibleRoleAssignment"])) {
+            if (is_a($this->_propDict["linkedEligibleRoleAssignment"], "\Beta\Microsoft\Graph\Model\GovernanceRoleAssignment")) {
                 return $this->_propDict["linkedEligibleRoleAssignment"];
             } else {
                 $this->_propDict["linkedEligibleRoleAssignment"] = new GovernanceRoleAssignment($this->_propDict["linkedEligibleRoleAssignment"]);
@@ -357,12 +357,12 @@ class GovernanceRoleAssignment extends Entity
     * Gets the resource
     * Read-only. The resource associated with the role assignment.
     *
-    * @return GovernanceResource|null The resource
+    * @return GovernanceResource The resource
     */
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource") || is_null($this->_propDict["resource"])) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new GovernanceResource($this->_propDict["resource"]);
@@ -390,12 +390,12 @@ class GovernanceRoleAssignment extends Entity
     * Gets the roleDefinition
     * Read-only. The role definition associated with the role assignment.
     *
-    * @return GovernanceRoleDefinition|null The roleDefinition
+    * @return GovernanceRoleDefinition The roleDefinition
     */
     public function getRoleDefinition()
     {
         if (array_key_exists("roleDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\GovernanceRoleDefinition") || is_null($this->_propDict["roleDefinition"])) {
+            if (is_a($this->_propDict["roleDefinition"], "\Beta\Microsoft\Graph\Model\GovernanceRoleDefinition")) {
                 return $this->_propDict["roleDefinition"];
             } else {
                 $this->_propDict["roleDefinition"] = new GovernanceRoleDefinition($this->_propDict["roleDefinition"]);
@@ -423,12 +423,12 @@ class GovernanceRoleAssignment extends Entity
     * Gets the subject
     * Read-only. The subject associated with the role assignment.
     *
-    * @return GovernanceSubject|null The subject
+    * @return GovernanceSubject The subject
     */
     public function getSubject()
     {
         if (array_key_exists("subject", $this->_propDict)) {
-            if (is_a($this->_propDict["subject"], "\Beta\Microsoft\Graph\Model\GovernanceSubject") || is_null($this->_propDict["subject"])) {
+            if (is_a($this->_propDict["subject"], "\Beta\Microsoft\Graph\Model\GovernanceSubject")) {
                 return $this->_propDict["subject"];
             } else {
                 $this->_propDict["subject"] = new GovernanceSubject($this->_propDict["subject"]);

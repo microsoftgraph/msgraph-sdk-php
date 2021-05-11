@@ -27,7 +27,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
     * Gets the devicesNotAutopilotRegistered
     * The count of intune devices that are not autopilot registerd.
     *
-    * @return int|null The devicesNotAutopilotRegistered
+    * @return int The devicesNotAutopilotRegistered
     */
     public function getDevicesNotAutopilotRegistered()
     {
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
     * Gets the devicesWithoutAutopilotProfileAssigned
     * The count of intune devices not autopilot profile assigned.
     *
-    * @return int|null The devicesWithoutAutopilotProfileAssigned
+    * @return int The devicesWithoutAutopilotProfileAssigned
     */
     public function getDevicesWithoutAutopilotProfileAssigned()
     {

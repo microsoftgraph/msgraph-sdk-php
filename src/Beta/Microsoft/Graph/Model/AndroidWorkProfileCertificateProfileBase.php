@@ -28,12 +28,12 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     * Gets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
-    * @return CertificateValidityPeriodScale|null The certificateValidityPeriodScale
+    * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
     public function getCertificateValidityPeriodScale()
     {
         if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale") || is_null($this->_propDict["certificateValidityPeriodScale"])) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodScale"];
             } else {
                 $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
@@ -61,7 +61,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     * Gets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period.
     *
-    * @return int|null The certificateValidityPeriodValue
+    * @return int The certificateValidityPeriodValue
     */
     public function getCertificateValidityPeriodValue()
     {
@@ -91,7 +91,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
      * Gets the extendedKeyUsages
     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The extendedKeyUsages
+     * @return array The extendedKeyUsages
      */
     public function getExtendedKeyUsages()
     {
@@ -112,7 +112,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     */
     public function setExtendedKeyUsages($val)
     {
-        $this->_propDict["extendedKeyUsages"] = $val;
+		$this->_propDict["extendedKeyUsages"] = $val;
         return $this;
     }
     
@@ -120,7 +120,7 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     * Gets the renewalThresholdPercentage
     * Certificate renewal threshold percentage. Valid values 1 to 99
     *
-    * @return int|null The renewalThresholdPercentage
+    * @return int The renewalThresholdPercentage
     */
     public function getRenewalThresholdPercentage()
     {
@@ -149,12 +149,12 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     * Gets the subjectAlternativeNameType
     * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
-    * @return SubjectAlternativeNameType|null The subjectAlternativeNameType
+    * @return SubjectAlternativeNameType The subjectAlternativeNameType
     */
     public function getSubjectAlternativeNameType()
     {
         if (array_key_exists("subjectAlternativeNameType", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectAlternativeNameType"], "\Beta\Microsoft\Graph\Model\SubjectAlternativeNameType") || is_null($this->_propDict["subjectAlternativeNameType"])) {
+            if (is_a($this->_propDict["subjectAlternativeNameType"], "\Beta\Microsoft\Graph\Model\SubjectAlternativeNameType")) {
                 return $this->_propDict["subjectAlternativeNameType"];
             } else {
                 $this->_propDict["subjectAlternativeNameType"] = new SubjectAlternativeNameType($this->_propDict["subjectAlternativeNameType"]);
@@ -182,12 +182,12 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     * Gets the subjectNameFormat
     * Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
     *
-    * @return SubjectNameFormat|null The subjectNameFormat
+    * @return SubjectNameFormat The subjectNameFormat
     */
     public function getSubjectNameFormat()
     {
         if (array_key_exists("subjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["subjectNameFormat"], "\Beta\Microsoft\Graph\Model\SubjectNameFormat") || is_null($this->_propDict["subjectNameFormat"])) {
+            if (is_a($this->_propDict["subjectNameFormat"], "\Beta\Microsoft\Graph\Model\SubjectNameFormat")) {
                 return $this->_propDict["subjectNameFormat"];
             } else {
                 $this->_propDict["subjectNameFormat"] = new SubjectNameFormat($this->_propDict["subjectNameFormat"]);
@@ -215,12 +215,12 @@ class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguration
     * Gets the rootCertificate
     * Trusted Root Certificate.
     *
-    * @return AndroidWorkProfileTrustedRootCertificate|null The rootCertificate
+    * @return AndroidWorkProfileTrustedRootCertificate The rootCertificate
     */
     public function getRootCertificate()
     {
         if (array_key_exists("rootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["rootCertificate"], "\Beta\Microsoft\Graph\Model\AndroidWorkProfileTrustedRootCertificate") || is_null($this->_propDict["rootCertificate"])) {
+            if (is_a($this->_propDict["rootCertificate"], "\Beta\Microsoft\Graph\Model\AndroidWorkProfileTrustedRootCertificate")) {
                 return $this->_propDict["rootCertificate"];
             } else {
                 $this->_propDict["rootCertificate"] = new AndroidWorkProfileTrustedRootCertificate($this->_propDict["rootCertificate"]);

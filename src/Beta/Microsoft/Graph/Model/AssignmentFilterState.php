@@ -27,7 +27,7 @@ class AssignmentFilterState extends Entity
     * Gets the enabled
     * Indicator to if AssignmentFilter is enabled or disabled.
     *
-    * @return bool|null The enabled
+    * @return bool The enabled
     */
     public function getEnabled()
     {

@@ -27,7 +27,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the assignedProducts
     *
-    * @return string|null The assignedProducts
+    * @return string The assignedProducts
     */
     public function getAssignedProducts()
     {
@@ -54,12 +54,12 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the deletedDate
     *
-    * @return \DateTime|null The deletedDate
+    * @return \DateTime The deletedDate
     */
     public function getDeletedDate()
     {
         if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime") || is_null($this->_propDict["deletedDate"])) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
                 return $this->_propDict["deletedDate"];
             } else {
                 $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
@@ -85,7 +85,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the isDeleted
     *
-    * @return bool|null The isDeleted
+    * @return bool The isDeleted
     */
     public function getIsDeleted()
     {
@@ -112,12 +112,12 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \DateTime The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -143,7 +143,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceAppSharingCount
     *
-    * @return int|null The organizedConferenceAppSharingCount
+    * @return int The organizedConferenceAppSharingCount
     */
     public function getOrganizedConferenceAppSharingCount()
     {
@@ -170,7 +170,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceAudioVideoCount
     *
-    * @return int|null The organizedConferenceAudioVideoCount
+    * @return int The organizedConferenceAudioVideoCount
     */
     public function getOrganizedConferenceAudioVideoCount()
     {
@@ -197,7 +197,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceAudioVideoMinutes
     *
-    * @return int|null The organizedConferenceAudioVideoMinutes
+    * @return int The organizedConferenceAudioVideoMinutes
     */
     public function getOrganizedConferenceAudioVideoMinutes()
     {
@@ -224,7 +224,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceCloudDialInMicrosoftMinutes
     *
-    * @return int|null The organizedConferenceCloudDialInMicrosoftMinutes
+    * @return int The organizedConferenceCloudDialInMicrosoftMinutes
     */
     public function getOrganizedConferenceCloudDialInMicrosoftMinutes()
     {
@@ -251,7 +251,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceCloudDialInOutMicrosoftCount
     *
-    * @return int|null The organizedConferenceCloudDialInOutMicrosoftCount
+    * @return int The organizedConferenceCloudDialInOutMicrosoftCount
     */
     public function getOrganizedConferenceCloudDialInOutMicrosoftCount()
     {
@@ -278,7 +278,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceCloudDialOutMicrosoftMinutes
     *
-    * @return int|null The organizedConferenceCloudDialOutMicrosoftMinutes
+    * @return int The organizedConferenceCloudDialOutMicrosoftMinutes
     */
     public function getOrganizedConferenceCloudDialOutMicrosoftMinutes()
     {
@@ -305,7 +305,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceDialInOut3rdPartyCount
     *
-    * @return int|null The organizedConferenceDialInOut3rdPartyCount
+    * @return int The organizedConferenceDialInOut3rdPartyCount
     */
     public function getOrganizedConferenceDialInOut3rdPartyCount()
     {
@@ -332,7 +332,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceIMCount
     *
-    * @return int|null The organizedConferenceIMCount
+    * @return int The organizedConferenceIMCount
     */
     public function getOrganizedConferenceIMCount()
     {
@@ -359,12 +359,12 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceLastActivityDate
     *
-    * @return \DateTime|null The organizedConferenceLastActivityDate
+    * @return \DateTime The organizedConferenceLastActivityDate
     */
     public function getOrganizedConferenceLastActivityDate()
     {
         if (array_key_exists("organizedConferenceLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["organizedConferenceLastActivityDate"], "\DateTime") || is_null($this->_propDict["organizedConferenceLastActivityDate"])) {
+            if (is_a($this->_propDict["organizedConferenceLastActivityDate"], "\DateTime")) {
                 return $this->_propDict["organizedConferenceLastActivityDate"];
             } else {
                 $this->_propDict["organizedConferenceLastActivityDate"] = new \DateTime($this->_propDict["organizedConferenceLastActivityDate"]);
@@ -390,7 +390,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceWebCount
     *
-    * @return int|null The organizedConferenceWebCount
+    * @return int The organizedConferenceWebCount
     */
     public function getOrganizedConferenceWebCount()
     {
@@ -417,7 +417,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the participatedConferenceAppSharingCount
     *
-    * @return int|null The participatedConferenceAppSharingCount
+    * @return int The participatedConferenceAppSharingCount
     */
     public function getParticipatedConferenceAppSharingCount()
     {
@@ -444,7 +444,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the participatedConferenceAudioVideoCount
     *
-    * @return int|null The participatedConferenceAudioVideoCount
+    * @return int The participatedConferenceAudioVideoCount
     */
     public function getParticipatedConferenceAudioVideoCount()
     {
@@ -471,7 +471,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the participatedConferenceAudioVideoMinutes
     *
-    * @return int|null The participatedConferenceAudioVideoMinutes
+    * @return int The participatedConferenceAudioVideoMinutes
     */
     public function getParticipatedConferenceAudioVideoMinutes()
     {
@@ -498,7 +498,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the participatedConferenceDialInOut3rdPartyCount
     *
-    * @return int|null The participatedConferenceDialInOut3rdPartyCount
+    * @return int The participatedConferenceDialInOut3rdPartyCount
     */
     public function getParticipatedConferenceDialInOut3rdPartyCount()
     {
@@ -525,7 +525,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the participatedConferenceIMCount
     *
-    * @return int|null The participatedConferenceIMCount
+    * @return int The participatedConferenceIMCount
     */
     public function getParticipatedConferenceIMCount()
     {
@@ -552,12 +552,12 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the participatedConferenceLastActivityDate
     *
-    * @return \DateTime|null The participatedConferenceLastActivityDate
+    * @return \DateTime The participatedConferenceLastActivityDate
     */
     public function getParticipatedConferenceLastActivityDate()
     {
         if (array_key_exists("participatedConferenceLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["participatedConferenceLastActivityDate"], "\DateTime") || is_null($this->_propDict["participatedConferenceLastActivityDate"])) {
+            if (is_a($this->_propDict["participatedConferenceLastActivityDate"], "\DateTime")) {
                 return $this->_propDict["participatedConferenceLastActivityDate"];
             } else {
                 $this->_propDict["participatedConferenceLastActivityDate"] = new \DateTime($this->_propDict["participatedConferenceLastActivityDate"]);
@@ -583,7 +583,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the participatedConferenceWebCount
     *
-    * @return int|null The participatedConferenceWebCount
+    * @return int The participatedConferenceWebCount
     */
     public function getParticipatedConferenceWebCount()
     {
@@ -610,7 +610,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerAppSharingCount
     *
-    * @return int|null The peerToPeerAppSharingCount
+    * @return int The peerToPeerAppSharingCount
     */
     public function getPeerToPeerAppSharingCount()
     {
@@ -637,7 +637,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerAudioCount
     *
-    * @return int|null The peerToPeerAudioCount
+    * @return int The peerToPeerAudioCount
     */
     public function getPeerToPeerAudioCount()
     {
@@ -664,7 +664,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerAudioMinutes
     *
-    * @return int|null The peerToPeerAudioMinutes
+    * @return int The peerToPeerAudioMinutes
     */
     public function getPeerToPeerAudioMinutes()
     {
@@ -691,7 +691,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerFileTransferCount
     *
-    * @return int|null The peerToPeerFileTransferCount
+    * @return int The peerToPeerFileTransferCount
     */
     public function getPeerToPeerFileTransferCount()
     {
@@ -718,7 +718,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerIMCount
     *
-    * @return int|null The peerToPeerIMCount
+    * @return int The peerToPeerIMCount
     */
     public function getPeerToPeerIMCount()
     {
@@ -745,12 +745,12 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerLastActivityDate
     *
-    * @return \DateTime|null The peerToPeerLastActivityDate
+    * @return \DateTime The peerToPeerLastActivityDate
     */
     public function getPeerToPeerLastActivityDate()
     {
         if (array_key_exists("peerToPeerLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["peerToPeerLastActivityDate"], "\DateTime") || is_null($this->_propDict["peerToPeerLastActivityDate"])) {
+            if (is_a($this->_propDict["peerToPeerLastActivityDate"], "\DateTime")) {
                 return $this->_propDict["peerToPeerLastActivityDate"];
             } else {
                 $this->_propDict["peerToPeerLastActivityDate"] = new \DateTime($this->_propDict["peerToPeerLastActivityDate"]);
@@ -776,7 +776,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerVideoCount
     *
-    * @return int|null The peerToPeerVideoCount
+    * @return int The peerToPeerVideoCount
     */
     public function getPeerToPeerVideoCount()
     {
@@ -803,7 +803,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerVideoMinutes
     *
-    * @return int|null The peerToPeerVideoMinutes
+    * @return int The peerToPeerVideoMinutes
     */
     public function getPeerToPeerVideoMinutes()
     {
@@ -830,7 +830,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -857,12 +857,12 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -888,7 +888,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the totalOrganizedConferenceCount
     *
-    * @return int|null The totalOrganizedConferenceCount
+    * @return int The totalOrganizedConferenceCount
     */
     public function getTotalOrganizedConferenceCount()
     {
@@ -915,7 +915,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the totalParticipatedConferenceCount
     *
-    * @return int|null The totalParticipatedConferenceCount
+    * @return int The totalParticipatedConferenceCount
     */
     public function getTotalParticipatedConferenceCount()
     {
@@ -942,7 +942,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the totalPeerToPeerSessionCount
     *
-    * @return int|null The totalPeerToPeerSessionCount
+    * @return int The totalPeerToPeerSessionCount
     */
     public function getTotalPeerToPeerSessionCount()
     {
@@ -969,7 +969,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

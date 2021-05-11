@@ -26,14 +26,14 @@ class AttendeeBase extends Recipient
 
     /**
     * Gets the type
-    * The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+    * The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
     *
-    * @return AttendeeType|null The type
+    * @return AttendeeType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\AttendeeType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\AttendeeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new AttendeeType($this->_propDict["type"]);
@@ -45,7 +45,7 @@ class AttendeeBase extends Recipient
 
     /**
     * Sets the type
-    * The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+    * The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
     *
     * @param AttendeeType $val The value to assign to the type
     *

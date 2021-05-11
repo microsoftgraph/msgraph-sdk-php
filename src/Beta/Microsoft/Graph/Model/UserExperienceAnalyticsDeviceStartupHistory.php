@@ -28,7 +28,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the coreBootTimeInMs
     * The user experience analytics device core boot time in milliseconds.
     *
-    * @return int|null The coreBootTimeInMs
+    * @return int The coreBootTimeInMs
     */
     public function getCoreBootTimeInMs()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the coreLoginTimeInMs
     * The user experience analytics device core login time in milliseconds.
     *
-    * @return int|null The coreLoginTimeInMs
+    * @return int The coreLoginTimeInMs
     */
     public function getCoreLoginTimeInMs()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the deviceId
     * The user experience analytics device id.
     *
-    * @return string|null The deviceId
+    * @return string The deviceId
     */
     public function getDeviceId()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the featureUpdateBootTimeInMs
     * The user experience analytics device feature update time in milliseconds.
     *
-    * @return int|null The featureUpdateBootTimeInMs
+    * @return int The featureUpdateBootTimeInMs
     */
     public function getFeatureUpdateBootTimeInMs()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the groupPolicyBootTimeInMs
     * The User experience analytics Device group policy boot time in milliseconds.
     *
-    * @return int|null The groupPolicyBootTimeInMs
+    * @return int The groupPolicyBootTimeInMs
     */
     public function getGroupPolicyBootTimeInMs()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the groupPolicyLoginTimeInMs
     * The User experience analytics Device group policy login time in milliseconds.
     *
-    * @return int|null The groupPolicyLoginTimeInMs
+    * @return int The groupPolicyLoginTimeInMs
     */
     public function getGroupPolicyLoginTimeInMs()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the isFeatureUpdate
     * The user experience analytics device boot record is a feature update.
     *
-    * @return bool|null The isFeatureUpdate
+    * @return bool The isFeatureUpdate
     */
     public function getIsFeatureUpdate()
     {
@@ -231,7 +231,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the isFirstLogin
     * The user experience analytics device first login.
     *
-    * @return bool|null The isFirstLogin
+    * @return bool The isFirstLogin
     */
     public function getIsFirstLogin()
     {
@@ -260,7 +260,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the operatingSystemVersion
     * The user experience analytics device boot record's operating system version.
     *
-    * @return string|null The operatingSystemVersion
+    * @return string The operatingSystemVersion
     */
     public function getOperatingSystemVersion()
     {
@@ -289,7 +289,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the responsiveDesktopTimeInMs
     * The user experience analytics responsive desktop time in milliseconds.
     *
-    * @return int|null The responsiveDesktopTimeInMs
+    * @return int The responsiveDesktopTimeInMs
     */
     public function getResponsiveDesktopTimeInMs()
     {
@@ -318,12 +318,12 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the restartCategory
     * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError, update.
     *
-    * @return UserExperienceAnalyticsOperatingSystemRestartCategory|null The restartCategory
+    * @return UserExperienceAnalyticsOperatingSystemRestartCategory The restartCategory
     */
     public function getRestartCategory()
     {
         if (array_key_exists("restartCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["restartCategory"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsOperatingSystemRestartCategory") || is_null($this->_propDict["restartCategory"])) {
+            if (is_a($this->_propDict["restartCategory"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsOperatingSystemRestartCategory")) {
                 return $this->_propDict["restartCategory"];
             } else {
                 $this->_propDict["restartCategory"] = new UserExperienceAnalyticsOperatingSystemRestartCategory($this->_propDict["restartCategory"]);
@@ -351,7 +351,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the restartFaultBucket
     * OS restart fault bucket. The fault bucket is used to find additional information about a system crash.
     *
-    * @return string|null The restartFaultBucket
+    * @return string The restartFaultBucket
     */
     public function getRestartFaultBucket()
     {
@@ -380,7 +380,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the restartStopCode
     * OS restart stop code. This shows the bug check code which can be used to look up the blue screen reason.
     *
-    * @return string|null The restartStopCode
+    * @return string The restartStopCode
     */
     public function getRestartStopCode()
     {
@@ -409,12 +409,12 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the startTime
     * The user experience analytics device boot start time.
     *
-    * @return \DateTime|null The startTime
+    * @return \DateTime The startTime
     */
     public function getStartTime()
     {
         if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "\DateTime") || is_null($this->_propDict["startTime"])) {
+            if (is_a($this->_propDict["startTime"], "\DateTime")) {
                 return $this->_propDict["startTime"];
             } else {
                 $this->_propDict["startTime"] = new \DateTime($this->_propDict["startTime"]);
@@ -442,7 +442,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the totalBootTimeInMs
     * The user experience analytics device total boot time in milliseconds.
     *
-    * @return int|null The totalBootTimeInMs
+    * @return int The totalBootTimeInMs
     */
     public function getTotalBootTimeInMs()
     {
@@ -471,7 +471,7 @@ class UserExperienceAnalyticsDeviceStartupHistory extends Entity
     * Gets the totalLoginTimeInMs
     * The user experience analytics device total login time in milliseconds.
     *
-    * @return int|null The totalLoginTimeInMs
+    * @return int The totalLoginTimeInMs
     */
     public function getTotalLoginTimeInMs()
     {

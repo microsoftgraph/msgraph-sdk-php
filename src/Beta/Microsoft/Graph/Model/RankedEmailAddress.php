@@ -27,7 +27,7 @@ class RankedEmailAddress extends Entity
     * Gets the address
     * The email address.
     *
-    * @return string|null The address
+    * @return string The address
     */
     public function getAddress()
     {
@@ -55,7 +55,7 @@ class RankedEmailAddress extends Entity
     * Gets the rank
     * The rank of the email address. A rank is used as a sort key, in relation to the other returned results. A higher rank value corresponds to a more relevant result. Relevance is determined by communication, collaboration, and business relationship signals.
     *
-    * @return float|null The rank
+    * @return float The rank
     */
     public function getRank()
     {

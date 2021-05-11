@@ -28,7 +28,7 @@ class Person extends Entity
     * Gets the birthday
     * The person's birthday.
     *
-    * @return string|null The birthday
+    * @return string The birthday
     */
     public function getBirthday()
     {
@@ -57,7 +57,7 @@ class Person extends Entity
     * Gets the companyName
     * The name of the person's company.
     *
-    * @return string|null The companyName
+    * @return string The companyName
     */
     public function getCompanyName()
     {
@@ -86,7 +86,7 @@ class Person extends Entity
     * Gets the department
     * The person's department.
     *
-    * @return string|null The department
+    * @return string The department
     */
     public function getDepartment()
     {
@@ -115,7 +115,7 @@ class Person extends Entity
     * Gets the displayName
     * The person's display name.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -145,7 +145,7 @@ class Person extends Entity
      * Gets the emailAddresses
     * The person's email addresses.
      *
-     * @return array|null The emailAddresses
+     * @return array The emailAddresses
      */
     public function getEmailAddresses()
     {
@@ -166,7 +166,7 @@ class Person extends Entity
     */
     public function setEmailAddresses($val)
     {
-        $this->_propDict["emailAddresses"] = $val;
+		$this->_propDict["emailAddresses"] = $val;
         return $this;
     }
     
@@ -174,7 +174,7 @@ class Person extends Entity
     * Gets the givenName
     * The person's given name.
     *
-    * @return string|null The givenName
+    * @return string The givenName
     */
     public function getGivenName()
     {
@@ -203,7 +203,7 @@ class Person extends Entity
     * Gets the isFavorite
     * true if the user has flagged this person as a favorite.
     *
-    * @return bool|null The isFavorite
+    * @return bool The isFavorite
     */
     public function getIsFavorite()
     {
@@ -232,7 +232,7 @@ class Person extends Entity
     * Gets the mailboxType
     * The type of mailbox that is represented by the person's email address.
     *
-    * @return string|null The mailboxType
+    * @return string The mailboxType
     */
     public function getMailboxType()
     {
@@ -261,7 +261,7 @@ class Person extends Entity
     * Gets the officeLocation
     * The location of the person's office.
     *
-    * @return string|null The officeLocation
+    * @return string The officeLocation
     */
     public function getOfficeLocation()
     {
@@ -290,7 +290,7 @@ class Person extends Entity
     * Gets the personNotes
     * Free-form notes that the user has taken about this person.
     *
-    * @return string|null The personNotes
+    * @return string The personNotes
     */
     public function getPersonNotes()
     {
@@ -317,9 +317,9 @@ class Person extends Entity
     
     /**
     * Gets the personType
-    * The type of person.
+    * The type of person, for example distribution list.
     *
-    * @return string|null The personType
+    * @return string The personType
     */
     public function getPersonType()
     {
@@ -332,7 +332,7 @@ class Person extends Entity
     
     /**
     * Sets the personType
-    * The type of person.
+    * The type of person, for example distribution list.
     *
     * @param string $val The personType
     *
@@ -349,7 +349,7 @@ class Person extends Entity
      * Gets the phones
     * The person's phone numbers.
      *
-     * @return array|null The phones
+     * @return array The phones
      */
     public function getPhones()
     {
@@ -370,7 +370,7 @@ class Person extends Entity
     */
     public function setPhones($val)
     {
-        $this->_propDict["phones"] = $val;
+		$this->_propDict["phones"] = $val;
         return $this;
     }
     
@@ -379,7 +379,7 @@ class Person extends Entity
      * Gets the postalAddresses
     * The person's addresses.
      *
-     * @return array|null The postalAddresses
+     * @return array The postalAddresses
      */
     public function getPostalAddresses()
     {
@@ -400,7 +400,7 @@ class Person extends Entity
     */
     public function setPostalAddresses($val)
     {
-        $this->_propDict["postalAddresses"] = $val;
+		$this->_propDict["postalAddresses"] = $val;
         return $this;
     }
     
@@ -408,7 +408,7 @@ class Person extends Entity
     * Gets the profession
     * The person's profession.
     *
-    * @return string|null The profession
+    * @return string The profession
     */
     public function getProfession()
     {
@@ -438,7 +438,7 @@ class Person extends Entity
      * Gets the sources
     * The sources the user data comes from, for example Directory or Outlook Contacts.
      *
-     * @return array|null The sources
+     * @return array The sources
      */
     public function getSources()
     {
@@ -459,7 +459,7 @@ class Person extends Entity
     */
     public function setSources($val)
     {
-        $this->_propDict["sources"] = $val;
+		$this->_propDict["sources"] = $val;
         return $this;
     }
     
@@ -467,7 +467,7 @@ class Person extends Entity
     * Gets the surname
     * The person's surname.
     *
-    * @return string|null The surname
+    * @return string The surname
     */
     public function getSurname()
     {
@@ -496,7 +496,7 @@ class Person extends Entity
     * Gets the title
     * The person's title.
     *
-    * @return string|null The title
+    * @return string The title
     */
     public function getTitle()
     {
@@ -525,7 +525,7 @@ class Person extends Entity
     * Gets the userPrincipalName
     * The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -555,7 +555,7 @@ class Person extends Entity
      * Gets the websites
     * The person's websites.
      *
-     * @return array|null The websites
+     * @return array The websites
      */
     public function getWebsites()
     {
@@ -576,7 +576,7 @@ class Person extends Entity
     */
     public function setWebsites($val)
     {
-        $this->_propDict["websites"] = $val;
+		$this->_propDict["websites"] = $val;
         return $this;
     }
     
@@ -584,7 +584,7 @@ class Person extends Entity
     * Gets the yomiCompany
     * The phonetic Japanese name of the person's company.
     *
-    * @return string|null The yomiCompany
+    * @return string The yomiCompany
     */
     public function getYomiCompany()
     {

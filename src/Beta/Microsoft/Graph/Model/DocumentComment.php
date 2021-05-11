@@ -27,7 +27,7 @@ class DocumentComment extends Entity
     /**
     * Gets the content
     *
-    * @return string|null The content
+    * @return string The content
     */
     public function getContent()
     {
@@ -55,7 +55,7 @@ class DocumentComment extends Entity
      /** 
      * Gets the replies
      *
-     * @return array|null The replies
+     * @return array The replies
      */
     public function getReplies()
     {
@@ -75,7 +75,7 @@ class DocumentComment extends Entity
     */
     public function setReplies($val)
     {
-        $this->_propDict["replies"] = $val;
+		$this->_propDict["replies"] = $val;
         return $this;
     }
     

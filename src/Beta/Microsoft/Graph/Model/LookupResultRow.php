@@ -27,7 +27,7 @@ class LookupResultRow extends Entity
     /**
     * Gets the row
     *
-    * @return string|null The row
+    * @return string The row
     */
     public function getRow()
     {

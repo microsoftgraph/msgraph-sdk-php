@@ -28,7 +28,7 @@ class WindowsUpdateState extends Entity
     * Gets the deviceDisplayName
     * Device display name.
     *
-    * @return string|null The deviceDisplayName
+    * @return string The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -57,7 +57,7 @@ class WindowsUpdateState extends Entity
     * Gets the deviceId
     * The id of the device.
     *
-    * @return string|null The deviceId
+    * @return string The deviceId
     */
     public function getDeviceId()
     {
@@ -86,7 +86,7 @@ class WindowsUpdateState extends Entity
     * Gets the featureUpdateVersion
     * The current feature update version of the device.
     *
-    * @return string|null The featureUpdateVersion
+    * @return string The featureUpdateVersion
     */
     public function getFeatureUpdateVersion()
     {
@@ -115,12 +115,12 @@ class WindowsUpdateState extends Entity
     * Gets the lastScanDateTime
     * The date time that the Windows Update Agent did a successful scan.
     *
-    * @return \DateTime|null The lastScanDateTime
+    * @return \DateTime The lastScanDateTime
     */
     public function getLastScanDateTime()
     {
         if (array_key_exists("lastScanDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastScanDateTime"], "\DateTime") || is_null($this->_propDict["lastScanDateTime"])) {
+            if (is_a($this->_propDict["lastScanDateTime"], "\DateTime")) {
                 return $this->_propDict["lastScanDateTime"];
             } else {
                 $this->_propDict["lastScanDateTime"] = new \DateTime($this->_propDict["lastScanDateTime"]);
@@ -148,12 +148,12 @@ class WindowsUpdateState extends Entity
     * Gets the lastSyncDateTime
     * Last date time that the device sync with with Microsoft Intune.
     *
-    * @return \DateTime|null The lastSyncDateTime
+    * @return \DateTime The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -181,7 +181,7 @@ class WindowsUpdateState extends Entity
     * Gets the qualityUpdateVersion
     * The Quality Update Version of the device.
     *
-    * @return string|null The qualityUpdateVersion
+    * @return string The qualityUpdateVersion
     */
     public function getQualityUpdateVersion()
     {
@@ -210,12 +210,12 @@ class WindowsUpdateState extends Entity
     * Gets the status
     * Windows udpate status. Possible values are: upToDate, pendingInstallation, pendingReboot, failed.
     *
-    * @return WindowsUpdateStatus|null The status
+    * @return WindowsUpdateStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\WindowsUpdateStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\WindowsUpdateStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new WindowsUpdateStatus($this->_propDict["status"]);
@@ -243,7 +243,7 @@ class WindowsUpdateState extends Entity
     * Gets the userId
     * The id of the user.
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {
@@ -272,7 +272,7 @@ class WindowsUpdateState extends Entity
     * Gets the userPrincipalName
     * User principal name.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

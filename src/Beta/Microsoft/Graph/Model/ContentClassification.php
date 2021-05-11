@@ -26,7 +26,7 @@ class ContentClassification extends Entity
     /**
     * Gets the confidence
     *
-    * @return int|null The confidence
+    * @return int The confidence
     */
     public function getConfidence()
     {
@@ -53,12 +53,12 @@ class ContentClassification extends Entity
     /**
     * Gets the matches
     *
-    * @return MatchLocation|null The matches
+    * @return MatchLocation The matches
     */
     public function getMatches()
     {
         if (array_key_exists("matches", $this->_propDict)) {
-            if (is_a($this->_propDict["matches"], "\Beta\Microsoft\Graph\Model\MatchLocation") || is_null($this->_propDict["matches"])) {
+            if (is_a($this->_propDict["matches"], "\Beta\Microsoft\Graph\Model\MatchLocation")) {
                 return $this->_propDict["matches"];
             } else {
                 $this->_propDict["matches"] = new MatchLocation($this->_propDict["matches"]);
@@ -83,7 +83,7 @@ class ContentClassification extends Entity
     /**
     * Gets the sensitiveTypeId
     *
-    * @return string|null The sensitiveTypeId
+    * @return string The sensitiveTypeId
     */
     public function getSensitiveTypeId()
     {
@@ -109,7 +109,7 @@ class ContentClassification extends Entity
     /**
     * Gets the uniqueCount
     *
-    * @return int|null The uniqueCount
+    * @return int The uniqueCount
     */
     public function getUniqueCount()
     {

@@ -28,7 +28,7 @@ class DeviceComplianceScriptRunSummary extends Entity
     * Gets the detectionScriptErrorDeviceCount
     * Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The detectionScriptErrorDeviceCount
+    * @return int The detectionScriptErrorDeviceCount
     */
     public function getDetectionScriptErrorDeviceCount()
     {
@@ -57,7 +57,7 @@ class DeviceComplianceScriptRunSummary extends Entity
     * Gets the detectionScriptPendingDeviceCount
     * Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The detectionScriptPendingDeviceCount
+    * @return int The detectionScriptPendingDeviceCount
     */
     public function getDetectionScriptPendingDeviceCount()
     {
@@ -86,7 +86,7 @@ class DeviceComplianceScriptRunSummary extends Entity
     * Gets the issueDetectedDeviceCount
     * Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The issueDetectedDeviceCount
+    * @return int The issueDetectedDeviceCount
     */
     public function getIssueDetectedDeviceCount()
     {
@@ -115,12 +115,12 @@ class DeviceComplianceScriptRunSummary extends Entity
     * Gets the lastScriptRunDateTime
     * Last run time for the script across all devices
     *
-    * @return \DateTime|null The lastScriptRunDateTime
+    * @return \DateTime The lastScriptRunDateTime
     */
     public function getLastScriptRunDateTime()
     {
         if (array_key_exists("lastScriptRunDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastScriptRunDateTime"], "\DateTime") || is_null($this->_propDict["lastScriptRunDateTime"])) {
+            if (is_a($this->_propDict["lastScriptRunDateTime"], "\DateTime")) {
                 return $this->_propDict["lastScriptRunDateTime"];
             } else {
                 $this->_propDict["lastScriptRunDateTime"] = new \DateTime($this->_propDict["lastScriptRunDateTime"]);
@@ -148,7 +148,7 @@ class DeviceComplianceScriptRunSummary extends Entity
     * Gets the noIssueDetectedDeviceCount
     * Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The noIssueDetectedDeviceCount
+    * @return int The noIssueDetectedDeviceCount
     */
     public function getNoIssueDetectedDeviceCount()
     {

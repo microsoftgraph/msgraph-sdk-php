@@ -27,7 +27,7 @@ class NumberColumn extends Entity
     * Gets the decimalPlaces
     * How many decimal places to display. See below for information about the possible values.
     *
-    * @return string|null The decimalPlaces
+    * @return string The decimalPlaces
     */
     public function getDecimalPlaces()
     {
@@ -55,7 +55,7 @@ class NumberColumn extends Entity
     * Gets the displayAs
     * How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
     *
-    * @return string|null The displayAs
+    * @return string The displayAs
     */
     public function getDisplayAs()
     {
@@ -83,7 +83,7 @@ class NumberColumn extends Entity
     * Gets the maximum
     * The maximum permitted value.
     *
-    * @return float|null The maximum
+    * @return float The maximum
     */
     public function getMaximum()
     {
@@ -111,7 +111,7 @@ class NumberColumn extends Entity
     * Gets the minimum
     * The minimum permitted value.
     *
-    * @return float|null The minimum
+    * @return float The minimum
     */
     public function getMinimum()
     {

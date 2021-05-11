@@ -26,7 +26,7 @@ class AccountAlias extends Entity
     /**
     * Gets the id
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -52,7 +52,7 @@ class AccountAlias extends Entity
     /**
     * Gets the idType
     *
-    * @return string|null The idType
+    * @return string The idType
     */
     public function getIdType()
     {

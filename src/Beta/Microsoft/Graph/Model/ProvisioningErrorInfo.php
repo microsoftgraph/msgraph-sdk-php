@@ -25,8 +25,9 @@ class ProvisioningErrorInfo extends Entity
 {
     /**
     * Gets the additionalDetails
+    * Additional details in case of error.
     *
-    * @return string|null The additionalDetails
+    * @return string The additionalDetails
     */
     public function getAdditionalDetails()
     {
@@ -39,6 +40,7 @@ class ProvisioningErrorInfo extends Entity
 
     /**
     * Sets the additionalDetails
+    * Additional details in case of error.
     *
     * @param string $val The value of the additionalDetails
     *
@@ -52,13 +54,14 @@ class ProvisioningErrorInfo extends Entity
 
     /**
     * Gets the errorCategory
+    * Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
     *
-    * @return ProvisioningStatusErrorCategory|null The errorCategory
+    * @return ProvisioningStatusErrorCategory The errorCategory
     */
     public function getErrorCategory()
     {
         if (array_key_exists("errorCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["errorCategory"], "\Beta\Microsoft\Graph\Model\ProvisioningStatusErrorCategory") || is_null($this->_propDict["errorCategory"])) {
+            if (is_a($this->_propDict["errorCategory"], "\Beta\Microsoft\Graph\Model\ProvisioningStatusErrorCategory")) {
                 return $this->_propDict["errorCategory"];
             } else {
                 $this->_propDict["errorCategory"] = new ProvisioningStatusErrorCategory($this->_propDict["errorCategory"]);
@@ -70,6 +73,7 @@ class ProvisioningErrorInfo extends Entity
 
     /**
     * Sets the errorCategory
+    * Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
     *
     * @param ProvisioningStatusErrorCategory $val The value to assign to the errorCategory
     *
@@ -82,8 +86,9 @@ class ProvisioningErrorInfo extends Entity
     }
     /**
     * Gets the errorCode
+    * Unique error code if any occurred. Learn more
     *
-    * @return string|null The errorCode
+    * @return string The errorCode
     */
     public function getErrorCode()
     {
@@ -96,6 +101,7 @@ class ProvisioningErrorInfo extends Entity
 
     /**
     * Sets the errorCode
+    * Unique error code if any occurred. Learn more
     *
     * @param string $val The value of the errorCode
     *
@@ -108,8 +114,9 @@ class ProvisioningErrorInfo extends Entity
     }
     /**
     * Gets the reason
+    * Summarizes the status and describes why the status happened.
     *
-    * @return string|null The reason
+    * @return string The reason
     */
     public function getReason()
     {
@@ -122,6 +129,7 @@ class ProvisioningErrorInfo extends Entity
 
     /**
     * Sets the reason
+    * Summarizes the status and describes why the status happened.
     *
     * @param string $val The value of the reason
     *
@@ -134,8 +142,9 @@ class ProvisioningErrorInfo extends Entity
     }
     /**
     * Gets the recommendedAction
+    * Provides the resolution for the corresponding error.
     *
-    * @return string|null The recommendedAction
+    * @return string The recommendedAction
     */
     public function getRecommendedAction()
     {
@@ -148,6 +157,7 @@ class ProvisioningErrorInfo extends Entity
 
     /**
     * Sets the recommendedAction
+    * Provides the resolution for the corresponding error.
     *
     * @param string $val The value of the recommendedAction
     *

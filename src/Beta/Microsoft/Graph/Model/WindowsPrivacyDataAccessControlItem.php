@@ -28,12 +28,12 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     * Gets the accessLevel
     * This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl.
     *
-    * @return WindowsPrivacyDataAccessLevel|null The accessLevel
+    * @return WindowsPrivacyDataAccessLevel The accessLevel
     */
     public function getAccessLevel()
     {
         if (array_key_exists("accessLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["accessLevel"], "\Beta\Microsoft\Graph\Model\WindowsPrivacyDataAccessLevel") || is_null($this->_propDict["accessLevel"])) {
+            if (is_a($this->_propDict["accessLevel"], "\Beta\Microsoft\Graph\Model\WindowsPrivacyDataAccessLevel")) {
                 return $this->_propDict["accessLevel"];
             } else {
                 $this->_propDict["accessLevel"] = new WindowsPrivacyDataAccessLevel($this->_propDict["accessLevel"]);
@@ -61,7 +61,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     * Gets the appDisplayName
     * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
     *
-    * @return string|null The appDisplayName
+    * @return string The appDisplayName
     */
     public function getAppDisplayName()
     {
@@ -90,7 +90,7 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     * Gets the appPackageFamilyName
     * The Package Family Name of a Windows app. When set, the access level applies to the specified application.
     *
-    * @return string|null The appPackageFamilyName
+    * @return string The appPackageFamilyName
     */
     public function getAppPackageFamilyName()
     {
@@ -119,12 +119,12 @@ class WindowsPrivacyDataAccessControlItem extends Entity
     * Gets the dataCategory
     * This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices.
     *
-    * @return WindowsPrivacyDataCategory|null The dataCategory
+    * @return WindowsPrivacyDataCategory The dataCategory
     */
     public function getDataCategory()
     {
         if (array_key_exists("dataCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["dataCategory"], "\Beta\Microsoft\Graph\Model\WindowsPrivacyDataCategory") || is_null($this->_propDict["dataCategory"])) {
+            if (is_a($this->_propDict["dataCategory"], "\Beta\Microsoft\Graph\Model\WindowsPrivacyDataCategory")) {
                 return $this->_propDict["dataCategory"];
             } else {
                 $this->_propDict["dataCategory"] = new WindowsPrivacyDataCategory($this->_propDict["dataCategory"]);

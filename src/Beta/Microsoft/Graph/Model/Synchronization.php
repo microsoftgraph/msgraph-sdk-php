@@ -28,7 +28,7 @@ class Synchronization extends Entity
      /** 
      * Gets the secrets
      *
-     * @return array|null The secrets
+     * @return array The secrets
      */
     public function getSecrets()
     {
@@ -48,7 +48,7 @@ class Synchronization extends Entity
     */
     public function setSecrets($val)
     {
-        $this->_propDict["secrets"] = $val;
+		$this->_propDict["secrets"] = $val;
         return $this;
     }
     
@@ -56,7 +56,7 @@ class Synchronization extends Entity
      /** 
      * Gets the jobs
      *
-     * @return array|null The jobs
+     * @return array The jobs
      */
     public function getJobs()
     {
@@ -76,7 +76,7 @@ class Synchronization extends Entity
     */
     public function setJobs($val)
     {
-        $this->_propDict["jobs"] = $val;
+		$this->_propDict["jobs"] = $val;
         return $this;
     }
     
@@ -84,7 +84,7 @@ class Synchronization extends Entity
      /** 
      * Gets the templates
      *
-     * @return array|null The templates
+     * @return array The templates
      */
     public function getTemplates()
     {
@@ -104,7 +104,7 @@ class Synchronization extends Entity
     */
     public function setTemplates($val)
     {
-        $this->_propDict["templates"] = $val;
+		$this->_propDict["templates"] = $val;
         return $this;
     }
     

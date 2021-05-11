@@ -23,32 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class EducationAssignmentPointsGrade extends EducationAssignmentGrade
 {
+
     /**
     * Gets the points
     * Number of points a teacher is giving this submission object.
     *
-    * @return float|null The points
+    * @return Single The points
     */
     public function getPoints()
     {
         if (array_key_exists("points", $this->_propDict)) {
-            return $this->_propDict["points"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["points"], "\Beta\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["points"];
+            } else {
+                $this->_propDict["points"] = new Single($this->_propDict["points"]);
+                return $this->_propDict["points"];
+            }
         }
+        return null;
     }
 
     /**
     * Sets the points
     * Number of points a teacher is giving this submission object.
     *
-    * @param float $val The value of the points
+    * @param Single $val The value to assign to the points
     *
-    * @return EducationAssignmentPointsGrade
+    * @return EducationAssignmentPointsGrade The EducationAssignmentPointsGrade
     */
     public function setPoints($val)
     {
         $this->_propDict["points"] = $val;
-        return $this;
+         return $this;
     }
 }

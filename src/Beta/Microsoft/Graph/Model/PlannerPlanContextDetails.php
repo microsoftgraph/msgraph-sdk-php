@@ -27,7 +27,7 @@ class PlannerPlanContextDetails extends Entity
     * Gets the customLinkText
     * Nullable. Specifies the text to use in a user experience to display a link the the associated plannerPlanContext. If null, applications should display the link with a custom text based on the displayLinkType property.
     *
-    * @return string|null The customLinkText
+    * @return string The customLinkText
     */
     public function getCustomLinkText()
     {
@@ -56,12 +56,12 @@ class PlannerPlanContextDetails extends Entity
     * Gets the displayLinkType
     * Specifies how an application should display the link to the associated plannerPlanContext. Applications may choose to provide customized text, description, icons, or other experiences based on the type of the link. Possible values are: teamsTab, sharePointPage, meetingNotes, other, unknownFutureValue.
     *
-    * @return PlannerPlanContextType|null The displayLinkType
+    * @return PlannerPlanContextType The displayLinkType
     */
     public function getDisplayLinkType()
     {
         if (array_key_exists("displayLinkType", $this->_propDict)) {
-            if (is_a($this->_propDict["displayLinkType"], "\Beta\Microsoft\Graph\Model\PlannerPlanContextType") || is_null($this->_propDict["displayLinkType"])) {
+            if (is_a($this->_propDict["displayLinkType"], "\Beta\Microsoft\Graph\Model\PlannerPlanContextType")) {
                 return $this->_propDict["displayLinkType"];
             } else {
                 $this->_propDict["displayLinkType"] = new PlannerPlanContextType($this->_propDict["displayLinkType"]);
@@ -88,7 +88,7 @@ class PlannerPlanContextDetails extends Entity
     * Gets the url
     * URL of the user experience represented by the associated plannerPlanContext.
     *
-    * @return string|null The url
+    * @return string The url
     */
     public function getUrl()
     {

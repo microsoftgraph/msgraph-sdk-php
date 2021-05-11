@@ -26,7 +26,7 @@ class EducationSynchronizationConnectionSettings extends Entity
     /**
     * Gets the clientId
     *
-    * @return string|null The clientId
+    * @return string The clientId
     */
     public function getClientId()
     {
@@ -52,7 +52,7 @@ class EducationSynchronizationConnectionSettings extends Entity
     /**
     * Gets the clientSecret
     *
-    * @return string|null The clientSecret
+    * @return string The clientSecret
     */
     public function getClientSecret()
     {

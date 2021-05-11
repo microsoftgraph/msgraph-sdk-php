@@ -37,12 +37,12 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
     * Gets the detectionType
     * The detection type for script output. Possible values are: notConfigured, string, dateTime, integer, float, version, boolean.
     *
-    * @return Win32LobAppPowerShellScriptDetectionType|null The detectionType
+    * @return Win32LobAppPowerShellScriptDetectionType The detectionType
     */
     public function getDetectionType()
     {
         if (array_key_exists("detectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionType"], "\Beta\Microsoft\Graph\Model\Win32LobAppPowerShellScriptDetectionType") || is_null($this->_propDict["detectionType"])) {
+            if (is_a($this->_propDict["detectionType"], "\Beta\Microsoft\Graph\Model\Win32LobAppPowerShellScriptDetectionType")) {
                 return $this->_propDict["detectionType"];
             } else {
                 $this->_propDict["detectionType"] = new Win32LobAppPowerShellScriptDetectionType($this->_propDict["detectionType"]);
@@ -69,7 +69,7 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
     * Gets the displayName
     * The unique display name for this rule
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -97,7 +97,7 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
     * Gets the enforceSignatureCheck
     * A value indicating whether signature check is enforced
     *
-    * @return bool|null The enforceSignatureCheck
+    * @return bool The enforceSignatureCheck
     */
     public function getEnforceSignatureCheck()
     {
@@ -125,7 +125,7 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
     * Gets the runAs32Bit
     * A value indicating whether this script should run as 32-bit
     *
-    * @return bool|null The runAs32Bit
+    * @return bool The runAs32Bit
     */
     public function getRunAs32Bit()
     {
@@ -154,12 +154,12 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
     * Gets the runAsAccount
     * Indicates the type of execution context the script runs in. Possible values are: system, user.
     *
-    * @return RunAsAccountType|null The runAsAccount
+    * @return RunAsAccountType The runAsAccount
     */
     public function getRunAsAccount()
     {
         if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType") || is_null($this->_propDict["runAsAccount"])) {
+            if (is_a($this->_propDict["runAsAccount"], "\Beta\Microsoft\Graph\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);
@@ -186,7 +186,7 @@ class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement
     * Gets the scriptContent
     * The base64 encoded script content to detect Win32 Line of Business (LoB) app
     *
-    * @return string|null The scriptContent
+    * @return string The scriptContent
     */
     public function getScriptContent()
     {

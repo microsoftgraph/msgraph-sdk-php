@@ -27,12 +27,12 @@ class ExactMatchJobBase extends Entity
     /**
     * Gets the completionDateTime
     *
-    * @return \DateTime|null The completionDateTime
+    * @return \DateTime The completionDateTime
     */
     public function getCompletionDateTime()
     {
         if (array_key_exists("completionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completionDateTime"], "\DateTime") || is_null($this->_propDict["completionDateTime"])) {
+            if (is_a($this->_propDict["completionDateTime"], "\DateTime")) {
                 return $this->_propDict["completionDateTime"];
             } else {
                 $this->_propDict["completionDateTime"] = new \DateTime($this->_propDict["completionDateTime"]);
@@ -58,12 +58,12 @@ class ExactMatchJobBase extends Entity
     /**
     * Gets the creationDateTime
     *
-    * @return \DateTime|null The creationDateTime
+    * @return \DateTime The creationDateTime
     */
     public function getCreationDateTime()
     {
         if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime") || is_null($this->_propDict["creationDateTime"])) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
                 return $this->_propDict["creationDateTime"];
             } else {
                 $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
@@ -89,12 +89,12 @@ class ExactMatchJobBase extends Entity
     /**
     * Gets the error
     *
-    * @return ClassificationError|null The error
+    * @return ClassificationError The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\ClassificationError") || is_null($this->_propDict["error"])) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\ClassificationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new ClassificationError($this->_propDict["error"]);
@@ -120,12 +120,12 @@ class ExactMatchJobBase extends Entity
     /**
     * Gets the lastUpdatedDateTime
     *
-    * @return \DateTime|null The lastUpdatedDateTime
+    * @return \DateTime The lastUpdatedDateTime
     */
     public function getLastUpdatedDateTime()
     {
         if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdatedDateTime"])) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastUpdatedDateTime"];
             } else {
                 $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
@@ -151,12 +151,12 @@ class ExactMatchJobBase extends Entity
     /**
     * Gets the startDateTime
     *
-    * @return \DateTime|null The startDateTime
+    * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

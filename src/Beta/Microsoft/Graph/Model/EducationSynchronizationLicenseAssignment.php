@@ -28,12 +28,12 @@ class EducationSynchronizationLicenseAssignment extends Entity
     * Gets the appliesTo
     * The user role type to assign to license. Possible values are: student, teacher, faculty.
     *
-    * @return EducationUserRole|null The appliesTo
+    * @return EducationUserRole The appliesTo
     */
     public function getAppliesTo()
     {
         if (array_key_exists("appliesTo", $this->_propDict)) {
-            if (is_a($this->_propDict["appliesTo"], "\Beta\Microsoft\Graph\Model\EducationUserRole") || is_null($this->_propDict["appliesTo"])) {
+            if (is_a($this->_propDict["appliesTo"], "\Beta\Microsoft\Graph\Model\EducationUserRole")) {
                 return $this->_propDict["appliesTo"];
             } else {
                 $this->_propDict["appliesTo"] = new EducationUserRole($this->_propDict["appliesTo"]);
@@ -60,7 +60,7 @@ class EducationSynchronizationLicenseAssignment extends Entity
     * Gets the skuIds
     * Represents the SKU identifiers of the licenses to assign.
     *
-    * @return string|null The skuIds
+    * @return string The skuIds
     */
     public function getSkuIds()
     {

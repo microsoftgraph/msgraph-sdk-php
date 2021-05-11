@@ -28,12 +28,12 @@ class DeviceManagementConfigurationSettingTemplate extends Entity
     * Gets the settingInstanceTemplate
     * Setting Instance Template
     *
-    * @return DeviceManagementConfigurationSettingInstanceTemplate|null The settingInstanceTemplate
+    * @return DeviceManagementConfigurationSettingInstanceTemplate The settingInstanceTemplate
     */
     public function getSettingInstanceTemplate()
     {
         if (array_key_exists("settingInstanceTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["settingInstanceTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstanceTemplate") || is_null($this->_propDict["settingInstanceTemplate"])) {
+            if (is_a($this->_propDict["settingInstanceTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstanceTemplate")) {
                 return $this->_propDict["settingInstanceTemplate"];
             } else {
                 $this->_propDict["settingInstanceTemplate"] = new DeviceManagementConfigurationSettingInstanceTemplate($this->_propDict["settingInstanceTemplate"]);
@@ -62,7 +62,7 @@ class DeviceManagementConfigurationSettingTemplate extends Entity
      * Gets the settingDefinitions
     * List of related Setting Definitions
      *
-     * @return array|null The settingDefinitions
+     * @return array The settingDefinitions
      */
     public function getSettingDefinitions()
     {
@@ -83,7 +83,7 @@ class DeviceManagementConfigurationSettingTemplate extends Entity
     */
     public function setSettingDefinitions($val)
     {
-        $this->_propDict["settingDefinitions"] = $val;
+		$this->_propDict["settingDefinitions"] = $val;
         return $this;
     }
     

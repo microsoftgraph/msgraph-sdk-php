@@ -28,12 +28,12 @@ class WindowsFeatureUpdateProfile extends Entity
     * Gets the createdDateTime
     * The date time that the profile was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class WindowsFeatureUpdateProfile extends Entity
     * Gets the deployableContentDisplayName
     * Friendly display name of the quality update profile deployable content
     *
-    * @return string|null The deployableContentDisplayName
+    * @return string The deployableContentDisplayName
     */
     public function getDeployableContentDisplayName()
     {
@@ -90,7 +90,7 @@ class WindowsFeatureUpdateProfile extends Entity
     * Gets the description
     * The description of the profile which is specified by the user.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -119,7 +119,7 @@ class WindowsFeatureUpdateProfile extends Entity
     * Gets the displayName
     * The display name of the profile.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -148,12 +148,12 @@ class WindowsFeatureUpdateProfile extends Entity
     * Gets the endOfSupportDate
     * The last supported date for a feature update
     *
-    * @return \DateTime|null The endOfSupportDate
+    * @return \DateTime The endOfSupportDate
     */
     public function getEndOfSupportDate()
     {
         if (array_key_exists("endOfSupportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endOfSupportDate"], "\DateTime") || is_null($this->_propDict["endOfSupportDate"])) {
+            if (is_a($this->_propDict["endOfSupportDate"], "\DateTime")) {
                 return $this->_propDict["endOfSupportDate"];
             } else {
                 $this->_propDict["endOfSupportDate"] = new \DateTime($this->_propDict["endOfSupportDate"]);
@@ -181,7 +181,7 @@ class WindowsFeatureUpdateProfile extends Entity
     * Gets the featureUpdateVersion
     * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
     *
-    * @return string|null The featureUpdateVersion
+    * @return string The featureUpdateVersion
     */
     public function getFeatureUpdateVersion()
     {
@@ -210,12 +210,12 @@ class WindowsFeatureUpdateProfile extends Entity
     * Gets the lastModifiedDateTime
     * The date time that the profile was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -243,7 +243,7 @@ class WindowsFeatureUpdateProfile extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Feature Update entity.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -273,7 +273,7 @@ class WindowsFeatureUpdateProfile extends Entity
      * Gets the assignments
     * The list of group assignments of the profile.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -294,7 +294,7 @@ class WindowsFeatureUpdateProfile extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -303,7 +303,7 @@ class WindowsFeatureUpdateProfile extends Entity
      * Gets the deviceUpdateStates
     * The list of device states this profile targeted to
      *
-     * @return array|null The deviceUpdateStates
+     * @return array The deviceUpdateStates
      */
     public function getDeviceUpdateStates()
     {
@@ -324,7 +324,7 @@ class WindowsFeatureUpdateProfile extends Entity
     */
     public function setDeviceUpdateStates($val)
     {
-        $this->_propDict["deviceUpdateStates"] = $val;
+		$this->_propDict["deviceUpdateStates"] = $val;
         return $this;
     }
     

@@ -28,7 +28,7 @@ class DeviceManagementTemplate extends Entity
     * Gets the description
     * The template's description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class DeviceManagementTemplate extends Entity
     * Gets the displayName
     * The template's display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class DeviceManagementTemplate extends Entity
     * Gets the intentCount
     * Number of Intents created from this template.
     *
-    * @return int|null The intentCount
+    * @return int The intentCount
     */
     public function getIntentCount()
     {
@@ -115,7 +115,7 @@ class DeviceManagementTemplate extends Entity
     * Gets the isDeprecated
     * The template is deprecated or not. Intents cannot be created from a deprecated template.
     *
-    * @return bool|null The isDeprecated
+    * @return bool The isDeprecated
     */
     public function getIsDeprecated()
     {
@@ -144,12 +144,12 @@ class DeviceManagementTemplate extends Entity
     * Gets the platformType
     * The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
     *
-    * @return PolicyPlatformType|null The platformType
+    * @return PolicyPlatformType The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\PolicyPlatformType") || is_null($this->_propDict["platformType"])) {
+            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\PolicyPlatformType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -177,12 +177,12 @@ class DeviceManagementTemplate extends Entity
     * Gets the publishedDateTime
     * When the template was published
     *
-    * @return \DateTime|null The publishedDateTime
+    * @return \DateTime The publishedDateTime
     */
     public function getPublishedDateTime()
     {
         if (array_key_exists("publishedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["publishedDateTime"], "\DateTime") || is_null($this->_propDict["publishedDateTime"])) {
+            if (is_a($this->_propDict["publishedDateTime"], "\DateTime")) {
                 return $this->_propDict["publishedDateTime"];
             } else {
                 $this->_propDict["publishedDateTime"] = new \DateTime($this->_propDict["publishedDateTime"]);
@@ -210,12 +210,12 @@ class DeviceManagementTemplate extends Entity
     * Gets the templateSubtype
     * The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist.
     *
-    * @return DeviceManagementTemplateSubtype|null The templateSubtype
+    * @return DeviceManagementTemplateSubtype The templateSubtype
     */
     public function getTemplateSubtype()
     {
         if (array_key_exists("templateSubtype", $this->_propDict)) {
-            if (is_a($this->_propDict["templateSubtype"], "\Beta\Microsoft\Graph\Model\DeviceManagementTemplateSubtype") || is_null($this->_propDict["templateSubtype"])) {
+            if (is_a($this->_propDict["templateSubtype"], "\Beta\Microsoft\Graph\Model\DeviceManagementTemplateSubtype")) {
                 return $this->_propDict["templateSubtype"];
             } else {
                 $this->_propDict["templateSubtype"] = new DeviceManagementTemplateSubtype($this->_propDict["templateSubtype"]);
@@ -243,12 +243,12 @@ class DeviceManagementTemplate extends Entity
     * Gets the templateType
     * The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings.
     *
-    * @return DeviceManagementTemplateType|null The templateType
+    * @return DeviceManagementTemplateType The templateType
     */
     public function getTemplateType()
     {
         if (array_key_exists("templateType", $this->_propDict)) {
-            if (is_a($this->_propDict["templateType"], "\Beta\Microsoft\Graph\Model\DeviceManagementTemplateType") || is_null($this->_propDict["templateType"])) {
+            if (is_a($this->_propDict["templateType"], "\Beta\Microsoft\Graph\Model\DeviceManagementTemplateType")) {
                 return $this->_propDict["templateType"];
             } else {
                 $this->_propDict["templateType"] = new DeviceManagementTemplateType($this->_propDict["templateType"]);
@@ -276,7 +276,7 @@ class DeviceManagementTemplate extends Entity
     * Gets the versionInfo
     * The template's version information
     *
-    * @return string|null The versionInfo
+    * @return string The versionInfo
     */
     public function getVersionInfo()
     {
@@ -306,7 +306,7 @@ class DeviceManagementTemplate extends Entity
      * Gets the categories
     * Collection of setting categories within the template
      *
-     * @return array|null The categories
+     * @return array The categories
      */
     public function getCategories()
     {
@@ -327,7 +327,7 @@ class DeviceManagementTemplate extends Entity
     */
     public function setCategories($val)
     {
-        $this->_propDict["categories"] = $val;
+		$this->_propDict["categories"] = $val;
         return $this;
     }
     
@@ -336,7 +336,7 @@ class DeviceManagementTemplate extends Entity
      * Gets the migratableTo
     * Collection of templates this template can migrate to
      *
-     * @return array|null The migratableTo
+     * @return array The migratableTo
      */
     public function getMigratableTo()
     {
@@ -357,7 +357,7 @@ class DeviceManagementTemplate extends Entity
     */
     public function setMigratableTo($val)
     {
-        $this->_propDict["migratableTo"] = $val;
+		$this->_propDict["migratableTo"] = $val;
         return $this;
     }
     
@@ -366,7 +366,7 @@ class DeviceManagementTemplate extends Entity
      * Gets the settings
     * Collection of all settings this template has
      *
-     * @return array|null The settings
+     * @return array The settings
      */
     public function getSettings()
     {
@@ -387,7 +387,7 @@ class DeviceManagementTemplate extends Entity
     */
     public function setSettings($val)
     {
-        $this->_propDict["settings"] = $val;
+		$this->_propDict["settings"] = $val;
         return $this;
     }
     

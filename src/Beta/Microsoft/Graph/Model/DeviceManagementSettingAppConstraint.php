@@ -36,7 +36,7 @@ class DeviceManagementSettingAppConstraint extends DeviceManagementConstraint
     * Gets the supportedTypes
     * Acceptable app types to allow for this setting
     *
-    * @return string|null The supportedTypes
+    * @return string The supportedTypes
     */
     public function getSupportedTypes()
     {

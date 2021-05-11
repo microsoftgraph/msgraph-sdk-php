@@ -27,12 +27,12 @@ class DlpEvaluatePoliciesJobResponse extends JobResponseBase
     /**
     * Gets the result
     *
-    * @return DlpPoliciesJobResult|null The result
+    * @return DlpPoliciesJobResult The result
     */
     public function getResult()
     {
         if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "\Beta\Microsoft\Graph\Model\DlpPoliciesJobResult") || is_null($this->_propDict["result"])) {
+            if (is_a($this->_propDict["result"], "\Beta\Microsoft\Graph\Model\DlpPoliciesJobResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new DlpPoliciesJobResult($this->_propDict["result"]);

@@ -27,7 +27,7 @@ class IosMinimumOperatingSystem extends Entity
     * Gets the v10_0
     * Version 10.0 or later.
     *
-    * @return bool|null The v10_0
+    * @return bool The v10_0
     */
     public function getV10_0()
     {
@@ -55,7 +55,7 @@ class IosMinimumOperatingSystem extends Entity
     * Gets the v11_0
     * Version 11.0 or later.
     *
-    * @return bool|null The v11_0
+    * @return bool The v11_0
     */
     public function getV11_0()
     {
@@ -83,7 +83,7 @@ class IosMinimumOperatingSystem extends Entity
     * Gets the v12_0
     * Version 12.0 or later.
     *
-    * @return bool|null The v12_0
+    * @return bool The v12_0
     */
     public function getV12_0()
     {
@@ -111,7 +111,7 @@ class IosMinimumOperatingSystem extends Entity
     * Gets the v13_0
     * Version 13.0 or later.
     *
-    * @return bool|null The v13_0
+    * @return bool The v13_0
     */
     public function getV13_0()
     {
@@ -139,7 +139,7 @@ class IosMinimumOperatingSystem extends Entity
     * Gets the v14_0
     * Version 14.0 or later.
     *
-    * @return bool|null The v14_0
+    * @return bool The v14_0
     */
     public function getV14_0()
     {
@@ -167,7 +167,7 @@ class IosMinimumOperatingSystem extends Entity
     * Gets the v8_0
     * Version 8.0 or later.
     *
-    * @return bool|null The v8_0
+    * @return bool The v8_0
     */
     public function getV8_0()
     {
@@ -195,7 +195,7 @@ class IosMinimumOperatingSystem extends Entity
     * Gets the v9_0
     * Version 9.0 or later.
     *
-    * @return bool|null The v9_0
+    * @return bool The v9_0
     */
     public function getV9_0()
     {

@@ -28,7 +28,7 @@ class ManagedAppProtectionPolicySetItem extends PolicySetItem
     * Gets the targetedAppManagementLevels
     * TargetedAppManagementLevels of the ManagedAppPolicySetItem.
     *
-    * @return string|null The targetedAppManagementLevels
+    * @return string The targetedAppManagementLevels
     */
     public function getTargetedAppManagementLevels()
     {

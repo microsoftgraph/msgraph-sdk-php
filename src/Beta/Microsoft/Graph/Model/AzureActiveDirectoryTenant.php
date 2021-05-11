@@ -36,7 +36,7 @@ class AzureActiveDirectoryTenant extends IdentitySource
     * Gets the displayName
     * The name of the Azure Active Directory tenant. Read only.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -64,7 +64,7 @@ class AzureActiveDirectoryTenant extends IdentitySource
     * Gets the tenantId
     * The ID of the Azure Active Directory tenant. Read only.
     *
-    * @return string|null The tenantId
+    * @return string The tenantId
     */
     public function getTenantId()
     {

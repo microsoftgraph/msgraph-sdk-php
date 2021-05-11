@@ -27,7 +27,7 @@ class MembershipRuleProcessingStatus extends Entity
     * Gets the errorMessage
     * Detailed error message if dynamic group processing ran into an error.  Optional. Read-only.
     *
-    * @return string|null The errorMessage
+    * @return string The errorMessage
     */
     public function getErrorMessage()
     {
@@ -56,12 +56,12 @@ class MembershipRuleProcessingStatus extends Entity
     * Gets the lastMembershipUpdated
     * Most recent date and time when membership of a dynamic group was updated.  Optional. Read-only.
     *
-    * @return \DateTime|null The lastMembershipUpdated
+    * @return \DateTime The lastMembershipUpdated
     */
     public function getLastMembershipUpdated()
     {
         if (array_key_exists("lastMembershipUpdated", $this->_propDict)) {
-            if (is_a($this->_propDict["lastMembershipUpdated"], "\DateTime") || is_null($this->_propDict["lastMembershipUpdated"])) {
+            if (is_a($this->_propDict["lastMembershipUpdated"], "\DateTime")) {
                 return $this->_propDict["lastMembershipUpdated"];
             } else {
                 $this->_propDict["lastMembershipUpdated"] = new \DateTime($this->_propDict["lastMembershipUpdated"]);
@@ -89,12 +89,12 @@ class MembershipRuleProcessingStatus extends Entity
     * Gets the status
     * Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.   Required. Read-only.
     *
-    * @return MembershipRuleProcessingStatusDetails|null The status
+    * @return MembershipRuleProcessingStatusDetails The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\MembershipRuleProcessingStatusDetails") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\MembershipRuleProcessingStatusDetails")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new MembershipRuleProcessingStatusDetails($this->_propDict["status"]);

@@ -28,7 +28,7 @@ class SkillProficiency extends ItemFacet
     * Gets the categories
     * Contains categories a user has associated with the skill (for example, personal, professional, hobby).
     *
-    * @return string|null The categories
+    * @return string The categories
     */
     public function getCategories()
     {
@@ -57,7 +57,7 @@ class SkillProficiency extends ItemFacet
     * Gets the collaborationTags
     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
-    * @return string|null The collaborationTags
+    * @return string The collaborationTags
     */
     public function getCollaborationTags()
     {
@@ -86,7 +86,7 @@ class SkillProficiency extends ItemFacet
     * Gets the displayName
     * Contains a friendly name for the skill.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -115,12 +115,12 @@ class SkillProficiency extends ItemFacet
     * Gets the proficiency
     * Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
     *
-    * @return SkillProficiencyLevel|null The proficiency
+    * @return SkillProficiencyLevel The proficiency
     */
     public function getProficiency()
     {
         if (array_key_exists("proficiency", $this->_propDict)) {
-            if (is_a($this->_propDict["proficiency"], "\Beta\Microsoft\Graph\Model\SkillProficiencyLevel") || is_null($this->_propDict["proficiency"])) {
+            if (is_a($this->_propDict["proficiency"], "\Beta\Microsoft\Graph\Model\SkillProficiencyLevel")) {
                 return $this->_propDict["proficiency"];
             } else {
                 $this->_propDict["proficiency"] = new SkillProficiencyLevel($this->_propDict["proficiency"]);
@@ -147,7 +147,7 @@ class SkillProficiency extends ItemFacet
     /**
     * Gets the thumbnailUrl
     *
-    * @return string|null The thumbnailUrl
+    * @return string The thumbnailUrl
     */
     public function getThumbnailUrl()
     {
@@ -175,7 +175,7 @@ class SkillProficiency extends ItemFacet
     * Gets the webUrl
     * Contains a link to an information source about the skill.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

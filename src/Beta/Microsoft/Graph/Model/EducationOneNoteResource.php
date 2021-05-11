@@ -36,7 +36,7 @@ class EducationOneNoteResource extends EducationResource
     * Gets the pageUrl
     * The Microsoft Graph URL to the page in OneNote.
     *
-    * @return string|null The pageUrl
+    * @return string The pageUrl
     */
     public function getPageUrl()
     {
@@ -64,7 +64,7 @@ class EducationOneNoteResource extends EducationResource
     * Gets the sectionName
     * Section name that distributions should be copied into or were copied into.
     *
-    * @return string|null The sectionName
+    * @return string The sectionName
     */
     public function getSectionName()
     {

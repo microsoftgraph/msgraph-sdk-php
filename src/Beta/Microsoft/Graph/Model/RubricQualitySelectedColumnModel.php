@@ -27,7 +27,7 @@ class RubricQualitySelectedColumnModel extends Entity
     * Gets the columnId
     * ID of the selected level for this quality.
     *
-    * @return string|null The columnId
+    * @return string The columnId
     */
     public function getColumnId()
     {
@@ -55,7 +55,7 @@ class RubricQualitySelectedColumnModel extends Entity
     * Gets the qualityId
     * ID of the associated quality.
     *
-    * @return string|null The qualityId
+    * @return string The qualityId
     */
     public function getQualityId()
     {

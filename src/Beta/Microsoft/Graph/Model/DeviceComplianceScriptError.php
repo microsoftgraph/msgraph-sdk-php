@@ -28,12 +28,12 @@ class DeviceComplianceScriptError extends Entity
     * Gets the code
     * Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing.
     *
-    * @return Code|null The code
+    * @return Code The code
     */
     public function getCode()
     {
         if (array_key_exists("code", $this->_propDict)) {
-            if (is_a($this->_propDict["code"], "\Beta\Microsoft\Graph\Model\Code") || is_null($this->_propDict["code"])) {
+            if (is_a($this->_propDict["code"], "\Beta\Microsoft\Graph\Model\Code")) {
                 return $this->_propDict["code"];
             } else {
                 $this->_propDict["code"] = new Code($this->_propDict["code"]);
@@ -61,12 +61,12 @@ class DeviceComplianceScriptError extends Entity
     * Gets the deviceComplianceScriptRulesValidationError
     * Error code. Possible values are: none, jsonFileInvalid, jsonFileMissing, jsonFileTooLarge, rulesMissing, duplicateRules, tooManyRulesSpecified, operatorMissing, operatorNotSupported, datatypeMissing, datatypeNotSupported, operatorDataTypeCombinationNotSupported, moreInfoUriMissing, moreInfoUriInvalid, moreInfoUriTooLarge, descriptionMissing, descriptionInvalid, descriptionTooLarge, titleMissing, titleInvalid, titleTooLarge, operandMissing, operandInvalid, operandTooLarge, settingNameMissing, settingNameInvalid, settingNameTooLarge, englishLocaleMissing, duplicateLocales, unrecognizedLocale, unknown, remediationStringsMissing.
     *
-    * @return DeviceComplianceScriptRulesValidationError|null The deviceComplianceScriptRulesValidationError
+    * @return DeviceComplianceScriptRulesValidationError The deviceComplianceScriptRulesValidationError
     */
     public function getDeviceComplianceScriptRulesValidationError()
     {
         if (array_key_exists("deviceComplianceScriptRulesValidationError", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceComplianceScriptRulesValidationError"], "\Beta\Microsoft\Graph\Model\DeviceComplianceScriptRulesValidationError") || is_null($this->_propDict["deviceComplianceScriptRulesValidationError"])) {
+            if (is_a($this->_propDict["deviceComplianceScriptRulesValidationError"], "\Beta\Microsoft\Graph\Model\DeviceComplianceScriptRulesValidationError")) {
                 return $this->_propDict["deviceComplianceScriptRulesValidationError"];
             } else {
                 $this->_propDict["deviceComplianceScriptRulesValidationError"] = new DeviceComplianceScriptRulesValidationError($this->_propDict["deviceComplianceScriptRulesValidationError"]);
@@ -93,7 +93,7 @@ class DeviceComplianceScriptError extends Entity
     * Gets the message
     * Error message.
     *
-    * @return string|null The message
+    * @return string The message
     */
     public function getMessage()
     {

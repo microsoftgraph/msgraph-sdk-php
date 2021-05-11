@@ -27,7 +27,7 @@ class ChromeOSDeviceProperty extends Entity
     * Gets the name
     * Name of the property
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -55,7 +55,7 @@ class ChromeOSDeviceProperty extends Entity
     * Gets the updatable
     * Whether this property is updatable
     *
-    * @return bool|null The updatable
+    * @return bool The updatable
     */
     public function getUpdatable()
     {
@@ -83,7 +83,7 @@ class ChromeOSDeviceProperty extends Entity
     * Gets the value
     * Value of the property
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {
@@ -111,7 +111,7 @@ class ChromeOSDeviceProperty extends Entity
     * Gets the valueType
     * Type of the value
     *
-    * @return string|null The valueType
+    * @return string The valueType
     */
     public function getValueType()
     {

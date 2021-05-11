@@ -28,12 +28,12 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     * Gets the payload
     * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The payload
+    * @return \GuzzleHttp\Psr7\Stream The payload
     */
     public function getPayload()
     {
         if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["payload"])) {
+            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
@@ -61,7 +61,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     * Gets the payloadFileName
     * Payload file name (.xml).
     *
-    * @return string|null The payloadFileName
+    * @return string The payloadFileName
     */
     public function getPayloadFileName()
     {
@@ -90,7 +90,7 @@ class Windows81WifiImportConfiguration extends DeviceConfiguration
     * Gets the profileName
     * Profile name displayed in the UI.
     *
-    * @return string|null The profileName
+    * @return string The profileName
     */
     public function getProfileName()
     {

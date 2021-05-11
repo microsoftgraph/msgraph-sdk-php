@@ -28,7 +28,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     * Gets the activationCodeCount
     * The total count of activation codes which belong to this pool.
     *
-    * @return int|null The activationCodeCount
+    * @return int The activationCodeCount
     */
     public function getActivationCodeCount()
     {
@@ -58,7 +58,7 @@ class EmbeddedSIMActivationCodePool extends Entity
      * Gets the activationCodes
     * The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
      *
-     * @return array|null The activationCodes
+     * @return array The activationCodes
      */
     public function getActivationCodes()
     {
@@ -79,7 +79,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     */
     public function setActivationCodes($val)
     {
-        $this->_propDict["activationCodes"] = $val;
+		$this->_propDict["activationCodes"] = $val;
         return $this;
     }
     
@@ -87,12 +87,12 @@ class EmbeddedSIMActivationCodePool extends Entity
     * Gets the createdDateTime
     * The time the embedded SIM activation code pool was created. Generated service side.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -120,7 +120,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     * Gets the displayName
     * The admin defined name of the embedded SIM activation code pool.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -149,12 +149,12 @@ class EmbeddedSIMActivationCodePool extends Entity
     * Gets the modifiedDateTime
     * The time the embedded SIM activation code pool was last modified. Updated service side.
     *
-    * @return \DateTime|null The modifiedDateTime
+    * @return \DateTime The modifiedDateTime
     */
     public function getModifiedDateTime()
     {
         if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime") || is_null($this->_propDict["modifiedDateTime"])) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["modifiedDateTime"];
             } else {
                 $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
@@ -183,7 +183,7 @@ class EmbeddedSIMActivationCodePool extends Entity
      * Gets the assignments
     * Navigational property to a list of targets to which this pool is assigned.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -204,7 +204,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -213,7 +213,7 @@ class EmbeddedSIMActivationCodePool extends Entity
      * Gets the deviceStates
     * Navigational property to a list of device states for this pool.
      *
-     * @return array|null The deviceStates
+     * @return array The deviceStates
      */
     public function getDeviceStates()
     {
@@ -234,7 +234,7 @@ class EmbeddedSIMActivationCodePool extends Entity
     */
     public function setDeviceStates($val)
     {
-        $this->_propDict["deviceStates"] = $val;
+		$this->_propDict["deviceStates"] = $val;
         return $this;
     }
     

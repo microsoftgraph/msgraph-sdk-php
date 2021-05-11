@@ -27,7 +27,7 @@ class MoveAction extends Entity
     * Gets the from
     * The name of the location the item was moved from.
     *
-    * @return string|null The from
+    * @return string The from
     */
     public function getFrom()
     {
@@ -55,7 +55,7 @@ class MoveAction extends Entity
     * Gets the to
     * The name of the location the item was moved to.
     *
-    * @return string|null The to
+    * @return string The to
     */
     public function getTo()
     {

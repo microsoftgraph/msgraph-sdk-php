@@ -27,7 +27,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -54,7 +54,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -82,7 +82,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
      /** 
      * Gets the members
      *
-     * @return array|null The members
+     * @return array The members
      */
     public function getMembers()
     {
@@ -102,7 +102,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setMembers($val)
     {
-        $this->_propDict["members"] = $val;
+		$this->_propDict["members"] = $val;
         return $this;
     }
     

@@ -28,7 +28,7 @@ class GroupPolicyObjectFile extends Entity
     * Gets the content
     * The Group Policy Object file content.
     *
-    * @return string|null The content
+    * @return string The content
     */
     public function getContent()
     {
@@ -57,12 +57,12 @@ class GroupPolicyObjectFile extends Entity
     * Gets the createdDateTime
     * The date and time at which the GroupPolicy was first uploaded.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -90,7 +90,7 @@ class GroupPolicyObjectFile extends Entity
     * Gets the groupPolicyObjectId
     * The Group Policy Object GUID from GPO Xml content
     *
-    * @return string|null The groupPolicyObjectId
+    * @return string The groupPolicyObjectId
     */
     public function getGroupPolicyObjectId()
     {
@@ -119,12 +119,12 @@ class GroupPolicyObjectFile extends Entity
     * Gets the lastModifiedDateTime
     * The date and time at which the GroupPolicyObjectFile was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -152,7 +152,7 @@ class GroupPolicyObjectFile extends Entity
     * Gets the ouDistinguishedName
     * The distinguished name of the OU.
     *
-    * @return string|null The ouDistinguishedName
+    * @return string The ouDistinguishedName
     */
     public function getOuDistinguishedName()
     {

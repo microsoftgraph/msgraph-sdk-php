@@ -27,7 +27,7 @@ class OmaSetting extends Entity
     * Gets the description
     * Description.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -55,7 +55,7 @@ class OmaSetting extends Entity
     * Gets the displayName
     * Display Name.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -83,7 +83,7 @@ class OmaSetting extends Entity
     * Gets the isEncrypted
     * Indicates whether the value field is encrypted. This property is read-only.
     *
-    * @return bool|null The isEncrypted
+    * @return bool The isEncrypted
     */
     public function getIsEncrypted()
     {
@@ -111,7 +111,7 @@ class OmaSetting extends Entity
     * Gets the omaUri
     * OMA.
     *
-    * @return string|null The omaUri
+    * @return string The omaUri
     */
     public function getOmaUri()
     {
@@ -139,7 +139,7 @@ class OmaSetting extends Entity
     * Gets the secretReferenceValueId
     * ReferenceId for looking up secret for decryption. This property is read-only.
     *
-    * @return string|null The secretReferenceValueId
+    * @return string The secretReferenceValueId
     */
     public function getSecretReferenceValueId()
     {

@@ -28,7 +28,7 @@ class AndroidManagedAppRegistration extends ManagedAppRegistration
     * Gets the patchVersion
     * The patch version for the current android app registration
     *
-    * @return string|null The patchVersion
+    * @return string The patchVersion
     */
     public function getPatchVersion()
     {

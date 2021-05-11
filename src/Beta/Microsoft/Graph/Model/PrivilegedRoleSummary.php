@@ -28,7 +28,7 @@ class PrivilegedRoleSummary extends Entity
     * Gets the elevatedCount
     * The number of users that have the role assigned and the role is activated.
     *
-    * @return int|null The elevatedCount
+    * @return int The elevatedCount
     */
     public function getElevatedCount()
     {
@@ -57,7 +57,7 @@ class PrivilegedRoleSummary extends Entity
     * Gets the managedCount
     * The number of users that have the role assigned but the role is deactivated.
     *
-    * @return int|null The managedCount
+    * @return int The managedCount
     */
     public function getManagedCount()
     {
@@ -86,7 +86,7 @@ class PrivilegedRoleSummary extends Entity
     * Gets the mfaEnabled
     * true if the role activation requires MFA. false if the role activation doesn't require MFA.
     *
-    * @return bool|null The mfaEnabled
+    * @return bool The mfaEnabled
     */
     public function getMfaEnabled()
     {
@@ -115,12 +115,12 @@ class PrivilegedRoleSummary extends Entity
     * Gets the status
     * Possible values are: ok, bad. The value depends on the ratio of (managedCount / usersCount). If the ratio is less than a predefined threshold, ok is returned. Otherwise, bad is returned.
     *
-    * @return RoleSummaryStatus|null The status
+    * @return RoleSummaryStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\RoleSummaryStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\RoleSummaryStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new RoleSummaryStatus($this->_propDict["status"]);
@@ -148,7 +148,7 @@ class PrivilegedRoleSummary extends Entity
     * Gets the usersCount
     * The number of users that are assigned with the role.
     *
-    * @return int|null The usersCount
+    * @return int The usersCount
     */
     public function getUsersCount()
     {

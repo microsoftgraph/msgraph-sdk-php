@@ -28,7 +28,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the exchangeMailboxStorageUsedInBytes
     * The storage used of the group mailbox.
     *
-    * @return int|null The exchangeMailboxStorageUsedInBytes
+    * @return int The exchangeMailboxStorageUsedInBytes
     */
     public function getExchangeMailboxStorageUsedInBytes()
     {
@@ -57,7 +57,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the exchangeMailboxTotalItemCount
     * The number of items in the group mailbox.
     *
-    * @return int|null The exchangeMailboxTotalItemCount
+    * @return int The exchangeMailboxTotalItemCount
     */
     public function getExchangeMailboxTotalItemCount()
     {
@@ -86,7 +86,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the exchangeReceivedEmailCount
     * The number of email that the group mailbox received.
     *
-    * @return int|null The exchangeReceivedEmailCount
+    * @return int The exchangeReceivedEmailCount
     */
     public function getExchangeReceivedEmailCount()
     {
@@ -115,7 +115,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the externalMemberCount
     * The group external member count.
     *
-    * @return int|null The externalMemberCount
+    * @return int The externalMemberCount
     */
     public function getExternalMemberCount()
     {
@@ -144,7 +144,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the groupDisplayName
     * The display name of the group.
     *
-    * @return string|null The groupDisplayName
+    * @return string The groupDisplayName
     */
     public function getGroupDisplayName()
     {
@@ -173,7 +173,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the groupId
     * The group id.
     *
-    * @return string|null The groupId
+    * @return string The groupId
     */
     public function getGroupId()
     {
@@ -202,7 +202,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the groupType
     * The group type. Possible values are: Public or Private.
     *
-    * @return string|null The groupType
+    * @return string The groupType
     */
     public function getGroupType()
     {
@@ -231,7 +231,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the isDeleted
     * Whether this user has been deleted or soft deleted.
     *
-    * @return bool|null The isDeleted
+    * @return bool The isDeleted
     */
     public function getIsDeleted()
     {
@@ -260,12 +260,12 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the lastActivityDate
     * The last activity date for the following scenarios:  group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \DateTime The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -293,7 +293,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the memberCount
     * The group member count.
     *
-    * @return int|null The memberCount
+    * @return int The memberCount
     */
     public function getMemberCount()
     {
@@ -322,7 +322,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the ownerPrincipalName
     * The group owner principal name.
     *
-    * @return string|null The ownerPrincipalName
+    * @return string The ownerPrincipalName
     */
     public function getOwnerPrincipalName()
     {
@@ -351,7 +351,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the reportPeriod
     * The number of days the report covers.
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -380,12 +380,12 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -413,7 +413,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the sharePointActiveFileCount
     * The number of active files in SharePoint Group site.
     *
-    * @return int|null The sharePointActiveFileCount
+    * @return int The sharePointActiveFileCount
     */
     public function getSharePointActiveFileCount()
     {
@@ -442,7 +442,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the sharePointSiteStorageUsedInBytes
     * The storage used by SharePoint Group site.
     *
-    * @return int|null The sharePointSiteStorageUsedInBytes
+    * @return int The sharePointSiteStorageUsedInBytes
     */
     public function getSharePointSiteStorageUsedInBytes()
     {
@@ -471,7 +471,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the sharePointTotalFileCount
     * The total number of files in SharePoint Group site.
     *
-    * @return int|null The sharePointTotalFileCount
+    * @return int The sharePointTotalFileCount
     */
     public function getSharePointTotalFileCount()
     {
@@ -500,7 +500,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the yammerLikedMessageCount
     * The number of messages liked in Yammer groups.
     *
-    * @return int|null The yammerLikedMessageCount
+    * @return int The yammerLikedMessageCount
     */
     public function getYammerLikedMessageCount()
     {
@@ -529,7 +529,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the yammerPostedMessageCount
     * The number of messages posted to Yammer groups.
     *
-    * @return int|null The yammerPostedMessageCount
+    * @return int The yammerPostedMessageCount
     */
     public function getYammerPostedMessageCount()
     {
@@ -558,7 +558,7 @@ class Office365GroupsActivityDetail extends Entity
     * Gets the yammerReadMessageCount
     * The number of messages read in Yammer groups.
     *
-    * @return int|null The yammerReadMessageCount
+    * @return int The yammerReadMessageCount
     */
     public function getYammerReadMessageCount()
     {

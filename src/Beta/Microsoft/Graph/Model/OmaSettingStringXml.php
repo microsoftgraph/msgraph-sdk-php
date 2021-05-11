@@ -36,7 +36,7 @@ class OmaSettingStringXml extends OmaSetting
     * Gets the fileName
     * File name associated with the Value property (.xml).
     *
-    * @return string|null The fileName
+    * @return string The fileName
     */
     public function getFileName()
     {
@@ -65,12 +65,12 @@ class OmaSettingStringXml extends OmaSetting
     * Gets the value
     * Value. (UTF8 encoded byte array)
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The value
+    * @return \GuzzleHttp\Psr7\Stream The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["value"])) {
+            if (is_a($this->_propDict["value"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["value"]);

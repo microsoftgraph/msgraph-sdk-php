@@ -27,12 +27,12 @@ class CompanyInformation extends Entity
     /**
     * Gets the address
     *
-    * @return PostalAddressType|null The address
+    * @return PostalAddressType The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PostalAddressType") || is_null($this->_propDict["address"])) {
+            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PostalAddressType")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PostalAddressType($this->_propDict["address"]);
@@ -58,7 +58,7 @@ class CompanyInformation extends Entity
     /**
     * Gets the currencyCode
     *
-    * @return string|null The currencyCode
+    * @return string The currencyCode
     */
     public function getCurrencyCode()
     {
@@ -85,12 +85,12 @@ class CompanyInformation extends Entity
     /**
     * Gets the currentFiscalYearStartDate
     *
-    * @return \DateTime|null The currentFiscalYearStartDate
+    * @return \DateTime The currentFiscalYearStartDate
     */
     public function getCurrentFiscalYearStartDate()
     {
         if (array_key_exists("currentFiscalYearStartDate", $this->_propDict)) {
-            if (is_a($this->_propDict["currentFiscalYearStartDate"], "\DateTime") || is_null($this->_propDict["currentFiscalYearStartDate"])) {
+            if (is_a($this->_propDict["currentFiscalYearStartDate"], "\DateTime")) {
                 return $this->_propDict["currentFiscalYearStartDate"];
             } else {
                 $this->_propDict["currentFiscalYearStartDate"] = new \DateTime($this->_propDict["currentFiscalYearStartDate"]);
@@ -116,7 +116,7 @@ class CompanyInformation extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -143,7 +143,7 @@ class CompanyInformation extends Entity
     /**
     * Gets the email
     *
-    * @return string|null The email
+    * @return string The email
     */
     public function getEmail()
     {
@@ -170,7 +170,7 @@ class CompanyInformation extends Entity
     /**
     * Gets the faxNumber
     *
-    * @return string|null The faxNumber
+    * @return string The faxNumber
     */
     public function getFaxNumber()
     {
@@ -197,7 +197,7 @@ class CompanyInformation extends Entity
     /**
     * Gets the industry
     *
-    * @return string|null The industry
+    * @return string The industry
     */
     public function getIndustry()
     {
@@ -224,12 +224,12 @@ class CompanyInformation extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -255,7 +255,7 @@ class CompanyInformation extends Entity
     /**
     * Gets the phoneNumber
     *
-    * @return string|null The phoneNumber
+    * @return string The phoneNumber
     */
     public function getPhoneNumber()
     {
@@ -282,12 +282,12 @@ class CompanyInformation extends Entity
     /**
     * Gets the picture
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The picture
+    * @return \GuzzleHttp\Psr7\Stream The picture
     */
     public function getPicture()
     {
         if (array_key_exists("picture", $this->_propDict)) {
-            if (is_a($this->_propDict["picture"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["picture"])) {
+            if (is_a($this->_propDict["picture"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["picture"];
             } else {
                 $this->_propDict["picture"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["picture"]);
@@ -313,7 +313,7 @@ class CompanyInformation extends Entity
     /**
     * Gets the taxRegistrationNumber
     *
-    * @return string|null The taxRegistrationNumber
+    * @return string The taxRegistrationNumber
     */
     public function getTaxRegistrationNumber()
     {
@@ -340,7 +340,7 @@ class CompanyInformation extends Entity
     /**
     * Gets the website
     *
-    * @return string|null The website
+    * @return string The website
     */
     public function getWebsite()
     {

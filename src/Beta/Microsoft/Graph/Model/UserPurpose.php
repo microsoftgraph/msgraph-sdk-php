@@ -28,12 +28,12 @@ class UserPurpose extends Entity
     * Gets the value
     * Represents the user's recipient or mailbox type in Exchange Online. Possible values are: unknown, user, linked, shared, room, equipment, and others. See the next section for more information.
     *
-    * @return MailboxRecipientType|null The value
+    * @return MailboxRecipientType The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\MailboxRecipientType") || is_null($this->_propDict["value"])) {
+            if (is_a($this->_propDict["value"], "\Beta\Microsoft\Graph\Model\MailboxRecipientType")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = new MailboxRecipientType($this->_propDict["value"]);

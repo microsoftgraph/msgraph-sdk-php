@@ -27,12 +27,12 @@ class EncryptContent extends LabelActionBase
     /**
     * Gets the encryptWith
     *
-    * @return EncryptWith|null The encryptWith
+    * @return EncryptWith The encryptWith
     */
     public function getEncryptWith()
     {
         if (array_key_exists("encryptWith", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptWith"], "\Beta\Microsoft\Graph\Model\EncryptWith") || is_null($this->_propDict["encryptWith"])) {
+            if (is_a($this->_propDict["encryptWith"], "\Beta\Microsoft\Graph\Model\EncryptWith")) {
                 return $this->_propDict["encryptWith"];
             } else {
                 $this->_propDict["encryptWith"] = new EncryptWith($this->_propDict["encryptWith"]);

@@ -27,7 +27,7 @@ class UnifiedRbacResourceNamespace extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -55,7 +55,7 @@ class UnifiedRbacResourceNamespace extends Entity
      /** 
      * Gets the resourceActions
      *
-     * @return array|null The resourceActions
+     * @return array The resourceActions
      */
     public function getResourceActions()
     {
@@ -75,7 +75,7 @@ class UnifiedRbacResourceNamespace extends Entity
     */
     public function setResourceActions($val)
     {
-        $this->_propDict["resourceActions"] = $val;
+		$this->_propDict["resourceActions"] = $val;
         return $this;
     }
     

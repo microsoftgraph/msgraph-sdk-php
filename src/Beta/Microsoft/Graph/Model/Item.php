@@ -27,7 +27,7 @@ class Item extends Entity
     /**
     * Gets the baseUnitOfMeasureId
     *
-    * @return string|null The baseUnitOfMeasureId
+    * @return string The baseUnitOfMeasureId
     */
     public function getBaseUnitOfMeasureId()
     {
@@ -54,7 +54,7 @@ class Item extends Entity
     /**
     * Gets the blocked
     *
-    * @return bool|null The blocked
+    * @return bool The blocked
     */
     public function getBlocked()
     {
@@ -81,7 +81,7 @@ class Item extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -108,7 +108,7 @@ class Item extends Entity
     /**
     * Gets the gtin
     *
-    * @return string|null The gtin
+    * @return string The gtin
     */
     public function getGtin()
     {
@@ -135,12 +135,12 @@ class Item extends Entity
     /**
     * Gets the inventory
     *
-    * @return Decimal|null The inventory
+    * @return Decimal The inventory
     */
     public function getInventory()
     {
         if (array_key_exists("inventory", $this->_propDict)) {
-            if (is_a($this->_propDict["inventory"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["inventory"])) {
+            if (is_a($this->_propDict["inventory"], "\Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["inventory"];
             } else {
                 $this->_propDict["inventory"] = new Decimal($this->_propDict["inventory"]);
@@ -166,7 +166,7 @@ class Item extends Entity
     /**
     * Gets the itemCategoryCode
     *
-    * @return string|null The itemCategoryCode
+    * @return string The itemCategoryCode
     */
     public function getItemCategoryCode()
     {
@@ -193,7 +193,7 @@ class Item extends Entity
     /**
     * Gets the itemCategoryId
     *
-    * @return string|null The itemCategoryId
+    * @return string The itemCategoryId
     */
     public function getItemCategoryId()
     {
@@ -220,12 +220,12 @@ class Item extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -251,7 +251,7 @@ class Item extends Entity
     /**
     * Gets the number
     *
-    * @return string|null The number
+    * @return string The number
     */
     public function getNumber()
     {
@@ -278,7 +278,7 @@ class Item extends Entity
     /**
     * Gets the priceIncludesTax
     *
-    * @return bool|null The priceIncludesTax
+    * @return bool The priceIncludesTax
     */
     public function getPriceIncludesTax()
     {
@@ -305,7 +305,7 @@ class Item extends Entity
     /**
     * Gets the taxGroupCode
     *
-    * @return string|null The taxGroupCode
+    * @return string The taxGroupCode
     */
     public function getTaxGroupCode()
     {
@@ -332,7 +332,7 @@ class Item extends Entity
     /**
     * Gets the taxGroupId
     *
-    * @return string|null The taxGroupId
+    * @return string The taxGroupId
     */
     public function getTaxGroupId()
     {
@@ -359,7 +359,7 @@ class Item extends Entity
     /**
     * Gets the type
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {
@@ -386,12 +386,12 @@ class Item extends Entity
     /**
     * Gets the unitCost
     *
-    * @return Decimal|null The unitCost
+    * @return Decimal The unitCost
     */
     public function getUnitCost()
     {
         if (array_key_exists("unitCost", $this->_propDict)) {
-            if (is_a($this->_propDict["unitCost"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["unitCost"])) {
+            if (is_a($this->_propDict["unitCost"], "\Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["unitCost"];
             } else {
                 $this->_propDict["unitCost"] = new Decimal($this->_propDict["unitCost"]);
@@ -417,12 +417,12 @@ class Item extends Entity
     /**
     * Gets the unitPrice
     *
-    * @return Decimal|null The unitPrice
+    * @return Decimal The unitPrice
     */
     public function getUnitPrice()
     {
         if (array_key_exists("unitPrice", $this->_propDict)) {
-            if (is_a($this->_propDict["unitPrice"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["unitPrice"])) {
+            if (is_a($this->_propDict["unitPrice"], "\Beta\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["unitPrice"];
             } else {
                 $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
@@ -448,12 +448,12 @@ class Item extends Entity
     /**
     * Gets the itemCategory
     *
-    * @return ItemCategory|null The itemCategory
+    * @return ItemCategory The itemCategory
     */
     public function getItemCategory()
     {
         if (array_key_exists("itemCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["itemCategory"], "\Beta\Microsoft\Graph\Model\ItemCategory") || is_null($this->_propDict["itemCategory"])) {
+            if (is_a($this->_propDict["itemCategory"], "\Beta\Microsoft\Graph\Model\ItemCategory")) {
                 return $this->_propDict["itemCategory"];
             } else {
                 $this->_propDict["itemCategory"] = new ItemCategory($this->_propDict["itemCategory"]);
@@ -480,7 +480,7 @@ class Item extends Entity
      /** 
      * Gets the picture
      *
-     * @return array|null The picture
+     * @return array The picture
      */
     public function getPicture()
     {
@@ -500,7 +500,7 @@ class Item extends Entity
     */
     public function setPicture($val)
     {
-        $this->_propDict["picture"] = $val;
+		$this->_propDict["picture"] = $val;
         return $this;
     }
     

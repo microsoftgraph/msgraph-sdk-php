@@ -28,7 +28,7 @@ class CloudPcDeviceImage extends Entity
     * Gets the displayName
     * The image's display name.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,12 +57,12 @@ class CloudPcDeviceImage extends Entity
     * Gets the lastModifiedDateTime
     * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -90,7 +90,7 @@ class CloudPcDeviceImage extends Entity
     * Gets the operatingSystem
     * The image's operating system. For example: Windows 10 Enterprise.
     *
-    * @return string|null The operatingSystem
+    * @return string The operatingSystem
     */
     public function getOperatingSystem()
     {
@@ -119,7 +119,7 @@ class CloudPcDeviceImage extends Entity
     * Gets the osBuildNumber
     * The image's OS build version. For example: 1909.
     *
-    * @return string|null The osBuildNumber
+    * @return string The osBuildNumber
     */
     public function getOsBuildNumber()
     {
@@ -148,7 +148,7 @@ class CloudPcDeviceImage extends Entity
     * Gets the sourceImageResourceId
     * The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
     *
-    * @return string|null The sourceImageResourceId
+    * @return string The sourceImageResourceId
     */
     public function getSourceImageResourceId()
     {
@@ -177,12 +177,12 @@ class CloudPcDeviceImage extends Entity
     * Gets the status
     * The status of the image on cloud PC. Possible values are: pending, ready, failed.
     *
-    * @return CloudPcDeviceImageStatus|null The status
+    * @return CloudPcDeviceImageStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\CloudPcDeviceImageStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\CloudPcDeviceImageStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new CloudPcDeviceImageStatus($this->_propDict["status"]);
@@ -210,12 +210,12 @@ class CloudPcDeviceImage extends Entity
     * Gets the statusDetails
     * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, and sourceImageInvalid.
     *
-    * @return CloudPcDeviceImageStatusDetails|null The statusDetails
+    * @return CloudPcDeviceImageStatusDetails The statusDetails
     */
     public function getStatusDetails()
     {
         if (array_key_exists("statusDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcDeviceImageStatusDetails") || is_null($this->_propDict["statusDetails"])) {
+            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcDeviceImageStatusDetails")) {
                 return $this->_propDict["statusDetails"];
             } else {
                 $this->_propDict["statusDetails"] = new CloudPcDeviceImageStatusDetails($this->_propDict["statusDetails"]);
@@ -243,7 +243,7 @@ class CloudPcDeviceImage extends Entity
     * Gets the version
     * The image version. For example: 0.0.1, 1.5.13.
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {

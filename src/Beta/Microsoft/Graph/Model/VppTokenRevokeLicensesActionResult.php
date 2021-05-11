@@ -28,12 +28,12 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
     * Gets the actionFailureReason
     * The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
     *
-    * @return VppTokenActionFailureReason|null The actionFailureReason
+    * @return VppTokenActionFailureReason The actionFailureReason
     */
     public function getActionFailureReason()
     {
         if (array_key_exists("actionFailureReason", $this->_propDict)) {
-            if (is_a($this->_propDict["actionFailureReason"], "\Beta\Microsoft\Graph\Model\VppTokenActionFailureReason") || is_null($this->_propDict["actionFailureReason"])) {
+            if (is_a($this->_propDict["actionFailureReason"], "\Beta\Microsoft\Graph\Model\VppTokenActionFailureReason")) {
                 return $this->_propDict["actionFailureReason"];
             } else {
                 $this->_propDict["actionFailureReason"] = new VppTokenActionFailureReason($this->_propDict["actionFailureReason"]);
@@ -60,7 +60,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
     * Gets the failedLicensesCount
     * A count of the number of licenses that failed to revoke.
     *
-    * @return int|null The failedLicensesCount
+    * @return int The failedLicensesCount
     */
     public function getFailedLicensesCount()
     {
@@ -88,7 +88,7 @@ class VppTokenRevokeLicensesActionResult extends VppTokenActionResult
     * Gets the totalLicensesCount
     * A count of the number of licenses that were attempted to revoke.
     *
-    * @return int|null The totalLicensesCount
+    * @return int The totalLicensesCount
     */
     public function getTotalLicensesCount()
     {

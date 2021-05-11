@@ -36,7 +36,7 @@ class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmentSettin
     * Gets the androidManagedStoreAppTrackIds
     * The track IDs to enable for this app assignment.
     *
-    * @return string|null The androidManagedStoreAppTrackIds
+    * @return string The androidManagedStoreAppTrackIds
     */
     public function getAndroidManagedStoreAppTrackIds()
     {

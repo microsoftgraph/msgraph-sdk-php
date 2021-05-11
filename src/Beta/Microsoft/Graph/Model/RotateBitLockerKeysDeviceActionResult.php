@@ -27,7 +27,7 @@ class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult
     * Gets the errorCode
     * RotateBitLockerKeys action error code
     *
-    * @return int|null The errorCode
+    * @return int The errorCode
     */
     public function getErrorCode()
     {

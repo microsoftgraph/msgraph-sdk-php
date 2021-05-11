@@ -27,7 +27,7 @@ class GeoCoordinates extends Entity
     * Gets the altitude
     * Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
     *
-    * @return float|null The altitude
+    * @return float The altitude
     */
     public function getAltitude()
     {
@@ -53,9 +53,9 @@ class GeoCoordinates extends Entity
     }
     /**
     * Gets the latitude
-    * Optional. The latitude, in decimal, for the item. Read-only.
+    * Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.
     *
-    * @return float|null The latitude
+    * @return float The latitude
     */
     public function getLatitude()
     {
@@ -68,7 +68,7 @@ class GeoCoordinates extends Entity
 
     /**
     * Sets the latitude
-    * Optional. The latitude, in decimal, for the item. Read-only.
+    * Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.
     *
     * @param float $val The value of the latitude
     *
@@ -81,9 +81,9 @@ class GeoCoordinates extends Entity
     }
     /**
     * Gets the longitude
-    * Optional. The longitude, in decimal, for the item. Read-only.
+    * Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.
     *
-    * @return float|null The longitude
+    * @return float The longitude
     */
     public function getLongitude()
     {
@@ -96,7 +96,7 @@ class GeoCoordinates extends Entity
 
     /**
     * Sets the longitude
-    * Optional. The longitude, in decimal, for the item. Read-only.
+    * Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.
     *
     * @param float $val The value of the longitude
     *

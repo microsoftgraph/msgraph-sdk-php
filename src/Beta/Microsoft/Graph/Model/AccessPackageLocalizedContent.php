@@ -27,7 +27,7 @@ class AccessPackageLocalizedContent extends Entity
     * Gets the defaultText
     * The fallback string, which is used when a requested localization is not available. Required.
     *
-    * @return string|null The defaultText
+    * @return string The defaultText
     */
     public function getDefaultText()
     {
@@ -56,12 +56,12 @@ class AccessPackageLocalizedContent extends Entity
     * Gets the localizedTexts
     * Content represented in a format for a specific locale.
     *
-    * @return AccessPackageLocalizedText|null The localizedTexts
+    * @return AccessPackageLocalizedText The localizedTexts
     */
     public function getLocalizedTexts()
     {
         if (array_key_exists("localizedTexts", $this->_propDict)) {
-            if (is_a($this->_propDict["localizedTexts"], "\Beta\Microsoft\Graph\Model\AccessPackageLocalizedText") || is_null($this->_propDict["localizedTexts"])) {
+            if (is_a($this->_propDict["localizedTexts"], "\Beta\Microsoft\Graph\Model\AccessPackageLocalizedText")) {
                 return $this->_propDict["localizedTexts"];
             } else {
                 $this->_propDict["localizedTexts"] = new AccessPackageLocalizedText($this->_propDict["localizedTexts"]);

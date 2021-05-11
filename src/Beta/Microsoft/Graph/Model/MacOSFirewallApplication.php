@@ -27,7 +27,7 @@ class MacOSFirewallApplication extends Entity
     * Gets the allowsIncomingConnections
     * Whether or not incoming connections are allowed.
     *
-    * @return bool|null The allowsIncomingConnections
+    * @return bool The allowsIncomingConnections
     */
     public function getAllowsIncomingConnections()
     {
@@ -55,7 +55,7 @@ class MacOSFirewallApplication extends Entity
     * Gets the bundleId
     * BundleId of the application.
     *
-    * @return string|null The bundleId
+    * @return string The bundleId
     */
     public function getBundleId()
     {

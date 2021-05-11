@@ -26,7 +26,7 @@ class ResponsibleSensitiveType extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -52,7 +52,7 @@ class ResponsibleSensitiveType extends Entity
     /**
     * Gets the id
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -78,7 +78,7 @@ class ResponsibleSensitiveType extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -104,7 +104,7 @@ class ResponsibleSensitiveType extends Entity
     /**
     * Gets the publisherName
     *
-    * @return string|null The publisherName
+    * @return string The publisherName
     */
     public function getPublisherName()
     {
@@ -130,7 +130,7 @@ class ResponsibleSensitiveType extends Entity
     /**
     * Gets the rulePackageId
     *
-    * @return string|null The rulePackageId
+    * @return string The rulePackageId
     */
     public function getRulePackageId()
     {
@@ -156,7 +156,7 @@ class ResponsibleSensitiveType extends Entity
     /**
     * Gets the rulePackageType
     *
-    * @return string|null The rulePackageType
+    * @return string The rulePackageType
     */
     public function getRulePackageType()
     {

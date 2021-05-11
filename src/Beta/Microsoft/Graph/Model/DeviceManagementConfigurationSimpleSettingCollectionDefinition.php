@@ -28,7 +28,7 @@ class DeviceManagementConfigurationSimpleSettingCollectionDefinition extends Dev
     * Gets the maximumCount
     * Maximum number of simple settings in the collection. Valid values 1 to 100
     *
-    * @return int|null The maximumCount
+    * @return int The maximumCount
     */
     public function getMaximumCount()
     {
@@ -57,7 +57,7 @@ class DeviceManagementConfigurationSimpleSettingCollectionDefinition extends Dev
     * Gets the minimumCount
     * Minimum number of simple settings in the collection. Valid values 1 to 100
     *
-    * @return int|null The minimumCount
+    * @return int The minimumCount
     */
     public function getMinimumCount()
     {

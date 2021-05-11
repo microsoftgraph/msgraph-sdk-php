@@ -28,7 +28,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     * Gets the appSupportsOemConfig
     * Whether or not this AppConfig is an OEMConfig policy.
     *
-    * @return bool|null The appSupportsOemConfig
+    * @return bool The appSupportsOemConfig
     */
     public function getAppSupportsOemConfig()
     {
@@ -57,7 +57,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     * Gets the packageId
     * Android Enterprise app configuration package id.
     *
-    * @return string|null The packageId
+    * @return string The packageId
     */
     public function getPackageId()
     {
@@ -86,7 +86,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     * Gets the payloadJson
     * Android Enterprise app configuration JSON payload.
     *
-    * @return string|null The payloadJson
+    * @return string The payloadJson
     */
     public function getPayloadJson()
     {
@@ -116,7 +116,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
      * Gets the permissionActions
     * List of Android app permissions and corresponding permission actions.
      *
-     * @return array|null The permissionActions
+     * @return array The permissionActions
      */
     public function getPermissionActions()
     {
@@ -137,7 +137,7 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     */
     public function setPermissionActions($val)
     {
-        $this->_propDict["permissionActions"] = $val;
+		$this->_propDict["permissionActions"] = $val;
         return $this;
     }
     
@@ -145,12 +145,12 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     * Gets the profileApplicability
     * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
     *
-    * @return AndroidProfileApplicability|null The profileApplicability
+    * @return AndroidProfileApplicability The profileApplicability
     */
     public function getProfileApplicability()
     {
         if (array_key_exists("profileApplicability", $this->_propDict)) {
-            if (is_a($this->_propDict["profileApplicability"], "\Beta\Microsoft\Graph\Model\AndroidProfileApplicability") || is_null($this->_propDict["profileApplicability"])) {
+            if (is_a($this->_propDict["profileApplicability"], "\Beta\Microsoft\Graph\Model\AndroidProfileApplicability")) {
                 return $this->_propDict["profileApplicability"];
             } else {
                 $this->_propDict["profileApplicability"] = new AndroidProfileApplicability($this->_propDict["profileApplicability"]);

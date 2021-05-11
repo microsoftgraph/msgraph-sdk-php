@@ -34,9 +34,9 @@ class IosHomeScreenApp extends IosHomeScreenItem
 
     /**
     * Gets the bundleID
-    * BundleID of app
+    * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
     *
-    * @return string|null The bundleID
+    * @return string The bundleID
     */
     public function getBundleID()
     {
@@ -49,7 +49,7 @@ class IosHomeScreenApp extends IosHomeScreenItem
 
     /**
     * Sets the bundleID
-    * BundleID of app
+    * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
     *
     * @param string $val The value of the bundleID
     *
@@ -64,7 +64,7 @@ class IosHomeScreenApp extends IosHomeScreenItem
     * Gets the isWebClip
     * When true, the bundle ID will be handled as a URL for a web clip.
     *
-    * @return bool|null The isWebClip
+    * @return bool The isWebClip
     */
     public function getIsWebClip()
     {

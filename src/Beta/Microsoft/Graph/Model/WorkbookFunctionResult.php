@@ -27,7 +27,7 @@ class WorkbookFunctionResult extends Entity
     /**
     * Gets the error
     *
-    * @return string|null The error
+    * @return string The error
     */
     public function getError()
     {
@@ -54,7 +54,7 @@ class WorkbookFunctionResult extends Entity
     /**
     * Gets the value
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

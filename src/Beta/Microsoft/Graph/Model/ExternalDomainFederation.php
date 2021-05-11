@@ -36,7 +36,7 @@ class ExternalDomainFederation extends IdentitySource
     * Gets the displayName
     * The name of the identity source, typically also the domain name. Read only.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -64,7 +64,7 @@ class ExternalDomainFederation extends IdentitySource
     * Gets the domainName
     * The domain name. Read only.
     *
-    * @return string|null The domainName
+    * @return string The domainName
     */
     public function getDomainName()
     {
@@ -92,7 +92,7 @@ class ExternalDomainFederation extends IdentitySource
     * Gets the issuerUri
     * The issuerURI of the incoming federation. Read only.
     *
-    * @return string|null The issuerUri
+    * @return string The issuerUri
     */
     public function getIssuerUri()
     {

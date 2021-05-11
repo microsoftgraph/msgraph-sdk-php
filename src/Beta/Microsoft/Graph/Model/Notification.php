@@ -28,7 +28,7 @@ class Notification extends Entity
     * Gets the displayTimeToLive
     * Sets how long (in seconds) this notification content will stay in each platform’s notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user’s Windows Action Center.
     *
-    * @return int|null The displayTimeToLive
+    * @return int The displayTimeToLive
     */
     public function getDisplayTimeToLive()
     {
@@ -57,12 +57,12 @@ class Notification extends Entity
     * Gets the expirationDateTime
     * Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: '2019-01-01T00:00:00Z'). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
     *
-    * @return \DateTime|null The expirationDateTime
+    * @return \DateTime The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -90,7 +90,7 @@ class Notification extends Entity
     * Gets the groupName
     * The name of the group that this notification belongs to. It is set by the developer for the purpose of grouping notifications together.
     *
-    * @return string|null The groupName
+    * @return string The groupName
     */
     public function getGroupName()
     {
@@ -119,12 +119,12 @@ class Notification extends Entity
     * Gets the payload
     * This is the data content of a raw or visual user notification that will be delivered to and consumed by the app client receiving this notification.
     *
-    * @return PayloadTypes|null The payload
+    * @return PayloadTypes The payload
     */
     public function getPayload()
     {
         if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "\Beta\Microsoft\Graph\Model\PayloadTypes") || is_null($this->_propDict["payload"])) {
+            if (is_a($this->_propDict["payload"], "\Beta\Microsoft\Graph\Model\PayloadTypes")) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = new PayloadTypes($this->_propDict["payload"]);
@@ -152,12 +152,12 @@ class Notification extends Entity
     * Gets the priority
     * Indicates the priority of a raw user notification. Visual notifications are sent with high priority by default. Valid values are None, High and Low.
     *
-    * @return Priority|null The priority
+    * @return Priority The priority
     */
     public function getPriority()
     {
         if (array_key_exists("priority", $this->_propDict)) {
-            if (is_a($this->_propDict["priority"], "\Beta\Microsoft\Graph\Model\Priority") || is_null($this->_propDict["priority"])) {
+            if (is_a($this->_propDict["priority"], "\Beta\Microsoft\Graph\Model\Priority")) {
                 return $this->_propDict["priority"];
             } else {
                 $this->_propDict["priority"] = new Priority($this->_propDict["priority"]);
@@ -185,7 +185,7 @@ class Notification extends Entity
     * Gets the targetHostName
     * Represents the host name of the app to which the calling service wants to post the notification, for the given user. If targeting web endpoints (see targetPolicy.platformTypes), ensure that targetHostName is the same as the name used when creating a subscription on the client side within the application JSON property.
     *
-    * @return string|null The targetHostName
+    * @return string The targetHostName
     */
     public function getTargetHostName()
     {
@@ -214,12 +214,12 @@ class Notification extends Entity
     * Gets the targetPolicy
     * Target policy object handles notification delivery policy for endpoint types that should be targeted (Windows, iOS, Android and WebPush) for the given user.
     *
-    * @return TargetPolicyEndpoints|null The targetPolicy
+    * @return TargetPolicyEndpoints The targetPolicy
     */
     public function getTargetPolicy()
     {
         if (array_key_exists("targetPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["targetPolicy"], "\Beta\Microsoft\Graph\Model\TargetPolicyEndpoints") || is_null($this->_propDict["targetPolicy"])) {
+            if (is_a($this->_propDict["targetPolicy"], "\Beta\Microsoft\Graph\Model\TargetPolicyEndpoints")) {
                 return $this->_propDict["targetPolicy"];
             } else {
                 $this->_propDict["targetPolicy"] = new TargetPolicyEndpoints($this->_propDict["targetPolicy"]);

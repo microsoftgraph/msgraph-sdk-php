@@ -37,12 +37,12 @@ class DeviceManagementConfigurationChoiceSettingValue extends DeviceManagementCo
     * Gets the children
     * Child settings.
     *
-    * @return DeviceManagementConfigurationSettingInstance|null The children
+    * @return DeviceManagementConfigurationSettingInstance The children
     */
     public function getChildren()
     {
         if (array_key_exists("children", $this->_propDict)) {
-            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstance") || is_null($this->_propDict["children"])) {
+            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstance")) {
                 return $this->_propDict["children"];
             } else {
                 $this->_propDict["children"] = new DeviceManagementConfigurationSettingInstance($this->_propDict["children"]);
@@ -69,7 +69,7 @@ class DeviceManagementConfigurationChoiceSettingValue extends DeviceManagementCo
     * Gets the value
     * Choice setting value: an OptionDefinition ItemId.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

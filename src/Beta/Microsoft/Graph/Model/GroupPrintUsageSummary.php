@@ -26,7 +26,7 @@ class GroupPrintUsageSummary extends Entity
     /**
     * Gets the completedJobCount
     *
-    * @return int|null The completedJobCount
+    * @return int The completedJobCount
     */
     public function getCompletedJobCount()
     {
@@ -53,12 +53,12 @@ class GroupPrintUsageSummary extends Entity
     /**
     * Gets the group
     *
-    * @return Identity|null The group
+    * @return Identity The group
     */
     public function getGroup()
     {
         if (array_key_exists("group", $this->_propDict)) {
-            if (is_a($this->_propDict["group"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["group"])) {
+            if (is_a($this->_propDict["group"], "\Beta\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["group"];
             } else {
                 $this->_propDict["group"] = new Identity($this->_propDict["group"]);
@@ -83,7 +83,7 @@ class GroupPrintUsageSummary extends Entity
     /**
     * Gets the groupDisplayName
     *
-    * @return string|null The groupDisplayName
+    * @return string The groupDisplayName
     */
     public function getGroupDisplayName()
     {
@@ -109,7 +109,7 @@ class GroupPrintUsageSummary extends Entity
     /**
     * Gets the groupMail
     *
-    * @return string|null The groupMail
+    * @return string The groupMail
     */
     public function getGroupMail()
     {
@@ -135,7 +135,7 @@ class GroupPrintUsageSummary extends Entity
     /**
     * Gets the incompleteJobCount
     *
-    * @return int|null The incompleteJobCount
+    * @return int The incompleteJobCount
     */
     public function getIncompleteJobCount()
     {

@@ -28,12 +28,12 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the createdDateTime
     * Policy creation date and time. This property is read-only.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the creationSource
     * Policy creation source
     *
-    * @return string|null The creationSource
+    * @return string The creationSource
     */
     public function getCreationSource()
     {
@@ -90,7 +90,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the description
     * Policy description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -119,7 +119,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the isAssigned
     * Policy assignment status. This property is read-only.
     *
-    * @return bool|null The isAssigned
+    * @return bool The isAssigned
     */
     public function getIsAssigned()
     {
@@ -148,12 +148,12 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the lastModifiedDateTime
     * Policy last modification date and time. This property is read-only.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -181,7 +181,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the name
     * Policy name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -210,12 +210,12 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the platforms
     * Platforms for this policy. Possible values are: none, macOS, windows10X, windows10.
     *
-    * @return DeviceManagementConfigurationPlatforms|null The platforms
+    * @return DeviceManagementConfigurationPlatforms The platforms
     */
     public function getPlatforms()
     {
         if (array_key_exists("platforms", $this->_propDict)) {
-            if (is_a($this->_propDict["platforms"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms") || is_null($this->_propDict["platforms"])) {
+            if (is_a($this->_propDict["platforms"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPlatforms")) {
                 return $this->_propDict["platforms"];
             } else {
                 $this->_propDict["platforms"] = new DeviceManagementConfigurationPlatforms($this->_propDict["platforms"]);
@@ -243,7 +243,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -272,7 +272,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the settingCount
     * Number of settings. This property is read-only.
     *
-    * @return int|null The settingCount
+    * @return int The settingCount
     */
     public function getSettingCount()
     {
@@ -301,12 +301,12 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the technologies
     * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager.
     *
-    * @return DeviceManagementConfigurationTechnologies|null The technologies
+    * @return DeviceManagementConfigurationTechnologies The technologies
     */
     public function getTechnologies()
     {
         if (array_key_exists("technologies", $this->_propDict)) {
-            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies") || is_null($this->_propDict["technologies"])) {
+            if (is_a($this->_propDict["technologies"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationTechnologies")) {
                 return $this->_propDict["technologies"];
             } else {
                 $this->_propDict["technologies"] = new DeviceManagementConfigurationTechnologies($this->_propDict["technologies"]);
@@ -334,12 +334,12 @@ class DeviceManagementConfigurationPolicy extends Entity
     * Gets the templateReference
     * Template reference information
     *
-    * @return DeviceManagementConfigurationPolicyTemplateReference|null The templateReference
+    * @return DeviceManagementConfigurationPolicyTemplateReference The templateReference
     */
     public function getTemplateReference()
     {
         if (array_key_exists("templateReference", $this->_propDict)) {
-            if (is_a($this->_propDict["templateReference"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPolicyTemplateReference") || is_null($this->_propDict["templateReference"])) {
+            if (is_a($this->_propDict["templateReference"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationPolicyTemplateReference")) {
                 return $this->_propDict["templateReference"];
             } else {
                 $this->_propDict["templateReference"] = new DeviceManagementConfigurationPolicyTemplateReference($this->_propDict["templateReference"]);
@@ -368,7 +368,7 @@ class DeviceManagementConfigurationPolicy extends Entity
      * Gets the assignments
     * Policy assignments
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -389,7 +389,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -398,7 +398,7 @@ class DeviceManagementConfigurationPolicy extends Entity
      * Gets the settings
     * Policy settings
      *
-     * @return array|null The settings
+     * @return array The settings
      */
     public function getSettings()
     {
@@ -419,7 +419,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     */
     public function setSettings($val)
     {
-        $this->_propDict["settings"] = $val;
+		$this->_propDict["settings"] = $val;
         return $this;
     }
     

@@ -27,7 +27,7 @@ class InformationalUrl extends Entity
     * Gets the logoUrl
     * CDN URL to the application's logo, Read-only.
     *
-    * @return string|null The logoUrl
+    * @return string The logoUrl
     */
     public function getLogoUrl()
     {
@@ -55,7 +55,7 @@ class InformationalUrl extends Entity
     * Gets the marketingUrl
     * Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
     *
-    * @return string|null The marketingUrl
+    * @return string The marketingUrl
     */
     public function getMarketingUrl()
     {
@@ -83,7 +83,7 @@ class InformationalUrl extends Entity
     * Gets the privacyStatementUrl
     * Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
     *
-    * @return string|null The privacyStatementUrl
+    * @return string The privacyStatementUrl
     */
     public function getPrivacyStatementUrl()
     {
@@ -111,7 +111,7 @@ class InformationalUrl extends Entity
     * Gets the supportUrl
     * Link to the application's support page. For example, https://www.contoso.com/app/support
     *
-    * @return string|null The supportUrl
+    * @return string The supportUrl
     */
     public function getSupportUrl()
     {
@@ -139,7 +139,7 @@ class InformationalUrl extends Entity
     * Gets the termsOfServiceUrl
     * Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
     *
-    * @return string|null The termsOfServiceUrl
+    * @return string The termsOfServiceUrl
     */
     public function getTermsOfServiceUrl()
     {

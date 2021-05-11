@@ -28,7 +28,7 @@ class WorkbookChartFont extends Entity
     * Gets the bold
     * Represents the bold status of font.
     *
-    * @return bool|null The bold
+    * @return bool The bold
     */
     public function getBold()
     {
@@ -57,7 +57,7 @@ class WorkbookChartFont extends Entity
     * Gets the color
     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
     *
-    * @return string|null The color
+    * @return string The color
     */
     public function getColor()
     {
@@ -86,7 +86,7 @@ class WorkbookChartFont extends Entity
     * Gets the italic
     * Represents the italic status of the font.
     *
-    * @return bool|null The italic
+    * @return bool The italic
     */
     public function getItalic()
     {
@@ -115,7 +115,7 @@ class WorkbookChartFont extends Entity
     * Gets the name
     * Font name (e.g. 'Calibri')
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -144,7 +144,7 @@ class WorkbookChartFont extends Entity
     * Gets the size
     * Size of the font (e.g. 11)
     *
-    * @return float|null The size
+    * @return float The size
     */
     public function getSize()
     {
@@ -165,7 +165,7 @@ class WorkbookChartFont extends Entity
     */
     public function setSize($val)
     {
-        $this->_propDict["size"] = floatval($val);
+        $this->_propDict["size"] = $val;
         return $this;
     }
     
@@ -173,7 +173,7 @@ class WorkbookChartFont extends Entity
     * Gets the underline
     * Type of underline applied to the font. The possible values are: None, Single.
     *
-    * @return string|null The underline
+    * @return string The underline
     */
     public function getUnderline()
     {

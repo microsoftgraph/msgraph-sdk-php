@@ -28,12 +28,12 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the applyActions
     * Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.
     *
-    * @return AccessReviewApplyAction|null The applyActions
+    * @return AccessReviewApplyAction The applyActions
     */
     public function getApplyActions()
     {
         if (array_key_exists("applyActions", $this->_propDict)) {
-            if (is_a($this->_propDict["applyActions"], "\Beta\Microsoft\Graph\Model\AccessReviewApplyAction") || is_null($this->_propDict["applyActions"])) {
+            if (is_a($this->_propDict["applyActions"], "\Beta\Microsoft\Graph\Model\AccessReviewApplyAction")) {
                 return $this->_propDict["applyActions"];
             } else {
                 $this->_propDict["applyActions"] = new AccessReviewApplyAction($this->_propDict["applyActions"]);
@@ -60,7 +60,7 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the autoApplyDecisionsEnabled
     * Flag to indicate whether auto-apply feature is enabled.
     *
-    * @return bool|null The autoApplyDecisionsEnabled
+    * @return bool The autoApplyDecisionsEnabled
     */
     public function getAutoApplyDecisionsEnabled()
     {
@@ -88,7 +88,7 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the defaultDecision
     * Decision chosen if defaultDecisionEnabled is enabled. Can be one of 'Approve', 'Deny', or 'Recommendation'.
     *
-    * @return string|null The defaultDecision
+    * @return string The defaultDecision
     */
     public function getDefaultDecision()
     {
@@ -116,7 +116,7 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the defaultDecisionEnabled
     * Flag to indicate whether default decision is enabled/disabled when reviewers do not respond.
     *
-    * @return bool|null The defaultDecisionEnabled
+    * @return bool The defaultDecisionEnabled
     */
     public function getDefaultDecisionEnabled()
     {
@@ -144,7 +144,7 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the instanceDurationInDays
     * Duration of each recurrence of review (accessReviewInstance) in number of days.
     *
-    * @return int|null The instanceDurationInDays
+    * @return int The instanceDurationInDays
     */
     public function getInstanceDurationInDays()
     {
@@ -172,7 +172,7 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the justificationRequiredOnApproval
     * Flag to indicate whether reviewers are required to provide justification with their decision.
     *
-    * @return bool|null The justificationRequiredOnApproval
+    * @return bool The justificationRequiredOnApproval
     */
     public function getJustificationRequiredOnApproval()
     {
@@ -200,7 +200,7 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the mailNotificationsEnabled
     * Flag to indicate whether emails are enabled/disabled.
     *
-    * @return bool|null The mailNotificationsEnabled
+    * @return bool The mailNotificationsEnabled
     */
     public function getMailNotificationsEnabled()
     {
@@ -228,7 +228,7 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the recommendationsEnabled
     * Flag to indicate whether decision recommendations are enabled/disabled.
     *
-    * @return bool|null The recommendationsEnabled
+    * @return bool The recommendationsEnabled
     */
     public function getRecommendationsEnabled()
     {
@@ -257,12 +257,12 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the recurrence
     * Detailed settings for recurrence. Using standard Outlook recurrence object. Note that dayOfMonth is not supported - use property startDate on recurrenceRange to determine the day the review will start on.
     *
-    * @return PatternedRecurrence|null The recurrence
+    * @return PatternedRecurrence The recurrence
     */
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence") || is_null($this->_propDict["recurrence"])) {
+            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -289,7 +289,7 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the reminderNotificationsEnabled
     * Flag to indicate whether reminders are enabled/disabled.
     *
-    * @return bool|null The reminderNotificationsEnabled
+    * @return bool The reminderNotificationsEnabled
     */
     public function getReminderNotificationsEnabled()
     {

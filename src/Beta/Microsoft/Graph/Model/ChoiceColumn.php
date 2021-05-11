@@ -27,7 +27,7 @@ class ChoiceColumn extends Entity
     * Gets the allowTextEntry
     * If true, allows custom values that aren't in the configured choices.
     *
-    * @return bool|null The allowTextEntry
+    * @return bool The allowTextEntry
     */
     public function getAllowTextEntry()
     {
@@ -55,7 +55,7 @@ class ChoiceColumn extends Entity
     * Gets the choices
     * The list of values available for this column.
     *
-    * @return string|null The choices
+    * @return string The choices
     */
     public function getChoices()
     {
@@ -83,7 +83,7 @@ class ChoiceColumn extends Entity
     * Gets the displayAs
     * How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
     *
-    * @return string|null The displayAs
+    * @return string The displayAs
     */
     public function getDisplayAs()
     {

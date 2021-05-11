@@ -28,7 +28,7 @@ class GroupLifecyclePolicy extends Entity
     * Gets the alternateNotificationEmails
     * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
     *
-    * @return string|null The alternateNotificationEmails
+    * @return string The alternateNotificationEmails
     */
     public function getAlternateNotificationEmails()
     {
@@ -57,7 +57,7 @@ class GroupLifecyclePolicy extends Entity
     * Gets the groupLifetimeInDays
     * Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
     *
-    * @return int|null The groupLifetimeInDays
+    * @return int The groupLifetimeInDays
     */
     public function getGroupLifetimeInDays()
     {
@@ -86,7 +86,7 @@ class GroupLifecyclePolicy extends Entity
     * Gets the managedGroupTypes
     * The group type for which the expiration policy applies. Possible values are All, Selected or None.
     *
-    * @return string|null The managedGroupTypes
+    * @return string The managedGroupTypes
     */
     public function getManagedGroupTypes()
     {

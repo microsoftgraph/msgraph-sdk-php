@@ -28,12 +28,12 @@ class OnPremisesPublishingProfile extends Entity
     * Gets the hybridAgentUpdaterConfiguration
     * Represents a hybridAgentUpdaterConfiguration object.
     *
-    * @return HybridAgentUpdaterConfiguration|null The hybridAgentUpdaterConfiguration
+    * @return HybridAgentUpdaterConfiguration The hybridAgentUpdaterConfiguration
     */
     public function getHybridAgentUpdaterConfiguration()
     {
         if (array_key_exists("hybridAgentUpdaterConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["hybridAgentUpdaterConfiguration"], "\Beta\Microsoft\Graph\Model\HybridAgentUpdaterConfiguration") || is_null($this->_propDict["hybridAgentUpdaterConfiguration"])) {
+            if (is_a($this->_propDict["hybridAgentUpdaterConfiguration"], "\Beta\Microsoft\Graph\Model\HybridAgentUpdaterConfiguration")) {
                 return $this->_propDict["hybridAgentUpdaterConfiguration"];
             } else {
                 $this->_propDict["hybridAgentUpdaterConfiguration"] = new HybridAgentUpdaterConfiguration($this->_propDict["hybridAgentUpdaterConfiguration"]);
@@ -61,7 +61,7 @@ class OnPremisesPublishingProfile extends Entity
     * Gets the isEnabled
     * Represents if Azure AD Application Proxy is enabled for the tenant.
     *
-    * @return bool|null The isEnabled
+    * @return bool The isEnabled
     */
     public function getIsEnabled()
     {
@@ -91,7 +91,7 @@ class OnPremisesPublishingProfile extends Entity
      * Gets the agentGroups
     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
      *
-     * @return array|null The agentGroups
+     * @return array The agentGroups
      */
     public function getAgentGroups()
     {
@@ -112,7 +112,7 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setAgentGroups($val)
     {
-        $this->_propDict["agentGroups"] = $val;
+		$this->_propDict["agentGroups"] = $val;
         return $this;
     }
     
@@ -121,7 +121,7 @@ class OnPremisesPublishingProfile extends Entity
      * Gets the agents
     * List of existing onPremisesAgent objects. Read-only. Nullable.
      *
-     * @return array|null The agents
+     * @return array The agents
      */
     public function getAgents()
     {
@@ -142,7 +142,7 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setAgents($val)
     {
-        $this->_propDict["agents"] = $val;
+		$this->_propDict["agents"] = $val;
         return $this;
     }
     
@@ -151,7 +151,7 @@ class OnPremisesPublishingProfile extends Entity
      * Gets the connectorGroups
     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      *
-     * @return array|null The connectorGroups
+     * @return array The connectorGroups
      */
     public function getConnectorGroups()
     {
@@ -172,7 +172,7 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setConnectorGroups($val)
     {
-        $this->_propDict["connectorGroups"] = $val;
+		$this->_propDict["connectorGroups"] = $val;
         return $this;
     }
     
@@ -181,7 +181,7 @@ class OnPremisesPublishingProfile extends Entity
      * Gets the connectors
     * List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
      *
-     * @return array|null The connectors
+     * @return array The connectors
      */
     public function getConnectors()
     {
@@ -202,7 +202,7 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setConnectors($val)
     {
-        $this->_propDict["connectors"] = $val;
+		$this->_propDict["connectors"] = $val;
         return $this;
     }
     
@@ -211,7 +211,7 @@ class OnPremisesPublishingProfile extends Entity
      * Gets the publishedResources
     * List of existing publishedResource objects. Read-only. Nullable.
      *
-     * @return array|null The publishedResources
+     * @return array The publishedResources
      */
     public function getPublishedResources()
     {
@@ -232,7 +232,7 @@ class OnPremisesPublishingProfile extends Entity
     */
     public function setPublishedResources($val)
     {
-        $this->_propDict["publishedResources"] = $val;
+		$this->_propDict["publishedResources"] = $val;
         return $this;
     }
     

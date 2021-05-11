@@ -28,7 +28,7 @@ class External extends Entity
      /** 
      * Gets the connections
      *
-     * @return array|null The connections
+     * @return array The connections
      */
     public function getConnections()
     {
@@ -48,7 +48,7 @@ class External extends Entity
     */
     public function setConnections($val)
     {
-        $this->_propDict["connections"] = $val;
+		$this->_propDict["connections"] = $val;
         return $this;
     }
     

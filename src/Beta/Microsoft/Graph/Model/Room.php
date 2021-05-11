@@ -28,7 +28,7 @@ class Room extends Place
     * Gets the audioDeviceName
     * Specifies the name of the audio device in the room.
     *
-    * @return string|null The audioDeviceName
+    * @return string The audioDeviceName
     */
     public function getAudioDeviceName()
     {
@@ -57,12 +57,12 @@ class Room extends Place
     * Gets the bookingType
     * Type of room. Possible values are standard, and reserved.
     *
-    * @return BookingType|null The bookingType
+    * @return BookingType The bookingType
     */
     public function getBookingType()
     {
         if (array_key_exists("bookingType", $this->_propDict)) {
-            if (is_a($this->_propDict["bookingType"], "\Beta\Microsoft\Graph\Model\BookingType") || is_null($this->_propDict["bookingType"])) {
+            if (is_a($this->_propDict["bookingType"], "\Beta\Microsoft\Graph\Model\BookingType")) {
                 return $this->_propDict["bookingType"];
             } else {
                 $this->_propDict["bookingType"] = new BookingType($this->_propDict["bookingType"]);
@@ -90,7 +90,7 @@ class Room extends Place
     * Gets the building
     * Specifies the building name or building number that the room is in.
     *
-    * @return string|null The building
+    * @return string The building
     */
     public function getBuilding()
     {
@@ -119,7 +119,7 @@ class Room extends Place
     * Gets the capacity
     * Specifies the capacity of the room.
     *
-    * @return int|null The capacity
+    * @return int The capacity
     */
     public function getCapacity()
     {
@@ -148,7 +148,7 @@ class Room extends Place
     * Gets the displayDeviceName
     * Specifies the name of the display device in the room.
     *
-    * @return string|null The displayDeviceName
+    * @return string The displayDeviceName
     */
     public function getDisplayDeviceName()
     {
@@ -177,7 +177,7 @@ class Room extends Place
     * Gets the emailAddress
     * Email address of the room.
     *
-    * @return string|null The emailAddress
+    * @return string The emailAddress
     */
     public function getEmailAddress()
     {
@@ -206,7 +206,7 @@ class Room extends Place
     * Gets the floorLabel
     * Specifies a descriptive label for the floor, for example, P.
     *
-    * @return string|null The floorLabel
+    * @return string The floorLabel
     */
     public function getFloorLabel()
     {
@@ -235,7 +235,7 @@ class Room extends Place
     * Gets the floorNumber
     * Specifies the floor number that the room is on.
     *
-    * @return int|null The floorNumber
+    * @return int The floorNumber
     */
     public function getFloorNumber()
     {
@@ -264,7 +264,7 @@ class Room extends Place
     * Gets the isWheelChairAccessible
     * Specifies whether the room is wheelchair accessible.
     *
-    * @return bool|null The isWheelChairAccessible
+    * @return bool The isWheelChairAccessible
     */
     public function getIsWheelChairAccessible()
     {
@@ -293,7 +293,7 @@ class Room extends Place
     * Gets the label
     * Specifies a descriptive label for the room, for example, a number or name.
     *
-    * @return string|null The label
+    * @return string The label
     */
     public function getLabel()
     {
@@ -322,7 +322,7 @@ class Room extends Place
     * Gets the nickname
     * Specifies a nickname for the room, for example, 'conf room'.
     *
-    * @return string|null The nickname
+    * @return string The nickname
     */
     public function getNickname()
     {
@@ -351,7 +351,7 @@ class Room extends Place
     * Gets the tags
     * Specifies additional features of the room, for example, details like the type of view or furniture type.
     *
-    * @return string|null The tags
+    * @return string The tags
     */
     public function getTags()
     {
@@ -380,7 +380,7 @@ class Room extends Place
     * Gets the videoDeviceName
     * Specifies the name of the video device in the room.
     *
-    * @return string|null The videoDeviceName
+    * @return string The videoDeviceName
     */
     public function getVideoDeviceName()
     {

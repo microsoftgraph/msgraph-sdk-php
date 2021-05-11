@@ -28,12 +28,12 @@ class DeviceManagementSettingDependency extends Entity
     * Gets the constraints
     * Collection of constraints for the dependency setting value
     *
-    * @return DeviceManagementConstraint|null The constraints
+    * @return DeviceManagementConstraint The constraints
     */
     public function getConstraints()
     {
         if (array_key_exists("constraints", $this->_propDict)) {
-            if (is_a($this->_propDict["constraints"], "\Beta\Microsoft\Graph\Model\DeviceManagementConstraint") || is_null($this->_propDict["constraints"])) {
+            if (is_a($this->_propDict["constraints"], "\Beta\Microsoft\Graph\Model\DeviceManagementConstraint")) {
                 return $this->_propDict["constraints"];
             } else {
                 $this->_propDict["constraints"] = new DeviceManagementConstraint($this->_propDict["constraints"]);
@@ -60,7 +60,7 @@ class DeviceManagementSettingDependency extends Entity
     * Gets the definitionId
     * The setting definition ID of the setting depended on
     *
-    * @return string|null The definitionId
+    * @return string The definitionId
     */
     public function getDefinitionId()
     {

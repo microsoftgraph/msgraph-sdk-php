@@ -29,7 +29,7 @@ class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfigura
      * Gets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
      *
-     * @return array|null The includeTargets
+     * @return array The includeTargets
      */
     public function getIncludeTargets()
     {
@@ -50,7 +50,7 @@ class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfigura
     */
     public function setIncludeTargets($val)
     {
-        $this->_propDict["includeTargets"] = $val;
+		$this->_propDict["includeTargets"] = $val;
         return $this;
     }
     

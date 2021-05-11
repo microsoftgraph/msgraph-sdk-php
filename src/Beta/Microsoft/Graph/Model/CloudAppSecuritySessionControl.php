@@ -26,14 +26,14 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl
 
     /**
     * Gets the cloudAppSecurityType
-    * Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
+    * Possible values are: mcasConfigured, monitorOnly, blockDownloads. Learn more about these values here: https://docs.microsoft.com/cloud-app-security/proxy-deployment-aad#step-1-create-an-azure-ad-conditional-access-test-policy-
     *
-    * @return CloudAppSecuritySessionControlType|null The cloudAppSecurityType
+    * @return CloudAppSecuritySessionControlType The cloudAppSecurityType
     */
     public function getCloudAppSecurityType()
     {
         if (array_key_exists("cloudAppSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["cloudAppSecurityType"], "\Beta\Microsoft\Graph\Model\CloudAppSecuritySessionControlType") || is_null($this->_propDict["cloudAppSecurityType"])) {
+            if (is_a($this->_propDict["cloudAppSecurityType"], "\Beta\Microsoft\Graph\Model\CloudAppSecuritySessionControlType")) {
                 return $this->_propDict["cloudAppSecurityType"];
             } else {
                 $this->_propDict["cloudAppSecurityType"] = new CloudAppSecuritySessionControlType($this->_propDict["cloudAppSecurityType"]);
@@ -45,7 +45,7 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl
 
     /**
     * Sets the cloudAppSecurityType
-    * Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
+    * Possible values are: mcasConfigured, monitorOnly, blockDownloads. Learn more about these values here: https://docs.microsoft.com/cloud-app-security/proxy-deployment-aad#step-1-create-an-azure-ad-conditional-access-test-policy-
     *
     * @param CloudAppSecuritySessionControlType $val The value to assign to the cloudAppSecurityType
     *

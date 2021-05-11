@@ -28,7 +28,7 @@ class RoleScopeTag extends Entity
     * Gets the description
     * Description of the Role Scope Tag.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class RoleScopeTag extends Entity
     * Gets the displayName
     * The display or friendly name of the Role Scope Tag.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class RoleScopeTag extends Entity
     * Gets the isBuiltIn
     * Description of the Role Scope Tag.
     *
-    * @return bool|null The isBuiltIn
+    * @return bool The isBuiltIn
     */
     public function getIsBuiltIn()
     {
@@ -116,7 +116,7 @@ class RoleScopeTag extends Entity
      * Gets the assignments
     * The list of assignments for this Role Scope Tag.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -137,7 +137,7 @@ class RoleScopeTag extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

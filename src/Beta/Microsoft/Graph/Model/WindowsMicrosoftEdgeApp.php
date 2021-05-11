@@ -28,12 +28,12 @@ class WindowsMicrosoftEdgeApp extends MobileApp
     * Gets the channel
     * The channel to install on target devices. Possible values are: dev, beta, stable.
     *
-    * @return MicrosoftEdgeChannel|null The channel
+    * @return MicrosoftEdgeChannel The channel
     */
     public function getChannel()
     {
         if (array_key_exists("channel", $this->_propDict)) {
-            if (is_a($this->_propDict["channel"], "\Beta\Microsoft\Graph\Model\MicrosoftEdgeChannel") || is_null($this->_propDict["channel"])) {
+            if (is_a($this->_propDict["channel"], "\Beta\Microsoft\Graph\Model\MicrosoftEdgeChannel")) {
                 return $this->_propDict["channel"];
             } else {
                 $this->_propDict["channel"] = new MicrosoftEdgeChannel($this->_propDict["channel"]);
@@ -61,7 +61,7 @@ class WindowsMicrosoftEdgeApp extends MobileApp
     * Gets the displayLanguageLocale
     * The language locale to use when the Edge app displays text to the user.
     *
-    * @return string|null The displayLanguageLocale
+    * @return string The displayLanguageLocale
     */
     public function getDisplayLanguageLocale()
     {

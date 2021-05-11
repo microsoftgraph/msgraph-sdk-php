@@ -28,12 +28,12 @@ class AssignmentFilterStatusDetails extends Entity
     * Gets the deviceProperties
     * Device properties used for filter evaluation during device check-in time.
     *
-    * @return KeyValuePair|null The deviceProperties
+    * @return KeyValuePair The deviceProperties
     */
     public function getDeviceProperties()
     {
         if (array_key_exists("deviceProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceProperties"], "\Beta\Microsoft\Graph\Model\KeyValuePair") || is_null($this->_propDict["deviceProperties"])) {
+            if (is_a($this->_propDict["deviceProperties"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["deviceProperties"];
             } else {
                 $this->_propDict["deviceProperties"] = new KeyValuePair($this->_propDict["deviceProperties"]);
@@ -61,12 +61,12 @@ class AssignmentFilterStatusDetails extends Entity
     * Gets the evalutionSummaries
     * Evaluation result summaries for each filter associated to device and payload
     *
-    * @return AssignmentFilterEvaluationSummary|null The evalutionSummaries
+    * @return AssignmentFilterEvaluationSummary The evalutionSummaries
     */
     public function getEvalutionSummaries()
     {
         if (array_key_exists("evalutionSummaries", $this->_propDict)) {
-            if (is_a($this->_propDict["evalutionSummaries"], "\Beta\Microsoft\Graph\Model\AssignmentFilterEvaluationSummary") || is_null($this->_propDict["evalutionSummaries"])) {
+            if (is_a($this->_propDict["evalutionSummaries"], "\Beta\Microsoft\Graph\Model\AssignmentFilterEvaluationSummary")) {
                 return $this->_propDict["evalutionSummaries"];
             } else {
                 $this->_propDict["evalutionSummaries"] = new AssignmentFilterEvaluationSummary($this->_propDict["evalutionSummaries"]);
@@ -93,7 +93,7 @@ class AssignmentFilterStatusDetails extends Entity
     * Gets the managedDeviceId
     * Unique identifier for the device object.
     *
-    * @return string|null The managedDeviceId
+    * @return string The managedDeviceId
     */
     public function getManagedDeviceId()
     {
@@ -121,7 +121,7 @@ class AssignmentFilterStatusDetails extends Entity
     * Gets the payloadId
     * Unique identifier for payload object.
     *
-    * @return string|null The payloadId
+    * @return string The payloadId
     */
     public function getPayloadId()
     {
@@ -149,7 +149,7 @@ class AssignmentFilterStatusDetails extends Entity
     * Gets the userId
     * Unique identifier for UserId object. Can be null
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {

@@ -28,12 +28,12 @@ class EducationPointsOutcome extends EducationOutcome
     * Gets the points
     * The numeric grade the teacher has given the student for this assignment.
     *
-    * @return EducationAssignmentPointsGrade|null The points
+    * @return EducationAssignmentPointsGrade The points
     */
     public function getPoints()
     {
         if (array_key_exists("points", $this->_propDict)) {
-            if (is_a($this->_propDict["points"], "\Beta\Microsoft\Graph\Model\EducationAssignmentPointsGrade") || is_null($this->_propDict["points"])) {
+            if (is_a($this->_propDict["points"], "\Beta\Microsoft\Graph\Model\EducationAssignmentPointsGrade")) {
                 return $this->_propDict["points"];
             } else {
                 $this->_propDict["points"] = new EducationAssignmentPointsGrade($this->_propDict["points"]);
@@ -61,12 +61,12 @@ class EducationPointsOutcome extends EducationOutcome
     * Gets the publishedPoints
     * A copy of the points property that is made when the grade is released to the student.
     *
-    * @return EducationAssignmentPointsGrade|null The publishedPoints
+    * @return EducationAssignmentPointsGrade The publishedPoints
     */
     public function getPublishedPoints()
     {
         if (array_key_exists("publishedPoints", $this->_propDict)) {
-            if (is_a($this->_propDict["publishedPoints"], "\Beta\Microsoft\Graph\Model\EducationAssignmentPointsGrade") || is_null($this->_propDict["publishedPoints"])) {
+            if (is_a($this->_propDict["publishedPoints"], "\Beta\Microsoft\Graph\Model\EducationAssignmentPointsGrade")) {
                 return $this->_propDict["publishedPoints"];
             } else {
                 $this->_propDict["publishedPoints"] = new EducationAssignmentPointsGrade($this->_propDict["publishedPoints"]);

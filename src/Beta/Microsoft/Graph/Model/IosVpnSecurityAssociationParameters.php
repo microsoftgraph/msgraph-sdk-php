@@ -27,7 +27,7 @@ class IosVpnSecurityAssociationParameters extends Entity
     * Gets the lifetimeInMinutes
     * Lifetime (minutes)
     *
-    * @return int|null The lifetimeInMinutes
+    * @return int The lifetimeInMinutes
     */
     public function getLifetimeInMinutes()
     {
@@ -55,7 +55,7 @@ class IosVpnSecurityAssociationParameters extends Entity
     * Gets the securityDiffieHellmanGroup
     * Diffie-Hellman Group
     *
-    * @return int|null The securityDiffieHellmanGroup
+    * @return int The securityDiffieHellmanGroup
     */
     public function getSecurityDiffieHellmanGroup()
     {
@@ -84,12 +84,12 @@ class IosVpnSecurityAssociationParameters extends Entity
     * Gets the securityEncryptionAlgorithm
     * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
     *
-    * @return VpnEncryptionAlgorithmType|null The securityEncryptionAlgorithm
+    * @return VpnEncryptionAlgorithmType The securityEncryptionAlgorithm
     */
     public function getSecurityEncryptionAlgorithm()
     {
         if (array_key_exists("securityEncryptionAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["securityEncryptionAlgorithm"], "\Beta\Microsoft\Graph\Model\VpnEncryptionAlgorithmType") || is_null($this->_propDict["securityEncryptionAlgorithm"])) {
+            if (is_a($this->_propDict["securityEncryptionAlgorithm"], "\Beta\Microsoft\Graph\Model\VpnEncryptionAlgorithmType")) {
                 return $this->_propDict["securityEncryptionAlgorithm"];
             } else {
                 $this->_propDict["securityEncryptionAlgorithm"] = new VpnEncryptionAlgorithmType($this->_propDict["securityEncryptionAlgorithm"]);
@@ -117,12 +117,12 @@ class IosVpnSecurityAssociationParameters extends Entity
     * Gets the securityIntegrityAlgorithm
     * Integrity algorithm. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
     *
-    * @return VpnIntegrityAlgorithmType|null The securityIntegrityAlgorithm
+    * @return VpnIntegrityAlgorithmType The securityIntegrityAlgorithm
     */
     public function getSecurityIntegrityAlgorithm()
     {
         if (array_key_exists("securityIntegrityAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["securityIntegrityAlgorithm"], "\Beta\Microsoft\Graph\Model\VpnIntegrityAlgorithmType") || is_null($this->_propDict["securityIntegrityAlgorithm"])) {
+            if (is_a($this->_propDict["securityIntegrityAlgorithm"], "\Beta\Microsoft\Graph\Model\VpnIntegrityAlgorithmType")) {
                 return $this->_propDict["securityIntegrityAlgorithm"];
             } else {
                 $this->_propDict["securityIntegrityAlgorithm"] = new VpnIntegrityAlgorithmType($this->_propDict["securityIntegrityAlgorithm"]);

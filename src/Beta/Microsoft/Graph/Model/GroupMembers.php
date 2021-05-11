@@ -27,7 +27,7 @@ class GroupMembers extends UserSet
     * Gets the description
     * The name of the group in Azure AD. Read only.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -55,7 +55,7 @@ class GroupMembers extends UserSet
     * Gets the id
     * The ID of the group in Azure AD.
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {

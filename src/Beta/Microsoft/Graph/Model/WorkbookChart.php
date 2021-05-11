@@ -28,7 +28,7 @@ class WorkbookChart extends Entity
     * Gets the height
     * Represents the height, in points, of the chart object.
     *
-    * @return float|null The height
+    * @return float The height
     */
     public function getHeight()
     {
@@ -49,7 +49,7 @@ class WorkbookChart extends Entity
     */
     public function setHeight($val)
     {
-        $this->_propDict["height"] = floatval($val);
+        $this->_propDict["height"] = $val;
         return $this;
     }
     
@@ -57,7 +57,7 @@ class WorkbookChart extends Entity
     * Gets the left
     * The distance, in points, from the left side of the chart to the worksheet origin.
     *
-    * @return float|null The left
+    * @return float The left
     */
     public function getLeft()
     {
@@ -78,7 +78,7 @@ class WorkbookChart extends Entity
     */
     public function setLeft($val)
     {
-        $this->_propDict["left"] = floatval($val);
+        $this->_propDict["left"] = $val;
         return $this;
     }
     
@@ -86,7 +86,7 @@ class WorkbookChart extends Entity
     * Gets the name
     * Represents the name of a chart object.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -115,7 +115,7 @@ class WorkbookChart extends Entity
     * Gets the top
     * Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
     *
-    * @return float|null The top
+    * @return float The top
     */
     public function getTop()
     {
@@ -136,7 +136,7 @@ class WorkbookChart extends Entity
     */
     public function setTop($val)
     {
-        $this->_propDict["top"] = floatval($val);
+        $this->_propDict["top"] = $val;
         return $this;
     }
     
@@ -144,7 +144,7 @@ class WorkbookChart extends Entity
     * Gets the width
     * Represents the width, in points, of the chart object.
     *
-    * @return float|null The width
+    * @return float The width
     */
     public function getWidth()
     {
@@ -165,7 +165,7 @@ class WorkbookChart extends Entity
     */
     public function setWidth($val)
     {
-        $this->_propDict["width"] = floatval($val);
+        $this->_propDict["width"] = $val;
         return $this;
     }
     
@@ -173,12 +173,12 @@ class WorkbookChart extends Entity
     * Gets the axes
     * Represents chart axes. Read-only.
     *
-    * @return WorkbookChartAxes|null The axes
+    * @return WorkbookChartAxes The axes
     */
     public function getAxes()
     {
         if (array_key_exists("axes", $this->_propDict)) {
-            if (is_a($this->_propDict["axes"], "\Beta\Microsoft\Graph\Model\WorkbookChartAxes") || is_null($this->_propDict["axes"])) {
+            if (is_a($this->_propDict["axes"], "\Beta\Microsoft\Graph\Model\WorkbookChartAxes")) {
                 return $this->_propDict["axes"];
             } else {
                 $this->_propDict["axes"] = new WorkbookChartAxes($this->_propDict["axes"]);
@@ -206,12 +206,12 @@ class WorkbookChart extends Entity
     * Gets the dataLabels
     * Represents the datalabels on the chart. Read-only.
     *
-    * @return WorkbookChartDataLabels|null The dataLabels
+    * @return WorkbookChartDataLabels The dataLabels
     */
     public function getDataLabels()
     {
         if (array_key_exists("dataLabels", $this->_propDict)) {
-            if (is_a($this->_propDict["dataLabels"], "\Beta\Microsoft\Graph\Model\WorkbookChartDataLabels") || is_null($this->_propDict["dataLabels"])) {
+            if (is_a($this->_propDict["dataLabels"], "\Beta\Microsoft\Graph\Model\WorkbookChartDataLabels")) {
                 return $this->_propDict["dataLabels"];
             } else {
                 $this->_propDict["dataLabels"] = new WorkbookChartDataLabels($this->_propDict["dataLabels"]);
@@ -239,12 +239,12 @@ class WorkbookChart extends Entity
     * Gets the format
     * Encapsulates the format properties for the chart area. Read-only.
     *
-    * @return WorkbookChartAreaFormat|null The format
+    * @return WorkbookChartAreaFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\WorkbookChartAreaFormat") || is_null($this->_propDict["format"])) {
+            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\WorkbookChartAreaFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartAreaFormat($this->_propDict["format"]);
@@ -272,12 +272,12 @@ class WorkbookChart extends Entity
     * Gets the legend
     * Represents the legend for the chart. Read-only.
     *
-    * @return WorkbookChartLegend|null The legend
+    * @return WorkbookChartLegend The legend
     */
     public function getLegend()
     {
         if (array_key_exists("legend", $this->_propDict)) {
-            if (is_a($this->_propDict["legend"], "\Beta\Microsoft\Graph\Model\WorkbookChartLegend") || is_null($this->_propDict["legend"])) {
+            if (is_a($this->_propDict["legend"], "\Beta\Microsoft\Graph\Model\WorkbookChartLegend")) {
                 return $this->_propDict["legend"];
             } else {
                 $this->_propDict["legend"] = new WorkbookChartLegend($this->_propDict["legend"]);
@@ -306,7 +306,7 @@ class WorkbookChart extends Entity
      * Gets the series
     * Represents either a single series or collection of series in the chart. Read-only.
      *
-     * @return array|null The series
+     * @return array The series
      */
     public function getSeries()
     {
@@ -327,7 +327,7 @@ class WorkbookChart extends Entity
     */
     public function setSeries($val)
     {
-        $this->_propDict["series"] = $val;
+		$this->_propDict["series"] = $val;
         return $this;
     }
     
@@ -335,12 +335,12 @@ class WorkbookChart extends Entity
     * Gets the title
     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
     *
-    * @return WorkbookChartTitle|null The title
+    * @return WorkbookChartTitle The title
     */
     public function getTitle()
     {
         if (array_key_exists("title", $this->_propDict)) {
-            if (is_a($this->_propDict["title"], "\Beta\Microsoft\Graph\Model\WorkbookChartTitle") || is_null($this->_propDict["title"])) {
+            if (is_a($this->_propDict["title"], "\Beta\Microsoft\Graph\Model\WorkbookChartTitle")) {
                 return $this->_propDict["title"];
             } else {
                 $this->_propDict["title"] = new WorkbookChartTitle($this->_propDict["title"]);
@@ -368,12 +368,12 @@ class WorkbookChart extends Entity
     * Gets the worksheet
     * The worksheet containing the current chart. Read-only.
     *
-    * @return WorkbookWorksheet|null The worksheet
+    * @return WorkbookWorksheet The worksheet
     */
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "\Beta\Microsoft\Graph\Model\WorkbookWorksheet") || is_null($this->_propDict["worksheet"])) {
+            if (is_a($this->_propDict["worksheet"], "\Beta\Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);

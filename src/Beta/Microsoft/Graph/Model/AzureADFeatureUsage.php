@@ -27,7 +27,7 @@ class AzureADFeatureUsage extends Entity
     /**
     * Gets the featureName
     *
-    * @return string|null The featureName
+    * @return string The featureName
     */
     public function getFeatureName()
     {
@@ -54,12 +54,12 @@ class AzureADFeatureUsage extends Entity
     /**
     * Gets the snapshotDateTime
     *
-    * @return \DateTime|null The snapshotDateTime
+    * @return \DateTime The snapshotDateTime
     */
     public function getSnapshotDateTime()
     {
         if (array_key_exists("snapshotDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["snapshotDateTime"], "\DateTime") || is_null($this->_propDict["snapshotDateTime"])) {
+            if (is_a($this->_propDict["snapshotDateTime"], "\DateTime")) {
                 return $this->_propDict["snapshotDateTime"];
             } else {
                 $this->_propDict["snapshotDateTime"] = new \DateTime($this->_propDict["snapshotDateTime"]);
@@ -85,7 +85,7 @@ class AzureADFeatureUsage extends Entity
     /**
     * Gets the usage
     *
-    * @return int|null The usage
+    * @return int The usage
     */
     public function getUsage()
     {

@@ -28,7 +28,7 @@ class GroupPolicyPresentationListBox extends GroupPolicyPresentation
     * Gets the explicitValue
     * If this option is specified true the user must specify the registry subkey value and the registry subkey name. The list box shows two columns, one for the name and one for the data. The default value is false.
     *
-    * @return bool|null The explicitValue
+    * @return bool The explicitValue
     */
     public function getExplicitValue()
     {
@@ -57,7 +57,7 @@ class GroupPolicyPresentationListBox extends GroupPolicyPresentation
     * Gets the valuePrefix
     * Not yet documented
     *
-    * @return string|null The valuePrefix
+    * @return string The valuePrefix
     */
     public function getValuePrefix()
     {

@@ -27,7 +27,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
     * Gets the displayName
     * Display name of the resource
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
     * Gets the id
     * Resource ID
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -83,7 +83,7 @@ class AccessReviewInstanceDecisionItemResource extends Entity
     * Gets the type
     * Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy.
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {

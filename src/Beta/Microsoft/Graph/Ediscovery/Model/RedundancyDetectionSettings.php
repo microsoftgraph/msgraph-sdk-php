@@ -27,7 +27,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the isEnabled
     * Indicates whether email threading and near duplicate detection are enabled.
     *
-    * @return bool|null The isEnabled
+    * @return bool The isEnabled
     */
     public function getIsEnabled()
     {
@@ -55,7 +55,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the maxWords
     * See Minimum/maximum number of words to learn more.
     *
-    * @return int|null The maxWords
+    * @return int The maxWords
     */
     public function getMaxWords()
     {
@@ -83,7 +83,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the minWords
     * See Minimum/maximum number of words to learn more.
     *
-    * @return int|null The minWords
+    * @return int The minWords
     */
     public function getMinWords()
     {
@@ -111,7 +111,7 @@ class RedundancyDetectionSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the similarityThreshold
     * See Document and email similarity threshold to learn more.
     *
-    * @return int|null The similarityThreshold
+    * @return int The similarityThreshold
     */
     public function getSimilarityThreshold()
     {

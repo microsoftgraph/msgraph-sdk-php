@@ -26,7 +26,7 @@ class ClassifcationErrorBase extends Entity
     /**
     * Gets the code
     *
-    * @return string|null The code
+    * @return string The code
     */
     public function getCode()
     {
@@ -53,12 +53,12 @@ class ClassifcationErrorBase extends Entity
     /**
     * Gets the innerError
     *
-    * @return ClassificationInnerError|null The innerError
+    * @return ClassificationInnerError The innerError
     */
     public function getInnerError()
     {
         if (array_key_exists("innerError", $this->_propDict)) {
-            if (is_a($this->_propDict["innerError"], "\Beta\Microsoft\Graph\Model\ClassificationInnerError") || is_null($this->_propDict["innerError"])) {
+            if (is_a($this->_propDict["innerError"], "\Beta\Microsoft\Graph\Model\ClassificationInnerError")) {
                 return $this->_propDict["innerError"];
             } else {
                 $this->_propDict["innerError"] = new ClassificationInnerError($this->_propDict["innerError"]);
@@ -83,7 +83,7 @@ class ClassifcationErrorBase extends Entity
     /**
     * Gets the message
     *
-    * @return string|null The message
+    * @return string The message
     */
     public function getMessage()
     {
@@ -109,7 +109,7 @@ class ClassifcationErrorBase extends Entity
     /**
     * Gets the target
     *
-    * @return string|null The target
+    * @return string The target
     */
     public function getTarget()
     {

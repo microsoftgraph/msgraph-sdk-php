@@ -27,7 +27,7 @@ class PlannerPlanContext extends Entity
     * Gets the associationType
     * Nullable. An app-defined type of association between the plannerPlan and the app. The app can use this information to track different kinds of relationships to the same plannerPlan.
     *
-    * @return string|null The associationType
+    * @return string The associationType
     */
     public function getAssociationType()
     {
@@ -56,12 +56,12 @@ class PlannerPlanContext extends Entity
     * Gets the createdDateTime
     * Read-only. The date and time when the plannerPlanContext was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -88,7 +88,7 @@ class PlannerPlanContext extends Entity
     * Gets the displayNameSegments
     * The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
     *
-    * @return string|null The displayNameSegments
+    * @return string The displayNameSegments
     */
     public function getDisplayNameSegments()
     {
@@ -116,7 +116,7 @@ class PlannerPlanContext extends Entity
     * Gets the isCreationContext
     * Read-only. Indicates whether the plan is created from the specified context. Auto-generated based on whether the context is specified as part of plan creation.
     *
-    * @return bool|null The isCreationContext
+    * @return bool The isCreationContext
     */
     public function getIsCreationContext()
     {
@@ -144,7 +144,7 @@ class PlannerPlanContext extends Entity
     * Gets the ownerAppId
     * Read-only. ID of the app that created the plannerPlanContext.
     *
-    * @return string|null The ownerAppId
+    * @return string The ownerAppId
     */
     public function getOwnerAppId()
     {

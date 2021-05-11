@@ -28,12 +28,12 @@ class PositionDetail extends Entity
     * Gets the company
     * Detail about the company or employer.
     *
-    * @return CompanyDetail|null The company
+    * @return CompanyDetail The company
     */
     public function getCompany()
     {
         if (array_key_exists("company", $this->_propDict)) {
-            if (is_a($this->_propDict["company"], "\Beta\Microsoft\Graph\Model\CompanyDetail") || is_null($this->_propDict["company"])) {
+            if (is_a($this->_propDict["company"], "\Beta\Microsoft\Graph\Model\CompanyDetail")) {
                 return $this->_propDict["company"];
             } else {
                 $this->_propDict["company"] = new CompanyDetail($this->_propDict["company"]);
@@ -60,7 +60,7 @@ class PositionDetail extends Entity
     * Gets the description
     * Description of the position in question.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -89,12 +89,12 @@ class PositionDetail extends Entity
     * Gets the endMonthYear
     * When the position ended.
     *
-    * @return \DateTime|null The endMonthYear
+    * @return \DateTime The endMonthYear
     */
     public function getEndMonthYear()
     {
         if (array_key_exists("endMonthYear", $this->_propDict)) {
-            if (is_a($this->_propDict["endMonthYear"], "\DateTime") || is_null($this->_propDict["endMonthYear"])) {
+            if (is_a($this->_propDict["endMonthYear"], "\DateTime")) {
                 return $this->_propDict["endMonthYear"];
             } else {
                 $this->_propDict["endMonthYear"] = new \DateTime($this->_propDict["endMonthYear"]);
@@ -121,7 +121,7 @@ class PositionDetail extends Entity
     * Gets the jobTitle
     * The title held when in that position.
     *
-    * @return string|null The jobTitle
+    * @return string The jobTitle
     */
     public function getJobTitle()
     {
@@ -149,7 +149,7 @@ class PositionDetail extends Entity
     * Gets the role
     * The role the position entailed.
     *
-    * @return string|null The role
+    * @return string The role
     */
     public function getRole()
     {
@@ -178,12 +178,12 @@ class PositionDetail extends Entity
     * Gets the startMonthYear
     * The start month and year of the position.
     *
-    * @return \DateTime|null The startMonthYear
+    * @return \DateTime The startMonthYear
     */
     public function getStartMonthYear()
     {
         if (array_key_exists("startMonthYear", $this->_propDict)) {
-            if (is_a($this->_propDict["startMonthYear"], "\DateTime") || is_null($this->_propDict["startMonthYear"])) {
+            if (is_a($this->_propDict["startMonthYear"], "\DateTime")) {
                 return $this->_propDict["startMonthYear"];
             } else {
                 $this->_propDict["startMonthYear"] = new \DateTime($this->_propDict["startMonthYear"]);
@@ -210,7 +210,7 @@ class PositionDetail extends Entity
     * Gets the summary
     * Short summary of the position.
     *
-    * @return string|null The summary
+    * @return string The summary
     */
     public function getSummary()
     {

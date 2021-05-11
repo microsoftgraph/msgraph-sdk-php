@@ -28,12 +28,12 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the airPrintExceptionAction
     * Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
     *
-    * @return VpnServiceExceptionAction|null The airPrintExceptionAction
+    * @return VpnServiceExceptionAction The airPrintExceptionAction
     */
     public function getAirPrintExceptionAction()
     {
         if (array_key_exists("airPrintExceptionAction", $this->_propDict)) {
-            if (is_a($this->_propDict["airPrintExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction") || is_null($this->_propDict["airPrintExceptionAction"])) {
+            if (is_a($this->_propDict["airPrintExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
                 return $this->_propDict["airPrintExceptionAction"];
             } else {
                 $this->_propDict["airPrintExceptionAction"] = new VpnServiceExceptionAction($this->_propDict["airPrintExceptionAction"]);
@@ -60,7 +60,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the allowAllCaptiveNetworkPlugins
     * Specifies whether traffic from all captive network plugins should be allowed outside the vpn
     *
-    * @return bool|null The allowAllCaptiveNetworkPlugins
+    * @return bool The allowAllCaptiveNetworkPlugins
     */
     public function getAllowAllCaptiveNetworkPlugins()
     {
@@ -88,7 +88,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the allowCaptiveWebSheet
     * Determines whether traffic from the Websheet app is allowed outside of the VPN
     *
-    * @return bool|null The allowCaptiveWebSheet
+    * @return bool The allowCaptiveWebSheet
     */
     public function getAllowCaptiveWebSheet()
     {
@@ -117,12 +117,12 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the allowedCaptiveNetworkPlugins
     * Determines whether all, some, or no non-native captive networking apps are allowed
     *
-    * @return SpecifiedCaptiveNetworkPlugins|null The allowedCaptiveNetworkPlugins
+    * @return SpecifiedCaptiveNetworkPlugins The allowedCaptiveNetworkPlugins
     */
     public function getAllowedCaptiveNetworkPlugins()
     {
         if (array_key_exists("allowedCaptiveNetworkPlugins", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedCaptiveNetworkPlugins"], "\Beta\Microsoft\Graph\Model\SpecifiedCaptiveNetworkPlugins") || is_null($this->_propDict["allowedCaptiveNetworkPlugins"])) {
+            if (is_a($this->_propDict["allowedCaptiveNetworkPlugins"], "\Beta\Microsoft\Graph\Model\SpecifiedCaptiveNetworkPlugins")) {
                 return $this->_propDict["allowedCaptiveNetworkPlugins"];
             } else {
                 $this->_propDict["allowedCaptiveNetworkPlugins"] = new SpecifiedCaptiveNetworkPlugins($this->_propDict["allowedCaptiveNetworkPlugins"]);
@@ -150,12 +150,12 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the cellularExceptionAction
     * Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
     *
-    * @return VpnServiceExceptionAction|null The cellularExceptionAction
+    * @return VpnServiceExceptionAction The cellularExceptionAction
     */
     public function getCellularExceptionAction()
     {
         if (array_key_exists("cellularExceptionAction", $this->_propDict)) {
-            if (is_a($this->_propDict["cellularExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction") || is_null($this->_propDict["cellularExceptionAction"])) {
+            if (is_a($this->_propDict["cellularExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
                 return $this->_propDict["cellularExceptionAction"];
             } else {
                 $this->_propDict["cellularExceptionAction"] = new VpnServiceExceptionAction($this->_propDict["cellularExceptionAction"]);
@@ -182,7 +182,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the natKeepAliveIntervalInSeconds
     * Specifies how often in seconds to send a network address translation keepalive package through the VPN
     *
-    * @return int|null The natKeepAliveIntervalInSeconds
+    * @return int The natKeepAliveIntervalInSeconds
     */
     public function getNatKeepAliveIntervalInSeconds()
     {
@@ -210,7 +210,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the natKeepAliveOffloadEnable
     * Enable hardware offloading of NAT keepalive signals when the device is asleep
     *
-    * @return bool|null The natKeepAliveOffloadEnable
+    * @return bool The natKeepAliveOffloadEnable
     */
     public function getNatKeepAliveOffloadEnable()
     {
@@ -239,12 +239,12 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the tunnelConfiguration
     * Determines what connections the specific tunnel configuration applies to. Possible values are: wifiAndCellular, cellular, wifi.
     *
-    * @return VpnTunnelConfigurationType|null The tunnelConfiguration
+    * @return VpnTunnelConfigurationType The tunnelConfiguration
     */
     public function getTunnelConfiguration()
     {
         if (array_key_exists("tunnelConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["tunnelConfiguration"], "\Beta\Microsoft\Graph\Model\VpnTunnelConfigurationType") || is_null($this->_propDict["tunnelConfiguration"])) {
+            if (is_a($this->_propDict["tunnelConfiguration"], "\Beta\Microsoft\Graph\Model\VpnTunnelConfigurationType")) {
                 return $this->_propDict["tunnelConfiguration"];
             } else {
                 $this->_propDict["tunnelConfiguration"] = new VpnTunnelConfigurationType($this->_propDict["tunnelConfiguration"]);
@@ -271,7 +271,7 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the userToggleEnabled
     * Allow the user to toggle the VPN configuration using the UI
     *
-    * @return bool|null The userToggleEnabled
+    * @return bool The userToggleEnabled
     */
     public function getUserToggleEnabled()
     {
@@ -300,12 +300,12 @@ class AppleVpnAlwaysOnConfiguration extends Entity
     * Gets the voicemailExceptionAction
     * Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
     *
-    * @return VpnServiceExceptionAction|null The voicemailExceptionAction
+    * @return VpnServiceExceptionAction The voicemailExceptionAction
     */
     public function getVoicemailExceptionAction()
     {
         if (array_key_exists("voicemailExceptionAction", $this->_propDict)) {
-            if (is_a($this->_propDict["voicemailExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction") || is_null($this->_propDict["voicemailExceptionAction"])) {
+            if (is_a($this->_propDict["voicemailExceptionAction"], "\Beta\Microsoft\Graph\Model\VpnServiceExceptionAction")) {
                 return $this->_propDict["voicemailExceptionAction"];
             } else {
                 $this->_propDict["voicemailExceptionAction"] = new VpnServiceExceptionAction($this->_propDict["voicemailExceptionAction"]);

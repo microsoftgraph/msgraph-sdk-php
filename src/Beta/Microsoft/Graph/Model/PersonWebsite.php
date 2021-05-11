@@ -28,7 +28,7 @@ class PersonWebsite extends ItemFacet
     * Gets the categories
     * Contains categories a user has associated with the website (for example, personal, recipes).
     *
-    * @return string|null The categories
+    * @return string The categories
     */
     public function getCategories()
     {
@@ -57,7 +57,7 @@ class PersonWebsite extends ItemFacet
     * Gets the description
     * Contains a description of the website.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -86,7 +86,7 @@ class PersonWebsite extends ItemFacet
     * Gets the displayName
     * Contains a friendly name for the website.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -114,7 +114,7 @@ class PersonWebsite extends ItemFacet
     /**
     * Gets the thumbnailUrl
     *
-    * @return string|null The thumbnailUrl
+    * @return string The thumbnailUrl
     */
     public function getThumbnailUrl()
     {
@@ -142,7 +142,7 @@ class PersonWebsite extends ItemFacet
     * Gets the webUrl
     * Contains a link to the website itself.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

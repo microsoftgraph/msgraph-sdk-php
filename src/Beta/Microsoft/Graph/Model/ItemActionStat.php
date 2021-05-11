@@ -27,7 +27,7 @@ class ItemActionStat extends Entity
     * Gets the actionCount
     * The number of times the action took place. Read-only.
     *
-    * @return int|null The actionCount
+    * @return int The actionCount
     */
     public function getActionCount()
     {
@@ -55,7 +55,7 @@ class ItemActionStat extends Entity
     * Gets the actorCount
     * The number of distinct actors that performed the action. Read-only.
     *
-    * @return int|null The actorCount
+    * @return int The actorCount
     */
     public function getActorCount()
     {

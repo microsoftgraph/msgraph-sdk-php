@@ -27,7 +27,7 @@ class ResetPasscodeActionResult extends DeviceActionResult
     * Gets the errorCode
     * RotateBitLockerKeys action error code. Valid values 0 to 2147483647
     *
-    * @return int|null The errorCode
+    * @return int The errorCode
     */
     public function getErrorCode()
     {
@@ -55,7 +55,7 @@ class ResetPasscodeActionResult extends DeviceActionResult
     * Gets the passcode
     * Newly generated passcode for the device
     *
-    * @return string|null The passcode
+    * @return string The passcode
     */
     public function getPasscode()
     {

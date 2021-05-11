@@ -27,7 +27,7 @@ class AddWatermarkAction extends InformationProtectionAction
     * Gets the fontColor
     * Color of the font to use for the watermark.
     *
-    * @return string|null The fontColor
+    * @return string The fontColor
     */
     public function getFontColor()
     {
@@ -55,7 +55,7 @@ class AddWatermarkAction extends InformationProtectionAction
     * Gets the fontName
     * Name of the font to use for the watermark.
     *
-    * @return string|null The fontName
+    * @return string The fontName
     */
     public function getFontName()
     {
@@ -83,7 +83,7 @@ class AddWatermarkAction extends InformationProtectionAction
     * Gets the fontSize
     * Font size to use for the watermark.
     *
-    * @return int|null The fontSize
+    * @return int The fontSize
     */
     public function getFontSize()
     {
@@ -112,12 +112,12 @@ class AddWatermarkAction extends InformationProtectionAction
     * Gets the layout
     * Possible values are: horizontal, diagonal.
     *
-    * @return WatermarkLayout|null The layout
+    * @return WatermarkLayout The layout
     */
     public function getLayout()
     {
         if (array_key_exists("layout", $this->_propDict)) {
-            if (is_a($this->_propDict["layout"], "\Beta\Microsoft\Graph\Model\WatermarkLayout") || is_null($this->_propDict["layout"])) {
+            if (is_a($this->_propDict["layout"], "\Beta\Microsoft\Graph\Model\WatermarkLayout")) {
                 return $this->_propDict["layout"];
             } else {
                 $this->_propDict["layout"] = new WatermarkLayout($this->_propDict["layout"]);
@@ -144,7 +144,7 @@ class AddWatermarkAction extends InformationProtectionAction
     * Gets the text
     * The contents of the watermark itself.
     *
-    * @return string|null The text
+    * @return string The text
     */
     public function getText()
     {
@@ -172,7 +172,7 @@ class AddWatermarkAction extends InformationProtectionAction
     * Gets the uiElementName
     * The name of the UI element where the watermark should be placed.
     *
-    * @return string|null The uiElementName
+    * @return string The uiElementName
     */
     public function getUiElementName()
     {

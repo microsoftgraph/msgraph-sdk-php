@@ -26,7 +26,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
     /**
     * Gets the id
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -52,7 +52,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
     /**
     * Gets the targetedAuthenticationMethod
     *
-    * @return string|null The targetedAuthenticationMethod
+    * @return string The targetedAuthenticationMethod
     */
     public function getTargetedAuthenticationMethod()
     {
@@ -79,12 +79,12 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
     /**
     * Gets the targetType
     *
-    * @return AuthenticationMethodTargetType|null The targetType
+    * @return AuthenticationMethodTargetType The targetType
     */
     public function getTargetType()
     {
         if (array_key_exists("targetType", $this->_propDict)) {
-            if (is_a($this->_propDict["targetType"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType") || is_null($this->_propDict["targetType"])) {
+            if (is_a($this->_propDict["targetType"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType")) {
                 return $this->_propDict["targetType"];
             } else {
                 $this->_propDict["targetType"] = new AuthenticationMethodTargetType($this->_propDict["targetType"]);

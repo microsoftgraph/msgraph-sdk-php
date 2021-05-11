@@ -28,7 +28,7 @@ class SynchronizationTemplate extends Entity
     * Gets the applicationId
     * Identifier of the application this template belongs to.
     *
-    * @return string|null The applicationId
+    * @return string The applicationId
     */
     public function getApplicationId()
     {
@@ -57,7 +57,7 @@ class SynchronizationTemplate extends Entity
     * Gets the default
     * true if this template is recommended to be the default for the application.
     *
-    * @return bool|null The default
+    * @return bool The default
     */
     public function getDefault()
     {
@@ -86,7 +86,7 @@ class SynchronizationTemplate extends Entity
     * Gets the description
     * Description of the template.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -115,7 +115,7 @@ class SynchronizationTemplate extends Entity
     * Gets the discoverable
     * true if this template should appear in the collection of templates available for the application instance (service principal).
     *
-    * @return bool|null The discoverable
+    * @return bool The discoverable
     */
     public function getDiscoverable()
     {
@@ -144,7 +144,7 @@ class SynchronizationTemplate extends Entity
     * Gets the factoryTag
     * One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
     *
-    * @return string|null The factoryTag
+    * @return string The factoryTag
     */
     public function getFactoryTag()
     {
@@ -174,7 +174,7 @@ class SynchronizationTemplate extends Entity
      * Gets the metadata
     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      *
-     * @return array|null The metadata
+     * @return array The metadata
      */
     public function getMetadata()
     {
@@ -195,7 +195,7 @@ class SynchronizationTemplate extends Entity
     */
     public function setMetadata($val)
     {
-        $this->_propDict["metadata"] = $val;
+		$this->_propDict["metadata"] = $val;
         return $this;
     }
     
@@ -203,12 +203,12 @@ class SynchronizationTemplate extends Entity
     * Gets the schema
     * Default synchronization schema for the jobs based on this template.
     *
-    * @return SynchronizationSchema|null The schema
+    * @return SynchronizationSchema The schema
     */
     public function getSchema()
     {
         if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\Model\SynchronizationSchema") || is_null($this->_propDict["schema"])) {
+            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\Model\SynchronizationSchema")) {
                 return $this->_propDict["schema"];
             } else {
                 $this->_propDict["schema"] = new SynchronizationSchema($this->_propDict["schema"]);

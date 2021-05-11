@@ -27,12 +27,12 @@ class EvaluateLabelJobResultGroup extends Entity
     /**
     * Gets the automatic
     *
-    * @return EvaluateLabelJobResult|null The automatic
+    * @return EvaluateLabelJobResult The automatic
     */
     public function getAutomatic()
     {
         if (array_key_exists("automatic", $this->_propDict)) {
-            if (is_a($this->_propDict["automatic"], "\Beta\Microsoft\Graph\Model\EvaluateLabelJobResult") || is_null($this->_propDict["automatic"])) {
+            if (is_a($this->_propDict["automatic"], "\Beta\Microsoft\Graph\Model\EvaluateLabelJobResult")) {
                 return $this->_propDict["automatic"];
             } else {
                 $this->_propDict["automatic"] = new EvaluateLabelJobResult($this->_propDict["automatic"]);
@@ -58,12 +58,12 @@ class EvaluateLabelJobResultGroup extends Entity
     /**
     * Gets the recommended
     *
-    * @return EvaluateLabelJobResult|null The recommended
+    * @return EvaluateLabelJobResult The recommended
     */
     public function getRecommended()
     {
         if (array_key_exists("recommended", $this->_propDict)) {
-            if (is_a($this->_propDict["recommended"], "\Beta\Microsoft\Graph\Model\EvaluateLabelJobResult") || is_null($this->_propDict["recommended"])) {
+            if (is_a($this->_propDict["recommended"], "\Beta\Microsoft\Graph\Model\EvaluateLabelJobResult")) {
                 return $this->_propDict["recommended"];
             } else {
                 $this->_propDict["recommended"] = new EvaluateLabelJobResult($this->_propDict["recommended"]);

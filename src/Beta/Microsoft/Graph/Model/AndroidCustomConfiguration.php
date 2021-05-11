@@ -29,7 +29,7 @@ class AndroidCustomConfiguration extends DeviceConfiguration
      * Gets the omaSettings
     * OMA settings. This collection can contain a maximum of 1000 elements.
      *
-     * @return array|null The omaSettings
+     * @return array The omaSettings
      */
     public function getOmaSettings()
     {
@@ -50,7 +50,7 @@ class AndroidCustomConfiguration extends DeviceConfiguration
     */
     public function setOmaSettings($val)
     {
-        $this->_propDict["omaSettings"] = $val;
+		$this->_propDict["omaSettings"] = $val;
         return $this;
     }
     

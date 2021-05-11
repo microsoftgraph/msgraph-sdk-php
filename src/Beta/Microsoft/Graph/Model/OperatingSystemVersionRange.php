@@ -27,7 +27,7 @@ class OperatingSystemVersionRange extends Entity
     * Gets the description
     * The description of this range (e.g. Valid 1702 builds)
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -55,7 +55,7 @@ class OperatingSystemVersionRange extends Entity
     * Gets the highestVersion
     * The highest inclusive version that this range contains.
     *
-    * @return string|null The highestVersion
+    * @return string The highestVersion
     */
     public function getHighestVersion()
     {
@@ -83,7 +83,7 @@ class OperatingSystemVersionRange extends Entity
     * Gets the lowestVersion
     * The lowest inclusive version that this range contains.
     *
-    * @return string|null The lowestVersion
+    * @return string The lowestVersion
     */
     public function getLowestVersion()
     {

@@ -28,7 +28,7 @@ class ManagedAppOperation extends Entity
     * Gets the displayName
     * The operation name.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,12 +57,12 @@ class ManagedAppOperation extends Entity
     * Gets the lastModifiedDateTime
     * The last time the app operation was modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -90,7 +90,7 @@ class ManagedAppOperation extends Entity
     * Gets the state
     * The current state of the operation
     *
-    * @return string|null The state
+    * @return string The state
     */
     public function getState()
     {
@@ -119,7 +119,7 @@ class ManagedAppOperation extends Entity
     * Gets the version
     * Version of the entity.
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {

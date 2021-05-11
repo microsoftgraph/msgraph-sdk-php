@@ -28,12 +28,12 @@ class MobileAppPolicySetItem extends PolicySetItem
     * Gets the intent
     * Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
-    * @return InstallIntent|null The intent
+    * @return InstallIntent The intent
     */
     public function getIntent()
     {
         if (array_key_exists("intent", $this->_propDict)) {
-            if (is_a($this->_propDict["intent"], "\Beta\Microsoft\Graph\Model\InstallIntent") || is_null($this->_propDict["intent"])) {
+            if (is_a($this->_propDict["intent"], "\Beta\Microsoft\Graph\Model\InstallIntent")) {
                 return $this->_propDict["intent"];
             } else {
                 $this->_propDict["intent"] = new InstallIntent($this->_propDict["intent"]);
@@ -61,12 +61,12 @@ class MobileAppPolicySetItem extends PolicySetItem
     * Gets the settings
     * Settings of the MobileAppPolicySetItem.
     *
-    * @return MobileAppAssignmentSettings|null The settings
+    * @return MobileAppAssignmentSettings The settings
     */
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\MobileAppAssignmentSettings") || is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Model\MobileAppAssignmentSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new MobileAppAssignmentSettings($this->_propDict["settings"]);

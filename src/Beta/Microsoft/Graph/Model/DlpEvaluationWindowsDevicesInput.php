@@ -27,12 +27,12 @@ class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput
     /**
     * Gets the contentProperties
     *
-    * @return ContentProperties|null The contentProperties
+    * @return ContentProperties The contentProperties
     */
     public function getContentProperties()
     {
         if (array_key_exists("contentProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["contentProperties"], "\Beta\Microsoft\Graph\Model\ContentProperties") || is_null($this->_propDict["contentProperties"])) {
+            if (is_a($this->_propDict["contentProperties"], "\Beta\Microsoft\Graph\Model\ContentProperties")) {
                 return $this->_propDict["contentProperties"];
             } else {
                 $this->_propDict["contentProperties"] = new ContentProperties($this->_propDict["contentProperties"]);
@@ -57,7 +57,7 @@ class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput
     /**
     * Gets the sharedBy
     *
-    * @return string|null The sharedBy
+    * @return string The sharedBy
     */
     public function getSharedBy()
     {

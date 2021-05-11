@@ -28,12 +28,12 @@ class IncompleteData extends Entity
     * Gets the missingDataBeforeDateTime
     * The service does not have source data before the specified time.
     *
-    * @return \DateTime|null The missingDataBeforeDateTime
+    * @return \DateTime The missingDataBeforeDateTime
     */
     public function getMissingDataBeforeDateTime()
     {
         if (array_key_exists("missingDataBeforeDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["missingDataBeforeDateTime"], "\DateTime") || is_null($this->_propDict["missingDataBeforeDateTime"])) {
+            if (is_a($this->_propDict["missingDataBeforeDateTime"], "\DateTime")) {
                 return $this->_propDict["missingDataBeforeDateTime"];
             } else {
                 $this->_propDict["missingDataBeforeDateTime"] = new \DateTime($this->_propDict["missingDataBeforeDateTime"]);
@@ -60,7 +60,7 @@ class IncompleteData extends Entity
     * Gets the wasThrottled
     * Some data was not recorded due to excessive activity.
     *
-    * @return bool|null The wasThrottled
+    * @return bool The wasThrottled
     */
     public function getWasThrottled()
     {

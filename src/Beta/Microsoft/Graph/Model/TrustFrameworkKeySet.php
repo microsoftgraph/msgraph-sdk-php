@@ -29,7 +29,7 @@ class TrustFrameworkKeySet extends Entity
      * Gets the keys
     * A collection of the keys.
      *
-     * @return array|null The keys
+     * @return array The keys
      */
     public function getKeys()
     {
@@ -50,7 +50,7 @@ class TrustFrameworkKeySet extends Entity
     */
     public function setKeys($val)
     {
-        $this->_propDict["keys"] = $val;
+		$this->_propDict["keys"] = $val;
         return $this;
     }
     

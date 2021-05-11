@@ -29,7 +29,7 @@ class CalendarPermission extends Entity
      * Gets the allowedRoles
     * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      *
-     * @return array|null The allowedRoles
+     * @return array The allowedRoles
      */
     public function getAllowedRoles()
     {
@@ -50,7 +50,7 @@ class CalendarPermission extends Entity
     */
     public function setAllowedRoles($val)
     {
-        $this->_propDict["allowedRoles"] = $val;
+		$this->_propDict["allowedRoles"] = $val;
         return $this;
     }
     
@@ -58,12 +58,12 @@ class CalendarPermission extends Entity
     * Gets the emailAddress
     * Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
     *
-    * @return EmailAddress|null The emailAddress
+    * @return EmailAddress The emailAddress
     */
     public function getEmailAddress()
     {
         if (array_key_exists("emailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddress"], "\Beta\Microsoft\Graph\Model\EmailAddress") || is_null($this->_propDict["emailAddress"])) {
+            if (is_a($this->_propDict["emailAddress"], "\Beta\Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["emailAddress"];
             } else {
                 $this->_propDict["emailAddress"] = new EmailAddress($this->_propDict["emailAddress"]);
@@ -91,7 +91,7 @@ class CalendarPermission extends Entity
     * Gets the isInsideOrganization
     * True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
     *
-    * @return bool|null The isInsideOrganization
+    * @return bool The isInsideOrganization
     */
     public function getIsInsideOrganization()
     {
@@ -120,7 +120,7 @@ class CalendarPermission extends Entity
     * Gets the isRemovable
     * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
     *
-    * @return bool|null The isRemovable
+    * @return bool The isRemovable
     */
     public function getIsRemovable()
     {
@@ -149,12 +149,12 @@ class CalendarPermission extends Entity
     * Gets the role
     * Current permission level of the calendar sharee or delegate.
     *
-    * @return CalendarRoleType|null The role
+    * @return CalendarRoleType The role
     */
     public function getRole()
     {
         if (array_key_exists("role", $this->_propDict)) {
-            if (is_a($this->_propDict["role"], "\Beta\Microsoft\Graph\Model\CalendarRoleType") || is_null($this->_propDict["role"])) {
+            if (is_a($this->_propDict["role"], "\Beta\Microsoft\Graph\Model\CalendarRoleType")) {
                 return $this->_propDict["role"];
             } else {
                 $this->_propDict["role"] = new CalendarRoleType($this->_propDict["role"]);

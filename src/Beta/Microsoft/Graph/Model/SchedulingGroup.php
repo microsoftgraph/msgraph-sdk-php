@@ -28,7 +28,7 @@ class SchedulingGroup extends ChangeTrackedEntity
     * Gets the displayName
     * The display name for the schedulingGroup. Required.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class SchedulingGroup extends ChangeTrackedEntity
     * Gets the isActive
     * Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
     *
-    * @return bool|null The isActive
+    * @return bool The isActive
     */
     public function getIsActive()
     {
@@ -86,7 +86,7 @@ class SchedulingGroup extends ChangeTrackedEntity
     * Gets the userIds
     * The list of user IDs that are a member of the schedulingGroup. Required.
     *
-    * @return string|null The userIds
+    * @return string The userIds
     */
     public function getUserIds()
     {

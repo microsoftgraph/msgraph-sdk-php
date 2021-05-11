@@ -36,7 +36,7 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
     * Gets the userDisplayName
     * The name of user.
     *
-    * @return string|null The userDisplayName
+    * @return string The userDisplayName
     */
     public function getUserDisplayName()
     {
@@ -64,7 +64,7 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
     * Gets the userId
     * The identifier of user.
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {
@@ -92,7 +92,7 @@ class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDec
     * Gets the userPrincipalName
     * The user principal name.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

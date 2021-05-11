@@ -28,7 +28,7 @@ class OutlookTask extends OutlookItem
     * Gets the assignedTo
     * The name of the person who has been assigned the task in Outlook. Read-only.
     *
-    * @return string|null The assignedTo
+    * @return string The assignedTo
     */
     public function getAssignedTo()
     {
@@ -57,12 +57,12 @@ class OutlookTask extends OutlookItem
     * Gets the body
     * The task body that typically contains information about the task. Note that only HTML type is supported.
     *
-    * @return ItemBody|null The body
+    * @return ItemBody The body
     */
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "\Beta\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["body"])) {
+            if (is_a($this->_propDict["body"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -90,12 +90,12 @@ class OutlookTask extends OutlookItem
     * Gets the completedDateTime
     * The date in the specified time zone that the task was finished.
     *
-    * @return DateTimeTimeZone|null The completedDateTime
+    * @return DateTimeTimeZone The completedDateTime
     */
     public function getCompletedDateTime()
     {
         if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["completedDateTime"])) {
+            if (is_a($this->_propDict["completedDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new DateTimeTimeZone($this->_propDict["completedDateTime"]);
@@ -123,12 +123,12 @@ class OutlookTask extends OutlookItem
     * Gets the dueDateTime
     * The date in the specified time zone that the task is to be finished.
     *
-    * @return DateTimeTimeZone|null The dueDateTime
+    * @return DateTimeTimeZone The dueDateTime
     */
     public function getDueDateTime()
     {
         if (array_key_exists("dueDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["dueDateTime"])) {
+            if (is_a($this->_propDict["dueDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["dueDateTime"];
             } else {
                 $this->_propDict["dueDateTime"] = new DateTimeTimeZone($this->_propDict["dueDateTime"]);
@@ -156,7 +156,7 @@ class OutlookTask extends OutlookItem
     * Gets the hasAttachments
     * Set to true if the task has attachments.
     *
-    * @return bool|null The hasAttachments
+    * @return bool The hasAttachments
     */
     public function getHasAttachments()
     {
@@ -184,12 +184,12 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the importance
     *
-    * @return Importance|null The importance
+    * @return Importance The importance
     */
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\Importance") || is_null($this->_propDict["importance"])) {
+            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -215,7 +215,7 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the isReminderOn
     *
-    * @return bool|null The isReminderOn
+    * @return bool The isReminderOn
     */
     public function getIsReminderOn()
     {
@@ -242,7 +242,7 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the owner
     *
-    * @return string|null The owner
+    * @return string The owner
     */
     public function getOwner()
     {
@@ -269,7 +269,7 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the parentFolderId
     *
-    * @return string|null The parentFolderId
+    * @return string The parentFolderId
     */
     public function getParentFolderId()
     {
@@ -296,12 +296,12 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the recurrence
     *
-    * @return PatternedRecurrence|null The recurrence
+    * @return PatternedRecurrence The recurrence
     */
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence") || is_null($this->_propDict["recurrence"])) {
+            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -327,12 +327,12 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the reminderDateTime
     *
-    * @return DateTimeTimeZone|null The reminderDateTime
+    * @return DateTimeTimeZone The reminderDateTime
     */
     public function getReminderDateTime()
     {
         if (array_key_exists("reminderDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["reminderDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["reminderDateTime"])) {
+            if (is_a($this->_propDict["reminderDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["reminderDateTime"];
             } else {
                 $this->_propDict["reminderDateTime"] = new DateTimeTimeZone($this->_propDict["reminderDateTime"]);
@@ -358,12 +358,12 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the sensitivity
     *
-    * @return Sensitivity|null The sensitivity
+    * @return Sensitivity The sensitivity
     */
     public function getSensitivity()
     {
         if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "\Beta\Microsoft\Graph\Model\Sensitivity") || is_null($this->_propDict["sensitivity"])) {
+            if (is_a($this->_propDict["sensitivity"], "\Beta\Microsoft\Graph\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -389,12 +389,12 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the startDateTime
     *
-    * @return DateTimeTimeZone|null The startDateTime
+    * @return DateTimeTimeZone The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);
@@ -420,12 +420,12 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the status
     *
-    * @return TaskStatus|null The status
+    * @return TaskStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\TaskStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\TaskStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new TaskStatus($this->_propDict["status"]);
@@ -451,7 +451,7 @@ class OutlookTask extends OutlookItem
     /**
     * Gets the subject
     *
-    * @return string|null The subject
+    * @return string The subject
     */
     public function getSubject()
     {
@@ -480,7 +480,7 @@ class OutlookTask extends OutlookItem
      * Gets the attachments
     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
      *
-     * @return array|null The attachments
+     * @return array The attachments
      */
     public function getAttachments()
     {
@@ -501,7 +501,7 @@ class OutlookTask extends OutlookItem
     */
     public function setAttachments($val)
     {
-        $this->_propDict["attachments"] = $val;
+		$this->_propDict["attachments"] = $val;
         return $this;
     }
     
@@ -510,7 +510,7 @@ class OutlookTask extends OutlookItem
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the task. Read-only. Nullable.
      *
-     * @return array|null The multiValueExtendedProperties
+     * @return array The multiValueExtendedProperties
      */
     public function getMultiValueExtendedProperties()
     {
@@ -531,7 +531,7 @@ class OutlookTask extends OutlookItem
     */
     public function setMultiValueExtendedProperties($val)
     {
-        $this->_propDict["multiValueExtendedProperties"] = $val;
+		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     
@@ -540,7 +540,7 @@ class OutlookTask extends OutlookItem
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the task. Read-only. Nullable.
      *
-     * @return array|null The singleValueExtendedProperties
+     * @return array The singleValueExtendedProperties
      */
     public function getSingleValueExtendedProperties()
     {
@@ -561,7 +561,7 @@ class OutlookTask extends OutlookItem
     */
     public function setSingleValueExtendedProperties($val)
     {
-        $this->_propDict["singleValueExtendedProperties"] = $val;
+		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
     

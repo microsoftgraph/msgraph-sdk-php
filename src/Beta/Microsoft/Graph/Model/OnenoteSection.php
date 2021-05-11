@@ -28,7 +28,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     * Gets the isDefault
     * Indicates whether this is the user's default section. Read-only.
     *
-    * @return bool|null The isDefault
+    * @return bool The isDefault
     */
     public function getIsDefault()
     {
@@ -57,12 +57,12 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     * Gets the links
     * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
     *
-    * @return SectionLinks|null The links
+    * @return SectionLinks The links
     */
     public function getLinks()
     {
         if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "\Beta\Microsoft\Graph\Model\SectionLinks") || is_null($this->_propDict["links"])) {
+            if (is_a($this->_propDict["links"], "\Beta\Microsoft\Graph\Model\SectionLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new SectionLinks($this->_propDict["links"]);
@@ -90,7 +90,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     * Gets the pagesUrl
     * The pages endpoint where you can get details for all the pages in the section. Read-only.
     *
-    * @return string|null The pagesUrl
+    * @return string The pagesUrl
     */
     public function getPagesUrl()
     {
@@ -120,7 +120,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
      * Gets the pages
     * The collection of pages in the section.  Read-only. Nullable.
      *
-     * @return array|null The pages
+     * @return array The pages
      */
     public function getPages()
     {
@@ -141,7 +141,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     */
     public function setPages($val)
     {
-        $this->_propDict["pages"] = $val;
+		$this->_propDict["pages"] = $val;
         return $this;
     }
     
@@ -149,12 +149,12 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     * Gets the parentNotebook
     * The notebook that contains the section.  Read-only.
     *
-    * @return Notebook|null The parentNotebook
+    * @return Notebook The parentNotebook
     */
     public function getParentNotebook()
     {
         if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "\Beta\Microsoft\Graph\Model\Notebook") || is_null($this->_propDict["parentNotebook"])) {
+            if (is_a($this->_propDict["parentNotebook"], "\Beta\Microsoft\Graph\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -182,12 +182,12 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     * Gets the parentSectionGroup
     * The section group that contains the section.  Read-only.
     *
-    * @return SectionGroup|null The parentSectionGroup
+    * @return SectionGroup The parentSectionGroup
     */
     public function getParentSectionGroup()
     {
         if (array_key_exists("parentSectionGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSectionGroup"], "\Beta\Microsoft\Graph\Model\SectionGroup") || is_null($this->_propDict["parentSectionGroup"])) {
+            if (is_a($this->_propDict["parentSectionGroup"], "\Beta\Microsoft\Graph\Model\SectionGroup")) {
                 return $this->_propDict["parentSectionGroup"];
             } else {
                 $this->_propDict["parentSectionGroup"] = new SectionGroup($this->_propDict["parentSectionGroup"]);

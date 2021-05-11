@@ -28,12 +28,12 @@ class ConditionalAccessPolicy extends Entity
     * Gets the conditions
     * Specifies the rules that must be met for the policy to apply. Required.
     *
-    * @return ConditionalAccessConditionSet|null The conditions
+    * @return ConditionalAccessConditionSet The conditions
     */
     public function getConditions()
     {
         if (array_key_exists("conditions", $this->_propDict)) {
-            if (is_a($this->_propDict["conditions"], "\Beta\Microsoft\Graph\Model\ConditionalAccessConditionSet") || is_null($this->_propDict["conditions"])) {
+            if (is_a($this->_propDict["conditions"], "\Beta\Microsoft\Graph\Model\ConditionalAccessConditionSet")) {
                 return $this->_propDict["conditions"];
             } else {
                 $this->_propDict["conditions"] = new ConditionalAccessConditionSet($this->_propDict["conditions"]);
@@ -61,12 +61,12 @@ class ConditionalAccessPolicy extends Entity
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -94,7 +94,7 @@ class ConditionalAccessPolicy extends Entity
     * Gets the description
     * Not used.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -123,7 +123,7 @@ class ConditionalAccessPolicy extends Entity
     * Gets the displayName
     * Specifies a display name for the conditionalAccessPolicy object.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -152,12 +152,12 @@ class ConditionalAccessPolicy extends Entity
     * Gets the grantControls
     * Specifies the grant controls that must be fulfilled to pass the policy.
     *
-    * @return ConditionalAccessGrantControls|null The grantControls
+    * @return ConditionalAccessGrantControls The grantControls
     */
     public function getGrantControls()
     {
         if (array_key_exists("grantControls", $this->_propDict)) {
-            if (is_a($this->_propDict["grantControls"], "\Beta\Microsoft\Graph\Model\ConditionalAccessGrantControls") || is_null($this->_propDict["grantControls"])) {
+            if (is_a($this->_propDict["grantControls"], "\Beta\Microsoft\Graph\Model\ConditionalAccessGrantControls")) {
                 return $this->_propDict["grantControls"];
             } else {
                 $this->_propDict["grantControls"] = new ConditionalAccessGrantControls($this->_propDict["grantControls"]);
@@ -185,12 +185,12 @@ class ConditionalAccessPolicy extends Entity
     * Gets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
     *
-    * @return \DateTime|null The modifiedDateTime
+    * @return \DateTime The modifiedDateTime
     */
     public function getModifiedDateTime()
     {
         if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime") || is_null($this->_propDict["modifiedDateTime"])) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["modifiedDateTime"];
             } else {
                 $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
@@ -218,12 +218,12 @@ class ConditionalAccessPolicy extends Entity
     * Gets the sessionControls
     * Specifies the session controls that are enforced after sign-in.
     *
-    * @return ConditionalAccessSessionControls|null The sessionControls
+    * @return ConditionalAccessSessionControls The sessionControls
     */
     public function getSessionControls()
     {
         if (array_key_exists("sessionControls", $this->_propDict)) {
-            if (is_a($this->_propDict["sessionControls"], "\Beta\Microsoft\Graph\Model\ConditionalAccessSessionControls") || is_null($this->_propDict["sessionControls"])) {
+            if (is_a($this->_propDict["sessionControls"], "\Beta\Microsoft\Graph\Model\ConditionalAccessSessionControls")) {
                 return $this->_propDict["sessionControls"];
             } else {
                 $this->_propDict["sessionControls"] = new ConditionalAccessSessionControls($this->_propDict["sessionControls"]);
@@ -251,12 +251,12 @@ class ConditionalAccessPolicy extends Entity
     * Gets the state
     * Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required.
     *
-    * @return ConditionalAccessPolicyState|null The state
+    * @return ConditionalAccessPolicyState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ConditionalAccessPolicyState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ConditionalAccessPolicyState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ConditionalAccessPolicyState($this->_propDict["state"]);

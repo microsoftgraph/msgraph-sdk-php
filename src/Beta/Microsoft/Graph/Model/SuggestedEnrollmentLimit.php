@@ -27,7 +27,7 @@ class SuggestedEnrollmentLimit extends Entity
     * Gets the suggestedDailyLimit
     * The suggested enrollment limit within a day
     *
-    * @return int|null The suggestedDailyLimit
+    * @return int The suggestedDailyLimit
     */
     public function getSuggestedDailyLimit()
     {

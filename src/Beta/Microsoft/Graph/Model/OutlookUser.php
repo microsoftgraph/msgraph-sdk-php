@@ -29,7 +29,7 @@ class OutlookUser extends Entity
      * Gets the masterCategories
     * A list of categories defined for the user.
      *
-     * @return array|null The masterCategories
+     * @return array The masterCategories
      */
     public function getMasterCategories()
     {
@@ -50,7 +50,7 @@ class OutlookUser extends Entity
     */
     public function setMasterCategories($val)
     {
-        $this->_propDict["masterCategories"] = $val;
+		$this->_propDict["masterCategories"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class OutlookUser extends Entity
      /** 
      * Gets the taskFolders
      *
-     * @return array|null The taskFolders
+     * @return array The taskFolders
      */
     public function getTaskFolders()
     {
@@ -78,7 +78,7 @@ class OutlookUser extends Entity
     */
     public function setTaskFolders($val)
     {
-        $this->_propDict["taskFolders"] = $val;
+		$this->_propDict["taskFolders"] = $val;
         return $this;
     }
     
@@ -86,7 +86,7 @@ class OutlookUser extends Entity
      /** 
      * Gets the taskGroups
      *
-     * @return array|null The taskGroups
+     * @return array The taskGroups
      */
     public function getTaskGroups()
     {
@@ -106,7 +106,7 @@ class OutlookUser extends Entity
     */
     public function setTaskGroups($val)
     {
-        $this->_propDict["taskGroups"] = $val;
+		$this->_propDict["taskGroups"] = $val;
         return $this;
     }
     
@@ -114,7 +114,7 @@ class OutlookUser extends Entity
      /** 
      * Gets the tasks
      *
-     * @return array|null The tasks
+     * @return array The tasks
      */
     public function getTasks()
     {
@@ -134,7 +134,7 @@ class OutlookUser extends Entity
     */
     public function setTasks($val)
     {
-        $this->_propDict["tasks"] = $val;
+		$this->_propDict["tasks"] = $val;
         return $this;
     }
     

@@ -27,7 +27,7 @@ class UserRegistrationMethodSummary extends Entity
     * Gets the totalUserCount
     * Total number of users in the tenant.
     *
-    * @return int|null The totalUserCount
+    * @return int The totalUserCount
     */
     public function getTotalUserCount()
     {
@@ -56,12 +56,12 @@ class UserRegistrationMethodSummary extends Entity
     * Gets the userRegistrationMethodCounts
     * Number of users registered for each authentication method.
     *
-    * @return UserRegistrationMethodCount|null The userRegistrationMethodCounts
+    * @return UserRegistrationMethodCount The userRegistrationMethodCounts
     */
     public function getUserRegistrationMethodCounts()
     {
         if (array_key_exists("userRegistrationMethodCounts", $this->_propDict)) {
-            if (is_a($this->_propDict["userRegistrationMethodCounts"], "\Beta\Microsoft\Graph\Model\UserRegistrationMethodCount") || is_null($this->_propDict["userRegistrationMethodCounts"])) {
+            if (is_a($this->_propDict["userRegistrationMethodCounts"], "\Beta\Microsoft\Graph\Model\UserRegistrationMethodCount")) {
                 return $this->_propDict["userRegistrationMethodCounts"];
             } else {
                 $this->_propDict["userRegistrationMethodCounts"] = new UserRegistrationMethodCount($this->_propDict["userRegistrationMethodCounts"]);
@@ -89,12 +89,12 @@ class UserRegistrationMethodSummary extends Entity
     * Gets the userRoles
     * User role type. Possible values are: all, privilegedAdmin, admin, user.
     *
-    * @return IncludedUserRoles|null The userRoles
+    * @return IncludedUserRoles The userRoles
     */
     public function getUserRoles()
     {
         if (array_key_exists("userRoles", $this->_propDict)) {
-            if (is_a($this->_propDict["userRoles"], "\Beta\Microsoft\Graph\Model\IncludedUserRoles") || is_null($this->_propDict["userRoles"])) {
+            if (is_a($this->_propDict["userRoles"], "\Beta\Microsoft\Graph\Model\IncludedUserRoles")) {
                 return $this->_propDict["userRoles"];
             } else {
                 $this->_propDict["userRoles"] = new IncludedUserRoles($this->_propDict["userRoles"]);
@@ -122,12 +122,12 @@ class UserRegistrationMethodSummary extends Entity
     * Gets the userTypes
     * User type. Possible values are: all, member, guest.
     *
-    * @return IncludedUserTypes|null The userTypes
+    * @return IncludedUserTypes The userTypes
     */
     public function getUserTypes()
     {
         if (array_key_exists("userTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["userTypes"], "\Beta\Microsoft\Graph\Model\IncludedUserTypes") || is_null($this->_propDict["userTypes"])) {
+            if (is_a($this->_propDict["userTypes"], "\Beta\Microsoft\Graph\Model\IncludedUserTypes")) {
                 return $this->_propDict["userTypes"];
             } else {
                 $this->_propDict["userTypes"] = new IncludedUserTypes($this->_propDict["userTypes"]);

@@ -28,7 +28,7 @@ class CalendarGroup extends Entity
     * Gets the changeKey
     * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
     *
-    * @return string|null The changeKey
+    * @return string The changeKey
     */
     public function getChangeKey()
     {
@@ -57,7 +57,7 @@ class CalendarGroup extends Entity
     * Gets the classId
     * The class identifier. Read-only.
     *
-    * @return string|null The classId
+    * @return string The classId
     */
     public function getClassId()
     {
@@ -86,7 +86,7 @@ class CalendarGroup extends Entity
     * Gets the name
     * The group name.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -116,7 +116,7 @@ class CalendarGroup extends Entity
      * Gets the calendars
     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
      *
-     * @return array|null The calendars
+     * @return array The calendars
      */
     public function getCalendars()
     {
@@ -137,7 +137,7 @@ class CalendarGroup extends Entity
     */
     public function setCalendars($val)
     {
-        $this->_propDict["calendars"] = $val;
+		$this->_propDict["calendars"] = $val;
         return $this;
     }
     

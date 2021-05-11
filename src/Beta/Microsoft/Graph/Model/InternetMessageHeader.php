@@ -27,7 +27,7 @@ class InternetMessageHeader extends Entity
     * Gets the name
     * Represents the key in a key-value pair.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -55,7 +55,7 @@ class InternetMessageHeader extends Entity
     * Gets the value
     * The value in a key-value pair.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

@@ -28,7 +28,7 @@ class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresentationVal
     * Gets the value
     * An unsigned long value for the associated presentation.
     *
-    * @return int|null The value
+    * @return int The value
     */
     public function getValue()
     {

@@ -27,7 +27,7 @@ class ProgramResource extends Identity
     * Gets the type
     * Type of the resource, indicating whether it is a group or an app.
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {

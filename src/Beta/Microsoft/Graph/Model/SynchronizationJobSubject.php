@@ -27,7 +27,7 @@ class SynchronizationJobSubject extends Entity
     * Gets the objectId
     * The identifier of an object to which a synchronizationJob  is to be applied.
     *
-    * @return string|null The objectId
+    * @return string The objectId
     */
     public function getObjectId()
     {
@@ -55,7 +55,7 @@ class SynchronizationJobSubject extends Entity
     * Gets the objectTypeName
     * The type of the object to which a synchronizationJob  is to be applied.
     *
-    * @return string|null The objectTypeName
+    * @return string The objectTypeName
     */
     public function getObjectTypeName()
     {

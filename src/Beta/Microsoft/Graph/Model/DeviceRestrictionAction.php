@@ -26,7 +26,7 @@ class DeviceRestrictionAction extends DlpActionInfo
     /**
     * Gets the message
     *
-    * @return string|null The message
+    * @return string The message
     */
     public function getMessage()
     {
@@ -53,12 +53,12 @@ class DeviceRestrictionAction extends DlpActionInfo
     /**
     * Gets the restrictionAction
     *
-    * @return RestrictionAction|null The restrictionAction
+    * @return RestrictionAction The restrictionAction
     */
     public function getRestrictionAction()
     {
         if (array_key_exists("restrictionAction", $this->_propDict)) {
-            if (is_a($this->_propDict["restrictionAction"], "\Beta\Microsoft\Graph\Model\RestrictionAction") || is_null($this->_propDict["restrictionAction"])) {
+            if (is_a($this->_propDict["restrictionAction"], "\Beta\Microsoft\Graph\Model\RestrictionAction")) {
                 return $this->_propDict["restrictionAction"];
             } else {
                 $this->_propDict["restrictionAction"] = new RestrictionAction($this->_propDict["restrictionAction"]);
@@ -84,12 +84,12 @@ class DeviceRestrictionAction extends DlpActionInfo
     /**
     * Gets the triggers
     *
-    * @return RestrictionTrigger|null The triggers
+    * @return RestrictionTrigger The triggers
     */
     public function getTriggers()
     {
         if (array_key_exists("triggers", $this->_propDict)) {
-            if (is_a($this->_propDict["triggers"], "\Beta\Microsoft\Graph\Model\RestrictionTrigger") || is_null($this->_propDict["triggers"])) {
+            if (is_a($this->_propDict["triggers"], "\Beta\Microsoft\Graph\Model\RestrictionTrigger")) {
                 return $this->_propDict["triggers"];
             } else {
                 $this->_propDict["triggers"] = new RestrictionTrigger($this->_propDict["triggers"]);

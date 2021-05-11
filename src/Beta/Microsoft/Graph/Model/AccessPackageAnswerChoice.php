@@ -27,7 +27,7 @@ class AccessPackageAnswerChoice extends Entity
     * Gets the actualValue
     * The actual value of the selected choice. This is typically a string value which is understandable by applications. Required.
     *
-    * @return string|null The actualValue
+    * @return string The actualValue
     */
     public function getActualValue()
     {
@@ -56,12 +56,12 @@ class AccessPackageAnswerChoice extends Entity
     * Gets the displayValue
     * The localized display values shown to the requestor and approvers. Required.
     *
-    * @return AccessPackageLocalizedContent|null The displayValue
+    * @return AccessPackageLocalizedContent The displayValue
     */
     public function getDisplayValue()
     {
         if (array_key_exists("displayValue", $this->_propDict)) {
-            if (is_a($this->_propDict["displayValue"], "\Beta\Microsoft\Graph\Model\AccessPackageLocalizedContent") || is_null($this->_propDict["displayValue"])) {
+            if (is_a($this->_propDict["displayValue"], "\Beta\Microsoft\Graph\Model\AccessPackageLocalizedContent")) {
                 return $this->_propDict["displayValue"];
             } else {
                 $this->_propDict["displayValue"] = new AccessPackageLocalizedContent($this->_propDict["displayValue"]);

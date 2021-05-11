@@ -28,12 +28,12 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the catalog
     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
     *
-    * @return Catalog|null The catalog
+    * @return Catalog The catalog
     */
     public function getCatalog()
     {
         if (array_key_exists("catalog", $this->_propDict)) {
-            if (is_a($this->_propDict["catalog"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\Catalog") || is_null($this->_propDict["catalog"])) {
+            if (is_a($this->_propDict["catalog"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\Catalog")) {
                 return $this->_propDict["catalog"];
             } else {
                 $this->_propDict["catalog"] = new Catalog($this->_propDict["catalog"]);
@@ -62,7 +62,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the deployments
     * Deployments created using the deployment service. Read-only.
      *
-     * @return array|null The deployments
+     * @return array The deployments
      */
     public function getDeployments()
     {
@@ -83,7 +83,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setDeployments($val)
     {
-        $this->_propDict["deployments"] = $val;
+		$this->_propDict["deployments"] = $val;
         return $this;
     }
     
@@ -92,7 +92,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the updatableAssets
     * Assets registered with the deployment service that can receive updates. Read-only.
      *
-     * @return array|null The updatableAssets
+     * @return array The updatableAssets
      */
     public function getUpdatableAssets()
     {
@@ -113,7 +113,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setUpdatableAssets($val)
     {
-        $this->_propDict["updatableAssets"] = $val;
+		$this->_propDict["updatableAssets"] = $val;
         return $this;
     }
     

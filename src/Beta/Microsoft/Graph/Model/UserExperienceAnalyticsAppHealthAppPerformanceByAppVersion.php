@@ -28,7 +28,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends Entity
     * Gets the appCrashCount
     * The number of crashes for the app. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The appCrashCount
+    * @return int The appCrashCount
     */
     public function getAppCrashCount()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends Entity
     * Gets the appDisplayName
     * The friendly name of the application.
     *
-    * @return string|null The appDisplayName
+    * @return string The appDisplayName
     */
     public function getAppDisplayName()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends Entity
     * Gets the appName
     * The name of the application.
     *
-    * @return string|null The appName
+    * @return string The appName
     */
     public function getAppName()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends Entity
     * Gets the appPublisher
     * The publisher of the application.
     *
-    * @return string|null The appPublisher
+    * @return string The appPublisher
     */
     public function getAppPublisher()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends Entity
     * Gets the appUsageDuration
     * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The appUsageDuration
+    * @return int The appUsageDuration
     */
     public function getAppUsageDuration()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends Entity
     * Gets the appVersion
     * The version of the application.
     *
-    * @return string|null The appVersion
+    * @return string The appVersion
     */
     public function getAppVersion()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends Entity
     * Gets the meanTimeToFailureInMinutes
     * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
     *
-    * @return int|null The meanTimeToFailureInMinutes
+    * @return int The meanTimeToFailureInMinutes
     */
     public function getMeanTimeToFailureInMinutes()
     {

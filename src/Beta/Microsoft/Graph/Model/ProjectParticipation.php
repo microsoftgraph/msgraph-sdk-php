@@ -28,7 +28,7 @@ class ProjectParticipation extends ItemFacet
     * Gets the categories
     * Contains categories a user has associated with the project (for example, digital transformation, oil rig).
     *
-    * @return string|null The categories
+    * @return string The categories
     */
     public function getCategories()
     {
@@ -57,12 +57,12 @@ class ProjectParticipation extends ItemFacet
     * Gets the client
     * Contains detailed information about the client the project was for.
     *
-    * @return CompanyDetail|null The client
+    * @return CompanyDetail The client
     */
     public function getClient()
     {
         if (array_key_exists("client", $this->_propDict)) {
-            if (is_a($this->_propDict["client"], "\Beta\Microsoft\Graph\Model\CompanyDetail") || is_null($this->_propDict["client"])) {
+            if (is_a($this->_propDict["client"], "\Beta\Microsoft\Graph\Model\CompanyDetail")) {
                 return $this->_propDict["client"];
             } else {
                 $this->_propDict["client"] = new CompanyDetail($this->_propDict["client"]);
@@ -90,7 +90,7 @@ class ProjectParticipation extends ItemFacet
     * Gets the collaborationTags
     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
-    * @return string|null The collaborationTags
+    * @return string The collaborationTags
     */
     public function getCollaborationTags()
     {
@@ -120,7 +120,7 @@ class ProjectParticipation extends ItemFacet
      * Gets the colleagues
     * Lists people that also worked on the project.
      *
-     * @return array|null The colleagues
+     * @return array The colleagues
      */
     public function getColleagues()
     {
@@ -141,7 +141,7 @@ class ProjectParticipation extends ItemFacet
     */
     public function setColleagues($val)
     {
-        $this->_propDict["colleagues"] = $val;
+		$this->_propDict["colleagues"] = $val;
         return $this;
     }
     
@@ -149,12 +149,12 @@ class ProjectParticipation extends ItemFacet
     * Gets the detail
     * Contains detail about the user's role on the project.
     *
-    * @return PositionDetail|null The detail
+    * @return PositionDetail The detail
     */
     public function getDetail()
     {
         if (array_key_exists("detail", $this->_propDict)) {
-            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\PositionDetail") || is_null($this->_propDict["detail"])) {
+            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\PositionDetail")) {
                 return $this->_propDict["detail"];
             } else {
                 $this->_propDict["detail"] = new PositionDetail($this->_propDict["detail"]);
@@ -182,7 +182,7 @@ class ProjectParticipation extends ItemFacet
     * Gets the displayName
     * Contains a friendly name for the project.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -212,7 +212,7 @@ class ProjectParticipation extends ItemFacet
      * Gets the sponsors
     * The Person or people who sponsored the project.
      *
-     * @return array|null The sponsors
+     * @return array The sponsors
      */
     public function getSponsors()
     {
@@ -233,14 +233,14 @@ class ProjectParticipation extends ItemFacet
     */
     public function setSponsors($val)
     {
-        $this->_propDict["sponsors"] = $val;
+		$this->_propDict["sponsors"] = $val;
         return $this;
     }
     
     /**
     * Gets the thumbnailUrl
     *
-    * @return string|null The thumbnailUrl
+    * @return string The thumbnailUrl
     */
     public function getThumbnailUrl()
     {

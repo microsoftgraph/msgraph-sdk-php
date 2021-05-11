@@ -27,7 +27,7 @@ class LocalizedName extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the languageTag
     * The language tag for the label.
     *
-    * @return string|null The languageTag
+    * @return string The languageTag
     */
     public function getLanguageTag()
     {
@@ -55,7 +55,7 @@ class LocalizedName extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the name
     * The name in the localized language.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {

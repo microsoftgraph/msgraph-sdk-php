@@ -28,12 +28,12 @@ class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfiguratio
     * Gets the derivedCredentialSettings
     * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @return DeviceManagementDerivedCredentialSettings|null The derivedCredentialSettings
+    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
     */
     public function getDerivedCredentialSettings()
     {
         if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings") || is_null($this->_propDict["derivedCredentialSettings"])) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
                 return $this->_propDict["derivedCredentialSettings"];
             } else {
                 $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);

@@ -36,7 +36,7 @@ class OmaSettingString extends OmaSetting
     * Gets the value
     * Value.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

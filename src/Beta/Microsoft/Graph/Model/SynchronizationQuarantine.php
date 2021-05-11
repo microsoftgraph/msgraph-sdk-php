@@ -28,12 +28,12 @@ class SynchronizationQuarantine extends Entity
     * Gets the currentBegan
     * Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The currentBegan
+    * @return \DateTime The currentBegan
     */
     public function getCurrentBegan()
     {
         if (array_key_exists("currentBegan", $this->_propDict)) {
-            if (is_a($this->_propDict["currentBegan"], "\DateTime") || is_null($this->_propDict["currentBegan"])) {
+            if (is_a($this->_propDict["currentBegan"], "\DateTime")) {
                 return $this->_propDict["currentBegan"];
             } else {
                 $this->_propDict["currentBegan"] = new \DateTime($this->_propDict["currentBegan"]);
@@ -61,12 +61,12 @@ class SynchronizationQuarantine extends Entity
     * Gets the error
     * Describes the error(s) that occurred when putting the synchronization job into quarantine.
     *
-    * @return SynchronizationError|null The error
+    * @return SynchronizationError The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\SynchronizationError") || is_null($this->_propDict["error"])) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\SynchronizationError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new SynchronizationError($this->_propDict["error"]);
@@ -94,12 +94,12 @@ class SynchronizationQuarantine extends Entity
     * Gets the nextAttempt
     * Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The nextAttempt
+    * @return \DateTime The nextAttempt
     */
     public function getNextAttempt()
     {
         if (array_key_exists("nextAttempt", $this->_propDict)) {
-            if (is_a($this->_propDict["nextAttempt"], "\DateTime") || is_null($this->_propDict["nextAttempt"])) {
+            if (is_a($this->_propDict["nextAttempt"], "\DateTime")) {
                 return $this->_propDict["nextAttempt"];
             } else {
                 $this->_propDict["nextAttempt"] = new \DateTime($this->_propDict["nextAttempt"]);
@@ -127,12 +127,12 @@ class SynchronizationQuarantine extends Entity
     * Gets the reason
     * A code that signifies why the quarantine was imposed. Possible values are: EncounteredBaseEscrowThreshold, EncounteredTotalEscrowThreshold, EncounteredEscrowProportionThreshold, EncounteredQuarantineException, QuarantinedOnDemand, TooManyDeletes, Unknown.
     *
-    * @return QuarantineReason|null The reason
+    * @return QuarantineReason The reason
     */
     public function getReason()
     {
         if (array_key_exists("reason", $this->_propDict)) {
-            if (is_a($this->_propDict["reason"], "\Beta\Microsoft\Graph\Model\QuarantineReason") || is_null($this->_propDict["reason"])) {
+            if (is_a($this->_propDict["reason"], "\Beta\Microsoft\Graph\Model\QuarantineReason")) {
                 return $this->_propDict["reason"];
             } else {
                 $this->_propDict["reason"] = new QuarantineReason($this->_propDict["reason"]);
@@ -160,12 +160,12 @@ class SynchronizationQuarantine extends Entity
     * Gets the seriesBegan
     * Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The seriesBegan
+    * @return \DateTime The seriesBegan
     */
     public function getSeriesBegan()
     {
         if (array_key_exists("seriesBegan", $this->_propDict)) {
-            if (is_a($this->_propDict["seriesBegan"], "\DateTime") || is_null($this->_propDict["seriesBegan"])) {
+            if (is_a($this->_propDict["seriesBegan"], "\DateTime")) {
                 return $this->_propDict["seriesBegan"];
             } else {
                 $this->_propDict["seriesBegan"] = new \DateTime($this->_propDict["seriesBegan"]);
@@ -192,7 +192,7 @@ class SynchronizationQuarantine extends Entity
     * Gets the seriesCount
     * Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).
     *
-    * @return int|null The seriesCount
+    * @return int The seriesCount
     */
     public function getSeriesCount()
     {

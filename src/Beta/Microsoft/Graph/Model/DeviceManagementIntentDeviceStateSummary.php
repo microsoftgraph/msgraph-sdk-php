@@ -28,7 +28,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
     * Gets the conflictCount
     * Number of devices in conflict
     *
-    * @return int|null The conflictCount
+    * @return int The conflictCount
     */
     public function getConflictCount()
     {
@@ -57,7 +57,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
     * Gets the errorCount
     * Number of error devices
     *
-    * @return int|null The errorCount
+    * @return int The errorCount
     */
     public function getErrorCount()
     {
@@ -86,7 +86,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
     * Gets the failedCount
     * Number of failed devices
     *
-    * @return int|null The failedCount
+    * @return int The failedCount
     */
     public function getFailedCount()
     {
@@ -115,7 +115,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
     * Gets the notApplicableCount
     * Number of not applicable devices
     *
-    * @return int|null The notApplicableCount
+    * @return int The notApplicableCount
     */
     public function getNotApplicableCount()
     {
@@ -144,7 +144,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
     * Gets the notApplicablePlatformCount
     * Number of not applicable devices due to mismatch platform and policy
     *
-    * @return int|null The notApplicablePlatformCount
+    * @return int The notApplicablePlatformCount
     */
     public function getNotApplicablePlatformCount()
     {
@@ -173,7 +173,7 @@ class DeviceManagementIntentDeviceStateSummary extends Entity
     * Gets the successCount
     * Number of succeeded devices
     *
-    * @return int|null The successCount
+    * @return int The successCount
     */
     public function getSuccessCount()
     {

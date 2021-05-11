@@ -28,12 +28,12 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the connectionInfo
     * Connection information of an environment used to connect to a resource.
     *
-    * @return ConnectionInfo|null The connectionInfo
+    * @return ConnectionInfo The connectionInfo
     */
     public function getConnectionInfo()
     {
         if (array_key_exists("connectionInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionInfo"], "\Beta\Microsoft\Graph\Model\ConnectionInfo") || is_null($this->_propDict["connectionInfo"])) {
+            if (is_a($this->_propDict["connectionInfo"], "\Beta\Microsoft\Graph\Model\ConnectionInfo")) {
                 return $this->_propDict["connectionInfo"];
             } else {
                 $this->_propDict["connectionInfo"] = new ConnectionInfo($this->_propDict["connectionInfo"]);
@@ -61,7 +61,7 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the createdBy
     * The display name of the user that created this object.
     *
-    * @return string|null The createdBy
+    * @return string The createdBy
     */
     public function getCreatedBy()
     {
@@ -90,12 +90,12 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the createdDateTime
     * The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -123,7 +123,7 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the description
     * The description of this accessPackageResourceEnvironment object.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -152,7 +152,7 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the displayName
     * The display name of this object.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -181,7 +181,7 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the isDefaultEnvironment
     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
     *
-    * @return bool|null The isDefaultEnvironment
+    * @return bool The isDefaultEnvironment
     */
     public function getIsDefaultEnvironment()
     {
@@ -210,7 +210,7 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the modifiedBy
     * The display name of the entity that last modified this object.
     *
-    * @return string|null The modifiedBy
+    * @return string The modifiedBy
     */
     public function getModifiedBy()
     {
@@ -239,12 +239,12 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the modifiedDateTime
     * The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The modifiedDateTime
+    * @return \DateTime The modifiedDateTime
     */
     public function getModifiedDateTime()
     {
         if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime") || is_null($this->_propDict["modifiedDateTime"])) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["modifiedDateTime"];
             } else {
                 $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
@@ -272,7 +272,7 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the originId
     * The unique identifier of this environment in the origin system.
     *
-    * @return string|null The originId
+    * @return string The originId
     */
     public function getOriginId()
     {
@@ -301,7 +301,7 @@ class AccessPackageResourceEnvironment extends Entity
     * Gets the originSystem
     * The type of the resource in the origin system such as SharePointOnline. Supports $filter.
     *
-    * @return string|null The originSystem
+    * @return string The originSystem
     */
     public function getOriginSystem()
     {
@@ -331,7 +331,7 @@ class AccessPackageResourceEnvironment extends Entity
      * Gets the accessPackageResources
     * Read-only. Required.
      *
-     * @return array|null The accessPackageResources
+     * @return array The accessPackageResources
      */
     public function getAccessPackageResources()
     {
@@ -352,7 +352,7 @@ class AccessPackageResourceEnvironment extends Entity
     */
     public function setAccessPackageResources($val)
     {
-        $this->_propDict["accessPackageResources"] = $val;
+		$this->_propDict["accessPackageResources"] = $val;
         return $this;
     }
     

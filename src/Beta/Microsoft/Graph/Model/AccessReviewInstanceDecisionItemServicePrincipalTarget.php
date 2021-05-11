@@ -36,7 +36,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
     * Gets the appId
     * The appId for the service principal entity being reviewed.
     *
-    * @return string|null The appId
+    * @return string The appId
     */
     public function getAppId()
     {
@@ -64,7 +64,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
     * Gets the servicePrincipalDisplayName
     * The display name of the service principal whose access is being reviewed.
     *
-    * @return string|null The servicePrincipalDisplayName
+    * @return string The servicePrincipalDisplayName
     */
     public function getServicePrincipalDisplayName()
     {
@@ -91,7 +91,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessRevie
     /**
     * Gets the servicePrincipalId
     *
-    * @return string|null The servicePrincipalId
+    * @return string The servicePrincipalId
     */
     public function getServicePrincipalId()
     {

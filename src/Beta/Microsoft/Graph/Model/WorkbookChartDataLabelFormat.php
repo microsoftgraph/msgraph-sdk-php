@@ -28,12 +28,12 @@ class WorkbookChartDataLabelFormat extends Entity
     * Gets the fill
     * Represents the fill format of the current chart data label. Read-only.
     *
-    * @return WorkbookChartFill|null The fill
+    * @return WorkbookChartFill The fill
     */
     public function getFill()
     {
         if (array_key_exists("fill", $this->_propDict)) {
-            if (is_a($this->_propDict["fill"], "\Beta\Microsoft\Graph\Model\WorkbookChartFill") || is_null($this->_propDict["fill"])) {
+            if (is_a($this->_propDict["fill"], "\Beta\Microsoft\Graph\Model\WorkbookChartFill")) {
                 return $this->_propDict["fill"];
             } else {
                 $this->_propDict["fill"] = new WorkbookChartFill($this->_propDict["fill"]);
@@ -61,12 +61,12 @@ class WorkbookChartDataLabelFormat extends Entity
     * Gets the font
     * Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
     *
-    * @return WorkbookChartFont|null The font
+    * @return WorkbookChartFont The font
     */
     public function getFont()
     {
         if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "\Beta\Microsoft\Graph\Model\WorkbookChartFont") || is_null($this->_propDict["font"])) {
+            if (is_a($this->_propDict["font"], "\Beta\Microsoft\Graph\Model\WorkbookChartFont")) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookChartFont($this->_propDict["font"]);

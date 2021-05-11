@@ -27,7 +27,7 @@ class PropertyToEvaluate extends Entity
     * Gets the propertyName
     * Provides the property name.
     *
-    * @return string|null The propertyName
+    * @return string The propertyName
     */
     public function getPropertyName()
     {
@@ -55,7 +55,7 @@ class PropertyToEvaluate extends Entity
     * Gets the propertyValue
     * Provides the property value.
     *
-    * @return string|null The propertyValue
+    * @return string The propertyValue
     */
     public function getPropertyValue()
     {

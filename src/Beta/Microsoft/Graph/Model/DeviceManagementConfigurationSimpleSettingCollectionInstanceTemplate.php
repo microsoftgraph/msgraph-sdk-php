@@ -36,7 +36,7 @@ class DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplate exten
     * Gets the allowUnmanagedValues
     * Linked policy may append values which are not present in the template.
     *
-    * @return bool|null The allowUnmanagedValues
+    * @return bool The allowUnmanagedValues
     */
     public function getAllowUnmanagedValues()
     {
@@ -65,12 +65,12 @@ class DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplate exten
     * Gets the simpleSettingCollectionValueTemplate
     * Simple Setting Collection Value Template
     *
-    * @return DeviceManagementConfigurationSimpleSettingValueTemplate|null The simpleSettingCollectionValueTemplate
+    * @return DeviceManagementConfigurationSimpleSettingValueTemplate The simpleSettingCollectionValueTemplate
     */
     public function getSimpleSettingCollectionValueTemplate()
     {
         if (array_key_exists("simpleSettingCollectionValueTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["simpleSettingCollectionValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValueTemplate") || is_null($this->_propDict["simpleSettingCollectionValueTemplate"])) {
+            if (is_a($this->_propDict["simpleSettingCollectionValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValueTemplate")) {
                 return $this->_propDict["simpleSettingCollectionValueTemplate"];
             } else {
                 $this->_propDict["simpleSettingCollectionValueTemplate"] = new DeviceManagementConfigurationSimpleSettingValueTemplate($this->_propDict["simpleSettingCollectionValueTemplate"]);

@@ -27,7 +27,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
     /**
     * Gets the audioVideo
     *
-    * @return int|null The audioVideo
+    * @return int The audioVideo
     */
     public function getAudioVideo()
     {
@@ -54,7 +54,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
     /**
     * Gets the dialInMicrosoft
     *
-    * @return int|null The dialInMicrosoft
+    * @return int The dialInMicrosoft
     */
     public function getDialInMicrosoft()
     {
@@ -81,7 +81,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
     /**
     * Gets the dialOutMicrosoft
     *
-    * @return int|null The dialOutMicrosoft
+    * @return int The dialOutMicrosoft
     */
     public function getDialOutMicrosoft()
     {
@@ -108,12 +108,12 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime|null The reportDate
+    * @return \DateTime The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -139,7 +139,7 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -166,12 +166,12 @@ class SkypeForBusinessOrganizerActivityMinuteCounts extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);

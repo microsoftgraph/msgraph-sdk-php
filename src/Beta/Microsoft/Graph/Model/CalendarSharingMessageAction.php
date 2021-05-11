@@ -27,12 +27,12 @@ class CalendarSharingMessageAction extends Entity
     /**
     * Gets the action
     *
-    * @return CalendarSharingAction|null The action
+    * @return CalendarSharingAction The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\CalendarSharingAction") || is_null($this->_propDict["action"])) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\CalendarSharingAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new CalendarSharingAction($this->_propDict["action"]);
@@ -58,12 +58,12 @@ class CalendarSharingMessageAction extends Entity
     /**
     * Gets the actionType
     *
-    * @return CalendarSharingActionType|null The actionType
+    * @return CalendarSharingActionType The actionType
     */
     public function getActionType()
     {
         if (array_key_exists("actionType", $this->_propDict)) {
-            if (is_a($this->_propDict["actionType"], "\Beta\Microsoft\Graph\Model\CalendarSharingActionType") || is_null($this->_propDict["actionType"])) {
+            if (is_a($this->_propDict["actionType"], "\Beta\Microsoft\Graph\Model\CalendarSharingActionType")) {
                 return $this->_propDict["actionType"];
             } else {
                 $this->_propDict["actionType"] = new CalendarSharingActionType($this->_propDict["actionType"]);
@@ -89,12 +89,12 @@ class CalendarSharingMessageAction extends Entity
     /**
     * Gets the importance
     *
-    * @return CalendarSharingActionImportance|null The importance
+    * @return CalendarSharingActionImportance The importance
     */
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\CalendarSharingActionImportance") || is_null($this->_propDict["importance"])) {
+            if (is_a($this->_propDict["importance"], "\Beta\Microsoft\Graph\Model\CalendarSharingActionImportance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new CalendarSharingActionImportance($this->_propDict["importance"]);

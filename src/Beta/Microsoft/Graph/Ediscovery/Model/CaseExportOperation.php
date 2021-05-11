@@ -28,7 +28,7 @@ class CaseExportOperation extends CaseOperation
     * Gets the azureBlobContainer
     * The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
     *
-    * @return string|null The azureBlobContainer
+    * @return string The azureBlobContainer
     */
     public function getAzureBlobContainer()
     {
@@ -57,7 +57,7 @@ class CaseExportOperation extends CaseOperation
     * Gets the azureBlobToken
     * The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
     *
-    * @return string|null The azureBlobToken
+    * @return string The azureBlobToken
     */
     public function getAzureBlobToken()
     {
@@ -86,7 +86,7 @@ class CaseExportOperation extends CaseOperation
     * Gets the description
     * The description provided for the export.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -115,12 +115,12 @@ class CaseExportOperation extends CaseOperation
     * Gets the exportOptions
     * The options provided for the export. See reviewSet: export for more details. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
     *
-    * @return ExportOptions|null The exportOptions
+    * @return ExportOptions The exportOptions
     */
     public function getExportOptions()
     {
         if (array_key_exists("exportOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["exportOptions"], "\Beta\Microsoft\Graph\Ediscovery\Model\ExportOptions") || is_null($this->_propDict["exportOptions"])) {
+            if (is_a($this->_propDict["exportOptions"], "\Beta\Microsoft\Graph\Ediscovery\Model\ExportOptions")) {
                 return $this->_propDict["exportOptions"];
             } else {
                 $this->_propDict["exportOptions"] = new ExportOptions($this->_propDict["exportOptions"]);
@@ -148,12 +148,12 @@ class CaseExportOperation extends CaseOperation
     * Gets the exportStructure
     * The options provided that specify the structure of the export. See reviewSet: export for more details. Possible values are: none, directory, pst.
     *
-    * @return ExportFileStructure|null The exportStructure
+    * @return ExportFileStructure The exportStructure
     */
     public function getExportStructure()
     {
         if (array_key_exists("exportStructure", $this->_propDict)) {
-            if (is_a($this->_propDict["exportStructure"], "\Beta\Microsoft\Graph\Ediscovery\Model\ExportFileStructure") || is_null($this->_propDict["exportStructure"])) {
+            if (is_a($this->_propDict["exportStructure"], "\Beta\Microsoft\Graph\Ediscovery\Model\ExportFileStructure")) {
                 return $this->_propDict["exportStructure"];
             } else {
                 $this->_propDict["exportStructure"] = new ExportFileStructure($this->_propDict["exportStructure"]);
@@ -180,7 +180,7 @@ class CaseExportOperation extends CaseOperation
     /**
     * Gets the outputFolderId
     *
-    * @return string|null The outputFolderId
+    * @return string The outputFolderId
     */
     public function getOutputFolderId()
     {
@@ -208,7 +208,7 @@ class CaseExportOperation extends CaseOperation
     * Gets the outputName
     * The name provided for the export.
     *
-    * @return string|null The outputName
+    * @return string The outputName
     */
     public function getOutputName()
     {
@@ -237,12 +237,12 @@ class CaseExportOperation extends CaseOperation
     * Gets the reviewSet
     * The review set the content is being exported from.
     *
-    * @return ReviewSet|null The reviewSet
+    * @return ReviewSet The reviewSet
     */
     public function getReviewSet()
     {
         if (array_key_exists("reviewSet", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewSet"], "\Beta\Microsoft\Graph\Ediscovery\Model\ReviewSet") || is_null($this->_propDict["reviewSet"])) {
+            if (is_a($this->_propDict["reviewSet"], "\Beta\Microsoft\Graph\Ediscovery\Model\ReviewSet")) {
                 return $this->_propDict["reviewSet"];
             } else {
                 $this->_propDict["reviewSet"] = new ReviewSet($this->_propDict["reviewSet"]);

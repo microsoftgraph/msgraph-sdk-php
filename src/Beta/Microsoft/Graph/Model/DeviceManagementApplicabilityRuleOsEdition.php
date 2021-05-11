@@ -27,7 +27,7 @@ class DeviceManagementApplicabilityRuleOsEdition extends Entity
     * Gets the name
     * Name for object.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -56,12 +56,12 @@ class DeviceManagementApplicabilityRuleOsEdition extends Entity
     * Gets the osEditionTypes
     * Applicability rule OS edition type.
     *
-    * @return Windows10EditionType|null The osEditionTypes
+    * @return Windows10EditionType The osEditionTypes
     */
     public function getOsEditionTypes()
     {
         if (array_key_exists("osEditionTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["osEditionTypes"], "\Beta\Microsoft\Graph\Model\Windows10EditionType") || is_null($this->_propDict["osEditionTypes"])) {
+            if (is_a($this->_propDict["osEditionTypes"], "\Beta\Microsoft\Graph\Model\Windows10EditionType")) {
                 return $this->_propDict["osEditionTypes"];
             } else {
                 $this->_propDict["osEditionTypes"] = new Windows10EditionType($this->_propDict["osEditionTypes"]);
@@ -89,12 +89,12 @@ class DeviceManagementApplicabilityRuleOsEdition extends Entity
     * Gets the ruleType
     * Applicability Rule type. Possible values are: include, exclude.
     *
-    * @return DeviceManagementApplicabilityRuleType|null The ruleType
+    * @return DeviceManagementApplicabilityRuleType The ruleType
     */
     public function getRuleType()
     {
         if (array_key_exists("ruleType", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleType"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleType") || is_null($this->_propDict["ruleType"])) {
+            if (is_a($this->_propDict["ruleType"], "\Beta\Microsoft\Graph\Model\DeviceManagementApplicabilityRuleType")) {
                 return $this->_propDict["ruleType"];
             } else {
                 $this->_propDict["ruleType"] = new DeviceManagementApplicabilityRuleType($this->_propDict["ruleType"]);

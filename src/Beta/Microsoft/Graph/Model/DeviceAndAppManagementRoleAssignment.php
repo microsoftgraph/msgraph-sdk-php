@@ -28,7 +28,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
     * Gets the members
     * The list of ids of role member security groups. These are IDs from Azure Active Directory.
     *
-    * @return string|null The members
+    * @return string The members
     */
     public function getMembers()
     {
@@ -58,7 +58,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
      * Gets the roleScopeTags
     * The set of Role Scope Tags defined on the Role Assignment.
      *
-     * @return array|null The roleScopeTags
+     * @return array The roleScopeTags
      */
     public function getRoleScopeTags()
     {
@@ -79,7 +79,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
     */
     public function setRoleScopeTags($val)
     {
-        $this->_propDict["roleScopeTags"] = $val;
+		$this->_propDict["roleScopeTags"] = $val;
         return $this;
     }
     

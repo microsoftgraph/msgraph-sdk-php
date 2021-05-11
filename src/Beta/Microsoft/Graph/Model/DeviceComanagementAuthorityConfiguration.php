@@ -28,7 +28,7 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
     * Gets the configurationManagerAgentCommandLineArgument
     * CoManagement Authority configuration ConfigurationManagerAgentCommandLineArgument
     *
-    * @return string|null The configurationManagerAgentCommandLineArgument
+    * @return string The configurationManagerAgentCommandLineArgument
     */
     public function getConfigurationManagerAgentCommandLineArgument()
     {
@@ -57,7 +57,7 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
     * Gets the installConfigurationManagerAgent
     * CoManagement Authority configuration InstallConfigurationManagerAgent
     *
-    * @return bool|null The installConfigurationManagerAgent
+    * @return bool The installConfigurationManagerAgent
     */
     public function getInstallConfigurationManagerAgent()
     {
@@ -86,7 +86,7 @@ class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentConfigura
     * Gets the managedDeviceAuthority
     * CoManagement Authority configuration ManagedDeviceAuthority
     *
-    * @return int|null The managedDeviceAuthority
+    * @return int The managedDeviceAuthority
     */
     public function getManagedDeviceAuthority()
     {

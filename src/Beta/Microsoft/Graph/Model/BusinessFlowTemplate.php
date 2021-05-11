@@ -28,7 +28,7 @@ class BusinessFlowTemplate extends Entity
     * Gets the displayName
     * The name of the business flow template
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {

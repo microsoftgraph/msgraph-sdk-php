@@ -28,7 +28,7 @@ class UserAppInstallStatus extends Entity
     * Gets the failedDeviceCount
     * Failed Device Count.
     *
-    * @return int|null The failedDeviceCount
+    * @return int The failedDeviceCount
     */
     public function getFailedDeviceCount()
     {
@@ -57,7 +57,7 @@ class UserAppInstallStatus extends Entity
     * Gets the installedDeviceCount
     * Installed Device Count.
     *
-    * @return int|null The installedDeviceCount
+    * @return int The installedDeviceCount
     */
     public function getInstalledDeviceCount()
     {
@@ -86,7 +86,7 @@ class UserAppInstallStatus extends Entity
     * Gets the notInstalledDeviceCount
     * Not installed device count.
     *
-    * @return int|null The notInstalledDeviceCount
+    * @return int The notInstalledDeviceCount
     */
     public function getNotInstalledDeviceCount()
     {
@@ -115,7 +115,7 @@ class UserAppInstallStatus extends Entity
     * Gets the userName
     * User name.
     *
-    * @return string|null The userName
+    * @return string The userName
     */
     public function getUserName()
     {
@@ -144,7 +144,7 @@ class UserAppInstallStatus extends Entity
     * Gets the userPrincipalName
     * User Principal Name.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -173,12 +173,12 @@ class UserAppInstallStatus extends Entity
     * Gets the app
     * The navigation link to the mobile app.
     *
-    * @return MobileApp|null The app
+    * @return MobileApp The app
     */
     public function getApp()
     {
         if (array_key_exists("app", $this->_propDict)) {
-            if (is_a($this->_propDict["app"], "\Beta\Microsoft\Graph\Model\MobileApp") || is_null($this->_propDict["app"])) {
+            if (is_a($this->_propDict["app"], "\Beta\Microsoft\Graph\Model\MobileApp")) {
                 return $this->_propDict["app"];
             } else {
                 $this->_propDict["app"] = new MobileApp($this->_propDict["app"]);
@@ -207,7 +207,7 @@ class UserAppInstallStatus extends Entity
      * Gets the deviceStatuses
     * The install state of the app on devices.
      *
-     * @return array|null The deviceStatuses
+     * @return array The deviceStatuses
      */
     public function getDeviceStatuses()
     {
@@ -228,7 +228,7 @@ class UserAppInstallStatus extends Entity
     */
     public function setDeviceStatuses($val)
     {
-        $this->_propDict["deviceStatuses"] = $val;
+		$this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
     

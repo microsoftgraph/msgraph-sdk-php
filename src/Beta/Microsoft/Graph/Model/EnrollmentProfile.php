@@ -28,7 +28,7 @@ class EnrollmentProfile extends Entity
     * Gets the configurationEndpointUrl
     * Configuration endpoint url to use for Enrollment
     *
-    * @return string|null The configurationEndpointUrl
+    * @return string The configurationEndpointUrl
     */
     public function getConfigurationEndpointUrl()
     {
@@ -57,7 +57,7 @@ class EnrollmentProfile extends Entity
     * Gets the description
     * Description of the profile
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -86,7 +86,7 @@ class EnrollmentProfile extends Entity
     * Gets the displayName
     * Name of the profile
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -115,7 +115,7 @@ class EnrollmentProfile extends Entity
     * Gets the enableAuthenticationViaCompanyPortal
     * Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
     *
-    * @return bool|null The enableAuthenticationViaCompanyPortal
+    * @return bool The enableAuthenticationViaCompanyPortal
     */
     public function getEnableAuthenticationViaCompanyPortal()
     {
@@ -144,7 +144,7 @@ class EnrollmentProfile extends Entity
     * Gets the requireCompanyPortalOnSetupAssistantEnrolledDevices
     * Indicates that Company Portal is required on setup assistant enrolled devices
     *
-    * @return bool|null The requireCompanyPortalOnSetupAssistantEnrolledDevices
+    * @return bool The requireCompanyPortalOnSetupAssistantEnrolledDevices
     */
     public function getRequireCompanyPortalOnSetupAssistantEnrolledDevices()
     {
@@ -173,7 +173,7 @@ class EnrollmentProfile extends Entity
     * Gets the requiresUserAuthentication
     * Indicates if the profile requires user authentication
     *
-    * @return bool|null The requiresUserAuthentication
+    * @return bool The requiresUserAuthentication
     */
     public function getRequiresUserAuthentication()
     {

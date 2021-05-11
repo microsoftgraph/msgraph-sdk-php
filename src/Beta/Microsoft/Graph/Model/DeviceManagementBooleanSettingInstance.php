@@ -28,7 +28,7 @@ class DeviceManagementBooleanSettingInstance extends DeviceManagementSettingInst
     * Gets the value
     * The boolean value
     *
-    * @return bool|null The value
+    * @return bool The value
     */
     public function getValue()
     {

@@ -28,7 +28,7 @@ class CountryNamedLocation extends NamedLocation
     * Gets the countriesAndRegions
     * List of countries and/or regions in two-letter format specified by ISO 3166-2.
     *
-    * @return string|null The countriesAndRegions
+    * @return string The countriesAndRegions
     */
     public function getCountriesAndRegions()
     {
@@ -57,12 +57,12 @@ class CountryNamedLocation extends NamedLocation
     * Gets the countryLookupMethod
     * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps.
     *
-    * @return CountryLookupMethodType|null The countryLookupMethod
+    * @return CountryLookupMethodType The countryLookupMethod
     */
     public function getCountryLookupMethod()
     {
         if (array_key_exists("countryLookupMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["countryLookupMethod"], "\Beta\Microsoft\Graph\Model\CountryLookupMethodType") || is_null($this->_propDict["countryLookupMethod"])) {
+            if (is_a($this->_propDict["countryLookupMethod"], "\Beta\Microsoft\Graph\Model\CountryLookupMethodType")) {
                 return $this->_propDict["countryLookupMethod"];
             } else {
                 $this->_propDict["countryLookupMethod"] = new CountryLookupMethodType($this->_propDict["countryLookupMethod"]);
@@ -90,7 +90,7 @@ class CountryNamedLocation extends NamedLocation
     * Gets the includeUnknownCountriesAndRegions
     * True if IP addresses that don't map to a country or region should be included in the named location.
     *
-    * @return bool|null The includeUnknownCountriesAndRegions
+    * @return bool The includeUnknownCountriesAndRegions
     */
     public function getIncludeUnknownCountriesAndRegions()
     {

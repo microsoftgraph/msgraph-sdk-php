@@ -28,7 +28,7 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
     * Gets the category
     * The category of impacting process.
     *
-    * @return string|null The category
+    * @return string The category
     */
     public function getCategory()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
     * Gets the description
     * The description of process.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
     * Gets the deviceId
     * The unique identifier of the impacted device.
     *
-    * @return string|null The deviceId
+    * @return string The deviceId
     */
     public function getDeviceId()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
     * Gets the impactValue
     * The impact value of the process. Valid values 0 to 1.79769313486232E+308
     *
-    * @return float|null The impactValue
+    * @return float The impactValue
     */
     public function getImpactValue()
     {
@@ -136,7 +136,7 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
     */
     public function setImpactValue($val)
     {
-        $this->_propDict["impactValue"] = floatval($val);
+        $this->_propDict["impactValue"] = $val;
         return $this;
     }
     
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
     * Gets the processName
     * The process name.
     *
-    * @return string|null The processName
+    * @return string The processName
     */
     public function getProcessName()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsImpactingProcess extends Entity
     * Gets the publisher
     * The publisher of the process.
     *
-    * @return string|null The publisher
+    * @return string The publisher
     */
     public function getPublisher()
     {

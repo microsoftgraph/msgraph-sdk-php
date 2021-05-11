@@ -29,7 +29,7 @@ class InferenceClassification extends Entity
      * Gets the overrides
     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      *
-     * @return array|null The overrides
+     * @return array The overrides
      */
     public function getOverrides()
     {
@@ -50,7 +50,7 @@ class InferenceClassification extends Entity
     */
     public function setOverrides($val)
     {
-        $this->_propDict["overrides"] = $val;
+		$this->_propDict["overrides"] = $val;
         return $this;
     }
     

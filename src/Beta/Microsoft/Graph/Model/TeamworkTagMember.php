@@ -27,7 +27,7 @@ class TeamworkTagMember extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -54,7 +54,7 @@ class TeamworkTagMember extends Entity
     /**
     * Gets the tenantId
     *
-    * @return string|null The tenantId
+    * @return string The tenantId
     */
     public function getTenantId()
     {
@@ -81,7 +81,7 @@ class TeamworkTagMember extends Entity
     /**
     * Gets the userId
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {

@@ -28,12 +28,12 @@ class CertificateConnectorSetting extends Entity
     * Gets the certExpiryTime
     * Certificate expire time
     *
-    * @return \DateTime|null The certExpiryTime
+    * @return \DateTime The certExpiryTime
     */
     public function getCertExpiryTime()
     {
         if (array_key_exists("certExpiryTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certExpiryTime"], "\DateTime") || is_null($this->_propDict["certExpiryTime"])) {
+            if (is_a($this->_propDict["certExpiryTime"], "\DateTime")) {
                 return $this->_propDict["certExpiryTime"];
             } else {
                 $this->_propDict["certExpiryTime"] = new \DateTime($this->_propDict["certExpiryTime"]);
@@ -60,7 +60,7 @@ class CertificateConnectorSetting extends Entity
     * Gets the connectorVersion
     * Version of certificate connector
     *
-    * @return string|null The connectorVersion
+    * @return string The connectorVersion
     */
     public function getConnectorVersion()
     {
@@ -88,7 +88,7 @@ class CertificateConnectorSetting extends Entity
     * Gets the enrollmentError
     * Certificate connector enrollment error
     *
-    * @return string|null The enrollmentError
+    * @return string The enrollmentError
     */
     public function getEnrollmentError()
     {
@@ -117,12 +117,12 @@ class CertificateConnectorSetting extends Entity
     * Gets the lastConnectorConnectionTime
     * Last time certificate connector connected
     *
-    * @return \DateTime|null The lastConnectorConnectionTime
+    * @return \DateTime The lastConnectorConnectionTime
     */
     public function getLastConnectorConnectionTime()
     {
         if (array_key_exists("lastConnectorConnectionTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastConnectorConnectionTime"], "\DateTime") || is_null($this->_propDict["lastConnectorConnectionTime"])) {
+            if (is_a($this->_propDict["lastConnectorConnectionTime"], "\DateTime")) {
                 return $this->_propDict["lastConnectorConnectionTime"];
             } else {
                 $this->_propDict["lastConnectorConnectionTime"] = new \DateTime($this->_propDict["lastConnectorConnectionTime"]);
@@ -149,7 +149,7 @@ class CertificateConnectorSetting extends Entity
     * Gets the lastUploadVersion
     * Version of last uploaded certificate connector
     *
-    * @return int|null The lastUploadVersion
+    * @return int The lastUploadVersion
     */
     public function getLastUploadVersion()
     {
@@ -177,7 +177,7 @@ class CertificateConnectorSetting extends Entity
     * Gets the status
     * Certificate connector status
     *
-    * @return int|null The status
+    * @return int The status
     */
     public function getStatus()
     {

@@ -28,7 +28,7 @@ class PersonResponsibility extends ItemFacet
     * Gets the collaborationTags
     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
-    * @return string|null The collaborationTags
+    * @return string The collaborationTags
     */
     public function getCollaborationTags()
     {
@@ -57,7 +57,7 @@ class PersonResponsibility extends ItemFacet
     * Gets the description
     * Description of the responsibility.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -86,7 +86,7 @@ class PersonResponsibility extends ItemFacet
     * Gets the displayName
     * Contains a friendly name for the responsibility.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -114,7 +114,7 @@ class PersonResponsibility extends ItemFacet
     /**
     * Gets the thumbnailUrl
     *
-    * @return string|null The thumbnailUrl
+    * @return string The thumbnailUrl
     */
     public function getThumbnailUrl()
     {
@@ -142,7 +142,7 @@ class PersonResponsibility extends ItemFacet
     * Gets the webUrl
     * Contains a link to a web page or resource about the responsibility.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

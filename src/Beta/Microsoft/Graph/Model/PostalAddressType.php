@@ -26,7 +26,7 @@ class PostalAddressType extends Entity
     /**
     * Gets the city
     *
-    * @return string|null The city
+    * @return string The city
     */
     public function getCity()
     {
@@ -52,7 +52,7 @@ class PostalAddressType extends Entity
     /**
     * Gets the countryLetterCode
     *
-    * @return string|null The countryLetterCode
+    * @return string The countryLetterCode
     */
     public function getCountryLetterCode()
     {
@@ -78,7 +78,7 @@ class PostalAddressType extends Entity
     /**
     * Gets the postalCode
     *
-    * @return string|null The postalCode
+    * @return string The postalCode
     */
     public function getPostalCode()
     {
@@ -104,7 +104,7 @@ class PostalAddressType extends Entity
     /**
     * Gets the state
     *
-    * @return string|null The state
+    * @return string The state
     */
     public function getState()
     {
@@ -130,7 +130,7 @@ class PostalAddressType extends Entity
     /**
     * Gets the street
     *
-    * @return string|null The street
+    * @return string The street
     */
     public function getStreet()
     {

@@ -27,7 +27,7 @@ class AttributeMappingParameterSchema extends Entity
     * Gets the allowMultipleOccurrences
     * The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
     *
-    * @return bool|null The allowMultipleOccurrences
+    * @return bool The allowMultipleOccurrences
     */
     public function getAllowMultipleOccurrences()
     {
@@ -55,7 +55,7 @@ class AttributeMappingParameterSchema extends Entity
     * Gets the name
     * Parameter name.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -83,7 +83,7 @@ class AttributeMappingParameterSchema extends Entity
     * Gets the required
     * true if the parameter is required; otherwise false.
     *
-    * @return bool|null The required
+    * @return bool The required
     */
     public function getRequired()
     {
@@ -112,12 +112,12 @@ class AttributeMappingParameterSchema extends Entity
     * Gets the type
     * Possible values are: Boolean, Binary, Reference, Integer, String. Default is String.
     *
-    * @return AttributeType|null The type
+    * @return AttributeType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\AttributeType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\AttributeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new AttributeType($this->_propDict["type"]);

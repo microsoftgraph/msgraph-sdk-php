@@ -28,12 +28,12 @@ class VpnConfiguration extends DeviceConfiguration
     * Gets the authenticationMethod
     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
     *
-    * @return VpnAuthenticationMethod|null The authenticationMethod
+    * @return VpnAuthenticationMethod The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\VpnAuthenticationMethod") || is_null($this->_propDict["authenticationMethod"])) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -61,7 +61,7 @@ class VpnConfiguration extends DeviceConfiguration
     * Gets the connectionName
     * Connection name displayed to the user.
     *
-    * @return string|null The connectionName
+    * @return string The connectionName
     */
     public function getConnectionName()
     {
@@ -90,7 +90,7 @@ class VpnConfiguration extends DeviceConfiguration
     * Gets the realm
     * Realm when connection type is set to Pulse Secure.
     *
-    * @return string|null The realm
+    * @return string The realm
     */
     public function getRealm()
     {
@@ -119,7 +119,7 @@ class VpnConfiguration extends DeviceConfiguration
     * Gets the role
     * Role when connection type is set to Pulse Secure.
     *
-    * @return string|null The role
+    * @return string The role
     */
     public function getRole()
     {
@@ -149,7 +149,7 @@ class VpnConfiguration extends DeviceConfiguration
      * Gets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The servers
+     * @return array The servers
      */
     public function getServers()
     {
@@ -170,7 +170,7 @@ class VpnConfiguration extends DeviceConfiguration
     */
     public function setServers($val)
     {
-        $this->_propDict["servers"] = $val;
+		$this->_propDict["servers"] = $val;
         return $this;
     }
     

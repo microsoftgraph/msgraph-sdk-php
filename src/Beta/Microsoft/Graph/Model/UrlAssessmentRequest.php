@@ -28,7 +28,7 @@ class UrlAssessmentRequest extends ThreatAssessmentRequest
     * Gets the url
     * The URL string.
     *
-    * @return string|null The url
+    * @return string The url
     */
     public function getUrl()
     {

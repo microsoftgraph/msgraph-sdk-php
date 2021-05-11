@@ -28,12 +28,12 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
     * Gets the actionType
     * Action type for Intune Application. Possible values are: unknown, installCommandSent, installed, uninstalled, userRequestedInstall.
     *
-    * @return MobileAppActionType|null The actionType
+    * @return MobileAppActionType The actionType
     */
     public function getActionType()
     {
         if (array_key_exists("actionType", $this->_propDict)) {
-            if (is_a($this->_propDict["actionType"], "\Beta\Microsoft\Graph\Model\MobileAppActionType") || is_null($this->_propDict["actionType"])) {
+            if (is_a($this->_propDict["actionType"], "\Beta\Microsoft\Graph\Model\MobileAppActionType")) {
                 return $this->_propDict["actionType"];
             } else {
                 $this->_propDict["actionType"] = new MobileAppActionType($this->_propDict["actionType"]);
@@ -60,7 +60,7 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
     * Gets the errorCode
     * Error code for the failure, empty if no failure.
     *
-    * @return string|null The errorCode
+    * @return string The errorCode
     */
     public function getErrorCode()
     {
@@ -89,12 +89,12 @@ class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHi
     * Gets the runState
     * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
-    * @return RunState|null The runState
+    * @return RunState The runState
     */
     public function getRunState()
     {
         if (array_key_exists("runState", $this->_propDict)) {
-            if (is_a($this->_propDict["runState"], "\Beta\Microsoft\Graph\Model\RunState") || is_null($this->_propDict["runState"])) {
+            if (is_a($this->_propDict["runState"], "\Beta\Microsoft\Graph\Model\RunState")) {
                 return $this->_propDict["runState"];
             } else {
                 $this->_propDict["runState"] = new RunState($this->_propDict["runState"]);

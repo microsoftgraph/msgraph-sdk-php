@@ -27,7 +27,7 @@ class DeviceManagementConfigurationReferenceSettingValue extends DeviceManagemen
     * Gets the note
     * A note that admin can use to put some contextual information
     *
-    * @return string|null The note
+    * @return string The note
     */
     public function getNote()
     {

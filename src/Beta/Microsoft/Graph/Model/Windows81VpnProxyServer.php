@@ -27,7 +27,7 @@ class Windows81VpnProxyServer extends VpnProxyServer
     * Gets the automaticallyDetectProxySettings
     * Automatically detect proxy settings.
     *
-    * @return bool|null The automaticallyDetectProxySettings
+    * @return bool The automaticallyDetectProxySettings
     */
     public function getAutomaticallyDetectProxySettings()
     {
@@ -55,7 +55,7 @@ class Windows81VpnProxyServer extends VpnProxyServer
     * Gets the bypassProxyServerForLocalAddress
     * Bypass proxy server for local address.
     *
-    * @return bool|null The bypassProxyServerForLocalAddress
+    * @return bool The bypassProxyServerForLocalAddress
     */
     public function getBypassProxyServerForLocalAddress()
     {

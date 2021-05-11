@@ -27,12 +27,12 @@ class MachineLearningDetectedSensitiveContent extends DetectedSensitiveContent
     /**
     * Gets the matchTolerance
     *
-    * @return MlClassificationMatchTolerance|null The matchTolerance
+    * @return MlClassificationMatchTolerance The matchTolerance
     */
     public function getMatchTolerance()
     {
         if (array_key_exists("matchTolerance", $this->_propDict)) {
-            if (is_a($this->_propDict["matchTolerance"], "\Beta\Microsoft\Graph\Model\MlClassificationMatchTolerance") || is_null($this->_propDict["matchTolerance"])) {
+            if (is_a($this->_propDict["matchTolerance"], "\Beta\Microsoft\Graph\Model\MlClassificationMatchTolerance")) {
                 return $this->_propDict["matchTolerance"];
             } else {
                 $this->_propDict["matchTolerance"] = new MlClassificationMatchTolerance($this->_propDict["matchTolerance"]);
@@ -57,7 +57,7 @@ class MachineLearningDetectedSensitiveContent extends DetectedSensitiveContent
     /**
     * Gets the modelVersion
     *
-    * @return string|null The modelVersion
+    * @return string The modelVersion
     */
     public function getModelVersion()
     {

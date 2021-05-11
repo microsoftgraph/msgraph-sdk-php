@@ -28,7 +28,7 @@ class ItemPatent extends ItemFacet
     * Gets the description
     * Descpription of the patent or filing.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class ItemPatent extends ItemFacet
     * Gets the displayName
     * Title of the patent or filing.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class ItemPatent extends ItemFacet
     * Gets the isPending
     * Indicates the patent is pending.
     *
-    * @return bool|null The isPending
+    * @return bool The isPending
     */
     public function getIsPending()
     {
@@ -115,12 +115,12 @@ class ItemPatent extends ItemFacet
     * Gets the issuedDate
     * The date that the patent was granted.
     *
-    * @return \DateTime|null The issuedDate
+    * @return \DateTime The issuedDate
     */
     public function getIssuedDate()
     {
         if (array_key_exists("issuedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["issuedDate"], "\DateTime") || is_null($this->_propDict["issuedDate"])) {
+            if (is_a($this->_propDict["issuedDate"], "\DateTime")) {
                 return $this->_propDict["issuedDate"];
             } else {
                 $this->_propDict["issuedDate"] = new \DateTime($this->_propDict["issuedDate"]);
@@ -148,7 +148,7 @@ class ItemPatent extends ItemFacet
     * Gets the issuingAuthority
     * Authority which granted the patent.
     *
-    * @return string|null The issuingAuthority
+    * @return string The issuingAuthority
     */
     public function getIssuingAuthority()
     {
@@ -177,7 +177,7 @@ class ItemPatent extends ItemFacet
     * Gets the number
     * The patent number.
     *
-    * @return string|null The number
+    * @return string The number
     */
     public function getNumber()
     {
@@ -206,7 +206,7 @@ class ItemPatent extends ItemFacet
     * Gets the webUrl
     * URL referencing the patent or filing.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

@@ -28,7 +28,7 @@ class WindowsManagementAppHealthState extends Entity
     * Gets the deviceName
     * Name of the device on which Windows management app is installed.
     *
-    * @return string|null The deviceName
+    * @return string The deviceName
     */
     public function getDeviceName()
     {
@@ -57,7 +57,7 @@ class WindowsManagementAppHealthState extends Entity
     * Gets the deviceOSVersion
     * Windows 10 OS version of the device on which Windows management app is installed.
     *
-    * @return string|null The deviceOSVersion
+    * @return string The deviceOSVersion
     */
     public function getDeviceOSVersion()
     {
@@ -86,12 +86,12 @@ class WindowsManagementAppHealthState extends Entity
     * Gets the healthState
     * Windows management app health state. Possible values are: unknown, healthy, unhealthy.
     *
-    * @return HealthState|null The healthState
+    * @return HealthState The healthState
     */
     public function getHealthState()
     {
         if (array_key_exists("healthState", $this->_propDict)) {
-            if (is_a($this->_propDict["healthState"], "\Beta\Microsoft\Graph\Model\HealthState") || is_null($this->_propDict["healthState"])) {
+            if (is_a($this->_propDict["healthState"], "\Beta\Microsoft\Graph\Model\HealthState")) {
                 return $this->_propDict["healthState"];
             } else {
                 $this->_propDict["healthState"] = new HealthState($this->_propDict["healthState"]);
@@ -119,7 +119,7 @@ class WindowsManagementAppHealthState extends Entity
     * Gets the installedVersion
     * Windows management app installed version.
     *
-    * @return string|null The installedVersion
+    * @return string The installedVersion
     */
     public function getInstalledVersion()
     {
@@ -148,12 +148,12 @@ class WindowsManagementAppHealthState extends Entity
     * Gets the lastCheckInDateTime
     * Windows management app last check-in time.
     *
-    * @return \DateTime|null The lastCheckInDateTime
+    * @return \DateTime The lastCheckInDateTime
     */
     public function getLastCheckInDateTime()
     {
         if (array_key_exists("lastCheckInDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime") || is_null($this->_propDict["lastCheckInDateTime"])) {
+            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime")) {
                 return $this->_propDict["lastCheckInDateTime"];
             } else {
                 $this->_propDict["lastCheckInDateTime"] = new \DateTime($this->_propDict["lastCheckInDateTime"]);

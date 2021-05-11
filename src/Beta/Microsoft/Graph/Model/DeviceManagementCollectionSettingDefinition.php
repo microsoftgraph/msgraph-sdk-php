@@ -28,7 +28,7 @@ class DeviceManagementCollectionSettingDefinition extends DeviceManagementSettin
     * Gets the elementDefinitionId
     * The Setting Definition ID that describes what each element of the collection looks like
     *
-    * @return string|null The elementDefinitionId
+    * @return string The elementDefinitionId
     */
     public function getElementDefinitionId()
     {

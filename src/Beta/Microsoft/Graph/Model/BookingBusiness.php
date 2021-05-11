@@ -28,12 +28,12 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the address
     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
     *
-    * @return PhysicalAddress|null The address
+    * @return PhysicalAddress The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PhysicalAddress") || is_null($this->_propDict["address"])) {
+            if (is_a($this->_propDict["address"], "\Beta\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -62,7 +62,7 @@ class BookingBusiness extends BookingNamedEntity
      * Gets the businessHours
     * The hours of operation for the business.
      *
-     * @return array|null The businessHours
+     * @return array The businessHours
      */
     public function getBusinessHours()
     {
@@ -83,7 +83,7 @@ class BookingBusiness extends BookingNamedEntity
     */
     public function setBusinessHours($val)
     {
-        $this->_propDict["businessHours"] = $val;
+		$this->_propDict["businessHours"] = $val;
         return $this;
     }
     
@@ -91,7 +91,7 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the businessType
     * The type of business.
     *
-    * @return string|null The businessType
+    * @return string The businessType
     */
     public function getBusinessType()
     {
@@ -120,7 +120,7 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the defaultCurrencyIso
     * The code for the currency that the business operates in on Microsoft Bookings.
     *
-    * @return string|null The defaultCurrencyIso
+    * @return string The defaultCurrencyIso
     */
     public function getDefaultCurrencyIso()
     {
@@ -149,7 +149,7 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the email
     * The email address for the business.
     *
-    * @return string|null The email
+    * @return string The email
     */
     public function getEmail()
     {
@@ -178,7 +178,7 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the isPublished
     * The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
     *
-    * @return bool|null The isPublished
+    * @return bool The isPublished
     */
     public function getIsPublished()
     {
@@ -207,7 +207,7 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the phone
     * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
     *
-    * @return string|null The phone
+    * @return string The phone
     */
     public function getPhone()
     {
@@ -236,7 +236,7 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the publicUrl
     * The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
     *
-    * @return string|null The publicUrl
+    * @return string The publicUrl
     */
     public function getPublicUrl()
     {
@@ -265,12 +265,12 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the schedulingPolicy
     * Specifies how bookings can be created for this business.
     *
-    * @return BookingSchedulingPolicy|null The schedulingPolicy
+    * @return BookingSchedulingPolicy The schedulingPolicy
     */
     public function getSchedulingPolicy()
     {
         if (array_key_exists("schedulingPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["schedulingPolicy"], "\Beta\Microsoft\Graph\Model\BookingSchedulingPolicy") || is_null($this->_propDict["schedulingPolicy"])) {
+            if (is_a($this->_propDict["schedulingPolicy"], "\Beta\Microsoft\Graph\Model\BookingSchedulingPolicy")) {
                 return $this->_propDict["schedulingPolicy"];
             } else {
                 $this->_propDict["schedulingPolicy"] = new BookingSchedulingPolicy($this->_propDict["schedulingPolicy"]);
@@ -298,7 +298,7 @@ class BookingBusiness extends BookingNamedEntity
     * Gets the webSiteUrl
     * Example: https://www.contoso.com
     *
-    * @return string|null The webSiteUrl
+    * @return string The webSiteUrl
     */
     public function getWebSiteUrl()
     {
@@ -328,7 +328,7 @@ class BookingBusiness extends BookingNamedEntity
      * Gets the appointments
     * All the appointments of this business. Read-only. Nullable.
      *
-     * @return array|null The appointments
+     * @return array The appointments
      */
     public function getAppointments()
     {
@@ -349,7 +349,7 @@ class BookingBusiness extends BookingNamedEntity
     */
     public function setAppointments($val)
     {
-        $this->_propDict["appointments"] = $val;
+		$this->_propDict["appointments"] = $val;
         return $this;
     }
     
@@ -358,7 +358,7 @@ class BookingBusiness extends BookingNamedEntity
      * Gets the calendarView
     * The set of appointments of this business in a specified date range. Read-only. Nullable.
      *
-     * @return array|null The calendarView
+     * @return array The calendarView
      */
     public function getCalendarView()
     {
@@ -379,7 +379,7 @@ class BookingBusiness extends BookingNamedEntity
     */
     public function setCalendarView($val)
     {
-        $this->_propDict["calendarView"] = $val;
+		$this->_propDict["calendarView"] = $val;
         return $this;
     }
     
@@ -388,7 +388,7 @@ class BookingBusiness extends BookingNamedEntity
      * Gets the customers
     * All the customers of this business. Read-only. Nullable.
      *
-     * @return array|null The customers
+     * @return array The customers
      */
     public function getCustomers()
     {
@@ -409,7 +409,7 @@ class BookingBusiness extends BookingNamedEntity
     */
     public function setCustomers($val)
     {
-        $this->_propDict["customers"] = $val;
+		$this->_propDict["customers"] = $val;
         return $this;
     }
     
@@ -418,7 +418,7 @@ class BookingBusiness extends BookingNamedEntity
      * Gets the services
     * All the services offered by this business. Read-only. Nullable.
      *
-     * @return array|null The services
+     * @return array The services
      */
     public function getServices()
     {
@@ -439,7 +439,7 @@ class BookingBusiness extends BookingNamedEntity
     */
     public function setServices($val)
     {
-        $this->_propDict["services"] = $val;
+		$this->_propDict["services"] = $val;
         return $this;
     }
     
@@ -448,7 +448,7 @@ class BookingBusiness extends BookingNamedEntity
      * Gets the staffMembers
     * All the staff members that provide services in this business. Read-only. Nullable.
      *
-     * @return array|null The staffMembers
+     * @return array The staffMembers
      */
     public function getStaffMembers()
     {
@@ -469,7 +469,7 @@ class BookingBusiness extends BookingNamedEntity
     */
     public function setStaffMembers($val)
     {
-        $this->_propDict["staffMembers"] = $val;
+		$this->_propDict["staffMembers"] = $val;
         return $this;
     }
     

@@ -36,7 +36,7 @@ class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the useDeviceContext
     * Whether or not to use device execution context for Windows AppX mobile app.
     *
-    * @return bool|null The useDeviceContext
+    * @return bool The useDeviceContext
     */
     public function getUseDeviceContext()
     {

@@ -28,7 +28,7 @@ class InformationProtectionLabel extends Entity
     * Gets the color
     * The color that the UI should display for the label, if configured.
     *
-    * @return string|null The color
+    * @return string The color
     */
     public function getColor()
     {
@@ -57,7 +57,7 @@ class InformationProtectionLabel extends Entity
     * Gets the description
     * The admin-defined description for the label.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -86,7 +86,7 @@ class InformationProtectionLabel extends Entity
     * Gets the isActive
     * Indicates whether the label is active or not. Active labels should be hidden or disabled in UI.
     *
-    * @return bool|null The isActive
+    * @return bool The isActive
     */
     public function getIsActive()
     {
@@ -115,7 +115,7 @@ class InformationProtectionLabel extends Entity
     * Gets the name
     * The plaintext name of the label.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -143,12 +143,12 @@ class InformationProtectionLabel extends Entity
     /**
     * Gets the parent
     *
-    * @return ParentLabelDetails|null The parent
+    * @return ParentLabelDetails The parent
     */
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\ParentLabelDetails") || is_null($this->_propDict["parent"])) {
+            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\ParentLabelDetails")) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new ParentLabelDetails($this->_propDict["parent"]);
@@ -175,7 +175,7 @@ class InformationProtectionLabel extends Entity
     * Gets the sensitivity
     * The sensitivity value of the label, where lower is less sensitive.
     *
-    * @return int|null The sensitivity
+    * @return int The sensitivity
     */
     public function getSensitivity()
     {
@@ -204,7 +204,7 @@ class InformationProtectionLabel extends Entity
     * Gets the tooltip
     * The tooltip that should be displayed for the label in a UI.
     *
-    * @return string|null The tooltip
+    * @return string The tooltip
     */
     public function getTooltip()
     {

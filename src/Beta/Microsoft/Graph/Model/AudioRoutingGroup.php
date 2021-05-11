@@ -28,7 +28,7 @@ class AudioRoutingGroup extends Entity
     * Gets the receivers
     * List of receiving participant ids.
     *
-    * @return string|null The receivers
+    * @return string The receivers
     */
     public function getReceivers()
     {
@@ -57,12 +57,12 @@ class AudioRoutingGroup extends Entity
     * Gets the routingMode
     * Routing group mode.  Possible values are: oneToOne, multicast.
     *
-    * @return RoutingMode|null The routingMode
+    * @return RoutingMode The routingMode
     */
     public function getRoutingMode()
     {
         if (array_key_exists("routingMode", $this->_propDict)) {
-            if (is_a($this->_propDict["routingMode"], "\Beta\Microsoft\Graph\Model\RoutingMode") || is_null($this->_propDict["routingMode"])) {
+            if (is_a($this->_propDict["routingMode"], "\Beta\Microsoft\Graph\Model\RoutingMode")) {
                 return $this->_propDict["routingMode"];
             } else {
                 $this->_propDict["routingMode"] = new RoutingMode($this->_propDict["routingMode"]);
@@ -90,7 +90,7 @@ class AudioRoutingGroup extends Entity
     * Gets the sources
     * List of source participant ids.
     *
-    * @return string|null The sources
+    * @return string The sources
     */
     public function getSources()
     {

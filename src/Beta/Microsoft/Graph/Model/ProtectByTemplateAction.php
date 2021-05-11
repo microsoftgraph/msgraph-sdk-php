@@ -27,7 +27,7 @@ class ProtectByTemplateAction extends InformationProtectionAction
     * Gets the templateId
     * The GUID of the Azure Information Protection template to apply to the information.
     *
-    * @return string|null The templateId
+    * @return string The templateId
     */
     public function getTemplateId()
     {

@@ -27,7 +27,7 @@ class DeleteAction extends Entity
     * Gets the name
     * The name of the item that was deleted.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -55,7 +55,7 @@ class DeleteAction extends Entity
     * Gets the objectType
     * File or Folder, depending on the type of the deleted item.
     *
-    * @return string|null The objectType
+    * @return string The objectType
     */
     public function getObjectType()
     {

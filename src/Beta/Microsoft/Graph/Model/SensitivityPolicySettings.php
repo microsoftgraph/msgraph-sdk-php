@@ -27,12 +27,12 @@ class SensitivityPolicySettings extends Entity
     /**
     * Gets the applicableTo
     *
-    * @return SensitivityLabelTarget|null The applicableTo
+    * @return SensitivityLabelTarget The applicableTo
     */
     public function getApplicableTo()
     {
         if (array_key_exists("applicableTo", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableTo"], "\Beta\Microsoft\Graph\Model\SensitivityLabelTarget") || is_null($this->_propDict["applicableTo"])) {
+            if (is_a($this->_propDict["applicableTo"], "\Beta\Microsoft\Graph\Model\SensitivityLabelTarget")) {
                 return $this->_propDict["applicableTo"];
             } else {
                 $this->_propDict["applicableTo"] = new SensitivityLabelTarget($this->_propDict["applicableTo"]);
@@ -58,7 +58,7 @@ class SensitivityPolicySettings extends Entity
     /**
     * Gets the downgradeSensitivityRequiresJustification
     *
-    * @return bool|null The downgradeSensitivityRequiresJustification
+    * @return bool The downgradeSensitivityRequiresJustification
     */
     public function getDowngradeSensitivityRequiresJustification()
     {
@@ -85,7 +85,7 @@ class SensitivityPolicySettings extends Entity
     /**
     * Gets the helpWebUrl
     *
-    * @return string|null The helpWebUrl
+    * @return string The helpWebUrl
     */
     public function getHelpWebUrl()
     {
@@ -112,7 +112,7 @@ class SensitivityPolicySettings extends Entity
     /**
     * Gets the isMandatory
     *
-    * @return bool|null The isMandatory
+    * @return bool The isMandatory
     */
     public function getIsMandatory()
     {

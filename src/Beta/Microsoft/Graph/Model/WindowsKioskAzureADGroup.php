@@ -27,7 +27,7 @@ class WindowsKioskAzureADGroup extends WindowsKioskUser
     * Gets the displayName
     * The display name of the AzureAD group that will be locked to this kiosk configuration
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class WindowsKioskAzureADGroup extends WindowsKioskUser
     * Gets the groupId
     * The ID of the AzureAD group that will be locked to this kiosk configuration
     *
-    * @return string|null The groupId
+    * @return string The groupId
     */
     public function getGroupId()
     {

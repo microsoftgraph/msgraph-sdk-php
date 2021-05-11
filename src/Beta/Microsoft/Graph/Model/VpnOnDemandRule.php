@@ -28,12 +28,12 @@ class VpnOnDemandRule extends Entity
     * Gets the action
     * Action. Possible values are: connect, evaluateConnection, ignore, disconnect.
     *
-    * @return VpnOnDemandRuleConnectionAction|null The action
+    * @return VpnOnDemandRuleConnectionAction The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\VpnOnDemandRuleConnectionAction") || is_null($this->_propDict["action"])) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\VpnOnDemandRuleConnectionAction")) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new VpnOnDemandRuleConnectionAction($this->_propDict["action"]);
@@ -60,7 +60,7 @@ class VpnOnDemandRule extends Entity
     * Gets the dnsSearchDomains
     * DNS Search Domains.
     *
-    * @return string|null The dnsSearchDomains
+    * @return string The dnsSearchDomains
     */
     public function getDnsSearchDomains()
     {
@@ -89,12 +89,12 @@ class VpnOnDemandRule extends Entity
     * Gets the domainAction
     * Domain Action (Only applicable when Action is evaluate connection). Possible values are: connectIfNeeded, neverConnect.
     *
-    * @return VpnOnDemandRuleConnectionDomainAction|null The domainAction
+    * @return VpnOnDemandRuleConnectionDomainAction The domainAction
     */
     public function getDomainAction()
     {
         if (array_key_exists("domainAction", $this->_propDict)) {
-            if (is_a($this->_propDict["domainAction"], "\Beta\Microsoft\Graph\Model\VpnOnDemandRuleConnectionDomainAction") || is_null($this->_propDict["domainAction"])) {
+            if (is_a($this->_propDict["domainAction"], "\Beta\Microsoft\Graph\Model\VpnOnDemandRuleConnectionDomainAction")) {
                 return $this->_propDict["domainAction"];
             } else {
                 $this->_propDict["domainAction"] = new VpnOnDemandRuleConnectionDomainAction($this->_propDict["domainAction"]);
@@ -121,7 +121,7 @@ class VpnOnDemandRule extends Entity
     * Gets the domains
     * Domains (Only applicable when Action is evaluate connection).
     *
-    * @return string|null The domains
+    * @return string The domains
     */
     public function getDomains()
     {
@@ -149,7 +149,7 @@ class VpnOnDemandRule extends Entity
     * Gets the probeRequiredUrl
     * Probe Required Url (Only applicable when Action is evaluate connection and DomainAction is connect if needed).
     *
-    * @return string|null The probeRequiredUrl
+    * @return string The probeRequiredUrl
     */
     public function getProbeRequiredUrl()
     {
@@ -177,7 +177,7 @@ class VpnOnDemandRule extends Entity
     * Gets the probeUrl
     * A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
     *
-    * @return string|null The probeUrl
+    * @return string The probeUrl
     */
     public function getProbeUrl()
     {
@@ -205,7 +205,7 @@ class VpnOnDemandRule extends Entity
     * Gets the ssids
     * Network Service Set Identifiers (SSIDs).
     *
-    * @return string|null The ssids
+    * @return string The ssids
     */
     public function getSsids()
     {

@@ -28,12 +28,12 @@ class ScheduleItem extends Entity
     * Gets the end
     * The date, time, and time zone that the corresponding event ends.
     *
-    * @return DateTimeTimeZone|null The end
+    * @return DateTimeTimeZone The end
     */
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["end"])) {
+            if (is_a($this->_propDict["end"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
@@ -60,7 +60,7 @@ class ScheduleItem extends Entity
     * Gets the isPrivate
     * The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
     *
-    * @return bool|null The isPrivate
+    * @return bool The isPrivate
     */
     public function getIsPrivate()
     {
@@ -88,7 +88,7 @@ class ScheduleItem extends Entity
     * Gets the location
     * The location where the corresponding event is held or attended from. Optional.
     *
-    * @return string|null The location
+    * @return string The location
     */
     public function getLocation()
     {
@@ -117,12 +117,12 @@ class ScheduleItem extends Entity
     * Gets the start
     * The date, time, and time zone that the corresponding event starts.
     *
-    * @return DateTimeTimeZone|null The start
+    * @return DateTimeTimeZone The start
     */
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["start"])) {
+            if (is_a($this->_propDict["start"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
@@ -150,12 +150,12 @@ class ScheduleItem extends Entity
     * Gets the status
     * The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
-    * @return FreeBusyStatus|null The status
+    * @return FreeBusyStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\FreeBusyStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\FreeBusyStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new FreeBusyStatus($this->_propDict["status"]);
@@ -182,7 +182,7 @@ class ScheduleItem extends Entity
     * Gets the subject
     * The corresponding event's subject line. Optional.
     *
-    * @return string|null The subject
+    * @return string The subject
     */
     public function getSubject()
     {

@@ -27,12 +27,12 @@ class UserConfiguration extends Entity
     /**
     * Gets the binaryData
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The binaryData
+    * @return \GuzzleHttp\Psr7\Stream The binaryData
     */
     public function getBinaryData()
     {
         if (array_key_exists("binaryData", $this->_propDict)) {
-            if (is_a($this->_propDict["binaryData"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["binaryData"])) {
+            if (is_a($this->_propDict["binaryData"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["binaryData"];
             } else {
                 $this->_propDict["binaryData"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["binaryData"]);

@@ -26,7 +26,7 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the aliases
     *
-    * @return string|null The aliases
+    * @return string The aliases
     */
     public function getAliases()
     {
@@ -52,7 +52,7 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the isQueryable
     *
-    * @return bool|null The isQueryable
+    * @return bool The isQueryable
     */
     public function getIsQueryable()
     {
@@ -78,7 +78,7 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the isRefinable
     *
-    * @return bool|null The isRefinable
+    * @return bool The isRefinable
     */
     public function getIsRefinable()
     {
@@ -104,7 +104,7 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the isRetrievable
     *
-    * @return bool|null The isRetrievable
+    * @return bool The isRetrievable
     */
     public function getIsRetrievable()
     {
@@ -130,7 +130,7 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the isSearchable
     *
-    * @return bool|null The isSearchable
+    * @return bool The isSearchable
     */
     public function getIsSearchable()
     {
@@ -157,12 +157,12 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the labels
     *
-    * @return Label|null The labels
+    * @return Label The labels
     */
     public function getLabels()
     {
         if (array_key_exists("labels", $this->_propDict)) {
-            if (is_a($this->_propDict["labels"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Label") || is_null($this->_propDict["labels"])) {
+            if (is_a($this->_propDict["labels"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Label")) {
                 return $this->_propDict["labels"];
             } else {
                 $this->_propDict["labels"] = new Label($this->_propDict["labels"]);
@@ -187,7 +187,7 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -214,12 +214,12 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the type
     *
-    * @return PropertyType|null The type
+    * @return PropertyType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\PropertyType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\PropertyType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PropertyType($this->_propDict["type"]);

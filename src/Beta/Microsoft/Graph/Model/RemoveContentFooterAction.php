@@ -27,7 +27,7 @@ class RemoveContentFooterAction extends InformationProtectionAction
     * Gets the uiElementNames
     * The name of the UI element of the footer to be removed.
     *
-    * @return string|null The uiElementNames
+    * @return string The uiElementNames
     */
     public function getUiElementNames()
     {

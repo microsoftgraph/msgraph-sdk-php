@@ -27,7 +27,7 @@ class CustomTimeZone extends TimeZoneBase
     * Gets the bias
     * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
     *
-    * @return int|null The bias
+    * @return int The bias
     */
     public function getBias()
     {
@@ -56,12 +56,12 @@ class CustomTimeZone extends TimeZoneBase
     * Gets the daylightOffset
     * Specifies when the time zone switches from standard time to daylight saving time.
     *
-    * @return DaylightTimeZoneOffset|null The daylightOffset
+    * @return DaylightTimeZoneOffset The daylightOffset
     */
     public function getDaylightOffset()
     {
         if (array_key_exists("daylightOffset", $this->_propDict)) {
-            if (is_a($this->_propDict["daylightOffset"], "\Beta\Microsoft\Graph\Model\DaylightTimeZoneOffset") || is_null($this->_propDict["daylightOffset"])) {
+            if (is_a($this->_propDict["daylightOffset"], "\Beta\Microsoft\Graph\Model\DaylightTimeZoneOffset")) {
                 return $this->_propDict["daylightOffset"];
             } else {
                 $this->_propDict["daylightOffset"] = new DaylightTimeZoneOffset($this->_propDict["daylightOffset"]);
@@ -89,12 +89,12 @@ class CustomTimeZone extends TimeZoneBase
     * Gets the standardOffset
     * Specifies when the time zone switches from daylight saving time to standard time.
     *
-    * @return StandardTimeZoneOffset|null The standardOffset
+    * @return StandardTimeZoneOffset The standardOffset
     */
     public function getStandardOffset()
     {
         if (array_key_exists("standardOffset", $this->_propDict)) {
-            if (is_a($this->_propDict["standardOffset"], "\Beta\Microsoft\Graph\Model\StandardTimeZoneOffset") || is_null($this->_propDict["standardOffset"])) {
+            if (is_a($this->_propDict["standardOffset"], "\Beta\Microsoft\Graph\Model\StandardTimeZoneOffset")) {
                 return $this->_propDict["standardOffset"];
             } else {
                 $this->_propDict["standardOffset"] = new StandardTimeZoneOffset($this->_propDict["standardOffset"]);

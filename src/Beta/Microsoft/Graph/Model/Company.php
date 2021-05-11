@@ -27,7 +27,7 @@ class Company extends Entity
     /**
     * Gets the businessProfileId
     *
-    * @return string|null The businessProfileId
+    * @return string The businessProfileId
     */
     public function getBusinessProfileId()
     {
@@ -54,7 +54,7 @@ class Company extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -81,7 +81,7 @@ class Company extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -108,7 +108,7 @@ class Company extends Entity
     /**
     * Gets the systemVersion
     *
-    * @return string|null The systemVersion
+    * @return string The systemVersion
     */
     public function getSystemVersion()
     {
@@ -136,7 +136,7 @@ class Company extends Entity
      /** 
      * Gets the accounts
      *
-     * @return array|null The accounts
+     * @return array The accounts
      */
     public function getAccounts()
     {
@@ -156,7 +156,7 @@ class Company extends Entity
     */
     public function setAccounts($val)
     {
-        $this->_propDict["accounts"] = $val;
+		$this->_propDict["accounts"] = $val;
         return $this;
     }
     
@@ -164,7 +164,7 @@ class Company extends Entity
      /** 
      * Gets the agedAccountsPayable
      *
-     * @return array|null The agedAccountsPayable
+     * @return array The agedAccountsPayable
      */
     public function getAgedAccountsPayable()
     {
@@ -184,7 +184,7 @@ class Company extends Entity
     */
     public function setAgedAccountsPayable($val)
     {
-        $this->_propDict["agedAccountsPayable"] = $val;
+		$this->_propDict["agedAccountsPayable"] = $val;
         return $this;
     }
     
@@ -192,7 +192,7 @@ class Company extends Entity
      /** 
      * Gets the agedAccountsReceivable
      *
-     * @return array|null The agedAccountsReceivable
+     * @return array The agedAccountsReceivable
      */
     public function getAgedAccountsReceivable()
     {
@@ -212,7 +212,7 @@ class Company extends Entity
     */
     public function setAgedAccountsReceivable($val)
     {
-        $this->_propDict["agedAccountsReceivable"] = $val;
+		$this->_propDict["agedAccountsReceivable"] = $val;
         return $this;
     }
     
@@ -220,7 +220,7 @@ class Company extends Entity
      /** 
      * Gets the companyInformation
      *
-     * @return array|null The companyInformation
+     * @return array The companyInformation
      */
     public function getCompanyInformation()
     {
@@ -240,7 +240,7 @@ class Company extends Entity
     */
     public function setCompanyInformation($val)
     {
-        $this->_propDict["companyInformation"] = $val;
+		$this->_propDict["companyInformation"] = $val;
         return $this;
     }
     
@@ -248,7 +248,7 @@ class Company extends Entity
      /** 
      * Gets the countriesRegions
      *
-     * @return array|null The countriesRegions
+     * @return array The countriesRegions
      */
     public function getCountriesRegions()
     {
@@ -268,7 +268,7 @@ class Company extends Entity
     */
     public function setCountriesRegions($val)
     {
-        $this->_propDict["countriesRegions"] = $val;
+		$this->_propDict["countriesRegions"] = $val;
         return $this;
     }
     
@@ -276,7 +276,7 @@ class Company extends Entity
      /** 
      * Gets the currencies
      *
-     * @return array|null The currencies
+     * @return array The currencies
      */
     public function getCurrencies()
     {
@@ -296,7 +296,7 @@ class Company extends Entity
     */
     public function setCurrencies($val)
     {
-        $this->_propDict["currencies"] = $val;
+		$this->_propDict["currencies"] = $val;
         return $this;
     }
     
@@ -304,7 +304,7 @@ class Company extends Entity
      /** 
      * Gets the customerPaymentJournals
      *
-     * @return array|null The customerPaymentJournals
+     * @return array The customerPaymentJournals
      */
     public function getCustomerPaymentJournals()
     {
@@ -324,7 +324,7 @@ class Company extends Entity
     */
     public function setCustomerPaymentJournals($val)
     {
-        $this->_propDict["customerPaymentJournals"] = $val;
+		$this->_propDict["customerPaymentJournals"] = $val;
         return $this;
     }
     
@@ -332,7 +332,7 @@ class Company extends Entity
      /** 
      * Gets the customerPayments
      *
-     * @return array|null The customerPayments
+     * @return array The customerPayments
      */
     public function getCustomerPayments()
     {
@@ -352,7 +352,7 @@ class Company extends Entity
     */
     public function setCustomerPayments($val)
     {
-        $this->_propDict["customerPayments"] = $val;
+		$this->_propDict["customerPayments"] = $val;
         return $this;
     }
     
@@ -360,7 +360,7 @@ class Company extends Entity
      /** 
      * Gets the customers
      *
-     * @return array|null The customers
+     * @return array The customers
      */
     public function getCustomers()
     {
@@ -380,7 +380,7 @@ class Company extends Entity
     */
     public function setCustomers($val)
     {
-        $this->_propDict["customers"] = $val;
+		$this->_propDict["customers"] = $val;
         return $this;
     }
     
@@ -388,7 +388,7 @@ class Company extends Entity
      /** 
      * Gets the dimensions
      *
-     * @return array|null The dimensions
+     * @return array The dimensions
      */
     public function getDimensions()
     {
@@ -408,7 +408,7 @@ class Company extends Entity
     */
     public function setDimensions($val)
     {
-        $this->_propDict["dimensions"] = $val;
+		$this->_propDict["dimensions"] = $val;
         return $this;
     }
     
@@ -416,7 +416,7 @@ class Company extends Entity
      /** 
      * Gets the dimensionValues
      *
-     * @return array|null The dimensionValues
+     * @return array The dimensionValues
      */
     public function getDimensionValues()
     {
@@ -436,7 +436,7 @@ class Company extends Entity
     */
     public function setDimensionValues($val)
     {
-        $this->_propDict["dimensionValues"] = $val;
+		$this->_propDict["dimensionValues"] = $val;
         return $this;
     }
     
@@ -444,7 +444,7 @@ class Company extends Entity
      /** 
      * Gets the employees
      *
-     * @return array|null The employees
+     * @return array The employees
      */
     public function getEmployees()
     {
@@ -464,7 +464,7 @@ class Company extends Entity
     */
     public function setEmployees($val)
     {
-        $this->_propDict["employees"] = $val;
+		$this->_propDict["employees"] = $val;
         return $this;
     }
     
@@ -472,7 +472,7 @@ class Company extends Entity
      /** 
      * Gets the generalLedgerEntries
      *
-     * @return array|null The generalLedgerEntries
+     * @return array The generalLedgerEntries
      */
     public function getGeneralLedgerEntries()
     {
@@ -492,7 +492,7 @@ class Company extends Entity
     */
     public function setGeneralLedgerEntries($val)
     {
-        $this->_propDict["generalLedgerEntries"] = $val;
+		$this->_propDict["generalLedgerEntries"] = $val;
         return $this;
     }
     
@@ -500,7 +500,7 @@ class Company extends Entity
      /** 
      * Gets the itemCategories
      *
-     * @return array|null The itemCategories
+     * @return array The itemCategories
      */
     public function getItemCategories()
     {
@@ -520,7 +520,7 @@ class Company extends Entity
     */
     public function setItemCategories($val)
     {
-        $this->_propDict["itemCategories"] = $val;
+		$this->_propDict["itemCategories"] = $val;
         return $this;
     }
     
@@ -528,7 +528,7 @@ class Company extends Entity
      /** 
      * Gets the items
      *
-     * @return array|null The items
+     * @return array The items
      */
     public function getItems()
     {
@@ -548,7 +548,7 @@ class Company extends Entity
     */
     public function setItems($val)
     {
-        $this->_propDict["items"] = $val;
+		$this->_propDict["items"] = $val;
         return $this;
     }
     
@@ -556,7 +556,7 @@ class Company extends Entity
      /** 
      * Gets the journalLines
      *
-     * @return array|null The journalLines
+     * @return array The journalLines
      */
     public function getJournalLines()
     {
@@ -576,7 +576,7 @@ class Company extends Entity
     */
     public function setJournalLines($val)
     {
-        $this->_propDict["journalLines"] = $val;
+		$this->_propDict["journalLines"] = $val;
         return $this;
     }
     
@@ -584,7 +584,7 @@ class Company extends Entity
      /** 
      * Gets the journals
      *
-     * @return array|null The journals
+     * @return array The journals
      */
     public function getJournals()
     {
@@ -604,7 +604,7 @@ class Company extends Entity
     */
     public function setJournals($val)
     {
-        $this->_propDict["journals"] = $val;
+		$this->_propDict["journals"] = $val;
         return $this;
     }
     
@@ -612,7 +612,7 @@ class Company extends Entity
      /** 
      * Gets the paymentMethods
      *
-     * @return array|null The paymentMethods
+     * @return array The paymentMethods
      */
     public function getPaymentMethods()
     {
@@ -632,7 +632,7 @@ class Company extends Entity
     */
     public function setPaymentMethods($val)
     {
-        $this->_propDict["paymentMethods"] = $val;
+		$this->_propDict["paymentMethods"] = $val;
         return $this;
     }
     
@@ -640,7 +640,7 @@ class Company extends Entity
      /** 
      * Gets the paymentTerms
      *
-     * @return array|null The paymentTerms
+     * @return array The paymentTerms
      */
     public function getPaymentTerms()
     {
@@ -660,7 +660,7 @@ class Company extends Entity
     */
     public function setPaymentTerms($val)
     {
-        $this->_propDict["paymentTerms"] = $val;
+		$this->_propDict["paymentTerms"] = $val;
         return $this;
     }
     
@@ -668,7 +668,7 @@ class Company extends Entity
      /** 
      * Gets the picture
      *
-     * @return array|null The picture
+     * @return array The picture
      */
     public function getPicture()
     {
@@ -688,7 +688,7 @@ class Company extends Entity
     */
     public function setPicture($val)
     {
-        $this->_propDict["picture"] = $val;
+		$this->_propDict["picture"] = $val;
         return $this;
     }
     
@@ -696,7 +696,7 @@ class Company extends Entity
      /** 
      * Gets the purchaseInvoiceLines
      *
-     * @return array|null The purchaseInvoiceLines
+     * @return array The purchaseInvoiceLines
      */
     public function getPurchaseInvoiceLines()
     {
@@ -716,7 +716,7 @@ class Company extends Entity
     */
     public function setPurchaseInvoiceLines($val)
     {
-        $this->_propDict["purchaseInvoiceLines"] = $val;
+		$this->_propDict["purchaseInvoiceLines"] = $val;
         return $this;
     }
     
@@ -724,7 +724,7 @@ class Company extends Entity
      /** 
      * Gets the purchaseInvoices
      *
-     * @return array|null The purchaseInvoices
+     * @return array The purchaseInvoices
      */
     public function getPurchaseInvoices()
     {
@@ -744,7 +744,7 @@ class Company extends Entity
     */
     public function setPurchaseInvoices($val)
     {
-        $this->_propDict["purchaseInvoices"] = $val;
+		$this->_propDict["purchaseInvoices"] = $val;
         return $this;
     }
     
@@ -752,7 +752,7 @@ class Company extends Entity
      /** 
      * Gets the salesCreditMemoLines
      *
-     * @return array|null The salesCreditMemoLines
+     * @return array The salesCreditMemoLines
      */
     public function getSalesCreditMemoLines()
     {
@@ -772,7 +772,7 @@ class Company extends Entity
     */
     public function setSalesCreditMemoLines($val)
     {
-        $this->_propDict["salesCreditMemoLines"] = $val;
+		$this->_propDict["salesCreditMemoLines"] = $val;
         return $this;
     }
     
@@ -780,7 +780,7 @@ class Company extends Entity
      /** 
      * Gets the salesCreditMemos
      *
-     * @return array|null The salesCreditMemos
+     * @return array The salesCreditMemos
      */
     public function getSalesCreditMemos()
     {
@@ -800,7 +800,7 @@ class Company extends Entity
     */
     public function setSalesCreditMemos($val)
     {
-        $this->_propDict["salesCreditMemos"] = $val;
+		$this->_propDict["salesCreditMemos"] = $val;
         return $this;
     }
     
@@ -808,7 +808,7 @@ class Company extends Entity
      /** 
      * Gets the salesInvoiceLines
      *
-     * @return array|null The salesInvoiceLines
+     * @return array The salesInvoiceLines
      */
     public function getSalesInvoiceLines()
     {
@@ -828,7 +828,7 @@ class Company extends Entity
     */
     public function setSalesInvoiceLines($val)
     {
-        $this->_propDict["salesInvoiceLines"] = $val;
+		$this->_propDict["salesInvoiceLines"] = $val;
         return $this;
     }
     
@@ -836,7 +836,7 @@ class Company extends Entity
      /** 
      * Gets the salesInvoices
      *
-     * @return array|null The salesInvoices
+     * @return array The salesInvoices
      */
     public function getSalesInvoices()
     {
@@ -856,7 +856,7 @@ class Company extends Entity
     */
     public function setSalesInvoices($val)
     {
-        $this->_propDict["salesInvoices"] = $val;
+		$this->_propDict["salesInvoices"] = $val;
         return $this;
     }
     
@@ -864,7 +864,7 @@ class Company extends Entity
      /** 
      * Gets the salesOrderLines
      *
-     * @return array|null The salesOrderLines
+     * @return array The salesOrderLines
      */
     public function getSalesOrderLines()
     {
@@ -884,7 +884,7 @@ class Company extends Entity
     */
     public function setSalesOrderLines($val)
     {
-        $this->_propDict["salesOrderLines"] = $val;
+		$this->_propDict["salesOrderLines"] = $val;
         return $this;
     }
     
@@ -892,7 +892,7 @@ class Company extends Entity
      /** 
      * Gets the salesOrders
      *
-     * @return array|null The salesOrders
+     * @return array The salesOrders
      */
     public function getSalesOrders()
     {
@@ -912,7 +912,7 @@ class Company extends Entity
     */
     public function setSalesOrders($val)
     {
-        $this->_propDict["salesOrders"] = $val;
+		$this->_propDict["salesOrders"] = $val;
         return $this;
     }
     
@@ -920,7 +920,7 @@ class Company extends Entity
      /** 
      * Gets the salesQuoteLines
      *
-     * @return array|null The salesQuoteLines
+     * @return array The salesQuoteLines
      */
     public function getSalesQuoteLines()
     {
@@ -940,7 +940,7 @@ class Company extends Entity
     */
     public function setSalesQuoteLines($val)
     {
-        $this->_propDict["salesQuoteLines"] = $val;
+		$this->_propDict["salesQuoteLines"] = $val;
         return $this;
     }
     
@@ -948,7 +948,7 @@ class Company extends Entity
      /** 
      * Gets the salesQuotes
      *
-     * @return array|null The salesQuotes
+     * @return array The salesQuotes
      */
     public function getSalesQuotes()
     {
@@ -968,7 +968,7 @@ class Company extends Entity
     */
     public function setSalesQuotes($val)
     {
-        $this->_propDict["salesQuotes"] = $val;
+		$this->_propDict["salesQuotes"] = $val;
         return $this;
     }
     
@@ -976,7 +976,7 @@ class Company extends Entity
      /** 
      * Gets the shipmentMethods
      *
-     * @return array|null The shipmentMethods
+     * @return array The shipmentMethods
      */
     public function getShipmentMethods()
     {
@@ -996,7 +996,7 @@ class Company extends Entity
     */
     public function setShipmentMethods($val)
     {
-        $this->_propDict["shipmentMethods"] = $val;
+		$this->_propDict["shipmentMethods"] = $val;
         return $this;
     }
     
@@ -1004,7 +1004,7 @@ class Company extends Entity
      /** 
      * Gets the taxAreas
      *
-     * @return array|null The taxAreas
+     * @return array The taxAreas
      */
     public function getTaxAreas()
     {
@@ -1024,7 +1024,7 @@ class Company extends Entity
     */
     public function setTaxAreas($val)
     {
-        $this->_propDict["taxAreas"] = $val;
+		$this->_propDict["taxAreas"] = $val;
         return $this;
     }
     
@@ -1032,7 +1032,7 @@ class Company extends Entity
      /** 
      * Gets the taxGroups
      *
-     * @return array|null The taxGroups
+     * @return array The taxGroups
      */
     public function getTaxGroups()
     {
@@ -1052,7 +1052,7 @@ class Company extends Entity
     */
     public function setTaxGroups($val)
     {
-        $this->_propDict["taxGroups"] = $val;
+		$this->_propDict["taxGroups"] = $val;
         return $this;
     }
     
@@ -1060,7 +1060,7 @@ class Company extends Entity
      /** 
      * Gets the unitsOfMeasure
      *
-     * @return array|null The unitsOfMeasure
+     * @return array The unitsOfMeasure
      */
     public function getUnitsOfMeasure()
     {
@@ -1080,7 +1080,7 @@ class Company extends Entity
     */
     public function setUnitsOfMeasure($val)
     {
-        $this->_propDict["unitsOfMeasure"] = $val;
+		$this->_propDict["unitsOfMeasure"] = $val;
         return $this;
     }
     
@@ -1088,7 +1088,7 @@ class Company extends Entity
      /** 
      * Gets the vendors
      *
-     * @return array|null The vendors
+     * @return array The vendors
      */
     public function getVendors()
     {
@@ -1108,7 +1108,7 @@ class Company extends Entity
     */
     public function setVendors($val)
     {
-        $this->_propDict["vendors"] = $val;
+		$this->_propDict["vendors"] = $val;
         return $this;
     }
     

@@ -28,12 +28,12 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the content
     * The WindowsDefenderApplicationControl supplemental policy content in byte array format.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The content
+    * @return \GuzzleHttp\Psr7\Stream The content
     */
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
@@ -61,7 +61,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the contentFileName
     * The WindowsDefenderApplicationControl supplemental policy content's file name.
     *
-    * @return string|null The contentFileName
+    * @return string The contentFileName
     */
     public function getContentFileName()
     {
@@ -90,12 +90,12 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the creationDateTime
     * The date and time when the WindowsDefenderApplicationControl supplemental policy was uploaded.
     *
-    * @return \DateTime|null The creationDateTime
+    * @return \DateTime The creationDateTime
     */
     public function getCreationDateTime()
     {
         if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime") || is_null($this->_propDict["creationDateTime"])) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
                 return $this->_propDict["creationDateTime"];
             } else {
                 $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
@@ -123,7 +123,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the description
     * The description of WindowsDefenderApplicationControl supplemental policy.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -152,7 +152,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the displayName
     * The display name of WindowsDefenderApplicationControl supplemental policy.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -181,12 +181,12 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the lastModifiedDateTime
     * The date and time when the WindowsDefenderApplicationControl supplemental policy was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -214,7 +214,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this WindowsDefenderApplicationControl supplemental policy entity.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -243,7 +243,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the version
     * The WindowsDefenderApplicationControl supplemental policy's version.
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {
@@ -273,7 +273,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
      * Gets the assignments
     * The associated group assignments for this WindowsDefenderApplicationControl supplemental policy.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -294,7 +294,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -302,12 +302,12 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     * Gets the deploySummary
     * WindowsDefenderApplicationControl supplemental policy deployment summary.
     *
-    * @return WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary|null The deploySummary
+    * @return WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary The deploySummary
     */
     public function getDeploySummary()
     {
         if (array_key_exists("deploySummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploySummary"], "\Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary") || is_null($this->_propDict["deploySummary"])) {
+            if (is_a($this->_propDict["deploySummary"], "\Beta\Microsoft\Graph\Model\WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary")) {
                 return $this->_propDict["deploySummary"];
             } else {
                 $this->_propDict["deploySummary"] = new WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary($this->_propDict["deploySummary"]);
@@ -336,7 +336,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
      * Gets the deviceStatuses
     * The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
      *
-     * @return array|null The deviceStatuses
+     * @return array The deviceStatuses
      */
     public function getDeviceStatuses()
     {
@@ -357,7 +357,7 @@ class WindowsDefenderApplicationControlSupplementalPolicy extends Entity
     */
     public function setDeviceStatuses($val)
     {
-        $this->_propDict["deviceStatuses"] = $val;
+		$this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
     

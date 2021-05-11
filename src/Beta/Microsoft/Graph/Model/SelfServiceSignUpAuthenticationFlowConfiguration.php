@@ -27,7 +27,7 @@ class SelfServiceSignUpAuthenticationFlowConfiguration extends Entity
     * Gets the isEnabled
     * Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
     *
-    * @return bool|null The isEnabled
+    * @return bool The isEnabled
     */
     public function getIsEnabled()
     {

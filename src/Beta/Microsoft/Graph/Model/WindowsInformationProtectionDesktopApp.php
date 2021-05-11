@@ -36,7 +36,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     * Gets the binaryName
     * The binary name.
     *
-    * @return string|null The binaryName
+    * @return string The binaryName
     */
     public function getBinaryName()
     {
@@ -64,7 +64,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     * Gets the binaryVersionHigh
     * The high binary version.
     *
-    * @return string|null The binaryVersionHigh
+    * @return string The binaryVersionHigh
     */
     public function getBinaryVersionHigh()
     {
@@ -92,7 +92,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     * Gets the binaryVersionLow
     * The lower binary version.
     *
-    * @return string|null The binaryVersionLow
+    * @return string The binaryVersionLow
     */
     public function getBinaryVersionLow()
     {

@@ -26,7 +26,7 @@ class WorkbookFilterDatetime extends Entity
     /**
     * Gets the date
     *
-    * @return string|null The date
+    * @return string The date
     */
     public function getDate()
     {
@@ -52,7 +52,7 @@ class WorkbookFilterDatetime extends Entity
     /**
     * Gets the specificity
     *
-    * @return string|null The specificity
+    * @return string The specificity
     */
     public function getSpecificity()
     {

@@ -27,12 +27,12 @@ class AddFooter extends MarkContent
     /**
     * Gets the alignment
     *
-    * @return Alignment|null The alignment
+    * @return Alignment The alignment
     */
     public function getAlignment()
     {
         if (array_key_exists("alignment", $this->_propDict)) {
-            if (is_a($this->_propDict["alignment"], "\Beta\Microsoft\Graph\Model\Alignment") || is_null($this->_propDict["alignment"])) {
+            if (is_a($this->_propDict["alignment"], "\Beta\Microsoft\Graph\Model\Alignment")) {
                 return $this->_propDict["alignment"];
             } else {
                 $this->_propDict["alignment"] = new Alignment($this->_propDict["alignment"]);
@@ -57,7 +57,7 @@ class AddFooter extends MarkContent
     /**
     * Gets the margin
     *
-    * @return int|null The margin
+    * @return int The margin
     */
     public function getMargin()
     {

@@ -28,12 +28,12 @@ class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSchedule
     * Gets the date
     * The date the script is scheduled to run. This collection can contain a maximum of 20 elements.
     *
-    * @return \DateTime|null The date
+    * @return \DateTime The date
     */
     public function getDate()
     {
         if (array_key_exists("date", $this->_propDict)) {
-            if (is_a($this->_propDict["date"], "\DateTime") || is_null($this->_propDict["date"])) {
+            if (is_a($this->_propDict["date"], "\DateTime")) {
                 return $this->_propDict["date"];
             } else {
                 $this->_propDict["date"] = new \DateTime($this->_propDict["date"]);

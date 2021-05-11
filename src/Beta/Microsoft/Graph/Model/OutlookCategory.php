@@ -28,12 +28,12 @@ class OutlookCategory extends Entity
     * Gets the color
     * A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
     *
-    * @return CategoryColor|null The color
+    * @return CategoryColor The color
     */
     public function getColor()
     {
         if (array_key_exists("color", $this->_propDict)) {
-            if (is_a($this->_propDict["color"], "\Beta\Microsoft\Graph\Model\CategoryColor") || is_null($this->_propDict["color"])) {
+            if (is_a($this->_propDict["color"], "\Beta\Microsoft\Graph\Model\CategoryColor")) {
                 return $this->_propDict["color"];
             } else {
                 $this->_propDict["color"] = new CategoryColor($this->_propDict["color"]);
@@ -61,7 +61,7 @@ class OutlookCategory extends Entity
     * Gets the displayName
     * A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {

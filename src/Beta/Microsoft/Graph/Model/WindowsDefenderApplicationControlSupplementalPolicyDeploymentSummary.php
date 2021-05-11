@@ -28,7 +28,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary exten
     * Gets the deployedDeviceCount
     * Number of Devices that have successfully deployed this WindowsDefenderApplicationControl supplemental policy.
     *
-    * @return int|null The deployedDeviceCount
+    * @return int The deployedDeviceCount
     */
     public function getDeployedDeviceCount()
     {
@@ -57,7 +57,7 @@ class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary exten
     * Gets the failedDeviceCount
     * Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy.
     *
-    * @return int|null The failedDeviceCount
+    * @return int The failedDeviceCount
     */
     public function getFailedDeviceCount()
     {

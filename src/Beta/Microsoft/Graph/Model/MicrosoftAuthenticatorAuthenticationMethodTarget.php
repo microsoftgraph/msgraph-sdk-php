@@ -28,12 +28,12 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     * Gets the authenticationMode
     * Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.
     *
-    * @return MicrosoftAuthenticatorAuthenticationMode|null The authenticationMode
+    * @return MicrosoftAuthenticatorAuthenticationMode The authenticationMode
     */
     public function getAuthenticationMode()
     {
         if (array_key_exists("authenticationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMode"], "\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode") || is_null($this->_propDict["authenticationMode"])) {
+            if (is_a($this->_propDict["authenticationMode"], "\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode")) {
                 return $this->_propDict["authenticationMode"];
             } else {
                 $this->_propDict["authenticationMode"] = new MicrosoftAuthenticatorAuthenticationMode($this->_propDict["authenticationMode"]);
@@ -61,12 +61,12 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     * Gets the featureSettings
     * Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).
     *
-    * @return AuthenticatorAppFeatureSettings|null The featureSettings
+    * @return AuthenticatorAppFeatureSettings The featureSettings
     */
     public function getFeatureSettings()
     {
         if (array_key_exists("featureSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["featureSettings"], "\Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings") || is_null($this->_propDict["featureSettings"])) {
+            if (is_a($this->_propDict["featureSettings"], "\Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings")) {
                 return $this->_propDict["featureSettings"];
             } else {
                 $this->_propDict["featureSettings"] = new AuthenticatorAppFeatureSettings($this->_propDict["featureSettings"]);

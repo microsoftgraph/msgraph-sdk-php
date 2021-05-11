@@ -26,7 +26,7 @@ class ResourcePermission extends Entity
     /**
     * Gets the type
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {
@@ -52,7 +52,7 @@ class ResourcePermission extends Entity
     /**
     * Gets the value
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

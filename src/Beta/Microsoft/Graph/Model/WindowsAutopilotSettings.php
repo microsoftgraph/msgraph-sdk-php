@@ -28,12 +28,12 @@ class WindowsAutopilotSettings extends Entity
     * Gets the lastManualSyncTriggerDateTime
     * Last data sync date time with DDS service.
     *
-    * @return \DateTime|null The lastManualSyncTriggerDateTime
+    * @return \DateTime The lastManualSyncTriggerDateTime
     */
     public function getLastManualSyncTriggerDateTime()
     {
         if (array_key_exists("lastManualSyncTriggerDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastManualSyncTriggerDateTime"], "\DateTime") || is_null($this->_propDict["lastManualSyncTriggerDateTime"])) {
+            if (is_a($this->_propDict["lastManualSyncTriggerDateTime"], "\DateTime")) {
                 return $this->_propDict["lastManualSyncTriggerDateTime"];
             } else {
                 $this->_propDict["lastManualSyncTriggerDateTime"] = new \DateTime($this->_propDict["lastManualSyncTriggerDateTime"]);
@@ -61,12 +61,12 @@ class WindowsAutopilotSettings extends Entity
     * Gets the lastSyncDateTime
     * Last data sync date time with DDS service.
     *
-    * @return \DateTime|null The lastSyncDateTime
+    * @return \DateTime The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -94,12 +94,12 @@ class WindowsAutopilotSettings extends Entity
     * Gets the syncStatus
     * Indicates the status of sync with Device data sync (DDS) service. Possible values are: unknown, inProgress, completed, failed.
     *
-    * @return WindowsAutopilotSyncStatus|null The syncStatus
+    * @return WindowsAutopilotSyncStatus The syncStatus
     */
     public function getSyncStatus()
     {
         if (array_key_exists("syncStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["syncStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotSyncStatus") || is_null($this->_propDict["syncStatus"])) {
+            if (is_a($this->_propDict["syncStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotSyncStatus")) {
                 return $this->_propDict["syncStatus"];
             } else {
                 $this->_propDict["syncStatus"] = new WindowsAutopilotSyncStatus($this->_propDict["syncStatus"]);

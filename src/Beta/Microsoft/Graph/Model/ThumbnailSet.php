@@ -28,12 +28,12 @@ class ThumbnailSet extends Entity
     * Gets the large
     * A 1920x1920 scaled thumbnail.
     *
-    * @return Thumbnail|null The large
+    * @return Thumbnail The large
     */
     public function getLarge()
     {
         if (array_key_exists("large", $this->_propDict)) {
-            if (is_a($this->_propDict["large"], "\Beta\Microsoft\Graph\Model\Thumbnail") || is_null($this->_propDict["large"])) {
+            if (is_a($this->_propDict["large"], "\Beta\Microsoft\Graph\Model\Thumbnail")) {
                 return $this->_propDict["large"];
             } else {
                 $this->_propDict["large"] = new Thumbnail($this->_propDict["large"]);
@@ -61,12 +61,12 @@ class ThumbnailSet extends Entity
     * Gets the medium
     * A 176x176 scaled thumbnail.
     *
-    * @return Thumbnail|null The medium
+    * @return Thumbnail The medium
     */
     public function getMedium()
     {
         if (array_key_exists("medium", $this->_propDict)) {
-            if (is_a($this->_propDict["medium"], "\Beta\Microsoft\Graph\Model\Thumbnail") || is_null($this->_propDict["medium"])) {
+            if (is_a($this->_propDict["medium"], "\Beta\Microsoft\Graph\Model\Thumbnail")) {
                 return $this->_propDict["medium"];
             } else {
                 $this->_propDict["medium"] = new Thumbnail($this->_propDict["medium"]);
@@ -94,12 +94,12 @@ class ThumbnailSet extends Entity
     * Gets the small
     * A 48x48 cropped thumbnail.
     *
-    * @return Thumbnail|null The small
+    * @return Thumbnail The small
     */
     public function getSmall()
     {
         if (array_key_exists("small", $this->_propDict)) {
-            if (is_a($this->_propDict["small"], "\Beta\Microsoft\Graph\Model\Thumbnail") || is_null($this->_propDict["small"])) {
+            if (is_a($this->_propDict["small"], "\Beta\Microsoft\Graph\Model\Thumbnail")) {
                 return $this->_propDict["small"];
             } else {
                 $this->_propDict["small"] = new Thumbnail($this->_propDict["small"]);
@@ -127,12 +127,12 @@ class ThumbnailSet extends Entity
     * Gets the source
     * A custom thumbnail image or the original image used to generate other thumbnails.
     *
-    * @return Thumbnail|null The source
+    * @return Thumbnail The source
     */
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\Thumbnail") || is_null($this->_propDict["source"])) {
+            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\Thumbnail")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new Thumbnail($this->_propDict["source"]);

@@ -26,14 +26,14 @@ class RiskUserActivity extends Entity
 
     /**
     * Gets the detail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
     *
-    * @return RiskDetail|null The detail
+    * @return RiskDetail The detail
     */
     public function getDetail()
     {
         if (array_key_exists("detail", $this->_propDict)) {
-            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\RiskDetail") || is_null($this->_propDict["detail"])) {
+            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\RiskDetail")) {
                 return $this->_propDict["detail"];
             } else {
                 $this->_propDict["detail"] = new RiskDetail($this->_propDict["detail"]);
@@ -45,7 +45,7 @@ class RiskUserActivity extends Entity
 
     /**
     * Sets the detail
-    * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+    * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
     *
     * @param RiskDetail $val The value to assign to the detail
     *
@@ -61,12 +61,12 @@ class RiskUserActivity extends Entity
     * Gets the eventTypes
     * List of risk event types. Deprecated. Use riskEventType instead.
     *
-    * @return RiskEventType|null The eventTypes
+    * @return RiskEventType The eventTypes
     */
     public function getEventTypes()
     {
         if (array_key_exists("eventTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["eventTypes"], "\Beta\Microsoft\Graph\Model\RiskEventType") || is_null($this->_propDict["eventTypes"])) {
+            if (is_a($this->_propDict["eventTypes"], "\Beta\Microsoft\Graph\Model\RiskEventType")) {
                 return $this->_propDict["eventTypes"];
             } else {
                 $this->_propDict["eventTypes"] = new RiskEventType($this->_propDict["eventTypes"]);
@@ -93,7 +93,7 @@ class RiskUserActivity extends Entity
     * Gets the riskEventTypes
     * The type of risk event detected.
     *
-    * @return string|null The riskEventTypes
+    * @return string The riskEventTypes
     */
     public function getRiskEventTypes()
     {

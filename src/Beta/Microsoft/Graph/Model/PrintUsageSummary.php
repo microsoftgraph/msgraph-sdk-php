@@ -26,7 +26,7 @@ class PrintUsageSummary extends Entity
     /**
     * Gets the completedJobCount
     *
-    * @return int|null The completedJobCount
+    * @return int The completedJobCount
     */
     public function getCompletedJobCount()
     {
@@ -52,7 +52,7 @@ class PrintUsageSummary extends Entity
     /**
     * Gets the incompleteJobCount
     *
-    * @return int|null The incompleteJobCount
+    * @return int The incompleteJobCount
     */
     public function getIncompleteJobCount()
     {

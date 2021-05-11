@@ -27,7 +27,7 @@ class ListInfo extends Entity
     * Gets the contentTypesEnabled
     * If true, indicates that content types are enabled for this list.
     *
-    * @return bool|null The contentTypesEnabled
+    * @return bool The contentTypesEnabled
     */
     public function getContentTypesEnabled()
     {
@@ -55,7 +55,7 @@ class ListInfo extends Entity
     * Gets the hidden
     * If true, indicates that the list is not normally visible in the SharePoint user experience.
     *
-    * @return bool|null The hidden
+    * @return bool The hidden
     */
     public function getHidden()
     {
@@ -83,7 +83,7 @@ class ListInfo extends Entity
     * Gets the template
     * An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
     *
-    * @return string|null The template
+    * @return string The template
     */
     public function getTemplate()
     {

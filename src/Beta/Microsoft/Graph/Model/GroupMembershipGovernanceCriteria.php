@@ -26,7 +26,7 @@ class GroupMembershipGovernanceCriteria extends GovernanceCriteria
     /**
     * Gets the groupId
     *
-    * @return string|null The groupId
+    * @return string The groupId
     */
     public function getGroupId()
     {

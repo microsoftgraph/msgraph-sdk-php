@@ -28,12 +28,12 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the certificateStore
     * Target store certificate. Possible values are: user, machine.
     *
-    * @return CertificateStore|null The certificateStore
+    * @return CertificateStore The certificateStore
     */
     public function getCertificateStore()
     {
         if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "\Beta\Microsoft\Graph\Model\CertificateStore") || is_null($this->_propDict["certificateStore"])) {
+            if (is_a($this->_propDict["certificateStore"], "\Beta\Microsoft\Graph\Model\CertificateStore")) {
                 return $this->_propDict["certificateStore"];
             } else {
                 $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
@@ -61,12 +61,12 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the certificateValidityPeriodScale
     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
     *
-    * @return CertificateValidityPeriodScale|null The certificateValidityPeriodScale
+    * @return CertificateValidityPeriodScale The certificateValidityPeriodScale
     */
     public function getCertificateValidityPeriodScale()
     {
         if (array_key_exists("certificateValidityPeriodScale", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodScale"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale") || is_null($this->_propDict["certificateValidityPeriodScale"])) {
+            if (is_a($this->_propDict["certificateValidityPeriodScale"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodScale"];
             } else {
                 $this->_propDict["certificateValidityPeriodScale"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodScale"]);
@@ -94,7 +94,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the certificateValidityPeriodValue
     * Value for the Certificate Validity Period
     *
-    * @return int|null The certificateValidityPeriodValue
+    * @return int The certificateValidityPeriodValue
     */
     public function getCertificateValidityPeriodValue()
     {
@@ -124,7 +124,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
      * Gets the extendedKeyUsages
     * Extended Key Usage (EKU) settings.
      *
-     * @return array|null The extendedKeyUsages
+     * @return array The extendedKeyUsages
      */
     public function getExtendedKeyUsages()
     {
@@ -145,7 +145,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     */
     public function setExtendedKeyUsages($val)
     {
-        $this->_propDict["extendedKeyUsages"] = $val;
+		$this->_propDict["extendedKeyUsages"] = $val;
         return $this;
     }
     
@@ -154,7 +154,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
      * Gets the hashAlgorithm
     * SCEP Hash Algorithm.
      *
-     * @return array|null The hashAlgorithm
+     * @return array The hashAlgorithm
      */
     public function getHashAlgorithm()
     {
@@ -175,7 +175,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     */
     public function setHashAlgorithm($val)
     {
-        $this->_propDict["hashAlgorithm"] = $val;
+		$this->_propDict["hashAlgorithm"] = $val;
         return $this;
     }
     
@@ -183,12 +183,12 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the keySize
     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
-    * @return KeySize|null The keySize
+    * @return KeySize The keySize
     */
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "\Beta\Microsoft\Graph\Model\KeySize") || is_null($this->_propDict["keySize"])) {
+            if (is_a($this->_propDict["keySize"], "\Beta\Microsoft\Graph\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -216,12 +216,12 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the keyStorageProvider
     * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
     *
-    * @return KeyStorageProviderOption|null The keyStorageProvider
+    * @return KeyStorageProviderOption The keyStorageProvider
     */
     public function getKeyStorageProvider()
     {
         if (array_key_exists("keyStorageProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["keyStorageProvider"], "\Beta\Microsoft\Graph\Model\KeyStorageProviderOption") || is_null($this->_propDict["keyStorageProvider"])) {
+            if (is_a($this->_propDict["keyStorageProvider"], "\Beta\Microsoft\Graph\Model\KeyStorageProviderOption")) {
                 return $this->_propDict["keyStorageProvider"];
             } else {
                 $this->_propDict["keyStorageProvider"] = new KeyStorageProviderOption($this->_propDict["keyStorageProvider"]);
@@ -249,12 +249,12 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the keyUsage
     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
-    * @return KeyUsages|null The keyUsage
+    * @return KeyUsages The keyUsage
     */
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "\Beta\Microsoft\Graph\Model\KeyUsages") || is_null($this->_propDict["keyUsage"])) {
+            if (is_a($this->_propDict["keyUsage"], "\Beta\Microsoft\Graph\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -282,7 +282,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the renewalThresholdPercentage
     * Certificate renewal threshold percentage
     *
-    * @return int|null The renewalThresholdPercentage
+    * @return int The renewalThresholdPercentage
     */
     public function getRenewalThresholdPercentage()
     {
@@ -311,7 +311,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the rootCertificateId
     * Trusted Root Certificate ID
     *
-    * @return string|null The rootCertificateId
+    * @return string The rootCertificateId
     */
     public function getRootCertificateId()
     {
@@ -340,7 +340,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the scepServerUrls
     * SCEP Server Url(s).
     *
-    * @return string|null The scepServerUrls
+    * @return string The scepServerUrls
     */
     public function getScepServerUrls()
     {
@@ -370,7 +370,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
      * Gets the subjectAlternativeNameFormats
     * Custom AAD Attributes.
      *
-     * @return array|null The subjectAlternativeNameFormats
+     * @return array The subjectAlternativeNameFormats
      */
     public function getSubjectAlternativeNameFormats()
     {
@@ -391,7 +391,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     */
     public function setSubjectAlternativeNameFormats($val)
     {
-        $this->_propDict["subjectAlternativeNameFormats"] = $val;
+		$this->_propDict["subjectAlternativeNameFormats"] = $val;
         return $this;
     }
     
@@ -399,7 +399,7 @@ class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile
     * Gets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
-    * @return string|null The subjectNameFormatString
+    * @return string The subjectNameFormatString
     */
     public function getSubjectNameFormatString()
     {

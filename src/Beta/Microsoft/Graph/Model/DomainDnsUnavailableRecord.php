@@ -28,7 +28,7 @@ class DomainDnsUnavailableRecord extends DomainDnsRecord
     * Gets the description
     * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {

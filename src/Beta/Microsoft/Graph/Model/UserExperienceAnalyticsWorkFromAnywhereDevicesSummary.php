@@ -28,12 +28,12 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     * Gets the autopilotDevicesSummary
     * The value of work from anywhere autopilot devices summary.
     *
-    * @return UserExperienceAnalyticsAutopilotDevicesSummary|null The autopilotDevicesSummary
+    * @return UserExperienceAnalyticsAutopilotDevicesSummary The autopilotDevicesSummary
     */
     public function getAutopilotDevicesSummary()
     {
         if (array_key_exists("autopilotDevicesSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["autopilotDevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsAutopilotDevicesSummary") || is_null($this->_propDict["autopilotDevicesSummary"])) {
+            if (is_a($this->_propDict["autopilotDevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsAutopilotDevicesSummary")) {
                 return $this->_propDict["autopilotDevicesSummary"];
             } else {
                 $this->_propDict["autopilotDevicesSummary"] = new UserExperienceAnalyticsAutopilotDevicesSummary($this->_propDict["autopilotDevicesSummary"]);
@@ -61,12 +61,12 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     * Gets the cloudManagementDevicesSummary
     * The user experience work from anywhere Cloud management devices summary.
     *
-    * @return UserExperienceAnalyticsCloudManagementDevicesSummary|null The cloudManagementDevicesSummary
+    * @return UserExperienceAnalyticsCloudManagementDevicesSummary The cloudManagementDevicesSummary
     */
     public function getCloudManagementDevicesSummary()
     {
         if (array_key_exists("cloudManagementDevicesSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["cloudManagementDevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCloudManagementDevicesSummary") || is_null($this->_propDict["cloudManagementDevicesSummary"])) {
+            if (is_a($this->_propDict["cloudManagementDevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCloudManagementDevicesSummary")) {
                 return $this->_propDict["cloudManagementDevicesSummary"];
             } else {
                 $this->_propDict["cloudManagementDevicesSummary"] = new UserExperienceAnalyticsCloudManagementDevicesSummary($this->_propDict["cloudManagementDevicesSummary"]);
@@ -94,12 +94,12 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     * Gets the windows10DevicesSummary
     * The user experience analytics work from anywhere Windows 10 devices summary.
     *
-    * @return UserExperienceAnalyticsWindows10DevicesSummary|null The windows10DevicesSummary
+    * @return UserExperienceAnalyticsWindows10DevicesSummary The windows10DevicesSummary
     */
     public function getWindows10DevicesSummary()
     {
         if (array_key_exists("windows10DevicesSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["windows10DevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsWindows10DevicesSummary") || is_null($this->_propDict["windows10DevicesSummary"])) {
+            if (is_a($this->_propDict["windows10DevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsWindows10DevicesSummary")) {
                 return $this->_propDict["windows10DevicesSummary"];
             } else {
                 $this->_propDict["windows10DevicesSummary"] = new UserExperienceAnalyticsWindows10DevicesSummary($this->_propDict["windows10DevicesSummary"]);

@@ -27,7 +27,7 @@ class MimeContent extends Entity
     * Gets the type
     * Indicates the content mime type.
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {
@@ -56,12 +56,12 @@ class MimeContent extends Entity
     * Gets the value
     * The byte array that contains the actual content.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The value
+    * @return \GuzzleHttp\Psr7\Stream The value
     */
     public function getValue()
     {
         if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["value"])) {
+            if (is_a($this->_propDict["value"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["value"];
             } else {
                 $this->_propDict["value"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["value"]);

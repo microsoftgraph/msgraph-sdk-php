@@ -26,7 +26,7 @@ class UserPrintUsageSummary extends Entity
     /**
     * Gets the completedJobCount
     *
-    * @return int|null The completedJobCount
+    * @return int The completedJobCount
     */
     public function getCompletedJobCount()
     {
@@ -52,7 +52,7 @@ class UserPrintUsageSummary extends Entity
     /**
     * Gets the incompleteJobCount
     *
-    * @return int|null The incompleteJobCount
+    * @return int The incompleteJobCount
     */
     public function getIncompleteJobCount()
     {
@@ -79,12 +79,12 @@ class UserPrintUsageSummary extends Entity
     /**
     * Gets the user
     *
-    * @return Identity|null The user
+    * @return Identity The user
     */
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["user"])) {
+            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new Identity($this->_propDict["user"]);
@@ -109,7 +109,7 @@ class UserPrintUsageSummary extends Entity
     /**
     * Gets the userDisplayName
     *
-    * @return string|null The userDisplayName
+    * @return string The userDisplayName
     */
     public function getUserDisplayName()
     {
@@ -135,7 +135,7 @@ class UserPrintUsageSummary extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

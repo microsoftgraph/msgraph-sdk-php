@@ -27,7 +27,7 @@ class StringKeyObjectValuePair extends Entity
     * Gets the key
     * Key.
     *
-    * @return string|null The key
+    * @return string The key
     */
     public function getKey()
     {

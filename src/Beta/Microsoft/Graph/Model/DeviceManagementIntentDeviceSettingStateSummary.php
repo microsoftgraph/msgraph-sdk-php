@@ -28,7 +28,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
     * Gets the compliantCount
     * Number of compliant devices
     *
-    * @return int|null The compliantCount
+    * @return int The compliantCount
     */
     public function getCompliantCount()
     {
@@ -57,7 +57,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
     * Gets the conflictCount
     * Number of devices in conflict
     *
-    * @return int|null The conflictCount
+    * @return int The conflictCount
     */
     public function getConflictCount()
     {
@@ -86,7 +86,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
     * Gets the errorCount
     * Number of error devices
     *
-    * @return int|null The errorCount
+    * @return int The errorCount
     */
     public function getErrorCount()
     {
@@ -115,7 +115,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
     * Gets the nonCompliantCount
     * Number of non compliant devices
     *
-    * @return int|null The nonCompliantCount
+    * @return int The nonCompliantCount
     */
     public function getNonCompliantCount()
     {
@@ -144,7 +144,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
     * Gets the notApplicableCount
     * Number of not applicable devices
     *
-    * @return int|null The notApplicableCount
+    * @return int The notApplicableCount
     */
     public function getNotApplicableCount()
     {
@@ -173,7 +173,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
     * Gets the remediatedCount
     * Number of remediated devices
     *
-    * @return int|null The remediatedCount
+    * @return int The remediatedCount
     */
     public function getRemediatedCount()
     {
@@ -202,7 +202,7 @@ class DeviceManagementIntentDeviceSettingStateSummary extends Entity
     * Gets the settingName
     * Name of a setting
     *
-    * @return string|null The settingName
+    * @return string The settingName
     */
     public function getSettingName()
     {

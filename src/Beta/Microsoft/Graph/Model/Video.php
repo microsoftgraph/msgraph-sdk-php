@@ -27,7 +27,7 @@ class Video extends Entity
     * Gets the audioBitsPerSample
     * Number of audio bits per sample.
     *
-    * @return int|null The audioBitsPerSample
+    * @return int The audioBitsPerSample
     */
     public function getAudioBitsPerSample()
     {
@@ -55,7 +55,7 @@ class Video extends Entity
     * Gets the audioChannels
     * Number of audio channels.
     *
-    * @return int|null The audioChannels
+    * @return int The audioChannels
     */
     public function getAudioChannels()
     {
@@ -83,7 +83,7 @@ class Video extends Entity
     * Gets the audioFormat
     * Name of the audio format (AAC, MP3, etc.).
     *
-    * @return string|null The audioFormat
+    * @return string The audioFormat
     */
     public function getAudioFormat()
     {
@@ -111,7 +111,7 @@ class Video extends Entity
     * Gets the audioSamplesPerSecond
     * Number of audio samples per second.
     *
-    * @return int|null The audioSamplesPerSecond
+    * @return int The audioSamplesPerSecond
     */
     public function getAudioSamplesPerSecond()
     {
@@ -139,7 +139,7 @@ class Video extends Entity
     * Gets the bitrate
     * Bit rate of the video in bits per second.
     *
-    * @return int|null The bitrate
+    * @return int The bitrate
     */
     public function getBitrate()
     {
@@ -167,7 +167,7 @@ class Video extends Entity
     * Gets the duration
     * Duration of the file in milliseconds.
     *
-    * @return int|null The duration
+    * @return int The duration
     */
     public function getDuration()
     {
@@ -195,7 +195,7 @@ class Video extends Entity
     * Gets the fourCC
     * 'Four character code' name of the video format.
     *
-    * @return string|null The fourCC
+    * @return string The fourCC
     */
     public function getFourCC()
     {
@@ -223,7 +223,7 @@ class Video extends Entity
     * Gets the frameRate
     * Frame rate of the video.
     *
-    * @return float|null The frameRate
+    * @return float The frameRate
     */
     public function getFrameRate()
     {
@@ -251,7 +251,7 @@ class Video extends Entity
     * Gets the height
     * Height of the video, in pixels.
     *
-    * @return int|null The height
+    * @return int The height
     */
     public function getHeight()
     {
@@ -279,7 +279,7 @@ class Video extends Entity
     * Gets the width
     * Width of the video, in pixels.
     *
-    * @return int|null The width
+    * @return int The width
     */
     public function getWidth()
     {

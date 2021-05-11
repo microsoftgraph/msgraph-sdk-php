@@ -28,7 +28,7 @@ class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetItem
     * Gets the limit
     * Limit of the EnrollmentRestrictionsConfigurationPolicySetItem.
     *
-    * @return int|null The limit
+    * @return int The limit
     */
     public function getLimit()
     {
@@ -57,7 +57,7 @@ class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetItem
     * Gets the priority
     * Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
     *
-    * @return int|null The priority
+    * @return int The priority
     */
     public function getPriority()
     {

@@ -28,7 +28,7 @@ class GroupPolicyPresentationMultiTextBox extends GroupPolicyPresentation
     * Gets the maxLength
     * An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
     *
-    * @return int|null The maxLength
+    * @return int The maxLength
     */
     public function getMaxLength()
     {
@@ -57,7 +57,7 @@ class GroupPolicyPresentationMultiTextBox extends GroupPolicyPresentation
     * Gets the maxStrings
     * An unsigned integer that specifies the maximum number of strings. Default value is 0.
     *
-    * @return int|null The maxStrings
+    * @return int The maxStrings
     */
     public function getMaxStrings()
     {
@@ -86,7 +86,7 @@ class GroupPolicyPresentationMultiTextBox extends GroupPolicyPresentation
     * Gets the required
     * Requirement to enter a value in the text box. Default value is false.
     *
-    * @return bool|null The required
+    * @return bool The required
     */
     public function getRequired()
     {

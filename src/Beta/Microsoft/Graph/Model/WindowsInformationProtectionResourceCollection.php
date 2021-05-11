@@ -27,7 +27,7 @@ class WindowsInformationProtectionResourceCollection extends Entity
     * Gets the displayName
     * Display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class WindowsInformationProtectionResourceCollection extends Entity
     * Gets the resources
     * Collection of resources
     *
-    * @return string|null The resources
+    * @return string The resources
     */
     public function getResources()
     {

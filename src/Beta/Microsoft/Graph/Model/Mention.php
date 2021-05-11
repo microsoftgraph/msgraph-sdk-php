@@ -28,7 +28,7 @@ class Mention extends Entity
     * Gets the application
     * The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
     *
-    * @return string|null The application
+    * @return string The application
     */
     public function getApplication()
     {
@@ -57,7 +57,7 @@ class Mention extends Entity
     * Gets the clientReference
     * A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
     *
-    * @return string|null The clientReference
+    * @return string The clientReference
     */
     public function getClientReference()
     {
@@ -86,12 +86,12 @@ class Mention extends Entity
     * Gets the createdBy
     * The email information of the user who made the mention.
     *
-    * @return EmailAddress|null The createdBy
+    * @return EmailAddress The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\EmailAddress") || is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new EmailAddress($this->_propDict["createdBy"]);
@@ -119,12 +119,12 @@ class Mention extends Entity
     * Gets the createdDateTime
     * The date and time that the mention is created on the client.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -152,7 +152,7 @@ class Mention extends Entity
     * Gets the deepLink
     * A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
     *
-    * @return string|null The deepLink
+    * @return string The deepLink
     */
     public function getDeepLink()
     {
@@ -181,12 +181,12 @@ class Mention extends Entity
     * Gets the mentioned
     * The email information of the mentioned person. Required.
     *
-    * @return EmailAddress|null The mentioned
+    * @return EmailAddress The mentioned
     */
     public function getMentioned()
     {
         if (array_key_exists("mentioned", $this->_propDict)) {
-            if (is_a($this->_propDict["mentioned"], "\Beta\Microsoft\Graph\Model\EmailAddress") || is_null($this->_propDict["mentioned"])) {
+            if (is_a($this->_propDict["mentioned"], "\Beta\Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["mentioned"];
             } else {
                 $this->_propDict["mentioned"] = new EmailAddress($this->_propDict["mentioned"]);
@@ -214,7 +214,7 @@ class Mention extends Entity
     * Gets the mentionText
     * Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
     *
-    * @return string|null The mentionText
+    * @return string The mentionText
     */
     public function getMentionText()
     {
@@ -243,12 +243,12 @@ class Mention extends Entity
     * Gets the serverCreatedDateTime
     * The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
     *
-    * @return \DateTime|null The serverCreatedDateTime
+    * @return \DateTime The serverCreatedDateTime
     */
     public function getServerCreatedDateTime()
     {
         if (array_key_exists("serverCreatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["serverCreatedDateTime"], "\DateTime") || is_null($this->_propDict["serverCreatedDateTime"])) {
+            if (is_a($this->_propDict["serverCreatedDateTime"], "\DateTime")) {
                 return $this->_propDict["serverCreatedDateTime"];
             } else {
                 $this->_propDict["serverCreatedDateTime"] = new \DateTime($this->_propDict["serverCreatedDateTime"]);

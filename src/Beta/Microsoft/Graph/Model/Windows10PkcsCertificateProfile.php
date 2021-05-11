@@ -28,12 +28,12 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     * Gets the certificateStore
     * Target store certificate. Possible values are: user, machine.
     *
-    * @return CertificateStore|null The certificateStore
+    * @return CertificateStore The certificateStore
     */
     public function getCertificateStore()
     {
         if (array_key_exists("certificateStore", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateStore"], "\Beta\Microsoft\Graph\Model\CertificateStore") || is_null($this->_propDict["certificateStore"])) {
+            if (is_a($this->_propDict["certificateStore"], "\Beta\Microsoft\Graph\Model\CertificateStore")) {
                 return $this->_propDict["certificateStore"];
             } else {
                 $this->_propDict["certificateStore"] = new CertificateStore($this->_propDict["certificateStore"]);
@@ -61,7 +61,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     * Gets the certificateTemplateName
     * PKCS Certificate Template Name
     *
-    * @return string|null The certificateTemplateName
+    * @return string The certificateTemplateName
     */
     public function getCertificateTemplateName()
     {
@@ -90,7 +90,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     * Gets the certificationAuthority
     * PKCS Certification Authority
     *
-    * @return string|null The certificationAuthority
+    * @return string The certificationAuthority
     */
     public function getCertificationAuthority()
     {
@@ -119,7 +119,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     * Gets the certificationAuthorityName
     * PKCS Certification Authority Name
     *
-    * @return string|null The certificationAuthorityName
+    * @return string The certificationAuthorityName
     */
     public function getCertificationAuthorityName()
     {
@@ -149,7 +149,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
      * Gets the customSubjectAlternativeNames
     * Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The customSubjectAlternativeNames
+     * @return array The customSubjectAlternativeNames
      */
     public function getCustomSubjectAlternativeNames()
     {
@@ -170,7 +170,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     */
     public function setCustomSubjectAlternativeNames($val)
     {
-        $this->_propDict["customSubjectAlternativeNames"] = $val;
+		$this->_propDict["customSubjectAlternativeNames"] = $val;
         return $this;
     }
     
@@ -179,7 +179,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
      * Gets the extendedKeyUsages
     * Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The extendedKeyUsages
+     * @return array The extendedKeyUsages
      */
     public function getExtendedKeyUsages()
     {
@@ -200,7 +200,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     */
     public function setExtendedKeyUsages($val)
     {
-        $this->_propDict["extendedKeyUsages"] = $val;
+		$this->_propDict["extendedKeyUsages"] = $val;
         return $this;
     }
     
@@ -208,7 +208,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     * Gets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
     *
-    * @return string|null The subjectAlternativeNameFormatString
+    * @return string The subjectAlternativeNameFormatString
     */
     public function getSubjectAlternativeNameFormatString()
     {
@@ -237,7 +237,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     * Gets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
-    * @return string|null The subjectNameFormatString
+    * @return string The subjectNameFormatString
     */
     public function getSubjectNameFormatString()
     {
@@ -267,7 +267,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices
      *
-     * @return array|null The managedDeviceCertificateStates
+     * @return array The managedDeviceCertificateStates
      */
     public function getManagedDeviceCertificateStates()
     {
@@ -288,7 +288,7 @@ class Windows10PkcsCertificateProfile extends Windows10CertificateProfileBase
     */
     public function setManagedDeviceCertificateStates($val)
     {
-        $this->_propDict["managedDeviceCertificateStates"] = $val;
+		$this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
     

@@ -36,7 +36,7 @@ class EducationLinkResource extends EducationResource
     * Gets the link
     * URL to the resource.
     *
-    * @return string|null The link
+    * @return string The link
     */
     public function getLink()
     {

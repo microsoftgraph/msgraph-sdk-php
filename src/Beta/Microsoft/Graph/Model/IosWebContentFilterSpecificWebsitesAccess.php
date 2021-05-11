@@ -37,12 +37,12 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
     * Gets the specificWebsitesOnly
     * URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
     *
-    * @return IosBookmark|null The specificWebsitesOnly
+    * @return IosBookmark The specificWebsitesOnly
     */
     public function getSpecificWebsitesOnly()
     {
         if (array_key_exists("specificWebsitesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["specificWebsitesOnly"], "\Beta\Microsoft\Graph\Model\IosBookmark") || is_null($this->_propDict["specificWebsitesOnly"])) {
+            if (is_a($this->_propDict["specificWebsitesOnly"], "\Beta\Microsoft\Graph\Model\IosBookmark")) {
                 return $this->_propDict["specificWebsitesOnly"];
             } else {
                 $this->_propDict["specificWebsitesOnly"] = new IosBookmark($this->_propDict["specificWebsitesOnly"]);
@@ -70,12 +70,12 @@ class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase
     * Gets the websiteList
     * URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
     *
-    * @return IosBookmark|null The websiteList
+    * @return IosBookmark The websiteList
     */
     public function getWebsiteList()
     {
         if (array_key_exists("websiteList", $this->_propDict)) {
-            if (is_a($this->_propDict["websiteList"], "\Beta\Microsoft\Graph\Model\IosBookmark") || is_null($this->_propDict["websiteList"])) {
+            if (is_a($this->_propDict["websiteList"], "\Beta\Microsoft\Graph\Model\IosBookmark")) {
                 return $this->_propDict["websiteList"];
             } else {
                 $this->_propDict["websiteList"] = new IosBookmark($this->_propDict["websiteList"]);

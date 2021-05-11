@@ -27,7 +27,7 @@ class Journal extends Entity
     /**
     * Gets the balancingAccountId
     *
-    * @return string|null The balancingAccountId
+    * @return string The balancingAccountId
     */
     public function getBalancingAccountId()
     {
@@ -54,7 +54,7 @@ class Journal extends Entity
     /**
     * Gets the balancingAccountNumber
     *
-    * @return string|null The balancingAccountNumber
+    * @return string The balancingAccountNumber
     */
     public function getBalancingAccountNumber()
     {
@@ -81,7 +81,7 @@ class Journal extends Entity
     /**
     * Gets the code
     *
-    * @return string|null The code
+    * @return string The code
     */
     public function getCode()
     {
@@ -108,7 +108,7 @@ class Journal extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -135,12 +135,12 @@ class Journal extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -166,12 +166,12 @@ class Journal extends Entity
     /**
     * Gets the account
     *
-    * @return Account|null The account
+    * @return Account The account
     */
     public function getAccount()
     {
         if (array_key_exists("account", $this->_propDict)) {
-            if (is_a($this->_propDict["account"], "\Beta\Microsoft\Graph\Model\Account") || is_null($this->_propDict["account"])) {
+            if (is_a($this->_propDict["account"], "\Beta\Microsoft\Graph\Model\Account")) {
                 return $this->_propDict["account"];
             } else {
                 $this->_propDict["account"] = new Account($this->_propDict["account"]);
@@ -198,7 +198,7 @@ class Journal extends Entity
      /** 
      * Gets the journalLines
      *
-     * @return array|null The journalLines
+     * @return array The journalLines
      */
     public function getJournalLines()
     {
@@ -218,7 +218,7 @@ class Journal extends Entity
     */
     public function setJournalLines($val)
     {
-        $this->_propDict["journalLines"] = $val;
+		$this->_propDict["journalLines"] = $val;
         return $this;
     }
     

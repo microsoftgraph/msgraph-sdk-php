@@ -28,7 +28,7 @@ class AzureADLicenseUsage extends Entity
      /** 
      * Gets the licenseInfoDetails
      *
-     * @return array|null The licenseInfoDetails
+     * @return array The licenseInfoDetails
      */
     public function getLicenseInfoDetails()
     {
@@ -48,19 +48,19 @@ class AzureADLicenseUsage extends Entity
     */
     public function setLicenseInfoDetails($val)
     {
-        $this->_propDict["licenseInfoDetails"] = $val;
+		$this->_propDict["licenseInfoDetails"] = $val;
         return $this;
     }
     
     /**
     * Gets the snapshotDateTime
     *
-    * @return \DateTime|null The snapshotDateTime
+    * @return \DateTime The snapshotDateTime
     */
     public function getSnapshotDateTime()
     {
         if (array_key_exists("snapshotDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["snapshotDateTime"], "\DateTime") || is_null($this->_propDict["snapshotDateTime"])) {
+            if (is_a($this->_propDict["snapshotDateTime"], "\DateTime")) {
                 return $this->_propDict["snapshotDateTime"];
             } else {
                 $this->_propDict["snapshotDateTime"] = new \DateTime($this->_propDict["snapshotDateTime"]);

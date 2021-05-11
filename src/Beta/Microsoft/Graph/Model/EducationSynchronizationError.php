@@ -28,7 +28,7 @@ class EducationSynchronizationError extends Entity
     * Gets the entryType
     * Represents the sync entity (school, section, student, teacher).
     *
-    * @return string|null The entryType
+    * @return string The entryType
     */
     public function getEntryType()
     {
@@ -57,7 +57,7 @@ class EducationSynchronizationError extends Entity
     * Gets the errorCode
     * Represents the error code for this error.
     *
-    * @return string|null The errorCode
+    * @return string The errorCode
     */
     public function getErrorCode()
     {
@@ -86,7 +86,7 @@ class EducationSynchronizationError extends Entity
     * Gets the errorMessage
     * Contains a description of the error.
     *
-    * @return string|null The errorMessage
+    * @return string The errorMessage
     */
     public function getErrorMessage()
     {
@@ -115,7 +115,7 @@ class EducationSynchronizationError extends Entity
     * Gets the joiningValue
     * The unique identifier for the entry.
     *
-    * @return string|null The joiningValue
+    * @return string The joiningValue
     */
     public function getJoiningValue()
     {
@@ -144,12 +144,12 @@ class EducationSynchronizationError extends Entity
     * Gets the recordedDateTime
     * The time of occurrence of this error.
     *
-    * @return \DateTime|null The recordedDateTime
+    * @return \DateTime The recordedDateTime
     */
     public function getRecordedDateTime()
     {
         if (array_key_exists("recordedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["recordedDateTime"], "\DateTime") || is_null($this->_propDict["recordedDateTime"])) {
+            if (is_a($this->_propDict["recordedDateTime"], "\DateTime")) {
                 return $this->_propDict["recordedDateTime"];
             } else {
                 $this->_propDict["recordedDateTime"] = new \DateTime($this->_propDict["recordedDateTime"]);
@@ -177,7 +177,7 @@ class EducationSynchronizationError extends Entity
     * Gets the reportableIdentifier
     * The identifier of this error entry.
     *
-    * @return string|null The reportableIdentifier
+    * @return string The reportableIdentifier
     */
     public function getReportableIdentifier()
     {

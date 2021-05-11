@@ -27,7 +27,7 @@ class DeviceManagementConfigurationSettingDependedOnBy extends Entity
     * Gets the dependedOnBy
     * Identifier of child setting that is dependent on the current setting
     *
-    * @return string|null The dependedOnBy
+    * @return string The dependedOnBy
     */
     public function getDependedOnBy()
     {
@@ -55,7 +55,7 @@ class DeviceManagementConfigurationSettingDependedOnBy extends Entity
     * Gets the required
     * Value that determines if the child setting is required based on the parent setting's selection
     *
-    * @return bool|null The required
+    * @return bool The required
     */
     public function getRequired()
     {

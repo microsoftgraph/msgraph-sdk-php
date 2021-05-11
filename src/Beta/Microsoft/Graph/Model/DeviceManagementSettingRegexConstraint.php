@@ -36,7 +36,7 @@ class DeviceManagementSettingRegexConstraint extends DeviceManagementConstraint
     * Gets the regex
     * The RegEx pattern to match against
     *
-    * @return string|null The regex
+    * @return string The regex
     */
     public function getRegex()
     {

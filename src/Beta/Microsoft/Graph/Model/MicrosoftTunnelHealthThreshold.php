@@ -28,7 +28,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
     * Gets the defaultHealthyThreshold
     * The default threshold for being healthy
     *
-    * @return int|null The defaultHealthyThreshold
+    * @return int The defaultHealthyThreshold
     */
     public function getDefaultHealthyThreshold()
     {
@@ -57,7 +57,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
     * Gets the defaultUnhealthyThreshold
     * The default threshold for being unhealthy
     *
-    * @return int|null The defaultUnhealthyThreshold
+    * @return int The defaultUnhealthyThreshold
     */
     public function getDefaultUnhealthyThreshold()
     {
@@ -86,7 +86,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
     * Gets the healthyThreshold
     * The threshold for being healthy
     *
-    * @return int|null The healthyThreshold
+    * @return int The healthyThreshold
     */
     public function getHealthyThreshold()
     {
@@ -115,7 +115,7 @@ class MicrosoftTunnelHealthThreshold extends Entity
     * Gets the unhealthyThreshold
     * The threshold for being unhealthy
     *
-    * @return int|null The unhealthyThreshold
+    * @return int The unhealthyThreshold
     */
     public function getUnhealthyThreshold()
     {

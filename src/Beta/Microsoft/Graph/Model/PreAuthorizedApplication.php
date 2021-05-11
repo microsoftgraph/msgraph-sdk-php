@@ -27,7 +27,7 @@ class PreAuthorizedApplication extends Entity
     * Gets the appId
     * The unique identifier for the application.
     *
-    * @return string|null The appId
+    * @return string The appId
     */
     public function getAppId()
     {
@@ -55,7 +55,7 @@ class PreAuthorizedApplication extends Entity
     * Gets the permissionIds
     * The unique identifier for the oauth2PermissionScopes the application requires.
     *
-    * @return string|null The permissionIds
+    * @return string The permissionIds
     */
     public function getPermissionIds()
     {

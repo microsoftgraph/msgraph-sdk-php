@@ -27,12 +27,12 @@ class LicenseInfoDetail extends Entity
     /**
     * Gets the licenseType
     *
-    * @return AzureADLicenseType|null The licenseType
+    * @return AzureADLicenseType The licenseType
     */
     public function getLicenseType()
     {
         if (array_key_exists("licenseType", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseType"], "\Beta\Microsoft\Graph\Model\AzureADLicenseType") || is_null($this->_propDict["licenseType"])) {
+            if (is_a($this->_propDict["licenseType"], "\Beta\Microsoft\Graph\Model\AzureADLicenseType")) {
                 return $this->_propDict["licenseType"];
             } else {
                 $this->_propDict["licenseType"] = new AzureADLicenseType($this->_propDict["licenseType"]);
@@ -57,7 +57,7 @@ class LicenseInfoDetail extends Entity
     /**
     * Gets the totalAssignedCount
     *
-    * @return int|null The totalAssignedCount
+    * @return int The totalAssignedCount
     */
     public function getTotalAssignedCount()
     {
@@ -83,7 +83,7 @@ class LicenseInfoDetail extends Entity
     /**
     * Gets the totalLicenseCount
     *
-    * @return int|null The totalLicenseCount
+    * @return int The totalLicenseCount
     */
     public function getTotalLicenseCount()
     {
@@ -109,7 +109,7 @@ class LicenseInfoDetail extends Entity
     /**
     * Gets the totalUsageCount
     *
-    * @return int|null The totalUsageCount
+    * @return int The totalUsageCount
     */
     public function getTotalUsageCount()
     {

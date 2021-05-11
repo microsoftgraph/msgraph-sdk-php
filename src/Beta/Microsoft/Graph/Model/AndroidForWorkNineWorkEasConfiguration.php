@@ -28,7 +28,7 @@ class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEmailProfi
     * Gets the syncCalendar
     * Toggles syncing the calendar. If set to false the calendar is turned off on the device.
     *
-    * @return bool|null The syncCalendar
+    * @return bool The syncCalendar
     */
     public function getSyncCalendar()
     {
@@ -57,7 +57,7 @@ class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEmailProfi
     * Gets the syncContacts
     * Toggles syncing contacts. If set to false contacts are turned off on the device.
     *
-    * @return bool|null The syncContacts
+    * @return bool The syncContacts
     */
     public function getSyncContacts()
     {
@@ -86,7 +86,7 @@ class AndroidForWorkNineWorkEasConfiguration extends AndroidForWorkEasEmailProfi
     * Gets the syncTasks
     * Toggles syncing tasks. If set to false tasks are turned off on the device.
     *
-    * @return bool|null The syncTasks
+    * @return bool The syncTasks
     */
     public function getSyncTasks()
     {

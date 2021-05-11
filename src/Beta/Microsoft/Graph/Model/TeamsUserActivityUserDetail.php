@@ -28,7 +28,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the adHocMeetingsAttendedCount
     * The number of ad hoc meetings a user participated in.
     *
-    * @return int|null The adHocMeetingsAttendedCount
+    * @return int The adHocMeetingsAttendedCount
     */
     public function getAdHocMeetingsAttendedCount()
     {
@@ -57,7 +57,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the adHocMeetingsOrganizedCount
     * The number of ad hoc meetings a user organized.
     *
-    * @return int|null The adHocMeetingsOrganizedCount
+    * @return int The adHocMeetingsOrganizedCount
     */
     public function getAdHocMeetingsOrganizedCount()
     {
@@ -86,7 +86,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the assignedProducts
     * Products the user assigned with.
     *
-    * @return string|null The assignedProducts
+    * @return string The assignedProducts
     */
     public function getAssignedProducts()
     {
@@ -115,12 +115,12 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the audioDuration
     * Audio duration the user participated in.
     *
-    * @return Duration|null The audioDuration
+    * @return Duration The audioDuration
     */
     public function getAudioDuration()
     {
         if (array_key_exists("audioDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["audioDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["audioDuration"])) {
+            if (is_a($this->_propDict["audioDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["audioDuration"];
             } else {
                 $this->_propDict["audioDuration"] = new Duration($this->_propDict["audioDuration"]);
@@ -148,7 +148,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the callCount
     * The number of 1:1 calls that the user participated in.
     *
-    * @return int|null The callCount
+    * @return int The callCount
     */
     public function getCallCount()
     {
@@ -177,12 +177,12 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the deletedDate
     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
     *
-    * @return \DateTime|null The deletedDate
+    * @return \DateTime The deletedDate
     */
     public function getDeletedDate()
     {
         if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime") || is_null($this->_propDict["deletedDate"])) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
                 return $this->_propDict["deletedDate"];
             } else {
                 $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
@@ -210,7 +210,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the hasOtherAction
     * The User is active but has performed other activities than exposed action types offered in the report (sending or replying to channel messages and chat messages, scheduling or participating in 1:1 calls and meetings). Examples actions are when a user changes the Teams status or the Teams status message or opens a Channel Message post but does not reply.
     *
-    * @return bool|null The hasOtherAction
+    * @return bool The hasOtherAction
     */
     public function getHasOtherAction()
     {
@@ -239,7 +239,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the isDeleted
     * Whether this user has been deleted or soft deleted.
     *
-    * @return bool|null The isDeleted
+    * @return bool The isDeleted
     */
     public function getIsDeleted()
     {
@@ -268,7 +268,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the isLicensed
     * Whether the user has been assigned a Teams license.
     *
-    * @return bool|null The isLicensed
+    * @return bool The isLicensed
     */
     public function getIsLicensed()
     {
@@ -297,12 +297,12 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the lastActivityDate
     * The last date that the user participated in a Microsoft Teams activity.
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \DateTime The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -330,7 +330,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the meetingCount
     * The number of online meetings that the user participated in.
     *
-    * @return int|null The meetingCount
+    * @return int The meetingCount
     */
     public function getMeetingCount()
     {
@@ -359,7 +359,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the meetingsAttendedCount
     * The sum of the one-time scheduled, recurring, ad hoc and unclassified meetings a user participated in.
     *
-    * @return int|null The meetingsAttendedCount
+    * @return int The meetingsAttendedCount
     */
     public function getMeetingsAttendedCount()
     {
@@ -388,7 +388,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the meetingsOrganizedCount
     * The sum of one-time scheduled, Recurring, ad hoc and unclassified meetings a user organized.
     *
-    * @return int|null The meetingsOrganizedCount
+    * @return int The meetingsOrganizedCount
     */
     public function getMeetingsOrganizedCount()
     {
@@ -417,7 +417,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the privateChatMessageCount
     * The number of unique messages that the user posted in a private chat.
     *
-    * @return int|null The privateChatMessageCount
+    * @return int The privateChatMessageCount
     */
     public function getPrivateChatMessageCount()
     {
@@ -446,7 +446,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the reportPeriod
     * The number of days the report covers.
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -475,12 +475,12 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -508,7 +508,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the scheduledOneTimeMeetingsAttendedCount
     * The number of the one-time scheduled meetings a user participated in.
     *
-    * @return int|null The scheduledOneTimeMeetingsAttendedCount
+    * @return int The scheduledOneTimeMeetingsAttendedCount
     */
     public function getScheduledOneTimeMeetingsAttendedCount()
     {
@@ -537,7 +537,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the scheduledOneTimeMeetingsOrganizedCount
     * The number of one-time scheduled meetings a user organized.
     *
-    * @return int|null The scheduledOneTimeMeetingsOrganizedCount
+    * @return int The scheduledOneTimeMeetingsOrganizedCount
     */
     public function getScheduledOneTimeMeetingsOrganizedCount()
     {
@@ -566,7 +566,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the scheduledRecurringMeetingsAttendedCount
     * The number of the recurring meetings a user participated in.
     *
-    * @return int|null The scheduledRecurringMeetingsAttendedCount
+    * @return int The scheduledRecurringMeetingsAttendedCount
     */
     public function getScheduledRecurringMeetingsAttendedCount()
     {
@@ -595,7 +595,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the scheduledRecurringMeetingsOrganizedCount
     * The number of recurring meetings a user organized.
     *
-    * @return int|null The scheduledRecurringMeetingsOrganizedCount
+    * @return int The scheduledRecurringMeetingsOrganizedCount
     */
     public function getScheduledRecurringMeetingsOrganizedCount()
     {
@@ -624,12 +624,12 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the screenShareDuration
     * Screen sharing duration the user participated in.
     *
-    * @return Duration|null The screenShareDuration
+    * @return Duration The screenShareDuration
     */
     public function getScreenShareDuration()
     {
         if (array_key_exists("screenShareDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["screenShareDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["screenShareDuration"])) {
+            if (is_a($this->_propDict["screenShareDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["screenShareDuration"];
             } else {
                 $this->_propDict["screenShareDuration"] = new Duration($this->_propDict["screenShareDuration"]);
@@ -657,7 +657,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the teamChatMessageCount
     * The number of unique messages that the user posted in a team chat.
     *
-    * @return int|null The teamChatMessageCount
+    * @return int The teamChatMessageCount
     */
     public function getTeamChatMessageCount()
     {
@@ -686,7 +686,7 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the userPrincipalName
     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -715,12 +715,12 @@ class TeamsUserActivityUserDetail extends Entity
     * Gets the videoDuration
     * Video duration the user participated in.
     *
-    * @return Duration|null The videoDuration
+    * @return Duration The videoDuration
     */
     public function getVideoDuration()
     {
         if (array_key_exists("videoDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["videoDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["videoDuration"])) {
+            if (is_a($this->_propDict["videoDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["videoDuration"];
             } else {
                 $this->_propDict["videoDuration"] = new Duration($this->_propDict["videoDuration"]);

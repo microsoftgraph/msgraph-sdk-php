@@ -28,7 +28,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateEnhancedKeyUsage
     * Extended key usage
     *
-    * @return string|null The certificateEnhancedKeyUsage
+    * @return string The certificateEnhancedKeyUsage
     */
     public function getCertificateEnhancedKeyUsage()
     {
@@ -57,7 +57,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateErrorCode
     * Error code
     *
-    * @return int|null The certificateErrorCode
+    * @return int The certificateErrorCode
     */
     public function getCertificateErrorCode()
     {
@@ -86,12 +86,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateExpirationDateTime
     * Certificate expiry date
     *
-    * @return \DateTime|null The certificateExpirationDateTime
+    * @return \DateTime The certificateExpirationDateTime
     */
     public function getCertificateExpirationDateTime()
     {
         if (array_key_exists("certificateExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateExpirationDateTime"], "\DateTime") || is_null($this->_propDict["certificateExpirationDateTime"])) {
+            if (is_a($this->_propDict["certificateExpirationDateTime"], "\DateTime")) {
                 return $this->_propDict["certificateExpirationDateTime"];
             } else {
                 $this->_propDict["certificateExpirationDateTime"] = new \DateTime($this->_propDict["certificateExpirationDateTime"]);
@@ -119,12 +119,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateIssuanceDateTime
     * Issuance date
     *
-    * @return \DateTime|null The certificateIssuanceDateTime
+    * @return \DateTime The certificateIssuanceDateTime
     */
     public function getCertificateIssuanceDateTime()
     {
         if (array_key_exists("certificateIssuanceDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateIssuanceDateTime"], "\DateTime") || is_null($this->_propDict["certificateIssuanceDateTime"])) {
+            if (is_a($this->_propDict["certificateIssuanceDateTime"], "\DateTime")) {
                 return $this->_propDict["certificateIssuanceDateTime"];
             } else {
                 $this->_propDict["certificateIssuanceDateTime"] = new \DateTime($this->_propDict["certificateIssuanceDateTime"]);
@@ -152,12 +152,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateIssuanceState
     * Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested.
     *
-    * @return CertificateIssuanceStates|null The certificateIssuanceState
+    * @return CertificateIssuanceStates The certificateIssuanceState
     */
     public function getCertificateIssuanceState()
     {
         if (array_key_exists("certificateIssuanceState", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateIssuanceState"], "\Beta\Microsoft\Graph\Model\CertificateIssuanceStates") || is_null($this->_propDict["certificateIssuanceState"])) {
+            if (is_a($this->_propDict["certificateIssuanceState"], "\Beta\Microsoft\Graph\Model\CertificateIssuanceStates")) {
                 return $this->_propDict["certificateIssuanceState"];
             } else {
                 $this->_propDict["certificateIssuanceState"] = new CertificateIssuanceStates($this->_propDict["certificateIssuanceState"]);
@@ -185,7 +185,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateIssuer
     * Issuer
     *
-    * @return string|null The certificateIssuer
+    * @return string The certificateIssuer
     */
     public function getCertificateIssuer()
     {
@@ -214,7 +214,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateKeyLength
     * Key length
     *
-    * @return int|null The certificateKeyLength
+    * @return int The certificateKeyLength
     */
     public function getCertificateKeyLength()
     {
@@ -243,12 +243,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateKeyStorageProvider
     * Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
     *
-    * @return KeyStorageProviderOption|null The certificateKeyStorageProvider
+    * @return KeyStorageProviderOption The certificateKeyStorageProvider
     */
     public function getCertificateKeyStorageProvider()
     {
         if (array_key_exists("certificateKeyStorageProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateKeyStorageProvider"], "\Beta\Microsoft\Graph\Model\KeyStorageProviderOption") || is_null($this->_propDict["certificateKeyStorageProvider"])) {
+            if (is_a($this->_propDict["certificateKeyStorageProvider"], "\Beta\Microsoft\Graph\Model\KeyStorageProviderOption")) {
                 return $this->_propDict["certificateKeyStorageProvider"];
             } else {
                 $this->_propDict["certificateKeyStorageProvider"] = new KeyStorageProviderOption($this->_propDict["certificateKeyStorageProvider"]);
@@ -276,12 +276,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateKeyUsage
     * Key usage. Possible values are: keyEncipherment, digitalSignature.
     *
-    * @return KeyUsages|null The certificateKeyUsage
+    * @return KeyUsages The certificateKeyUsage
     */
     public function getCertificateKeyUsage()
     {
         if (array_key_exists("certificateKeyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateKeyUsage"], "\Beta\Microsoft\Graph\Model\KeyUsages") || is_null($this->_propDict["certificateKeyUsage"])) {
+            if (is_a($this->_propDict["certificateKeyUsage"], "\Beta\Microsoft\Graph\Model\KeyUsages")) {
                 return $this->_propDict["certificateKeyUsage"];
             } else {
                 $this->_propDict["certificateKeyUsage"] = new KeyUsages($this->_propDict["certificateKeyUsage"]);
@@ -309,12 +309,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateLastIssuanceStateChangedDateTime
     * Last certificate issuance state change
     *
-    * @return \DateTime|null The certificateLastIssuanceStateChangedDateTime
+    * @return \DateTime The certificateLastIssuanceStateChangedDateTime
     */
     public function getCertificateLastIssuanceStateChangedDateTime()
     {
         if (array_key_exists("certificateLastIssuanceStateChangedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateLastIssuanceStateChangedDateTime"], "\DateTime") || is_null($this->_propDict["certificateLastIssuanceStateChangedDateTime"])) {
+            if (is_a($this->_propDict["certificateLastIssuanceStateChangedDateTime"], "\DateTime")) {
                 return $this->_propDict["certificateLastIssuanceStateChangedDateTime"];
             } else {
                 $this->_propDict["certificateLastIssuanceStateChangedDateTime"] = new \DateTime($this->_propDict["certificateLastIssuanceStateChangedDateTime"]);
@@ -342,7 +342,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateProfileDisplayName
     * Certificate profile display name
     *
-    * @return string|null The certificateProfileDisplayName
+    * @return string The certificateProfileDisplayName
     */
     public function getCertificateProfileDisplayName()
     {
@@ -371,12 +371,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateRevokeStatus
     * Revoke status. Possible values are: none, pending, issued, failed, revoked.
     *
-    * @return CertificateRevocationStatus|null The certificateRevokeStatus
+    * @return CertificateRevocationStatus The certificateRevokeStatus
     */
     public function getCertificateRevokeStatus()
     {
         if (array_key_exists("certificateRevokeStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateRevokeStatus"], "\Beta\Microsoft\Graph\Model\CertificateRevocationStatus") || is_null($this->_propDict["certificateRevokeStatus"])) {
+            if (is_a($this->_propDict["certificateRevokeStatus"], "\Beta\Microsoft\Graph\Model\CertificateRevocationStatus")) {
                 return $this->_propDict["certificateRevokeStatus"];
             } else {
                 $this->_propDict["certificateRevokeStatus"] = new CertificateRevocationStatus($this->_propDict["certificateRevokeStatus"]);
@@ -404,7 +404,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateSerialNumber
     * Serial number
     *
-    * @return string|null The certificateSerialNumber
+    * @return string The certificateSerialNumber
     */
     public function getCertificateSerialNumber()
     {
@@ -433,12 +433,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateSubjectAlternativeNameFormat
     * Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
     *
-    * @return SubjectAlternativeNameType|null The certificateSubjectAlternativeNameFormat
+    * @return SubjectAlternativeNameType The certificateSubjectAlternativeNameFormat
     */
     public function getCertificateSubjectAlternativeNameFormat()
     {
         if (array_key_exists("certificateSubjectAlternativeNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateSubjectAlternativeNameFormat"], "\Beta\Microsoft\Graph\Model\SubjectAlternativeNameType") || is_null($this->_propDict["certificateSubjectAlternativeNameFormat"])) {
+            if (is_a($this->_propDict["certificateSubjectAlternativeNameFormat"], "\Beta\Microsoft\Graph\Model\SubjectAlternativeNameType")) {
                 return $this->_propDict["certificateSubjectAlternativeNameFormat"];
             } else {
                 $this->_propDict["certificateSubjectAlternativeNameFormat"] = new SubjectAlternativeNameType($this->_propDict["certificateSubjectAlternativeNameFormat"]);
@@ -466,7 +466,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateSubjectAlternativeNameFormatString
     * Subject alternative name format string for custom formats
     *
-    * @return string|null The certificateSubjectAlternativeNameFormatString
+    * @return string The certificateSubjectAlternativeNameFormatString
     */
     public function getCertificateSubjectAlternativeNameFormatString()
     {
@@ -495,12 +495,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateSubjectNameFormat
     * Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
     *
-    * @return SubjectNameFormat|null The certificateSubjectNameFormat
+    * @return SubjectNameFormat The certificateSubjectNameFormat
     */
     public function getCertificateSubjectNameFormat()
     {
         if (array_key_exists("certificateSubjectNameFormat", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateSubjectNameFormat"], "\Beta\Microsoft\Graph\Model\SubjectNameFormat") || is_null($this->_propDict["certificateSubjectNameFormat"])) {
+            if (is_a($this->_propDict["certificateSubjectNameFormat"], "\Beta\Microsoft\Graph\Model\SubjectNameFormat")) {
                 return $this->_propDict["certificateSubjectNameFormat"];
             } else {
                 $this->_propDict["certificateSubjectNameFormat"] = new SubjectNameFormat($this->_propDict["certificateSubjectNameFormat"]);
@@ -528,7 +528,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateSubjectNameFormatString
     * Subject name format string for custom subject name formats
     *
-    * @return string|null The certificateSubjectNameFormatString
+    * @return string The certificateSubjectNameFormatString
     */
     public function getCertificateSubjectNameFormatString()
     {
@@ -557,7 +557,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateThumbprint
     * Thumbprint
     *
-    * @return string|null The certificateThumbprint
+    * @return string The certificateThumbprint
     */
     public function getCertificateThumbprint()
     {
@@ -586,7 +586,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateValidityPeriod
     * Validity period
     *
-    * @return int|null The certificateValidityPeriod
+    * @return int The certificateValidityPeriod
     */
     public function getCertificateValidityPeriod()
     {
@@ -615,12 +615,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the certificateValidityPeriodUnits
     * Validity period units. Possible values are: days, months, years.
     *
-    * @return CertificateValidityPeriodScale|null The certificateValidityPeriodUnits
+    * @return CertificateValidityPeriodScale The certificateValidityPeriodUnits
     */
     public function getCertificateValidityPeriodUnits()
     {
         if (array_key_exists("certificateValidityPeriodUnits", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateValidityPeriodUnits"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale") || is_null($this->_propDict["certificateValidityPeriodUnits"])) {
+            if (is_a($this->_propDict["certificateValidityPeriodUnits"], "\Beta\Microsoft\Graph\Model\CertificateValidityPeriodScale")) {
                 return $this->_propDict["certificateValidityPeriodUnits"];
             } else {
                 $this->_propDict["certificateValidityPeriodUnits"] = new CertificateValidityPeriodScale($this->_propDict["certificateValidityPeriodUnits"]);
@@ -648,7 +648,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the deviceDisplayName
     * Device display name
     *
-    * @return string|null The deviceDisplayName
+    * @return string The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -677,12 +677,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the devicePlatform
     * Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
     *
-    * @return DevicePlatformType|null The devicePlatform
+    * @return DevicePlatformType The devicePlatform
     */
     public function getDevicePlatform()
     {
         if (array_key_exists("devicePlatform", $this->_propDict)) {
-            if (is_a($this->_propDict["devicePlatform"], "\Beta\Microsoft\Graph\Model\DevicePlatformType") || is_null($this->_propDict["devicePlatform"])) {
+            if (is_a($this->_propDict["devicePlatform"], "\Beta\Microsoft\Graph\Model\DevicePlatformType")) {
                 return $this->_propDict["devicePlatform"];
             } else {
                 $this->_propDict["devicePlatform"] = new DevicePlatformType($this->_propDict["devicePlatform"]);
@@ -710,12 +710,12 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the lastCertificateStateChangeDateTime
     * Last certificate issuance state change
     *
-    * @return \DateTime|null The lastCertificateStateChangeDateTime
+    * @return \DateTime The lastCertificateStateChangeDateTime
     */
     public function getLastCertificateStateChangeDateTime()
     {
         if (array_key_exists("lastCertificateStateChangeDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCertificateStateChangeDateTime"], "\DateTime") || is_null($this->_propDict["lastCertificateStateChangeDateTime"])) {
+            if (is_a($this->_propDict["lastCertificateStateChangeDateTime"], "\DateTime")) {
                 return $this->_propDict["lastCertificateStateChangeDateTime"];
             } else {
                 $this->_propDict["lastCertificateStateChangeDateTime"] = new \DateTime($this->_propDict["lastCertificateStateChangeDateTime"]);
@@ -743,7 +743,7 @@ class ManagedDeviceCertificateState extends Entity
     * Gets the userDisplayName
     * User display name
     *
-    * @return string|null The userDisplayName
+    * @return string The userDisplayName
     */
     public function getUserDisplayName()
     {

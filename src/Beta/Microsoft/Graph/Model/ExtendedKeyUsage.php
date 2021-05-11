@@ -27,7 +27,7 @@ class ExtendedKeyUsage extends Entity
     * Gets the name
     * Extended Key Usage Name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -55,7 +55,7 @@ class ExtendedKeyUsage extends Entity
     * Gets the objectIdentifier
     * Extended Key Usage Object Identifier
     *
-    * @return string|null The objectIdentifier
+    * @return string The objectIdentifier
     */
     public function getObjectIdentifier()
     {

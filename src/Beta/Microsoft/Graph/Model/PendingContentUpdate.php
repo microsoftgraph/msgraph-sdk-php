@@ -28,12 +28,12 @@ class PendingContentUpdate extends Entity
     * Gets the queuedDateTime
     * Date and time the pending binary operation was queued in UTC time. Read-only.
     *
-    * @return \DateTime|null The queuedDateTime
+    * @return \DateTime The queuedDateTime
     */
     public function getQueuedDateTime()
     {
         if (array_key_exists("queuedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["queuedDateTime"], "\DateTime") || is_null($this->_propDict["queuedDateTime"])) {
+            if (is_a($this->_propDict["queuedDateTime"], "\DateTime")) {
                 return $this->_propDict["queuedDateTime"];
             } else {
                 $this->_propDict["queuedDateTime"] = new \DateTime($this->_propDict["queuedDateTime"]);

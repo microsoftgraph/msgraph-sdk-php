@@ -27,7 +27,7 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
     * Gets the scope
     * The scope of the access request (see RFC6749).
     *
-    * @return string|null The scope
+    * @return string The scope
     */
     public function getScope()
     {
@@ -55,7 +55,7 @@ class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings extends 
     * Gets the tokenUrl
     * The URL to get access tokens for the data provider.
     *
-    * @return string|null The tokenUrl
+    * @return string The tokenUrl
     */
     public function getTokenUrl()
     {

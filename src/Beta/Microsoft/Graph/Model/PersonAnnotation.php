@@ -28,12 +28,12 @@ class PersonAnnotation extends ItemFacet
     * Gets the detail
     * Contains the detail of the note itself.
     *
-    * @return ItemBody|null The detail
+    * @return ItemBody The detail
     */
     public function getDetail()
     {
         if (array_key_exists("detail", $this->_propDict)) {
-            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["detail"])) {
+            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["detail"];
             } else {
                 $this->_propDict["detail"] = new ItemBody($this->_propDict["detail"]);
@@ -61,7 +61,7 @@ class PersonAnnotation extends ItemFacet
     * Gets the displayName
     * Contains a friendly name for the note.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -89,7 +89,7 @@ class PersonAnnotation extends ItemFacet
     /**
     * Gets the thumbnailUrl
     *
-    * @return string|null The thumbnailUrl
+    * @return string The thumbnailUrl
     */
     public function getThumbnailUrl()
     {

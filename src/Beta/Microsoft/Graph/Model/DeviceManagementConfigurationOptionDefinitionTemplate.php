@@ -28,12 +28,12 @@ class DeviceManagementConfigurationOptionDefinitionTemplate extends Entity
     * Gets the children
     * Option Children
     *
-    * @return DeviceManagementConfigurationSettingInstanceTemplate|null The children
+    * @return DeviceManagementConfigurationSettingInstanceTemplate The children
     */
     public function getChildren()
     {
         if (array_key_exists("children", $this->_propDict)) {
-            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstanceTemplate") || is_null($this->_propDict["children"])) {
+            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstanceTemplate")) {
                 return $this->_propDict["children"];
             } else {
                 $this->_propDict["children"] = new DeviceManagementConfigurationSettingInstanceTemplate($this->_propDict["children"]);
@@ -60,7 +60,7 @@ class DeviceManagementConfigurationOptionDefinitionTemplate extends Entity
     * Gets the itemId
     * Option ItemId
     *
-    * @return string|null The itemId
+    * @return string The itemId
     */
     public function getItemId()
     {

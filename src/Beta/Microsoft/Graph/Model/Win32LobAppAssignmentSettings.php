@@ -37,12 +37,12 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the deliveryOptimizationPriority
     * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
     *
-    * @return Win32LobAppDeliveryOptimizationPriority|null The deliveryOptimizationPriority
+    * @return Win32LobAppDeliveryOptimizationPriority The deliveryOptimizationPriority
     */
     public function getDeliveryOptimizationPriority()
     {
         if (array_key_exists("deliveryOptimizationPriority", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationPriority"], "\Beta\Microsoft\Graph\Model\Win32LobAppDeliveryOptimizationPriority") || is_null($this->_propDict["deliveryOptimizationPriority"])) {
+            if (is_a($this->_propDict["deliveryOptimizationPriority"], "\Beta\Microsoft\Graph\Model\Win32LobAppDeliveryOptimizationPriority")) {
                 return $this->_propDict["deliveryOptimizationPriority"];
             } else {
                 $this->_propDict["deliveryOptimizationPriority"] = new Win32LobAppDeliveryOptimizationPriority($this->_propDict["deliveryOptimizationPriority"]);
@@ -70,12 +70,12 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the installTimeSettings
     * The install time settings to apply for this app assignment.
     *
-    * @return MobileAppInstallTimeSettings|null The installTimeSettings
+    * @return MobileAppInstallTimeSettings The installTimeSettings
     */
     public function getInstallTimeSettings()
     {
         if (array_key_exists("installTimeSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["installTimeSettings"], "\Beta\Microsoft\Graph\Model\MobileAppInstallTimeSettings") || is_null($this->_propDict["installTimeSettings"])) {
+            if (is_a($this->_propDict["installTimeSettings"], "\Beta\Microsoft\Graph\Model\MobileAppInstallTimeSettings")) {
                 return $this->_propDict["installTimeSettings"];
             } else {
                 $this->_propDict["installTimeSettings"] = new MobileAppInstallTimeSettings($this->_propDict["installTimeSettings"]);
@@ -103,12 +103,12 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the notifications
     * The notification status for this app assignment. Possible values are: showAll, showReboot, hideAll.
     *
-    * @return Win32LobAppNotification|null The notifications
+    * @return Win32LobAppNotification The notifications
     */
     public function getNotifications()
     {
         if (array_key_exists("notifications", $this->_propDict)) {
-            if (is_a($this->_propDict["notifications"], "\Beta\Microsoft\Graph\Model\Win32LobAppNotification") || is_null($this->_propDict["notifications"])) {
+            if (is_a($this->_propDict["notifications"], "\Beta\Microsoft\Graph\Model\Win32LobAppNotification")) {
                 return $this->_propDict["notifications"];
             } else {
                 $this->_propDict["notifications"] = new Win32LobAppNotification($this->_propDict["notifications"]);
@@ -136,12 +136,12 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the restartSettings
     * The reboot settings to apply for this app assignment.
     *
-    * @return Win32LobAppRestartSettings|null The restartSettings
+    * @return Win32LobAppRestartSettings The restartSettings
     */
     public function getRestartSettings()
     {
         if (array_key_exists("restartSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["restartSettings"], "\Beta\Microsoft\Graph\Model\Win32LobAppRestartSettings") || is_null($this->_propDict["restartSettings"])) {
+            if (is_a($this->_propDict["restartSettings"], "\Beta\Microsoft\Graph\Model\Win32LobAppRestartSettings")) {
                 return $this->_propDict["restartSettings"];
             } else {
                 $this->_propDict["restartSettings"] = new Win32LobAppRestartSettings($this->_propDict["restartSettings"]);

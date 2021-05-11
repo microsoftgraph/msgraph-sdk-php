@@ -27,7 +27,7 @@ class CommentAction extends Entity
     * Gets the isReply
     * If true, this activity was a reply to an existing comment thread.
     *
-    * @return bool|null The isReply
+    * @return bool The isReply
     */
     public function getIsReply()
     {
@@ -56,12 +56,12 @@ class CommentAction extends Entity
     * Gets the parentAuthor
     * The identity of the user who started the comment thread.
     *
-    * @return IdentitySet|null The parentAuthor
+    * @return IdentitySet The parentAuthor
     */
     public function getParentAuthor()
     {
         if (array_key_exists("parentAuthor", $this->_propDict)) {
-            if (is_a($this->_propDict["parentAuthor"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["parentAuthor"])) {
+            if (is_a($this->_propDict["parentAuthor"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["parentAuthor"];
             } else {
                 $this->_propDict["parentAuthor"] = new IdentitySet($this->_propDict["parentAuthor"]);
@@ -89,12 +89,12 @@ class CommentAction extends Entity
     * Gets the participants
     * The identities of the users participating in this comment thread.
     *
-    * @return IdentitySet|null The participants
+    * @return IdentitySet The participants
     */
     public function getParticipants()
     {
         if (array_key_exists("participants", $this->_propDict)) {
-            if (is_a($this->_propDict["participants"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["participants"])) {
+            if (is_a($this->_propDict["participants"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["participants"];
             } else {
                 $this->_propDict["participants"] = new IdentitySet($this->_propDict["participants"]);

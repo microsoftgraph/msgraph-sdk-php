@@ -36,7 +36,7 @@ class OmaSettingBoolean extends OmaSetting
     * Gets the value
     * Value.
     *
-    * @return bool|null The value
+    * @return bool The value
     */
     public function getValue()
     {

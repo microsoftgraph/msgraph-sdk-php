@@ -28,7 +28,7 @@ class PublishedResource extends Entity
     * Gets the displayName
     * Display Name of the publishedResource.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,12 +57,12 @@ class PublishedResource extends Entity
     * Gets the publishingType
     * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
     *
-    * @return OnPremisesPublishingType|null The publishingType
+    * @return OnPremisesPublishingType The publishingType
     */
     public function getPublishingType()
     {
         if (array_key_exists("publishingType", $this->_propDict)) {
-            if (is_a($this->_propDict["publishingType"], "\Beta\Microsoft\Graph\Model\OnPremisesPublishingType") || is_null($this->_propDict["publishingType"])) {
+            if (is_a($this->_propDict["publishingType"], "\Beta\Microsoft\Graph\Model\OnPremisesPublishingType")) {
                 return $this->_propDict["publishingType"];
             } else {
                 $this->_propDict["publishingType"] = new OnPremisesPublishingType($this->_propDict["publishingType"]);
@@ -90,7 +90,7 @@ class PublishedResource extends Entity
     * Gets the resourceName
     * Name of the publishedResource.
     *
-    * @return string|null The resourceName
+    * @return string The resourceName
     */
     public function getResourceName()
     {
@@ -120,7 +120,7 @@ class PublishedResource extends Entity
      * Gets the agentGroups
     * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
      *
-     * @return array|null The agentGroups
+     * @return array The agentGroups
      */
     public function getAgentGroups()
     {
@@ -141,7 +141,7 @@ class PublishedResource extends Entity
     */
     public function setAgentGroups($val)
     {
-        $this->_propDict["agentGroups"] = $val;
+		$this->_propDict["agentGroups"] = $val;
         return $this;
     }
     

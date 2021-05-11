@@ -28,12 +28,12 @@ class CallActivityStatistics extends ActivityStatistics
     * Gets the afterHours
     * Time spent on calls outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The afterHours
+    * @return Duration The afterHours
     */
     public function getAfterHours()
     {
         if (array_key_exists("afterHours", $this->_propDict)) {
-            if (is_a($this->_propDict["afterHours"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["afterHours"])) {
+            if (is_a($this->_propDict["afterHours"], "\Beta\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["afterHours"];
             } else {
                 $this->_propDict["afterHours"] = new Duration($this->_propDict["afterHours"]);

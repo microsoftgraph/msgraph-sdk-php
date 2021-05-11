@@ -28,12 +28,12 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     * Gets the licenseType
     * The app license type. Possible values are: offline, online.
     *
-    * @return MicrosoftStoreForBusinessLicenseType|null The licenseType
+    * @return MicrosoftStoreForBusinessLicenseType The licenseType
     */
     public function getLicenseType()
     {
         if (array_key_exists("licenseType", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseType"], "\Beta\Microsoft\Graph\Model\MicrosoftStoreForBusinessLicenseType") || is_null($this->_propDict["licenseType"])) {
+            if (is_a($this->_propDict["licenseType"], "\Beta\Microsoft\Graph\Model\MicrosoftStoreForBusinessLicenseType")) {
                 return $this->_propDict["licenseType"];
             } else {
                 $this->_propDict["licenseType"] = new MicrosoftStoreForBusinessLicenseType($this->_propDict["licenseType"]);
@@ -61,12 +61,12 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     * Gets the licensingType
     * The supported License Type.
     *
-    * @return VppLicensingType|null The licensingType
+    * @return VppLicensingType The licensingType
     */
     public function getLicensingType()
     {
         if (array_key_exists("licensingType", $this->_propDict)) {
-            if (is_a($this->_propDict["licensingType"], "\Beta\Microsoft\Graph\Model\VppLicensingType") || is_null($this->_propDict["licensingType"])) {
+            if (is_a($this->_propDict["licensingType"], "\Beta\Microsoft\Graph\Model\VppLicensingType")) {
                 return $this->_propDict["licensingType"];
             } else {
                 $this->_propDict["licensingType"] = new VppLicensingType($this->_propDict["licensingType"]);
@@ -94,7 +94,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     * Gets the packageIdentityName
     * The app package identifier
     *
-    * @return string|null The packageIdentityName
+    * @return string The packageIdentityName
     */
     public function getPackageIdentityName()
     {
@@ -123,7 +123,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     * Gets the productKey
     * The app product key
     *
-    * @return string|null The productKey
+    * @return string The productKey
     */
     public function getProductKey()
     {
@@ -152,7 +152,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     * Gets the totalLicenseCount
     * The total number of Microsoft Store for Business licenses.
     *
-    * @return int|null The totalLicenseCount
+    * @return int The totalLicenseCount
     */
     public function getTotalLicenseCount()
     {
@@ -181,7 +181,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     * Gets the usedLicenseCount
     * The number of Microsoft Store for Business licenses in use.
     *
-    * @return int|null The usedLicenseCount
+    * @return int The usedLicenseCount
     */
     public function getUsedLicenseCount()
     {
@@ -211,7 +211,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp
      * Gets the containedApps
     * The collection of contained apps in a mobileApp acting as a package.
      *
-     * @return array|null The containedApps
+     * @return array The containedApps
      */
     public function getContainedApps()
     {
@@ -232,7 +232,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp
     */
     public function setContainedApps($val)
     {
-        $this->_propDict["containedApps"] = $val;
+		$this->_propDict["containedApps"] = $val;
         return $this;
     }
     

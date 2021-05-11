@@ -28,7 +28,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
     * Gets the displayName
     * The display name of the identityUserFlowAttribute within a user flow.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
     * Gets the isOptional
     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
     *
-    * @return bool|null The isOptional
+    * @return bool The isOptional
     */
     public function getIsOptional()
     {
@@ -86,7 +86,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
     * Gets the requiresVerification
     * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
     *
-    * @return bool|null The requiresVerification
+    * @return bool The requiresVerification
     */
     public function getRequiresVerification()
     {
@@ -116,7 +116,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
      * Gets the userAttributeValues
     * The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
      *
-     * @return array|null The userAttributeValues
+     * @return array The userAttributeValues
      */
     public function getUserAttributeValues()
     {
@@ -137,7 +137,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
     */
     public function setUserAttributeValues($val)
     {
-        $this->_propDict["userAttributeValues"] = $val;
+		$this->_propDict["userAttributeValues"] = $val;
         return $this;
     }
     
@@ -145,12 +145,12 @@ class IdentityUserFlowAttributeAssignment extends Entity
     * Gets the userInputType
     * The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
     *
-    * @return IdentityUserFlowAttributeInputType|null The userInputType
+    * @return IdentityUserFlowAttributeInputType The userInputType
     */
     public function getUserInputType()
     {
         if (array_key_exists("userInputType", $this->_propDict)) {
-            if (is_a($this->_propDict["userInputType"], "\Beta\Microsoft\Graph\Model\IdentityUserFlowAttributeInputType") || is_null($this->_propDict["userInputType"])) {
+            if (is_a($this->_propDict["userInputType"], "\Beta\Microsoft\Graph\Model\IdentityUserFlowAttributeInputType")) {
                 return $this->_propDict["userInputType"];
             } else {
                 $this->_propDict["userInputType"] = new IdentityUserFlowAttributeInputType($this->_propDict["userInputType"]);
@@ -178,12 +178,12 @@ class IdentityUserFlowAttributeAssignment extends Entity
     * Gets the userAttribute
     * The user attribute that you want to add to your user flow.
     *
-    * @return IdentityUserFlowAttribute|null The userAttribute
+    * @return IdentityUserFlowAttribute The userAttribute
     */
     public function getUserAttribute()
     {
         if (array_key_exists("userAttribute", $this->_propDict)) {
-            if (is_a($this->_propDict["userAttribute"], "\Beta\Microsoft\Graph\Model\IdentityUserFlowAttribute") || is_null($this->_propDict["userAttribute"])) {
+            if (is_a($this->_propDict["userAttribute"], "\Beta\Microsoft\Graph\Model\IdentityUserFlowAttribute")) {
                 return $this->_propDict["userAttribute"];
             } else {
                 $this->_propDict["userAttribute"] = new IdentityUserFlowAttribute($this->_propDict["userAttribute"]);

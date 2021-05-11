@@ -27,7 +27,7 @@ class ClaimsMapping extends Entity
     * Gets the displayName
     * The claim that provides the display name or full name for the user. It is a required propoerty.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class ClaimsMapping extends Entity
     * Gets the email
     * The claim that provides the email address of the user.
     *
-    * @return string|null The email
+    * @return string The email
     */
     public function getEmail()
     {
@@ -83,7 +83,7 @@ class ClaimsMapping extends Entity
     * Gets the givenName
     * The claim that provides the first name of the user.
     *
-    * @return string|null The givenName
+    * @return string The givenName
     */
     public function getGivenName()
     {
@@ -111,7 +111,7 @@ class ClaimsMapping extends Entity
     * Gets the surname
     * The claim that provides the last name of the user.
     *
-    * @return string|null The surname
+    * @return string The surname
     */
     public function getSurname()
     {
@@ -139,7 +139,7 @@ class ClaimsMapping extends Entity
     * Gets the userId
     * The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {

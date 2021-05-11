@@ -27,7 +27,7 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -54,7 +54,7 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -81,12 +81,12 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -112,7 +112,7 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the policyVersion
     *
-    * @return string|null The policyVersion
+    * @return string The policyVersion
     */
     public function getPolicyVersion()
     {
@@ -139,7 +139,7 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the reconfirmationInDays
     *
-    * @return int|null The reconfirmationInDays
+    * @return int The reconfirmationInDays
     */
     public function getReconfirmationInDays()
     {
@@ -166,12 +166,12 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the registrationEnforcement
     *
-    * @return RegistrationEnforcement|null The registrationEnforcement
+    * @return RegistrationEnforcement The registrationEnforcement
     */
     public function getRegistrationEnforcement()
     {
         if (array_key_exists("registrationEnforcement", $this->_propDict)) {
-            if (is_a($this->_propDict["registrationEnforcement"], "\Beta\Microsoft\Graph\Model\RegistrationEnforcement") || is_null($this->_propDict["registrationEnforcement"])) {
+            if (is_a($this->_propDict["registrationEnforcement"], "\Beta\Microsoft\Graph\Model\RegistrationEnforcement")) {
                 return $this->_propDict["registrationEnforcement"];
             } else {
                 $this->_propDict["registrationEnforcement"] = new RegistrationEnforcement($this->_propDict["registrationEnforcement"]);
@@ -198,7 +198,7 @@ class AuthenticationMethodsPolicy extends Entity
      /** 
      * Gets the authenticationMethodConfigurations
      *
-     * @return array|null The authenticationMethodConfigurations
+     * @return array The authenticationMethodConfigurations
      */
     public function getAuthenticationMethodConfigurations()
     {
@@ -218,7 +218,7 @@ class AuthenticationMethodsPolicy extends Entity
     */
     public function setAuthenticationMethodConfigurations($val)
     {
-        $this->_propDict["authenticationMethodConfigurations"] = $val;
+		$this->_propDict["authenticationMethodConfigurations"] = $val;
         return $this;
     }
     

@@ -26,7 +26,7 @@ class ParentLabelDetails extends Entity
     /**
     * Gets the color
     *
-    * @return string|null The color
+    * @return string The color
     */
     public function getColor()
     {
@@ -52,7 +52,7 @@ class ParentLabelDetails extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -78,7 +78,7 @@ class ParentLabelDetails extends Entity
     /**
     * Gets the id
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -104,7 +104,7 @@ class ParentLabelDetails extends Entity
     /**
     * Gets the isActive
     *
-    * @return bool|null The isActive
+    * @return bool The isActive
     */
     public function getIsActive()
     {
@@ -130,7 +130,7 @@ class ParentLabelDetails extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -157,12 +157,12 @@ class ParentLabelDetails extends Entity
     /**
     * Gets the parent
     *
-    * @return ParentLabelDetails|null The parent
+    * @return ParentLabelDetails The parent
     */
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\ParentLabelDetails") || is_null($this->_propDict["parent"])) {
+            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\ParentLabelDetails")) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new ParentLabelDetails($this->_propDict["parent"]);
@@ -187,7 +187,7 @@ class ParentLabelDetails extends Entity
     /**
     * Gets the sensitivity
     *
-    * @return int|null The sensitivity
+    * @return int The sensitivity
     */
     public function getSensitivity()
     {
@@ -213,7 +213,7 @@ class ParentLabelDetails extends Entity
     /**
     * Gets the tooltip
     *
-    * @return string|null The tooltip
+    * @return string The tooltip
     */
     public function getTooltip()
     {

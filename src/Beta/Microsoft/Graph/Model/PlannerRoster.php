@@ -29,7 +29,7 @@ class PlannerRoster extends Entity
      * Gets the members
     * Retrieves the members of the plannerRoster.
      *
-     * @return array|null The members
+     * @return array The members
      */
     public function getMembers()
     {
@@ -50,7 +50,7 @@ class PlannerRoster extends Entity
     */
     public function setMembers($val)
     {
-        $this->_propDict["members"] = $val;
+		$this->_propDict["members"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class PlannerRoster extends Entity
      * Gets the plans
     * Retrieves the plans contained by the plannerRoster.
      *
-     * @return array|null The plans
+     * @return array The plans
      */
     public function getPlans()
     {
@@ -80,7 +80,7 @@ class PlannerRoster extends Entity
     */
     public function setPlans($val)
     {
-        $this->_propDict["plans"] = $val;
+		$this->_propDict["plans"] = $val;
         return $this;
     }
     

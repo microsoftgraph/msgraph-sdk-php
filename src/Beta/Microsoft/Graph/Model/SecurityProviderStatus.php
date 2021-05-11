@@ -26,7 +26,7 @@ class SecurityProviderStatus extends Entity
     /**
     * Gets the enabled
     *
-    * @return bool|null The enabled
+    * @return bool The enabled
     */
     public function getEnabled()
     {
@@ -52,7 +52,7 @@ class SecurityProviderStatus extends Entity
     /**
     * Gets the endpoint
     *
-    * @return string|null The endpoint
+    * @return string The endpoint
     */
     public function getEndpoint()
     {
@@ -78,7 +78,7 @@ class SecurityProviderStatus extends Entity
     /**
     * Gets the provider
     *
-    * @return string|null The provider
+    * @return string The provider
     */
     public function getProvider()
     {
@@ -104,7 +104,7 @@ class SecurityProviderStatus extends Entity
     /**
     * Gets the region
     *
-    * @return string|null The region
+    * @return string The region
     */
     public function getRegion()
     {
@@ -130,7 +130,7 @@ class SecurityProviderStatus extends Entity
     /**
     * Gets the vendor
     *
-    * @return string|null The vendor
+    * @return string The vendor
     */
     public function getVendor()
     {

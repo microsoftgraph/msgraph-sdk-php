@@ -27,7 +27,7 @@ class ConfigurationManagerClientInformation extends Entity
     * Gets the clientIdentifier
     * Configuration Manager Client Id from SCCM
     *
-    * @return string|null The clientIdentifier
+    * @return string The clientIdentifier
     */
     public function getClientIdentifier()
     {
@@ -55,7 +55,7 @@ class ConfigurationManagerClientInformation extends Entity
     * Gets the isBlocked
     * Configuration Manager Client blocked status from SCCM
     *
-    * @return bool|null The isBlocked
+    * @return bool The isBlocked
     */
     public function getIsBlocked()
     {

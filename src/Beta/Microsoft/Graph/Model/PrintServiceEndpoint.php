@@ -28,7 +28,7 @@ class PrintServiceEndpoint extends Entity
     * Gets the displayName
     * A human-readable display name for the endpoint.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class PrintServiceEndpoint extends Entity
     * Gets the uri
     * The URI that can be used to access the service.
     *
-    * @return string|null The uri
+    * @return string The uri
     */
     public function getUri()
     {

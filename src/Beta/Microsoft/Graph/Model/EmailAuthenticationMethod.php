@@ -28,7 +28,7 @@ class EmailAuthenticationMethod extends AuthenticationMethod
     * Gets the emailAddress
     * The email address registered to this user.
     *
-    * @return string|null The emailAddress
+    * @return string The emailAddress
     */
     public function getEmailAddress()
     {

@@ -27,7 +27,7 @@ class KeyStringValuePair extends KeyTypedValuePair
     * Gets the value
     * The string value of the key-value pair.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

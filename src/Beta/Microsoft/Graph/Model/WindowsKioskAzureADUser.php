@@ -27,7 +27,7 @@ class WindowsKioskAzureADUser extends WindowsKioskUser
     * Gets the userId
     * The ID of the AzureAD user that will be locked to this kiosk configuration
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {
@@ -55,7 +55,7 @@ class WindowsKioskAzureADUser extends WindowsKioskUser
     * Gets the userPrincipalName
     * The user accounts that will be locked to this kiosk configuration
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

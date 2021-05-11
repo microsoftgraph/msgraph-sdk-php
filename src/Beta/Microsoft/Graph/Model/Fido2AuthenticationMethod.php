@@ -28,7 +28,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     * Gets the aaGuid
     * Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
     *
-    * @return string|null The aaGuid
+    * @return string The aaGuid
     */
     public function getAaGuid()
     {
@@ -57,7 +57,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     * Gets the attestationCertificates
     * The attestation certificate(s) attached to this security key.
     *
-    * @return string|null The attestationCertificates
+    * @return string The attestationCertificates
     */
     public function getAttestationCertificates()
     {
@@ -84,14 +84,14 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Gets the attestationLevel
-    * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+    * The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
     *
-    * @return AttestationLevel|null The attestationLevel
+    * @return AttestationLevel The attestationLevel
     */
     public function getAttestationLevel()
     {
         if (array_key_exists("attestationLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["attestationLevel"], "\Beta\Microsoft\Graph\Model\AttestationLevel") || is_null($this->_propDict["attestationLevel"])) {
+            if (is_a($this->_propDict["attestationLevel"], "\Beta\Microsoft\Graph\Model\AttestationLevel")) {
                 return $this->_propDict["attestationLevel"];
             } else {
                 $this->_propDict["attestationLevel"] = new AttestationLevel($this->_propDict["attestationLevel"]);
@@ -103,7 +103,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     
     /**
     * Sets the attestationLevel
-    * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
+    * The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
     *
     * @param AttestationLevel $val The attestationLevel
     *
@@ -119,12 +119,12 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     * Gets the createdDateTime
     * The timestamp when this key was registered to the user.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -152,12 +152,12 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     * Gets the creationDateTime
     * The timestamp when this key was registered to the user.
     *
-    * @return \DateTime|null The creationDateTime
+    * @return \DateTime The creationDateTime
     */
     public function getCreationDateTime()
     {
         if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime") || is_null($this->_propDict["creationDateTime"])) {
+            if (is_a($this->_propDict["creationDateTime"], "\DateTime")) {
                 return $this->_propDict["creationDateTime"];
             } else {
                 $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
@@ -185,7 +185,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     * Gets the displayName
     * The display name of the key as given by the user.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -214,7 +214,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     * Gets the model
     * The manufacturer-assigned model of the FIDO2 security key.
     *
-    * @return string|null The model
+    * @return string The model
     */
     public function getModel()
     {

@@ -28,12 +28,12 @@ class DataPolicyOperation extends Entity
     * Gets the completedDateTime
     * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
     *
-    * @return \DateTime|null The completedDateTime
+    * @return \DateTime The completedDateTime
     */
     public function getCompletedDateTime()
     {
         if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\DateTime") || is_null($this->_propDict["completedDateTime"])) {
+            if (is_a($this->_propDict["completedDateTime"], "\DateTime")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new \DateTime($this->_propDict["completedDateTime"]);
@@ -61,7 +61,7 @@ class DataPolicyOperation extends Entity
     * Gets the progress
     * Specifies the progress of an operation.
     *
-    * @return float|null The progress
+    * @return float The progress
     */
     public function getProgress()
     {
@@ -82,7 +82,7 @@ class DataPolicyOperation extends Entity
     */
     public function setProgress($val)
     {
-        $this->_propDict["progress"] = floatval($val);
+        $this->_propDict["progress"] = $val;
         return $this;
     }
     
@@ -90,12 +90,12 @@ class DataPolicyOperation extends Entity
     * Gets the status
     * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
     *
-    * @return DataPolicyOperationStatus|null The status
+    * @return DataPolicyOperationStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DataPolicyOperationStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DataPolicyOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DataPolicyOperationStatus($this->_propDict["status"]);
@@ -123,7 +123,7 @@ class DataPolicyOperation extends Entity
     * Gets the storageLocation
     * The URL location to where data is being exported for export requests.
     *
-    * @return string|null The storageLocation
+    * @return string The storageLocation
     */
     public function getStorageLocation()
     {
@@ -152,12 +152,12 @@ class DataPolicyOperation extends Entity
     * Gets the submittedDateTime
     * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime|null The submittedDateTime
+    * @return \DateTime The submittedDateTime
     */
     public function getSubmittedDateTime()
     {
         if (array_key_exists("submittedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["submittedDateTime"], "\DateTime") || is_null($this->_propDict["submittedDateTime"])) {
+            if (is_a($this->_propDict["submittedDateTime"], "\DateTime")) {
                 return $this->_propDict["submittedDateTime"];
             } else {
                 $this->_propDict["submittedDateTime"] = new \DateTime($this->_propDict["submittedDateTime"]);
@@ -185,7 +185,7 @@ class DataPolicyOperation extends Entity
     * Gets the userId
     * The id for the user on whom the operation is performed.
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {

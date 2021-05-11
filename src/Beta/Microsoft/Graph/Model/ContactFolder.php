@@ -28,7 +28,7 @@ class ContactFolder extends Entity
     * Gets the displayName
     * The folder's display name.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class ContactFolder extends Entity
     * Gets the parentFolderId
     * The ID of the folder's parent folder.
     *
-    * @return string|null The parentFolderId
+    * @return string The parentFolderId
     */
     public function getParentFolderId()
     {
@@ -86,7 +86,7 @@ class ContactFolder extends Entity
     * Gets the wellKnownName
     * The name of the folder if the folder is a recognized folder. Currently contacts is the only recognized contacts folder.
     *
-    * @return string|null The wellKnownName
+    * @return string The wellKnownName
     */
     public function getWellKnownName()
     {
@@ -116,7 +116,7 @@ class ContactFolder extends Entity
      * Gets the childFolders
     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      *
-     * @return array|null The childFolders
+     * @return array The childFolders
      */
     public function getChildFolders()
     {
@@ -137,7 +137,7 @@ class ContactFolder extends Entity
     */
     public function setChildFolders($val)
     {
-        $this->_propDict["childFolders"] = $val;
+		$this->_propDict["childFolders"] = $val;
         return $this;
     }
     
@@ -146,7 +146,7 @@ class ContactFolder extends Entity
      * Gets the contacts
     * The contacts in the folder. Navigation property. Read-only. Nullable.
      *
-     * @return array|null The contacts
+     * @return array The contacts
      */
     public function getContacts()
     {
@@ -167,7 +167,7 @@ class ContactFolder extends Entity
     */
     public function setContacts($val)
     {
-        $this->_propDict["contacts"] = $val;
+		$this->_propDict["contacts"] = $val;
         return $this;
     }
     
@@ -176,7 +176,7 @@ class ContactFolder extends Entity
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      *
-     * @return array|null The multiValueExtendedProperties
+     * @return array The multiValueExtendedProperties
      */
     public function getMultiValueExtendedProperties()
     {
@@ -197,7 +197,7 @@ class ContactFolder extends Entity
     */
     public function setMultiValueExtendedProperties($val)
     {
-        $this->_propDict["multiValueExtendedProperties"] = $val;
+		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     
@@ -206,7 +206,7 @@ class ContactFolder extends Entity
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      *
-     * @return array|null The singleValueExtendedProperties
+     * @return array The singleValueExtendedProperties
      */
     public function getSingleValueExtendedProperties()
     {
@@ -227,7 +227,7 @@ class ContactFolder extends Entity
     */
     public function setSingleValueExtendedProperties($val)
     {
-        $this->_propDict["singleValueExtendedProperties"] = $val;
+		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
     

@@ -28,12 +28,12 @@ class EducationAssignmentGrade extends Entity
     * Gets the gradedBy
     * User who did the grading.
     *
-    * @return IdentitySet|null The gradedBy
+    * @return IdentitySet The gradedBy
     */
     public function getGradedBy()
     {
         if (array_key_exists("gradedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["gradedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["gradedBy"])) {
+            if (is_a($this->_propDict["gradedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["gradedBy"];
             } else {
                 $this->_propDict["gradedBy"] = new IdentitySet($this->_propDict["gradedBy"]);
@@ -61,12 +61,12 @@ class EducationAssignmentGrade extends Entity
     * Gets the gradedDateTime
     * Moment in time when the grade was applied to this submission object. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime|null The gradedDateTime
+    * @return \DateTime The gradedDateTime
     */
     public function getGradedDateTime()
     {
         if (array_key_exists("gradedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["gradedDateTime"], "\DateTime") || is_null($this->_propDict["gradedDateTime"])) {
+            if (is_a($this->_propDict["gradedDateTime"], "\DateTime")) {
                 return $this->_propDict["gradedDateTime"];
             } else {
                 $this->_propDict["gradedDateTime"] = new \DateTime($this->_propDict["gradedDateTime"]);

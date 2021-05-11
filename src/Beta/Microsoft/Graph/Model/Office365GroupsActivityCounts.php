@@ -28,7 +28,7 @@ class Office365GroupsActivityCounts extends Entity
     * Gets the exchangeEmailsReceived
     * The number of emails received by Group mailboxes.
     *
-    * @return int|null The exchangeEmailsReceived
+    * @return int The exchangeEmailsReceived
     */
     public function getExchangeEmailsReceived()
     {
@@ -57,12 +57,12 @@ class Office365GroupsActivityCounts extends Entity
     * Gets the reportDate
     * The date on which a number of emails were sent to a group mailbox or a number of messages were posted, read, or liked in a Yammer group
     *
-    * @return \DateTime|null The reportDate
+    * @return \DateTime The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -90,7 +90,7 @@ class Office365GroupsActivityCounts extends Entity
     * Gets the reportPeriod
     * The number of days the report covers.
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -119,12 +119,12 @@ class Office365GroupsActivityCounts extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -152,7 +152,7 @@ class Office365GroupsActivityCounts extends Entity
     * Gets the yammerMessagesLiked
     * The number of messages liked in Yammer groups.
     *
-    * @return int|null The yammerMessagesLiked
+    * @return int The yammerMessagesLiked
     */
     public function getYammerMessagesLiked()
     {
@@ -181,7 +181,7 @@ class Office365GroupsActivityCounts extends Entity
     * Gets the yammerMessagesPosted
     * The number of messages posted to Yammer groups.
     *
-    * @return int|null The yammerMessagesPosted
+    * @return int The yammerMessagesPosted
     */
     public function getYammerMessagesPosted()
     {
@@ -210,7 +210,7 @@ class Office365GroupsActivityCounts extends Entity
     * Gets the yammerMessagesRead
     * The number of messages read in Yammer groups.
     *
-    * @return int|null The yammerMessagesRead
+    * @return int The yammerMessagesRead
     */
     public function getYammerMessagesRead()
     {

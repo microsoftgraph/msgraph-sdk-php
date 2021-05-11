@@ -28,7 +28,7 @@ class PersonInterest extends ItemFacet
     * Gets the categories
     * Contains categories a user has associated with the interest (for example, personal, recipies).
     *
-    * @return string|null The categories
+    * @return string The categories
     */
     public function getCategories()
     {
@@ -57,7 +57,7 @@ class PersonInterest extends ItemFacet
     * Gets the collaborationTags
     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
     *
-    * @return string|null The collaborationTags
+    * @return string The collaborationTags
     */
     public function getCollaborationTags()
     {
@@ -86,7 +86,7 @@ class PersonInterest extends ItemFacet
     * Gets the description
     * Contains a description of the interest.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -115,7 +115,7 @@ class PersonInterest extends ItemFacet
     * Gets the displayName
     * Contains a friendly name for the interest.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -143,7 +143,7 @@ class PersonInterest extends ItemFacet
     /**
     * Gets the thumbnailUrl
     *
-    * @return string|null The thumbnailUrl
+    * @return string The thumbnailUrl
     */
     public function getThumbnailUrl()
     {
@@ -171,7 +171,7 @@ class PersonInterest extends ItemFacet
     * Gets the webUrl
     * Contains a link to a web page or resource about the interest.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

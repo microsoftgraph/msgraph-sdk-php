@@ -28,12 +28,12 @@ class SearchAggregation extends Entity
     * Gets the buckets
     * Defines the actual buckets of the computed aggregation.
     *
-    * @return SearchBucket|null The buckets
+    * @return SearchBucket The buckets
     */
     public function getBuckets()
     {
         if (array_key_exists("buckets", $this->_propDict)) {
-            if (is_a($this->_propDict["buckets"], "\Beta\Microsoft\Graph\Model\SearchBucket") || is_null($this->_propDict["buckets"])) {
+            if (is_a($this->_propDict["buckets"], "\Beta\Microsoft\Graph\Model\SearchBucket")) {
                 return $this->_propDict["buckets"];
             } else {
                 $this->_propDict["buckets"] = new SearchBucket($this->_propDict["buckets"]);
@@ -60,7 +60,7 @@ class SearchAggregation extends Entity
     * Gets the field
     * Defines on which field the aggregation was computed on.
     *
-    * @return string|null The field
+    * @return string The field
     */
     public function getField()
     {

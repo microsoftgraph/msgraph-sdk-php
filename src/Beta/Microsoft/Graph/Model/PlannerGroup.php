@@ -29,7 +29,7 @@ class PlannerGroup extends Entity
      * Gets the plans
     * Read-only. Nullable. Returns the plannerPlans owned by the group.
      *
-     * @return array|null The plans
+     * @return array The plans
      */
     public function getPlans()
     {
@@ -50,7 +50,7 @@ class PlannerGroup extends Entity
     */
     public function setPlans($val)
     {
-        $this->_propDict["plans"] = $val;
+		$this->_propDict["plans"] = $val;
         return $this;
     }
     

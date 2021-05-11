@@ -27,7 +27,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the activityGroupNames
     *
-    * @return string|null The activityGroupNames
+    * @return string The activityGroupNames
     */
     public function getActivityGroupNames()
     {
@@ -54,7 +54,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the azureSubscriptionId
     *
-    * @return string|null The azureSubscriptionId
+    * @return string The azureSubscriptionId
     */
     public function getAzureSubscriptionId()
     {
@@ -81,7 +81,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the azureTenantId
     *
-    * @return string|null The azureTenantId
+    * @return string The azureTenantId
     */
     public function getAzureTenantId()
     {
@@ -108,7 +108,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the certificateThumbprint
     *
-    * @return string|null The certificateThumbprint
+    * @return string The certificateThumbprint
     */
     public function getCertificateThumbprint()
     {
@@ -135,7 +135,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the extensions
     *
-    * @return string|null The extensions
+    * @return string The extensions
     */
     public function getExtensions()
     {
@@ -162,7 +162,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the fileType
     *
-    * @return string|null The fileType
+    * @return string The fileType
     */
     public function getFileType()
     {
@@ -189,12 +189,12 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the firstSeenDateTime
     *
-    * @return \DateTime|null The firstSeenDateTime
+    * @return \DateTime The firstSeenDateTime
     */
     public function getFirstSeenDateTime()
     {
         if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime") || is_null($this->_propDict["firstSeenDateTime"])) {
+            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime")) {
                 return $this->_propDict["firstSeenDateTime"];
             } else {
                 $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
@@ -221,7 +221,7 @@ class FileSecurityProfile extends Entity
      /** 
      * Gets the hashes
      *
-     * @return array|null The hashes
+     * @return array The hashes
      */
     public function getHashes()
     {
@@ -241,19 +241,19 @@ class FileSecurityProfile extends Entity
     */
     public function setHashes($val)
     {
-        $this->_propDict["hashes"] = $val;
+		$this->_propDict["hashes"] = $val;
         return $this;
     }
     
     /**
     * Gets the lastSeenDateTime
     *
-    * @return \DateTime|null The lastSeenDateTime
+    * @return \DateTime The lastSeenDateTime
     */
     public function getLastSeenDateTime()
     {
         if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime") || is_null($this->_propDict["lastSeenDateTime"])) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSeenDateTime"];
             } else {
                 $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
@@ -280,7 +280,7 @@ class FileSecurityProfile extends Entity
      /** 
      * Gets the malwareStates
      *
-     * @return array|null The malwareStates
+     * @return array The malwareStates
      */
     public function getMalwareStates()
     {
@@ -300,14 +300,14 @@ class FileSecurityProfile extends Entity
     */
     public function setMalwareStates($val)
     {
-        $this->_propDict["malwareStates"] = $val;
+		$this->_propDict["malwareStates"] = $val;
         return $this;
     }
     
     /**
     * Gets the names
     *
-    * @return string|null The names
+    * @return string The names
     */
     public function getNames()
     {
@@ -334,7 +334,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the riskScore
     *
-    * @return string|null The riskScore
+    * @return string The riskScore
     */
     public function getRiskScore()
     {
@@ -361,7 +361,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the size
     *
-    * @return int|null The size
+    * @return int The size
     */
     public function getSize()
     {
@@ -388,7 +388,7 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the tags
     *
-    * @return string|null The tags
+    * @return string The tags
     */
     public function getTags()
     {
@@ -415,12 +415,12 @@ class FileSecurityProfile extends Entity
     /**
     * Gets the vendorInformation
     *
-    * @return SecurityVendorInformation|null The vendorInformation
+    * @return SecurityVendorInformation The vendorInformation
     */
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation") || is_null($this->_propDict["vendorInformation"])) {
+            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);
@@ -447,7 +447,7 @@ class FileSecurityProfile extends Entity
      /** 
      * Gets the vulnerabilityStates
      *
-     * @return array|null The vulnerabilityStates
+     * @return array The vulnerabilityStates
      */
     public function getVulnerabilityStates()
     {
@@ -467,7 +467,7 @@ class FileSecurityProfile extends Entity
     */
     public function setVulnerabilityStates($val)
     {
-        $this->_propDict["vulnerabilityStates"] = $val;
+		$this->_propDict["vulnerabilityStates"] = $val;
         return $this;
     }
     

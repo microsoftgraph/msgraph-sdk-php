@@ -27,7 +27,7 @@ class DeviceManagementConfigurationSettingInstanceTemplate extends Entity
     * Gets the isRequired
     * Indicates if a policy must specify this setting.
     *
-    * @return bool|null The isRequired
+    * @return bool The isRequired
     */
     public function getIsRequired()
     {
@@ -55,7 +55,7 @@ class DeviceManagementConfigurationSettingInstanceTemplate extends Entity
     * Gets the settingDefinitionId
     * Setting Definition Id
     *
-    * @return string|null The settingDefinitionId
+    * @return string The settingDefinitionId
     */
     public function getSettingDefinitionId()
     {
@@ -83,7 +83,7 @@ class DeviceManagementConfigurationSettingInstanceTemplate extends Entity
     * Gets the settingInstanceTemplateId
     * Setting Instance Template Id
     *
-    * @return string|null The settingInstanceTemplateId
+    * @return string The settingInstanceTemplateId
     */
     public function getSettingInstanceTemplateId()
     {

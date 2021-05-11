@@ -28,7 +28,7 @@ class AccessPackageResource extends Entity
     * Gets the addedBy
     * Read-only.
     *
-    * @return string|null The addedBy
+    * @return string The addedBy
     */
     public function getAddedBy()
     {
@@ -57,12 +57,12 @@ class AccessPackageResource extends Entity
     * Gets the addedOn
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime|null The addedOn
+    * @return \DateTime The addedOn
     */
     public function getAddedOn()
     {
         if (array_key_exists("addedOn", $this->_propDict)) {
-            if (is_a($this->_propDict["addedOn"], "\DateTime") || is_null($this->_propDict["addedOn"])) {
+            if (is_a($this->_propDict["addedOn"], "\DateTime")) {
                 return $this->_propDict["addedOn"];
             } else {
                 $this->_propDict["addedOn"] = new \DateTime($this->_propDict["addedOn"]);
@@ -90,7 +90,7 @@ class AccessPackageResource extends Entity
      /** 
      * Gets the attributes
      *
-     * @return array|null The attributes
+     * @return array The attributes
      */
     public function getAttributes()
     {
@@ -110,7 +110,7 @@ class AccessPackageResource extends Entity
     */
     public function setAttributes($val)
     {
-        $this->_propDict["attributes"] = $val;
+		$this->_propDict["attributes"] = $val;
         return $this;
     }
     
@@ -118,7 +118,7 @@ class AccessPackageResource extends Entity
     * Gets the description
     * A description for the resource.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -147,7 +147,7 @@ class AccessPackageResource extends Entity
     * Gets the displayName
     * The display name of the resource, such as the application name, group name or site name.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -176,7 +176,7 @@ class AccessPackageResource extends Entity
     * Gets the isPendingOnboarding
     * True if the resource is not yet available for assignment.
     *
-    * @return bool|null The isPendingOnboarding
+    * @return bool The isPendingOnboarding
     */
     public function getIsPendingOnboarding()
     {
@@ -205,7 +205,7 @@ class AccessPackageResource extends Entity
     * Gets the originId
     * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
     *
-    * @return string|null The originId
+    * @return string The originId
     */
     public function getOriginId()
     {
@@ -234,7 +234,7 @@ class AccessPackageResource extends Entity
     * Gets the originSystem
     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
-    * @return string|null The originSystem
+    * @return string The originSystem
     */
     public function getOriginSystem()
     {
@@ -263,7 +263,7 @@ class AccessPackageResource extends Entity
     * Gets the resourceType
     * The type of the resource, such as Application if it is an Azure AD connected application, or SharePoint Online Site for a SharePoint Online site.
     *
-    * @return string|null The resourceType
+    * @return string The resourceType
     */
     public function getResourceType()
     {
@@ -292,7 +292,7 @@ class AccessPackageResource extends Entity
     * Gets the url
     * A unique resource locator for the resource, such as the URL for signing a user into an application.
     *
-    * @return string|null The url
+    * @return string The url
     */
     public function getUrl()
     {
@@ -321,12 +321,12 @@ class AccessPackageResource extends Entity
     * Gets the accessPackageResourceEnvironment
     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.
     *
-    * @return AccessPackageResourceEnvironment|null The accessPackageResourceEnvironment
+    * @return AccessPackageResourceEnvironment The accessPackageResourceEnvironment
     */
     public function getAccessPackageResourceEnvironment()
     {
         if (array_key_exists("accessPackageResourceEnvironment", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResourceEnvironment"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceEnvironment") || is_null($this->_propDict["accessPackageResourceEnvironment"])) {
+            if (is_a($this->_propDict["accessPackageResourceEnvironment"], "\Beta\Microsoft\Graph\Model\AccessPackageResourceEnvironment")) {
                 return $this->_propDict["accessPackageResourceEnvironment"];
             } else {
                 $this->_propDict["accessPackageResourceEnvironment"] = new AccessPackageResourceEnvironment($this->_propDict["accessPackageResourceEnvironment"]);
@@ -355,7 +355,7 @@ class AccessPackageResource extends Entity
      * Gets the accessPackageResourceRoles
     * Read-only. Nullable.
      *
-     * @return array|null The accessPackageResourceRoles
+     * @return array The accessPackageResourceRoles
      */
     public function getAccessPackageResourceRoles()
     {
@@ -376,7 +376,7 @@ class AccessPackageResource extends Entity
     */
     public function setAccessPackageResourceRoles($val)
     {
-        $this->_propDict["accessPackageResourceRoles"] = $val;
+		$this->_propDict["accessPackageResourceRoles"] = $val;
         return $this;
     }
     
@@ -385,7 +385,7 @@ class AccessPackageResource extends Entity
      * Gets the accessPackageResourceScopes
     * Read-only. Nullable.
      *
-     * @return array|null The accessPackageResourceScopes
+     * @return array The accessPackageResourceScopes
      */
     public function getAccessPackageResourceScopes()
     {
@@ -406,7 +406,7 @@ class AccessPackageResource extends Entity
     */
     public function setAccessPackageResourceScopes($val)
     {
-        $this->_propDict["accessPackageResourceScopes"] = $val;
+		$this->_propDict["accessPackageResourceScopes"] = $val;
         return $this;
     }
     

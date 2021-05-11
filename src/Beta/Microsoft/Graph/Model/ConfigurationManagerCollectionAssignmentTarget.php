@@ -36,7 +36,7 @@ class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagem
     * Gets the collectionId
     * The collection Id that is the target of the assignment.
     *
-    * @return string|null The collectionId
+    * @return string The collectionId
     */
     public function getCollectionId()
     {

@@ -26,7 +26,7 @@ class MessageSecurityState extends Entity
     /**
     * Gets the connectingIP
     *
-    * @return string|null The connectingIP
+    * @return string The connectingIP
     */
     public function getConnectingIP()
     {
@@ -52,7 +52,7 @@ class MessageSecurityState extends Entity
     /**
     * Gets the deliveryAction
     *
-    * @return string|null The deliveryAction
+    * @return string The deliveryAction
     */
     public function getDeliveryAction()
     {
@@ -78,7 +78,7 @@ class MessageSecurityState extends Entity
     /**
     * Gets the deliveryLocation
     *
-    * @return string|null The deliveryLocation
+    * @return string The deliveryLocation
     */
     public function getDeliveryLocation()
     {
@@ -104,7 +104,7 @@ class MessageSecurityState extends Entity
     /**
     * Gets the directionality
     *
-    * @return string|null The directionality
+    * @return string The directionality
     */
     public function getDirectionality()
     {
@@ -130,7 +130,7 @@ class MessageSecurityState extends Entity
     /**
     * Gets the internetMessageId
     *
-    * @return string|null The internetMessageId
+    * @return string The internetMessageId
     */
     public function getInternetMessageId()
     {
@@ -156,7 +156,7 @@ class MessageSecurityState extends Entity
     /**
     * Gets the messageFingerprint
     *
-    * @return string|null The messageFingerprint
+    * @return string The messageFingerprint
     */
     public function getMessageFingerprint()
     {
@@ -183,12 +183,12 @@ class MessageSecurityState extends Entity
     /**
     * Gets the messageReceivedDateTime
     *
-    * @return \DateTime|null The messageReceivedDateTime
+    * @return \DateTime The messageReceivedDateTime
     */
     public function getMessageReceivedDateTime()
     {
         if (array_key_exists("messageReceivedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["messageReceivedDateTime"], "\DateTime") || is_null($this->_propDict["messageReceivedDateTime"])) {
+            if (is_a($this->_propDict["messageReceivedDateTime"], "\DateTime")) {
                 return $this->_propDict["messageReceivedDateTime"];
             } else {
                 $this->_propDict["messageReceivedDateTime"] = new \DateTime($this->_propDict["messageReceivedDateTime"]);
@@ -213,7 +213,7 @@ class MessageSecurityState extends Entity
     /**
     * Gets the messageSubject
     *
-    * @return string|null The messageSubject
+    * @return string The messageSubject
     */
     public function getMessageSubject()
     {
@@ -239,7 +239,7 @@ class MessageSecurityState extends Entity
     /**
     * Gets the networkMessageId
     *
-    * @return string|null The networkMessageId
+    * @return string The networkMessageId
     */
     public function getNetworkMessageId()
     {

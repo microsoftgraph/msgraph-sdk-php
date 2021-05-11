@@ -28,12 +28,12 @@ class WindowsQualityUpdateProfile extends Entity
     * Gets the createdDateTime
     * The date time that the profile was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class WindowsQualityUpdateProfile extends Entity
     * Gets the deployableContentDisplayName
     * Friendly display name of the quality update profile deployable content
     *
-    * @return string|null The deployableContentDisplayName
+    * @return string The deployableContentDisplayName
     */
     public function getDeployableContentDisplayName()
     {
@@ -90,7 +90,7 @@ class WindowsQualityUpdateProfile extends Entity
     * Gets the description
     * The description of the profile which is specified by the user.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -119,7 +119,7 @@ class WindowsQualityUpdateProfile extends Entity
     * Gets the displayName
     * The display name for the profile.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -148,12 +148,12 @@ class WindowsQualityUpdateProfile extends Entity
     * Gets the expeditedUpdateSettings
     * Expedited update settings.
     *
-    * @return ExpeditedWindowsQualityUpdateSettings|null The expeditedUpdateSettings
+    * @return ExpeditedWindowsQualityUpdateSettings The expeditedUpdateSettings
     */
     public function getExpeditedUpdateSettings()
     {
         if (array_key_exists("expeditedUpdateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["expeditedUpdateSettings"], "\Beta\Microsoft\Graph\Model\ExpeditedWindowsQualityUpdateSettings") || is_null($this->_propDict["expeditedUpdateSettings"])) {
+            if (is_a($this->_propDict["expeditedUpdateSettings"], "\Beta\Microsoft\Graph\Model\ExpeditedWindowsQualityUpdateSettings")) {
                 return $this->_propDict["expeditedUpdateSettings"];
             } else {
                 $this->_propDict["expeditedUpdateSettings"] = new ExpeditedWindowsQualityUpdateSettings($this->_propDict["expeditedUpdateSettings"]);
@@ -181,12 +181,12 @@ class WindowsQualityUpdateProfile extends Entity
     * Gets the lastModifiedDateTime
     * The date time that the profile was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -214,7 +214,7 @@ class WindowsQualityUpdateProfile extends Entity
     * Gets the releaseDateDisplayName
     * Friendly release date to display for a Quality Update release
     *
-    * @return string|null The releaseDateDisplayName
+    * @return string The releaseDateDisplayName
     */
     public function getReleaseDateDisplayName()
     {
@@ -243,7 +243,7 @@ class WindowsQualityUpdateProfile extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Quality Update entity.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -273,7 +273,7 @@ class WindowsQualityUpdateProfile extends Entity
      * Gets the assignments
     * The list of group assignments of the profile.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -294,7 +294,7 @@ class WindowsQualityUpdateProfile extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

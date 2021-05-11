@@ -28,7 +28,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
     * Gets the deviceId
     * The user experience analytics device id.
     *
-    * @return string|null The deviceId
+    * @return string The deviceId
     */
     public function getDeviceId()
     {
@@ -57,12 +57,12 @@ class UserExperienceAnalyticsMetricHistory extends Entity
     * Gets the metricDateTime
     * The user experience analytics metric date time.
     *
-    * @return \DateTime|null The metricDateTime
+    * @return \DateTime The metricDateTime
     */
     public function getMetricDateTime()
     {
         if (array_key_exists("metricDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["metricDateTime"], "\DateTime") || is_null($this->_propDict["metricDateTime"])) {
+            if (is_a($this->_propDict["metricDateTime"], "\DateTime")) {
                 return $this->_propDict["metricDateTime"];
             } else {
                 $this->_propDict["metricDateTime"] = new \DateTime($this->_propDict["metricDateTime"]);
@@ -90,7 +90,7 @@ class UserExperienceAnalyticsMetricHistory extends Entity
     * Gets the metricType
     * The user experience analytics metric type.
     *
-    * @return string|null The metricType
+    * @return string The metricType
     */
     public function getMetricType()
     {
@@ -119,12 +119,12 @@ class UserExperienceAnalyticsMetricHistory extends Entity
     * Gets the userExperienceAnalyticsMetric
     * User experience analytics metric.
     *
-    * @return UserExperienceAnalyticsMetric|null The userExperienceAnalyticsMetric
+    * @return UserExperienceAnalyticsMetric The userExperienceAnalyticsMetric
     */
     public function getUserExperienceAnalyticsMetric()
     {
         if (array_key_exists("userExperienceAnalyticsMetric", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsMetric"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsMetric") || is_null($this->_propDict["userExperienceAnalyticsMetric"])) {
+            if (is_a($this->_propDict["userExperienceAnalyticsMetric"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsMetric")) {
                 return $this->_propDict["userExperienceAnalyticsMetric"];
             } else {
                 $this->_propDict["userExperienceAnalyticsMetric"] = new UserExperienceAnalyticsMetric($this->_propDict["userExperienceAnalyticsMetric"]);

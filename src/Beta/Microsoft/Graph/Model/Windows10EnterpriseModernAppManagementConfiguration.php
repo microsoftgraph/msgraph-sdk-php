@@ -28,7 +28,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
     * Gets the uninstallBuiltInApps
     * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
     *
-    * @return bool|null The uninstallBuiltInApps
+    * @return bool The uninstallBuiltInApps
     */
     public function getUninstallBuiltInApps()
     {

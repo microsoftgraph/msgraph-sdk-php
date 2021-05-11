@@ -28,12 +28,12 @@ class ContentInfo extends Entity
     * Gets the format
     * Possible values are: default, email.
     *
-    * @return ContentFormat|null The format
+    * @return ContentFormat The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\ContentFormat") || is_null($this->_propDict["format"])) {
+            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\ContentFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new ContentFormat($this->_propDict["format"]);
@@ -60,7 +60,7 @@ class ContentInfo extends Entity
     * Gets the identifier
     * Identifier used for Azure Information Protection Analytics.
     *
-    * @return string|null The identifier
+    * @return string The identifier
     */
     public function getIdentifier()
     {
@@ -89,12 +89,12 @@ class ContentInfo extends Entity
     * Gets the metadata
     * Existing Microsoft Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
     *
-    * @return KeyValuePair|null The metadata
+    * @return KeyValuePair The metadata
     */
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\KeyValuePair") || is_null($this->_propDict["metadata"])) {
+            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\KeyValuePair")) {
                 return $this->_propDict["metadata"];
             } else {
                 $this->_propDict["metadata"] = new KeyValuePair($this->_propDict["metadata"]);
@@ -122,12 +122,12 @@ class ContentInfo extends Entity
     * Gets the state
     * Possible values are: rest, motion, use.
     *
-    * @return ContentState|null The state
+    * @return ContentState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ContentState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ContentState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ContentState($this->_propDict["state"]);

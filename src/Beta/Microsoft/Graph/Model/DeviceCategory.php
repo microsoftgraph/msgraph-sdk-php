@@ -28,7 +28,7 @@ class DeviceCategory extends Entity
     * Gets the description
     * Optional description for the device category.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class DeviceCategory extends Entity
     * Gets the displayName
     * Display name for the device category.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class DeviceCategory extends Entity
     * Gets the roleScopeTagIds
     * Optional role scope tags for the device category.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {

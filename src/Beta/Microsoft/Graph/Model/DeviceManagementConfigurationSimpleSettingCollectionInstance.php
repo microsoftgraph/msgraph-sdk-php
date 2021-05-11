@@ -37,12 +37,12 @@ class DeviceManagementConfigurationSimpleSettingCollectionInstance extends Devic
     * Gets the simpleSettingCollectionValue
     * Simple setting collection instance value
     *
-    * @return DeviceManagementConfigurationSimpleSettingValue|null The simpleSettingCollectionValue
+    * @return DeviceManagementConfigurationSimpleSettingValue The simpleSettingCollectionValue
     */
     public function getSimpleSettingCollectionValue()
     {
         if (array_key_exists("simpleSettingCollectionValue", $this->_propDict)) {
-            if (is_a($this->_propDict["simpleSettingCollectionValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValue") || is_null($this->_propDict["simpleSettingCollectionValue"])) {
+            if (is_a($this->_propDict["simpleSettingCollectionValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValue")) {
                 return $this->_propDict["simpleSettingCollectionValue"];
             } else {
                 $this->_propDict["simpleSettingCollectionValue"] = new DeviceManagementConfigurationSimpleSettingValue($this->_propDict["simpleSettingCollectionValue"]);

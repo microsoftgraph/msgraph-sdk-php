@@ -28,12 +28,12 @@ class MeetingParticipants extends Entity
     * Gets the attendees
     * Information of the meeting attendees.
     *
-    * @return MeetingParticipantInfo|null The attendees
+    * @return MeetingParticipantInfo The attendees
     */
     public function getAttendees()
     {
         if (array_key_exists("attendees", $this->_propDict)) {
-            if (is_a($this->_propDict["attendees"], "\Beta\Microsoft\Graph\Model\MeetingParticipantInfo") || is_null($this->_propDict["attendees"])) {
+            if (is_a($this->_propDict["attendees"], "\Beta\Microsoft\Graph\Model\MeetingParticipantInfo")) {
                 return $this->_propDict["attendees"];
             } else {
                 $this->_propDict["attendees"] = new MeetingParticipantInfo($this->_propDict["attendees"]);
@@ -60,12 +60,12 @@ class MeetingParticipants extends Entity
     /**
     * Gets the contributors
     *
-    * @return MeetingParticipantInfo|null The contributors
+    * @return MeetingParticipantInfo The contributors
     */
     public function getContributors()
     {
         if (array_key_exists("contributors", $this->_propDict)) {
-            if (is_a($this->_propDict["contributors"], "\Beta\Microsoft\Graph\Model\MeetingParticipantInfo") || is_null($this->_propDict["contributors"])) {
+            if (is_a($this->_propDict["contributors"], "\Beta\Microsoft\Graph\Model\MeetingParticipantInfo")) {
                 return $this->_propDict["contributors"];
             } else {
                 $this->_propDict["contributors"] = new MeetingParticipantInfo($this->_propDict["contributors"]);
@@ -92,12 +92,12 @@ class MeetingParticipants extends Entity
     * Gets the organizer
     * Information of the meeting organizer.
     *
-    * @return MeetingParticipantInfo|null The organizer
+    * @return MeetingParticipantInfo The organizer
     */
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "\Beta\Microsoft\Graph\Model\MeetingParticipantInfo") || is_null($this->_propDict["organizer"])) {
+            if (is_a($this->_propDict["organizer"], "\Beta\Microsoft\Graph\Model\MeetingParticipantInfo")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);
@@ -124,12 +124,12 @@ class MeetingParticipants extends Entity
     /**
     * Gets the producers
     *
-    * @return MeetingParticipantInfo|null The producers
+    * @return MeetingParticipantInfo The producers
     */
     public function getProducers()
     {
         if (array_key_exists("producers", $this->_propDict)) {
-            if (is_a($this->_propDict["producers"], "\Beta\Microsoft\Graph\Model\MeetingParticipantInfo") || is_null($this->_propDict["producers"])) {
+            if (is_a($this->_propDict["producers"], "\Beta\Microsoft\Graph\Model\MeetingParticipantInfo")) {
                 return $this->_propDict["producers"];
             } else {
                 $this->_propDict["producers"] = new MeetingParticipantInfo($this->_propDict["producers"]);

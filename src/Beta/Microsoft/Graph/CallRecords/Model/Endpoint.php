@@ -28,12 +28,12 @@ class Endpoint extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the userAgent
     * User-agent reported by this endpoint.
     *
-    * @return UserAgent|null The userAgent
+    * @return UserAgent The userAgent
     */
     public function getUserAgent()
     {
         if (array_key_exists("userAgent", $this->_propDict)) {
-            if (is_a($this->_propDict["userAgent"], "\Beta\Microsoft\Graph\CallRecords\Model\UserAgent") || is_null($this->_propDict["userAgent"])) {
+            if (is_a($this->_propDict["userAgent"], "\Beta\Microsoft\Graph\CallRecords\Model\UserAgent")) {
                 return $this->_propDict["userAgent"];
             } else {
                 $this->_propDict["userAgent"] = new UserAgent($this->_propDict["userAgent"]);

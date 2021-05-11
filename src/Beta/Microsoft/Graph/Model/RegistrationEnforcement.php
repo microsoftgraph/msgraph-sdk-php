@@ -27,12 +27,12 @@ class RegistrationEnforcement extends Entity
     /**
     * Gets the authenticationMethodsRegistrationCampaign
     *
-    * @return AuthenticationMethodsRegistrationCampaign|null The authenticationMethodsRegistrationCampaign
+    * @return AuthenticationMethodsRegistrationCampaign The authenticationMethodsRegistrationCampaign
     */
     public function getAuthenticationMethodsRegistrationCampaign()
     {
         if (array_key_exists("authenticationMethodsRegistrationCampaign", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethodsRegistrationCampaign"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodsRegistrationCampaign") || is_null($this->_propDict["authenticationMethodsRegistrationCampaign"])) {
+            if (is_a($this->_propDict["authenticationMethodsRegistrationCampaign"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodsRegistrationCampaign")) {
                 return $this->_propDict["authenticationMethodsRegistrationCampaign"];
             } else {
                 $this->_propDict["authenticationMethodsRegistrationCampaign"] = new AuthenticationMethodsRegistrationCampaign($this->_propDict["authenticationMethodsRegistrationCampaign"]);

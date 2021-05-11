@@ -26,7 +26,7 @@ class SensitiveContentEvidence extends Entity
     /**
     * Gets the length
     *
-    * @return int|null The length
+    * @return int The length
     */
     public function getLength()
     {
@@ -52,7 +52,7 @@ class SensitiveContentEvidence extends Entity
     /**
     * Gets the match
     *
-    * @return string|null The match
+    * @return string The match
     */
     public function getMatch()
     {
@@ -78,7 +78,7 @@ class SensitiveContentEvidence extends Entity
     /**
     * Gets the offset
     *
-    * @return int|null The offset
+    * @return int The offset
     */
     public function getOffset()
     {

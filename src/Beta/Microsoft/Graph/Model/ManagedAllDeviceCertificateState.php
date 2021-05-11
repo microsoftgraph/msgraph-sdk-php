@@ -28,12 +28,12 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateExpirationDateTime
     * Certificate expiry date
     *
-    * @return \DateTime|null The certificateExpirationDateTime
+    * @return \DateTime The certificateExpirationDateTime
     */
     public function getCertificateExpirationDateTime()
     {
         if (array_key_exists("certificateExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateExpirationDateTime"], "\DateTime") || is_null($this->_propDict["certificateExpirationDateTime"])) {
+            if (is_a($this->_propDict["certificateExpirationDateTime"], "\DateTime")) {
                 return $this->_propDict["certificateExpirationDateTime"];
             } else {
                 $this->_propDict["certificateExpirationDateTime"] = new \DateTime($this->_propDict["certificateExpirationDateTime"]);
@@ -61,7 +61,7 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateExtendedKeyUsages
     * Enhanced Key Usage
     *
-    * @return string|null The certificateExtendedKeyUsages
+    * @return string The certificateExtendedKeyUsages
     */
     public function getCertificateExtendedKeyUsages()
     {
@@ -90,12 +90,12 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateIssuanceDateTime
     * Issuance date
     *
-    * @return \DateTime|null The certificateIssuanceDateTime
+    * @return \DateTime The certificateIssuanceDateTime
     */
     public function getCertificateIssuanceDateTime()
     {
         if (array_key_exists("certificateIssuanceDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateIssuanceDateTime"], "\DateTime") || is_null($this->_propDict["certificateIssuanceDateTime"])) {
+            if (is_a($this->_propDict["certificateIssuanceDateTime"], "\DateTime")) {
                 return $this->_propDict["certificateIssuanceDateTime"];
             } else {
                 $this->_propDict["certificateIssuanceDateTime"] = new \DateTime($this->_propDict["certificateIssuanceDateTime"]);
@@ -123,7 +123,7 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateIssuerName
     * Issuer
     *
-    * @return string|null The certificateIssuerName
+    * @return string The certificateIssuerName
     */
     public function getCertificateIssuerName()
     {
@@ -152,7 +152,7 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateKeyUsages
     * Key Usage
     *
-    * @return int|null The certificateKeyUsages
+    * @return int The certificateKeyUsages
     */
     public function getCertificateKeyUsages()
     {
@@ -181,12 +181,12 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateRevokeStatus
     * Revoke status. Possible values are: none, pending, issued, failed, revoked.
     *
-    * @return CertificateRevocationStatus|null The certificateRevokeStatus
+    * @return CertificateRevocationStatus The certificateRevokeStatus
     */
     public function getCertificateRevokeStatus()
     {
         if (array_key_exists("certificateRevokeStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateRevokeStatus"], "\Beta\Microsoft\Graph\Model\CertificateRevocationStatus") || is_null($this->_propDict["certificateRevokeStatus"])) {
+            if (is_a($this->_propDict["certificateRevokeStatus"], "\Beta\Microsoft\Graph\Model\CertificateRevocationStatus")) {
                 return $this->_propDict["certificateRevokeStatus"];
             } else {
                 $this->_propDict["certificateRevokeStatus"] = new CertificateRevocationStatus($this->_propDict["certificateRevokeStatus"]);
@@ -214,12 +214,12 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateRevokeStatusLastChangeDateTime
     * The time the revoke status was last changed
     *
-    * @return \DateTime|null The certificateRevokeStatusLastChangeDateTime
+    * @return \DateTime The certificateRevokeStatusLastChangeDateTime
     */
     public function getCertificateRevokeStatusLastChangeDateTime()
     {
         if (array_key_exists("certificateRevokeStatusLastChangeDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateRevokeStatusLastChangeDateTime"], "\DateTime") || is_null($this->_propDict["certificateRevokeStatusLastChangeDateTime"])) {
+            if (is_a($this->_propDict["certificateRevokeStatusLastChangeDateTime"], "\DateTime")) {
                 return $this->_propDict["certificateRevokeStatusLastChangeDateTime"];
             } else {
                 $this->_propDict["certificateRevokeStatusLastChangeDateTime"] = new \DateTime($this->_propDict["certificateRevokeStatusLastChangeDateTime"]);
@@ -247,7 +247,7 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateSerialNumber
     * Serial number
     *
-    * @return string|null The certificateSerialNumber
+    * @return string The certificateSerialNumber
     */
     public function getCertificateSerialNumber()
     {
@@ -276,7 +276,7 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateSubjectName
     * Certificate subject name
     *
-    * @return string|null The certificateSubjectName
+    * @return string The certificateSubjectName
     */
     public function getCertificateSubjectName()
     {
@@ -305,7 +305,7 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the certificateThumbprint
     * Thumbprint
     *
-    * @return string|null The certificateThumbprint
+    * @return string The certificateThumbprint
     */
     public function getCertificateThumbprint()
     {
@@ -334,7 +334,7 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the managedDeviceDisplayName
     * Device display name
     *
-    * @return string|null The managedDeviceDisplayName
+    * @return string The managedDeviceDisplayName
     */
     public function getManagedDeviceDisplayName()
     {
@@ -363,7 +363,7 @@ class ManagedAllDeviceCertificateState extends Entity
     * Gets the userPrincipalName
     * User principal name
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

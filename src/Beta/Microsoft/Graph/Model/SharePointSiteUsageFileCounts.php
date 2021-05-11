@@ -27,7 +27,7 @@ class SharePointSiteUsageFileCounts extends Entity
     /**
     * Gets the active
     *
-    * @return int|null The active
+    * @return int The active
     */
     public function getActive()
     {
@@ -54,12 +54,12 @@ class SharePointSiteUsageFileCounts extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime|null The reportDate
+    * @return \DateTime The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -85,7 +85,7 @@ class SharePointSiteUsageFileCounts extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string|null The reportPeriod
+    * @return string The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -112,12 +112,12 @@ class SharePointSiteUsageFileCounts extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \DateTime The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -143,7 +143,7 @@ class SharePointSiteUsageFileCounts extends Entity
     /**
     * Gets the siteType
     *
-    * @return string|null The siteType
+    * @return string The siteType
     */
     public function getSiteType()
     {
@@ -170,7 +170,7 @@ class SharePointSiteUsageFileCounts extends Entity
     /**
     * Gets the total
     *
-    * @return int|null The total
+    * @return int The total
     */
     public function getTotal()
     {

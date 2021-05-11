@@ -28,7 +28,7 @@ class BookingCurrency extends Entity
     * Gets the symbol
     * The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
     *
-    * @return string|null The symbol
+    * @return string The symbol
     */
     public function getSymbol()
     {

@@ -27,7 +27,7 @@ class InferenceData extends Entity
     * Gets the confidenceScore
     * Confidence score reflecting the accuracy of the data inferred about the user.
     *
-    * @return float|null The confidenceScore
+    * @return float The confidenceScore
     */
     public function getConfidenceScore()
     {
@@ -55,7 +55,7 @@ class InferenceData extends Entity
     * Gets the userHasVerifiedAccuracy
     * Records if the user has confirmed this inference as being True or False.
     *
-    * @return bool|null The userHasVerifiedAccuracy
+    * @return bool The userHasVerifiedAccuracy
     */
     public function getUserHasVerifiedAccuracy()
     {

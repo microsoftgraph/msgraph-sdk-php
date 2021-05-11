@@ -29,7 +29,7 @@ class Bitlocker extends Entity
      * Gets the recoveryKeys
     * The recovery keys associated with the bitlocker entity.
      *
-     * @return array|null The recoveryKeys
+     * @return array The recoveryKeys
      */
     public function getRecoveryKeys()
     {
@@ -50,7 +50,7 @@ class Bitlocker extends Entity
     */
     public function setRecoveryKeys($val)
     {
-        $this->_propDict["recoveryKeys"] = $val;
+		$this->_propDict["recoveryKeys"] = $val;
         return $this;
     }
     

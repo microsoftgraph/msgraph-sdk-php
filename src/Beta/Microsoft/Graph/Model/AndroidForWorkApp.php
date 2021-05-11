@@ -28,7 +28,7 @@ class AndroidForWorkApp extends MobileApp
     * Gets the appIdentifier
     * The Identity Name.
     *
-    * @return string|null The appIdentifier
+    * @return string The appIdentifier
     */
     public function getAppIdentifier()
     {
@@ -57,7 +57,7 @@ class AndroidForWorkApp extends MobileApp
     * Gets the appStoreUrl
     * The Play for Work Store app URL.
     *
-    * @return string|null The appStoreUrl
+    * @return string The appStoreUrl
     */
     public function getAppStoreUrl()
     {
@@ -86,7 +86,7 @@ class AndroidForWorkApp extends MobileApp
     * Gets the packageId
     * The package identifier.
     *
-    * @return string|null The packageId
+    * @return string The packageId
     */
     public function getPackageId()
     {
@@ -115,7 +115,7 @@ class AndroidForWorkApp extends MobileApp
     * Gets the totalLicenseCount
     * The total number of VPP licenses.
     *
-    * @return int|null The totalLicenseCount
+    * @return int The totalLicenseCount
     */
     public function getTotalLicenseCount()
     {
@@ -144,7 +144,7 @@ class AndroidForWorkApp extends MobileApp
     * Gets the usedLicenseCount
     * The number of VPP licenses in use.
     *
-    * @return int|null The usedLicenseCount
+    * @return int The usedLicenseCount
     */
     public function getUsedLicenseCount()
     {

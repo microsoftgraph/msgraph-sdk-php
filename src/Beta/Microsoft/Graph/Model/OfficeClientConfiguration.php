@@ -28,7 +28,7 @@ class OfficeClientConfiguration extends Entity
      /** 
      * Gets the checkinStatuses
      *
-     * @return array|null The checkinStatuses
+     * @return array The checkinStatuses
      */
     public function getCheckinStatuses()
     {
@@ -48,14 +48,14 @@ class OfficeClientConfiguration extends Entity
     */
     public function setCheckinStatuses($val)
     {
-        $this->_propDict["checkinStatuses"] = $val;
+		$this->_propDict["checkinStatuses"] = $val;
         return $this;
     }
     
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -82,7 +82,7 @@ class OfficeClientConfiguration extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -109,12 +109,12 @@ class OfficeClientConfiguration extends Entity
     /**
     * Gets the policyPayload
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The policyPayload
+    * @return \GuzzleHttp\Psr7\Stream The policyPayload
     */
     public function getPolicyPayload()
     {
         if (array_key_exists("policyPayload", $this->_propDict)) {
-            if (is_a($this->_propDict["policyPayload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["policyPayload"])) {
+            if (is_a($this->_propDict["policyPayload"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["policyPayload"];
             } else {
                 $this->_propDict["policyPayload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["policyPayload"]);
@@ -140,7 +140,7 @@ class OfficeClientConfiguration extends Entity
     /**
     * Gets the priority
     *
-    * @return int|null The priority
+    * @return int The priority
     */
     public function getPriority()
     {
@@ -167,12 +167,12 @@ class OfficeClientConfiguration extends Entity
     /**
     * Gets the userCheckinSummary
     *
-    * @return OfficeUserCheckinSummary|null The userCheckinSummary
+    * @return OfficeUserCheckinSummary The userCheckinSummary
     */
     public function getUserCheckinSummary()
     {
         if (array_key_exists("userCheckinSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userCheckinSummary"], "\Beta\Microsoft\Graph\Model\OfficeUserCheckinSummary") || is_null($this->_propDict["userCheckinSummary"])) {
+            if (is_a($this->_propDict["userCheckinSummary"], "\Beta\Microsoft\Graph\Model\OfficeUserCheckinSummary")) {
                 return $this->_propDict["userCheckinSummary"];
             } else {
                 $this->_propDict["userCheckinSummary"] = new OfficeUserCheckinSummary($this->_propDict["userCheckinSummary"]);
@@ -198,12 +198,12 @@ class OfficeClientConfiguration extends Entity
     /**
     * Gets the userPreferencePayload
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The userPreferencePayload
+    * @return \GuzzleHttp\Psr7\Stream The userPreferencePayload
     */
     public function getUserPreferencePayload()
     {
         if (array_key_exists("userPreferencePayload", $this->_propDict)) {
-            if (is_a($this->_propDict["userPreferencePayload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["userPreferencePayload"])) {
+            if (is_a($this->_propDict["userPreferencePayload"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["userPreferencePayload"];
             } else {
                 $this->_propDict["userPreferencePayload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["userPreferencePayload"]);
@@ -230,7 +230,7 @@ class OfficeClientConfiguration extends Entity
      /** 
      * Gets the assignments
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -250,7 +250,7 @@ class OfficeClientConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     

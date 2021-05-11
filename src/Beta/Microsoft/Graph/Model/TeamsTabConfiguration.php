@@ -27,7 +27,7 @@ class TeamsTabConfiguration extends Entity
     * Gets the contentUrl
     * Url used for rendering tab contents in Teams. Required.
     *
-    * @return string|null The contentUrl
+    * @return string The contentUrl
     */
     public function getContentUrl()
     {
@@ -55,7 +55,7 @@ class TeamsTabConfiguration extends Entity
     * Gets the entityId
     * Identifier for the entity hosted by the tab provider.
     *
-    * @return string|null The entityId
+    * @return string The entityId
     */
     public function getEntityId()
     {
@@ -83,7 +83,7 @@ class TeamsTabConfiguration extends Entity
     * Gets the removeUrl
     * Url called by Teams client when a Tab is removed using the Teams Client.
     *
-    * @return string|null The removeUrl
+    * @return string The removeUrl
     */
     public function getRemoveUrl()
     {
@@ -111,7 +111,7 @@ class TeamsTabConfiguration extends Entity
     * Gets the websiteUrl
     * Url for showing tab contents outside of Teams.
     *
-    * @return string|null The websiteUrl
+    * @return string The websiteUrl
     */
     public function getWebsiteUrl()
     {

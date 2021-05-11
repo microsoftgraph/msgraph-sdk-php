@@ -27,12 +27,12 @@ class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContentBase
     /**
     * Gets the matches
     *
-    * @return SensitiveContentLocation|null The matches
+    * @return SensitiveContentLocation The matches
     */
     public function getMatches()
     {
         if (array_key_exists("matches", $this->_propDict)) {
-            if (is_a($this->_propDict["matches"], "\Beta\Microsoft\Graph\Model\SensitiveContentLocation") || is_null($this->_propDict["matches"])) {
+            if (is_a($this->_propDict["matches"], "\Beta\Microsoft\Graph\Model\SensitiveContentLocation")) {
                 return $this->_propDict["matches"];
             } else {
                 $this->_propDict["matches"] = new SensitiveContentLocation($this->_propDict["matches"]);

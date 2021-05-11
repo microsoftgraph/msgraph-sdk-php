@@ -28,12 +28,12 @@ class ItemActivityStat extends Entity
     * Gets the access
     * Statistics about the access actions in this interval. Read-only.
     *
-    * @return ItemActionStat|null The access
+    * @return ItemActionStat The access
     */
     public function getAccess()
     {
         if (array_key_exists("access", $this->_propDict)) {
-            if (is_a($this->_propDict["access"], "\Beta\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["access"])) {
+            if (is_a($this->_propDict["access"], "\Beta\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["access"];
             } else {
                 $this->_propDict["access"] = new ItemActionStat($this->_propDict["access"]);
@@ -61,12 +61,12 @@ class ItemActivityStat extends Entity
     * Gets the create
     * Statistics about the create actions in this interval. Read-only.
     *
-    * @return ItemActionStat|null The create
+    * @return ItemActionStat The create
     */
     public function getCreate()
     {
         if (array_key_exists("create", $this->_propDict)) {
-            if (is_a($this->_propDict["create"], "\Beta\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["create"])) {
+            if (is_a($this->_propDict["create"], "\Beta\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["create"];
             } else {
                 $this->_propDict["create"] = new ItemActionStat($this->_propDict["create"]);
@@ -94,12 +94,12 @@ class ItemActivityStat extends Entity
     * Gets the delete
     * Statistics about the delete actions in this interval. Read-only.
     *
-    * @return ItemActionStat|null The delete
+    * @return ItemActionStat The delete
     */
     public function getDelete()
     {
         if (array_key_exists("delete", $this->_propDict)) {
-            if (is_a($this->_propDict["delete"], "\Beta\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["delete"])) {
+            if (is_a($this->_propDict["delete"], "\Beta\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["delete"];
             } else {
                 $this->_propDict["delete"] = new ItemActionStat($this->_propDict["delete"]);
@@ -127,12 +127,12 @@ class ItemActivityStat extends Entity
     * Gets the edit
     * Statistics about the edit actions in this interval. Read-only.
     *
-    * @return ItemActionStat|null The edit
+    * @return ItemActionStat The edit
     */
     public function getEdit()
     {
         if (array_key_exists("edit", $this->_propDict)) {
-            if (is_a($this->_propDict["edit"], "\Beta\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["edit"])) {
+            if (is_a($this->_propDict["edit"], "\Beta\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["edit"];
             } else {
                 $this->_propDict["edit"] = new ItemActionStat($this->_propDict["edit"]);
@@ -160,12 +160,12 @@ class ItemActivityStat extends Entity
     * Gets the endDateTime
     * When the interval ends. Read-only.
     *
-    * @return \DateTime|null The endDateTime
+    * @return \DateTime The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -193,12 +193,12 @@ class ItemActivityStat extends Entity
     * Gets the incompleteData
     * Indicates that the statistics in this interval are based on incomplete data. Read-only.
     *
-    * @return IncompleteData|null The incompleteData
+    * @return IncompleteData The incompleteData
     */
     public function getIncompleteData()
     {
         if (array_key_exists("incompleteData", $this->_propDict)) {
-            if (is_a($this->_propDict["incompleteData"], "\Beta\Microsoft\Graph\Model\IncompleteData") || is_null($this->_propDict["incompleteData"])) {
+            if (is_a($this->_propDict["incompleteData"], "\Beta\Microsoft\Graph\Model\IncompleteData")) {
                 return $this->_propDict["incompleteData"];
             } else {
                 $this->_propDict["incompleteData"] = new IncompleteData($this->_propDict["incompleteData"]);
@@ -226,7 +226,7 @@ class ItemActivityStat extends Entity
     * Gets the isTrending
     * Indicates whether the item is 'trending.' Read-only.
     *
-    * @return bool|null The isTrending
+    * @return bool The isTrending
     */
     public function getIsTrending()
     {
@@ -255,12 +255,12 @@ class ItemActivityStat extends Entity
     * Gets the move
     * Statistics about the move actions in this interval. Read-only.
     *
-    * @return ItemActionStat|null The move
+    * @return ItemActionStat The move
     */
     public function getMove()
     {
         if (array_key_exists("move", $this->_propDict)) {
-            if (is_a($this->_propDict["move"], "\Beta\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["move"])) {
+            if (is_a($this->_propDict["move"], "\Beta\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["move"];
             } else {
                 $this->_propDict["move"] = new ItemActionStat($this->_propDict["move"]);
@@ -288,12 +288,12 @@ class ItemActivityStat extends Entity
     * Gets the startDateTime
     * When the interval starts. Read-only.
     *
-    * @return \DateTime|null The startDateTime
+    * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -322,7 +322,7 @@ class ItemActivityStat extends Entity
      * Gets the activities
     * Exposes the itemActivities represented in this itemActivityStat resource.
      *
-     * @return array|null The activities
+     * @return array The activities
      */
     public function getActivities()
     {
@@ -343,7 +343,7 @@ class ItemActivityStat extends Entity
     */
     public function setActivities($val)
     {
-        $this->_propDict["activities"] = $val;
+		$this->_propDict["activities"] = $val;
         return $this;
     }
     

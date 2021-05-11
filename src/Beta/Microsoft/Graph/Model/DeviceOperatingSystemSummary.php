@@ -27,7 +27,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the androidCorporateWorkProfileCount
     * The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
     *
-    * @return int|null The androidCorporateWorkProfileCount
+    * @return int The androidCorporateWorkProfileCount
     */
     public function getAndroidCorporateWorkProfileCount()
     {
@@ -55,7 +55,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the androidCount
     * Number of android device count.
     *
-    * @return int|null The androidCount
+    * @return int The androidCount
     */
     public function getAndroidCount()
     {
@@ -83,7 +83,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the androidDedicatedCount
     * Number of dedicated Android devices.
     *
-    * @return int|null The androidDedicatedCount
+    * @return int The androidDedicatedCount
     */
     public function getAndroidDedicatedCount()
     {
@@ -111,7 +111,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the androidDeviceAdminCount
     * Number of device admin Android devices.
     *
-    * @return int|null The androidDeviceAdminCount
+    * @return int The androidDeviceAdminCount
     */
     public function getAndroidDeviceAdminCount()
     {
@@ -139,7 +139,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the androidFullyManagedCount
     * Number of fully managed Android devices.
     *
-    * @return int|null The androidFullyManagedCount
+    * @return int The androidFullyManagedCount
     */
     public function getAndroidFullyManagedCount()
     {
@@ -167,7 +167,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the androidWorkProfileCount
     * Number of work profile Android devices.
     *
-    * @return int|null The androidWorkProfileCount
+    * @return int The androidWorkProfileCount
     */
     public function getAndroidWorkProfileCount()
     {
@@ -195,7 +195,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the aospUserAssociatedCount
     * Number of AOSP user-associated Android devices. Valid values 0 to 2147483647
     *
-    * @return int|null The aospUserAssociatedCount
+    * @return int The aospUserAssociatedCount
     */
     public function getAospUserAssociatedCount()
     {
@@ -223,7 +223,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the aospUserlessCount
     * Number of AOSP userless Android devices. Valid values 0 to 2147483647
     *
-    * @return int|null The aospUserlessCount
+    * @return int The aospUserlessCount
     */
     public function getAospUserlessCount()
     {
@@ -251,7 +251,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the chromeOSCount
     * Number of Chrome OS devices. Valid values 0 to 2147483647
     *
-    * @return int|null The chromeOSCount
+    * @return int The chromeOSCount
     */
     public function getChromeOSCount()
     {
@@ -279,7 +279,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the configMgrDeviceCount
     * Number of ConfigMgr managed devices.
     *
-    * @return int|null The configMgrDeviceCount
+    * @return int The configMgrDeviceCount
     */
     public function getConfigMgrDeviceCount()
     {
@@ -307,7 +307,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the iosCount
     * Number of iOS device count.
     *
-    * @return int|null The iosCount
+    * @return int The iosCount
     */
     public function getIosCount()
     {
@@ -335,7 +335,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the linuxCount
     * Number of Linux OS devices. Valid values 0 to 2147483647
     *
-    * @return int|null The linuxCount
+    * @return int The linuxCount
     */
     public function getLinuxCount()
     {
@@ -363,7 +363,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the macOSCount
     * Number of Mac OS X device count.
     *
-    * @return int|null The macOSCount
+    * @return int The macOSCount
     */
     public function getMacOSCount()
     {
@@ -391,7 +391,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the unknownCount
     * Number of unknown device count.
     *
-    * @return int|null The unknownCount
+    * @return int The unknownCount
     */
     public function getUnknownCount()
     {
@@ -419,7 +419,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the windowsCount
     * Number of Windows device count.
     *
-    * @return int|null The windowsCount
+    * @return int The windowsCount
     */
     public function getWindowsCount()
     {
@@ -447,7 +447,7 @@ class DeviceOperatingSystemSummary extends Entity
     * Gets the windowsMobileCount
     * Number of Windows mobile device count.
     *
-    * @return int|null The windowsMobileCount
+    * @return int The windowsMobileCount
     */
     public function getWindowsMobileCount()
     {

@@ -28,7 +28,7 @@ class ScopedRoleMembership extends Entity
     * Gets the administrativeUnitId
     * Unique identifier for the administrative unit that the directory role is scoped to
     *
-    * @return string|null The administrativeUnitId
+    * @return string The administrativeUnitId
     */
     public function getAdministrativeUnitId()
     {
@@ -57,7 +57,7 @@ class ScopedRoleMembership extends Entity
     * Gets the roleId
     * Unique identifier for the directory role that the member is in.
     *
-    * @return string|null The roleId
+    * @return string The roleId
     */
     public function getRoleId()
     {
@@ -86,12 +86,12 @@ class ScopedRoleMembership extends Entity
     * Gets the roleMemberInfo
     * Role member identity information. Represents the user that is a member of this scoped-role.
     *
-    * @return Identity|null The roleMemberInfo
+    * @return Identity The roleMemberInfo
     */
     public function getRoleMemberInfo()
     {
         if (array_key_exists("roleMemberInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleMemberInfo"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["roleMemberInfo"])) {
+            if (is_a($this->_propDict["roleMemberInfo"], "\Beta\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["roleMemberInfo"];
             } else {
                 $this->_propDict["roleMemberInfo"] = new Identity($this->_propDict["roleMemberInfo"]);

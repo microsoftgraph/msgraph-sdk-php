@@ -27,12 +27,12 @@ class MatchingLabel extends Entity
     /**
     * Gets the applicationMode
     *
-    * @return ApplicationMode|null The applicationMode
+    * @return ApplicationMode The applicationMode
     */
     public function getApplicationMode()
     {
         if (array_key_exists("applicationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationMode"], "\Beta\Microsoft\Graph\Model\ApplicationMode") || is_null($this->_propDict["applicationMode"])) {
+            if (is_a($this->_propDict["applicationMode"], "\Beta\Microsoft\Graph\Model\ApplicationMode")) {
                 return $this->_propDict["applicationMode"];
             } else {
                 $this->_propDict["applicationMode"] = new ApplicationMode($this->_propDict["applicationMode"]);
@@ -57,7 +57,7 @@ class MatchingLabel extends Entity
     /**
     * Gets the description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -83,7 +83,7 @@ class MatchingLabel extends Entity
     /**
     * Gets the displayName
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -109,7 +109,7 @@ class MatchingLabel extends Entity
     /**
     * Gets the id
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -135,7 +135,7 @@ class MatchingLabel extends Entity
     /**
     * Gets the isEndpointProtectionEnabled
     *
-    * @return bool|null The isEndpointProtectionEnabled
+    * @return bool The isEndpointProtectionEnabled
     */
     public function getIsEndpointProtectionEnabled()
     {
@@ -162,12 +162,12 @@ class MatchingLabel extends Entity
     /**
     * Gets the labelActions
     *
-    * @return LabelActionBase|null The labelActions
+    * @return LabelActionBase The labelActions
     */
     public function getLabelActions()
     {
         if (array_key_exists("labelActions", $this->_propDict)) {
-            if (is_a($this->_propDict["labelActions"], "\Beta\Microsoft\Graph\Model\LabelActionBase") || is_null($this->_propDict["labelActions"])) {
+            if (is_a($this->_propDict["labelActions"], "\Beta\Microsoft\Graph\Model\LabelActionBase")) {
                 return $this->_propDict["labelActions"];
             } else {
                 $this->_propDict["labelActions"] = new LabelActionBase($this->_propDict["labelActions"]);
@@ -192,7 +192,7 @@ class MatchingLabel extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -218,7 +218,7 @@ class MatchingLabel extends Entity
     /**
     * Gets the policyTip
     *
-    * @return string|null The policyTip
+    * @return string The policyTip
     */
     public function getPolicyTip()
     {
@@ -244,7 +244,7 @@ class MatchingLabel extends Entity
     /**
     * Gets the priority
     *
-    * @return int|null The priority
+    * @return int The priority
     */
     public function getPriority()
     {
@@ -270,7 +270,7 @@ class MatchingLabel extends Entity
     /**
     * Gets the toolTip
     *
-    * @return string|null The toolTip
+    * @return string The toolTip
     */
     public function getToolTip()
     {

@@ -28,12 +28,12 @@ class QualityUpdateReference extends WindowsUpdateReference
     * Gets the classification
     * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security.
     *
-    * @return QualityUpdateClassification|null The classification
+    * @return QualityUpdateClassification The classification
     */
     public function getClassification()
     {
         if (array_key_exists("classification", $this->_propDict)) {
-            if (is_a($this->_propDict["classification"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\QualityUpdateClassification") || is_null($this->_propDict["classification"])) {
+            if (is_a($this->_propDict["classification"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\QualityUpdateClassification")) {
                 return $this->_propDict["classification"];
             } else {
                 $this->_propDict["classification"] = new QualityUpdateClassification($this->_propDict["classification"]);
@@ -61,12 +61,12 @@ class QualityUpdateReference extends WindowsUpdateReference
     * Gets the releaseDateTime
     * Specifies a quality update in the given servicingChannel with the given classification by date (i.e. the last update published on the specified date). Default value is security.
     *
-    * @return \DateTime|null The releaseDateTime
+    * @return \DateTime The releaseDateTime
     */
     public function getReleaseDateTime()
     {
         if (array_key_exists("releaseDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["releaseDateTime"], "\DateTime") || is_null($this->_propDict["releaseDateTime"])) {
+            if (is_a($this->_propDict["releaseDateTime"], "\DateTime")) {
                 return $this->_propDict["releaseDateTime"];
             } else {
                 $this->_propDict["releaseDateTime"] = new \DateTime($this->_propDict["releaseDateTime"]);

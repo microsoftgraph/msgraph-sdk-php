@@ -27,7 +27,7 @@ class Album extends Entity
     * Gets the coverImageItemId
     * Unique identifier of the [driveItem][] that is the cover of the album.
     *
-    * @return string|null The coverImageItemId
+    * @return string The coverImageItemId
     */
     public function getCoverImageItemId()
     {

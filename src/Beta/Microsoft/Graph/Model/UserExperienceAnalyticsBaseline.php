@@ -28,12 +28,12 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the createdDateTime
     * The date the custom baseline was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the displayName
     * The name of the user experience analytics baseline.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -90,7 +90,7 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the isBuiltIn
     * Signifies if the current baseline is the commercial median baseline or a custom baseline.
     *
-    * @return bool|null The isBuiltIn
+    * @return bool The isBuiltIn
     */
     public function getIsBuiltIn()
     {
@@ -119,12 +119,12 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the appHealthMetrics
     * The user experience analytics app health metrics.
     *
-    * @return UserExperienceAnalyticsCategory|null The appHealthMetrics
+    * @return UserExperienceAnalyticsCategory The appHealthMetrics
     */
     public function getAppHealthMetrics()
     {
         if (array_key_exists("appHealthMetrics", $this->_propDict)) {
-            if (is_a($this->_propDict["appHealthMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory") || is_null($this->_propDict["appHealthMetrics"])) {
+            if (is_a($this->_propDict["appHealthMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
                 return $this->_propDict["appHealthMetrics"];
             } else {
                 $this->_propDict["appHealthMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["appHealthMetrics"]);
@@ -152,12 +152,12 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the bestPracticesMetrics
     * The user experience analytics best practices metrics.
     *
-    * @return UserExperienceAnalyticsCategory|null The bestPracticesMetrics
+    * @return UserExperienceAnalyticsCategory The bestPracticesMetrics
     */
     public function getBestPracticesMetrics()
     {
         if (array_key_exists("bestPracticesMetrics", $this->_propDict)) {
-            if (is_a($this->_propDict["bestPracticesMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory") || is_null($this->_propDict["bestPracticesMetrics"])) {
+            if (is_a($this->_propDict["bestPracticesMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
                 return $this->_propDict["bestPracticesMetrics"];
             } else {
                 $this->_propDict["bestPracticesMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["bestPracticesMetrics"]);
@@ -185,12 +185,12 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the deviceBootPerformanceMetrics
     * The user experience analytics device boot performance metrics.
     *
-    * @return UserExperienceAnalyticsCategory|null The deviceBootPerformanceMetrics
+    * @return UserExperienceAnalyticsCategory The deviceBootPerformanceMetrics
     */
     public function getDeviceBootPerformanceMetrics()
     {
         if (array_key_exists("deviceBootPerformanceMetrics", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceBootPerformanceMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory") || is_null($this->_propDict["deviceBootPerformanceMetrics"])) {
+            if (is_a($this->_propDict["deviceBootPerformanceMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
                 return $this->_propDict["deviceBootPerformanceMetrics"];
             } else {
                 $this->_propDict["deviceBootPerformanceMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["deviceBootPerformanceMetrics"]);
@@ -218,12 +218,12 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the rebootAnalyticsMetrics
     * The user experience analytics reboot analytics metrics.
     *
-    * @return UserExperienceAnalyticsCategory|null The rebootAnalyticsMetrics
+    * @return UserExperienceAnalyticsCategory The rebootAnalyticsMetrics
     */
     public function getRebootAnalyticsMetrics()
     {
         if (array_key_exists("rebootAnalyticsMetrics", $this->_propDict)) {
-            if (is_a($this->_propDict["rebootAnalyticsMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory") || is_null($this->_propDict["rebootAnalyticsMetrics"])) {
+            if (is_a($this->_propDict["rebootAnalyticsMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
                 return $this->_propDict["rebootAnalyticsMetrics"];
             } else {
                 $this->_propDict["rebootAnalyticsMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["rebootAnalyticsMetrics"]);
@@ -251,12 +251,12 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the resourcePerformanceMetrics
     * The user experience analytics resource performance metrics.
     *
-    * @return UserExperienceAnalyticsCategory|null The resourcePerformanceMetrics
+    * @return UserExperienceAnalyticsCategory The resourcePerformanceMetrics
     */
     public function getResourcePerformanceMetrics()
     {
         if (array_key_exists("resourcePerformanceMetrics", $this->_propDict)) {
-            if (is_a($this->_propDict["resourcePerformanceMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory") || is_null($this->_propDict["resourcePerformanceMetrics"])) {
+            if (is_a($this->_propDict["resourcePerformanceMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
                 return $this->_propDict["resourcePerformanceMetrics"];
             } else {
                 $this->_propDict["resourcePerformanceMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["resourcePerformanceMetrics"]);
@@ -284,12 +284,12 @@ class UserExperienceAnalyticsBaseline extends Entity
     * Gets the workFromAnywhereMetrics
     * The user experience analytics work from anywhere metrics.
     *
-    * @return UserExperienceAnalyticsCategory|null The workFromAnywhereMetrics
+    * @return UserExperienceAnalyticsCategory The workFromAnywhereMetrics
     */
     public function getWorkFromAnywhereMetrics()
     {
         if (array_key_exists("workFromAnywhereMetrics", $this->_propDict)) {
-            if (is_a($this->_propDict["workFromAnywhereMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory") || is_null($this->_propDict["workFromAnywhereMetrics"])) {
+            if (is_a($this->_propDict["workFromAnywhereMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory")) {
                 return $this->_propDict["workFromAnywhereMetrics"];
             } else {
                 $this->_propDict["workFromAnywhereMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["workFromAnywhereMetrics"]);

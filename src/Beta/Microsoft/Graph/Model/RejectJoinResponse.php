@@ -28,12 +28,12 @@ class RejectJoinResponse extends ParticipantJoiningResponse
     * Gets the reason
     * The rejection reason. Possible values are None, Busy, and Forbidden.
     *
-    * @return RejectReason|null The reason
+    * @return RejectReason The reason
     */
     public function getReason()
     {
         if (array_key_exists("reason", $this->_propDict)) {
-            if (is_a($this->_propDict["reason"], "\Beta\Microsoft\Graph\Model\RejectReason") || is_null($this->_propDict["reason"])) {
+            if (is_a($this->_propDict["reason"], "\Beta\Microsoft\Graph\Model\RejectReason")) {
                 return $this->_propDict["reason"];
             } else {
                 $this->_propDict["reason"] = new RejectReason($this->_propDict["reason"]);

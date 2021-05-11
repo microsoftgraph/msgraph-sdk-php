@@ -28,7 +28,7 @@ class DeviceManagementIntegerSettingInstance extends DeviceManagementSettingInst
     * Gets the value
     * The integer value
     *
-    * @return int|null The value
+    * @return int The value
     */
     public function getValue()
     {

@@ -29,7 +29,7 @@ class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity
      * Gets the metricDevices
     * The work from anywhere metric devices.
      *
-     * @return array|null The metricDevices
+     * @return array The metricDevices
      */
     public function getMetricDevices()
     {
@@ -50,7 +50,7 @@ class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity
     */
     public function setMetricDevices($val)
     {
-        $this->_propDict["metricDevices"] = $val;
+		$this->_propDict["metricDevices"] = $val;
         return $this;
     }
     

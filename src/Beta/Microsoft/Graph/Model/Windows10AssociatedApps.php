@@ -28,12 +28,12 @@ class Windows10AssociatedApps extends Entity
     * Gets the appType
     * Application type. Possible values are: desktop, universal.
     *
-    * @return Windows10AppType|null The appType
+    * @return Windows10AppType The appType
     */
     public function getAppType()
     {
         if (array_key_exists("appType", $this->_propDict)) {
-            if (is_a($this->_propDict["appType"], "\Beta\Microsoft\Graph\Model\Windows10AppType") || is_null($this->_propDict["appType"])) {
+            if (is_a($this->_propDict["appType"], "\Beta\Microsoft\Graph\Model\Windows10AppType")) {
                 return $this->_propDict["appType"];
             } else {
                 $this->_propDict["appType"] = new Windows10AppType($this->_propDict["appType"]);
@@ -60,7 +60,7 @@ class Windows10AssociatedApps extends Entity
     * Gets the identifier
     * Identifier.
     *
-    * @return string|null The identifier
+    * @return string The identifier
     */
     public function getIdentifier()
     {

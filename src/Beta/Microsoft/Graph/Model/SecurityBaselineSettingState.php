@@ -29,7 +29,7 @@ class SecurityBaselineSettingState extends Entity
      * Gets the contributingPolicies
     * The policies that contribute to this setting instance
      *
-     * @return array|null The contributingPolicies
+     * @return array The contributingPolicies
      */
     public function getContributingPolicies()
     {
@@ -50,7 +50,7 @@ class SecurityBaselineSettingState extends Entity
     */
     public function setContributingPolicies($val)
     {
-        $this->_propDict["contributingPolicies"] = $val;
+		$this->_propDict["contributingPolicies"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class SecurityBaselineSettingState extends Entity
     * Gets the errorCode
     * The error code if the setting is in error state
     *
-    * @return string|null The errorCode
+    * @return string The errorCode
     */
     public function getErrorCode()
     {
@@ -87,7 +87,7 @@ class SecurityBaselineSettingState extends Entity
     * Gets the settingCategoryId
     * The setting category id which this setting belongs to
     *
-    * @return string|null The settingCategoryId
+    * @return string The settingCategoryId
     */
     public function getSettingCategoryId()
     {
@@ -116,7 +116,7 @@ class SecurityBaselineSettingState extends Entity
     * Gets the settingCategoryName
     * The setting category name which this setting belongs to
     *
-    * @return string|null The settingCategoryName
+    * @return string The settingCategoryName
     */
     public function getSettingCategoryName()
     {
@@ -145,7 +145,7 @@ class SecurityBaselineSettingState extends Entity
     * Gets the settingId
     * The setting id guid
     *
-    * @return string|null The settingId
+    * @return string The settingId
     */
     public function getSettingId()
     {
@@ -174,7 +174,7 @@ class SecurityBaselineSettingState extends Entity
     * Gets the settingName
     * The setting name that is being reported
     *
-    * @return string|null The settingName
+    * @return string The settingName
     */
     public function getSettingName()
     {
@@ -204,7 +204,7 @@ class SecurityBaselineSettingState extends Entity
      * Gets the sourcePolicies
     * The policies that contribute to this setting instance
      *
-     * @return array|null The sourcePolicies
+     * @return array The sourcePolicies
      */
     public function getSourcePolicies()
     {
@@ -225,7 +225,7 @@ class SecurityBaselineSettingState extends Entity
     */
     public function setSourcePolicies($val)
     {
-        $this->_propDict["sourcePolicies"] = $val;
+		$this->_propDict["sourcePolicies"] = $val;
         return $this;
     }
     
@@ -233,12 +233,12 @@ class SecurityBaselineSettingState extends Entity
     * Gets the state
     * The compliance state of the security baseline setting
     *
-    * @return SecurityBaselineComplianceState|null The state
+    * @return SecurityBaselineComplianceState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SecurityBaselineComplianceState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SecurityBaselineComplianceState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SecurityBaselineComplianceState($this->_propDict["state"]);

@@ -28,12 +28,12 @@ class ManagedEBookAssignment extends Entity
     * Gets the installIntent
     * The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
-    * @return InstallIntent|null The installIntent
+    * @return InstallIntent The installIntent
     */
     public function getInstallIntent()
     {
         if (array_key_exists("installIntent", $this->_propDict)) {
-            if (is_a($this->_propDict["installIntent"], "\Beta\Microsoft\Graph\Model\InstallIntent") || is_null($this->_propDict["installIntent"])) {
+            if (is_a($this->_propDict["installIntent"], "\Beta\Microsoft\Graph\Model\InstallIntent")) {
                 return $this->_propDict["installIntent"];
             } else {
                 $this->_propDict["installIntent"] = new InstallIntent($this->_propDict["installIntent"]);
@@ -61,12 +61,12 @@ class ManagedEBookAssignment extends Entity
     * Gets the target
     * The assignment target for eBook.
     *
-    * @return DeviceAndAppManagementAssignmentTarget|null The target
+    * @return DeviceAndAppManagementAssignmentTarget The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget") || is_null($this->_propDict["target"])) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);

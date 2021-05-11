@@ -27,7 +27,7 @@ class MobileAppRelationshipState extends Entity
     * Gets the deviceId
     * The corresponding device id.
     *
-    * @return string|null The deviceId
+    * @return string The deviceId
     */
     public function getDeviceId()
     {
@@ -55,7 +55,7 @@ class MobileAppRelationshipState extends Entity
     * Gets the errorCode
     * The error code for install or uninstall failures of target app.
     *
-    * @return int|null The errorCode
+    * @return int The errorCode
     */
     public function getErrorCode()
     {
@@ -84,12 +84,12 @@ class MobileAppRelationshipState extends Entity
     * Gets the installState
     * The install state of the app of target app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
-    * @return ResultantAppState|null The installState
+    * @return ResultantAppState The installState
     */
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\ResultantAppState") || is_null($this->_propDict["installState"])) {
+            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\ResultantAppState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new ResultantAppState($this->_propDict["installState"]);
@@ -117,12 +117,12 @@ class MobileAppRelationshipState extends Entity
     * Gets the installStateDetail
     * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
     *
-    * @return ResultantAppStateDetail|null The installStateDetail
+    * @return ResultantAppStateDetail The installStateDetail
     */
     public function getInstallStateDetail()
     {
         if (array_key_exists("installStateDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["installStateDetail"], "\Beta\Microsoft\Graph\Model\ResultantAppStateDetail") || is_null($this->_propDict["installStateDetail"])) {
+            if (is_a($this->_propDict["installStateDetail"], "\Beta\Microsoft\Graph\Model\ResultantAppStateDetail")) {
                 return $this->_propDict["installStateDetail"];
             } else {
                 $this->_propDict["installStateDetail"] = new ResultantAppStateDetail($this->_propDict["installStateDetail"]);
@@ -149,7 +149,7 @@ class MobileAppRelationshipState extends Entity
     * Gets the sourceIds
     * The collection of source mobile app's ids.
     *
-    * @return string|null The sourceIds
+    * @return string The sourceIds
     */
     public function getSourceIds()
     {
@@ -177,7 +177,7 @@ class MobileAppRelationshipState extends Entity
     * Gets the targetDisplayName
     * The related target app's display name.
     *
-    * @return string|null The targetDisplayName
+    * @return string The targetDisplayName
     */
     public function getTargetDisplayName()
     {
@@ -205,7 +205,7 @@ class MobileAppRelationshipState extends Entity
     * Gets the targetId
     * The related target app's id.
     *
-    * @return string|null The targetId
+    * @return string The targetId
     */
     public function getTargetId()
     {
@@ -234,12 +234,12 @@ class MobileAppRelationshipState extends Entity
     * Gets the targetLastSyncDateTime
     * The last sync time of the target app.
     *
-    * @return \DateTime|null The targetLastSyncDateTime
+    * @return \DateTime The targetLastSyncDateTime
     */
     public function getTargetLastSyncDateTime()
     {
         if (array_key_exists("targetLastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["targetLastSyncDateTime"], "\DateTime") || is_null($this->_propDict["targetLastSyncDateTime"])) {
+            if (is_a($this->_propDict["targetLastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["targetLastSyncDateTime"];
             } else {
                 $this->_propDict["targetLastSyncDateTime"] = new \DateTime($this->_propDict["targetLastSyncDateTime"]);

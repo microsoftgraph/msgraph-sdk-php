@@ -28,12 +28,12 @@ class PlannerRecentPlanReference extends Entity
     * Gets the lastAccessedDateTime
     * The date and time the plan was last viewed by the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime|null The lastAccessedDateTime
+    * @return \DateTime The lastAccessedDateTime
     */
     public function getLastAccessedDateTime()
     {
         if (array_key_exists("lastAccessedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAccessedDateTime"], "\DateTime") || is_null($this->_propDict["lastAccessedDateTime"])) {
+            if (is_a($this->_propDict["lastAccessedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastAccessedDateTime"];
             } else {
                 $this->_propDict["lastAccessedDateTime"] = new \DateTime($this->_propDict["lastAccessedDateTime"]);
@@ -60,7 +60,7 @@ class PlannerRecentPlanReference extends Entity
     * Gets the planTitle
     * The title of the plan at the time the user viewed it.
     *
-    * @return string|null The planTitle
+    * @return string The planTitle
     */
     public function getPlanTitle()
     {

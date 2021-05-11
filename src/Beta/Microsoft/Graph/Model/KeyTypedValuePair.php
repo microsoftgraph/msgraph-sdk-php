@@ -27,7 +27,7 @@ class KeyTypedValuePair extends Entity
     * Gets the key
     * The string key of the key-value pair.
     *
-    * @return string|null The key
+    * @return string The key
     */
     public function getKey()
     {

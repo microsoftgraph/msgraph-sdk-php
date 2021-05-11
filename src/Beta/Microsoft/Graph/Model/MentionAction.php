@@ -28,12 +28,12 @@ class MentionAction extends Entity
     * Gets the mentionees
     * The identities of the users mentioned in this action.
     *
-    * @return IdentitySet|null The mentionees
+    * @return IdentitySet The mentionees
     */
     public function getMentionees()
     {
         if (array_key_exists("mentionees", $this->_propDict)) {
-            if (is_a($this->_propDict["mentionees"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["mentionees"])) {
+            if (is_a($this->_propDict["mentionees"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["mentionees"];
             } else {
                 $this->_propDict["mentionees"] = new IdentitySet($this->_propDict["mentionees"]);

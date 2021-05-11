@@ -28,7 +28,7 @@ class AppRoleAssignment extends Entity
     * Gets the appRoleId
     * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
     *
-    * @return string|null The appRoleId
+    * @return string The appRoleId
     */
     public function getAppRoleId()
     {
@@ -57,12 +57,12 @@ class AppRoleAssignment extends Entity
     * Gets the creationTimestamp
     * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
-    * @return \DateTime|null The creationTimestamp
+    * @return \DateTime The creationTimestamp
     */
     public function getCreationTimestamp()
     {
         if (array_key_exists("creationTimestamp", $this->_propDict)) {
-            if (is_a($this->_propDict["creationTimestamp"], "\DateTime") || is_null($this->_propDict["creationTimestamp"])) {
+            if (is_a($this->_propDict["creationTimestamp"], "\DateTime")) {
                 return $this->_propDict["creationTimestamp"];
             } else {
                 $this->_propDict["creationTimestamp"] = new \DateTime($this->_propDict["creationTimestamp"]);
@@ -90,7 +90,7 @@ class AppRoleAssignment extends Entity
     * Gets the principalDisplayName
     * The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
     *
-    * @return string|null The principalDisplayName
+    * @return string The principalDisplayName
     */
     public function getPrincipalDisplayName()
     {
@@ -119,7 +119,7 @@ class AppRoleAssignment extends Entity
     * Gets the principalId
     * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
     *
-    * @return string|null The principalId
+    * @return string The principalId
     */
     public function getPrincipalId()
     {
@@ -148,7 +148,7 @@ class AppRoleAssignment extends Entity
     * Gets the principalType
     * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
     *
-    * @return string|null The principalType
+    * @return string The principalType
     */
     public function getPrincipalType()
     {
@@ -177,7 +177,7 @@ class AppRoleAssignment extends Entity
     * Gets the resourceDisplayName
     * The display name of the resource app's service principal to which the assignment is made.
     *
-    * @return string|null The resourceDisplayName
+    * @return string The resourceDisplayName
     */
     public function getResourceDisplayName()
     {
@@ -206,7 +206,7 @@ class AppRoleAssignment extends Entity
     * Gets the resourceId
     * The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
     *
-    * @return string|null The resourceId
+    * @return string The resourceId
     */
     public function getResourceId()
     {

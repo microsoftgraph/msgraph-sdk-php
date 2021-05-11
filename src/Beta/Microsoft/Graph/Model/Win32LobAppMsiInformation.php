@@ -28,12 +28,12 @@ class Win32LobAppMsiInformation extends Entity
     * Gets the packageType
     * The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
     *
-    * @return Win32LobAppMsiPackageType|null The packageType
+    * @return Win32LobAppMsiPackageType The packageType
     */
     public function getPackageType()
     {
         if (array_key_exists("packageType", $this->_propDict)) {
-            if (is_a($this->_propDict["packageType"], "\Beta\Microsoft\Graph\Model\Win32LobAppMsiPackageType") || is_null($this->_propDict["packageType"])) {
+            if (is_a($this->_propDict["packageType"], "\Beta\Microsoft\Graph\Model\Win32LobAppMsiPackageType")) {
                 return $this->_propDict["packageType"];
             } else {
                 $this->_propDict["packageType"] = new Win32LobAppMsiPackageType($this->_propDict["packageType"]);
@@ -60,7 +60,7 @@ class Win32LobAppMsiInformation extends Entity
     * Gets the productCode
     * The MSI product code.
     *
-    * @return string|null The productCode
+    * @return string The productCode
     */
     public function getProductCode()
     {
@@ -88,7 +88,7 @@ class Win32LobAppMsiInformation extends Entity
     * Gets the productName
     * The MSI product name.
     *
-    * @return string|null The productName
+    * @return string The productName
     */
     public function getProductName()
     {
@@ -116,7 +116,7 @@ class Win32LobAppMsiInformation extends Entity
     * Gets the productVersion
     * The MSI product version.
     *
-    * @return string|null The productVersion
+    * @return string The productVersion
     */
     public function getProductVersion()
     {
@@ -144,7 +144,7 @@ class Win32LobAppMsiInformation extends Entity
     * Gets the publisher
     * The MSI publisher.
     *
-    * @return string|null The publisher
+    * @return string The publisher
     */
     public function getPublisher()
     {
@@ -172,7 +172,7 @@ class Win32LobAppMsiInformation extends Entity
     * Gets the requiresReboot
     * Whether the MSI app requires the machine to reboot to complete installation.
     *
-    * @return bool|null The requiresReboot
+    * @return bool The requiresReboot
     */
     public function getRequiresReboot()
     {
@@ -200,7 +200,7 @@ class Win32LobAppMsiInformation extends Entity
     * Gets the upgradeCode
     * The MSI upgrade code.
     *
-    * @return string|null The upgradeCode
+    * @return string The upgradeCode
     */
     public function getUpgradeCode()
     {

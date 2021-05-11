@@ -28,7 +28,7 @@ class LocalizedNotificationMessage extends Entity
     * Gets the isDefault
     * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
     *
-    * @return bool|null The isDefault
+    * @return bool The isDefault
     */
     public function getIsDefault()
     {
@@ -57,12 +57,12 @@ class LocalizedNotificationMessage extends Entity
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -90,7 +90,7 @@ class LocalizedNotificationMessage extends Entity
     * Gets the locale
     * The Locale for which this message is destined.
     *
-    * @return string|null The locale
+    * @return string The locale
     */
     public function getLocale()
     {
@@ -119,7 +119,7 @@ class LocalizedNotificationMessage extends Entity
     * Gets the messageTemplate
     * The Message Template content.
     *
-    * @return string|null The messageTemplate
+    * @return string The messageTemplate
     */
     public function getMessageTemplate()
     {
@@ -148,7 +148,7 @@ class LocalizedNotificationMessage extends Entity
     * Gets the subject
     * The Message Template Subject.
     *
-    * @return string|null The subject
+    * @return string The subject
     */
     public function getSubject()
     {

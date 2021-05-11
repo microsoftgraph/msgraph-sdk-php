@@ -36,7 +36,7 @@ class ManagementConditionExpressionString extends ManagementConditionExpression
     * Gets the value
     * The management condition statement expression string value.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

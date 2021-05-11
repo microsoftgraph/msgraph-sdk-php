@@ -28,12 +28,12 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     * Gets the hashAlgorithm
     * SCEP Hash Algorithm. Possible values are: sha1, sha2.
     *
-    * @return HashAlgorithms|null The hashAlgorithm
+    * @return HashAlgorithms The hashAlgorithm
     */
     public function getHashAlgorithm()
     {
         if (array_key_exists("hashAlgorithm", $this->_propDict)) {
-            if (is_a($this->_propDict["hashAlgorithm"], "\Beta\Microsoft\Graph\Model\HashAlgorithms") || is_null($this->_propDict["hashAlgorithm"])) {
+            if (is_a($this->_propDict["hashAlgorithm"], "\Beta\Microsoft\Graph\Model\HashAlgorithms")) {
                 return $this->_propDict["hashAlgorithm"];
             } else {
                 $this->_propDict["hashAlgorithm"] = new HashAlgorithms($this->_propDict["hashAlgorithm"]);
@@ -61,12 +61,12 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     * Gets the keySize
     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
     *
-    * @return KeySize|null The keySize
+    * @return KeySize The keySize
     */
     public function getKeySize()
     {
         if (array_key_exists("keySize", $this->_propDict)) {
-            if (is_a($this->_propDict["keySize"], "\Beta\Microsoft\Graph\Model\KeySize") || is_null($this->_propDict["keySize"])) {
+            if (is_a($this->_propDict["keySize"], "\Beta\Microsoft\Graph\Model\KeySize")) {
                 return $this->_propDict["keySize"];
             } else {
                 $this->_propDict["keySize"] = new KeySize($this->_propDict["keySize"]);
@@ -94,12 +94,12 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     * Gets the keyUsage
     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
     *
-    * @return KeyUsages|null The keyUsage
+    * @return KeyUsages The keyUsage
     */
     public function getKeyUsage()
     {
         if (array_key_exists("keyUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["keyUsage"], "\Beta\Microsoft\Graph\Model\KeyUsages") || is_null($this->_propDict["keyUsage"])) {
+            if (is_a($this->_propDict["keyUsage"], "\Beta\Microsoft\Graph\Model\KeyUsages")) {
                 return $this->_propDict["keyUsage"];
             } else {
                 $this->_propDict["keyUsage"] = new KeyUsages($this->_propDict["keyUsage"]);
@@ -127,7 +127,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     * Gets the scepServerUrls
     * SCEP Server Url(s)
     *
-    * @return string|null The scepServerUrls
+    * @return string The scepServerUrls
     */
     public function getScepServerUrls()
     {
@@ -156,7 +156,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     * Gets the subjectAlternativeNameFormatString
     * Custom String that defines the AAD Attribute.
     *
-    * @return string|null The subjectAlternativeNameFormatString
+    * @return string The subjectAlternativeNameFormatString
     */
     public function getSubjectAlternativeNameFormatString()
     {
@@ -185,7 +185,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     * Gets the subjectNameFormatString
     * Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
     *
-    * @return string|null The subjectNameFormatString
+    * @return string The subjectNameFormatString
     */
     public function getSubjectNameFormatString()
     {
@@ -215,7 +215,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
      * Gets the managedDeviceCertificateStates
     * Certificate state for devices
      *
-     * @return array|null The managedDeviceCertificateStates
+     * @return array The managedDeviceCertificateStates
      */
     public function getManagedDeviceCertificateStates()
     {
@@ -236,7 +236,7 @@ class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     */
     public function setManagedDeviceCertificateStates($val)
     {
-        $this->_propDict["managedDeviceCertificateStates"] = $val;
+		$this->_propDict["managedDeviceCertificateStates"] = $val;
         return $this;
     }
     

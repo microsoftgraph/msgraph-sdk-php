@@ -27,7 +27,7 @@ class AssignmentReviewSettings extends Entity
     * Gets the durationInDays
     * The number of days to allow input from reviewers.
     *
-    * @return int|null The durationInDays
+    * @return int The durationInDays
     */
     public function getDurationInDays()
     {
@@ -55,7 +55,7 @@ class AssignmentReviewSettings extends Entity
     * Gets the isEnabled
     * If true, access reviews are required for assignments from this policy.
     *
-    * @return bool|null The isEnabled
+    * @return bool The isEnabled
     */
     public function getIsEnabled()
     {
@@ -83,7 +83,7 @@ class AssignmentReviewSettings extends Entity
     * Gets the recurrenceType
     * The interval for recurrence, such as monthly or quarterly.
     *
-    * @return string|null The recurrenceType
+    * @return string The recurrenceType
     */
     public function getRecurrenceType()
     {
@@ -112,12 +112,12 @@ class AssignmentReviewSettings extends Entity
     * Gets the reviewers
     * If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers.
     *
-    * @return UserSet|null The reviewers
+    * @return UserSet The reviewers
     */
     public function getReviewers()
     {
         if (array_key_exists("reviewers", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewers"], "\Beta\Microsoft\Graph\Model\UserSet") || is_null($this->_propDict["reviewers"])) {
+            if (is_a($this->_propDict["reviewers"], "\Beta\Microsoft\Graph\Model\UserSet")) {
                 return $this->_propDict["reviewers"];
             } else {
                 $this->_propDict["reviewers"] = new UserSet($this->_propDict["reviewers"]);
@@ -144,7 +144,7 @@ class AssignmentReviewSettings extends Entity
     * Gets the reviewerType
     * Who should be asked to do the review, either Self or Reviewers.
     *
-    * @return string|null The reviewerType
+    * @return string The reviewerType
     */
     public function getReviewerType()
     {
@@ -173,12 +173,12 @@ class AssignmentReviewSettings extends Entity
     * Gets the startDateTime
     * When the first review should start.
     *
-    * @return \DateTime|null The startDateTime
+    * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

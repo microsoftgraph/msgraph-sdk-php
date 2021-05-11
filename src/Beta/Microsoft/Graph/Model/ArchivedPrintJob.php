@@ -27,7 +27,7 @@ class ArchivedPrintJob extends Entity
     * Gets the acquiredByPrinter
     * True if the job was acquired by a printer; false otherwise. Read-only.
     *
-    * @return bool|null The acquiredByPrinter
+    * @return bool The acquiredByPrinter
     */
     public function getAcquiredByPrinter()
     {
@@ -56,12 +56,12 @@ class ArchivedPrintJob extends Entity
     * Gets the acquiredDateTime
     * The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
     *
-    * @return \DateTime|null The acquiredDateTime
+    * @return \DateTime The acquiredDateTime
     */
     public function getAcquiredDateTime()
     {
         if (array_key_exists("acquiredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["acquiredDateTime"], "\DateTime") || is_null($this->_propDict["acquiredDateTime"])) {
+            if (is_a($this->_propDict["acquiredDateTime"], "\DateTime")) {
                 return $this->_propDict["acquiredDateTime"];
             } else {
                 $this->_propDict["acquiredDateTime"] = new \DateTime($this->_propDict["acquiredDateTime"]);
@@ -88,7 +88,7 @@ class ArchivedPrintJob extends Entity
     * Gets the blackAndWhitePageCount
     * The number of black and white pages that were printed. Read-only.
     *
-    * @return int|null The blackAndWhitePageCount
+    * @return int The blackAndWhitePageCount
     */
     public function getBlackAndWhitePageCount()
     {
@@ -116,7 +116,7 @@ class ArchivedPrintJob extends Entity
     * Gets the colorPageCount
     * The number of color pages that were printed. Read-only.
     *
-    * @return int|null The colorPageCount
+    * @return int The colorPageCount
     */
     public function getColorPageCount()
     {
@@ -145,12 +145,12 @@ class ArchivedPrintJob extends Entity
     * Gets the completionDateTime
     * The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
     *
-    * @return \DateTime|null The completionDateTime
+    * @return \DateTime The completionDateTime
     */
     public function getCompletionDateTime()
     {
         if (array_key_exists("completionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completionDateTime"], "\DateTime") || is_null($this->_propDict["completionDateTime"])) {
+            if (is_a($this->_propDict["completionDateTime"], "\DateTime")) {
                 return $this->_propDict["completionDateTime"];
             } else {
                 $this->_propDict["completionDateTime"] = new \DateTime($this->_propDict["completionDateTime"]);
@@ -177,7 +177,7 @@ class ArchivedPrintJob extends Entity
     * Gets the copiesPrinted
     * The number of copies that were printed. Read-only.
     *
-    * @return int|null The copiesPrinted
+    * @return int The copiesPrinted
     */
     public function getCopiesPrinted()
     {
@@ -206,12 +206,12 @@ class ArchivedPrintJob extends Entity
     * Gets the createdBy
     * The user who created the print job. Read-only.
     *
-    * @return UserIdentity|null The createdBy
+    * @return UserIdentity The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\UserIdentity") || is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Beta\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
@@ -239,12 +239,12 @@ class ArchivedPrintJob extends Entity
     * Gets the createdDateTime
     * The dateTimeOffset when the job was created. Read-only.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -271,7 +271,7 @@ class ArchivedPrintJob extends Entity
     * Gets the duplexPageCount
     * The number of duplex (double-sided) pages that were printed. Read-only.
     *
-    * @return int|null The duplexPageCount
+    * @return int The duplexPageCount
     */
     public function getDuplexPageCount()
     {
@@ -299,7 +299,7 @@ class ArchivedPrintJob extends Entity
     * Gets the id
     * The archived print job's GUID. Read-only.
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -327,7 +327,7 @@ class ArchivedPrintJob extends Entity
     * Gets the pageCount
     * The total number of pages that were printed. Read-only.
     *
-    * @return int|null The pageCount
+    * @return int The pageCount
     */
     public function getPageCount()
     {
@@ -355,7 +355,7 @@ class ArchivedPrintJob extends Entity
     * Gets the printerId
     * The printer ID that the job was queued for. Read-only.
     *
-    * @return string|null The printerId
+    * @return string The printerId
     */
     public function getPrinterId()
     {
@@ -384,12 +384,12 @@ class ArchivedPrintJob extends Entity
     * Gets the processingState
     * The print job's final processing state. Read-only.
     *
-    * @return PrintJobProcessingState|null The processingState
+    * @return PrintJobProcessingState The processingState
     */
     public function getProcessingState()
     {
         if (array_key_exists("processingState", $this->_propDict)) {
-            if (is_a($this->_propDict["processingState"], "\Beta\Microsoft\Graph\Model\PrintJobProcessingState") || is_null($this->_propDict["processingState"])) {
+            if (is_a($this->_propDict["processingState"], "\Beta\Microsoft\Graph\Model\PrintJobProcessingState")) {
                 return $this->_propDict["processingState"];
             } else {
                 $this->_propDict["processingState"] = new PrintJobProcessingState($this->_propDict["processingState"]);
@@ -416,7 +416,7 @@ class ArchivedPrintJob extends Entity
     * Gets the simplexPageCount
     * The number of simplex (single-sided) pages that were printed. Read-only.
     *
-    * @return int|null The simplexPageCount
+    * @return int The simplexPageCount
     */
     public function getSimplexPageCount()
     {

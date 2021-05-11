@@ -28,7 +28,7 @@ class DeviceManagementIntentUserState extends Entity
     * Gets the deviceCount
     * Count of Devices that belongs to a user for an intent
     *
-    * @return int|null The deviceCount
+    * @return int The deviceCount
     */
     public function getDeviceCount()
     {
@@ -57,12 +57,12 @@ class DeviceManagementIntentUserState extends Entity
     * Gets the lastReportedDateTime
     * Last modified date time of an intent report
     *
-    * @return \DateTime|null The lastReportedDateTime
+    * @return \DateTime The lastReportedDateTime
     */
     public function getLastReportedDateTime()
     {
         if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime") || is_null($this->_propDict["lastReportedDateTime"])) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastReportedDateTime"];
             } else {
                 $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
@@ -90,12 +90,12 @@ class DeviceManagementIntentUserState extends Entity
     * Gets the state
     * User state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
-    * @return ComplianceStatus|null The state
+    * @return ComplianceStatus The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);
@@ -123,7 +123,7 @@ class DeviceManagementIntentUserState extends Entity
     * Gets the userName
     * The user name that is being reported on a device
     *
-    * @return string|null The userName
+    * @return string The userName
     */
     public function getUserName()
     {
@@ -152,7 +152,7 @@ class DeviceManagementIntentUserState extends Entity
     * Gets the userPrincipalName
     * The user principal name that is being reported on a device
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

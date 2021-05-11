@@ -26,7 +26,7 @@ class EducationItemBody extends Entity
     /**
     * Gets the content
     *
-    * @return string|null The content
+    * @return string The content
     */
     public function getContent()
     {
@@ -53,12 +53,12 @@ class EducationItemBody extends Entity
     /**
     * Gets the contentType
     *
-    * @return BodyType|null The contentType
+    * @return BodyType The contentType
     */
     public function getContentType()
     {
         if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "\Beta\Microsoft\Graph\Model\BodyType") || is_null($this->_propDict["contentType"])) {
+            if (is_a($this->_propDict["contentType"], "\Beta\Microsoft\Graph\Model\BodyType")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new BodyType($this->_propDict["contentType"]);

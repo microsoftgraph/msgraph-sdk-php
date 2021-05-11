@@ -27,7 +27,7 @@ class SearchAlterationOptions extends Entity
     * Gets the enableModification
     * Indicates whether spelling modifications are enabled. If enabled, user will get the search results for corrected query when there are no results for the original query with typos and get the spelling modification information in queryAlterationResponse property of the response. Optional.
     *
-    * @return bool|null The enableModification
+    * @return bool The enableModification
     */
     public function getEnableModification()
     {
@@ -55,7 +55,7 @@ class SearchAlterationOptions extends Entity
     * Gets the enableSuggestion
     * Indicates whether spelling suggestions are enabled. If enabled, user will get the search results for original search query and suggesting spelling correction in queryAlterationResponse property of the response for typos in query. Optional.
     *
-    * @return bool|null The enableSuggestion
+    * @return bool The enableSuggestion
     */
     public function getEnableSuggestion()
     {

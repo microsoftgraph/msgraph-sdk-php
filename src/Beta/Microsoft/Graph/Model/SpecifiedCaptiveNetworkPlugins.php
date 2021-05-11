@@ -27,7 +27,7 @@ class SpecifiedCaptiveNetworkPlugins extends Entity
     * Gets the allowedBundleIdentifiers
     * Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
     *
-    * @return string|null The allowedBundleIdentifiers
+    * @return string The allowedBundleIdentifiers
     */
     public function getAllowedBundleIdentifiers()
     {

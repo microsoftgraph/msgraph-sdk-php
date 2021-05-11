@@ -27,7 +27,7 @@ class ApprovalSettings extends Entity
     * Gets the approvalMode
     * One of NoApproval, SingleStage or Serial. The NoApproval is used when isApprovalRequired is false.
     *
-    * @return string|null The approvalMode
+    * @return string The approvalMode
     */
     public function getApprovalMode()
     {
@@ -56,12 +56,12 @@ class ApprovalSettings extends Entity
     * Gets the approvalStages
     * If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
     *
-    * @return ApprovalStage|null The approvalStages
+    * @return ApprovalStage The approvalStages
     */
     public function getApprovalStages()
     {
         if (array_key_exists("approvalStages", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalStages"], "\Beta\Microsoft\Graph\Model\ApprovalStage") || is_null($this->_propDict["approvalStages"])) {
+            if (is_a($this->_propDict["approvalStages"], "\Beta\Microsoft\Graph\Model\ApprovalStage")) {
                 return $this->_propDict["approvalStages"];
             } else {
                 $this->_propDict["approvalStages"] = new ApprovalStage($this->_propDict["approvalStages"]);
@@ -88,7 +88,7 @@ class ApprovalSettings extends Entity
     * Gets the isApprovalRequired
     * If false, then approval is not required for requests in this policy.
     *
-    * @return bool|null The isApprovalRequired
+    * @return bool The isApprovalRequired
     */
     public function getIsApprovalRequired()
     {
@@ -116,7 +116,7 @@ class ApprovalSettings extends Entity
     * Gets the isApprovalRequiredForExtension
     * If false, then approval is not required for a user who already has an assignment to extend their assignment.
     *
-    * @return bool|null The isApprovalRequiredForExtension
+    * @return bool The isApprovalRequiredForExtension
     */
     public function getIsApprovalRequiredForExtension()
     {
@@ -144,7 +144,7 @@ class ApprovalSettings extends Entity
     * Gets the isRequestorJustificationRequired
     * Indicates whether the requestor is required to supply a justification in their request.
     *
-    * @return bool|null The isRequestorJustificationRequired
+    * @return bool The isRequestorJustificationRequired
     */
     public function getIsRequestorJustificationRequired()
     {

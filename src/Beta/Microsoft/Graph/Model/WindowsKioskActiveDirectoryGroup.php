@@ -27,7 +27,7 @@ class WindowsKioskActiveDirectoryGroup extends WindowsKioskUser
     * Gets the groupName
     * The name of the AD group that will be locked to this kiosk configuration
     *
-    * @return string|null The groupName
+    * @return string The groupName
     */
     public function getGroupName()
     {

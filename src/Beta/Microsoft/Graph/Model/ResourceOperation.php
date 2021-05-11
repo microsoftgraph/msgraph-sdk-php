@@ -28,7 +28,7 @@ class ResourceOperation extends Entity
     * Gets the actionName
     * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
     *
-    * @return string|null The actionName
+    * @return string The actionName
     */
     public function getActionName()
     {
@@ -57,7 +57,7 @@ class ResourceOperation extends Entity
     * Gets the description
     * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -86,7 +86,7 @@ class ResourceOperation extends Entity
     * Gets the enabledForScopeValidation
     * Determines whether the Permission is validated for Scopes defined per Role Assignment.
     *
-    * @return bool|null The enabledForScopeValidation
+    * @return bool The enabledForScopeValidation
     */
     public function getEnabledForScopeValidation()
     {
@@ -115,7 +115,7 @@ class ResourceOperation extends Entity
     * Gets the resource
     * Resource category to which this Operation belongs.
     *
-    * @return string|null The resource
+    * @return string The resource
     */
     public function getResource()
     {
@@ -144,7 +144,7 @@ class ResourceOperation extends Entity
     * Gets the resourceName
     * Name of the Resource this operation is performed on.
     *
-    * @return string|null The resourceName
+    * @return string The resourceName
     */
     public function getResourceName()
     {

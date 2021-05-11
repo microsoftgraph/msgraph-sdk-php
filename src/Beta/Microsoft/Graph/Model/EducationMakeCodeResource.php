@@ -36,7 +36,7 @@ class EducationMakeCodeResource extends EducationResource
     * Gets the hostWebUrl
     * Host for the type of MakeCode resource (for example, arcade, microbit)
     *
-    * @return string|null The hostWebUrl
+    * @return string The hostWebUrl
     */
     public function getHostWebUrl()
     {
@@ -64,7 +64,7 @@ class EducationMakeCodeResource extends EducationResource
     * Gets the projectId
     * ID of the MakeCode project
     *
-    * @return string|null The projectId
+    * @return string The projectId
     */
     public function getProjectId()
     {

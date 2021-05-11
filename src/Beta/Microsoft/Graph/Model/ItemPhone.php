@@ -28,7 +28,7 @@ class ItemPhone extends ItemFacet
     * Gets the displayName
     * Friendly name the user has assigned this phone number.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class ItemPhone extends ItemFacet
     * Gets the number
     * Phone number provided by the user.
     *
-    * @return string|null The number
+    * @return string The number
     */
     public function getNumber()
     {
@@ -86,12 +86,12 @@ class ItemPhone extends ItemFacet
     * Gets the type
     * The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
-    * @return PhoneType|null The type
+    * @return PhoneType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\PhoneType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\PhoneType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PhoneType($this->_propDict["type"]);

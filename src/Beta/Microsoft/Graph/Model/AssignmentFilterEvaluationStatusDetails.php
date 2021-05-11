@@ -28,7 +28,7 @@ class AssignmentFilterEvaluationStatusDetails extends Entity
     * Gets the payloadId
     * PayloadId on which filter has been applied.
     *
-    * @return string|null The payloadId
+    * @return string The payloadId
     */
     public function getPayloadId()
     {

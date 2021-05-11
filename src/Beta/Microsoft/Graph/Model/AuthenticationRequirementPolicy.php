@@ -26,7 +26,7 @@ class AuthenticationRequirementPolicy extends Entity
     /**
     * Gets the detail
     *
-    * @return string|null The detail
+    * @return string The detail
     */
     public function getDetail()
     {
@@ -53,12 +53,12 @@ class AuthenticationRequirementPolicy extends Entity
     /**
     * Gets the requirementProvider
     *
-    * @return RequirementProvider|null The requirementProvider
+    * @return RequirementProvider The requirementProvider
     */
     public function getRequirementProvider()
     {
         if (array_key_exists("requirementProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["requirementProvider"], "\Beta\Microsoft\Graph\Model\RequirementProvider") || is_null($this->_propDict["requirementProvider"])) {
+            if (is_a($this->_propDict["requirementProvider"], "\Beta\Microsoft\Graph\Model\RequirementProvider")) {
                 return $this->_propDict["requirementProvider"];
             } else {
                 $this->_propDict["requirementProvider"] = new RequirementProvider($this->_propDict["requirementProvider"]);

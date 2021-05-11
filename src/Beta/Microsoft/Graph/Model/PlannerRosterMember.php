@@ -28,7 +28,7 @@ class PlannerRosterMember extends Entity
     * Gets the roles
     * Additional roles associated with the PlannerRosterMember, which determines permissions of the member in the plannerRoster. Currently there are no available roles to assign, and every member has full control over the contents of the plannerRoster.
     *
-    * @return string|null The roles
+    * @return string The roles
     */
     public function getRoles()
     {
@@ -57,7 +57,7 @@ class PlannerRosterMember extends Entity
     * Gets the tenantId
     * Identifier of the tenant the user belongs to. Currently only the users from the same tenant can be added to a plannerRoster.
     *
-    * @return string|null The tenantId
+    * @return string The tenantId
     */
     public function getTenantId()
     {
@@ -86,7 +86,7 @@ class PlannerRosterMember extends Entity
     * Gets the userId
     * Identifier of the user.
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {

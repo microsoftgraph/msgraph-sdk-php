@@ -27,7 +27,7 @@ class AccessReviewSettings extends Entity
     * Gets the accessRecommendationsEnabled
     * Indicates whether showing recommendations to reviewers is enabled.
     *
-    * @return bool|null The accessRecommendationsEnabled
+    * @return bool The accessRecommendationsEnabled
     */
     public function getAccessRecommendationsEnabled()
     {
@@ -55,7 +55,7 @@ class AccessReviewSettings extends Entity
     * Gets the activityDurationInDays
     * The number of days of user activities to show to reviewers.
     *
-    * @return int|null The activityDurationInDays
+    * @return int The activityDurationInDays
     */
     public function getActivityDurationInDays()
     {
@@ -83,7 +83,7 @@ class AccessReviewSettings extends Entity
     * Gets the autoApplyReviewResultsEnabled
     * Indicates whether the auto-apply capability, to automatically change the target object access resource, is enabled.  If not enabled, a user must, after the review completes, apply the access review.
     *
-    * @return bool|null The autoApplyReviewResultsEnabled
+    * @return bool The autoApplyReviewResultsEnabled
     */
     public function getAutoApplyReviewResultsEnabled()
     {
@@ -111,7 +111,7 @@ class AccessReviewSettings extends Entity
     * Gets the autoReviewEnabled
     * Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
     *
-    * @return bool|null The autoReviewEnabled
+    * @return bool The autoReviewEnabled
     */
     public function getAutoReviewEnabled()
     {
@@ -140,12 +140,12 @@ class AccessReviewSettings extends Entity
     * Gets the autoReviewSettings
     * Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
     *
-    * @return AutoReviewSettings|null The autoReviewSettings
+    * @return AutoReviewSettings The autoReviewSettings
     */
     public function getAutoReviewSettings()
     {
         if (array_key_exists("autoReviewSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["autoReviewSettings"], "\Beta\Microsoft\Graph\Model\AutoReviewSettings") || is_null($this->_propDict["autoReviewSettings"])) {
+            if (is_a($this->_propDict["autoReviewSettings"], "\Beta\Microsoft\Graph\Model\AutoReviewSettings")) {
                 return $this->_propDict["autoReviewSettings"];
             } else {
                 $this->_propDict["autoReviewSettings"] = new AutoReviewSettings($this->_propDict["autoReviewSettings"]);
@@ -172,7 +172,7 @@ class AccessReviewSettings extends Entity
     * Gets the justificationRequiredOnApproval
     * Indicates whether reviewers are required to provide a justification when reviewing access.
     *
-    * @return bool|null The justificationRequiredOnApproval
+    * @return bool The justificationRequiredOnApproval
     */
     public function getJustificationRequiredOnApproval()
     {
@@ -200,7 +200,7 @@ class AccessReviewSettings extends Entity
     * Gets the mailNotificationsEnabled
     * Indicates whether sending mails to reviewers and the review creator is enabled.
     *
-    * @return bool|null The mailNotificationsEnabled
+    * @return bool The mailNotificationsEnabled
     */
     public function getMailNotificationsEnabled()
     {
@@ -229,12 +229,12 @@ class AccessReviewSettings extends Entity
     * Gets the recurrenceSettings
     * Detailed settings for recurrence.
     *
-    * @return AccessReviewRecurrenceSettings|null The recurrenceSettings
+    * @return AccessReviewRecurrenceSettings The recurrenceSettings
     */
     public function getRecurrenceSettings()
     {
         if (array_key_exists("recurrenceSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrenceSettings"], "\Beta\Microsoft\Graph\Model\AccessReviewRecurrenceSettings") || is_null($this->_propDict["recurrenceSettings"])) {
+            if (is_a($this->_propDict["recurrenceSettings"], "\Beta\Microsoft\Graph\Model\AccessReviewRecurrenceSettings")) {
                 return $this->_propDict["recurrenceSettings"];
             } else {
                 $this->_propDict["recurrenceSettings"] = new AccessReviewRecurrenceSettings($this->_propDict["recurrenceSettings"]);
@@ -261,7 +261,7 @@ class AccessReviewSettings extends Entity
     * Gets the remindersEnabled
     * Indicates whether sending reminder emails to reviewers is enabled.
     *
-    * @return bool|null The remindersEnabled
+    * @return bool The remindersEnabled
     */
     public function getRemindersEnabled()
     {

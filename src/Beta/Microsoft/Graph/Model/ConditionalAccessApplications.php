@@ -27,7 +27,7 @@ class ConditionalAccessApplications extends Entity
     * Gets the excludeApplications
     * The list of application IDs explicitly excluded from the policy.
     *
-    * @return string|null The excludeApplications
+    * @return string The excludeApplications
     */
     public function getExcludeApplications()
     {
@@ -55,7 +55,7 @@ class ConditionalAccessApplications extends Entity
     * Gets the includeApplications
     * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
     *
-    * @return string|null The includeApplications
+    * @return string The includeApplications
     */
     public function getIncludeApplications()
     {
@@ -83,7 +83,7 @@ class ConditionalAccessApplications extends Entity
     * Gets the includeUserActions
     * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
     *
-    * @return string|null The includeUserActions
+    * @return string The includeUserActions
     */
     public function getIncludeUserActions()
     {

@@ -36,7 +36,7 @@ class DeviceManagementSettingIntegerConstraint extends DeviceManagementConstrain
     * Gets the maximumValue
     * The maximum permitted value
     *
-    * @return int|null The maximumValue
+    * @return int The maximumValue
     */
     public function getMaximumValue()
     {
@@ -64,7 +64,7 @@ class DeviceManagementSettingIntegerConstraint extends DeviceManagementConstrain
     * Gets the minimumValue
     * The minimum permitted value
     *
-    * @return int|null The minimumValue
+    * @return int The minimumValue
     */
     public function getMinimumValue()
     {

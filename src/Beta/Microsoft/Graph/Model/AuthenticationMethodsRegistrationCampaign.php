@@ -27,12 +27,12 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
     /**
     * Gets the excludeTargets
     *
-    * @return ExcludeTarget|null The excludeTargets
+    * @return ExcludeTarget The excludeTargets
     */
     public function getExcludeTargets()
     {
         if (array_key_exists("excludeTargets", $this->_propDict)) {
-            if (is_a($this->_propDict["excludeTargets"], "\Beta\Microsoft\Graph\Model\ExcludeTarget") || is_null($this->_propDict["excludeTargets"])) {
+            if (is_a($this->_propDict["excludeTargets"], "\Beta\Microsoft\Graph\Model\ExcludeTarget")) {
                 return $this->_propDict["excludeTargets"];
             } else {
                 $this->_propDict["excludeTargets"] = new ExcludeTarget($this->_propDict["excludeTargets"]);
@@ -58,12 +58,12 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
     /**
     * Gets the includeTargets
     *
-    * @return AuthenticationMethodsRegistrationCampaignIncludeTarget|null The includeTargets
+    * @return AuthenticationMethodsRegistrationCampaignIncludeTarget The includeTargets
     */
     public function getIncludeTargets()
     {
         if (array_key_exists("includeTargets", $this->_propDict)) {
-            if (is_a($this->_propDict["includeTargets"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodsRegistrationCampaignIncludeTarget") || is_null($this->_propDict["includeTargets"])) {
+            if (is_a($this->_propDict["includeTargets"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodsRegistrationCampaignIncludeTarget")) {
                 return $this->_propDict["includeTargets"];
             } else {
                 $this->_propDict["includeTargets"] = new AuthenticationMethodsRegistrationCampaignIncludeTarget($this->_propDict["includeTargets"]);
@@ -88,7 +88,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
     /**
     * Gets the snoozeDurationInDays
     *
-    * @return int|null The snoozeDurationInDays
+    * @return int The snoozeDurationInDays
     */
     public function getSnoozeDurationInDays()
     {
@@ -115,12 +115,12 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
     /**
     * Gets the state
     *
-    * @return AdvancedConfigState|null The state
+    * @return AdvancedConfigState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\AdvancedConfigState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\AdvancedConfigState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new AdvancedConfigState($this->_propDict["state"]);

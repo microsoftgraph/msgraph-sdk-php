@@ -26,7 +26,7 @@ class ClassificationAttribute extends Entity
     /**
     * Gets the confidence
     *
-    * @return int|null The confidence
+    * @return int The confidence
     */
     public function getConfidence()
     {
@@ -52,7 +52,7 @@ class ClassificationAttribute extends Entity
     /**
     * Gets the count
     *
-    * @return int|null The count
+    * @return int The count
     */
     public function getCount()
     {

@@ -28,7 +28,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the averageBlueScreens
     * Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
     *
-    * @return float|null The averageBlueScreens
+    * @return float The averageBlueScreens
     */
     public function getAverageBlueScreens()
     {
@@ -49,7 +49,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     */
     public function setAverageBlueScreens($val)
     {
-        $this->_propDict["averageBlueScreens"] = floatval($val);
+        $this->_propDict["averageBlueScreens"] = $val;
         return $this;
     }
     
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the averageRestarts
     * Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
     *
-    * @return float|null The averageRestarts
+    * @return float The averageRestarts
     */
     public function getAverageRestarts()
     {
@@ -78,7 +78,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     */
     public function setAverageRestarts($val)
     {
-        $this->_propDict["averageRestarts"] = floatval($val);
+        $this->_propDict["averageRestarts"] = $val;
         return $this;
     }
     
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the blueScreenCount
     * Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
     *
-    * @return int|null The blueScreenCount
+    * @return int The blueScreenCount
     */
     public function getBlueScreenCount()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the bootScore
     * The user experience analytics device boot score.
     *
-    * @return int|null The bootScore
+    * @return int The bootScore
     */
     public function getBootScore()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the coreBootTimeInMs
     * The user experience analytics device core boot time in milliseconds.
     *
-    * @return int|null The coreBootTimeInMs
+    * @return int The coreBootTimeInMs
     */
     public function getCoreBootTimeInMs()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the coreLoginTimeInMs
     * The user experience analytics device core login time in milliseconds.
     *
-    * @return int|null The coreLoginTimeInMs
+    * @return int The coreLoginTimeInMs
     */
     public function getCoreLoginTimeInMs()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the deviceCount
     * User experience analytics summarized device count.
     *
-    * @return int|null The deviceCount
+    * @return int The deviceCount
     */
     public function getDeviceCount()
     {
@@ -231,7 +231,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the deviceName
     * The user experience analytics device name.
     *
-    * @return string|null The deviceName
+    * @return string The deviceName
     */
     public function getDeviceName()
     {
@@ -260,12 +260,12 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the diskType
     * The user experience analytics device disk type. Possible values are: unkown, hdd, ssd.
     *
-    * @return DiskType|null The diskType
+    * @return DiskType The diskType
     */
     public function getDiskType()
     {
         if (array_key_exists("diskType", $this->_propDict)) {
-            if (is_a($this->_propDict["diskType"], "\Beta\Microsoft\Graph\Model\DiskType") || is_null($this->_propDict["diskType"])) {
+            if (is_a($this->_propDict["diskType"], "\Beta\Microsoft\Graph\Model\DiskType")) {
                 return $this->_propDict["diskType"];
             } else {
                 $this->_propDict["diskType"] = new DiskType($this->_propDict["diskType"]);
@@ -293,7 +293,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the groupPolicyBootTimeInMs
     * The user experience analytics device group policy boot time in milliseconds.
     *
-    * @return int|null The groupPolicyBootTimeInMs
+    * @return int The groupPolicyBootTimeInMs
     */
     public function getGroupPolicyBootTimeInMs()
     {
@@ -322,7 +322,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the groupPolicyLoginTimeInMs
     * The user experience analytics device group policy login time in milliseconds.
     *
-    * @return int|null The groupPolicyLoginTimeInMs
+    * @return int The groupPolicyLoginTimeInMs
     */
     public function getGroupPolicyLoginTimeInMs()
     {
@@ -351,12 +351,12 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the healthStatus
     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
     *
-    * @return UserExperienceAnalyticsHealthState|null The healthStatus
+    * @return UserExperienceAnalyticsHealthState The healthStatus
     */
     public function getHealthStatus()
     {
         if (array_key_exists("healthStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["healthStatus"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsHealthState") || is_null($this->_propDict["healthStatus"])) {
+            if (is_a($this->_propDict["healthStatus"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsHealthState")) {
                 return $this->_propDict["healthStatus"];
             } else {
                 $this->_propDict["healthStatus"] = new UserExperienceAnalyticsHealthState($this->_propDict["healthStatus"]);
@@ -384,7 +384,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the loginScore
     * The user experience analytics device login score.
     *
-    * @return int|null The loginScore
+    * @return int The loginScore
     */
     public function getLoginScore()
     {
@@ -413,7 +413,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the manufacturer
     * The user experience analytics device manufacturer.
     *
-    * @return string|null The manufacturer
+    * @return string The manufacturer
     */
     public function getManufacturer()
     {
@@ -442,7 +442,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the model
     * The user experience analytics device model.
     *
-    * @return string|null The model
+    * @return string The model
     */
     public function getModel()
     {
@@ -471,7 +471,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the operatingSystemVersion
     * The user experience analytics device Operating System version.
     *
-    * @return string|null The operatingSystemVersion
+    * @return string The operatingSystemVersion
     */
     public function getOperatingSystemVersion()
     {
@@ -500,7 +500,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the responsiveDesktopTimeInMs
     * The user experience analytics responsive desktop time in milliseconds.
     *
-    * @return int|null The responsiveDesktopTimeInMs
+    * @return int The responsiveDesktopTimeInMs
     */
     public function getResponsiveDesktopTimeInMs()
     {
@@ -529,7 +529,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
     * Gets the restartCount
     * Number of Restarts in the last 14 days. Valid values 0 to 9999999
     *
-    * @return int|null The restartCount
+    * @return int The restartCount
     */
     public function getRestartCount()
     {

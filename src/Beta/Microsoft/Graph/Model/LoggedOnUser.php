@@ -28,12 +28,12 @@ class LoggedOnUser extends Entity
     * Gets the lastLogOnDateTime
     * Date time when user logs on
     *
-    * @return \DateTime|null The lastLogOnDateTime
+    * @return \DateTime The lastLogOnDateTime
     */
     public function getLastLogOnDateTime()
     {
         if (array_key_exists("lastLogOnDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastLogOnDateTime"], "\DateTime") || is_null($this->_propDict["lastLogOnDateTime"])) {
+            if (is_a($this->_propDict["lastLogOnDateTime"], "\DateTime")) {
                 return $this->_propDict["lastLogOnDateTime"];
             } else {
                 $this->_propDict["lastLogOnDateTime"] = new \DateTime($this->_propDict["lastLogOnDateTime"]);
@@ -60,7 +60,7 @@ class LoggedOnUser extends Entity
     * Gets the userId
     * User id
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {

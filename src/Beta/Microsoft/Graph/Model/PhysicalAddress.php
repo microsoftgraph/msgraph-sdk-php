@@ -27,7 +27,7 @@ class PhysicalAddress extends Entity
     * Gets the city
     * The city.
     *
-    * @return string|null The city
+    * @return string The city
     */
     public function getCity()
     {
@@ -55,7 +55,7 @@ class PhysicalAddress extends Entity
     * Gets the countryOrRegion
     * The country or region. It's a free-format string value, for example, 'United States'.
     *
-    * @return string|null The countryOrRegion
+    * @return string The countryOrRegion
     */
     public function getCountryOrRegion()
     {
@@ -83,7 +83,7 @@ class PhysicalAddress extends Entity
     * Gets the postalCode
     * The postal code.
     *
-    * @return string|null The postalCode
+    * @return string The postalCode
     */
     public function getPostalCode()
     {
@@ -111,7 +111,7 @@ class PhysicalAddress extends Entity
     * Gets the postOfficeBox
     * The post office box number.
     *
-    * @return string|null The postOfficeBox
+    * @return string The postOfficeBox
     */
     public function getPostOfficeBox()
     {
@@ -139,7 +139,7 @@ class PhysicalAddress extends Entity
     * Gets the state
     * The state.
     *
-    * @return string|null The state
+    * @return string The state
     */
     public function getState()
     {
@@ -167,7 +167,7 @@ class PhysicalAddress extends Entity
     * Gets the street
     * The street.
     *
-    * @return string|null The street
+    * @return string The street
     */
     public function getStreet()
     {
@@ -196,12 +196,12 @@ class PhysicalAddress extends Entity
     * Gets the type
     * The type of address. Possible values are: unknown, home, business, other.
     *
-    * @return PhysicalAddressType|null The type
+    * @return PhysicalAddressType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\PhysicalAddressType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\PhysicalAddressType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PhysicalAddressType($this->_propDict["type"]);

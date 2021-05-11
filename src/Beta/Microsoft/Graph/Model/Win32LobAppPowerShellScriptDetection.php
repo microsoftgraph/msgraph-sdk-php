@@ -36,7 +36,7 @@ class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection
     * Gets the enforceSignatureCheck
     * A value indicating whether signature check is enforced
     *
-    * @return bool|null The enforceSignatureCheck
+    * @return bool The enforceSignatureCheck
     */
     public function getEnforceSignatureCheck()
     {
@@ -64,7 +64,7 @@ class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection
     * Gets the runAs32Bit
     * A value indicating whether this script should run as 32-bit
     *
-    * @return bool|null The runAs32Bit
+    * @return bool The runAs32Bit
     */
     public function getRunAs32Bit()
     {
@@ -92,7 +92,7 @@ class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection
     * Gets the scriptContent
     * The base64 encoded script content to detect Win32 Line of Business (LoB) app
     *
-    * @return string|null The scriptContent
+    * @return string The scriptContent
     */
     public function getScriptContent()
     {

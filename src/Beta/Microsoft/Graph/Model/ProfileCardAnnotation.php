@@ -27,7 +27,7 @@ class ProfileCardAnnotation extends Entity
     * Gets the displayName
     * If present, the value of this field is used by the profile card as the default property label in the experience (for example, 'Cost Center').
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -56,12 +56,12 @@ class ProfileCardAnnotation extends Entity
     * Gets the localizations
     * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
     *
-    * @return DisplayNameLocalization|null The localizations
+    * @return DisplayNameLocalization The localizations
     */
     public function getLocalizations()
     {
         if (array_key_exists("localizations", $this->_propDict)) {
-            if (is_a($this->_propDict["localizations"], "\Beta\Microsoft\Graph\Model\DisplayNameLocalization") || is_null($this->_propDict["localizations"])) {
+            if (is_a($this->_propDict["localizations"], "\Beta\Microsoft\Graph\Model\DisplayNameLocalization")) {
                 return $this->_propDict["localizations"];
             } else {
                 $this->_propDict["localizations"] = new DisplayNameLocalization($this->_propDict["localizations"]);

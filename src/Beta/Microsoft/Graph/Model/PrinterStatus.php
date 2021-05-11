@@ -27,7 +27,7 @@ class PrinterStatus extends Entity
     * Gets the description
     * A human-readable description of the printer's current processing state. Read-only.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -56,12 +56,12 @@ class PrinterStatus extends Entity
     * Gets the details
     * The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
     *
-    * @return PrinterProcessingStateDetail|null The details
+    * @return PrinterProcessingStateDetail The details
     */
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\PrinterProcessingStateDetail") || is_null($this->_propDict["details"])) {
+            if (is_a($this->_propDict["details"], "\Beta\Microsoft\Graph\Model\PrinterProcessingStateDetail")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PrinterProcessingStateDetail($this->_propDict["details"]);
@@ -88,12 +88,12 @@ class PrinterStatus extends Entity
     /**
     * Gets the processingState
     *
-    * @return PrinterProcessingState|null The processingState
+    * @return PrinterProcessingState The processingState
     */
     public function getProcessingState()
     {
         if (array_key_exists("processingState", $this->_propDict)) {
-            if (is_a($this->_propDict["processingState"], "\Beta\Microsoft\Graph\Model\PrinterProcessingState") || is_null($this->_propDict["processingState"])) {
+            if (is_a($this->_propDict["processingState"], "\Beta\Microsoft\Graph\Model\PrinterProcessingState")) {
                 return $this->_propDict["processingState"];
             } else {
                 $this->_propDict["processingState"] = new PrinterProcessingState($this->_propDict["processingState"]);
@@ -118,7 +118,7 @@ class PrinterStatus extends Entity
     /**
     * Gets the processingStateDescription
     *
-    * @return string|null The processingStateDescription
+    * @return string The processingStateDescription
     */
     public function getProcessingStateDescription()
     {
@@ -145,12 +145,12 @@ class PrinterStatus extends Entity
     /**
     * Gets the processingStateReasons
     *
-    * @return PrinterProcessingStateReason|null The processingStateReasons
+    * @return PrinterProcessingStateReason The processingStateReasons
     */
     public function getProcessingStateReasons()
     {
         if (array_key_exists("processingStateReasons", $this->_propDict)) {
-            if (is_a($this->_propDict["processingStateReasons"], "\Beta\Microsoft\Graph\Model\PrinterProcessingStateReason") || is_null($this->_propDict["processingStateReasons"])) {
+            if (is_a($this->_propDict["processingStateReasons"], "\Beta\Microsoft\Graph\Model\PrinterProcessingStateReason")) {
                 return $this->_propDict["processingStateReasons"];
             } else {
                 $this->_propDict["processingStateReasons"] = new PrinterProcessingStateReason($this->_propDict["processingStateReasons"]);
@@ -177,12 +177,12 @@ class PrinterStatus extends Entity
     * Gets the state
     * The current processing state. Valid values are described in the following table. Read-only.
     *
-    * @return PrinterProcessingState|null The state
+    * @return PrinterProcessingState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\PrinterProcessingState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\PrinterProcessingState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new PrinterProcessingState($this->_propDict["state"]);

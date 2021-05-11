@@ -27,7 +27,7 @@ class ServiceInformation extends Entity
     * Gets the name
     * The name of the cloud service (for example, Twitter, Instagram).
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -55,7 +55,7 @@ class ServiceInformation extends Entity
     * Gets the webUrl
     * Contains the URL for the service being referenced.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

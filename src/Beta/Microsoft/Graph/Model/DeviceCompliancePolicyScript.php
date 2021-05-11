@@ -27,7 +27,7 @@ class DeviceCompliancePolicyScript extends Entity
     * Gets the deviceComplianceScriptId
     * Device compliance script Id.
     *
-    * @return string|null The deviceComplianceScriptId
+    * @return string The deviceComplianceScriptId
     */
     public function getDeviceComplianceScriptId()
     {
@@ -56,12 +56,12 @@ class DeviceCompliancePolicyScript extends Entity
     * Gets the rulesContent
     * Json of the rules.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The rulesContent
+    * @return \GuzzleHttp\Psr7\Stream The rulesContent
     */
     public function getRulesContent()
     {
         if (array_key_exists("rulesContent", $this->_propDict)) {
-            if (is_a($this->_propDict["rulesContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["rulesContent"])) {
+            if (is_a($this->_propDict["rulesContent"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["rulesContent"];
             } else {
                 $this->_propDict["rulesContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["rulesContent"]);

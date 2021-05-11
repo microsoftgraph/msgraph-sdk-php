@@ -28,12 +28,12 @@ class SharingDetail extends Entity
     * Gets the sharedBy
     * The user who shared the document.
     *
-    * @return InsightIdentity|null The sharedBy
+    * @return InsightIdentity The sharedBy
     */
     public function getSharedBy()
     {
         if (array_key_exists("sharedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedBy"], "\Beta\Microsoft\Graph\Model\InsightIdentity") || is_null($this->_propDict["sharedBy"])) {
+            if (is_a($this->_propDict["sharedBy"], "\Beta\Microsoft\Graph\Model\InsightIdentity")) {
                 return $this->_propDict["sharedBy"];
             } else {
                 $this->_propDict["sharedBy"] = new InsightIdentity($this->_propDict["sharedBy"]);
@@ -61,12 +61,12 @@ class SharingDetail extends Entity
     * Gets the sharedDateTime
     * The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z. Read-only.
     *
-    * @return \DateTime|null The sharedDateTime
+    * @return \DateTime The sharedDateTime
     */
     public function getSharedDateTime()
     {
         if (array_key_exists("sharedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedDateTime"], "\DateTime") || is_null($this->_propDict["sharedDateTime"])) {
+            if (is_a($this->_propDict["sharedDateTime"], "\DateTime")) {
                 return $this->_propDict["sharedDateTime"];
             } else {
                 $this->_propDict["sharedDateTime"] = new \DateTime($this->_propDict["sharedDateTime"]);
@@ -93,12 +93,12 @@ class SharingDetail extends Entity
     /**
     * Gets the sharingReference
     *
-    * @return ResourceReference|null The sharingReference
+    * @return ResourceReference The sharingReference
     */
     public function getSharingReference()
     {
         if (array_key_exists("sharingReference", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingReference"], "\Beta\Microsoft\Graph\Model\ResourceReference") || is_null($this->_propDict["sharingReference"])) {
+            if (is_a($this->_propDict["sharingReference"], "\Beta\Microsoft\Graph\Model\ResourceReference")) {
                 return $this->_propDict["sharingReference"];
             } else {
                 $this->_propDict["sharingReference"] = new ResourceReference($this->_propDict["sharingReference"]);
@@ -124,7 +124,7 @@ class SharingDetail extends Entity
     * Gets the sharingSubject
     * The subject with which the document was shared.
     *
-    * @return string|null The sharingSubject
+    * @return string The sharingSubject
     */
     public function getSharingSubject()
     {
@@ -152,7 +152,7 @@ class SharingDetail extends Entity
     * Gets the sharingType
     * Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
     *
-    * @return string|null The sharingType
+    * @return string The sharingType
     */
     public function getSharingType()
     {

@@ -28,7 +28,7 @@ class AndroidManagedStoreApp extends MobileApp
     * Gets the appIdentifier
     * The Identity Name.
     *
-    * @return string|null The appIdentifier
+    * @return string The appIdentifier
     */
     public function getAppIdentifier()
     {
@@ -57,7 +57,7 @@ class AndroidManagedStoreApp extends MobileApp
     * Gets the appStoreUrl
     * The Play for Work Store app URL.
     *
-    * @return string|null The appStoreUrl
+    * @return string The appStoreUrl
     */
     public function getAppStoreUrl()
     {
@@ -87,7 +87,7 @@ class AndroidManagedStoreApp extends MobileApp
      * Gets the appTracks
     * The tracks that are visible to this enterprise.
      *
-     * @return array|null The appTracks
+     * @return array The appTracks
      */
     public function getAppTracks()
     {
@@ -108,7 +108,7 @@ class AndroidManagedStoreApp extends MobileApp
     */
     public function setAppTracks($val)
     {
-        $this->_propDict["appTracks"] = $val;
+		$this->_propDict["appTracks"] = $val;
         return $this;
     }
     
@@ -116,7 +116,7 @@ class AndroidManagedStoreApp extends MobileApp
     * Gets the isPrivate
     * Indicates whether the app is only available to a given enterprise's users.
     *
-    * @return bool|null The isPrivate
+    * @return bool The isPrivate
     */
     public function getIsPrivate()
     {
@@ -145,7 +145,7 @@ class AndroidManagedStoreApp extends MobileApp
     * Gets the isSystemApp
     * Indicates whether the app is a preinstalled system app.
     *
-    * @return bool|null The isSystemApp
+    * @return bool The isSystemApp
     */
     public function getIsSystemApp()
     {
@@ -174,7 +174,7 @@ class AndroidManagedStoreApp extends MobileApp
     * Gets the packageId
     * The package identifier.
     *
-    * @return string|null The packageId
+    * @return string The packageId
     */
     public function getPackageId()
     {
@@ -203,7 +203,7 @@ class AndroidManagedStoreApp extends MobileApp
     * Gets the supportsOemConfig
     * Whether this app supports OEMConfig policy.
     *
-    * @return bool|null The supportsOemConfig
+    * @return bool The supportsOemConfig
     */
     public function getSupportsOemConfig()
     {
@@ -232,7 +232,7 @@ class AndroidManagedStoreApp extends MobileApp
     * Gets the totalLicenseCount
     * The total number of VPP licenses.
     *
-    * @return int|null The totalLicenseCount
+    * @return int The totalLicenseCount
     */
     public function getTotalLicenseCount()
     {
@@ -261,7 +261,7 @@ class AndroidManagedStoreApp extends MobileApp
     * Gets the usedLicenseCount
     * The number of VPP licenses in use.
     *
-    * @return int|null The usedLicenseCount
+    * @return int The usedLicenseCount
     */
     public function getUsedLicenseCount()
     {

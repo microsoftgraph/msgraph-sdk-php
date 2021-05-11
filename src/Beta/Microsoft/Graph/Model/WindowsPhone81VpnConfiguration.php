@@ -28,12 +28,12 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     * Gets the authenticationMethod
     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
     *
-    * @return VpnAuthenticationMethod|null The authenticationMethod
+    * @return VpnAuthenticationMethod The authenticationMethod
     */
     public function getAuthenticationMethod()
     {
         if (array_key_exists("authenticationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\VpnAuthenticationMethod") || is_null($this->_propDict["authenticationMethod"])) {
+            if (is_a($this->_propDict["authenticationMethod"], "\Beta\Microsoft\Graph\Model\VpnAuthenticationMethod")) {
                 return $this->_propDict["authenticationMethod"];
             } else {
                 $this->_propDict["authenticationMethod"] = new VpnAuthenticationMethod($this->_propDict["authenticationMethod"]);
@@ -61,7 +61,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     * Gets the bypassVpnOnCompanyWifi
     * Bypass VPN on company Wi-Fi.
     *
-    * @return bool|null The bypassVpnOnCompanyWifi
+    * @return bool The bypassVpnOnCompanyWifi
     */
     public function getBypassVpnOnCompanyWifi()
     {
@@ -90,7 +90,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     * Gets the bypassVpnOnHomeWifi
     * Bypass VPN on home Wi-Fi.
     *
-    * @return bool|null The bypassVpnOnHomeWifi
+    * @return bool The bypassVpnOnHomeWifi
     */
     public function getBypassVpnOnHomeWifi()
     {
@@ -119,7 +119,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     * Gets the dnsSuffixSearchList
     * DNS suffix search list.
     *
-    * @return string|null The dnsSuffixSearchList
+    * @return string The dnsSuffixSearchList
     */
     public function getDnsSuffixSearchList()
     {
@@ -148,7 +148,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     * Gets the rememberUserCredentials
     * Remember user credentials.
     *
-    * @return bool|null The rememberUserCredentials
+    * @return bool The rememberUserCredentials
     */
     public function getRememberUserCredentials()
     {
@@ -177,12 +177,12 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     * Gets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
     *
-    * @return WindowsPhone81CertificateProfileBase|null The identityCertificate
+    * @return WindowsPhone81CertificateProfileBase The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\WindowsPhone81CertificateProfileBase") || is_null($this->_propDict["identityCertificate"])) {
+            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\WindowsPhone81CertificateProfileBase")) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new WindowsPhone81CertificateProfileBase($this->_propDict["identityCertificate"]);

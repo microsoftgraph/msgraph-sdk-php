@@ -27,7 +27,7 @@ class ManagedAppPolicyDeploymentSummaryPerApp extends Entity
     * Gets the configurationAppliedUserCount
     * Number of users the policy is applied.
     *
-    * @return int|null The configurationAppliedUserCount
+    * @return int The configurationAppliedUserCount
     */
     public function getConfigurationAppliedUserCount()
     {
@@ -56,12 +56,12 @@ class ManagedAppPolicyDeploymentSummaryPerApp extends Entity
     * Gets the mobileAppIdentifier
     * Deployment of an app.
     *
-    * @return MobileAppIdentifier|null The mobileAppIdentifier
+    * @return MobileAppIdentifier The mobileAppIdentifier
     */
     public function getMobileAppIdentifier()
     {
         if (array_key_exists("mobileAppIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppIdentifier"], "\Beta\Microsoft\Graph\Model\MobileAppIdentifier") || is_null($this->_propDict["mobileAppIdentifier"])) {
+            if (is_a($this->_propDict["mobileAppIdentifier"], "\Beta\Microsoft\Graph\Model\MobileAppIdentifier")) {
                 return $this->_propDict["mobileAppIdentifier"];
             } else {
                 $this->_propDict["mobileAppIdentifier"] = new MobileAppIdentifier($this->_propDict["mobileAppIdentifier"]);

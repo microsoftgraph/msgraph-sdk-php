@@ -36,7 +36,7 @@ class EducationFileResource extends EducationResource
     * Gets the fileUrl
     * Location on disk of the file resource.
     *
-    * @return string|null The fileUrl
+    * @return string The fileUrl
     */
     public function getFileUrl()
     {

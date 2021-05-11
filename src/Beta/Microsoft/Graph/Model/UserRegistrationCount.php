@@ -27,7 +27,7 @@ class UserRegistrationCount extends Entity
     * Gets the registrationCount
     * Provides the registration count for your tenant.
     *
-    * @return int|null The registrationCount
+    * @return int The registrationCount
     */
     public function getRegistrationCount()
     {
@@ -56,12 +56,12 @@ class UserRegistrationCount extends Entity
     * Gets the registrationStatus
     * Represents the status of user registration. Possible values are: registered, enabled, capable, and mfaRegistered.
     *
-    * @return RegistrationStatusType|null The registrationStatus
+    * @return RegistrationStatusType The registrationStatus
     */
     public function getRegistrationStatus()
     {
         if (array_key_exists("registrationStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["registrationStatus"], "\Beta\Microsoft\Graph\Model\RegistrationStatusType") || is_null($this->_propDict["registrationStatus"])) {
+            if (is_a($this->_propDict["registrationStatus"], "\Beta\Microsoft\Graph\Model\RegistrationStatusType")) {
                 return $this->_propDict["registrationStatus"];
             } else {
                 $this->_propDict["registrationStatus"] = new RegistrationStatusType($this->_propDict["registrationStatus"]);

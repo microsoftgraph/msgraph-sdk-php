@@ -28,7 +28,7 @@ class EducationSubmissionResource extends Entity
     * Gets the assignmentResourceUrl
     * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
     *
-    * @return string|null The assignmentResourceUrl
+    * @return string The assignmentResourceUrl
     */
     public function getAssignmentResourceUrl()
     {
@@ -57,12 +57,12 @@ class EducationSubmissionResource extends Entity
     * Gets the resource
     * Resource object.
     *
-    * @return EducationResource|null The resource
+    * @return EducationResource The resource
     */
     public function getResource()
     {
         if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\EducationResource") || is_null($this->_propDict["resource"])) {
+            if (is_a($this->_propDict["resource"], "\Beta\Microsoft\Graph\Model\EducationResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new EducationResource($this->_propDict["resource"]);

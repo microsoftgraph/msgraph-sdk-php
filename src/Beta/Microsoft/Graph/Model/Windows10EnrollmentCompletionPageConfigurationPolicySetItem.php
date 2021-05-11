@@ -28,7 +28,7 @@ class Windows10EnrollmentCompletionPageConfigurationPolicySetItem extends Policy
     * Gets the priority
     * Priority of the Windows10EnrollmentCompletionPageConfigurationPolicySetItem.
     *
-    * @return int|null The priority
+    * @return int The priority
     */
     public function getPriority()
     {

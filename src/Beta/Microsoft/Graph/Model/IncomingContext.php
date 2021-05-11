@@ -25,9 +25,9 @@ class IncomingContext extends Entity
 {
     /**
     * Gets the observedParticipantId
-    * The ID of the participant that is under observation. Read-only.
+    * The id of the participant that is under observation. Read-only.
     *
-    * @return string|null The observedParticipantId
+    * @return string The observedParticipantId
     */
     public function getObservedParticipantId()
     {
@@ -40,7 +40,7 @@ class IncomingContext extends Entity
 
     /**
     * Sets the observedParticipantId
-    * The ID of the participant that is under observation. Read-only.
+    * The id of the participant that is under observation. Read-only.
     *
     * @param string $val The value of the observedParticipantId
     *
@@ -56,12 +56,12 @@ class IncomingContext extends Entity
     * Gets the onBehalfOf
     * The identity that the call is happening on behalf of.
     *
-    * @return IdentitySet|null The onBehalfOf
+    * @return IdentitySet The onBehalfOf
     */
     public function getOnBehalfOf()
     {
         if (array_key_exists("onBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["onBehalfOf"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["onBehalfOf"])) {
+            if (is_a($this->_propDict["onBehalfOf"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["onBehalfOf"];
             } else {
                 $this->_propDict["onBehalfOf"] = new IdentitySet($this->_propDict["onBehalfOf"]);
@@ -86,9 +86,9 @@ class IncomingContext extends Entity
     }
     /**
     * Gets the sourceParticipantId
-    * The ID of the participant that triggered the incoming call. Read-only.
+    * The id of the participant that triggered the incoming call. Read-only.
     *
-    * @return string|null The sourceParticipantId
+    * @return string The sourceParticipantId
     */
     public function getSourceParticipantId()
     {
@@ -101,7 +101,7 @@ class IncomingContext extends Entity
 
     /**
     * Sets the sourceParticipantId
-    * The ID of the participant that triggered the incoming call. Read-only.
+    * The id of the participant that triggered the incoming call. Read-only.
     *
     * @param string $val The value of the sourceParticipantId
     *
@@ -117,12 +117,12 @@ class IncomingContext extends Entity
     * Gets the transferor
     * The identity that transferred the call.
     *
-    * @return IdentitySet|null The transferor
+    * @return IdentitySet The transferor
     */
     public function getTransferor()
     {
         if (array_key_exists("transferor", $this->_propDict)) {
-            if (is_a($this->_propDict["transferor"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["transferor"])) {
+            if (is_a($this->_propDict["transferor"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["transferor"];
             } else {
                 $this->_propDict["transferor"] = new IdentitySet($this->_propDict["transferor"]);

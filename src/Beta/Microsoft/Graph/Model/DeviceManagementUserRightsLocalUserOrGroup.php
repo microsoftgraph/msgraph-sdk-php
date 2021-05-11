@@ -27,7 +27,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
     * Gets the description
     * Admin’s description of this local user or group.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -55,7 +55,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
     * Gets the name
     * The name of this local user or group.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -83,7 +83,7 @@ class DeviceManagementUserRightsLocalUserOrGroup extends Entity
     * Gets the securityIdentifier
     * The security identifier of this local user or group (e.g. S-1-5-32-544).
     *
-    * @return string|null The securityIdentifier
+    * @return string The securityIdentifier
     */
     public function getSecurityIdentifier()
     {

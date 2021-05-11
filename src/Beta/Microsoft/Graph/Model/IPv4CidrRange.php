@@ -36,7 +36,7 @@ class IPv4CidrRange extends IpRange
     * Gets the cidrAddress
     * IPv4 address in CIDR notation
     *
-    * @return string|null The cidrAddress
+    * @return string The cidrAddress
     */
     public function getCidrAddress()
     {

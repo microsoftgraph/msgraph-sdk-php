@@ -27,7 +27,7 @@ class NumberRange extends Entity
     * Gets the lowerNumber
     * Lower number.
     *
-    * @return int|null The lowerNumber
+    * @return int The lowerNumber
     */
     public function getLowerNumber()
     {
@@ -55,7 +55,7 @@ class NumberRange extends Entity
     * Gets the upperNumber
     * Upper number.
     *
-    * @return int|null The upperNumber
+    * @return int The upperNumber
     */
     public function getUpperNumber()
     {

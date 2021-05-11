@@ -28,7 +28,7 @@ class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroubleshootingE
     * Gets the tokenId
     * Apple Volume Purchase Program Token Identifier.
     *
-    * @return string|null The tokenId
+    * @return string The tokenId
     */
     public function getTokenId()
     {

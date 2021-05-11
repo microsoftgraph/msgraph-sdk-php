@@ -28,7 +28,7 @@ class SideLoadingKey extends Entity
     * Gets the description
     * Side Loading Key description displayed to the ITPro Admins..
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class SideLoadingKey extends Entity
     * Gets the displayName
     * Side Loading Key Name displayed to the ITPro Admins.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class SideLoadingKey extends Entity
     * Gets the lastUpdatedDateTime
     * Side Loading Key Last Updated Date displayed to the ITPro Admins.
     *
-    * @return string|null The lastUpdatedDateTime
+    * @return string The lastUpdatedDateTime
     */
     public function getLastUpdatedDateTime()
     {
@@ -115,7 +115,7 @@ class SideLoadingKey extends Entity
     * Gets the totalActivation
     * Side Loading Key Total Activation displayed to the ITPro Admins.
     *
-    * @return int|null The totalActivation
+    * @return int The totalActivation
     */
     public function getTotalActivation()
     {
@@ -144,7 +144,7 @@ class SideLoadingKey extends Entity
     * Gets the value
     * Side Loading Key Value, it is 5x5 value, seperated by hiphens.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

@@ -27,7 +27,7 @@ class Website extends Entity
     * Gets the address
     * The URL of the website.
     *
-    * @return string|null The address
+    * @return string The address
     */
     public function getAddress()
     {
@@ -55,7 +55,7 @@ class Website extends Entity
     * Gets the displayName
     * The display name of the web site.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -82,14 +82,14 @@ class Website extends Entity
 
     /**
     * Gets the type
-    * The possible values are: other, home, work, blog, profile.
+    * Possible values are: other, home, work, blog, profile.
     *
-    * @return WebsiteType|null The type
+    * @return WebsiteType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\WebsiteType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\WebsiteType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new WebsiteType($this->_propDict["type"]);
@@ -101,7 +101,7 @@ class Website extends Entity
 
     /**
     * Sets the type
-    * The possible values are: other, home, work, blog, profile.
+    * Possible values are: other, home, work, blog, profile.
     *
     * @param WebsiteType $val The value to assign to the type
     *

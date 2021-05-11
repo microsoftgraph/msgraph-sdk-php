@@ -36,7 +36,7 @@ class DeviceManagementSettingBooleanConstraint extends DeviceManagementConstrain
     * Gets the value
     * The boolean value to compare against
     *
-    * @return bool|null The value
+    * @return bool The value
     */
     public function getValue()
     {

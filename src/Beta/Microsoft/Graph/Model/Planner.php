@@ -29,7 +29,7 @@ class Planner extends Entity
      * Gets the buckets
     * Read-only. Nullable. Returns a collection of the specified buckets
      *
-     * @return array|null The buckets
+     * @return array The buckets
      */
     public function getBuckets()
     {
@@ -50,7 +50,7 @@ class Planner extends Entity
     */
     public function setBuckets($val)
     {
-        $this->_propDict["buckets"] = $val;
+		$this->_propDict["buckets"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class Planner extends Entity
      * Gets the plans
     * Read-only. Nullable. Returns a collection of the specified plans
      *
-     * @return array|null The plans
+     * @return array The plans
      */
     public function getPlans()
     {
@@ -80,7 +80,7 @@ class Planner extends Entity
     */
     public function setPlans($val)
     {
-        $this->_propDict["plans"] = $val;
+		$this->_propDict["plans"] = $val;
         return $this;
     }
     
@@ -89,7 +89,7 @@ class Planner extends Entity
      * Gets the rosters
     * Read-only. Nullable. Returns a collection of the specified rosters
      *
-     * @return array|null The rosters
+     * @return array The rosters
      */
     public function getRosters()
     {
@@ -110,7 +110,7 @@ class Planner extends Entity
     */
     public function setRosters($val)
     {
-        $this->_propDict["rosters"] = $val;
+		$this->_propDict["rosters"] = $val;
         return $this;
     }
     
@@ -119,7 +119,7 @@ class Planner extends Entity
      * Gets the tasks
     * Read-only. Nullable. Returns a collection of the specified tasks
      *
-     * @return array|null The tasks
+     * @return array The tasks
      */
     public function getTasks()
     {
@@ -140,7 +140,7 @@ class Planner extends Entity
     */
     public function setTasks($val)
     {
-        $this->_propDict["tasks"] = $val;
+		$this->_propDict["tasks"] = $val;
         return $this;
     }
     

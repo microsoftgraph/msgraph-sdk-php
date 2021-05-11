@@ -28,7 +28,7 @@ class ReferenceAttachment extends Attachment
     * Gets the isFolder
     * Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
     *
-    * @return bool|null The isFolder
+    * @return bool The isFolder
     */
     public function getIsFolder()
     {
@@ -57,12 +57,12 @@ class ReferenceAttachment extends Attachment
     * Gets the permission
     * Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
     *
-    * @return ReferenceAttachmentPermission|null The permission
+    * @return ReferenceAttachmentPermission The permission
     */
     public function getPermission()
     {
         if (array_key_exists("permission", $this->_propDict)) {
-            if (is_a($this->_propDict["permission"], "\Beta\Microsoft\Graph\Model\ReferenceAttachmentPermission") || is_null($this->_propDict["permission"])) {
+            if (is_a($this->_propDict["permission"], "\Beta\Microsoft\Graph\Model\ReferenceAttachmentPermission")) {
                 return $this->_propDict["permission"];
             } else {
                 $this->_propDict["permission"] = new ReferenceAttachmentPermission($this->_propDict["permission"]);
@@ -90,7 +90,7 @@ class ReferenceAttachment extends Attachment
     * Gets the previewUrl
     * Applies to only a reference attachment of an image - URL to get a preview image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
     *
-    * @return string|null The previewUrl
+    * @return string The previewUrl
     */
     public function getPreviewUrl()
     {
@@ -119,12 +119,12 @@ class ReferenceAttachment extends Attachment
     * Gets the providerType
     * The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
     *
-    * @return ReferenceAttachmentProvider|null The providerType
+    * @return ReferenceAttachmentProvider The providerType
     */
     public function getProviderType()
     {
         if (array_key_exists("providerType", $this->_propDict)) {
-            if (is_a($this->_propDict["providerType"], "\Beta\Microsoft\Graph\Model\ReferenceAttachmentProvider") || is_null($this->_propDict["providerType"])) {
+            if (is_a($this->_propDict["providerType"], "\Beta\Microsoft\Graph\Model\ReferenceAttachmentProvider")) {
                 return $this->_propDict["providerType"];
             } else {
                 $this->_propDict["providerType"] = new ReferenceAttachmentProvider($this->_propDict["providerType"]);
@@ -152,7 +152,7 @@ class ReferenceAttachment extends Attachment
     * Gets the sourceUrl
     * URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
     *
-    * @return string|null The sourceUrl
+    * @return string The sourceUrl
     */
     public function getSourceUrl()
     {
@@ -181,7 +181,7 @@ class ReferenceAttachment extends Attachment
     * Gets the thumbnailUrl
     * Applies to only a reference attachment of an image - URL to get a thumbnail image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
     *
-    * @return string|null The thumbnailUrl
+    * @return string The thumbnailUrl
     */
     public function getThumbnailUrl()
     {

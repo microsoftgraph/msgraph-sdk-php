@@ -28,7 +28,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     * Gets the deviceMacAddress
     * Device Mac address.
     *
-    * @return string|null The deviceMacAddress
+    * @return string The deviceMacAddress
     */
     public function getDeviceMacAddress()
     {
@@ -57,7 +57,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     * Gets the deviceName
     * Device name.
     *
-    * @return string|null The deviceName
+    * @return string The deviceName
     */
     public function getDeviceName()
     {
@@ -86,7 +86,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     * Gets the deviceRegistrationId
     * Device identifier for this device registration record.
     *
-    * @return string|null The deviceRegistrationId
+    * @return string The deviceRegistrationId
     */
     public function getDeviceRegistrationId()
     {
@@ -115,7 +115,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     * Gets the deviceType
     * Device type, for example, Windows laptop VS Windows phone.
     *
-    * @return string|null The deviceType
+    * @return string The deviceType
     */
     public function getDeviceType()
     {
@@ -144,12 +144,12 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     * Gets the lastCheckInDateTime
     * Last checkin time of the device.
     *
-    * @return \DateTime|null The lastCheckInDateTime
+    * @return \DateTime The lastCheckInDateTime
     */
     public function getLastCheckInDateTime()
     {
         if (array_key_exists("lastCheckInDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime") || is_null($this->_propDict["lastCheckInDateTime"])) {
+            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime")) {
                 return $this->_propDict["lastCheckInDateTime"];
             } else {
                 $this->_propDict["lastCheckInDateTime"] = new \DateTime($this->_propDict["lastCheckInDateTime"]);
@@ -177,7 +177,7 @@ class WindowsInformationProtectionDeviceRegistration extends Entity
     * Gets the userId
     * UserId associated with this device registration record.
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {

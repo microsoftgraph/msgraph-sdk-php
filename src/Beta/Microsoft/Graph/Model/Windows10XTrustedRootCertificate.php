@@ -28,7 +28,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
     * Gets the certFileName
     * File name to display in UI.
     *
-    * @return string|null The certFileName
+    * @return string The certFileName
     */
     public function getCertFileName()
     {
@@ -57,12 +57,12 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
     * Gets the destinationStore
     * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
     *
-    * @return CertificateDestinationStore|null The destinationStore
+    * @return CertificateDestinationStore The destinationStore
     */
     public function getDestinationStore()
     {
         if (array_key_exists("destinationStore", $this->_propDict)) {
-            if (is_a($this->_propDict["destinationStore"], "\Beta\Microsoft\Graph\Model\CertificateDestinationStore") || is_null($this->_propDict["destinationStore"])) {
+            if (is_a($this->_propDict["destinationStore"], "\Beta\Microsoft\Graph\Model\CertificateDestinationStore")) {
                 return $this->_propDict["destinationStore"];
             } else {
                 $this->_propDict["destinationStore"] = new CertificateDestinationStore($this->_propDict["destinationStore"]);
@@ -90,12 +90,12 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
     * Gets the trustedRootCertificate
     * Trusted Root Certificate
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The trustedRootCertificate
+    * @return \GuzzleHttp\Psr7\Stream The trustedRootCertificate
     */
     public function getTrustedRootCertificate()
     {
         if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["trustedRootCertificate"])) {
+            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["trustedRootCertificate"];
             } else {
                 $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["trustedRootCertificate"]);

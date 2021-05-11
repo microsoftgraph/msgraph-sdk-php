@@ -37,12 +37,12 @@ class DeviceManagementConfigurationGroupSettingInstanceTemplate extends DeviceMa
     * Gets the groupSettingValueTemplate
     * Group Setting Value Template
     *
-    * @return DeviceManagementConfigurationGroupSettingValueTemplate|null The groupSettingValueTemplate
+    * @return DeviceManagementConfigurationGroupSettingValueTemplate The groupSettingValueTemplate
     */
     public function getGroupSettingValueTemplate()
     {
         if (array_key_exists("groupSettingValueTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["groupSettingValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationGroupSettingValueTemplate") || is_null($this->_propDict["groupSettingValueTemplate"])) {
+            if (is_a($this->_propDict["groupSettingValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationGroupSettingValueTemplate")) {
                 return $this->_propDict["groupSettingValueTemplate"];
             } else {
                 $this->_propDict["groupSettingValueTemplate"] = new DeviceManagementConfigurationGroupSettingValueTemplate($this->_propDict["groupSettingValueTemplate"]);

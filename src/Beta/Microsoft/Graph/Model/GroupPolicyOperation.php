@@ -28,12 +28,12 @@ class GroupPolicyOperation extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -61,12 +61,12 @@ class GroupPolicyOperation extends Entity
     * Gets the operationStatus
     * The group policy operation status. Possible values are: unknown, inProgress, success, failed.
     *
-    * @return GroupPolicyOperationStatus|null The operationStatus
+    * @return GroupPolicyOperationStatus The operationStatus
     */
     public function getOperationStatus()
     {
         if (array_key_exists("operationStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["operationStatus"], "\Beta\Microsoft\Graph\Model\GroupPolicyOperationStatus") || is_null($this->_propDict["operationStatus"])) {
+            if (is_a($this->_propDict["operationStatus"], "\Beta\Microsoft\Graph\Model\GroupPolicyOperationStatus")) {
                 return $this->_propDict["operationStatus"];
             } else {
                 $this->_propDict["operationStatus"] = new GroupPolicyOperationStatus($this->_propDict["operationStatus"]);
@@ -94,12 +94,12 @@ class GroupPolicyOperation extends Entity
     * Gets the operationType
     * The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove.
     *
-    * @return GroupPolicyOperationType|null The operationType
+    * @return GroupPolicyOperationType The operationType
     */
     public function getOperationType()
     {
         if (array_key_exists("operationType", $this->_propDict)) {
-            if (is_a($this->_propDict["operationType"], "\Beta\Microsoft\Graph\Model\GroupPolicyOperationType") || is_null($this->_propDict["operationType"])) {
+            if (is_a($this->_propDict["operationType"], "\Beta\Microsoft\Graph\Model\GroupPolicyOperationType")) {
                 return $this->_propDict["operationType"];
             } else {
                 $this->_propDict["operationType"] = new GroupPolicyOperationType($this->_propDict["operationType"]);
@@ -127,7 +127,7 @@ class GroupPolicyOperation extends Entity
     * Gets the statusDetails
     * The group policy operation status detail.
     *
-    * @return string|null The statusDetails
+    * @return string The statusDetails
     */
     public function getStatusDetails()
     {

@@ -28,12 +28,12 @@ class BitlockerRecoveryKey extends Entity
     * Gets the createdDateTime
     * The date and time when the key was originally backed up to Azure Active Directory.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class BitlockerRecoveryKey extends Entity
     * Gets the deviceId
     * ID of the device the BitLocker key is originally backed up from.
     *
-    * @return string|null The deviceId
+    * @return string The deviceId
     */
     public function getDeviceId()
     {
@@ -90,7 +90,7 @@ class BitlockerRecoveryKey extends Entity
     * Gets the key
     * The BitLocker recovery key.
     *
-    * @return string|null The key
+    * @return string The key
     */
     public function getKey()
     {
@@ -119,12 +119,12 @@ class BitlockerRecoveryKey extends Entity
     * Gets the volumeType
     * Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
     *
-    * @return VolumeType|null The volumeType
+    * @return VolumeType The volumeType
     */
     public function getVolumeType()
     {
         if (array_key_exists("volumeType", $this->_propDict)) {
-            if (is_a($this->_propDict["volumeType"], "\Beta\Microsoft\Graph\Model\VolumeType") || is_null($this->_propDict["volumeType"])) {
+            if (is_a($this->_propDict["volumeType"], "\Beta\Microsoft\Graph\Model\VolumeType")) {
                 return $this->_propDict["volumeType"];
             } else {
                 $this->_propDict["volumeType"] = new VolumeType($this->_propDict["volumeType"]);

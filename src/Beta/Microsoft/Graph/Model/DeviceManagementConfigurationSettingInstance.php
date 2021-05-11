@@ -27,7 +27,7 @@ class DeviceManagementConfigurationSettingInstance extends Entity
     * Gets the settingDefinitionId
     * Setting Definition Id
     *
-    * @return string|null The settingDefinitionId
+    * @return string The settingDefinitionId
     */
     public function getSettingDefinitionId()
     {

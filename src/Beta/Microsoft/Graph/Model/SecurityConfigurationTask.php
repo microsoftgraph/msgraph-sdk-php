@@ -28,12 +28,12 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     * Gets the applicablePlatform
     * The applicable platform. Possible values are: unknown, macOS, windows10AndLater, windows10AndWindowsServer.
     *
-    * @return EndpointSecurityConfigurationApplicablePlatform|null The applicablePlatform
+    * @return EndpointSecurityConfigurationApplicablePlatform The applicablePlatform
     */
     public function getApplicablePlatform()
     {
         if (array_key_exists("applicablePlatform", $this->_propDict)) {
-            if (is_a($this->_propDict["applicablePlatform"], "\Beta\Microsoft\Graph\Model\EndpointSecurityConfigurationApplicablePlatform") || is_null($this->_propDict["applicablePlatform"])) {
+            if (is_a($this->_propDict["applicablePlatform"], "\Beta\Microsoft\Graph\Model\EndpointSecurityConfigurationApplicablePlatform")) {
                 return $this->_propDict["applicablePlatform"];
             } else {
                 $this->_propDict["applicablePlatform"] = new EndpointSecurityConfigurationApplicablePlatform($this->_propDict["applicablePlatform"]);
@@ -61,12 +61,12 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     * Gets the endpointSecurityPolicy
     * The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection.
     *
-    * @return EndpointSecurityConfigurationType|null The endpointSecurityPolicy
+    * @return EndpointSecurityConfigurationType The endpointSecurityPolicy
     */
     public function getEndpointSecurityPolicy()
     {
         if (array_key_exists("endpointSecurityPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointSecurityPolicy"], "\Beta\Microsoft\Graph\Model\EndpointSecurityConfigurationType") || is_null($this->_propDict["endpointSecurityPolicy"])) {
+            if (is_a($this->_propDict["endpointSecurityPolicy"], "\Beta\Microsoft\Graph\Model\EndpointSecurityConfigurationType")) {
                 return $this->_propDict["endpointSecurityPolicy"];
             } else {
                 $this->_propDict["endpointSecurityPolicy"] = new EndpointSecurityConfigurationType($this->_propDict["endpointSecurityPolicy"]);
@@ -94,12 +94,12 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     * Gets the endpointSecurityPolicyProfile
     * The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection.
     *
-    * @return EndpointSecurityConfigurationProfileType|null The endpointSecurityPolicyProfile
+    * @return EndpointSecurityConfigurationProfileType The endpointSecurityPolicyProfile
     */
     public function getEndpointSecurityPolicyProfile()
     {
         if (array_key_exists("endpointSecurityPolicyProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointSecurityPolicyProfile"], "\Beta\Microsoft\Graph\Model\EndpointSecurityConfigurationProfileType") || is_null($this->_propDict["endpointSecurityPolicyProfile"])) {
+            if (is_a($this->_propDict["endpointSecurityPolicyProfile"], "\Beta\Microsoft\Graph\Model\EndpointSecurityConfigurationProfileType")) {
                 return $this->_propDict["endpointSecurityPolicyProfile"];
             } else {
                 $this->_propDict["endpointSecurityPolicyProfile"] = new EndpointSecurityConfigurationProfileType($this->_propDict["endpointSecurityPolicyProfile"]);
@@ -127,7 +127,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     * Gets the insights
     * Information about the mitigation.
     *
-    * @return string|null The insights
+    * @return string The insights
     */
     public function getInsights()
     {
@@ -157,7 +157,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
      * Gets the intendedSettings
     * The intended settings and their values.
      *
-     * @return array|null The intendedSettings
+     * @return array The intendedSettings
      */
     public function getIntendedSettings()
     {
@@ -178,7 +178,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     */
     public function setIntendedSettings($val)
     {
-        $this->_propDict["intendedSettings"] = $val;
+		$this->_propDict["intendedSettings"] = $val;
         return $this;
     }
     
@@ -186,7 +186,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     * Gets the managedDeviceCount
     * The number of vulnerable devices.
     *
-    * @return int|null The managedDeviceCount
+    * @return int The managedDeviceCount
     */
     public function getManagedDeviceCount()
     {
@@ -216,7 +216,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
      * Gets the managedDevices
     * The vulnerable managed devices.
      *
-     * @return array|null The managedDevices
+     * @return array The managedDevices
      */
     public function getManagedDevices()
     {
@@ -237,7 +237,7 @@ class SecurityConfigurationTask extends DeviceAppManagementTask
     */
     public function setManagedDevices($val)
     {
-        $this->_propDict["managedDevices"] = $val;
+		$this->_propDict["managedDevices"] = $val;
         return $this;
     }
     

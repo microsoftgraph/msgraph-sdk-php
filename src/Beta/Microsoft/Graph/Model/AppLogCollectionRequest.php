@@ -28,12 +28,12 @@ class AppLogCollectionRequest extends Entity
     * Gets the completedDateTime
     * Time at which the upload log request reached a terminal state
     *
-    * @return \DateTime|null The completedDateTime
+    * @return \DateTime The completedDateTime
     */
     public function getCompletedDateTime()
     {
         if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\DateTime") || is_null($this->_propDict["completedDateTime"])) {
+            if (is_a($this->_propDict["completedDateTime"], "\DateTime")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new \DateTime($this->_propDict["completedDateTime"]);
@@ -61,7 +61,7 @@ class AppLogCollectionRequest extends Entity
     * Gets the customLogFolders
     * List of log folders.
     *
-    * @return string|null The customLogFolders
+    * @return string The customLogFolders
     */
     public function getCustomLogFolders()
     {
@@ -90,7 +90,7 @@ class AppLogCollectionRequest extends Entity
     * Gets the errorMessage
     * Error message if any during the upload process
     *
-    * @return string|null The errorMessage
+    * @return string The errorMessage
     */
     public function getErrorMessage()
     {
@@ -119,12 +119,12 @@ class AppLogCollectionRequest extends Entity
     * Gets the status
     * Log upload status. Possible values are: pending, completed, failed.
     *
-    * @return AppLogUploadState|null The status
+    * @return AppLogUploadState The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\AppLogUploadState") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\AppLogUploadState")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AppLogUploadState($this->_propDict["status"]);

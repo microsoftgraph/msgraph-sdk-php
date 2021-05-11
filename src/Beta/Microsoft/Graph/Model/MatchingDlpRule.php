@@ -27,12 +27,12 @@ class MatchingDlpRule extends Entity
     /**
     * Gets the actions
     *
-    * @return DlpActionInfo|null The actions
+    * @return DlpActionInfo The actions
     */
     public function getActions()
     {
         if (array_key_exists("actions", $this->_propDict)) {
-            if (is_a($this->_propDict["actions"], "\Beta\Microsoft\Graph\Model\DlpActionInfo") || is_null($this->_propDict["actions"])) {
+            if (is_a($this->_propDict["actions"], "\Beta\Microsoft\Graph\Model\DlpActionInfo")) {
                 return $this->_propDict["actions"];
             } else {
                 $this->_propDict["actions"] = new DlpActionInfo($this->_propDict["actions"]);
@@ -57,7 +57,7 @@ class MatchingDlpRule extends Entity
     /**
     * Gets the isMostRestrictive
     *
-    * @return bool|null The isMostRestrictive
+    * @return bool The isMostRestrictive
     */
     public function getIsMostRestrictive()
     {
@@ -83,7 +83,7 @@ class MatchingDlpRule extends Entity
     /**
     * Gets the policyId
     *
-    * @return string|null The policyId
+    * @return string The policyId
     */
     public function getPolicyId()
     {
@@ -109,7 +109,7 @@ class MatchingDlpRule extends Entity
     /**
     * Gets the policyName
     *
-    * @return string|null The policyName
+    * @return string The policyName
     */
     public function getPolicyName()
     {
@@ -135,7 +135,7 @@ class MatchingDlpRule extends Entity
     /**
     * Gets the priority
     *
-    * @return int|null The priority
+    * @return int The priority
     */
     public function getPriority()
     {
@@ -161,7 +161,7 @@ class MatchingDlpRule extends Entity
     /**
     * Gets the ruleId
     *
-    * @return string|null The ruleId
+    * @return string The ruleId
     */
     public function getRuleId()
     {
@@ -188,12 +188,12 @@ class MatchingDlpRule extends Entity
     /**
     * Gets the ruleMode
     *
-    * @return RuleMode|null The ruleMode
+    * @return RuleMode The ruleMode
     */
     public function getRuleMode()
     {
         if (array_key_exists("ruleMode", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleMode"], "\Beta\Microsoft\Graph\Model\RuleMode") || is_null($this->_propDict["ruleMode"])) {
+            if (is_a($this->_propDict["ruleMode"], "\Beta\Microsoft\Graph\Model\RuleMode")) {
                 return $this->_propDict["ruleMode"];
             } else {
                 $this->_propDict["ruleMode"] = new RuleMode($this->_propDict["ruleMode"]);
@@ -218,7 +218,7 @@ class MatchingDlpRule extends Entity
     /**
     * Gets the ruleName
     *
-    * @return string|null The ruleName
+    * @return string The ruleName
     */
     public function getRuleName()
     {

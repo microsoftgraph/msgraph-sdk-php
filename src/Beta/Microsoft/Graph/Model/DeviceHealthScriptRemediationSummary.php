@@ -27,7 +27,7 @@ class DeviceHealthScriptRemediationSummary extends Entity
     * Gets the remediatedDeviceCount
     * The number of devices remediated by device health scripts.
     *
-    * @return int|null The remediatedDeviceCount
+    * @return int The remediatedDeviceCount
     */
     public function getRemediatedDeviceCount()
     {
@@ -55,7 +55,7 @@ class DeviceHealthScriptRemediationSummary extends Entity
     * Gets the scriptCount
     * The number of device health scripts deployed.
     *
-    * @return int|null The scriptCount
+    * @return int The scriptCount
     */
     public function getScriptCount()
     {

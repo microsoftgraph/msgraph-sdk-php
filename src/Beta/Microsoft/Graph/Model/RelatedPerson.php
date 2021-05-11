@@ -27,7 +27,7 @@ class RelatedPerson extends Entity
     * Gets the displayName
     * Name of the person.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -56,12 +56,12 @@ class RelatedPerson extends Entity
     * Gets the relationship
     * Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
     *
-    * @return PersonRelationship|null The relationship
+    * @return PersonRelationship The relationship
     */
     public function getRelationship()
     {
         if (array_key_exists("relationship", $this->_propDict)) {
-            if (is_a($this->_propDict["relationship"], "\Beta\Microsoft\Graph\Model\PersonRelationship") || is_null($this->_propDict["relationship"])) {
+            if (is_a($this->_propDict["relationship"], "\Beta\Microsoft\Graph\Model\PersonRelationship")) {
                 return $this->_propDict["relationship"];
             } else {
                 $this->_propDict["relationship"] = new PersonRelationship($this->_propDict["relationship"]);
@@ -88,7 +88,7 @@ class RelatedPerson extends Entity
     * Gets the userPrincipalName
     * Email address or reference to person within organization.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

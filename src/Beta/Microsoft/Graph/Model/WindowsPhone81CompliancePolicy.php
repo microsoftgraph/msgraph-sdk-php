@@ -28,7 +28,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMaximumVersion
     * Maximum Windows Phone version.
     *
-    * @return string|null The osMaximumVersion
+    * @return string The osMaximumVersion
     */
     public function getOsMaximumVersion()
     {
@@ -57,7 +57,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMinimumVersion
     * Minimum Windows Phone version.
     *
-    * @return string|null The osMinimumVersion
+    * @return string The osMinimumVersion
     */
     public function getOsMinimumVersion()
     {
@@ -86,7 +86,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordBlockSimple
     * Whether or not to block syncing the calendar.
     *
-    * @return bool|null The passwordBlockSimple
+    * @return bool The passwordBlockSimple
     */
     public function getPasswordBlockSimple()
     {
@@ -115,7 +115,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordExpirationDays
     * Number of days before the password expires.
     *
-    * @return int|null The passwordExpirationDays
+    * @return int The passwordExpirationDays
     */
     public function getPasswordExpirationDays()
     {
@@ -144,7 +144,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
     *
-    * @return int|null The passwordMinimumCharacterSetCount
+    * @return int The passwordMinimumCharacterSetCount
     */
     public function getPasswordMinimumCharacterSetCount()
     {
@@ -173,7 +173,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumLength
     * Minimum length of passwords.
     *
-    * @return int|null The passwordMinimumLength
+    * @return int The passwordMinimumLength
     */
     public function getPasswordMinimumLength()
     {
@@ -202,7 +202,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
     *
-    * @return int|null The passwordMinutesOfInactivityBeforeLock
+    * @return int The passwordMinutesOfInactivityBeforeLock
     */
     public function getPasswordMinutesOfInactivityBeforeLock()
     {
@@ -231,7 +231,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 0 to 24
     *
-    * @return int|null The passwordPreviousPasswordBlockCount
+    * @return int The passwordPreviousPasswordBlockCount
     */
     public function getPasswordPreviousPasswordBlockCount()
     {
@@ -260,7 +260,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequired
     * Whether or not to require a password.
     *
-    * @return bool|null The passwordRequired
+    * @return bool The passwordRequired
     */
     public function getPasswordRequired()
     {
@@ -289,12 +289,12 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
-    * @return RequiredPasswordType|null The passwordRequiredType
+    * @return RequiredPasswordType The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -322,7 +322,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy
     * Gets the storageRequireEncryption
     * Require encryption on windows phone devices.
     *
-    * @return bool|null The storageRequireEncryption
+    * @return bool The storageRequireEncryption
     */
     public function getStorageRequireEncryption()
     {

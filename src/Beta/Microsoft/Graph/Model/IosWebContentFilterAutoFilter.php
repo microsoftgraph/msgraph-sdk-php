@@ -36,7 +36,7 @@ class IosWebContentFilterAutoFilter extends IosWebContentFilterBase
     * Gets the allowedUrls
     * Additional URLs allowed for access
     *
-    * @return string|null The allowedUrls
+    * @return string The allowedUrls
     */
     public function getAllowedUrls()
     {
@@ -64,7 +64,7 @@ class IosWebContentFilterAutoFilter extends IosWebContentFilterBase
     * Gets the blockedUrls
     * Additional URLs blocked for access
     *
-    * @return string|null The blockedUrls
+    * @return string The blockedUrls
     */
     public function getBlockedUrls()
     {

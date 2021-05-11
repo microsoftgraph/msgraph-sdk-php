@@ -27,7 +27,7 @@ class DeviceManagementConfigurationSimpleSettingValueTemplate extends Entity
     * Gets the settingValueTemplateId
     * Setting Value Template Id
     *
-    * @return string|null The settingValueTemplateId
+    * @return string The settingValueTemplateId
     */
     public function getSettingValueTemplateId()
     {

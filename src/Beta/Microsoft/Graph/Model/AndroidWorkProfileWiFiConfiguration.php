@@ -28,7 +28,7 @@ class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration
     * Gets the connectAutomatically
     * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
     *
-    * @return bool|null The connectAutomatically
+    * @return bool The connectAutomatically
     */
     public function getConnectAutomatically()
     {
@@ -57,7 +57,7 @@ class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration
     * Gets the connectWhenNetworkNameIsHidden
     * When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
     *
-    * @return bool|null The connectWhenNetworkNameIsHidden
+    * @return bool The connectWhenNetworkNameIsHidden
     */
     public function getConnectWhenNetworkNameIsHidden()
     {
@@ -86,7 +86,7 @@ class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration
     * Gets the networkName
     * Network Name
     *
-    * @return string|null The networkName
+    * @return string The networkName
     */
     public function getNetworkName()
     {
@@ -115,7 +115,7 @@ class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration
     * Gets the ssid
     * This is the name of the Wi-Fi network that is broadcast to all devices.
     *
-    * @return string|null The ssid
+    * @return string The ssid
     */
     public function getSsid()
     {
@@ -144,12 +144,12 @@ class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration
     * Gets the wiFiSecurityType
     * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaEnterprise, wpa2Enterprise.
     *
-    * @return AndroidWiFiSecurityType|null The wiFiSecurityType
+    * @return AndroidWiFiSecurityType The wiFiSecurityType
     */
     public function getWiFiSecurityType()
     {
         if (array_key_exists("wiFiSecurityType", $this->_propDict)) {
-            if (is_a($this->_propDict["wiFiSecurityType"], "\Beta\Microsoft\Graph\Model\AndroidWiFiSecurityType") || is_null($this->_propDict["wiFiSecurityType"])) {
+            if (is_a($this->_propDict["wiFiSecurityType"], "\Beta\Microsoft\Graph\Model\AndroidWiFiSecurityType")) {
                 return $this->_propDict["wiFiSecurityType"];
             } else {
                 $this->_propDict["wiFiSecurityType"] = new AndroidWiFiSecurityType($this->_propDict["wiFiSecurityType"]);

@@ -29,7 +29,7 @@ class AttributeMappingFunctionSchema extends Entity
      * Gets the parameters
     * Collection of function parameters.
      *
-     * @return array|null The parameters
+     * @return array The parameters
      */
     public function getParameters()
     {
@@ -50,7 +50,7 @@ class AttributeMappingFunctionSchema extends Entity
     */
     public function setParameters($val)
     {
-        $this->_propDict["parameters"] = $val;
+		$this->_propDict["parameters"] = $val;
         return $this;
     }
     

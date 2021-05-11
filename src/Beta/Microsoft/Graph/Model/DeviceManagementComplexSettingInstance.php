@@ -29,7 +29,7 @@ class DeviceManagementComplexSettingInstance extends DeviceManagementSettingInst
      * Gets the value
     * The values that make up the complex setting
      *
-     * @return array|null The value
+     * @return array The value
      */
     public function getValue()
     {
@@ -50,7 +50,7 @@ class DeviceManagementComplexSettingInstance extends DeviceManagementSettingInst
     */
     public function setValue($val)
     {
-        $this->_propDict["value"] = $val;
+		$this->_propDict["value"] = $val;
         return $this;
     }
     

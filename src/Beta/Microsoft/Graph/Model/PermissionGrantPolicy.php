@@ -29,7 +29,7 @@ class PermissionGrantPolicy extends PolicyBase
      * Gets the excludes
     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
      *
-     * @return array|null The excludes
+     * @return array The excludes
      */
     public function getExcludes()
     {
@@ -50,7 +50,7 @@ class PermissionGrantPolicy extends PolicyBase
     */
     public function setExcludes($val)
     {
-        $this->_propDict["excludes"] = $val;
+		$this->_propDict["excludes"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class PermissionGrantPolicy extends PolicyBase
      * Gets the includes
     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
      *
-     * @return array|null The includes
+     * @return array The includes
      */
     public function getIncludes()
     {
@@ -80,7 +80,7 @@ class PermissionGrantPolicy extends PolicyBase
     */
     public function setIncludes($val)
     {
-        $this->_propDict["includes"] = $val;
+		$this->_propDict["includes"] = $val;
         return $this;
     }
     

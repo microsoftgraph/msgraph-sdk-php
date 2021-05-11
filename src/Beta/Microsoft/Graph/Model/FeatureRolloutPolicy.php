@@ -28,7 +28,7 @@ class FeatureRolloutPolicy extends Entity
     * Gets the description
     * A description for this feature rollout policy.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class FeatureRolloutPolicy extends Entity
     * Gets the displayName
     * The display name for this  feature rollout policy.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,12 +86,12 @@ class FeatureRolloutPolicy extends Entity
     * Gets the feature
     * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
     *
-    * @return StagedFeatureName|null The feature
+    * @return StagedFeatureName The feature
     */
     public function getFeature()
     {
         if (array_key_exists("feature", $this->_propDict)) {
-            if (is_a($this->_propDict["feature"], "\Beta\Microsoft\Graph\Model\StagedFeatureName") || is_null($this->_propDict["feature"])) {
+            if (is_a($this->_propDict["feature"], "\Beta\Microsoft\Graph\Model\StagedFeatureName")) {
                 return $this->_propDict["feature"];
             } else {
                 $this->_propDict["feature"] = new StagedFeatureName($this->_propDict["feature"]);
@@ -119,7 +119,7 @@ class FeatureRolloutPolicy extends Entity
     * Gets the isAppliedToOrganization
     * Indicates whether this feature rollout policy should be applied to the entire organization.
     *
-    * @return bool|null The isAppliedToOrganization
+    * @return bool The isAppliedToOrganization
     */
     public function getIsAppliedToOrganization()
     {
@@ -148,7 +148,7 @@ class FeatureRolloutPolicy extends Entity
     * Gets the isEnabled
     * Indicates whether the feature rollout is enabled.
     *
-    * @return bool|null The isEnabled
+    * @return bool The isEnabled
     */
     public function getIsEnabled()
     {
@@ -178,7 +178,7 @@ class FeatureRolloutPolicy extends Entity
      * Gets the appliesTo
     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
      *
-     * @return array|null The appliesTo
+     * @return array The appliesTo
      */
     public function getAppliesTo()
     {
@@ -199,7 +199,7 @@ class FeatureRolloutPolicy extends Entity
     */
     public function setAppliesTo($val)
     {
-        $this->_propDict["appliesTo"] = $val;
+		$this->_propDict["appliesTo"] = $val;
         return $this;
     }
     

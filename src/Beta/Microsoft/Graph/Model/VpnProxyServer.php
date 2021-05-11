@@ -27,7 +27,7 @@ class VpnProxyServer extends Entity
     * Gets the address
     * Address.
     *
-    * @return string|null The address
+    * @return string The address
     */
     public function getAddress()
     {
@@ -55,7 +55,7 @@ class VpnProxyServer extends Entity
     * Gets the automaticConfigurationScriptUrl
     * Proxy's automatic configuration script url.
     *
-    * @return string|null The automaticConfigurationScriptUrl
+    * @return string The automaticConfigurationScriptUrl
     */
     public function getAutomaticConfigurationScriptUrl()
     {
@@ -83,7 +83,7 @@ class VpnProxyServer extends Entity
     * Gets the port
     * Port. Valid values 0 to 65535
     *
-    * @return int|null The port
+    * @return int The port
     */
     public function getPort()
     {

@@ -28,7 +28,7 @@ class ItemEmail extends ItemFacet
     * Gets the address
     * The email address itself.
     *
-    * @return string|null The address
+    * @return string The address
     */
     public function getAddress()
     {
@@ -57,7 +57,7 @@ class ItemEmail extends ItemFacet
     * Gets the displayName
     * The name or label a user has associated with a particular email address.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,12 +86,12 @@ class ItemEmail extends ItemFacet
     * Gets the type
     * The type of email address. Possible values are: unknown, work, personal, main, other.
     *
-    * @return EmailType|null The type
+    * @return EmailType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\EmailType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\EmailType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new EmailType($this->_propDict["type"]);

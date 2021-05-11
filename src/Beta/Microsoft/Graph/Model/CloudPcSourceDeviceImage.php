@@ -27,7 +27,7 @@ class CloudPcSourceDeviceImage extends Entity
     * Gets the displayName
     * The display name for the source image.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class CloudPcSourceDeviceImage extends Entity
     * Gets the id
     * The ID of the source image.
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {

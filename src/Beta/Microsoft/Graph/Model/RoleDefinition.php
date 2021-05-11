@@ -28,7 +28,7 @@ class RoleDefinition extends Entity
     * Gets the description
     * Description of the Role definition.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class RoleDefinition extends Entity
     * Gets the displayName
     * Display Name of the Role definition.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class RoleDefinition extends Entity
     * Gets the isBuiltIn
     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
     *
-    * @return bool|null The isBuiltIn
+    * @return bool The isBuiltIn
     */
     public function getIsBuiltIn()
     {
@@ -115,7 +115,7 @@ class RoleDefinition extends Entity
     * Gets the isBuiltInRoleDefinition
     * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
     *
-    * @return bool|null The isBuiltInRoleDefinition
+    * @return bool The isBuiltInRoleDefinition
     */
     public function getIsBuiltInRoleDefinition()
     {
@@ -145,7 +145,7 @@ class RoleDefinition extends Entity
      * Gets the permissions
     * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      *
-     * @return array|null The permissions
+     * @return array The permissions
      */
     public function getPermissions()
     {
@@ -166,7 +166,7 @@ class RoleDefinition extends Entity
     */
     public function setPermissions($val)
     {
-        $this->_propDict["permissions"] = $val;
+		$this->_propDict["permissions"] = $val;
         return $this;
     }
     
@@ -175,7 +175,7 @@ class RoleDefinition extends Entity
      * Gets the rolePermissions
     * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      *
-     * @return array|null The rolePermissions
+     * @return array The rolePermissions
      */
     public function getRolePermissions()
     {
@@ -196,7 +196,7 @@ class RoleDefinition extends Entity
     */
     public function setRolePermissions($val)
     {
-        $this->_propDict["rolePermissions"] = $val;
+		$this->_propDict["rolePermissions"] = $val;
         return $this;
     }
     
@@ -204,7 +204,7 @@ class RoleDefinition extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @return string|null The roleScopeTagIds
+    * @return string The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -234,7 +234,7 @@ class RoleDefinition extends Entity
      * Gets the roleAssignments
     * List of Role assignments for this role definition.
      *
-     * @return array|null The roleAssignments
+     * @return array The roleAssignments
      */
     public function getRoleAssignments()
     {
@@ -255,7 +255,7 @@ class RoleDefinition extends Entity
     */
     public function setRoleAssignments($val)
     {
-        $this->_propDict["roleAssignments"] = $val;
+		$this->_propDict["roleAssignments"] = $val;
         return $this;
     }
     

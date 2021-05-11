@@ -28,7 +28,7 @@ class GroupPolicyCategory extends Entity
     * Gets the displayName
     * The string id of the category's display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class GroupPolicyCategory extends Entity
     * Gets the isRoot
     * Defines if the category is a root category
     *
-    * @return bool|null The isRoot
+    * @return bool The isRoot
     */
     public function getIsRoot()
     {
@@ -86,12 +86,12 @@ class GroupPolicyCategory extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -120,7 +120,7 @@ class GroupPolicyCategory extends Entity
      * Gets the children
     * The children categories
      *
-     * @return array|null The children
+     * @return array The children
      */
     public function getChildren()
     {
@@ -141,7 +141,7 @@ class GroupPolicyCategory extends Entity
     */
     public function setChildren($val)
     {
-        $this->_propDict["children"] = $val;
+		$this->_propDict["children"] = $val;
         return $this;
     }
     
@@ -149,12 +149,12 @@ class GroupPolicyCategory extends Entity
     * Gets the definitionFile
     * The id of the definition file the category came from
     *
-    * @return GroupPolicyDefinitionFile|null The definitionFile
+    * @return GroupPolicyDefinitionFile The definitionFile
     */
     public function getDefinitionFile()
     {
         if (array_key_exists("definitionFile", $this->_propDict)) {
-            if (is_a($this->_propDict["definitionFile"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile") || is_null($this->_propDict["definitionFile"])) {
+            if (is_a($this->_propDict["definitionFile"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinitionFile")) {
                 return $this->_propDict["definitionFile"];
             } else {
                 $this->_propDict["definitionFile"] = new GroupPolicyDefinitionFile($this->_propDict["definitionFile"]);
@@ -183,7 +183,7 @@ class GroupPolicyCategory extends Entity
      * Gets the definitions
     * The immediate GroupPolicyDefinition children of the category
      *
-     * @return array|null The definitions
+     * @return array The definitions
      */
     public function getDefinitions()
     {
@@ -204,7 +204,7 @@ class GroupPolicyCategory extends Entity
     */
     public function setDefinitions($val)
     {
-        $this->_propDict["definitions"] = $val;
+		$this->_propDict["definitions"] = $val;
         return $this;
     }
     
@@ -212,12 +212,12 @@ class GroupPolicyCategory extends Entity
     * Gets the parent
     * The parent category
     *
-    * @return GroupPolicyCategory|null The parent
+    * @return GroupPolicyCategory The parent
     */
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\GroupPolicyCategory") || is_null($this->_propDict["parent"])) {
+            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\GroupPolicyCategory")) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new GroupPolicyCategory($this->_propDict["parent"]);

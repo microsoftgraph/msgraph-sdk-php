@@ -27,7 +27,7 @@ class DocumentCommentReply extends Entity
     /**
     * Gets the content
     *
-    * @return string|null The content
+    * @return string The content
     */
     public function getContent()
     {
@@ -54,7 +54,7 @@ class DocumentCommentReply extends Entity
     /**
     * Gets the location
     *
-    * @return string|null The location
+    * @return string The location
     */
     public function getLocation()
     {

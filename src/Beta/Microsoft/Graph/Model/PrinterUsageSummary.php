@@ -26,7 +26,7 @@ class PrinterUsageSummary extends Entity
     /**
     * Gets the completedJobCount
     *
-    * @return int|null The completedJobCount
+    * @return int The completedJobCount
     */
     public function getCompletedJobCount()
     {
@@ -52,7 +52,7 @@ class PrinterUsageSummary extends Entity
     /**
     * Gets the incompleteJobCount
     *
-    * @return int|null The incompleteJobCount
+    * @return int The incompleteJobCount
     */
     public function getIncompleteJobCount()
     {
@@ -78,7 +78,7 @@ class PrinterUsageSummary extends Entity
     /**
     * Gets the printerDisplayName
     *
-    * @return string|null The printerDisplayName
+    * @return string The printerDisplayName
     */
     public function getPrinterDisplayName()
     {
@@ -104,7 +104,7 @@ class PrinterUsageSummary extends Entity
     /**
     * Gets the printerId
     *
-    * @return string|null The printerId
+    * @return string The printerId
     */
     public function getPrinterId()
     {
@@ -130,7 +130,7 @@ class PrinterUsageSummary extends Entity
     /**
     * Gets the printerManufacturer
     *
-    * @return string|null The printerManufacturer
+    * @return string The printerManufacturer
     */
     public function getPrinterManufacturer()
     {
@@ -156,7 +156,7 @@ class PrinterUsageSummary extends Entity
     /**
     * Gets the printerModel
     *
-    * @return string|null The printerModel
+    * @return string The printerModel
     */
     public function getPrinterModel()
     {
@@ -183,12 +183,12 @@ class PrinterUsageSummary extends Entity
     /**
     * Gets the printer
     *
-    * @return DirectoryObject|null The printer
+    * @return DirectoryObject The printer
     */
     public function getPrinter()
     {
         if (array_key_exists("printer", $this->_propDict)) {
-            if (is_a($this->_propDict["printer"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["printer"])) {
+            if (is_a($this->_propDict["printer"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["printer"];
             } else {
                 $this->_propDict["printer"] = new DirectoryObject($this->_propDict["printer"]);

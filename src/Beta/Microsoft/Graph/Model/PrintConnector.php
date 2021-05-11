@@ -28,7 +28,7 @@ class PrintConnector extends Entity
     * Gets the appVersion
     * The connector's version.
     *
-    * @return string|null The appVersion
+    * @return string The appVersion
     */
     public function getAppVersion()
     {
@@ -57,12 +57,12 @@ class PrintConnector extends Entity
     * Gets the deviceHealth
     * The connector's device health.
     *
-    * @return DeviceHealth|null The deviceHealth
+    * @return DeviceHealth The deviceHealth
     */
     public function getDeviceHealth()
     {
         if (array_key_exists("deviceHealth", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceHealth"], "\Beta\Microsoft\Graph\Model\DeviceHealth") || is_null($this->_propDict["deviceHealth"])) {
+            if (is_a($this->_propDict["deviceHealth"], "\Beta\Microsoft\Graph\Model\DeviceHealth")) {
                 return $this->_propDict["deviceHealth"];
             } else {
                 $this->_propDict["deviceHealth"] = new DeviceHealth($this->_propDict["deviceHealth"]);
@@ -90,7 +90,7 @@ class PrintConnector extends Entity
     * Gets the displayName
     * The name of the connector.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,7 +119,7 @@ class PrintConnector extends Entity
     * Gets the fullyQualifiedDomainName
     * The connector machine's hostname.
     *
-    * @return string|null The fullyQualifiedDomainName
+    * @return string The fullyQualifiedDomainName
     */
     public function getFullyQualifiedDomainName()
     {
@@ -148,12 +148,12 @@ class PrintConnector extends Entity
     * Gets the location
     * The physical and/or organizational location of the connector.
     *
-    * @return PrinterLocation|null The location
+    * @return PrinterLocation The location
     */
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Beta\Microsoft\Graph\Model\PrinterLocation") || is_null($this->_propDict["location"])) {
+            if (is_a($this->_propDict["location"], "\Beta\Microsoft\Graph\Model\PrinterLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new PrinterLocation($this->_propDict["location"]);
@@ -180,7 +180,7 @@ class PrintConnector extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -208,7 +208,7 @@ class PrintConnector extends Entity
     * Gets the operatingSystem
     * The connector machine's operating system version.
     *
-    * @return string|null The operatingSystem
+    * @return string The operatingSystem
     */
     public function getOperatingSystem()
     {
@@ -237,12 +237,12 @@ class PrintConnector extends Entity
     * Gets the registeredDateTime
     * The DateTimeOffset when the connector was registered.
     *
-    * @return \DateTime|null The registeredDateTime
+    * @return \DateTime The registeredDateTime
     */
     public function getRegisteredDateTime()
     {
         if (array_key_exists("registeredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["registeredDateTime"], "\DateTime") || is_null($this->_propDict["registeredDateTime"])) {
+            if (is_a($this->_propDict["registeredDateTime"], "\DateTime")) {
                 return $this->_propDict["registeredDateTime"];
             } else {
                 $this->_propDict["registeredDateTime"] = new \DateTime($this->_propDict["registeredDateTime"]);
