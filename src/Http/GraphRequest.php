@@ -101,6 +101,12 @@ class GraphRequest
     */
     protected $proxyPort;
     /**
+     * Whether SSL verification should be used for proxy requests
+     *
+     * @var bool
+     */
+    protected $proxyVerifySSL;
+    /**
     * Request options to decide if Guzzle Client should throw exceptions when http code is 4xx or 5xx
     *
     * @var bool
