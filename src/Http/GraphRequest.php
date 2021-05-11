@@ -110,15 +110,16 @@ class GraphRequest
     /**
     * Constructs a new Graph Request object
     *
-    * @param string $requestType The HTTP method to use, e.g. "GET" or "POST"
-    * @param string $endpoint    The Graph endpoint to call
-    * @param string $accessToken A valid access token to validate the Graph call
-    * @param string $baseUrl     The base URL to call
-    * @param string $apiVersion  The API version to use
-    * @param string $proxyPort   The url where to proxy through
+    * @param string $requestType  The HTTP method to use, e.g. "GET" or "POST"
+    * @param string $endpoint     The Graph endpoint to call
+    * @param string $accessToken  A valid access token to validate the Graph call
+    * @param string $baseUrl      The base URL to call
+    * @param string $apiVersion   The API version to use
+    * @param string $proxyPort    The url where to proxy through
+    * @param bool $proxyVerifySSL Whether the proxy requests should perform SSL verification
     * @throws GraphException when no access token is provided
     */
-    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null)
+    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null, $proxyVerifySSL = false)
     {
         $this->requestType = $requestType;
         $this->endpoint = $endpoint;
@@ -134,6 +135,7 @@ class GraphRequest
         $this->timeout = 100;
         $this->headers = $this->_getDefaultHeaders();
         $this->proxyPort = $proxyPort;
+        $this->proxyVerifySSL = $proxyVerifySSL;
     }
 
     /**
@@ -535,7 +537,7 @@ class GraphRequest
             'headers' => $this->headers
         ];
         if ($this->proxyPort !== null) {
-            $clientSettings['verify'] = false;
+            $clientSettings['verify'] = $this->proxyVerifySSL;
             $clientSettings['proxy'] = $this->proxyPort;
         }
         $client = new Client($clientSettings);
