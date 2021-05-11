@@ -28,7 +28,7 @@ class SingleValueLegacyExtendedProperty extends Entity
     * Gets the value
     * A property value.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

@@ -28,12 +28,12 @@ class ManagedMobileApp extends Entity
     * Gets the mobileAppIdentifier
     * The identifier for an app with it's operating system type.
     *
-    * @return MobileAppIdentifier|null The mobileAppIdentifier
+    * @return MobileAppIdentifier The mobileAppIdentifier
     */
     public function getMobileAppIdentifier()
     {
         if (array_key_exists("mobileAppIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppIdentifier"], "\Microsoft\Graph\Model\MobileAppIdentifier") || is_null($this->_propDict["mobileAppIdentifier"])) {
+            if (is_a($this->_propDict["mobileAppIdentifier"], "\Microsoft\Graph\Model\MobileAppIdentifier")) {
                 return $this->_propDict["mobileAppIdentifier"];
             } else {
                 $this->_propDict["mobileAppIdentifier"] = new MobileAppIdentifier($this->_propDict["mobileAppIdentifier"]);
@@ -61,7 +61,7 @@ class ManagedMobileApp extends Entity
     * Gets the version
     * Version of the entity.
     *
-    * @return string|null The version
+    * @return string The version
     */
     public function getVersion()
     {

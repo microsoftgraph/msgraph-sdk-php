@@ -28,7 +28,7 @@ class AgreementFile extends AgreementFileProperties
      /** 
      * Gets the localizations
      *
-     * @return array|null The localizations
+     * @return array The localizations
      */
     public function getLocalizations()
     {
@@ -48,7 +48,7 @@ class AgreementFile extends AgreementFileProperties
     */
     public function setLocalizations($val)
     {
-        $this->_propDict["localizations"] = $val;
+		$this->_propDict["localizations"] = $val;
         return $this;
     }
     

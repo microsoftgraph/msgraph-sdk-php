@@ -28,12 +28,12 @@ class MediaContentRatingAustralia extends Entity
     * Gets the movieRating
     * Movies rating selected for Australia. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove15, agesAbove18.
     *
-    * @return RatingAustraliaMoviesType|null The movieRating
+    * @return RatingAustraliaMoviesType The movieRating
     */
     public function getMovieRating()
     {
         if (array_key_exists("movieRating", $this->_propDict)) {
-            if (is_a($this->_propDict["movieRating"], "\Microsoft\Graph\Model\RatingAustraliaMoviesType") || is_null($this->_propDict["movieRating"])) {
+            if (is_a($this->_propDict["movieRating"], "\Microsoft\Graph\Model\RatingAustraliaMoviesType")) {
                 return $this->_propDict["movieRating"];
             } else {
                 $this->_propDict["movieRating"] = new RatingAustraliaMoviesType($this->_propDict["movieRating"]);
@@ -61,12 +61,12 @@ class MediaContentRatingAustralia extends Entity
     * Gets the tvRating
     * TV rating selected for Australia. Possible values are: allAllowed, allBlocked, preschoolers, children, general, parentalGuidance, mature, agesAbove15, agesAbove15AdultViolence.
     *
-    * @return RatingAustraliaTelevisionType|null The tvRating
+    * @return RatingAustraliaTelevisionType The tvRating
     */
     public function getTvRating()
     {
         if (array_key_exists("tvRating", $this->_propDict)) {
-            if (is_a($this->_propDict["tvRating"], "\Microsoft\Graph\Model\RatingAustraliaTelevisionType") || is_null($this->_propDict["tvRating"])) {
+            if (is_a($this->_propDict["tvRating"], "\Microsoft\Graph\Model\RatingAustraliaTelevisionType")) {
                 return $this->_propDict["tvRating"];
             } else {
                 $this->_propDict["tvRating"] = new RatingAustraliaTelevisionType($this->_propDict["tvRating"]);

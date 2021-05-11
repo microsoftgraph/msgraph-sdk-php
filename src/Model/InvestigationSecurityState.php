@@ -26,7 +26,7 @@ class InvestigationSecurityState extends Entity
     /**
     * Gets the name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -52,7 +52,7 @@ class InvestigationSecurityState extends Entity
     /**
     * Gets the status
     *
-    * @return string|null The status
+    * @return string The status
     */
     public function getStatus()
     {

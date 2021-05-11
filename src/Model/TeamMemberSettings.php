@@ -27,7 +27,7 @@ class TeamMemberSettings extends Entity
     * Gets the allowAddRemoveApps
     * If set to true, members can add and remove apps.
     *
-    * @return bool|null The allowAddRemoveApps
+    * @return bool The allowAddRemoveApps
     */
     public function getAllowAddRemoveApps()
     {
@@ -55,7 +55,7 @@ class TeamMemberSettings extends Entity
     * Gets the allowCreatePrivateChannels
     * If set to true, members can add and update private channels.
     *
-    * @return bool|null The allowCreatePrivateChannels
+    * @return bool The allowCreatePrivateChannels
     */
     public function getAllowCreatePrivateChannels()
     {
@@ -81,9 +81,9 @@ class TeamMemberSettings extends Entity
     }
     /**
     * Gets the allowCreateUpdateChannels
-    * If set to true, members can add and update channels.
+    * If set to true, members can add and update any channels.
     *
-    * @return bool|null The allowCreateUpdateChannels
+    * @return bool The allowCreateUpdateChannels
     */
     public function getAllowCreateUpdateChannels()
     {
@@ -96,7 +96,7 @@ class TeamMemberSettings extends Entity
 
     /**
     * Sets the allowCreateUpdateChannels
-    * If set to true, members can add and update channels.
+    * If set to true, members can add and update any channels.
     *
     * @param bool $val The value of the allowCreateUpdateChannels
     *
@@ -111,7 +111,7 @@ class TeamMemberSettings extends Entity
     * Gets the allowCreateUpdateRemoveConnectors
     * If set to true, members can add, update, and remove connectors.
     *
-    * @return bool|null The allowCreateUpdateRemoveConnectors
+    * @return bool The allowCreateUpdateRemoveConnectors
     */
     public function getAllowCreateUpdateRemoveConnectors()
     {
@@ -139,7 +139,7 @@ class TeamMemberSettings extends Entity
     * Gets the allowCreateUpdateRemoveTabs
     * If set to true, members can add, update, and remove tabs.
     *
-    * @return bool|null The allowCreateUpdateRemoveTabs
+    * @return bool The allowCreateUpdateRemoveTabs
     */
     public function getAllowCreateUpdateRemoveTabs()
     {
@@ -167,7 +167,7 @@ class TeamMemberSettings extends Entity
     * Gets the allowDeleteChannels
     * If set to true, members can delete channels.
     *
-    * @return bool|null The allowDeleteChannels
+    * @return bool The allowDeleteChannels
     */
     public function getAllowDeleteChannels()
     {

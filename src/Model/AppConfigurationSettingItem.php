@@ -27,7 +27,7 @@ class AppConfigurationSettingItem extends Entity
     * Gets the appConfigKey
     * app configuration key.
     *
-    * @return string|null The appConfigKey
+    * @return string The appConfigKey
     */
     public function getAppConfigKey()
     {
@@ -56,12 +56,12 @@ class AppConfigurationSettingItem extends Entity
     * Gets the appConfigKeyType
     * app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType.
     *
-    * @return MdmAppConfigKeyType|null The appConfigKeyType
+    * @return MdmAppConfigKeyType The appConfigKeyType
     */
     public function getAppConfigKeyType()
     {
         if (array_key_exists("appConfigKeyType", $this->_propDict)) {
-            if (is_a($this->_propDict["appConfigKeyType"], "\Microsoft\Graph\Model\MdmAppConfigKeyType") || is_null($this->_propDict["appConfigKeyType"])) {
+            if (is_a($this->_propDict["appConfigKeyType"], "\Microsoft\Graph\Model\MdmAppConfigKeyType")) {
                 return $this->_propDict["appConfigKeyType"];
             } else {
                 $this->_propDict["appConfigKeyType"] = new MdmAppConfigKeyType($this->_propDict["appConfigKeyType"]);
@@ -88,7 +88,7 @@ class AppConfigurationSettingItem extends Entity
     * Gets the appConfigKeyValue
     * app configuration key value.
     *
-    * @return string|null The appConfigKeyValue
+    * @return string The appConfigKeyValue
     */
     public function getAppConfigKeyValue()
     {

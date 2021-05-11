@@ -27,7 +27,7 @@ class SpecialFolder extends Entity
     * Gets the name
     * The unique identifier for this item in the /drive/special collection
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {

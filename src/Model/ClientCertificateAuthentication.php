@@ -37,12 +37,12 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
     * Gets the certificateList
     * The list of certificates uploaded for this API connector.
     *
-    * @return Pkcs12CertificateInformation|null The certificateList
+    * @return Pkcs12CertificateInformation The certificateList
     */
     public function getCertificateList()
     {
         if (array_key_exists("certificateList", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateList"], "\Microsoft\Graph\Model\Pkcs12CertificateInformation") || is_null($this->_propDict["certificateList"])) {
+            if (is_a($this->_propDict["certificateList"], "\Microsoft\Graph\Model\Pkcs12CertificateInformation")) {
                 return $this->_propDict["certificateList"];
             } else {
                 $this->_propDict["certificateList"] = new Pkcs12CertificateInformation($this->_propDict["certificateList"]);

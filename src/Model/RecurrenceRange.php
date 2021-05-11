@@ -28,12 +28,12 @@ class RecurrenceRange extends Entity
     * Gets the endDate
     * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
     *
-    * @return \DateTime|null The endDate
+    * @return \DateTime The endDate
     */
     public function getEndDate()
     {
         if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "\DateTime") || is_null($this->_propDict["endDate"])) {
+            if (is_a($this->_propDict["endDate"], "\DateTime")) {
                 return $this->_propDict["endDate"];
             } else {
                 $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
@@ -60,7 +60,7 @@ class RecurrenceRange extends Entity
     * Gets the numberOfOccurrences
     * The number of times to repeat the event. Required and must be positive if type is numbered.
     *
-    * @return int|null The numberOfOccurrences
+    * @return int The numberOfOccurrences
     */
     public function getNumberOfOccurrences()
     {
@@ -88,7 +88,7 @@ class RecurrenceRange extends Entity
     * Gets the recurrenceTimeZone
     * Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
     *
-    * @return string|null The recurrenceTimeZone
+    * @return string The recurrenceTimeZone
     */
     public function getRecurrenceTimeZone()
     {
@@ -117,12 +117,12 @@ class RecurrenceRange extends Entity
     * Gets the startDate
     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
     *
-    * @return \DateTime|null The startDate
+    * @return \DateTime The startDate
     */
     public function getStartDate()
     {
         if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "\DateTime") || is_null($this->_propDict["startDate"])) {
+            if (is_a($this->_propDict["startDate"], "\DateTime")) {
                 return $this->_propDict["startDate"];
             } else {
                 $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
@@ -148,14 +148,14 @@ class RecurrenceRange extends Entity
 
     /**
     * Gets the type
-    * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
+    * The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
     *
-    * @return RecurrenceRangeType|null The type
+    * @return RecurrenceRangeType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\RecurrenceRangeType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\RecurrenceRangeType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new RecurrenceRangeType($this->_propDict["type"]);
@@ -167,7 +167,7 @@ class RecurrenceRange extends Entity
 
     /**
     * Sets the type
-    * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
+    * The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
     *
     * @param RecurrenceRangeType $val The value to assign to the type
     *

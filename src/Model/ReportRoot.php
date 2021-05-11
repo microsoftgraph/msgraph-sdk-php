@@ -28,7 +28,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the dailyPrintUsageByPrinter
      *
-     * @return array|null The dailyPrintUsageByPrinter
+     * @return array The dailyPrintUsageByPrinter
      */
     public function getDailyPrintUsageByPrinter()
     {
@@ -48,7 +48,7 @@ class ReportRoot extends Entity
     */
     public function setDailyPrintUsageByPrinter($val)
     {
-        $this->_propDict["dailyPrintUsageByPrinter"] = $val;
+		$this->_propDict["dailyPrintUsageByPrinter"] = $val;
         return $this;
     }
     
@@ -56,7 +56,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the dailyPrintUsageByUser
      *
-     * @return array|null The dailyPrintUsageByUser
+     * @return array The dailyPrintUsageByUser
      */
     public function getDailyPrintUsageByUser()
     {
@@ -76,7 +76,7 @@ class ReportRoot extends Entity
     */
     public function setDailyPrintUsageByUser($val)
     {
-        $this->_propDict["dailyPrintUsageByUser"] = $val;
+		$this->_propDict["dailyPrintUsageByUser"] = $val;
         return $this;
     }
     
@@ -84,7 +84,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the monthlyPrintUsageByPrinter
      *
-     * @return array|null The monthlyPrintUsageByPrinter
+     * @return array The monthlyPrintUsageByPrinter
      */
     public function getMonthlyPrintUsageByPrinter()
     {
@@ -104,7 +104,7 @@ class ReportRoot extends Entity
     */
     public function setMonthlyPrintUsageByPrinter($val)
     {
-        $this->_propDict["monthlyPrintUsageByPrinter"] = $val;
+		$this->_propDict["monthlyPrintUsageByPrinter"] = $val;
         return $this;
     }
     
@@ -112,7 +112,7 @@ class ReportRoot extends Entity
      /** 
      * Gets the monthlyPrintUsageByUser
      *
-     * @return array|null The monthlyPrintUsageByUser
+     * @return array The monthlyPrintUsageByUser
      */
     public function getMonthlyPrintUsageByUser()
     {
@@ -132,7 +132,7 @@ class ReportRoot extends Entity
     */
     public function setMonthlyPrintUsageByUser($val)
     {
-        $this->_propDict["monthlyPrintUsageByUser"] = $val;
+		$this->_propDict["monthlyPrintUsageByUser"] = $val;
         return $this;
     }
     

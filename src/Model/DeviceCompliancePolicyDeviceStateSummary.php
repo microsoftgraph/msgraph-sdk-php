@@ -28,7 +28,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the compliantDeviceCount
     * Number of compliant devices
     *
-    * @return int|null The compliantDeviceCount
+    * @return int The compliantDeviceCount
     */
     public function getCompliantDeviceCount()
     {
@@ -57,7 +57,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the configManagerCount
     * Number of devices that have compliance managed by System Center Configuration Manager
     *
-    * @return int|null The configManagerCount
+    * @return int The configManagerCount
     */
     public function getConfigManagerCount()
     {
@@ -86,7 +86,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the conflictDeviceCount
     * Number of conflict devices
     *
-    * @return int|null The conflictDeviceCount
+    * @return int The conflictDeviceCount
     */
     public function getConflictDeviceCount()
     {
@@ -115,7 +115,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the errorDeviceCount
     * Number of error devices
     *
-    * @return int|null The errorDeviceCount
+    * @return int The errorDeviceCount
     */
     public function getErrorDeviceCount()
     {
@@ -144,7 +144,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the inGracePeriodCount
     * Number of devices that are in grace period
     *
-    * @return int|null The inGracePeriodCount
+    * @return int The inGracePeriodCount
     */
     public function getInGracePeriodCount()
     {
@@ -173,7 +173,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the nonCompliantDeviceCount
     * Number of NonCompliant devices
     *
-    * @return int|null The nonCompliantDeviceCount
+    * @return int The nonCompliantDeviceCount
     */
     public function getNonCompliantDeviceCount()
     {
@@ -202,7 +202,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the notApplicableDeviceCount
     * Number of not applicable devices
     *
-    * @return int|null The notApplicableDeviceCount
+    * @return int The notApplicableDeviceCount
     */
     public function getNotApplicableDeviceCount()
     {
@@ -231,7 +231,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the remediatedDeviceCount
     * Number of remediated devices
     *
-    * @return int|null The remediatedDeviceCount
+    * @return int The remediatedDeviceCount
     */
     public function getRemediatedDeviceCount()
     {
@@ -260,7 +260,7 @@ class DeviceCompliancePolicyDeviceStateSummary extends Entity
     * Gets the unknownDeviceCount
     * Number of unknown devices
     *
-    * @return int|null The unknownDeviceCount
+    * @return int The unknownDeviceCount
     */
     public function getUnknownDeviceCount()
     {

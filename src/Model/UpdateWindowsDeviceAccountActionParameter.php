@@ -27,7 +27,7 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     * Gets the calendarSyncEnabled
     * Not yet documented
     *
-    * @return bool|null The calendarSyncEnabled
+    * @return bool The calendarSyncEnabled
     */
     public function getCalendarSyncEnabled()
     {
@@ -56,12 +56,12 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     * Gets the deviceAccount
     * Not yet documented
     *
-    * @return WindowsDeviceAccount|null The deviceAccount
+    * @return WindowsDeviceAccount The deviceAccount
     */
     public function getDeviceAccount()
     {
         if (array_key_exists("deviceAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceAccount"], "\Microsoft\Graph\Model\WindowsDeviceAccount") || is_null($this->_propDict["deviceAccount"])) {
+            if (is_a($this->_propDict["deviceAccount"], "\Microsoft\Graph\Model\WindowsDeviceAccount")) {
                 return $this->_propDict["deviceAccount"];
             } else {
                 $this->_propDict["deviceAccount"] = new WindowsDeviceAccount($this->_propDict["deviceAccount"]);
@@ -88,7 +88,7 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     * Gets the deviceAccountEmail
     * Not yet documented
     *
-    * @return string|null The deviceAccountEmail
+    * @return string The deviceAccountEmail
     */
     public function getDeviceAccountEmail()
     {
@@ -116,7 +116,7 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     * Gets the exchangeServer
     * Not yet documented
     *
-    * @return string|null The exchangeServer
+    * @return string The exchangeServer
     */
     public function getExchangeServer()
     {
@@ -144,7 +144,7 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     * Gets the passwordRotationEnabled
     * Not yet documented
     *
-    * @return bool|null The passwordRotationEnabled
+    * @return bool The passwordRotationEnabled
     */
     public function getPasswordRotationEnabled()
     {
@@ -172,7 +172,7 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     * Gets the sessionInitiationProtocalAddress
     * Not yet documented
     *
-    * @return string|null The sessionInitiationProtocalAddress
+    * @return string The sessionInitiationProtocalAddress
     */
     public function getSessionInitiationProtocalAddress()
     {

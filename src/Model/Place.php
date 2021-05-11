@@ -28,12 +28,12 @@ class Place extends Entity
     * Gets the address
     * The street address of the place.
     *
-    * @return PhysicalAddress|null The address
+    * @return PhysicalAddress The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "\Microsoft\Graph\Model\PhysicalAddress") || is_null($this->_propDict["address"])) {
+            if (is_a($this->_propDict["address"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -61,7 +61,7 @@ class Place extends Entity
     * Gets the displayName
     * The name associated with the place.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -90,12 +90,12 @@ class Place extends Entity
     * Gets the geoCoordinates
     * Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
     *
-    * @return OutlookGeoCoordinates|null The geoCoordinates
+    * @return OutlookGeoCoordinates The geoCoordinates
     */
     public function getGeoCoordinates()
     {
         if (array_key_exists("geoCoordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["geoCoordinates"], "\Microsoft\Graph\Model\OutlookGeoCoordinates") || is_null($this->_propDict["geoCoordinates"])) {
+            if (is_a($this->_propDict["geoCoordinates"], "\Microsoft\Graph\Model\OutlookGeoCoordinates")) {
                 return $this->_propDict["geoCoordinates"];
             } else {
                 $this->_propDict["geoCoordinates"] = new OutlookGeoCoordinates($this->_propDict["geoCoordinates"]);
@@ -123,7 +123,7 @@ class Place extends Entity
     * Gets the phone
     * The phone number of the place.
     *
-    * @return string|null The phone
+    * @return string The phone
     */
     public function getPhone()
     {

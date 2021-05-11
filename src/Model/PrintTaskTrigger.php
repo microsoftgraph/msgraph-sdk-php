@@ -28,12 +28,12 @@ class PrintTaskTrigger extends Entity
     * Gets the event
     * The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
     *
-    * @return PrintEvent|null The event
+    * @return PrintEvent The event
     */
     public function getEvent()
     {
         if (array_key_exists("event", $this->_propDict)) {
-            if (is_a($this->_propDict["event"], "\Microsoft\Graph\Model\PrintEvent") || is_null($this->_propDict["event"])) {
+            if (is_a($this->_propDict["event"], "\Microsoft\Graph\Model\PrintEvent")) {
                 return $this->_propDict["event"];
             } else {
                 $this->_propDict["event"] = new PrintEvent($this->_propDict["event"]);
@@ -61,12 +61,12 @@ class PrintTaskTrigger extends Entity
     * Gets the definition
     * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
     *
-    * @return PrintTaskDefinition|null The definition
+    * @return PrintTaskDefinition The definition
     */
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "\Microsoft\Graph\Model\PrintTaskDefinition") || is_null($this->_propDict["definition"])) {
+            if (is_a($this->_propDict["definition"], "\Microsoft\Graph\Model\PrintTaskDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new PrintTaskDefinition($this->_propDict["definition"]);

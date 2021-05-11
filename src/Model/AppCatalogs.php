@@ -28,7 +28,7 @@ class AppCatalogs extends Entity
      /** 
      * Gets the teamsApps
      *
-     * @return array|null The teamsApps
+     * @return array The teamsApps
      */
     public function getTeamsApps()
     {
@@ -48,7 +48,7 @@ class AppCatalogs extends Entity
     */
     public function setTeamsApps($val)
     {
-        $this->_propDict["teamsApps"] = $val;
+		$this->_propDict["teamsApps"] = $val;
         return $this;
     }
     

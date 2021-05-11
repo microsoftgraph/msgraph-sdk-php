@@ -29,7 +29,7 @@ class Todo extends Entity
      * Gets the lists
     * The task lists in the users mailbox.
      *
-     * @return array|null The lists
+     * @return array The lists
      */
     public function getLists()
     {
@@ -50,7 +50,7 @@ class Todo extends Entity
     */
     public function setLists($val)
     {
-        $this->_propDict["lists"] = $val;
+		$this->_propDict["lists"] = $val;
         return $this;
     }
     

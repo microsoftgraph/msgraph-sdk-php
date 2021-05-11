@@ -26,14 +26,14 @@ class RolePermission extends Entity
 
     /**
     * Gets the resourceActions
-    * Actions
+    * Resource Actions each containing a set of allowed and not allowed permissions.
     *
-    * @return ResourceAction|null The resourceActions
+    * @return ResourceAction The resourceActions
     */
     public function getResourceActions()
     {
         if (array_key_exists("resourceActions", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceActions"], "\Microsoft\Graph\Model\ResourceAction") || is_null($this->_propDict["resourceActions"])) {
+            if (is_a($this->_propDict["resourceActions"], "\Microsoft\Graph\Model\ResourceAction")) {
                 return $this->_propDict["resourceActions"];
             } else {
                 $this->_propDict["resourceActions"] = new ResourceAction($this->_propDict["resourceActions"]);
@@ -45,7 +45,7 @@ class RolePermission extends Entity
 
     /**
     * Sets the resourceActions
-    * Actions
+    * Resource Actions each containing a set of allowed and not allowed permissions.
     *
     * @param ResourceAction $val The value to assign to the resourceActions
     *

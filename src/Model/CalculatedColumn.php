@@ -27,7 +27,7 @@ class CalculatedColumn extends Entity
     * Gets the format
     * For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
     *
-    * @return string|null The format
+    * @return string The format
     */
     public function getFormat()
     {
@@ -55,7 +55,7 @@ class CalculatedColumn extends Entity
     * Gets the formula
     * The formula used to compute the value for this column.
     *
-    * @return string|null The formula
+    * @return string The formula
     */
     public function getFormula()
     {
@@ -83,7 +83,7 @@ class CalculatedColumn extends Entity
     * Gets the outputType
     * The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
     *
-    * @return string|null The outputType
+    * @return string The outputType
     */
     public function getOutputType()
     {

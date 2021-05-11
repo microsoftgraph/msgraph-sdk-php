@@ -28,12 +28,12 @@ class CommsNotification extends Entity
     * Gets the changeType
     * Possible values are: created, updated, deleted.
     *
-    * @return ChangeType|null The changeType
+    * @return ChangeType The changeType
     */
     public function getChangeType()
     {
         if (array_key_exists("changeType", $this->_propDict)) {
-            if (is_a($this->_propDict["changeType"], "\Microsoft\Graph\Model\ChangeType") || is_null($this->_propDict["changeType"])) {
+            if (is_a($this->_propDict["changeType"], "\Microsoft\Graph\Model\ChangeType")) {
                 return $this->_propDict["changeType"];
             } else {
                 $this->_propDict["changeType"] = new ChangeType($this->_propDict["changeType"]);
@@ -60,7 +60,7 @@ class CommsNotification extends Entity
     * Gets the resourceUrl
     * URI of the resource that was changed.
     *
-    * @return string|null The resourceUrl
+    * @return string The resourceUrl
     */
     public function getResourceUrl()
     {

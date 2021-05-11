@@ -26,7 +26,7 @@ class UriClickSecurityState extends Entity
     /**
     * Gets the clickAction
     *
-    * @return string|null The clickAction
+    * @return string The clickAction
     */
     public function getClickAction()
     {
@@ -53,12 +53,12 @@ class UriClickSecurityState extends Entity
     /**
     * Gets the clickDateTime
     *
-    * @return \DateTime|null The clickDateTime
+    * @return \DateTime The clickDateTime
     */
     public function getClickDateTime()
     {
         if (array_key_exists("clickDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["clickDateTime"], "\DateTime") || is_null($this->_propDict["clickDateTime"])) {
+            if (is_a($this->_propDict["clickDateTime"], "\DateTime")) {
                 return $this->_propDict["clickDateTime"];
             } else {
                 $this->_propDict["clickDateTime"] = new \DateTime($this->_propDict["clickDateTime"]);
@@ -83,7 +83,7 @@ class UriClickSecurityState extends Entity
     /**
     * Gets the id
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -109,7 +109,7 @@ class UriClickSecurityState extends Entity
     /**
     * Gets the sourceId
     *
-    * @return string|null The sourceId
+    * @return string The sourceId
     */
     public function getSourceId()
     {
@@ -135,7 +135,7 @@ class UriClickSecurityState extends Entity
     /**
     * Gets the uriDomain
     *
-    * @return string|null The uriDomain
+    * @return string The uriDomain
     */
     public function getUriDomain()
     {
@@ -161,7 +161,7 @@ class UriClickSecurityState extends Entity
     /**
     * Gets the verdict
     *
-    * @return string|null The verdict
+    * @return string The verdict
     */
     public function getVerdict()
     {

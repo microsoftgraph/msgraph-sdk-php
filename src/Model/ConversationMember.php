@@ -28,7 +28,7 @@ class ConversationMember extends Entity
     * Gets the displayName
     * The display name of the user.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class ConversationMember extends Entity
     * Gets the roles
     * The roles for that user.
     *
-    * @return string|null The roles
+    * @return string The roles
     */
     public function getRoles()
     {
@@ -86,12 +86,12 @@ class ConversationMember extends Entity
     * Gets the visibleHistoryStartDateTime
     * The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
     *
-    * @return \DateTime|null The visibleHistoryStartDateTime
+    * @return \DateTime The visibleHistoryStartDateTime
     */
     public function getVisibleHistoryStartDateTime()
     {
         if (array_key_exists("visibleHistoryStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["visibleHistoryStartDateTime"], "\DateTime") || is_null($this->_propDict["visibleHistoryStartDateTime"])) {
+            if (is_a($this->_propDict["visibleHistoryStartDateTime"], "\DateTime")) {
                 return $this->_propDict["visibleHistoryStartDateTime"];
             } else {
                 $this->_propDict["visibleHistoryStartDateTime"] = new \DateTime($this->_propDict["visibleHistoryStartDateTime"]);

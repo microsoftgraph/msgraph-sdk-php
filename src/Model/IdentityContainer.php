@@ -27,12 +27,12 @@ class IdentityContainer extends Entity
     /**
     * Gets the conditionalAccess
     *
-    * @return ConditionalAccessRoot|null The conditionalAccess
+    * @return ConditionalAccessRoot The conditionalAccess
     */
     public function getConditionalAccess()
     {
         if (array_key_exists("conditionalAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccess"], "\Microsoft\Graph\Model\ConditionalAccessRoot") || is_null($this->_propDict["conditionalAccess"])) {
+            if (is_a($this->_propDict["conditionalAccess"], "\Microsoft\Graph\Model\ConditionalAccessRoot")) {
                 return $this->_propDict["conditionalAccess"];
             } else {
                 $this->_propDict["conditionalAccess"] = new ConditionalAccessRoot($this->_propDict["conditionalAccess"]);
@@ -59,7 +59,7 @@ class IdentityContainer extends Entity
      /** 
      * Gets the apiConnectors
      *
-     * @return array|null The apiConnectors
+     * @return array The apiConnectors
      */
     public function getApiConnectors()
     {
@@ -79,7 +79,7 @@ class IdentityContainer extends Entity
     */
     public function setApiConnectors($val)
     {
-        $this->_propDict["apiConnectors"] = $val;
+		$this->_propDict["apiConnectors"] = $val;
         return $this;
     }
     
@@ -87,7 +87,7 @@ class IdentityContainer extends Entity
      /** 
      * Gets the b2xUserFlows
      *
-     * @return array|null The b2xUserFlows
+     * @return array The b2xUserFlows
      */
     public function getB2xUserFlows()
     {
@@ -107,7 +107,7 @@ class IdentityContainer extends Entity
     */
     public function setB2xUserFlows($val)
     {
-        $this->_propDict["b2xUserFlows"] = $val;
+		$this->_propDict["b2xUserFlows"] = $val;
         return $this;
     }
     
@@ -115,7 +115,7 @@ class IdentityContainer extends Entity
      /** 
      * Gets the userFlowAttributes
      *
-     * @return array|null The userFlowAttributes
+     * @return array The userFlowAttributes
      */
     public function getUserFlowAttributes()
     {
@@ -135,7 +135,7 @@ class IdentityContainer extends Entity
     */
     public function setUserFlowAttributes($val)
     {
-        $this->_propDict["userFlowAttributes"] = $val;
+		$this->_propDict["userFlowAttributes"] = $val;
         return $this;
     }
     

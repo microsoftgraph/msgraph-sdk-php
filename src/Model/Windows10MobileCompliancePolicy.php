@@ -28,7 +28,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the bitLockerEnabled
     * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
     *
-    * @return bool|null The bitLockerEnabled
+    * @return bool The bitLockerEnabled
     */
     public function getBitLockerEnabled()
     {
@@ -57,7 +57,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the codeIntegrityEnabled
     * Require devices to be reported as healthy by Windows Device Health Attestation.
     *
-    * @return bool|null The codeIntegrityEnabled
+    * @return bool The codeIntegrityEnabled
     */
     public function getCodeIntegrityEnabled()
     {
@@ -86,7 +86,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the earlyLaunchAntiMalwareDriverEnabled
     * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
     *
-    * @return bool|null The earlyLaunchAntiMalwareDriverEnabled
+    * @return bool The earlyLaunchAntiMalwareDriverEnabled
     */
     public function getEarlyLaunchAntiMalwareDriverEnabled()
     {
@@ -115,7 +115,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMaximumVersion
     * Maximum Windows Phone version.
     *
-    * @return string|null The osMaximumVersion
+    * @return string The osMaximumVersion
     */
     public function getOsMaximumVersion()
     {
@@ -144,7 +144,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMinimumVersion
     * Minimum Windows Phone version.
     *
-    * @return string|null The osMinimumVersion
+    * @return string The osMinimumVersion
     */
     public function getOsMinimumVersion()
     {
@@ -173,7 +173,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordBlockSimple
     * Whether or not to block syncing the calendar.
     *
-    * @return bool|null The passwordBlockSimple
+    * @return bool The passwordBlockSimple
     */
     public function getPasswordBlockSimple()
     {
@@ -202,7 +202,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordExpirationDays
     * Number of days before password expiration. Valid values 1 to 255
     *
-    * @return int|null The passwordExpirationDays
+    * @return int The passwordExpirationDays
     */
     public function getPasswordExpirationDays()
     {
@@ -231,7 +231,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
     *
-    * @return int|null The passwordMinimumCharacterSetCount
+    * @return int The passwordMinimumCharacterSetCount
     */
     public function getPasswordMinimumCharacterSetCount()
     {
@@ -260,7 +260,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumLength
     * Minimum password length. Valid values 4 to 16
     *
-    * @return int|null The passwordMinimumLength
+    * @return int The passwordMinimumLength
     */
     public function getPasswordMinimumLength()
     {
@@ -289,7 +289,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
     *
-    * @return int|null The passwordMinutesOfInactivityBeforeLock
+    * @return int The passwordMinutesOfInactivityBeforeLock
     */
     public function getPasswordMinutesOfInactivityBeforeLock()
     {
@@ -318,7 +318,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordPreviousPasswordBlockCount
     * The number of previous passwords to prevent re-use of.
     *
-    * @return int|null The passwordPreviousPasswordBlockCount
+    * @return int The passwordPreviousPasswordBlockCount
     */
     public function getPasswordPreviousPasswordBlockCount()
     {
@@ -347,7 +347,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequired
     * Require a password to unlock Windows Phone device.
     *
-    * @return bool|null The passwordRequired
+    * @return bool The passwordRequired
     */
     public function getPasswordRequired()
     {
@@ -376,12 +376,12 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
-    * @return RequiredPasswordType|null The passwordRequiredType
+    * @return RequiredPasswordType The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -409,7 +409,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequireToUnlockFromIdle
     * Require a password to unlock an idle device.
     *
-    * @return bool|null The passwordRequireToUnlockFromIdle
+    * @return bool The passwordRequireToUnlockFromIdle
     */
     public function getPasswordRequireToUnlockFromIdle()
     {
@@ -438,7 +438,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the secureBootEnabled
     * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
     *
-    * @return bool|null The secureBootEnabled
+    * @return bool The secureBootEnabled
     */
     public function getSecureBootEnabled()
     {
@@ -467,7 +467,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the storageRequireEncryption
     * Require encryption on windows devices.
     *
-    * @return bool|null The storageRequireEncryption
+    * @return bool The storageRequireEncryption
     */
     public function getStorageRequireEncryption()
     {

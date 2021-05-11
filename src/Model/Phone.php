@@ -26,7 +26,7 @@ class Phone extends Entity
     /**
     * Gets the language
     *
-    * @return string|null The language
+    * @return string The language
     */
     public function getLanguage()
     {
@@ -53,7 +53,7 @@ class Phone extends Entity
     * Gets the number
     * The phone number.
     *
-    * @return string|null The number
+    * @return string The number
     */
     public function getNumber()
     {
@@ -80,7 +80,7 @@ class Phone extends Entity
     /**
     * Gets the region
     *
-    * @return string|null The region
+    * @return string The region
     */
     public function getRegion()
     {
@@ -106,14 +106,14 @@ class Phone extends Entity
 
     /**
     * Gets the type
-    * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+    * The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
-    * @return PhoneType|null The type
+    * @return PhoneType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\PhoneType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\PhoneType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new PhoneType($this->_propDict["type"]);
@@ -125,7 +125,7 @@ class Phone extends Entity
 
     /**
     * Sets the type
-    * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+    * The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
     *
     * @param PhoneType $val The value to assign to the type
     *

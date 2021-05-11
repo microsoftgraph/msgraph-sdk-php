@@ -28,12 +28,12 @@ class Participant extends Entity
     * Gets the info
     * Information about the participant.
     *
-    * @return ParticipantInfo|null The info
+    * @return ParticipantInfo The info
     */
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "\Microsoft\Graph\Model\ParticipantInfo") || is_null($this->_propDict["info"])) {
+            if (is_a($this->_propDict["info"], "\Microsoft\Graph\Model\ParticipantInfo")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new ParticipantInfo($this->_propDict["info"]);
@@ -61,7 +61,7 @@ class Participant extends Entity
     * Gets the isInLobby
     * true if the participant is in lobby.
     *
-    * @return bool|null The isInLobby
+    * @return bool The isInLobby
     */
     public function getIsInLobby()
     {
@@ -90,7 +90,7 @@ class Participant extends Entity
     * Gets the isMuted
     * true if the participant is muted (client or server muted).
     *
-    * @return bool|null The isMuted
+    * @return bool The isMuted
     */
     public function getIsMuted()
     {
@@ -120,7 +120,7 @@ class Participant extends Entity
      * Gets the mediaStreams
     * The list of media streams.
      *
-     * @return array|null The mediaStreams
+     * @return array The mediaStreams
      */
     public function getMediaStreams()
     {
@@ -141,20 +141,20 @@ class Participant extends Entity
     */
     public function setMediaStreams($val)
     {
-        $this->_propDict["mediaStreams"] = $val;
+		$this->_propDict["mediaStreams"] = $val;
         return $this;
     }
     
     /**
     * Gets the recordingInfo
-    * Information about whether the participant has recording capability.
+    * Information on whether the participant has recording capability.
     *
-    * @return RecordingInfo|null The recordingInfo
+    * @return RecordingInfo The recordingInfo
     */
     public function getRecordingInfo()
     {
         if (array_key_exists("recordingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["recordingInfo"], "\Microsoft\Graph\Model\RecordingInfo") || is_null($this->_propDict["recordingInfo"])) {
+            if (is_a($this->_propDict["recordingInfo"], "\Microsoft\Graph\Model\RecordingInfo")) {
                 return $this->_propDict["recordingInfo"];
             } else {
                 $this->_propDict["recordingInfo"] = new RecordingInfo($this->_propDict["recordingInfo"]);
@@ -166,7 +166,7 @@ class Participant extends Entity
     
     /**
     * Sets the recordingInfo
-    * Information about whether the participant has recording capability.
+    * Information on whether the participant has recording capability.
     *
     * @param RecordingInfo $val The recordingInfo
     *

@@ -27,7 +27,7 @@ class LocaleInfo extends Entity
     * Gets the displayName
     * A name representing the user's locale in natural language, for example, 'English (United States)'.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class LocaleInfo extends Entity
     * Gets the locale
     * A locale representation for the user, which includes the user's preferred language and country/region. For example, 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.
     *
-    * @return string|null The locale
+    * @return string The locale
     */
     public function getLocale()
     {

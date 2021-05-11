@@ -27,7 +27,7 @@ class PrintSettings extends Entity
     * Gets the documentConversionEnabled
     * Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service will automatically convert documents into a format compatible with the printer (xps to pdf) when needed.
     *
-    * @return bool|null The documentConversionEnabled
+    * @return bool The documentConversionEnabled
     */
     public function getDocumentConversionEnabled()
     {

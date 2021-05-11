@@ -28,7 +28,7 @@ class MultiValueLegacyExtendedProperty extends Entity
     * Gets the value
     * A collection of property values.
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

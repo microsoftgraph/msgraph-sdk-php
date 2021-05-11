@@ -28,7 +28,7 @@ class WindowsMobileMSI extends MobileLobApp
     * Gets the commandLine
     * The command line.
     *
-    * @return string|null The commandLine
+    * @return string The commandLine
     */
     public function getCommandLine()
     {
@@ -57,7 +57,7 @@ class WindowsMobileMSI extends MobileLobApp
     * Gets the ignoreVersionDetection
     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
     *
-    * @return bool|null The ignoreVersionDetection
+    * @return bool The ignoreVersionDetection
     */
     public function getIgnoreVersionDetection()
     {
@@ -86,7 +86,7 @@ class WindowsMobileMSI extends MobileLobApp
     * Gets the productCode
     * The product code.
     *
-    * @return string|null The productCode
+    * @return string The productCode
     */
     public function getProductCode()
     {
@@ -115,7 +115,7 @@ class WindowsMobileMSI extends MobileLobApp
     * Gets the productVersion
     * The product version of Windows Mobile MSI Line of Business (LoB) app.
     *
-    * @return string|null The productVersion
+    * @return string The productVersion
     */
     public function getProductVersion()
     {

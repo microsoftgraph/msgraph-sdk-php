@@ -29,7 +29,7 @@ class Security extends Entity
      * Gets the alerts
     * Read-only. Nullable.
      *
-     * @return array|null The alerts
+     * @return array The alerts
      */
     public function getAlerts()
     {
@@ -50,7 +50,7 @@ class Security extends Entity
     */
     public function setAlerts($val)
     {
-        $this->_propDict["alerts"] = $val;
+		$this->_propDict["alerts"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class Security extends Entity
      /** 
      * Gets the secureScoreControlProfiles
      *
-     * @return array|null The secureScoreControlProfiles
+     * @return array The secureScoreControlProfiles
      */
     public function getSecureScoreControlProfiles()
     {
@@ -78,7 +78,7 @@ class Security extends Entity
     */
     public function setSecureScoreControlProfiles($val)
     {
-        $this->_propDict["secureScoreControlProfiles"] = $val;
+		$this->_propDict["secureScoreControlProfiles"] = $val;
         return $this;
     }
     
@@ -86,7 +86,7 @@ class Security extends Entity
      /** 
      * Gets the secureScores
      *
-     * @return array|null The secureScores
+     * @return array The secureScores
      */
     public function getSecureScores()
     {
@@ -106,7 +106,7 @@ class Security extends Entity
     */
     public function setSecureScores($val)
     {
-        $this->_propDict["secureScores"] = $val;
+		$this->_propDict["secureScores"] = $val;
         return $this;
     }
     

@@ -28,12 +28,12 @@ class IdentityUserFlowAttribute extends Entity
     * Gets the dataType
     * The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime.
     *
-    * @return IdentityUserFlowAttributeDataType|null The dataType
+    * @return IdentityUserFlowAttributeDataType The dataType
     */
     public function getDataType()
     {
         if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeDataType") || is_null($this->_propDict["dataType"])) {
+            if (is_a($this->_propDict["dataType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeDataType")) {
                 return $this->_propDict["dataType"];
             } else {
                 $this->_propDict["dataType"] = new IdentityUserFlowAttributeDataType($this->_propDict["dataType"]);
@@ -61,7 +61,7 @@ class IdentityUserFlowAttribute extends Entity
     * Gets the description
     * The description of the user flow attribute that's shown to the user at the time of sign-up.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class IdentityUserFlowAttribute extends Entity
     * Gets the displayName
     * The display name of the user flow attribute.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class IdentityUserFlowAttribute extends Entity
     * Gets the userFlowAttributeType
     * The type of the user flow attribute. This is a read-only attribute that is automatically set. Depending on the type of attribute, the values for this property will be builtIn, custom, or required.
     *
-    * @return IdentityUserFlowAttributeType|null The userFlowAttributeType
+    * @return IdentityUserFlowAttributeType The userFlowAttributeType
     */
     public function getUserFlowAttributeType()
     {
         if (array_key_exists("userFlowAttributeType", $this->_propDict)) {
-            if (is_a($this->_propDict["userFlowAttributeType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeType") || is_null($this->_propDict["userFlowAttributeType"])) {
+            if (is_a($this->_propDict["userFlowAttributeType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeType")) {
                 return $this->_propDict["userFlowAttributeType"];
             } else {
                 $this->_propDict["userFlowAttributeType"] = new IdentityUserFlowAttributeType($this->_propDict["userFlowAttributeType"]);

@@ -36,7 +36,7 @@ class TokenMeetingInfo extends MeetingInfo
     * Gets the token
     * The token used to join the call.
     *
-    * @return string|null The token
+    * @return string The token
     */
     public function getToken()
     {

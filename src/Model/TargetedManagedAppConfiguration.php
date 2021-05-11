@@ -28,7 +28,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     * Gets the deployedAppCount
     * Count of apps to which the current policy is deployed.
     *
-    * @return int|null The deployedAppCount
+    * @return int The deployedAppCount
     */
     public function getDeployedAppCount()
     {
@@ -57,7 +57,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     * Gets the isAssigned
     * Indicates if the policy is deployed to any inclusion groups or not.
     *
-    * @return bool|null The isAssigned
+    * @return bool The isAssigned
     */
     public function getIsAssigned()
     {
@@ -87,7 +87,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
      * Gets the apps
     * List of apps to which the policy is deployed.
      *
-     * @return array|null The apps
+     * @return array The apps
      */
     public function getApps()
     {
@@ -108,7 +108,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     */
     public function setApps($val)
     {
-        $this->_propDict["apps"] = $val;
+		$this->_propDict["apps"] = $val;
         return $this;
     }
     
@@ -117,7 +117,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
      * Gets the assignments
     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -138,7 +138,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -146,12 +146,12 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
     * Gets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
     *
-    * @return ManagedAppPolicyDeploymentSummary|null The deploymentSummary
+    * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
     */
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary") || is_null($this->_propDict["deploymentSummary"])) {
+            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

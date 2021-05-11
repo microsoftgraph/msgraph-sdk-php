@@ -28,7 +28,7 @@ class WorkbookWorksheet extends Entity
     * Gets the name
     * The display name of the worksheet.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -57,7 +57,7 @@ class WorkbookWorksheet extends Entity
     * Gets the position
     * The zero-based position of the worksheet within the workbook.
     *
-    * @return int|null The position
+    * @return int The position
     */
     public function getPosition()
     {
@@ -86,7 +86,7 @@ class WorkbookWorksheet extends Entity
     * Gets the visibility
     * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
     *
-    * @return string|null The visibility
+    * @return string The visibility
     */
     public function getVisibility()
     {
@@ -116,7 +116,7 @@ class WorkbookWorksheet extends Entity
      * Gets the charts
     * Returns collection of charts that are part of the worksheet. Read-only.
      *
-     * @return array|null The charts
+     * @return array The charts
      */
     public function getCharts()
     {
@@ -137,7 +137,7 @@ class WorkbookWorksheet extends Entity
     */
     public function setCharts($val)
     {
-        $this->_propDict["charts"] = $val;
+		$this->_propDict["charts"] = $val;
         return $this;
     }
     
@@ -146,7 +146,7 @@ class WorkbookWorksheet extends Entity
      * Gets the names
     * Returns collection of names that are associated with the worksheet. Read-only.
      *
-     * @return array|null The names
+     * @return array The names
      */
     public function getNames()
     {
@@ -167,7 +167,7 @@ class WorkbookWorksheet extends Entity
     */
     public function setNames($val)
     {
-        $this->_propDict["names"] = $val;
+		$this->_propDict["names"] = $val;
         return $this;
     }
     
@@ -176,7 +176,7 @@ class WorkbookWorksheet extends Entity
      * Gets the pivotTables
     * Collection of PivotTables that are part of the worksheet.
      *
-     * @return array|null The pivotTables
+     * @return array The pivotTables
      */
     public function getPivotTables()
     {
@@ -197,7 +197,7 @@ class WorkbookWorksheet extends Entity
     */
     public function setPivotTables($val)
     {
-        $this->_propDict["pivotTables"] = $val;
+		$this->_propDict["pivotTables"] = $val;
         return $this;
     }
     
@@ -205,12 +205,12 @@ class WorkbookWorksheet extends Entity
     * Gets the protection
     * Returns sheet protection object for a worksheet. Read-only.
     *
-    * @return WorkbookWorksheetProtection|null The protection
+    * @return WorkbookWorksheetProtection The protection
     */
     public function getProtection()
     {
         if (array_key_exists("protection", $this->_propDict)) {
-            if (is_a($this->_propDict["protection"], "\Microsoft\Graph\Model\WorkbookWorksheetProtection") || is_null($this->_propDict["protection"])) {
+            if (is_a($this->_propDict["protection"], "\Microsoft\Graph\Model\WorkbookWorksheetProtection")) {
                 return $this->_propDict["protection"];
             } else {
                 $this->_propDict["protection"] = new WorkbookWorksheetProtection($this->_propDict["protection"]);
@@ -239,7 +239,7 @@ class WorkbookWorksheet extends Entity
      * Gets the tables
     * Collection of tables that are part of the worksheet. Read-only.
      *
-     * @return array|null The tables
+     * @return array The tables
      */
     public function getTables()
     {
@@ -260,7 +260,7 @@ class WorkbookWorksheet extends Entity
     */
     public function setTables($val)
     {
-        $this->_propDict["tables"] = $val;
+		$this->_propDict["tables"] = $val;
         return $this;
     }
     

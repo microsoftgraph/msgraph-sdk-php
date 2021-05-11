@@ -26,7 +26,7 @@ class ItemPreviewInfo extends Entity
     /**
     * Gets the getUrl
     *
-    * @return string|null The getUrl
+    * @return string The getUrl
     */
     public function getGetUrl()
     {
@@ -52,7 +52,7 @@ class ItemPreviewInfo extends Entity
     /**
     * Gets the postParameters
     *
-    * @return string|null The postParameters
+    * @return string The postParameters
     */
     public function getPostParameters()
     {
@@ -78,7 +78,7 @@ class ItemPreviewInfo extends Entity
     /**
     * Gets the postUrl
     *
-    * @return string|null The postUrl
+    * @return string The postUrl
     */
     public function getPostUrl()
     {

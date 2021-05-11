@@ -27,7 +27,7 @@ class FolderView extends Entity
     * Gets the sortBy
     * The method by which the folder should be sorted.
     *
-    * @return string|null The sortBy
+    * @return string The sortBy
     */
     public function getSortBy()
     {
@@ -55,7 +55,7 @@ class FolderView extends Entity
     * Gets the sortOrder
     * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
     *
-    * @return string|null The sortOrder
+    * @return string The sortOrder
     */
     public function getSortOrder()
     {
@@ -83,7 +83,7 @@ class FolderView extends Entity
     * Gets the viewType
     * The type of view that should be used to represent the folder.
     *
-    * @return string|null The viewType
+    * @return string The viewType
     */
     public function getViewType()
     {

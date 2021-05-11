@@ -27,7 +27,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     * Gets the deviceErrorCode
     * Device error code reported by Device Directory Service(DDS).
     *
-    * @return int|null The deviceErrorCode
+    * @return int The deviceErrorCode
     */
     public function getDeviceErrorCode()
     {
@@ -55,7 +55,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     * Gets the deviceErrorName
     * Device error name reported by Device Directory Service(DDS).
     *
-    * @return string|null The deviceErrorName
+    * @return string The deviceErrorName
     */
     public function getDeviceErrorName()
     {
@@ -84,12 +84,12 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     * Gets the deviceImportStatus
     * Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
     *
-    * @return ImportedWindowsAutopilotDeviceIdentityImportStatus|null The deviceImportStatus
+    * @return ImportedWindowsAutopilotDeviceIdentityImportStatus The deviceImportStatus
     */
     public function getDeviceImportStatus()
     {
         if (array_key_exists("deviceImportStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceImportStatus"], "\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityImportStatus") || is_null($this->_propDict["deviceImportStatus"])) {
+            if (is_a($this->_propDict["deviceImportStatus"], "\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityImportStatus")) {
                 return $this->_propDict["deviceImportStatus"];
             } else {
                 $this->_propDict["deviceImportStatus"] = new ImportedWindowsAutopilotDeviceIdentityImportStatus($this->_propDict["deviceImportStatus"]);
@@ -116,7 +116,7 @@ class ImportedWindowsAutopilotDeviceIdentityState extends Entity
     * Gets the deviceRegistrationId
     * Device Registration ID for successfully added device reported by Device Directory Service(DDS).
     *
-    * @return string|null The deviceRegistrationId
+    * @return string The deviceRegistrationId
     */
     public function getDeviceRegistrationId()
     {

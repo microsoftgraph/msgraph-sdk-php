@@ -28,12 +28,12 @@ class DeletedWindowsAutopilotDeviceState extends Entity
     * Gets the deletionState
     * Device deletion state. Possible values are: unknown, failed, accepted, error.
     *
-    * @return WindowsAutopilotDeviceDeletionState|null The deletionState
+    * @return WindowsAutopilotDeviceDeletionState The deletionState
     */
     public function getDeletionState()
     {
         if (array_key_exists("deletionState", $this->_propDict)) {
-            if (is_a($this->_propDict["deletionState"], "\Microsoft\Graph\Model\WindowsAutopilotDeviceDeletionState") || is_null($this->_propDict["deletionState"])) {
+            if (is_a($this->_propDict["deletionState"], "\Microsoft\Graph\Model\WindowsAutopilotDeviceDeletionState")) {
                 return $this->_propDict["deletionState"];
             } else {
                 $this->_propDict["deletionState"] = new WindowsAutopilotDeviceDeletionState($this->_propDict["deletionState"]);
@@ -60,7 +60,7 @@ class DeletedWindowsAutopilotDeviceState extends Entity
     * Gets the deviceRegistrationId
     * ZTD Device Registration ID .
     *
-    * @return string|null The deviceRegistrationId
+    * @return string The deviceRegistrationId
     */
     public function getDeviceRegistrationId()
     {
@@ -88,7 +88,7 @@ class DeletedWindowsAutopilotDeviceState extends Entity
     * Gets the errorMessage
     * Device deletion error message.
     *
-    * @return string|null The errorMessage
+    * @return string The errorMessage
     */
     public function getErrorMessage()
     {
@@ -116,7 +116,7 @@ class DeletedWindowsAutopilotDeviceState extends Entity
     * Gets the serialNumber
     * Autopilot Device Serial Number
     *
-    * @return string|null The serialNumber
+    * @return string The serialNumber
     */
     public function getSerialNumber()
     {

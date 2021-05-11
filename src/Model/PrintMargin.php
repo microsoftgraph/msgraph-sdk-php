@@ -27,7 +27,7 @@ class PrintMargin extends Entity
     * Gets the bottom
     * The margin in microns from the bottom edge.
     *
-    * @return int|null The bottom
+    * @return int The bottom
     */
     public function getBottom()
     {
@@ -55,7 +55,7 @@ class PrintMargin extends Entity
     * Gets the left
     * The margin in microns from the left edge.
     *
-    * @return int|null The left
+    * @return int The left
     */
     public function getLeft()
     {
@@ -83,7 +83,7 @@ class PrintMargin extends Entity
     * Gets the right
     * The margin in microns from the right edge.
     *
-    * @return int|null The right
+    * @return int The right
     */
     public function getRight()
     {
@@ -111,7 +111,7 @@ class PrintMargin extends Entity
     * Gets the top
     * The margin in microns from the top edge.
     *
-    * @return int|null The top
+    * @return int The top
     */
     public function getTop()
     {

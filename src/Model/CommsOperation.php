@@ -28,7 +28,7 @@ class CommsOperation extends Entity
     * Gets the clientContext
     * Unique Client Context string. Max limit is 256 chars.
     *
-    * @return string|null The clientContext
+    * @return string The clientContext
     */
     public function getClientContext()
     {
@@ -57,12 +57,12 @@ class CommsOperation extends Entity
     * Gets the resultInfo
     * The result information. Read-only.
     *
-    * @return ResultInfo|null The resultInfo
+    * @return ResultInfo The resultInfo
     */
     public function getResultInfo()
     {
         if (array_key_exists("resultInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["resultInfo"], "\Microsoft\Graph\Model\ResultInfo") || is_null($this->_propDict["resultInfo"])) {
+            if (is_a($this->_propDict["resultInfo"], "\Microsoft\Graph\Model\ResultInfo")) {
                 return $this->_propDict["resultInfo"];
             } else {
                 $this->_propDict["resultInfo"] = new ResultInfo($this->_propDict["resultInfo"]);
@@ -90,12 +90,12 @@ class CommsOperation extends Entity
     * Gets the status
     * Possible values are: notStarted, running, completed, failed. Read-only.
     *
-    * @return OperationStatus|null The status
+    * @return OperationStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\OperationStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\OperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new OperationStatus($this->_propDict["status"]);

@@ -27,7 +27,7 @@ class LookupColumn extends Entity
     * Gets the allowMultipleValues
     * Indicates whether multiple values can be selected from the source.
     *
-    * @return bool|null The allowMultipleValues
+    * @return bool The allowMultipleValues
     */
     public function getAllowMultipleValues()
     {
@@ -55,7 +55,7 @@ class LookupColumn extends Entity
     * Gets the allowUnlimitedLength
     * Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
     *
-    * @return bool|null The allowUnlimitedLength
+    * @return bool The allowUnlimitedLength
     */
     public function getAllowUnlimitedLength()
     {
@@ -83,7 +83,7 @@ class LookupColumn extends Entity
     * Gets the columnName
     * The name of the lookup source column.
     *
-    * @return string|null The columnName
+    * @return string The columnName
     */
     public function getColumnName()
     {
@@ -111,7 +111,7 @@ class LookupColumn extends Entity
     * Gets the listId
     * The unique identifier of the lookup source list.
     *
-    * @return string|null The listId
+    * @return string The listId
     */
     public function getListId()
     {
@@ -139,7 +139,7 @@ class LookupColumn extends Entity
     * Gets the primaryLookupColumnId
     * If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
     *
-    * @return string|null The primaryLookupColumnId
+    * @return string The primaryLookupColumnId
     */
     public function getPrimaryLookupColumnId()
     {

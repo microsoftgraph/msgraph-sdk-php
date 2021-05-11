@@ -28,12 +28,12 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     * Gets the acceptedDateTime
     * DateTime when the terms were last accepted by the user.
     *
-    * @return \DateTime|null The acceptedDateTime
+    * @return \DateTime The acceptedDateTime
     */
     public function getAcceptedDateTime()
     {
         if (array_key_exists("acceptedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["acceptedDateTime"], "\DateTime") || is_null($this->_propDict["acceptedDateTime"])) {
+            if (is_a($this->_propDict["acceptedDateTime"], "\DateTime")) {
                 return $this->_propDict["acceptedDateTime"];
             } else {
                 $this->_propDict["acceptedDateTime"] = new \DateTime($this->_propDict["acceptedDateTime"]);
@@ -61,7 +61,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     * Gets the acceptedVersion
     * Most recent version number of the T&amp;C accepted by the user.
     *
-    * @return int|null The acceptedVersion
+    * @return int The acceptedVersion
     */
     public function getAcceptedVersion()
     {
@@ -90,7 +90,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     * Gets the userDisplayName
     * Display name of the user whose acceptance the entity represents.
     *
-    * @return string|null The userDisplayName
+    * @return string The userDisplayName
     */
     public function getUserDisplayName()
     {
@@ -119,7 +119,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     * Gets the userPrincipalName
     * The userPrincipalName of the User that accepted the term.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -148,12 +148,12 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     * Gets the termsAndConditions
     * Navigation link to the terms and conditions that are assigned.
     *
-    * @return TermsAndConditions|null The termsAndConditions
+    * @return TermsAndConditions The termsAndConditions
     */
     public function getTermsAndConditions()
     {
         if (array_key_exists("termsAndConditions", $this->_propDict)) {
-            if (is_a($this->_propDict["termsAndConditions"], "\Microsoft\Graph\Model\TermsAndConditions") || is_null($this->_propDict["termsAndConditions"])) {
+            if (is_a($this->_propDict["termsAndConditions"], "\Microsoft\Graph\Model\TermsAndConditions")) {
                 return $this->_propDict["termsAndConditions"];
             } else {
                 $this->_propDict["termsAndConditions"] = new TermsAndConditions($this->_propDict["termsAndConditions"]);

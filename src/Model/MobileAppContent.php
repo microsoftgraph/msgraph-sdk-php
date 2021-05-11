@@ -29,7 +29,7 @@ class MobileAppContent extends Entity
      * Gets the files
     * The list of files for this app content version.
      *
-     * @return array|null The files
+     * @return array The files
      */
     public function getFiles()
     {
@@ -50,7 +50,7 @@ class MobileAppContent extends Entity
     */
     public function setFiles($val)
     {
-        $this->_propDict["files"] = $val;
+		$this->_propDict["files"] = $val;
         return $this;
     }
     

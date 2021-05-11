@@ -34,9 +34,9 @@ class OmaSettingBase64 extends OmaSetting
 
     /**
     * Gets the fileName
-    * File name associated with the Value property (.cer | .crt | .p7b | .bin).
+    * File name associated with the Value property (.cer
     *
-    * @return string|null The fileName
+    * @return string The fileName
     */
     public function getFileName()
     {
@@ -49,7 +49,7 @@ class OmaSettingBase64 extends OmaSetting
 
     /**
     * Sets the fileName
-    * File name associated with the Value property (.cer | .crt | .p7b | .bin).
+    * File name associated with the Value property (.cer
     *
     * @param string $val The value of the fileName
     *
@@ -64,7 +64,7 @@ class OmaSettingBase64 extends OmaSetting
     * Gets the value
     * Value. (Base64 encoded string)
     *
-    * @return string|null The value
+    * @return string The value
     */
     public function getValue()
     {

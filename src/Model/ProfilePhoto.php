@@ -28,7 +28,7 @@ class ProfilePhoto extends Entity
     * Gets the height
     * The height of the photo. Read-only.
     *
-    * @return int|null The height
+    * @return int The height
     */
     public function getHeight()
     {
@@ -57,7 +57,7 @@ class ProfilePhoto extends Entity
     * Gets the width
     * The width of the photo. Read-only.
     *
-    * @return int|null The width
+    * @return int The width
     */
     public function getWidth()
     {

@@ -28,12 +28,12 @@ class DeviceCompliancePolicy extends Entity
     * Gets the createdDateTime
     * DateTime the object was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class DeviceCompliancePolicy extends Entity
     * Gets the description
     * Admin provided description of the Device Configuration.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class DeviceCompliancePolicy extends Entity
     * Gets the displayName
     * Admin provided name of the device configuration.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,12 +119,12 @@ class DeviceCompliancePolicy extends Entity
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -152,7 +152,7 @@ class DeviceCompliancePolicy extends Entity
     * Gets the version
     * Version of the device configuration.
     *
-    * @return int|null The version
+    * @return int The version
     */
     public function getVersion()
     {
@@ -182,7 +182,7 @@ class DeviceCompliancePolicy extends Entity
      * Gets the assignments
     * The collection of assignments for this compliance policy.
      *
-     * @return array|null The assignments
+     * @return array The assignments
      */
     public function getAssignments()
     {
@@ -203,7 +203,7 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setAssignments($val)
     {
-        $this->_propDict["assignments"] = $val;
+		$this->_propDict["assignments"] = $val;
         return $this;
     }
     
@@ -212,7 +212,7 @@ class DeviceCompliancePolicy extends Entity
      * Gets the deviceSettingStateSummaries
     * Compliance Setting State Device Summary
      *
-     * @return array|null The deviceSettingStateSummaries
+     * @return array The deviceSettingStateSummaries
      */
     public function getDeviceSettingStateSummaries()
     {
@@ -233,7 +233,7 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setDeviceSettingStateSummaries($val)
     {
-        $this->_propDict["deviceSettingStateSummaries"] = $val;
+		$this->_propDict["deviceSettingStateSummaries"] = $val;
         return $this;
     }
     
@@ -242,7 +242,7 @@ class DeviceCompliancePolicy extends Entity
      * Gets the deviceStatuses
     * List of DeviceComplianceDeviceStatus.
      *
-     * @return array|null The deviceStatuses
+     * @return array The deviceStatuses
      */
     public function getDeviceStatuses()
     {
@@ -263,7 +263,7 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setDeviceStatuses($val)
     {
-        $this->_propDict["deviceStatuses"] = $val;
+		$this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
     
@@ -271,12 +271,12 @@ class DeviceCompliancePolicy extends Entity
     * Gets the deviceStatusOverview
     * Device compliance devices status overview
     *
-    * @return DeviceComplianceDeviceOverview|null The deviceStatusOverview
+    * @return DeviceComplianceDeviceOverview The deviceStatusOverview
     */
     public function getDeviceStatusOverview()
     {
         if (array_key_exists("deviceStatusOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceStatusOverview"], "\Microsoft\Graph\Model\DeviceComplianceDeviceOverview") || is_null($this->_propDict["deviceStatusOverview"])) {
+            if (is_a($this->_propDict["deviceStatusOverview"], "\Microsoft\Graph\Model\DeviceComplianceDeviceOverview")) {
                 return $this->_propDict["deviceStatusOverview"];
             } else {
                 $this->_propDict["deviceStatusOverview"] = new DeviceComplianceDeviceOverview($this->_propDict["deviceStatusOverview"]);
@@ -305,7 +305,7 @@ class DeviceCompliancePolicy extends Entity
      * Gets the scheduledActionsForRule
     * The list of scheduled action for this rule
      *
-     * @return array|null The scheduledActionsForRule
+     * @return array The scheduledActionsForRule
      */
     public function getScheduledActionsForRule()
     {
@@ -326,7 +326,7 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setScheduledActionsForRule($val)
     {
-        $this->_propDict["scheduledActionsForRule"] = $val;
+		$this->_propDict["scheduledActionsForRule"] = $val;
         return $this;
     }
     
@@ -335,7 +335,7 @@ class DeviceCompliancePolicy extends Entity
      * Gets the userStatuses
     * List of DeviceComplianceUserStatus.
      *
-     * @return array|null The userStatuses
+     * @return array The userStatuses
      */
     public function getUserStatuses()
     {
@@ -356,7 +356,7 @@ class DeviceCompliancePolicy extends Entity
     */
     public function setUserStatuses($val)
     {
-        $this->_propDict["userStatuses"] = $val;
+		$this->_propDict["userStatuses"] = $val;
         return $this;
     }
     
@@ -364,12 +364,12 @@ class DeviceCompliancePolicy extends Entity
     * Gets the userStatusOverview
     * Device compliance users status overview
     *
-    * @return DeviceComplianceUserOverview|null The userStatusOverview
+    * @return DeviceComplianceUserOverview The userStatusOverview
     */
     public function getUserStatusOverview()
     {
         if (array_key_exists("userStatusOverview", $this->_propDict)) {
-            if (is_a($this->_propDict["userStatusOverview"], "\Microsoft\Graph\Model\DeviceComplianceUserOverview") || is_null($this->_propDict["userStatusOverview"])) {
+            if (is_a($this->_propDict["userStatusOverview"], "\Microsoft\Graph\Model\DeviceComplianceUserOverview")) {
                 return $this->_propDict["userStatusOverview"];
             } else {
                 $this->_propDict["userStatusOverview"] = new DeviceComplianceUserOverview($this->_propDict["userStatusOverview"]);

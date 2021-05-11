@@ -28,7 +28,7 @@ class LinkedResource extends Entity
     * Gets the applicationName
     * Field indicating the app name of the source that is sending the linkedResource.
     *
-    * @return string|null The applicationName
+    * @return string The applicationName
     */
     public function getApplicationName()
     {
@@ -57,7 +57,7 @@ class LinkedResource extends Entity
     * Gets the displayName
     * Field indicating the title of the linkedResource.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class LinkedResource extends Entity
     * Gets the externalId
     * Id of the object that is associated with this task on the third-party/partner system.
     *
-    * @return string|null The externalId
+    * @return string The externalId
     */
     public function getExternalId()
     {
@@ -115,7 +115,7 @@ class LinkedResource extends Entity
     * Gets the webUrl
     * Deep link to the linkedResource.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

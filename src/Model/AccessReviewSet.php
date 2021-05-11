@@ -28,7 +28,7 @@ class AccessReviewSet extends Entity
      /** 
      * Gets the definitions
      *
-     * @return array|null The definitions
+     * @return array The definitions
      */
     public function getDefinitions()
     {
@@ -48,7 +48,7 @@ class AccessReviewSet extends Entity
     */
     public function setDefinitions($val)
     {
-        $this->_propDict["definitions"] = $val;
+		$this->_propDict["definitions"] = $val;
         return $this;
     }
     

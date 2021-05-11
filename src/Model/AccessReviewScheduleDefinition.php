@@ -28,12 +28,12 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the createdBy
     * User who created this review.
     *
-    * @return UserIdentity|null The createdBy
+    * @return UserIdentity The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\UserIdentity") || is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
@@ -61,12 +61,12 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the createdDateTime
     * Timestamp when review series was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -94,7 +94,7 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the descriptionForAdmins
     * Description provided by review creators to provide more context of the review to admins.
     *
-    * @return string|null The descriptionForAdmins
+    * @return string The descriptionForAdmins
     */
     public function getDescriptionForAdmins()
     {
@@ -123,7 +123,7 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the descriptionForReviewers
     * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review.
     *
-    * @return string|null The descriptionForReviewers
+    * @return string The descriptionForReviewers
     */
     public function getDescriptionForReviewers()
     {
@@ -152,7 +152,7 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the displayName
     * Name of access review series. Required on create.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -181,7 +181,7 @@ class AccessReviewScheduleDefinition extends Entity
      /** 
      * Gets the fallbackReviewers
      *
-     * @return array|null The fallbackReviewers
+     * @return array The fallbackReviewers
      */
     public function getFallbackReviewers()
     {
@@ -201,7 +201,7 @@ class AccessReviewScheduleDefinition extends Entity
     */
     public function setFallbackReviewers($val)
     {
-        $this->_propDict["fallbackReviewers"] = $val;
+		$this->_propDict["fallbackReviewers"] = $val;
         return $this;
     }
     
@@ -209,12 +209,12 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the instanceEnumerationScope
     * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
     *
-    * @return AccessReviewScope|null The instanceEnumerationScope
+    * @return AccessReviewScope The instanceEnumerationScope
     */
     public function getInstanceEnumerationScope()
     {
         if (array_key_exists("instanceEnumerationScope", $this->_propDict)) {
-            if (is_a($this->_propDict["instanceEnumerationScope"], "\Microsoft\Graph\Model\AccessReviewScope") || is_null($this->_propDict["instanceEnumerationScope"])) {
+            if (is_a($this->_propDict["instanceEnumerationScope"], "\Microsoft\Graph\Model\AccessReviewScope")) {
                 return $this->_propDict["instanceEnumerationScope"];
             } else {
                 $this->_propDict["instanceEnumerationScope"] = new AccessReviewScope($this->_propDict["instanceEnumerationScope"]);
@@ -242,12 +242,12 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the lastModifiedDateTime
     * Timestamp when review series was last modified.
     *
-    * @return \DateTime|null The lastModifiedDateTime
+    * @return \DateTime The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -276,7 +276,7 @@ class AccessReviewScheduleDefinition extends Entity
      * Gets the reviewers
     * This collection of access review scopes is used to define who are the reviewers. See accessReviewReviewerScope. Required on create.
      *
-     * @return array|null The reviewers
+     * @return array The reviewers
      */
     public function getReviewers()
     {
@@ -297,7 +297,7 @@ class AccessReviewScheduleDefinition extends Entity
     */
     public function setReviewers($val)
     {
-        $this->_propDict["reviewers"] = $val;
+		$this->_propDict["reviewers"] = $val;
         return $this;
     }
     
@@ -305,12 +305,12 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the scope
     * Defines scope of users reviewed. For supported scopes, see accessReviewScope. Required on create.
     *
-    * @return AccessReviewScope|null The scope
+    * @return AccessReviewScope The scope
     */
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "\Microsoft\Graph\Model\AccessReviewScope") || is_null($this->_propDict["scope"])) {
+            if (is_a($this->_propDict["scope"], "\Microsoft\Graph\Model\AccessReviewScope")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new AccessReviewScope($this->_propDict["scope"]);
@@ -338,12 +338,12 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the settings
     * The settings for an access review series, see type definition below.
     *
-    * @return AccessReviewScheduleSettings|null The settings
+    * @return AccessReviewScheduleSettings The settings
     */
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\AccessReviewScheduleSettings") || is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\AccessReviewScheduleSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new AccessReviewScheduleSettings($this->_propDict["settings"]);
@@ -371,7 +371,7 @@ class AccessReviewScheduleDefinition extends Entity
     * Gets the status
     * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
     *
-    * @return string|null The status
+    * @return string The status
     */
     public function getStatus()
     {
@@ -401,7 +401,7 @@ class AccessReviewScheduleDefinition extends Entity
      * Gets the instances
     * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there will be an instance for each recurrence.
      *
-     * @return array|null The instances
+     * @return array The instances
      */
     public function getInstances()
     {
@@ -422,7 +422,7 @@ class AccessReviewScheduleDefinition extends Entity
     */
     public function setInstances($val)
     {
-        $this->_propDict["instances"] = $val;
+		$this->_propDict["instances"] = $val;
         return $this;
     }
     

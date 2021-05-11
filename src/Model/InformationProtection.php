@@ -28,7 +28,7 @@ class InformationProtection extends Entity
      /** 
      * Gets the threatAssessmentRequests
      *
-     * @return array|null The threatAssessmentRequests
+     * @return array The threatAssessmentRequests
      */
     public function getThreatAssessmentRequests()
     {
@@ -48,7 +48,7 @@ class InformationProtection extends Entity
     */
     public function setThreatAssessmentRequests($val)
     {
-        $this->_propDict["threatAssessmentRequests"] = $val;
+		$this->_propDict["threatAssessmentRequests"] = $val;
         return $this;
     }
     

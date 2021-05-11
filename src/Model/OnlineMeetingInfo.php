@@ -27,7 +27,7 @@ class OnlineMeetingInfo extends Entity
     * Gets the conferenceId
     * The ID of the conference.
     *
-    * @return string|null The conferenceId
+    * @return string The conferenceId
     */
     public function getConferenceId()
     {
@@ -55,7 +55,7 @@ class OnlineMeetingInfo extends Entity
     * Gets the joinUrl
     * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
     *
-    * @return string|null The joinUrl
+    * @return string The joinUrl
     */
     public function getJoinUrl()
     {
@@ -84,12 +84,12 @@ class OnlineMeetingInfo extends Entity
     * Gets the phones
     * All of the phone numbers associated with this conference.
     *
-    * @return Phone|null The phones
+    * @return Phone The phones
     */
     public function getPhones()
     {
         if (array_key_exists("phones", $this->_propDict)) {
-            if (is_a($this->_propDict["phones"], "\Microsoft\Graph\Model\Phone") || is_null($this->_propDict["phones"])) {
+            if (is_a($this->_propDict["phones"], "\Microsoft\Graph\Model\Phone")) {
                 return $this->_propDict["phones"];
             } else {
                 $this->_propDict["phones"] = new Phone($this->_propDict["phones"]);
@@ -116,7 +116,7 @@ class OnlineMeetingInfo extends Entity
     * Gets the quickDial
     * The pre-formatted quickdial for this call.
     *
-    * @return string|null The quickDial
+    * @return string The quickDial
     */
     public function getQuickDial()
     {
@@ -144,7 +144,7 @@ class OnlineMeetingInfo extends Entity
     * Gets the tollFreeNumbers
     * The toll free numbers that can be used to join the conference.
     *
-    * @return string|null The tollFreeNumbers
+    * @return string The tollFreeNumbers
     */
     public function getTollFreeNumbers()
     {
@@ -172,7 +172,7 @@ class OnlineMeetingInfo extends Entity
     * Gets the tollNumber
     * The toll number that can be used to join the conference.
     *
-    * @return string|null The tollNumber
+    * @return string The tollNumber
     */
     public function getTollNumber()
     {

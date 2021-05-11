@@ -27,7 +27,7 @@ class PrinterStatus extends Entity
     * Gets the description
     * A human-readable description of the printer's current processing state. Read-only.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -56,12 +56,12 @@ class PrinterStatus extends Entity
     * Gets the details
     * The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
     *
-    * @return PrinterProcessingStateDetail|null The details
+    * @return PrinterProcessingStateDetail The details
     */
     public function getDetails()
     {
         if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\PrinterProcessingStateDetail") || is_null($this->_propDict["details"])) {
+            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\PrinterProcessingStateDetail")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new PrinterProcessingStateDetail($this->_propDict["details"]);
@@ -89,12 +89,12 @@ class PrinterStatus extends Entity
     * Gets the state
     * The current processing state. Valid values are described in the following table. Read-only.
     *
-    * @return PrinterProcessingState|null The state
+    * @return PrinterProcessingState The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\PrinterProcessingState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\PrinterProcessingState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new PrinterProcessingState($this->_propDict["state"]);

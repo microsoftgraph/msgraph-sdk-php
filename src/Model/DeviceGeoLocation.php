@@ -27,7 +27,7 @@ class DeviceGeoLocation extends Entity
     * Gets the altitude
     * Altitude, given in meters above sea level
     *
-    * @return float|null The altitude
+    * @return float The altitude
     */
     public function getAltitude()
     {
@@ -55,7 +55,7 @@ class DeviceGeoLocation extends Entity
     * Gets the heading
     * Heading in degrees from true north
     *
-    * @return float|null The heading
+    * @return float The heading
     */
     public function getHeading()
     {
@@ -83,7 +83,7 @@ class DeviceGeoLocation extends Entity
     * Gets the horizontalAccuracy
     * Accuracy of longitude and latitude in meters
     *
-    * @return float|null The horizontalAccuracy
+    * @return float The horizontalAccuracy
     */
     public function getHorizontalAccuracy()
     {
@@ -112,12 +112,12 @@ class DeviceGeoLocation extends Entity
     * Gets the lastCollectedDateTime
     * Time at which location was recorded, relative to UTC
     *
-    * @return \DateTime|null The lastCollectedDateTime
+    * @return \DateTime The lastCollectedDateTime
     */
     public function getLastCollectedDateTime()
     {
         if (array_key_exists("lastCollectedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCollectedDateTime"], "\DateTime") || is_null($this->_propDict["lastCollectedDateTime"])) {
+            if (is_a($this->_propDict["lastCollectedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastCollectedDateTime"];
             } else {
                 $this->_propDict["lastCollectedDateTime"] = new \DateTime($this->_propDict["lastCollectedDateTime"]);
@@ -144,7 +144,7 @@ class DeviceGeoLocation extends Entity
     * Gets the latitude
     * Latitude coordinate of the device's location
     *
-    * @return float|null The latitude
+    * @return float The latitude
     */
     public function getLatitude()
     {
@@ -172,7 +172,7 @@ class DeviceGeoLocation extends Entity
     * Gets the longitude
     * Longitude coordinate of the device's location
     *
-    * @return float|null The longitude
+    * @return float The longitude
     */
     public function getLongitude()
     {
@@ -200,7 +200,7 @@ class DeviceGeoLocation extends Entity
     * Gets the speed
     * Speed the device is traveling in meters per second
     *
-    * @return float|null The speed
+    * @return float The speed
     */
     public function getSpeed()
     {
@@ -228,7 +228,7 @@ class DeviceGeoLocation extends Entity
     * Gets the verticalAccuracy
     * Accuracy of altitude in meters
     *
-    * @return float|null The verticalAccuracy
+    * @return float The verticalAccuracy
     */
     public function getVerticalAccuracy()
     {

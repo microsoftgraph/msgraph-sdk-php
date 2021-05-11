@@ -28,7 +28,7 @@ class DomainDnsTxtRecord extends DomainDnsRecord
     * Gets the text
     * Value used when configuring the text property at the DNS host.
     *
-    * @return string|null The text
+    * @return string The text
     */
     public function getText()
     {

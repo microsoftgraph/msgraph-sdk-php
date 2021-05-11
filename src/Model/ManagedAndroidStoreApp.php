@@ -28,7 +28,7 @@ class ManagedAndroidStoreApp extends ManagedApp
     * Gets the appStoreUrl
     * The Android AppStoreUrl.
     *
-    * @return string|null The appStoreUrl
+    * @return string The appStoreUrl
     */
     public function getAppStoreUrl()
     {
@@ -57,12 +57,12 @@ class ManagedAndroidStoreApp extends ManagedApp
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum supported operating system.
     *
-    * @return AndroidMinimumOperatingSystem|null The minimumSupportedOperatingSystem
+    * @return AndroidMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\AndroidMinimumOperatingSystem") || is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\AndroidMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new AndroidMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -90,7 +90,7 @@ class ManagedAndroidStoreApp extends ManagedApp
     * Gets the packageId
     * The app's package ID.
     *
-    * @return string|null The packageId
+    * @return string The packageId
     */
     public function getPackageId()
     {

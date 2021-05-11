@@ -35,14 +35,14 @@ class IosHomeScreenFolder extends IosHomeScreenItem
 
     /**
     * Gets the pages
-    * Pages of Home Screen Layout Icons which must be Application Type. This collection can contain a maximum of 500 elements.
+    * Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
     *
-    * @return IosHomeScreenFolderPage|null The pages
+    * @return IosHomeScreenFolderPage The pages
     */
     public function getPages()
     {
         if (array_key_exists("pages", $this->_propDict)) {
-            if (is_a($this->_propDict["pages"], "\Microsoft\Graph\Model\IosHomeScreenFolderPage") || is_null($this->_propDict["pages"])) {
+            if (is_a($this->_propDict["pages"], "\Microsoft\Graph\Model\IosHomeScreenFolderPage")) {
                 return $this->_propDict["pages"];
             } else {
                 $this->_propDict["pages"] = new IosHomeScreenFolderPage($this->_propDict["pages"]);
@@ -54,7 +54,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem
 
     /**
     * Sets the pages
-    * Pages of Home Screen Layout Icons which must be Application Type. This collection can contain a maximum of 500 elements.
+    * Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenFolderPage $val The value to assign to the pages
     *

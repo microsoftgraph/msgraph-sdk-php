@@ -28,7 +28,7 @@ class RoomList extends Place
     * Gets the emailAddress
     * The email address of the room list.
     *
-    * @return string|null The emailAddress
+    * @return string The emailAddress
     */
     public function getEmailAddress()
     {
@@ -58,7 +58,7 @@ class RoomList extends Place
      * Gets the rooms
     * Read-only. Nullable.
      *
-     * @return array|null The rooms
+     * @return array The rooms
      */
     public function getRooms()
     {
@@ -79,7 +79,7 @@ class RoomList extends Place
     */
     public function setRooms($val)
     {
-        $this->_propDict["rooms"] = $val;
+		$this->_propDict["rooms"] = $val;
         return $this;
     }
     

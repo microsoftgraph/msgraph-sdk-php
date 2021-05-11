@@ -26,9 +26,9 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration
 {
     /**
     * Gets the limit
-    * Not yet documented
+    * The maximum number of devices that a user can enroll
     *
-    * @return int|null The limit
+    * @return int The limit
     */
     public function getLimit()
     {
@@ -41,7 +41,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration
     
     /**
     * Sets the limit
-    * Not yet documented
+    * The maximum number of devices that a user can enroll
     *
     * @param int $val The limit
     *

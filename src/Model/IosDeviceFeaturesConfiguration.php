@@ -28,7 +28,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the assetTagTemplate
     * Asset tag information for the device, displayed on the login window and lock screen.
     *
-    * @return string|null The assetTagTemplate
+    * @return string The assetTagTemplate
     */
     public function getAssetTagTemplate()
     {
@@ -58,7 +58,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the homeScreenDockIcons
     * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The homeScreenDockIcons
+     * @return array The homeScreenDockIcons
      */
     public function getHomeScreenDockIcons()
     {
@@ -79,7 +79,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setHomeScreenDockIcons($val)
     {
-        $this->_propDict["homeScreenDockIcons"] = $val;
+		$this->_propDict["homeScreenDockIcons"] = $val;
         return $this;
     }
     
@@ -88,7 +88,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the homeScreenPages
     * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The homeScreenPages
+     * @return array The homeScreenPages
      */
     public function getHomeScreenPages()
     {
@@ -109,7 +109,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setHomeScreenPages($val)
     {
-        $this->_propDict["homeScreenPages"] = $val;
+		$this->_propDict["homeScreenPages"] = $val;
         return $this;
     }
     
@@ -117,7 +117,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the lockScreenFootnote
     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
     *
-    * @return string|null The lockScreenFootnote
+    * @return string The lockScreenFootnote
     */
     public function getLockScreenFootnote()
     {
@@ -147,7 +147,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the notificationSettings
     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The notificationSettings
+     * @return array The notificationSettings
      */
     public function getNotificationSettings()
     {
@@ -168,7 +168,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setNotificationSettings($val)
     {
-        $this->_propDict["notificationSettings"] = $val;
+		$this->_propDict["notificationSettings"] = $val;
         return $this;
     }
     

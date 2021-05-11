@@ -36,7 +36,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the useDeviceLicensing
     * Whether or not to use device licensing.
     *
-    * @return bool|null The useDeviceLicensing
+    * @return bool The useDeviceLicensing
     */
     public function getUseDeviceLicensing()
     {
@@ -64,7 +64,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the vpnConfigurationId
     * The VPN Configuration Id to apply for this app.
     *
-    * @return string|null The vpnConfigurationId
+    * @return string The vpnConfigurationId
     */
     public function getVpnConfigurationId()
     {

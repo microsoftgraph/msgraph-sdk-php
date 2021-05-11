@@ -27,7 +27,7 @@ class AppConsentRequestScope extends Entity
     * Gets the displayName
     * The name of the scope.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {

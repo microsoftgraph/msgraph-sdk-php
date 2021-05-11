@@ -25,9 +25,9 @@ class ChatInfo extends Entity
 {
     /**
     * Gets the messageId
-    * The unique identifier of a message in a Microsoft Teams channel.
+    * The unique identifier for a message in a Microsoft Teams channel.
     *
-    * @return string|null The messageId
+    * @return string The messageId
     */
     public function getMessageId()
     {
@@ -40,7 +40,7 @@ class ChatInfo extends Entity
 
     /**
     * Sets the messageId
-    * The unique identifier of a message in a Microsoft Teams channel.
+    * The unique identifier for a message in a Microsoft Teams channel.
     *
     * @param string $val The value of the messageId
     *
@@ -55,7 +55,7 @@ class ChatInfo extends Entity
     * Gets the replyChainMessageId
     * The ID of the reply message.
     *
-    * @return string|null The replyChainMessageId
+    * @return string The replyChainMessageId
     */
     public function getReplyChainMessageId()
     {
@@ -83,7 +83,7 @@ class ChatInfo extends Entity
     * Gets the threadId
     * The unique identifier for a thread in Microsoft Teams.
     *
-    * @return string|null The threadId
+    * @return string The threadId
     */
     public function getThreadId()
     {

@@ -28,7 +28,7 @@ class TodoTaskList extends Entity
     * Gets the displayName
     * The name of the task list.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class TodoTaskList extends Entity
     * Gets the isOwner
     * True if the user is owner of the given task list.
     *
-    * @return bool|null The isOwner
+    * @return bool The isOwner
     */
     public function getIsOwner()
     {
@@ -86,7 +86,7 @@ class TodoTaskList extends Entity
     * Gets the isShared
     * True if the task list is shared with other users
     *
-    * @return bool|null The isShared
+    * @return bool The isShared
     */
     public function getIsShared()
     {
@@ -115,12 +115,12 @@ class TodoTaskList extends Entity
     * Gets the wellknownListName
     * Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
     *
-    * @return WellknownListName|null The wellknownListName
+    * @return WellknownListName The wellknownListName
     */
     public function getWellknownListName()
     {
         if (array_key_exists("wellknownListName", $this->_propDict)) {
-            if (is_a($this->_propDict["wellknownListName"], "\Microsoft\Graph\Model\WellknownListName") || is_null($this->_propDict["wellknownListName"])) {
+            if (is_a($this->_propDict["wellknownListName"], "\Microsoft\Graph\Model\WellknownListName")) {
                 return $this->_propDict["wellknownListName"];
             } else {
                 $this->_propDict["wellknownListName"] = new WellknownListName($this->_propDict["wellknownListName"]);
@@ -149,7 +149,7 @@ class TodoTaskList extends Entity
      * Gets the extensions
     * The collection of open extensions defined for the task list. Nullable.
      *
-     * @return array|null The extensions
+     * @return array The extensions
      */
     public function getExtensions()
     {
@@ -170,7 +170,7 @@ class TodoTaskList extends Entity
     */
     public function setExtensions($val)
     {
-        $this->_propDict["extensions"] = $val;
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     
@@ -179,7 +179,7 @@ class TodoTaskList extends Entity
      * Gets the tasks
     * The tasks in this task list. Read-only. Nullable.
      *
-     * @return array|null The tasks
+     * @return array The tasks
      */
     public function getTasks()
     {
@@ -200,7 +200,7 @@ class TodoTaskList extends Entity
     */
     public function setTasks($val)
     {
-        $this->_propDict["tasks"] = $val;
+		$this->_propDict["tasks"] = $val;
         return $this;
     }
     

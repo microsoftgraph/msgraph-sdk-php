@@ -27,7 +27,7 @@ class AppListItem extends Entity
     * Gets the appId
     * The application or bundle identifier of the application
     *
-    * @return string|null The appId
+    * @return string The appId
     */
     public function getAppId()
     {
@@ -55,7 +55,7 @@ class AppListItem extends Entity
     * Gets the appStoreUrl
     * The Store URL of the application
     *
-    * @return string|null The appStoreUrl
+    * @return string The appStoreUrl
     */
     public function getAppStoreUrl()
     {
@@ -83,7 +83,7 @@ class AppListItem extends Entity
     * Gets the name
     * The application name
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -111,7 +111,7 @@ class AppListItem extends Entity
     * Gets the publisher
     * The publisher of the application
     *
-    * @return string|null The publisher
+    * @return string The publisher
     */
     public function getPublisher()
     {

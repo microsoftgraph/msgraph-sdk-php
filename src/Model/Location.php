@@ -28,12 +28,12 @@ class Location extends Entity
     * Gets the address
     * The street address of the location.
     *
-    * @return PhysicalAddress|null The address
+    * @return PhysicalAddress The address
     */
     public function getAddress()
     {
         if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "\Microsoft\Graph\Model\PhysicalAddress") || is_null($this->_propDict["address"])) {
+            if (is_a($this->_propDict["address"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -61,12 +61,12 @@ class Location extends Entity
     * Gets the coordinates
     * The geographic coordinates and elevation of the location.
     *
-    * @return OutlookGeoCoordinates|null The coordinates
+    * @return OutlookGeoCoordinates The coordinates
     */
     public function getCoordinates()
     {
         if (array_key_exists("coordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["coordinates"], "\Microsoft\Graph\Model\OutlookGeoCoordinates") || is_null($this->_propDict["coordinates"])) {
+            if (is_a($this->_propDict["coordinates"], "\Microsoft\Graph\Model\OutlookGeoCoordinates")) {
                 return $this->_propDict["coordinates"];
             } else {
                 $this->_propDict["coordinates"] = new OutlookGeoCoordinates($this->_propDict["coordinates"]);
@@ -93,7 +93,7 @@ class Location extends Entity
     * Gets the displayName
     * The name associated with the location.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -121,7 +121,7 @@ class Location extends Entity
     * Gets the locationEmailAddress
     * Optional email address of the location.
     *
-    * @return string|null The locationEmailAddress
+    * @return string The locationEmailAddress
     */
     public function getLocationEmailAddress()
     {
@@ -148,14 +148,14 @@ class Location extends Entity
 
     /**
     * Gets the locationType
-    * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+    * The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
     *
-    * @return LocationType|null The locationType
+    * @return LocationType The locationType
     */
     public function getLocationType()
     {
         if (array_key_exists("locationType", $this->_propDict)) {
-            if (is_a($this->_propDict["locationType"], "\Microsoft\Graph\Model\LocationType") || is_null($this->_propDict["locationType"])) {
+            if (is_a($this->_propDict["locationType"], "\Microsoft\Graph\Model\LocationType")) {
                 return $this->_propDict["locationType"];
             } else {
                 $this->_propDict["locationType"] = new LocationType($this->_propDict["locationType"]);
@@ -167,7 +167,7 @@ class Location extends Entity
 
     /**
     * Sets the locationType
-    * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+    * The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
     *
     * @param LocationType $val The value to assign to the locationType
     *
@@ -182,7 +182,7 @@ class Location extends Entity
     * Gets the locationUri
     * Optional URI representing the location.
     *
-    * @return string|null The locationUri
+    * @return string The locationUri
     */
     public function getLocationUri()
     {
@@ -210,7 +210,7 @@ class Location extends Entity
     * Gets the uniqueId
     * For internal use only.
     *
-    * @return string|null The uniqueId
+    * @return string The uniqueId
     */
     public function getUniqueId()
     {
@@ -239,12 +239,12 @@ class Location extends Entity
     * Gets the uniqueIdType
     * For internal use only.
     *
-    * @return LocationUniqueIdType|null The uniqueIdType
+    * @return LocationUniqueIdType The uniqueIdType
     */
     public function getUniqueIdType()
     {
         if (array_key_exists("uniqueIdType", $this->_propDict)) {
-            if (is_a($this->_propDict["uniqueIdType"], "\Microsoft\Graph\Model\LocationUniqueIdType") || is_null($this->_propDict["uniqueIdType"])) {
+            if (is_a($this->_propDict["uniqueIdType"], "\Microsoft\Graph\Model\LocationUniqueIdType")) {
                 return $this->_propDict["uniqueIdType"];
             } else {
                 $this->_propDict["uniqueIdType"] = new LocationUniqueIdType($this->_propDict["uniqueIdType"]);

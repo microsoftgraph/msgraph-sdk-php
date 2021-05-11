@@ -28,7 +28,7 @@ class Contact extends OutlookItem
     * Gets the assistantName
     * The name of the contact's assistant.
     *
-    * @return string|null The assistantName
+    * @return string The assistantName
     */
     public function getAssistantName()
     {
@@ -57,12 +57,12 @@ class Contact extends OutlookItem
     * Gets the birthday
     * The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime|null The birthday
+    * @return \DateTime The birthday
     */
     public function getBirthday()
     {
         if (array_key_exists("birthday", $this->_propDict)) {
-            if (is_a($this->_propDict["birthday"], "\DateTime") || is_null($this->_propDict["birthday"])) {
+            if (is_a($this->_propDict["birthday"], "\DateTime")) {
                 return $this->_propDict["birthday"];
             } else {
                 $this->_propDict["birthday"] = new \DateTime($this->_propDict["birthday"]);
@@ -90,12 +90,12 @@ class Contact extends OutlookItem
     * Gets the businessAddress
     * The contact's business address.
     *
-    * @return PhysicalAddress|null The businessAddress
+    * @return PhysicalAddress The businessAddress
     */
     public function getBusinessAddress()
     {
         if (array_key_exists("businessAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["businessAddress"], "\Microsoft\Graph\Model\PhysicalAddress") || is_null($this->_propDict["businessAddress"])) {
+            if (is_a($this->_propDict["businessAddress"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["businessAddress"];
             } else {
                 $this->_propDict["businessAddress"] = new PhysicalAddress($this->_propDict["businessAddress"]);
@@ -123,7 +123,7 @@ class Contact extends OutlookItem
     * Gets the businessHomePage
     * The business home page of the contact.
     *
-    * @return string|null The businessHomePage
+    * @return string The businessHomePage
     */
     public function getBusinessHomePage()
     {
@@ -152,7 +152,7 @@ class Contact extends OutlookItem
     * Gets the businessPhones
     * The contact's business phone numbers.
     *
-    * @return string|null The businessPhones
+    * @return string The businessPhones
     */
     public function getBusinessPhones()
     {
@@ -181,7 +181,7 @@ class Contact extends OutlookItem
     * Gets the children
     * The names of the contact's children.
     *
-    * @return string|null The children
+    * @return string The children
     */
     public function getChildren()
     {
@@ -210,7 +210,7 @@ class Contact extends OutlookItem
     * Gets the companyName
     * The name of the contact's company.
     *
-    * @return string|null The companyName
+    * @return string The companyName
     */
     public function getCompanyName()
     {
@@ -239,7 +239,7 @@ class Contact extends OutlookItem
     * Gets the department
     * The contact's department.
     *
-    * @return string|null The department
+    * @return string The department
     */
     public function getDepartment()
     {
@@ -268,7 +268,7 @@ class Contact extends OutlookItem
     * Gets the displayName
     * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -298,7 +298,7 @@ class Contact extends OutlookItem
      * Gets the emailAddresses
     * The contact's email addresses.
      *
-     * @return array|null The emailAddresses
+     * @return array The emailAddresses
      */
     public function getEmailAddresses()
     {
@@ -319,7 +319,7 @@ class Contact extends OutlookItem
     */
     public function setEmailAddresses($val)
     {
-        $this->_propDict["emailAddresses"] = $val;
+		$this->_propDict["emailAddresses"] = $val;
         return $this;
     }
     
@@ -327,7 +327,7 @@ class Contact extends OutlookItem
     * Gets the fileAs
     * The name the contact is filed under.
     *
-    * @return string|null The fileAs
+    * @return string The fileAs
     */
     public function getFileAs()
     {
@@ -356,7 +356,7 @@ class Contact extends OutlookItem
     * Gets the generation
     * The contact's generation.
     *
-    * @return string|null The generation
+    * @return string The generation
     */
     public function getGeneration()
     {
@@ -385,7 +385,7 @@ class Contact extends OutlookItem
     * Gets the givenName
     * The contact's given name.
     *
-    * @return string|null The givenName
+    * @return string The givenName
     */
     public function getGivenName()
     {
@@ -414,12 +414,12 @@ class Contact extends OutlookItem
     * Gets the homeAddress
     * The contact's home address.
     *
-    * @return PhysicalAddress|null The homeAddress
+    * @return PhysicalAddress The homeAddress
     */
     public function getHomeAddress()
     {
         if (array_key_exists("homeAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["homeAddress"], "\Microsoft\Graph\Model\PhysicalAddress") || is_null($this->_propDict["homeAddress"])) {
+            if (is_a($this->_propDict["homeAddress"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["homeAddress"];
             } else {
                 $this->_propDict["homeAddress"] = new PhysicalAddress($this->_propDict["homeAddress"]);
@@ -447,7 +447,7 @@ class Contact extends OutlookItem
     * Gets the homePhones
     * The contact's home phone numbers.
     *
-    * @return string|null The homePhones
+    * @return string The homePhones
     */
     public function getHomePhones()
     {
@@ -476,7 +476,7 @@ class Contact extends OutlookItem
     * Gets the imAddresses
     * The contact's instant messaging (IM) addresses.
     *
-    * @return string|null The imAddresses
+    * @return string The imAddresses
     */
     public function getImAddresses()
     {
@@ -505,7 +505,7 @@ class Contact extends OutlookItem
     * Gets the initials
     * The contact's initials.
     *
-    * @return string|null The initials
+    * @return string The initials
     */
     public function getInitials()
     {
@@ -534,7 +534,7 @@ class Contact extends OutlookItem
     * Gets the jobTitle
     * The contact’s job title.
     *
-    * @return string|null The jobTitle
+    * @return string The jobTitle
     */
     public function getJobTitle()
     {
@@ -563,7 +563,7 @@ class Contact extends OutlookItem
     * Gets the manager
     * The name of the contact's manager.
     *
-    * @return string|null The manager
+    * @return string The manager
     */
     public function getManager()
     {
@@ -592,7 +592,7 @@ class Contact extends OutlookItem
     * Gets the middleName
     * The contact's middle name.
     *
-    * @return string|null The middleName
+    * @return string The middleName
     */
     public function getMiddleName()
     {
@@ -621,7 +621,7 @@ class Contact extends OutlookItem
     * Gets the mobilePhone
     * The contact's mobile phone number.
     *
-    * @return string|null The mobilePhone
+    * @return string The mobilePhone
     */
     public function getMobilePhone()
     {
@@ -650,7 +650,7 @@ class Contact extends OutlookItem
     * Gets the nickName
     * The contact's nickname.
     *
-    * @return string|null The nickName
+    * @return string The nickName
     */
     public function getNickName()
     {
@@ -679,7 +679,7 @@ class Contact extends OutlookItem
     * Gets the officeLocation
     * The location of the contact's office.
     *
-    * @return string|null The officeLocation
+    * @return string The officeLocation
     */
     public function getOfficeLocation()
     {
@@ -708,12 +708,12 @@ class Contact extends OutlookItem
     * Gets the otherAddress
     * Other addresses for the contact.
     *
-    * @return PhysicalAddress|null The otherAddress
+    * @return PhysicalAddress The otherAddress
     */
     public function getOtherAddress()
     {
         if (array_key_exists("otherAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["otherAddress"], "\Microsoft\Graph\Model\PhysicalAddress") || is_null($this->_propDict["otherAddress"])) {
+            if (is_a($this->_propDict["otherAddress"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["otherAddress"];
             } else {
                 $this->_propDict["otherAddress"] = new PhysicalAddress($this->_propDict["otherAddress"]);
@@ -741,7 +741,7 @@ class Contact extends OutlookItem
     * Gets the parentFolderId
     * The ID of the contact's parent folder.
     *
-    * @return string|null The parentFolderId
+    * @return string The parentFolderId
     */
     public function getParentFolderId()
     {
@@ -770,7 +770,7 @@ class Contact extends OutlookItem
     * Gets the personalNotes
     * The user's notes about the contact.
     *
-    * @return string|null The personalNotes
+    * @return string The personalNotes
     */
     public function getPersonalNotes()
     {
@@ -799,7 +799,7 @@ class Contact extends OutlookItem
     * Gets the profession
     * The contact's profession.
     *
-    * @return string|null The profession
+    * @return string The profession
     */
     public function getProfession()
     {
@@ -828,7 +828,7 @@ class Contact extends OutlookItem
     * Gets the spouseName
     * The name of the contact's spouse/partner.
     *
-    * @return string|null The spouseName
+    * @return string The spouseName
     */
     public function getSpouseName()
     {
@@ -857,7 +857,7 @@ class Contact extends OutlookItem
     * Gets the surname
     * The contact's surname.
     *
-    * @return string|null The surname
+    * @return string The surname
     */
     public function getSurname()
     {
@@ -886,7 +886,7 @@ class Contact extends OutlookItem
     * Gets the title
     * The contact's title.
     *
-    * @return string|null The title
+    * @return string The title
     */
     public function getTitle()
     {
@@ -915,7 +915,7 @@ class Contact extends OutlookItem
     * Gets the yomiCompanyName
     * The phonetic Japanese company name of the contact.
     *
-    * @return string|null The yomiCompanyName
+    * @return string The yomiCompanyName
     */
     public function getYomiCompanyName()
     {
@@ -944,7 +944,7 @@ class Contact extends OutlookItem
     * Gets the yomiGivenName
     * The phonetic Japanese given name (first name) of the contact.
     *
-    * @return string|null The yomiGivenName
+    * @return string The yomiGivenName
     */
     public function getYomiGivenName()
     {
@@ -973,7 +973,7 @@ class Contact extends OutlookItem
     * Gets the yomiSurname
     * The phonetic Japanese surname (last name)  of the contact.
     *
-    * @return string|null The yomiSurname
+    * @return string The yomiSurname
     */
     public function getYomiSurname()
     {
@@ -1001,9 +1001,9 @@ class Contact extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the contact. Nullable.
      *
-     * @return array|null The extensions
+     * @return array The extensions
      */
     public function getExtensions()
     {
@@ -1016,7 +1016,7 @@ class Contact extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the contact. Read-only. Nullable.
+    * The collection of open extensions defined for the contact. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -1024,7 +1024,7 @@ class Contact extends OutlookItem
     */
     public function setExtensions($val)
     {
-        $this->_propDict["extensions"] = $val;
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     
@@ -1033,7 +1033,7 @@ class Contact extends OutlookItem
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
      *
-     * @return array|null The multiValueExtendedProperties
+     * @return array The multiValueExtendedProperties
      */
     public function getMultiValueExtendedProperties()
     {
@@ -1054,7 +1054,7 @@ class Contact extends OutlookItem
     */
     public function setMultiValueExtendedProperties($val)
     {
-        $this->_propDict["multiValueExtendedProperties"] = $val;
+		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     
@@ -1062,12 +1062,12 @@ class Contact extends OutlookItem
     * Gets the photo
     * Optional contact picture. You can get or set a photo for a contact.
     *
-    * @return ProfilePhoto|null The photo
+    * @return ProfilePhoto The photo
     */
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto") || is_null($this->_propDict["photo"])) {
+            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -1096,7 +1096,7 @@ class Contact extends OutlookItem
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
      *
-     * @return array|null The singleValueExtendedProperties
+     * @return array The singleValueExtendedProperties
      */
     public function getSingleValueExtendedProperties()
     {
@@ -1117,7 +1117,7 @@ class Contact extends OutlookItem
     */
     public function setSingleValueExtendedProperties($val)
     {
-        $this->_propDict["singleValueExtendedProperties"] = $val;
+		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
     

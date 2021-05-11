@@ -27,7 +27,7 @@ class SiteCollection extends Entity
     * Gets the dataLocationCode
     * The geographic region code for where this site collection resides. Read-only.
     *
-    * @return string|null The dataLocationCode
+    * @return string The dataLocationCode
     */
     public function getDataLocationCode()
     {
@@ -55,7 +55,7 @@ class SiteCollection extends Entity
     * Gets the hostname
     * The hostname for the site collection. Read-only.
     *
-    * @return string|null The hostname
+    * @return string The hostname
     */
     public function getHostname()
     {
@@ -84,12 +84,12 @@ class SiteCollection extends Entity
     * Gets the root
     * If present, indicates that this is a root site collection in SharePoint. Read-only.
     *
-    * @return Root|null The root
+    * @return Root The root
     */
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\Root") || is_null($this->_propDict["root"])) {
+            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);

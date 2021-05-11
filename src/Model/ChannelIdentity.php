@@ -27,7 +27,7 @@ class ChannelIdentity extends Entity
     * Gets the channelId
     * The identity of the channel in which the message was posted.
     *
-    * @return string|null The channelId
+    * @return string The channelId
     */
     public function getChannelId()
     {
@@ -55,7 +55,7 @@ class ChannelIdentity extends Entity
     * Gets the teamId
     * The identity of the team in which the message was posted.
     *
-    * @return string|null The teamId
+    * @return string The teamId
     */
     public function getTeamId()
     {

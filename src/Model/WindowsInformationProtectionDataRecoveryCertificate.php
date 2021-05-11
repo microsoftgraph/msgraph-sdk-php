@@ -28,12 +28,12 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
     * Gets the certificate
     * Data recovery Certificate
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The certificate
+    * @return \GuzzleHttp\Psr7\Stream The certificate
     */
     public function getCertificate()
     {
         if (array_key_exists("certificate", $this->_propDict)) {
-            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["certificate"])) {
+            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["certificate"];
             } else {
                 $this->_propDict["certificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["certificate"]);
@@ -60,7 +60,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
     * Gets the description
     * Data recovery Certificate description
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -89,12 +89,12 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
     * Gets the expirationDateTime
     * Data recovery Certificate expiration datetime
     *
-    * @return \DateTime|null The expirationDateTime
+    * @return \DateTime The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -121,7 +121,7 @@ class WindowsInformationProtectionDataRecoveryCertificate extends Entity
     * Gets the subjectName
     * Data recovery Certificate subject name
     *
-    * @return string|null The subjectName
+    * @return string The subjectName
     */
     public function getSubjectName()
     {

@@ -27,7 +27,7 @@ class SignInStatus extends Entity
     * Gets the additionalDetails
     * Provides additional details on the sign-in activity
     *
-    * @return string|null The additionalDetails
+    * @return string The additionalDetails
     */
     public function getAdditionalDetails()
     {
@@ -55,7 +55,7 @@ class SignInStatus extends Entity
     * Gets the errorCode
     * Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
     *
-    * @return int|null The errorCode
+    * @return int The errorCode
     */
     public function getErrorCode()
     {
@@ -83,7 +83,7 @@ class SignInStatus extends Entity
     * Gets the failureReason
     * Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
     *
-    * @return string|null The failureReason
+    * @return string The failureReason
     */
     public function getFailureReason()
     {

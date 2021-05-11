@@ -29,7 +29,7 @@ class ShiftPreferences extends ChangeTrackedEntity
      * Gets the availability
     * Availability of the user to be scheduled for work and its recurrence pattern.
      *
-     * @return array|null The availability
+     * @return array The availability
      */
     public function getAvailability()
     {
@@ -50,7 +50,7 @@ class ShiftPreferences extends ChangeTrackedEntity
     */
     public function setAvailability($val)
     {
-        $this->_propDict["availability"] = $val;
+		$this->_propDict["availability"] = $val;
         return $this;
     }
     

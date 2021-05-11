@@ -28,7 +28,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment
     * Gets the members
     * The list of ids of role member security groups. These are IDs from Azure Active Directory.
     *
-    * @return string|null The members
+    * @return string The members
     */
     public function getMembers()
     {

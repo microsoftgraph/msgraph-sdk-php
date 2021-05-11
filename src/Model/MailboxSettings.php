@@ -25,9 +25,9 @@ class MailboxSettings extends Entity
 {
     /**
     * Gets the archiveFolder
-    * Folder ID of an archive folder for the user.
+    * Folder ID of an archive folder for the user. Read only.
     *
-    * @return string|null The archiveFolder
+    * @return string The archiveFolder
     */
     public function getArchiveFolder()
     {
@@ -40,7 +40,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the archiveFolder
-    * Folder ID of an archive folder for the user.
+    * Folder ID of an archive folder for the user. Read only.
     *
     * @param string $val The value of the archiveFolder
     *
@@ -56,12 +56,12 @@ class MailboxSettings extends Entity
     * Gets the automaticRepliesSetting
     * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
     *
-    * @return AutomaticRepliesSetting|null The automaticRepliesSetting
+    * @return AutomaticRepliesSetting The automaticRepliesSetting
     */
     public function getAutomaticRepliesSetting()
     {
         if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "\Microsoft\Graph\Model\AutomaticRepliesSetting") || is_null($this->_propDict["automaticRepliesSetting"])) {
+            if (is_a($this->_propDict["automaticRepliesSetting"], "\Microsoft\Graph\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -88,7 +88,7 @@ class MailboxSettings extends Entity
     * Gets the dateFormat
     * The date format for the user's mailbox.
     *
-    * @return string|null The dateFormat
+    * @return string The dateFormat
     */
     public function getDateFormat()
     {
@@ -115,14 +115,14 @@ class MailboxSettings extends Entity
 
     /**
     * Gets the delegateMeetingMessageDeliveryOptions
-    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
     *
-    * @return DelegateMeetingMessageDeliveryOptions|null The delegateMeetingMessageDeliveryOptions
+    * @return DelegateMeetingMessageDeliveryOptions The delegateMeetingMessageDeliveryOptions
     */
     public function getDelegateMeetingMessageDeliveryOptions()
     {
         if (array_key_exists("delegateMeetingMessageDeliveryOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["delegateMeetingMessageDeliveryOptions"], "\Microsoft\Graph\Model\DelegateMeetingMessageDeliveryOptions") || is_null($this->_propDict["delegateMeetingMessageDeliveryOptions"])) {
+            if (is_a($this->_propDict["delegateMeetingMessageDeliveryOptions"], "\Microsoft\Graph\Model\DelegateMeetingMessageDeliveryOptions")) {
                 return $this->_propDict["delegateMeetingMessageDeliveryOptions"];
             } else {
                 $this->_propDict["delegateMeetingMessageDeliveryOptions"] = new DelegateMeetingMessageDeliveryOptions($this->_propDict["delegateMeetingMessageDeliveryOptions"]);
@@ -134,7 +134,7 @@ class MailboxSettings extends Entity
 
     /**
     * Sets the delegateMeetingMessageDeliveryOptions
-    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+    * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
     *
     * @param DelegateMeetingMessageDeliveryOptions $val The value to assign to the delegateMeetingMessageDeliveryOptions
     *
@@ -150,12 +150,12 @@ class MailboxSettings extends Entity
     * Gets the language
     * The locale information for the user, including the preferred language and country/region.
     *
-    * @return LocaleInfo|null The language
+    * @return LocaleInfo The language
     */
     public function getLanguage()
     {
         if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "\Microsoft\Graph\Model\LocaleInfo") || is_null($this->_propDict["language"])) {
+            if (is_a($this->_propDict["language"], "\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["language"];
             } else {
                 $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
@@ -182,7 +182,7 @@ class MailboxSettings extends Entity
     * Gets the timeFormat
     * The time format for the user's mailbox.
     *
-    * @return string|null The timeFormat
+    * @return string The timeFormat
     */
     public function getTimeFormat()
     {
@@ -210,7 +210,7 @@ class MailboxSettings extends Entity
     * Gets the timeZone
     * The default time zone for the user's mailbox.
     *
-    * @return string|null The timeZone
+    * @return string The timeZone
     */
     public function getTimeZone()
     {
@@ -239,12 +239,12 @@ class MailboxSettings extends Entity
     * Gets the workingHours
     * The days of the week and hours in a specific time zone that the user works.
     *
-    * @return WorkingHours|null The workingHours
+    * @return WorkingHours The workingHours
     */
     public function getWorkingHours()
     {
         if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "\Microsoft\Graph\Model\WorkingHours") || is_null($this->_propDict["workingHours"])) {
+            if (is_a($this->_propDict["workingHours"], "\Microsoft\Graph\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);

@@ -27,12 +27,12 @@ class UserFlowApiConnectorConfiguration extends Entity
     /**
     * Gets the postAttributeCollection
     *
-    * @return IdentityApiConnector|null The postAttributeCollection
+    * @return IdentityApiConnector The postAttributeCollection
     */
     public function getPostAttributeCollection()
     {
         if (array_key_exists("postAttributeCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["postAttributeCollection"], "\Microsoft\Graph\Model\IdentityApiConnector") || is_null($this->_propDict["postAttributeCollection"])) {
+            if (is_a($this->_propDict["postAttributeCollection"], "\Microsoft\Graph\Model\IdentityApiConnector")) {
                 return $this->_propDict["postAttributeCollection"];
             } else {
                 $this->_propDict["postAttributeCollection"] = new IdentityApiConnector($this->_propDict["postAttributeCollection"]);
@@ -58,12 +58,12 @@ class UserFlowApiConnectorConfiguration extends Entity
     /**
     * Gets the postFederationSignup
     *
-    * @return IdentityApiConnector|null The postFederationSignup
+    * @return IdentityApiConnector The postFederationSignup
     */
     public function getPostFederationSignup()
     {
         if (array_key_exists("postFederationSignup", $this->_propDict)) {
-            if (is_a($this->_propDict["postFederationSignup"], "\Microsoft\Graph\Model\IdentityApiConnector") || is_null($this->_propDict["postFederationSignup"])) {
+            if (is_a($this->_propDict["postFederationSignup"], "\Microsoft\Graph\Model\IdentityApiConnector")) {
                 return $this->_propDict["postFederationSignup"];
             } else {
                 $this->_propDict["postFederationSignup"] = new IdentityApiConnector($this->_propDict["postFederationSignup"]);

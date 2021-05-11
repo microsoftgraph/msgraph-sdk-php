@@ -36,7 +36,7 @@ class OmaSettingInteger extends OmaSetting
     * Gets the value
     * Value.
     *
-    * @return int|null The value
+    * @return int The value
     */
     public function getValue()
     {

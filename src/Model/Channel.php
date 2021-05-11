@@ -28,12 +28,12 @@ class Channel extends Entity
     * Gets the createdDateTime
     * Read only. Timestamp at which the channel was created.
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class Channel extends Entity
     * Gets the description
     * Optional textual description for the channel.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class Channel extends Entity
     * Gets the displayName
     * Channel name as it will appear to the user in Microsoft Teams.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -119,7 +119,7 @@ class Channel extends Entity
     * Gets the email
     * The email address for sending messages to the channel. Read-only.
     *
-    * @return string|null The email
+    * @return string The email
     */
     public function getEmail()
     {
@@ -148,7 +148,7 @@ class Channel extends Entity
     * Gets the isFavoriteByDefault
     * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
     *
-    * @return bool|null The isFavoriteByDefault
+    * @return bool The isFavoriteByDefault
     */
     public function getIsFavoriteByDefault()
     {
@@ -175,14 +175,14 @@ class Channel extends Entity
     
     /**
     * Gets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
+    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
     *
-    * @return ChannelMembershipType|null The membershipType
+    * @return ChannelMembershipType The membershipType
     */
     public function getMembershipType()
     {
         if (array_key_exists("membershipType", $this->_propDict)) {
-            if (is_a($this->_propDict["membershipType"], "\Microsoft\Graph\Model\ChannelMembershipType") || is_null($this->_propDict["membershipType"])) {
+            if (is_a($this->_propDict["membershipType"], "\Microsoft\Graph\Model\ChannelMembershipType")) {
                 return $this->_propDict["membershipType"];
             } else {
                 $this->_propDict["membershipType"] = new ChannelMembershipType($this->_propDict["membershipType"]);
@@ -194,7 +194,7 @@ class Channel extends Entity
     
     /**
     * Sets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
+    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
     *
     * @param ChannelMembershipType $val The membershipType
     *
@@ -210,7 +210,7 @@ class Channel extends Entity
     * Gets the webUrl
     * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {
@@ -239,12 +239,12 @@ class Channel extends Entity
     * Gets the filesFolder
     * Metadata for the location where the channel's files are stored.
     *
-    * @return DriveItem|null The filesFolder
+    * @return DriveItem The filesFolder
     */
     public function getFilesFolder()
     {
         if (array_key_exists("filesFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["filesFolder"], "\Microsoft\Graph\Model\DriveItem") || is_null($this->_propDict["filesFolder"])) {
+            if (is_a($this->_propDict["filesFolder"], "\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["filesFolder"];
             } else {
                 $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);
@@ -273,7 +273,7 @@ class Channel extends Entity
      * Gets the members
     * A collection of membership records associated with the channel.
      *
-     * @return array|null The members
+     * @return array The members
      */
     public function getMembers()
     {
@@ -294,7 +294,7 @@ class Channel extends Entity
     */
     public function setMembers($val)
     {
-        $this->_propDict["members"] = $val;
+		$this->_propDict["members"] = $val;
         return $this;
     }
     
@@ -303,7 +303,7 @@ class Channel extends Entity
      * Gets the messages
     * A collection of all the messages in the channel. A navigation property. Nullable.
      *
-     * @return array|null The messages
+     * @return array The messages
      */
     public function getMessages()
     {
@@ -324,7 +324,7 @@ class Channel extends Entity
     */
     public function setMessages($val)
     {
-        $this->_propDict["messages"] = $val;
+		$this->_propDict["messages"] = $val;
         return $this;
     }
     
@@ -333,7 +333,7 @@ class Channel extends Entity
      * Gets the tabs
     * A collection of all the tabs in the channel. A navigation property.
      *
-     * @return array|null The tabs
+     * @return array The tabs
      */
     public function getTabs()
     {
@@ -354,7 +354,7 @@ class Channel extends Entity
     */
     public function setTabs($val)
     {
-        $this->_propDict["tabs"] = $val;
+		$this->_propDict["tabs"] = $val;
         return $this;
     }
     

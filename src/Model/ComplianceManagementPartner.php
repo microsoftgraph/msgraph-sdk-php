@@ -29,7 +29,7 @@ class ComplianceManagementPartner extends Entity
      * Gets the androidEnrollmentAssignments
     * User groups which enroll Android devices through partner.
      *
-     * @return array|null The androidEnrollmentAssignments
+     * @return array The androidEnrollmentAssignments
      */
     public function getAndroidEnrollmentAssignments()
     {
@@ -50,7 +50,7 @@ class ComplianceManagementPartner extends Entity
     */
     public function setAndroidEnrollmentAssignments($val)
     {
-        $this->_propDict["androidEnrollmentAssignments"] = $val;
+		$this->_propDict["androidEnrollmentAssignments"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class ComplianceManagementPartner extends Entity
     * Gets the androidOnboarded
     * Partner onboarded for Android devices.
     *
-    * @return bool|null The androidOnboarded
+    * @return bool The androidOnboarded
     */
     public function getAndroidOnboarded()
     {
@@ -87,7 +87,7 @@ class ComplianceManagementPartner extends Entity
     * Gets the displayName
     * Partner display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -117,7 +117,7 @@ class ComplianceManagementPartner extends Entity
      * Gets the iosEnrollmentAssignments
     * User groups which enroll ios devices through partner.
      *
-     * @return array|null The iosEnrollmentAssignments
+     * @return array The iosEnrollmentAssignments
      */
     public function getIosEnrollmentAssignments()
     {
@@ -138,7 +138,7 @@ class ComplianceManagementPartner extends Entity
     */
     public function setIosEnrollmentAssignments($val)
     {
-        $this->_propDict["iosEnrollmentAssignments"] = $val;
+		$this->_propDict["iosEnrollmentAssignments"] = $val;
         return $this;
     }
     
@@ -146,7 +146,7 @@ class ComplianceManagementPartner extends Entity
     * Gets the iosOnboarded
     * Partner onboarded for ios devices.
     *
-    * @return bool|null The iosOnboarded
+    * @return bool The iosOnboarded
     */
     public function getIosOnboarded()
     {
@@ -175,12 +175,12 @@ class ComplianceManagementPartner extends Entity
     * Gets the lastHeartbeatDateTime
     * Timestamp of last heartbeat after admin onboarded to the compliance management partner
     *
-    * @return \DateTime|null The lastHeartbeatDateTime
+    * @return \DateTime The lastHeartbeatDateTime
     */
     public function getLastHeartbeatDateTime()
     {
         if (array_key_exists("lastHeartbeatDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime") || is_null($this->_propDict["lastHeartbeatDateTime"])) {
+            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime")) {
                 return $this->_propDict["lastHeartbeatDateTime"];
             } else {
                 $this->_propDict["lastHeartbeatDateTime"] = new \DateTime($this->_propDict["lastHeartbeatDateTime"]);
@@ -209,7 +209,7 @@ class ComplianceManagementPartner extends Entity
      * Gets the macOsEnrollmentAssignments
     * User groups which enroll Mac devices through partner.
      *
-     * @return array|null The macOsEnrollmentAssignments
+     * @return array The macOsEnrollmentAssignments
      */
     public function getMacOsEnrollmentAssignments()
     {
@@ -230,7 +230,7 @@ class ComplianceManagementPartner extends Entity
     */
     public function setMacOsEnrollmentAssignments($val)
     {
-        $this->_propDict["macOsEnrollmentAssignments"] = $val;
+		$this->_propDict["macOsEnrollmentAssignments"] = $val;
         return $this;
     }
     
@@ -238,7 +238,7 @@ class ComplianceManagementPartner extends Entity
     * Gets the macOsOnboarded
     * Partner onboarded for Mac devices.
     *
-    * @return bool|null The macOsOnboarded
+    * @return bool The macOsOnboarded
     */
     public function getMacOsOnboarded()
     {
@@ -267,12 +267,12 @@ class ComplianceManagementPartner extends Entity
     * Gets the partnerState
     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
     *
-    * @return DeviceManagementPartnerTenantState|null The partnerState
+    * @return DeviceManagementPartnerTenantState The partnerState
     */
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState") || is_null($this->_propDict["partnerState"])) {
+            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);

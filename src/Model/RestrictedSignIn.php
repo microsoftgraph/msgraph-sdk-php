@@ -27,7 +27,7 @@ class RestrictedSignIn extends SignIn
     /**
     * Gets the targetTenantId
     *
-    * @return string|null The targetTenantId
+    * @return string The targetTenantId
     */
     public function getTargetTenantId()
     {

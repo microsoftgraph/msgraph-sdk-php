@@ -28,12 +28,12 @@ class DriveItem extends BaseItem
     * Gets the audio
     * Audio metadata, if the item is an audio file. Read-only.
     *
-    * @return Audio|null The audio
+    * @return Audio The audio
     */
     public function getAudio()
     {
         if (array_key_exists("audio", $this->_propDict)) {
-            if (is_a($this->_propDict["audio"], "\Microsoft\Graph\Model\Audio") || is_null($this->_propDict["audio"])) {
+            if (is_a($this->_propDict["audio"], "\Microsoft\Graph\Model\Audio")) {
                 return $this->_propDict["audio"];
             } else {
                 $this->_propDict["audio"] = new Audio($this->_propDict["audio"]);
@@ -61,12 +61,12 @@ class DriveItem extends BaseItem
     * Gets the content
     * The content stream, if the item represents a file.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The content
+    * @return \GuzzleHttp\Psr7\Stream The content
     */
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
@@ -94,7 +94,7 @@ class DriveItem extends BaseItem
     * Gets the cTag
     * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
     *
-    * @return string|null The cTag
+    * @return string The cTag
     */
     public function getCTag()
     {
@@ -123,12 +123,12 @@ class DriveItem extends BaseItem
     * Gets the deleted
     * Information about the deleted state of the item. Read-only.
     *
-    * @return Deleted|null The deleted
+    * @return Deleted The deleted
     */
     public function getDeleted()
     {
         if (array_key_exists("deleted", $this->_propDict)) {
-            if (is_a($this->_propDict["deleted"], "\Microsoft\Graph\Model\Deleted") || is_null($this->_propDict["deleted"])) {
+            if (is_a($this->_propDict["deleted"], "\Microsoft\Graph\Model\Deleted")) {
                 return $this->_propDict["deleted"];
             } else {
                 $this->_propDict["deleted"] = new Deleted($this->_propDict["deleted"]);
@@ -156,12 +156,12 @@ class DriveItem extends BaseItem
     * Gets the file
     * File metadata, if the item is a file. Read-only.
     *
-    * @return File|null The file
+    * @return File The file
     */
     public function getFile()
     {
         if (array_key_exists("file", $this->_propDict)) {
-            if (is_a($this->_propDict["file"], "\Microsoft\Graph\Model\File") || is_null($this->_propDict["file"])) {
+            if (is_a($this->_propDict["file"], "\Microsoft\Graph\Model\File")) {
                 return $this->_propDict["file"];
             } else {
                 $this->_propDict["file"] = new File($this->_propDict["file"]);
@@ -189,12 +189,12 @@ class DriveItem extends BaseItem
     * Gets the fileSystemInfo
     * File system information on client. Read-write.
     *
-    * @return FileSystemInfo|null The fileSystemInfo
+    * @return FileSystemInfo The fileSystemInfo
     */
     public function getFileSystemInfo()
     {
         if (array_key_exists("fileSystemInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["fileSystemInfo"], "\Microsoft\Graph\Model\FileSystemInfo") || is_null($this->_propDict["fileSystemInfo"])) {
+            if (is_a($this->_propDict["fileSystemInfo"], "\Microsoft\Graph\Model\FileSystemInfo")) {
                 return $this->_propDict["fileSystemInfo"];
             } else {
                 $this->_propDict["fileSystemInfo"] = new FileSystemInfo($this->_propDict["fileSystemInfo"]);
@@ -222,12 +222,12 @@ class DriveItem extends BaseItem
     * Gets the folder
     * Folder metadata, if the item is a folder. Read-only.
     *
-    * @return Folder|null The folder
+    * @return Folder The folder
     */
     public function getFolder()
     {
         if (array_key_exists("folder", $this->_propDict)) {
-            if (is_a($this->_propDict["folder"], "\Microsoft\Graph\Model\Folder") || is_null($this->_propDict["folder"])) {
+            if (is_a($this->_propDict["folder"], "\Microsoft\Graph\Model\Folder")) {
                 return $this->_propDict["folder"];
             } else {
                 $this->_propDict["folder"] = new Folder($this->_propDict["folder"]);
@@ -255,12 +255,12 @@ class DriveItem extends BaseItem
     * Gets the image
     * Image metadata, if the item is an image. Read-only.
     *
-    * @return Image|null The image
+    * @return Image The image
     */
     public function getImage()
     {
         if (array_key_exists("image", $this->_propDict)) {
-            if (is_a($this->_propDict["image"], "\Microsoft\Graph\Model\Image") || is_null($this->_propDict["image"])) {
+            if (is_a($this->_propDict["image"], "\Microsoft\Graph\Model\Image")) {
                 return $this->_propDict["image"];
             } else {
                 $this->_propDict["image"] = new Image($this->_propDict["image"]);
@@ -288,12 +288,12 @@ class DriveItem extends BaseItem
     * Gets the location
     * Location metadata, if the item has location data. Read-only.
     *
-    * @return GeoCoordinates|null The location
+    * @return GeoCoordinates The location
     */
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\GeoCoordinates") || is_null($this->_propDict["location"])) {
+            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\GeoCoordinates")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new GeoCoordinates($this->_propDict["location"]);
@@ -321,12 +321,12 @@ class DriveItem extends BaseItem
     * Gets the package
     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
-    * @return Package|null The package
+    * @return Package The package
     */
     public function getPackage()
     {
         if (array_key_exists("package", $this->_propDict)) {
-            if (is_a($this->_propDict["package"], "\Microsoft\Graph\Model\Package") || is_null($this->_propDict["package"])) {
+            if (is_a($this->_propDict["package"], "\Microsoft\Graph\Model\Package")) {
                 return $this->_propDict["package"];
             } else {
                 $this->_propDict["package"] = new Package($this->_propDict["package"]);
@@ -352,14 +352,14 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the pendingOperations
-    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
     *
-    * @return PendingOperations|null The pendingOperations
+    * @return PendingOperations The pendingOperations
     */
     public function getPendingOperations()
     {
         if (array_key_exists("pendingOperations", $this->_propDict)) {
-            if (is_a($this->_propDict["pendingOperations"], "\Microsoft\Graph\Model\PendingOperations") || is_null($this->_propDict["pendingOperations"])) {
+            if (is_a($this->_propDict["pendingOperations"], "\Microsoft\Graph\Model\PendingOperations")) {
                 return $this->_propDict["pendingOperations"];
             } else {
                 $this->_propDict["pendingOperations"] = new PendingOperations($this->_propDict["pendingOperations"]);
@@ -371,7 +371,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the pendingOperations
-    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
     *
     * @param PendingOperations $val The pendingOperations
     *
@@ -387,12 +387,12 @@ class DriveItem extends BaseItem
     * Gets the photo
     * Photo metadata, if the item is a photo. Read-only.
     *
-    * @return Photo|null The photo
+    * @return Photo The photo
     */
     public function getPhoto()
     {
         if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\Photo") || is_null($this->_propDict["photo"])) {
+            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\Photo")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new Photo($this->_propDict["photo"]);
@@ -420,12 +420,12 @@ class DriveItem extends BaseItem
     * Gets the publication
     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
     *
-    * @return PublicationFacet|null The publication
+    * @return PublicationFacet The publication
     */
     public function getPublication()
     {
         if (array_key_exists("publication", $this->_propDict)) {
-            if (is_a($this->_propDict["publication"], "\Microsoft\Graph\Model\PublicationFacet") || is_null($this->_propDict["publication"])) {
+            if (is_a($this->_propDict["publication"], "\Microsoft\Graph\Model\PublicationFacet")) {
                 return $this->_propDict["publication"];
             } else {
                 $this->_propDict["publication"] = new PublicationFacet($this->_propDict["publication"]);
@@ -453,12 +453,12 @@ class DriveItem extends BaseItem
     * Gets the remoteItem
     * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
     *
-    * @return RemoteItem|null The remoteItem
+    * @return RemoteItem The remoteItem
     */
     public function getRemoteItem()
     {
         if (array_key_exists("remoteItem", $this->_propDict)) {
-            if (is_a($this->_propDict["remoteItem"], "\Microsoft\Graph\Model\RemoteItem") || is_null($this->_propDict["remoteItem"])) {
+            if (is_a($this->_propDict["remoteItem"], "\Microsoft\Graph\Model\RemoteItem")) {
                 return $this->_propDict["remoteItem"];
             } else {
                 $this->_propDict["remoteItem"] = new RemoteItem($this->_propDict["remoteItem"]);
@@ -486,12 +486,12 @@ class DriveItem extends BaseItem
     * Gets the root
     * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
     *
-    * @return Root|null The root
+    * @return Root The root
     */
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\Root") || is_null($this->_propDict["root"])) {
+            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);
@@ -519,12 +519,12 @@ class DriveItem extends BaseItem
     * Gets the searchResult
     * Search metadata, if the item is from a search result. Read-only.
     *
-    * @return SearchResult|null The searchResult
+    * @return SearchResult The searchResult
     */
     public function getSearchResult()
     {
         if (array_key_exists("searchResult", $this->_propDict)) {
-            if (is_a($this->_propDict["searchResult"], "\Microsoft\Graph\Model\SearchResult") || is_null($this->_propDict["searchResult"])) {
+            if (is_a($this->_propDict["searchResult"], "\Microsoft\Graph\Model\SearchResult")) {
                 return $this->_propDict["searchResult"];
             } else {
                 $this->_propDict["searchResult"] = new SearchResult($this->_propDict["searchResult"]);
@@ -552,12 +552,12 @@ class DriveItem extends BaseItem
     * Gets the shared
     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
     *
-    * @return Shared|null The shared
+    * @return Shared The shared
     */
     public function getShared()
     {
         if (array_key_exists("shared", $this->_propDict)) {
-            if (is_a($this->_propDict["shared"], "\Microsoft\Graph\Model\Shared") || is_null($this->_propDict["shared"])) {
+            if (is_a($this->_propDict["shared"], "\Microsoft\Graph\Model\Shared")) {
                 return $this->_propDict["shared"];
             } else {
                 $this->_propDict["shared"] = new Shared($this->_propDict["shared"]);
@@ -585,12 +585,12 @@ class DriveItem extends BaseItem
     * Gets the sharepointIds
     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
-    * @return SharepointIds|null The sharepointIds
+    * @return SharepointIds The sharepointIds
     */
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "\Microsoft\Graph\Model\SharepointIds") || is_null($this->_propDict["sharepointIds"])) {
+            if (is_a($this->_propDict["sharepointIds"], "\Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -618,7 +618,7 @@ class DriveItem extends BaseItem
     * Gets the size
     * Size of the item in bytes. Read-only.
     *
-    * @return int|null The size
+    * @return int The size
     */
     public function getSize()
     {
@@ -647,12 +647,12 @@ class DriveItem extends BaseItem
     * Gets the specialFolder
     * If the current item is also available as a special folder, this facet is returned. Read-only.
     *
-    * @return SpecialFolder|null The specialFolder
+    * @return SpecialFolder The specialFolder
     */
     public function getSpecialFolder()
     {
         if (array_key_exists("specialFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["specialFolder"], "\Microsoft\Graph\Model\SpecialFolder") || is_null($this->_propDict["specialFolder"])) {
+            if (is_a($this->_propDict["specialFolder"], "\Microsoft\Graph\Model\SpecialFolder")) {
                 return $this->_propDict["specialFolder"];
             } else {
                 $this->_propDict["specialFolder"] = new SpecialFolder($this->_propDict["specialFolder"]);
@@ -680,12 +680,12 @@ class DriveItem extends BaseItem
     * Gets the video
     * Video metadata, if the item is a video. Read-only.
     *
-    * @return Video|null The video
+    * @return Video The video
     */
     public function getVideo()
     {
         if (array_key_exists("video", $this->_propDict)) {
-            if (is_a($this->_propDict["video"], "\Microsoft\Graph\Model\Video") || is_null($this->_propDict["video"])) {
+            if (is_a($this->_propDict["video"], "\Microsoft\Graph\Model\Video")) {
                 return $this->_propDict["video"];
             } else {
                 $this->_propDict["video"] = new Video($this->_propDict["video"]);
@@ -713,7 +713,7 @@ class DriveItem extends BaseItem
     * Gets the webDavUrl
     * WebDAV compatible URL for the item.
     *
-    * @return string|null The webDavUrl
+    * @return string The webDavUrl
     */
     public function getWebDavUrl()
     {
@@ -742,12 +742,12 @@ class DriveItem extends BaseItem
     * Gets the workbook
     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
     *
-    * @return Workbook|null The workbook
+    * @return Workbook The workbook
     */
     public function getWorkbook()
     {
         if (array_key_exists("workbook", $this->_propDict)) {
-            if (is_a($this->_propDict["workbook"], "\Microsoft\Graph\Model\Workbook") || is_null($this->_propDict["workbook"])) {
+            if (is_a($this->_propDict["workbook"], "\Microsoft\Graph\Model\Workbook")) {
                 return $this->_propDict["workbook"];
             } else {
                 $this->_propDict["workbook"] = new Workbook($this->_propDict["workbook"]);
@@ -775,12 +775,12 @@ class DriveItem extends BaseItem
     * Gets the analytics
     * Analytics about the view activities that took place on this item.
     *
-    * @return ItemAnalytics|null The analytics
+    * @return ItemAnalytics The analytics
     */
     public function getAnalytics()
     {
         if (array_key_exists("analytics", $this->_propDict)) {
-            if (is_a($this->_propDict["analytics"], "\Microsoft\Graph\Model\ItemAnalytics") || is_null($this->_propDict["analytics"])) {
+            if (is_a($this->_propDict["analytics"], "\Microsoft\Graph\Model\ItemAnalytics")) {
                 return $this->_propDict["analytics"];
             } else {
                 $this->_propDict["analytics"] = new ItemAnalytics($this->_propDict["analytics"]);
@@ -809,7 +809,7 @@ class DriveItem extends BaseItem
      * Gets the children
     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      *
-     * @return array|null The children
+     * @return array The children
      */
     public function getChildren()
     {
@@ -830,7 +830,7 @@ class DriveItem extends BaseItem
     */
     public function setChildren($val)
     {
-        $this->_propDict["children"] = $val;
+		$this->_propDict["children"] = $val;
         return $this;
     }
     
@@ -838,12 +838,12 @@ class DriveItem extends BaseItem
     * Gets the listItem
     * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
     *
-    * @return ListItem|null The listItem
+    * @return ListItem The listItem
     */
     public function getListItem()
     {
         if (array_key_exists("listItem", $this->_propDict)) {
-            if (is_a($this->_propDict["listItem"], "\Microsoft\Graph\Model\ListItem") || is_null($this->_propDict["listItem"])) {
+            if (is_a($this->_propDict["listItem"], "\Microsoft\Graph\Model\ListItem")) {
                 return $this->_propDict["listItem"];
             } else {
                 $this->_propDict["listItem"] = new ListItem($this->_propDict["listItem"]);
@@ -872,7 +872,7 @@ class DriveItem extends BaseItem
      * Gets the permissions
     * The set of permissions for the item. Read-only. Nullable.
      *
-     * @return array|null The permissions
+     * @return array The permissions
      */
     public function getPermissions()
     {
@@ -893,7 +893,7 @@ class DriveItem extends BaseItem
     */
     public function setPermissions($val)
     {
-        $this->_propDict["permissions"] = $val;
+		$this->_propDict["permissions"] = $val;
         return $this;
     }
     
@@ -902,7 +902,7 @@ class DriveItem extends BaseItem
      * Gets the subscriptions
     * The set of subscriptions on the item. Only supported on the root of a drive.
      *
-     * @return array|null The subscriptions
+     * @return array The subscriptions
      */
     public function getSubscriptions()
     {
@@ -923,7 +923,7 @@ class DriveItem extends BaseItem
     */
     public function setSubscriptions($val)
     {
-        $this->_propDict["subscriptions"] = $val;
+		$this->_propDict["subscriptions"] = $val;
         return $this;
     }
     
@@ -932,7 +932,7 @@ class DriveItem extends BaseItem
      * Gets the thumbnails
     * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      *
-     * @return array|null The thumbnails
+     * @return array The thumbnails
      */
     public function getThumbnails()
     {
@@ -953,7 +953,7 @@ class DriveItem extends BaseItem
     */
     public function setThumbnails($val)
     {
-        $this->_propDict["thumbnails"] = $val;
+		$this->_propDict["thumbnails"] = $val;
         return $this;
     }
     
@@ -962,7 +962,7 @@ class DriveItem extends BaseItem
      * Gets the versions
     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      *
-     * @return array|null The versions
+     * @return array The versions
      */
     public function getVersions()
     {
@@ -983,7 +983,7 @@ class DriveItem extends BaseItem
     */
     public function setVersions($val)
     {
-        $this->_propDict["versions"] = $val;
+		$this->_propDict["versions"] = $val;
         return $this;
     }
     

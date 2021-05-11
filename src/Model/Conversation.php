@@ -28,7 +28,7 @@ class Conversation extends Entity
     * Gets the hasAttachments
     * Indicates whether any of the posts within this Conversation has at least one attachment.
     *
-    * @return bool|null The hasAttachments
+    * @return bool The hasAttachments
     */
     public function getHasAttachments()
     {
@@ -57,12 +57,12 @@ class Conversation extends Entity
     * Gets the lastDeliveredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime|null The lastDeliveredDateTime
+    * @return \DateTime The lastDeliveredDateTime
     */
     public function getLastDeliveredDateTime()
     {
         if (array_key_exists("lastDeliveredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastDeliveredDateTime"], "\DateTime") || is_null($this->_propDict["lastDeliveredDateTime"])) {
+            if (is_a($this->_propDict["lastDeliveredDateTime"], "\DateTime")) {
                 return $this->_propDict["lastDeliveredDateTime"];
             } else {
                 $this->_propDict["lastDeliveredDateTime"] = new \DateTime($this->_propDict["lastDeliveredDateTime"]);
@@ -90,7 +90,7 @@ class Conversation extends Entity
     * Gets the preview
     * A short summary from the body of the latest post in this converstaion.
     *
-    * @return string|null The preview
+    * @return string The preview
     */
     public function getPreview()
     {
@@ -119,7 +119,7 @@ class Conversation extends Entity
     * Gets the topic
     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
     *
-    * @return string|null The topic
+    * @return string The topic
     */
     public function getTopic()
     {
@@ -148,7 +148,7 @@ class Conversation extends Entity
     * Gets the uniqueSenders
     * All the users that sent a message to this Conversation.
     *
-    * @return string|null The uniqueSenders
+    * @return string The uniqueSenders
     */
     public function getUniqueSenders()
     {
@@ -178,7 +178,7 @@ class Conversation extends Entity
      * Gets the threads
     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      *
-     * @return array|null The threads
+     * @return array The threads
      */
     public function getThreads()
     {
@@ -199,7 +199,7 @@ class Conversation extends Entity
     */
     public function setThreads($val)
     {
-        $this->_propDict["threads"] = $val;
+		$this->_propDict["threads"] = $val;
         return $this;
     }
     

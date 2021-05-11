@@ -27,7 +27,7 @@ class AverageComparativeScore extends Entity
     * Gets the averageScore
     * Average score within specified basis.
     *
-    * @return float|null The averageScore
+    * @return float The averageScore
     */
     public function getAverageScore()
     {
@@ -55,7 +55,7 @@ class AverageComparativeScore extends Entity
     * Gets the basis
     * Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
     *
-    * @return string|null The basis
+    * @return string The basis
     */
     public function getBasis()
     {

@@ -28,7 +28,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the azureOperationalInsightsBlockTelemetry
     * Indicates whether or not to Block Azure Operational Insights.
     *
-    * @return bool|null The azureOperationalInsightsBlockTelemetry
+    * @return bool The azureOperationalInsightsBlockTelemetry
     */
     public function getAzureOperationalInsightsBlockTelemetry()
     {
@@ -57,7 +57,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the azureOperationalInsightsWorkspaceId
     * The Azure Operational Insights workspace id.
     *
-    * @return string|null The azureOperationalInsightsWorkspaceId
+    * @return string The azureOperationalInsightsWorkspaceId
     */
     public function getAzureOperationalInsightsWorkspaceId()
     {
@@ -86,7 +86,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the azureOperationalInsightsWorkspaceKey
     * The Azure Operational Insights Workspace key.
     *
-    * @return string|null The azureOperationalInsightsWorkspaceKey
+    * @return string The azureOperationalInsightsWorkspaceKey
     */
     public function getAzureOperationalInsightsWorkspaceKey()
     {
@@ -115,7 +115,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the connectAppBlockAutoLaunch
     * Specifies whether to automatically launch the Connect app whenever a projection is initiated.
     *
-    * @return bool|null The connectAppBlockAutoLaunch
+    * @return bool The connectAppBlockAutoLaunch
     */
     public function getConnectAppBlockAutoLaunch()
     {
@@ -144,7 +144,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the maintenanceWindowBlocked
     * Indicates whether or not to Block setting a maintenance window for device updates.
     *
-    * @return bool|null The maintenanceWindowBlocked
+    * @return bool The maintenanceWindowBlocked
     */
     public function getMaintenanceWindowBlocked()
     {
@@ -173,7 +173,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the maintenanceWindowDurationInHours
     * Maintenance window duration for device updates. Valid values 0 to 5
     *
-    * @return int|null The maintenanceWindowDurationInHours
+    * @return int The maintenanceWindowDurationInHours
     */
     public function getMaintenanceWindowDurationInHours()
     {
@@ -202,12 +202,12 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the maintenanceWindowStartTime
     * Maintenance window start time for device updates.
     *
-    * @return TimeOfDay|null The maintenanceWindowStartTime
+    * @return TimeOfDay The maintenanceWindowStartTime
     */
     public function getMaintenanceWindowStartTime()
     {
         if (array_key_exists("maintenanceWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceWindowStartTime"], "\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["maintenanceWindowStartTime"])) {
+            if (is_a($this->_propDict["maintenanceWindowStartTime"], "\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["maintenanceWindowStartTime"];
             } else {
                 $this->_propDict["maintenanceWindowStartTime"] = new TimeOfDay($this->_propDict["maintenanceWindowStartTime"]);
@@ -235,7 +235,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the miracastBlocked
     * Indicates whether or not to Block wireless projection.
     *
-    * @return bool|null The miracastBlocked
+    * @return bool The miracastBlocked
     */
     public function getMiracastBlocked()
     {
@@ -264,12 +264,12 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the miracastChannel
     * The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
     *
-    * @return MiracastChannel|null The miracastChannel
+    * @return MiracastChannel The miracastChannel
     */
     public function getMiracastChannel()
     {
         if (array_key_exists("miracastChannel", $this->_propDict)) {
-            if (is_a($this->_propDict["miracastChannel"], "\Microsoft\Graph\Model\MiracastChannel") || is_null($this->_propDict["miracastChannel"])) {
+            if (is_a($this->_propDict["miracastChannel"], "\Microsoft\Graph\Model\MiracastChannel")) {
                 return $this->_propDict["miracastChannel"];
             } else {
                 $this->_propDict["miracastChannel"] = new MiracastChannel($this->_propDict["miracastChannel"]);
@@ -297,7 +297,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the miracastRequirePin
     * Indicates whether or not to require a pin for wireless projection.
     *
-    * @return bool|null The miracastRequirePin
+    * @return bool The miracastRequirePin
     */
     public function getMiracastRequirePin()
     {
@@ -326,7 +326,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the settingsBlockMyMeetingsAndFiles
     * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
     *
-    * @return bool|null The settingsBlockMyMeetingsAndFiles
+    * @return bool The settingsBlockMyMeetingsAndFiles
     */
     public function getSettingsBlockMyMeetingsAndFiles()
     {
@@ -355,7 +355,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the settingsBlockSessionResume
     * Specifies whether to allow the ability to resume a session when the session times out.
     *
-    * @return bool|null The settingsBlockSessionResume
+    * @return bool The settingsBlockSessionResume
     */
     public function getSettingsBlockSessionResume()
     {
@@ -384,7 +384,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the settingsBlockSigninSuggestions
     * Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
     *
-    * @return bool|null The settingsBlockSigninSuggestions
+    * @return bool The settingsBlockSigninSuggestions
     */
     public function getSettingsBlockSigninSuggestions()
     {
@@ -413,7 +413,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the settingsDefaultVolume
     * Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
     *
-    * @return int|null The settingsDefaultVolume
+    * @return int The settingsDefaultVolume
     */
     public function getSettingsDefaultVolume()
     {
@@ -442,7 +442,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the settingsScreenTimeoutInMinutes
     * Specifies the number of minutes until the Hub screen turns off.
     *
-    * @return int|null The settingsScreenTimeoutInMinutes
+    * @return int The settingsScreenTimeoutInMinutes
     */
     public function getSettingsScreenTimeoutInMinutes()
     {
@@ -471,7 +471,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the settingsSessionTimeoutInMinutes
     * Specifies the number of minutes until the session times out.
     *
-    * @return int|null The settingsSessionTimeoutInMinutes
+    * @return int The settingsSessionTimeoutInMinutes
     */
     public function getSettingsSessionTimeoutInMinutes()
     {
@@ -500,7 +500,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the settingsSleepTimeoutInMinutes
     * Specifies the number of minutes until the Hub enters sleep mode.
     *
-    * @return int|null The settingsSleepTimeoutInMinutes
+    * @return int The settingsSleepTimeoutInMinutes
     */
     public function getSettingsSleepTimeoutInMinutes()
     {
@@ -529,7 +529,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the welcomeScreenBackgroundImageUrl
     * The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
     *
-    * @return string|null The welcomeScreenBackgroundImageUrl
+    * @return string The welcomeScreenBackgroundImageUrl
     */
     public function getWelcomeScreenBackgroundImageUrl()
     {
@@ -558,7 +558,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the welcomeScreenBlockAutomaticWakeUp
     * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
     *
-    * @return bool|null The welcomeScreenBlockAutomaticWakeUp
+    * @return bool The welcomeScreenBlockAutomaticWakeUp
     */
     public function getWelcomeScreenBlockAutomaticWakeUp()
     {
@@ -587,12 +587,12 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the welcomeScreenMeetingInformation
     * The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
     *
-    * @return WelcomeScreenMeetingInformation|null The welcomeScreenMeetingInformation
+    * @return WelcomeScreenMeetingInformation The welcomeScreenMeetingInformation
     */
     public function getWelcomeScreenMeetingInformation()
     {
         if (array_key_exists("welcomeScreenMeetingInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["welcomeScreenMeetingInformation"], "\Microsoft\Graph\Model\WelcomeScreenMeetingInformation") || is_null($this->_propDict["welcomeScreenMeetingInformation"])) {
+            if (is_a($this->_propDict["welcomeScreenMeetingInformation"], "\Microsoft\Graph\Model\WelcomeScreenMeetingInformation")) {
                 return $this->_propDict["welcomeScreenMeetingInformation"];
             } else {
                 $this->_propDict["welcomeScreenMeetingInformation"] = new WelcomeScreenMeetingInformation($this->_propDict["welcomeScreenMeetingInformation"]);

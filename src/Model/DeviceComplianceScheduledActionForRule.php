@@ -28,7 +28,7 @@ class DeviceComplianceScheduledActionForRule extends Entity
     * Gets the ruleName
     * Name of the rule which this scheduled action applies to.
     *
-    * @return string|null The ruleName
+    * @return string The ruleName
     */
     public function getRuleName()
     {
@@ -58,7 +58,7 @@ class DeviceComplianceScheduledActionForRule extends Entity
      * Gets the scheduledActionConfigurations
     * The list of scheduled action configurations for this compliance policy.
      *
-     * @return array|null The scheduledActionConfigurations
+     * @return array The scheduledActionConfigurations
      */
     public function getScheduledActionConfigurations()
     {
@@ -79,7 +79,7 @@ class DeviceComplianceScheduledActionForRule extends Entity
     */
     public function setScheduledActionConfigurations($val)
     {
-        $this->_propDict["scheduledActionConfigurations"] = $val;
+		$this->_propDict["scheduledActionConfigurations"] = $val;
         return $this;
     }
     

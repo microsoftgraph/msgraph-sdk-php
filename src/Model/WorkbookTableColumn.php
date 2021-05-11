@@ -28,7 +28,7 @@ class WorkbookTableColumn extends Entity
     * Gets the index
     * Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
     *
-    * @return int|null The index
+    * @return int The index
     */
     public function getIndex()
     {
@@ -57,7 +57,7 @@ class WorkbookTableColumn extends Entity
     * Gets the name
     * Returns the name of the table column.
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -86,7 +86,7 @@ class WorkbookTableColumn extends Entity
     * Gets the values
     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
     *
-    * @return string|null The values
+    * @return string The values
     */
     public function getValues()
     {
@@ -115,12 +115,12 @@ class WorkbookTableColumn extends Entity
     * Gets the filter
     * Retrieve the filter applied to the column. Read-only.
     *
-    * @return WorkbookFilter|null The filter
+    * @return WorkbookFilter The filter
     */
     public function getFilter()
     {
         if (array_key_exists("filter", $this->_propDict)) {
-            if (is_a($this->_propDict["filter"], "\Microsoft\Graph\Model\WorkbookFilter") || is_null($this->_propDict["filter"])) {
+            if (is_a($this->_propDict["filter"], "\Microsoft\Graph\Model\WorkbookFilter")) {
                 return $this->_propDict["filter"];
             } else {
                 $this->_propDict["filter"] = new WorkbookFilter($this->_propDict["filter"]);

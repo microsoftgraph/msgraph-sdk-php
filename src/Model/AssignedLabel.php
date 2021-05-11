@@ -27,7 +27,7 @@ class AssignedLabel extends Entity
     * Gets the displayName
     * The display name of the label. Read-only.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -55,7 +55,7 @@ class AssignedLabel extends Entity
     * Gets the labelId
     * The unique identifier of the label.
     *
-    * @return string|null The labelId
+    * @return string The labelId
     */
     public function getLabelId()
     {

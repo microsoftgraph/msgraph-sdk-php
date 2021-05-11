@@ -27,12 +27,12 @@ class Workbook extends Entity
     /**
     * Gets the application
     *
-    * @return WorkbookApplication|null The application
+    * @return WorkbookApplication The application
     */
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "\Microsoft\Graph\Model\WorkbookApplication") || is_null($this->_propDict["application"])) {
+            if (is_a($this->_propDict["application"], "\Microsoft\Graph\Model\WorkbookApplication")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new WorkbookApplication($this->_propDict["application"]);
@@ -59,7 +59,7 @@ class Workbook extends Entity
      /** 
      * Gets the comments
      *
-     * @return array|null The comments
+     * @return array The comments
      */
     public function getComments()
     {
@@ -79,19 +79,19 @@ class Workbook extends Entity
     */
     public function setComments($val)
     {
-        $this->_propDict["comments"] = $val;
+		$this->_propDict["comments"] = $val;
         return $this;
     }
     
     /**
     * Gets the functions
     *
-    * @return WorkbookFunctions|null The functions
+    * @return WorkbookFunctions The functions
     */
     public function getFunctions()
     {
         if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "\Microsoft\Graph\Model\WorkbookFunctions") || is_null($this->_propDict["functions"])) {
+            if (is_a($this->_propDict["functions"], "\Microsoft\Graph\Model\WorkbookFunctions")) {
                 return $this->_propDict["functions"];
             } else {
                 $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);
@@ -119,7 +119,7 @@ class Workbook extends Entity
      * Gets the names
     * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
      *
-     * @return array|null The names
+     * @return array The names
      */
     public function getNames()
     {
@@ -140,16 +140,16 @@ class Workbook extends Entity
     */
     public function setNames($val)
     {
-        $this->_propDict["names"] = $val;
+		$this->_propDict["names"] = $val;
         return $this;
     }
     
 
      /** 
      * Gets the operations
-    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+    * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      *
-     * @return array|null The operations
+     * @return array The operations
      */
     public function getOperations()
     {
@@ -162,7 +162,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the operations
-    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+    * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
     *
     * @param WorkbookOperation $val The operations
     *
@@ -170,7 +170,7 @@ class Workbook extends Entity
     */
     public function setOperations($val)
     {
-        $this->_propDict["operations"] = $val;
+		$this->_propDict["operations"] = $val;
         return $this;
     }
     
@@ -179,7 +179,7 @@ class Workbook extends Entity
      * Gets the tables
     * Represents a collection of tables associated with the workbook. Read-only.
      *
-     * @return array|null The tables
+     * @return array The tables
      */
     public function getTables()
     {
@@ -200,7 +200,7 @@ class Workbook extends Entity
     */
     public function setTables($val)
     {
-        $this->_propDict["tables"] = $val;
+		$this->_propDict["tables"] = $val;
         return $this;
     }
     
@@ -209,7 +209,7 @@ class Workbook extends Entity
      * Gets the worksheets
     * Represents a collection of worksheets associated with the workbook. Read-only.
      *
-     * @return array|null The worksheets
+     * @return array The worksheets
      */
     public function getWorksheets()
     {
@@ -230,7 +230,7 @@ class Workbook extends Entity
     */
     public function setWorksheets($val)
     {
-        $this->_propDict["worksheets"] = $val;
+		$this->_propDict["worksheets"] = $val;
         return $this;
     }
     

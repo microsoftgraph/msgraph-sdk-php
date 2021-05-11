@@ -27,7 +27,7 @@ class PrivacyProfile extends Entity
     * Gets the contactEmail
     * A valid smtp email address for the privacy statement contact. Not required.
     *
-    * @return string|null The contactEmail
+    * @return string The contactEmail
     */
     public function getContactEmail()
     {
@@ -55,7 +55,7 @@ class PrivacyProfile extends Entity
     * Gets the statementUrl
     * A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
     *
-    * @return string|null The statementUrl
+    * @return string The statementUrl
     */
     public function getStatementUrl()
     {

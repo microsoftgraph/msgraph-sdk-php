@@ -28,7 +28,7 @@ class WorkbookApplication extends Entity
     * Gets the calculationMode
     * Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
     *
-    * @return string|null The calculationMode
+    * @return string The calculationMode
     */
     public function getCalculationMode()
     {

@@ -27,7 +27,7 @@ class SharepointIds extends Entity
     * Gets the listId
     * The unique identifier (guid) for the item's list in SharePoint.
     *
-    * @return string|null The listId
+    * @return string The listId
     */
     public function getListId()
     {
@@ -55,7 +55,7 @@ class SharepointIds extends Entity
     * Gets the listItemId
     * An integer identifier for the item within the containing list.
     *
-    * @return string|null The listItemId
+    * @return string The listItemId
     */
     public function getListItemId()
     {
@@ -83,7 +83,7 @@ class SharepointIds extends Entity
     * Gets the listItemUniqueId
     * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
     *
-    * @return string|null The listItemUniqueId
+    * @return string The listItemUniqueId
     */
     public function getListItemUniqueId()
     {
@@ -111,7 +111,7 @@ class SharepointIds extends Entity
     * Gets the siteId
     * The unique identifier (guid) for the item's site collection (SPSite).
     *
-    * @return string|null The siteId
+    * @return string The siteId
     */
     public function getSiteId()
     {
@@ -139,7 +139,7 @@ class SharepointIds extends Entity
     * Gets the siteUrl
     * The SharePoint URL for the site that contains the item.
     *
-    * @return string|null The siteUrl
+    * @return string The siteUrl
     */
     public function getSiteUrl()
     {
@@ -167,7 +167,7 @@ class SharepointIds extends Entity
     * Gets the tenantId
     * The unique identifier (guid) for the tenancy.
     *
-    * @return string|null The tenantId
+    * @return string The tenantId
     */
     public function getTenantId()
     {
@@ -195,7 +195,7 @@ class SharepointIds extends Entity
     * Gets the webId
     * The unique identifier (guid) for the item's site (SPWeb).
     *
-    * @return string|null The webId
+    * @return string The webId
     */
     public function getWebId()
     {

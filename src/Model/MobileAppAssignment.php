@@ -28,12 +28,12 @@ class MobileAppAssignment extends Entity
     * Gets the intent
     * The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
     *
-    * @return InstallIntent|null The intent
+    * @return InstallIntent The intent
     */
     public function getIntent()
     {
         if (array_key_exists("intent", $this->_propDict)) {
-            if (is_a($this->_propDict["intent"], "\Microsoft\Graph\Model\InstallIntent") || is_null($this->_propDict["intent"])) {
+            if (is_a($this->_propDict["intent"], "\Microsoft\Graph\Model\InstallIntent")) {
                 return $this->_propDict["intent"];
             } else {
                 $this->_propDict["intent"] = new InstallIntent($this->_propDict["intent"]);
@@ -61,12 +61,12 @@ class MobileAppAssignment extends Entity
     * Gets the settings
     * The settings for target assignment defined by the admin.
     *
-    * @return MobileAppAssignmentSettings|null The settings
+    * @return MobileAppAssignmentSettings The settings
     */
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\MobileAppAssignmentSettings") || is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\MobileAppAssignmentSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new MobileAppAssignmentSettings($this->_propDict["settings"]);
@@ -94,12 +94,12 @@ class MobileAppAssignment extends Entity
     * Gets the target
     * The target group assignment defined by the admin.
     *
-    * @return DeviceAndAppManagementAssignmentTarget|null The target
+    * @return DeviceAndAppManagementAssignmentTarget The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget") || is_null($this->_propDict["target"])) {
+            if (is_a($this->_propDict["target"], "\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentTarget")) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new DeviceAndAppManagementAssignmentTarget($this->_propDict["target"]);

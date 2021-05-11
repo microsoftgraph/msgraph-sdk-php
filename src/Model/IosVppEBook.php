@@ -28,7 +28,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the appleId
     * The Apple ID associated with Vpp token.
     *
-    * @return string|null The appleId
+    * @return string The appleId
     */
     public function getAppleId()
     {
@@ -57,7 +57,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the genres
     * Genres.
     *
-    * @return string|null The genres
+    * @return string The genres
     */
     public function getGenres()
     {
@@ -86,7 +86,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the language
     * Language.
     *
-    * @return string|null The language
+    * @return string The language
     */
     public function getLanguage()
     {
@@ -115,7 +115,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the seller
     * Seller.
     *
-    * @return string|null The seller
+    * @return string The seller
     */
     public function getSeller()
     {
@@ -144,7 +144,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the totalLicenseCount
     * Total license count.
     *
-    * @return int|null The totalLicenseCount
+    * @return int The totalLicenseCount
     */
     public function getTotalLicenseCount()
     {
@@ -173,7 +173,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the usedLicenseCount
     * Used license count.
     *
-    * @return int|null The usedLicenseCount
+    * @return int The usedLicenseCount
     */
     public function getUsedLicenseCount()
     {
@@ -202,7 +202,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the vppOrganizationName
     * The Vpp token's organization name.
     *
-    * @return string|null The vppOrganizationName
+    * @return string The vppOrganizationName
     */
     public function getVppOrganizationName()
     {
@@ -231,7 +231,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the vppTokenId
     * The Vpp token ID.
     *
-    * @return string|null The vppTokenId
+    * @return string The vppTokenId
     */
     public function getVppTokenId()
     {

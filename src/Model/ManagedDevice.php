@@ -26,9 +26,9 @@ class ManagedDevice extends Entity
 {
     /**
     * Gets the activationLockBypassCode
-    * Code that allows the Activation Lock on a device to be bypassed.
+    * Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
     *
-    * @return string|null The activationLockBypassCode
+    * @return string The activationLockBypassCode
     */
     public function getActivationLockBypassCode()
     {
@@ -41,7 +41,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the activationLockBypassCode
-    * Code that allows the Activation Lock on a device to be bypassed.
+    * Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
     *
     * @param string $val The activationLockBypassCode
     *
@@ -55,9 +55,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the androidSecurityPatchLevel
-    * Android security patch level
+    * Android security patch level. This property is read-only.
     *
-    * @return string|null The androidSecurityPatchLevel
+    * @return string The androidSecurityPatchLevel
     */
     public function getAndroidSecurityPatchLevel()
     {
@@ -70,7 +70,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the androidSecurityPatchLevel
-    * Android security patch level
+    * Android security patch level. This property is read-only.
     *
     * @param string $val The androidSecurityPatchLevel
     *
@@ -84,9 +84,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the azureADDeviceId
-    * The unique identifier for the Azure Active Directory device. Read only.
+    * The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
     *
-    * @return string|null The azureADDeviceId
+    * @return string The azureADDeviceId
     */
     public function getAzureADDeviceId()
     {
@@ -99,7 +99,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the azureADDeviceId
-    * The unique identifier for the Azure Active Directory device. Read only.
+    * The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
     *
     * @param string $val The azureADDeviceId
     *
@@ -113,9 +113,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the azureADRegistered
-    * Whether the device is Azure Active Directory registered.
+    * Whether the device is Azure Active Directory registered. This property is read-only.
     *
-    * @return bool|null The azureADRegistered
+    * @return bool The azureADRegistered
     */
     public function getAzureADRegistered()
     {
@@ -128,7 +128,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the azureADRegistered
-    * Whether the device is Azure Active Directory registered.
+    * Whether the device is Azure Active Directory registered. This property is read-only.
     *
     * @param bool $val The azureADRegistered
     *
@@ -142,14 +142,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
+    * The DateTime when device compliance grace period expires. This property is read-only.
     *
-    * @return \DateTime|null The complianceGracePeriodExpirationDateTime
+    * @return \DateTime The complianceGracePeriodExpirationDateTime
     */
     public function getComplianceGracePeriodExpirationDateTime()
     {
         if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
+            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime")) {
                 return $this->_propDict["complianceGracePeriodExpirationDateTime"];
             } else {
                 $this->_propDict["complianceGracePeriodExpirationDateTime"] = new \DateTime($this->_propDict["complianceGracePeriodExpirationDateTime"]);
@@ -161,7 +161,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
+    * The DateTime when device compliance grace period expires. This property is read-only.
     *
     * @param \DateTime $val The complianceGracePeriodExpirationDateTime
     *
@@ -175,14 +175,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the complianceState
-    * Compliance state of the device. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
+    * Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
     *
-    * @return ComplianceState|null The complianceState
+    * @return ComplianceState The complianceState
     */
     public function getComplianceState()
     {
         if (array_key_exists("complianceState", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceState"], "\Microsoft\Graph\Model\ComplianceState") || is_null($this->_propDict["complianceState"])) {
+            if (is_a($this->_propDict["complianceState"], "\Microsoft\Graph\Model\ComplianceState")) {
                 return $this->_propDict["complianceState"];
             } else {
                 $this->_propDict["complianceState"] = new ComplianceState($this->_propDict["complianceState"]);
@@ -194,7 +194,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the complianceState
-    * Compliance state of the device. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
+    * Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
     *
     * @param ComplianceState $val The complianceState
     *
@@ -208,14 +208,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the configurationManagerClientEnabledFeatures
-    * ConfigrMgr client enabled features
+    * ConfigrMgr client enabled features. This property is read-only.
     *
-    * @return ConfigurationManagerClientEnabledFeatures|null The configurationManagerClientEnabledFeatures
+    * @return ConfigurationManagerClientEnabledFeatures The configurationManagerClientEnabledFeatures
     */
     public function getConfigurationManagerClientEnabledFeatures()
     {
         if (array_key_exists("configurationManagerClientEnabledFeatures", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationManagerClientEnabledFeatures"], "\Microsoft\Graph\Model\ConfigurationManagerClientEnabledFeatures") || is_null($this->_propDict["configurationManagerClientEnabledFeatures"])) {
+            if (is_a($this->_propDict["configurationManagerClientEnabledFeatures"], "\Microsoft\Graph\Model\ConfigurationManagerClientEnabledFeatures")) {
                 return $this->_propDict["configurationManagerClientEnabledFeatures"];
             } else {
                 $this->_propDict["configurationManagerClientEnabledFeatures"] = new ConfigurationManagerClientEnabledFeatures($this->_propDict["configurationManagerClientEnabledFeatures"]);
@@ -227,7 +227,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the configurationManagerClientEnabledFeatures
-    * ConfigrMgr client enabled features
+    * ConfigrMgr client enabled features. This property is read-only.
     *
     * @param ConfigurationManagerClientEnabledFeatures $val The configurationManagerClientEnabledFeatures
     *
@@ -242,9 +242,9 @@ class ManagedDevice extends Entity
 
      /** 
      * Gets the deviceActionResults
-    * List of ComplexType deviceActionResult objects.
+    * List of ComplexType deviceActionResult objects. This property is read-only.
      *
-     * @return array|null The deviceActionResults
+     * @return array The deviceActionResults
      */
     public function getDeviceActionResults()
     {
@@ -257,7 +257,7 @@ class ManagedDevice extends Entity
     
     /** 
     * Sets the deviceActionResults
-    * List of ComplexType deviceActionResult objects.
+    * List of ComplexType deviceActionResult objects. This property is read-only.
     *
     * @param DeviceActionResult $val The deviceActionResults
     *
@@ -265,15 +265,15 @@ class ManagedDevice extends Entity
     */
     public function setDeviceActionResults($val)
     {
-        $this->_propDict["deviceActionResults"] = $val;
+		$this->_propDict["deviceActionResults"] = $val;
         return $this;
     }
     
     /**
     * Gets the deviceCategoryDisplayName
-    * Device category display name
+    * Device category display name. This property is read-only.
     *
-    * @return string|null The deviceCategoryDisplayName
+    * @return string The deviceCategoryDisplayName
     */
     public function getDeviceCategoryDisplayName()
     {
@@ -286,7 +286,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceCategoryDisplayName
-    * Device category display name
+    * Device category display name. This property is read-only.
     *
     * @param string $val The deviceCategoryDisplayName
     *
@@ -300,14 +300,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceEnrollmentType
-    * Enrollment type of the device. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
+    * Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
     *
-    * @return DeviceEnrollmentType|null The deviceEnrollmentType
+    * @return DeviceEnrollmentType The deviceEnrollmentType
     */
     public function getDeviceEnrollmentType()
     {
         if (array_key_exists("deviceEnrollmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceEnrollmentType"], "\Microsoft\Graph\Model\DeviceEnrollmentType") || is_null($this->_propDict["deviceEnrollmentType"])) {
+            if (is_a($this->_propDict["deviceEnrollmentType"], "\Microsoft\Graph\Model\DeviceEnrollmentType")) {
                 return $this->_propDict["deviceEnrollmentType"];
             } else {
                 $this->_propDict["deviceEnrollmentType"] = new DeviceEnrollmentType($this->_propDict["deviceEnrollmentType"]);
@@ -319,7 +319,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceEnrollmentType
-    * Enrollment type of the device. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
+    * Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
     *
     * @param DeviceEnrollmentType $val The deviceEnrollmentType
     *
@@ -333,14 +333,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceHealthAttestationState
-    * The device health attestation state.
+    * The device health attestation state. This property is read-only.
     *
-    * @return DeviceHealthAttestationState|null The deviceHealthAttestationState
+    * @return DeviceHealthAttestationState The deviceHealthAttestationState
     */
     public function getDeviceHealthAttestationState()
     {
         if (array_key_exists("deviceHealthAttestationState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceHealthAttestationState"], "\Microsoft\Graph\Model\DeviceHealthAttestationState") || is_null($this->_propDict["deviceHealthAttestationState"])) {
+            if (is_a($this->_propDict["deviceHealthAttestationState"], "\Microsoft\Graph\Model\DeviceHealthAttestationState")) {
                 return $this->_propDict["deviceHealthAttestationState"];
             } else {
                 $this->_propDict["deviceHealthAttestationState"] = new DeviceHealthAttestationState($this->_propDict["deviceHealthAttestationState"]);
@@ -352,7 +352,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceHealthAttestationState
-    * The device health attestation state.
+    * The device health attestation state. This property is read-only.
     *
     * @param DeviceHealthAttestationState $val The deviceHealthAttestationState
     *
@@ -366,9 +366,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceName
-    * Name of the device
+    * Name of the device. This property is read-only.
     *
-    * @return string|null The deviceName
+    * @return string The deviceName
     */
     public function getDeviceName()
     {
@@ -381,7 +381,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceName
-    * Name of the device
+    * Name of the device. This property is read-only.
     *
     * @param string $val The deviceName
     *
@@ -395,14 +395,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceRegistrationState
-    * Device registration state. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+    * Device registration state. This property is read-only. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
     *
-    * @return DeviceRegistrationState|null The deviceRegistrationState
+    * @return DeviceRegistrationState The deviceRegistrationState
     */
     public function getDeviceRegistrationState()
     {
         if (array_key_exists("deviceRegistrationState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceRegistrationState"], "\Microsoft\Graph\Model\DeviceRegistrationState") || is_null($this->_propDict["deviceRegistrationState"])) {
+            if (is_a($this->_propDict["deviceRegistrationState"], "\Microsoft\Graph\Model\DeviceRegistrationState")) {
                 return $this->_propDict["deviceRegistrationState"];
             } else {
                 $this->_propDict["deviceRegistrationState"] = new DeviceRegistrationState($this->_propDict["deviceRegistrationState"]);
@@ -414,7 +414,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceRegistrationState
-    * Device registration state. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+    * Device registration state. This property is read-only. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
     *
     * @param DeviceRegistrationState $val The deviceRegistrationState
     *
@@ -428,9 +428,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the easActivated
-    * Whether the device is Exchange ActiveSync activated.
+    * Whether the device is Exchange ActiveSync activated. This property is read-only.
     *
-    * @return bool|null The easActivated
+    * @return bool The easActivated
     */
     public function getEasActivated()
     {
@@ -443,7 +443,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the easActivated
-    * Whether the device is Exchange ActiveSync activated.
+    * Whether the device is Exchange ActiveSync activated. This property is read-only.
     *
     * @param bool $val The easActivated
     *
@@ -457,14 +457,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the easActivationDateTime
-    * Exchange ActivationSync activation time of the device.
+    * Exchange ActivationSync activation time of the device. This property is read-only.
     *
-    * @return \DateTime|null The easActivationDateTime
+    * @return \DateTime The easActivationDateTime
     */
     public function getEasActivationDateTime()
     {
         if (array_key_exists("easActivationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["easActivationDateTime"], "\DateTime") || is_null($this->_propDict["easActivationDateTime"])) {
+            if (is_a($this->_propDict["easActivationDateTime"], "\DateTime")) {
                 return $this->_propDict["easActivationDateTime"];
             } else {
                 $this->_propDict["easActivationDateTime"] = new \DateTime($this->_propDict["easActivationDateTime"]);
@@ -476,7 +476,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the easActivationDateTime
-    * Exchange ActivationSync activation time of the device.
+    * Exchange ActivationSync activation time of the device. This property is read-only.
     *
     * @param \DateTime $val The easActivationDateTime
     *
@@ -490,9 +490,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the easDeviceId
-    * Exchange ActiveSync Id of the device.
+    * Exchange ActiveSync Id of the device. This property is read-only.
     *
-    * @return string|null The easDeviceId
+    * @return string The easDeviceId
     */
     public function getEasDeviceId()
     {
@@ -505,7 +505,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the easDeviceId
-    * Exchange ActiveSync Id of the device.
+    * Exchange ActiveSync Id of the device. This property is read-only.
     *
     * @param string $val The easDeviceId
     *
@@ -519,9 +519,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the emailAddress
-    * Email(s) for the user associated with the device
+    * Email(s) for the user associated with the device. This property is read-only.
     *
-    * @return string|null The emailAddress
+    * @return string The emailAddress
     */
     public function getEmailAddress()
     {
@@ -534,7 +534,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the emailAddress
-    * Email(s) for the user associated with the device
+    * Email(s) for the user associated with the device. This property is read-only.
     *
     * @param string $val The emailAddress
     *
@@ -548,14 +548,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the enrolledDateTime
-    * Enrollment time of the device.
+    * Enrollment time of the device. This property is read-only.
     *
-    * @return \DateTime|null The enrolledDateTime
+    * @return \DateTime The enrolledDateTime
     */
     public function getEnrolledDateTime()
     {
         if (array_key_exists("enrolledDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["enrolledDateTime"], "\DateTime") || is_null($this->_propDict["enrolledDateTime"])) {
+            if (is_a($this->_propDict["enrolledDateTime"], "\DateTime")) {
                 return $this->_propDict["enrolledDateTime"];
             } else {
                 $this->_propDict["enrolledDateTime"] = new \DateTime($this->_propDict["enrolledDateTime"]);
@@ -567,7 +567,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the enrolledDateTime
-    * Enrollment time of the device.
+    * Enrollment time of the device. This property is read-only.
     *
     * @param \DateTime $val The enrolledDateTime
     *
@@ -581,14 +581,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the exchangeAccessState
-    * The Access State of the device in Exchange. Possible values are: none, unknown, allowed, blocked, quarantined.
+    * The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined.
     *
-    * @return DeviceManagementExchangeAccessState|null The exchangeAccessState
+    * @return DeviceManagementExchangeAccessState The exchangeAccessState
     */
     public function getExchangeAccessState()
     {
         if (array_key_exists("exchangeAccessState", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeAccessState"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessState") || is_null($this->_propDict["exchangeAccessState"])) {
+            if (is_a($this->_propDict["exchangeAccessState"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessState")) {
                 return $this->_propDict["exchangeAccessState"];
             } else {
                 $this->_propDict["exchangeAccessState"] = new DeviceManagementExchangeAccessState($this->_propDict["exchangeAccessState"]);
@@ -600,7 +600,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the exchangeAccessState
-    * The Access State of the device in Exchange. Possible values are: none, unknown, allowed, blocked, quarantined.
+    * The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined.
     *
     * @param DeviceManagementExchangeAccessState $val The exchangeAccessState
     *
@@ -614,14 +614,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the exchangeAccessStateReason
-    * The reason for the device's access state in Exchange. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
+    * The reason for the device's access state in Exchange. This property is read-only. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
     *
-    * @return DeviceManagementExchangeAccessStateReason|null The exchangeAccessStateReason
+    * @return DeviceManagementExchangeAccessStateReason The exchangeAccessStateReason
     */
     public function getExchangeAccessStateReason()
     {
         if (array_key_exists("exchangeAccessStateReason", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeAccessStateReason"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessStateReason") || is_null($this->_propDict["exchangeAccessStateReason"])) {
+            if (is_a($this->_propDict["exchangeAccessStateReason"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessStateReason")) {
                 return $this->_propDict["exchangeAccessStateReason"];
             } else {
                 $this->_propDict["exchangeAccessStateReason"] = new DeviceManagementExchangeAccessStateReason($this->_propDict["exchangeAccessStateReason"]);
@@ -633,7 +633,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the exchangeAccessStateReason
-    * The reason for the device's access state in Exchange. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
+    * The reason for the device's access state in Exchange. This property is read-only. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
     *
     * @param DeviceManagementExchangeAccessStateReason $val The exchangeAccessStateReason
     *
@@ -647,14 +647,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the exchangeLastSuccessfulSyncDateTime
-    * Last time the device contacted Exchange.
+    * Last time the device contacted Exchange. This property is read-only.
     *
-    * @return \DateTime|null The exchangeLastSuccessfulSyncDateTime
+    * @return \DateTime The exchangeLastSuccessfulSyncDateTime
     */
     public function getExchangeLastSuccessfulSyncDateTime()
     {
         if (array_key_exists("exchangeLastSuccessfulSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeLastSuccessfulSyncDateTime"], "\DateTime") || is_null($this->_propDict["exchangeLastSuccessfulSyncDateTime"])) {
+            if (is_a($this->_propDict["exchangeLastSuccessfulSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["exchangeLastSuccessfulSyncDateTime"];
             } else {
                 $this->_propDict["exchangeLastSuccessfulSyncDateTime"] = new \DateTime($this->_propDict["exchangeLastSuccessfulSyncDateTime"]);
@@ -666,7 +666,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the exchangeLastSuccessfulSyncDateTime
-    * Last time the device contacted Exchange.
+    * Last time the device contacted Exchange. This property is read-only.
     *
     * @param \DateTime $val The exchangeLastSuccessfulSyncDateTime
     *
@@ -680,9 +680,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the freeStorageSpaceInBytes
-    * Free Storage in Bytes
+    * Free Storage in Bytes. This property is read-only.
     *
-    * @return int|null The freeStorageSpaceInBytes
+    * @return int The freeStorageSpaceInBytes
     */
     public function getFreeStorageSpaceInBytes()
     {
@@ -695,7 +695,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the freeStorageSpaceInBytes
-    * Free Storage in Bytes
+    * Free Storage in Bytes. This property is read-only.
     *
     * @param int $val The freeStorageSpaceInBytes
     *
@@ -709,9 +709,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the imei
-    * IMEI
+    * IMEI. This property is read-only.
     *
-    * @return string|null The imei
+    * @return string The imei
     */
     public function getImei()
     {
@@ -724,7 +724,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the imei
-    * IMEI
+    * IMEI. This property is read-only.
     *
     * @param string $val The imei
     *
@@ -738,9 +738,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the isEncrypted
-    * Device encryption status
+    * Device encryption status. This property is read-only.
     *
-    * @return bool|null The isEncrypted
+    * @return bool The isEncrypted
     */
     public function getIsEncrypted()
     {
@@ -753,7 +753,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the isEncrypted
-    * Device encryption status
+    * Device encryption status. This property is read-only.
     *
     * @param bool $val The isEncrypted
     *
@@ -767,9 +767,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the isSupervised
-    * Device supervised status
+    * Device supervised status. This property is read-only.
     *
-    * @return bool|null The isSupervised
+    * @return bool The isSupervised
     */
     public function getIsSupervised()
     {
@@ -782,7 +782,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the isSupervised
-    * Device supervised status
+    * Device supervised status. This property is read-only.
     *
     * @param bool $val The isSupervised
     *
@@ -796,9 +796,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the jailBroken
-    * whether the device is jail broken or rooted.
+    * whether the device is jail broken or rooted. This property is read-only.
     *
-    * @return string|null The jailBroken
+    * @return string The jailBroken
     */
     public function getJailBroken()
     {
@@ -811,7 +811,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the jailBroken
-    * whether the device is jail broken or rooted.
+    * whether the device is jail broken or rooted. This property is read-only.
     *
     * @param string $val The jailBroken
     *
@@ -825,14 +825,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the lastSyncDateTime
-    * The date and time that the device last completed a successful sync with Intune.
+    * The date and time that the device last completed a successful sync with Intune. This property is read-only.
     *
-    * @return \DateTime|null The lastSyncDateTime
+    * @return \DateTime The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -844,7 +844,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the lastSyncDateTime
-    * The date and time that the device last completed a successful sync with Intune.
+    * The date and time that the device last completed a successful sync with Intune. This property is read-only.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -860,7 +860,7 @@ class ManagedDevice extends Entity
     * Gets the managedDeviceName
     * Automatically generated name to identify a device. Can be overwritten to a user friendly name.
     *
-    * @return string|null The managedDeviceName
+    * @return string The managedDeviceName
     */
     public function getManagedDeviceName()
     {
@@ -889,12 +889,12 @@ class ManagedDevice extends Entity
     * Gets the managedDeviceOwnerType
     * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
     *
-    * @return ManagedDeviceOwnerType|null The managedDeviceOwnerType
+    * @return ManagedDeviceOwnerType The managedDeviceOwnerType
     */
     public function getManagedDeviceOwnerType()
     {
         if (array_key_exists("managedDeviceOwnerType", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceOwnerType"], "\Microsoft\Graph\Model\ManagedDeviceOwnerType") || is_null($this->_propDict["managedDeviceOwnerType"])) {
+            if (is_a($this->_propDict["managedDeviceOwnerType"], "\Microsoft\Graph\Model\ManagedDeviceOwnerType")) {
                 return $this->_propDict["managedDeviceOwnerType"];
             } else {
                 $this->_propDict["managedDeviceOwnerType"] = new ManagedDeviceOwnerType($this->_propDict["managedDeviceOwnerType"]);
@@ -920,14 +920,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the managementAgent
-    * Management channel of the device. Intune, EAS, etc. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
+    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
     *
-    * @return ManagementAgentType|null The managementAgent
+    * @return ManagementAgentType The managementAgent
     */
     public function getManagementAgent()
     {
         if (array_key_exists("managementAgent", $this->_propDict)) {
-            if (is_a($this->_propDict["managementAgent"], "\Microsoft\Graph\Model\ManagementAgentType") || is_null($this->_propDict["managementAgent"])) {
+            if (is_a($this->_propDict["managementAgent"], "\Microsoft\Graph\Model\ManagementAgentType")) {
                 return $this->_propDict["managementAgent"];
             } else {
                 $this->_propDict["managementAgent"] = new ManagementAgentType($this->_propDict["managementAgent"]);
@@ -939,7 +939,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the managementAgent
-    * Management channel of the device. Intune, EAS, etc. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
+    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
     *
     * @param ManagementAgentType $val The managementAgent
     *
@@ -953,9 +953,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the manufacturer
-    * Manufacturer of the device
+    * Manufacturer of the device. This property is read-only.
     *
-    * @return string|null The manufacturer
+    * @return string The manufacturer
     */
     public function getManufacturer()
     {
@@ -968,7 +968,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the manufacturer
-    * Manufacturer of the device
+    * Manufacturer of the device. This property is read-only.
     *
     * @param string $val The manufacturer
     *
@@ -982,9 +982,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the meid
-    * MEID
+    * MEID. This property is read-only.
     *
-    * @return string|null The meid
+    * @return string The meid
     */
     public function getMeid()
     {
@@ -997,7 +997,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the meid
-    * MEID
+    * MEID. This property is read-only.
     *
     * @param string $val The meid
     *
@@ -1011,9 +1011,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the model
-    * Model of the device
+    * Model of the device. This property is read-only.
     *
-    * @return string|null The model
+    * @return string The model
     */
     public function getModel()
     {
@@ -1026,7 +1026,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the model
-    * Model of the device
+    * Model of the device. This property is read-only.
     *
     * @param string $val The model
     *
@@ -1040,9 +1040,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the operatingSystem
-    * Operating system of the device. Windows, iOS, etc.
+    * Operating system of the device. Windows, iOS, etc. This property is read-only.
     *
-    * @return string|null The operatingSystem
+    * @return string The operatingSystem
     */
     public function getOperatingSystem()
     {
@@ -1055,7 +1055,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the operatingSystem
-    * Operating system of the device. Windows, iOS, etc.
+    * Operating system of the device. Windows, iOS, etc. This property is read-only.
     *
     * @param string $val The operatingSystem
     *
@@ -1069,9 +1069,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the osVersion
-    * Operating system version of the device.
+    * Operating system version of the device. This property is read-only.
     *
-    * @return string|null The osVersion
+    * @return string The osVersion
     */
     public function getOsVersion()
     {
@@ -1084,7 +1084,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the osVersion
-    * Operating system version of the device.
+    * Operating system version of the device. This property is read-only.
     *
     * @param string $val The osVersion
     *
@@ -1098,14 +1098,14 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the partnerReportedThreatState
-    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
+    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. This property is read-only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
     *
-    * @return ManagedDevicePartnerReportedHealthState|null The partnerReportedThreatState
+    * @return ManagedDevicePartnerReportedHealthState The partnerReportedThreatState
     */
     public function getPartnerReportedThreatState()
     {
         if (array_key_exists("partnerReportedThreatState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerReportedThreatState"], "\Microsoft\Graph\Model\ManagedDevicePartnerReportedHealthState") || is_null($this->_propDict["partnerReportedThreatState"])) {
+            if (is_a($this->_propDict["partnerReportedThreatState"], "\Microsoft\Graph\Model\ManagedDevicePartnerReportedHealthState")) {
                 return $this->_propDict["partnerReportedThreatState"];
             } else {
                 $this->_propDict["partnerReportedThreatState"] = new ManagedDevicePartnerReportedHealthState($this->_propDict["partnerReportedThreatState"]);
@@ -1117,7 +1117,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the partnerReportedThreatState
-    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
+    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. This property is read-only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
     *
     * @param ManagedDevicePartnerReportedHealthState $val The partnerReportedThreatState
     *
@@ -1131,9 +1131,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the phoneNumber
-    * Phone number of the device
+    * Phone number of the device. This property is read-only.
     *
-    * @return string|null The phoneNumber
+    * @return string The phoneNumber
     */
     public function getPhoneNumber()
     {
@@ -1146,7 +1146,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the phoneNumber
-    * Phone number of the device
+    * Phone number of the device. This property is read-only.
     *
     * @param string $val The phoneNumber
     *
@@ -1160,9 +1160,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the remoteAssistanceSessionErrorDetails
-    * An error string that identifies issues when creating Remote Assistance session objects.
+    * An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
     *
-    * @return string|null The remoteAssistanceSessionErrorDetails
+    * @return string The remoteAssistanceSessionErrorDetails
     */
     public function getRemoteAssistanceSessionErrorDetails()
     {
@@ -1175,7 +1175,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the remoteAssistanceSessionErrorDetails
-    * An error string that identifies issues when creating Remote Assistance session objects.
+    * An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
     *
     * @param string $val The remoteAssistanceSessionErrorDetails
     *
@@ -1189,9 +1189,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the remoteAssistanceSessionUrl
-    * Url that allows a Remote Assistance session to be established with the device.
+    * Url that allows a Remote Assistance session to be established with the device. This property is read-only.
     *
-    * @return string|null The remoteAssistanceSessionUrl
+    * @return string The remoteAssistanceSessionUrl
     */
     public function getRemoteAssistanceSessionUrl()
     {
@@ -1204,7 +1204,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the remoteAssistanceSessionUrl
-    * Url that allows a Remote Assistance session to be established with the device.
+    * Url that allows a Remote Assistance session to be established with the device. This property is read-only.
     *
     * @param string $val The remoteAssistanceSessionUrl
     *
@@ -1218,9 +1218,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the serialNumber
-    * SerialNumber
+    * SerialNumber. This property is read-only.
     *
-    * @return string|null The serialNumber
+    * @return string The serialNumber
     */
     public function getSerialNumber()
     {
@@ -1233,7 +1233,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the serialNumber
-    * SerialNumber
+    * SerialNumber. This property is read-only.
     *
     * @param string $val The serialNumber
     *
@@ -1247,9 +1247,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the subscriberCarrier
-    * Subscriber Carrier
+    * Subscriber Carrier. This property is read-only.
     *
-    * @return string|null The subscriberCarrier
+    * @return string The subscriberCarrier
     */
     public function getSubscriberCarrier()
     {
@@ -1262,7 +1262,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the subscriberCarrier
-    * Subscriber Carrier
+    * Subscriber Carrier. This property is read-only.
     *
     * @param string $val The subscriberCarrier
     *
@@ -1276,9 +1276,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the totalStorageSpaceInBytes
-    * Total Storage in Bytes
+    * Total Storage in Bytes. This property is read-only.
     *
-    * @return int|null The totalStorageSpaceInBytes
+    * @return int The totalStorageSpaceInBytes
     */
     public function getTotalStorageSpaceInBytes()
     {
@@ -1291,7 +1291,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the totalStorageSpaceInBytes
-    * Total Storage in Bytes
+    * Total Storage in Bytes. This property is read-only.
     *
     * @param int $val The totalStorageSpaceInBytes
     *
@@ -1305,9 +1305,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the userDisplayName
-    * User display name
+    * User display name. This property is read-only.
     *
-    * @return string|null The userDisplayName
+    * @return string The userDisplayName
     */
     public function getUserDisplayName()
     {
@@ -1320,7 +1320,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the userDisplayName
-    * User display name
+    * User display name. This property is read-only.
     *
     * @param string $val The userDisplayName
     *
@@ -1334,9 +1334,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the userId
-    * Unique Identifier for the user associated with the device
+    * Unique Identifier for the user associated with the device. This property is read-only.
     *
-    * @return string|null The userId
+    * @return string The userId
     */
     public function getUserId()
     {
@@ -1349,7 +1349,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the userId
-    * Unique Identifier for the user associated with the device
+    * Unique Identifier for the user associated with the device. This property is read-only.
     *
     * @param string $val The userId
     *
@@ -1363,9 +1363,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the userPrincipalName
-    * Device user principal name
+    * Device user principal name. This property is read-only.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -1378,7 +1378,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the userPrincipalName
-    * Device user principal name
+    * Device user principal name. This property is read-only.
     *
     * @param string $val The userPrincipalName
     *
@@ -1392,9 +1392,9 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the wiFiMacAddress
-    * Wi-Fi MAC
+    * Wi-Fi MAC. This property is read-only.
     *
-    * @return string|null The wiFiMacAddress
+    * @return string The wiFiMacAddress
     */
     public function getWiFiMacAddress()
     {
@@ -1407,7 +1407,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the wiFiMacAddress
-    * Wi-Fi MAC
+    * Wi-Fi MAC. This property is read-only.
     *
     * @param string $val The wiFiMacAddress
     *
@@ -1424,7 +1424,7 @@ class ManagedDevice extends Entity
      * Gets the deviceCompliancePolicyStates
     * Device compliance policy states for this device.
      *
-     * @return array|null The deviceCompliancePolicyStates
+     * @return array The deviceCompliancePolicyStates
      */
     public function getDeviceCompliancePolicyStates()
     {
@@ -1445,7 +1445,7 @@ class ManagedDevice extends Entity
     */
     public function setDeviceCompliancePolicyStates($val)
     {
-        $this->_propDict["deviceCompliancePolicyStates"] = $val;
+		$this->_propDict["deviceCompliancePolicyStates"] = $val;
         return $this;
     }
     
@@ -1454,7 +1454,7 @@ class ManagedDevice extends Entity
      * Gets the deviceConfigurationStates
     * Device configuration states for this device.
      *
-     * @return array|null The deviceConfigurationStates
+     * @return array The deviceConfigurationStates
      */
     public function getDeviceConfigurationStates()
     {
@@ -1475,7 +1475,7 @@ class ManagedDevice extends Entity
     */
     public function setDeviceConfigurationStates($val)
     {
-        $this->_propDict["deviceConfigurationStates"] = $val;
+		$this->_propDict["deviceConfigurationStates"] = $val;
         return $this;
     }
     
@@ -1483,12 +1483,12 @@ class ManagedDevice extends Entity
     * Gets the deviceCategory
     * Device category
     *
-    * @return DeviceCategory|null The deviceCategory
+    * @return DeviceCategory The deviceCategory
     */
     public function getDeviceCategory()
     {
         if (array_key_exists("deviceCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCategory"], "\Microsoft\Graph\Model\DeviceCategory") || is_null($this->_propDict["deviceCategory"])) {
+            if (is_a($this->_propDict["deviceCategory"], "\Microsoft\Graph\Model\DeviceCategory")) {
                 return $this->_propDict["deviceCategory"];
             } else {
                 $this->_propDict["deviceCategory"] = new DeviceCategory($this->_propDict["deviceCategory"]);

@@ -34,9 +34,9 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase
 
     /**
     * Gets the password
-    * The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
+    * This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
     *
-    * @return string|null The password
+    * @return string The password
     */
     public function getPassword()
     {
@@ -49,7 +49,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase
 
     /**
     * Sets the password
-    * The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
+    * This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
     *
     * @param string $val The value of the password
     *
@@ -62,9 +62,9 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase
     }
     /**
     * Gets the pkcs12Value
-    * Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
+    * This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
     *
-    * @return string|null The pkcs12Value
+    * @return string The pkcs12Value
     */
     public function getPkcs12Value()
     {
@@ -77,7 +77,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase
 
     /**
     * Sets the pkcs12Value
-    * Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
+    * This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
     *
     * @param string $val The value of the pkcs12Value
     *

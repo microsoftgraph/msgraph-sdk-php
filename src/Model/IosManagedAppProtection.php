@@ -28,12 +28,12 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the appDataEncryptionType
     * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     *
-    * @return ManagedAppDataEncryptionType|null The appDataEncryptionType
+    * @return ManagedAppDataEncryptionType The appDataEncryptionType
     */
     public function getAppDataEncryptionType()
     {
         if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
-            if (is_a($this->_propDict["appDataEncryptionType"], "\Microsoft\Graph\Model\ManagedAppDataEncryptionType") || is_null($this->_propDict["appDataEncryptionType"])) {
+            if (is_a($this->_propDict["appDataEncryptionType"], "\Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
                 return $this->_propDict["appDataEncryptionType"];
             } else {
                 $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
@@ -59,9 +59,9 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the customBrowserProtocol
-    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * A custom browser protocol to open weblink on iOS.
     *
-    * @return string|null The customBrowserProtocol
+    * @return string The customBrowserProtocol
     */
     public function getCustomBrowserProtocol()
     {
@@ -74,7 +74,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserProtocol
-    * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+    * A custom browser protocol to open weblink on iOS.
     *
     * @param string $val The customBrowserProtocol
     *
@@ -90,7 +90,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the deployedAppCount
     * Count of apps to which the current policy is deployed.
     *
-    * @return int|null The deployedAppCount
+    * @return int The deployedAppCount
     */
     public function getDeployedAppCount()
     {
@@ -119,7 +119,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the faceIdBlocked
     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
     *
-    * @return bool|null The faceIdBlocked
+    * @return bool The faceIdBlocked
     */
     public function getFaceIdBlocked()
     {
@@ -148,7 +148,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the minimumRequiredSdkVersion
     * Versions less than the specified version will block the managed app from accessing company data.
     *
-    * @return string|null The minimumRequiredSdkVersion
+    * @return string The minimumRequiredSdkVersion
     */
     public function getMinimumRequiredSdkVersion()
     {
@@ -178,7 +178,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
      * Gets the apps
     * List of apps to which the policy is deployed.
      *
-     * @return array|null The apps
+     * @return array The apps
      */
     public function getApps()
     {
@@ -199,7 +199,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     */
     public function setApps($val)
     {
-        $this->_propDict["apps"] = $val;
+		$this->_propDict["apps"] = $val;
         return $this;
     }
     
@@ -207,12 +207,12 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
     *
-    * @return ManagedAppPolicyDeploymentSummary|null The deploymentSummary
+    * @return ManagedAppPolicyDeploymentSummary The deploymentSummary
     */
     public function getDeploymentSummary()
     {
         if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary") || is_null($this->_propDict["deploymentSummary"])) {
+            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

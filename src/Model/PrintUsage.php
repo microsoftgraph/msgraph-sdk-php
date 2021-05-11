@@ -27,7 +27,7 @@ class PrintUsage extends Entity
     /**
     * Gets the completedBlackAndWhiteJobCount
     *
-    * @return int|null The completedBlackAndWhiteJobCount
+    * @return int The completedBlackAndWhiteJobCount
     */
     public function getCompletedBlackAndWhiteJobCount()
     {
@@ -54,7 +54,7 @@ class PrintUsage extends Entity
     /**
     * Gets the completedColorJobCount
     *
-    * @return int|null The completedColorJobCount
+    * @return int The completedColorJobCount
     */
     public function getCompletedColorJobCount()
     {
@@ -81,7 +81,7 @@ class PrintUsage extends Entity
     /**
     * Gets the incompleteJobCount
     *
-    * @return int|null The incompleteJobCount
+    * @return int The incompleteJobCount
     */
     public function getIncompleteJobCount()
     {
@@ -108,12 +108,12 @@ class PrintUsage extends Entity
     /**
     * Gets the usageDate
     *
-    * @return \DateTime|null The usageDate
+    * @return \DateTime The usageDate
     */
     public function getUsageDate()
     {
         if (array_key_exists("usageDate", $this->_propDict)) {
-            if (is_a($this->_propDict["usageDate"], "\DateTime") || is_null($this->_propDict["usageDate"])) {
+            if (is_a($this->_propDict["usageDate"], "\DateTime")) {
                 return $this->_propDict["usageDate"];
             } else {
                 $this->_propDict["usageDate"] = new \DateTime($this->_propDict["usageDate"]);

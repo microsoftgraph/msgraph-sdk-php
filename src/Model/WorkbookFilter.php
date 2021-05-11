@@ -28,12 +28,12 @@ class WorkbookFilter extends Entity
     * Gets the criteria
     * The currently applied filter on the given column. Read-only.
     *
-    * @return WorkbookFilterCriteria|null The criteria
+    * @return WorkbookFilterCriteria The criteria
     */
     public function getCriteria()
     {
         if (array_key_exists("criteria", $this->_propDict)) {
-            if (is_a($this->_propDict["criteria"], "\Microsoft\Graph\Model\WorkbookFilterCriteria") || is_null($this->_propDict["criteria"])) {
+            if (is_a($this->_propDict["criteria"], "\Microsoft\Graph\Model\WorkbookFilterCriteria")) {
                 return $this->_propDict["criteria"];
             } else {
                 $this->_propDict["criteria"] = new WorkbookFilterCriteria($this->_propDict["criteria"]);

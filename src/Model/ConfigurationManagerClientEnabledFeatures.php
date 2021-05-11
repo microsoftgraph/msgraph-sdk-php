@@ -27,7 +27,7 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
     * Gets the compliancePolicy
     * Whether compliance policy is managed by Intune
     *
-    * @return bool|null The compliancePolicy
+    * @return bool The compliancePolicy
     */
     public function getCompliancePolicy()
     {
@@ -55,7 +55,7 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
     * Gets the deviceConfiguration
     * Whether device configuration is managed by Intune
     *
-    * @return bool|null The deviceConfiguration
+    * @return bool The deviceConfiguration
     */
     public function getDeviceConfiguration()
     {
@@ -83,7 +83,7 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
     * Gets the inventory
     * Whether inventory is managed by Intune
     *
-    * @return bool|null The inventory
+    * @return bool The inventory
     */
     public function getInventory()
     {
@@ -111,7 +111,7 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
     * Gets the modernApps
     * Whether modern application is managed by Intune
     *
-    * @return bool|null The modernApps
+    * @return bool The modernApps
     */
     public function getModernApps()
     {
@@ -139,7 +139,7 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
     * Gets the resourceAccess
     * Whether resource access is managed by Intune
     *
-    * @return bool|null The resourceAccess
+    * @return bool The resourceAccess
     */
     public function getResourceAccess()
     {
@@ -167,7 +167,7 @@ class ConfigurationManagerClientEnabledFeatures extends Entity
     * Gets the windowsUpdateForBusiness
     * Whether Windows Update for Business is managed by Intune
     *
-    * @return bool|null The windowsUpdateForBusiness
+    * @return bool The windowsUpdateForBusiness
     */
     public function getWindowsUpdateForBusiness()
     {

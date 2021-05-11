@@ -28,12 +28,12 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the complianceGracePeriodExpirationDateTime
     * The DateTime when device compliance grace period expires
     *
-    * @return \DateTime|null The complianceGracePeriodExpirationDateTime
+    * @return \DateTime The complianceGracePeriodExpirationDateTime
     */
     public function getComplianceGracePeriodExpirationDateTime()
     {
         if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
+            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime")) {
                 return $this->_propDict["complianceGracePeriodExpirationDateTime"];
             } else {
                 $this->_propDict["complianceGracePeriodExpirationDateTime"] = new \DateTime($this->_propDict["complianceGracePeriodExpirationDateTime"]);
@@ -61,7 +61,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the deviceDisplayName
     * Device name of the DevicePolicyStatus.
     *
-    * @return string|null The deviceDisplayName
+    * @return string The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -90,7 +90,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the deviceModel
     * The device model that is being reported
     *
-    * @return string|null The deviceModel
+    * @return string The deviceModel
     */
     public function getDeviceModel()
     {
@@ -119,12 +119,12 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report.
     *
-    * @return \DateTime|null The lastReportedDateTime
+    * @return \DateTime The lastReportedDateTime
     */
     public function getLastReportedDateTime()
     {
         if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime") || is_null($this->_propDict["lastReportedDateTime"])) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastReportedDateTime"];
             } else {
                 $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
@@ -152,12 +152,12 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
-    * @return ComplianceStatus|null The status
+    * @return ComplianceStatus The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);
@@ -185,7 +185,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the userName
     * The User Name that is being reported
     *
-    * @return string|null The userName
+    * @return string The userName
     */
     public function getUserName()
     {
@@ -214,7 +214,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the userPrincipalName
     * UserPrincipalName.
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

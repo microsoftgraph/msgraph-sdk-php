@@ -28,7 +28,7 @@ class PrintDocument extends Entity
     * Gets the contentType
     * The document's content (MIME) type. Read-only.
     *
-    * @return string|null The contentType
+    * @return string The contentType
     */
     public function getContentType()
     {
@@ -57,7 +57,7 @@ class PrintDocument extends Entity
     * Gets the displayName
     * The document's name. Read-only.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class PrintDocument extends Entity
     * Gets the size
     * The document's size in bytes. Read-only.
     *
-    * @return int|null The size
+    * @return int The size
     */
     public function getSize()
     {

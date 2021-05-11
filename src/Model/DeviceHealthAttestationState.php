@@ -27,7 +27,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the attestationIdentityKey
     * TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
     *
-    * @return string|null The attestationIdentityKey
+    * @return string The attestationIdentityKey
     */
     public function getAttestationIdentityKey()
     {
@@ -55,7 +55,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the bitLockerStatus
     * On or Off of BitLocker Drive Encryption
     *
-    * @return string|null The bitLockerStatus
+    * @return string The bitLockerStatus
     */
     public function getBitLockerStatus()
     {
@@ -83,7 +83,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the bootAppSecurityVersion
     * The security version number of the Boot Application
     *
-    * @return string|null The bootAppSecurityVersion
+    * @return string The bootAppSecurityVersion
     */
     public function getBootAppSecurityVersion()
     {
@@ -111,7 +111,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the bootDebugging
     * When bootDebugging is enabled, the device is used in development and testing
     *
-    * @return string|null The bootDebugging
+    * @return string The bootDebugging
     */
     public function getBootDebugging()
     {
@@ -139,7 +139,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the bootManagerSecurityVersion
     * The security version number of the Boot Application
     *
-    * @return string|null The bootManagerSecurityVersion
+    * @return string The bootManagerSecurityVersion
     */
     public function getBootManagerSecurityVersion()
     {
@@ -167,7 +167,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the bootManagerVersion
     * The version of the Boot Manager
     *
-    * @return string|null The bootManagerVersion
+    * @return string The bootManagerVersion
     */
     public function getBootManagerVersion()
     {
@@ -195,7 +195,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the bootRevisionListInfo
     * The Boot Revision List that was loaded during initial boot on the attested device
     *
-    * @return string|null The bootRevisionListInfo
+    * @return string The bootRevisionListInfo
     */
     public function getBootRevisionListInfo()
     {
@@ -223,7 +223,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the codeIntegrity
     * When code integrity is enabled, code execution is restricted to integrity verified code
     *
-    * @return string|null The codeIntegrity
+    * @return string The codeIntegrity
     */
     public function getCodeIntegrity()
     {
@@ -251,7 +251,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the codeIntegrityCheckVersion
     * The version of the Boot Manager
     *
-    * @return string|null The codeIntegrityCheckVersion
+    * @return string The codeIntegrityCheckVersion
     */
     public function getCodeIntegrityCheckVersion()
     {
@@ -279,7 +279,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the codeIntegrityPolicy
     * The Code Integrity policy that is controlling the security of the boot environment
     *
-    * @return string|null The codeIntegrityPolicy
+    * @return string The codeIntegrityPolicy
     */
     public function getCodeIntegrityPolicy()
     {
@@ -307,7 +307,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the contentNamespaceUrl
     * The DHA report version. (Namespace version)
     *
-    * @return string|null The contentNamespaceUrl
+    * @return string The contentNamespaceUrl
     */
     public function getContentNamespaceUrl()
     {
@@ -335,7 +335,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the contentVersion
     * The HealthAttestation state schema version
     *
-    * @return string|null The contentVersion
+    * @return string The contentVersion
     */
     public function getContentVersion()
     {
@@ -363,7 +363,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the dataExcutionPolicy
     * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
     *
-    * @return string|null The dataExcutionPolicy
+    * @return string The dataExcutionPolicy
     */
     public function getDataExcutionPolicy()
     {
@@ -391,7 +391,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the deviceHealthAttestationStatus
     * The DHA report version. (Namespace version)
     *
-    * @return string|null The deviceHealthAttestationStatus
+    * @return string The deviceHealthAttestationStatus
     */
     public function getDeviceHealthAttestationStatus()
     {
@@ -419,7 +419,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the earlyLaunchAntiMalwareDriverProtection
     * ELAM provides protection for the computers in your network when they start up
     *
-    * @return string|null The earlyLaunchAntiMalwareDriverProtection
+    * @return string The earlyLaunchAntiMalwareDriverProtection
     */
     public function getEarlyLaunchAntiMalwareDriverProtection()
     {
@@ -447,7 +447,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the healthAttestationSupportedStatus
     * This attribute indicates if DHA is supported for the device
     *
-    * @return string|null The healthAttestationSupportedStatus
+    * @return string The healthAttestationSupportedStatus
     */
     public function getHealthAttestationSupportedStatus()
     {
@@ -475,7 +475,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the healthStatusMismatchInfo
     * This attribute appears if DHA-Service detects an integrity issue
     *
-    * @return string|null The healthStatusMismatchInfo
+    * @return string The healthStatusMismatchInfo
     */
     public function getHealthStatusMismatchInfo()
     {
@@ -504,12 +504,12 @@ class DeviceHealthAttestationState extends Entity
     * Gets the issuedDateTime
     * The DateTime when device was evaluated or issued to MDM
     *
-    * @return \DateTime|null The issuedDateTime
+    * @return \DateTime The issuedDateTime
     */
     public function getIssuedDateTime()
     {
         if (array_key_exists("issuedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["issuedDateTime"], "\DateTime") || is_null($this->_propDict["issuedDateTime"])) {
+            if (is_a($this->_propDict["issuedDateTime"], "\DateTime")) {
                 return $this->_propDict["issuedDateTime"];
             } else {
                 $this->_propDict["issuedDateTime"] = new \DateTime($this->_propDict["issuedDateTime"]);
@@ -536,7 +536,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the lastUpdateDateTime
     * The Timestamp of the last update.
     *
-    * @return string|null The lastUpdateDateTime
+    * @return string The lastUpdateDateTime
     */
     public function getLastUpdateDateTime()
     {
@@ -564,7 +564,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the operatingSystemKernelDebugging
     * When operatingSystemKernelDebugging is enabled, the device is used in development and testing
     *
-    * @return string|null The operatingSystemKernelDebugging
+    * @return string The operatingSystemKernelDebugging
     */
     public function getOperatingSystemKernelDebugging()
     {
@@ -592,7 +592,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the operatingSystemRevListInfo
     * The Operating System Revision List that was loaded during initial boot on the attested device
     *
-    * @return string|null The operatingSystemRevListInfo
+    * @return string The operatingSystemRevListInfo
     */
     public function getOperatingSystemRevListInfo()
     {
@@ -620,7 +620,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the pcr0
     * The measurement that is captured in PCR[0]
     *
-    * @return string|null The pcr0
+    * @return string The pcr0
     */
     public function getPcr0()
     {
@@ -648,7 +648,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the pcrHashAlgorithm
     * Informational attribute that identifies the HASH algorithm that was used by TPM
     *
-    * @return string|null The pcrHashAlgorithm
+    * @return string The pcrHashAlgorithm
     */
     public function getPcrHashAlgorithm()
     {
@@ -676,7 +676,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the resetCount
     * The number of times a PC device has hibernated or resumed
     *
-    * @return int|null The resetCount
+    * @return int The resetCount
     */
     public function getResetCount()
     {
@@ -704,7 +704,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the restartCount
     * The number of times a PC device has rebooted
     *
-    * @return int|null The restartCount
+    * @return int The restartCount
     */
     public function getRestartCount()
     {
@@ -732,7 +732,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the safeMode
     * Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
     *
-    * @return string|null The safeMode
+    * @return string The safeMode
     */
     public function getSafeMode()
     {
@@ -760,7 +760,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the secureBoot
     * When Secure Boot is enabled, the core components must have the correct cryptographic signatures
     *
-    * @return string|null The secureBoot
+    * @return string The secureBoot
     */
     public function getSecureBoot()
     {
@@ -788,7 +788,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the secureBootConfigurationPolicyFingerPrint
     * Fingerprint of the Custom Secure Boot Configuration Policy
     *
-    * @return string|null The secureBootConfigurationPolicyFingerPrint
+    * @return string The secureBootConfigurationPolicyFingerPrint
     */
     public function getSecureBootConfigurationPolicyFingerPrint()
     {
@@ -816,7 +816,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the testSigning
     * When test signing is allowed, the device does not enforce signature validation during boot
     *
-    * @return string|null The testSigning
+    * @return string The testSigning
     */
     public function getTestSigning()
     {
@@ -844,7 +844,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the tpmVersion
     * The security version number of the Boot Application
     *
-    * @return string|null The tpmVersion
+    * @return string The tpmVersion
     */
     public function getTpmVersion()
     {
@@ -872,7 +872,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the virtualSecureMode
     * VSM is a container that protects high value assets from a compromised kernel
     *
-    * @return string|null The virtualSecureMode
+    * @return string The virtualSecureMode
     */
     public function getVirtualSecureMode()
     {
@@ -900,7 +900,7 @@ class DeviceHealthAttestationState extends Entity
     * Gets the windowsPE
     * Operating system running with limited services that is used to prepare a computer for Windows
     *
-    * @return string|null The windowsPE
+    * @return string The windowsPE
     */
     public function getWindowsPE()
     {

@@ -28,7 +28,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the compliantDeviceCount
     * Device Compliant count for the setting
     *
-    * @return int|null The compliantDeviceCount
+    * @return int The compliantDeviceCount
     */
     public function getCompliantDeviceCount()
     {
@@ -57,7 +57,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the conflictDeviceCount
     * Device conflict error count for the setting
     *
-    * @return int|null The conflictDeviceCount
+    * @return int The conflictDeviceCount
     */
     public function getConflictDeviceCount()
     {
@@ -86,7 +86,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the errorDeviceCount
     * Device error count for the setting
     *
-    * @return int|null The errorDeviceCount
+    * @return int The errorDeviceCount
     */
     public function getErrorDeviceCount()
     {
@@ -115,7 +115,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the instancePath
     * Name of the InstancePath for the setting
     *
-    * @return string|null The instancePath
+    * @return string The instancePath
     */
     public function getInstancePath()
     {
@@ -144,7 +144,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the nonCompliantDeviceCount
     * Device NonCompliant count for the setting
     *
-    * @return int|null The nonCompliantDeviceCount
+    * @return int The nonCompliantDeviceCount
     */
     public function getNonCompliantDeviceCount()
     {
@@ -173,7 +173,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the notApplicableDeviceCount
     * Device Not Applicable count for the setting
     *
-    * @return int|null The notApplicableDeviceCount
+    * @return int The notApplicableDeviceCount
     */
     public function getNotApplicableDeviceCount()
     {
@@ -202,7 +202,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the remediatedDeviceCount
     * Device Compliant count for the setting
     *
-    * @return int|null The remediatedDeviceCount
+    * @return int The remediatedDeviceCount
     */
     public function getRemediatedDeviceCount()
     {
@@ -231,7 +231,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the settingName
     * Name of the setting
     *
-    * @return string|null The settingName
+    * @return string The settingName
     */
     public function getSettingName()
     {
@@ -260,7 +260,7 @@ class SettingStateDeviceSummary extends Entity
     * Gets the unknownDeviceCount
     * Device Unkown count for the setting
     *
-    * @return int|null The unknownDeviceCount
+    * @return int The unknownDeviceCount
     */
     public function getUnknownDeviceCount()
     {

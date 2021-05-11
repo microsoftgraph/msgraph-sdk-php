@@ -28,7 +28,7 @@ class WorkbookRangeFont extends Entity
     * Gets the bold
     * Represents the bold status of font.
     *
-    * @return bool|null The bold
+    * @return bool The bold
     */
     public function getBold()
     {
@@ -57,7 +57,7 @@ class WorkbookRangeFont extends Entity
     * Gets the color
     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
     *
-    * @return string|null The color
+    * @return string The color
     */
     public function getColor()
     {
@@ -86,7 +86,7 @@ class WorkbookRangeFont extends Entity
     * Gets the italic
     * Represents the italic status of the font.
     *
-    * @return bool|null The italic
+    * @return bool The italic
     */
     public function getItalic()
     {
@@ -115,7 +115,7 @@ class WorkbookRangeFont extends Entity
     * Gets the name
     * Font name (e.g. 'Calibri')
     *
-    * @return string|null The name
+    * @return string The name
     */
     public function getName()
     {
@@ -144,7 +144,7 @@ class WorkbookRangeFont extends Entity
     * Gets the size
     * Font size.
     *
-    * @return float|null The size
+    * @return float The size
     */
     public function getSize()
     {
@@ -165,15 +165,15 @@ class WorkbookRangeFont extends Entity
     */
     public function setSize($val)
     {
-        $this->_propDict["size"] = floatval($val);
+        $this->_propDict["size"] = $val;
         return $this;
     }
     
     /**
     * Gets the underline
-    * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+    * Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
     *
-    * @return string|null The underline
+    * @return string The underline
     */
     public function getUnderline()
     {
@@ -186,7 +186,7 @@ class WorkbookRangeFont extends Entity
     
     /**
     * Sets the underline
-    * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+    * Type of underline applied to the font. Possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
     *
     * @param string $val The underline
     *

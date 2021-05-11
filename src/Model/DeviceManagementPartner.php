@@ -28,7 +28,7 @@ class DeviceManagementPartner extends Entity
     * Gets the displayName
     * Partner display name
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class DeviceManagementPartner extends Entity
     * Gets the isConfigured
     * Whether device management partner is configured or not
     *
-    * @return bool|null The isConfigured
+    * @return bool The isConfigured
     */
     public function getIsConfigured()
     {
@@ -86,12 +86,12 @@ class DeviceManagementPartner extends Entity
     * Gets the lastHeartbeatDateTime
     * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
     *
-    * @return \DateTime|null The lastHeartbeatDateTime
+    * @return \DateTime The lastHeartbeatDateTime
     */
     public function getLastHeartbeatDateTime()
     {
         if (array_key_exists("lastHeartbeatDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime") || is_null($this->_propDict["lastHeartbeatDateTime"])) {
+            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime")) {
                 return $this->_propDict["lastHeartbeatDateTime"];
             } else {
                 $this->_propDict["lastHeartbeatDateTime"] = new \DateTime($this->_propDict["lastHeartbeatDateTime"]);
@@ -119,12 +119,12 @@ class DeviceManagementPartner extends Entity
     * Gets the partnerAppType
     * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
     *
-    * @return DeviceManagementPartnerAppType|null The partnerAppType
+    * @return DeviceManagementPartnerAppType The partnerAppType
     */
     public function getPartnerAppType()
     {
         if (array_key_exists("partnerAppType", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerAppType"], "\Microsoft\Graph\Model\DeviceManagementPartnerAppType") || is_null($this->_propDict["partnerAppType"])) {
+            if (is_a($this->_propDict["partnerAppType"], "\Microsoft\Graph\Model\DeviceManagementPartnerAppType")) {
                 return $this->_propDict["partnerAppType"];
             } else {
                 $this->_propDict["partnerAppType"] = new DeviceManagementPartnerAppType($this->_propDict["partnerAppType"]);
@@ -152,12 +152,12 @@ class DeviceManagementPartner extends Entity
     * Gets the partnerState
     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
     *
-    * @return DeviceManagementPartnerTenantState|null The partnerState
+    * @return DeviceManagementPartnerTenantState The partnerState
     */
     public function getPartnerState()
     {
         if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState") || is_null($this->_propDict["partnerState"])) {
+            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);
@@ -185,7 +185,7 @@ class DeviceManagementPartner extends Entity
     * Gets the singleTenantAppId
     * Partner Single tenant App id
     *
-    * @return string|null The singleTenantAppId
+    * @return string The singleTenantAppId
     */
     public function getSingleTenantAppId()
     {
@@ -214,12 +214,12 @@ class DeviceManagementPartner extends Entity
     * Gets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     * DateTime in UTC when PartnerDevices will be marked as NonCompliant
     *
-    * @return \DateTime|null The whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
+    * @return \DateTime The whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime
     */
     public function getWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime()
     {
         if (array_key_exists("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"], "\DateTime") || is_null($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"])) {
+            if (is_a($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"], "\DateTime")) {
                 return $this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"];
             } else {
                 $this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"] = new \DateTime($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"]);
@@ -247,12 +247,12 @@ class DeviceManagementPartner extends Entity
     * Gets the whenPartnerDevicesWillBeRemovedDateTime
     * DateTime in UTC when PartnerDevices will be removed
     *
-    * @return \DateTime|null The whenPartnerDevicesWillBeRemovedDateTime
+    * @return \DateTime The whenPartnerDevicesWillBeRemovedDateTime
     */
     public function getWhenPartnerDevicesWillBeRemovedDateTime()
     {
         if (array_key_exists("whenPartnerDevicesWillBeRemovedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"], "\DateTime") || is_null($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"])) {
+            if (is_a($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"], "\DateTime")) {
                 return $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"];
             } else {
                 $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"] = new \DateTime($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"]);

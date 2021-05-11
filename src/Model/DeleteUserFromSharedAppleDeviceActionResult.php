@@ -27,7 +27,7 @@ class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult
     * Gets the userPrincipalName
     * User principal name of the user to be deleted
     *
-    * @return string|null The userPrincipalName
+    * @return string The userPrincipalName
     */
     public function getUserPrincipalName()
     {

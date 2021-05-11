@@ -27,7 +27,7 @@ class Request extends Entity
     /**
     * Gets the approvalId
     *
-    * @return string|null The approvalId
+    * @return string The approvalId
     */
     public function getApprovalId()
     {
@@ -54,12 +54,12 @@ class Request extends Entity
     /**
     * Gets the completedDateTime
     *
-    * @return \DateTime|null The completedDateTime
+    * @return \DateTime The completedDateTime
     */
     public function getCompletedDateTime()
     {
         if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\DateTime") || is_null($this->_propDict["completedDateTime"])) {
+            if (is_a($this->_propDict["completedDateTime"], "\DateTime")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new \DateTime($this->_propDict["completedDateTime"]);
@@ -85,12 +85,12 @@ class Request extends Entity
     /**
     * Gets the createdBy
     *
-    * @return IdentitySet|null The createdBy
+    * @return IdentitySet The createdBy
     */
     public function getCreatedBy()
     {
         if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -116,12 +116,12 @@ class Request extends Entity
     /**
     * Gets the createdDateTime
     *
-    * @return \DateTime|null The createdDateTime
+    * @return \DateTime The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -147,7 +147,7 @@ class Request extends Entity
     /**
     * Gets the customData
     *
-    * @return string|null The customData
+    * @return string The customData
     */
     public function getCustomData()
     {
@@ -174,7 +174,7 @@ class Request extends Entity
     /**
     * Gets the status
     *
-    * @return string|null The status
+    * @return string The status
     */
     public function getStatus()
     {

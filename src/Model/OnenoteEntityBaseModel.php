@@ -28,7 +28,7 @@ class OnenoteEntityBaseModel extends Entity
     * Gets the self
     * The endpoint where you can get details about the page. Read-only.
     *
-    * @return string|null The self
+    * @return string The self
     */
     public function getSelf()
     {

@@ -27,7 +27,7 @@ class AppIdentity extends Entity
     * Gets the appId
     * Refers to the Unique GUID representing Application Id in the Azure Active Directory.
     *
-    * @return string|null The appId
+    * @return string The appId
     */
     public function getAppId()
     {
@@ -55,7 +55,7 @@ class AppIdentity extends Entity
     * Gets the displayName
     * Refers to the Application Name displayed in the Azure Portal.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -83,7 +83,7 @@ class AppIdentity extends Entity
     * Gets the servicePrincipalId
     * Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
     *
-    * @return string|null The servicePrincipalId
+    * @return string The servicePrincipalId
     */
     public function getServicePrincipalId()
     {
@@ -111,7 +111,7 @@ class AppIdentity extends Entity
     * Gets the servicePrincipalName
     * Refers to the Service Principal Name is the Application name in the tenant.
     *
-    * @return string|null The servicePrincipalName
+    * @return string The servicePrincipalName
     */
     public function getServicePrincipalName()
     {

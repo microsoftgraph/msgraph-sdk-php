@@ -28,12 +28,12 @@ class CertificateAuthority extends Entity
     * Gets the certificate
     * Required. The base64 encoded string representing the public certificate.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The certificate
+    * @return \GuzzleHttp\Psr7\Stream The certificate
     */
     public function getCertificate()
     {
         if (array_key_exists("certificate", $this->_propDict)) {
-            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["certificate"])) {
+            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["certificate"];
             } else {
                 $this->_propDict["certificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["certificate"]);
@@ -60,7 +60,7 @@ class CertificateAuthority extends Entity
     * Gets the certificateRevocationListUrl
     * The URL of the certificate revocation list.
     *
-    * @return string|null The certificateRevocationListUrl
+    * @return string The certificateRevocationListUrl
     */
     public function getCertificateRevocationListUrl()
     {
@@ -88,7 +88,7 @@ class CertificateAuthority extends Entity
     * Gets the deltaCertificateRevocationListUrl
     * The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
     *
-    * @return string|null The deltaCertificateRevocationListUrl
+    * @return string The deltaCertificateRevocationListUrl
     */
     public function getDeltaCertificateRevocationListUrl()
     {
@@ -116,7 +116,7 @@ class CertificateAuthority extends Entity
     * Gets the isRootAuthority
     * Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
     *
-    * @return bool|null The isRootAuthority
+    * @return bool The isRootAuthority
     */
     public function getIsRootAuthority()
     {
@@ -144,7 +144,7 @@ class CertificateAuthority extends Entity
     * Gets the issuer
     * The issuer of the certificate, calculated from the certificate value. Read-only.
     *
-    * @return string|null The issuer
+    * @return string The issuer
     */
     public function getIssuer()
     {
@@ -172,7 +172,7 @@ class CertificateAuthority extends Entity
     * Gets the issuerSki
     * The subject key identifier of the certificate, calculated from the certificate value. Read-only.
     *
-    * @return string|null The issuerSki
+    * @return string The issuerSki
     */
     public function getIssuerSki()
     {

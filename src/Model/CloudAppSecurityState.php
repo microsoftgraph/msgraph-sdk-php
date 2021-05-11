@@ -27,7 +27,7 @@ class CloudAppSecurityState extends Entity
     * Gets the destinationServiceIp
     * Destination IP Address of the connection to the cloud application/service.
     *
-    * @return string|null The destinationServiceIp
+    * @return string The destinationServiceIp
     */
     public function getDestinationServiceIp()
     {
@@ -55,7 +55,7 @@ class CloudAppSecurityState extends Entity
     * Gets the destinationServiceName
     * Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
     *
-    * @return string|null The destinationServiceName
+    * @return string The destinationServiceName
     */
     public function getDestinationServiceName()
     {
@@ -83,7 +83,7 @@ class CloudAppSecurityState extends Entity
     * Gets the riskScore
     * Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
     *
-    * @return string|null The riskScore
+    * @return string The riskScore
     */
     public function getRiskScore()
     {

@@ -26,14 +26,14 @@ class DeviceComplianceActionItem extends Entity
 {
     /**
     * Gets the actionType
-    * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification.
+    * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification, remoteLock.
     *
-    * @return DeviceComplianceActionType|null The actionType
+    * @return DeviceComplianceActionType The actionType
     */
     public function getActionType()
     {
         if (array_key_exists("actionType", $this->_propDict)) {
-            if (is_a($this->_propDict["actionType"], "\Microsoft\Graph\Model\DeviceComplianceActionType") || is_null($this->_propDict["actionType"])) {
+            if (is_a($this->_propDict["actionType"], "\Microsoft\Graph\Model\DeviceComplianceActionType")) {
                 return $this->_propDict["actionType"];
             } else {
                 $this->_propDict["actionType"] = new DeviceComplianceActionType($this->_propDict["actionType"]);
@@ -45,7 +45,7 @@ class DeviceComplianceActionItem extends Entity
     
     /**
     * Sets the actionType
-    * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification.
+    * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification, remoteLock.
     *
     * @param DeviceComplianceActionType $val The actionType
     *
@@ -61,7 +61,7 @@ class DeviceComplianceActionItem extends Entity
     * Gets the gracePeriodHours
     * Number of hours to wait till the action will be enforced. Valid values 0 to 8760
     *
-    * @return int|null The gracePeriodHours
+    * @return int The gracePeriodHours
     */
     public function getGracePeriodHours()
     {
@@ -90,7 +90,7 @@ class DeviceComplianceActionItem extends Entity
     * Gets the notificationMessageCCList
     * A list of group IDs to speicify who to CC this notification message to.
     *
-    * @return string|null The notificationMessageCCList
+    * @return string The notificationMessageCCList
     */
     public function getNotificationMessageCCList()
     {
@@ -119,7 +119,7 @@ class DeviceComplianceActionItem extends Entity
     * Gets the notificationTemplateId
     * What notification Message template to use
     *
-    * @return string|null The notificationTemplateId
+    * @return string The notificationTemplateId
     */
     public function getNotificationTemplateId()
     {

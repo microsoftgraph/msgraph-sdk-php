@@ -27,7 +27,7 @@ class Audio extends Entity
     * Gets the album
     * The title of the album for this audio file.
     *
-    * @return string|null The album
+    * @return string The album
     */
     public function getAlbum()
     {
@@ -55,7 +55,7 @@ class Audio extends Entity
     * Gets the albumArtist
     * The artist named on the album for the audio file.
     *
-    * @return string|null The albumArtist
+    * @return string The albumArtist
     */
     public function getAlbumArtist()
     {
@@ -83,7 +83,7 @@ class Audio extends Entity
     * Gets the artist
     * The performing artist for the audio file.
     *
-    * @return string|null The artist
+    * @return string The artist
     */
     public function getArtist()
     {
@@ -111,7 +111,7 @@ class Audio extends Entity
     * Gets the bitrate
     * Bitrate expressed in kbps.
     *
-    * @return int|null The bitrate
+    * @return int The bitrate
     */
     public function getBitrate()
     {
@@ -139,7 +139,7 @@ class Audio extends Entity
     * Gets the composers
     * The name of the composer of the audio file.
     *
-    * @return string|null The composers
+    * @return string The composers
     */
     public function getComposers()
     {
@@ -167,7 +167,7 @@ class Audio extends Entity
     * Gets the copyright
     * Copyright information for the audio file.
     *
-    * @return string|null The copyright
+    * @return string The copyright
     */
     public function getCopyright()
     {
@@ -195,7 +195,7 @@ class Audio extends Entity
     * Gets the disc
     * The number of the disc this audio file came from.
     *
-    * @return int|null The disc
+    * @return int The disc
     */
     public function getDisc()
     {
@@ -223,7 +223,7 @@ class Audio extends Entity
     * Gets the discCount
     * The total number of discs in this album.
     *
-    * @return int|null The discCount
+    * @return int The discCount
     */
     public function getDiscCount()
     {
@@ -251,7 +251,7 @@ class Audio extends Entity
     * Gets the duration
     * Duration of the audio file, expressed in milliseconds
     *
-    * @return int|null The duration
+    * @return int The duration
     */
     public function getDuration()
     {
@@ -279,7 +279,7 @@ class Audio extends Entity
     * Gets the genre
     * The genre of this audio file.
     *
-    * @return string|null The genre
+    * @return string The genre
     */
     public function getGenre()
     {
@@ -307,7 +307,7 @@ class Audio extends Entity
     * Gets the hasDrm
     * Indicates if the file is protected with digital rights management.
     *
-    * @return bool|null The hasDrm
+    * @return bool The hasDrm
     */
     public function getHasDrm()
     {
@@ -335,7 +335,7 @@ class Audio extends Entity
     * Gets the isVariableBitrate
     * Indicates if the file is encoded with a variable bitrate.
     *
-    * @return bool|null The isVariableBitrate
+    * @return bool The isVariableBitrate
     */
     public function getIsVariableBitrate()
     {
@@ -363,7 +363,7 @@ class Audio extends Entity
     * Gets the title
     * The title of the audio file.
     *
-    * @return string|null The title
+    * @return string The title
     */
     public function getTitle()
     {
@@ -391,7 +391,7 @@ class Audio extends Entity
     * Gets the track
     * The number of the track on the original disc for this audio file.
     *
-    * @return int|null The track
+    * @return int The track
     */
     public function getTrack()
     {
@@ -419,7 +419,7 @@ class Audio extends Entity
     * Gets the trackCount
     * The total number of tracks on the original disc for this audio file.
     *
-    * @return int|null The trackCount
+    * @return int The trackCount
     */
     public function getTrackCount()
     {
@@ -447,7 +447,7 @@ class Audio extends Entity
     * Gets the year
     * The year the audio file was recorded.
     *
-    * @return int|null The year
+    * @return int The year
     */
     public function getYear()
     {

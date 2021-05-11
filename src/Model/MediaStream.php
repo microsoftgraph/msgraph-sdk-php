@@ -28,12 +28,12 @@ class MediaStream extends Entity
     * Gets the direction
     * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
     *
-    * @return MediaDirection|null The direction
+    * @return MediaDirection The direction
     */
     public function getDirection()
     {
         if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "\Microsoft\Graph\Model\MediaDirection") || is_null($this->_propDict["direction"])) {
+            if (is_a($this->_propDict["direction"], "\Microsoft\Graph\Model\MediaDirection")) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new MediaDirection($this->_propDict["direction"]);
@@ -60,7 +60,7 @@ class MediaStream extends Entity
     * Gets the label
     * The media stream label.
     *
-    * @return string|null The label
+    * @return string The label
     */
     public function getLabel()
     {
@@ -89,12 +89,12 @@ class MediaStream extends Entity
     * Gets the mediaType
     * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
     *
-    * @return Modality|null The mediaType
+    * @return Modality The mediaType
     */
     public function getMediaType()
     {
         if (array_key_exists("mediaType", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaType"], "\Microsoft\Graph\Model\Modality") || is_null($this->_propDict["mediaType"])) {
+            if (is_a($this->_propDict["mediaType"], "\Microsoft\Graph\Model\Modality")) {
                 return $this->_propDict["mediaType"];
             } else {
                 $this->_propDict["mediaType"] = new Modality($this->_propDict["mediaType"]);
@@ -119,9 +119,9 @@ class MediaStream extends Entity
     }
     /**
     * Gets the serverMuted
-    * If the media is muted by the server.
+    * Indicates whether the media is muted by the server.
     *
-    * @return bool|null The serverMuted
+    * @return bool The serverMuted
     */
     public function getServerMuted()
     {
@@ -134,7 +134,7 @@ class MediaStream extends Entity
 
     /**
     * Sets the serverMuted
-    * If the media is muted by the server.
+    * Indicates whether the media is muted by the server.
     *
     * @param bool $val The value of the serverMuted
     *
@@ -149,7 +149,7 @@ class MediaStream extends Entity
     * Gets the sourceId
     * The source ID.
     *
-    * @return string|null The sourceId
+    * @return string The sourceId
     */
     public function getSourceId()
     {

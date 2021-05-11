@@ -28,7 +28,7 @@ class GroupSettingTemplate extends DirectoryObject
     * Gets the description
     * Description of the template.
     *
-    * @return string|null The description
+    * @return string The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class GroupSettingTemplate extends DirectoryObject
     * Gets the displayName
     * Display name of the template.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {
@@ -87,7 +87,7 @@ class GroupSettingTemplate extends DirectoryObject
      * Gets the values
     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      *
-     * @return array|null The values
+     * @return array The values
      */
     public function getValues()
     {
@@ -108,7 +108,7 @@ class GroupSettingTemplate extends DirectoryObject
     */
     public function setValues($val)
     {
-        $this->_propDict["values"] = $val;
+		$this->_propDict["values"] = $val;
         return $this;
     }
     

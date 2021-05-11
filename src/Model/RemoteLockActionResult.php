@@ -27,7 +27,7 @@ class RemoteLockActionResult extends DeviceActionResult
     * Gets the unlockPin
     * Pin to unlock the client
     *
-    * @return string|null The unlockPin
+    * @return string The unlockPin
     */
     public function getUnlockPin()
     {

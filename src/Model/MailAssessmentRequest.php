@@ -28,12 +28,12 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
     * Gets the destinationRoutingReason
     * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
     *
-    * @return MailDestinationRoutingReason|null The destinationRoutingReason
+    * @return MailDestinationRoutingReason The destinationRoutingReason
     */
     public function getDestinationRoutingReason()
     {
         if (array_key_exists("destinationRoutingReason", $this->_propDict)) {
-            if (is_a($this->_propDict["destinationRoutingReason"], "\Microsoft\Graph\Model\MailDestinationRoutingReason") || is_null($this->_propDict["destinationRoutingReason"])) {
+            if (is_a($this->_propDict["destinationRoutingReason"], "\Microsoft\Graph\Model\MailDestinationRoutingReason")) {
                 return $this->_propDict["destinationRoutingReason"];
             } else {
                 $this->_propDict["destinationRoutingReason"] = new MailDestinationRoutingReason($this->_propDict["destinationRoutingReason"]);
@@ -61,7 +61,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
     * Gets the messageUri
     * The resource URI of the mail message for assessment.
     *
-    * @return string|null The messageUri
+    * @return string The messageUri
     */
     public function getMessageUri()
     {
@@ -90,7 +90,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest
     * Gets the recipientEmail
     * The mail recipient whose policies are used to assess the mail.
     *
-    * @return string|null The recipientEmail
+    * @return string The recipientEmail
     */
     public function getRecipientEmail()
     {

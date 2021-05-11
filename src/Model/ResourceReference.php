@@ -27,7 +27,7 @@ class ResourceReference extends Entity
     * Gets the id
     * The item's unique identifier.
     *
-    * @return string|null The id
+    * @return string The id
     */
     public function getId()
     {
@@ -55,7 +55,7 @@ class ResourceReference extends Entity
     * Gets the type
     * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
     *
-    * @return string|null The type
+    * @return string The type
     */
     public function getType()
     {
@@ -83,7 +83,7 @@ class ResourceReference extends Entity
     * Gets the webUrl
     * A URL leading to the referenced item.
     *
-    * @return string|null The webUrl
+    * @return string The webUrl
     */
     public function getWebUrl()
     {

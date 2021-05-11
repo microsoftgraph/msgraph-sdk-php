@@ -28,12 +28,12 @@ class ListItemVersion extends BaseItemVersion
     * Gets the fields
     * A collection of the fields and values for this version of the list item.
     *
-    * @return FieldValueSet|null The fields
+    * @return FieldValueSet The fields
     */
     public function getFields()
     {
         if (array_key_exists("fields", $this->_propDict)) {
-            if (is_a($this->_propDict["fields"], "\Microsoft\Graph\Model\FieldValueSet") || is_null($this->_propDict["fields"])) {
+            if (is_a($this->_propDict["fields"], "\Microsoft\Graph\Model\FieldValueSet")) {
                 return $this->_propDict["fields"];
             } else {
                 $this->_propDict["fields"] = new FieldValueSet($this->_propDict["fields"]);

@@ -28,12 +28,12 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *
-    * @return AndroidMinimumOperatingSystem|null The minimumSupportedOperatingSystem
+    * @return AndroidMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\AndroidMinimumOperatingSystem") || is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\AndroidMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new AndroidMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -61,7 +61,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     * Gets the packageId
     * The package identifier.
     *
-    * @return string|null The packageId
+    * @return string The packageId
     */
     public function getPackageId()
     {
@@ -90,7 +90,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     * Gets the versionCode
     * The version code of managed Android Line of Business (LoB) app.
     *
-    * @return string|null The versionCode
+    * @return string The versionCode
     */
     public function getVersionCode()
     {
@@ -119,7 +119,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
     * Gets the versionName
     * The version name of managed Android Line of Business (LoB) app.
     *
-    * @return string|null The versionName
+    * @return string The versionName
     */
     public function getVersionName()
     {

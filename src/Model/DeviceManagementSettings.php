@@ -25,9 +25,9 @@ class DeviceManagementSettings extends Entity
 {
     /**
     * Gets the deviceComplianceCheckinThresholdDays
-    * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
+    * The number of days a device is allowed to go without checking in to remain compliant.
     *
-    * @return int|null The deviceComplianceCheckinThresholdDays
+    * @return int The deviceComplianceCheckinThresholdDays
     */
     public function getDeviceComplianceCheckinThresholdDays()
     {
@@ -40,7 +40,7 @@ class DeviceManagementSettings extends Entity
 
     /**
     * Sets the deviceComplianceCheckinThresholdDays
-    * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
+    * The number of days a device is allowed to go without checking in to remain compliant.
     *
     * @param int $val The value of the deviceComplianceCheckinThresholdDays
     *
@@ -55,7 +55,7 @@ class DeviceManagementSettings extends Entity
     * Gets the isScheduledActionEnabled
     * Is feature enabled or not for scheduled action for rule.
     *
-    * @return bool|null The isScheduledActionEnabled
+    * @return bool The isScheduledActionEnabled
     */
     public function getIsScheduledActionEnabled()
     {
@@ -83,7 +83,7 @@ class DeviceManagementSettings extends Entity
     * Gets the secureByDefault
     * Device should be noncompliant when there is no compliance policy targeted when this is true
     *
-    * @return bool|null The secureByDefault
+    * @return bool The secureByDefault
     */
     public function getSecureByDefault()
     {

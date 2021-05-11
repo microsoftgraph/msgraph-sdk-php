@@ -27,7 +27,7 @@ class AlternativeSecurityId extends Entity
     * Gets the identityProvider
     * For internal use only
     *
-    * @return string|null The identityProvider
+    * @return string The identityProvider
     */
     public function getIdentityProvider()
     {
@@ -56,12 +56,12 @@ class AlternativeSecurityId extends Entity
     * Gets the key
     * For internal use only
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The key
+    * @return \GuzzleHttp\Psr7\Stream The key
     */
     public function getKey()
     {
         if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["key"])) {
+            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["key"];
             } else {
                 $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
@@ -88,7 +88,7 @@ class AlternativeSecurityId extends Entity
     * Gets the type
     * For internal use only
     *
-    * @return int|null The type
+    * @return int The type
     */
     public function getType()
     {

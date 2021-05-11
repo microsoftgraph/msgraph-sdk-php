@@ -28,7 +28,7 @@ class Endpoint extends DirectoryObject
     * Gets the capability
     * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.)  Not nullable. Read-only.
     *
-    * @return string|null The capability
+    * @return string The capability
     */
     public function getCapability()
     {
@@ -57,7 +57,7 @@ class Endpoint extends DirectoryObject
     * Gets the providerId
     * Application id of the publishing underlying service. Not nullable. Read-only.
     *
-    * @return string|null The providerId
+    * @return string The providerId
     */
     public function getProviderId()
     {
@@ -86,7 +86,7 @@ class Endpoint extends DirectoryObject
     * Gets the providerName
     * Name of the publishing underlying service. Read-only.
     *
-    * @return string|null The providerName
+    * @return string The providerName
     */
     public function getProviderName()
     {
@@ -115,7 +115,7 @@ class Endpoint extends DirectoryObject
     * Gets the providerResourceId
     * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
     *
-    * @return string|null The providerResourceId
+    * @return string The providerResourceId
     */
     public function getProviderResourceId()
     {
@@ -144,7 +144,7 @@ class Endpoint extends DirectoryObject
     * Gets the uri
     * URL of the published resource. Not nullable. Read-only.
     *
-    * @return string|null The uri
+    * @return string The uri
     */
     public function getUri()
     {

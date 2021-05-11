@@ -36,7 +36,7 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the vpnConfigurationId
     * The VPN Configuration Id to apply for this app.
     *
-    * @return string|null The vpnConfigurationId
+    * @return string The vpnConfigurationId
     */
     public function getVpnConfigurationId()
     {

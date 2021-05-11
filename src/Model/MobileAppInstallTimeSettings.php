@@ -28,12 +28,12 @@ class MobileAppInstallTimeSettings extends Entity
     * Gets the deadlineDateTime
     * The time at which the app should be installed.
     *
-    * @return \DateTime|null The deadlineDateTime
+    * @return \DateTime The deadlineDateTime
     */
     public function getDeadlineDateTime()
     {
         if (array_key_exists("deadlineDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deadlineDateTime"], "\DateTime") || is_null($this->_propDict["deadlineDateTime"])) {
+            if (is_a($this->_propDict["deadlineDateTime"], "\DateTime")) {
                 return $this->_propDict["deadlineDateTime"];
             } else {
                 $this->_propDict["deadlineDateTime"] = new \DateTime($this->_propDict["deadlineDateTime"]);
@@ -61,12 +61,12 @@ class MobileAppInstallTimeSettings extends Entity
     * Gets the startDateTime
     * The time at which the app should be available for installation.
     *
-    * @return \DateTime|null The startDateTime
+    * @return \DateTime The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -93,7 +93,7 @@ class MobileAppInstallTimeSettings extends Entity
     * Gets the useLocalTime
     * Whether the local device time or UTC time should be used when determining the available and deadline times.
     *
-    * @return bool|null The useLocalTime
+    * @return bool The useLocalTime
     */
     public function getUseLocalTime()
     {

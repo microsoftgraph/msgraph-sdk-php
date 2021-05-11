@@ -37,12 +37,12 @@ class OrganizerMeetingInfo extends MeetingInfo
     * Gets the organizer
     * The organizer Azure Active Directory identity.
     *
-    * @return IdentitySet|null The organizer
+    * @return IdentitySet The organizer
     */
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["organizer"])) {
+            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new IdentitySet($this->_propDict["organizer"]);

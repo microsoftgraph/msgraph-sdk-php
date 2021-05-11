@@ -27,12 +27,12 @@ class IdentityUserFlow extends Entity
     /**
     * Gets the userFlowType
     *
-    * @return UserFlowType|null The userFlowType
+    * @return UserFlowType The userFlowType
     */
     public function getUserFlowType()
     {
         if (array_key_exists("userFlowType", $this->_propDict)) {
-            if (is_a($this->_propDict["userFlowType"], "\Microsoft\Graph\Model\UserFlowType") || is_null($this->_propDict["userFlowType"])) {
+            if (is_a($this->_propDict["userFlowType"], "\Microsoft\Graph\Model\UserFlowType")) {
                 return $this->_propDict["userFlowType"];
             } else {
                 $this->_propDict["userFlowType"] = new UserFlowType($this->_propDict["userFlowType"]);
@@ -58,27 +58,31 @@ class IdentityUserFlow extends Entity
     /**
     * Gets the userFlowTypeVersion
     *
-    * @return float|null The userFlowTypeVersion
+    * @return Single The userFlowTypeVersion
     */
     public function getUserFlowTypeVersion()
     {
         if (array_key_exists("userFlowTypeVersion", $this->_propDict)) {
-            return $this->_propDict["userFlowTypeVersion"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["userFlowTypeVersion"], "\Microsoft\Graph\Model\Single")) {
+                return $this->_propDict["userFlowTypeVersion"];
+            } else {
+                $this->_propDict["userFlowTypeVersion"] = new Single($this->_propDict["userFlowTypeVersion"]);
+                return $this->_propDict["userFlowTypeVersion"];
+            }
         }
+        return null;
     }
     
     /**
     * Sets the userFlowTypeVersion
     *
-    * @param float $val The userFlowTypeVersion
+    * @param Single $val The userFlowTypeVersion
     *
     * @return IdentityUserFlow
     */
     public function setUserFlowTypeVersion($val)
     {
-        $this->_propDict["userFlowTypeVersion"] = floatval($val);
+        $this->_propDict["userFlowTypeVersion"] = $val;
         return $this;
     }
     

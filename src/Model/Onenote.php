@@ -29,7 +29,7 @@ class Onenote extends Entity
      * Gets the notebooks
     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      *
-     * @return array|null The notebooks
+     * @return array The notebooks
      */
     public function getNotebooks()
     {
@@ -50,7 +50,7 @@ class Onenote extends Entity
     */
     public function setNotebooks($val)
     {
-        $this->_propDict["notebooks"] = $val;
+		$this->_propDict["notebooks"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class Onenote extends Entity
      * Gets the operations
     * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      *
-     * @return array|null The operations
+     * @return array The operations
      */
     public function getOperations()
     {
@@ -80,7 +80,7 @@ class Onenote extends Entity
     */
     public function setOperations($val)
     {
-        $this->_propDict["operations"] = $val;
+		$this->_propDict["operations"] = $val;
         return $this;
     }
     
@@ -89,7 +89,7 @@ class Onenote extends Entity
      * Gets the pages
     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *
-     * @return array|null The pages
+     * @return array The pages
      */
     public function getPages()
     {
@@ -110,7 +110,7 @@ class Onenote extends Entity
     */
     public function setPages($val)
     {
-        $this->_propDict["pages"] = $val;
+		$this->_propDict["pages"] = $val;
         return $this;
     }
     
@@ -119,7 +119,7 @@ class Onenote extends Entity
      * Gets the resources
     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      *
-     * @return array|null The resources
+     * @return array The resources
      */
     public function getResources()
     {
@@ -140,7 +140,7 @@ class Onenote extends Entity
     */
     public function setResources($val)
     {
-        $this->_propDict["resources"] = $val;
+		$this->_propDict["resources"] = $val;
         return $this;
     }
     
@@ -149,7 +149,7 @@ class Onenote extends Entity
      * Gets the sectionGroups
     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *
-     * @return array|null The sectionGroups
+     * @return array The sectionGroups
      */
     public function getSectionGroups()
     {
@@ -170,7 +170,7 @@ class Onenote extends Entity
     */
     public function setSectionGroups($val)
     {
-        $this->_propDict["sectionGroups"] = $val;
+		$this->_propDict["sectionGroups"] = $val;
         return $this;
     }
     
@@ -179,7 +179,7 @@ class Onenote extends Entity
      * Gets the sections
     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *
-     * @return array|null The sections
+     * @return array The sections
      */
     public function getSections()
     {
@@ -200,7 +200,7 @@ class Onenote extends Entity
     */
     public function setSections($val)
     {
-        $this->_propDict["sections"] = $val;
+		$this->_propDict["sections"] = $val;
         return $this;
     }
     

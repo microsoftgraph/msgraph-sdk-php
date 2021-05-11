@@ -28,7 +28,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
     * Gets the correlationId
     * Id used for tracing the failure in the service.
     *
-    * @return string|null The correlationId
+    * @return string The correlationId
     */
     public function getCorrelationId()
     {
@@ -57,12 +57,12 @@ class DeviceManagementTroubleshootingEvent extends Entity
     * Gets the eventDateTime
     * Time when the event occurred .
     *
-    * @return \DateTime|null The eventDateTime
+    * @return \DateTime The eventDateTime
     */
     public function getEventDateTime()
     {
         if (array_key_exists("eventDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["eventDateTime"], "\DateTime") || is_null($this->_propDict["eventDateTime"])) {
+            if (is_a($this->_propDict["eventDateTime"], "\DateTime")) {
                 return $this->_propDict["eventDateTime"];
             } else {
                 $this->_propDict["eventDateTime"] = new \DateTime($this->_propDict["eventDateTime"]);

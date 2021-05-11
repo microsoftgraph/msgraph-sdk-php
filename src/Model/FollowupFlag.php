@@ -28,12 +28,12 @@ class FollowupFlag extends Entity
     * Gets the completedDateTime
     * The date and time that the follow-up was finished.
     *
-    * @return DateTimeTimeZone|null The completedDateTime
+    * @return DateTimeTimeZone The completedDateTime
     */
     public function getCompletedDateTime()
     {
         if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["completedDateTime"])) {
+            if (is_a($this->_propDict["completedDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new DateTimeTimeZone($this->_propDict["completedDateTime"]);
@@ -61,12 +61,12 @@ class FollowupFlag extends Entity
     * Gets the dueDateTime
     * The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
     *
-    * @return DateTimeTimeZone|null The dueDateTime
+    * @return DateTimeTimeZone The dueDateTime
     */
     public function getDueDateTime()
     {
         if (array_key_exists("dueDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["dueDateTime"])) {
+            if (is_a($this->_propDict["dueDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["dueDateTime"];
             } else {
                 $this->_propDict["dueDateTime"] = new DateTimeTimeZone($this->_propDict["dueDateTime"]);
@@ -94,12 +94,12 @@ class FollowupFlag extends Entity
     * Gets the flagStatus
     * The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
     *
-    * @return FollowupFlagStatus|null The flagStatus
+    * @return FollowupFlagStatus The flagStatus
     */
     public function getFlagStatus()
     {
         if (array_key_exists("flagStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["flagStatus"], "\Microsoft\Graph\Model\FollowupFlagStatus") || is_null($this->_propDict["flagStatus"])) {
+            if (is_a($this->_propDict["flagStatus"], "\Microsoft\Graph\Model\FollowupFlagStatus")) {
                 return $this->_propDict["flagStatus"];
             } else {
                 $this->_propDict["flagStatus"] = new FollowupFlagStatus($this->_propDict["flagStatus"]);
@@ -127,12 +127,12 @@ class FollowupFlag extends Entity
     * Gets the startDateTime
     * The date and time that the follow-up is to begin.
     *
-    * @return DateTimeTimeZone|null The startDateTime
+    * @return DateTimeTimeZone The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);

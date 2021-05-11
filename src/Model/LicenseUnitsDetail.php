@@ -27,7 +27,7 @@ class LicenseUnitsDetail extends Entity
     * Gets the enabled
     * The number of units that are enabled.
     *
-    * @return int|null The enabled
+    * @return int The enabled
     */
     public function getEnabled()
     {
@@ -55,7 +55,7 @@ class LicenseUnitsDetail extends Entity
     * Gets the suspended
     * The number of units that are suspended.
     *
-    * @return int|null The suspended
+    * @return int The suspended
     */
     public function getSuspended()
     {
@@ -83,7 +83,7 @@ class LicenseUnitsDetail extends Entity
     * Gets the warning
     * The number of units that are in warning status.
     *
-    * @return int|null The warning
+    * @return int The warning
     */
     public function getWarning()
     {

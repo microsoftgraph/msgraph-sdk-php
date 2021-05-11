@@ -27,7 +27,7 @@ class Win32LobAppRestartSettings extends Entity
     * Gets the countdownDisplayBeforeRestartInMinutes
     * The number of minutes before the restart time to display the countdown dialog for pending restarts.
     *
-    * @return int|null The countdownDisplayBeforeRestartInMinutes
+    * @return int The countdownDisplayBeforeRestartInMinutes
     */
     public function getCountdownDisplayBeforeRestartInMinutes()
     {
@@ -55,7 +55,7 @@ class Win32LobAppRestartSettings extends Entity
     * Gets the gracePeriodInMinutes
     * The number of minutes to wait before restarting the device after an app installation.
     *
-    * @return int|null The gracePeriodInMinutes
+    * @return int The gracePeriodInMinutes
     */
     public function getGracePeriodInMinutes()
     {
@@ -83,7 +83,7 @@ class Win32LobAppRestartSettings extends Entity
     * Gets the restartNotificationSnoozeDurationInMinutes
     * The number of minutes to snooze the restart notification dialog when the snooze button is selected.
     *
-    * @return int|null The restartNotificationSnoozeDurationInMinutes
+    * @return int The restartNotificationSnoozeDurationInMinutes
     */
     public function getRestartNotificationSnoozeDurationInMinutes()
     {

@@ -27,7 +27,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     * Gets the allowedDeviceCount
     * Total count of devices with Exchange Access State: Allowed.
     *
-    * @return int|null The allowedDeviceCount
+    * @return int The allowedDeviceCount
     */
     public function getAllowedDeviceCount()
     {
@@ -55,7 +55,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     * Gets the blockedDeviceCount
     * Total count of devices with Exchange Access State: Blocked.
     *
-    * @return int|null The blockedDeviceCount
+    * @return int The blockedDeviceCount
     */
     public function getBlockedDeviceCount()
     {
@@ -83,7 +83,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     * Gets the quarantinedDeviceCount
     * Total count of devices with Exchange Access State: Quarantined.
     *
-    * @return int|null The quarantinedDeviceCount
+    * @return int The quarantinedDeviceCount
     */
     public function getQuarantinedDeviceCount()
     {
@@ -111,7 +111,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     * Gets the unavailableDeviceCount
     * Total count of devices for which no Exchange Access State could be found.
     *
-    * @return int|null The unavailableDeviceCount
+    * @return int The unavailableDeviceCount
     */
     public function getUnavailableDeviceCount()
     {
@@ -139,7 +139,7 @@ class DeviceExchangeAccessStateSummary extends Entity
     * Gets the unknownDeviceCount
     * Total count of devices with Exchange Access State: Unknown.
     *
-    * @return int|null The unknownDeviceCount
+    * @return int The unknownDeviceCount
     */
     public function getUnknownDeviceCount()
     {

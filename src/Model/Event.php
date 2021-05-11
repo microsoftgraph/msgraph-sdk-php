@@ -28,7 +28,7 @@ class Event extends OutlookItem
     * Gets the allowNewTimeProposals
     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
     *
-    * @return bool|null The allowNewTimeProposals
+    * @return bool The allowNewTimeProposals
     */
     public function getAllowNewTimeProposals()
     {
@@ -58,7 +58,7 @@ class Event extends OutlookItem
      * Gets the attendees
     * The collection of attendees for the event.
      *
-     * @return array|null The attendees
+     * @return array The attendees
      */
     public function getAttendees()
     {
@@ -79,7 +79,7 @@ class Event extends OutlookItem
     */
     public function setAttendees($val)
     {
-        $this->_propDict["attendees"] = $val;
+		$this->_propDict["attendees"] = $val;
         return $this;
     }
     
@@ -87,12 +87,12 @@ class Event extends OutlookItem
     * Gets the body
     * The body of the message associated with the event. It can be in HTML or text format.
     *
-    * @return ItemBody|null The body
+    * @return ItemBody The body
     */
     public function getBody()
     {
         if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["body"])) {
+            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -120,7 +120,7 @@ class Event extends OutlookItem
     * Gets the bodyPreview
     * The preview of the message associated with the event. It is in text format.
     *
-    * @return string|null The bodyPreview
+    * @return string The bodyPreview
     */
     public function getBodyPreview()
     {
@@ -149,12 +149,12 @@ class Event extends OutlookItem
     * Gets the end
     * The date, time, and time zone that the event ends. By default, the end time is in UTC.
     *
-    * @return DateTimeTimeZone|null The end
+    * @return DateTimeTimeZone The end
     */
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["end"])) {
+            if (is_a($this->_propDict["end"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
@@ -182,7 +182,7 @@ class Event extends OutlookItem
     * Gets the hasAttachments
     * Set to true if the event has attachments.
     *
-    * @return bool|null The hasAttachments
+    * @return bool The hasAttachments
     */
     public function getHasAttachments()
     {
@@ -211,7 +211,7 @@ class Event extends OutlookItem
     * Gets the hideAttendees
     * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
     *
-    * @return bool|null The hideAttendees
+    * @return bool The hideAttendees
     */
     public function getHideAttendees()
     {
@@ -240,7 +240,7 @@ class Event extends OutlookItem
     * Gets the iCalUId
     * A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
     *
-    * @return string|null The iCalUId
+    * @return string The iCalUId
     */
     public function getICalUId()
     {
@@ -269,12 +269,12 @@ class Event extends OutlookItem
     * Gets the importance
     * The importance of the event. The possible values are: low, normal, high.
     *
-    * @return Importance|null The importance
+    * @return Importance The importance
     */
     public function getImportance()
     {
         if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\Importance") || is_null($this->_propDict["importance"])) {
+            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -302,7 +302,7 @@ class Event extends OutlookItem
     * Gets the isAllDay
     * Set to true if the event lasts all day.
     *
-    * @return bool|null The isAllDay
+    * @return bool The isAllDay
     */
     public function getIsAllDay()
     {
@@ -331,7 +331,7 @@ class Event extends OutlookItem
     * Gets the isCancelled
     * Set to true if the event has been canceled.
     *
-    * @return bool|null The isCancelled
+    * @return bool The isCancelled
     */
     public function getIsCancelled()
     {
@@ -360,7 +360,7 @@ class Event extends OutlookItem
     * Gets the isDraft
     * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
     *
-    * @return bool|null The isDraft
+    * @return bool The isDraft
     */
     public function getIsDraft()
     {
@@ -389,7 +389,7 @@ class Event extends OutlookItem
     * Gets the isOnlineMeeting
     * True if this event has online meeting information, false otherwise. Default is false. Optional.
     *
-    * @return bool|null The isOnlineMeeting
+    * @return bool The isOnlineMeeting
     */
     public function getIsOnlineMeeting()
     {
@@ -418,7 +418,7 @@ class Event extends OutlookItem
     * Gets the isOrganizer
     * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
     *
-    * @return bool|null The isOrganizer
+    * @return bool The isOrganizer
     */
     public function getIsOrganizer()
     {
@@ -447,7 +447,7 @@ class Event extends OutlookItem
     * Gets the isReminderOn
     * Set to true if an alert is set to remind the user of the event.
     *
-    * @return bool|null The isReminderOn
+    * @return bool The isReminderOn
     */
     public function getIsReminderOn()
     {
@@ -476,12 +476,12 @@ class Event extends OutlookItem
     * Gets the location
     * The location of the event.
     *
-    * @return Location|null The location
+    * @return Location The location
     */
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\Location") || is_null($this->_propDict["location"])) {
+            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new Location($this->_propDict["location"]);
@@ -510,7 +510,7 @@ class Event extends OutlookItem
      * Gets the locations
     * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
      *
-     * @return array|null The locations
+     * @return array The locations
      */
     public function getLocations()
     {
@@ -531,7 +531,7 @@ class Event extends OutlookItem
     */
     public function setLocations($val)
     {
-        $this->_propDict["locations"] = $val;
+		$this->_propDict["locations"] = $val;
         return $this;
     }
     
@@ -539,12 +539,12 @@ class Event extends OutlookItem
     * Gets the onlineMeeting
     * Details for an attendee to join the meeting online. Read-only.
     *
-    * @return OnlineMeetingInfo|null The onlineMeeting
+    * @return OnlineMeetingInfo The onlineMeeting
     */
     public function getOnlineMeeting()
     {
         if (array_key_exists("onlineMeeting", $this->_propDict)) {
-            if (is_a($this->_propDict["onlineMeeting"], "\Microsoft\Graph\Model\OnlineMeetingInfo") || is_null($this->_propDict["onlineMeeting"])) {
+            if (is_a($this->_propDict["onlineMeeting"], "\Microsoft\Graph\Model\OnlineMeetingInfo")) {
                 return $this->_propDict["onlineMeeting"];
             } else {
                 $this->_propDict["onlineMeeting"] = new OnlineMeetingInfo($this->_propDict["onlineMeeting"]);
@@ -572,12 +572,12 @@ class Event extends OutlookItem
     * Gets the onlineMeetingProvider
     * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
     *
-    * @return OnlineMeetingProviderType|null The onlineMeetingProvider
+    * @return OnlineMeetingProviderType The onlineMeetingProvider
     */
     public function getOnlineMeetingProvider()
     {
         if (array_key_exists("onlineMeetingProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["onlineMeetingProvider"], "\Microsoft\Graph\Model\OnlineMeetingProviderType") || is_null($this->_propDict["onlineMeetingProvider"])) {
+            if (is_a($this->_propDict["onlineMeetingProvider"], "\Microsoft\Graph\Model\OnlineMeetingProviderType")) {
                 return $this->_propDict["onlineMeetingProvider"];
             } else {
                 $this->_propDict["onlineMeetingProvider"] = new OnlineMeetingProviderType($this->_propDict["onlineMeetingProvider"]);
@@ -605,7 +605,7 @@ class Event extends OutlookItem
     * Gets the onlineMeetingUrl
     * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
     *
-    * @return string|null The onlineMeetingUrl
+    * @return string The onlineMeetingUrl
     */
     public function getOnlineMeetingUrl()
     {
@@ -634,12 +634,12 @@ class Event extends OutlookItem
     * Gets the organizer
     * The organizer of the event.
     *
-    * @return Recipient|null The organizer
+    * @return Recipient The organizer
     */
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["organizer"])) {
+            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new Recipient($this->_propDict["organizer"]);
@@ -667,7 +667,7 @@ class Event extends OutlookItem
     * Gets the originalEndTimeZone
     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
-    * @return string|null The originalEndTimeZone
+    * @return string The originalEndTimeZone
     */
     public function getOriginalEndTimeZone()
     {
@@ -696,12 +696,12 @@ class Event extends OutlookItem
     * Gets the originalStart
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime|null The originalStart
+    * @return \DateTime The originalStart
     */
     public function getOriginalStart()
     {
         if (array_key_exists("originalStart", $this->_propDict)) {
-            if (is_a($this->_propDict["originalStart"], "\DateTime") || is_null($this->_propDict["originalStart"])) {
+            if (is_a($this->_propDict["originalStart"], "\DateTime")) {
                 return $this->_propDict["originalStart"];
             } else {
                 $this->_propDict["originalStart"] = new \DateTime($this->_propDict["originalStart"]);
@@ -729,7 +729,7 @@ class Event extends OutlookItem
     * Gets the originalStartTimeZone
     * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
-    * @return string|null The originalStartTimeZone
+    * @return string The originalStartTimeZone
     */
     public function getOriginalStartTimeZone()
     {
@@ -758,12 +758,12 @@ class Event extends OutlookItem
     * Gets the recurrence
     * The recurrence pattern for the event.
     *
-    * @return PatternedRecurrence|null The recurrence
+    * @return PatternedRecurrence The recurrence
     */
     public function getRecurrence()
     {
         if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence") || is_null($this->_propDict["recurrence"])) {
+            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -791,7 +791,7 @@ class Event extends OutlookItem
     * Gets the reminderMinutesBeforeStart
     * The number of minutes before the event start time that the reminder alert occurs.
     *
-    * @return int|null The reminderMinutesBeforeStart
+    * @return int The reminderMinutesBeforeStart
     */
     public function getReminderMinutesBeforeStart()
     {
@@ -820,7 +820,7 @@ class Event extends OutlookItem
     * Gets the responseRequested
     * Default is true, which represents the organizer would like an invitee to send a response to the event.
     *
-    * @return bool|null The responseRequested
+    * @return bool The responseRequested
     */
     public function getResponseRequested()
     {
@@ -849,12 +849,12 @@ class Event extends OutlookItem
     * Gets the responseStatus
     * Indicates the type of response sent in response to an event message.
     *
-    * @return ResponseStatus|null The responseStatus
+    * @return ResponseStatus The responseStatus
     */
     public function getResponseStatus()
     {
         if (array_key_exists("responseStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["responseStatus"], "\Microsoft\Graph\Model\ResponseStatus") || is_null($this->_propDict["responseStatus"])) {
+            if (is_a($this->_propDict["responseStatus"], "\Microsoft\Graph\Model\ResponseStatus")) {
                 return $this->_propDict["responseStatus"];
             } else {
                 $this->_propDict["responseStatus"] = new ResponseStatus($this->_propDict["responseStatus"]);
@@ -882,12 +882,12 @@ class Event extends OutlookItem
     * Gets the sensitivity
     * The possible values are: normal, personal, private, confidential.
     *
-    * @return Sensitivity|null The sensitivity
+    * @return Sensitivity The sensitivity
     */
     public function getSensitivity()
     {
         if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "\Microsoft\Graph\Model\Sensitivity") || is_null($this->_propDict["sensitivity"])) {
+            if (is_a($this->_propDict["sensitivity"], "\Microsoft\Graph\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -915,7 +915,7 @@ class Event extends OutlookItem
     * Gets the seriesMasterId
     * The ID for the recurring series master item, if this event is part of a recurring series.
     *
-    * @return string|null The seriesMasterId
+    * @return string The seriesMasterId
     */
     public function getSeriesMasterId()
     {
@@ -944,12 +944,12 @@ class Event extends OutlookItem
     * Gets the showAs
     * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
-    * @return FreeBusyStatus|null The showAs
+    * @return FreeBusyStatus The showAs
     */
     public function getShowAs()
     {
         if (array_key_exists("showAs", $this->_propDict)) {
-            if (is_a($this->_propDict["showAs"], "\Microsoft\Graph\Model\FreeBusyStatus") || is_null($this->_propDict["showAs"])) {
+            if (is_a($this->_propDict["showAs"], "\Microsoft\Graph\Model\FreeBusyStatus")) {
                 return $this->_propDict["showAs"];
             } else {
                 $this->_propDict["showAs"] = new FreeBusyStatus($this->_propDict["showAs"]);
@@ -977,12 +977,12 @@ class Event extends OutlookItem
     * Gets the start
     * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
-    * @return DateTimeTimeZone|null The start
+    * @return DateTimeTimeZone The start
     */
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["start"])) {
+            if (is_a($this->_propDict["start"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);
@@ -1010,7 +1010,7 @@ class Event extends OutlookItem
     * Gets the subject
     * The text of the event's subject line.
     *
-    * @return string|null The subject
+    * @return string The subject
     */
     public function getSubject()
     {
@@ -1039,7 +1039,7 @@ class Event extends OutlookItem
     * Gets the transactionId
     * A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
     *
-    * @return string|null The transactionId
+    * @return string The transactionId
     */
     public function getTransactionId()
     {
@@ -1068,12 +1068,12 @@ class Event extends OutlookItem
     * Gets the type
     * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
-    * @return EventType|null The type
+    * @return EventType The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\EventType") || is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\EventType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new EventType($this->_propDict["type"]);
@@ -1101,7 +1101,7 @@ class Event extends OutlookItem
     * Gets the webLink
     * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
     *
-    * @return string|null The webLink
+    * @return string The webLink
     */
     public function getWebLink()
     {
@@ -1129,9 +1129,9 @@ class Event extends OutlookItem
 
      /** 
      * Gets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      *
-     * @return array|null The attachments
+     * @return array The attachments
      */
     public function getAttachments()
     {
@@ -1144,7 +1144,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -1152,7 +1152,7 @@ class Event extends OutlookItem
     */
     public function setAttachments($val)
     {
-        $this->_propDict["attachments"] = $val;
+		$this->_propDict["attachments"] = $val;
         return $this;
     }
     
@@ -1160,12 +1160,12 @@ class Event extends OutlookItem
     * Gets the calendar
     * The calendar that contains the event. Navigation property. Read-only.
     *
-    * @return Calendar|null The calendar
+    * @return Calendar The calendar
     */
     public function getCalendar()
     {
         if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "\Microsoft\Graph\Model\Calendar") || is_null($this->_propDict["calendar"])) {
+            if (is_a($this->_propDict["calendar"], "\Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -1192,9 +1192,9 @@ class Event extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the event. Read-only. Nullable.
+    * The collection of open extensions defined for the event. Nullable.
      *
-     * @return array|null The extensions
+     * @return array The extensions
      */
     public function getExtensions()
     {
@@ -1207,7 +1207,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the event. Read-only. Nullable.
+    * The collection of open extensions defined for the event. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -1215,16 +1215,16 @@ class Event extends OutlookItem
     */
     public function setExtensions($val)
     {
-        $this->_propDict["extensions"] = $val;
+		$this->_propDict["extensions"] = $val;
         return $this;
     }
     
 
      /** 
      * Gets the instances
-    * The instances of the event. Navigation property. Read-only. Nullable.
+    * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      *
-     * @return array|null The instances
+     * @return array The instances
      */
     public function getInstances()
     {
@@ -1237,7 +1237,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the instances
-    * The instances of the event. Navigation property. Read-only. Nullable.
+    * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
     *
     * @param Event $val The instances
     *
@@ -1245,7 +1245,7 @@ class Event extends OutlookItem
     */
     public function setInstances($val)
     {
-        $this->_propDict["instances"] = $val;
+		$this->_propDict["instances"] = $val;
         return $this;
     }
     
@@ -1254,7 +1254,7 @@ class Event extends OutlookItem
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      *
-     * @return array|null The multiValueExtendedProperties
+     * @return array The multiValueExtendedProperties
      */
     public function getMultiValueExtendedProperties()
     {
@@ -1275,7 +1275,7 @@ class Event extends OutlookItem
     */
     public function setMultiValueExtendedProperties($val)
     {
-        $this->_propDict["multiValueExtendedProperties"] = $val;
+		$this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
     
@@ -1284,7 +1284,7 @@ class Event extends OutlookItem
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
      *
-     * @return array|null The singleValueExtendedProperties
+     * @return array The singleValueExtendedProperties
      */
     public function getSingleValueExtendedProperties()
     {
@@ -1305,7 +1305,7 @@ class Event extends OutlookItem
     */
     public function setSingleValueExtendedProperties($val)
     {
-        $this->_propDict["singleValueExtendedProperties"] = $val;
+		$this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
     

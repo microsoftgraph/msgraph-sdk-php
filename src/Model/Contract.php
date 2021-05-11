@@ -28,7 +28,7 @@ class Contract extends DirectoryObject
     * Gets the contractType
     * Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
     *
-    * @return string|null The contractType
+    * @return string The contractType
     */
     public function getContractType()
     {
@@ -57,7 +57,7 @@ class Contract extends DirectoryObject
     * Gets the customerId
     * The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
     *
-    * @return string|null The customerId
+    * @return string The customerId
     */
     public function getCustomerId()
     {
@@ -86,7 +86,7 @@ class Contract extends DirectoryObject
     * Gets the defaultDomainName
     * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
     *
-    * @return string|null The defaultDomainName
+    * @return string The defaultDomainName
     */
     public function getDefaultDomainName()
     {
@@ -115,7 +115,7 @@ class Contract extends DirectoryObject
     * Gets the displayName
     * A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
     *
-    * @return string|null The displayName
+    * @return string The displayName
     */
     public function getDisplayName()
     {

@@ -28,12 +28,12 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation
     * Gets the chat
     * The chat between the user and Teams app.
     *
-    * @return Chat|null The chat
+    * @return Chat The chat
     */
     public function getChat()
     {
         if (array_key_exists("chat", $this->_propDict)) {
-            if (is_a($this->_propDict["chat"], "\Microsoft\Graph\Model\Chat") || is_null($this->_propDict["chat"])) {
+            if (is_a($this->_propDict["chat"], "\Microsoft\Graph\Model\Chat")) {
                 return $this->_propDict["chat"];
             } else {
                 $this->_propDict["chat"] = new Chat($this->_propDict["chat"]);

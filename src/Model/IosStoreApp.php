@@ -28,12 +28,12 @@ class IosStoreApp extends MobileApp
     * Gets the applicableDeviceType
     * The iOS architecture for which this app can run on.
     *
-    * @return IosDeviceType|null The applicableDeviceType
+    * @return IosDeviceType The applicableDeviceType
     */
     public function getApplicableDeviceType()
     {
         if (array_key_exists("applicableDeviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceType"], "\Microsoft\Graph\Model\IosDeviceType") || is_null($this->_propDict["applicableDeviceType"])) {
+            if (is_a($this->_propDict["applicableDeviceType"], "\Microsoft\Graph\Model\IosDeviceType")) {
                 return $this->_propDict["applicableDeviceType"];
             } else {
                 $this->_propDict["applicableDeviceType"] = new IosDeviceType($this->_propDict["applicableDeviceType"]);
@@ -61,7 +61,7 @@ class IosStoreApp extends MobileApp
     * Gets the appStoreUrl
     * The Apple App Store URL
     *
-    * @return string|null The appStoreUrl
+    * @return string The appStoreUrl
     */
     public function getAppStoreUrl()
     {
@@ -90,7 +90,7 @@ class IosStoreApp extends MobileApp
     * Gets the bundleId
     * The Identity Name.
     *
-    * @return string|null The bundleId
+    * @return string The bundleId
     */
     public function getBundleId()
     {
@@ -119,12 +119,12 @@ class IosStoreApp extends MobileApp
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *
-    * @return IosMinimumOperatingSystem|null The minimumSupportedOperatingSystem
+    * @return IosMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\IosMinimumOperatingSystem") || is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\IosMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new IosMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);

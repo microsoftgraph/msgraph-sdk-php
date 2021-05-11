@@ -28,12 +28,12 @@ class IosLobApp extends MobileLobApp
     * Gets the applicableDeviceType
     * The iOS architecture for which this app can run on.
     *
-    * @return IosDeviceType|null The applicableDeviceType
+    * @return IosDeviceType The applicableDeviceType
     */
     public function getApplicableDeviceType()
     {
         if (array_key_exists("applicableDeviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceType"], "\Microsoft\Graph\Model\IosDeviceType") || is_null($this->_propDict["applicableDeviceType"])) {
+            if (is_a($this->_propDict["applicableDeviceType"], "\Microsoft\Graph\Model\IosDeviceType")) {
                 return $this->_propDict["applicableDeviceType"];
             } else {
                 $this->_propDict["applicableDeviceType"] = new IosDeviceType($this->_propDict["applicableDeviceType"]);
@@ -61,7 +61,7 @@ class IosLobApp extends MobileLobApp
     * Gets the buildNumber
     * The build number of iOS Line of Business (LoB) app.
     *
-    * @return string|null The buildNumber
+    * @return string The buildNumber
     */
     public function getBuildNumber()
     {
@@ -90,7 +90,7 @@ class IosLobApp extends MobileLobApp
     * Gets the bundleId
     * The Identity Name.
     *
-    * @return string|null The bundleId
+    * @return string The bundleId
     */
     public function getBundleId()
     {
@@ -119,12 +119,12 @@ class IosLobApp extends MobileLobApp
     * Gets the expirationDateTime
     * The expiration time.
     *
-    * @return \DateTime|null The expirationDateTime
+    * @return \DateTime The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -152,12 +152,12 @@ class IosLobApp extends MobileLobApp
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *
-    * @return IosMinimumOperatingSystem|null The minimumSupportedOperatingSystem
+    * @return IosMinimumOperatingSystem The minimumSupportedOperatingSystem
     */
     public function getMinimumSupportedOperatingSystem()
     {
         if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\IosMinimumOperatingSystem") || is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\IosMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new IosMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);
@@ -185,7 +185,7 @@ class IosLobApp extends MobileLobApp
     * Gets the versionNumber
     * The version number of iOS Line of Business (LoB) app.
     *
-    * @return string|null The versionNumber
+    * @return string The versionNumber
     */
     public function getVersionNumber()
     {

@@ -27,7 +27,7 @@ class TimeOffItem extends ScheduleEntity
     * Gets the timeOffReasonId
     * ID of the timeOffReason for this timeOffItem. Required.
     *
-    * @return string|null The timeOffReasonId
+    * @return string The timeOffReasonId
     */
     public function getTimeOffReasonId()
     {

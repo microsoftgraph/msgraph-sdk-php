@@ -28,12 +28,12 @@ class SearchHitsContainer extends Entity
     * Gets the hits
     * A collection of the search results.
     *
-    * @return SearchHit|null The hits
+    * @return SearchHit The hits
     */
     public function getHits()
     {
         if (array_key_exists("hits", $this->_propDict)) {
-            if (is_a($this->_propDict["hits"], "\Microsoft\Graph\Model\SearchHit") || is_null($this->_propDict["hits"])) {
+            if (is_a($this->_propDict["hits"], "\Microsoft\Graph\Model\SearchHit")) {
                 return $this->_propDict["hits"];
             } else {
                 $this->_propDict["hits"] = new SearchHit($this->_propDict["hits"]);
@@ -60,7 +60,7 @@ class SearchHitsContainer extends Entity
     * Gets the moreResultsAvailable
     * Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
     *
-    * @return bool|null The moreResultsAvailable
+    * @return bool The moreResultsAvailable
     */
     public function getMoreResultsAvailable()
     {
@@ -88,7 +88,7 @@ class SearchHitsContainer extends Entity
     * Gets the total
     * The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
     *
-    * @return int|null The total
+    * @return int The total
     */
     public function getTotal()
     {
