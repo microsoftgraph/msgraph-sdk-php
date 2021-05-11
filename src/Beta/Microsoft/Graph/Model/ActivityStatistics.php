@@ -28,12 +28,12 @@ class ActivityStatistics extends Entity
     * Gets the activity
     * The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
     *
-    * @return AnalyticsActivityType The activity
+    * @return AnalyticsActivityType|null The activity
     */
     public function getActivity()
     {
         if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "\Beta\Microsoft\Graph\Model\AnalyticsActivityType")) {
+            if (is_a($this->_propDict["activity"], "\Beta\Microsoft\Graph\Model\AnalyticsActivityType") || is_null($this->_propDict["activity"])) {
                 return $this->_propDict["activity"];
             } else {
                 $this->_propDict["activity"] = new AnalyticsActivityType($this->_propDict["activity"]);
@@ -61,12 +61,12 @@ class ActivityStatistics extends Entity
     * Gets the duration
     * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration The duration
+    * @return Duration|null The duration
     */
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["duration"])) {
                 return $this->_propDict["duration"];
             } else {
                 $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
@@ -94,12 +94,12 @@ class ActivityStatistics extends Entity
     * Gets the endDate
     * Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
     *
-    * @return \DateTime The endDate
+    * @return \DateTime|null The endDate
     */
     public function getEndDate()
     {
         if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "\DateTime")) {
+            if (is_a($this->_propDict["endDate"], "\DateTime") || is_null($this->_propDict["endDate"])) {
                 return $this->_propDict["endDate"];
             } else {
                 $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
@@ -127,12 +127,12 @@ class ActivityStatistics extends Entity
     * Gets the startDate
     * Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
     *
-    * @return \DateTime The startDate
+    * @return \DateTime|null The startDate
     */
     public function getStartDate()
     {
         if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "\DateTime")) {
+            if (is_a($this->_propDict["startDate"], "\DateTime") || is_null($this->_propDict["startDate"])) {
                 return $this->_propDict["startDate"];
             } else {
                 $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
@@ -160,7 +160,7 @@ class ActivityStatistics extends Entity
     * Gets the timeZoneUsed
     * The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
     *
-    * @return string The timeZoneUsed
+    * @return string|null The timeZoneUsed
     */
     public function getTimeZoneUsed()
     {

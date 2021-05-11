@@ -28,7 +28,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the addressableUserName
     * Addressable user name.
     *
-    * @return string The addressableUserName
+    * @return string|null The addressableUserName
     */
     public function getAddressableUserName()
     {
@@ -57,7 +57,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the azureActiveDirectoryDeviceId
     * AAD Device ID - to be deprecated
     *
-    * @return string The azureActiveDirectoryDeviceId
+    * @return string|null The azureActiveDirectoryDeviceId
     */
     public function getAzureActiveDirectoryDeviceId()
     {
@@ -86,7 +86,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the displayName
     * Display Name
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -115,12 +115,12 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the enrollmentState
     * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
-    * @return EnrollmentState The enrollmentState
+    * @return EnrollmentState|null The enrollmentState
     */
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "\Microsoft\Graph\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "\Microsoft\Graph\Model\EnrollmentState") || is_null($this->_propDict["enrollmentState"])) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -148,7 +148,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the groupTag
     * Group Tag of the Windows autopilot device.
     *
-    * @return string The groupTag
+    * @return string|null The groupTag
     */
     public function getGroupTag()
     {
@@ -177,12 +177,12 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the lastContactedDateTime
     * Intune Last Contacted Date Time of the Windows autopilot device.
     *
-    * @return \DateTime The lastContactedDateTime
+    * @return \DateTime|null The lastContactedDateTime
     */
     public function getLastContactedDateTime()
     {
         if (array_key_exists("lastContactedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime") || is_null($this->_propDict["lastContactedDateTime"])) {
                 return $this->_propDict["lastContactedDateTime"];
             } else {
                 $this->_propDict["lastContactedDateTime"] = new \DateTime($this->_propDict["lastContactedDateTime"]);
@@ -210,7 +210,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the managedDeviceId
     * Managed Device ID
     *
-    * @return string The managedDeviceId
+    * @return string|null The managedDeviceId
     */
     public function getManagedDeviceId()
     {
@@ -239,7 +239,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the manufacturer
     * Oem manufacturer of the Windows autopilot device.
     *
-    * @return string The manufacturer
+    * @return string|null The manufacturer
     */
     public function getManufacturer()
     {
@@ -268,7 +268,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the model
     * Model name of the Windows autopilot device.
     *
-    * @return string The model
+    * @return string|null The model
     */
     public function getModel()
     {
@@ -297,7 +297,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the productKey
     * Product Key of the Windows autopilot device.
     *
-    * @return string The productKey
+    * @return string|null The productKey
     */
     public function getProductKey()
     {
@@ -326,7 +326,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the purchaseOrderIdentifier
     * Purchase Order Identifier of the Windows autopilot device.
     *
-    * @return string The purchaseOrderIdentifier
+    * @return string|null The purchaseOrderIdentifier
     */
     public function getPurchaseOrderIdentifier()
     {
@@ -355,7 +355,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the resourceName
     * Resource Name.
     *
-    * @return string The resourceName
+    * @return string|null The resourceName
     */
     public function getResourceName()
     {
@@ -384,7 +384,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the serialNumber
     * Serial number of the Windows autopilot device.
     *
-    * @return string The serialNumber
+    * @return string|null The serialNumber
     */
     public function getSerialNumber()
     {
@@ -413,7 +413,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the skuNumber
     * SKU Number
     *
-    * @return string The skuNumber
+    * @return string|null The skuNumber
     */
     public function getSkuNumber()
     {
@@ -442,7 +442,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the systemFamily
     * System Family
     *
-    * @return string The systemFamily
+    * @return string|null The systemFamily
     */
     public function getSystemFamily()
     {
@@ -471,7 +471,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     * Gets the userPrincipalName
     * User Principal Name.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

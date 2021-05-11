@@ -28,7 +28,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the applyOnlyToWindowsPhone81
     * Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
     *
-    * @return bool The applyOnlyToWindowsPhone81
+    * @return bool|null The applyOnlyToWindowsPhone81
     */
     public function getApplyOnlyToWindowsPhone81()
     {
@@ -57,7 +57,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the appsBlockCopyPaste
     * Indicates whether or not to block copy paste.
     *
-    * @return bool The appsBlockCopyPaste
+    * @return bool|null The appsBlockCopyPaste
     */
     public function getAppsBlockCopyPaste()
     {
@@ -86,7 +86,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the bluetoothBlocked
     * Indicates whether or not to block bluetooth.
     *
-    * @return bool The bluetoothBlocked
+    * @return bool|null The bluetoothBlocked
     */
     public function getBluetoothBlocked()
     {
@@ -115,7 +115,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the cameraBlocked
     * Indicates whether or not to block camera.
     *
-    * @return bool The cameraBlocked
+    * @return bool|null The cameraBlocked
     */
     public function getCameraBlocked()
     {
@@ -144,7 +144,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the cellularBlockWifiTethering
     * Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
     *
-    * @return bool The cellularBlockWifiTethering
+    * @return bool|null The cellularBlockWifiTethering
     */
     public function getCellularBlockWifiTethering()
     {
@@ -173,12 +173,12 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the compliantAppListType
     * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
     *
-    * @return AppListType The compliantAppListType
+    * @return AppListType|null The compliantAppListType
     */
     public function getCompliantAppListType()
     {
         if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "\Beta\Microsoft\Graph\Model\AppListType")) {
+            if (is_a($this->_propDict["compliantAppListType"], "\Beta\Microsoft\Graph\Model\AppListType") || is_null($this->_propDict["compliantAppListType"])) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -207,7 +207,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
      * Gets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
-     * @return array The compliantAppsList
+     * @return array|null The compliantAppsList
      */
     public function getCompliantAppsList()
     {
@@ -228,7 +228,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     */
     public function setCompliantAppsList($val)
     {
-		$this->_propDict["compliantAppsList"] = $val;
+        $this->_propDict["compliantAppsList"] = $val;
         return $this;
     }
     
@@ -236,7 +236,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the diagnosticDataBlockSubmission
     * Indicates whether or not to block diagnostic data submission.
     *
-    * @return bool The diagnosticDataBlockSubmission
+    * @return bool|null The diagnosticDataBlockSubmission
     */
     public function getDiagnosticDataBlockSubmission()
     {
@@ -265,7 +265,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the emailBlockAddingAccounts
     * Indicates whether or not to block custom email accounts.
     *
-    * @return bool The emailBlockAddingAccounts
+    * @return bool|null The emailBlockAddingAccounts
     */
     public function getEmailBlockAddingAccounts()
     {
@@ -294,7 +294,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the locationServicesBlocked
     * Indicates whether or not to block location services.
     *
-    * @return bool The locationServicesBlocked
+    * @return bool|null The locationServicesBlocked
     */
     public function getLocationServicesBlocked()
     {
@@ -323,7 +323,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the microsoftAccountBlocked
     * Indicates whether or not to block using a Microsoft Account.
     *
-    * @return bool The microsoftAccountBlocked
+    * @return bool|null The microsoftAccountBlocked
     */
     public function getMicrosoftAccountBlocked()
     {
@@ -352,7 +352,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the nfcBlocked
     * Indicates whether or not to block Near-Field Communication.
     *
-    * @return bool The nfcBlocked
+    * @return bool|null The nfcBlocked
     */
     public function getNfcBlocked()
     {
@@ -381,7 +381,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordBlockSimple
     * Indicates whether or not to block syncing the calendar.
     *
-    * @return bool The passwordBlockSimple
+    * @return bool|null The passwordBlockSimple
     */
     public function getPasswordBlockSimple()
     {
@@ -410,7 +410,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordExpirationDays
     * Number of days before the password expires.
     *
-    * @return int The passwordExpirationDays
+    * @return int|null The passwordExpirationDays
     */
     public function getPasswordExpirationDays()
     {
@@ -439,7 +439,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordMinimumCharacterSetCount
     * Number of character sets a password must contain.
     *
-    * @return int The passwordMinimumCharacterSetCount
+    * @return int|null The passwordMinimumCharacterSetCount
     */
     public function getPasswordMinimumCharacterSetCount()
     {
@@ -468,7 +468,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordMinimumLength
     * Minimum length of passwords.
     *
-    * @return int The passwordMinimumLength
+    * @return int|null The passwordMinimumLength
     */
     public function getPasswordMinimumLength()
     {
@@ -497,7 +497,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordMinutesOfInactivityBeforeScreenTimeout
     * Minutes of inactivity before screen timeout.
     *
-    * @return int The passwordMinutesOfInactivityBeforeScreenTimeout
+    * @return int|null The passwordMinutesOfInactivityBeforeScreenTimeout
     */
     public function getPasswordMinutesOfInactivityBeforeScreenTimeout()
     {
@@ -526,7 +526,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 0 to 24
     *
-    * @return int The passwordPreviousPasswordBlockCount
+    * @return int|null The passwordPreviousPasswordBlockCount
     */
     public function getPasswordPreviousPasswordBlockCount()
     {
@@ -555,7 +555,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordRequired
     * Indicates whether or not to require a password.
     *
-    * @return bool The passwordRequired
+    * @return bool|null The passwordRequired
     */
     public function getPasswordRequired()
     {
@@ -584,12 +584,12 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordRequiredType
     * Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
     *
-    * @return RequiredPasswordType The passwordRequiredType
+    * @return RequiredPasswordType|null The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -617,7 +617,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the passwordSignInFailureCountBeforeFactoryReset
     * Number of sign in failures allowed before factory reset.
     *
-    * @return int The passwordSignInFailureCountBeforeFactoryReset
+    * @return int|null The passwordSignInFailureCountBeforeFactoryReset
     */
     public function getPasswordSignInFailureCountBeforeFactoryReset()
     {
@@ -646,7 +646,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the screenCaptureBlocked
     * Indicates whether or not to block screenshots.
     *
-    * @return bool The screenCaptureBlocked
+    * @return bool|null The screenCaptureBlocked
     */
     public function getScreenCaptureBlocked()
     {
@@ -675,7 +675,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the storageBlockRemovableStorage
     * Indicates whether or not to block removable storage.
     *
-    * @return bool The storageBlockRemovableStorage
+    * @return bool|null The storageBlockRemovableStorage
     */
     public function getStorageBlockRemovableStorage()
     {
@@ -704,7 +704,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the storageRequireEncryption
     * Indicates whether or not to require encryption.
     *
-    * @return bool The storageRequireEncryption
+    * @return bool|null The storageRequireEncryption
     */
     public function getStorageRequireEncryption()
     {
@@ -733,7 +733,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the webBrowserBlocked
     * Indicates whether or not to block the web browser.
     *
-    * @return bool The webBrowserBlocked
+    * @return bool|null The webBrowserBlocked
     */
     public function getWebBrowserBlocked()
     {
@@ -762,7 +762,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the wifiBlockAutomaticConnectHotspots
     * Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
     *
-    * @return bool The wifiBlockAutomaticConnectHotspots
+    * @return bool|null The wifiBlockAutomaticConnectHotspots
     */
     public function getWifiBlockAutomaticConnectHotspots()
     {
@@ -791,7 +791,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the wifiBlocked
     * Indicates whether or not to block Wi-Fi.
     *
-    * @return bool The wifiBlocked
+    * @return bool|null The wifiBlocked
     */
     public function getWifiBlocked()
     {
@@ -820,7 +820,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the wifiBlockHotspotReporting
     * Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
     *
-    * @return bool The wifiBlockHotspotReporting
+    * @return bool|null The wifiBlockHotspotReporting
     */
     public function getWifiBlockHotspotReporting()
     {
@@ -849,7 +849,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     * Gets the windowsStoreBlocked
     * Indicates whether or not to block the Windows Store.
     *
-    * @return bool The windowsStoreBlocked
+    * @return bool|null The windowsStoreBlocked
     */
     public function getWindowsStoreBlocked()
     {

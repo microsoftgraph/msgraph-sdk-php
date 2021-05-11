@@ -37,12 +37,12 @@ class DeviceManagementConfigurationSimpleSettingInstanceTemplate extends DeviceM
     * Gets the simpleSettingValueTemplate
     * Simple Setting Value Template
     *
-    * @return DeviceManagementConfigurationSimpleSettingValueTemplate The simpleSettingValueTemplate
+    * @return DeviceManagementConfigurationSimpleSettingValueTemplate|null The simpleSettingValueTemplate
     */
     public function getSimpleSettingValueTemplate()
     {
         if (array_key_exists("simpleSettingValueTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["simpleSettingValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValueTemplate")) {
+            if (is_a($this->_propDict["simpleSettingValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSimpleSettingValueTemplate") || is_null($this->_propDict["simpleSettingValueTemplate"])) {
                 return $this->_propDict["simpleSettingValueTemplate"];
             } else {
                 $this->_propDict["simpleSettingValueTemplate"] = new DeviceManagementConfigurationSimpleSettingValueTemplate($this->_propDict["simpleSettingValueTemplate"]);

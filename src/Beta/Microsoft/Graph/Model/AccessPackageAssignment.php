@@ -28,7 +28,7 @@ class AccessPackageAssignment extends Entity
     * Gets the accessPackageId
     * The identifier of the access package. Read-only.
     *
-    * @return string The accessPackageId
+    * @return string|null The accessPackageId
     */
     public function getAccessPackageId()
     {
@@ -57,7 +57,7 @@ class AccessPackageAssignment extends Entity
     * Gets the assignmentPolicyId
     * The identifier of the access package assignment policy. Read-only.
     *
-    * @return string The assignmentPolicyId
+    * @return string|null The assignmentPolicyId
     */
     public function getAssignmentPolicyId()
     {
@@ -86,7 +86,7 @@ class AccessPackageAssignment extends Entity
     * Gets the assignmentState
     * The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only.
     *
-    * @return string The assignmentState
+    * @return string|null The assignmentState
     */
     public function getAssignmentState()
     {
@@ -115,7 +115,7 @@ class AccessPackageAssignment extends Entity
     * Gets the assignmentStatus
     * More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
     *
-    * @return string The assignmentStatus
+    * @return string|null The assignmentStatus
     */
     public function getAssignmentStatus()
     {
@@ -144,7 +144,7 @@ class AccessPackageAssignment extends Entity
     * Gets the catalogId
     * The identifier of the catalog containing the access package. Read-only.
     *
-    * @return string The catalogId
+    * @return string|null The catalogId
     */
     public function getCatalogId()
     {
@@ -173,12 +173,12 @@ class AccessPackageAssignment extends Entity
     * Gets the expiredDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The expiredDateTime
+    * @return \DateTime|null The expiredDateTime
     */
     public function getExpiredDateTime()
     {
         if (array_key_exists("expiredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expiredDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expiredDateTime"], "\DateTime") || is_null($this->_propDict["expiredDateTime"])) {
                 return $this->_propDict["expiredDateTime"];
             } else {
                 $this->_propDict["expiredDateTime"] = new \DateTime($this->_propDict["expiredDateTime"]);
@@ -206,7 +206,7 @@ class AccessPackageAssignment extends Entity
     * Gets the isExtended
     * Indicates whether the access package assignment is extended. Read-only.
     *
-    * @return bool The isExtended
+    * @return bool|null The isExtended
     */
     public function getIsExtended()
     {
@@ -235,12 +235,12 @@ class AccessPackageAssignment extends Entity
     * Gets the schedule
     * When the access assignment is to be in place. Read-only.
     *
-    * @return RequestSchedule The schedule
+    * @return RequestSchedule|null The schedule
     */
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\RequestSchedule")) {
+            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\RequestSchedule") || is_null($this->_propDict["schedule"])) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new RequestSchedule($this->_propDict["schedule"]);
@@ -268,7 +268,7 @@ class AccessPackageAssignment extends Entity
     * Gets the targetId
     * The ID of the subject with the assignment. Read-only.
     *
-    * @return string The targetId
+    * @return string|null The targetId
     */
     public function getTargetId()
     {
@@ -297,12 +297,12 @@ class AccessPackageAssignment extends Entity
     * Gets the accessPackage
     * Read-only. Nullable.
     *
-    * @return AccessPackage The accessPackage
+    * @return AccessPackage|null The accessPackage
     */
     public function getAccessPackage()
     {
         if (array_key_exists("accessPackage", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackage"], "\Beta\Microsoft\Graph\Model\AccessPackage")) {
+            if (is_a($this->_propDict["accessPackage"], "\Beta\Microsoft\Graph\Model\AccessPackage") || is_null($this->_propDict["accessPackage"])) {
                 return $this->_propDict["accessPackage"];
             } else {
                 $this->_propDict["accessPackage"] = new AccessPackage($this->_propDict["accessPackage"]);
@@ -330,12 +330,12 @@ class AccessPackageAssignment extends Entity
     * Gets the accessPackageAssignmentPolicy
     * Read-only. Nullable.
     *
-    * @return AccessPackageAssignmentPolicy The accessPackageAssignmentPolicy
+    * @return AccessPackageAssignmentPolicy|null The accessPackageAssignmentPolicy
     */
     public function getAccessPackageAssignmentPolicy()
     {
         if (array_key_exists("accessPackageAssignmentPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageAssignmentPolicy"], "\Beta\Microsoft\Graph\Model\AccessPackageAssignmentPolicy")) {
+            if (is_a($this->_propDict["accessPackageAssignmentPolicy"], "\Beta\Microsoft\Graph\Model\AccessPackageAssignmentPolicy") || is_null($this->_propDict["accessPackageAssignmentPolicy"])) {
                 return $this->_propDict["accessPackageAssignmentPolicy"];
             } else {
                 $this->_propDict["accessPackageAssignmentPolicy"] = new AccessPackageAssignmentPolicy($this->_propDict["accessPackageAssignmentPolicy"]);
@@ -363,7 +363,7 @@ class AccessPackageAssignment extends Entity
      /** 
      * Gets the accessPackageAssignmentRequests
      *
-     * @return array The accessPackageAssignmentRequests
+     * @return array|null The accessPackageAssignmentRequests
      */
     public function getAccessPackageAssignmentRequests()
     {
@@ -383,7 +383,7 @@ class AccessPackageAssignment extends Entity
     */
     public function setAccessPackageAssignmentRequests($val)
     {
-		$this->_propDict["accessPackageAssignmentRequests"] = $val;
+        $this->_propDict["accessPackageAssignmentRequests"] = $val;
         return $this;
     }
     
@@ -392,7 +392,7 @@ class AccessPackageAssignment extends Entity
      * Gets the accessPackageAssignmentResourceRoles
     * The resource roles delivered to the target user for this assignment. Read-only. Nullable.
      *
-     * @return array The accessPackageAssignmentResourceRoles
+     * @return array|null The accessPackageAssignmentResourceRoles
      */
     public function getAccessPackageAssignmentResourceRoles()
     {
@@ -413,7 +413,7 @@ class AccessPackageAssignment extends Entity
     */
     public function setAccessPackageAssignmentResourceRoles($val)
     {
-		$this->_propDict["accessPackageAssignmentResourceRoles"] = $val;
+        $this->_propDict["accessPackageAssignmentResourceRoles"] = $val;
         return $this;
     }
     
@@ -421,12 +421,12 @@ class AccessPackageAssignment extends Entity
     * Gets the target
     * The subject of the access package assignment. Read-only. Nullable.
     *
-    * @return AccessPackageSubject The target
+    * @return AccessPackageSubject|null The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject") || is_null($this->_propDict["target"])) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new AccessPackageSubject($this->_propDict["target"]);

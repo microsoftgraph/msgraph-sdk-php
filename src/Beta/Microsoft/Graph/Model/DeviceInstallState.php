@@ -28,7 +28,7 @@ class DeviceInstallState extends Entity
     * Gets the deviceId
     * Device Id.
     *
-    * @return string The deviceId
+    * @return string|null The deviceId
     */
     public function getDeviceId()
     {
@@ -57,7 +57,7 @@ class DeviceInstallState extends Entity
     * Gets the deviceName
     * Device name.
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -86,7 +86,7 @@ class DeviceInstallState extends Entity
     * Gets the errorCode
     * The error code for install failures.
     *
-    * @return string The errorCode
+    * @return string|null The errorCode
     */
     public function getErrorCode()
     {
@@ -115,12 +115,12 @@ class DeviceInstallState extends Entity
     * Gets the installState
     * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
     *
-    * @return InstallState The installState
+    * @return InstallState|null The installState
     */
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\InstallState")) {
+            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\InstallState") || is_null($this->_propDict["installState"])) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new InstallState($this->_propDict["installState"]);
@@ -148,12 +148,12 @@ class DeviceInstallState extends Entity
     * Gets the lastSyncDateTime
     * Last sync date and time.
     *
-    * @return \DateTime The lastSyncDateTime
+    * @return \DateTime|null The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -181,7 +181,7 @@ class DeviceInstallState extends Entity
     * Gets the osDescription
     * OS Description.
     *
-    * @return string The osDescription
+    * @return string|null The osDescription
     */
     public function getOsDescription()
     {
@@ -210,7 +210,7 @@ class DeviceInstallState extends Entity
     * Gets the osVersion
     * OS Version.
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {
@@ -239,7 +239,7 @@ class DeviceInstallState extends Entity
     * Gets the userName
     * Device User Name.
     *
-    * @return string The userName
+    * @return string|null The userName
     */
     public function getUserName()
     {

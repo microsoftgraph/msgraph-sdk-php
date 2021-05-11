@@ -28,7 +28,7 @@ class DepOnboardingSetting extends Entity
     * Gets the appleIdentifier
     * The Apple ID used to obtain the current token.
     *
-    * @return string The appleIdentifier
+    * @return string|null The appleIdentifier
     */
     public function getAppleIdentifier()
     {
@@ -57,7 +57,7 @@ class DepOnboardingSetting extends Entity
     * Gets the dataSharingConsentGranted
     * Consent granted for data sharing with Apple Dep Service
     *
-    * @return bool The dataSharingConsentGranted
+    * @return bool|null The dataSharingConsentGranted
     */
     public function getDataSharingConsentGranted()
     {
@@ -86,12 +86,12 @@ class DepOnboardingSetting extends Entity
     * Gets the lastModifiedDateTime
     * When the service was onboarded.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -119,12 +119,12 @@ class DepOnboardingSetting extends Entity
     * Gets the lastSuccessfulSyncDateTime
     * When the service last syned with Intune
     *
-    * @return \DateTime The lastSuccessfulSyncDateTime
+    * @return \DateTime|null The lastSuccessfulSyncDateTime
     */
     public function getLastSuccessfulSyncDateTime()
     {
         if (array_key_exists("lastSuccessfulSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSuccessfulSyncDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSuccessfulSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSuccessfulSyncDateTime"])) {
                 return $this->_propDict["lastSuccessfulSyncDateTime"];
             } else {
                 $this->_propDict["lastSuccessfulSyncDateTime"] = new \DateTime($this->_propDict["lastSuccessfulSyncDateTime"]);
@@ -152,7 +152,7 @@ class DepOnboardingSetting extends Entity
     * Gets the lastSyncErrorCode
     * Error code reported by Apple during last dep sync.
     *
-    * @return int The lastSyncErrorCode
+    * @return int|null The lastSyncErrorCode
     */
     public function getLastSyncErrorCode()
     {
@@ -181,12 +181,12 @@ class DepOnboardingSetting extends Entity
     * Gets the lastSyncTriggeredDateTime
     * When Intune last requested a sync.
     *
-    * @return \DateTime The lastSyncTriggeredDateTime
+    * @return \DateTime|null The lastSyncTriggeredDateTime
     */
     public function getLastSyncTriggeredDateTime()
     {
         if (array_key_exists("lastSyncTriggeredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncTriggeredDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSyncTriggeredDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncTriggeredDateTime"])) {
                 return $this->_propDict["lastSyncTriggeredDateTime"];
             } else {
                 $this->_propDict["lastSyncTriggeredDateTime"] = new \DateTime($this->_propDict["lastSyncTriggeredDateTime"]);
@@ -214,7 +214,7 @@ class DepOnboardingSetting extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @return string The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -243,7 +243,7 @@ class DepOnboardingSetting extends Entity
     * Gets the shareTokenWithSchoolDataSyncService
     * Whether or not the Dep token sharing is enabled with the School Data Sync service.
     *
-    * @return bool The shareTokenWithSchoolDataSyncService
+    * @return bool|null The shareTokenWithSchoolDataSyncService
     */
     public function getShareTokenWithSchoolDataSyncService()
     {
@@ -272,7 +272,7 @@ class DepOnboardingSetting extends Entity
     * Gets the syncedDeviceCount
     * Gets synced device count
     *
-    * @return int The syncedDeviceCount
+    * @return int|null The syncedDeviceCount
     */
     public function getSyncedDeviceCount()
     {
@@ -301,12 +301,12 @@ class DepOnboardingSetting extends Entity
     * Gets the tokenExpirationDateTime
     * When the token will expire.
     *
-    * @return \DateTime The tokenExpirationDateTime
+    * @return \DateTime|null The tokenExpirationDateTime
     */
     public function getTokenExpirationDateTime()
     {
         if (array_key_exists("tokenExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenExpirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["tokenExpirationDateTime"], "\DateTime") || is_null($this->_propDict["tokenExpirationDateTime"])) {
                 return $this->_propDict["tokenExpirationDateTime"];
             } else {
                 $this->_propDict["tokenExpirationDateTime"] = new \DateTime($this->_propDict["tokenExpirationDateTime"]);
@@ -334,7 +334,7 @@ class DepOnboardingSetting extends Entity
     * Gets the tokenName
     * Friendly Name for Dep Token
     *
-    * @return string The tokenName
+    * @return string|null The tokenName
     */
     public function getTokenName()
     {
@@ -363,12 +363,12 @@ class DepOnboardingSetting extends Entity
     * Gets the tokenType
     * Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
     *
-    * @return DepTokenType The tokenType
+    * @return DepTokenType|null The tokenType
     */
     public function getTokenType()
     {
         if (array_key_exists("tokenType", $this->_propDict)) {
-            if (is_a($this->_propDict["tokenType"], "\Beta\Microsoft\Graph\Model\DepTokenType")) {
+            if (is_a($this->_propDict["tokenType"], "\Beta\Microsoft\Graph\Model\DepTokenType") || is_null($this->_propDict["tokenType"])) {
                 return $this->_propDict["tokenType"];
             } else {
                 $this->_propDict["tokenType"] = new DepTokenType($this->_propDict["tokenType"]);
@@ -396,12 +396,12 @@ class DepOnboardingSetting extends Entity
     * Gets the defaultIosEnrollmentProfile
     * Default iOS Enrollment Profile
     *
-    * @return DepIOSEnrollmentProfile The defaultIosEnrollmentProfile
+    * @return DepIOSEnrollmentProfile|null The defaultIosEnrollmentProfile
     */
     public function getDefaultIosEnrollmentProfile()
     {
         if (array_key_exists("defaultIosEnrollmentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultIosEnrollmentProfile"], "\Beta\Microsoft\Graph\Model\DepIOSEnrollmentProfile")) {
+            if (is_a($this->_propDict["defaultIosEnrollmentProfile"], "\Beta\Microsoft\Graph\Model\DepIOSEnrollmentProfile") || is_null($this->_propDict["defaultIosEnrollmentProfile"])) {
                 return $this->_propDict["defaultIosEnrollmentProfile"];
             } else {
                 $this->_propDict["defaultIosEnrollmentProfile"] = new DepIOSEnrollmentProfile($this->_propDict["defaultIosEnrollmentProfile"]);
@@ -429,12 +429,12 @@ class DepOnboardingSetting extends Entity
     * Gets the defaultMacOsEnrollmentProfile
     * Default MacOs Enrollment Profile
     *
-    * @return DepMacOSEnrollmentProfile The defaultMacOsEnrollmentProfile
+    * @return DepMacOSEnrollmentProfile|null The defaultMacOsEnrollmentProfile
     */
     public function getDefaultMacOsEnrollmentProfile()
     {
         if (array_key_exists("defaultMacOsEnrollmentProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultMacOsEnrollmentProfile"], "\Beta\Microsoft\Graph\Model\DepMacOSEnrollmentProfile")) {
+            if (is_a($this->_propDict["defaultMacOsEnrollmentProfile"], "\Beta\Microsoft\Graph\Model\DepMacOSEnrollmentProfile") || is_null($this->_propDict["defaultMacOsEnrollmentProfile"])) {
                 return $this->_propDict["defaultMacOsEnrollmentProfile"];
             } else {
                 $this->_propDict["defaultMacOsEnrollmentProfile"] = new DepMacOSEnrollmentProfile($this->_propDict["defaultMacOsEnrollmentProfile"]);
@@ -463,7 +463,7 @@ class DepOnboardingSetting extends Entity
      * Gets the enrollmentProfiles
     * The enrollment profiles.
      *
-     * @return array The enrollmentProfiles
+     * @return array|null The enrollmentProfiles
      */
     public function getEnrollmentProfiles()
     {
@@ -484,7 +484,7 @@ class DepOnboardingSetting extends Entity
     */
     public function setEnrollmentProfiles($val)
     {
-		$this->_propDict["enrollmentProfiles"] = $val;
+        $this->_propDict["enrollmentProfiles"] = $val;
         return $this;
     }
     
@@ -493,7 +493,7 @@ class DepOnboardingSetting extends Entity
      * Gets the importedAppleDeviceIdentities
     * The imported Apple device identities.
      *
-     * @return array The importedAppleDeviceIdentities
+     * @return array|null The importedAppleDeviceIdentities
      */
     public function getImportedAppleDeviceIdentities()
     {
@@ -514,7 +514,7 @@ class DepOnboardingSetting extends Entity
     */
     public function setImportedAppleDeviceIdentities($val)
     {
-		$this->_propDict["importedAppleDeviceIdentities"] = $val;
+        $this->_propDict["importedAppleDeviceIdentities"] = $val;
         return $this;
     }
     

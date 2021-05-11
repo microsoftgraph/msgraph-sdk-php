@@ -28,12 +28,12 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the complianceGracePeriodExpirationDateTime
     * The DateTime when device compliance grace period expires
     *
-    * @return \DateTime The complianceGracePeriodExpirationDateTime
+    * @return \DateTime|null The complianceGracePeriodExpirationDateTime
     */
     public function getComplianceGracePeriodExpirationDateTime()
     {
         if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
                 return $this->_propDict["complianceGracePeriodExpirationDateTime"];
             } else {
                 $this->_propDict["complianceGracePeriodExpirationDateTime"] = new \DateTime($this->_propDict["complianceGracePeriodExpirationDateTime"]);
@@ -61,7 +61,7 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the deviceDisplayName
     * Device name of the DevicePolicyStatus.
     *
-    * @return string The deviceDisplayName
+    * @return string|null The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -90,7 +90,7 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the deviceId
     * The device id that is being reported.
     *
-    * @return string The deviceId
+    * @return string|null The deviceId
     */
     public function getDeviceId()
     {
@@ -119,7 +119,7 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the deviceModel
     * The device model that is being reported
     *
-    * @return string The deviceModel
+    * @return string|null The deviceModel
     */
     public function getDeviceModel()
     {
@@ -148,12 +148,12 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the installStatus
     * The installation status of the policy report. Possible values are: success, available, idle, unknown, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError.
     *
-    * @return IosUpdatesInstallStatus The installStatus
+    * @return IosUpdatesInstallStatus|null The installStatus
     */
     public function getInstallStatus()
     {
         if (array_key_exists("installStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["installStatus"], "\Beta\Microsoft\Graph\Model\IosUpdatesInstallStatus")) {
+            if (is_a($this->_propDict["installStatus"], "\Beta\Microsoft\Graph\Model\IosUpdatesInstallStatus") || is_null($this->_propDict["installStatus"])) {
                 return $this->_propDict["installStatus"];
             } else {
                 $this->_propDict["installStatus"] = new IosUpdatesInstallStatus($this->_propDict["installStatus"]);
@@ -181,12 +181,12 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report.
     *
-    * @return \DateTime The lastReportedDateTime
+    * @return \DateTime|null The lastReportedDateTime
     */
     public function getLastReportedDateTime()
     {
         if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime") || is_null($this->_propDict["lastReportedDateTime"])) {
                 return $this->_propDict["lastReportedDateTime"];
             } else {
                 $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
@@ -214,7 +214,7 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the osVersion
     * The device version that is being reported.
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {
@@ -243,7 +243,7 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the platform
     * Platform of the device that is being reported
     *
-    * @return int The platform
+    * @return int|null The platform
     */
     public function getPlatform()
     {
@@ -272,12 +272,12 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
-    * @return ComplianceStatus The status
+    * @return ComplianceStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);
@@ -305,7 +305,7 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the userId
     * The User id that is being reported.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -334,7 +334,7 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the userName
     * The User Name that is being reported
     *
-    * @return string The userName
+    * @return string|null The userName
     */
     public function getUserName()
     {
@@ -363,7 +363,7 @@ class IosUpdateDeviceStatus extends Entity
     * Gets the userPrincipalName
     * UserPrincipalName.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

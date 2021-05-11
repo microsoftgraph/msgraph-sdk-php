@@ -28,7 +28,7 @@ class EducationOrganization extends Entity
     * Gets the description
     * Organization description.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class EducationOrganization extends Entity
     * Gets the displayName
     * Organization display name.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,12 +86,12 @@ class EducationOrganization extends Entity
     * Gets the externalSource
     * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
     *
-    * @return EducationExternalSource The externalSource
+    * @return EducationExternalSource|null The externalSource
     */
     public function getExternalSource()
     {
         if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "\Microsoft\Graph\Model\EducationExternalSource")) {
+            if (is_a($this->_propDict["externalSource"], "\Microsoft\Graph\Model\EducationExternalSource") || is_null($this->_propDict["externalSource"])) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);
@@ -118,7 +118,7 @@ class EducationOrganization extends Entity
     /**
     * Gets the externalSourceDetail
     *
-    * @return string The externalSourceDetail
+    * @return string|null The externalSourceDetail
     */
     public function getExternalSourceDetail()
     {

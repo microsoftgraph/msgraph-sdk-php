@@ -36,7 +36,7 @@ class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSetti
     * Gets the useDeviceContext
     * Whether or not to use device execution context for Windows Universal AppX mobile app.
     *
-    * @return bool The useDeviceContext
+    * @return bool|null The useDeviceContext
     */
     public function getUseDeviceContext()
     {

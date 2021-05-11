@@ -28,7 +28,7 @@ class SecurityBaselineDeviceState extends Entity
     * Gets the deviceDisplayName
     * Display name of the device
     *
-    * @return string The deviceDisplayName
+    * @return string|null The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -57,12 +57,12 @@ class SecurityBaselineDeviceState extends Entity
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report
     *
-    * @return \DateTime The lastReportedDateTime
+    * @return \DateTime|null The lastReportedDateTime
     */
     public function getLastReportedDateTime()
     {
         if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime") || is_null($this->_propDict["lastReportedDateTime"])) {
                 return $this->_propDict["lastReportedDateTime"];
             } else {
                 $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
@@ -90,7 +90,7 @@ class SecurityBaselineDeviceState extends Entity
     * Gets the managedDeviceId
     * Intune device id
     *
-    * @return string The managedDeviceId
+    * @return string|null The managedDeviceId
     */
     public function getManagedDeviceId()
     {
@@ -119,12 +119,12 @@ class SecurityBaselineDeviceState extends Entity
     * Gets the state
     * Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
     *
-    * @return SecurityBaselineComplianceState The state
+    * @return SecurityBaselineComplianceState|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SecurityBaselineComplianceState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\SecurityBaselineComplianceState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new SecurityBaselineComplianceState($this->_propDict["state"]);
@@ -152,7 +152,7 @@ class SecurityBaselineDeviceState extends Entity
     * Gets the userPrincipalName
     * User Principal Name
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

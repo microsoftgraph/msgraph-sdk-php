@@ -27,7 +27,7 @@ class AccessPackageSubject extends Entity
     /**
     * Gets the altSecId
     *
-    * @return string The altSecId
+    * @return string|null The altSecId
     */
     public function getAltSecId()
     {
@@ -54,7 +54,7 @@ class AccessPackageSubject extends Entity
     /**
     * Gets the connectedOrganizationId
     *
-    * @return string The connectedOrganizationId
+    * @return string|null The connectedOrganizationId
     */
     public function getConnectedOrganizationId()
     {
@@ -82,7 +82,7 @@ class AccessPackageSubject extends Entity
     * Gets the displayName
     * The display name of the subject.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -111,7 +111,7 @@ class AccessPackageSubject extends Entity
     * Gets the email
     * The email address of the subject.
     *
-    * @return string The email
+    * @return string|null The email
     */
     public function getEmail()
     {
@@ -140,7 +140,7 @@ class AccessPackageSubject extends Entity
     * Gets the objectId
     * The object ID of the subject.
     *
-    * @return string The objectId
+    * @return string|null The objectId
     */
     public function getObjectId()
     {
@@ -168,7 +168,7 @@ class AccessPackageSubject extends Entity
     /**
     * Gets the onPremisesSecurityIdentifier
     *
-    * @return string The onPremisesSecurityIdentifier
+    * @return string|null The onPremisesSecurityIdentifier
     */
     public function getOnPremisesSecurityIdentifier()
     {
@@ -196,7 +196,7 @@ class AccessPackageSubject extends Entity
     * Gets the principalName
     * The principal name, if known, of the subject.
     *
-    * @return string The principalName
+    * @return string|null The principalName
     */
     public function getPrincipalName()
     {
@@ -225,7 +225,7 @@ class AccessPackageSubject extends Entity
     * Gets the type
     * The resource type of the subject.
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {
@@ -253,12 +253,12 @@ class AccessPackageSubject extends Entity
     /**
     * Gets the connectedOrganization
     *
-    * @return ConnectedOrganization The connectedOrganization
+    * @return ConnectedOrganization|null The connectedOrganization
     */
     public function getConnectedOrganization()
     {
         if (array_key_exists("connectedOrganization", $this->_propDict)) {
-            if (is_a($this->_propDict["connectedOrganization"], "\Beta\Microsoft\Graph\Model\ConnectedOrganization")) {
+            if (is_a($this->_propDict["connectedOrganization"], "\Beta\Microsoft\Graph\Model\ConnectedOrganization") || is_null($this->_propDict["connectedOrganization"])) {
                 return $this->_propDict["connectedOrganization"];
             } else {
                 $this->_propDict["connectedOrganization"] = new ConnectedOrganization($this->_propDict["connectedOrganization"]);

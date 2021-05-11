@@ -27,7 +27,7 @@ class FeatureUpdateReference extends WindowsUpdateReference
     * Gets the version
     * Specifies a feature update by version.
     *
-    * @return string The version
+    * @return string|null The version
     */
     public function getVersion()
     {

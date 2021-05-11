@@ -28,12 +28,12 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     * Gets the createdDateTimeUtc
     * DateTime when the entity is created.
     *
-    * @return \DateTime The createdDateTimeUtc
+    * @return \DateTime|null The createdDateTimeUtc
     */
     public function getCreatedDateTimeUtc()
     {
         if (array_key_exists("createdDateTimeUtc", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTimeUtc"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTimeUtc"], "\DateTime") || is_null($this->_propDict["createdDateTimeUtc"])) {
                 return $this->_propDict["createdDateTimeUtc"];
             } else {
                 $this->_propDict["createdDateTimeUtc"] = new \DateTime($this->_propDict["createdDateTimeUtc"]);
@@ -61,12 +61,12 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     * Gets the status
     * Upload status.
     *
-    * @return ImportedWindowsAutopilotDeviceIdentityUploadStatus The status
+    * @return ImportedWindowsAutopilotDeviceIdentityUploadStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityUploadStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityUploadStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ImportedWindowsAutopilotDeviceIdentityUploadStatus($this->_propDict["status"]);
@@ -95,7 +95,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
      * Gets the deviceIdentities
     * Collection of all Autopilot devices as a part of this upload.
      *
-     * @return array The deviceIdentities
+     * @return array|null The deviceIdentities
      */
     public function getDeviceIdentities()
     {
@@ -116,7 +116,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     */
     public function setDeviceIdentities($val)
     {
-		$this->_propDict["deviceIdentities"] = $val;
+        $this->_propDict["deviceIdentities"] = $val;
         return $this;
     }
     

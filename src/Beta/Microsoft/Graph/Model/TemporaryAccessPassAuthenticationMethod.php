@@ -28,12 +28,12 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod
     * Gets the createdDateTime
     * The date and time when the temporaryAccessPass was created.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod
     * Gets the isUsable
     * The state of the authentication method that indicates whether it's currently usable by the user.
     *
-    * @return bool The isUsable
+    * @return bool|null The isUsable
     */
     public function getIsUsable()
     {
@@ -90,7 +90,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod
     * Gets the isUsableOnce
     * Determines whether the pass is limited to a one time use. If true, the pass can be used once; if false, the pass can be used multiple times within the temporaryAccessPass lifetime.
     *
-    * @return bool The isUsableOnce
+    * @return bool|null The isUsableOnce
     */
     public function getIsUsableOnce()
     {
@@ -119,7 +119,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod
     * Gets the lifetimeInMinutes
     * The lifetime of the temporaryAccessPass in minutes starting at startDateTime. Minimum 10, Maximum 43200 (equivalent to 30 days).
     *
-    * @return int The lifetimeInMinutes
+    * @return int|null The lifetimeInMinutes
     */
     public function getLifetimeInMinutes()
     {
@@ -148,7 +148,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod
     * Gets the methodUsabilityReason
     * Details about usability state (isUsable). Reasons can include: enabledByPolicy, disabledByPolicy, expired, notYetValid, oneTimeUsed.
     *
-    * @return string The methodUsabilityReason
+    * @return string|null The methodUsabilityReason
     */
     public function getMethodUsabilityReason()
     {
@@ -177,12 +177,12 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod
     * Gets the startDateTime
     * The date and time when the temporaryAccessPass becomes available to use.
     *
-    * @return \DateTime The startDateTime
+    * @return \DateTime|null The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -210,7 +210,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod
     * Gets the temporaryAccessPass
     * The temporaryAccessPass used to authenticate. Returned only on creation of a new temporaryAccessPass; returned as NULL with GET.
     *
-    * @return string The temporaryAccessPass
+    * @return string|null The temporaryAccessPass
     */
     public function getTemporaryAccessPass()
     {

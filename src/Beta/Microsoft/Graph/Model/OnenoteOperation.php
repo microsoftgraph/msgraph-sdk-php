@@ -28,12 +28,12 @@ class OnenoteOperation extends Operation
     * Gets the error
     * The error returned by the operation.
     *
-    * @return OnenoteOperationError The error
+    * @return OnenoteOperationError|null The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\OnenoteOperationError")) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\OnenoteOperationError") || is_null($this->_propDict["error"])) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new OnenoteOperationError($this->_propDict["error"]);
@@ -61,7 +61,7 @@ class OnenoteOperation extends Operation
     * Gets the percentComplete
     * The operation percent complete if the operation is still in running status.
     *
-    * @return string The percentComplete
+    * @return string|null The percentComplete
     */
     public function getPercentComplete()
     {
@@ -90,7 +90,7 @@ class OnenoteOperation extends Operation
     * Gets the resourceId
     * The resource id.
     *
-    * @return string The resourceId
+    * @return string|null The resourceId
     */
     public function getResourceId()
     {
@@ -119,7 +119,7 @@ class OnenoteOperation extends Operation
     * Gets the resourceLocation
     * The resource URI for the object. For example, the resource URI for a copied page or section.
     *
-    * @return string The resourceLocation
+    * @return string|null The resourceLocation
     */
     public function getResourceLocation()
     {

@@ -28,7 +28,7 @@ class DeviceManagementSettingInstance extends Entity
     * Gets the definitionId
     * The ID of the setting definition for this instance
     *
-    * @return string The definitionId
+    * @return string|null The definitionId
     */
     public function getDefinitionId()
     {
@@ -57,7 +57,7 @@ class DeviceManagementSettingInstance extends Entity
     * Gets the valueJson
     * JSON representation of the value
     *
-    * @return string The valueJson
+    * @return string|null The valueJson
     */
     public function getValueJson()
     {

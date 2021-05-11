@@ -28,12 +28,12 @@ class IdentitySet extends Entity
     * Gets the application
     * Optional. The application associated with this action.
     *
-    * @return Identity The application
+    * @return Identity|null The application
     */
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["application"])) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new Identity($this->_propDict["application"]);
@@ -61,12 +61,12 @@ class IdentitySet extends Entity
     * Gets the device
     * Optional. The device associated with this action.
     *
-    * @return Identity The device
+    * @return Identity|null The device
     */
     public function getDevice()
     {
         if (array_key_exists("device", $this->_propDict)) {
-            if (is_a($this->_propDict["device"], "\Beta\Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["device"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["device"])) {
                 return $this->_propDict["device"];
             } else {
                 $this->_propDict["device"] = new Identity($this->_propDict["device"]);
@@ -94,12 +94,12 @@ class IdentitySet extends Entity
     * Gets the user
     * Optional. The user associated with this action.
     *
-    * @return Identity The user
+    * @return Identity|null The user
     */
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\Identity")) {
+            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["user"])) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new Identity($this->_propDict["user"]);

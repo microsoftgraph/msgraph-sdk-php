@@ -27,7 +27,7 @@ class AlterationResponse extends Entity
     * Gets the originalQueryString
     * Defines the original user query string.
     *
-    * @return string The originalQueryString
+    * @return string|null The originalQueryString
     */
     public function getOriginalQueryString()
     {
@@ -56,12 +56,12 @@ class AlterationResponse extends Entity
     * Gets the queryAlteration
     * Defines the details of alteration information for the spelling correction.
     *
-    * @return SearchAlteration The queryAlteration
+    * @return SearchAlteration|null The queryAlteration
     */
     public function getQueryAlteration()
     {
         if (array_key_exists("queryAlteration", $this->_propDict)) {
-            if (is_a($this->_propDict["queryAlteration"], "\Beta\Microsoft\Graph\Model\SearchAlteration")) {
+            if (is_a($this->_propDict["queryAlteration"], "\Beta\Microsoft\Graph\Model\SearchAlteration") || is_null($this->_propDict["queryAlteration"])) {
                 return $this->_propDict["queryAlteration"];
             } else {
                 $this->_propDict["queryAlteration"] = new SearchAlteration($this->_propDict["queryAlteration"]);
@@ -89,12 +89,12 @@ class AlterationResponse extends Entity
     * Gets the queryAlterationType
     * Defines the type of the spelling correction. Possible values are suggestion, modification.
     *
-    * @return SearchAlterationType The queryAlterationType
+    * @return SearchAlterationType|null The queryAlterationType
     */
     public function getQueryAlterationType()
     {
         if (array_key_exists("queryAlterationType", $this->_propDict)) {
-            if (is_a($this->_propDict["queryAlterationType"], "\Beta\Microsoft\Graph\Model\SearchAlterationType")) {
+            if (is_a($this->_propDict["queryAlterationType"], "\Beta\Microsoft\Graph\Model\SearchAlterationType") || is_null($this->_propDict["queryAlterationType"])) {
                 return $this->_propDict["queryAlterationType"];
             } else {
                 $this->_propDict["queryAlterationType"] = new SearchAlterationType($this->_propDict["queryAlterationType"]);

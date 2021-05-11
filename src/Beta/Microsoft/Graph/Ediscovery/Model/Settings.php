@@ -28,12 +28,12 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the ocr
     * The OCR (Optical Character Recognition) settings for the case.
     *
-    * @return OcrSettings The ocr
+    * @return OcrSettings|null The ocr
     */
     public function getOcr()
     {
         if (array_key_exists("ocr", $this->_propDict)) {
-            if (is_a($this->_propDict["ocr"], "\Beta\Microsoft\Graph\Ediscovery\Model\OcrSettings")) {
+            if (is_a($this->_propDict["ocr"], "\Beta\Microsoft\Graph\Ediscovery\Model\OcrSettings") || is_null($this->_propDict["ocr"])) {
                 return $this->_propDict["ocr"];
             } else {
                 $this->_propDict["ocr"] = new OcrSettings($this->_propDict["ocr"]);
@@ -61,12 +61,12 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the redundancyDetection
     * The redundancy (near duplicate and email threading) detection settings for the case.
     *
-    * @return RedundancyDetectionSettings The redundancyDetection
+    * @return RedundancyDetectionSettings|null The redundancyDetection
     */
     public function getRedundancyDetection()
     {
         if (array_key_exists("redundancyDetection", $this->_propDict)) {
-            if (is_a($this->_propDict["redundancyDetection"], "\Beta\Microsoft\Graph\Ediscovery\Model\RedundancyDetectionSettings")) {
+            if (is_a($this->_propDict["redundancyDetection"], "\Beta\Microsoft\Graph\Ediscovery\Model\RedundancyDetectionSettings") || is_null($this->_propDict["redundancyDetection"])) {
                 return $this->_propDict["redundancyDetection"];
             } else {
                 $this->_propDict["redundancyDetection"] = new RedundancyDetectionSettings($this->_propDict["redundancyDetection"]);
@@ -94,12 +94,12 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the topicModeling
     * The Topic Modeling (Themes) settings for the case.
     *
-    * @return TopicModelingSettings The topicModeling
+    * @return TopicModelingSettings|null The topicModeling
     */
     public function getTopicModeling()
     {
         if (array_key_exists("topicModeling", $this->_propDict)) {
-            if (is_a($this->_propDict["topicModeling"], "\Beta\Microsoft\Graph\Ediscovery\Model\TopicModelingSettings")) {
+            if (is_a($this->_propDict["topicModeling"], "\Beta\Microsoft\Graph\Ediscovery\Model\TopicModelingSettings") || is_null($this->_propDict["topicModeling"])) {
                 return $this->_propDict["topicModeling"];
             } else {
                 $this->_propDict["topicModeling"] = new TopicModelingSettings($this->_propDict["topicModeling"]);

@@ -29,7 +29,7 @@ class UnsupportedDeviceConfiguration extends DeviceConfiguration
      * Gets the details
     * Details describing why the entity is unsupported. This collection can contain a maximum of 1000 elements.
      *
-     * @return array The details
+     * @return array|null The details
      */
     public function getDetails()
     {
@@ -50,7 +50,7 @@ class UnsupportedDeviceConfiguration extends DeviceConfiguration
     */
     public function setDetails($val)
     {
-		$this->_propDict["details"] = $val;
+        $this->_propDict["details"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class UnsupportedDeviceConfiguration extends DeviceConfiguration
     * Gets the originalEntityTypeName
     * The type of entity that would be returned otherwise.
     *
-    * @return string The originalEntityTypeName
+    * @return string|null The originalEntityTypeName
     */
     public function getOriginalEntityTypeName()
     {

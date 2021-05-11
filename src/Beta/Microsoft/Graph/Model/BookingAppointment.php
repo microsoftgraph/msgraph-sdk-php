@@ -27,7 +27,7 @@ class BookingAppointment extends Entity
     /**
     * Gets the additionalInformation
     *
-    * @return string The additionalInformation
+    * @return string|null The additionalInformation
     */
     public function getAdditionalInformation()
     {
@@ -55,7 +55,7 @@ class BookingAppointment extends Entity
     * Gets the customerEmailAddress
     * The SMTP address of the bookingCustomer who is booking the appointment.
     *
-    * @return string The customerEmailAddress
+    * @return string|null The customerEmailAddress
     */
     public function getCustomerEmailAddress()
     {
@@ -84,7 +84,7 @@ class BookingAppointment extends Entity
     * Gets the customerId
     * If CustomerId is not specified when an appointment is created then a new customer is created based on the appointment customer information. Once set, the customerId should be considered immutable.
     *
-    * @return string The customerId
+    * @return string|null The customerId
     */
     public function getCustomerId()
     {
@@ -113,12 +113,12 @@ class BookingAppointment extends Entity
     * Gets the customerLocation
     * Represents location information for the bookingCustomer who is booking the appointment.
     *
-    * @return Location The customerLocation
+    * @return Location|null The customerLocation
     */
     public function getCustomerLocation()
     {
         if (array_key_exists("customerLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["customerLocation"], "\Beta\Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["customerLocation"], "\Beta\Microsoft\Graph\Model\Location") || is_null($this->_propDict["customerLocation"])) {
                 return $this->_propDict["customerLocation"];
             } else {
                 $this->_propDict["customerLocation"] = new Location($this->_propDict["customerLocation"]);
@@ -146,7 +146,7 @@ class BookingAppointment extends Entity
     * Gets the customerName
     * The customer's name.
     *
-    * @return string The customerName
+    * @return string|null The customerName
     */
     public function getCustomerName()
     {
@@ -175,7 +175,7 @@ class BookingAppointment extends Entity
     * Gets the customerNotes
     * The value of this property is only available when reading an individual booking appointment by id. Its value can only be set when creating a new appointment with a new customer, ie, without specifying a CustomerId. After that, the property is computed from the customer represented by CustomerId.
     *
-    * @return string The customerNotes
+    * @return string|null The customerNotes
     */
     public function getCustomerNotes()
     {
@@ -204,7 +204,7 @@ class BookingAppointment extends Entity
     * Gets the customerPhone
     * The customer's phone number.
     *
-    * @return string The customerPhone
+    * @return string|null The customerPhone
     */
     public function getCustomerPhone()
     {
@@ -233,12 +233,12 @@ class BookingAppointment extends Entity
     * Gets the duration
     * The length of the appointment, denoted in ISO8601 format.
     *
-    * @return Duration The duration
+    * @return Duration|null The duration
     */
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["duration"])) {
                 return $this->_propDict["duration"];
             } else {
                 $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
@@ -266,12 +266,12 @@ class BookingAppointment extends Entity
     * Gets the end
     * The date, time, and time zone that the appointment ends.
     *
-    * @return DateTimeTimeZone The end
+    * @return DateTimeTimeZone|null The end
     */
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["end"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["end"])) {
                 return $this->_propDict["end"];
             } else {
                 $this->_propDict["end"] = new DateTimeTimeZone($this->_propDict["end"]);
@@ -299,7 +299,7 @@ class BookingAppointment extends Entity
     * Gets the invoiceAmount
     * The billed amount on the invoice.
     *
-    * @return float The invoiceAmount
+    * @return float|null The invoiceAmount
     */
     public function getInvoiceAmount()
     {
@@ -320,7 +320,7 @@ class BookingAppointment extends Entity
     */
     public function setInvoiceAmount($val)
     {
-        $this->_propDict["invoiceAmount"] = $val;
+        $this->_propDict["invoiceAmount"] = floatval($val);
         return $this;
     }
     
@@ -328,12 +328,12 @@ class BookingAppointment extends Entity
     * Gets the invoiceDate
     * The date, time, and time zone of the invoice for this appointment.
     *
-    * @return DateTimeTimeZone The invoiceDate
+    * @return DateTimeTimeZone|null The invoiceDate
     */
     public function getInvoiceDate()
     {
         if (array_key_exists("invoiceDate", $this->_propDict)) {
-            if (is_a($this->_propDict["invoiceDate"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["invoiceDate"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["invoiceDate"])) {
                 return $this->_propDict["invoiceDate"];
             } else {
                 $this->_propDict["invoiceDate"] = new DateTimeTimeZone($this->_propDict["invoiceDate"]);
@@ -361,7 +361,7 @@ class BookingAppointment extends Entity
     * Gets the invoiceId
     * The ID of the invoice.
     *
-    * @return string The invoiceId
+    * @return string|null The invoiceId
     */
     public function getInvoiceId()
     {
@@ -390,12 +390,12 @@ class BookingAppointment extends Entity
     * Gets the invoiceStatus
     * The status of the invoice. Possible values are: draft, reviewing, open, canceled, paid, corrective.
     *
-    * @return BookingInvoiceStatus The invoiceStatus
+    * @return BookingInvoiceStatus|null The invoiceStatus
     */
     public function getInvoiceStatus()
     {
         if (array_key_exists("invoiceStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["invoiceStatus"], "\Beta\Microsoft\Graph\Model\BookingInvoiceStatus")) {
+            if (is_a($this->_propDict["invoiceStatus"], "\Beta\Microsoft\Graph\Model\BookingInvoiceStatus") || is_null($this->_propDict["invoiceStatus"])) {
                 return $this->_propDict["invoiceStatus"];
             } else {
                 $this->_propDict["invoiceStatus"] = new BookingInvoiceStatus($this->_propDict["invoiceStatus"]);
@@ -423,7 +423,7 @@ class BookingAppointment extends Entity
     * Gets the invoiceUrl
     * The URL of the invoice in Microsoft Bookings.
     *
-    * @return string The invoiceUrl
+    * @return string|null The invoiceUrl
     */
     public function getInvoiceUrl()
     {
@@ -451,7 +451,7 @@ class BookingAppointment extends Entity
     /**
     * Gets the isLocationOnline
     *
-    * @return bool The isLocationOnline
+    * @return bool|null The isLocationOnline
     */
     public function getIsLocationOnline()
     {
@@ -478,7 +478,7 @@ class BookingAppointment extends Entity
     /**
     * Gets the onlineMeetingUrl
     *
-    * @return string The onlineMeetingUrl
+    * @return string|null The onlineMeetingUrl
     */
     public function getOnlineMeetingUrl()
     {
@@ -506,7 +506,7 @@ class BookingAppointment extends Entity
     * Gets the optOutOfCustomerEmail
     * True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
     *
-    * @return bool The optOutOfCustomerEmail
+    * @return bool|null The optOutOfCustomerEmail
     */
     public function getOptOutOfCustomerEmail()
     {
@@ -535,12 +535,12 @@ class BookingAppointment extends Entity
     * Gets the postBuffer
     * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
     *
-    * @return Duration The postBuffer
+    * @return Duration|null The postBuffer
     */
     public function getPostBuffer()
     {
         if (array_key_exists("postBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["postBuffer"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["postBuffer"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["postBuffer"])) {
                 return $this->_propDict["postBuffer"];
             } else {
                 $this->_propDict["postBuffer"] = new Duration($this->_propDict["postBuffer"]);
@@ -568,12 +568,12 @@ class BookingAppointment extends Entity
     * Gets the preBuffer
     * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
     *
-    * @return Duration The preBuffer
+    * @return Duration|null The preBuffer
     */
     public function getPreBuffer()
     {
         if (array_key_exists("preBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["preBuffer"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["preBuffer"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["preBuffer"])) {
                 return $this->_propDict["preBuffer"];
             } else {
                 $this->_propDict["preBuffer"] = new Duration($this->_propDict["preBuffer"]);
@@ -601,7 +601,7 @@ class BookingAppointment extends Entity
     * Gets the price
     * The regular price for an appointment for the specified bookingService.
     *
-    * @return float The price
+    * @return float|null The price
     */
     public function getPrice()
     {
@@ -622,7 +622,7 @@ class BookingAppointment extends Entity
     */
     public function setPrice($val)
     {
-        $this->_propDict["price"] = $val;
+        $this->_propDict["price"] = floatval($val);
         return $this;
     }
     
@@ -630,12 +630,12 @@ class BookingAppointment extends Entity
     * Gets the priceType
     * A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
     *
-    * @return BookingPriceType The priceType
+    * @return BookingPriceType|null The priceType
     */
     public function getPriceType()
     {
         if (array_key_exists("priceType", $this->_propDict)) {
-            if (is_a($this->_propDict["priceType"], "\Beta\Microsoft\Graph\Model\BookingPriceType")) {
+            if (is_a($this->_propDict["priceType"], "\Beta\Microsoft\Graph\Model\BookingPriceType") || is_null($this->_propDict["priceType"])) {
                 return $this->_propDict["priceType"];
             } else {
                 $this->_propDict["priceType"] = new BookingPriceType($this->_propDict["priceType"]);
@@ -664,7 +664,7 @@ class BookingAppointment extends Entity
      * Gets the reminders
     * The value of this property is only available when reading an individual booking appointment by id.
      *
-     * @return array The reminders
+     * @return array|null The reminders
      */
     public function getReminders()
     {
@@ -685,7 +685,7 @@ class BookingAppointment extends Entity
     */
     public function setReminders($val)
     {
-		$this->_propDict["reminders"] = $val;
+        $this->_propDict["reminders"] = $val;
         return $this;
     }
     
@@ -693,7 +693,7 @@ class BookingAppointment extends Entity
     * Gets the selfServiceAppointmentId
     * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
     *
-    * @return string The selfServiceAppointmentId
+    * @return string|null The selfServiceAppointmentId
     */
     public function getSelfServiceAppointmentId()
     {
@@ -722,7 +722,7 @@ class BookingAppointment extends Entity
     * Gets the serviceId
     * The ID of the bookingService associated with this appointment.
     *
-    * @return string The serviceId
+    * @return string|null The serviceId
     */
     public function getServiceId()
     {
@@ -751,12 +751,12 @@ class BookingAppointment extends Entity
     * Gets the serviceLocation
     * The location where the service is delivered.
     *
-    * @return Location The serviceLocation
+    * @return Location|null The serviceLocation
     */
     public function getServiceLocation()
     {
         if (array_key_exists("serviceLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["serviceLocation"], "\Beta\Microsoft\Graph\Model\Location")) {
+            if (is_a($this->_propDict["serviceLocation"], "\Beta\Microsoft\Graph\Model\Location") || is_null($this->_propDict["serviceLocation"])) {
                 return $this->_propDict["serviceLocation"];
             } else {
                 $this->_propDict["serviceLocation"] = new Location($this->_propDict["serviceLocation"]);
@@ -784,7 +784,7 @@ class BookingAppointment extends Entity
     * Gets the serviceName
     * This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the service id.
     *
-    * @return string The serviceName
+    * @return string|null The serviceName
     */
     public function getServiceName()
     {
@@ -813,7 +813,7 @@ class BookingAppointment extends Entity
     * Gets the serviceNotes
     * The value of this property is only available when reading an individual booking appointment by id.
     *
-    * @return string The serviceNotes
+    * @return string|null The serviceNotes
     */
     public function getServiceNotes()
     {
@@ -842,7 +842,7 @@ class BookingAppointment extends Entity
     * Gets the staffMemberIds
     * The ID of each bookingStaffMember who is scheduled in this appointment.
     *
-    * @return string The staffMemberIds
+    * @return string|null The staffMemberIds
     */
     public function getStaffMemberIds()
     {
@@ -871,12 +871,12 @@ class BookingAppointment extends Entity
     * Gets the start
     * The date, time, and time zone that the appointment begins.
     *
-    * @return DateTimeTimeZone The start
+    * @return DateTimeTimeZone|null The start
     */
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone")) {
+            if (is_a($this->_propDict["start"], "\Beta\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["start"])) {
                 return $this->_propDict["start"];
             } else {
                 $this->_propDict["start"] = new DateTimeTimeZone($this->_propDict["start"]);

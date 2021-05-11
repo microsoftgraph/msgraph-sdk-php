@@ -26,7 +26,7 @@ class ResourceSpecificPermission extends Entity
     /**
     * Gets the description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -52,7 +52,7 @@ class ResourceSpecificPermission extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -78,7 +78,7 @@ class ResourceSpecificPermission extends Entity
     /**
     * Gets the id
     *
-    * @return string The id
+    * @return string|null The id
     */
     public function getId()
     {
@@ -104,7 +104,7 @@ class ResourceSpecificPermission extends Entity
     /**
     * Gets the isEnabled
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {
@@ -130,7 +130,7 @@ class ResourceSpecificPermission extends Entity
     /**
     * Gets the value
     *
-    * @return string The value
+    * @return string|null The value
     */
     public function getValue()
     {

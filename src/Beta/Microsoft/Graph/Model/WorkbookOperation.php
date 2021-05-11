@@ -28,12 +28,12 @@ class WorkbookOperation extends Entity
     * Gets the error
     * The error returned by the operation.
     *
-    * @return WorkbookOperationError The error
+    * @return WorkbookOperationError|null The error
     */
     public function getError()
     {
         if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\WorkbookOperationError")) {
+            if (is_a($this->_propDict["error"], "\Beta\Microsoft\Graph\Model\WorkbookOperationError") || is_null($this->_propDict["error"])) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new WorkbookOperationError($this->_propDict["error"]);
@@ -61,7 +61,7 @@ class WorkbookOperation extends Entity
     * Gets the resourceLocation
     * The resource URI for the result.
     *
-    * @return string The resourceLocation
+    * @return string|null The resourceLocation
     */
     public function getResourceLocation()
     {
@@ -90,12 +90,12 @@ class WorkbookOperation extends Entity
     * Gets the status
     * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
     *
-    * @return WorkbookOperationStatus The status
+    * @return WorkbookOperationStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\WorkbookOperationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\WorkbookOperationStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new WorkbookOperationStatus($this->_propDict["status"]);

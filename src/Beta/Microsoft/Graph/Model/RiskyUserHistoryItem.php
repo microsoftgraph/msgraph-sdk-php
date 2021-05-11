@@ -28,12 +28,12 @@ class RiskyUserHistoryItem extends RiskyUser
     * Gets the activity
     * The activity related to user risk level change.
     *
-    * @return RiskUserActivity The activity
+    * @return RiskUserActivity|null The activity
     */
     public function getActivity()
     {
         if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "\Beta\Microsoft\Graph\Model\RiskUserActivity")) {
+            if (is_a($this->_propDict["activity"], "\Beta\Microsoft\Graph\Model\RiskUserActivity") || is_null($this->_propDict["activity"])) {
                 return $this->_propDict["activity"];
             } else {
                 $this->_propDict["activity"] = new RiskUserActivity($this->_propDict["activity"]);
@@ -61,7 +61,7 @@ class RiskyUserHistoryItem extends RiskyUser
     * Gets the initiatedBy
     * The id of actor that does the operation.
     *
-    * @return string The initiatedBy
+    * @return string|null The initiatedBy
     */
     public function getInitiatedBy()
     {
@@ -90,7 +90,7 @@ class RiskyUserHistoryItem extends RiskyUser
     * Gets the userId
     * The id of the user.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {

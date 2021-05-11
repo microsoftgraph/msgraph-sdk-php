@@ -28,7 +28,7 @@ class PlannerBucket extends Entity
     * Gets the name
     * Name of the bucket.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -57,7 +57,7 @@ class PlannerBucket extends Entity
     * Gets the orderHint
     * Hint used to order items of this type in a list view. The format is defined as outlined here.
     *
-    * @return string The orderHint
+    * @return string|null The orderHint
     */
     public function getOrderHint()
     {
@@ -86,7 +86,7 @@ class PlannerBucket extends Entity
     * Gets the planId
     * Plan ID to which the bucket belongs.
     *
-    * @return string The planId
+    * @return string|null The planId
     */
     public function getPlanId()
     {
@@ -116,7 +116,7 @@ class PlannerBucket extends Entity
      * Gets the tasks
     * Read-only. Nullable. The collection of tasks in the bucket.
      *
-     * @return array The tasks
+     * @return array|null The tasks
      */
     public function getTasks()
     {
@@ -137,7 +137,7 @@ class PlannerBucket extends Entity
     */
     public function setTasks($val)
     {
-		$this->_propDict["tasks"] = $val;
+        $this->_propDict["tasks"] = $val;
         return $this;
     }
     

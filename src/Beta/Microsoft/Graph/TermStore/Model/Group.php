@@ -28,12 +28,12 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdDateTime
     * Date and time of group creation. Read-only.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the description
     * Description giving details on the term usage.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -90,7 +90,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the displayName
     * Name of group.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -119,7 +119,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the parentSiteId
     * Id of the parent site of this group.
     *
-    * @return string The parentSiteId
+    * @return string|null The parentSiteId
     */
     public function getParentSiteId()
     {
@@ -148,12 +148,12 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the scope
     * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
     *
-    * @return TermGroupScope The scope
+    * @return TermGroupScope|null The scope
     */
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\TermStore\Model\TermGroupScope")) {
+            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\TermStore\Model\TermGroupScope") || is_null($this->_propDict["scope"])) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new TermGroupScope($this->_propDict["scope"]);
@@ -182,7 +182,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the sets
     * All sets under the group in a term [store].
      *
-     * @return array The sets
+     * @return array|null The sets
      */
     public function getSets()
     {
@@ -203,7 +203,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setSets($val)
     {
-		$this->_propDict["sets"] = $val;
+        $this->_propDict["sets"] = $val;
         return $this;
     }
     

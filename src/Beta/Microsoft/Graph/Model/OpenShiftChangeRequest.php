@@ -28,7 +28,7 @@ class OpenShiftChangeRequest extends ScheduleChangeRequest
     * Gets the openShiftId
     * ID for the open shift.
     *
-    * @return string The openShiftId
+    * @return string|null The openShiftId
     */
     public function getOpenShiftId()
     {

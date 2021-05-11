@@ -28,7 +28,7 @@ class WebAccount extends ItemFacet
     * Gets the description
     * Contains the description the user has provided for the account on the service being referenced.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,12 +57,12 @@ class WebAccount extends ItemFacet
     * Gets the service
     * Contains basic detail about the service that is being associated.
     *
-    * @return ServiceInformation The service
+    * @return ServiceInformation|null The service
     */
     public function getService()
     {
         if (array_key_exists("service", $this->_propDict)) {
-            if (is_a($this->_propDict["service"], "\Beta\Microsoft\Graph\Model\ServiceInformation")) {
+            if (is_a($this->_propDict["service"], "\Beta\Microsoft\Graph\Model\ServiceInformation") || is_null($this->_propDict["service"])) {
                 return $this->_propDict["service"];
             } else {
                 $this->_propDict["service"] = new ServiceInformation($this->_propDict["service"]);
@@ -90,7 +90,7 @@ class WebAccount extends ItemFacet
     * Gets the statusMessage
     * Contains a status message from the cloud service if provided or synchronized.
     *
-    * @return string The statusMessage
+    * @return string|null The statusMessage
     */
     public function getStatusMessage()
     {
@@ -118,7 +118,7 @@ class WebAccount extends ItemFacet
     /**
     * Gets the thumbnailUrl
     *
-    * @return string The thumbnailUrl
+    * @return string|null The thumbnailUrl
     */
     public function getThumbnailUrl()
     {
@@ -146,7 +146,7 @@ class WebAccount extends ItemFacet
     * Gets the userId
     * The user name  displayed for the webaccount.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -175,7 +175,7 @@ class WebAccount extends ItemFacet
     * Gets the webUrl
     * Contains a link to the user's profile on the cloud service if one exists.
     *
-    * @return string The webUrl
+    * @return string|null The webUrl
     */
     public function getWebUrl()
     {

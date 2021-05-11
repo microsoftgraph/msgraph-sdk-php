@@ -27,7 +27,7 @@ class PermissionScope extends Entity
     * Gets the adminConsentDescription
     * A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
     *
-    * @return string The adminConsentDescription
+    * @return string|null The adminConsentDescription
     */
     public function getAdminConsentDescription()
     {
@@ -55,7 +55,7 @@ class PermissionScope extends Entity
     * Gets the adminConsentDisplayName
     * The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
     *
-    * @return string The adminConsentDisplayName
+    * @return string|null The adminConsentDisplayName
     */
     public function getAdminConsentDisplayName()
     {
@@ -83,7 +83,7 @@ class PermissionScope extends Entity
     * Gets the id
     * Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
     *
-    * @return string The id
+    * @return string|null The id
     */
     public function getId()
     {
@@ -111,7 +111,7 @@ class PermissionScope extends Entity
     * Gets the isEnabled
     * When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {
@@ -138,7 +138,7 @@ class PermissionScope extends Entity
     /**
     * Gets the origin
     *
-    * @return string The origin
+    * @return string|null The origin
     */
     public function getOrigin()
     {
@@ -165,7 +165,7 @@ class PermissionScope extends Entity
     * Gets the type
     * Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. This will be the default behavior, but each customer can choose to customize the behavior in their organization (by allowing, restricting or limiting user consent to this delegated permission.)
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {
@@ -193,7 +193,7 @@ class PermissionScope extends Entity
     * Gets the userConsentDescription
     * A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
     *
-    * @return string The userConsentDescription
+    * @return string|null The userConsentDescription
     */
     public function getUserConsentDescription()
     {
@@ -221,7 +221,7 @@ class PermissionScope extends Entity
     * Gets the userConsentDisplayName
     * A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
     *
-    * @return string The userConsentDisplayName
+    * @return string|null The userConsentDisplayName
     */
     public function getUserConsentDisplayName()
     {
@@ -249,7 +249,7 @@ class PermissionScope extends Entity
     * Gets the value
     * Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
     *
-    * @return string The value
+    * @return string|null The value
     */
     public function getValue()
     {

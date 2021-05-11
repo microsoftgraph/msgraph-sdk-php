@@ -28,7 +28,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the edgeKioskEnablePublicBrowsing
     * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
     *
-    * @return bool The edgeKioskEnablePublicBrowsing
+    * @return bool|null The edgeKioskEnablePublicBrowsing
     */
     public function getEdgeKioskEnablePublicBrowsing()
     {
@@ -57,7 +57,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the kioskBrowserBlockedUrlExceptions
     * Specify URLs that the kiosk browser is allowed to navigate to
     *
-    * @return string The kioskBrowserBlockedUrlExceptions
+    * @return string|null The kioskBrowserBlockedUrlExceptions
     */
     public function getKioskBrowserBlockedUrlExceptions()
     {
@@ -86,7 +86,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the kioskBrowserBlockedURLs
     * Specify URLs that the kiosk browsers should not navigate to
     *
-    * @return string The kioskBrowserBlockedURLs
+    * @return string|null The kioskBrowserBlockedURLs
     */
     public function getKioskBrowserBlockedURLs()
     {
@@ -115,7 +115,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the kioskBrowserDefaultUrl
     * Specify the default URL the browser should navigate to on launch.
     *
-    * @return string The kioskBrowserDefaultUrl
+    * @return string|null The kioskBrowserDefaultUrl
     */
     public function getKioskBrowserDefaultUrl()
     {
@@ -144,7 +144,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the kioskBrowserEnableEndSessionButton
     * Enable the kiosk browser's end session button. By default, the end session button is disabled.
     *
-    * @return bool The kioskBrowserEnableEndSessionButton
+    * @return bool|null The kioskBrowserEnableEndSessionButton
     */
     public function getKioskBrowserEnableEndSessionButton()
     {
@@ -173,7 +173,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the kioskBrowserEnableHomeButton
     * Enable the kiosk browser's home button. By default, the home button is disabled.
     *
-    * @return bool The kioskBrowserEnableHomeButton
+    * @return bool|null The kioskBrowserEnableHomeButton
     */
     public function getKioskBrowserEnableHomeButton()
     {
@@ -202,7 +202,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the kioskBrowserEnableNavigationButtons
     * Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
     *
-    * @return bool The kioskBrowserEnableNavigationButtons
+    * @return bool|null The kioskBrowserEnableNavigationButtons
     */
     public function getKioskBrowserEnableNavigationButtons()
     {
@@ -231,7 +231,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the kioskBrowserRestartOnIdleTimeInMinutes
     * Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
     *
-    * @return int The kioskBrowserRestartOnIdleTimeInMinutes
+    * @return int|null The kioskBrowserRestartOnIdleTimeInMinutes
     */
     public function getKioskBrowserRestartOnIdleTimeInMinutes()
     {
@@ -261,7 +261,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
      * Gets the kioskProfiles
     * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
      *
-     * @return array The kioskProfiles
+     * @return array|null The kioskProfiles
      */
     public function getKioskProfiles()
     {
@@ -282,7 +282,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     */
     public function setKioskProfiles($val)
     {
-		$this->_propDict["kioskProfiles"] = $val;
+        $this->_propDict["kioskProfiles"] = $val;
         return $this;
     }
     
@@ -290,12 +290,12 @@ class WindowsKioskConfiguration extends DeviceConfiguration
     * Gets the windowsKioskForceUpdateSchedule
     * force update schedule for Kiosk devices.
     *
-    * @return WindowsKioskForceUpdateSchedule The windowsKioskForceUpdateSchedule
+    * @return WindowsKioskForceUpdateSchedule|null The windowsKioskForceUpdateSchedule
     */
     public function getWindowsKioskForceUpdateSchedule()
     {
         if (array_key_exists("windowsKioskForceUpdateSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsKioskForceUpdateSchedule"], "\Beta\Microsoft\Graph\Model\WindowsKioskForceUpdateSchedule")) {
+            if (is_a($this->_propDict["windowsKioskForceUpdateSchedule"], "\Beta\Microsoft\Graph\Model\WindowsKioskForceUpdateSchedule") || is_null($this->_propDict["windowsKioskForceUpdateSchedule"])) {
                 return $this->_propDict["windowsKioskForceUpdateSchedule"];
             } else {
                 $this->_propDict["windowsKioskForceUpdateSchedule"] = new WindowsKioskForceUpdateSchedule($this->_propDict["windowsKioskForceUpdateSchedule"]);

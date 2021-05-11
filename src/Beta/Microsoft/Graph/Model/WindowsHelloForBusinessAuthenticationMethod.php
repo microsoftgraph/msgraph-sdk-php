@@ -28,12 +28,12 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
     * Gets the createdDateTime
     * The date and time that this Windows Hello for Business key was registered.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
     * Gets the displayName
     * The name of the device on which Windows Hello for Business is registered
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -90,12 +90,12 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
     * Gets the keyStrength
     * Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
     *
-    * @return AuthenticationMethodKeyStrength The keyStrength
+    * @return AuthenticationMethodKeyStrength|null The keyStrength
     */
     public function getKeyStrength()
     {
         if (array_key_exists("keyStrength", $this->_propDict)) {
-            if (is_a($this->_propDict["keyStrength"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodKeyStrength")) {
+            if (is_a($this->_propDict["keyStrength"], "\Beta\Microsoft\Graph\Model\AuthenticationMethodKeyStrength") || is_null($this->_propDict["keyStrength"])) {
                 return $this->_propDict["keyStrength"];
             } else {
                 $this->_propDict["keyStrength"] = new AuthenticationMethodKeyStrength($this->_propDict["keyStrength"]);
@@ -123,12 +123,12 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod
     * Gets the device
     * The registered device on which this Windows Hello for Business key resides.
     *
-    * @return Device The device
+    * @return Device|null The device
     */
     public function getDevice()
     {
         if (array_key_exists("device", $this->_propDict)) {
-            if (is_a($this->_propDict["device"], "\Beta\Microsoft\Graph\Model\Device")) {
+            if (is_a($this->_propDict["device"], "\Beta\Microsoft\Graph\Model\Device") || is_null($this->_propDict["device"])) {
                 return $this->_propDict["device"];
             } else {
                 $this->_propDict["device"] = new Device($this->_propDict["device"]);

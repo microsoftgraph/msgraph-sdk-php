@@ -28,12 +28,12 @@ class DeviceManagementCachedReportConfiguration extends Entity
     * Gets the expirationDateTime
     * Time that the cached report expires
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -61,7 +61,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     * Gets the filter
     * Filters applied on report creation.
     *
-    * @return string The filter
+    * @return string|null The filter
     */
     public function getFilter()
     {
@@ -90,12 +90,12 @@ class DeviceManagementCachedReportConfiguration extends Entity
     * Gets the lastRefreshDateTime
     * Time that the cached report was last refreshed
     *
-    * @return \DateTime The lastRefreshDateTime
+    * @return \DateTime|null The lastRefreshDateTime
     */
     public function getLastRefreshDateTime()
     {
         if (array_key_exists("lastRefreshDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastRefreshDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastRefreshDateTime"], "\DateTime") || is_null($this->_propDict["lastRefreshDateTime"])) {
                 return $this->_propDict["lastRefreshDateTime"];
             } else {
                 $this->_propDict["lastRefreshDateTime"] = new \DateTime($this->_propDict["lastRefreshDateTime"]);
@@ -123,7 +123,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     * Gets the metadata
     * Caller-managed metadata associated with the report
     *
-    * @return string The metadata
+    * @return string|null The metadata
     */
     public function getMetadata()
     {
@@ -152,7 +152,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     * Gets the orderBy
     * Ordering of columns in the report
     *
-    * @return string The orderBy
+    * @return string|null The orderBy
     */
     public function getOrderBy()
     {
@@ -181,7 +181,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     * Gets the reportName
     * Name of the report
     *
-    * @return string The reportName
+    * @return string|null The reportName
     */
     public function getReportName()
     {
@@ -210,7 +210,7 @@ class DeviceManagementCachedReportConfiguration extends Entity
     * Gets the select
     * Columns selected from the report
     *
-    * @return string The select
+    * @return string|null The select
     */
     public function getSelect()
     {
@@ -239,12 +239,12 @@ class DeviceManagementCachedReportConfiguration extends Entity
     * Gets the status
     * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
     *
-    * @return DeviceManagementReportStatus The status
+    * @return DeviceManagementReportStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\DeviceManagementReportStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DeviceManagementReportStatus($this->_propDict["status"]);

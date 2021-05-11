@@ -27,12 +27,12 @@ class DriveItemSource extends Entity
     /**
     * Gets the application
     *
-    * @return DriveItemSourceApplication The application
+    * @return DriveItemSourceApplication|null The application
     */
     public function getApplication()
     {
         if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\DriveItemSourceApplication")) {
+            if (is_a($this->_propDict["application"], "\Beta\Microsoft\Graph\Model\DriveItemSourceApplication") || is_null($this->_propDict["application"])) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new DriveItemSourceApplication($this->_propDict["application"]);
@@ -57,7 +57,7 @@ class DriveItemSource extends Entity
     /**
     * Gets the externalId
     *
-    * @return string The externalId
+    * @return string|null The externalId
     */
     public function getExternalId()
     {

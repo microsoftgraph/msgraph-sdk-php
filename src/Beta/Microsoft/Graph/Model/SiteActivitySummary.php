@@ -27,12 +27,12 @@ class SiteActivitySummary extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime The reportDate
+    * @return \DateTime|null The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -58,7 +58,7 @@ class SiteActivitySummary extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -85,12 +85,12 @@ class SiteActivitySummary extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -116,7 +116,7 @@ class SiteActivitySummary extends Entity
     /**
     * Gets the sharedExternally
     *
-    * @return int The sharedExternally
+    * @return int|null The sharedExternally
     */
     public function getSharedExternally()
     {
@@ -143,7 +143,7 @@ class SiteActivitySummary extends Entity
     /**
     * Gets the sharedInternally
     *
-    * @return int The sharedInternally
+    * @return int|null The sharedInternally
     */
     public function getSharedInternally()
     {
@@ -170,7 +170,7 @@ class SiteActivitySummary extends Entity
     /**
     * Gets the synced
     *
-    * @return int The synced
+    * @return int|null The synced
     */
     public function getSynced()
     {
@@ -197,7 +197,7 @@ class SiteActivitySummary extends Entity
     /**
     * Gets the viewedOrEdited
     *
-    * @return int The viewedOrEdited
+    * @return int|null The viewedOrEdited
     */
     public function getViewedOrEdited()
     {

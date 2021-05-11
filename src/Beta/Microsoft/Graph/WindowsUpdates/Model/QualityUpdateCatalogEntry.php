@@ -28,7 +28,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
     * Gets the isExpeditable
     * Indicates whether the content can be deployed as an expedited quality update. Read-only.
     *
-    * @return bool The isExpeditable
+    * @return bool|null The isExpeditable
     */
     public function getIsExpeditable()
     {
@@ -57,12 +57,12 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
     * Gets the qualityUpdateClassification
     * The classification on the quality update. Supports a subset of the values for qualityUpdateClassification. Possible values are: all, security, nonSecurity. Read-only.
     *
-    * @return QualityUpdateClassification The qualityUpdateClassification
+    * @return QualityUpdateClassification|null The qualityUpdateClassification
     */
     public function getQualityUpdateClassification()
     {
         if (array_key_exists("qualityUpdateClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["qualityUpdateClassification"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\QualityUpdateClassification")) {
+            if (is_a($this->_propDict["qualityUpdateClassification"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\QualityUpdateClassification") || is_null($this->_propDict["qualityUpdateClassification"])) {
                 return $this->_propDict["qualityUpdateClassification"];
             } else {
                 $this->_propDict["qualityUpdateClassification"] = new QualityUpdateClassification($this->_propDict["qualityUpdateClassification"]);

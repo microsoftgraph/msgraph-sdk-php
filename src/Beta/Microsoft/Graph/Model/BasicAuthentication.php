@@ -36,7 +36,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase
     * Gets the password
     * The password. It is not returned in the responses.
     *
-    * @return string The password
+    * @return string|null The password
     */
     public function getPassword()
     {
@@ -64,7 +64,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase
     * Gets the username
     * The username.
     *
-    * @return string The username
+    * @return string|null The username
     */
     public function getUsername()
     {

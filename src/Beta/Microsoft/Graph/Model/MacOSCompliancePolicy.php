@@ -28,12 +28,12 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the advancedThreatProtectionRequiredSecurityLevel
     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
-    * @return DeviceThreatProtectionLevel The advancedThreatProtectionRequiredSecurityLevel
+    * @return DeviceThreatProtectionLevel|null The advancedThreatProtectionRequiredSecurityLevel
     */
     public function getAdvancedThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("advancedThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel") || is_null($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"])) {
                 return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"]);
@@ -61,7 +61,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the deviceThreatProtectionEnabled
     * Require that devices have enabled device threat protection.
     *
-    * @return bool The deviceThreatProtectionEnabled
+    * @return bool|null The deviceThreatProtectionEnabled
     */
     public function getDeviceThreatProtectionEnabled()
     {
@@ -90,12 +90,12 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the deviceThreatProtectionRequiredSecurityLevel
     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
-    * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
+    * @return DeviceThreatProtectionLevel|null The deviceThreatProtectionRequiredSecurityLevel
     */
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel") || is_null($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"])) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
@@ -123,7 +123,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the firewallBlockAllIncoming
     * Corresponds to the 'Block all incoming connections' option.
     *
-    * @return bool The firewallBlockAllIncoming
+    * @return bool|null The firewallBlockAllIncoming
     */
     public function getFirewallBlockAllIncoming()
     {
@@ -152,7 +152,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the firewallEnabled
     * Whether the firewall should be enabled or not.
     *
-    * @return bool The firewallEnabled
+    * @return bool|null The firewallEnabled
     */
     public function getFirewallEnabled()
     {
@@ -181,7 +181,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the firewallEnableStealthMode
     * Corresponds to 'Enable stealth mode.'
     *
-    * @return bool The firewallEnableStealthMode
+    * @return bool|null The firewallEnableStealthMode
     */
     public function getFirewallEnableStealthMode()
     {
@@ -210,12 +210,12 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the gatekeeperAllowedAppSource
     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
     *
-    * @return MacOSGatekeeperAppSources The gatekeeperAllowedAppSource
+    * @return MacOSGatekeeperAppSources|null The gatekeeperAllowedAppSource
     */
     public function getGatekeeperAllowedAppSource()
     {
         if (array_key_exists("gatekeeperAllowedAppSource", $this->_propDict)) {
-            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "\Beta\Microsoft\Graph\Model\MacOSGatekeeperAppSources")) {
+            if (is_a($this->_propDict["gatekeeperAllowedAppSource"], "\Beta\Microsoft\Graph\Model\MacOSGatekeeperAppSources") || is_null($this->_propDict["gatekeeperAllowedAppSource"])) {
                 return $this->_propDict["gatekeeperAllowedAppSource"];
             } else {
                 $this->_propDict["gatekeeperAllowedAppSource"] = new MacOSGatekeeperAppSources($this->_propDict["gatekeeperAllowedAppSource"]);
@@ -243,7 +243,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMaximumBuildVersion
     * Maximum MacOS build version.
     *
-    * @return string The osMaximumBuildVersion
+    * @return string|null The osMaximumBuildVersion
     */
     public function getOsMaximumBuildVersion()
     {
@@ -272,7 +272,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMaximumVersion
     * Maximum MacOS version.
     *
-    * @return string The osMaximumVersion
+    * @return string|null The osMaximumVersion
     */
     public function getOsMaximumVersion()
     {
@@ -301,7 +301,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMinimumBuildVersion
     * Minimum MacOS build version.
     *
-    * @return string The osMinimumBuildVersion
+    * @return string|null The osMinimumBuildVersion
     */
     public function getOsMinimumBuildVersion()
     {
@@ -330,7 +330,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMinimumVersion
     * Minimum MacOS version.
     *
-    * @return string The osMinimumVersion
+    * @return string|null The osMinimumVersion
     */
     public function getOsMinimumVersion()
     {
@@ -359,7 +359,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordBlockSimple
     * Indicates whether or not to block simple passwords.
     *
-    * @return bool The passwordBlockSimple
+    * @return bool|null The passwordBlockSimple
     */
     public function getPasswordBlockSimple()
     {
@@ -388,7 +388,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordExpirationDays
     * Number of days before the password expires. Valid values 1 to 65535
     *
-    * @return int The passwordExpirationDays
+    * @return int|null The passwordExpirationDays
     */
     public function getPasswordExpirationDays()
     {
@@ -417,7 +417,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumCharacterSetCount
     * The number of character sets required in the password.
     *
-    * @return int The passwordMinimumCharacterSetCount
+    * @return int|null The passwordMinimumCharacterSetCount
     */
     public function getPasswordMinimumCharacterSetCount()
     {
@@ -446,7 +446,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumLength
     * Minimum length of password. Valid values 4 to 14
     *
-    * @return int The passwordMinimumLength
+    * @return int|null The passwordMinimumLength
     */
     public function getPasswordMinimumLength()
     {
@@ -475,7 +475,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
     *
-    * @return int The passwordMinutesOfInactivityBeforeLock
+    * @return int|null The passwordMinutesOfInactivityBeforeLock
     */
     public function getPasswordMinutesOfInactivityBeforeLock()
     {
@@ -504,7 +504,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 1 to 24
     *
-    * @return int The passwordPreviousPasswordBlockCount
+    * @return int|null The passwordPreviousPasswordBlockCount
     */
     public function getPasswordPreviousPasswordBlockCount()
     {
@@ -533,7 +533,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequired
     * Whether or not to require a password.
     *
-    * @return bool The passwordRequired
+    * @return bool|null The passwordRequired
     */
     public function getPasswordRequired()
     {
@@ -562,12 +562,12 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequiredType
     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
     *
-    * @return RequiredPasswordType The passwordRequiredType
+    * @return RequiredPasswordType|null The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\RequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -595,7 +595,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the storageRequireEncryption
     * Require encryption on Mac OS devices.
     *
-    * @return bool The storageRequireEncryption
+    * @return bool|null The storageRequireEncryption
     */
     public function getStorageRequireEncryption()
     {
@@ -624,7 +624,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy
     * Gets the systemIntegrityProtectionEnabled
     * Require that devices have enabled system integrity protection.
     *
-    * @return bool The systemIntegrityProtectionEnabled
+    * @return bool|null The systemIntegrityProtectionEnabled
     */
     public function getSystemIntegrityProtectionEnabled()
     {

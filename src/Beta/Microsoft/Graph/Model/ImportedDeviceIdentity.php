@@ -28,12 +28,12 @@ class ImportedDeviceIdentity extends Entity
     * Gets the createdDateTime
     * Created Date Time of the device
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class ImportedDeviceIdentity extends Entity
     * Gets the description
     * The description of the device
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -90,12 +90,12 @@ class ImportedDeviceIdentity extends Entity
     * Gets the enrollmentState
     * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
-    * @return EnrollmentState The enrollmentState
+    * @return EnrollmentState|null The enrollmentState
     */
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "\Beta\Microsoft\Graph\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "\Beta\Microsoft\Graph\Model\EnrollmentState") || is_null($this->_propDict["enrollmentState"])) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -123,7 +123,7 @@ class ImportedDeviceIdentity extends Entity
     * Gets the importedDeviceIdentifier
     * Imported Device Identifier
     *
-    * @return string The importedDeviceIdentifier
+    * @return string|null The importedDeviceIdentifier
     */
     public function getImportedDeviceIdentifier()
     {
@@ -152,12 +152,12 @@ class ImportedDeviceIdentity extends Entity
     * Gets the importedDeviceIdentityType
     * Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber.
     *
-    * @return ImportedDeviceIdentityType The importedDeviceIdentityType
+    * @return ImportedDeviceIdentityType|null The importedDeviceIdentityType
     */
     public function getImportedDeviceIdentityType()
     {
         if (array_key_exists("importedDeviceIdentityType", $this->_propDict)) {
-            if (is_a($this->_propDict["importedDeviceIdentityType"], "\Beta\Microsoft\Graph\Model\ImportedDeviceIdentityType")) {
+            if (is_a($this->_propDict["importedDeviceIdentityType"], "\Beta\Microsoft\Graph\Model\ImportedDeviceIdentityType") || is_null($this->_propDict["importedDeviceIdentityType"])) {
                 return $this->_propDict["importedDeviceIdentityType"];
             } else {
                 $this->_propDict["importedDeviceIdentityType"] = new ImportedDeviceIdentityType($this->_propDict["importedDeviceIdentityType"]);
@@ -185,12 +185,12 @@ class ImportedDeviceIdentity extends Entity
     * Gets the lastContactedDateTime
     * Last Contacted Date Time of the device
     *
-    * @return \DateTime The lastContactedDateTime
+    * @return \DateTime|null The lastContactedDateTime
     */
     public function getLastContactedDateTime()
     {
         if (array_key_exists("lastContactedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime") || is_null($this->_propDict["lastContactedDateTime"])) {
                 return $this->_propDict["lastContactedDateTime"];
             } else {
                 $this->_propDict["lastContactedDateTime"] = new \DateTime($this->_propDict["lastContactedDateTime"]);
@@ -218,12 +218,12 @@ class ImportedDeviceIdentity extends Entity
     * Gets the lastModifiedDateTime
     * Last Modified DateTime of the description
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -251,12 +251,12 @@ class ImportedDeviceIdentity extends Entity
     * Gets the platform
     * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
     *
-    * @return Platform The platform
+    * @return Platform|null The platform
     */
     public function getPlatform()
     {
         if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\Platform")) {
+            if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\Platform") || is_null($this->_propDict["platform"])) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new Platform($this->_propDict["platform"]);

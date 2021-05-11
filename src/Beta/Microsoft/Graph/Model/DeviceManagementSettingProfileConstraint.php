@@ -36,7 +36,7 @@ class DeviceManagementSettingProfileConstraint extends DeviceManagementConstrain
     * Gets the source
     * The source of the entity
     *
-    * @return string The source
+    * @return string|null The source
     */
     public function getSource()
     {
@@ -64,7 +64,7 @@ class DeviceManagementSettingProfileConstraint extends DeviceManagementConstrain
     * Gets the types
     * A collection of types this entity carries
     *
-    * @return string The types
+    * @return string|null The types
     */
     public function getTypes()
     {

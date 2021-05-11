@@ -28,12 +28,12 @@ class Windows extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the updates
     * Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only.
     *
-    * @return Updates The updates
+    * @return Updates|null The updates
     */
     public function getUpdates()
     {
         if (array_key_exists("updates", $this->_propDict)) {
-            if (is_a($this->_propDict["updates"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\Updates")) {
+            if (is_a($this->_propDict["updates"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\Updates") || is_null($this->_propDict["updates"])) {
                 return $this->_propDict["updates"];
             } else {
                 $this->_propDict["updates"] = new Updates($this->_propDict["updates"]);

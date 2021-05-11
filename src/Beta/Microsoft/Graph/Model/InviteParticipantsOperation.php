@@ -29,7 +29,7 @@ class InviteParticipantsOperation extends CommsOperation
      * Gets the participants
     * The participants to invite.
      *
-     * @return array The participants
+     * @return array|null The participants
      */
     public function getParticipants()
     {
@@ -50,7 +50,7 @@ class InviteParticipantsOperation extends CommsOperation
     */
     public function setParticipants($val)
     {
-		$this->_propDict["participants"] = $val;
+        $this->_propDict["participants"] = $val;
         return $this;
     }
     

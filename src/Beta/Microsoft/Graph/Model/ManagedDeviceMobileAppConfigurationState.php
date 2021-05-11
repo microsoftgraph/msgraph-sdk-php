@@ -28,7 +28,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     * Gets the displayName
     * The name of the policy for this policyBase
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,12 +57,12 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     * Gets the platformType
     * Platform type that the policy applies to
     *
-    * @return PolicyPlatformType The platformType
+    * @return PolicyPlatformType|null The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\PolicyPlatformType")) {
+            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\PolicyPlatformType") || is_null($this->_propDict["platformType"])) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -90,7 +90,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     * Gets the settingCount
     * Count of how many setting a policy holds
     *
-    * @return int The settingCount
+    * @return int|null The settingCount
     */
     public function getSettingCount()
     {
@@ -119,7 +119,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
      /** 
      * Gets the settingStates
      *
-     * @return array The settingStates
+     * @return array|null The settingStates
      */
     public function getSettingStates()
     {
@@ -139,7 +139,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     */
     public function setSettingStates($val)
     {
-		$this->_propDict["settingStates"] = $val;
+        $this->_propDict["settingStates"] = $val;
         return $this;
     }
     
@@ -147,12 +147,12 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     * Gets the state
     * The compliance state of the policy
     *
-    * @return ComplianceStatus The state
+    * @return ComplianceStatus|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);
@@ -180,7 +180,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     * Gets the userId
     * User unique identifier, must be Guid
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -209,7 +209,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     * Gets the userPrincipalName
     * User Principal Name
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -238,7 +238,7 @@ class ManagedDeviceMobileAppConfigurationState extends Entity
     * Gets the version
     * The version of the policy
     *
-    * @return int The version
+    * @return int|null The version
     */
     public function getVersion()
     {

@@ -28,12 +28,12 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     * Gets the deviceCertificateSettings
     * The Trusted Root and PFX certificates for Device
     *
-    * @return IosEduCertificateSettings The deviceCertificateSettings
+    * @return IosEduCertificateSettings|null The deviceCertificateSettings
     */
     public function getDeviceCertificateSettings()
     {
         if (array_key_exists("deviceCertificateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCertificateSettings"], "\Beta\Microsoft\Graph\Model\IosEduCertificateSettings")) {
+            if (is_a($this->_propDict["deviceCertificateSettings"], "\Beta\Microsoft\Graph\Model\IosEduCertificateSettings") || is_null($this->_propDict["deviceCertificateSettings"])) {
                 return $this->_propDict["deviceCertificateSettings"];
             } else {
                 $this->_propDict["deviceCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["deviceCertificateSettings"]);
@@ -61,12 +61,12 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     * Gets the studentCertificateSettings
     * The Trusted Root and PFX certificates for Student
     *
-    * @return IosEduCertificateSettings The studentCertificateSettings
+    * @return IosEduCertificateSettings|null The studentCertificateSettings
     */
     public function getStudentCertificateSettings()
     {
         if (array_key_exists("studentCertificateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["studentCertificateSettings"], "\Beta\Microsoft\Graph\Model\IosEduCertificateSettings")) {
+            if (is_a($this->_propDict["studentCertificateSettings"], "\Beta\Microsoft\Graph\Model\IosEduCertificateSettings") || is_null($this->_propDict["studentCertificateSettings"])) {
                 return $this->_propDict["studentCertificateSettings"];
             } else {
                 $this->_propDict["studentCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["studentCertificateSettings"]);
@@ -94,12 +94,12 @@ class IosEduDeviceConfiguration extends DeviceConfiguration
     * Gets the teacherCertificateSettings
     * The Trusted Root and PFX certificates for Teacher
     *
-    * @return IosEduCertificateSettings The teacherCertificateSettings
+    * @return IosEduCertificateSettings|null The teacherCertificateSettings
     */
     public function getTeacherCertificateSettings()
     {
         if (array_key_exists("teacherCertificateSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["teacherCertificateSettings"], "\Beta\Microsoft\Graph\Model\IosEduCertificateSettings")) {
+            if (is_a($this->_propDict["teacherCertificateSettings"], "\Beta\Microsoft\Graph\Model\IosEduCertificateSettings") || is_null($this->_propDict["teacherCertificateSettings"])) {
                 return $this->_propDict["teacherCertificateSettings"];
             } else {
                 $this->_propDict["teacherCertificateSettings"] = new IosEduCertificateSettings($this->_propDict["teacherCertificateSettings"]);

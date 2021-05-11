@@ -28,7 +28,7 @@ class AuthenticationFlowsPolicy extends Entity
     * Gets the description
     * Inherited property. A description of the policy. Optional. Read-only.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class AuthenticationFlowsPolicy extends Entity
     * Gets the displayName
     * Inherited property. The human-readable name of the policy. Optional. Read-only.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,12 +86,12 @@ class AuthenticationFlowsPolicy extends Entity
     * Gets the selfServiceSignUp
     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
     *
-    * @return SelfServiceSignUpAuthenticationFlowConfiguration The selfServiceSignUp
+    * @return SelfServiceSignUpAuthenticationFlowConfiguration|null The selfServiceSignUp
     */
     public function getSelfServiceSignUp()
     {
         if (array_key_exists("selfServiceSignUp", $this->_propDict)) {
-            if (is_a($this->_propDict["selfServiceSignUp"], "\Beta\Microsoft\Graph\Model\SelfServiceSignUpAuthenticationFlowConfiguration")) {
+            if (is_a($this->_propDict["selfServiceSignUp"], "\Beta\Microsoft\Graph\Model\SelfServiceSignUpAuthenticationFlowConfiguration") || is_null($this->_propDict["selfServiceSignUp"])) {
                 return $this->_propDict["selfServiceSignUp"];
             } else {
                 $this->_propDict["selfServiceSignUp"] = new SelfServiceSignUpAuthenticationFlowConfiguration($this->_propDict["selfServiceSignUp"]);

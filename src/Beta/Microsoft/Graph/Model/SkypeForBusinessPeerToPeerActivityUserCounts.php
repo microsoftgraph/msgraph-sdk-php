@@ -27,7 +27,7 @@ class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity
     /**
     * Gets the appSharing
     *
-    * @return int The appSharing
+    * @return int|null The appSharing
     */
     public function getAppSharing()
     {
@@ -54,7 +54,7 @@ class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity
     /**
     * Gets the audio
     *
-    * @return int The audio
+    * @return int|null The audio
     */
     public function getAudio()
     {
@@ -81,7 +81,7 @@ class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity
     /**
     * Gets the fileTransfer
     *
-    * @return int The fileTransfer
+    * @return int|null The fileTransfer
     */
     public function getFileTransfer()
     {
@@ -108,7 +108,7 @@ class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity
     /**
     * Gets the im
     *
-    * @return int The im
+    * @return int|null The im
     */
     public function getIm()
     {
@@ -135,12 +135,12 @@ class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity
     /**
     * Gets the reportDate
     *
-    * @return \DateTime The reportDate
+    * @return \DateTime|null The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
                 return $this->_propDict["reportDate"];
             } else {
                 $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
@@ -166,7 +166,7 @@ class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -193,12 +193,12 @@ class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -224,7 +224,7 @@ class SkypeForBusinessPeerToPeerActivityUserCounts extends Entity
     /**
     * Gets the video
     *
-    * @return int The video
+    * @return int|null The video
     */
     public function getVideo()
     {

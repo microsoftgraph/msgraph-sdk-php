@@ -26,7 +26,7 @@ class UnifiedRoleManagementPolicyRuleTarget extends Entity
     /**
     * Gets the caller
     *
-    * @return string The caller
+    * @return string|null The caller
     */
     public function getCaller()
     {
@@ -52,7 +52,7 @@ class UnifiedRoleManagementPolicyRuleTarget extends Entity
     /**
     * Gets the enforcedSettings
     *
-    * @return string The enforcedSettings
+    * @return string|null The enforcedSettings
     */
     public function getEnforcedSettings()
     {
@@ -78,7 +78,7 @@ class UnifiedRoleManagementPolicyRuleTarget extends Entity
     /**
     * Gets the inheritableSettings
     *
-    * @return string The inheritableSettings
+    * @return string|null The inheritableSettings
     */
     public function getInheritableSettings()
     {
@@ -104,7 +104,7 @@ class UnifiedRoleManagementPolicyRuleTarget extends Entity
     /**
     * Gets the level
     *
-    * @return string The level
+    * @return string|null The level
     */
     public function getLevel()
     {
@@ -130,7 +130,7 @@ class UnifiedRoleManagementPolicyRuleTarget extends Entity
     /**
     * Gets the operations
     *
-    * @return string The operations
+    * @return string|null The operations
     */
     public function getOperations()
     {
@@ -157,12 +157,12 @@ class UnifiedRoleManagementPolicyRuleTarget extends Entity
     /**
     * Gets the targetObjects
     *
-    * @return DirectoryObject The targetObjects
+    * @return DirectoryObject|null The targetObjects
     */
     public function getTargetObjects()
     {
         if (array_key_exists("targetObjects", $this->_propDict)) {
-            if (is_a($this->_propDict["targetObjects"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["targetObjects"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["targetObjects"])) {
                 return $this->_propDict["targetObjects"];
             } else {
                 $this->_propDict["targetObjects"] = new DirectoryObject($this->_propDict["targetObjects"]);

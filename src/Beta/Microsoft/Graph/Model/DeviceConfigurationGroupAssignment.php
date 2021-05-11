@@ -28,7 +28,7 @@ class DeviceConfigurationGroupAssignment extends Entity
     * Gets the excludeGroup
     * Indicates if this group is should be excluded. Defaults that the group should be included
     *
-    * @return bool The excludeGroup
+    * @return bool|null The excludeGroup
     */
     public function getExcludeGroup()
     {
@@ -57,7 +57,7 @@ class DeviceConfigurationGroupAssignment extends Entity
     * Gets the targetGroupId
     * The Id of the AAD group we are targeting the device configuration to.
     *
-    * @return string The targetGroupId
+    * @return string|null The targetGroupId
     */
     public function getTargetGroupId()
     {
@@ -86,12 +86,12 @@ class DeviceConfigurationGroupAssignment extends Entity
     * Gets the deviceConfiguration
     * The navigation link to the Device Configuration being targeted.
     *
-    * @return DeviceConfiguration The deviceConfiguration
+    * @return DeviceConfiguration|null The deviceConfiguration
     */
     public function getDeviceConfiguration()
     {
         if (array_key_exists("deviceConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceConfiguration"], "\Beta\Microsoft\Graph\Model\DeviceConfiguration")) {
+            if (is_a($this->_propDict["deviceConfiguration"], "\Beta\Microsoft\Graph\Model\DeviceConfiguration") || is_null($this->_propDict["deviceConfiguration"])) {
                 return $this->_propDict["deviceConfiguration"];
             } else {
                 $this->_propDict["deviceConfiguration"] = new DeviceConfiguration($this->_propDict["deviceConfiguration"]);

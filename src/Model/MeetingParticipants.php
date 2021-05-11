@@ -28,12 +28,12 @@ class MeetingParticipants extends Entity
     * Gets the attendees
     * Information of the meeting attendees.
     *
-    * @return MeetingParticipantInfo The attendees
+    * @return MeetingParticipantInfo|null The attendees
     */
     public function getAttendees()
     {
         if (array_key_exists("attendees", $this->_propDict)) {
-            if (is_a($this->_propDict["attendees"], "\Microsoft\Graph\Model\MeetingParticipantInfo")) {
+            if (is_a($this->_propDict["attendees"], "\Microsoft\Graph\Model\MeetingParticipantInfo") || is_null($this->_propDict["attendees"])) {
                 return $this->_propDict["attendees"];
             } else {
                 $this->_propDict["attendees"] = new MeetingParticipantInfo($this->_propDict["attendees"]);
@@ -61,12 +61,12 @@ class MeetingParticipants extends Entity
     * Gets the organizer
     * Information of the meeting organizer.
     *
-    * @return MeetingParticipantInfo The organizer
+    * @return MeetingParticipantInfo|null The organizer
     */
     public function getOrganizer()
     {
         if (array_key_exists("organizer", $this->_propDict)) {
-            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\MeetingParticipantInfo")) {
+            if (is_a($this->_propDict["organizer"], "\Microsoft\Graph\Model\MeetingParticipantInfo") || is_null($this->_propDict["organizer"])) {
                 return $this->_propDict["organizer"];
             } else {
                 $this->_propDict["organizer"] = new MeetingParticipantInfo($this->_propDict["organizer"]);

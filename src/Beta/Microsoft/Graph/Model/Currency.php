@@ -27,7 +27,7 @@ class Currency extends Entity
     /**
     * Gets the amountDecimalPlaces
     *
-    * @return string The amountDecimalPlaces
+    * @return string|null The amountDecimalPlaces
     */
     public function getAmountDecimalPlaces()
     {
@@ -54,12 +54,12 @@ class Currency extends Entity
     /**
     * Gets the amountRoundingPrecision
     *
-    * @return Decimal The amountRoundingPrecision
+    * @return Decimal|null The amountRoundingPrecision
     */
     public function getAmountRoundingPrecision()
     {
         if (array_key_exists("amountRoundingPrecision", $this->_propDict)) {
-            if (is_a($this->_propDict["amountRoundingPrecision"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["amountRoundingPrecision"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["amountRoundingPrecision"])) {
                 return $this->_propDict["amountRoundingPrecision"];
             } else {
                 $this->_propDict["amountRoundingPrecision"] = new Decimal($this->_propDict["amountRoundingPrecision"]);
@@ -85,7 +85,7 @@ class Currency extends Entity
     /**
     * Gets the code
     *
-    * @return string The code
+    * @return string|null The code
     */
     public function getCode()
     {
@@ -112,7 +112,7 @@ class Currency extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -139,12 +139,12 @@ class Currency extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -170,7 +170,7 @@ class Currency extends Entity
     /**
     * Gets the symbol
     *
-    * @return string The symbol
+    * @return string|null The symbol
     */
     public function getSymbol()
     {

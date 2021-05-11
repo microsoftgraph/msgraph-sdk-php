@@ -27,7 +27,7 @@ class TopicModelingSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the dynamicallyAdjustTopicCount
     * To learn more, see Adjust maximum number of themes dynamically.
     *
-    * @return bool The dynamicallyAdjustTopicCount
+    * @return bool|null The dynamicallyAdjustTopicCount
     */
     public function getDynamicallyAdjustTopicCount()
     {
@@ -55,7 +55,7 @@ class TopicModelingSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the ignoreNumbers
     * To learn more, see Include numbers in themes.
     *
-    * @return bool The ignoreNumbers
+    * @return bool|null The ignoreNumbers
     */
     public function getIgnoreNumbers()
     {
@@ -83,7 +83,7 @@ class TopicModelingSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the isEnabled
     * Indicates whether themes is enabled for the case.
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {
@@ -111,7 +111,7 @@ class TopicModelingSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the topicCount
     * To learn more, see Maximum number of themes.
     *
-    * @return int The topicCount
+    * @return int|null The topicCount
     */
     public function getTopicCount()
     {

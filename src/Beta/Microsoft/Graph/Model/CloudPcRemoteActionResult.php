@@ -26,7 +26,7 @@ class CloudPcRemoteActionResult extends Entity
     /**
     * Gets the actionName
     *
-    * @return string The actionName
+    * @return string|null The actionName
     */
     public function getActionName()
     {
@@ -53,12 +53,12 @@ class CloudPcRemoteActionResult extends Entity
     /**
     * Gets the actionState
     *
-    * @return ActionState The actionState
+    * @return ActionState|null The actionState
     */
     public function getActionState()
     {
         if (array_key_exists("actionState", $this->_propDict)) {
-            if (is_a($this->_propDict["actionState"], "\Beta\Microsoft\Graph\Model\ActionState")) {
+            if (is_a($this->_propDict["actionState"], "\Beta\Microsoft\Graph\Model\ActionState") || is_null($this->_propDict["actionState"])) {
                 return $this->_propDict["actionState"];
             } else {
                 $this->_propDict["actionState"] = new ActionState($this->_propDict["actionState"]);
@@ -83,7 +83,7 @@ class CloudPcRemoteActionResult extends Entity
     /**
     * Gets the cloudPcId
     *
-    * @return string The cloudPcId
+    * @return string|null The cloudPcId
     */
     public function getCloudPcId()
     {
@@ -110,12 +110,12 @@ class CloudPcRemoteActionResult extends Entity
     /**
     * Gets the lastUpdatedDateTime
     *
-    * @return \DateTime The lastUpdatedDateTime
+    * @return \DateTime|null The lastUpdatedDateTime
     */
     public function getLastUpdatedDateTime()
     {
         if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdatedDateTime"])) {
                 return $this->_propDict["lastUpdatedDateTime"];
             } else {
                 $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
@@ -140,7 +140,7 @@ class CloudPcRemoteActionResult extends Entity
     /**
     * Gets the managedDeviceId
     *
-    * @return string The managedDeviceId
+    * @return string|null The managedDeviceId
     */
     public function getManagedDeviceId()
     {
@@ -167,12 +167,12 @@ class CloudPcRemoteActionResult extends Entity
     /**
     * Gets the startDateTime
     *
-    * @return \DateTime The startDateTime
+    * @return \DateTime|null The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -198,12 +198,12 @@ class CloudPcRemoteActionResult extends Entity
     /**
     * Gets the statusDetails
     *
-    * @return CloudPcStatusDetails The statusDetails
+    * @return CloudPcStatusDetails|null The statusDetails
     */
     public function getStatusDetails()
     {
         if (array_key_exists("statusDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcStatusDetails")) {
+            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\CloudPcStatusDetails") || is_null($this->_propDict["statusDetails"])) {
                 return $this->_propDict["statusDetails"];
             } else {
                 $this->_propDict["statusDetails"] = new CloudPcStatusDetails($this->_propDict["statusDetails"]);

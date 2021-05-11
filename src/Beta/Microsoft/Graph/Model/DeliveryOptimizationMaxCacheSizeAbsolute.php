@@ -36,7 +36,7 @@ class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizationMaxCa
     * Gets the maximumCacheSizeInGigabytes
     * The value 0 (zero) means "unlimited" cache. Delivery Optimization will clear the cache when the device is running low on disk space. Valid values 0 to 4294967295
     *
-    * @return int The maximumCacheSizeInGigabytes
+    * @return int|null The maximumCacheSizeInGigabytes
     */
     public function getMaximumCacheSizeInGigabytes()
     {

@@ -28,7 +28,7 @@ class DeviceManagementComplexSettingDefinition extends DeviceManagementSettingDe
     * Gets the propertyDefinitionIds
     * The definitions of each property of the complex setting
     *
-    * @return string The propertyDefinitionIds
+    * @return string|null The propertyDefinitionIds
     */
     public function getPropertyDefinitionIds()
     {

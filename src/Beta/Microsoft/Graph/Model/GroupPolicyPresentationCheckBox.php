@@ -28,7 +28,7 @@ class GroupPolicyPresentationCheckBox extends GroupPolicyPresentation
     * Gets the defaultChecked
     * Default value for the check box. The default value is false.
     *
-    * @return bool The defaultChecked
+    * @return bool|null The defaultChecked
     */
     public function getDefaultChecked()
     {

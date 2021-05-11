@@ -28,12 +28,12 @@ class Initiator extends Identity
     * Gets the initiatorType
     * Type of initiator. Possible values are: user, app, system, unknownFutureValue.
     *
-    * @return InitiatorType The initiatorType
+    * @return InitiatorType|null The initiatorType
     */
     public function getInitiatorType()
     {
         if (array_key_exists("initiatorType", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatorType"], "\Microsoft\Graph\Model\InitiatorType")) {
+            if (is_a($this->_propDict["initiatorType"], "\Microsoft\Graph\Model\InitiatorType") || is_null($this->_propDict["initiatorType"])) {
                 return $this->_propDict["initiatorType"];
             } else {
                 $this->_propDict["initiatorType"] = new InitiatorType($this->_propDict["initiatorType"]);

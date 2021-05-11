@@ -28,7 +28,7 @@ class PersonName extends ItemFacet
     * Gets the displayName
     * Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class PersonName extends ItemFacet
     * Gets the first
     * First name of the user.
     *
-    * @return string The first
+    * @return string|null The first
     */
     public function getFirst()
     {
@@ -86,7 +86,7 @@ class PersonName extends ItemFacet
     * Gets the initials
     * Initials of the user.
     *
-    * @return string The initials
+    * @return string|null The initials
     */
     public function getInitials()
     {
@@ -115,7 +115,7 @@ class PersonName extends ItemFacet
     * Gets the languageTag
     * Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
     *
-    * @return string The languageTag
+    * @return string|null The languageTag
     */
     public function getLanguageTag()
     {
@@ -144,7 +144,7 @@ class PersonName extends ItemFacet
     * Gets the last
     * Last name of the user.
     *
-    * @return string The last
+    * @return string|null The last
     */
     public function getLast()
     {
@@ -173,7 +173,7 @@ class PersonName extends ItemFacet
     * Gets the maiden
     * Maiden name of the user.
     *
-    * @return string The maiden
+    * @return string|null The maiden
     */
     public function getMaiden()
     {
@@ -202,7 +202,7 @@ class PersonName extends ItemFacet
     * Gets the middle
     * Middle name of the user.
     *
-    * @return string The middle
+    * @return string|null The middle
     */
     public function getMiddle()
     {
@@ -231,7 +231,7 @@ class PersonName extends ItemFacet
     * Gets the nickname
     * Nickname of the user.
     *
-    * @return string The nickname
+    * @return string|null The nickname
     */
     public function getNickname()
     {
@@ -260,12 +260,12 @@ class PersonName extends ItemFacet
     * Gets the pronunciation
     * Guidance on how to pronounce the users name.
     *
-    * @return PersonNamePronounciation The pronunciation
+    * @return PersonNamePronounciation|null The pronunciation
     */
     public function getPronunciation()
     {
         if (array_key_exists("pronunciation", $this->_propDict)) {
-            if (is_a($this->_propDict["pronunciation"], "\Beta\Microsoft\Graph\Model\PersonNamePronounciation")) {
+            if (is_a($this->_propDict["pronunciation"], "\Beta\Microsoft\Graph\Model\PersonNamePronounciation") || is_null($this->_propDict["pronunciation"])) {
                 return $this->_propDict["pronunciation"];
             } else {
                 $this->_propDict["pronunciation"] = new PersonNamePronounciation($this->_propDict["pronunciation"]);
@@ -293,7 +293,7 @@ class PersonName extends ItemFacet
     * Gets the suffix
     * Designators used after the users name (eg: PhD.)
     *
-    * @return string The suffix
+    * @return string|null The suffix
     */
     public function getSuffix()
     {
@@ -322,7 +322,7 @@ class PersonName extends ItemFacet
     * Gets the title
     * Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
     *
-    * @return string The title
+    * @return string|null The title
     */
     public function getTitle()
     {

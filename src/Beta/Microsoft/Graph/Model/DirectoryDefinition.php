@@ -28,12 +28,12 @@ class DirectoryDefinition extends Entity
     * Gets the discoverabilities
     * Read only value indicating what type of discovery the app supports. Possible values are: AttributeDataTypes, AttributeNames, AttributeReadOnly, None, ReferenceAttributes, UnknownFutureValue.
     *
-    * @return DirectoryDefinitionDiscoverabilities The discoverabilities
+    * @return DirectoryDefinitionDiscoverabilities|null The discoverabilities
     */
     public function getDiscoverabilities()
     {
         if (array_key_exists("discoverabilities", $this->_propDict)) {
-            if (is_a($this->_propDict["discoverabilities"], "\Beta\Microsoft\Graph\Model\DirectoryDefinitionDiscoverabilities")) {
+            if (is_a($this->_propDict["discoverabilities"], "\Beta\Microsoft\Graph\Model\DirectoryDefinitionDiscoverabilities") || is_null($this->_propDict["discoverabilities"])) {
                 return $this->_propDict["discoverabilities"];
             } else {
                 $this->_propDict["discoverabilities"] = new DirectoryDefinitionDiscoverabilities($this->_propDict["discoverabilities"]);
@@ -61,12 +61,12 @@ class DirectoryDefinition extends Entity
     * Gets the discoveryDateTime
     * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime The discoveryDateTime
+    * @return \DateTime|null The discoveryDateTime
     */
     public function getDiscoveryDateTime()
     {
         if (array_key_exists("discoveryDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["discoveryDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["discoveryDateTime"], "\DateTime") || is_null($this->_propDict["discoveryDateTime"])) {
                 return $this->_propDict["discoveryDateTime"];
             } else {
                 $this->_propDict["discoveryDateTime"] = new \DateTime($this->_propDict["discoveryDateTime"]);
@@ -94,7 +94,7 @@ class DirectoryDefinition extends Entity
     * Gets the name
     * Name of the directory. Must be unique within the synchronization schema. Not nullable.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -124,7 +124,7 @@ class DirectoryDefinition extends Entity
      * Gets the objects
     * Collection of objects supported by the directory.
      *
-     * @return array The objects
+     * @return array|null The objects
      */
     public function getObjects()
     {
@@ -145,14 +145,14 @@ class DirectoryDefinition extends Entity
     */
     public function setObjects($val)
     {
-		$this->_propDict["objects"] = $val;
+        $this->_propDict["objects"] = $val;
         return $this;
     }
     
     /**
     * Gets the readOnly
     *
-    * @return bool The readOnly
+    * @return bool|null The readOnly
     */
     public function getReadOnly()
     {
@@ -180,7 +180,7 @@ class DirectoryDefinition extends Entity
     * Gets the version
     * Read only value that indicates version discovered. null if discovery has not yet occurred.
     *
-    * @return string The version
+    * @return string|null The version
     */
     public function getVersion()
     {

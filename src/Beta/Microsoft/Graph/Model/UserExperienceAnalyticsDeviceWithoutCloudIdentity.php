@@ -28,7 +28,7 @@ class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity
     * Gets the azureAdDeviceId
     * Azure Active Directory Device Id
     *
-    * @return string The azureAdDeviceId
+    * @return string|null The azureAdDeviceId
     */
     public function getAzureAdDeviceId()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity
     * Gets the deviceName
     * The tenant attach device's name.
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {

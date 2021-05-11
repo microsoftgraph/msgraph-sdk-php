@@ -26,7 +26,7 @@ class ConditionalAccessClientApplications extends Entity
     /**
     * Gets the excludeServicePrincipals
     *
-    * @return string The excludeServicePrincipals
+    * @return string|null The excludeServicePrincipals
     */
     public function getExcludeServicePrincipals()
     {
@@ -52,7 +52,7 @@ class ConditionalAccessClientApplications extends Entity
     /**
     * Gets the includeServicePrincipals
     *
-    * @return string The includeServicePrincipals
+    * @return string|null The includeServicePrincipals
     */
     public function getIncludeServicePrincipals()
     {

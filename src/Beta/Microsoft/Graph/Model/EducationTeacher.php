@@ -27,7 +27,7 @@ class EducationTeacher extends Entity
     * Gets the externalId
     * ID of the teacher in the source system.
     *
-    * @return string The externalId
+    * @return string|null The externalId
     */
     public function getExternalId()
     {
@@ -55,7 +55,7 @@ class EducationTeacher extends Entity
     * Gets the teacherNumber
     * Teacher number.
     *
-    * @return string The teacherNumber
+    * @return string|null The teacherNumber
     */
     public function getTeacherNumber()
     {

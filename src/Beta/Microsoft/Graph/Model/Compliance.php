@@ -39,7 +39,10 @@ class Compliance implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-		$this->_propDict = $propDict;
+        if (!is_array($propDict)) {
+           $propDict = array();
+        }
+        $this->_propDict = $propDict;
     }
 
     /**
@@ -55,12 +58,12 @@ class Compliance implements \JsonSerializable
     /**
     * Gets the ediscovery
     *
-    * @return \Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot The ediscovery
+    * @return \Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot|null The ediscovery
     */
     public function getEdiscovery()
     {
         if (array_key_exists("ediscovery", $this->_propDict)) {
-            if (is_a($this->_propDict["ediscovery"], "\Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot")) {
+            if (is_a($this->_propDict["ediscovery"], "\Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot") || is_null($this->_propDict["ediscovery"])) {
                 return $this->_propDict["ediscovery"];
             } else {
                 $this->_propDict["ediscovery"] = new \Beta\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot($this->_propDict["ediscovery"]);
@@ -108,7 +111,7 @@ class Compliance implements \JsonSerializable
     
     /**
     * Serializes the object by property array
-	* Manually serialize DateTime into RFC3339 format
+    * Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */

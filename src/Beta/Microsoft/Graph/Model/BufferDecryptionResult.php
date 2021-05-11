@@ -27,12 +27,12 @@ class BufferDecryptionResult extends Entity
     /**
     * Gets the decryptedBuffer
     *
-    * @return \GuzzleHttp\Psr7\Stream The decryptedBuffer
+    * @return \GuzzleHttp\Psr7\Stream|null The decryptedBuffer
     */
     public function getDecryptedBuffer()
     {
         if (array_key_exists("decryptedBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["decryptedBuffer"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["decryptedBuffer"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["decryptedBuffer"])) {
                 return $this->_propDict["decryptedBuffer"];
             } else {
                 $this->_propDict["decryptedBuffer"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["decryptedBuffer"]);

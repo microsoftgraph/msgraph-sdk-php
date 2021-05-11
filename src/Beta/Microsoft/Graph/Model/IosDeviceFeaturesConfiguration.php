@@ -28,7 +28,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the assetTagTemplate
     * Asset tag information for the device, displayed on the login window and lock screen.
     *
-    * @return string The assetTagTemplate
+    * @return string|null The assetTagTemplate
     */
     public function getAssetTagTemplate()
     {
@@ -57,12 +57,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the contentFilterSettings
     * Gets or sets iOS Web Content Filter settings, supervised mode only
     *
-    * @return IosWebContentFilterBase The contentFilterSettings
+    * @return IosWebContentFilterBase|null The contentFilterSettings
     */
     public function getContentFilterSettings()
     {
         if (array_key_exists("contentFilterSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["contentFilterSettings"], "\Beta\Microsoft\Graph\Model\IosWebContentFilterBase")) {
+            if (is_a($this->_propDict["contentFilterSettings"], "\Beta\Microsoft\Graph\Model\IosWebContentFilterBase") || is_null($this->_propDict["contentFilterSettings"])) {
                 return $this->_propDict["contentFilterSettings"];
             } else {
                 $this->_propDict["contentFilterSettings"] = new IosWebContentFilterBase($this->_propDict["contentFilterSettings"]);
@@ -91,7 +91,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the homeScreenDockIcons
     * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      *
-     * @return array The homeScreenDockIcons
+     * @return array|null The homeScreenDockIcons
      */
     public function getHomeScreenDockIcons()
     {
@@ -112,7 +112,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setHomeScreenDockIcons($val)
     {
-		$this->_propDict["homeScreenDockIcons"] = $val;
+        $this->_propDict["homeScreenDockIcons"] = $val;
         return $this;
     }
     
@@ -121,7 +121,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the homeScreenPages
     * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      *
-     * @return array The homeScreenPages
+     * @return array|null The homeScreenPages
      */
     public function getHomeScreenPages()
     {
@@ -142,7 +142,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setHomeScreenPages($val)
     {
-		$this->_propDict["homeScreenPages"] = $val;
+        $this->_propDict["homeScreenPages"] = $val;
         return $this;
     }
     
@@ -150,12 +150,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the iosSingleSignOnExtension
     * Gets or sets a single sign-on extension profile.
     *
-    * @return IosSingleSignOnExtension The iosSingleSignOnExtension
+    * @return IosSingleSignOnExtension|null The iosSingleSignOnExtension
     */
     public function getIosSingleSignOnExtension()
     {
         if (array_key_exists("iosSingleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["iosSingleSignOnExtension"], "\Beta\Microsoft\Graph\Model\IosSingleSignOnExtension")) {
+            if (is_a($this->_propDict["iosSingleSignOnExtension"], "\Beta\Microsoft\Graph\Model\IosSingleSignOnExtension") || is_null($this->_propDict["iosSingleSignOnExtension"])) {
                 return $this->_propDict["iosSingleSignOnExtension"];
             } else {
                 $this->_propDict["iosSingleSignOnExtension"] = new IosSingleSignOnExtension($this->_propDict["iosSingleSignOnExtension"]);
@@ -183,7 +183,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the lockScreenFootnote
     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
     *
-    * @return string The lockScreenFootnote
+    * @return string|null The lockScreenFootnote
     */
     public function getLockScreenFootnote()
     {
@@ -213,7 +213,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the notificationSettings
     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      *
-     * @return array The notificationSettings
+     * @return array|null The notificationSettings
      */
     public function getNotificationSettings()
     {
@@ -234,7 +234,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     */
     public function setNotificationSettings($val)
     {
-		$this->_propDict["notificationSettings"] = $val;
+        $this->_propDict["notificationSettings"] = $val;
         return $this;
     }
     
@@ -242,12 +242,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the singleSignOnExtension
     * Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
     *
-    * @return SingleSignOnExtension The singleSignOnExtension
+    * @return SingleSignOnExtension|null The singleSignOnExtension
     */
     public function getSingleSignOnExtension()
     {
         if (array_key_exists("singleSignOnExtension", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtension"], "\Beta\Microsoft\Graph\Model\SingleSignOnExtension")) {
+            if (is_a($this->_propDict["singleSignOnExtension"], "\Beta\Microsoft\Graph\Model\SingleSignOnExtension") || is_null($this->_propDict["singleSignOnExtension"])) {
                 return $this->_propDict["singleSignOnExtension"];
             } else {
                 $this->_propDict["singleSignOnExtension"] = new SingleSignOnExtension($this->_propDict["singleSignOnExtension"]);
@@ -275,12 +275,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the singleSignOnSettings
     * The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
     *
-    * @return IosSingleSignOnSettings The singleSignOnSettings
+    * @return IosSingleSignOnSettings|null The singleSignOnSettings
     */
     public function getSingleSignOnSettings()
     {
         if (array_key_exists("singleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnSettings"], "\Beta\Microsoft\Graph\Model\IosSingleSignOnSettings")) {
+            if (is_a($this->_propDict["singleSignOnSettings"], "\Beta\Microsoft\Graph\Model\IosSingleSignOnSettings") || is_null($this->_propDict["singleSignOnSettings"])) {
                 return $this->_propDict["singleSignOnSettings"];
             } else {
                 $this->_propDict["singleSignOnSettings"] = new IosSingleSignOnSettings($this->_propDict["singleSignOnSettings"]);
@@ -308,12 +308,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the wallpaperDisplayLocation
     * A wallpaper display location specifier. Possible values are: notConfigured, lockScreen, homeScreen, lockAndHomeScreens.
     *
-    * @return IosWallpaperDisplayLocation The wallpaperDisplayLocation
+    * @return IosWallpaperDisplayLocation|null The wallpaperDisplayLocation
     */
     public function getWallpaperDisplayLocation()
     {
         if (array_key_exists("wallpaperDisplayLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["wallpaperDisplayLocation"], "\Beta\Microsoft\Graph\Model\IosWallpaperDisplayLocation")) {
+            if (is_a($this->_propDict["wallpaperDisplayLocation"], "\Beta\Microsoft\Graph\Model\IosWallpaperDisplayLocation") || is_null($this->_propDict["wallpaperDisplayLocation"])) {
                 return $this->_propDict["wallpaperDisplayLocation"];
             } else {
                 $this->_propDict["wallpaperDisplayLocation"] = new IosWallpaperDisplayLocation($this->_propDict["wallpaperDisplayLocation"]);
@@ -341,12 +341,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the wallpaperImage
     * A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
     *
-    * @return MimeContent The wallpaperImage
+    * @return MimeContent|null The wallpaperImage
     */
     public function getWallpaperImage()
     {
         if (array_key_exists("wallpaperImage", $this->_propDict)) {
-            if (is_a($this->_propDict["wallpaperImage"], "\Beta\Microsoft\Graph\Model\MimeContent")) {
+            if (is_a($this->_propDict["wallpaperImage"], "\Beta\Microsoft\Graph\Model\MimeContent") || is_null($this->_propDict["wallpaperImage"])) {
                 return $this->_propDict["wallpaperImage"];
             } else {
                 $this->_propDict["wallpaperImage"] = new MimeContent($this->_propDict["wallpaperImage"]);
@@ -374,12 +374,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the identityCertificateForClientAuthentication
     * Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
     *
-    * @return IosCertificateProfileBase The identityCertificateForClientAuthentication
+    * @return IosCertificateProfileBase|null The identityCertificateForClientAuthentication
     */
     public function getIdentityCertificateForClientAuthentication()
     {
         if (array_key_exists("identityCertificateForClientAuthentication", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificateForClientAuthentication"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase") || is_null($this->_propDict["identityCertificateForClientAuthentication"])) {
                 return $this->_propDict["identityCertificateForClientAuthentication"];
             } else {
                 $this->_propDict["identityCertificateForClientAuthentication"] = new IosCertificateProfileBase($this->_propDict["identityCertificateForClientAuthentication"]);
@@ -407,12 +407,12 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     * Gets the singleSignOnExtensionPkinitCertificate
     * PKINIT Certificate for the authentication with single sign-on extension settings.
     *
-    * @return IosCertificateProfileBase The singleSignOnExtensionPkinitCertificate
+    * @return IosCertificateProfileBase|null The singleSignOnExtensionPkinitCertificate
     */
     public function getSingleSignOnExtensionPkinitCertificate()
     {
         if (array_key_exists("singleSignOnExtensionPkinitCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["singleSignOnExtensionPkinitCertificate"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["singleSignOnExtensionPkinitCertificate"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase") || is_null($this->_propDict["singleSignOnExtensionPkinitCertificate"])) {
                 return $this->_propDict["singleSignOnExtensionPkinitCertificate"];
             } else {
                 $this->_propDict["singleSignOnExtensionPkinitCertificate"] = new IosCertificateProfileBase($this->_propDict["singleSignOnExtensionPkinitCertificate"]);

@@ -27,12 +27,12 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the deletedDate
     *
-    * @return \DateTime The deletedDate
+    * @return \DateTime|null The deletedDate
     */
     public function getDeletedDate()
     {
         if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime")) {
+            if (is_a($this->_propDict["deletedDate"], "\DateTime") || is_null($this->_propDict["deletedDate"])) {
                 return $this->_propDict["deletedDate"];
             } else {
                 $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
@@ -58,7 +58,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -85,7 +85,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the imap4App
     *
-    * @return string The imap4App
+    * @return string|null The imap4App
     */
     public function getImap4App()
     {
@@ -112,7 +112,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the isDeleted
     *
-    * @return bool The isDeleted
+    * @return bool|null The isDeleted
     */
     public function getIsDeleted()
     {
@@ -139,12 +139,12 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime The lastActivityDate
+    * @return \DateTime|null The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime")) {
+            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
                 return $this->_propDict["lastActivityDate"];
             } else {
                 $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
@@ -170,7 +170,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the mailForMac
     *
-    * @return string The mailForMac
+    * @return string|null The mailForMac
     */
     public function getMailForMac()
     {
@@ -197,7 +197,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the otherForMobile
     *
-    * @return string The otherForMobile
+    * @return string|null The otherForMobile
     */
     public function getOtherForMobile()
     {
@@ -224,7 +224,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the outlookForMac
     *
-    * @return string The outlookForMac
+    * @return string|null The outlookForMac
     */
     public function getOutlookForMac()
     {
@@ -251,7 +251,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the outlookForMobile
     *
-    * @return string The outlookForMobile
+    * @return string|null The outlookForMobile
     */
     public function getOutlookForMobile()
     {
@@ -278,7 +278,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the outlookForWeb
     *
-    * @return string The outlookForWeb
+    * @return string|null The outlookForWeb
     */
     public function getOutlookForWeb()
     {
@@ -305,7 +305,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the outlookForWindows
     *
-    * @return string The outlookForWindows
+    * @return string|null The outlookForWindows
     */
     public function getOutlookForWindows()
     {
@@ -332,7 +332,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the pop3App
     *
-    * @return string The pop3App
+    * @return string|null The pop3App
     */
     public function getPop3App()
     {
@@ -359,7 +359,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the reportPeriod
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -386,12 +386,12 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -417,7 +417,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the smtpApp
     *
-    * @return string The smtpApp
+    * @return string|null The smtpApp
     */
     public function getSmtpApp()
     {
@@ -444,7 +444,7 @@ class EmailAppUsageUserDetail extends Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

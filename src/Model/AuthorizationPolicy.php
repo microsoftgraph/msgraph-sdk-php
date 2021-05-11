@@ -28,7 +28,7 @@ class AuthorizationPolicy extends PolicyBase
     * Gets the allowedToSignUpEmailBasedSubscriptions
     * Indicates whether users can sign up for email based subscriptions.
     *
-    * @return bool The allowedToSignUpEmailBasedSubscriptions
+    * @return bool|null The allowedToSignUpEmailBasedSubscriptions
     */
     public function getAllowedToSignUpEmailBasedSubscriptions()
     {
@@ -57,7 +57,7 @@ class AuthorizationPolicy extends PolicyBase
     * Gets the allowedToUseSSPR
     * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
     *
-    * @return bool The allowedToUseSSPR
+    * @return bool|null The allowedToUseSSPR
     */
     public function getAllowedToUseSSPR()
     {
@@ -86,7 +86,7 @@ class AuthorizationPolicy extends PolicyBase
     * Gets the allowEmailVerifiedUsersToJoinOrganization
     * Indicates whether a user can join the tenant by email validation.
     *
-    * @return bool The allowEmailVerifiedUsersToJoinOrganization
+    * @return bool|null The allowEmailVerifiedUsersToJoinOrganization
     */
     public function getAllowEmailVerifiedUsersToJoinOrganization()
     {
@@ -115,12 +115,12 @@ class AuthorizationPolicy extends PolicyBase
     * Gets the allowInvitesFrom
     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below.
     *
-    * @return AllowInvitesFrom The allowInvitesFrom
+    * @return AllowInvitesFrom|null The allowInvitesFrom
     */
     public function getAllowInvitesFrom()
     {
         if (array_key_exists("allowInvitesFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["allowInvitesFrom"], "\Microsoft\Graph\Model\AllowInvitesFrom")) {
+            if (is_a($this->_propDict["allowInvitesFrom"], "\Microsoft\Graph\Model\AllowInvitesFrom") || is_null($this->_propDict["allowInvitesFrom"])) {
                 return $this->_propDict["allowInvitesFrom"];
             } else {
                 $this->_propDict["allowInvitesFrom"] = new AllowInvitesFrom($this->_propDict["allowInvitesFrom"]);
@@ -148,7 +148,7 @@ class AuthorizationPolicy extends PolicyBase
     * Gets the blockMsolPowerShell
     * To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
     *
-    * @return bool The blockMsolPowerShell
+    * @return bool|null The blockMsolPowerShell
     */
     public function getBlockMsolPowerShell()
     {
@@ -177,12 +177,12 @@ class AuthorizationPolicy extends PolicyBase
     * Gets the defaultUserRolePermissions
     * Specifies certain customizable permissions for default user role.
     *
-    * @return DefaultUserRolePermissions The defaultUserRolePermissions
+    * @return DefaultUserRolePermissions|null The defaultUserRolePermissions
     */
     public function getDefaultUserRolePermissions()
     {
         if (array_key_exists("defaultUserRolePermissions", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultUserRolePermissions"], "\Microsoft\Graph\Model\DefaultUserRolePermissions")) {
+            if (is_a($this->_propDict["defaultUserRolePermissions"], "\Microsoft\Graph\Model\DefaultUserRolePermissions") || is_null($this->_propDict["defaultUserRolePermissions"])) {
                 return $this->_propDict["defaultUserRolePermissions"];
             } else {
                 $this->_propDict["defaultUserRolePermissions"] = new DefaultUserRolePermissions($this->_propDict["defaultUserRolePermissions"]);

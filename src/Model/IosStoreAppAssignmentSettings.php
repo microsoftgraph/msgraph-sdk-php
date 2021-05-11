@@ -36,7 +36,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings
     * Gets the vpnConfigurationId
     * The VPN Configuration Id to apply for this app.
     *
-    * @return string The vpnConfigurationId
+    * @return string|null The vpnConfigurationId
     */
     public function getVpnConfigurationId()
     {

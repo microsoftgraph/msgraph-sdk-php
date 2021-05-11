@@ -28,7 +28,7 @@ class SignIn extends Entity
     * Gets the appDisplayName
     * App name displayed in the Azure Portal.
     *
-    * @return string The appDisplayName
+    * @return string|null The appDisplayName
     */
     public function getAppDisplayName()
     {
@@ -57,7 +57,7 @@ class SignIn extends Entity
     * Gets the appId
     * Unique GUID representing the app ID in the Azure Active Directory.
     *
-    * @return string The appId
+    * @return string|null The appId
     */
     public function getAppId()
     {
@@ -87,7 +87,7 @@ class SignIn extends Entity
      * Gets the appliedConditionalAccessPolicies
     * A list of conditional access policies that are triggered by the corresponding sign-in activity.
      *
-     * @return array The appliedConditionalAccessPolicies
+     * @return array|null The appliedConditionalAccessPolicies
      */
     public function getAppliedConditionalAccessPolicies()
     {
@@ -108,7 +108,7 @@ class SignIn extends Entity
     */
     public function setAppliedConditionalAccessPolicies($val)
     {
-		$this->_propDict["appliedConditionalAccessPolicies"] = $val;
+        $this->_propDict["appliedConditionalAccessPolicies"] = $val;
         return $this;
     }
     
@@ -116,7 +116,7 @@ class SignIn extends Entity
     * Gets the clientAppUsed
     * Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP.
     *
-    * @return string The clientAppUsed
+    * @return string|null The clientAppUsed
     */
     public function getClientAppUsed()
     {
@@ -145,12 +145,12 @@ class SignIn extends Entity
     * Gets the conditionalAccessStatus
     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.
     *
-    * @return ConditionalAccessStatus The conditionalAccessStatus
+    * @return ConditionalAccessStatus|null The conditionalAccessStatus
     */
     public function getConditionalAccessStatus()
     {
         if (array_key_exists("conditionalAccessStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessStatus"], "\Microsoft\Graph\Model\ConditionalAccessStatus")) {
+            if (is_a($this->_propDict["conditionalAccessStatus"], "\Microsoft\Graph\Model\ConditionalAccessStatus") || is_null($this->_propDict["conditionalAccessStatus"])) {
                 return $this->_propDict["conditionalAccessStatus"];
             } else {
                 $this->_propDict["conditionalAccessStatus"] = new ConditionalAccessStatus($this->_propDict["conditionalAccessStatus"]);
@@ -178,7 +178,7 @@ class SignIn extends Entity
     * Gets the correlationId
     * The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity.
     *
-    * @return string The correlationId
+    * @return string|null The correlationId
     */
     public function getCorrelationId()
     {
@@ -207,12 +207,12 @@ class SignIn extends Entity
     * Gets the createdDateTime
     * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -240,12 +240,12 @@ class SignIn extends Entity
     * Gets the deviceDetail
     * Device information from where the sign-in occurred; includes device ID, operating system, and browser.
     *
-    * @return DeviceDetail The deviceDetail
+    * @return DeviceDetail|null The deviceDetail
     */
     public function getDeviceDetail()
     {
         if (array_key_exists("deviceDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceDetail"], "\Microsoft\Graph\Model\DeviceDetail")) {
+            if (is_a($this->_propDict["deviceDetail"], "\Microsoft\Graph\Model\DeviceDetail") || is_null($this->_propDict["deviceDetail"])) {
                 return $this->_propDict["deviceDetail"];
             } else {
                 $this->_propDict["deviceDetail"] = new DeviceDetail($this->_propDict["deviceDetail"]);
@@ -273,7 +273,7 @@ class SignIn extends Entity
     * Gets the ipAddress
     * IP address of the client used to sign in.
     *
-    * @return string The ipAddress
+    * @return string|null The ipAddress
     */
     public function getIpAddress()
     {
@@ -302,7 +302,7 @@ class SignIn extends Entity
     * Gets the isInteractive
     * Indicates if a sign-in is interactive or not.
     *
-    * @return bool The isInteractive
+    * @return bool|null The isInteractive
     */
     public function getIsInteractive()
     {
@@ -331,12 +331,12 @@ class SignIn extends Entity
     * Gets the location
     * Provides the city, state, and country code where the sign-in originated.
     *
-    * @return SignInLocation The location
+    * @return SignInLocation|null The location
     */
     public function getLocation()
     {
         if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\SignInLocation")) {
+            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\SignInLocation") || is_null($this->_propDict["location"])) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new SignInLocation($this->_propDict["location"]);
@@ -364,7 +364,7 @@ class SignIn extends Entity
     * Gets the resourceDisplayName
     * Name of the resource the user signed into.
     *
-    * @return string The resourceDisplayName
+    * @return string|null The resourceDisplayName
     */
     public function getResourceDisplayName()
     {
@@ -393,7 +393,7 @@ class SignIn extends Entity
     * Gets the resourceId
     * ID of the resource that the user signed into.
     *
-    * @return string The resourceId
+    * @return string|null The resourceId
     */
     public function getResourceId()
     {
@@ -422,12 +422,12 @@ class SignIn extends Entity
     * Gets the riskDetail
     * Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
     *
-    * @return RiskDetail The riskDetail
+    * @return RiskDetail|null The riskDetail
     */
     public function getRiskDetail()
     {
         if (array_key_exists("riskDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["riskDetail"], "\Microsoft\Graph\Model\RiskDetail")) {
+            if (is_a($this->_propDict["riskDetail"], "\Microsoft\Graph\Model\RiskDetail") || is_null($this->_propDict["riskDetail"])) {
                 return $this->_propDict["riskDetail"];
             } else {
                 $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
@@ -456,7 +456,7 @@ class SignIn extends Entity
      * Gets the riskEventTypes
     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.
      *
-     * @return array The riskEventTypes
+     * @return array|null The riskEventTypes
      */
     public function getRiskEventTypes()
     {
@@ -477,7 +477,7 @@ class SignIn extends Entity
     */
     public function setRiskEventTypes($val)
     {
-		$this->_propDict["riskEventTypes"] = $val;
+        $this->_propDict["riskEventTypes"] = $val;
         return $this;
     }
     
@@ -485,7 +485,7 @@ class SignIn extends Entity
     * Gets the riskEventTypesV2
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
     *
-    * @return string The riskEventTypesV2
+    * @return string|null The riskEventTypesV2
     */
     public function getRiskEventTypesV2()
     {
@@ -514,12 +514,12 @@ class SignIn extends Entity
     * Gets the riskLevelAggregated
     * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
     *
-    * @return RiskLevel The riskLevelAggregated
+    * @return RiskLevel|null The riskLevelAggregated
     */
     public function getRiskLevelAggregated()
     {
         if (array_key_exists("riskLevelAggregated", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevelAggregated"], "\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevelAggregated"], "\Microsoft\Graph\Model\RiskLevel") || is_null($this->_propDict["riskLevelAggregated"])) {
                 return $this->_propDict["riskLevelAggregated"];
             } else {
                 $this->_propDict["riskLevelAggregated"] = new RiskLevel($this->_propDict["riskLevelAggregated"]);
@@ -547,12 +547,12 @@ class SignIn extends Entity
     * Gets the riskLevelDuringSignIn
     * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
     *
-    * @return RiskLevel The riskLevelDuringSignIn
+    * @return RiskLevel|null The riskLevelDuringSignIn
     */
     public function getRiskLevelDuringSignIn()
     {
         if (array_key_exists("riskLevelDuringSignIn", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevelDuringSignIn"], "\Microsoft\Graph\Model\RiskLevel")) {
+            if (is_a($this->_propDict["riskLevelDuringSignIn"], "\Microsoft\Graph\Model\RiskLevel") || is_null($this->_propDict["riskLevelDuringSignIn"])) {
                 return $this->_propDict["riskLevelDuringSignIn"];
             } else {
                 $this->_propDict["riskLevelDuringSignIn"] = new RiskLevel($this->_propDict["riskLevelDuringSignIn"]);
@@ -580,12 +580,12 @@ class SignIn extends Entity
     * Gets the riskState
     * Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
     *
-    * @return RiskState The riskState
+    * @return RiskState|null The riskState
     */
     public function getRiskState()
     {
         if (array_key_exists("riskState", $this->_propDict)) {
-            if (is_a($this->_propDict["riskState"], "\Microsoft\Graph\Model\RiskState")) {
+            if (is_a($this->_propDict["riskState"], "\Microsoft\Graph\Model\RiskState") || is_null($this->_propDict["riskState"])) {
                 return $this->_propDict["riskState"];
             } else {
                 $this->_propDict["riskState"] = new RiskState($this->_propDict["riskState"]);
@@ -613,12 +613,12 @@ class SignIn extends Entity
     * Gets the status
     * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
     *
-    * @return SignInStatus The status
+    * @return SignInStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\SignInStatus")) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\SignInStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SignInStatus($this->_propDict["status"]);
@@ -646,7 +646,7 @@ class SignIn extends Entity
     * Gets the userDisplayName
     * Display name of the user that initiated the sign-in.
     *
-    * @return string The userDisplayName
+    * @return string|null The userDisplayName
     */
     public function getUserDisplayName()
     {
@@ -675,7 +675,7 @@ class SignIn extends Entity
     * Gets the userId
     * ID of the user that initiated the sign-in.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -704,7 +704,7 @@ class SignIn extends Entity
     * Gets the userPrincipalName
     * User principal name of the user that initiated the sign-in.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

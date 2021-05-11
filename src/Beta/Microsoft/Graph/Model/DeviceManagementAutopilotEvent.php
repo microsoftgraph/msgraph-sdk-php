@@ -28,12 +28,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the accountSetupDuration
     * Time spent in user ESP.
     *
-    * @return Duration The accountSetupDuration
+    * @return Duration|null The accountSetupDuration
     */
     public function getAccountSetupDuration()
     {
         if (array_key_exists("accountSetupDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["accountSetupDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["accountSetupDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["accountSetupDuration"])) {
                 return $this->_propDict["accountSetupDuration"];
             } else {
                 $this->_propDict["accountSetupDuration"] = new Duration($this->_propDict["accountSetupDuration"]);
@@ -61,12 +61,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the accountSetupStatus
     * Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
     *
-    * @return WindowsAutopilotDeploymentState The accountSetupStatus
+    * @return WindowsAutopilotDeploymentState|null The accountSetupStatus
     */
     public function getAccountSetupStatus()
     {
         if (array_key_exists("accountSetupStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["accountSetupStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentState")) {
+            if (is_a($this->_propDict["accountSetupStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentState") || is_null($this->_propDict["accountSetupStatus"])) {
                 return $this->_propDict["accountSetupStatus"];
             } else {
                 $this->_propDict["accountSetupStatus"] = new WindowsAutopilotDeploymentState($this->_propDict["accountSetupStatus"]);
@@ -94,12 +94,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deploymentDuration
     * Autopilot deployment duration including enrollment.
     *
-    * @return Duration The deploymentDuration
+    * @return Duration|null The deploymentDuration
     */
     public function getDeploymentDuration()
     {
         if (array_key_exists("deploymentDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["deploymentDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["deploymentDuration"])) {
                 return $this->_propDict["deploymentDuration"];
             } else {
                 $this->_propDict["deploymentDuration"] = new Duration($this->_propDict["deploymentDuration"]);
@@ -127,12 +127,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deploymentEndDateTime
     * Deployment end time.
     *
-    * @return \DateTime The deploymentEndDateTime
+    * @return \DateTime|null The deploymentEndDateTime
     */
     public function getDeploymentEndDateTime()
     {
         if (array_key_exists("deploymentEndDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentEndDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["deploymentEndDateTime"], "\DateTime") || is_null($this->_propDict["deploymentEndDateTime"])) {
                 return $this->_propDict["deploymentEndDateTime"];
             } else {
                 $this->_propDict["deploymentEndDateTime"] = new \DateTime($this->_propDict["deploymentEndDateTime"]);
@@ -160,12 +160,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deploymentStartDateTime
     * Deployment start time.
     *
-    * @return \DateTime The deploymentStartDateTime
+    * @return \DateTime|null The deploymentStartDateTime
     */
     public function getDeploymentStartDateTime()
     {
         if (array_key_exists("deploymentStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentStartDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["deploymentStartDateTime"], "\DateTime") || is_null($this->_propDict["deploymentStartDateTime"])) {
                 return $this->_propDict["deploymentStartDateTime"];
             } else {
                 $this->_propDict["deploymentStartDateTime"] = new \DateTime($this->_propDict["deploymentStartDateTime"]);
@@ -193,12 +193,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deploymentState
     * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
     *
-    * @return WindowsAutopilotDeploymentState The deploymentState
+    * @return WindowsAutopilotDeploymentState|null The deploymentState
     */
     public function getDeploymentState()
     {
         if (array_key_exists("deploymentState", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentState"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentState")) {
+            if (is_a($this->_propDict["deploymentState"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentState") || is_null($this->_propDict["deploymentState"])) {
                 return $this->_propDict["deploymentState"];
             } else {
                 $this->_propDict["deploymentState"] = new WindowsAutopilotDeploymentState($this->_propDict["deploymentState"]);
@@ -226,12 +226,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deploymentTotalDuration
     * Total deployment duration from enrollment to Desktop screen.
     *
-    * @return Duration The deploymentTotalDuration
+    * @return Duration|null The deploymentTotalDuration
     */
     public function getDeploymentTotalDuration()
     {
         if (array_key_exists("deploymentTotalDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentTotalDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["deploymentTotalDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["deploymentTotalDuration"])) {
                 return $this->_propDict["deploymentTotalDuration"];
             } else {
                 $this->_propDict["deploymentTotalDuration"] = new Duration($this->_propDict["deploymentTotalDuration"]);
@@ -259,7 +259,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deviceId
     * Device id associated with the object
     *
-    * @return string The deviceId
+    * @return string|null The deviceId
     */
     public function getDeviceId()
     {
@@ -288,12 +288,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the devicePreparationDuration
     * Time spent in device enrollment.
     *
-    * @return Duration The devicePreparationDuration
+    * @return Duration|null The devicePreparationDuration
     */
     public function getDevicePreparationDuration()
     {
         if (array_key_exists("devicePreparationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["devicePreparationDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["devicePreparationDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["devicePreparationDuration"])) {
                 return $this->_propDict["devicePreparationDuration"];
             } else {
                 $this->_propDict["devicePreparationDuration"] = new Duration($this->_propDict["devicePreparationDuration"]);
@@ -321,12 +321,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deviceRegisteredDateTime
     * Device registration date.
     *
-    * @return \DateTime The deviceRegisteredDateTime
+    * @return \DateTime|null The deviceRegisteredDateTime
     */
     public function getDeviceRegisteredDateTime()
     {
         if (array_key_exists("deviceRegisteredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceRegisteredDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["deviceRegisteredDateTime"], "\DateTime") || is_null($this->_propDict["deviceRegisteredDateTime"])) {
                 return $this->_propDict["deviceRegisteredDateTime"];
             } else {
                 $this->_propDict["deviceRegisteredDateTime"] = new \DateTime($this->_propDict["deviceRegisteredDateTime"]);
@@ -354,7 +354,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deviceSerialNumber
     * Device serial number.
     *
-    * @return string The deviceSerialNumber
+    * @return string|null The deviceSerialNumber
     */
     public function getDeviceSerialNumber()
     {
@@ -383,12 +383,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deviceSetupDuration
     * Time spent in device ESP.
     *
-    * @return Duration The deviceSetupDuration
+    * @return Duration|null The deviceSetupDuration
     */
     public function getDeviceSetupDuration()
     {
         if (array_key_exists("deviceSetupDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceSetupDuration"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["deviceSetupDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["deviceSetupDuration"])) {
                 return $this->_propDict["deviceSetupDuration"];
             } else {
                 $this->_propDict["deviceSetupDuration"] = new Duration($this->_propDict["deviceSetupDuration"]);
@@ -416,12 +416,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deviceSetupStatus
     * Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
     *
-    * @return WindowsAutopilotDeploymentState The deviceSetupStatus
+    * @return WindowsAutopilotDeploymentState|null The deviceSetupStatus
     */
     public function getDeviceSetupStatus()
     {
         if (array_key_exists("deviceSetupStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceSetupStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentState")) {
+            if (is_a($this->_propDict["deviceSetupStatus"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotDeploymentState") || is_null($this->_propDict["deviceSetupStatus"])) {
                 return $this->_propDict["deviceSetupStatus"];
             } else {
                 $this->_propDict["deviceSetupStatus"] = new WindowsAutopilotDeploymentState($this->_propDict["deviceSetupStatus"]);
@@ -449,7 +449,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the enrollmentFailureDetails
     * Enrollment failure details.
     *
-    * @return string The enrollmentFailureDetails
+    * @return string|null The enrollmentFailureDetails
     */
     public function getEnrollmentFailureDetails()
     {
@@ -478,12 +478,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the enrollmentStartDateTime
     * Device enrollment start date.
     *
-    * @return \DateTime The enrollmentStartDateTime
+    * @return \DateTime|null The enrollmentStartDateTime
     */
     public function getEnrollmentStartDateTime()
     {
         if (array_key_exists("enrollmentStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentStartDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["enrollmentStartDateTime"], "\DateTime") || is_null($this->_propDict["enrollmentStartDateTime"])) {
                 return $this->_propDict["enrollmentStartDateTime"];
             } else {
                 $this->_propDict["enrollmentStartDateTime"] = new \DateTime($this->_propDict["enrollmentStartDateTime"]);
@@ -511,12 +511,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the enrollmentState
     * Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
     *
-    * @return EnrollmentState The enrollmentState
+    * @return EnrollmentState|null The enrollmentState
     */
     public function getEnrollmentState()
     {
         if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "\Beta\Microsoft\Graph\Model\EnrollmentState")) {
+            if (is_a($this->_propDict["enrollmentState"], "\Beta\Microsoft\Graph\Model\EnrollmentState") || is_null($this->_propDict["enrollmentState"])) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -544,12 +544,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the enrollmentType
     * Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
     *
-    * @return WindowsAutopilotEnrollmentType The enrollmentType
+    * @return WindowsAutopilotEnrollmentType|null The enrollmentType
     */
     public function getEnrollmentType()
     {
         if (array_key_exists("enrollmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentType"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotEnrollmentType")) {
+            if (is_a($this->_propDict["enrollmentType"], "\Beta\Microsoft\Graph\Model\WindowsAutopilotEnrollmentType") || is_null($this->_propDict["enrollmentType"])) {
                 return $this->_propDict["enrollmentType"];
             } else {
                 $this->_propDict["enrollmentType"] = new WindowsAutopilotEnrollmentType($this->_propDict["enrollmentType"]);
@@ -577,12 +577,12 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the eventDateTime
     * Time when the event occurred .
     *
-    * @return \DateTime The eventDateTime
+    * @return \DateTime|null The eventDateTime
     */
     public function getEventDateTime()
     {
         if (array_key_exists("eventDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["eventDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["eventDateTime"], "\DateTime") || is_null($this->_propDict["eventDateTime"])) {
                 return $this->_propDict["eventDateTime"];
             } else {
                 $this->_propDict["eventDateTime"] = new \DateTime($this->_propDict["eventDateTime"]);
@@ -610,7 +610,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the managedDeviceName
     * Managed device name.
     *
-    * @return string The managedDeviceName
+    * @return string|null The managedDeviceName
     */
     public function getManagedDeviceName()
     {
@@ -639,7 +639,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the osVersion
     * Device operating system version.
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {
@@ -668,7 +668,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the targetedAppCount
     * Count of applications targeted.
     *
-    * @return int The targetedAppCount
+    * @return int|null The targetedAppCount
     */
     public function getTargetedAppCount()
     {
@@ -697,7 +697,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the targetedPolicyCount
     * Count of policies targeted.
     *
-    * @return int The targetedPolicyCount
+    * @return int|null The targetedPolicyCount
     */
     public function getTargetedPolicyCount()
     {
@@ -726,7 +726,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the userPrincipalName
     * User principal name used to enroll the device.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -755,7 +755,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the windows10EnrollmentCompletionPageConfigurationDisplayName
     * Enrollment Status Page profile name
     *
-    * @return string The windows10EnrollmentCompletionPageConfigurationDisplayName
+    * @return string|null The windows10EnrollmentCompletionPageConfigurationDisplayName
     */
     public function getWindows10EnrollmentCompletionPageConfigurationDisplayName()
     {
@@ -784,7 +784,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the windows10EnrollmentCompletionPageConfigurationId
     * Enrollment Status Page profile ID
     *
-    * @return string The windows10EnrollmentCompletionPageConfigurationId
+    * @return string|null The windows10EnrollmentCompletionPageConfigurationId
     */
     public function getWindows10EnrollmentCompletionPageConfigurationId()
     {
@@ -813,7 +813,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the windowsAutopilotDeploymentProfileDisplayName
     * Autopilot profile name.
     *
-    * @return string The windowsAutopilotDeploymentProfileDisplayName
+    * @return string|null The windowsAutopilotDeploymentProfileDisplayName
     */
     public function getWindowsAutopilotDeploymentProfileDisplayName()
     {
@@ -843,7 +843,7 @@ class DeviceManagementAutopilotEvent extends Entity
      * Gets the policyStatusDetails
     * Policy and application status details for this device.
      *
-     * @return array The policyStatusDetails
+     * @return array|null The policyStatusDetails
      */
     public function getPolicyStatusDetails()
     {
@@ -864,7 +864,7 @@ class DeviceManagementAutopilotEvent extends Entity
     */
     public function setPolicyStatusDetails($val)
     {
-		$this->_propDict["policyStatusDetails"] = $val;
+        $this->_propDict["policyStatusDetails"] = $val;
         return $this;
     }
     

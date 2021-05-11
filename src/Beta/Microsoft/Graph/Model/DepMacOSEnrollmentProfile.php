@@ -28,7 +28,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the accessibilityScreenDisabled
     * Indicates if Accessibility screen is disabled
     *
-    * @return bool The accessibilityScreenDisabled
+    * @return bool|null The accessibilityScreenDisabled
     */
     public function getAccessibilityScreenDisabled()
     {
@@ -57,7 +57,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the chooseYourLockScreenDisabled
     * Indicates if iCloud Documents and Desktop screen is disabled
     *
-    * @return bool The chooseYourLockScreenDisabled
+    * @return bool|null The chooseYourLockScreenDisabled
     */
     public function getChooseYourLockScreenDisabled()
     {
@@ -86,7 +86,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the fileVaultDisabled
     * Indicates if file vault is disabled
     *
-    * @return bool The fileVaultDisabled
+    * @return bool|null The fileVaultDisabled
     */
     public function getFileVaultDisabled()
     {
@@ -115,7 +115,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the iCloudDiagnosticsDisabled
     * Indicates if iCloud Analytics screen is disabled
     *
-    * @return bool The iCloudDiagnosticsDisabled
+    * @return bool|null The iCloudDiagnosticsDisabled
     */
     public function getICloudDiagnosticsDisabled()
     {
@@ -144,7 +144,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the iCloudStorageDisabled
     * Indicates if iCloud Documents and Desktop screen is disabled
     *
-    * @return bool The iCloudStorageDisabled
+    * @return bool|null The iCloudStorageDisabled
     */
     public function getICloudStorageDisabled()
     {
@@ -173,7 +173,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the passCodeDisabled
     * Indicates if Passcode setup pane is disabled
     *
-    * @return bool The passCodeDisabled
+    * @return bool|null The passCodeDisabled
     */
     public function getPassCodeDisabled()
     {
@@ -202,7 +202,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the registrationDisabled
     * Indicates if registration is disabled
     *
-    * @return bool The registrationDisabled
+    * @return bool|null The registrationDisabled
     */
     public function getRegistrationDisabled()
     {
@@ -231,7 +231,7 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     * Gets the zoomDisabled
     * Indicates if zoom setup pane is disabled
     *
-    * @return bool The zoomDisabled
+    * @return bool|null The zoomDisabled
     */
     public function getZoomDisabled()
     {
