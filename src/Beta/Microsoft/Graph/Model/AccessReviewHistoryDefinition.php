@@ -26,6 +26,7 @@ class AccessReviewHistoryDefinition extends Entity
 {
     /**
     * Gets the createdBy
+    * User who created this review history definition.
     *
     * @return UserIdentity|null The createdBy
     */
@@ -44,6 +45,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Sets the createdBy
+    * User who created this review history definition.
     *
     * @param UserIdentity $val The createdBy
     *
@@ -57,6 +59,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Gets the createdDateTime
+    * Timestamp when the access review definition was created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Sets the createdDateTime
+    * Timestamp when the access review definition was created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -89,6 +93,7 @@ class AccessReviewHistoryDefinition extends Entity
 
      /** 
      * Gets the decisions
+    * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      *
      * @return array|null The decisions
      */
@@ -103,6 +108,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /** 
     * Sets the decisions
+    * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
     *
     * @param AccessReviewHistoryDecisionFilter $val The decisions
     *
@@ -116,6 +122,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Gets the displayName
+    * Name for the access review history data collection. Required.
     *
     * @return string|null The displayName
     */
@@ -130,6 +137,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Sets the displayName
+    * Name for the access review history data collection. Required.
     *
     * @param string $val The displayName
     *
@@ -143,6 +151,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Gets the downloadUri
+    * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated.
     *
     * @return string|null The downloadUri
     */
@@ -157,6 +166,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Sets the downloadUri
+    * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated.
     *
     * @param string $val The downloadUri
     *
@@ -170,6 +180,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Gets the fulfilledDateTime
+    * Timestamp when all of the available data for this definition was collected. This will be set after this definition's status is set to done.
     *
     * @return \DateTime|null The fulfilledDateTime
     */
@@ -188,6 +199,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Sets the fulfilledDateTime
+    * Timestamp when all of the available data for this definition was collected. This will be set after this definition's status is set to done.
     *
     * @param \DateTime $val The fulfilledDateTime
     *
@@ -201,6 +213,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Gets the reviewHistoryPeriodEndDateTime
+    * Timestamp, reviews starting on or after this date will be included in the fetched history data. Required.
     *
     * @return \DateTime|null The reviewHistoryPeriodEndDateTime
     */
@@ -219,6 +232,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Sets the reviewHistoryPeriodEndDateTime
+    * Timestamp, reviews starting on or after this date will be included in the fetched history data. Required.
     *
     * @param \DateTime $val The reviewHistoryPeriodEndDateTime
     *
@@ -232,6 +246,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Gets the reviewHistoryPeriodStartDateTime
+    * Timestamp, reviews starting on or before this date will be included in the fetched history data. Required.
     *
     * @return \DateTime|null The reviewHistoryPeriodStartDateTime
     */
@@ -250,6 +265,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Sets the reviewHistoryPeriodStartDateTime
+    * Timestamp, reviews starting on or before this date will be included in the fetched history data. Required.
     *
     * @param \DateTime $val The reviewHistoryPeriodStartDateTime
     *
@@ -264,6 +280,7 @@ class AccessReviewHistoryDefinition extends Entity
 
      /** 
      * Gets the scopes
+    * Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. See accessreviewqueryscope. Required.
      *
      * @return array|null The scopes
      */
@@ -278,6 +295,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /** 
     * Sets the scopes
+    * Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. See accessreviewqueryscope. Required.
     *
     * @param AccessReviewScope $val The scopes
     *
@@ -291,6 +309,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Gets the status
+    * Represents the status of the review history data collection. Possible values are: done, inprogress, error, requested.
     *
     * @return AccessReviewHistoryStatus|null The status
     */
@@ -309,6 +328,7 @@ class AccessReviewHistoryDefinition extends Entity
     
     /**
     * Sets the status
+    * Represents the status of the review history data collection. Possible values are: done, inprogress, error, requested.
     *
     * @param AccessReviewHistoryStatus $val The status
     *
