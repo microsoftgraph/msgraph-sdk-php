@@ -26,6 +26,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
 {
     /**
     * Gets the isExpirationRequired
+    * Indicates if expiration is required for eligibility or assignment.
     *
     * @return bool|null The isExpirationRequired
     */
@@ -40,6 +41,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
     
     /**
     * Sets the isExpirationRequired
+    * Indicates if expiration is required for eligibility or assignment.
     *
     * @param bool $val The isExpirationRequired
     *
@@ -53,6 +55,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
     
     /**
     * Gets the maximumDuration
+    * The maximum duration allowed for eligiblity or assignment which is not permanent.
     *
     * @return Duration|null The maximumDuration
     */
@@ -71,6 +74,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
     
     /**
     * Sets the maximumDuration
+    * The maximum duration allowed for eligiblity or assignment which is not permanent.
     *
     * @param Duration $val The maximumDuration
     *
