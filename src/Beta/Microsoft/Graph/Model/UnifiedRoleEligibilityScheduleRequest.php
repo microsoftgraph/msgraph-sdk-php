@@ -26,6 +26,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
 {
     /**
     * Gets the action
+    * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
     *
     * @return string|null The action
     */
@@ -40,6 +41,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the action
+    * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
     *
     * @param string $val The action
     *
@@ -53,6 +55,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the appScopeId
+    * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @return string|null The appScopeId
     */
@@ -67,6 +70,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the appScopeId
+    * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The appScopeId
     *
@@ -80,6 +84,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the directoryScopeId
+    * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @return string|null The directoryScopeId
     */
@@ -94,6 +99,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the directoryScopeId
+    * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The directoryScopeId
     *
@@ -107,6 +113,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the isValidationOnly
+    * Boolean
     *
     * @return bool|null The isValidationOnly
     */
@@ -121,6 +128,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the isValidationOnly
+    * Boolean
     *
     * @param bool $val The isValidationOnly
     *
@@ -134,6 +142,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the justification
+    * A message provided by users and administrators when create the request about why it is needed.
     *
     * @return string|null The justification
     */
@@ -148,6 +157,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the justification
+    * A message provided by users and administrators when create the request about why it is needed.
     *
     * @param string $val The justification
     *
@@ -161,6 +171,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the principalId
+    * Objectid of the principal to which the assignment is being granted to.
     *
     * @return string|null The principalId
     */
@@ -175,6 +186,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the principalId
+    * Objectid of the principal to which the assignment is being granted to.
     *
     * @param string $val The principalId
     *
@@ -188,6 +200,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the roleDefinitionId
+    * ID of the unifiedRoleDefinition the assignment is for. Read only.
     *
     * @return string|null The roleDefinitionId
     */
@@ -202,6 +215,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the roleDefinitionId
+    * ID of the unifiedRoleDefinition the assignment is for. Read only.
     *
     * @param string $val The roleDefinitionId
     *
@@ -215,6 +229,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the scheduleInfo
+    * The schedule object of the role assignment request.
     *
     * @return RequestSchedule|null The scheduleInfo
     */
@@ -233,6 +248,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the scheduleInfo
+    * The schedule object of the role assignment request.
     *
     * @param RequestSchedule $val The scheduleInfo
     *
@@ -246,6 +262,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the targetScheduleId
+    * ID of the schedule object attached to the assignment.
     *
     * @return string|null The targetScheduleId
     */
@@ -260,6 +277,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the targetScheduleId
+    * ID of the schedule object attached to the assignment.
     *
     * @param string $val The targetScheduleId
     *
@@ -273,6 +291,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the ticketInfo
+    * The ticketInfo object attached to the role assignment request which includes details of the ticket number and ticket system.
     *
     * @return TicketInfo|null The ticketInfo
     */
@@ -291,6 +310,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the ticketInfo
+    * The ticketInfo object attached to the role assignment request which includes details of the ticket number and ticket system.
     *
     * @param TicketInfo $val The ticketInfo
     *
@@ -304,6 +324,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the appScope
+    * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
     *
     * @return AppScope|null The appScope
     */
@@ -322,6 +343,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the appScope
+    * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
     *
     * @param AppScope $val The appScope
     *
@@ -335,6 +357,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the directoryScope
+    * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
     *
     * @return DirectoryObject|null The directoryScope
     */
@@ -353,6 +376,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the directoryScope
+    * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
     *
     * @param DirectoryObject $val The directoryScope
     *
@@ -366,6 +390,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the principal
+    * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
     *
     * @return DirectoryObject|null The principal
     */
@@ -384,6 +409,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the principal
+    * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
     *
     * @param DirectoryObject $val The principal
     *
@@ -397,6 +423,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the roleDefinition
+    * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded
     *
     * @return UnifiedRoleDefinition|null The roleDefinition
     */
@@ -415,6 +442,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the roleDefinition
+    * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded
     *
     * @param UnifiedRoleDefinition $val The roleDefinition
     *

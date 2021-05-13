@@ -26,7 +26,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 {
     /**
     * Gets the appScopeIds
-    * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
+    * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @return string|null The appScopeIds
     */
@@ -41,7 +41,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the appScopeIds
-    * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
+    * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The appScopeIds
     *
@@ -169,7 +169,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the principalIds
-    * Objectids of the principals to which the assignment is granted.
+    * Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
     *
     * @return string|null The principalIds
     */
@@ -184,7 +184,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the principalIds
-    * Objectids of the principals to which the assignment is granted.
+    * Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
     *
     * @param string $val The principalIds
     *
@@ -198,7 +198,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the roleDefinitionId
-    * ID of the unifiedRoleDefinition the assignment is for.
+    * Identifier of the unifiedRoleDefinition the assignment is for.
     *
     * @return string|null The roleDefinitionId
     */
@@ -213,7 +213,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the roleDefinitionId
-    * ID of the unifiedRoleDefinition the assignment is for.
+    * Identifier of the unifiedRoleDefinition the assignment is for.
     *
     * @param string $val The roleDefinitionId
     *
@@ -228,6 +228,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
      /** 
      * Gets the appScopes
+    * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
      *
      * @return array|null The appScopes
      */
@@ -242,6 +243,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /** 
     * Sets the appScopes
+    * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
     *
     * @param AppScope $val The appScopes
     *
@@ -256,6 +258,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
      /** 
      * Gets the directoryScopes
+    * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      *
      * @return array|null The directoryScopes
      */
@@ -270,6 +273,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /** 
     * Sets the directoryScopes
+    * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
     *
     * @param DirectoryObject $val The directoryScopes
     *
@@ -284,6 +288,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
 
      /** 
      * Gets the principals
+    * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      *
      * @return array|null The principals
      */
@@ -298,6 +303,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /** 
     * Sets the principals
+    * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
     *
     * @param DirectoryObject $val The principals
     *
@@ -311,6 +317,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the roleDefinition
+    * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. Read-only. Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
     *
     * @return UnifiedRoleDefinition|null The roleDefinition
     */
@@ -329,6 +336,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the roleDefinition
+    * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. Read-only. Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
     *
     * @param UnifiedRoleDefinition $val The roleDefinition
     *

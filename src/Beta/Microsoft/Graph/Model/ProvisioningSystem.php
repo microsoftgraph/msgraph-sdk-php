@@ -26,6 +26,7 @@ class ProvisioningSystem extends Identity
 
     /**
     * Gets the details
+    * Details of the system.
     *
     * @return DetailsInfo|null The details
     */
@@ -44,6 +45,7 @@ class ProvisioningSystem extends Identity
 
     /**
     * Sets the details
+    * Details of the system.
     *
     * @param DetailsInfo $val The value to assign to the details
     *
