@@ -28,7 +28,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the appleId
     * The Apple ID associated with Vpp token.
     *
-    * @return string The appleId
+    * @return string|null The appleId
     */
     public function getAppleId()
     {
@@ -57,7 +57,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the genres
     * Genres.
     *
-    * @return string The genres
+    * @return string|null The genres
     */
     public function getGenres()
     {
@@ -86,7 +86,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the language
     * Language.
     *
-    * @return string The language
+    * @return string|null The language
     */
     public function getLanguage()
     {
@@ -115,7 +115,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @return string The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -144,7 +144,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the seller
     * Seller.
     *
-    * @return string The seller
+    * @return string|null The seller
     */
     public function getSeller()
     {
@@ -173,7 +173,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the totalLicenseCount
     * Total license count.
     *
-    * @return int The totalLicenseCount
+    * @return int|null The totalLicenseCount
     */
     public function getTotalLicenseCount()
     {
@@ -202,7 +202,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the usedLicenseCount
     * Used license count.
     *
-    * @return int The usedLicenseCount
+    * @return int|null The usedLicenseCount
     */
     public function getUsedLicenseCount()
     {
@@ -231,7 +231,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the vppOrganizationName
     * The Vpp token's organization name.
     *
-    * @return string The vppOrganizationName
+    * @return string|null The vppOrganizationName
     */
     public function getVppOrganizationName()
     {
@@ -260,7 +260,7 @@ class IosVppEBook extends ManagedEBook
     * Gets the vppTokenId
     * The Vpp token ID.
     *
-    * @return string The vppTokenId
+    * @return string|null The vppTokenId
     */
     public function getVppTokenId()
     {

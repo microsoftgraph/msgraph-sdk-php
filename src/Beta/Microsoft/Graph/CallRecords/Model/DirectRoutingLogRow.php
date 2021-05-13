@@ -26,7 +26,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the calleeNumber
     *
-    * @return string The calleeNumber
+    * @return string|null The calleeNumber
     */
     public function getCalleeNumber()
     {
@@ -52,7 +52,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the callEndSubReason
     *
-    * @return int The callEndSubReason
+    * @return int|null The callEndSubReason
     */
     public function getCallEndSubReason()
     {
@@ -78,7 +78,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the callerNumber
     *
-    * @return string The callerNumber
+    * @return string|null The callerNumber
     */
     public function getCallerNumber()
     {
@@ -104,7 +104,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the callType
     *
-    * @return string The callType
+    * @return string|null The callType
     */
     public function getCallType()
     {
@@ -130,7 +130,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the correlationId
     *
-    * @return string The correlationId
+    * @return string|null The correlationId
     */
     public function getCorrelationId()
     {
@@ -156,7 +156,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the duration
     *
-    * @return int The duration
+    * @return int|null The duration
     */
     public function getDuration()
     {
@@ -183,12 +183,12 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the endDateTime
     *
-    * @return \DateTime The endDateTime
+    * @return \DateTime|null The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -214,12 +214,12 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the failureDateTime
     *
-    * @return \DateTime The failureDateTime
+    * @return \DateTime|null The failureDateTime
     */
     public function getFailureDateTime()
     {
         if (array_key_exists("failureDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["failureDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["failureDateTime"], "\DateTime") || is_null($this->_propDict["failureDateTime"])) {
                 return $this->_propDict["failureDateTime"];
             } else {
                 $this->_propDict["failureDateTime"] = new \DateTime($this->_propDict["failureDateTime"]);
@@ -244,7 +244,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the finalSipCode
     *
-    * @return int The finalSipCode
+    * @return int|null The finalSipCode
     */
     public function getFinalSipCode()
     {
@@ -270,7 +270,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the finalSipCodePhrase
     *
-    * @return string The finalSipCodePhrase
+    * @return string|null The finalSipCodePhrase
     */
     public function getFinalSipCodePhrase()
     {
@@ -296,7 +296,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the id
     *
-    * @return string The id
+    * @return string|null The id
     */
     public function getId()
     {
@@ -323,12 +323,12 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the inviteDateTime
     *
-    * @return \DateTime The inviteDateTime
+    * @return \DateTime|null The inviteDateTime
     */
     public function getInviteDateTime()
     {
         if (array_key_exists("inviteDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["inviteDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["inviteDateTime"], "\DateTime") || is_null($this->_propDict["inviteDateTime"])) {
                 return $this->_propDict["inviteDateTime"];
             } else {
                 $this->_propDict["inviteDateTime"] = new \DateTime($this->_propDict["inviteDateTime"]);
@@ -353,7 +353,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the mediaBypassEnabled
     *
-    * @return bool The mediaBypassEnabled
+    * @return bool|null The mediaBypassEnabled
     */
     public function getMediaBypassEnabled()
     {
@@ -379,7 +379,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the mediaPathLocation
     *
-    * @return string The mediaPathLocation
+    * @return string|null The mediaPathLocation
     */
     public function getMediaPathLocation()
     {
@@ -405,7 +405,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the signalingLocation
     *
-    * @return string The signalingLocation
+    * @return string|null The signalingLocation
     */
     public function getSignalingLocation()
     {
@@ -432,12 +432,12 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the startDateTime
     *
-    * @return \DateTime The startDateTime
+    * @return \DateTime|null The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -462,7 +462,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the successfulCall
     *
-    * @return bool The successfulCall
+    * @return bool|null The successfulCall
     */
     public function getSuccessfulCall()
     {
@@ -488,7 +488,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the trunkFullyQualifiedDomainName
     *
-    * @return string The trunkFullyQualifiedDomainName
+    * @return string|null The trunkFullyQualifiedDomainName
     */
     public function getTrunkFullyQualifiedDomainName()
     {
@@ -514,7 +514,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the userDisplayName
     *
-    * @return string The userDisplayName
+    * @return string|null The userDisplayName
     */
     public function getUserDisplayName()
     {
@@ -540,7 +540,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the userId
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -566,7 +566,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the userPrincipalName
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

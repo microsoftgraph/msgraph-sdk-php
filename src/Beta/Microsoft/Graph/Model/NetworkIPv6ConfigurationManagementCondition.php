@@ -28,7 +28,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     * Gets the dnsSuffixList
     * Valid DNS suffixes for the current network. e.g. seattle.contoso.com
     *
-    * @return string The dnsSuffixList
+    * @return string|null The dnsSuffixList
     */
     public function getDnsSuffixList()
     {
@@ -57,7 +57,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     * Gets the ipV6DNSServerList
     * An IPv6 DNS servers configured for the adapter.
     *
-    * @return string The ipV6DNSServerList
+    * @return string|null The ipV6DNSServerList
     */
     public function getIpV6DNSServerList()
     {
@@ -86,7 +86,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     * Gets the ipV6Gateway
     * The IPv6 gateway address to. e.g 2001:db8::1
     *
-    * @return string The ipV6Gateway
+    * @return string|null The ipV6Gateway
     */
     public function getIpV6Gateway()
     {
@@ -115,7 +115,7 @@ class NetworkIPv6ConfigurationManagementCondition extends NetworkManagementCondi
     * Gets the ipV6Prefix
     * The IPv6 subnet to be connected to. e.g. 2001:db8::/32
     *
-    * @return string The ipV6Prefix
+    * @return string|null The ipV6Prefix
     */
     public function getIpV6Prefix()
     {

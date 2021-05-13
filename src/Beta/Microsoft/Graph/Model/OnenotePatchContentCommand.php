@@ -26,14 +26,14 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Gets the action
-    * The action to perform on the target element. The possible values are: replace, append, delete, insert, or prepend.
+    * The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
     *
-    * @return OnenotePatchActionType The action
+    * @return OnenotePatchActionType|null The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\OnenotePatchActionType")) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\OnenotePatchActionType") || is_null($this->_propDict["action"])) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new OnenotePatchActionType($this->_propDict["action"]);
@@ -45,7 +45,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Sets the action
-    * The action to perform on the target element. The possible values are: replace, append, delete, insert, or prepend.
+    * The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
     *
     * @param OnenotePatchActionType $val The value to assign to the action
     *
@@ -60,7 +60,7 @@ class OnenotePatchContentCommand extends Entity
     * Gets the content
     * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
     *
-    * @return string The content
+    * @return string|null The content
     */
     public function getContent()
     {
@@ -87,14 +87,14 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Gets the position
-    * The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
+    * The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
     *
-    * @return OnenotePatchInsertPosition The position
+    * @return OnenotePatchInsertPosition|null The position
     */
     public function getPosition()
     {
         if (array_key_exists("position", $this->_propDict)) {
-            if (is_a($this->_propDict["position"], "\Beta\Microsoft\Graph\Model\OnenotePatchInsertPosition")) {
+            if (is_a($this->_propDict["position"], "\Beta\Microsoft\Graph\Model\OnenotePatchInsertPosition") || is_null($this->_propDict["position"])) {
                 return $this->_propDict["position"];
             } else {
                 $this->_propDict["position"] = new OnenotePatchInsertPosition($this->_propDict["position"]);
@@ -106,7 +106,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Sets the position
-    * The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
+    * The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
     *
     * @param OnenotePatchInsertPosition $val The value to assign to the position
     *
@@ -119,9 +119,9 @@ class OnenotePatchContentCommand extends Entity
     }
     /**
     * Gets the target
-    * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
+    * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated {id} of the element, or the body or title keyword.
     *
-    * @return string The target
+    * @return string|null The target
     */
     public function getTarget()
     {
@@ -134,7 +134,7 @@ class OnenotePatchContentCommand extends Entity
 
     /**
     * Sets the target
-    * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
+    * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated {id} of the element, or the body or title keyword.
     *
     * @param string $val The value of the target
     *

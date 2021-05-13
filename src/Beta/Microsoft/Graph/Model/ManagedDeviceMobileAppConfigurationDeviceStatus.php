@@ -28,12 +28,12 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the complianceGracePeriodExpirationDateTime
     * The DateTime when device compliance grace period expires
     *
-    * @return \DateTime The complianceGracePeriodExpirationDateTime
+    * @return \DateTime|null The complianceGracePeriodExpirationDateTime
     */
     public function getComplianceGracePeriodExpirationDateTime()
     {
         if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
                 return $this->_propDict["complianceGracePeriodExpirationDateTime"];
             } else {
                 $this->_propDict["complianceGracePeriodExpirationDateTime"] = new \DateTime($this->_propDict["complianceGracePeriodExpirationDateTime"]);
@@ -61,7 +61,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the deviceDisplayName
     * Device name of the DevicePolicyStatus.
     *
-    * @return string The deviceDisplayName
+    * @return string|null The deviceDisplayName
     */
     public function getDeviceDisplayName()
     {
@@ -90,7 +90,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the deviceModel
     * The device model that is being reported
     *
-    * @return string The deviceModel
+    * @return string|null The deviceModel
     */
     public function getDeviceModel()
     {
@@ -119,12 +119,12 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report.
     *
-    * @return \DateTime The lastReportedDateTime
+    * @return \DateTime|null The lastReportedDateTime
     */
     public function getLastReportedDateTime()
     {
         if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime") || is_null($this->_propDict["lastReportedDateTime"])) {
                 return $this->_propDict["lastReportedDateTime"];
             } else {
                 $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
@@ -152,7 +152,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the platform
     * Platform of the device that is being reported
     *
-    * @return int The platform
+    * @return int|null The platform
     */
     public function getPlatform()
     {
@@ -181,12 +181,12 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
-    * @return ComplianceStatus The status
+    * @return ComplianceStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);
@@ -214,7 +214,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the userName
     * The User Name that is being reported
     *
-    * @return string The userName
+    * @return string|null The userName
     */
     public function getUserName()
     {
@@ -243,7 +243,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity
     * Gets the userPrincipalName
     * UserPrincipalName.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

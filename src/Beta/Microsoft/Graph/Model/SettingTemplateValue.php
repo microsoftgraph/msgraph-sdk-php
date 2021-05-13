@@ -25,9 +25,9 @@ class SettingTemplateValue extends Entity
 {
     /**
     * Gets the defaultValue
-    * Default value for the setting.
+    * Default value for the setting. Read-only.
     *
-    * @return string The defaultValue
+    * @return string|null The defaultValue
     */
     public function getDefaultValue()
     {
@@ -40,7 +40,7 @@ class SettingTemplateValue extends Entity
 
     /**
     * Sets the defaultValue
-    * Default value for the setting.
+    * Default value for the setting. Read-only.
     *
     * @param string $val The value of the defaultValue
     *
@@ -53,9 +53,9 @@ class SettingTemplateValue extends Entity
     }
     /**
     * Gets the description
-    * Description of the setting.
+    * Description of the setting. Read-only.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -68,7 +68,7 @@ class SettingTemplateValue extends Entity
 
     /**
     * Sets the description
-    * Description of the setting.
+    * Description of the setting. Read-only.
     *
     * @param string $val The value of the description
     *
@@ -81,9 +81,9 @@ class SettingTemplateValue extends Entity
     }
     /**
     * Gets the name
-    * Name of the setting.
+    * Name of the setting. Read-only.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -96,7 +96,7 @@ class SettingTemplateValue extends Entity
 
     /**
     * Sets the name
-    * Name of the setting.
+    * Name of the setting. Read-only.
     *
     * @param string $val The value of the name
     *
@@ -109,9 +109,9 @@ class SettingTemplateValue extends Entity
     }
     /**
     * Gets the type
-    * Type of the setting.
+    * Type of the setting. Read-only.
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {
@@ -124,7 +124,7 @@ class SettingTemplateValue extends Entity
 
     /**
     * Sets the type
-    * Type of the setting.
+    * Type of the setting. Read-only.
     *
     * @param string $val The value of the type
     *

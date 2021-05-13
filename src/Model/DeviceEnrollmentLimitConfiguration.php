@@ -28,7 +28,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration
     * Gets the limit
     * Not yet documented
     *
-    * @return int The limit
+    * @return int|null The limit
     */
     public function getLimit()
     {

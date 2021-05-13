@@ -28,12 +28,12 @@ class InvitationParticipantInfo extends Entity
     * Gets the endpointType
     * The type of endpoint. Possible values are: default, voicemail.
     *
-    * @return EndpointType The endpointType
+    * @return EndpointType|null The endpointType
     */
     public function getEndpointType()
     {
         if (array_key_exists("endpointType", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointType"], "\Beta\Microsoft\Graph\Model\EndpointType")) {
+            if (is_a($this->_propDict["endpointType"], "\Beta\Microsoft\Graph\Model\EndpointType") || is_null($this->_propDict["endpointType"])) {
                 return $this->_propDict["endpointType"];
             } else {
                 $this->_propDict["endpointType"] = new EndpointType($this->_propDict["endpointType"]);
@@ -61,12 +61,12 @@ class InvitationParticipantInfo extends Entity
     * Gets the identity
     * The identitySet associated with this invitation.
     *
-    * @return IdentitySet The identity
+    * @return IdentitySet|null The identity
     */
     public function getIdentity()
     {
         if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "\Beta\Microsoft\Graph\Model\IdentitySet")) {
+            if (is_a($this->_propDict["identity"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["identity"])) {
                 return $this->_propDict["identity"];
             } else {
                 $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
@@ -91,9 +91,9 @@ class InvitationParticipantInfo extends Entity
     }
     /**
     * Gets the replacesCallId
-    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
     *
-    * @return string The replacesCallId
+    * @return string|null The replacesCallId
     */
     public function getReplacesCallId()
     {
@@ -106,7 +106,7 @@ class InvitationParticipantInfo extends Entity
 
     /**
     * Sets the replacesCallId
-    * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
+    * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
     *
     * @param string $val The value of the replacesCallId
     *

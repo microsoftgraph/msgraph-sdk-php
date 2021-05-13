@@ -28,12 +28,12 @@ class Application extends DirectoryObject
     * Gets the api
     * Specifies settings for an application that implements a web API.
     *
-    * @return ApiApplication The api
+    * @return ApiApplication|null The api
     */
     public function getApi()
     {
         if (array_key_exists("api", $this->_propDict)) {
-            if (is_a($this->_propDict["api"], "\Beta\Microsoft\Graph\Model\ApiApplication")) {
+            if (is_a($this->_propDict["api"], "\Beta\Microsoft\Graph\Model\ApiApplication") || is_null($this->_propDict["api"])) {
                 return $this->_propDict["api"];
             } else {
                 $this->_propDict["api"] = new ApiApplication($this->_propDict["api"]);
@@ -59,9 +59,9 @@ class Application extends DirectoryObject
     
     /**
     * Gets the appId
-    * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
+    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
     *
-    * @return string The appId
+    * @return string|null The appId
     */
     public function getAppId()
     {
@@ -74,7 +74,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the appId
-    * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
+    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
     *
     * @param string $val The appId
     *
@@ -91,7 +91,7 @@ class Application extends DirectoryObject
      * Gets the appRoles
     * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      *
-     * @return array The appRoles
+     * @return array|null The appRoles
      */
     public function getAppRoles()
     {
@@ -112,7 +112,7 @@ class Application extends DirectoryObject
     */
     public function setAppRoles($val)
     {
-		$this->_propDict["appRoles"] = $val;
+        $this->_propDict["appRoles"] = $val;
         return $this;
     }
     
@@ -120,12 +120,12 @@ class Application extends DirectoryObject
     * Gets the createdDateTime
     * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -152,7 +152,7 @@ class Application extends DirectoryObject
     /**
     * Gets the defaultRedirectUri
     *
-    * @return string The defaultRedirectUri
+    * @return string|null The defaultRedirectUri
     */
     public function getDefaultRedirectUri()
     {
@@ -179,7 +179,7 @@ class Application extends DirectoryObject
     /**
     * Gets the description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -207,7 +207,7 @@ class Application extends DirectoryObject
     * Gets the displayName
     * The display name for the application.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -234,9 +234,9 @@ class Application extends DirectoryObject
     
     /**
     * Gets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     *
-    * @return string The groupMembershipClaims
+    * @return string|null The groupMembershipClaims
     */
     public function getGroupMembershipClaims()
     {
@@ -249,7 +249,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     *
     * @param string $val The groupMembershipClaims
     *
@@ -263,9 +263,9 @@ class Application extends DirectoryObject
     
     /**
     * Gets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
     *
-    * @return string The identifierUris
+    * @return string|null The identifierUris
     */
     public function getIdentifierUris()
     {
@@ -278,7 +278,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
     *
     * @param string $val The identifierUris
     *
@@ -292,14 +292,14 @@ class Application extends DirectoryObject
     
     /**
     * Gets the info
-    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
-    * @return InformationalUrl The info
+    * @return InformationalUrl|null The info
     */
     public function getInfo()
     {
         if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "\Beta\Microsoft\Graph\Model\InformationalUrl")) {
+            if (is_a($this->_propDict["info"], "\Beta\Microsoft\Graph\Model\InformationalUrl") || is_null($this->_propDict["info"])) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
@@ -311,7 +311,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the info
-    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
     * @param InformationalUrl $val The info
     *
@@ -327,7 +327,7 @@ class Application extends DirectoryObject
     * Gets the isDeviceOnlyAuthSupported
     * Specifies whether this application supports device authentication without a user. The default is false.
     *
-    * @return bool The isDeviceOnlyAuthSupported
+    * @return bool|null The isDeviceOnlyAuthSupported
     */
     public function getIsDeviceOnlyAuthSupported()
     {
@@ -354,9 +354,9 @@ class Application extends DirectoryObject
     
     /**
     * Gets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
     *
-    * @return bool The isFallbackPublicClient
+    * @return bool|null The isFallbackPublicClient
     */
     public function getIsFallbackPublicClient()
     {
@@ -369,7 +369,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
     *
     * @param bool $val The isFallbackPublicClient
     *
@@ -386,7 +386,7 @@ class Application extends DirectoryObject
      * Gets the keyCredentials
     * The collection of key credentials associated with the application. Not nullable.
      *
-     * @return array The keyCredentials
+     * @return array|null The keyCredentials
      */
     public function getKeyCredentials()
     {
@@ -407,7 +407,7 @@ class Application extends DirectoryObject
     */
     public function setKeyCredentials($val)
     {
-		$this->_propDict["keyCredentials"] = $val;
+        $this->_propDict["keyCredentials"] = $val;
         return $this;
     }
     
@@ -415,12 +415,12 @@ class Application extends DirectoryObject
     * Gets the logo
     * The main logo for the application. Not nullable.
     *
-    * @return \GuzzleHttp\Psr7\Stream The logo
+    * @return \GuzzleHttp\Psr7\Stream|null The logo
     */
     public function getLogo()
     {
         if (array_key_exists("logo", $this->_propDict)) {
-            if (is_a($this->_propDict["logo"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["logo"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["logo"])) {
                 return $this->_propDict["logo"];
             } else {
                 $this->_propDict["logo"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["logo"]);
@@ -448,7 +448,7 @@ class Application extends DirectoryObject
     * Gets the notes
     * Notes relevant for the management of the application.
     *
-    * @return string The notes
+    * @return string|null The notes
     */
     public function getNotes()
     {
@@ -477,12 +477,12 @@ class Application extends DirectoryObject
     * Gets the optionalClaims
     * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
     *
-    * @return OptionalClaims The optionalClaims
+    * @return OptionalClaims|null The optionalClaims
     */
     public function getOptionalClaims()
     {
         if (array_key_exists("optionalClaims", $this->_propDict)) {
-            if (is_a($this->_propDict["optionalClaims"], "\Beta\Microsoft\Graph\Model\OptionalClaims")) {
+            if (is_a($this->_propDict["optionalClaims"], "\Beta\Microsoft\Graph\Model\OptionalClaims") || is_null($this->_propDict["optionalClaims"])) {
                 return $this->_propDict["optionalClaims"];
             } else {
                 $this->_propDict["optionalClaims"] = new OptionalClaims($this->_propDict["optionalClaims"]);
@@ -510,12 +510,12 @@ class Application extends DirectoryObject
     * Gets the parentalControlSettings
     * Specifies parental control settings for an application.
     *
-    * @return ParentalControlSettings The parentalControlSettings
+    * @return ParentalControlSettings|null The parentalControlSettings
     */
     public function getParentalControlSettings()
     {
         if (array_key_exists("parentalControlSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["parentalControlSettings"], "\Beta\Microsoft\Graph\Model\ParentalControlSettings")) {
+            if (is_a($this->_propDict["parentalControlSettings"], "\Beta\Microsoft\Graph\Model\ParentalControlSettings") || is_null($this->_propDict["parentalControlSettings"])) {
                 return $this->_propDict["parentalControlSettings"];
             } else {
                 $this->_propDict["parentalControlSettings"] = new ParentalControlSettings($this->_propDict["parentalControlSettings"]);
@@ -544,7 +544,7 @@ class Application extends DirectoryObject
      * Gets the passwordCredentials
     * The collection of password credentials associated with the application. Not nullable.
      *
-     * @return array The passwordCredentials
+     * @return array|null The passwordCredentials
      */
     public function getPasswordCredentials()
     {
@@ -565,7 +565,7 @@ class Application extends DirectoryObject
     */
     public function setPasswordCredentials($val)
     {
-		$this->_propDict["passwordCredentials"] = $val;
+        $this->_propDict["passwordCredentials"] = $val;
         return $this;
     }
     
@@ -573,12 +573,12 @@ class Application extends DirectoryObject
     * Gets the publicClient
     * Specifies settings for installed clients such as desktop or mobile devices.
     *
-    * @return PublicClientApplication The publicClient
+    * @return PublicClientApplication|null The publicClient
     */
     public function getPublicClient()
     {
         if (array_key_exists("publicClient", $this->_propDict)) {
-            if (is_a($this->_propDict["publicClient"], "\Beta\Microsoft\Graph\Model\PublicClientApplication")) {
+            if (is_a($this->_propDict["publicClient"], "\Beta\Microsoft\Graph\Model\PublicClientApplication") || is_null($this->_propDict["publicClient"])) {
                 return $this->_propDict["publicClient"];
             } else {
                 $this->_propDict["publicClient"] = new PublicClientApplication($this->_propDict["publicClient"]);
@@ -604,9 +604,9 @@ class Application extends DirectoryObject
     
     /**
     * Gets the publisherDomain
-    * The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain.
+    * The verified publisher domain for the application. Read-only.
     *
-    * @return string The publisherDomain
+    * @return string|null The publisherDomain
     */
     public function getPublisherDomain()
     {
@@ -619,7 +619,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the publisherDomain
-    * The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain.
+    * The verified publisher domain for the application. Read-only.
     *
     * @param string $val The publisherDomain
     *
@@ -636,7 +636,7 @@ class Application extends DirectoryObject
      * Gets the requiredResourceAccess
     * Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable.
      *
-     * @return array The requiredResourceAccess
+     * @return array|null The requiredResourceAccess
      */
     public function getRequiredResourceAccess()
     {
@@ -657,7 +657,7 @@ class Application extends DirectoryObject
     */
     public function setRequiredResourceAccess($val)
     {
-		$this->_propDict["requiredResourceAccess"] = $val;
+        $this->_propDict["requiredResourceAccess"] = $val;
         return $this;
     }
     
@@ -665,7 +665,7 @@ class Application extends DirectoryObject
     * Gets the signInAudience
     * Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below.
     *
-    * @return string The signInAudience
+    * @return string|null The signInAudience
     */
     public function getSignInAudience()
     {
@@ -694,12 +694,12 @@ class Application extends DirectoryObject
     * Gets the spa
     * Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
     *
-    * @return SpaApplication The spa
+    * @return SpaApplication|null The spa
     */
     public function getSpa()
     {
         if (array_key_exists("spa", $this->_propDict)) {
-            if (is_a($this->_propDict["spa"], "\Beta\Microsoft\Graph\Model\SpaApplication")) {
+            if (is_a($this->_propDict["spa"], "\Beta\Microsoft\Graph\Model\SpaApplication") || is_null($this->_propDict["spa"])) {
                 return $this->_propDict["spa"];
             } else {
                 $this->_propDict["spa"] = new SpaApplication($this->_propDict["spa"]);
@@ -727,7 +727,7 @@ class Application extends DirectoryObject
     * Gets the tags
     * Custom strings that can be used to categorize and identify the application. Not nullable.
     *
-    * @return string The tags
+    * @return string|null The tags
     */
     public function getTags()
     {
@@ -756,7 +756,7 @@ class Application extends DirectoryObject
     * Gets the tokenEncryptionKeyId
     * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
     *
-    * @return string The tokenEncryptionKeyId
+    * @return string|null The tokenEncryptionKeyId
     */
     public function getTokenEncryptionKeyId()
     {
@@ -785,7 +785,7 @@ class Application extends DirectoryObject
     * Gets the uniqueName
     * The unique identifier that can be assigned to an application as an alternative identifier. Immutable. Read-only.
     *
-    * @return string The uniqueName
+    * @return string|null The uniqueName
     */
     public function getUniqueName()
     {
@@ -814,12 +814,12 @@ class Application extends DirectoryObject
     * Gets the web
     * Specifies settings for a web application.
     *
-    * @return WebApplication The web
+    * @return WebApplication|null The web
     */
     public function getWeb()
     {
         if (array_key_exists("web", $this->_propDict)) {
-            if (is_a($this->_propDict["web"], "\Beta\Microsoft\Graph\Model\WebApplication")) {
+            if (is_a($this->_propDict["web"], "\Beta\Microsoft\Graph\Model\WebApplication") || is_null($this->_propDict["web"])) {
                 return $this->_propDict["web"];
             } else {
                 $this->_propDict["web"] = new WebApplication($this->_propDict["web"]);
@@ -847,12 +847,12 @@ class Application extends DirectoryObject
     * Gets the onPremisesPublishing
     * Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
     *
-    * @return OnPremisesPublishing The onPremisesPublishing
+    * @return OnPremisesPublishing|null The onPremisesPublishing
     */
     public function getOnPremisesPublishing()
     {
         if (array_key_exists("onPremisesPublishing", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesPublishing"], "\Beta\Microsoft\Graph\Model\OnPremisesPublishing")) {
+            if (is_a($this->_propDict["onPremisesPublishing"], "\Beta\Microsoft\Graph\Model\OnPremisesPublishing") || is_null($this->_propDict["onPremisesPublishing"])) {
                 return $this->_propDict["onPremisesPublishing"];
             } else {
                 $this->_propDict["onPremisesPublishing"] = new OnPremisesPublishing($this->_propDict["onPremisesPublishing"]);
@@ -880,12 +880,12 @@ class Application extends DirectoryObject
     * Gets the createdOnBehalfOf
     * Read-only.
     *
-    * @return DirectoryObject The createdOnBehalfOf
+    * @return DirectoryObject|null The createdOnBehalfOf
     */
     public function getCreatedOnBehalfOf()
     {
         if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "\Beta\Microsoft\Graph\Model\DirectoryObject")) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "\Beta\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["createdOnBehalfOf"])) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
@@ -914,7 +914,7 @@ class Application extends DirectoryObject
      * Gets the extensionProperties
     * Read-only. Nullable.
      *
-     * @return array The extensionProperties
+     * @return array|null The extensionProperties
      */
     public function getExtensionProperties()
     {
@@ -935,7 +935,7 @@ class Application extends DirectoryObject
     */
     public function setExtensionProperties($val)
     {
-		$this->_propDict["extensionProperties"] = $val;
+        $this->_propDict["extensionProperties"] = $val;
         return $this;
     }
     
@@ -943,7 +943,7 @@ class Application extends DirectoryObject
      /** 
      * Gets the homeRealmDiscoveryPolicies
      *
-     * @return array The homeRealmDiscoveryPolicies
+     * @return array|null The homeRealmDiscoveryPolicies
      */
     public function getHomeRealmDiscoveryPolicies()
     {
@@ -963,7 +963,7 @@ class Application extends DirectoryObject
     */
     public function setHomeRealmDiscoveryPolicies($val)
     {
-		$this->_propDict["homeRealmDiscoveryPolicies"] = $val;
+        $this->_propDict["homeRealmDiscoveryPolicies"] = $val;
         return $this;
     }
     
@@ -972,7 +972,7 @@ class Application extends DirectoryObject
      * Gets the owners
     * Directory objects that are owners of the application. Read-only. Nullable.
      *
-     * @return array The owners
+     * @return array|null The owners
      */
     public function getOwners()
     {
@@ -993,7 +993,7 @@ class Application extends DirectoryObject
     */
     public function setOwners($val)
     {
-		$this->_propDict["owners"] = $val;
+        $this->_propDict["owners"] = $val;
         return $this;
     }
     
@@ -1001,7 +1001,7 @@ class Application extends DirectoryObject
      /** 
      * Gets the tokenIssuancePolicies
      *
-     * @return array The tokenIssuancePolicies
+     * @return array|null The tokenIssuancePolicies
      */
     public function getTokenIssuancePolicies()
     {
@@ -1021,7 +1021,7 @@ class Application extends DirectoryObject
     */
     public function setTokenIssuancePolicies($val)
     {
-		$this->_propDict["tokenIssuancePolicies"] = $val;
+        $this->_propDict["tokenIssuancePolicies"] = $val;
         return $this;
     }
     
@@ -1030,7 +1030,7 @@ class Application extends DirectoryObject
      * Gets the tokenLifetimePolicies
     * The tokenLifetimePolicies assigned to this application.
      *
-     * @return array The tokenLifetimePolicies
+     * @return array|null The tokenLifetimePolicies
      */
     public function getTokenLifetimePolicies()
     {
@@ -1051,7 +1051,7 @@ class Application extends DirectoryObject
     */
     public function setTokenLifetimePolicies($val)
     {
-		$this->_propDict["tokenLifetimePolicies"] = $val;
+        $this->_propDict["tokenLifetimePolicies"] = $val;
         return $this;
     }
     
@@ -1059,12 +1059,12 @@ class Application extends DirectoryObject
     * Gets the connectorGroup
     * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
     *
-    * @return ConnectorGroup The connectorGroup
+    * @return ConnectorGroup|null The connectorGroup
     */
     public function getConnectorGroup()
     {
         if (array_key_exists("connectorGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["connectorGroup"], "\Beta\Microsoft\Graph\Model\ConnectorGroup")) {
+            if (is_a($this->_propDict["connectorGroup"], "\Beta\Microsoft\Graph\Model\ConnectorGroup") || is_null($this->_propDict["connectorGroup"])) {
                 return $this->_propDict["connectorGroup"];
             } else {
                 $this->_propDict["connectorGroup"] = new ConnectorGroup($this->_propDict["connectorGroup"]);
@@ -1091,12 +1091,12 @@ class Application extends DirectoryObject
     /**
     * Gets the synchronization
     *
-    * @return Synchronization The synchronization
+    * @return Synchronization|null The synchronization
     */
     public function getSynchronization()
     {
         if (array_key_exists("synchronization", $this->_propDict)) {
-            if (is_a($this->_propDict["synchronization"], "\Beta\Microsoft\Graph\Model\Synchronization")) {
+            if (is_a($this->_propDict["synchronization"], "\Beta\Microsoft\Graph\Model\Synchronization") || is_null($this->_propDict["synchronization"])) {
                 return $this->_propDict["synchronization"];
             } else {
                 $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);

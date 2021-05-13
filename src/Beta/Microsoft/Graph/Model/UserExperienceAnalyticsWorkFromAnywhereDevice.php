@@ -28,7 +28,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the autoPilotProfileAssigned
     * The user experience analytics work from anywhere intune device's autopilotProfileAssigned.
     *
-    * @return bool The autoPilotProfileAssigned
+    * @return bool|null The autoPilotProfileAssigned
     */
     public function getAutoPilotProfileAssigned()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the autoPilotRegistered
     * The user experience work from anywhere intune device's autopilotRegistered.
     *
-    * @return bool The autoPilotRegistered
+    * @return bool|null The autoPilotRegistered
     */
     public function getAutoPilotRegistered()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the azureAdDeviceId
     * The user experience work from anywhere azure Ad device Id.
     *
-    * @return string The azureAdDeviceId
+    * @return string|null The azureAdDeviceId
     */
     public function getAzureAdDeviceId()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the azureAdJoinType
     * The user experience work from anywhere device's azure Ad joinType.
     *
-    * @return string The azureAdJoinType
+    * @return string|null The azureAdJoinType
     */
     public function getAzureAdJoinType()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the azureAdRegistered
     * The user experience work from anywhere device's azureAdRegistered.
     *
-    * @return bool The azureAdRegistered
+    * @return bool|null The azureAdRegistered
     */
     public function getAzureAdRegistered()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the deviceName
     * The work from anywhere device's name.
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the managedBy
     * The user experience work from anywhere management agent of the device.
     *
-    * @return string The managedBy
+    * @return string|null The managedBy
     */
     public function getManagedBy()
     {
@@ -231,7 +231,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the manufacturer
     * The user experience work from anywhere device's manufacturer.
     *
-    * @return string The manufacturer
+    * @return string|null The manufacturer
     */
     public function getManufacturer()
     {
@@ -260,7 +260,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the model
     * The user experience work from anywhere device's model.
     *
-    * @return string The model
+    * @return string|null The model
     */
     public function getModel()
     {
@@ -289,7 +289,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the ownership
     * The user experience work from anywhere device's ownership.
     *
-    * @return string The ownership
+    * @return string|null The ownership
     */
     public function getOwnership()
     {
@@ -318,7 +318,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     * Gets the serialNumber
     * The user experience work from anywhere device's serial number.
     *
-    * @return string The serialNumber
+    * @return string|null The serialNumber
     */
     public function getSerialNumber()
     {

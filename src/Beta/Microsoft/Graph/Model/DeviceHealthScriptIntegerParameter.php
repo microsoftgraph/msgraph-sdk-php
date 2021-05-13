@@ -36,7 +36,7 @@ class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParameter
     * Gets the defaultValue
     * The default value of Integer param. Valid values -2147483648 to 2147483647
     *
-    * @return int The defaultValue
+    * @return int|null The defaultValue
     */
     public function getDefaultValue()
     {

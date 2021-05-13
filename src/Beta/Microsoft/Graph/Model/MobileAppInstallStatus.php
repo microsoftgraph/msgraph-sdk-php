@@ -28,7 +28,7 @@ class MobileAppInstallStatus extends Entity
     * Gets the deviceId
     * Device ID
     *
-    * @return string The deviceId
+    * @return string|null The deviceId
     */
     public function getDeviceId()
     {
@@ -57,7 +57,7 @@ class MobileAppInstallStatus extends Entity
     * Gets the deviceName
     * Device name
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -86,7 +86,7 @@ class MobileAppInstallStatus extends Entity
     * Gets the displayVersion
     * Human readable version of the application
     *
-    * @return string The displayVersion
+    * @return string|null The displayVersion
     */
     public function getDisplayVersion()
     {
@@ -115,7 +115,7 @@ class MobileAppInstallStatus extends Entity
     * Gets the errorCode
     * The error code for install or uninstall failures.
     *
-    * @return int The errorCode
+    * @return int|null The errorCode
     */
     public function getErrorCode()
     {
@@ -144,12 +144,12 @@ class MobileAppInstallStatus extends Entity
     * Gets the installState
     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
-    * @return ResultantAppState The installState
+    * @return ResultantAppState|null The installState
     */
     public function getInstallState()
     {
         if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\ResultantAppState")) {
+            if (is_a($this->_propDict["installState"], "\Beta\Microsoft\Graph\Model\ResultantAppState") || is_null($this->_propDict["installState"])) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new ResultantAppState($this->_propDict["installState"]);
@@ -177,12 +177,12 @@ class MobileAppInstallStatus extends Entity
     * Gets the installStateDetail
     * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
     *
-    * @return ResultantAppStateDetail The installStateDetail
+    * @return ResultantAppStateDetail|null The installStateDetail
     */
     public function getInstallStateDetail()
     {
         if (array_key_exists("installStateDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["installStateDetail"], "\Beta\Microsoft\Graph\Model\ResultantAppStateDetail")) {
+            if (is_a($this->_propDict["installStateDetail"], "\Beta\Microsoft\Graph\Model\ResultantAppStateDetail") || is_null($this->_propDict["installStateDetail"])) {
                 return $this->_propDict["installStateDetail"];
             } else {
                 $this->_propDict["installStateDetail"] = new ResultantAppStateDetail($this->_propDict["installStateDetail"]);
@@ -210,12 +210,12 @@ class MobileAppInstallStatus extends Entity
     * Gets the lastSyncDateTime
     * Last sync date time
     *
-    * @return \DateTime The lastSyncDateTime
+    * @return \DateTime|null The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -243,12 +243,12 @@ class MobileAppInstallStatus extends Entity
     * Gets the mobileAppInstallStatusValue
     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
     *
-    * @return ResultantAppState The mobileAppInstallStatusValue
+    * @return ResultantAppState|null The mobileAppInstallStatusValue
     */
     public function getMobileAppInstallStatusValue()
     {
         if (array_key_exists("mobileAppInstallStatusValue", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileAppInstallStatusValue"], "\Beta\Microsoft\Graph\Model\ResultantAppState")) {
+            if (is_a($this->_propDict["mobileAppInstallStatusValue"], "\Beta\Microsoft\Graph\Model\ResultantAppState") || is_null($this->_propDict["mobileAppInstallStatusValue"])) {
                 return $this->_propDict["mobileAppInstallStatusValue"];
             } else {
                 $this->_propDict["mobileAppInstallStatusValue"] = new ResultantAppState($this->_propDict["mobileAppInstallStatusValue"]);
@@ -276,7 +276,7 @@ class MobileAppInstallStatus extends Entity
     * Gets the osDescription
     * OS Description
     *
-    * @return string The osDescription
+    * @return string|null The osDescription
     */
     public function getOsDescription()
     {
@@ -305,7 +305,7 @@ class MobileAppInstallStatus extends Entity
     * Gets the osVersion
     * OS Version
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {
@@ -334,7 +334,7 @@ class MobileAppInstallStatus extends Entity
     * Gets the userName
     * Device User Name
     *
-    * @return string The userName
+    * @return string|null The userName
     */
     public function getUserName()
     {
@@ -363,7 +363,7 @@ class MobileAppInstallStatus extends Entity
     * Gets the userPrincipalName
     * User Principal Name
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -392,12 +392,12 @@ class MobileAppInstallStatus extends Entity
     * Gets the app
     * The navigation link to the mobile app.
     *
-    * @return MobileApp The app
+    * @return MobileApp|null The app
     */
     public function getApp()
     {
         if (array_key_exists("app", $this->_propDict)) {
-            if (is_a($this->_propDict["app"], "\Beta\Microsoft\Graph\Model\MobileApp")) {
+            if (is_a($this->_propDict["app"], "\Beta\Microsoft\Graph\Model\MobileApp") || is_null($this->_propDict["app"])) {
                 return $this->_propDict["app"];
             } else {
                 $this->_propDict["app"] = new MobileApp($this->_propDict["app"]);

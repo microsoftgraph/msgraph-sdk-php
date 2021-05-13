@@ -26,14 +26,14 @@ class DeviceEnrollmentConfiguration extends Entity
 {
     /**
     * Gets the createdDateTime
-    * Not yet documented
+    * Created date time in UTC of the device enrollment configuration
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -45,7 +45,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the createdDateTime
-    * Not yet documented
+    * Created date time in UTC of the device enrollment configuration
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,9 +59,9 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the description
-    * Not yet documented
+    * The description of the device enrollment configuration
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -74,7 +74,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the description
-    * Not yet documented
+    * The description of the device enrollment configuration
     *
     * @param string $val The description
     *
@@ -88,9 +88,9 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the displayName
-    * Not yet documented
+    * The display name of the device enrollment configuration
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -103,7 +103,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the displayName
-    * Not yet documented
+    * The display name of the device enrollment configuration
     *
     * @param string $val The displayName
     *
@@ -117,14 +117,14 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Not yet documented
+    * Last modified date time in UTC of the device enrollment configuration
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -136,7 +136,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Not yet documented
+    * Last modified date time in UTC of the device enrollment configuration
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -150,9 +150,9 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the priority
-    * Not yet documented
+    * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
     *
-    * @return int The priority
+    * @return int|null The priority
     */
     public function getPriority()
     {
@@ -165,7 +165,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the priority
-    * Not yet documented
+    * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
     *
     * @param int $val The priority
     *
@@ -181,7 +181,7 @@ class DeviceEnrollmentConfiguration extends Entity
     * Gets the roleScopeTagIds
     * Optional role scope tags for the enrollment restrictions.
     *
-    * @return string The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -208,9 +208,9 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Gets the version
-    * Not yet documented
+    * The version of the device enrollment configuration
     *
-    * @return int The version
+    * @return int|null The version
     */
     public function getVersion()
     {
@@ -223,7 +223,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /**
     * Sets the version
-    * Not yet documented
+    * The version of the device enrollment configuration
     *
     * @param int $val The version
     *
@@ -238,9 +238,9 @@ class DeviceEnrollmentConfiguration extends Entity
 
      /** 
      * Gets the assignments
-    * The list of group assignments for the device configuration profile.
+    * The list of group assignments for the device configuration profile
      *
-     * @return array The assignments
+     * @return array|null The assignments
      */
     public function getAssignments()
     {
@@ -253,7 +253,7 @@ class DeviceEnrollmentConfiguration extends Entity
     
     /** 
     * Sets the assignments
-    * The list of group assignments for the device configuration profile.
+    * The list of group assignments for the device configuration profile
     *
     * @param EnrollmentConfigurationAssignment $val The assignments
     *
@@ -261,7 +261,7 @@ class DeviceEnrollmentConfiguration extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
     

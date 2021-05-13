@@ -28,7 +28,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the appleIdDisabled
     * Indicates if Apple id setup pane is disabled
     *
-    * @return bool The appleIdDisabled
+    * @return bool|null The appleIdDisabled
     */
     public function getAppleIdDisabled()
     {
@@ -57,7 +57,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the applePayDisabled
     * Indicates if Apple pay setup pane is disabled
     *
-    * @return bool The applePayDisabled
+    * @return bool|null The applePayDisabled
     */
     public function getApplePayDisabled()
     {
@@ -86,7 +86,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the configurationWebUrl
     * URL for setup assistant login
     *
-    * @return bool The configurationWebUrl
+    * @return bool|null The configurationWebUrl
     */
     public function getConfigurationWebUrl()
     {
@@ -115,7 +115,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the deviceNameTemplate
     * Sets a literal or name pattern.
     *
-    * @return string The deviceNameTemplate
+    * @return string|null The deviceNameTemplate
     */
     public function getDeviceNameTemplate()
     {
@@ -144,7 +144,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the diagnosticsDisabled
     * Indicates if diagnostics setup pane is disabled
     *
-    * @return bool The diagnosticsDisabled
+    * @return bool|null The diagnosticsDisabled
     */
     public function getDiagnosticsDisabled()
     {
@@ -173,7 +173,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the displayToneSetupDisabled
     * Indicates if displaytone setup screen is disabled
     *
-    * @return bool The displayToneSetupDisabled
+    * @return bool|null The displayToneSetupDisabled
     */
     public function getDisplayToneSetupDisabled()
     {
@@ -202,7 +202,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the isDefault
     * Indicates if this is the default profile
     *
-    * @return bool The isDefault
+    * @return bool|null The isDefault
     */
     public function getIsDefault()
     {
@@ -231,7 +231,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the isMandatory
     * Indicates if the profile is mandatory
     *
-    * @return bool The isMandatory
+    * @return bool|null The isMandatory
     */
     public function getIsMandatory()
     {
@@ -260,7 +260,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the locationDisabled
     * Indicates if Location service setup pane is disabled
     *
-    * @return bool The locationDisabled
+    * @return bool|null The locationDisabled
     */
     public function getLocationDisabled()
     {
@@ -289,7 +289,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the privacyPaneDisabled
     * Indicates if privacy screen is disabled
     *
-    * @return bool The privacyPaneDisabled
+    * @return bool|null The privacyPaneDisabled
     */
     public function getPrivacyPaneDisabled()
     {
@@ -318,7 +318,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the profileRemovalDisabled
     * Indicates if the profile removal option is disabled
     *
-    * @return bool The profileRemovalDisabled
+    * @return bool|null The profileRemovalDisabled
     */
     public function getProfileRemovalDisabled()
     {
@@ -347,7 +347,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the restoreBlocked
     * Indicates if Restore setup pane is blocked
     *
-    * @return bool The restoreBlocked
+    * @return bool|null The restoreBlocked
     */
     public function getRestoreBlocked()
     {
@@ -376,7 +376,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the screenTimeScreenDisabled
     * Indicates if screen timeout setup is disabled
     *
-    * @return bool The screenTimeScreenDisabled
+    * @return bool|null The screenTimeScreenDisabled
     */
     public function getScreenTimeScreenDisabled()
     {
@@ -405,7 +405,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the siriDisabled
     * Indicates if siri setup pane is disabled
     *
-    * @return bool The siriDisabled
+    * @return bool|null The siriDisabled
     */
     public function getSiriDisabled()
     {
@@ -434,7 +434,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the supervisedModeEnabled
     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
-    * @return bool The supervisedModeEnabled
+    * @return bool|null The supervisedModeEnabled
     */
     public function getSupervisedModeEnabled()
     {
@@ -463,7 +463,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the supportDepartment
     * Support department information
     *
-    * @return string The supportDepartment
+    * @return string|null The supportDepartment
     */
     public function getSupportDepartment()
     {
@@ -492,7 +492,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the supportPhoneNumber
     * Support phone number
     *
-    * @return string The supportPhoneNumber
+    * @return string|null The supportPhoneNumber
     */
     public function getSupportPhoneNumber()
     {
@@ -521,7 +521,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the termsAndConditionsDisabled
     * Indicates if 'Terms and Conditions' setup pane is disabled
     *
-    * @return bool The termsAndConditionsDisabled
+    * @return bool|null The termsAndConditionsDisabled
     */
     public function getTermsAndConditionsDisabled()
     {
@@ -550,7 +550,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
     * Gets the touchIdDisabled
     * Indicates if touch id setup pane is disabled
     *
-    * @return bool The touchIdDisabled
+    * @return bool|null The touchIdDisabled
     */
     public function getTouchIdDisabled()
     {

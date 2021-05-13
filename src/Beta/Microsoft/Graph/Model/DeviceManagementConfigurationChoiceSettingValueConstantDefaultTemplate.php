@@ -28,12 +28,12 @@ class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate ext
     * Gets the children
     * Option Children
     *
-    * @return DeviceManagementConfigurationSettingInstanceTemplate The children
+    * @return DeviceManagementConfigurationSettingInstanceTemplate|null The children
     */
     public function getChildren()
     {
         if (array_key_exists("children", $this->_propDict)) {
-            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstanceTemplate")) {
+            if (is_a($this->_propDict["children"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationSettingInstanceTemplate") || is_null($this->_propDict["children"])) {
                 return $this->_propDict["children"];
             } else {
                 $this->_propDict["children"] = new DeviceManagementConfigurationSettingInstanceTemplate($this->_propDict["children"]);
@@ -60,7 +60,7 @@ class DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate ext
     * Gets the settingDefinitionOptionId
     * Default Constant Value
     *
-    * @return string The settingDefinitionOptionId
+    * @return string|null The settingDefinitionOptionId
     */
     public function getSettingDefinitionOptionId()
     {

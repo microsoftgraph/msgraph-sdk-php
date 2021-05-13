@@ -28,7 +28,7 @@ class Office365ActivationCounts extends Entity
     * Gets the android
     * The activation count on an Android device.
     *
-    * @return int The android
+    * @return int|null The android
     */
     public function getAndroid()
     {
@@ -57,7 +57,7 @@ class Office365ActivationCounts extends Entity
     * Gets the ios
     * The activation count on iOS.
     *
-    * @return int The ios
+    * @return int|null The ios
     */
     public function getIos()
     {
@@ -86,7 +86,7 @@ class Office365ActivationCounts extends Entity
     * Gets the mac
     * The activation count on Mac OS.
     *
-    * @return int The mac
+    * @return int|null The mac
     */
     public function getMac()
     {
@@ -115,7 +115,7 @@ class Office365ActivationCounts extends Entity
     * Gets the productType
     * The product type, such as 'Microsoft 365 ProPlus' or 'Project Client'.
     *
-    * @return string The productType
+    * @return string|null The productType
     */
     public function getProductType()
     {
@@ -144,12 +144,12 @@ class Office365ActivationCounts extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -177,7 +177,7 @@ class Office365ActivationCounts extends Entity
     * Gets the windows
     * The activation count on Windows. This number includes every activation on any Windows computer.
     *
-    * @return int The windows
+    * @return int|null The windows
     */
     public function getWindows()
     {
@@ -206,7 +206,7 @@ class Office365ActivationCounts extends Entity
     * Gets the windows10Mobile
     * The activation count on Windows 10 mobile.
     *
-    * @return int The windows10Mobile
+    * @return int|null The windows10Mobile
     */
     public function getWindows10Mobile()
     {

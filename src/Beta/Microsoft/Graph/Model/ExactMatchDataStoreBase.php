@@ -28,7 +28,7 @@ class ExactMatchDataStoreBase extends Entity
      /** 
      * Gets the columns
      *
-     * @return array The columns
+     * @return array|null The columns
      */
     public function getColumns()
     {
@@ -48,19 +48,19 @@ class ExactMatchDataStoreBase extends Entity
     */
     public function setColumns($val)
     {
-		$this->_propDict["columns"] = $val;
+        $this->_propDict["columns"] = $val;
         return $this;
     }
     
     /**
     * Gets the dataLastUpdatedDateTime
     *
-    * @return \DateTime The dataLastUpdatedDateTime
+    * @return \DateTime|null The dataLastUpdatedDateTime
     */
     public function getDataLastUpdatedDateTime()
     {
         if (array_key_exists("dataLastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dataLastUpdatedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["dataLastUpdatedDateTime"], "\DateTime") || is_null($this->_propDict["dataLastUpdatedDateTime"])) {
                 return $this->_propDict["dataLastUpdatedDateTime"];
             } else {
                 $this->_propDict["dataLastUpdatedDateTime"] = new \DateTime($this->_propDict["dataLastUpdatedDateTime"]);
@@ -86,7 +86,7 @@ class ExactMatchDataStoreBase extends Entity
     /**
     * Gets the description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -113,7 +113,7 @@ class ExactMatchDataStoreBase extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {

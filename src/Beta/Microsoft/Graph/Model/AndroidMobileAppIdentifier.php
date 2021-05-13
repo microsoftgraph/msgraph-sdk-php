@@ -36,7 +36,7 @@ class AndroidMobileAppIdentifier extends MobileAppIdentifier
     * Gets the packageId
     * The identifier for an app, as specified in the play store.
     *
-    * @return string The packageId
+    * @return string|null The packageId
     */
     public function getPackageId()
     {

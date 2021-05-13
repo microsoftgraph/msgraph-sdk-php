@@ -29,7 +29,7 @@ class LicenseDetails extends Entity
      * Gets the servicePlans
     * Information about the service plans assigned with the license. Read-only, Not nullable
      *
-     * @return array The servicePlans
+     * @return array|null The servicePlans
      */
     public function getServicePlans()
     {
@@ -50,7 +50,7 @@ class LicenseDetails extends Entity
     */
     public function setServicePlans($val)
     {
-		$this->_propDict["servicePlans"] = $val;
+        $this->_propDict["servicePlans"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class LicenseDetails extends Entity
     * Gets the skuId
     * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
     *
-    * @return string The skuId
+    * @return string|null The skuId
     */
     public function getSkuId()
     {
@@ -87,7 +87,7 @@ class LicenseDetails extends Entity
     * Gets the skuPartNumber
     * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
     *
-    * @return string The skuPartNumber
+    * @return string|null The skuPartNumber
     */
     public function getSkuPartNumber()
     {

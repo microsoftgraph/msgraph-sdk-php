@@ -28,12 +28,12 @@ class ConfigurationManagerAction extends Entity
     * Gets the action
     * The action type to trigger on Configuration Manager client. Possible values are: refreshMachinePolicy, refreshUserPolicy, wakeUpClient, appEvaluation.
     *
-    * @return ConfigurationManagerActionType The action
+    * @return ConfigurationManagerActionType|null The action
     */
     public function getAction()
     {
         if (array_key_exists("action", $this->_propDict)) {
-            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\ConfigurationManagerActionType")) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Model\ConfigurationManagerActionType") || is_null($this->_propDict["action"])) {
                 return $this->_propDict["action"];
             } else {
                 $this->_propDict["action"] = new ConfigurationManagerActionType($this->_propDict["action"]);

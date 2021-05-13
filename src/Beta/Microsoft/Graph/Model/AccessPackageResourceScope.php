@@ -28,7 +28,7 @@ class AccessPackageResourceScope extends Entity
     * Gets the description
     * The description of the scope.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class AccessPackageResourceScope extends Entity
     * Gets the displayName
     * The display name of the scope.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class AccessPackageResourceScope extends Entity
     * Gets the isRootScope
     * True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
     *
-    * @return bool The isRootScope
+    * @return bool|null The isRootScope
     */
     public function getIsRootScope()
     {
@@ -115,7 +115,7 @@ class AccessPackageResourceScope extends Entity
     * Gets the originId
     * The unique identifier for the scope in the resource as defined in the origin system.
     *
-    * @return string The originId
+    * @return string|null The originId
     */
     public function getOriginId()
     {
@@ -144,7 +144,7 @@ class AccessPackageResourceScope extends Entity
     * Gets the originSystem
     * The origin system for the scope.
     *
-    * @return string The originSystem
+    * @return string|null The originSystem
     */
     public function getOriginSystem()
     {
@@ -173,7 +173,7 @@ class AccessPackageResourceScope extends Entity
     * Gets the roleOriginId
     * The origin system for the role, if different.
     *
-    * @return string The roleOriginId
+    * @return string|null The roleOriginId
     */
     public function getRoleOriginId()
     {
@@ -202,7 +202,7 @@ class AccessPackageResourceScope extends Entity
     * Gets the url
     * A resource locator for the scope.
     *
-    * @return string The url
+    * @return string|null The url
     */
     public function getUrl()
     {
@@ -231,12 +231,12 @@ class AccessPackageResourceScope extends Entity
     * Gets the accessPackageResource
     * Read-only. Nullable.
     *
-    * @return AccessPackageResource The accessPackageResource
+    * @return AccessPackageResource|null The accessPackageResource
     */
     public function getAccessPackageResource()
     {
         if (array_key_exists("accessPackageResource", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResource"], "\Beta\Microsoft\Graph\Model\AccessPackageResource")) {
+            if (is_a($this->_propDict["accessPackageResource"], "\Beta\Microsoft\Graph\Model\AccessPackageResource") || is_null($this->_propDict["accessPackageResource"])) {
                 return $this->_propDict["accessPackageResource"];
             } else {
                 $this->_propDict["accessPackageResource"] = new AccessPackageResource($this->_propDict["accessPackageResource"]);

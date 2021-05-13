@@ -28,7 +28,7 @@ class DirectorySettingTemplate extends DirectoryObject
     * Gets the description
     * Description of the template. Read-only.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class DirectorySettingTemplate extends DirectoryObject
     * Gets the displayName
     * Display name of the template. Read-only.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -87,7 +87,7 @@ class DirectorySettingTemplate extends DirectoryObject
      * Gets the values
     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
      *
-     * @return array The values
+     * @return array|null The values
      */
     public function getValues()
     {
@@ -108,7 +108,7 @@ class DirectorySettingTemplate extends DirectoryObject
     */
     public function setValues($val)
     {
-		$this->_propDict["values"] = $val;
+        $this->_propDict["values"] = $val;
         return $this;
     }
     

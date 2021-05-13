@@ -28,12 +28,12 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the advancedThreatProtectionRequiredSecurityLevel
     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
-    * @return DeviceThreatProtectionLevel The advancedThreatProtectionRequiredSecurityLevel
+    * @return DeviceThreatProtectionLevel|null The advancedThreatProtectionRequiredSecurityLevel
     */
     public function getAdvancedThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("advancedThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel") || is_null($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"])) {
                 return $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["advancedThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["advancedThreatProtectionRequiredSecurityLevel"]);
@@ -61,7 +61,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the deviceThreatProtectionEnabled
     * Require that devices have enabled device threat protection.
     *
-    * @return bool The deviceThreatProtectionEnabled
+    * @return bool|null The deviceThreatProtectionEnabled
     */
     public function getDeviceThreatProtectionEnabled()
     {
@@ -90,12 +90,12 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the deviceThreatProtectionRequiredSecurityLevel
     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
     *
-    * @return DeviceThreatProtectionLevel The deviceThreatProtectionRequiredSecurityLevel
+    * @return DeviceThreatProtectionLevel|null The deviceThreatProtectionRequiredSecurityLevel
     */
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
         if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Beta\Microsoft\Graph\Model\DeviceThreatProtectionLevel") || is_null($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"])) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
@@ -123,7 +123,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the minAndroidSecurityPatchLevel
     * Minimum Android security patch level.
     *
-    * @return string The minAndroidSecurityPatchLevel
+    * @return string|null The minAndroidSecurityPatchLevel
     */
     public function getMinAndroidSecurityPatchLevel()
     {
@@ -152,7 +152,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMaximumVersion
     * Maximum Android version.
     *
-    * @return string The osMaximumVersion
+    * @return string|null The osMaximumVersion
     */
     public function getOsMaximumVersion()
     {
@@ -181,7 +181,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the osMinimumVersion
     * Minimum Android version.
     *
-    * @return string The osMinimumVersion
+    * @return string|null The osMinimumVersion
     */
     public function getOsMinimumVersion()
     {
@@ -210,7 +210,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordExpirationDays
     * Number of days before the password expires. Valid values 1 to 365
     *
-    * @return int The passwordExpirationDays
+    * @return int|null The passwordExpirationDays
     */
     public function getPasswordExpirationDays()
     {
@@ -239,7 +239,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinimumLength
     * Minimum password length. Valid values 4 to 16
     *
-    * @return int The passwordMinimumLength
+    * @return int|null The passwordMinimumLength
     */
     public function getPasswordMinimumLength()
     {
@@ -268,7 +268,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a password is required.
     *
-    * @return int The passwordMinutesOfInactivityBeforeLock
+    * @return int|null The passwordMinutesOfInactivityBeforeLock
     */
     public function getPasswordMinutesOfInactivityBeforeLock()
     {
@@ -297,7 +297,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordPreviousPasswordBlockCount
     * Number of previous passwords to block. Valid values 1 to 24
     *
-    * @return int The passwordPreviousPasswordBlockCount
+    * @return int|null The passwordPreviousPasswordBlockCount
     */
     public function getPasswordPreviousPasswordBlockCount()
     {
@@ -326,7 +326,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequired
     * Require a password to unlock device.
     *
-    * @return bool The passwordRequired
+    * @return bool|null The passwordRequired
     */
     public function getPasswordRequired()
     {
@@ -355,12 +355,12 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordRequiredType
     * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
     *
-    * @return AndroidRequiredPasswordType The passwordRequiredType
+    * @return AndroidRequiredPasswordType|null The passwordRequiredType
     */
     public function getPasswordRequiredType()
     {
         if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\AndroidRequiredPasswordType")) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Beta\Microsoft\Graph\Model\AndroidRequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -388,7 +388,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the passwordSignInFailureCountBeforeFactoryReset
     * Number of sign-in failures allowed before factory reset. Valid values 1 to 16
     *
-    * @return int The passwordSignInFailureCountBeforeFactoryReset
+    * @return int|null The passwordSignInFailureCountBeforeFactoryReset
     */
     public function getPasswordSignInFailureCountBeforeFactoryReset()
     {
@@ -417,7 +417,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityBlockJailbrokenDevices
     * Devices must not be jailbroken or rooted.
     *
-    * @return bool The securityBlockJailbrokenDevices
+    * @return bool|null The securityBlockJailbrokenDevices
     */
     public function getSecurityBlockJailbrokenDevices()
     {
@@ -446,7 +446,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityDisableUsbDebugging
     * Disable USB debugging on Android devices.
     *
-    * @return bool The securityDisableUsbDebugging
+    * @return bool|null The securityDisableUsbDebugging
     */
     public function getSecurityDisableUsbDebugging()
     {
@@ -475,7 +475,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityPreventInstallAppsFromUnknownSources
     * Require that devices disallow installation of apps from unknown sources.
     *
-    * @return bool The securityPreventInstallAppsFromUnknownSources
+    * @return bool|null The securityPreventInstallAppsFromUnknownSources
     */
     public function getSecurityPreventInstallAppsFromUnknownSources()
     {
@@ -504,7 +504,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityRequireCompanyPortalAppIntegrity
     * Require the device to pass the Company Portal client app runtime integrity check.
     *
-    * @return bool The securityRequireCompanyPortalAppIntegrity
+    * @return bool|null The securityRequireCompanyPortalAppIntegrity
     */
     public function getSecurityRequireCompanyPortalAppIntegrity()
     {
@@ -533,7 +533,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityRequireGooglePlayServices
     * Require Google Play Services to be installed and enabled on the device.
     *
-    * @return bool The securityRequireGooglePlayServices
+    * @return bool|null The securityRequireGooglePlayServices
     */
     public function getSecurityRequireGooglePlayServices()
     {
@@ -562,7 +562,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityRequireSafetyNetAttestationBasicIntegrity
     * Require the device to pass the SafetyNet basic integrity check.
     *
-    * @return bool The securityRequireSafetyNetAttestationBasicIntegrity
+    * @return bool|null The securityRequireSafetyNetAttestationBasicIntegrity
     */
     public function getSecurityRequireSafetyNetAttestationBasicIntegrity()
     {
@@ -591,7 +591,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityRequireSafetyNetAttestationCertifiedDevice
     * Require the device to pass the SafetyNet certified device check.
     *
-    * @return bool The securityRequireSafetyNetAttestationCertifiedDevice
+    * @return bool|null The securityRequireSafetyNetAttestationCertifiedDevice
     */
     public function getSecurityRequireSafetyNetAttestationCertifiedDevice()
     {
@@ -620,7 +620,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityRequireUpToDateSecurityProviders
     * Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
     *
-    * @return bool The securityRequireUpToDateSecurityProviders
+    * @return bool|null The securityRequireUpToDateSecurityProviders
     */
     public function getSecurityRequireUpToDateSecurityProviders()
     {
@@ -649,7 +649,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the securityRequireVerifyApps
     * Require the Android Verify apps feature is turned on.
     *
-    * @return bool The securityRequireVerifyApps
+    * @return bool|null The securityRequireVerifyApps
     */
     public function getSecurityRequireVerifyApps()
     {
@@ -678,7 +678,7 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     * Gets the storageRequireEncryption
     * Require encryption on Android devices.
     *
-    * @return bool The storageRequireEncryption
+    * @return bool|null The storageRequireEncryption
     */
     public function getStorageRequireEncryption()
     {

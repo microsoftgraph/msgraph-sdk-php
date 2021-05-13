@@ -25,9 +25,9 @@ class StoragePlanInformation extends Entity
 {
     /**
     * Gets the upgradeAvailable
-    * Indicates whether there are higher storage quota plans available. Read-only.
+    * Indicates if there are higher storage quota plans available. Read-only.
     *
-    * @return bool The upgradeAvailable
+    * @return bool|null The upgradeAvailable
     */
     public function getUpgradeAvailable()
     {
@@ -40,7 +40,7 @@ class StoragePlanInformation extends Entity
 
     /**
     * Sets the upgradeAvailable
-    * Indicates whether there are higher storage quota plans available. Read-only.
+    * Indicates if there are higher storage quota plans available. Read-only.
     *
     * @param bool $val The value of the upgradeAvailable
     *

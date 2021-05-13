@@ -36,7 +36,7 @@ class DeviceManagementSettingEnrollmentTypeConstraint extends DeviceManagementCo
     * Gets the enrollmentTypes
     * List of enrollment types
     *
-    * @return string The enrollmentTypes
+    * @return string|null The enrollmentTypes
     */
     public function getEnrollmentTypes()
     {

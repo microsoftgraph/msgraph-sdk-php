@@ -29,7 +29,7 @@ class SynchronizationSchema extends Entity
      * Gets the synchronizationRules
     * A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      *
-     * @return array The synchronizationRules
+     * @return array|null The synchronizationRules
      */
     public function getSynchronizationRules()
     {
@@ -50,7 +50,7 @@ class SynchronizationSchema extends Entity
     */
     public function setSynchronizationRules($val)
     {
-		$this->_propDict["synchronizationRules"] = $val;
+        $this->_propDict["synchronizationRules"] = $val;
         return $this;
     }
     
@@ -58,7 +58,7 @@ class SynchronizationSchema extends Entity
     * Gets the version
     * The version of the schema, updated automatically with every schema change.
     *
-    * @return string The version
+    * @return string|null The version
     */
     public function getVersion()
     {
@@ -88,7 +88,7 @@ class SynchronizationSchema extends Entity
      * Gets the directories
     * Contains the collection of directories and all of their objects.
      *
-     * @return array The directories
+     * @return array|null The directories
      */
     public function getDirectories()
     {
@@ -109,7 +109,7 @@ class SynchronizationSchema extends Entity
     */
     public function setDirectories($val)
     {
-		$this->_propDict["directories"] = $val;
+        $this->_propDict["directories"] = $val;
         return $this;
     }
     

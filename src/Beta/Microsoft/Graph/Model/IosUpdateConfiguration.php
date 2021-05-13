@@ -28,12 +28,12 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the activeHoursEnd
     * Active Hours End (active hours mean the time window when updates install should not happen)
     *
-    * @return TimeOfDay The activeHoursEnd
+    * @return TimeOfDay|null The activeHoursEnd
     */
     public function getActiveHoursEnd()
     {
         if (array_key_exists("activeHoursEnd", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursEnd"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["activeHoursEnd"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["activeHoursEnd"])) {
                 return $this->_propDict["activeHoursEnd"];
             } else {
                 $this->_propDict["activeHoursEnd"] = new TimeOfDay($this->_propDict["activeHoursEnd"]);
@@ -61,12 +61,12 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the activeHoursStart
     * Active Hours Start (active hours mean the time window when updates install should not happen)
     *
-    * @return TimeOfDay The activeHoursStart
+    * @return TimeOfDay|null The activeHoursStart
     */
     public function getActiveHoursStart()
     {
         if (array_key_exists("activeHoursStart", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursStart"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["activeHoursStart"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["activeHoursStart"])) {
                 return $this->_propDict["activeHoursStart"];
             } else {
                 $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
@@ -95,7 +95,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
      * Gets the customUpdateTimeWindows
     * If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
      *
-     * @return array The customUpdateTimeWindows
+     * @return array|null The customUpdateTimeWindows
      */
     public function getCustomUpdateTimeWindows()
     {
@@ -116,7 +116,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     */
     public function setCustomUpdateTimeWindows($val)
     {
-		$this->_propDict["customUpdateTimeWindows"] = $val;
+        $this->_propDict["customUpdateTimeWindows"] = $val;
         return $this;
     }
     
@@ -124,7 +124,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the desiredOsVersion
     * If left unspecified, devices will update to the latest version of the OS.
     *
-    * @return string The desiredOsVersion
+    * @return string|null The desiredOsVersion
     */
     public function getDesiredOsVersion()
     {
@@ -153,7 +153,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the enforcedSoftwareUpdateDelayInDays
     * Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
     *
-    * @return int The enforcedSoftwareUpdateDelayInDays
+    * @return int|null The enforcedSoftwareUpdateDelayInDays
     */
     public function getEnforcedSoftwareUpdateDelayInDays()
     {
@@ -182,7 +182,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the isEnabled
     * Is setting enabled in UI
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {
@@ -212,7 +212,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
      * Gets the scheduledInstallDays
     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      *
-     * @return array The scheduledInstallDays
+     * @return array|null The scheduledInstallDays
      */
     public function getScheduledInstallDays()
     {
@@ -233,7 +233,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     */
     public function setScheduledInstallDays($val)
     {
-		$this->_propDict["scheduledInstallDays"] = $val;
+        $this->_propDict["scheduledInstallDays"] = $val;
         return $this;
     }
     
@@ -241,12 +241,12 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the updateScheduleType
     * Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
     *
-    * @return IosSoftwareUpdateScheduleType The updateScheduleType
+    * @return IosSoftwareUpdateScheduleType|null The updateScheduleType
     */
     public function getUpdateScheduleType()
     {
         if (array_key_exists("updateScheduleType", $this->_propDict)) {
-            if (is_a($this->_propDict["updateScheduleType"], "\Beta\Microsoft\Graph\Model\IosSoftwareUpdateScheduleType")) {
+            if (is_a($this->_propDict["updateScheduleType"], "\Beta\Microsoft\Graph\Model\IosSoftwareUpdateScheduleType") || is_null($this->_propDict["updateScheduleType"])) {
                 return $this->_propDict["updateScheduleType"];
             } else {
                 $this->_propDict["updateScheduleType"] = new IosSoftwareUpdateScheduleType($this->_propDict["updateScheduleType"]);
@@ -274,7 +274,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the utcTimeOffsetInMinutes
     * UTC Time Offset indicated in minutes
     *
-    * @return int The utcTimeOffsetInMinutes
+    * @return int|null The utcTimeOffsetInMinutes
     */
     public function getUtcTimeOffsetInMinutes()
     {

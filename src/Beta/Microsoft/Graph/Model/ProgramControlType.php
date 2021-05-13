@@ -27,7 +27,7 @@ class ProgramControlType extends Entity
     /**
     * Gets the controlTypeGroupId
     *
-    * @return string The controlTypeGroupId
+    * @return string|null The controlTypeGroupId
     */
     public function getControlTypeGroupId()
     {
@@ -55,7 +55,7 @@ class ProgramControlType extends Entity
     * Gets the displayName
     * The name of the program control type
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {

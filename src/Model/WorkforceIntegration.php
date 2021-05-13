@@ -28,7 +28,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     * Gets the apiVersion
     * API version for the call back URL. Start with 1.
     *
-    * @return int The apiVersion
+    * @return int|null The apiVersion
     */
     public function getApiVersion()
     {
@@ -57,7 +57,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     * Gets the displayName
     * Name of the workforce integration.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,12 +86,12 @@ class WorkforceIntegration extends ChangeTrackedEntity
     * Gets the encryption
     * The workforce integration encryption resource.
     *
-    * @return WorkforceIntegrationEncryption The encryption
+    * @return WorkforceIntegrationEncryption|null The encryption
     */
     public function getEncryption()
     {
         if (array_key_exists("encryption", $this->_propDict)) {
-            if (is_a($this->_propDict["encryption"], "\Microsoft\Graph\Model\WorkforceIntegrationEncryption")) {
+            if (is_a($this->_propDict["encryption"], "\Microsoft\Graph\Model\WorkforceIntegrationEncryption") || is_null($this->_propDict["encryption"])) {
                 return $this->_propDict["encryption"];
             } else {
                 $this->_propDict["encryption"] = new WorkforceIntegrationEncryption($this->_propDict["encryption"]);
@@ -119,7 +119,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     * Gets the isActive
     * Indicates whether this workforce integration is currently active and available.
     *
-    * @return bool The isActive
+    * @return bool|null The isActive
     */
     public function getIsActive()
     {
@@ -148,12 +148,12 @@ class WorkforceIntegration extends ChangeTrackedEntity
     * Gets the supportedEntities
     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. Possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences
     *
-    * @return WorkforceIntegrationSupportedEntities The supportedEntities
+    * @return WorkforceIntegrationSupportedEntities|null The supportedEntities
     */
     public function getSupportedEntities()
     {
         if (array_key_exists("supportedEntities", $this->_propDict)) {
-            if (is_a($this->_propDict["supportedEntities"], "\Microsoft\Graph\Model\WorkforceIntegrationSupportedEntities")) {
+            if (is_a($this->_propDict["supportedEntities"], "\Microsoft\Graph\Model\WorkforceIntegrationSupportedEntities") || is_null($this->_propDict["supportedEntities"])) {
                 return $this->_propDict["supportedEntities"];
             } else {
                 $this->_propDict["supportedEntities"] = new WorkforceIntegrationSupportedEntities($this->_propDict["supportedEntities"]);
@@ -181,7 +181,7 @@ class WorkforceIntegration extends ChangeTrackedEntity
     * Gets the url
     * Workforce Integration URL for callbacks from the Shifts service.
     *
-    * @return string The url
+    * @return string|null The url
     */
     public function getUrl()
     {

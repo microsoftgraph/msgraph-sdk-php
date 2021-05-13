@@ -28,7 +28,7 @@ class DirectoryRole extends DirectoryObject
     * Gets the description
     * The description for the directory role. Read-only.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class DirectoryRole extends DirectoryObject
     * Gets the displayName
     * The display name for the directory role. Read-only.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class DirectoryRole extends DirectoryObject
     * Gets the roleTemplateId
     * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.
     *
-    * @return string The roleTemplateId
+    * @return string|null The roleTemplateId
     */
     public function getRoleTemplateId()
     {
@@ -116,7 +116,7 @@ class DirectoryRole extends DirectoryObject
      * Gets the members
     * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
      *
-     * @return array The members
+     * @return array|null The members
      */
     public function getMembers()
     {
@@ -137,7 +137,7 @@ class DirectoryRole extends DirectoryObject
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
     
@@ -146,7 +146,7 @@ class DirectoryRole extends DirectoryObject
      * Gets the scopedMembers
     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      *
-     * @return array The scopedMembers
+     * @return array|null The scopedMembers
      */
     public function getScopedMembers()
     {
@@ -167,7 +167,7 @@ class DirectoryRole extends DirectoryObject
     */
     public function setScopedMembers($val)
     {
-		$this->_propDict["scopedMembers"] = $val;
+        $this->_propDict["scopedMembers"] = $val;
         return $this;
     }
     

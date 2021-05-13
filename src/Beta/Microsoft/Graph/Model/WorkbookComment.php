@@ -26,9 +26,9 @@ class WorkbookComment extends Entity
 {
     /**
     * Gets the content
-    * The content of comment.
+    * The content of the comment.
     *
-    * @return string The content
+    * @return string|null The content
     */
     public function getContent()
     {
@@ -41,7 +41,7 @@ class WorkbookComment extends Entity
     
     /**
     * Sets the content
-    * The content of comment.
+    * The content of the comment.
     *
     * @param string $val The content
     *
@@ -57,7 +57,7 @@ class WorkbookComment extends Entity
     * Gets the contentType
     * Indicates the type for the comment.
     *
-    * @return string The contentType
+    * @return string|null The contentType
     */
     public function getContentType()
     {
@@ -87,7 +87,7 @@ class WorkbookComment extends Entity
      * Gets the replies
     * Read-only. Nullable.
      *
-     * @return array The replies
+     * @return array|null The replies
      */
     public function getReplies()
     {
@@ -108,7 +108,7 @@ class WorkbookComment extends Entity
     */
     public function setReplies($val)
     {
-		$this->_propDict["replies"] = $val;
+        $this->_propDict["replies"] = $val;
         return $this;
     }
     

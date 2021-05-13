@@ -28,7 +28,7 @@ class NoncustodialDataSource extends DataSourceContainer
     * Gets the applyHoldToSource
     * Indicates if hold is applied to non-custodial data source (such as mailbox or site).
     *
-    * @return bool The applyHoldToSource
+    * @return bool|null The applyHoldToSource
     */
     public function getApplyHoldToSource()
     {
@@ -57,12 +57,12 @@ class NoncustodialDataSource extends DataSourceContainer
     * Gets the dataSource
     * User source or SharePoint site data source as non-custodial data source.
     *
-    * @return DataSource The dataSource
+    * @return DataSource|null The dataSource
     */
     public function getDataSource()
     {
         if (array_key_exists("dataSource", $this->_propDict)) {
-            if (is_a($this->_propDict["dataSource"], "\Beta\Microsoft\Graph\Ediscovery\Model\DataSource")) {
+            if (is_a($this->_propDict["dataSource"], "\Beta\Microsoft\Graph\Ediscovery\Model\DataSource") || is_null($this->_propDict["dataSource"])) {
                 return $this->_propDict["dataSource"];
             } else {
                 $this->_propDict["dataSource"] = new DataSource($this->_propDict["dataSource"]);

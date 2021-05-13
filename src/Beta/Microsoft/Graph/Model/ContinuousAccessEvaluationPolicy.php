@@ -28,7 +28,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
     * Gets the description
     * Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
     * Gets the displayName
     * The value is always Continuous Access Evaluation. Read-only.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
     * Gets the groups
     * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty.
     *
-    * @return string The groups
+    * @return string|null The groups
     */
     public function getGroups()
     {
@@ -115,7 +115,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
     * Gets the isEnabled
     * true to indicate whether continuous access evaluation should be performed; otherwise false.
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {
@@ -144,7 +144,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
     * Gets the users
     * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty.
     *
-    * @return string The users
+    * @return string|null The users
     */
     public function getUsers()
     {

@@ -28,12 +28,12 @@ class CloudPcProvisioningPolicyAssignment extends Entity
     * Gets the target
     * The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group.
     *
-    * @return CloudPcManagementAssignmentTarget The target
+    * @return CloudPcManagementAssignmentTarget|null The target
     */
     public function getTarget()
     {
         if (array_key_exists("target", $this->_propDict)) {
-            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\CloudPcManagementAssignmentTarget")) {
+            if (is_a($this->_propDict["target"], "\Beta\Microsoft\Graph\Model\CloudPcManagementAssignmentTarget") || is_null($this->_propDict["target"])) {
                 return $this->_propDict["target"];
             } else {
                 $this->_propDict["target"] = new CloudPcManagementAssignmentTarget($this->_propDict["target"]);

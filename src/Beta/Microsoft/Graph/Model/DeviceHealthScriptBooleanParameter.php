@@ -36,7 +36,7 @@ class DeviceHealthScriptBooleanParameter extends DeviceHealthScriptParameter
     * Gets the defaultValue
     * The default value of boolean param
     *
-    * @return bool The defaultValue
+    * @return bool|null The defaultValue
     */
     public function getDefaultValue()
     {

@@ -28,12 +28,12 @@ class Segment extends \Microsoft\Graph\Model\Entity
     * Gets the callee
     * Endpoint that answered this segment.
     *
-    * @return Endpoint The callee
+    * @return Endpoint|null The callee
     */
     public function getCallee()
     {
         if (array_key_exists("callee", $this->_propDict)) {
-            if (is_a($this->_propDict["callee"], "\Microsoft\Graph\CallRecords\Model\Endpoint")) {
+            if (is_a($this->_propDict["callee"], "\Microsoft\Graph\CallRecords\Model\Endpoint") || is_null($this->_propDict["callee"])) {
                 return $this->_propDict["callee"];
             } else {
                 $this->_propDict["callee"] = new Endpoint($this->_propDict["callee"]);
@@ -61,12 +61,12 @@ class Segment extends \Microsoft\Graph\Model\Entity
     * Gets the caller
     * Endpoint that initiated this segment.
     *
-    * @return Endpoint The caller
+    * @return Endpoint|null The caller
     */
     public function getCaller()
     {
         if (array_key_exists("caller", $this->_propDict)) {
-            if (is_a($this->_propDict["caller"], "\Microsoft\Graph\CallRecords\Model\Endpoint")) {
+            if (is_a($this->_propDict["caller"], "\Microsoft\Graph\CallRecords\Model\Endpoint") || is_null($this->_propDict["caller"])) {
                 return $this->_propDict["caller"];
             } else {
                 $this->_propDict["caller"] = new Endpoint($this->_propDict["caller"]);
@@ -94,12 +94,12 @@ class Segment extends \Microsoft\Graph\Model\Entity
     * Gets the endDateTime
     * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The endDateTime
+    * @return \DateTime|null The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -127,12 +127,12 @@ class Segment extends \Microsoft\Graph\Model\Entity
     * Gets the failureInfo
     * Failure information associated with the segment if it failed.
     *
-    * @return FailureInfo The failureInfo
+    * @return FailureInfo|null The failureInfo
     */
     public function getFailureInfo()
     {
         if (array_key_exists("failureInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["failureInfo"], "\Microsoft\Graph\CallRecords\Model\FailureInfo")) {
+            if (is_a($this->_propDict["failureInfo"], "\Microsoft\Graph\CallRecords\Model\FailureInfo") || is_null($this->_propDict["failureInfo"])) {
                 return $this->_propDict["failureInfo"];
             } else {
                 $this->_propDict["failureInfo"] = new FailureInfo($this->_propDict["failureInfo"]);
@@ -161,7 +161,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
      * Gets the media
     * Media associated with this segment.
      *
-     * @return array The media
+     * @return array|null The media
      */
     public function getMedia()
     {
@@ -182,7 +182,7 @@ class Segment extends \Microsoft\Graph\Model\Entity
     */
     public function setMedia($val)
     {
-		$this->_propDict["media"] = $val;
+        $this->_propDict["media"] = $val;
         return $this;
     }
     
@@ -190,12 +190,12 @@ class Segment extends \Microsoft\Graph\Model\Entity
     * Gets the startDateTime
     * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The startDateTime
+    * @return \DateTime|null The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

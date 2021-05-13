@@ -29,7 +29,7 @@ class UpdatableAssetGroup extends UpdatableAsset
      * Gets the members
     * Members of the group. Read-only.
      *
-     * @return array The members
+     * @return array|null The members
      */
     public function getMembers()
     {
@@ -50,7 +50,7 @@ class UpdatableAssetGroup extends UpdatableAsset
     */
     public function setMembers($val)
     {
-		$this->_propDict["members"] = $val;
+        $this->_propDict["members"] = $val;
         return $this;
     }
     

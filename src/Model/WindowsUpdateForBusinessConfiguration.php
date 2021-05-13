@@ -28,12 +28,12 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the automaticUpdateMode
     * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
-    * @return AutomaticUpdateMode The automaticUpdateMode
+    * @return AutomaticUpdateMode|null The automaticUpdateMode
     */
     public function getAutomaticUpdateMode()
     {
         if (array_key_exists("automaticUpdateMode", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticUpdateMode"], "\Microsoft\Graph\Model\AutomaticUpdateMode")) {
+            if (is_a($this->_propDict["automaticUpdateMode"], "\Microsoft\Graph\Model\AutomaticUpdateMode") || is_null($this->_propDict["automaticUpdateMode"])) {
                 return $this->_propDict["automaticUpdateMode"];
             } else {
                 $this->_propDict["automaticUpdateMode"] = new AutomaticUpdateMode($this->_propDict["automaticUpdateMode"]);
@@ -61,12 +61,12 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the businessReadyUpdatesOnly
     * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
     *
-    * @return WindowsUpdateType The businessReadyUpdatesOnly
+    * @return WindowsUpdateType|null The businessReadyUpdatesOnly
     */
     public function getBusinessReadyUpdatesOnly()
     {
         if (array_key_exists("businessReadyUpdatesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["businessReadyUpdatesOnly"], "\Microsoft\Graph\Model\WindowsUpdateType")) {
+            if (is_a($this->_propDict["businessReadyUpdatesOnly"], "\Microsoft\Graph\Model\WindowsUpdateType") || is_null($this->_propDict["businessReadyUpdatesOnly"])) {
                 return $this->_propDict["businessReadyUpdatesOnly"];
             } else {
                 $this->_propDict["businessReadyUpdatesOnly"] = new WindowsUpdateType($this->_propDict["businessReadyUpdatesOnly"]);
@@ -94,12 +94,12 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the deliveryOptimizationMode
     * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
     *
-    * @return WindowsDeliveryOptimizationMode The deliveryOptimizationMode
+    * @return WindowsDeliveryOptimizationMode|null The deliveryOptimizationMode
     */
     public function getDeliveryOptimizationMode()
     {
         if (array_key_exists("deliveryOptimizationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationMode"], "\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
+            if (is_a($this->_propDict["deliveryOptimizationMode"], "\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode") || is_null($this->_propDict["deliveryOptimizationMode"])) {
                 return $this->_propDict["deliveryOptimizationMode"];
             } else {
                 $this->_propDict["deliveryOptimizationMode"] = new WindowsDeliveryOptimizationMode($this->_propDict["deliveryOptimizationMode"]);
@@ -127,7 +127,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the driversExcluded
     * Exclude Windows update Drivers
     *
-    * @return bool The driversExcluded
+    * @return bool|null The driversExcluded
     */
     public function getDriversExcluded()
     {
@@ -156,7 +156,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the featureUpdatesDeferralPeriodInDays
     * Defer Feature Updates by these many days
     *
-    * @return int The featureUpdatesDeferralPeriodInDays
+    * @return int|null The featureUpdatesDeferralPeriodInDays
     */
     public function getFeatureUpdatesDeferralPeriodInDays()
     {
@@ -185,7 +185,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the featureUpdatesPaused
     * Pause Feature Updates
     *
-    * @return bool The featureUpdatesPaused
+    * @return bool|null The featureUpdatesPaused
     */
     public function getFeatureUpdatesPaused()
     {
@@ -214,12 +214,12 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the featureUpdatesPauseExpiryDateTime
     * Feature Updates Pause Expiry datetime
     *
-    * @return \DateTime The featureUpdatesPauseExpiryDateTime
+    * @return \DateTime|null The featureUpdatesPauseExpiryDateTime
     */
     public function getFeatureUpdatesPauseExpiryDateTime()
     {
         if (array_key_exists("featureUpdatesPauseExpiryDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["featureUpdatesPauseExpiryDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["featureUpdatesPauseExpiryDateTime"], "\DateTime") || is_null($this->_propDict["featureUpdatesPauseExpiryDateTime"])) {
                 return $this->_propDict["featureUpdatesPauseExpiryDateTime"];
             } else {
                 $this->_propDict["featureUpdatesPauseExpiryDateTime"] = new \DateTime($this->_propDict["featureUpdatesPauseExpiryDateTime"]);
@@ -247,12 +247,12 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the installationSchedule
     * Installation schedule
     *
-    * @return WindowsUpdateInstallScheduleType The installationSchedule
+    * @return WindowsUpdateInstallScheduleType|null The installationSchedule
     */
     public function getInstallationSchedule()
     {
         if (array_key_exists("installationSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["installationSchedule"], "\Microsoft\Graph\Model\WindowsUpdateInstallScheduleType")) {
+            if (is_a($this->_propDict["installationSchedule"], "\Microsoft\Graph\Model\WindowsUpdateInstallScheduleType") || is_null($this->_propDict["installationSchedule"])) {
                 return $this->_propDict["installationSchedule"];
             } else {
                 $this->_propDict["installationSchedule"] = new WindowsUpdateInstallScheduleType($this->_propDict["installationSchedule"]);
@@ -280,7 +280,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the microsoftUpdateServiceAllowed
     * Allow Microsoft Update Service
     *
-    * @return bool The microsoftUpdateServiceAllowed
+    * @return bool|null The microsoftUpdateServiceAllowed
     */
     public function getMicrosoftUpdateServiceAllowed()
     {
@@ -309,12 +309,12 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the prereleaseFeatures
     * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
     *
-    * @return PrereleaseFeatures The prereleaseFeatures
+    * @return PrereleaseFeatures|null The prereleaseFeatures
     */
     public function getPrereleaseFeatures()
     {
         if (array_key_exists("prereleaseFeatures", $this->_propDict)) {
-            if (is_a($this->_propDict["prereleaseFeatures"], "\Microsoft\Graph\Model\PrereleaseFeatures")) {
+            if (is_a($this->_propDict["prereleaseFeatures"], "\Microsoft\Graph\Model\PrereleaseFeatures") || is_null($this->_propDict["prereleaseFeatures"])) {
                 return $this->_propDict["prereleaseFeatures"];
             } else {
                 $this->_propDict["prereleaseFeatures"] = new PrereleaseFeatures($this->_propDict["prereleaseFeatures"]);
@@ -342,7 +342,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the qualityUpdatesDeferralPeriodInDays
     * Defer Quality Updates by these many days
     *
-    * @return int The qualityUpdatesDeferralPeriodInDays
+    * @return int|null The qualityUpdatesDeferralPeriodInDays
     */
     public function getQualityUpdatesDeferralPeriodInDays()
     {
@@ -371,7 +371,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the qualityUpdatesPaused
     * Pause Quality Updates
     *
-    * @return bool The qualityUpdatesPaused
+    * @return bool|null The qualityUpdatesPaused
     */
     public function getQualityUpdatesPaused()
     {
@@ -400,12 +400,12 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the qualityUpdatesPauseExpiryDateTime
     * Quality Updates Pause Expiry datetime
     *
-    * @return \DateTime The qualityUpdatesPauseExpiryDateTime
+    * @return \DateTime|null The qualityUpdatesPauseExpiryDateTime
     */
     public function getQualityUpdatesPauseExpiryDateTime()
     {
         if (array_key_exists("qualityUpdatesPauseExpiryDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["qualityUpdatesPauseExpiryDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["qualityUpdatesPauseExpiryDateTime"], "\DateTime") || is_null($this->_propDict["qualityUpdatesPauseExpiryDateTime"])) {
                 return $this->_propDict["qualityUpdatesPauseExpiryDateTime"];
             } else {
                 $this->_propDict["qualityUpdatesPauseExpiryDateTime"] = new \DateTime($this->_propDict["qualityUpdatesPauseExpiryDateTime"]);

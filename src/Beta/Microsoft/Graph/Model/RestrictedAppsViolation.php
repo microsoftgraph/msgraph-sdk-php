@@ -28,7 +28,7 @@ class RestrictedAppsViolation extends Entity
     * Gets the deviceConfigurationId
     * Device configuration profile unique identifier, must be Guid
     *
-    * @return string The deviceConfigurationId
+    * @return string|null The deviceConfigurationId
     */
     public function getDeviceConfigurationId()
     {
@@ -57,7 +57,7 @@ class RestrictedAppsViolation extends Entity
     * Gets the deviceConfigurationName
     * Device configuration profile name
     *
-    * @return string The deviceConfigurationName
+    * @return string|null The deviceConfigurationName
     */
     public function getDeviceConfigurationName()
     {
@@ -86,7 +86,7 @@ class RestrictedAppsViolation extends Entity
     * Gets the deviceName
     * Device name
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -115,7 +115,7 @@ class RestrictedAppsViolation extends Entity
     * Gets the managedDeviceId
     * Managed device unique identifier, must be Guid
     *
-    * @return string The managedDeviceId
+    * @return string|null The managedDeviceId
     */
     public function getManagedDeviceId()
     {
@@ -144,12 +144,12 @@ class RestrictedAppsViolation extends Entity
     * Gets the platformType
     * Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
     *
-    * @return PolicyPlatformType The platformType
+    * @return PolicyPlatformType|null The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\PolicyPlatformType")) {
+            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\PolicyPlatformType") || is_null($this->_propDict["platformType"])) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -178,7 +178,7 @@ class RestrictedAppsViolation extends Entity
      * Gets the restrictedApps
     * List of violated restricted apps
      *
-     * @return array The restrictedApps
+     * @return array|null The restrictedApps
      */
     public function getRestrictedApps()
     {
@@ -199,7 +199,7 @@ class RestrictedAppsViolation extends Entity
     */
     public function setRestrictedApps($val)
     {
-		$this->_propDict["restrictedApps"] = $val;
+        $this->_propDict["restrictedApps"] = $val;
         return $this;
     }
     
@@ -207,12 +207,12 @@ class RestrictedAppsViolation extends Entity
     * Gets the restrictedAppsState
     * Restricted apps state. Possible values are: prohibitedApps, notApprovedApps.
     *
-    * @return RestrictedAppsState The restrictedAppsState
+    * @return RestrictedAppsState|null The restrictedAppsState
     */
     public function getRestrictedAppsState()
     {
         if (array_key_exists("restrictedAppsState", $this->_propDict)) {
-            if (is_a($this->_propDict["restrictedAppsState"], "\Beta\Microsoft\Graph\Model\RestrictedAppsState")) {
+            if (is_a($this->_propDict["restrictedAppsState"], "\Beta\Microsoft\Graph\Model\RestrictedAppsState") || is_null($this->_propDict["restrictedAppsState"])) {
                 return $this->_propDict["restrictedAppsState"];
             } else {
                 $this->_propDict["restrictedAppsState"] = new RestrictedAppsState($this->_propDict["restrictedAppsState"]);
@@ -240,7 +240,7 @@ class RestrictedAppsViolation extends Entity
     * Gets the userId
     * User unique identifier, must be Guid
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -269,7 +269,7 @@ class RestrictedAppsViolation extends Entity
     * Gets the userName
     * User name
     *
-    * @return string The userName
+    * @return string|null The userName
     */
     public function getUserName()
     {

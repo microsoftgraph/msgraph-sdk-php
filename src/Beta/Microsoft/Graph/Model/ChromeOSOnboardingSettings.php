@@ -28,12 +28,12 @@ class ChromeOSOnboardingSettings extends Entity
     * Gets the lastDirectorySyncDateTime
     * The ChromebookTenant's LastDirectorySyncDateTime
     *
-    * @return \DateTime The lastDirectorySyncDateTime
+    * @return \DateTime|null The lastDirectorySyncDateTime
     */
     public function getLastDirectorySyncDateTime()
     {
         if (array_key_exists("lastDirectorySyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastDirectorySyncDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastDirectorySyncDateTime"], "\DateTime") || is_null($this->_propDict["lastDirectorySyncDateTime"])) {
                 return $this->_propDict["lastDirectorySyncDateTime"];
             } else {
                 $this->_propDict["lastDirectorySyncDateTime"] = new \DateTime($this->_propDict["lastDirectorySyncDateTime"]);
@@ -61,12 +61,12 @@ class ChromeOSOnboardingSettings extends Entity
     * Gets the lastModifiedDateTime
     * The ChromebookTenant's LastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -94,12 +94,12 @@ class ChromeOSOnboardingSettings extends Entity
     * Gets the onboardingStatus
     * The ChromebookTenant's OnboardingStatus
     *
-    * @return OnboardingStatus The onboardingStatus
+    * @return OnboardingStatus|null The onboardingStatus
     */
     public function getOnboardingStatus()
     {
         if (array_key_exists("onboardingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["onboardingStatus"], "\Beta\Microsoft\Graph\Model\OnboardingStatus")) {
+            if (is_a($this->_propDict["onboardingStatus"], "\Beta\Microsoft\Graph\Model\OnboardingStatus") || is_null($this->_propDict["onboardingStatus"])) {
                 return $this->_propDict["onboardingStatus"];
             } else {
                 $this->_propDict["onboardingStatus"] = new OnboardingStatus($this->_propDict["onboardingStatus"]);
@@ -127,7 +127,7 @@ class ChromeOSOnboardingSettings extends Entity
     * Gets the ownerUserPrincipalName
     * The ChromebookTenant's OwnerUserPrincipalName
     *
-    * @return string The ownerUserPrincipalName
+    * @return string|null The ownerUserPrincipalName
     */
     public function getOwnerUserPrincipalName()
     {

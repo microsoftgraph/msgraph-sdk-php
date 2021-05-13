@@ -28,12 +28,12 @@ class SynchronizationJob extends Entity
     * Gets the schedule
     * Schedule used to run the job. Read-only.
     *
-    * @return SynchronizationSchedule The schedule
+    * @return SynchronizationSchedule|null The schedule
     */
     public function getSchedule()
     {
         if (array_key_exists("schedule", $this->_propDict)) {
-            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\SynchronizationSchedule")) {
+            if (is_a($this->_propDict["schedule"], "\Beta\Microsoft\Graph\Model\SynchronizationSchedule") || is_null($this->_propDict["schedule"])) {
                 return $this->_propDict["schedule"];
             } else {
                 $this->_propDict["schedule"] = new SynchronizationSchedule($this->_propDict["schedule"]);
@@ -61,12 +61,12 @@ class SynchronizationJob extends Entity
     * Gets the status
     * Status of the job, which includes when the job was last run, current job state, and errors.
     *
-    * @return SynchronizationStatus The status
+    * @return SynchronizationStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\SynchronizationStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\SynchronizationStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SynchronizationStatus($this->_propDict["status"]);
@@ -95,7 +95,7 @@ class SynchronizationJob extends Entity
      * Gets the synchronizationJobSettings
     * Settings associated with the job. Some settings are inherited from the template.
      *
-     * @return array The synchronizationJobSettings
+     * @return array|null The synchronizationJobSettings
      */
     public function getSynchronizationJobSettings()
     {
@@ -116,7 +116,7 @@ class SynchronizationJob extends Entity
     */
     public function setSynchronizationJobSettings($val)
     {
-		$this->_propDict["synchronizationJobSettings"] = $val;
+        $this->_propDict["synchronizationJobSettings"] = $val;
         return $this;
     }
     
@@ -124,7 +124,7 @@ class SynchronizationJob extends Entity
     * Gets the templateId
     * Identifier of the synchronization template this job is based on.
     *
-    * @return string The templateId
+    * @return string|null The templateId
     */
     public function getTemplateId()
     {
@@ -153,12 +153,12 @@ class SynchronizationJob extends Entity
     * Gets the schema
     * The synchronization schema configured for the job.
     *
-    * @return SynchronizationSchema The schema
+    * @return SynchronizationSchema|null The schema
     */
     public function getSchema()
     {
         if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\Model\SynchronizationSchema")) {
+            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\Model\SynchronizationSchema") || is_null($this->_propDict["schema"])) {
                 return $this->_propDict["schema"];
             } else {
                 $this->_propDict["schema"] = new SynchronizationSchema($this->_propDict["schema"]);

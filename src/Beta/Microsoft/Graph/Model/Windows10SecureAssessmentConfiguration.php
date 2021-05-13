@@ -28,7 +28,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     * Gets the allowPrinting
     * Indicates whether or not to allow the app from printing during the test.
     *
-    * @return bool The allowPrinting
+    * @return bool|null The allowPrinting
     */
     public function getAllowPrinting()
     {
@@ -57,7 +57,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     * Gets the allowScreenCapture
     * Indicates whether or not to allow screen capture capability during a test.
     *
-    * @return bool The allowScreenCapture
+    * @return bool|null The allowScreenCapture
     */
     public function getAllowScreenCapture()
     {
@@ -86,7 +86,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     * Gets the allowTextSuggestion
     * Indicates whether or not to allow text suggestions during the test.
     *
-    * @return bool The allowTextSuggestion
+    * @return bool|null The allowTextSuggestion
     */
     public function getAllowTextSuggestion()
     {
@@ -115,7 +115,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     * Gets the assessmentAppUserModelId
     * Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
     *
-    * @return string The assessmentAppUserModelId
+    * @return string|null The assessmentAppUserModelId
     */
     public function getAssessmentAppUserModelId()
     {
@@ -144,7 +144,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     * Gets the configurationAccount
     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
     *
-    * @return string The configurationAccount
+    * @return string|null The configurationAccount
     */
     public function getConfigurationAccount()
     {
@@ -173,12 +173,12 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     * Gets the configurationAccountType
     * The account type used to by ConfigurationAccount. Possible values are: azureADAccount, domainAccount, localAccount, localGuestAccount.
     *
-    * @return SecureAssessmentAccountType The configurationAccountType
+    * @return SecureAssessmentAccountType|null The configurationAccountType
     */
     public function getConfigurationAccountType()
     {
         if (array_key_exists("configurationAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationAccountType"], "\Beta\Microsoft\Graph\Model\SecureAssessmentAccountType")) {
+            if (is_a($this->_propDict["configurationAccountType"], "\Beta\Microsoft\Graph\Model\SecureAssessmentAccountType") || is_null($this->_propDict["configurationAccountType"])) {
                 return $this->_propDict["configurationAccountType"];
             } else {
                 $this->_propDict["configurationAccountType"] = new SecureAssessmentAccountType($this->_propDict["configurationAccountType"]);
@@ -206,7 +206,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     * Gets the launchUri
     * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
     *
-    * @return string The launchUri
+    * @return string|null The launchUri
     */
     public function getLaunchUri()
     {
@@ -235,7 +235,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration
     * Gets the localGuestAccountName
     * Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
     *
-    * @return string The localGuestAccountName
+    * @return string|null The localGuestAccountName
     */
     public function getLocalGuestAccountName()
     {

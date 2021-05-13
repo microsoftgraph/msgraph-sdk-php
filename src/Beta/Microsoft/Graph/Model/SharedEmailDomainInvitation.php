@@ -27,12 +27,12 @@ class SharedEmailDomainInvitation extends Entity
     /**
     * Gets the expiryTime
     *
-    * @return \DateTime The expiryTime
+    * @return \DateTime|null The expiryTime
     */
     public function getExpiryTime()
     {
         if (array_key_exists("expiryTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expiryTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expiryTime"], "\DateTime") || is_null($this->_propDict["expiryTime"])) {
                 return $this->_propDict["expiryTime"];
             } else {
                 $this->_propDict["expiryTime"] = new \DateTime($this->_propDict["expiryTime"]);
@@ -58,7 +58,7 @@ class SharedEmailDomainInvitation extends Entity
     /**
     * Gets the invitationDomain
     *
-    * @return string The invitationDomain
+    * @return string|null The invitationDomain
     */
     public function getInvitationDomain()
     {
@@ -85,7 +85,7 @@ class SharedEmailDomainInvitation extends Entity
     /**
     * Gets the invitationStatus
     *
-    * @return string The invitationStatus
+    * @return string|null The invitationStatus
     */
     public function getInvitationStatus()
     {

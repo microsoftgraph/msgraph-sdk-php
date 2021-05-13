@@ -28,12 +28,12 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     * Gets the androidRestriction
     * Not yet documented
     *
-    * @return DeviceEnrollmentPlatformRestriction The androidRestriction
+    * @return DeviceEnrollmentPlatformRestriction|null The androidRestriction
     */
     public function getAndroidRestriction()
     {
         if (array_key_exists("androidRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["androidRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+            if (is_a($this->_propDict["androidRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction") || is_null($this->_propDict["androidRestriction"])) {
                 return $this->_propDict["androidRestriction"];
             } else {
                 $this->_propDict["androidRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["androidRestriction"]);
@@ -61,12 +61,12 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     * Gets the iosRestriction
     * Not yet documented
     *
-    * @return DeviceEnrollmentPlatformRestriction The iosRestriction
+    * @return DeviceEnrollmentPlatformRestriction|null The iosRestriction
     */
     public function getIosRestriction()
     {
         if (array_key_exists("iosRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["iosRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+            if (is_a($this->_propDict["iosRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction") || is_null($this->_propDict["iosRestriction"])) {
                 return $this->_propDict["iosRestriction"];
             } else {
                 $this->_propDict["iosRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["iosRestriction"]);
@@ -94,12 +94,12 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     * Gets the macOSRestriction
     * Not yet documented
     *
-    * @return DeviceEnrollmentPlatformRestriction The macOSRestriction
+    * @return DeviceEnrollmentPlatformRestriction|null The macOSRestriction
     */
     public function getMacOSRestriction()
     {
         if (array_key_exists("macOSRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["macOSRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+            if (is_a($this->_propDict["macOSRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction") || is_null($this->_propDict["macOSRestriction"])) {
                 return $this->_propDict["macOSRestriction"];
             } else {
                 $this->_propDict["macOSRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["macOSRestriction"]);
@@ -127,12 +127,12 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     * Gets the windowsMobileRestriction
     * Not yet documented
     *
-    * @return DeviceEnrollmentPlatformRestriction The windowsMobileRestriction
+    * @return DeviceEnrollmentPlatformRestriction|null The windowsMobileRestriction
     */
     public function getWindowsMobileRestriction()
     {
         if (array_key_exists("windowsMobileRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsMobileRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+            if (is_a($this->_propDict["windowsMobileRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction") || is_null($this->_propDict["windowsMobileRestriction"])) {
                 return $this->_propDict["windowsMobileRestriction"];
             } else {
                 $this->_propDict["windowsMobileRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["windowsMobileRestriction"]);
@@ -160,12 +160,12 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     * Gets the windowsRestriction
     * Not yet documented
     *
-    * @return DeviceEnrollmentPlatformRestriction The windowsRestriction
+    * @return DeviceEnrollmentPlatformRestriction|null The windowsRestriction
     */
     public function getWindowsRestriction()
     {
         if (array_key_exists("windowsRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["windowsRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction")) {
+            if (is_a($this->_propDict["windowsRestriction"], "\Microsoft\Graph\Model\DeviceEnrollmentPlatformRestriction") || is_null($this->_propDict["windowsRestriction"])) {
                 return $this->_propDict["windowsRestriction"];
             } else {
                 $this->_propDict["windowsRestriction"] = new DeviceEnrollmentPlatformRestriction($this->_propDict["windowsRestriction"]);

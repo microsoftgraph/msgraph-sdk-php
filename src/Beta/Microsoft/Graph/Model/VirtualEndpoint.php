@@ -29,7 +29,7 @@ class VirtualEndpoint extends Entity
      * Gets the cloudPCs
     * Cloud managed virtual desktops.
      *
-     * @return array The cloudPCs
+     * @return array|null The cloudPCs
      */
     public function getCloudPCs()
     {
@@ -50,7 +50,7 @@ class VirtualEndpoint extends Entity
     */
     public function setCloudPCs($val)
     {
-		$this->_propDict["cloudPCs"] = $val;
+        $this->_propDict["cloudPCs"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class VirtualEndpoint extends Entity
      * Gets the deviceImages
     * The image resource on cloud PC.
      *
-     * @return array The deviceImages
+     * @return array|null The deviceImages
      */
     public function getDeviceImages()
     {
@@ -80,7 +80,7 @@ class VirtualEndpoint extends Entity
     */
     public function setDeviceImages($val)
     {
-		$this->_propDict["deviceImages"] = $val;
+        $this->_propDict["deviceImages"] = $val;
         return $this;
     }
     
@@ -89,7 +89,7 @@ class VirtualEndpoint extends Entity
      * Gets the onPremisesConnections
     * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for cloud PCs.
      *
-     * @return array The onPremisesConnections
+     * @return array|null The onPremisesConnections
      */
     public function getOnPremisesConnections()
     {
@@ -110,7 +110,7 @@ class VirtualEndpoint extends Entity
     */
     public function setOnPremisesConnections($val)
     {
-		$this->_propDict["onPremisesConnections"] = $val;
+        $this->_propDict["onPremisesConnections"] = $val;
         return $this;
     }
     
@@ -119,7 +119,7 @@ class VirtualEndpoint extends Entity
      * Gets the provisioningPolicies
     * cloud PC provisioning policy.
      *
-     * @return array The provisioningPolicies
+     * @return array|null The provisioningPolicies
      */
     public function getProvisioningPolicies()
     {
@@ -140,7 +140,7 @@ class VirtualEndpoint extends Entity
     */
     public function setProvisioningPolicies($val)
     {
-		$this->_propDict["provisioningPolicies"] = $val;
+        $this->_propDict["provisioningPolicies"] = $val;
         return $this;
     }
     

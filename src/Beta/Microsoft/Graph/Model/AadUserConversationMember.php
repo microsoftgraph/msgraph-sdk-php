@@ -28,7 +28,7 @@ class AadUserConversationMember extends ConversationMember
     * Gets the email
     * The email address of the user.
     *
-    * @return string The email
+    * @return string|null The email
     */
     public function getEmail()
     {
@@ -57,7 +57,7 @@ class AadUserConversationMember extends ConversationMember
     * Gets the tenantId
     * TenantId which the Azure AD user belongs to.
     *
-    * @return string The tenantId
+    * @return string|null The tenantId
     */
     public function getTenantId()
     {
@@ -84,9 +84,9 @@ class AadUserConversationMember extends ConversationMember
     
     /**
     * Gets the userId
-    * The guid of the user.
+    * The GUID of the user.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -99,7 +99,7 @@ class AadUserConversationMember extends ConversationMember
     
     /**
     * Sets the userId
-    * The guid of the user.
+    * The GUID of the user.
     *
     * @param string $val The userId
     *
@@ -114,12 +114,12 @@ class AadUserConversationMember extends ConversationMember
     /**
     * Gets the user
     *
-    * @return User The user
+    * @return User|null The user
     */
     public function getUser()
     {
         if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\User")) {
+            if (is_a($this->_propDict["user"], "\Beta\Microsoft\Graph\Model\User") || is_null($this->_propDict["user"])) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new User($this->_propDict["user"]);

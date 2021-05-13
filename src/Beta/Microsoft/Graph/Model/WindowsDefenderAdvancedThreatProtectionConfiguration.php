@@ -28,7 +28,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the advancedThreatProtectionAutoPopulateOnboardingBlob
     * Auto populate onboarding blob programmatically from Advanced Threat protection service
     *
-    * @return bool The advancedThreatProtectionAutoPopulateOnboardingBlob
+    * @return bool|null The advancedThreatProtectionAutoPopulateOnboardingBlob
     */
     public function getAdvancedThreatProtectionAutoPopulateOnboardingBlob()
     {
@@ -57,7 +57,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the advancedThreatProtectionOffboardingBlob
     * Windows Defender AdvancedThreatProtection Offboarding Blob.
     *
-    * @return string The advancedThreatProtectionOffboardingBlob
+    * @return string|null The advancedThreatProtectionOffboardingBlob
     */
     public function getAdvancedThreatProtectionOffboardingBlob()
     {
@@ -86,7 +86,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the advancedThreatProtectionOffboardingFilename
     * Name of the file from which AdvancedThreatProtectionOffboardingBlob was obtained.
     *
-    * @return string The advancedThreatProtectionOffboardingFilename
+    * @return string|null The advancedThreatProtectionOffboardingFilename
     */
     public function getAdvancedThreatProtectionOffboardingFilename()
     {
@@ -115,7 +115,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the advancedThreatProtectionOnboardingBlob
     * Windows Defender AdvancedThreatProtection Onboarding Blob.
     *
-    * @return string The advancedThreatProtectionOnboardingBlob
+    * @return string|null The advancedThreatProtectionOnboardingBlob
     */
     public function getAdvancedThreatProtectionOnboardingBlob()
     {
@@ -144,7 +144,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the advancedThreatProtectionOnboardingFilename
     * Name of the file from which AdvancedThreatProtectionOnboardingBlob was obtained.
     *
-    * @return string The advancedThreatProtectionOnboardingFilename
+    * @return string|null The advancedThreatProtectionOnboardingFilename
     */
     public function getAdvancedThreatProtectionOnboardingFilename()
     {
@@ -173,7 +173,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the allowSampleSharing
     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
     *
-    * @return bool The allowSampleSharing
+    * @return bool|null The allowSampleSharing
     */
     public function getAllowSampleSharing()
     {
@@ -202,7 +202,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     * Gets the enableExpeditedTelemetryReporting
     * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
     *
-    * @return bool The enableExpeditedTelemetryReporting
+    * @return bool|null The enableExpeditedTelemetryReporting
     */
     public function getEnableExpeditedTelemetryReporting()
     {

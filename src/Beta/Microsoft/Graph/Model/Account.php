@@ -27,7 +27,7 @@ class Account extends Entity
     /**
     * Gets the blocked
     *
-    * @return bool The blocked
+    * @return bool|null The blocked
     */
     public function getBlocked()
     {
@@ -54,7 +54,7 @@ class Account extends Entity
     /**
     * Gets the category
     *
-    * @return string The category
+    * @return string|null The category
     */
     public function getCategory()
     {
@@ -81,7 +81,7 @@ class Account extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -108,12 +108,12 @@ class Account extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -139,7 +139,7 @@ class Account extends Entity
     /**
     * Gets the number
     *
-    * @return string The number
+    * @return string|null The number
     */
     public function getNumber()
     {
@@ -166,7 +166,7 @@ class Account extends Entity
     /**
     * Gets the subCategory
     *
-    * @return string The subCategory
+    * @return string|null The subCategory
     */
     public function getSubCategory()
     {

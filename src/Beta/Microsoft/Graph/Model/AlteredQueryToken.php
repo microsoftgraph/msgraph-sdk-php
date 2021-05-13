@@ -27,7 +27,7 @@ class AlteredQueryToken extends Entity
     * Gets the length
     * Defines the length of a changed segment.
     *
-    * @return int The length
+    * @return int|null The length
     */
     public function getLength()
     {
@@ -55,7 +55,7 @@ class AlteredQueryToken extends Entity
     * Gets the offset
     * Defines the offset of a changed segment.
     *
-    * @return int The offset
+    * @return int|null The offset
     */
     public function getOffset()
     {
@@ -83,7 +83,7 @@ class AlteredQueryToken extends Entity
     * Gets the suggestion
     * Represents the corrected segment string.
     *
-    * @return string The suggestion
+    * @return string|null The suggestion
     */
     public function getSuggestion()
     {

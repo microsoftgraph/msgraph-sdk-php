@@ -29,7 +29,7 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
      * Gets the manufacturerRegression
     * The metric values for the user experience analytics Manufacturer regression.
      *
-     * @return array The manufacturerRegression
+     * @return array|null The manufacturerRegression
      */
     public function getManufacturerRegression()
     {
@@ -50,7 +50,7 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
     */
     public function setManufacturerRegression($val)
     {
-		$this->_propDict["manufacturerRegression"] = $val;
+        $this->_propDict["manufacturerRegression"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
      * Gets the modelRegression
     * The metric values for the user experience analytics model regression.
      *
-     * @return array The modelRegression
+     * @return array|null The modelRegression
      */
     public function getModelRegression()
     {
@@ -80,7 +80,7 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
     */
     public function setModelRegression($val)
     {
-		$this->_propDict["modelRegression"] = $val;
+        $this->_propDict["modelRegression"] = $val;
         return $this;
     }
     
@@ -89,7 +89,7 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
      * Gets the operatingSystemRegression
     * The metric values for the user experience analytics operating system regression.
      *
-     * @return array The operatingSystemRegression
+     * @return array|null The operatingSystemRegression
      */
     public function getOperatingSystemRegression()
     {
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsRegressionSummary extends Entity
     */
     public function setOperatingSystemRegression($val)
     {
-		$this->_propDict["operatingSystemRegression"] = $val;
+        $this->_propDict["operatingSystemRegression"] = $val;
         return $this;
     }
     

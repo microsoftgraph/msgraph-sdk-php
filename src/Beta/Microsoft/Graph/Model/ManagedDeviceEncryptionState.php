@@ -28,12 +28,12 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the advancedBitLockerStates
     * Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
     *
-    * @return AdvancedBitLockerState The advancedBitLockerStates
+    * @return AdvancedBitLockerState|null The advancedBitLockerStates
     */
     public function getAdvancedBitLockerStates()
     {
         if (array_key_exists("advancedBitLockerStates", $this->_propDict)) {
-            if (is_a($this->_propDict["advancedBitLockerStates"], "\Beta\Microsoft\Graph\Model\AdvancedBitLockerState")) {
+            if (is_a($this->_propDict["advancedBitLockerStates"], "\Beta\Microsoft\Graph\Model\AdvancedBitLockerState") || is_null($this->_propDict["advancedBitLockerStates"])) {
                 return $this->_propDict["advancedBitLockerStates"];
             } else {
                 $this->_propDict["advancedBitLockerStates"] = new AdvancedBitLockerState($this->_propDict["advancedBitLockerStates"]);
@@ -61,7 +61,7 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the deviceName
     * Device name
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -90,12 +90,12 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the deviceType
     * Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown.
     *
-    * @return DeviceTypes The deviceType
+    * @return DeviceTypes|null The deviceType
     */
     public function getDeviceType()
     {
         if (array_key_exists("deviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceType"], "\Beta\Microsoft\Graph\Model\DeviceTypes")) {
+            if (is_a($this->_propDict["deviceType"], "\Beta\Microsoft\Graph\Model\DeviceTypes") || is_null($this->_propDict["deviceType"])) {
                 return $this->_propDict["deviceType"];
             } else {
                 $this->_propDict["deviceType"] = new DeviceTypes($this->_propDict["deviceType"]);
@@ -123,12 +123,12 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the encryptionPolicySettingState
     * Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
-    * @return ComplianceStatus The encryptionPolicySettingState
+    * @return ComplianceStatus|null The encryptionPolicySettingState
     */
     public function getEncryptionPolicySettingState()
     {
         if (array_key_exists("encryptionPolicySettingState", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionPolicySettingState"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["encryptionPolicySettingState"], "\Beta\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["encryptionPolicySettingState"])) {
                 return $this->_propDict["encryptionPolicySettingState"];
             } else {
                 $this->_propDict["encryptionPolicySettingState"] = new ComplianceStatus($this->_propDict["encryptionPolicySettingState"]);
@@ -156,12 +156,12 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the encryptionReadinessState
     * Encryption readiness state. Possible values are: notReady, ready.
     *
-    * @return EncryptionReadinessState The encryptionReadinessState
+    * @return EncryptionReadinessState|null The encryptionReadinessState
     */
     public function getEncryptionReadinessState()
     {
         if (array_key_exists("encryptionReadinessState", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionReadinessState"], "\Beta\Microsoft\Graph\Model\EncryptionReadinessState")) {
+            if (is_a($this->_propDict["encryptionReadinessState"], "\Beta\Microsoft\Graph\Model\EncryptionReadinessState") || is_null($this->_propDict["encryptionReadinessState"])) {
                 return $this->_propDict["encryptionReadinessState"];
             } else {
                 $this->_propDict["encryptionReadinessState"] = new EncryptionReadinessState($this->_propDict["encryptionReadinessState"]);
@@ -189,12 +189,12 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the encryptionState
     * Device encryption state. Possible values are: notEncrypted, encrypted.
     *
-    * @return EncryptionState The encryptionState
+    * @return EncryptionState|null The encryptionState
     */
     public function getEncryptionState()
     {
         if (array_key_exists("encryptionState", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionState"], "\Beta\Microsoft\Graph\Model\EncryptionState")) {
+            if (is_a($this->_propDict["encryptionState"], "\Beta\Microsoft\Graph\Model\EncryptionState") || is_null($this->_propDict["encryptionState"])) {
                 return $this->_propDict["encryptionState"];
             } else {
                 $this->_propDict["encryptionState"] = new EncryptionState($this->_propDict["encryptionState"]);
@@ -222,12 +222,12 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the fileVaultStates
     * FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
     *
-    * @return FileVaultState The fileVaultStates
+    * @return FileVaultState|null The fileVaultStates
     */
     public function getFileVaultStates()
     {
         if (array_key_exists("fileVaultStates", $this->_propDict)) {
-            if (is_a($this->_propDict["fileVaultStates"], "\Beta\Microsoft\Graph\Model\FileVaultState")) {
+            if (is_a($this->_propDict["fileVaultStates"], "\Beta\Microsoft\Graph\Model\FileVaultState") || is_null($this->_propDict["fileVaultStates"])) {
                 return $this->_propDict["fileVaultStates"];
             } else {
                 $this->_propDict["fileVaultStates"] = new FileVaultState($this->_propDict["fileVaultStates"]);
@@ -255,7 +255,7 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the osVersion
     * Operating system version of the device
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {
@@ -285,7 +285,7 @@ class ManagedDeviceEncryptionState extends Entity
      * Gets the policyDetails
     * Policy Details
      *
-     * @return array The policyDetails
+     * @return array|null The policyDetails
      */
     public function getPolicyDetails()
     {
@@ -306,7 +306,7 @@ class ManagedDeviceEncryptionState extends Entity
     */
     public function setPolicyDetails($val)
     {
-		$this->_propDict["policyDetails"] = $val;
+        $this->_propDict["policyDetails"] = $val;
         return $this;
     }
     
@@ -314,7 +314,7 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the tpmSpecificationVersion
     * Device TPM Version
     *
-    * @return string The tpmSpecificationVersion
+    * @return string|null The tpmSpecificationVersion
     */
     public function getTpmSpecificationVersion()
     {
@@ -343,7 +343,7 @@ class ManagedDeviceEncryptionState extends Entity
     * Gets the userPrincipalName
     * User name
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

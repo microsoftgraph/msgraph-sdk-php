@@ -28,12 +28,12 @@ class SignInActivity extends Entity
     * Gets the lastSignInDateTime
     * The last interactive sign-in date for a specific user. You can use this field to calculate the last time a user signed in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.
     *
-    * @return \DateTime The lastSignInDateTime
+    * @return \DateTime|null The lastSignInDateTime
     */
     public function getLastSignInDateTime()
     {
         if (array_key_exists("lastSignInDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSignInDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSignInDateTime"], "\DateTime") || is_null($this->_propDict["lastSignInDateTime"])) {
                 return $this->_propDict["lastSignInDateTime"];
             } else {
                 $this->_propDict["lastSignInDateTime"] = new \DateTime($this->_propDict["lastSignInDateTime"]);
@@ -60,7 +60,7 @@ class SignInActivity extends Entity
     * Gets the lastSignInRequestId
     * Request ID of the last sign-in performed by this user.
     *
-    * @return string The lastSignInRequestId
+    * @return string|null The lastSignInRequestId
     */
     public function getLastSignInRequestId()
     {

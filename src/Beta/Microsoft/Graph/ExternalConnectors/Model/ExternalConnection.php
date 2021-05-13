@@ -27,12 +27,12 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the configuration
     *
-    * @return Configuration The configuration
+    * @return Configuration|null The configuration
     */
     public function getConfiguration()
     {
         if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Configuration")) {
+            if (is_a($this->_propDict["configuration"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Configuration") || is_null($this->_propDict["configuration"])) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new Configuration($this->_propDict["configuration"]);
@@ -58,7 +58,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -85,7 +85,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the name
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -112,12 +112,12 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the state
     *
-    * @return ConnectionState The state
+    * @return ConnectionState|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ConnectionState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\ConnectionState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ConnectionState($this->_propDict["state"]);
@@ -144,7 +144,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
      /** 
      * Gets the groups
      *
-     * @return array The groups
+     * @return array|null The groups
      */
     public function getGroups()
     {
@@ -164,7 +164,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setGroups($val)
     {
-		$this->_propDict["groups"] = $val;
+        $this->_propDict["groups"] = $val;
         return $this;
     }
     
@@ -172,7 +172,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
      /** 
      * Gets the items
      *
-     * @return array The items
+     * @return array|null The items
      */
     public function getItems()
     {
@@ -192,7 +192,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setItems($val)
     {
-		$this->_propDict["items"] = $val;
+        $this->_propDict["items"] = $val;
         return $this;
     }
     
@@ -200,7 +200,7 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
      /** 
      * Gets the operations
      *
-     * @return array The operations
+     * @return array|null The operations
      */
     public function getOperations()
     {
@@ -220,19 +220,19 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setOperations($val)
     {
-		$this->_propDict["operations"] = $val;
+        $this->_propDict["operations"] = $val;
         return $this;
     }
     
     /**
     * Gets the schema
     *
-    * @return Schema The schema
+    * @return Schema|null The schema
     */
     public function getSchema()
     {
         if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Schema")) {
+            if (is_a($this->_propDict["schema"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\Schema") || is_null($this->_propDict["schema"])) {
                 return $this->_propDict["schema"];
             } else {
                 $this->_propDict["schema"] = new Schema($this->_propDict["schema"]);

@@ -28,7 +28,7 @@ class TermsAndConditions extends Entity
     * Gets the acceptanceStatement
     * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
     *
-    * @return string The acceptanceStatement
+    * @return string|null The acceptanceStatement
     */
     public function getAcceptanceStatement()
     {
@@ -57,7 +57,7 @@ class TermsAndConditions extends Entity
     * Gets the bodyText
     * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
     *
-    * @return string The bodyText
+    * @return string|null The bodyText
     */
     public function getBodyText()
     {
@@ -86,12 +86,12 @@ class TermsAndConditions extends Entity
     * Gets the createdDateTime
     * DateTime the object was created.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -119,7 +119,7 @@ class TermsAndConditions extends Entity
     * Gets the description
     * Administrator-supplied description of the T&amp;C policy.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -148,7 +148,7 @@ class TermsAndConditions extends Entity
     * Gets the displayName
     * Administrator-supplied name for the T&amp;C policy.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -177,12 +177,12 @@ class TermsAndConditions extends Entity
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -210,7 +210,7 @@ class TermsAndConditions extends Entity
     * Gets the title
     * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C policy.
     *
-    * @return string The title
+    * @return string|null The title
     */
     public function getTitle()
     {
@@ -239,7 +239,7 @@ class TermsAndConditions extends Entity
     * Gets the version
     * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&amp;C policy.
     *
-    * @return int The version
+    * @return int|null The version
     */
     public function getVersion()
     {
@@ -269,7 +269,7 @@ class TermsAndConditions extends Entity
      * Gets the acceptanceStatuses
     * The list of acceptance statuses for this T&amp;C policy.
      *
-     * @return array The acceptanceStatuses
+     * @return array|null The acceptanceStatuses
      */
     public function getAcceptanceStatuses()
     {
@@ -290,7 +290,7 @@ class TermsAndConditions extends Entity
     */
     public function setAcceptanceStatuses($val)
     {
-		$this->_propDict["acceptanceStatuses"] = $val;
+        $this->_propDict["acceptanceStatuses"] = $val;
         return $this;
     }
     
@@ -299,7 +299,7 @@ class TermsAndConditions extends Entity
      * Gets the assignments
     * The list of assignments for this T&amp;C policy.
      *
-     * @return array The assignments
+     * @return array|null The assignments
      */
     public function getAssignments()
     {
@@ -320,7 +320,7 @@ class TermsAndConditions extends Entity
     */
     public function setAssignments($val)
     {
-		$this->_propDict["assignments"] = $val;
+        $this->_propDict["assignments"] = $val;
         return $this;
     }
     

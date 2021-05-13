@@ -36,7 +36,7 @@ class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate extend
     * Gets the allowUnmanagedValues
     * Linked policy may append values which are not present in the template.
     *
-    * @return bool The allowUnmanagedValues
+    * @return bool|null The allowUnmanagedValues
     */
     public function getAllowUnmanagedValues()
     {
@@ -65,12 +65,12 @@ class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate extend
     * Gets the groupSettingCollectionValueTemplate
     * Group Setting Collection Value Template
     *
-    * @return DeviceManagementConfigurationGroupSettingValueTemplate The groupSettingCollectionValueTemplate
+    * @return DeviceManagementConfigurationGroupSettingValueTemplate|null The groupSettingCollectionValueTemplate
     */
     public function getGroupSettingCollectionValueTemplate()
     {
         if (array_key_exists("groupSettingCollectionValueTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["groupSettingCollectionValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationGroupSettingValueTemplate")) {
+            if (is_a($this->_propDict["groupSettingCollectionValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationGroupSettingValueTemplate") || is_null($this->_propDict["groupSettingCollectionValueTemplate"])) {
                 return $this->_propDict["groupSettingCollectionValueTemplate"];
             } else {
                 $this->_propDict["groupSettingCollectionValueTemplate"] = new DeviceManagementConfigurationGroupSettingValueTemplate($this->_propDict["groupSettingCollectionValueTemplate"]);

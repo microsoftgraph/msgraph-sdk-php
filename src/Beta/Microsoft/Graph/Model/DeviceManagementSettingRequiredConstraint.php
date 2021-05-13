@@ -36,7 +36,7 @@ class DeviceManagementSettingRequiredConstraint extends DeviceManagementConstrai
     * Gets the notConfiguredValue
     * List of value which means not configured for the setting
     *
-    * @return string The notConfiguredValue
+    * @return string|null The notConfiguredValue
     */
     public function getNotConfiguredValue()
     {

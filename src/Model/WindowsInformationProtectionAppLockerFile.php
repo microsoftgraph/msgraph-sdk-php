@@ -28,7 +28,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     * Gets the displayName
     * The friendly name
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,12 +57,12 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     * Gets the file
     * File as a byte array
     *
-    * @return \GuzzleHttp\Psr7\Stream The file
+    * @return \GuzzleHttp\Psr7\Stream|null The file
     */
     public function getFile()
     {
         if (array_key_exists("file", $this->_propDict)) {
-            if (is_a($this->_propDict["file"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["file"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["file"])) {
                 return $this->_propDict["file"];
             } else {
                 $this->_propDict["file"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["file"]);
@@ -90,7 +90,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     * Gets the fileHash
     * SHA256 hash of the file
     *
-    * @return string The fileHash
+    * @return string|null The fileHash
     */
     public function getFileHash()
     {
@@ -119,7 +119,7 @@ class WindowsInformationProtectionAppLockerFile extends Entity
     * Gets the version
     * Version of the entity.
     *
-    * @return string The version
+    * @return string|null The version
     */
     public function getVersion()
     {

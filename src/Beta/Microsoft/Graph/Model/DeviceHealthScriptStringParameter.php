@@ -36,7 +36,7 @@ class DeviceHealthScriptStringParameter extends DeviceHealthScriptParameter
     * Gets the defaultValue
     * The default value of string param
     *
-    * @return string The defaultValue
+    * @return string|null The defaultValue
     */
     public function getDefaultValue()
     {

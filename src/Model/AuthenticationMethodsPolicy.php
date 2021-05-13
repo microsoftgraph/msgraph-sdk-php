@@ -27,7 +27,7 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -54,7 +54,7 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -81,12 +81,12 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -112,7 +112,7 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the policyVersion
     *
-    * @return string The policyVersion
+    * @return string|null The policyVersion
     */
     public function getPolicyVersion()
     {
@@ -139,7 +139,7 @@ class AuthenticationMethodsPolicy extends Entity
     /**
     * Gets the reconfirmationInDays
     *
-    * @return int The reconfirmationInDays
+    * @return int|null The reconfirmationInDays
     */
     public function getReconfirmationInDays()
     {
@@ -167,7 +167,7 @@ class AuthenticationMethodsPolicy extends Entity
      /** 
      * Gets the authenticationMethodConfigurations
      *
-     * @return array The authenticationMethodConfigurations
+     * @return array|null The authenticationMethodConfigurations
      */
     public function getAuthenticationMethodConfigurations()
     {
@@ -187,7 +187,7 @@ class AuthenticationMethodsPolicy extends Entity
     */
     public function setAuthenticationMethodConfigurations($val)
     {
-		$this->_propDict["authenticationMethodConfigurations"] = $val;
+        $this->_propDict["authenticationMethodConfigurations"] = $val;
         return $this;
     }
     

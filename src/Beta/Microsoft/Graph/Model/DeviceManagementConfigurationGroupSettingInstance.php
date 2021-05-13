@@ -37,12 +37,12 @@ class DeviceManagementConfigurationGroupSettingInstance extends DeviceManagement
     * Gets the groupSettingValue
     * GroupSetting value
     *
-    * @return DeviceManagementConfigurationGroupSettingValue The groupSettingValue
+    * @return DeviceManagementConfigurationGroupSettingValue|null The groupSettingValue
     */
     public function getGroupSettingValue()
     {
         if (array_key_exists("groupSettingValue", $this->_propDict)) {
-            if (is_a($this->_propDict["groupSettingValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationGroupSettingValue")) {
+            if (is_a($this->_propDict["groupSettingValue"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationGroupSettingValue") || is_null($this->_propDict["groupSettingValue"])) {
                 return $this->_propDict["groupSettingValue"];
             } else {
                 $this->_propDict["groupSettingValue"] = new DeviceManagementConfigurationGroupSettingValue($this->_propDict["groupSettingValue"]);

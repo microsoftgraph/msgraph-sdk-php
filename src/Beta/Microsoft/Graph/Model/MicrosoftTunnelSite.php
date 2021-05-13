@@ -28,7 +28,7 @@ class MicrosoftTunnelSite extends Entity
     * Gets the description
     * The MicrosoftTunnelSite's description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class MicrosoftTunnelSite extends Entity
     * Gets the displayName
     * The MicrosoftTunnelSite's display name
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class MicrosoftTunnelSite extends Entity
     * Gets the publicAddress
     * The MicrosoftTunnelSite's public domain name or IP address
     *
-    * @return string The publicAddress
+    * @return string|null The publicAddress
     */
     public function getPublicAddress()
     {
@@ -115,7 +115,7 @@ class MicrosoftTunnelSite extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @return string The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -144,7 +144,7 @@ class MicrosoftTunnelSite extends Entity
     * Gets the upgradeAutomatically
     * The site's automatic upgrade setting. True for automatic upgrades, false for manual control
     *
-    * @return bool The upgradeAutomatically
+    * @return bool|null The upgradeAutomatically
     */
     public function getUpgradeAutomatically()
     {
@@ -173,7 +173,7 @@ class MicrosoftTunnelSite extends Entity
     * Gets the upgradeAvailable
     * True if an upgrade is available
     *
-    * @return bool The upgradeAvailable
+    * @return bool|null The upgradeAvailable
     */
     public function getUpgradeAvailable()
     {
@@ -202,12 +202,12 @@ class MicrosoftTunnelSite extends Entity
     * Gets the upgradeWindowEndTime
     * The site's upgrade window end time of day
     *
-    * @return TimeOfDay The upgradeWindowEndTime
+    * @return TimeOfDay|null The upgradeWindowEndTime
     */
     public function getUpgradeWindowEndTime()
     {
         if (array_key_exists("upgradeWindowEndTime", $this->_propDict)) {
-            if (is_a($this->_propDict["upgradeWindowEndTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["upgradeWindowEndTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["upgradeWindowEndTime"])) {
                 return $this->_propDict["upgradeWindowEndTime"];
             } else {
                 $this->_propDict["upgradeWindowEndTime"] = new TimeOfDay($this->_propDict["upgradeWindowEndTime"]);
@@ -235,12 +235,12 @@ class MicrosoftTunnelSite extends Entity
     * Gets the upgradeWindowStartTime
     * The site's upgrade window start time of day
     *
-    * @return TimeOfDay The upgradeWindowStartTime
+    * @return TimeOfDay|null The upgradeWindowStartTime
     */
     public function getUpgradeWindowStartTime()
     {
         if (array_key_exists("upgradeWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["upgradeWindowStartTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay")) {
+            if (is_a($this->_propDict["upgradeWindowStartTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["upgradeWindowStartTime"])) {
                 return $this->_propDict["upgradeWindowStartTime"];
             } else {
                 $this->_propDict["upgradeWindowStartTime"] = new TimeOfDay($this->_propDict["upgradeWindowStartTime"]);
@@ -268,7 +268,7 @@ class MicrosoftTunnelSite extends Entity
     * Gets the upgradeWindowUtcOffsetInMinutes
     * The site's timezone represented as a minute offset from UTC
     *
-    * @return int The upgradeWindowUtcOffsetInMinutes
+    * @return int|null The upgradeWindowUtcOffsetInMinutes
     */
     public function getUpgradeWindowUtcOffsetInMinutes()
     {
@@ -297,12 +297,12 @@ class MicrosoftTunnelSite extends Entity
     * Gets the microsoftTunnelConfiguration
     * The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
     *
-    * @return MicrosoftTunnelConfiguration The microsoftTunnelConfiguration
+    * @return MicrosoftTunnelConfiguration|null The microsoftTunnelConfiguration
     */
     public function getMicrosoftTunnelConfiguration()
     {
         if (array_key_exists("microsoftTunnelConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["microsoftTunnelConfiguration"], "\Beta\Microsoft\Graph\Model\MicrosoftTunnelConfiguration")) {
+            if (is_a($this->_propDict["microsoftTunnelConfiguration"], "\Beta\Microsoft\Graph\Model\MicrosoftTunnelConfiguration") || is_null($this->_propDict["microsoftTunnelConfiguration"])) {
                 return $this->_propDict["microsoftTunnelConfiguration"];
             } else {
                 $this->_propDict["microsoftTunnelConfiguration"] = new MicrosoftTunnelConfiguration($this->_propDict["microsoftTunnelConfiguration"]);
@@ -331,7 +331,7 @@ class MicrosoftTunnelSite extends Entity
      * Gets the microsoftTunnelServers
     * A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
      *
-     * @return array The microsoftTunnelServers
+     * @return array|null The microsoftTunnelServers
      */
     public function getMicrosoftTunnelServers()
     {
@@ -352,7 +352,7 @@ class MicrosoftTunnelSite extends Entity
     */
     public function setMicrosoftTunnelServers($val)
     {
-		$this->_propDict["microsoftTunnelServers"] = $val;
+        $this->_propDict["microsoftTunnelServers"] = $val;
         return $this;
     }
     

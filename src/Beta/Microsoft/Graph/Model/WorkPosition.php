@@ -28,7 +28,7 @@ class WorkPosition extends ItemFacet
     * Gets the categories
     * Categories that the user has associated with this position.
     *
-    * @return string The categories
+    * @return string|null The categories
     */
     public function getCategories()
     {
@@ -58,7 +58,7 @@ class WorkPosition extends ItemFacet
      * Gets the colleagues
     * Colleagues that are associated with this position.
      *
-     * @return array The colleagues
+     * @return array|null The colleagues
      */
     public function getColleagues()
     {
@@ -79,7 +79,7 @@ class WorkPosition extends ItemFacet
     */
     public function setColleagues($val)
     {
-		$this->_propDict["colleagues"] = $val;
+        $this->_propDict["colleagues"] = $val;
         return $this;
     }
     
@@ -87,12 +87,12 @@ class WorkPosition extends ItemFacet
     * Gets the detail
     * Contains detailed information about the position.
     *
-    * @return PositionDetail The detail
+    * @return PositionDetail|null The detail
     */
     public function getDetail()
     {
         if (array_key_exists("detail", $this->_propDict)) {
-            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\PositionDetail")) {
+            if (is_a($this->_propDict["detail"], "\Beta\Microsoft\Graph\Model\PositionDetail") || is_null($this->_propDict["detail"])) {
                 return $this->_propDict["detail"];
             } else {
                 $this->_propDict["detail"] = new PositionDetail($this->_propDict["detail"]);
@@ -120,7 +120,7 @@ class WorkPosition extends ItemFacet
     * Gets the isCurrent
     * Denotes whether or not the position is current.
     *
-    * @return bool The isCurrent
+    * @return bool|null The isCurrent
     */
     public function getIsCurrent()
     {
@@ -149,12 +149,12 @@ class WorkPosition extends ItemFacet
     * Gets the manager
     * Contains detail of the user's manager in this position.
     *
-    * @return RelatedPerson The manager
+    * @return RelatedPerson|null The manager
     */
     public function getManager()
     {
         if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "\Beta\Microsoft\Graph\Model\RelatedPerson")) {
+            if (is_a($this->_propDict["manager"], "\Beta\Microsoft\Graph\Model\RelatedPerson") || is_null($this->_propDict["manager"])) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new RelatedPerson($this->_propDict["manager"]);

@@ -27,7 +27,7 @@ class StatusDetails extends StatusBase
     * Gets the additionalDetails
     * Additional details in case of error.
     *
-    * @return string The additionalDetails
+    * @return string|null The additionalDetails
     */
     public function getAdditionalDetails()
     {
@@ -56,12 +56,12 @@ class StatusDetails extends StatusBase
     * Gets the errorCategory
     * Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
     *
-    * @return ProvisioningStatusErrorCategory The errorCategory
+    * @return ProvisioningStatusErrorCategory|null The errorCategory
     */
     public function getErrorCategory()
     {
         if (array_key_exists("errorCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["errorCategory"], "\Beta\Microsoft\Graph\Model\ProvisioningStatusErrorCategory")) {
+            if (is_a($this->_propDict["errorCategory"], "\Beta\Microsoft\Graph\Model\ProvisioningStatusErrorCategory") || is_null($this->_propDict["errorCategory"])) {
                 return $this->_propDict["errorCategory"];
             } else {
                 $this->_propDict["errorCategory"] = new ProvisioningStatusErrorCategory($this->_propDict["errorCategory"]);
@@ -88,7 +88,7 @@ class StatusDetails extends StatusBase
     * Gets the errorCode
     * Unique error code if any occurred. Learn more
     *
-    * @return string The errorCode
+    * @return string|null The errorCode
     */
     public function getErrorCode()
     {
@@ -116,7 +116,7 @@ class StatusDetails extends StatusBase
     * Gets the reason
     * Summarizes the status and describes why the status happened.
     *
-    * @return string The reason
+    * @return string|null The reason
     */
     public function getReason()
     {
@@ -144,7 +144,7 @@ class StatusDetails extends StatusBase
     * Gets the recommendedAction
     * Provides the resolution for the corresponding error.
     *
-    * @return string The recommendedAction
+    * @return string|null The recommendedAction
     */
     public function getRecommendedAction()
     {

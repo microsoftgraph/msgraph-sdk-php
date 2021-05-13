@@ -28,12 +28,12 @@ class IosCustomConfiguration extends DeviceConfiguration
     * Gets the payload
     * Payload. (UTF8 encoded byte array)
     *
-    * @return \GuzzleHttp\Psr7\Stream The payload
+    * @return \GuzzleHttp\Psr7\Stream|null The payload
     */
     public function getPayload()
     {
         if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream")) {
+            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["payload"])) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
@@ -59,9 +59,9 @@ class IosCustomConfiguration extends DeviceConfiguration
     
     /**
     * Gets the payloadFileName
-    * Payload file name (.mobileconfig | .xml).
+    * Payload file name (.mobileconfig
     *
-    * @return string The payloadFileName
+    * @return string|null The payloadFileName
     */
     public function getPayloadFileName()
     {
@@ -74,7 +74,7 @@ class IosCustomConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payloadFileName
-    * Payload file name (.mobileconfig | .xml).
+    * Payload file name (.mobileconfig
     *
     * @param string $val The payloadFileName
     *
@@ -90,7 +90,7 @@ class IosCustomConfiguration extends DeviceConfiguration
     * Gets the payloadName
     * Name that is displayed to the user.
     *
-    * @return string The payloadName
+    * @return string|null The payloadName
     */
     public function getPayloadName()
     {

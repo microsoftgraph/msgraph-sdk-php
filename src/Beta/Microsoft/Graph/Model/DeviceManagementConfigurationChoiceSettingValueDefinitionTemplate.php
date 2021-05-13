@@ -28,12 +28,12 @@ class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate extends 
     * Gets the allowedOptions
     * Choice Setting Allowed Options
     *
-    * @return DeviceManagementConfigurationOptionDefinitionTemplate The allowedOptions
+    * @return DeviceManagementConfigurationOptionDefinitionTemplate|null The allowedOptions
     */
     public function getAllowedOptions()
     {
         if (array_key_exists("allowedOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedOptions"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationOptionDefinitionTemplate")) {
+            if (is_a($this->_propDict["allowedOptions"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationOptionDefinitionTemplate") || is_null($this->_propDict["allowedOptions"])) {
                 return $this->_propDict["allowedOptions"];
             } else {
                 $this->_propDict["allowedOptions"] = new DeviceManagementConfigurationOptionDefinitionTemplate($this->_propDict["allowedOptions"]);

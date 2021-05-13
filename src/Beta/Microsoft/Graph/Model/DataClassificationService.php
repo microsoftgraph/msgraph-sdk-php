@@ -28,7 +28,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the exactMatchDataStores
      *
-     * @return array The exactMatchDataStores
+     * @return array|null The exactMatchDataStores
      */
     public function getExactMatchDataStores()
     {
@@ -48,7 +48,7 @@ class DataClassificationService extends Entity
     */
     public function setExactMatchDataStores($val)
     {
-		$this->_propDict["exactMatchDataStores"] = $val;
+        $this->_propDict["exactMatchDataStores"] = $val;
         return $this;
     }
     
@@ -56,7 +56,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the classifyFile
      *
-     * @return array The classifyFile
+     * @return array|null The classifyFile
      */
     public function getClassifyFile()
     {
@@ -76,7 +76,7 @@ class DataClassificationService extends Entity
     */
     public function setClassifyFile($val)
     {
-		$this->_propDict["classifyFile"] = $val;
+        $this->_propDict["classifyFile"] = $val;
         return $this;
     }
     
@@ -84,7 +84,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the classifyFileJobs
      *
-     * @return array The classifyFileJobs
+     * @return array|null The classifyFileJobs
      */
     public function getClassifyFileJobs()
     {
@@ -104,7 +104,7 @@ class DataClassificationService extends Entity
     */
     public function setClassifyFileJobs($val)
     {
-		$this->_propDict["classifyFileJobs"] = $val;
+        $this->_propDict["classifyFileJobs"] = $val;
         return $this;
     }
     
@@ -112,7 +112,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the classifyText
      *
-     * @return array The classifyText
+     * @return array|null The classifyText
      */
     public function getClassifyText()
     {
@@ -132,7 +132,7 @@ class DataClassificationService extends Entity
     */
     public function setClassifyText($val)
     {
-		$this->_propDict["classifyText"] = $val;
+        $this->_propDict["classifyText"] = $val;
         return $this;
     }
     
@@ -140,7 +140,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the classifyTextJobs
      *
-     * @return array The classifyTextJobs
+     * @return array|null The classifyTextJobs
      */
     public function getClassifyTextJobs()
     {
@@ -160,7 +160,7 @@ class DataClassificationService extends Entity
     */
     public function setClassifyTextJobs($val)
     {
-		$this->_propDict["classifyTextJobs"] = $val;
+        $this->_propDict["classifyTextJobs"] = $val;
         return $this;
     }
     
@@ -168,7 +168,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the evaluateDlpPoliciesJobs
      *
-     * @return array The evaluateDlpPoliciesJobs
+     * @return array|null The evaluateDlpPoliciesJobs
      */
     public function getEvaluateDlpPoliciesJobs()
     {
@@ -188,7 +188,7 @@ class DataClassificationService extends Entity
     */
     public function setEvaluateDlpPoliciesJobs($val)
     {
-		$this->_propDict["evaluateDlpPoliciesJobs"] = $val;
+        $this->_propDict["evaluateDlpPoliciesJobs"] = $val;
         return $this;
     }
     
@@ -196,7 +196,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the evaluateLabelJobs
      *
-     * @return array The evaluateLabelJobs
+     * @return array|null The evaluateLabelJobs
      */
     public function getEvaluateLabelJobs()
     {
@@ -216,7 +216,7 @@ class DataClassificationService extends Entity
     */
     public function setEvaluateLabelJobs($val)
     {
-		$this->_propDict["evaluateLabelJobs"] = $val;
+        $this->_propDict["evaluateLabelJobs"] = $val;
         return $this;
     }
     
@@ -224,7 +224,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the jobs
      *
-     * @return array The jobs
+     * @return array|null The jobs
      */
     public function getJobs()
     {
@@ -244,7 +244,7 @@ class DataClassificationService extends Entity
     */
     public function setJobs($val)
     {
-		$this->_propDict["jobs"] = $val;
+        $this->_propDict["jobs"] = $val;
         return $this;
     }
     
@@ -252,7 +252,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the sensitiveTypes
      *
-     * @return array The sensitiveTypes
+     * @return array|null The sensitiveTypes
      */
     public function getSensitiveTypes()
     {
@@ -272,7 +272,7 @@ class DataClassificationService extends Entity
     */
     public function setSensitiveTypes($val)
     {
-		$this->_propDict["sensitiveTypes"] = $val;
+        $this->_propDict["sensitiveTypes"] = $val;
         return $this;
     }
     
@@ -280,7 +280,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the sensitivityLabels
      *
-     * @return array The sensitivityLabels
+     * @return array|null The sensitivityLabels
      */
     public function getSensitivityLabels()
     {
@@ -300,7 +300,7 @@ class DataClassificationService extends Entity
     */
     public function setSensitivityLabels($val)
     {
-		$this->_propDict["sensitivityLabels"] = $val;
+        $this->_propDict["sensitivityLabels"] = $val;
         return $this;
     }
     
@@ -308,7 +308,7 @@ class DataClassificationService extends Entity
      /** 
      * Gets the exactMatchUploadAgents
      *
-     * @return array The exactMatchUploadAgents
+     * @return array|null The exactMatchUploadAgents
      */
     public function getExactMatchUploadAgents()
     {
@@ -328,7 +328,7 @@ class DataClassificationService extends Entity
     */
     public function setExactMatchUploadAgents($val)
     {
-		$this->_propDict["exactMatchUploadAgents"] = $val;
+        $this->_propDict["exactMatchUploadAgents"] = $val;
         return $this;
     }
     

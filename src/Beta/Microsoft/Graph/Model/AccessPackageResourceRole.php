@@ -28,7 +28,7 @@ class AccessPackageResourceRole extends Entity
     * Gets the description
     * A description for the resource role.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -57,7 +57,7 @@ class AccessPackageResourceRole extends Entity
     * Gets the displayName
     * The display name of the resource role such as the role defined by the application.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -86,7 +86,7 @@ class AccessPackageResourceRole extends Entity
     * Gets the originId
     * The unique identifier of the resource role in the origin system.
     *
-    * @return string The originId
+    * @return string|null The originId
     */
     public function getOriginId()
     {
@@ -115,7 +115,7 @@ class AccessPackageResourceRole extends Entity
     * Gets the originSystem
     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
     *
-    * @return string The originSystem
+    * @return string|null The originSystem
     */
     public function getOriginSystem()
     {
@@ -144,12 +144,12 @@ class AccessPackageResourceRole extends Entity
     * Gets the accessPackageResource
     * Read-only. Nullable.
     *
-    * @return AccessPackageResource The accessPackageResource
+    * @return AccessPackageResource|null The accessPackageResource
     */
     public function getAccessPackageResource()
     {
         if (array_key_exists("accessPackageResource", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResource"], "\Beta\Microsoft\Graph\Model\AccessPackageResource")) {
+            if (is_a($this->_propDict["accessPackageResource"], "\Beta\Microsoft\Graph\Model\AccessPackageResource") || is_null($this->_propDict["accessPackageResource"])) {
                 return $this->_propDict["accessPackageResource"];
             } else {
                 $this->_propDict["accessPackageResource"] = new AccessPackageResource($this->_propDict["accessPackageResource"]);

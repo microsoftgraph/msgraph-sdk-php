@@ -28,12 +28,12 @@ class OfferShiftRequest extends ScheduleChangeRequest
     * Gets the recipientActionDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The recipientActionDateTime
+    * @return \DateTime|null The recipientActionDateTime
     */
     public function getRecipientActionDateTime()
     {
         if (array_key_exists("recipientActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["recipientActionDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["recipientActionDateTime"], "\DateTime") || is_null($this->_propDict["recipientActionDateTime"])) {
                 return $this->_propDict["recipientActionDateTime"];
             } else {
                 $this->_propDict["recipientActionDateTime"] = new \DateTime($this->_propDict["recipientActionDateTime"]);
@@ -61,7 +61,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
     * Gets the recipientActionMessage
     * Custom message sent by recipient of the offer shift request.
     *
-    * @return string The recipientActionMessage
+    * @return string|null The recipientActionMessage
     */
     public function getRecipientActionMessage()
     {
@@ -88,9 +88,9 @@ class OfferShiftRequest extends ScheduleChangeRequest
     
     /**
     * Gets the recipientUserId
-    * User ID of the recipient of the offer shift request.
+    * User id of the recipient of the offer shift request.
     *
-    * @return string The recipientUserId
+    * @return string|null The recipientUserId
     */
     public function getRecipientUserId()
     {
@@ -103,7 +103,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
     
     /**
     * Sets the recipientUserId
-    * User ID of the recipient of the offer shift request.
+    * User id of the recipient of the offer shift request.
     *
     * @param string $val The recipientUserId
     *
@@ -117,9 +117,9 @@ class OfferShiftRequest extends ScheduleChangeRequest
     
     /**
     * Gets the senderShiftId
-    * User ID of the sender of the offer shift request.
+    * User id of the sender of the offer shift request.
     *
-    * @return string The senderShiftId
+    * @return string|null The senderShiftId
     */
     public function getSenderShiftId()
     {
@@ -132,7 +132,7 @@ class OfferShiftRequest extends ScheduleChangeRequest
     
     /**
     * Sets the senderShiftId
-    * User ID of the sender of the offer shift request.
+    * User id of the sender of the offer shift request.
     *
     * @param string $val The senderShiftId
     *

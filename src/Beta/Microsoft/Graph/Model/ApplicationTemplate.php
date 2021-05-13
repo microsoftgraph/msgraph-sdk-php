@@ -28,7 +28,7 @@ class ApplicationTemplate extends Entity
     * Gets the categories
     * The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
     *
-    * @return string The categories
+    * @return string|null The categories
     */
     public function getCategories()
     {
@@ -57,7 +57,7 @@ class ApplicationTemplate extends Entity
     * Gets the description
     * A description of the application.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -86,7 +86,7 @@ class ApplicationTemplate extends Entity
     * Gets the displayName
     * The name of the application.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -115,7 +115,7 @@ class ApplicationTemplate extends Entity
     * Gets the homePageUrl
     * The home page URL of the application.
     *
-    * @return string The homePageUrl
+    * @return string|null The homePageUrl
     */
     public function getHomePageUrl()
     {
@@ -144,7 +144,7 @@ class ApplicationTemplate extends Entity
     * Gets the logoUrl
     * The URL to get the logo for this application.
     *
-    * @return string The logoUrl
+    * @return string|null The logoUrl
     */
     public function getLogoUrl()
     {
@@ -173,7 +173,7 @@ class ApplicationTemplate extends Entity
     * Gets the publisher
     * The name of the publisher for this application.
     *
-    * @return string The publisher
+    * @return string|null The publisher
     */
     public function getPublisher()
     {
@@ -202,7 +202,7 @@ class ApplicationTemplate extends Entity
     * Gets the supportedProvisioningTypes
     * The list of provisioning modes supported by this application. The only valid value is sync.
     *
-    * @return string The supportedProvisioningTypes
+    * @return string|null The supportedProvisioningTypes
     */
     public function getSupportedProvisioningTypes()
     {
@@ -231,7 +231,7 @@ class ApplicationTemplate extends Entity
     * Gets the supportedSingleSignOnModes
     * The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
     *
-    * @return string The supportedSingleSignOnModes
+    * @return string|null The supportedSingleSignOnModes
     */
     public function getSupportedSingleSignOnModes()
     {

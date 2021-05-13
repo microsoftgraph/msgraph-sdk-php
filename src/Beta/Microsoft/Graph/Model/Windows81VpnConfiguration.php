@@ -28,7 +28,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     * Gets the applyOnlyToWindows81
     * Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
     *
-    * @return bool The applyOnlyToWindows81
+    * @return bool|null The applyOnlyToWindows81
     */
     public function getApplyOnlyToWindows81()
     {
@@ -57,12 +57,12 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     * Gets the connectionType
     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn.
     *
-    * @return WindowsVpnConnectionType The connectionType
+    * @return WindowsVpnConnectionType|null The connectionType
     */
     public function getConnectionType()
     {
         if (array_key_exists("connectionType", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\WindowsVpnConnectionType")) {
+            if (is_a($this->_propDict["connectionType"], "\Beta\Microsoft\Graph\Model\WindowsVpnConnectionType") || is_null($this->_propDict["connectionType"])) {
                 return $this->_propDict["connectionType"];
             } else {
                 $this->_propDict["connectionType"] = new WindowsVpnConnectionType($this->_propDict["connectionType"]);
@@ -90,7 +90,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     * Gets the enableSplitTunneling
     * Enable split tunneling for the VPN.
     *
-    * @return bool The enableSplitTunneling
+    * @return bool|null The enableSplitTunneling
     */
     public function getEnableSplitTunneling()
     {
@@ -119,7 +119,7 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     * Gets the loginGroupOrDomain
     * Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
     *
-    * @return string The loginGroupOrDomain
+    * @return string|null The loginGroupOrDomain
     */
     public function getLoginGroupOrDomain()
     {
@@ -148,12 +148,12 @@ class Windows81VpnConfiguration extends WindowsVpnConfiguration
     * Gets the proxyServer
     * Proxy Server.
     *
-    * @return Windows81VpnProxyServer The proxyServer
+    * @return Windows81VpnProxyServer|null The proxyServer
     */
     public function getProxyServer()
     {
         if (array_key_exists("proxyServer", $this->_propDict)) {
-            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\Windows81VpnProxyServer")) {
+            if (is_a($this->_propDict["proxyServer"], "\Beta\Microsoft\Graph\Model\Windows81VpnProxyServer") || is_null($this->_propDict["proxyServer"])) {
                 return $this->_propDict["proxyServer"];
             } else {
                 $this->_propDict["proxyServer"] = new Windows81VpnProxyServer($this->_propDict["proxyServer"]);

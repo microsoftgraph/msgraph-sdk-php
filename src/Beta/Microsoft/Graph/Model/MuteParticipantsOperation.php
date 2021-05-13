@@ -27,7 +27,7 @@ class MuteParticipantsOperation extends CommsOperation
     /**
     * Gets the participants
     *
-    * @return string The participants
+    * @return string|null The participants
     */
     public function getParticipants()
     {

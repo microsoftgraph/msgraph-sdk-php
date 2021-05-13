@@ -27,7 +27,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the devicesPerOffer
     * Specifies the number of devices that are offered at the same time. Has no effect when endDateTime is set. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time.
     *
-    * @return int The devicesPerOffer
+    * @return int|null The devicesPerOffer
     */
     public function getDevicesPerOffer()
     {
@@ -55,7 +55,7 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the durationBetweenOffers
     * Specifies duration between each set of devices being offered the update. Has an effect when endDateTime or devicesPerOffer are defined. Default value is P1D (1 day).
     *
-    * @return string The durationBetweenOffers
+    * @return string|null The durationBetweenOffers
     */
     public function getDurationBetweenOffers()
     {
@@ -84,12 +84,12 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the endDateTime
     * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time.
     *
-    * @return \DateTime The endDateTime
+    * @return \DateTime|null The endDateTime
     */
     public function getEndDateTime()
     {
         if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -117,12 +117,12 @@ class RolloutSettings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the startDateTime
     * Date on which devices in the deployment start receiving the update. When not set, the deployment starts as soon as devices are assigned.
     *
-    * @return \DateTime The startDateTime
+    * @return \DateTime|null The startDateTime
     */
     public function getStartDateTime()
     {
         if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

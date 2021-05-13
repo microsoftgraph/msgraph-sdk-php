@@ -28,7 +28,7 @@ class ManagedAppStatus extends Entity
     * Gets the displayName
     * Friendly name of the status report.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class ManagedAppStatus extends Entity
     * Gets the version
     * Version of the entity.
     *
-    * @return string The version
+    * @return string|null The version
     */
     public function getVersion()
     {

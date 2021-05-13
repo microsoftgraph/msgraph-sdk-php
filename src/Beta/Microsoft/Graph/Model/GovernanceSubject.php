@@ -28,7 +28,7 @@ class GovernanceSubject extends Entity
     * Gets the displayName
     * The display name of the subject.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class GovernanceSubject extends Entity
     * Gets the email
     * The email address of the user subject. If the subject is in other types, it is empty.
     *
-    * @return string The email
+    * @return string|null The email
     */
     public function getEmail()
     {
@@ -86,7 +86,7 @@ class GovernanceSubject extends Entity
     * Gets the principalName
     * The principal name of the user subject. If the subject is in other types, it is empty.
     *
-    * @return string The principalName
+    * @return string|null The principalName
     */
     public function getPrincipalName()
     {
@@ -115,7 +115,7 @@ class GovernanceSubject extends Entity
     * Gets the type
     * The type of the subject. The value can be User, Group, and ServicePrincipal.
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {
