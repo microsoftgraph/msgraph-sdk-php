@@ -26,7 +26,7 @@ class IosHomeScreenFolderPage extends Entity
 
     /**
     * Gets the apps
-    * A list of apps to appear on a page within a folder. This collection can contain a maximum of 500 elements.
+    * A list of apps and web clips to appear on a page within a folder. This collection can contain a maximum of 500 elements.
     *
     * @return IosHomeScreenApp|null The apps
     */
@@ -45,7 +45,7 @@ class IosHomeScreenFolderPage extends Entity
 
     /**
     * Sets the apps
-    * A list of apps to appear on a page within a folder. This collection can contain a maximum of 500 elements.
+    * A list of apps and web clips to appear on a page within a folder. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenApp $val The value to assign to the apps
     *

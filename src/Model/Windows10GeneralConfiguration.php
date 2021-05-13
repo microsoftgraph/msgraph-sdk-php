@@ -1276,7 +1276,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the defenderSystemScanSchedule
-    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
     *
     * @return WeeklySchedule|null The defenderSystemScanSchedule
     */
@@ -1295,7 +1295,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the defenderSystemScanSchedule
-    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
     *
     * @param WeeklySchedule $val The defenderSystemScanSchedule
     *
@@ -4328,7 +4328,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Gets the smartScreenEnableAppInstallControl
-    * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+    * This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
     *
     * @return bool|null The smartScreenEnableAppInstallControl
     */
@@ -4343,7 +4343,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /**
     * Sets the smartScreenEnableAppInstallControl
-    * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+    * This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
     *
     * @param bool $val The smartScreenEnableAppInstallControl
     *
