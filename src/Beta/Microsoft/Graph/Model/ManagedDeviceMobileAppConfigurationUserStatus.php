@@ -28,7 +28,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
     * Gets the devicesCount
     * Devices count for that user.
     *
-    * @return int The devicesCount
+    * @return int|null The devicesCount
     */
     public function getDevicesCount()
     {
@@ -57,12 +57,12 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
     * Gets the lastReportedDateTime
     * Last modified date time of the policy report.
     *
-    * @return \DateTime The lastReportedDateTime
+    * @return \DateTime|null The lastReportedDateTime
     */
     public function getLastReportedDateTime()
     {
         if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime") || is_null($this->_propDict["lastReportedDateTime"])) {
                 return $this->_propDict["lastReportedDateTime"];
             } else {
                 $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
@@ -90,12 +90,12 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
     * Gets the status
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
-    * @return ComplianceStatus The status
+    * @return ComplianceStatus|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);
@@ -123,7 +123,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
     * Gets the userDisplayName
     * User name of the DevicePolicyStatus.
     *
-    * @return string The userDisplayName
+    * @return string|null The userDisplayName
     */
     public function getUserDisplayName()
     {
@@ -152,7 +152,7 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity
     * Gets the userPrincipalName
     * UserPrincipalName.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

@@ -28,7 +28,7 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the configurationVersion
     * Version of the policy for that overview
     *
-    * @return int The configurationVersion
+    * @return int|null The configurationVersion
     */
     public function getConfigurationVersion()
     {
@@ -57,7 +57,7 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the conflictCount
     * Number of devices in conflict
     *
-    * @return int The conflictCount
+    * @return int|null The conflictCount
     */
     public function getConflictCount()
     {
@@ -86,7 +86,7 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the errorCount
     * Number of error devices
     *
-    * @return int The errorCount
+    * @return int|null The errorCount
     */
     public function getErrorCount()
     {
@@ -115,7 +115,7 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the failedCount
     * Number of failed devices
     *
-    * @return int The failedCount
+    * @return int|null The failedCount
     */
     public function getFailedCount()
     {
@@ -144,12 +144,12 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the lastUpdateDateTime
     * Last update time
     *
-    * @return \DateTime The lastUpdateDateTime
+    * @return \DateTime|null The lastUpdateDateTime
     */
     public function getLastUpdateDateTime()
     {
         if (array_key_exists("lastUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdateDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastUpdateDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdateDateTime"])) {
                 return $this->_propDict["lastUpdateDateTime"];
             } else {
                 $this->_propDict["lastUpdateDateTime"] = new \DateTime($this->_propDict["lastUpdateDateTime"]);
@@ -177,7 +177,7 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the notApplicableCount
     * Number of not applicable devices
     *
-    * @return int The notApplicableCount
+    * @return int|null The notApplicableCount
     */
     public function getNotApplicableCount()
     {
@@ -206,7 +206,7 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the notApplicablePlatformCount
     * Number of not applicable devices due to mismatch platform and policy
     *
-    * @return int The notApplicablePlatformCount
+    * @return int|null The notApplicablePlatformCount
     */
     public function getNotApplicablePlatformCount()
     {
@@ -235,7 +235,7 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the pendingCount
     * Number of pending devices
     *
-    * @return int The pendingCount
+    * @return int|null The pendingCount
     */
     public function getPendingCount()
     {
@@ -264,7 +264,7 @@ class DeviceComplianceDeviceOverview extends Entity
     * Gets the successCount
     * Number of succeeded devices
     *
-    * @return int The successCount
+    * @return int|null The successCount
     */
     public function getSuccessCount()
     {

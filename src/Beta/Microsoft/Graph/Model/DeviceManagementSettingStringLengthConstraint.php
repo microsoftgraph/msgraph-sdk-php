@@ -36,7 +36,7 @@ class DeviceManagementSettingStringLengthConstraint extends DeviceManagementCons
     * Gets the maximumLength
     * The maximum permitted string length
     *
-    * @return int The maximumLength
+    * @return int|null The maximumLength
     */
     public function getMaximumLength()
     {
@@ -64,7 +64,7 @@ class DeviceManagementSettingStringLengthConstraint extends DeviceManagementCons
     * Gets the minimumLength
     * The minimum permitted string length
     *
-    * @return int The minimumLength
+    * @return int|null The minimumLength
     */
     public function getMinimumLength()
     {

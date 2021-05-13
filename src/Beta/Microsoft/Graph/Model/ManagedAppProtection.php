@@ -29,7 +29,7 @@ class ManagedAppProtection extends ManagedAppPolicy
      * Gets the allowedDataIngestionLocations
     * Data storage locations where a user may store managed data.
      *
-     * @return array The allowedDataIngestionLocations
+     * @return array|null The allowedDataIngestionLocations
      */
     public function getAllowedDataIngestionLocations()
     {
@@ -50,7 +50,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function setAllowedDataIngestionLocations($val)
     {
-		$this->_propDict["allowedDataIngestionLocations"] = $val;
+        $this->_propDict["allowedDataIngestionLocations"] = $val;
         return $this;
     }
     
@@ -59,7 +59,7 @@ class ManagedAppProtection extends ManagedAppPolicy
      * Gets the allowedDataStorageLocations
     * Data storage locations where a user may store managed data.
      *
-     * @return array The allowedDataStorageLocations
+     * @return array|null The allowedDataStorageLocations
      */
     public function getAllowedDataStorageLocations()
     {
@@ -80,7 +80,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function setAllowedDataStorageLocations($val)
     {
-		$this->_propDict["allowedDataStorageLocations"] = $val;
+        $this->_propDict["allowedDataStorageLocations"] = $val;
         return $this;
     }
     
@@ -88,12 +88,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the allowedInboundDataTransferSources
     * Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
     *
-    * @return ManagedAppDataTransferLevel The allowedInboundDataTransferSources
+    * @return ManagedAppDataTransferLevel|null The allowedInboundDataTransferSources
     */
     public function getAllowedInboundDataTransferSources()
     {
         if (array_key_exists("allowedInboundDataTransferSources", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedInboundDataTransferSources"], "\Beta\Microsoft\Graph\Model\ManagedAppDataTransferLevel")) {
+            if (is_a($this->_propDict["allowedInboundDataTransferSources"], "\Beta\Microsoft\Graph\Model\ManagedAppDataTransferLevel") || is_null($this->_propDict["allowedInboundDataTransferSources"])) {
                 return $this->_propDict["allowedInboundDataTransferSources"];
             } else {
                 $this->_propDict["allowedInboundDataTransferSources"] = new ManagedAppDataTransferLevel($this->_propDict["allowedInboundDataTransferSources"]);
@@ -121,7 +121,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the allowedOutboundClipboardSharingExceptionLength
     * Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of '0' means no exception is allowed.
     *
-    * @return int The allowedOutboundClipboardSharingExceptionLength
+    * @return int|null The allowedOutboundClipboardSharingExceptionLength
     */
     public function getAllowedOutboundClipboardSharingExceptionLength()
     {
@@ -150,12 +150,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the allowedOutboundClipboardSharingLevel
     * The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
     *
-    * @return ManagedAppClipboardSharingLevel The allowedOutboundClipboardSharingLevel
+    * @return ManagedAppClipboardSharingLevel|null The allowedOutboundClipboardSharingLevel
     */
     public function getAllowedOutboundClipboardSharingLevel()
     {
         if (array_key_exists("allowedOutboundClipboardSharingLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedOutboundClipboardSharingLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppClipboardSharingLevel")) {
+            if (is_a($this->_propDict["allowedOutboundClipboardSharingLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppClipboardSharingLevel") || is_null($this->_propDict["allowedOutboundClipboardSharingLevel"])) {
                 return $this->_propDict["allowedOutboundClipboardSharingLevel"];
             } else {
                 $this->_propDict["allowedOutboundClipboardSharingLevel"] = new ManagedAppClipboardSharingLevel($this->_propDict["allowedOutboundClipboardSharingLevel"]);
@@ -183,12 +183,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the allowedOutboundDataTransferDestinations
     * Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
     *
-    * @return ManagedAppDataTransferLevel The allowedOutboundDataTransferDestinations
+    * @return ManagedAppDataTransferLevel|null The allowedOutboundDataTransferDestinations
     */
     public function getAllowedOutboundDataTransferDestinations()
     {
         if (array_key_exists("allowedOutboundDataTransferDestinations", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedOutboundDataTransferDestinations"], "\Beta\Microsoft\Graph\Model\ManagedAppDataTransferLevel")) {
+            if (is_a($this->_propDict["allowedOutboundDataTransferDestinations"], "\Beta\Microsoft\Graph\Model\ManagedAppDataTransferLevel") || is_null($this->_propDict["allowedOutboundDataTransferDestinations"])) {
                 return $this->_propDict["allowedOutboundDataTransferDestinations"];
             } else {
                 $this->_propDict["allowedOutboundDataTransferDestinations"] = new ManagedAppDataTransferLevel($this->_propDict["allowedOutboundDataTransferDestinations"]);
@@ -216,12 +216,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the appActionIfDeviceComplianceRequired
     * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true. Possible values are: block, wipe, warn.
     *
-    * @return ManagedAppRemediationAction The appActionIfDeviceComplianceRequired
+    * @return ManagedAppRemediationAction|null The appActionIfDeviceComplianceRequired
     */
     public function getAppActionIfDeviceComplianceRequired()
     {
         if (array_key_exists("appActionIfDeviceComplianceRequired", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfDeviceComplianceRequired"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfDeviceComplianceRequired"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["appActionIfDeviceComplianceRequired"])) {
                 return $this->_propDict["appActionIfDeviceComplianceRequired"];
             } else {
                 $this->_propDict["appActionIfDeviceComplianceRequired"] = new ManagedAppRemediationAction($this->_propDict["appActionIfDeviceComplianceRequired"]);
@@ -249,12 +249,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the appActionIfMaximumPinRetriesExceeded
     * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts. Possible values are: block, wipe, warn.
     *
-    * @return ManagedAppRemediationAction The appActionIfMaximumPinRetriesExceeded
+    * @return ManagedAppRemediationAction|null The appActionIfMaximumPinRetriesExceeded
     */
     public function getAppActionIfMaximumPinRetriesExceeded()
     {
         if (array_key_exists("appActionIfMaximumPinRetriesExceeded", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfMaximumPinRetriesExceeded"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfMaximumPinRetriesExceeded"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["appActionIfMaximumPinRetriesExceeded"])) {
                 return $this->_propDict["appActionIfMaximumPinRetriesExceeded"];
             } else {
                 $this->_propDict["appActionIfMaximumPinRetriesExceeded"] = new ManagedAppRemediationAction($this->_propDict["appActionIfMaximumPinRetriesExceeded"]);
@@ -282,12 +282,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the appActionIfUnableToAuthenticateUser
     * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Possible values are: block, wipe, warn.
     *
-    * @return ManagedAppRemediationAction The appActionIfUnableToAuthenticateUser
+    * @return ManagedAppRemediationAction|null The appActionIfUnableToAuthenticateUser
     */
     public function getAppActionIfUnableToAuthenticateUser()
     {
         if (array_key_exists("appActionIfUnableToAuthenticateUser", $this->_propDict)) {
-            if (is_a($this->_propDict["appActionIfUnableToAuthenticateUser"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["appActionIfUnableToAuthenticateUser"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["appActionIfUnableToAuthenticateUser"])) {
                 return $this->_propDict["appActionIfUnableToAuthenticateUser"];
             } else {
                 $this->_propDict["appActionIfUnableToAuthenticateUser"] = new ManagedAppRemediationAction($this->_propDict["appActionIfUnableToAuthenticateUser"]);
@@ -315,7 +315,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the blockDataIngestionIntoOrganizationDocuments
     * Indicates whether a user can bring data into org documents.
     *
-    * @return bool The blockDataIngestionIntoOrganizationDocuments
+    * @return bool|null The blockDataIngestionIntoOrganizationDocuments
     */
     public function getBlockDataIngestionIntoOrganizationDocuments()
     {
@@ -344,7 +344,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the contactSyncBlocked
     * Indicates whether contacts can be synced to the user's device.
     *
-    * @return bool The contactSyncBlocked
+    * @return bool|null The contactSyncBlocked
     */
     public function getContactSyncBlocked()
     {
@@ -373,7 +373,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the dataBackupBlocked
     * Indicates whether the backup of a managed app's data is blocked.
     *
-    * @return bool The dataBackupBlocked
+    * @return bool|null The dataBackupBlocked
     */
     public function getDataBackupBlocked()
     {
@@ -402,7 +402,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the deviceComplianceRequired
     * Indicates whether device compliance is required.
     *
-    * @return bool The deviceComplianceRequired
+    * @return bool|null The deviceComplianceRequired
     */
     public function getDeviceComplianceRequired()
     {
@@ -431,12 +431,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the dialerRestrictionLevel
     * The classes of dialer apps that are allowed to click-to-open a phone number. Possible values are: allApps, managedApps, customApp, blocked.
     *
-    * @return ManagedAppPhoneNumberRedirectLevel The dialerRestrictionLevel
+    * @return ManagedAppPhoneNumberRedirectLevel|null The dialerRestrictionLevel
     */
     public function getDialerRestrictionLevel()
     {
         if (array_key_exists("dialerRestrictionLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["dialerRestrictionLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppPhoneNumberRedirectLevel")) {
+            if (is_a($this->_propDict["dialerRestrictionLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppPhoneNumberRedirectLevel") || is_null($this->_propDict["dialerRestrictionLevel"])) {
                 return $this->_propDict["dialerRestrictionLevel"];
             } else {
                 $this->_propDict["dialerRestrictionLevel"] = new ManagedAppPhoneNumberRedirectLevel($this->_propDict["dialerRestrictionLevel"]);
@@ -464,7 +464,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the disableAppPinIfDevicePinIsSet
     * Indicates whether use of the app pin is required if the device pin is set.
     *
-    * @return bool The disableAppPinIfDevicePinIsSet
+    * @return bool|null The disableAppPinIfDevicePinIsSet
     */
     public function getDisableAppPinIfDevicePinIsSet()
     {
@@ -493,7 +493,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the fingerprintBlocked
     * Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
     *
-    * @return bool The fingerprintBlocked
+    * @return bool|null The fingerprintBlocked
     */
     public function getFingerprintBlocked()
     {
@@ -522,12 +522,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the managedBrowser
     * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
     *
-    * @return ManagedBrowserType The managedBrowser
+    * @return ManagedBrowserType|null The managedBrowser
     */
     public function getManagedBrowser()
     {
         if (array_key_exists("managedBrowser", $this->_propDict)) {
-            if (is_a($this->_propDict["managedBrowser"], "\Beta\Microsoft\Graph\Model\ManagedBrowserType")) {
+            if (is_a($this->_propDict["managedBrowser"], "\Beta\Microsoft\Graph\Model\ManagedBrowserType") || is_null($this->_propDict["managedBrowser"])) {
                 return $this->_propDict["managedBrowser"];
             } else {
                 $this->_propDict["managedBrowser"] = new ManagedBrowserType($this->_propDict["managedBrowser"]);
@@ -555,7 +555,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the managedBrowserToOpenLinksRequired
     * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
     *
-    * @return bool The managedBrowserToOpenLinksRequired
+    * @return bool|null The managedBrowserToOpenLinksRequired
     */
     public function getManagedBrowserToOpenLinksRequired()
     {
@@ -584,12 +584,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the maximumAllowedDeviceThreatLevel
     * Maximum allowed device threat level, as reported by the MTD app. Possible values are: notConfigured, secured, low, medium, high.
     *
-    * @return ManagedAppDeviceThreatLevel The maximumAllowedDeviceThreatLevel
+    * @return ManagedAppDeviceThreatLevel|null The maximumAllowedDeviceThreatLevel
     */
     public function getMaximumAllowedDeviceThreatLevel()
     {
         if (array_key_exists("maximumAllowedDeviceThreatLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumAllowedDeviceThreatLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppDeviceThreatLevel")) {
+            if (is_a($this->_propDict["maximumAllowedDeviceThreatLevel"], "\Beta\Microsoft\Graph\Model\ManagedAppDeviceThreatLevel") || is_null($this->_propDict["maximumAllowedDeviceThreatLevel"])) {
                 return $this->_propDict["maximumAllowedDeviceThreatLevel"];
             } else {
                 $this->_propDict["maximumAllowedDeviceThreatLevel"] = new ManagedAppDeviceThreatLevel($this->_propDict["maximumAllowedDeviceThreatLevel"]);
@@ -617,7 +617,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the maximumPinRetries
     * Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
     *
-    * @return int The maximumPinRetries
+    * @return int|null The maximumPinRetries
     */
     public function getMaximumPinRetries()
     {
@@ -646,7 +646,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the maximumRequiredOsVersion
     * Versions bigger than the specified version will block the managed app from accessing company data.
     *
-    * @return string The maximumRequiredOsVersion
+    * @return string|null The maximumRequiredOsVersion
     */
     public function getMaximumRequiredOsVersion()
     {
@@ -675,7 +675,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the maximumWarningOsVersion
     * Versions bigger than the specified version will block the managed app from accessing company data.
     *
-    * @return string The maximumWarningOsVersion
+    * @return string|null The maximumWarningOsVersion
     */
     public function getMaximumWarningOsVersion()
     {
@@ -704,7 +704,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the maximumWipeOsVersion
     * Versions bigger than the specified version will block the managed app from accessing company data.
     *
-    * @return string The maximumWipeOsVersion
+    * @return string|null The maximumWipeOsVersion
     */
     public function getMaximumWipeOsVersion()
     {
@@ -733,7 +733,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the minimumPinLength
     * Minimum pin length required for an app-level pin if PinRequired is set to True
     *
-    * @return int The minimumPinLength
+    * @return int|null The minimumPinLength
     */
     public function getMinimumPinLength()
     {
@@ -762,7 +762,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the minimumRequiredAppVersion
     * Versions less than the specified version will block the managed app from accessing company data.
     *
-    * @return string The minimumRequiredAppVersion
+    * @return string|null The minimumRequiredAppVersion
     */
     public function getMinimumRequiredAppVersion()
     {
@@ -791,7 +791,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the minimumRequiredOsVersion
     * Versions less than the specified version will block the managed app from accessing company data.
     *
-    * @return string The minimumRequiredOsVersion
+    * @return string|null The minimumRequiredOsVersion
     */
     public function getMinimumRequiredOsVersion()
     {
@@ -820,7 +820,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the minimumWarningAppVersion
     * Versions less than the specified version will result in warning message on the managed app.
     *
-    * @return string The minimumWarningAppVersion
+    * @return string|null The minimumWarningAppVersion
     */
     public function getMinimumWarningAppVersion()
     {
@@ -849,7 +849,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the minimumWarningOsVersion
     * Versions less than the specified version will result in warning message on the managed app from accessing company data.
     *
-    * @return string The minimumWarningOsVersion
+    * @return string|null The minimumWarningOsVersion
     */
     public function getMinimumWarningOsVersion()
     {
@@ -878,7 +878,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the minimumWipeAppVersion
     * Versions less than or equal to the specified version will wipe the managed app and the associated company data.
     *
-    * @return string The minimumWipeAppVersion
+    * @return string|null The minimumWipeAppVersion
     */
     public function getMinimumWipeAppVersion()
     {
@@ -907,7 +907,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the minimumWipeOsVersion
     * Versions less than or equal to the specified version will wipe the managed app and the associated company data.
     *
-    * @return string The minimumWipeOsVersion
+    * @return string|null The minimumWipeOsVersion
     */
     public function getMinimumWipeOsVersion()
     {
@@ -936,12 +936,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the mobileThreatDefenseRemediationAction
     * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
     *
-    * @return ManagedAppRemediationAction The mobileThreatDefenseRemediationAction
+    * @return ManagedAppRemediationAction|null The mobileThreatDefenseRemediationAction
     */
     public function getMobileThreatDefenseRemediationAction()
     {
         if (array_key_exists("mobileThreatDefenseRemediationAction", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileThreatDefenseRemediationAction"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction")) {
+            if (is_a($this->_propDict["mobileThreatDefenseRemediationAction"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["mobileThreatDefenseRemediationAction"])) {
                 return $this->_propDict["mobileThreatDefenseRemediationAction"];
             } else {
                 $this->_propDict["mobileThreatDefenseRemediationAction"] = new ManagedAppRemediationAction($this->_propDict["mobileThreatDefenseRemediationAction"]);
@@ -969,12 +969,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the notificationRestriction
     * Specify app notification restriction. Possible values are: allow, blockOrganizationalData, block.
     *
-    * @return ManagedAppNotificationRestriction The notificationRestriction
+    * @return ManagedAppNotificationRestriction|null The notificationRestriction
     */
     public function getNotificationRestriction()
     {
         if (array_key_exists("notificationRestriction", $this->_propDict)) {
-            if (is_a($this->_propDict["notificationRestriction"], "\Beta\Microsoft\Graph\Model\ManagedAppNotificationRestriction")) {
+            if (is_a($this->_propDict["notificationRestriction"], "\Beta\Microsoft\Graph\Model\ManagedAppNotificationRestriction") || is_null($this->_propDict["notificationRestriction"])) {
                 return $this->_propDict["notificationRestriction"];
             } else {
                 $this->_propDict["notificationRestriction"] = new ManagedAppNotificationRestriction($this->_propDict["notificationRestriction"]);
@@ -1002,7 +1002,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the organizationalCredentialsRequired
     * Indicates whether organizational credentials are required for app use.
     *
-    * @return bool The organizationalCredentialsRequired
+    * @return bool|null The organizationalCredentialsRequired
     */
     public function getOrganizationalCredentialsRequired()
     {
@@ -1031,12 +1031,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the periodBeforePinReset
     * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
     *
-    * @return Duration The periodBeforePinReset
+    * @return Duration|null The periodBeforePinReset
     */
     public function getPeriodBeforePinReset()
     {
         if (array_key_exists("periodBeforePinReset", $this->_propDict)) {
-            if (is_a($this->_propDict["periodBeforePinReset"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["periodBeforePinReset"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodBeforePinReset"])) {
                 return $this->_propDict["periodBeforePinReset"];
             } else {
                 $this->_propDict["periodBeforePinReset"] = new Duration($this->_propDict["periodBeforePinReset"]);
@@ -1064,12 +1064,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the periodOfflineBeforeAccessCheck
     * The period after which access is checked when the device is not connected to the internet.
     *
-    * @return Duration The periodOfflineBeforeAccessCheck
+    * @return Duration|null The periodOfflineBeforeAccessCheck
     */
     public function getPeriodOfflineBeforeAccessCheck()
     {
         if (array_key_exists("periodOfflineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOfflineBeforeAccessCheck"])) {
                 return $this->_propDict["periodOfflineBeforeAccessCheck"];
             } else {
                 $this->_propDict["periodOfflineBeforeAccessCheck"] = new Duration($this->_propDict["periodOfflineBeforeAccessCheck"]);
@@ -1097,12 +1097,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the periodOfflineBeforeWipeIsEnforced
     * The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
     *
-    * @return Duration The periodOfflineBeforeWipeIsEnforced
+    * @return Duration|null The periodOfflineBeforeWipeIsEnforced
     */
     public function getPeriodOfflineBeforeWipeIsEnforced()
     {
         if (array_key_exists("periodOfflineBeforeWipeIsEnforced", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeWipeIsEnforced"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["periodOfflineBeforeWipeIsEnforced"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOfflineBeforeWipeIsEnforced"])) {
                 return $this->_propDict["periodOfflineBeforeWipeIsEnforced"];
             } else {
                 $this->_propDict["periodOfflineBeforeWipeIsEnforced"] = new Duration($this->_propDict["periodOfflineBeforeWipeIsEnforced"]);
@@ -1130,12 +1130,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the periodOnlineBeforeAccessCheck
     * The period after which access is checked when the device is connected to the internet.
     *
-    * @return Duration The periodOnlineBeforeAccessCheck
+    * @return Duration|null The periodOnlineBeforeAccessCheck
     */
     public function getPeriodOnlineBeforeAccessCheck()
     {
         if (array_key_exists("periodOnlineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOnlineBeforeAccessCheck"])) {
                 return $this->_propDict["periodOnlineBeforeAccessCheck"];
             } else {
                 $this->_propDict["periodOnlineBeforeAccessCheck"] = new Duration($this->_propDict["periodOnlineBeforeAccessCheck"]);
@@ -1163,12 +1163,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the pinCharacterSet
     * Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol.
     *
-    * @return ManagedAppPinCharacterSet The pinCharacterSet
+    * @return ManagedAppPinCharacterSet|null The pinCharacterSet
     */
     public function getPinCharacterSet()
     {
         if (array_key_exists("pinCharacterSet", $this->_propDict)) {
-            if (is_a($this->_propDict["pinCharacterSet"], "\Beta\Microsoft\Graph\Model\ManagedAppPinCharacterSet")) {
+            if (is_a($this->_propDict["pinCharacterSet"], "\Beta\Microsoft\Graph\Model\ManagedAppPinCharacterSet") || is_null($this->_propDict["pinCharacterSet"])) {
                 return $this->_propDict["pinCharacterSet"];
             } else {
                 $this->_propDict["pinCharacterSet"] = new ManagedAppPinCharacterSet($this->_propDict["pinCharacterSet"]);
@@ -1196,7 +1196,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the pinRequired
     * Indicates whether an app-level pin is required.
     *
-    * @return bool The pinRequired
+    * @return bool|null The pinRequired
     */
     public function getPinRequired()
     {
@@ -1225,12 +1225,12 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the pinRequiredInsteadOfBiometricTimeout
     * Timeout in minutes for an app pin instead of non biometrics passcode
     *
-    * @return Duration The pinRequiredInsteadOfBiometricTimeout
+    * @return Duration|null The pinRequiredInsteadOfBiometricTimeout
     */
     public function getPinRequiredInsteadOfBiometricTimeout()
     {
         if (array_key_exists("pinRequiredInsteadOfBiometricTimeout", $this->_propDict)) {
-            if (is_a($this->_propDict["pinRequiredInsteadOfBiometricTimeout"], "\Beta\Microsoft\Graph\Model\Duration")) {
+            if (is_a($this->_propDict["pinRequiredInsteadOfBiometricTimeout"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["pinRequiredInsteadOfBiometricTimeout"])) {
                 return $this->_propDict["pinRequiredInsteadOfBiometricTimeout"];
             } else {
                 $this->_propDict["pinRequiredInsteadOfBiometricTimeout"] = new Duration($this->_propDict["pinRequiredInsteadOfBiometricTimeout"]);
@@ -1258,7 +1258,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the previousPinBlockCount
     * Requires a pin to be unique from the number specified in this property.
     *
-    * @return int The previousPinBlockCount
+    * @return int|null The previousPinBlockCount
     */
     public function getPreviousPinBlockCount()
     {
@@ -1287,7 +1287,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the printBlocked
     * Indicates whether printing is allowed from managed apps.
     *
-    * @return bool The printBlocked
+    * @return bool|null The printBlocked
     */
     public function getPrintBlocked()
     {
@@ -1316,7 +1316,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the saveAsBlocked
     * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
     *
-    * @return bool The saveAsBlocked
+    * @return bool|null The saveAsBlocked
     */
     public function getSaveAsBlocked()
     {
@@ -1345,7 +1345,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the simplePinBlocked
     * Indicates whether simplePin is blocked.
     *
-    * @return bool The simplePinBlocked
+    * @return bool|null The simplePinBlocked
     */
     public function getSimplePinBlocked()
     {

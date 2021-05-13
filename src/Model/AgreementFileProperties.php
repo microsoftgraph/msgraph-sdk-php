@@ -27,12 +27,12 @@ class AgreementFileProperties extends Entity
     /**
     * Gets the createdDateTime
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -58,7 +58,7 @@ class AgreementFileProperties extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -85,12 +85,12 @@ class AgreementFileProperties extends Entity
     /**
     * Gets the fileData
     *
-    * @return AgreementFileData The fileData
+    * @return AgreementFileData|null The fileData
     */
     public function getFileData()
     {
         if (array_key_exists("fileData", $this->_propDict)) {
-            if (is_a($this->_propDict["fileData"], "\Microsoft\Graph\Model\AgreementFileData")) {
+            if (is_a($this->_propDict["fileData"], "\Microsoft\Graph\Model\AgreementFileData") || is_null($this->_propDict["fileData"])) {
                 return $this->_propDict["fileData"];
             } else {
                 $this->_propDict["fileData"] = new AgreementFileData($this->_propDict["fileData"]);
@@ -116,7 +116,7 @@ class AgreementFileProperties extends Entity
     /**
     * Gets the fileName
     *
-    * @return string The fileName
+    * @return string|null The fileName
     */
     public function getFileName()
     {
@@ -143,7 +143,7 @@ class AgreementFileProperties extends Entity
     /**
     * Gets the isDefault
     *
-    * @return bool The isDefault
+    * @return bool|null The isDefault
     */
     public function getIsDefault()
     {
@@ -170,7 +170,7 @@ class AgreementFileProperties extends Entity
     /**
     * Gets the isMajorVersion
     *
-    * @return bool The isMajorVersion
+    * @return bool|null The isMajorVersion
     */
     public function getIsMajorVersion()
     {
@@ -197,7 +197,7 @@ class AgreementFileProperties extends Entity
     /**
     * Gets the language
     *
-    * @return string The language
+    * @return string|null The language
     */
     public function getLanguage()
     {

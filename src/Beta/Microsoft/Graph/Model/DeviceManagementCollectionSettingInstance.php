@@ -29,7 +29,7 @@ class DeviceManagementCollectionSettingInstance extends DeviceManagementSettingI
      * Gets the value
     * The collection of values
      *
-     * @return array The value
+     * @return array|null The value
      */
     public function getValue()
     {
@@ -50,7 +50,7 @@ class DeviceManagementCollectionSettingInstance extends DeviceManagementSettingI
     */
     public function setValue($val)
     {
-		$this->_propDict["value"] = $val;
+        $this->_propDict["value"] = $val;
         return $this;
     }
     

@@ -27,7 +27,7 @@ class ExactMatchLookupJob extends ExactMatchJobBase
     /**
     * Gets the state
     *
-    * @return string The state
+    * @return string|null The state
     */
     public function getState()
     {
@@ -55,7 +55,7 @@ class ExactMatchLookupJob extends ExactMatchJobBase
      /** 
      * Gets the matchingRows
      *
-     * @return array The matchingRows
+     * @return array|null The matchingRows
      */
     public function getMatchingRows()
     {
@@ -75,7 +75,7 @@ class ExactMatchLookupJob extends ExactMatchJobBase
     */
     public function setMatchingRows($val)
     {
-		$this->_propDict["matchingRows"] = $val;
+        $this->_propDict["matchingRows"] = $val;
         return $this;
     }
     

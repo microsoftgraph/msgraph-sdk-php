@@ -29,7 +29,7 @@ class WindowsPhone81CustomConfiguration extends DeviceConfiguration
      * Gets the omaSettings
     * OMA settings. This collection can contain a maximum of 1000 elements.
      *
-     * @return array The omaSettings
+     * @return array|null The omaSettings
      */
     public function getOmaSettings()
     {
@@ -50,7 +50,7 @@ class WindowsPhone81CustomConfiguration extends DeviceConfiguration
     */
     public function setOmaSettings($val)
     {
-		$this->_propDict["omaSettings"] = $val;
+        $this->_propDict["omaSettings"] = $val;
         return $this;
     }
     

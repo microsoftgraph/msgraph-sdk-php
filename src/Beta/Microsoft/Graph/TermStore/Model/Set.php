@@ -28,12 +28,12 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the createdDateTime
     * Date and time of set creation. Read-only.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -61,7 +61,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the description
     * Description giving details on the term usage.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -91,7 +91,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the localizedNames
     * Name of the set for each languageTag.
      *
-     * @return array The localizedNames
+     * @return array|null The localizedNames
      */
     public function getLocalizedNames()
     {
@@ -112,7 +112,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setLocalizedNames($val)
     {
-		$this->_propDict["localizedNames"] = $val;
+        $this->_propDict["localizedNames"] = $val;
         return $this;
     }
     
@@ -121,7 +121,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the setProperties
     * Custom properties for the set.
      *
-     * @return array The setProperties
+     * @return array|null The setProperties
      */
     public function getSetProperties()
     {
@@ -142,7 +142,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setSetProperties($val)
     {
-		$this->_propDict["properties"] = $val;
+        $this->_propDict["properties"] = $val;
         return $this;
     }
     
@@ -151,7 +151,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the children
     * Children terms of set in term [store].
      *
-     * @return array The children
+     * @return array|null The children
      */
     public function getChildren()
     {
@@ -172,7 +172,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setChildren($val)
     {
-		$this->_propDict["children"] = $val;
+        $this->_propDict["children"] = $val;
         return $this;
     }
     
@@ -180,12 +180,12 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the parentGroup
     * The parent [group] that contains the set.
     *
-    * @return Group The parentGroup
+    * @return Group|null The parentGroup
     */
     public function getParentGroup()
     {
         if (array_key_exists("parentGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["parentGroup"], "\Beta\Microsoft\Graph\TermStore\Model\Group")) {
+            if (is_a($this->_propDict["parentGroup"], "\Beta\Microsoft\Graph\TermStore\Model\Group") || is_null($this->_propDict["parentGroup"])) {
                 return $this->_propDict["parentGroup"];
             } else {
                 $this->_propDict["parentGroup"] = new Group($this->_propDict["parentGroup"]);
@@ -214,7 +214,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the relations
     * Indicates which terms have been pinned or reused directly under the set.
      *
-     * @return array The relations
+     * @return array|null The relations
      */
     public function getRelations()
     {
@@ -235,7 +235,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setRelations($val)
     {
-		$this->_propDict["relations"] = $val;
+        $this->_propDict["relations"] = $val;
         return $this;
     }
     
@@ -244,7 +244,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
      * Gets the terms
     * All the terms under the set.
      *
-     * @return array The terms
+     * @return array|null The terms
      */
     public function getTerms()
     {
@@ -265,7 +265,7 @@ class Set extends \Beta\Microsoft\Graph\Model\Entity
     */
     public function setTerms($val)
     {
-		$this->_propDict["terms"] = $val;
+        $this->_propDict["terms"] = $val;
         return $this;
     }
     

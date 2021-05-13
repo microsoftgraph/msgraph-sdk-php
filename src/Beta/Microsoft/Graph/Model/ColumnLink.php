@@ -28,7 +28,7 @@ class ColumnLink extends Entity
     * Gets the name
     * The name of the column  in this content type.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {

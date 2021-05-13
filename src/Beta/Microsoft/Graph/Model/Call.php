@@ -29,7 +29,7 @@ class Call extends Entity
      * Gets the activeModalities
     * The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
      *
-     * @return array The activeModalities
+     * @return array|null The activeModalities
      */
     public function getActiveModalities()
     {
@@ -50,7 +50,7 @@ class Call extends Entity
     */
     public function setActiveModalities($val)
     {
-		$this->_propDict["activeModalities"] = $val;
+        $this->_propDict["activeModalities"] = $val;
         return $this;
     }
     
@@ -58,12 +58,12 @@ class Call extends Entity
     * Gets the answeredBy
     * The participant that answered the call. Read-only.
     *
-    * @return ParticipantInfo The answeredBy
+    * @return ParticipantInfo|null The answeredBy
     */
     public function getAnsweredBy()
     {
         if (array_key_exists("answeredBy", $this->_propDict)) {
-            if (is_a($this->_propDict["answeredBy"], "\Beta\Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["answeredBy"], "\Beta\Microsoft\Graph\Model\ParticipantInfo") || is_null($this->_propDict["answeredBy"])) {
                 return $this->_propDict["answeredBy"];
             } else {
                 $this->_propDict["answeredBy"] = new ParticipantInfo($this->_propDict["answeredBy"]);
@@ -91,7 +91,7 @@ class Call extends Entity
     * Gets the callbackUri
     * The callback URL on which callbacks will be delivered. Must be https.
     *
-    * @return string The callbackUri
+    * @return string|null The callbackUri
     */
     public function getCallbackUri()
     {
@@ -120,7 +120,7 @@ class Call extends Entity
     * Gets the callChainId
     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
     *
-    * @return string The callChainId
+    * @return string|null The callChainId
     */
     public function getCallChainId()
     {
@@ -148,12 +148,12 @@ class Call extends Entity
     /**
     * Gets the callOptions
     *
-    * @return CallOptions The callOptions
+    * @return CallOptions|null The callOptions
     */
     public function getCallOptions()
     {
         if (array_key_exists("callOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["callOptions"], "\Beta\Microsoft\Graph\Model\CallOptions")) {
+            if (is_a($this->_propDict["callOptions"], "\Beta\Microsoft\Graph\Model\CallOptions") || is_null($this->_propDict["callOptions"])) {
                 return $this->_propDict["callOptions"];
             } else {
                 $this->_propDict["callOptions"] = new CallOptions($this->_propDict["callOptions"]);
@@ -181,7 +181,7 @@ class Call extends Entity
      * Gets the callRoutes
     * The routing information on how the call was retargeted. Read-only.
      *
-     * @return array The callRoutes
+     * @return array|null The callRoutes
      */
     public function getCallRoutes()
     {
@@ -202,7 +202,7 @@ class Call extends Entity
     */
     public function setCallRoutes($val)
     {
-		$this->_propDict["callRoutes"] = $val;
+        $this->_propDict["callRoutes"] = $val;
         return $this;
     }
     
@@ -210,12 +210,12 @@ class Call extends Entity
     * Gets the chatInfo
     * The chat information. Required information for joining a meeting.
     *
-    * @return ChatInfo The chatInfo
+    * @return ChatInfo|null The chatInfo
     */
     public function getChatInfo()
     {
         if (array_key_exists("chatInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["chatInfo"], "\Beta\Microsoft\Graph\Model\ChatInfo")) {
+            if (is_a($this->_propDict["chatInfo"], "\Beta\Microsoft\Graph\Model\ChatInfo") || is_null($this->_propDict["chatInfo"])) {
                 return $this->_propDict["chatInfo"];
             } else {
                 $this->_propDict["chatInfo"] = new ChatInfo($this->_propDict["chatInfo"]);
@@ -243,12 +243,12 @@ class Call extends Entity
     * Gets the direction
     * The direction of the call. The possible value are incoming or outgoing. Read-only.
     *
-    * @return CallDirection The direction
+    * @return CallDirection|null The direction
     */
     public function getDirection()
     {
         if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "\Beta\Microsoft\Graph\Model\CallDirection")) {
+            if (is_a($this->_propDict["direction"], "\Beta\Microsoft\Graph\Model\CallDirection") || is_null($this->_propDict["direction"])) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new CallDirection($this->_propDict["direction"]);
@@ -276,12 +276,12 @@ class Call extends Entity
     * Gets the incomingContext
     * The context associated with an incoming call. Read-only. Server generated.
     *
-    * @return IncomingContext The incomingContext
+    * @return IncomingContext|null The incomingContext
     */
     public function getIncomingContext()
     {
         if (array_key_exists("incomingContext", $this->_propDict)) {
-            if (is_a($this->_propDict["incomingContext"], "\Beta\Microsoft\Graph\Model\IncomingContext")) {
+            if (is_a($this->_propDict["incomingContext"], "\Beta\Microsoft\Graph\Model\IncomingContext") || is_null($this->_propDict["incomingContext"])) {
                 return $this->_propDict["incomingContext"];
             } else {
                 $this->_propDict["incomingContext"] = new IncomingContext($this->_propDict["incomingContext"]);
@@ -309,12 +309,12 @@ class Call extends Entity
     * Gets the mediaConfig
     * The media configuration. Required.
     *
-    * @return MediaConfig The mediaConfig
+    * @return MediaConfig|null The mediaConfig
     */
     public function getMediaConfig()
     {
         if (array_key_exists("mediaConfig", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaConfig"], "\Beta\Microsoft\Graph\Model\MediaConfig")) {
+            if (is_a($this->_propDict["mediaConfig"], "\Beta\Microsoft\Graph\Model\MediaConfig") || is_null($this->_propDict["mediaConfig"])) {
                 return $this->_propDict["mediaConfig"];
             } else {
                 $this->_propDict["mediaConfig"] = new MediaConfig($this->_propDict["mediaConfig"]);
@@ -342,12 +342,12 @@ class Call extends Entity
     * Gets the mediaState
     * Read-only. The call media state.
     *
-    * @return CallMediaState The mediaState
+    * @return CallMediaState|null The mediaState
     */
     public function getMediaState()
     {
         if (array_key_exists("mediaState", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaState"], "\Beta\Microsoft\Graph\Model\CallMediaState")) {
+            if (is_a($this->_propDict["mediaState"], "\Beta\Microsoft\Graph\Model\CallMediaState") || is_null($this->_propDict["mediaState"])) {
                 return $this->_propDict["mediaState"];
             } else {
                 $this->_propDict["mediaState"] = new CallMediaState($this->_propDict["mediaState"]);
@@ -375,12 +375,12 @@ class Call extends Entity
     * Gets the meetingCapability
     * Contains the capabilities of a meeting. Read-only.
     *
-    * @return MeetingCapability The meetingCapability
+    * @return MeetingCapability|null The meetingCapability
     */
     public function getMeetingCapability()
     {
         if (array_key_exists("meetingCapability", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingCapability"], "\Beta\Microsoft\Graph\Model\MeetingCapability")) {
+            if (is_a($this->_propDict["meetingCapability"], "\Beta\Microsoft\Graph\Model\MeetingCapability") || is_null($this->_propDict["meetingCapability"])) {
                 return $this->_propDict["meetingCapability"];
             } else {
                 $this->_propDict["meetingCapability"] = new MeetingCapability($this->_propDict["meetingCapability"]);
@@ -408,12 +408,12 @@ class Call extends Entity
     * Gets the meetingInfo
     * The meeting information that's required for joining a meeting.
     *
-    * @return MeetingInfo The meetingInfo
+    * @return MeetingInfo|null The meetingInfo
     */
     public function getMeetingInfo()
     {
         if (array_key_exists("meetingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingInfo"], "\Beta\Microsoft\Graph\Model\MeetingInfo")) {
+            if (is_a($this->_propDict["meetingInfo"], "\Beta\Microsoft\Graph\Model\MeetingInfo") || is_null($this->_propDict["meetingInfo"])) {
                 return $this->_propDict["meetingInfo"];
             } else {
                 $this->_propDict["meetingInfo"] = new MeetingInfo($this->_propDict["meetingInfo"]);
@@ -440,7 +440,7 @@ class Call extends Entity
     /**
     * Gets the myParticipantId
     *
-    * @return string The myParticipantId
+    * @return string|null The myParticipantId
     */
     public function getMyParticipantId()
     {
@@ -468,7 +468,7 @@ class Call extends Entity
      /** 
      * Gets the requestedModalities
      *
-     * @return array The requestedModalities
+     * @return array|null The requestedModalities
      */
     public function getRequestedModalities()
     {
@@ -488,19 +488,19 @@ class Call extends Entity
     */
     public function setRequestedModalities($val)
     {
-		$this->_propDict["requestedModalities"] = $val;
+        $this->_propDict["requestedModalities"] = $val;
         return $this;
     }
     
     /**
     * Gets the resultInfo
     *
-    * @return ResultInfo The resultInfo
+    * @return ResultInfo|null The resultInfo
     */
     public function getResultInfo()
     {
         if (array_key_exists("resultInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["resultInfo"], "\Beta\Microsoft\Graph\Model\ResultInfo")) {
+            if (is_a($this->_propDict["resultInfo"], "\Beta\Microsoft\Graph\Model\ResultInfo") || is_null($this->_propDict["resultInfo"])) {
                 return $this->_propDict["resultInfo"];
             } else {
                 $this->_propDict["resultInfo"] = new ResultInfo($this->_propDict["resultInfo"]);
@@ -526,7 +526,7 @@ class Call extends Entity
     /**
     * Gets the ringingTimeoutInSeconds
     *
-    * @return int The ringingTimeoutInSeconds
+    * @return int|null The ringingTimeoutInSeconds
     */
     public function getRingingTimeoutInSeconds()
     {
@@ -554,7 +554,7 @@ class Call extends Entity
      /** 
      * Gets the routingPolicies
      *
-     * @return array The routingPolicies
+     * @return array|null The routingPolicies
      */
     public function getRoutingPolicies()
     {
@@ -574,19 +574,19 @@ class Call extends Entity
     */
     public function setRoutingPolicies($val)
     {
-		$this->_propDict["routingPolicies"] = $val;
+        $this->_propDict["routingPolicies"] = $val;
         return $this;
     }
     
     /**
     * Gets the source
     *
-    * @return ParticipantInfo The source
+    * @return ParticipantInfo|null The source
     */
     public function getSource()
     {
         if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\ParticipantInfo")) {
+            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\ParticipantInfo") || is_null($this->_propDict["source"])) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new ParticipantInfo($this->_propDict["source"]);
@@ -612,12 +612,12 @@ class Call extends Entity
     /**
     * Gets the state
     *
-    * @return CallState The state
+    * @return CallState|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\CallState")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\CallState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new CallState($this->_propDict["state"]);
@@ -643,7 +643,7 @@ class Call extends Entity
     /**
     * Gets the subject
     *
-    * @return string The subject
+    * @return string|null The subject
     */
     public function getSubject()
     {
@@ -671,7 +671,7 @@ class Call extends Entity
      /** 
      * Gets the targets
      *
-     * @return array The targets
+     * @return array|null The targets
      */
     public function getTargets()
     {
@@ -691,14 +691,14 @@ class Call extends Entity
     */
     public function setTargets($val)
     {
-		$this->_propDict["targets"] = $val;
+        $this->_propDict["targets"] = $val;
         return $this;
     }
     
     /**
     * Gets the tenantId
     *
-    * @return string The tenantId
+    * @return string|null The tenantId
     */
     public function getTenantId()
     {
@@ -725,7 +725,7 @@ class Call extends Entity
     /**
     * Gets the terminationReason
     *
-    * @return string The terminationReason
+    * @return string|null The terminationReason
     */
     public function getTerminationReason()
     {
@@ -752,12 +752,12 @@ class Call extends Entity
     /**
     * Gets the toneInfo
     *
-    * @return ToneInfo The toneInfo
+    * @return ToneInfo|null The toneInfo
     */
     public function getToneInfo()
     {
         if (array_key_exists("toneInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["toneInfo"], "\Beta\Microsoft\Graph\Model\ToneInfo")) {
+            if (is_a($this->_propDict["toneInfo"], "\Beta\Microsoft\Graph\Model\ToneInfo") || is_null($this->_propDict["toneInfo"])) {
                 return $this->_propDict["toneInfo"];
             } else {
                 $this->_propDict["toneInfo"] = new ToneInfo($this->_propDict["toneInfo"]);
@@ -784,12 +784,12 @@ class Call extends Entity
     * Gets the transcription
     * The transcription information for the call. Read-only.
     *
-    * @return CallTranscriptionInfo The transcription
+    * @return CallTranscriptionInfo|null The transcription
     */
     public function getTranscription()
     {
         if (array_key_exists("transcription", $this->_propDict)) {
-            if (is_a($this->_propDict["transcription"], "\Beta\Microsoft\Graph\Model\CallTranscriptionInfo")) {
+            if (is_a($this->_propDict["transcription"], "\Beta\Microsoft\Graph\Model\CallTranscriptionInfo") || is_null($this->_propDict["transcription"])) {
                 return $this->_propDict["transcription"];
             } else {
                 $this->_propDict["transcription"] = new CallTranscriptionInfo($this->_propDict["transcription"]);
@@ -818,7 +818,7 @@ class Call extends Entity
      * Gets the audioRoutingGroups
     * Read-only. Nullable.
      *
-     * @return array The audioRoutingGroups
+     * @return array|null The audioRoutingGroups
      */
     public function getAudioRoutingGroups()
     {
@@ -839,7 +839,7 @@ class Call extends Entity
     */
     public function setAudioRoutingGroups($val)
     {
-		$this->_propDict["audioRoutingGroups"] = $val;
+        $this->_propDict["audioRoutingGroups"] = $val;
         return $this;
     }
     
@@ -848,7 +848,7 @@ class Call extends Entity
      * Gets the operations
     * Read-only. Nullable.
      *
-     * @return array The operations
+     * @return array|null The operations
      */
     public function getOperations()
     {
@@ -869,7 +869,7 @@ class Call extends Entity
     */
     public function setOperations($val)
     {
-		$this->_propDict["operations"] = $val;
+        $this->_propDict["operations"] = $val;
         return $this;
     }
     
@@ -878,7 +878,7 @@ class Call extends Entity
      * Gets the participants
     * Read-only. Nullable.
      *
-     * @return array The participants
+     * @return array|null The participants
      */
     public function getParticipants()
     {
@@ -899,7 +899,7 @@ class Call extends Entity
     */
     public function setParticipants($val)
     {
-		$this->_propDict["participants"] = $val;
+        $this->_propDict["participants"] = $val;
         return $this;
     }
     

@@ -28,7 +28,7 @@ class PrintUsageByUser extends PrintUsage
     * Gets the userPrincipalName
     * The UPN of the user represented by these statistics.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

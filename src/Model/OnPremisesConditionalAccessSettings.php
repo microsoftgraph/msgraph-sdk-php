@@ -28,7 +28,7 @@ class OnPremisesConditionalAccessSettings extends Entity
     * Gets the enabled
     * Indicates if on premises conditional access is enabled for this organization
     *
-    * @return bool The enabled
+    * @return bool|null The enabled
     */
     public function getEnabled()
     {
@@ -57,7 +57,7 @@ class OnPremisesConditionalAccessSettings extends Entity
     * Gets the excludedGroups
     * User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
     *
-    * @return string The excludedGroups
+    * @return string|null The excludedGroups
     */
     public function getExcludedGroups()
     {
@@ -86,7 +86,7 @@ class OnPremisesConditionalAccessSettings extends Entity
     * Gets the includedGroups
     * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
     *
-    * @return string The includedGroups
+    * @return string|null The includedGroups
     */
     public function getIncludedGroups()
     {
@@ -115,7 +115,7 @@ class OnPremisesConditionalAccessSettings extends Entity
     * Gets the overrideDefaultRule
     * Override the default access rule when allowing a device to ensure access is granted.
     *
-    * @return bool The overrideDefaultRule
+    * @return bool|null The overrideDefaultRule
     */
     public function getOverrideDefaultRule()
     {

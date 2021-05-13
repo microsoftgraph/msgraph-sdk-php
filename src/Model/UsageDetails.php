@@ -28,12 +28,12 @@ class UsageDetails extends Entity
     * Gets the lastAccessedDateTime
     * The date and time the resource was last accessed by the user. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z. Read-only.
     *
-    * @return \DateTime The lastAccessedDateTime
+    * @return \DateTime|null The lastAccessedDateTime
     */
     public function getLastAccessedDateTime()
     {
         if (array_key_exists("lastAccessedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAccessedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastAccessedDateTime"], "\DateTime") || is_null($this->_propDict["lastAccessedDateTime"])) {
                 return $this->_propDict["lastAccessedDateTime"];
             } else {
                 $this->_propDict["lastAccessedDateTime"] = new \DateTime($this->_propDict["lastAccessedDateTime"]);
@@ -61,12 +61,12 @@ class UsageDetails extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the resource was last modified by the user. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z. Read-only.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);

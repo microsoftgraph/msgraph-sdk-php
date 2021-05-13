@@ -28,7 +28,7 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity
     * Gets the deviceCount
     * Device Count
     *
-    * @return int The deviceCount
+    * @return int|null The deviceCount
     */
     public function getDeviceCount()
     {
@@ -57,7 +57,7 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity
     * Gets the url
     * Website url
     *
-    * @return string The url
+    * @return string|null The url
     */
     public function getUrl()
     {

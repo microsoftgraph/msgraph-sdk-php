@@ -27,12 +27,12 @@ class SensitiveType extends Entity
     /**
     * Gets the classificationMethod
     *
-    * @return ClassificationMethod The classificationMethod
+    * @return ClassificationMethod|null The classificationMethod
     */
     public function getClassificationMethod()
     {
         if (array_key_exists("classificationMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["classificationMethod"], "\Beta\Microsoft\Graph\Model\ClassificationMethod")) {
+            if (is_a($this->_propDict["classificationMethod"], "\Beta\Microsoft\Graph\Model\ClassificationMethod") || is_null($this->_propDict["classificationMethod"])) {
                 return $this->_propDict["classificationMethod"];
             } else {
                 $this->_propDict["classificationMethod"] = new ClassificationMethod($this->_propDict["classificationMethod"]);
@@ -58,7 +58,7 @@ class SensitiveType extends Entity
     /**
     * Gets the description
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -85,7 +85,7 @@ class SensitiveType extends Entity
     /**
     * Gets the name
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -112,7 +112,7 @@ class SensitiveType extends Entity
     /**
     * Gets the publisherName
     *
-    * @return string The publisherName
+    * @return string|null The publisherName
     */
     public function getPublisherName()
     {
@@ -139,7 +139,7 @@ class SensitiveType extends Entity
     /**
     * Gets the rulePackageId
     *
-    * @return string The rulePackageId
+    * @return string|null The rulePackageId
     */
     public function getRulePackageId()
     {
@@ -166,7 +166,7 @@ class SensitiveType extends Entity
     /**
     * Gets the rulePackageType
     *
-    * @return string The rulePackageType
+    * @return string|null The rulePackageType
     */
     public function getRulePackageType()
     {
@@ -193,12 +193,12 @@ class SensitiveType extends Entity
     /**
     * Gets the scope
     *
-    * @return SensitiveTypeScope The scope
+    * @return SensitiveTypeScope|null The scope
     */
     public function getScope()
     {
         if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\Model\SensitiveTypeScope")) {
+            if (is_a($this->_propDict["scope"], "\Beta\Microsoft\Graph\Model\SensitiveTypeScope") || is_null($this->_propDict["scope"])) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new SensitiveTypeScope($this->_propDict["scope"]);
@@ -224,12 +224,12 @@ class SensitiveType extends Entity
     /**
     * Gets the sensitiveTypeSource
     *
-    * @return SensitiveTypeSource The sensitiveTypeSource
+    * @return SensitiveTypeSource|null The sensitiveTypeSource
     */
     public function getSensitiveTypeSource()
     {
         if (array_key_exists("sensitiveTypeSource", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitiveTypeSource"], "\Beta\Microsoft\Graph\Model\SensitiveTypeSource")) {
+            if (is_a($this->_propDict["sensitiveTypeSource"], "\Beta\Microsoft\Graph\Model\SensitiveTypeSource") || is_null($this->_propDict["sensitiveTypeSource"])) {
                 return $this->_propDict["sensitiveTypeSource"];
             } else {
                 $this->_propDict["sensitiveTypeSource"] = new SensitiveTypeSource($this->_propDict["sensitiveTypeSource"]);
@@ -255,7 +255,7 @@ class SensitiveType extends Entity
     /**
     * Gets the state
     *
-    * @return string The state
+    * @return string|null The state
     */
     public function getState()
     {

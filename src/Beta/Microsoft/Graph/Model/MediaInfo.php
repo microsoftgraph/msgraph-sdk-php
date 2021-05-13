@@ -27,7 +27,7 @@ class MediaInfo extends Entity
     * Gets the resourceId
     * Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
     *
-    * @return string The resourceId
+    * @return string|null The resourceId
     */
     public function getResourceId()
     {
@@ -55,7 +55,7 @@ class MediaInfo extends Entity
     * Gets the uri
     * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
     *
-    * @return string The uri
+    * @return string|null The uri
     */
     public function getUri()
     {

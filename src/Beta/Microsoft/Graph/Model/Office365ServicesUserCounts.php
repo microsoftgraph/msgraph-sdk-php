@@ -28,7 +28,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the exchangeActive
     * The number of active users on Exchange. Any user who can read and send email is considered an active user.
     *
-    * @return int The exchangeActive
+    * @return int|null The exchangeActive
     */
     public function getExchangeActive()
     {
@@ -57,7 +57,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the exchangeInactive
     * The number of inactive users on Exchange.
     *
-    * @return int The exchangeInactive
+    * @return int|null The exchangeInactive
     */
     public function getExchangeInactive()
     {
@@ -86,7 +86,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the office365Active
     * The number of active users on Microsoft 365.
     *
-    * @return int The office365Active
+    * @return int|null The office365Active
     */
     public function getOffice365Active()
     {
@@ -115,7 +115,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the office365Inactive
     * The number of inactive users on Microsoft 365.
     *
-    * @return int The office365Inactive
+    * @return int|null The office365Inactive
     */
     public function getOffice365Inactive()
     {
@@ -144,7 +144,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the oneDriveActive
     * The number of active users on OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
     *
-    * @return int The oneDriveActive
+    * @return int|null The oneDriveActive
     */
     public function getOneDriveActive()
     {
@@ -173,7 +173,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the oneDriveInactive
     * The number of inactive users on OneDrive.
     *
-    * @return int The oneDriveInactive
+    * @return int|null The oneDriveInactive
     */
     public function getOneDriveInactive()
     {
@@ -202,7 +202,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the reportPeriod
     * The number of days the report covers.
     *
-    * @return string The reportPeriod
+    * @return string|null The reportPeriod
     */
     public function getReportPeriod()
     {
@@ -231,12 +231,12 @@ class Office365ServicesUserCounts extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime The reportRefreshDate
+    * @return \DateTime|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime")) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
                 $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
@@ -264,7 +264,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the sharePointActive
     * The number of active users on SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
     *
-    * @return int The sharePointActive
+    * @return int|null The sharePointActive
     */
     public function getSharePointActive()
     {
@@ -293,7 +293,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the sharePointInactive
     * The number of inactive users on SharePoint.
     *
-    * @return int The sharePointInactive
+    * @return int|null The sharePointInactive
     */
     public function getSharePointInactive()
     {
@@ -322,7 +322,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the skypeForBusinessActive
     * The number of active users on Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
     *
-    * @return int The skypeForBusinessActive
+    * @return int|null The skypeForBusinessActive
     */
     public function getSkypeForBusinessActive()
     {
@@ -351,7 +351,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the skypeForBusinessInactive
     * The number of inactive users on Skype For Business.
     *
-    * @return int The skypeForBusinessInactive
+    * @return int|null The skypeForBusinessInactive
     */
     public function getSkypeForBusinessInactive()
     {
@@ -380,7 +380,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the teamsActive
     * The number of active users on Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
     *
-    * @return int The teamsActive
+    * @return int|null The teamsActive
     */
     public function getTeamsActive()
     {
@@ -409,7 +409,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the teamsInactive
     * The number of inactive users on Microsoft Teams.
     *
-    * @return int The teamsInactive
+    * @return int|null The teamsInactive
     */
     public function getTeamsInactive()
     {
@@ -438,7 +438,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the yammerActive
     * The number of active users on Yammer. Any user who can post, read, or like messages is considered an active user.
     *
-    * @return int The yammerActive
+    * @return int|null The yammerActive
     */
     public function getYammerActive()
     {
@@ -467,7 +467,7 @@ class Office365ServicesUserCounts extends Entity
     * Gets the yammerInactive
     * The number of inactive users on Yammer.
     *
-    * @return int The yammerInactive
+    * @return int|null The yammerInactive
     */
     public function getYammerInactive()
     {

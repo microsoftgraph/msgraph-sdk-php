@@ -28,7 +28,7 @@ class AccessPackage extends Entity
     * Gets the catalogId
     * ID of the access package catalog referencing this access package. Read-only.
     *
-    * @return string The catalogId
+    * @return string|null The catalogId
     */
     public function getCatalogId()
     {
@@ -57,7 +57,7 @@ class AccessPackage extends Entity
     * Gets the createdBy
     * UPN of the user or identity of the subject who created this resource. Read-only.
     *
-    * @return string The createdBy
+    * @return string|null The createdBy
     */
     public function getCreatedBy()
     {
@@ -86,12 +86,12 @@ class AccessPackage extends Entity
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
-    * @return \DateTime The createdDateTime
+    * @return \DateTime|null The createdDateTime
     */
     public function getCreatedDateTime()
     {
         if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -119,7 +119,7 @@ class AccessPackage extends Entity
     * Gets the description
     * The description of the access package.
     *
-    * @return string The description
+    * @return string|null The description
     */
     public function getDescription()
     {
@@ -148,7 +148,7 @@ class AccessPackage extends Entity
     * Gets the displayName
     * The display name of the access package.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -177,7 +177,7 @@ class AccessPackage extends Entity
     * Gets the isHidden
     * Whether the access package is hidden from the requestor.
     *
-    * @return bool The isHidden
+    * @return bool|null The isHidden
     */
     public function getIsHidden()
     {
@@ -206,7 +206,7 @@ class AccessPackage extends Entity
     * Gets the isRoleScopesVisible
     * Indicates whether role scopes are visible.
     *
-    * @return bool The isRoleScopesVisible
+    * @return bool|null The isRoleScopesVisible
     */
     public function getIsRoleScopesVisible()
     {
@@ -235,7 +235,7 @@ class AccessPackage extends Entity
     * Gets the modifiedBy
     * The UPN of the user who last modified this resource. Read-only.
     *
-    * @return string The modifiedBy
+    * @return string|null The modifiedBy
     */
     public function getModifiedBy()
     {
@@ -264,12 +264,12 @@ class AccessPackage extends Entity
     * Gets the modifiedDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
-    * @return \DateTime The modifiedDateTime
+    * @return \DateTime|null The modifiedDateTime
     */
     public function getModifiedDateTime()
     {
         if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime") || is_null($this->_propDict["modifiedDateTime"])) {
                 return $this->_propDict["modifiedDateTime"];
             } else {
                 $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
@@ -298,7 +298,7 @@ class AccessPackage extends Entity
      * Gets the accessPackageAssignmentPolicies
     * Read-only. Nullable.
      *
-     * @return array The accessPackageAssignmentPolicies
+     * @return array|null The accessPackageAssignmentPolicies
      */
     public function getAccessPackageAssignmentPolicies()
     {
@@ -319,7 +319,7 @@ class AccessPackage extends Entity
     */
     public function setAccessPackageAssignmentPolicies($val)
     {
-		$this->_propDict["accessPackageAssignmentPolicies"] = $val;
+        $this->_propDict["accessPackageAssignmentPolicies"] = $val;
         return $this;
     }
     
@@ -327,12 +327,12 @@ class AccessPackage extends Entity
     * Gets the accessPackageCatalog
     * Read-only. Nullable.
     *
-    * @return AccessPackageCatalog The accessPackageCatalog
+    * @return AccessPackageCatalog|null The accessPackageCatalog
     */
     public function getAccessPackageCatalog()
     {
         if (array_key_exists("accessPackageCatalog", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageCatalog"], "\Beta\Microsoft\Graph\Model\AccessPackageCatalog")) {
+            if (is_a($this->_propDict["accessPackageCatalog"], "\Beta\Microsoft\Graph\Model\AccessPackageCatalog") || is_null($this->_propDict["accessPackageCatalog"])) {
                 return $this->_propDict["accessPackageCatalog"];
             } else {
                 $this->_propDict["accessPackageCatalog"] = new AccessPackageCatalog($this->_propDict["accessPackageCatalog"]);
@@ -361,7 +361,7 @@ class AccessPackage extends Entity
      * Gets the accessPackageResourceRoleScopes
     * Nullable.
      *
-     * @return array The accessPackageResourceRoleScopes
+     * @return array|null The accessPackageResourceRoleScopes
      */
     public function getAccessPackageResourceRoleScopes()
     {
@@ -382,7 +382,7 @@ class AccessPackage extends Entity
     */
     public function setAccessPackageResourceRoleScopes($val)
     {
-		$this->_propDict["accessPackageResourceRoleScopes"] = $val;
+        $this->_propDict["accessPackageResourceRoleScopes"] = $val;
         return $this;
     }
     

@@ -26,7 +26,7 @@ class TicketInfo extends Entity
     /**
     * Gets the ticketNumber
     *
-    * @return string The ticketNumber
+    * @return string|null The ticketNumber
     */
     public function getTicketNumber()
     {
@@ -52,7 +52,7 @@ class TicketInfo extends Entity
     /**
     * Gets the ticketSystem
     *
-    * @return string The ticketSystem
+    * @return string|null The ticketSystem
     */
     public function getTicketSystem()
     {

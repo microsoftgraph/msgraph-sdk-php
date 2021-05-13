@@ -27,7 +27,7 @@ class DataLossPreventionPolicy extends Entity
     /**
     * Gets the name
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {

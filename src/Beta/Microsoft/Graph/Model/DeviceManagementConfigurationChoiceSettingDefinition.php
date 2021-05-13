@@ -28,7 +28,7 @@ class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagem
     * Gets the defaultOptionId
     * Default option for choice setting
     *
-    * @return string The defaultOptionId
+    * @return string|null The defaultOptionId
     */
     public function getDefaultOptionId()
     {
@@ -58,7 +58,7 @@ class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagem
      * Gets the options
     * Options for the setting that can be selected
      *
-     * @return array The options
+     * @return array|null The options
      */
     public function getOptions()
     {
@@ -79,7 +79,7 @@ class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagem
     */
     public function setOptions($val)
     {
-		$this->_propDict["options"] = $val;
+        $this->_propDict["options"] = $val;
         return $this;
     }
     

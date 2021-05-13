@@ -28,7 +28,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     * Gets the deviceCount
     * User experience analytics device startup process summarized count.
     *
-    * @return int The deviceCount
+    * @return int|null The deviceCount
     */
     public function getDeviceCount()
     {
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     * Gets the medianImpactInMs
     * User experience analytics device startup process median impact in milliseconds.
     *
-    * @return int The medianImpactInMs
+    * @return int|null The medianImpactInMs
     */
     public function getMedianImpactInMs()
     {
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     * Gets the processName
     * User experience analytics device startup process name.
     *
-    * @return string The processName
+    * @return string|null The processName
     */
     public function getProcessName()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     * Gets the productName
     * The user experience analytics device startup process product name.
     *
-    * @return string The productName
+    * @return string|null The productName
     */
     public function getProductName()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     * Gets the publisher
     * The User experience analytics device startup process publisher.
     *
-    * @return string The publisher
+    * @return string|null The publisher
     */
     public function getPublisher()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity
     * Gets the totalImpactInMs
     * User experience analytics device startup process total impact in milliseconds.
     *
-    * @return int The totalImpactInMs
+    * @return int|null The totalImpactInMs
     */
     public function getTotalImpactInMs()
     {

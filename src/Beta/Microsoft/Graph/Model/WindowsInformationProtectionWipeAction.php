@@ -28,12 +28,12 @@ class WindowsInformationProtectionWipeAction extends Entity
     * Gets the lastCheckInDateTime
     * Last checkin time of the device that was targeted by this wipe action.
     *
-    * @return \DateTime The lastCheckInDateTime
+    * @return \DateTime|null The lastCheckInDateTime
     */
     public function getLastCheckInDateTime()
     {
         if (array_key_exists("lastCheckInDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastCheckInDateTime"], "\DateTime") || is_null($this->_propDict["lastCheckInDateTime"])) {
                 return $this->_propDict["lastCheckInDateTime"];
             } else {
                 $this->_propDict["lastCheckInDateTime"] = new \DateTime($this->_propDict["lastCheckInDateTime"]);
@@ -61,12 +61,12 @@ class WindowsInformationProtectionWipeAction extends Entity
     * Gets the status
     * Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
     *
-    * @return ActionState The status
+    * @return ActionState|null The status
     */
     public function getStatus()
     {
         if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ActionState")) {
+            if (is_a($this->_propDict["status"], "\Beta\Microsoft\Graph\Model\ActionState") || is_null($this->_propDict["status"])) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ActionState($this->_propDict["status"]);
@@ -94,7 +94,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     * Gets the targetedDeviceMacAddress
     * Targeted device Mac address.
     *
-    * @return string The targetedDeviceMacAddress
+    * @return string|null The targetedDeviceMacAddress
     */
     public function getTargetedDeviceMacAddress()
     {
@@ -123,7 +123,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     * Gets the targetedDeviceName
     * Targeted device name.
     *
-    * @return string The targetedDeviceName
+    * @return string|null The targetedDeviceName
     */
     public function getTargetedDeviceName()
     {
@@ -152,7 +152,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     * Gets the targetedDeviceRegistrationId
     * The DeviceRegistrationId being targeted by this wipe action.
     *
-    * @return string The targetedDeviceRegistrationId
+    * @return string|null The targetedDeviceRegistrationId
     */
     public function getTargetedDeviceRegistrationId()
     {
@@ -181,7 +181,7 @@ class WindowsInformationProtectionWipeAction extends Entity
     * Gets the targetedUserId
     * The UserId being targeted by this wipe action.
     *
-    * @return string The targetedUserId
+    * @return string|null The targetedUserId
     */
     public function getTargetedUserId()
     {

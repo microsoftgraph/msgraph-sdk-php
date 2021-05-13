@@ -28,12 +28,12 @@ class DeviceComplianceSettingState extends Entity
     * Gets the complianceGracePeriodExpirationDateTime
     * The DateTime when device compliance grace period expires
     *
-    * @return \DateTime The complianceGracePeriodExpirationDateTime
+    * @return \DateTime|null The complianceGracePeriodExpirationDateTime
     */
     public function getComplianceGracePeriodExpirationDateTime()
     {
         if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
                 return $this->_propDict["complianceGracePeriodExpirationDateTime"];
             } else {
                 $this->_propDict["complianceGracePeriodExpirationDateTime"] = new \DateTime($this->_propDict["complianceGracePeriodExpirationDateTime"]);
@@ -61,7 +61,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the deviceId
     * The Device Id that is being reported
     *
-    * @return string The deviceId
+    * @return string|null The deviceId
     */
     public function getDeviceId()
     {
@@ -90,7 +90,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the deviceModel
     * The device model that is being reported
     *
-    * @return string The deviceModel
+    * @return string|null The deviceModel
     */
     public function getDeviceModel()
     {
@@ -119,7 +119,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the deviceName
     * The Device Name that is being reported
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -148,12 +148,12 @@ class DeviceComplianceSettingState extends Entity
     * Gets the platformType
     * Device platform type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
     *
-    * @return DeviceType The platformType
+    * @return DeviceType|null The platformType
     */
     public function getPlatformType()
     {
         if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\DeviceType")) {
+            if (is_a($this->_propDict["platformType"], "\Beta\Microsoft\Graph\Model\DeviceType") || is_null($this->_propDict["platformType"])) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new DeviceType($this->_propDict["platformType"]);
@@ -181,7 +181,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the setting
     * The setting class name and property name.
     *
-    * @return string The setting
+    * @return string|null The setting
     */
     public function getSetting()
     {
@@ -210,7 +210,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the settingName
     * The Setting Name that is being reported
     *
-    * @return string The settingName
+    * @return string|null The settingName
     */
     public function getSettingName()
     {
@@ -239,12 +239,12 @@ class DeviceComplianceSettingState extends Entity
     * Gets the state
     * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
     *
-    * @return ComplianceStatus The state
+    * @return ComplianceStatus|null The state
     */
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ComplianceStatus")) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);
@@ -272,7 +272,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the userEmail
     * The User email address that is being reported
     *
-    * @return string The userEmail
+    * @return string|null The userEmail
     */
     public function getUserEmail()
     {
@@ -301,7 +301,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the userId
     * The user Id that is being reported
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -330,7 +330,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the userName
     * The User Name that is being reported
     *
-    * @return string The userName
+    * @return string|null The userName
     */
     public function getUserName()
     {
@@ -359,7 +359,7 @@ class DeviceComplianceSettingState extends Entity
     * Gets the userPrincipalName
     * The User PrincipalName that is being reported
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {

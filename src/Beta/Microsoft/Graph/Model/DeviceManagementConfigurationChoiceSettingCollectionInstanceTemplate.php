@@ -36,7 +36,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate exten
     * Gets the allowUnmanagedValues
     * Linked policy may append values which are not present in the template.
     *
-    * @return bool The allowUnmanagedValues
+    * @return bool|null The allowUnmanagedValues
     */
     public function getAllowUnmanagedValues()
     {
@@ -65,12 +65,12 @@ class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate exten
     * Gets the choiceSettingCollectionValueTemplate
     * Choice Setting Collection Value Template
     *
-    * @return DeviceManagementConfigurationChoiceSettingValueTemplate The choiceSettingCollectionValueTemplate
+    * @return DeviceManagementConfigurationChoiceSettingValueTemplate|null The choiceSettingCollectionValueTemplate
     */
     public function getChoiceSettingCollectionValueTemplate()
     {
         if (array_key_exists("choiceSettingCollectionValueTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["choiceSettingCollectionValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationChoiceSettingValueTemplate")) {
+            if (is_a($this->_propDict["choiceSettingCollectionValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationChoiceSettingValueTemplate") || is_null($this->_propDict["choiceSettingCollectionValueTemplate"])) {
                 return $this->_propDict["choiceSettingCollectionValueTemplate"];
             } else {
                 $this->_propDict["choiceSettingCollectionValueTemplate"] = new DeviceManagementConfigurationChoiceSettingValueTemplate($this->_propDict["choiceSettingCollectionValueTemplate"]);

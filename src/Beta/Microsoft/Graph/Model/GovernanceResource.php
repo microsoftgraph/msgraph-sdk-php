@@ -28,7 +28,7 @@ class GovernanceResource extends Entity
     * Gets the displayName
     * The display name of the resource.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -57,7 +57,7 @@ class GovernanceResource extends Entity
     * Gets the externalId
     * The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
     *
-    * @return string The externalId
+    * @return string|null The externalId
     */
     public function getExternalId()
     {
@@ -86,12 +86,12 @@ class GovernanceResource extends Entity
     * Gets the registeredDateTime
     * Represents the date time when the resource is registered in PIM.
     *
-    * @return \DateTime The registeredDateTime
+    * @return \DateTime|null The registeredDateTime
     */
     public function getRegisteredDateTime()
     {
         if (array_key_exists("registeredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["registeredDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["registeredDateTime"], "\DateTime") || is_null($this->_propDict["registeredDateTime"])) {
                 return $this->_propDict["registeredDateTime"];
             } else {
                 $this->_propDict["registeredDateTime"] = new \DateTime($this->_propDict["registeredDateTime"]);
@@ -119,7 +119,7 @@ class GovernanceResource extends Entity
     * Gets the registeredRoot
     * The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
     *
-    * @return string The registeredRoot
+    * @return string|null The registeredRoot
     */
     public function getRegisteredRoot()
     {
@@ -148,7 +148,7 @@ class GovernanceResource extends Entity
     * Gets the status
     * The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
     *
-    * @return string The status
+    * @return string|null The status
     */
     public function getStatus()
     {
@@ -177,7 +177,7 @@ class GovernanceResource extends Entity
     * Gets the type
     * Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
     *
-    * @return string The type
+    * @return string|null The type
     */
     public function getType()
     {
@@ -206,12 +206,12 @@ class GovernanceResource extends Entity
     * Gets the parent
     * Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
     *
-    * @return GovernanceResource The parent
+    * @return GovernanceResource|null The parent
     */
     public function getParent()
     {
         if (array_key_exists("parent", $this->_propDict)) {
-            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\GovernanceResource")) {
+            if (is_a($this->_propDict["parent"], "\Beta\Microsoft\Graph\Model\GovernanceResource") || is_null($this->_propDict["parent"])) {
                 return $this->_propDict["parent"];
             } else {
                 $this->_propDict["parent"] = new GovernanceResource($this->_propDict["parent"]);
@@ -240,7 +240,7 @@ class GovernanceResource extends Entity
      * Gets the roleAssignmentRequests
     * The collection of role assignment requests for the resource.
      *
-     * @return array The roleAssignmentRequests
+     * @return array|null The roleAssignmentRequests
      */
     public function getRoleAssignmentRequests()
     {
@@ -261,7 +261,7 @@ class GovernanceResource extends Entity
     */
     public function setRoleAssignmentRequests($val)
     {
-		$this->_propDict["roleAssignmentRequests"] = $val;
+        $this->_propDict["roleAssignmentRequests"] = $val;
         return $this;
     }
     
@@ -270,7 +270,7 @@ class GovernanceResource extends Entity
      * Gets the roleAssignments
     * The collection of role assignments for the resource.
      *
-     * @return array The roleAssignments
+     * @return array|null The roleAssignments
      */
     public function getRoleAssignments()
     {
@@ -291,7 +291,7 @@ class GovernanceResource extends Entity
     */
     public function setRoleAssignments($val)
     {
-		$this->_propDict["roleAssignments"] = $val;
+        $this->_propDict["roleAssignments"] = $val;
         return $this;
     }
     
@@ -300,7 +300,7 @@ class GovernanceResource extends Entity
      * Gets the roleDefinitions
     * The collection of role defintions for the resource.
      *
-     * @return array The roleDefinitions
+     * @return array|null The roleDefinitions
      */
     public function getRoleDefinitions()
     {
@@ -321,7 +321,7 @@ class GovernanceResource extends Entity
     */
     public function setRoleDefinitions($val)
     {
-		$this->_propDict["roleDefinitions"] = $val;
+        $this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
     
@@ -330,7 +330,7 @@ class GovernanceResource extends Entity
      * Gets the roleSettings
     * The collection of role settings for the resource.
      *
-     * @return array The roleSettings
+     * @return array|null The roleSettings
      */
     public function getRoleSettings()
     {
@@ -351,7 +351,7 @@ class GovernanceResource extends Entity
     */
     public function setRoleSettings($val)
     {
-		$this->_propDict["roleSettings"] = $val;
+        $this->_propDict["roleSettings"] = $val;
         return $this;
     }
     

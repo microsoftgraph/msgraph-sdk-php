@@ -27,7 +27,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the azureSubscriptionId
     *
-    * @return string The azureSubscriptionId
+    * @return string|null The azureSubscriptionId
     */
     public function getAzureSubscriptionId()
     {
@@ -54,7 +54,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the azureTenantId
     *
-    * @return string The azureTenantId
+    * @return string|null The azureTenantId
     */
     public function getAzureTenantId()
     {
@@ -81,12 +81,12 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the firstSeenDateTime
     *
-    * @return \DateTime The firstSeenDateTime
+    * @return \DateTime|null The firstSeenDateTime
     */
     public function getFirstSeenDateTime()
     {
         if (array_key_exists("firstSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["firstSeenDateTime"], "\DateTime") || is_null($this->_propDict["firstSeenDateTime"])) {
                 return $this->_propDict["firstSeenDateTime"];
             } else {
                 $this->_propDict["firstSeenDateTime"] = new \DateTime($this->_propDict["firstSeenDateTime"]);
@@ -112,7 +112,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the fqdn
     *
-    * @return string The fqdn
+    * @return string|null The fqdn
     */
     public function getFqdn()
     {
@@ -139,7 +139,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the isAzureAdJoined
     *
-    * @return bool The isAzureAdJoined
+    * @return bool|null The isAzureAdJoined
     */
     public function getIsAzureAdJoined()
     {
@@ -166,7 +166,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the isAzureAdRegistered
     *
-    * @return bool The isAzureAdRegistered
+    * @return bool|null The isAzureAdRegistered
     */
     public function getIsAzureAdRegistered()
     {
@@ -193,7 +193,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the isHybridAzureDomainJoined
     *
-    * @return bool The isHybridAzureDomainJoined
+    * @return bool|null The isHybridAzureDomainJoined
     */
     public function getIsHybridAzureDomainJoined()
     {
@@ -220,12 +220,12 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the lastSeenDateTime
     *
-    * @return \DateTime The lastSeenDateTime
+    * @return \DateTime|null The lastSeenDateTime
     */
     public function getLastSeenDateTime()
     {
         if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime") || is_null($this->_propDict["lastSeenDateTime"])) {
                 return $this->_propDict["lastSeenDateTime"];
             } else {
                 $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
@@ -252,7 +252,7 @@ class HostSecurityProfile extends Entity
      /** 
      * Gets the logonUsers
      *
-     * @return array The logonUsers
+     * @return array|null The logonUsers
      */
     public function getLogonUsers()
     {
@@ -272,14 +272,14 @@ class HostSecurityProfile extends Entity
     */
     public function setLogonUsers($val)
     {
-		$this->_propDict["logonUsers"] = $val;
+        $this->_propDict["logonUsers"] = $val;
         return $this;
     }
     
     /**
     * Gets the netBiosName
     *
-    * @return string The netBiosName
+    * @return string|null The netBiosName
     */
     public function getNetBiosName()
     {
@@ -307,7 +307,7 @@ class HostSecurityProfile extends Entity
      /** 
      * Gets the networkInterfaces
      *
-     * @return array The networkInterfaces
+     * @return array|null The networkInterfaces
      */
     public function getNetworkInterfaces()
     {
@@ -327,14 +327,14 @@ class HostSecurityProfile extends Entity
     */
     public function setNetworkInterfaces($val)
     {
-		$this->_propDict["networkInterfaces"] = $val;
+        $this->_propDict["networkInterfaces"] = $val;
         return $this;
     }
     
     /**
     * Gets the os
     *
-    * @return string The os
+    * @return string|null The os
     */
     public function getOs()
     {
@@ -361,7 +361,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the osVersion
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {
@@ -388,7 +388,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the parentHost
     *
-    * @return string The parentHost
+    * @return string|null The parentHost
     */
     public function getParentHost()
     {
@@ -415,7 +415,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the relatedHostIds
     *
-    * @return string The relatedHostIds
+    * @return string|null The relatedHostIds
     */
     public function getRelatedHostIds()
     {
@@ -442,7 +442,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the riskScore
     *
-    * @return string The riskScore
+    * @return string|null The riskScore
     */
     public function getRiskScore()
     {
@@ -469,7 +469,7 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the tags
     *
-    * @return string The tags
+    * @return string|null The tags
     */
     public function getTags()
     {
@@ -496,12 +496,12 @@ class HostSecurityProfile extends Entity
     /**
     * Gets the vendorInformation
     *
-    * @return SecurityVendorInformation The vendorInformation
+    * @return SecurityVendorInformation|null The vendorInformation
     */
     public function getVendorInformation()
     {
         if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation")) {
+            if (is_a($this->_propDict["vendorInformation"], "\Beta\Microsoft\Graph\Model\SecurityVendorInformation") || is_null($this->_propDict["vendorInformation"])) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

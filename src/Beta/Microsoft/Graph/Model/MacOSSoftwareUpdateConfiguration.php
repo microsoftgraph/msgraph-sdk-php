@@ -28,12 +28,12 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     * Gets the allOtherUpdateBehavior
     * Update behavior for all other updates. Possible values are: notConfigured, default.
     *
-    * @return MacOSSoftwareUpdateBehavior The allOtherUpdateBehavior
+    * @return MacOSSoftwareUpdateBehavior|null The allOtherUpdateBehavior
     */
     public function getAllOtherUpdateBehavior()
     {
         if (array_key_exists("allOtherUpdateBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["allOtherUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
+            if (is_a($this->_propDict["allOtherUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior") || is_null($this->_propDict["allOtherUpdateBehavior"])) {
                 return $this->_propDict["allOtherUpdateBehavior"];
             } else {
                 $this->_propDict["allOtherUpdateBehavior"] = new MacOSSoftwareUpdateBehavior($this->_propDict["allOtherUpdateBehavior"]);
@@ -61,12 +61,12 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     * Gets the configDataUpdateBehavior
     * Update behavior for configuration data file updates. Possible values are: notConfigured, default.
     *
-    * @return MacOSSoftwareUpdateBehavior The configDataUpdateBehavior
+    * @return MacOSSoftwareUpdateBehavior|null The configDataUpdateBehavior
     */
     public function getConfigDataUpdateBehavior()
     {
         if (array_key_exists("configDataUpdateBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["configDataUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
+            if (is_a($this->_propDict["configDataUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior") || is_null($this->_propDict["configDataUpdateBehavior"])) {
                 return $this->_propDict["configDataUpdateBehavior"];
             } else {
                 $this->_propDict["configDataUpdateBehavior"] = new MacOSSoftwareUpdateBehavior($this->_propDict["configDataUpdateBehavior"]);
@@ -94,12 +94,12 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     * Gets the criticalUpdateBehavior
     * Update behavior for critical updates. Possible values are: notConfigured, default.
     *
-    * @return MacOSSoftwareUpdateBehavior The criticalUpdateBehavior
+    * @return MacOSSoftwareUpdateBehavior|null The criticalUpdateBehavior
     */
     public function getCriticalUpdateBehavior()
     {
         if (array_key_exists("criticalUpdateBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["criticalUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
+            if (is_a($this->_propDict["criticalUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior") || is_null($this->_propDict["criticalUpdateBehavior"])) {
                 return $this->_propDict["criticalUpdateBehavior"];
             } else {
                 $this->_propDict["criticalUpdateBehavior"] = new MacOSSoftwareUpdateBehavior($this->_propDict["criticalUpdateBehavior"]);
@@ -128,7 +128,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
      * Gets the customUpdateTimeWindows
     * Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements.
      *
-     * @return array The customUpdateTimeWindows
+     * @return array|null The customUpdateTimeWindows
      */
     public function getCustomUpdateTimeWindows()
     {
@@ -149,7 +149,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     */
     public function setCustomUpdateTimeWindows($val)
     {
-		$this->_propDict["customUpdateTimeWindows"] = $val;
+        $this->_propDict["customUpdateTimeWindows"] = $val;
         return $this;
     }
     
@@ -157,12 +157,12 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     * Gets the firmwareUpdateBehavior
     * Update behavior for firmware updates. Possible values are: notConfigured, default.
     *
-    * @return MacOSSoftwareUpdateBehavior The firmwareUpdateBehavior
+    * @return MacOSSoftwareUpdateBehavior|null The firmwareUpdateBehavior
     */
     public function getFirmwareUpdateBehavior()
     {
         if (array_key_exists("firmwareUpdateBehavior", $this->_propDict)) {
-            if (is_a($this->_propDict["firmwareUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior")) {
+            if (is_a($this->_propDict["firmwareUpdateBehavior"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateBehavior") || is_null($this->_propDict["firmwareUpdateBehavior"])) {
                 return $this->_propDict["firmwareUpdateBehavior"];
             } else {
                 $this->_propDict["firmwareUpdateBehavior"] = new MacOSSoftwareUpdateBehavior($this->_propDict["firmwareUpdateBehavior"]);
@@ -190,12 +190,12 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     * Gets the updateScheduleType
     * Update schedule type. Possible values are: alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
     *
-    * @return MacOSSoftwareUpdateScheduleType The updateScheduleType
+    * @return MacOSSoftwareUpdateScheduleType|null The updateScheduleType
     */
     public function getUpdateScheduleType()
     {
         if (array_key_exists("updateScheduleType", $this->_propDict)) {
-            if (is_a($this->_propDict["updateScheduleType"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateScheduleType")) {
+            if (is_a($this->_propDict["updateScheduleType"], "\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateScheduleType") || is_null($this->_propDict["updateScheduleType"])) {
                 return $this->_propDict["updateScheduleType"];
             } else {
                 $this->_propDict["updateScheduleType"] = new MacOSSoftwareUpdateScheduleType($this->_propDict["updateScheduleType"]);
@@ -223,7 +223,7 @@ class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration
     * Gets the updateTimeWindowUtcOffsetInMinutes
     * Minutes indicating UTC offset for each update time window
     *
-    * @return int The updateTimeWindowUtcOffsetInMinutes
+    * @return int|null The updateTimeWindowUtcOffsetInMinutes
     */
     public function getUpdateTimeWindowUtcOffsetInMinutes()
     {

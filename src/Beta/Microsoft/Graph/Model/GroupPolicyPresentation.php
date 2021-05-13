@@ -28,7 +28,7 @@ class GroupPolicyPresentation extends Entity
     * Gets the label
     * Localized text label for any presentation entity. The default value is empty.
     *
-    * @return string The label
+    * @return string|null The label
     */
     public function getLabel()
     {
@@ -57,12 +57,12 @@ class GroupPolicyPresentation extends Entity
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -90,12 +90,12 @@ class GroupPolicyPresentation extends Entity
     * Gets the definition
     * The group policy definition associated with the presentation.
     *
-    * @return GroupPolicyDefinition The definition
+    * @return GroupPolicyDefinition|null The definition
     */
     public function getDefinition()
     {
         if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinition")) {
+            if (is_a($this->_propDict["definition"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinition") || is_null($this->_propDict["definition"])) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new GroupPolicyDefinition($this->_propDict["definition"]);

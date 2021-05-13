@@ -28,12 +28,12 @@ class ExternalGroupMember extends Entity
     * Gets the identitySource
     * The identity source that the member belongs to. Possible values are: azureActiveDirectory, external.
     *
-    * @return IdentitySourceType The identitySource
+    * @return IdentitySourceType|null The identitySource
     */
     public function getIdentitySource()
     {
         if (array_key_exists("identitySource", $this->_propDict)) {
-            if (is_a($this->_propDict["identitySource"], "\Beta\Microsoft\Graph\Model\IdentitySourceType")) {
+            if (is_a($this->_propDict["identitySource"], "\Beta\Microsoft\Graph\Model\IdentitySourceType") || is_null($this->_propDict["identitySource"])) {
                 return $this->_propDict["identitySource"];
             } else {
                 $this->_propDict["identitySource"] = new IdentitySourceType($this->_propDict["identitySource"]);
@@ -61,12 +61,12 @@ class ExternalGroupMember extends Entity
     * Gets the type
     * The type of member added to the external group. Possible values are: user or group when the identitySource is azureActiveDirectory and just group when the identitySource is external.
     *
-    * @return ExternalGroupMemberType The type
+    * @return ExternalGroupMemberType|null The type
     */
     public function getType()
     {
         if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\ExternalGroupMemberType")) {
+            if (is_a($this->_propDict["type"], "\Beta\Microsoft\Graph\Model\ExternalGroupMemberType") || is_null($this->_propDict["type"])) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new ExternalGroupMemberType($this->_propDict["type"]);

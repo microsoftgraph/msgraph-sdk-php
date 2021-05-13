@@ -28,7 +28,7 @@ class AgreementFileLocalization extends AgreementFileProperties
      /** 
      * Gets the versions
      *
-     * @return array The versions
+     * @return array|null The versions
      */
     public function getVersions()
     {
@@ -48,7 +48,7 @@ class AgreementFileLocalization extends AgreementFileProperties
     */
     public function setVersions($val)
     {
-		$this->_propDict["versions"] = $val;
+        $this->_propDict["versions"] = $val;
         return $this;
     }
     

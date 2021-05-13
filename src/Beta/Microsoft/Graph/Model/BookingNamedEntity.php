@@ -28,7 +28,7 @@ class BookingNamedEntity extends Entity
     * Gets the displayName
     * The display name is suitable for human-readable interfaces.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {

@@ -28,7 +28,7 @@ class WorkbookChartSeries extends Entity
     * Gets the name
     * Represents the name of a series in a chart.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -57,12 +57,12 @@ class WorkbookChartSeries extends Entity
     * Gets the format
     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
     *
-    * @return WorkbookChartSeriesFormat The format
+    * @return WorkbookChartSeriesFormat|null The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\WorkbookChartSeriesFormat")) {
+            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\WorkbookChartSeriesFormat") || is_null($this->_propDict["format"])) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartSeriesFormat($this->_propDict["format"]);
@@ -91,7 +91,7 @@ class WorkbookChartSeries extends Entity
      * Gets the points
     * Represents a collection of all points in the series. Read-only.
      *
-     * @return array The points
+     * @return array|null The points
      */
     public function getPoints()
     {
@@ -112,7 +112,7 @@ class WorkbookChartSeries extends Entity
     */
     public function setPoints($val)
     {
-		$this->_propDict["points"] = $val;
+        $this->_propDict["points"] = $val;
         return $this;
     }
     

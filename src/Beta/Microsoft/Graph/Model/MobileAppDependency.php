@@ -28,12 +28,12 @@ class MobileAppDependency extends MobileAppRelationship
     * Gets the dependencyType
     * The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
     *
-    * @return MobileAppDependencyType The dependencyType
+    * @return MobileAppDependencyType|null The dependencyType
     */
     public function getDependencyType()
     {
         if (array_key_exists("dependencyType", $this->_propDict)) {
-            if (is_a($this->_propDict["dependencyType"], "\Beta\Microsoft\Graph\Model\MobileAppDependencyType")) {
+            if (is_a($this->_propDict["dependencyType"], "\Beta\Microsoft\Graph\Model\MobileAppDependencyType") || is_null($this->_propDict["dependencyType"])) {
                 return $this->_propDict["dependencyType"];
             } else {
                 $this->_propDict["dependencyType"] = new MobileAppDependencyType($this->_propDict["dependencyType"]);
@@ -61,7 +61,7 @@ class MobileAppDependency extends MobileAppRelationship
     * Gets the dependentAppCount
     * The total number of apps that directly or indirectly depend on the parent app.
     *
-    * @return int The dependentAppCount
+    * @return int|null The dependentAppCount
     */
     public function getDependentAppCount()
     {
@@ -90,7 +90,7 @@ class MobileAppDependency extends MobileAppRelationship
     * Gets the dependsOnAppCount
     * The total number of apps the child app directly or indirectly depends on.
     *
-    * @return int The dependsOnAppCount
+    * @return int|null The dependsOnAppCount
     */
     public function getDependsOnAppCount()
     {

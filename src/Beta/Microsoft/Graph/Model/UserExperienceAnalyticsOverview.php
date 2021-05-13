@@ -29,7 +29,7 @@ class UserExperienceAnalyticsOverview extends Entity
      * Gets the insights
     * The user experience analytics insights.
      *
-     * @return array The insights
+     * @return array|null The insights
      */
     public function getInsights()
     {
@@ -50,7 +50,7 @@ class UserExperienceAnalyticsOverview extends Entity
     */
     public function setInsights($val)
     {
-		$this->_propDict["insights"] = $val;
+        $this->_propDict["insights"] = $val;
         return $this;
     }
     

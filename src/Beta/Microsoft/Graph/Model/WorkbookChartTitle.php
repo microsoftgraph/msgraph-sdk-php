@@ -28,7 +28,7 @@ class WorkbookChartTitle extends Entity
     * Gets the overlay
     * Boolean value representing if the chart title will overlay the chart or not.
     *
-    * @return bool The overlay
+    * @return bool|null The overlay
     */
     public function getOverlay()
     {
@@ -57,7 +57,7 @@ class WorkbookChartTitle extends Entity
     * Gets the text
     * Represents the title text of a chart.
     *
-    * @return string The text
+    * @return string|null The text
     */
     public function getText()
     {
@@ -86,7 +86,7 @@ class WorkbookChartTitle extends Entity
     * Gets the visible
     * A boolean value the represents the visibility of a chart title object.
     *
-    * @return bool The visible
+    * @return bool|null The visible
     */
     public function getVisible()
     {
@@ -115,12 +115,12 @@ class WorkbookChartTitle extends Entity
     * Gets the format
     * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
     *
-    * @return WorkbookChartTitleFormat The format
+    * @return WorkbookChartTitleFormat|null The format
     */
     public function getFormat()
     {
         if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\WorkbookChartTitleFormat")) {
+            if (is_a($this->_propDict["format"], "\Beta\Microsoft\Graph\Model\WorkbookChartTitleFormat") || is_null($this->_propDict["format"])) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartTitleFormat($this->_propDict["format"]);

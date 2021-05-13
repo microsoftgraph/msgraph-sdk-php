@@ -27,7 +27,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase
     /**
     * Gets the memberType
     *
-    * @return string The memberType
+    * @return string|null The memberType
     */
     public function getMemberType()
     {
@@ -54,12 +54,12 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase
     /**
     * Gets the scheduleInfo
     *
-    * @return RequestSchedule The scheduleInfo
+    * @return RequestSchedule|null The scheduleInfo
     */
     public function getScheduleInfo()
     {
         if (array_key_exists("scheduleInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleInfo"], "\Beta\Microsoft\Graph\Model\RequestSchedule")) {
+            if (is_a($this->_propDict["scheduleInfo"], "\Beta\Microsoft\Graph\Model\RequestSchedule") || is_null($this->_propDict["scheduleInfo"])) {
                 return $this->_propDict["scheduleInfo"];
             } else {
                 $this->_propDict["scheduleInfo"] = new RequestSchedule($this->_propDict["scheduleInfo"]);

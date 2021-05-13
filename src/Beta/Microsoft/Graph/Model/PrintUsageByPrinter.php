@@ -27,7 +27,7 @@ class PrintUsageByPrinter extends PrintUsage
     /**
     * Gets the printerId
     *
-    * @return string The printerId
+    * @return string|null The printerId
     */
     public function getPrinterId()
     {

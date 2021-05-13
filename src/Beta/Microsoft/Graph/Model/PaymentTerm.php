@@ -27,7 +27,7 @@ class PaymentTerm extends Entity
     /**
     * Gets the calculateDiscountOnCreditMemos
     *
-    * @return bool The calculateDiscountOnCreditMemos
+    * @return bool|null The calculateDiscountOnCreditMemos
     */
     public function getCalculateDiscountOnCreditMemos()
     {
@@ -54,7 +54,7 @@ class PaymentTerm extends Entity
     /**
     * Gets the code
     *
-    * @return string The code
+    * @return string|null The code
     */
     public function getCode()
     {
@@ -81,7 +81,7 @@ class PaymentTerm extends Entity
     /**
     * Gets the discountDateCalculation
     *
-    * @return string The discountDateCalculation
+    * @return string|null The discountDateCalculation
     */
     public function getDiscountDateCalculation()
     {
@@ -108,12 +108,12 @@ class PaymentTerm extends Entity
     /**
     * Gets the discountPercent
     *
-    * @return Decimal The discountPercent
+    * @return Decimal|null The discountPercent
     */
     public function getDiscountPercent()
     {
         if (array_key_exists("discountPercent", $this->_propDict)) {
-            if (is_a($this->_propDict["discountPercent"], "\Beta\Microsoft\Graph\Model\Decimal")) {
+            if (is_a($this->_propDict["discountPercent"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["discountPercent"])) {
                 return $this->_propDict["discountPercent"];
             } else {
                 $this->_propDict["discountPercent"] = new Decimal($this->_propDict["discountPercent"]);
@@ -139,7 +139,7 @@ class PaymentTerm extends Entity
     /**
     * Gets the displayName
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -166,7 +166,7 @@ class PaymentTerm extends Entity
     /**
     * Gets the dueDateCalculation
     *
-    * @return string The dueDateCalculation
+    * @return string|null The dueDateCalculation
     */
     public function getDueDateCalculation()
     {
@@ -193,12 +193,12 @@ class PaymentTerm extends Entity
     /**
     * Gets the lastModifiedDateTime
     *
-    * @return \DateTime The lastModifiedDateTime
+    * @return \DateTime|null The lastModifiedDateTime
     */
     public function getLastModifiedDateTime()
     {
         if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);

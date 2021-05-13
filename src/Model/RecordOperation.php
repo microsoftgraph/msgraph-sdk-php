@@ -28,7 +28,7 @@ class RecordOperation extends CommsOperation
     * Gets the recordingAccessToken
     * The access token required to retrieve the recording.
     *
-    * @return string The recordingAccessToken
+    * @return string|null The recordingAccessToken
     */
     public function getRecordingAccessToken()
     {
@@ -57,7 +57,7 @@ class RecordOperation extends CommsOperation
     * Gets the recordingLocation
     * The location where the recording is located.
     *
-    * @return string The recordingLocation
+    * @return string|null The recordingLocation
     */
     public function getRecordingLocation()
     {

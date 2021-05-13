@@ -29,7 +29,7 @@ class DeviceManagementIntentSettingCategory extends DeviceManagementSettingCateg
      * Gets the settings
     * The settings this category contains
      *
-     * @return array The settings
+     * @return array|null The settings
      */
     public function getSettings()
     {
@@ -50,7 +50,7 @@ class DeviceManagementIntentSettingCategory extends DeviceManagementSettingCateg
     */
     public function setSettings($val)
     {
-		$this->_propDict["settings"] = $val;
+        $this->_propDict["settings"] = $val;
         return $this;
     }
     

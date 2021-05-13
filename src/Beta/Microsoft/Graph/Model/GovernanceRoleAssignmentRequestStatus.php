@@ -26,7 +26,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
     /**
     * Gets the status
     *
-    * @return string The status
+    * @return string|null The status
     */
     public function getStatus()
     {
@@ -53,12 +53,12 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
     /**
     * Gets the statusDetails
     *
-    * @return KeyValue The statusDetails
+    * @return KeyValue|null The statusDetails
     */
     public function getStatusDetails()
     {
         if (array_key_exists("statusDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\KeyValue")) {
+            if (is_a($this->_propDict["statusDetails"], "\Beta\Microsoft\Graph\Model\KeyValue") || is_null($this->_propDict["statusDetails"])) {
                 return $this->_propDict["statusDetails"];
             } else {
                 $this->_propDict["statusDetails"] = new KeyValue($this->_propDict["statusDetails"]);
@@ -83,7 +83,7 @@ class GovernanceRoleAssignmentRequestStatus extends Entity
     /**
     * Gets the subStatus
     *
-    * @return string The subStatus
+    * @return string|null The subStatus
     */
     public function getSubStatus()
     {

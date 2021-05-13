@@ -28,12 +28,12 @@ class WorkbookChartGridlinesFormat extends Entity
     * Gets the line
     * Represents chart line formatting. Read-only.
     *
-    * @return WorkbookChartLineFormat The line
+    * @return WorkbookChartLineFormat|null The line
     */
     public function getLine()
     {
         if (array_key_exists("line", $this->_propDict)) {
-            if (is_a($this->_propDict["line"], "\Microsoft\Graph\Model\WorkbookChartLineFormat")) {
+            if (is_a($this->_propDict["line"], "\Microsoft\Graph\Model\WorkbookChartLineFormat") || is_null($this->_propDict["line"])) {
                 return $this->_propDict["line"];
             } else {
                 $this->_propDict["line"] = new WorkbookChartLineFormat($this->_propDict["line"]);

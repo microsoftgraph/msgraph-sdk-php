@@ -28,7 +28,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     * Gets the cloudName
     * Zscaler only. Zscaler cloud which the user is assigned to.
     *
-    * @return string The cloudName
+    * @return string|null The cloudName
     */
     public function getCloudName()
     {
@@ -57,7 +57,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     * Gets the excludeList
     * Zscaler only. List of network addresses which are not sent through the Zscaler cloud.
     *
-    * @return string The excludeList
+    * @return string|null The excludeList
     */
     public function getExcludeList()
     {
@@ -86,7 +86,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     * Gets the microsoftTunnelSiteId
     * Microsoft Tunnel site ID.
     *
-    * @return string The microsoftTunnelSiteId
+    * @return string|null The microsoftTunnelSiteId
     */
     public function getMicrosoftTunnelSiteId()
     {
@@ -115,7 +115,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     * Gets the strictEnforcement
     * Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
     *
-    * @return bool The strictEnforcement
+    * @return bool|null The strictEnforcement
     */
     public function getStrictEnforcement()
     {
@@ -145,7 +145,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
      * Gets the targetedMobileApps
     * Targeted mobile apps. This collection can contain a maximum of 500 elements.
      *
-     * @return array The targetedMobileApps
+     * @return array|null The targetedMobileApps
      */
     public function getTargetedMobileApps()
     {
@@ -166,7 +166,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     */
     public function setTargetedMobileApps($val)
     {
-		$this->_propDict["targetedMobileApps"] = $val;
+        $this->_propDict["targetedMobileApps"] = $val;
         return $this;
     }
     
@@ -174,7 +174,7 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     * Gets the userDomain
     * Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
     *
-    * @return string The userDomain
+    * @return string|null The userDomain
     */
     public function getUserDomain()
     {
@@ -203,12 +203,12 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     * Gets the derivedCredentialSettings
     * Tenant level settings for the Derived Credentials to be used for authentication.
     *
-    * @return DeviceManagementDerivedCredentialSettings The derivedCredentialSettings
+    * @return DeviceManagementDerivedCredentialSettings|null The derivedCredentialSettings
     */
     public function getDerivedCredentialSettings()
     {
         if (array_key_exists("derivedCredentialSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings")) {
+            if (is_a($this->_propDict["derivedCredentialSettings"], "\Beta\Microsoft\Graph\Model\DeviceManagementDerivedCredentialSettings") || is_null($this->_propDict["derivedCredentialSettings"])) {
                 return $this->_propDict["derivedCredentialSettings"];
             } else {
                 $this->_propDict["derivedCredentialSettings"] = new DeviceManagementDerivedCredentialSettings($this->_propDict["derivedCredentialSettings"]);
@@ -236,12 +236,12 @@ class IosVpnConfiguration extends AppleVpnConfiguration
     * Gets the identityCertificate
     * Identity certificate for client authentication when authentication method is certificate.
     *
-    * @return IosCertificateProfileBase The identityCertificate
+    * @return IosCertificateProfileBase|null The identityCertificate
     */
     public function getIdentityCertificate()
     {
         if (array_key_exists("identityCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase")) {
+            if (is_a($this->_propDict["identityCertificate"], "\Beta\Microsoft\Graph\Model\IosCertificateProfileBase") || is_null($this->_propDict["identityCertificate"])) {
                 return $this->_propDict["identityCertificate"];
             } else {
                 $this->_propDict["identityCertificate"] = new IosCertificateProfileBase($this->_propDict["identityCertificate"]);

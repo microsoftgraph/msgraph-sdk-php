@@ -28,7 +28,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the cpuSpikeTimePercentage
     * CPU spike time in percentage. Valid values 0 to 100
     *
-    * @return float The cpuSpikeTimePercentage
+    * @return float|null The cpuSpikeTimePercentage
     */
     public function getCpuSpikeTimePercentage()
     {
@@ -49,7 +49,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     */
     public function setCpuSpikeTimePercentage($val)
     {
-        $this->_propDict["cpuSpikeTimePercentage"] = $val;
+        $this->_propDict["cpuSpikeTimePercentage"] = floatval($val);
         return $this;
     }
     
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the cpuSpikeTimePercentageThreshold
     * Threshold of cpuSpikeTimeScore. Valid values 0 to 100
     *
-    * @return float The cpuSpikeTimePercentageThreshold
+    * @return float|null The cpuSpikeTimePercentageThreshold
     */
     public function getCpuSpikeTimePercentageThreshold()
     {
@@ -78,7 +78,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     */
     public function setCpuSpikeTimePercentageThreshold($val)
     {
-        $this->_propDict["cpuSpikeTimePercentageThreshold"] = $val;
+        $this->_propDict["cpuSpikeTimePercentageThreshold"] = floatval($val);
         return $this;
     }
     
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the cpuSpikeTimeScore
     * The user experience analytics device CPU spike time score. Valid values 0 to 100
     *
-    * @return int The cpuSpikeTimeScore
+    * @return int|null The cpuSpikeTimeScore
     */
     public function getCpuSpikeTimeScore()
     {
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the deviceCount
     * User experience analytics summarized device count.
     *
-    * @return int The deviceCount
+    * @return int|null The deviceCount
     */
     public function getDeviceCount()
     {
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the deviceId
     * The id of the device.
     *
-    * @return string The deviceId
+    * @return string|null The deviceId
     */
     public function getDeviceId()
     {
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the deviceName
     * The name of the device.
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the deviceResourcePerformanceScore
     * Resource performance score of a specific device. Valid values 0 to 100
     *
-    * @return int The deviceResourcePerformanceScore
+    * @return int|null The deviceResourcePerformanceScore
     */
     public function getDeviceResourcePerformanceScore()
     {
@@ -231,7 +231,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the manufacturer
     * The user experience analytics device manufacturer.
     *
-    * @return string The manufacturer
+    * @return string|null The manufacturer
     */
     public function getManufacturer()
     {
@@ -260,7 +260,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the model
     * The user experience analytics device model.
     *
-    * @return string The model
+    * @return string|null The model
     */
     public function getModel()
     {
@@ -289,7 +289,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the ramSpikeTimePercentage
     * RAM spike time in percentage. Valid values 0 to 100
     *
-    * @return float The ramSpikeTimePercentage
+    * @return float|null The ramSpikeTimePercentage
     */
     public function getRamSpikeTimePercentage()
     {
@@ -310,7 +310,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     */
     public function setRamSpikeTimePercentage($val)
     {
-        $this->_propDict["ramSpikeTimePercentage"] = $val;
+        $this->_propDict["ramSpikeTimePercentage"] = floatval($val);
         return $this;
     }
     
@@ -318,7 +318,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the ramSpikeTimePercentageThreshold
     * Threshold of ramSpikeTimeScore. Valid values 0 to 100
     *
-    * @return float The ramSpikeTimePercentageThreshold
+    * @return float|null The ramSpikeTimePercentageThreshold
     */
     public function getRamSpikeTimePercentageThreshold()
     {
@@ -339,7 +339,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     */
     public function setRamSpikeTimePercentageThreshold($val)
     {
-        $this->_propDict["ramSpikeTimePercentageThreshold"] = $val;
+        $this->_propDict["ramSpikeTimePercentageThreshold"] = floatval($val);
         return $this;
     }
     
@@ -347,7 +347,7 @@ class UserExperienceAnalyticsResourcePerformance extends Entity
     * Gets the ramSpikeTimeScore
     * The user experience analytics device RAM spike time score. Valid values 0 to 100
     *
-    * @return int The ramSpikeTimeScore
+    * @return int|null The ramSpikeTimeScore
     */
     public function getRamSpikeTimeScore()
     {

@@ -26,7 +26,7 @@ class SensitiveContentLocation extends Entity
     /**
     * Gets the confidence
     *
-    * @return int The confidence
+    * @return int|null The confidence
     */
     public function getConfidence()
     {
@@ -53,12 +53,12 @@ class SensitiveContentLocation extends Entity
     /**
     * Gets the evidences
     *
-    * @return SensitiveContentEvidence The evidences
+    * @return SensitiveContentEvidence|null The evidences
     */
     public function getEvidences()
     {
         if (array_key_exists("evidences", $this->_propDict)) {
-            if (is_a($this->_propDict["evidences"], "\Beta\Microsoft\Graph\Model\SensitiveContentEvidence")) {
+            if (is_a($this->_propDict["evidences"], "\Beta\Microsoft\Graph\Model\SensitiveContentEvidence") || is_null($this->_propDict["evidences"])) {
                 return $this->_propDict["evidences"];
             } else {
                 $this->_propDict["evidences"] = new SensitiveContentEvidence($this->_propDict["evidences"]);
@@ -83,7 +83,7 @@ class SensitiveContentLocation extends Entity
     /**
     * Gets the idMatch
     *
-    * @return string The idMatch
+    * @return string|null The idMatch
     */
     public function getIdMatch()
     {
@@ -109,7 +109,7 @@ class SensitiveContentLocation extends Entity
     /**
     * Gets the length
     *
-    * @return int The length
+    * @return int|null The length
     */
     public function getLength()
     {
@@ -135,7 +135,7 @@ class SensitiveContentLocation extends Entity
     /**
     * Gets the offset
     *
-    * @return int The offset
+    * @return int|null The offset
     */
     public function getOffset()
     {

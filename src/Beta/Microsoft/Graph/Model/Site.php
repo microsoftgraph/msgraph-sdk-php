@@ -27,12 +27,12 @@ class Site extends BaseItem
     /**
     * Gets the deleted
     *
-    * @return Deleted The deleted
+    * @return Deleted|null The deleted
     */
     public function getDeleted()
     {
         if (array_key_exists("deleted", $this->_propDict)) {
-            if (is_a($this->_propDict["deleted"], "\Beta\Microsoft\Graph\Model\Deleted")) {
+            if (is_a($this->_propDict["deleted"], "\Beta\Microsoft\Graph\Model\Deleted") || is_null($this->_propDict["deleted"])) {
                 return $this->_propDict["deleted"];
             } else {
                 $this->_propDict["deleted"] = new Deleted($this->_propDict["deleted"]);
@@ -59,7 +59,7 @@ class Site extends BaseItem
     * Gets the displayName
     * The full title for the site. Read-only.
     *
-    * @return string The displayName
+    * @return string|null The displayName
     */
     public function getDisplayName()
     {
@@ -88,12 +88,12 @@ class Site extends BaseItem
     * Gets the root
     * If present, indicates that this is the root site in the site collection. Read-only.
     *
-    * @return Root The root
+    * @return Root|null The root
     */
     public function getRoot()
     {
         if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "\Beta\Microsoft\Graph\Model\Root")) {
+            if (is_a($this->_propDict["root"], "\Beta\Microsoft\Graph\Model\Root") || is_null($this->_propDict["root"])) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);
@@ -121,12 +121,12 @@ class Site extends BaseItem
     * Gets the sharepointIds
     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
-    * @return SharepointIds The sharepointIds
+    * @return SharepointIds|null The sharepointIds
     */
     public function getSharepointIds()
     {
         if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "\Beta\Microsoft\Graph\Model\SharepointIds")) {
+            if (is_a($this->_propDict["sharepointIds"], "\Beta\Microsoft\Graph\Model\SharepointIds") || is_null($this->_propDict["sharepointIds"])) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -154,12 +154,12 @@ class Site extends BaseItem
     * Gets the siteCollection
     * Provides details about the site's site collection. Available only on the root site. Read-only.
     *
-    * @return SiteCollection The siteCollection
+    * @return SiteCollection|null The siteCollection
     */
     public function getSiteCollection()
     {
         if (array_key_exists("siteCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["siteCollection"], "\Beta\Microsoft\Graph\Model\SiteCollection")) {
+            if (is_a($this->_propDict["siteCollection"], "\Beta\Microsoft\Graph\Model\SiteCollection") || is_null($this->_propDict["siteCollection"])) {
                 return $this->_propDict["siteCollection"];
             } else {
                 $this->_propDict["siteCollection"] = new SiteCollection($this->_propDict["siteCollection"]);
@@ -187,12 +187,12 @@ class Site extends BaseItem
     * Gets the analytics
     * Analytics about the view activities that took place in this site.
     *
-    * @return ItemAnalytics The analytics
+    * @return ItemAnalytics|null The analytics
     */
     public function getAnalytics()
     {
         if (array_key_exists("analytics", $this->_propDict)) {
-            if (is_a($this->_propDict["analytics"], "\Beta\Microsoft\Graph\Model\ItemAnalytics")) {
+            if (is_a($this->_propDict["analytics"], "\Beta\Microsoft\Graph\Model\ItemAnalytics") || is_null($this->_propDict["analytics"])) {
                 return $this->_propDict["analytics"];
             } else {
                 $this->_propDict["analytics"] = new ItemAnalytics($this->_propDict["analytics"]);
@@ -221,7 +221,7 @@ class Site extends BaseItem
      * Gets the columns
     * The collection of column definitions reusable across lists under this site.
      *
-     * @return array The columns
+     * @return array|null The columns
      */
     public function getColumns()
     {
@@ -242,7 +242,7 @@ class Site extends BaseItem
     */
     public function setColumns($val)
     {
-		$this->_propDict["columns"] = $val;
+        $this->_propDict["columns"] = $val;
         return $this;
     }
     
@@ -251,7 +251,7 @@ class Site extends BaseItem
      * Gets the contentTypes
     * The collection of content types defined for this site.
      *
-     * @return array The contentTypes
+     * @return array|null The contentTypes
      */
     public function getContentTypes()
     {
@@ -272,7 +272,7 @@ class Site extends BaseItem
     */
     public function setContentTypes($val)
     {
-		$this->_propDict["contentTypes"] = $val;
+        $this->_propDict["contentTypes"] = $val;
         return $this;
     }
     
@@ -280,12 +280,12 @@ class Site extends BaseItem
     * Gets the drive
     * The default drive (document library) for this site.
     *
-    * @return Drive The drive
+    * @return Drive|null The drive
     */
     public function getDrive()
     {
         if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "\Beta\Microsoft\Graph\Model\Drive")) {
+            if (is_a($this->_propDict["drive"], "\Beta\Microsoft\Graph\Model\Drive") || is_null($this->_propDict["drive"])) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -314,7 +314,7 @@ class Site extends BaseItem
      * Gets the drives
     * The collection of drives (document libraries) under this site.
      *
-     * @return array The drives
+     * @return array|null The drives
      */
     public function getDrives()
     {
@@ -335,7 +335,7 @@ class Site extends BaseItem
     */
     public function setDrives($val)
     {
-		$this->_propDict["drives"] = $val;
+        $this->_propDict["drives"] = $val;
         return $this;
     }
     
@@ -344,7 +344,7 @@ class Site extends BaseItem
      * Gets the externalColumns
     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
      *
-     * @return array The externalColumns
+     * @return array|null The externalColumns
      */
     public function getExternalColumns()
     {
@@ -365,7 +365,7 @@ class Site extends BaseItem
     */
     public function setExternalColumns($val)
     {
-		$this->_propDict["externalColumns"] = $val;
+        $this->_propDict["externalColumns"] = $val;
         return $this;
     }
     
@@ -374,7 +374,7 @@ class Site extends BaseItem
      * Gets the items
     * Used to address any item contained in this site. This collection cannot be enumerated.
      *
-     * @return array The items
+     * @return array|null The items
      */
     public function getItems()
     {
@@ -395,7 +395,7 @@ class Site extends BaseItem
     */
     public function setItems($val)
     {
-		$this->_propDict["items"] = $val;
+        $this->_propDict["items"] = $val;
         return $this;
     }
     
@@ -404,7 +404,7 @@ class Site extends BaseItem
      * Gets the lists
     * The collection of lists under this site.
      *
-     * @return array The lists
+     * @return array|null The lists
      */
     public function getLists()
     {
@@ -425,7 +425,7 @@ class Site extends BaseItem
     */
     public function setLists($val)
     {
-		$this->_propDict["lists"] = $val;
+        $this->_propDict["lists"] = $val;
         return $this;
     }
     
@@ -434,7 +434,7 @@ class Site extends BaseItem
      * Gets the pages
     * The collection of pages in the SitePages list in this site.
      *
-     * @return array The pages
+     * @return array|null The pages
      */
     public function getPages()
     {
@@ -455,7 +455,7 @@ class Site extends BaseItem
     */
     public function setPages($val)
     {
-		$this->_propDict["pages"] = $val;
+        $this->_propDict["pages"] = $val;
         return $this;
     }
     
@@ -464,7 +464,7 @@ class Site extends BaseItem
      * Gets the permissions
     * The permissions associated with the site. Nullable.
      *
-     * @return array The permissions
+     * @return array|null The permissions
      */
     public function getPermissions()
     {
@@ -485,7 +485,7 @@ class Site extends BaseItem
     */
     public function setPermissions($val)
     {
-		$this->_propDict["permissions"] = $val;
+        $this->_propDict["permissions"] = $val;
         return $this;
     }
     
@@ -494,7 +494,7 @@ class Site extends BaseItem
      * Gets the sites
     * The collection of the sub-sites under this site.
      *
-     * @return array The sites
+     * @return array|null The sites
      */
     public function getSites()
     {
@@ -515,7 +515,7 @@ class Site extends BaseItem
     */
     public function setSites($val)
     {
-		$this->_propDict["sites"] = $val;
+        $this->_propDict["sites"] = $val;
         return $this;
     }
     
@@ -523,12 +523,12 @@ class Site extends BaseItem
     * Gets the termStore
     * The termStore under this site.
     *
-    * @return \Beta\Microsoft\Graph\TermStore\Model\Store The termStore
+    * @return \Beta\Microsoft\Graph\TermStore\Model\Store|null The termStore
     */
     public function getTermStore()
     {
         if (array_key_exists("termStore", $this->_propDict)) {
-            if (is_a($this->_propDict["termStore"], "\Beta\Microsoft\Graph\TermStore\Model\Store")) {
+            if (is_a($this->_propDict["termStore"], "\Beta\Microsoft\Graph\TermStore\Model\Store") || is_null($this->_propDict["termStore"])) {
                 return $this->_propDict["termStore"];
             } else {
                 $this->_propDict["termStore"] = new \Beta\Microsoft\Graph\TermStore\Model\Store($this->_propDict["termStore"]);
@@ -556,12 +556,12 @@ class Site extends BaseItem
     * Gets the onenote
     * Calls the OneNote service for notebook related operations.
     *
-    * @return Onenote The onenote
+    * @return Onenote|null The onenote
     */
     public function getOnenote()
     {
         if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "\Beta\Microsoft\Graph\Model\Onenote")) {
+            if (is_a($this->_propDict["onenote"], "\Beta\Microsoft\Graph\Model\Onenote") || is_null($this->_propDict["onenote"])) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);

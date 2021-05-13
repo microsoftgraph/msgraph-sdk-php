@@ -28,12 +28,12 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the detectionState
     * Detection state from the lastest device health script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *
-    * @return RunState The detectionState
+    * @return RunState|null The detectionState
     */
     public function getDetectionState()
     {
         if (array_key_exists("detectionState", $this->_propDict)) {
-            if (is_a($this->_propDict["detectionState"], "\Beta\Microsoft\Graph\Model\RunState")) {
+            if (is_a($this->_propDict["detectionState"], "\Beta\Microsoft\Graph\Model\RunState") || is_null($this->_propDict["detectionState"])) {
                 return $this->_propDict["detectionState"];
             } else {
                 $this->_propDict["detectionState"] = new RunState($this->_propDict["detectionState"]);
@@ -61,12 +61,12 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the expectedStateUpdateDateTime
     * The next timestamp of when the device health script is expected to execute
     *
-    * @return \DateTime The expectedStateUpdateDateTime
+    * @return \DateTime|null The expectedStateUpdateDateTime
     */
     public function getExpectedStateUpdateDateTime()
     {
         if (array_key_exists("expectedStateUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expectedStateUpdateDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expectedStateUpdateDateTime"], "\DateTime") || is_null($this->_propDict["expectedStateUpdateDateTime"])) {
                 return $this->_propDict["expectedStateUpdateDateTime"];
             } else {
                 $this->_propDict["expectedStateUpdateDateTime"] = new \DateTime($this->_propDict["expectedStateUpdateDateTime"]);
@@ -94,12 +94,12 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the lastStateUpdateDateTime
     * The last timestamp of when the device health script executed
     *
-    * @return \DateTime The lastStateUpdateDateTime
+    * @return \DateTime|null The lastStateUpdateDateTime
     */
     public function getLastStateUpdateDateTime()
     {
         if (array_key_exists("lastStateUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastStateUpdateDateTime"], "\DateTime") || is_null($this->_propDict["lastStateUpdateDateTime"])) {
                 return $this->_propDict["lastStateUpdateDateTime"];
             } else {
                 $this->_propDict["lastStateUpdateDateTime"] = new \DateTime($this->_propDict["lastStateUpdateDateTime"]);
@@ -127,12 +127,12 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the lastSyncDateTime
     * The last time that Intune Managment Extension synced with Intune
     *
-    * @return \DateTime The lastSyncDateTime
+    * @return \DateTime|null The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -160,7 +160,7 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the postRemediationDetectionScriptError
     * Error from the detection script after remediation
     *
-    * @return string The postRemediationDetectionScriptError
+    * @return string|null The postRemediationDetectionScriptError
     */
     public function getPostRemediationDetectionScriptError()
     {
@@ -189,7 +189,7 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the postRemediationDetectionScriptOutput
     * Detection script output after remediation
     *
-    * @return string The postRemediationDetectionScriptOutput
+    * @return string|null The postRemediationDetectionScriptOutput
     */
     public function getPostRemediationDetectionScriptOutput()
     {
@@ -218,7 +218,7 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the preRemediationDetectionScriptError
     * Error from the detection script before remediation
     *
-    * @return string The preRemediationDetectionScriptError
+    * @return string|null The preRemediationDetectionScriptError
     */
     public function getPreRemediationDetectionScriptError()
     {
@@ -247,7 +247,7 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the preRemediationDetectionScriptOutput
     * Output of the detection script before remediation
     *
-    * @return string The preRemediationDetectionScriptOutput
+    * @return string|null The preRemediationDetectionScriptOutput
     */
     public function getPreRemediationDetectionScriptOutput()
     {
@@ -276,7 +276,7 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the remediationScriptError
     * Error output of the remediation script
     *
-    * @return string The remediationScriptError
+    * @return string|null The remediationScriptError
     */
     public function getRemediationScriptError()
     {
@@ -305,12 +305,12 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the remediationState
     * Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError.
     *
-    * @return RemediationState The remediationState
+    * @return RemediationState|null The remediationState
     */
     public function getRemediationState()
     {
         if (array_key_exists("remediationState", $this->_propDict)) {
-            if (is_a($this->_propDict["remediationState"], "\Beta\Microsoft\Graph\Model\RemediationState")) {
+            if (is_a($this->_propDict["remediationState"], "\Beta\Microsoft\Graph\Model\RemediationState") || is_null($this->_propDict["remediationState"])) {
                 return $this->_propDict["remediationState"];
             } else {
                 $this->_propDict["remediationState"] = new RemediationState($this->_propDict["remediationState"]);
@@ -338,12 +338,12 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the managedDevice
     * The managed device on which the device health script executed
     *
-    * @return ManagedDevice The managedDevice
+    * @return ManagedDevice|null The managedDevice
     */
     public function getManagedDevice()
     {
         if (array_key_exists("managedDevice", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDevice"], "\Beta\Microsoft\Graph\Model\ManagedDevice")) {
+            if (is_a($this->_propDict["managedDevice"], "\Beta\Microsoft\Graph\Model\ManagedDevice") || is_null($this->_propDict["managedDevice"])) {
                 return $this->_propDict["managedDevice"];
             } else {
                 $this->_propDict["managedDevice"] = new ManagedDevice($this->_propDict["managedDevice"]);

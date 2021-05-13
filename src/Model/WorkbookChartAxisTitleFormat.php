@@ -28,12 +28,12 @@ class WorkbookChartAxisTitleFormat extends Entity
     * Gets the font
     * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
     *
-    * @return WorkbookChartFont The font
+    * @return WorkbookChartFont|null The font
     */
     public function getFont()
     {
         if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "\Microsoft\Graph\Model\WorkbookChartFont")) {
+            if (is_a($this->_propDict["font"], "\Microsoft\Graph\Model\WorkbookChartFont") || is_null($this->_propDict["font"])) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookChartFont($this->_propDict["font"]);

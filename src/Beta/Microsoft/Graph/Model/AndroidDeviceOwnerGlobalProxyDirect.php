@@ -36,7 +36,7 @@ class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGlobalProxy
     * Gets the excludedHosts
     * The excluded hosts
     *
-    * @return string The excludedHosts
+    * @return string|null The excludedHosts
     */
     public function getExcludedHosts()
     {
@@ -64,7 +64,7 @@ class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGlobalProxy
     * Gets the host
     * The host name
     *
-    * @return string The host
+    * @return string|null The host
     */
     public function getHost()
     {
@@ -92,7 +92,7 @@ class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGlobalProxy
     * Gets the port
     * The port
     *
-    * @return int The port
+    * @return int|null The port
     */
     public function getPort()
     {

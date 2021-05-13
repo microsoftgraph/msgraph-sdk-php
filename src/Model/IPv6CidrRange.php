@@ -36,7 +36,7 @@ class IPv6CidrRange extends IpRange
     * Gets the cidrAddress
     * IPv6 address in CIDR notation
     *
-    * @return string The cidrAddress
+    * @return string|null The cidrAddress
     */
     public function getCidrAddress()
     {

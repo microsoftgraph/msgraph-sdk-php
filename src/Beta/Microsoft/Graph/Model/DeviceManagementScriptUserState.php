@@ -28,7 +28,7 @@ class DeviceManagementScriptUserState extends Entity
     * Gets the errorDeviceCount
     * Error device count for specific user.
     *
-    * @return int The errorDeviceCount
+    * @return int|null The errorDeviceCount
     */
     public function getErrorDeviceCount()
     {
@@ -57,7 +57,7 @@ class DeviceManagementScriptUserState extends Entity
     * Gets the successDeviceCount
     * Success device count for specific user.
     *
-    * @return int The successDeviceCount
+    * @return int|null The successDeviceCount
     */
     public function getSuccessDeviceCount()
     {
@@ -86,7 +86,7 @@ class DeviceManagementScriptUserState extends Entity
     * Gets the userPrincipalName
     * User principle name of specific user.
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -116,7 +116,7 @@ class DeviceManagementScriptUserState extends Entity
      * Gets the deviceRunStates
     * List of run states for this script across all devices of specific user.
      *
-     * @return array The deviceRunStates
+     * @return array|null The deviceRunStates
      */
     public function getDeviceRunStates()
     {
@@ -137,7 +137,7 @@ class DeviceManagementScriptUserState extends Entity
     */
     public function setDeviceRunStates($val)
     {
-		$this->_propDict["deviceRunStates"] = $val;
+        $this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
     

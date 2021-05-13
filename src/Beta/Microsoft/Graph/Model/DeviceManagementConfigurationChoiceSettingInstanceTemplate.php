@@ -37,12 +37,12 @@ class DeviceManagementConfigurationChoiceSettingInstanceTemplate extends DeviceM
     * Gets the choiceSettingValueTemplate
     * Choice Setting Value Template
     *
-    * @return DeviceManagementConfigurationChoiceSettingValueTemplate The choiceSettingValueTemplate
+    * @return DeviceManagementConfigurationChoiceSettingValueTemplate|null The choiceSettingValueTemplate
     */
     public function getChoiceSettingValueTemplate()
     {
         if (array_key_exists("choiceSettingValueTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["choiceSettingValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationChoiceSettingValueTemplate")) {
+            if (is_a($this->_propDict["choiceSettingValueTemplate"], "\Beta\Microsoft\Graph\Model\DeviceManagementConfigurationChoiceSettingValueTemplate") || is_null($this->_propDict["choiceSettingValueTemplate"])) {
                 return $this->_propDict["choiceSettingValueTemplate"];
             } else {
                 $this->_propDict["choiceSettingValueTemplate"] = new DeviceManagementConfigurationChoiceSettingValueTemplate($this->_propDict["choiceSettingValueTemplate"]);

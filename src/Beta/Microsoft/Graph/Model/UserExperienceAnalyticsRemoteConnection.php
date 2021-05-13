@@ -28,7 +28,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the cloudPcFailurePercentage
     * The sign in failure percentage of Cloud PC Device. Valid values 0 to 100
     *
-    * @return float The cloudPcFailurePercentage
+    * @return float|null The cloudPcFailurePercentage
     */
     public function getCloudPcFailurePercentage()
     {
@@ -49,7 +49,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     */
     public function setCloudPcFailurePercentage($val)
     {
-        $this->_propDict["cloudPcFailurePercentage"] = $val;
+        $this->_propDict["cloudPcFailurePercentage"] = floatval($val);
         return $this;
     }
     
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the cloudPcRoundTripTime
     * The round tip time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
     *
-    * @return float The cloudPcRoundTripTime
+    * @return float|null The cloudPcRoundTripTime
     */
     public function getCloudPcRoundTripTime()
     {
@@ -78,7 +78,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     */
     public function setCloudPcRoundTripTime($val)
     {
-        $this->_propDict["cloudPcRoundTripTime"] = $val;
+        $this->_propDict["cloudPcRoundTripTime"] = floatval($val);
         return $this;
     }
     
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the cloudPcSignInTime
     * The sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
     *
-    * @return float The cloudPcSignInTime
+    * @return float|null The cloudPcSignInTime
     */
     public function getCloudPcSignInTime()
     {
@@ -107,7 +107,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     */
     public function setCloudPcSignInTime($val)
     {
-        $this->_propDict["cloudPcSignInTime"] = $val;
+        $this->_propDict["cloudPcSignInTime"] = floatval($val);
         return $this;
     }
     
@@ -115,7 +115,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the coreBootTime
     * The core boot time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
     *
-    * @return float The coreBootTime
+    * @return float|null The coreBootTime
     */
     public function getCoreBootTime()
     {
@@ -136,7 +136,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     */
     public function setCoreBootTime($val)
     {
-        $this->_propDict["coreBootTime"] = $val;
+        $this->_propDict["coreBootTime"] = floatval($val);
         return $this;
     }
     
@@ -144,7 +144,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the coreSignInTime
     * The core sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
     *
-    * @return float The coreSignInTime
+    * @return float|null The coreSignInTime
     */
     public function getCoreSignInTime()
     {
@@ -165,7 +165,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     */
     public function setCoreSignInTime($val)
     {
-        $this->_propDict["coreSignInTime"] = $val;
+        $this->_propDict["coreSignInTime"] = floatval($val);
         return $this;
     }
     
@@ -173,7 +173,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the deviceCount
     * The count of remote connection. Valid values 0 to 2147483647
     *
-    * @return int The deviceCount
+    * @return int|null The deviceCount
     */
     public function getDeviceCount()
     {
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the deviceId
     * The id of the device.
     *
-    * @return string The deviceId
+    * @return string|null The deviceId
     */
     public function getDeviceId()
     {
@@ -231,7 +231,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the deviceName
     * The name of the device.
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -260,7 +260,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the model
     * The user experience analytics device model.
     *
-    * @return string The model
+    * @return string|null The model
     */
     public function getModel()
     {
@@ -289,7 +289,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the remoteSignInTime
     * The remote sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
     *
-    * @return float The remoteSignInTime
+    * @return float|null The remoteSignInTime
     */
     public function getRemoteSignInTime()
     {
@@ -310,7 +310,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     */
     public function setRemoteSignInTime($val)
     {
-        $this->_propDict["remoteSignInTime"] = $val;
+        $this->_propDict["remoteSignInTime"] = floatval($val);
         return $this;
     }
     
@@ -318,7 +318,7 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     * Gets the virtualNetwork
     * The user experience analytics virtual network.
     *
-    * @return string The virtualNetwork
+    * @return string|null The virtualNetwork
     */
     public function getVirtualNetwork()
     {

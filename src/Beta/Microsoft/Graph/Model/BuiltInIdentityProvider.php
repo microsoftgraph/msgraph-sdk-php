@@ -28,7 +28,7 @@ class BuiltInIdentityProvider extends IdentityProviderBase
     * Gets the identityProviderType
     * The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
     *
-    * @return string The identityProviderType
+    * @return string|null The identityProviderType
     */
     public function getIdentityProviderType()
     {

@@ -28,7 +28,7 @@ class WindowsManagementApp extends Entity
     * Gets the availableVersion
     * Windows management app available version.
     *
-    * @return string The availableVersion
+    * @return string|null The availableVersion
     */
     public function getAvailableVersion()
     {
@@ -58,7 +58,7 @@ class WindowsManagementApp extends Entity
      * Gets the healthStates
     * The list of health states for installed Windows management app.
      *
-     * @return array The healthStates
+     * @return array|null The healthStates
      */
     public function getHealthStates()
     {
@@ -79,7 +79,7 @@ class WindowsManagementApp extends Entity
     */
     public function setHealthStates($val)
     {
-		$this->_propDict["healthStates"] = $val;
+        $this->_propDict["healthStates"] = $val;
         return $this;
     }
     

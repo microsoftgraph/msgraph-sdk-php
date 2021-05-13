@@ -28,12 +28,12 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
     * Gets the firstOperand
     * The first operand of the binary operation.
     *
-    * @return ManagementConditionExpressionModel The firstOperand
+    * @return ManagementConditionExpressionModel|null The firstOperand
     */
     public function getFirstOperand()
     {
         if (array_key_exists("firstOperand", $this->_propDict)) {
-            if (is_a($this->_propDict["firstOperand"], "\Beta\Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
+            if (is_a($this->_propDict["firstOperand"], "\Beta\Microsoft\Graph\Model\ManagementConditionExpressionModel") || is_null($this->_propDict["firstOperand"])) {
                 return $this->_propDict["firstOperand"];
             } else {
                 $this->_propDict["firstOperand"] = new ManagementConditionExpressionModel($this->_propDict["firstOperand"]);
@@ -61,12 +61,12 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
     * Gets the operator
     * The operator used in the evaluation of the binary operation. Possible values are: or, and.
     *
-    * @return BinaryManagementConditionExpressionOperatorType The operator
+    * @return BinaryManagementConditionExpressionOperatorType|null The operator
     */
     public function getOperator()
     {
         if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "\Beta\Microsoft\Graph\Model\BinaryManagementConditionExpressionOperatorType")) {
+            if (is_a($this->_propDict["operator"], "\Beta\Microsoft\Graph\Model\BinaryManagementConditionExpressionOperatorType") || is_null($this->_propDict["operator"])) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new BinaryManagementConditionExpressionOperatorType($this->_propDict["operator"]);
@@ -94,12 +94,12 @@ class BinaryManagementConditionExpression extends ManagementConditionExpressionM
     * Gets the secondOperand
     * The second operand of the binary operation.
     *
-    * @return ManagementConditionExpressionModel The secondOperand
+    * @return ManagementConditionExpressionModel|null The secondOperand
     */
     public function getSecondOperand()
     {
         if (array_key_exists("secondOperand", $this->_propDict)) {
-            if (is_a($this->_propDict["secondOperand"], "\Beta\Microsoft\Graph\Model\ManagementConditionExpressionModel")) {
+            if (is_a($this->_propDict["secondOperand"], "\Beta\Microsoft\Graph\Model\ManagementConditionExpressionModel") || is_null($this->_propDict["secondOperand"])) {
                 return $this->_propDict["secondOperand"];
             } else {
                 $this->_propDict["secondOperand"] = new ManagementConditionExpressionModel($this->_propDict["secondOperand"]);

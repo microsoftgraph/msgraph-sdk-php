@@ -28,12 +28,12 @@ class TimeOff extends ChangeTrackedEntity
     * Gets the draftTimeOff
     * The draft version of this timeOff that is viewable by managers. Required.
     *
-    * @return TimeOffItem The draftTimeOff
+    * @return TimeOffItem|null The draftTimeOff
     */
     public function getDraftTimeOff()
     {
         if (array_key_exists("draftTimeOff", $this->_propDict)) {
-            if (is_a($this->_propDict["draftTimeOff"], "\Beta\Microsoft\Graph\Model\TimeOffItem")) {
+            if (is_a($this->_propDict["draftTimeOff"], "\Beta\Microsoft\Graph\Model\TimeOffItem") || is_null($this->_propDict["draftTimeOff"])) {
                 return $this->_propDict["draftTimeOff"];
             } else {
                 $this->_propDict["draftTimeOff"] = new TimeOffItem($this->_propDict["draftTimeOff"]);
@@ -60,7 +60,7 @@ class TimeOff extends ChangeTrackedEntity
     /**
     * Gets the isStagedForDeletion
     *
-    * @return bool The isStagedForDeletion
+    * @return bool|null The isStagedForDeletion
     */
     public function getIsStagedForDeletion()
     {
@@ -88,12 +88,12 @@ class TimeOff extends ChangeTrackedEntity
     * Gets the sharedTimeOff
     * The shared version of this timeOff that is viewable by both employees and managers. Required.
     *
-    * @return TimeOffItem The sharedTimeOff
+    * @return TimeOffItem|null The sharedTimeOff
     */
     public function getSharedTimeOff()
     {
         if (array_key_exists("sharedTimeOff", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedTimeOff"], "\Beta\Microsoft\Graph\Model\TimeOffItem")) {
+            if (is_a($this->_propDict["sharedTimeOff"], "\Beta\Microsoft\Graph\Model\TimeOffItem") || is_null($this->_propDict["sharedTimeOff"])) {
                 return $this->_propDict["sharedTimeOff"];
             } else {
                 $this->_propDict["sharedTimeOff"] = new TimeOffItem($this->_propDict["sharedTimeOff"]);
@@ -121,7 +121,7 @@ class TimeOff extends ChangeTrackedEntity
     * Gets the userId
     * ID of the user assigned to the timeOff. Required.
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {

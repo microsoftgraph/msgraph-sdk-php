@@ -28,7 +28,7 @@ class Printer extends PrinterBase
     * Gets the hasPhysicalDevice
     * True if the printer has a physical device for printing. Read-only.
     *
-    * @return bool The hasPhysicalDevice
+    * @return bool|null The hasPhysicalDevice
     */
     public function getHasPhysicalDevice()
     {
@@ -57,7 +57,7 @@ class Printer extends PrinterBase
     * Gets the isShared
     * True if the printer is shared; false otherwise. Read-only.
     *
-    * @return bool The isShared
+    * @return bool|null The isShared
     */
     public function getIsShared()
     {
@@ -86,12 +86,12 @@ class Printer extends PrinterBase
     * Gets the lastSeenDateTime
     * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
     *
-    * @return \DateTime The lastSeenDateTime
+    * @return \DateTime|null The lastSeenDateTime
     */
     public function getLastSeenDateTime()
     {
         if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime") || is_null($this->_propDict["lastSeenDateTime"])) {
                 return $this->_propDict["lastSeenDateTime"];
             } else {
                 $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
@@ -119,12 +119,12 @@ class Printer extends PrinterBase
     * Gets the registeredDateTime
     * The DateTimeOffset when the printer was registered. Read-only.
     *
-    * @return \DateTime The registeredDateTime
+    * @return \DateTime|null The registeredDateTime
     */
     public function getRegisteredDateTime()
     {
         if (array_key_exists("registeredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["registeredDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["registeredDateTime"], "\DateTime") || is_null($this->_propDict["registeredDateTime"])) {
                 return $this->_propDict["registeredDateTime"];
             } else {
                 $this->_propDict["registeredDateTime"] = new \DateTime($this->_propDict["registeredDateTime"]);
@@ -153,7 +153,7 @@ class Printer extends PrinterBase
      * Gets the connectors
     * The connectors that are associated with the printer.
      *
-     * @return array The connectors
+     * @return array|null The connectors
      */
     public function getConnectors()
     {
@@ -174,7 +174,7 @@ class Printer extends PrinterBase
     */
     public function setConnectors($val)
     {
-		$this->_propDict["connectors"] = $val;
+        $this->_propDict["connectors"] = $val;
         return $this;
     }
     
@@ -183,7 +183,7 @@ class Printer extends PrinterBase
      * Gets the shares
     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      *
-     * @return array The shares
+     * @return array|null The shares
      */
     public function getShares()
     {
@@ -204,7 +204,7 @@ class Printer extends PrinterBase
     */
     public function setShares($val)
     {
-		$this->_propDict["shares"] = $val;
+        $this->_propDict["shares"] = $val;
         return $this;
     }
     
@@ -213,7 +213,7 @@ class Printer extends PrinterBase
      * Gets the taskTriggers
     * A list of task triggers that are associated with the printer.
      *
-     * @return array The taskTriggers
+     * @return array|null The taskTriggers
      */
     public function getTaskTriggers()
     {
@@ -234,7 +234,7 @@ class Printer extends PrinterBase
     */
     public function setTaskTriggers($val)
     {
-		$this->_propDict["taskTriggers"] = $val;
+        $this->_propDict["taskTriggers"] = $val;
         return $this;
     }
     

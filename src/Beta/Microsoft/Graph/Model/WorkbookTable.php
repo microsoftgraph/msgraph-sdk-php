@@ -28,7 +28,7 @@ class WorkbookTable extends Entity
     * Gets the highlightFirstColumn
     * Indicates whether the first column contains special formatting.
     *
-    * @return bool The highlightFirstColumn
+    * @return bool|null The highlightFirstColumn
     */
     public function getHighlightFirstColumn()
     {
@@ -57,7 +57,7 @@ class WorkbookTable extends Entity
     * Gets the highlightLastColumn
     * Indicates whether the last column contains special formatting.
     *
-    * @return bool The highlightLastColumn
+    * @return bool|null The highlightLastColumn
     */
     public function getHighlightLastColumn()
     {
@@ -86,7 +86,7 @@ class WorkbookTable extends Entity
     * Gets the legacyId
     * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
     *
-    * @return string The legacyId
+    * @return string|null The legacyId
     */
     public function getLegacyId()
     {
@@ -115,7 +115,7 @@ class WorkbookTable extends Entity
     * Gets the name
     * Name of the table.
     *
-    * @return string The name
+    * @return string|null The name
     */
     public function getName()
     {
@@ -144,7 +144,7 @@ class WorkbookTable extends Entity
     * Gets the showBandedColumns
     * Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
     *
-    * @return bool The showBandedColumns
+    * @return bool|null The showBandedColumns
     */
     public function getShowBandedColumns()
     {
@@ -173,7 +173,7 @@ class WorkbookTable extends Entity
     * Gets the showBandedRows
     * Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
     *
-    * @return bool The showBandedRows
+    * @return bool|null The showBandedRows
     */
     public function getShowBandedRows()
     {
@@ -202,7 +202,7 @@ class WorkbookTable extends Entity
     * Gets the showFilterButton
     * Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
     *
-    * @return bool The showFilterButton
+    * @return bool|null The showFilterButton
     */
     public function getShowFilterButton()
     {
@@ -231,7 +231,7 @@ class WorkbookTable extends Entity
     * Gets the showHeaders
     * Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
     *
-    * @return bool The showHeaders
+    * @return bool|null The showHeaders
     */
     public function getShowHeaders()
     {
@@ -260,7 +260,7 @@ class WorkbookTable extends Entity
     * Gets the showTotals
     * Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
     *
-    * @return bool The showTotals
+    * @return bool|null The showTotals
     */
     public function getShowTotals()
     {
@@ -289,7 +289,7 @@ class WorkbookTable extends Entity
     * Gets the style
     * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
     *
-    * @return string The style
+    * @return string|null The style
     */
     public function getStyle()
     {
@@ -319,7 +319,7 @@ class WorkbookTable extends Entity
      * Gets the columns
     * Represents a collection of all the columns in the table. Read-only.
      *
-     * @return array The columns
+     * @return array|null The columns
      */
     public function getColumns()
     {
@@ -340,7 +340,7 @@ class WorkbookTable extends Entity
     */
     public function setColumns($val)
     {
-		$this->_propDict["columns"] = $val;
+        $this->_propDict["columns"] = $val;
         return $this;
     }
     
@@ -349,7 +349,7 @@ class WorkbookTable extends Entity
      * Gets the rows
     * Represents a collection of all the rows in the table. Read-only.
      *
-     * @return array The rows
+     * @return array|null The rows
      */
     public function getRows()
     {
@@ -370,7 +370,7 @@ class WorkbookTable extends Entity
     */
     public function setRows($val)
     {
-		$this->_propDict["rows"] = $val;
+        $this->_propDict["rows"] = $val;
         return $this;
     }
     
@@ -378,12 +378,12 @@ class WorkbookTable extends Entity
     * Gets the sort
     * Represents the sorting for the table. Read-only.
     *
-    * @return WorkbookTableSort The sort
+    * @return WorkbookTableSort|null The sort
     */
     public function getSort()
     {
         if (array_key_exists("sort", $this->_propDict)) {
-            if (is_a($this->_propDict["sort"], "\Beta\Microsoft\Graph\Model\WorkbookTableSort")) {
+            if (is_a($this->_propDict["sort"], "\Beta\Microsoft\Graph\Model\WorkbookTableSort") || is_null($this->_propDict["sort"])) {
                 return $this->_propDict["sort"];
             } else {
                 $this->_propDict["sort"] = new WorkbookTableSort($this->_propDict["sort"]);
@@ -411,12 +411,12 @@ class WorkbookTable extends Entity
     * Gets the worksheet
     * The worksheet containing the current table. Read-only.
     *
-    * @return WorkbookWorksheet The worksheet
+    * @return WorkbookWorksheet|null The worksheet
     */
     public function getWorksheet()
     {
         if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "\Beta\Microsoft\Graph\Model\WorkbookWorksheet")) {
+            if (is_a($this->_propDict["worksheet"], "\Beta\Microsoft\Graph\Model\WorkbookWorksheet") || is_null($this->_propDict["worksheet"])) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);

@@ -37,12 +37,12 @@ class DeviceManagementEnumConstraint extends DeviceManagementConstraint
     * Gets the values
     * List of valid values for this string
     *
-    * @return DeviceManagementEnumValue The values
+    * @return DeviceManagementEnumValue|null The values
     */
     public function getValues()
     {
         if (array_key_exists("values", $this->_propDict)) {
-            if (is_a($this->_propDict["values"], "\Beta\Microsoft\Graph\Model\DeviceManagementEnumValue")) {
+            if (is_a($this->_propDict["values"], "\Beta\Microsoft\Graph\Model\DeviceManagementEnumValue") || is_null($this->_propDict["values"])) {
                 return $this->_propDict["values"];
             } else {
                 $this->_propDict["values"] = new DeviceManagementEnumValue($this->_propDict["values"]);

@@ -28,7 +28,7 @@ class ManagedDevice extends Entity
     * Gets the activationLockBypassCode
     * Code that allows the Activation Lock on a device to be bypassed.
     *
-    * @return string The activationLockBypassCode
+    * @return string|null The activationLockBypassCode
     */
     public function getActivationLockBypassCode()
     {
@@ -57,7 +57,7 @@ class ManagedDevice extends Entity
     * Gets the androidSecurityPatchLevel
     * Android security patch level
     *
-    * @return string The androidSecurityPatchLevel
+    * @return string|null The androidSecurityPatchLevel
     */
     public function getAndroidSecurityPatchLevel()
     {
@@ -86,7 +86,7 @@ class ManagedDevice extends Entity
     * Gets the azureADDeviceId
     * The unique identifier for the Azure Active Directory device. Read only.
     *
-    * @return string The azureADDeviceId
+    * @return string|null The azureADDeviceId
     */
     public function getAzureADDeviceId()
     {
@@ -115,7 +115,7 @@ class ManagedDevice extends Entity
     * Gets the azureADRegistered
     * Whether the device is Azure Active Directory registered.
     *
-    * @return bool The azureADRegistered
+    * @return bool|null The azureADRegistered
     */
     public function getAzureADRegistered()
     {
@@ -144,12 +144,12 @@ class ManagedDevice extends Entity
     * Gets the complianceGracePeriodExpirationDateTime
     * The DateTime when device compliance grace period expires
     *
-    * @return \DateTime The complianceGracePeriodExpirationDateTime
+    * @return \DateTime|null The complianceGracePeriodExpirationDateTime
     */
     public function getComplianceGracePeriodExpirationDateTime()
     {
         if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
                 return $this->_propDict["complianceGracePeriodExpirationDateTime"];
             } else {
                 $this->_propDict["complianceGracePeriodExpirationDateTime"] = new \DateTime($this->_propDict["complianceGracePeriodExpirationDateTime"]);
@@ -177,12 +177,12 @@ class ManagedDevice extends Entity
     * Gets the complianceState
     * Compliance state of the device. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
     *
-    * @return ComplianceState The complianceState
+    * @return ComplianceState|null The complianceState
     */
     public function getComplianceState()
     {
         if (array_key_exists("complianceState", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceState"], "\Microsoft\Graph\Model\ComplianceState")) {
+            if (is_a($this->_propDict["complianceState"], "\Microsoft\Graph\Model\ComplianceState") || is_null($this->_propDict["complianceState"])) {
                 return $this->_propDict["complianceState"];
             } else {
                 $this->_propDict["complianceState"] = new ComplianceState($this->_propDict["complianceState"]);
@@ -210,12 +210,12 @@ class ManagedDevice extends Entity
     * Gets the configurationManagerClientEnabledFeatures
     * ConfigrMgr client enabled features
     *
-    * @return ConfigurationManagerClientEnabledFeatures The configurationManagerClientEnabledFeatures
+    * @return ConfigurationManagerClientEnabledFeatures|null The configurationManagerClientEnabledFeatures
     */
     public function getConfigurationManagerClientEnabledFeatures()
     {
         if (array_key_exists("configurationManagerClientEnabledFeatures", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationManagerClientEnabledFeatures"], "\Microsoft\Graph\Model\ConfigurationManagerClientEnabledFeatures")) {
+            if (is_a($this->_propDict["configurationManagerClientEnabledFeatures"], "\Microsoft\Graph\Model\ConfigurationManagerClientEnabledFeatures") || is_null($this->_propDict["configurationManagerClientEnabledFeatures"])) {
                 return $this->_propDict["configurationManagerClientEnabledFeatures"];
             } else {
                 $this->_propDict["configurationManagerClientEnabledFeatures"] = new ConfigurationManagerClientEnabledFeatures($this->_propDict["configurationManagerClientEnabledFeatures"]);
@@ -244,7 +244,7 @@ class ManagedDevice extends Entity
      * Gets the deviceActionResults
     * List of ComplexType deviceActionResult objects.
      *
-     * @return array The deviceActionResults
+     * @return array|null The deviceActionResults
      */
     public function getDeviceActionResults()
     {
@@ -265,7 +265,7 @@ class ManagedDevice extends Entity
     */
     public function setDeviceActionResults($val)
     {
-		$this->_propDict["deviceActionResults"] = $val;
+        $this->_propDict["deviceActionResults"] = $val;
         return $this;
     }
     
@@ -273,7 +273,7 @@ class ManagedDevice extends Entity
     * Gets the deviceCategoryDisplayName
     * Device category display name
     *
-    * @return string The deviceCategoryDisplayName
+    * @return string|null The deviceCategoryDisplayName
     */
     public function getDeviceCategoryDisplayName()
     {
@@ -302,12 +302,12 @@ class ManagedDevice extends Entity
     * Gets the deviceEnrollmentType
     * Enrollment type of the device. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
     *
-    * @return DeviceEnrollmentType The deviceEnrollmentType
+    * @return DeviceEnrollmentType|null The deviceEnrollmentType
     */
     public function getDeviceEnrollmentType()
     {
         if (array_key_exists("deviceEnrollmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceEnrollmentType"], "\Microsoft\Graph\Model\DeviceEnrollmentType")) {
+            if (is_a($this->_propDict["deviceEnrollmentType"], "\Microsoft\Graph\Model\DeviceEnrollmentType") || is_null($this->_propDict["deviceEnrollmentType"])) {
                 return $this->_propDict["deviceEnrollmentType"];
             } else {
                 $this->_propDict["deviceEnrollmentType"] = new DeviceEnrollmentType($this->_propDict["deviceEnrollmentType"]);
@@ -335,12 +335,12 @@ class ManagedDevice extends Entity
     * Gets the deviceHealthAttestationState
     * The device health attestation state.
     *
-    * @return DeviceHealthAttestationState The deviceHealthAttestationState
+    * @return DeviceHealthAttestationState|null The deviceHealthAttestationState
     */
     public function getDeviceHealthAttestationState()
     {
         if (array_key_exists("deviceHealthAttestationState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceHealthAttestationState"], "\Microsoft\Graph\Model\DeviceHealthAttestationState")) {
+            if (is_a($this->_propDict["deviceHealthAttestationState"], "\Microsoft\Graph\Model\DeviceHealthAttestationState") || is_null($this->_propDict["deviceHealthAttestationState"])) {
                 return $this->_propDict["deviceHealthAttestationState"];
             } else {
                 $this->_propDict["deviceHealthAttestationState"] = new DeviceHealthAttestationState($this->_propDict["deviceHealthAttestationState"]);
@@ -368,7 +368,7 @@ class ManagedDevice extends Entity
     * Gets the deviceName
     * Name of the device
     *
-    * @return string The deviceName
+    * @return string|null The deviceName
     */
     public function getDeviceName()
     {
@@ -397,12 +397,12 @@ class ManagedDevice extends Entity
     * Gets the deviceRegistrationState
     * Device registration state. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
     *
-    * @return DeviceRegistrationState The deviceRegistrationState
+    * @return DeviceRegistrationState|null The deviceRegistrationState
     */
     public function getDeviceRegistrationState()
     {
         if (array_key_exists("deviceRegistrationState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceRegistrationState"], "\Microsoft\Graph\Model\DeviceRegistrationState")) {
+            if (is_a($this->_propDict["deviceRegistrationState"], "\Microsoft\Graph\Model\DeviceRegistrationState") || is_null($this->_propDict["deviceRegistrationState"])) {
                 return $this->_propDict["deviceRegistrationState"];
             } else {
                 $this->_propDict["deviceRegistrationState"] = new DeviceRegistrationState($this->_propDict["deviceRegistrationState"]);
@@ -430,7 +430,7 @@ class ManagedDevice extends Entity
     * Gets the easActivated
     * Whether the device is Exchange ActiveSync activated.
     *
-    * @return bool The easActivated
+    * @return bool|null The easActivated
     */
     public function getEasActivated()
     {
@@ -459,12 +459,12 @@ class ManagedDevice extends Entity
     * Gets the easActivationDateTime
     * Exchange ActivationSync activation time of the device.
     *
-    * @return \DateTime The easActivationDateTime
+    * @return \DateTime|null The easActivationDateTime
     */
     public function getEasActivationDateTime()
     {
         if (array_key_exists("easActivationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["easActivationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["easActivationDateTime"], "\DateTime") || is_null($this->_propDict["easActivationDateTime"])) {
                 return $this->_propDict["easActivationDateTime"];
             } else {
                 $this->_propDict["easActivationDateTime"] = new \DateTime($this->_propDict["easActivationDateTime"]);
@@ -492,7 +492,7 @@ class ManagedDevice extends Entity
     * Gets the easDeviceId
     * Exchange ActiveSync Id of the device.
     *
-    * @return string The easDeviceId
+    * @return string|null The easDeviceId
     */
     public function getEasDeviceId()
     {
@@ -521,7 +521,7 @@ class ManagedDevice extends Entity
     * Gets the emailAddress
     * Email(s) for the user associated with the device
     *
-    * @return string The emailAddress
+    * @return string|null The emailAddress
     */
     public function getEmailAddress()
     {
@@ -550,12 +550,12 @@ class ManagedDevice extends Entity
     * Gets the enrolledDateTime
     * Enrollment time of the device.
     *
-    * @return \DateTime The enrolledDateTime
+    * @return \DateTime|null The enrolledDateTime
     */
     public function getEnrolledDateTime()
     {
         if (array_key_exists("enrolledDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["enrolledDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["enrolledDateTime"], "\DateTime") || is_null($this->_propDict["enrolledDateTime"])) {
                 return $this->_propDict["enrolledDateTime"];
             } else {
                 $this->_propDict["enrolledDateTime"] = new \DateTime($this->_propDict["enrolledDateTime"]);
@@ -583,12 +583,12 @@ class ManagedDevice extends Entity
     * Gets the exchangeAccessState
     * The Access State of the device in Exchange. Possible values are: none, unknown, allowed, blocked, quarantined.
     *
-    * @return DeviceManagementExchangeAccessState The exchangeAccessState
+    * @return DeviceManagementExchangeAccessState|null The exchangeAccessState
     */
     public function getExchangeAccessState()
     {
         if (array_key_exists("exchangeAccessState", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeAccessState"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessState")) {
+            if (is_a($this->_propDict["exchangeAccessState"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessState") || is_null($this->_propDict["exchangeAccessState"])) {
                 return $this->_propDict["exchangeAccessState"];
             } else {
                 $this->_propDict["exchangeAccessState"] = new DeviceManagementExchangeAccessState($this->_propDict["exchangeAccessState"]);
@@ -616,12 +616,12 @@ class ManagedDevice extends Entity
     * Gets the exchangeAccessStateReason
     * The reason for the device's access state in Exchange. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
     *
-    * @return DeviceManagementExchangeAccessStateReason The exchangeAccessStateReason
+    * @return DeviceManagementExchangeAccessStateReason|null The exchangeAccessStateReason
     */
     public function getExchangeAccessStateReason()
     {
         if (array_key_exists("exchangeAccessStateReason", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeAccessStateReason"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessStateReason")) {
+            if (is_a($this->_propDict["exchangeAccessStateReason"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessStateReason") || is_null($this->_propDict["exchangeAccessStateReason"])) {
                 return $this->_propDict["exchangeAccessStateReason"];
             } else {
                 $this->_propDict["exchangeAccessStateReason"] = new DeviceManagementExchangeAccessStateReason($this->_propDict["exchangeAccessStateReason"]);
@@ -649,12 +649,12 @@ class ManagedDevice extends Entity
     * Gets the exchangeLastSuccessfulSyncDateTime
     * Last time the device contacted Exchange.
     *
-    * @return \DateTime The exchangeLastSuccessfulSyncDateTime
+    * @return \DateTime|null The exchangeLastSuccessfulSyncDateTime
     */
     public function getExchangeLastSuccessfulSyncDateTime()
     {
         if (array_key_exists("exchangeLastSuccessfulSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeLastSuccessfulSyncDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["exchangeLastSuccessfulSyncDateTime"], "\DateTime") || is_null($this->_propDict["exchangeLastSuccessfulSyncDateTime"])) {
                 return $this->_propDict["exchangeLastSuccessfulSyncDateTime"];
             } else {
                 $this->_propDict["exchangeLastSuccessfulSyncDateTime"] = new \DateTime($this->_propDict["exchangeLastSuccessfulSyncDateTime"]);
@@ -682,7 +682,7 @@ class ManagedDevice extends Entity
     * Gets the freeStorageSpaceInBytes
     * Free Storage in Bytes
     *
-    * @return int The freeStorageSpaceInBytes
+    * @return int|null The freeStorageSpaceInBytes
     */
     public function getFreeStorageSpaceInBytes()
     {
@@ -711,7 +711,7 @@ class ManagedDevice extends Entity
     * Gets the imei
     * IMEI
     *
-    * @return string The imei
+    * @return string|null The imei
     */
     public function getImei()
     {
@@ -740,7 +740,7 @@ class ManagedDevice extends Entity
     * Gets the isEncrypted
     * Device encryption status
     *
-    * @return bool The isEncrypted
+    * @return bool|null The isEncrypted
     */
     public function getIsEncrypted()
     {
@@ -769,7 +769,7 @@ class ManagedDevice extends Entity
     * Gets the isSupervised
     * Device supervised status
     *
-    * @return bool The isSupervised
+    * @return bool|null The isSupervised
     */
     public function getIsSupervised()
     {
@@ -798,7 +798,7 @@ class ManagedDevice extends Entity
     * Gets the jailBroken
     * whether the device is jail broken or rooted.
     *
-    * @return string The jailBroken
+    * @return string|null The jailBroken
     */
     public function getJailBroken()
     {
@@ -827,12 +827,12 @@ class ManagedDevice extends Entity
     * Gets the lastSyncDateTime
     * The date and time that the device last completed a successful sync with Intune.
     *
-    * @return \DateTime The lastSyncDateTime
+    * @return \DateTime|null The lastSyncDateTime
     */
     public function getLastSyncDateTime()
     {
         if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -860,7 +860,7 @@ class ManagedDevice extends Entity
     * Gets the managedDeviceName
     * Automatically generated name to identify a device. Can be overwritten to a user friendly name.
     *
-    * @return string The managedDeviceName
+    * @return string|null The managedDeviceName
     */
     public function getManagedDeviceName()
     {
@@ -889,12 +889,12 @@ class ManagedDevice extends Entity
     * Gets the managedDeviceOwnerType
     * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
     *
-    * @return ManagedDeviceOwnerType The managedDeviceOwnerType
+    * @return ManagedDeviceOwnerType|null The managedDeviceOwnerType
     */
     public function getManagedDeviceOwnerType()
     {
         if (array_key_exists("managedDeviceOwnerType", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceOwnerType"], "\Microsoft\Graph\Model\ManagedDeviceOwnerType")) {
+            if (is_a($this->_propDict["managedDeviceOwnerType"], "\Microsoft\Graph\Model\ManagedDeviceOwnerType") || is_null($this->_propDict["managedDeviceOwnerType"])) {
                 return $this->_propDict["managedDeviceOwnerType"];
             } else {
                 $this->_propDict["managedDeviceOwnerType"] = new ManagedDeviceOwnerType($this->_propDict["managedDeviceOwnerType"]);
@@ -922,12 +922,12 @@ class ManagedDevice extends Entity
     * Gets the managementAgent
     * Management channel of the device. Intune, EAS, etc. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
     *
-    * @return ManagementAgentType The managementAgent
+    * @return ManagementAgentType|null The managementAgent
     */
     public function getManagementAgent()
     {
         if (array_key_exists("managementAgent", $this->_propDict)) {
-            if (is_a($this->_propDict["managementAgent"], "\Microsoft\Graph\Model\ManagementAgentType")) {
+            if (is_a($this->_propDict["managementAgent"], "\Microsoft\Graph\Model\ManagementAgentType") || is_null($this->_propDict["managementAgent"])) {
                 return $this->_propDict["managementAgent"];
             } else {
                 $this->_propDict["managementAgent"] = new ManagementAgentType($this->_propDict["managementAgent"]);
@@ -955,7 +955,7 @@ class ManagedDevice extends Entity
     * Gets the manufacturer
     * Manufacturer of the device
     *
-    * @return string The manufacturer
+    * @return string|null The manufacturer
     */
     public function getManufacturer()
     {
@@ -984,7 +984,7 @@ class ManagedDevice extends Entity
     * Gets the meid
     * MEID
     *
-    * @return string The meid
+    * @return string|null The meid
     */
     public function getMeid()
     {
@@ -1013,7 +1013,7 @@ class ManagedDevice extends Entity
     * Gets the model
     * Model of the device
     *
-    * @return string The model
+    * @return string|null The model
     */
     public function getModel()
     {
@@ -1042,7 +1042,7 @@ class ManagedDevice extends Entity
     * Gets the operatingSystem
     * Operating system of the device. Windows, iOS, etc.
     *
-    * @return string The operatingSystem
+    * @return string|null The operatingSystem
     */
     public function getOperatingSystem()
     {
@@ -1071,7 +1071,7 @@ class ManagedDevice extends Entity
     * Gets the osVersion
     * Operating system version of the device.
     *
-    * @return string The osVersion
+    * @return string|null The osVersion
     */
     public function getOsVersion()
     {
@@ -1100,12 +1100,12 @@ class ManagedDevice extends Entity
     * Gets the partnerReportedThreatState
     * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
     *
-    * @return ManagedDevicePartnerReportedHealthState The partnerReportedThreatState
+    * @return ManagedDevicePartnerReportedHealthState|null The partnerReportedThreatState
     */
     public function getPartnerReportedThreatState()
     {
         if (array_key_exists("partnerReportedThreatState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerReportedThreatState"], "\Microsoft\Graph\Model\ManagedDevicePartnerReportedHealthState")) {
+            if (is_a($this->_propDict["partnerReportedThreatState"], "\Microsoft\Graph\Model\ManagedDevicePartnerReportedHealthState") || is_null($this->_propDict["partnerReportedThreatState"])) {
                 return $this->_propDict["partnerReportedThreatState"];
             } else {
                 $this->_propDict["partnerReportedThreatState"] = new ManagedDevicePartnerReportedHealthState($this->_propDict["partnerReportedThreatState"]);
@@ -1133,7 +1133,7 @@ class ManagedDevice extends Entity
     * Gets the phoneNumber
     * Phone number of the device
     *
-    * @return string The phoneNumber
+    * @return string|null The phoneNumber
     */
     public function getPhoneNumber()
     {
@@ -1162,7 +1162,7 @@ class ManagedDevice extends Entity
     * Gets the remoteAssistanceSessionErrorDetails
     * An error string that identifies issues when creating Remote Assistance session objects.
     *
-    * @return string The remoteAssistanceSessionErrorDetails
+    * @return string|null The remoteAssistanceSessionErrorDetails
     */
     public function getRemoteAssistanceSessionErrorDetails()
     {
@@ -1191,7 +1191,7 @@ class ManagedDevice extends Entity
     * Gets the remoteAssistanceSessionUrl
     * Url that allows a Remote Assistance session to be established with the device.
     *
-    * @return string The remoteAssistanceSessionUrl
+    * @return string|null The remoteAssistanceSessionUrl
     */
     public function getRemoteAssistanceSessionUrl()
     {
@@ -1220,7 +1220,7 @@ class ManagedDevice extends Entity
     * Gets the serialNumber
     * SerialNumber
     *
-    * @return string The serialNumber
+    * @return string|null The serialNumber
     */
     public function getSerialNumber()
     {
@@ -1249,7 +1249,7 @@ class ManagedDevice extends Entity
     * Gets the subscriberCarrier
     * Subscriber Carrier
     *
-    * @return string The subscriberCarrier
+    * @return string|null The subscriberCarrier
     */
     public function getSubscriberCarrier()
     {
@@ -1278,7 +1278,7 @@ class ManagedDevice extends Entity
     * Gets the totalStorageSpaceInBytes
     * Total Storage in Bytes
     *
-    * @return int The totalStorageSpaceInBytes
+    * @return int|null The totalStorageSpaceInBytes
     */
     public function getTotalStorageSpaceInBytes()
     {
@@ -1307,7 +1307,7 @@ class ManagedDevice extends Entity
     * Gets the userDisplayName
     * User display name
     *
-    * @return string The userDisplayName
+    * @return string|null The userDisplayName
     */
     public function getUserDisplayName()
     {
@@ -1336,7 +1336,7 @@ class ManagedDevice extends Entity
     * Gets the userId
     * Unique Identifier for the user associated with the device
     *
-    * @return string The userId
+    * @return string|null The userId
     */
     public function getUserId()
     {
@@ -1365,7 +1365,7 @@ class ManagedDevice extends Entity
     * Gets the userPrincipalName
     * Device user principal name
     *
-    * @return string The userPrincipalName
+    * @return string|null The userPrincipalName
     */
     public function getUserPrincipalName()
     {
@@ -1394,7 +1394,7 @@ class ManagedDevice extends Entity
     * Gets the wiFiMacAddress
     * Wi-Fi MAC
     *
-    * @return string The wiFiMacAddress
+    * @return string|null The wiFiMacAddress
     */
     public function getWiFiMacAddress()
     {
@@ -1424,7 +1424,7 @@ class ManagedDevice extends Entity
      * Gets the deviceCompliancePolicyStates
     * Device compliance policy states for this device.
      *
-     * @return array The deviceCompliancePolicyStates
+     * @return array|null The deviceCompliancePolicyStates
      */
     public function getDeviceCompliancePolicyStates()
     {
@@ -1445,7 +1445,7 @@ class ManagedDevice extends Entity
     */
     public function setDeviceCompliancePolicyStates($val)
     {
-		$this->_propDict["deviceCompliancePolicyStates"] = $val;
+        $this->_propDict["deviceCompliancePolicyStates"] = $val;
         return $this;
     }
     
@@ -1454,7 +1454,7 @@ class ManagedDevice extends Entity
      * Gets the deviceConfigurationStates
     * Device configuration states for this device.
      *
-     * @return array The deviceConfigurationStates
+     * @return array|null The deviceConfigurationStates
      */
     public function getDeviceConfigurationStates()
     {
@@ -1475,7 +1475,7 @@ class ManagedDevice extends Entity
     */
     public function setDeviceConfigurationStates($val)
     {
-		$this->_propDict["deviceConfigurationStates"] = $val;
+        $this->_propDict["deviceConfigurationStates"] = $val;
         return $this;
     }
     
@@ -1483,12 +1483,12 @@ class ManagedDevice extends Entity
     * Gets the deviceCategory
     * Device category
     *
-    * @return DeviceCategory The deviceCategory
+    * @return DeviceCategory|null The deviceCategory
     */
     public function getDeviceCategory()
     {
         if (array_key_exists("deviceCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCategory"], "\Microsoft\Graph\Model\DeviceCategory")) {
+            if (is_a($this->_propDict["deviceCategory"], "\Microsoft\Graph\Model\DeviceCategory") || is_null($this->_propDict["deviceCategory"])) {
                 return $this->_propDict["deviceCategory"];
             } else {
                 $this->_propDict["deviceCategory"] = new DeviceCategory($this->_propDict["deviceCategory"]);

@@ -36,7 +36,7 @@ class AccessPackageTextInputQuestion extends AccessPackageQuestion
     * Gets the isSingleLineQuestion
     * Indicates whether the answer will be in single or multiple line format.
     *
-    * @return bool The isSingleLineQuestion
+    * @return bool|null The isSingleLineQuestion
     */
     public function getIsSingleLineQuestion()
     {

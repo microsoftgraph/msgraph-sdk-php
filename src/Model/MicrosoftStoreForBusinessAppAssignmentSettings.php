@@ -36,7 +36,7 @@ class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignment
     * Gets the useDeviceContext
     * Whether or not to use device execution context for Microsoft Store for Business mobile app.
     *
-    * @return bool The useDeviceContext
+    * @return bool|null The useDeviceContext
     */
     public function getUseDeviceContext()
     {

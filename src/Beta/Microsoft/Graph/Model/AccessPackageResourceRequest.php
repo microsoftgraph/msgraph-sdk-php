@@ -28,7 +28,7 @@ class AccessPackageResourceRequest extends Entity
     * Gets the catalogId
     * The unique ID of the access package catalog.
     *
-    * @return string The catalogId
+    * @return string|null The catalogId
     */
     public function getCatalogId()
     {
@@ -56,7 +56,7 @@ class AccessPackageResourceRequest extends Entity
     /**
     * Gets the executeImmediately
     *
-    * @return bool The executeImmediately
+    * @return bool|null The executeImmediately
     */
     public function getExecuteImmediately()
     {
@@ -84,12 +84,12 @@ class AccessPackageResourceRequest extends Entity
     * Gets the expirationDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
-    * @return \DateTime The expirationDateTime
+    * @return \DateTime|null The expirationDateTime
     */
     public function getExpirationDateTime()
     {
         if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -117,7 +117,7 @@ class AccessPackageResourceRequest extends Entity
     * Gets the isValidationOnly
     * If set, does not add the resource.
     *
-    * @return bool The isValidationOnly
+    * @return bool|null The isValidationOnly
     */
     public function getIsValidationOnly()
     {
@@ -146,7 +146,7 @@ class AccessPackageResourceRequest extends Entity
     * Gets the justification
     * The requestor's justification for adding or removing the resource.
     *
-    * @return string The justification
+    * @return string|null The justification
     */
     public function getJustification()
     {
@@ -175,7 +175,7 @@ class AccessPackageResourceRequest extends Entity
     * Gets the requestState
     * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
     *
-    * @return string The requestState
+    * @return string|null The requestState
     */
     public function getRequestState()
     {
@@ -204,7 +204,7 @@ class AccessPackageResourceRequest extends Entity
     * Gets the requestStatus
     * Read-only.
     *
-    * @return string The requestStatus
+    * @return string|null The requestStatus
     */
     public function getRequestStatus()
     {
@@ -233,7 +233,7 @@ class AccessPackageResourceRequest extends Entity
     * Gets the requestType
     * Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
     *
-    * @return string The requestType
+    * @return string|null The requestType
     */
     public function getRequestType()
     {
@@ -262,12 +262,12 @@ class AccessPackageResourceRequest extends Entity
     * Gets the accessPackageResource
     * Nullable.
     *
-    * @return AccessPackageResource The accessPackageResource
+    * @return AccessPackageResource|null The accessPackageResource
     */
     public function getAccessPackageResource()
     {
         if (array_key_exists("accessPackageResource", $this->_propDict)) {
-            if (is_a($this->_propDict["accessPackageResource"], "\Beta\Microsoft\Graph\Model\AccessPackageResource")) {
+            if (is_a($this->_propDict["accessPackageResource"], "\Beta\Microsoft\Graph\Model\AccessPackageResource") || is_null($this->_propDict["accessPackageResource"])) {
                 return $this->_propDict["accessPackageResource"];
             } else {
                 $this->_propDict["accessPackageResource"] = new AccessPackageResource($this->_propDict["accessPackageResource"]);
@@ -295,12 +295,12 @@ class AccessPackageResourceRequest extends Entity
     * Gets the requestor
     * Read-only. Nullable.
     *
-    * @return AccessPackageSubject The requestor
+    * @return AccessPackageSubject|null The requestor
     */
     public function getRequestor()
     {
         if (array_key_exists("requestor", $this->_propDict)) {
-            if (is_a($this->_propDict["requestor"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject")) {
+            if (is_a($this->_propDict["requestor"], "\Beta\Microsoft\Graph\Model\AccessPackageSubject") || is_null($this->_propDict["requestor"])) {
                 return $this->_propDict["requestor"];
             } else {
                 $this->_propDict["requestor"] = new AccessPackageSubject($this->_propDict["requestor"]);

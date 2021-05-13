@@ -39,7 +39,10 @@ class External implements \JsonSerializable
     */
     function __construct($propDict = array())
     {
-		$this->_propDict = $propDict;
+        if (!is_array($propDict)) {
+           $propDict = array();
+        }
+        $this->_propDict = $propDict;
     }
 
     /**
@@ -56,7 +59,7 @@ class External implements \JsonSerializable
      /** 
      * Gets the connections
      *
-     * @return array The connections
+     * @return array|null The connections
      */
     public function getConnections()
     {
@@ -76,7 +79,7 @@ class External implements \JsonSerializable
     */
     public function setConnections($val)
     {
-		$this->_propDict["connections"] = $val;
+        $this->_propDict["connections"] = $val;
         return $this;
     }
     
@@ -105,7 +108,7 @@ class External implements \JsonSerializable
     
     /**
     * Serializes the object by property array
-	* Manually serialize DateTime into RFC3339 format
+    * Manually serialize DateTime into RFC3339 format
     *
     * @return array The list of properties
     */

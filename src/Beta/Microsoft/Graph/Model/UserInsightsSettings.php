@@ -27,7 +27,7 @@ class UserInsightsSettings extends Entity
     /**
     * Gets the isEnabled
     *
-    * @return bool The isEnabled
+    * @return bool|null The isEnabled
     */
     public function getIsEnabled()
     {

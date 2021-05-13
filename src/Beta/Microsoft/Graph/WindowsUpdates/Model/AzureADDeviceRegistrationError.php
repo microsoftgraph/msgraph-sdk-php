@@ -37,12 +37,12 @@ class AzureADDeviceRegistrationError extends UpdatableAssetError
     * Gets the reason
     * The reason why the registration encountered an error. Possible values are: invalidGlobalDeviceId, invalidAzureADDeviceId, missingTrustType, invalidAzureADJoin.
     *
-    * @return AzureADDeviceRegistrationErrorReason The reason
+    * @return AzureADDeviceRegistrationErrorReason|null The reason
     */
     public function getReason()
     {
         if (array_key_exists("reason", $this->_propDict)) {
-            if (is_a($this->_propDict["reason"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\AzureADDeviceRegistrationErrorReason")) {
+            if (is_a($this->_propDict["reason"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\AzureADDeviceRegistrationErrorReason") || is_null($this->_propDict["reason"])) {
                 return $this->_propDict["reason"];
             } else {
                 $this->_propDict["reason"] = new AzureADDeviceRegistrationErrorReason($this->_propDict["reason"]);

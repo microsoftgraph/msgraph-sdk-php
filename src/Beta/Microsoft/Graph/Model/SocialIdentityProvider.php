@@ -28,7 +28,7 @@ class SocialIdentityProvider extends IdentityProviderBase
     * Gets the clientId
     * The client identifier for the application obtained when registering the application with the identity provider. Required.
     *
-    * @return string The clientId
+    * @return string|null The clientId
     */
     public function getClientId()
     {
@@ -57,7 +57,7 @@ class SocialIdentityProvider extends IdentityProviderBase
     * Gets the clientSecret
     * The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns '****'. Required.
     *
-    * @return string The clientSecret
+    * @return string|null The clientSecret
     */
     public function getClientSecret()
     {
@@ -86,7 +86,7 @@ class SocialIdentityProvider extends IdentityProviderBase
     * Gets the identityProviderType
     * For a B2B scenario, possible values: Google, Facebook. For a B2C scenario, possible values: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat. Required.
     *
-    * @return string The identityProviderType
+    * @return string|null The identityProviderType
     */
     public function getIdentityProviderType()
     {
