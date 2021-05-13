@@ -15,6 +15,7 @@
 const CONSTANTS_FILEPATH = "./src/Core/GraphConstants.php";
 const SDK_VERSION_VAR_NAME = "SDK_VERSION"; # Name of version variable in GraphConstants.php
 const PACKAGIST_ENDPOINT = "https://packagist.org/packages/microsoft/microsoft-graph.json";
+const CONSTANTS_README_FILEPATH = "./README.md";
 
 function getLatestPackagistVersion(): string 
 {
@@ -79,18 +80,17 @@ function updateGraphConstants(string $version)
 
 function updateReadMe(string $version)
 {
-    $path = "./README.md";
-    $fileContents = file_get_contents($path);
+    $fileContents = file_get_contents(CONSTANTS_README_FILEPATH);
     if ($fileContents) {
         $pattern = '/"microsoft\/microsoft-graph":\s+".+"/';
         $replacement = "\"microsoft/microsoft-graph\": \"^{$version}\"";
-        if (!file_put_contents($path, preg_replace($pattern, $replacement, $fileContents))) {
+        if (!file_put_contents(CONSTANTS_README_FILEPATH, preg_replace($pattern, $replacement, $fileContents))) {
             throw new Exception("Unable to find and replace SDK version");
         }
-        echo "Successfully updated {$path}\n";
+        echo "Successfully updated README\n";
         return;
     }
-    throw new Exception("Could not read README.md at {$path}");
+    throw new Exception("Could not read README.md at " . CONSTANTS_README_FILEPATH);
 }
 
 $version = incrementMinorVersion(getLatestPackagistVersion());
