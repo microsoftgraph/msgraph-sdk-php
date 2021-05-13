@@ -88,7 +88,7 @@ class ThreatAssessmentResult extends Entity
     
     /**
     * Gets the resultType
-    * The threat assessment result type. Possible values are: checkPolicy, rescan.
+    * The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
     *
     * @return ThreatAssessmentResultType|null The resultType
     */
@@ -107,7 +107,7 @@ class ThreatAssessmentResult extends Entity
     
     /**
     * Sets the resultType
-    * The threat assessment result type. Possible values are: checkPolicy, rescan.
+    * The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
     *
     * @param ThreatAssessmentResultType $val The resultType
     *

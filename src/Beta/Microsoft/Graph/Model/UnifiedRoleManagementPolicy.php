@@ -26,6 +26,7 @@ class UnifiedRoleManagementPolicy extends Entity
 {
     /**
     * Gets the description
+    * Description for the policy.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Sets the description
+    * Description for the policy.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Gets the displayName
+    * Display name for the policy.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Sets the displayName
+    * Display name for the policy.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Gets the isOrganizationDefault
+    * This can only be set to true for a single tenant wide policy which will apply to all scopes and roles. Set the scopeId to '/' and scopeType to Directory.
     *
     * @return bool|null The isOrganizationDefault
     */
@@ -94,6 +99,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Sets the isOrganizationDefault
+    * This can only be set to true for a single tenant wide policy which will apply to all scopes and roles. Set the scopeId to '/' and scopeType to Directory.
     *
     * @param bool $val The isOrganizationDefault
     *
@@ -107,6 +113,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Gets the lastModifiedBy
+    * The identity who last modified the role setting.
     *
     * @return Identity|null The lastModifiedBy
     */
@@ -125,6 +132,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Sets the lastModifiedBy
+    * The identity who last modified the role setting.
     *
     * @param Identity $val The lastModifiedBy
     *
@@ -138,6 +146,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The time when the role setting was last modified.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -156,6 +165,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The time when the role setting was last modified.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -169,6 +179,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Gets the scopeId
+    * The id of the scope where the policy is created. E.g. '/', groupId, etc.
     *
     * @return string|null The scopeId
     */
@@ -183,6 +194,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Sets the scopeId
+    * The id of the scope where the policy is created. E.g. '/', groupId, etc.
     *
     * @param string $val The scopeId
     *
@@ -196,6 +208,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Gets the scopeType
+    * The type of the scope where the policy is created. One of Directory, DirectoryRole, Group.
     *
     * @return string|null The scopeType
     */
@@ -210,6 +223,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /**
     * Sets the scopeType
+    * The type of the scope where the policy is created. One of Directory, DirectoryRole, Group.
     *
     * @param string $val The scopeType
     *
@@ -224,6 +238,7 @@ class UnifiedRoleManagementPolicy extends Entity
 
      /** 
      * Gets the effectiveRules
+    * The list of effective rules like approval rule, expiration rule, etc. evaluated based on inherited referenced rules. E.g. If there is a tenant wide policy to enforce enabling approval rule, the effective rule will be to enable approval even if the polcy has a rule to disable approval.
      *
      * @return array|null The effectiveRules
      */
@@ -238,6 +253,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /** 
     * Sets the effectiveRules
+    * The list of effective rules like approval rule, expiration rule, etc. evaluated based on inherited referenced rules. E.g. If there is a tenant wide policy to enforce enabling approval rule, the effective rule will be to enable approval even if the polcy has a rule to disable approval.
     *
     * @param UnifiedRoleManagementPolicyRule $val The effectiveRules
     *
@@ -252,6 +268,7 @@ class UnifiedRoleManagementPolicy extends Entity
 
      /** 
      * Gets the rules
+    * The collection of rules like approval rule, expiration rule, etc.
      *
      * @return array|null The rules
      */
@@ -266,6 +283,7 @@ class UnifiedRoleManagementPolicy extends Entity
     
     /** 
     * Sets the rules
+    * The collection of rules like approval rule, expiration rule, etc.
     *
     * @param UnifiedRoleManagementPolicyRule $val The rules
     *

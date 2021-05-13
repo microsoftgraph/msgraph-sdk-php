@@ -26,6 +26,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
 {
     /**
     * Gets the policyId
+    * The id of the policy.
     *
     * @return string|null The policyId
     */
@@ -40,6 +41,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Sets the policyId
+    * The id of the policy.
     *
     * @param string $val The policyId
     *
@@ -53,6 +55,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Gets the roleDefinitionId
+    * The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
     *
     * @return string|null The roleDefinitionId
     */
@@ -67,6 +70,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Sets the roleDefinitionId
+    * The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
     *
     * @param string $val The roleDefinitionId
     *
@@ -80,6 +84,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Gets the scopeId
+    * The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
     *
     * @return string|null The scopeId
     */
@@ -94,6 +99,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Sets the scopeId
+    * The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
     *
     * @param string $val The scopeId
     *
@@ -107,6 +113,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Gets the scopeType
+    * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
     *
     * @return string|null The scopeType
     */
@@ -121,6 +128,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Sets the scopeType
+    * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
     *
     * @param string $val The scopeType
     *
@@ -134,6 +142,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Gets the policy
+    * The policy for the assignment.
     *
     * @return UnifiedRoleManagementPolicy|null The policy
     */
@@ -152,6 +161,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity
     
     /**
     * Sets the policy
+    * The policy for the assignment.
     *
     * @param UnifiedRoleManagementPolicy $val The policy
     *

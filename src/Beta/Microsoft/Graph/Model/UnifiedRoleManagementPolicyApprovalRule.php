@@ -26,6 +26,7 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
 {
     /**
     * Gets the setting
+    * The approval setting for the rule.
     *
     * @return ApprovalSettings|null The setting
     */
@@ -44,6 +45,7 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
     
     /**
     * Sets the setting
+    * The approval setting for the rule.
     *
     * @param ApprovalSettings $val The setting
     *
