@@ -26,6 +26,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
 {
     /**
     * Gets the assignmentType
+    * Type of the assignment. It can either be Assigned or Activated.
     *
     * @return string|null The assignmentType
     */
@@ -40,6 +41,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
     
     /**
     * Sets the assignmentType
+    * Type of the assignment. It can either be Assigned or Activated.
     *
     * @param string $val The assignmentType
     *
@@ -53,6 +55,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
     
     /**
     * Gets the memberType
+    * Membership type of the assignment. It can either be Inherited, Direct, or Group.
     *
     * @return string|null The memberType
     */
@@ -67,6 +70,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
     
     /**
     * Sets the memberType
+    * Membership type of the assignment. It can either be Inherited, Direct, or Group.
     *
     * @param string $val The memberType
     *
@@ -80,6 +84,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
     
     /**
     * Gets the scheduleInfo
+    * The schedule object of the role assignment request.
     *
     * @return RequestSchedule|null The scheduleInfo
     */
@@ -98,6 +103,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
     
     /**
     * Sets the scheduleInfo
+    * The schedule object of the role assignment request.
     *
     * @param RequestSchedule $val The scheduleInfo
     *
@@ -111,6 +117,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
     
     /**
     * Gets the activatedUsing
+    * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
     *
     * @return UnifiedRoleEligibilitySchedule|null The activatedUsing
     */
@@ -129,6 +136,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
     
     /**
     * Sets the activatedUsing
+    * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
     *
     * @param UnifiedRoleEligibilitySchedule $val The activatedUsing
     *

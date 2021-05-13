@@ -241,7 +241,7 @@ class PlannerUser extends PlannerDelta
 
      /** 
      * Gets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
+    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
      * @return array|null The tasks
      */
@@ -256,7 +256,7 @@ class PlannerUser extends PlannerDelta
     
     /** 
     * Sets the tasks
-    * Read-only. Nullable. Returns the plannerPlans shared with the user.
+    * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
     * @param PlannerTask $val The tasks
     *

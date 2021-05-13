@@ -26,6 +26,7 @@ class UnifiedRoleManagementPolicyRule extends Entity
 {
     /**
     * Gets the target
+    * The target for the policy rule.
     *
     * @return UnifiedRoleManagementPolicyRuleTarget|null The target
     */
@@ -44,6 +45,7 @@ class UnifiedRoleManagementPolicyRule extends Entity
     
     /**
     * Sets the target
+    * The target for the policy rule.
     *
     * @param UnifiedRoleManagementPolicyRuleTarget $val The target
     *
