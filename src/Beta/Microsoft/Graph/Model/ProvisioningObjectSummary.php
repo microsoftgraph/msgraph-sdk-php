@@ -26,7 +26,6 @@ class ProvisioningObjectSummary extends Entity
 {
     /**
     * Gets the action
-    * Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Azure AD activity list.
     *
     * @return string|null The action
     */
@@ -41,7 +40,6 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the action
-    * Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Azure AD activity list.
     *
     * @param string $val The action
     *
@@ -267,6 +265,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the provisioningAction
+    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
     *
     * @return ProvisioningAction|null The provisioningAction
     */
@@ -285,6 +284,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the provisioningAction
+    * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
     *
     * @param ProvisioningAction $val The provisioningAction
     *
@@ -298,6 +298,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the provisioningStatusInfo
+    * Details of provisioning status.
     *
     * @return ProvisioningStatusInfo|null The provisioningStatusInfo
     */
@@ -316,6 +317,7 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the provisioningStatusInfo
+    * Details of provisioning status.
     *
     * @param ProvisioningStatusInfo $val The provisioningStatusInfo
     *
@@ -458,7 +460,6 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Gets the statusInfo
-    * Details of provisioning status.
     *
     * @return StatusBase|null The statusInfo
     */
@@ -477,7 +478,6 @@ class ProvisioningObjectSummary extends Entity
     
     /**
     * Sets the statusInfo
-    * Details of provisioning status.
     *
     * @param StatusBase $val The statusInfo
     *

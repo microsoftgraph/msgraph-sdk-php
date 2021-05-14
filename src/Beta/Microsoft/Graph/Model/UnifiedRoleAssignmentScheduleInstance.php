@@ -26,6 +26,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
 {
     /**
     * Gets the assignmentType
+    * Type of the assignment. It can either be Assigned or Activated.
     *
     * @return string|null The assignmentType
     */
@@ -40,6 +41,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Sets the assignmentType
+    * Type of the assignment. It can either be Assigned or Activated.
     *
     * @param string $val The assignmentType
     *
@@ -53,6 +55,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Gets the endDateTime
+    * Time that the roleAssignmentInstance will expire
     *
     * @return \DateTime|null The endDateTime
     */
@@ -71,6 +74,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Sets the endDateTime
+    * Time that the roleAssignmentInstance will expire
     *
     * @param \DateTime $val The endDateTime
     *
@@ -84,6 +88,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Gets the memberType
+    * Membership type of the assignment. It can either be Inherited, Direct, or Group.
     *
     * @return string|null The memberType
     */
@@ -98,6 +103,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Sets the memberType
+    * Membership type of the assignment. It can either be Inherited, Direct, or Group.
     *
     * @param string $val The memberType
     *
@@ -111,6 +117,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Gets the roleAssignmentOriginId
+    * ID of the roleAssignment in the directory
     *
     * @return string|null The roleAssignmentOriginId
     */
@@ -125,6 +132,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Sets the roleAssignmentOriginId
+    * ID of the roleAssignment in the directory
     *
     * @param string $val The roleAssignmentOriginId
     *
@@ -138,6 +146,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Gets the roleAssignmentScheduleId
+    * ID of the parent roleAssignmentSchedule for this instance
     *
     * @return string|null The roleAssignmentScheduleId
     */
@@ -152,6 +161,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Sets the roleAssignmentScheduleId
+    * ID of the parent roleAssignmentSchedule for this instance
     *
     * @param string $val The roleAssignmentScheduleId
     *
@@ -165,6 +175,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Gets the startDateTime
+    * Time that the roleAssignmentInstance will start
     *
     * @return \DateTime|null The startDateTime
     */
@@ -183,6 +194,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Sets the startDateTime
+    * Time that the roleAssignmentInstance will start
     *
     * @param \DateTime $val The startDateTime
     *
@@ -196,6 +208,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Gets the activatedUsing
+    * If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.
     *
     * @return UnifiedRoleEligibilityScheduleInstance|null The activatedUsing
     */
@@ -214,6 +227,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     
     /**
     * Sets the activatedUsing
+    * If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.
     *
     * @param UnifiedRoleEligibilityScheduleInstance $val The activatedUsing
     *

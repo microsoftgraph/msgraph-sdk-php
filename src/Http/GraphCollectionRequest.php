@@ -70,16 +70,17 @@ class GraphCollectionRequest extends GraphRequest
     /**
     * Constructs a new GraphCollectionRequest object
     *
-    * @param string $requestType The HTTP verb for the
-    *                            request ("GET", "POST", "PUT", etc.)
-    * @param string $endpoint    The URI of the endpoint to hit
-    * @param string $accessToken A valid access token
-    * @param string $baseUrl     The base URL of the request
-    * @param string $apiVersion  The version of the API to call
-    * @param string $proxyPort   The url where to proxy through
+    * @param string $requestType  The HTTP verb for the
+    *                             request ("GET", "POST", "PUT", etc.)
+    * @param string $endpoint     The URI of the endpoint to hit
+    * @param string $accessToken  A valid access token
+    * @param string $baseUrl      The base URL of the request
+    * @param string $apiVersion   The version of the API to call
+    * @param string $proxyPort    The url where to proxy through
+    * @param bool $proxyVerifySSL Whether the proxy requests should perform SSL verification
     * @throws GraphException when no access token is provided
     */
-    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null)
+    public function __construct($requestType, $endpoint, $accessToken, $baseUrl, $apiVersion, $proxyPort = null, $proxyVerifySSL = false)
     {
         parent::__construct(
             $requestType,
@@ -87,7 +88,8 @@ class GraphCollectionRequest extends GraphRequest
             $accessToken,
             $baseUrl,
             $apiVersion,
-            $proxyPort
+            $proxyPort,
+            $proxyVerifySSL
         );
         $this->end = false;
     }

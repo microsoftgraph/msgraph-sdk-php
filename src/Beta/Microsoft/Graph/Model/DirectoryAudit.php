@@ -59,7 +59,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Gets the activityDisplayName
-    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+    * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
     *
     * @return string|null The activityDisplayName
     */
@@ -74,7 +74,7 @@ class DirectoryAudit extends Entity
     
     /**
     * Sets the activityDisplayName
-    * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+    * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
     *
     * @param string $val The activityDisplayName
     *
