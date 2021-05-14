@@ -206,4 +206,33 @@ class AuthorizationPolicy extends PolicyBase
         return $this;
     }
     
+    /**
+    * Gets the guestUserRoleId
+    * Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+    *
+    * @return string|null The guestUserRoleId
+    */
+    public function getGuestUserRoleId()
+    {
+        if (array_key_exists("guestUserRoleId", $this->_propDict)) {
+            return $this->_propDict["guestUserRoleId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the guestUserRoleId
+    * Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+    *
+    * @param string $val The guestUserRoleId
+    *
+    * @return AuthorizationPolicy
+    */
+    public function setGuestUserRoleId($val)
+    {
+        $this->_propDict["guestUserRoleId"] = $val;
+        return $this;
+    }
+    
 }

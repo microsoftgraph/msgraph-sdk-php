@@ -54,7 +54,7 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
 
     /**
     * Gets the ranges
-    * Collection of Internet protocol address ranges
+    * Collection of ip ranges
     *
     * @return IpRange|null The ranges
     */
@@ -73,7 +73,7 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
 
     /**
     * Sets the ranges
-    * Collection of Internet protocol address ranges
+    * Collection of ip ranges
     *
     * @param IpRange $val The value to assign to the ranges
     *
