@@ -53,7 +53,7 @@ class ResourceAction extends Entity
     }
     /**
     * Gets the notAllowedResourceActions
-    * Not Allowed Actions
+    * Not Allowed Actions.
     *
     * @return string|null The notAllowedResourceActions
     */
@@ -68,7 +68,7 @@ class ResourceAction extends Entity
 
     /**
     * Sets the notAllowedResourceActions
-    * Not Allowed Actions
+    * Not Allowed Actions.
     *
     * @param string $val The value of the notAllowedResourceActions
     *
