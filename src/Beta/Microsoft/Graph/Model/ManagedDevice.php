@@ -83,7 +83,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the activationLockBypassCode
-    * Code that allows the Activation Lock on a device to be bypassed.
+    * Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
     *
     * @return string|null The activationLockBypassCode
     */
@@ -98,7 +98,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the activationLockBypassCode
-    * Code that allows the Activation Lock on a device to be bypassed.
+    * Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
     *
     * @param string $val The activationLockBypassCode
     *
@@ -112,7 +112,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the androidSecurityPatchLevel
-    * Android security patch level
+    * Android security patch level. This property is read-only.
     *
     * @return string|null The androidSecurityPatchLevel
     */
@@ -127,7 +127,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the androidSecurityPatchLevel
-    * Android security patch level
+    * Android security patch level. This property is read-only.
     *
     * @param string $val The androidSecurityPatchLevel
     *
@@ -199,7 +199,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the azureADDeviceId
-    * The unique identifier for the Azure Active Directory device. Read only.
+    * The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
     *
     * @return string|null The azureADDeviceId
     */
@@ -214,7 +214,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the azureADDeviceId
-    * The unique identifier for the Azure Active Directory device. Read only.
+    * The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
     *
     * @param string $val The azureADDeviceId
     *
@@ -228,7 +228,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the azureADRegistered
-    * Whether the device is Azure Active Directory registered.
+    * Whether the device is Azure Active Directory registered. This property is read-only.
     *
     * @return bool|null The azureADRegistered
     */
@@ -243,7 +243,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the azureADRegistered
-    * Whether the device is Azure Active Directory registered.
+    * Whether the device is Azure Active Directory registered. This property is read-only.
     *
     * @param bool $val The azureADRegistered
     *
@@ -320,7 +320,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
+    * The DateTime when device compliance grace period expires. This property is read-only.
     *
     * @return \DateTime|null The complianceGracePeriodExpirationDateTime
     */
@@ -339,7 +339,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the complianceGracePeriodExpirationDateTime
-    * The DateTime when device compliance grace period expires
+    * The DateTime when device compliance grace period expires. This property is read-only.
     *
     * @param \DateTime $val The complianceGracePeriodExpirationDateTime
     *
@@ -353,7 +353,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the complianceState
-    * Compliance state of the device. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
+    * Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
     *
     * @return ComplianceState|null The complianceState
     */
@@ -372,7 +372,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the complianceState
-    * Compliance state of the device. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
+    * Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
     *
     * @param ComplianceState $val The complianceState
     *
@@ -386,7 +386,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the configurationManagerClientEnabledFeatures
-    * ConfigrMgr client enabled features
+    * ConfigrMgr client enabled features. This property is read-only.
     *
     * @return ConfigurationManagerClientEnabledFeatures|null The configurationManagerClientEnabledFeatures
     */
@@ -405,7 +405,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the configurationManagerClientEnabledFeatures
-    * ConfigrMgr client enabled features
+    * ConfigrMgr client enabled features. This property is read-only.
     *
     * @param ConfigurationManagerClientEnabledFeatures $val The configurationManagerClientEnabledFeatures
     *
@@ -486,7 +486,7 @@ class ManagedDevice extends Entity
 
      /** 
      * Gets the deviceActionResults
-    * List of ComplexType deviceActionResult objects.
+    * List of ComplexType deviceActionResult objects. This property is read-only.
      *
      * @return array|null The deviceActionResults
      */
@@ -501,7 +501,7 @@ class ManagedDevice extends Entity
     
     /** 
     * Sets the deviceActionResults
-    * List of ComplexType deviceActionResult objects.
+    * List of ComplexType deviceActionResult objects. This property is read-only.
     *
     * @param DeviceActionResult $val The deviceActionResults
     *
@@ -515,7 +515,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceCategoryDisplayName
-    * Device category display name
+    * Device category display name. This property is read-only.
     *
     * @return string|null The deviceCategoryDisplayName
     */
@@ -530,7 +530,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceCategoryDisplayName
-    * Device category display name
+    * Device category display name. This property is read-only.
     *
     * @param string $val The deviceCategoryDisplayName
     *
@@ -544,7 +544,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceEnrollmentType
-    * Enrollment type of the device. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
+    * Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
     *
     * @return DeviceEnrollmentType|null The deviceEnrollmentType
     */
@@ -563,7 +563,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceEnrollmentType
-    * Enrollment type of the device. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
+    * Enrollment type of the device. This property is read-only. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
     *
     * @param DeviceEnrollmentType $val The deviceEnrollmentType
     *
@@ -577,7 +577,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceHealthAttestationState
-    * The device health attestation state.
+    * The device health attestation state. This property is read-only.
     *
     * @return DeviceHealthAttestationState|null The deviceHealthAttestationState
     */
@@ -596,7 +596,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceHealthAttestationState
-    * The device health attestation state.
+    * The device health attestation state. This property is read-only.
     *
     * @param DeviceHealthAttestationState $val The deviceHealthAttestationState
     *
@@ -610,7 +610,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceName
-    * Name of the device
+    * Name of the device. This property is read-only.
     *
     * @return string|null The deviceName
     */
@@ -625,7 +625,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceName
-    * Name of the device
+    * Name of the device. This property is read-only.
     *
     * @param string $val The deviceName
     *
@@ -639,7 +639,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceRegistrationState
-    * Device registration state. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+    * Device registration state. This property is read-only. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
     *
     * @return DeviceRegistrationState|null The deviceRegistrationState
     */
@@ -658,7 +658,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceRegistrationState
-    * Device registration state. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+    * Device registration state. This property is read-only. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
     *
     * @param DeviceRegistrationState $val The deviceRegistrationState
     *
@@ -705,7 +705,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the easActivated
-    * Whether the device is Exchange ActiveSync activated.
+    * Whether the device is Exchange ActiveSync activated. This property is read-only.
     *
     * @return bool|null The easActivated
     */
@@ -720,7 +720,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the easActivated
-    * Whether the device is Exchange ActiveSync activated.
+    * Whether the device is Exchange ActiveSync activated. This property is read-only.
     *
     * @param bool $val The easActivated
     *
@@ -734,7 +734,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the easActivationDateTime
-    * Exchange ActivationSync activation time of the device.
+    * Exchange ActivationSync activation time of the device. This property is read-only.
     *
     * @return \DateTime|null The easActivationDateTime
     */
@@ -753,7 +753,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the easActivationDateTime
-    * Exchange ActivationSync activation time of the device.
+    * Exchange ActivationSync activation time of the device. This property is read-only.
     *
     * @param \DateTime $val The easActivationDateTime
     *
@@ -767,7 +767,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the easDeviceId
-    * Exchange ActiveSync Id of the device.
+    * Exchange ActiveSync Id of the device. This property is read-only.
     *
     * @return string|null The easDeviceId
     */
@@ -782,7 +782,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the easDeviceId
-    * Exchange ActiveSync Id of the device.
+    * Exchange ActiveSync Id of the device. This property is read-only.
     *
     * @param string $val The easDeviceId
     *
@@ -796,7 +796,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the emailAddress
-    * Email(s) for the user associated with the device
+    * Email(s) for the user associated with the device. This property is read-only.
     *
     * @return string|null The emailAddress
     */
@@ -811,7 +811,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the emailAddress
-    * Email(s) for the user associated with the device
+    * Email(s) for the user associated with the device. This property is read-only.
     *
     * @param string $val The emailAddress
     *
@@ -825,7 +825,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the enrolledDateTime
-    * Enrollment time of the device.
+    * Enrollment time of the device. This property is read-only.
     *
     * @return \DateTime|null The enrolledDateTime
     */
@@ -844,7 +844,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the enrolledDateTime
-    * Enrollment time of the device.
+    * Enrollment time of the device. This property is read-only.
     *
     * @param \DateTime $val The enrolledDateTime
     *
@@ -887,7 +887,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the exchangeAccessState
-    * The Access State of the device in Exchange. Possible values are: none, unknown, allowed, blocked, quarantined.
+    * The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined.
     *
     * @return DeviceManagementExchangeAccessState|null The exchangeAccessState
     */
@@ -906,7 +906,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the exchangeAccessState
-    * The Access State of the device in Exchange. Possible values are: none, unknown, allowed, blocked, quarantined.
+    * The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined.
     *
     * @param DeviceManagementExchangeAccessState $val The exchangeAccessState
     *
@@ -920,7 +920,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the exchangeAccessStateReason
-    * The reason for the device's access state in Exchange. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
+    * The reason for the device's access state in Exchange. This property is read-only. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
     *
     * @return DeviceManagementExchangeAccessStateReason|null The exchangeAccessStateReason
     */
@@ -939,7 +939,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the exchangeAccessStateReason
-    * The reason for the device's access state in Exchange. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
+    * The reason for the device's access state in Exchange. This property is read-only. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
     *
     * @param DeviceManagementExchangeAccessStateReason $val The exchangeAccessStateReason
     *
@@ -953,7 +953,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the exchangeLastSuccessfulSyncDateTime
-    * Last time the device contacted Exchange.
+    * Last time the device contacted Exchange. This property is read-only.
     *
     * @return \DateTime|null The exchangeLastSuccessfulSyncDateTime
     */
@@ -972,7 +972,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the exchangeLastSuccessfulSyncDateTime
-    * Last time the device contacted Exchange.
+    * Last time the device contacted Exchange. This property is read-only.
     *
     * @param \DateTime $val The exchangeLastSuccessfulSyncDateTime
     *
@@ -986,7 +986,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the freeStorageSpaceInBytes
-    * Free Storage in Bytes
+    * Free Storage in Bytes. This property is read-only.
     *
     * @return int|null The freeStorageSpaceInBytes
     */
@@ -1001,7 +1001,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the freeStorageSpaceInBytes
-    * Free Storage in Bytes
+    * Free Storage in Bytes. This property is read-only.
     *
     * @param int $val The freeStorageSpaceInBytes
     *
@@ -1077,7 +1077,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the imei
-    * IMEI
+    * IMEI. This property is read-only.
     *
     * @return string|null The imei
     */
@@ -1092,7 +1092,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the imei
-    * IMEI
+    * IMEI. This property is read-only.
     *
     * @param string $val The imei
     *
@@ -1106,7 +1106,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the isEncrypted
-    * Device encryption status
+    * Device encryption status. This property is read-only.
     *
     * @return bool|null The isEncrypted
     */
@@ -1121,7 +1121,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the isEncrypted
-    * Device encryption status
+    * Device encryption status. This property is read-only.
     *
     * @param bool $val The isEncrypted
     *
@@ -1135,7 +1135,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the isSupervised
-    * Device supervised status
+    * Device supervised status. This property is read-only.
     *
     * @return bool|null The isSupervised
     */
@@ -1150,7 +1150,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the isSupervised
-    * Device supervised status
+    * Device supervised status. This property is read-only.
     *
     * @param bool $val The isSupervised
     *
@@ -1164,7 +1164,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the jailBroken
-    * whether the device is jail broken or rooted.
+    * whether the device is jail broken or rooted. This property is read-only.
     *
     * @return string|null The jailBroken
     */
@@ -1179,7 +1179,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the jailBroken
-    * whether the device is jail broken or rooted.
+    * whether the device is jail broken or rooted. This property is read-only.
     *
     * @param string $val The jailBroken
     *
@@ -1226,7 +1226,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the lastSyncDateTime
-    * The date and time that the device last completed a successful sync with Intune.
+    * The date and time that the device last completed a successful sync with Intune. This property is read-only.
     *
     * @return \DateTime|null The lastSyncDateTime
     */
@@ -1245,7 +1245,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the lastSyncDateTime
-    * The date and time that the device last completed a successful sync with Intune.
+    * The date and time that the device last completed a successful sync with Intune. This property is read-only.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -1354,7 +1354,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the managementAgent
-    * Management channel of the device. Intune, EAS, etc. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
+    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
     *
     * @return ManagementAgentType|null The managementAgent
     */
@@ -1373,7 +1373,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the managementAgent
-    * Management channel of the device. Intune, EAS, etc. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
+    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
     *
     * @param ManagementAgentType $val The managementAgent
     *
@@ -1486,7 +1486,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the manufacturer
-    * Manufacturer of the device
+    * Manufacturer of the device. This property is read-only.
     *
     * @return string|null The manufacturer
     */
@@ -1501,7 +1501,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the manufacturer
-    * Manufacturer of the device
+    * Manufacturer of the device. This property is read-only.
     *
     * @param string $val The manufacturer
     *
@@ -1515,7 +1515,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the meid
-    * MEID
+    * MEID. This property is read-only.
     *
     * @return string|null The meid
     */
@@ -1530,7 +1530,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the meid
-    * MEID
+    * MEID. This property is read-only.
     *
     * @param string $val The meid
     *
@@ -1544,7 +1544,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the model
-    * Model of the device
+    * Model of the device. This property is read-only.
     *
     * @return string|null The model
     */
@@ -1559,7 +1559,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the model
-    * Model of the device
+    * Model of the device. This property is read-only.
     *
     * @param string $val The model
     *
@@ -1602,7 +1602,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the operatingSystem
-    * Operating system of the device. Windows, iOS, etc.
+    * Operating system of the device. Windows, iOS, etc. This property is read-only.
     *
     * @return string|null The operatingSystem
     */
@@ -1617,7 +1617,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the operatingSystem
-    * Operating system of the device. Windows, iOS, etc.
+    * Operating system of the device. Windows, iOS, etc. This property is read-only.
     *
     * @param string $val The operatingSystem
     *
@@ -1631,7 +1631,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the osVersion
-    * Operating system version of the device.
+    * Operating system version of the device. This property is read-only.
     *
     * @return string|null The osVersion
     */
@@ -1646,7 +1646,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the osVersion
-    * Operating system version of the device.
+    * Operating system version of the device. This property is read-only.
     *
     * @param string $val The osVersion
     *
@@ -1693,7 +1693,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the partnerReportedThreatState
-    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
+    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. This property is read-only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
     *
     * @return ManagedDevicePartnerReportedHealthState|null The partnerReportedThreatState
     */
@@ -1712,7 +1712,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the partnerReportedThreatState
-    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
+    * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. This property is read-only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
     *
     * @param ManagedDevicePartnerReportedHealthState $val The partnerReportedThreatState
     *
@@ -1726,7 +1726,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the phoneNumber
-    * Phone number of the device
+    * Phone number of the device. This property is read-only.
     *
     * @return string|null The phoneNumber
     */
@@ -1741,7 +1741,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the phoneNumber
-    * Phone number of the device
+    * Phone number of the device. This property is read-only.
     *
     * @param string $val The phoneNumber
     *
@@ -1850,7 +1850,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the remoteAssistanceSessionErrorDetails
-    * An error string that identifies issues when creating Remote Assistance session objects.
+    * An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
     *
     * @return string|null The remoteAssistanceSessionErrorDetails
     */
@@ -1865,7 +1865,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the remoteAssistanceSessionErrorDetails
-    * An error string that identifies issues when creating Remote Assistance session objects.
+    * An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
     *
     * @param string $val The remoteAssistanceSessionErrorDetails
     *
@@ -1879,7 +1879,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the remoteAssistanceSessionUrl
-    * Url that allows a Remote Assistance session to be established with the device.
+    * Url that allows a Remote Assistance session to be established with the device. This property is read-only.
     *
     * @return string|null The remoteAssistanceSessionUrl
     */
@@ -1894,7 +1894,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the remoteAssistanceSessionUrl
-    * Url that allows a Remote Assistance session to be established with the device.
+    * Url that allows a Remote Assistance session to be established with the device. This property is read-only.
     *
     * @param string $val The remoteAssistanceSessionUrl
     *
@@ -1999,7 +1999,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the serialNumber
-    * SerialNumber
+    * SerialNumber. This property is read-only.
     *
     * @return string|null The serialNumber
     */
@@ -2014,7 +2014,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the serialNumber
-    * SerialNumber
+    * SerialNumber. This property is read-only.
     *
     * @param string $val The serialNumber
     *
@@ -2115,7 +2115,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the subscriberCarrier
-    * Subscriber Carrier
+    * Subscriber Carrier. This property is read-only.
     *
     * @return string|null The subscriberCarrier
     */
@@ -2130,7 +2130,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the subscriberCarrier
-    * Subscriber Carrier
+    * Subscriber Carrier. This property is read-only.
     *
     * @param string $val The subscriberCarrier
     *
@@ -2144,7 +2144,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the totalStorageSpaceInBytes
-    * Total Storage in Bytes
+    * Total Storage in Bytes. This property is read-only.
     *
     * @return int|null The totalStorageSpaceInBytes
     */
@@ -2159,7 +2159,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the totalStorageSpaceInBytes
-    * Total Storage in Bytes
+    * Total Storage in Bytes. This property is read-only.
     *
     * @param int $val The totalStorageSpaceInBytes
     *
@@ -2202,7 +2202,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the userDisplayName
-    * User display name
+    * User display name. This property is read-only.
     *
     * @return string|null The userDisplayName
     */
@@ -2217,7 +2217,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the userDisplayName
-    * User display name
+    * User display name. This property is read-only.
     *
     * @param string $val The userDisplayName
     *
@@ -2231,7 +2231,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the userId
-    * Unique Identifier for the user associated with the device
+    * Unique Identifier for the user associated with the device. This property is read-only.
     *
     * @return string|null The userId
     */
@@ -2246,7 +2246,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the userId
-    * Unique Identifier for the user associated with the device
+    * Unique Identifier for the user associated with the device. This property is read-only.
     *
     * @param string $val The userId
     *
@@ -2260,7 +2260,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the userPrincipalName
-    * Device user principal name
+    * Device user principal name. This property is read-only.
     *
     * @return string|null The userPrincipalName
     */
@@ -2275,7 +2275,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the userPrincipalName
-    * Device user principal name
+    * Device user principal name. This property is read-only.
     *
     * @param string $val The userPrincipalName
     *
@@ -2319,7 +2319,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the wiFiMacAddress
-    * Wi-Fi MAC
+    * Wi-Fi MAC. This property is read-only.
     *
     * @return string|null The wiFiMacAddress
     */
@@ -2334,7 +2334,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the wiFiMacAddress
-    * Wi-Fi MAC
+    * Wi-Fi MAC. This property is read-only.
     *
     * @param string $val The wiFiMacAddress
     *

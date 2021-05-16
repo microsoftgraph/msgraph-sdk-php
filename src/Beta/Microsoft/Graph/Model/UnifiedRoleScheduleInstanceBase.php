@@ -26,6 +26,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
 {
     /**
     * Gets the appScopeId
+    * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @return string|null The appScopeId
     */
@@ -40,6 +41,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Sets the appScopeId
+    * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The appScopeId
     *
@@ -53,6 +55,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Gets the directoryScopeId
+    * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @return string|null The directoryScopeId
     */
@@ -67,6 +70,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Sets the directoryScopeId
+    * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
     *
     * @param string $val The directoryScopeId
     *
@@ -80,6 +84,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Gets the principalId
+    * Objectid of the principal to which the assignment is being granted to.
     *
     * @return string|null The principalId
     */
@@ -94,6 +99,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Sets the principalId
+    * Objectid of the principal to which the assignment is being granted to.
     *
     * @param string $val The principalId
     *
@@ -107,6 +113,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Gets the roleDefinitionId
+    * ID of the unifiedRoleDefinition the assignment is for. Read only.
     *
     * @return string|null The roleDefinitionId
     */
@@ -121,6 +128,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Sets the roleDefinitionId
+    * ID of the unifiedRoleDefinition the assignment is for. Read only.
     *
     * @param string $val The roleDefinitionId
     *
@@ -134,6 +142,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Gets the appScope
+    * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
     *
     * @return AppScope|null The appScope
     */
@@ -152,6 +161,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Sets the appScope
+    * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
     *
     * @param AppScope $val The appScope
     *
@@ -165,6 +175,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Gets the directoryScope
+    * The directory object that is the scope of the assignment. Enables the retrieval of the directory object using $expand at the same time as getting the role assignment. Read-only.
     *
     * @return DirectoryObject|null The directoryScope
     */
@@ -183,6 +194,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Sets the directoryScope
+    * The directory object that is the scope of the assignment. Enables the retrieval of the directory object using $expand at the same time as getting the role assignment. Read-only.
     *
     * @param DirectoryObject $val The directoryScope
     *
@@ -196,6 +208,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Gets the principal
+    * The principal that is getting a role assignment through the request. Enables the retrieval of the principal using $expand at the same time as getting the role assignment. Read-only.
     *
     * @return DirectoryObject|null The principal
     */
@@ -214,6 +227,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Sets the principal
+    * The principal that is getting a role assignment through the request. Enables the retrieval of the principal using $expand at the same time as getting the role assignment. Read-only.
     *
     * @param DirectoryObject $val The principal
     *
@@ -227,6 +241,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Gets the roleDefinition
+    * The roleDefinition for the assignment. Enables the retrieval of the role definition using $expand at the same time as getting the role assignment. The roleDefinition.Id is automatically expanded.
     *
     * @return UnifiedRoleDefinition|null The roleDefinition
     */
@@ -245,6 +260,7 @@ class UnifiedRoleScheduleInstanceBase extends Entity
     
     /**
     * Sets the roleDefinition
+    * The roleDefinition for the assignment. Enables the retrieval of the role definition using $expand at the same time as getting the role assignment. The roleDefinition.Id is automatically expanded.
     *
     * @param UnifiedRoleDefinition $val The roleDefinition
     *

@@ -26,7 +26,7 @@ class Initiator extends Identity
 
     /**
     * Gets the initiatorType
-    * Type of initiator. Possible values are: user, app, system, unknownFutureValue.
+    * Type of initiator. Possible values are: user, application, system, unknownFutureValue.
     *
     * @return InitiatorType|null The initiatorType
     */
@@ -45,7 +45,7 @@ class Initiator extends Identity
 
     /**
     * Sets the initiatorType
-    * Type of initiator. Possible values are: user, app, system, unknownFutureValue.
+    * Type of initiator. Possible values are: user, application, system, unknownFutureValue.
     *
     * @param InitiatorType $val The value to assign to the initiatorType
     *

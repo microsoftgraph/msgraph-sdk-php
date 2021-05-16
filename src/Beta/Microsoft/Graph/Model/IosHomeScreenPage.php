@@ -54,7 +54,7 @@ class IosHomeScreenPage extends Entity
 
     /**
     * Gets the icons
-    * A list of apps and folders to appear on a page. This collection can contain a maximum of 500 elements.
+    * A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements.
     *
     * @return IosHomeScreenItem|null The icons
     */
@@ -73,7 +73,7 @@ class IosHomeScreenPage extends Entity
 
     /**
     * Sets the icons
-    * A list of apps and folders to appear on a page. This collection can contain a maximum of 500 elements.
+    * A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements.
     *
     * @param IosHomeScreenItem $val The value to assign to the icons
     *

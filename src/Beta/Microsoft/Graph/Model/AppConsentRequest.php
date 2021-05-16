@@ -114,7 +114,7 @@ class AppConsentRequest extends Entity
 
      /** 
      * Gets the pendingScopes
-    * A list of pending scopes waiting for approval. Required.
+    * A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
      *
      * @return array|null The pendingScopes
      */
@@ -129,7 +129,7 @@ class AppConsentRequest extends Entity
     
     /** 
     * Sets the pendingScopes
-    * A list of pending scopes waiting for approval. Required.
+    * A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
     *
     * @param AppConsentRequestScope $val The pendingScopes
     *

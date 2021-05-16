@@ -26,6 +26,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
 {
     /**
     * Gets the endDateTime
+    * Time that the roleEligibilityScheduleInstance will expire
     *
     * @return \DateTime|null The endDateTime
     */
@@ -44,6 +45,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     
     /**
     * Sets the endDateTime
+    * Time that the roleEligibilityScheduleInstance will expire
     *
     * @param \DateTime $val The endDateTime
     *
@@ -57,6 +59,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     
     /**
     * Gets the memberType
+    * Membership type of the assignment. It can either be Inherited, Direct, or Group.
     *
     * @return string|null The memberType
     */
@@ -71,6 +74,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     
     /**
     * Sets the memberType
+    * Membership type of the assignment. It can either be Inherited, Direct, or Group.
     *
     * @param string $val The memberType
     *
@@ -84,6 +88,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     
     /**
     * Gets the roleEligibilityScheduleId
+    * ID of the parent roleEligibilitySchedule for this instance
     *
     * @return string|null The roleEligibilityScheduleId
     */
@@ -98,6 +103,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     
     /**
     * Sets the roleEligibilityScheduleId
+    * ID of the parent roleEligibilitySchedule for this instance
     *
     * @param string $val The roleEligibilityScheduleId
     *
@@ -111,6 +117,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     
     /**
     * Gets the startDateTime
+    * Time that the roleEligibilityScheduleInstance will start
     *
     * @return \DateTime|null The startDateTime
     */
@@ -129,6 +136,7 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     
     /**
     * Sets the startDateTime
+    * Time that the roleEligibilityScheduleInstance will start
     *
     * @param \DateTime $val The startDateTime
     *
