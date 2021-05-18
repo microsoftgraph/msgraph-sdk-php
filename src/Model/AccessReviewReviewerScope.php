@@ -53,7 +53,7 @@ class AccessReviewReviewerScope extends Entity
     }
     /**
     * Gets the queryRoot
-    * The type of query. Examples include MicrosoftGraph and ARM.
+    * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
     *
     * @return string|null The queryRoot
     */
@@ -68,7 +68,7 @@ class AccessReviewReviewerScope extends Entity
 
     /**
     * Sets the queryRoot
-    * The type of query. Examples include MicrosoftGraph and ARM.
+    * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
     *
     * @param string $val The value of the queryRoot
     *
@@ -81,7 +81,7 @@ class AccessReviewReviewerScope extends Entity
     }
     /**
     * Gets the queryType
-    * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
+    * The type of query. Examples include MicrosoftGraph and ARM.
     *
     * @return string|null The queryType
     */
@@ -96,7 +96,7 @@ class AccessReviewReviewerScope extends Entity
 
     /**
     * Sets the queryType
-    * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
+    * The type of query. Examples include MicrosoftGraph and ARM.
     *
     * @param string $val The value of the queryType
     *

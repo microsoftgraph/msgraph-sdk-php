@@ -533,7 +533,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the replyToId
-    * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+    * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
     *
     * @return string|null The replyToId
     */
@@ -548,7 +548,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the replyToId
-    * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+    * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
     *
     * @param string $val The replyToId
     *

@@ -11,20 +11,21 @@ on:
     # Add assigned to defaults as a hack to easily trigger code-gen PRs to run validation
     types: [assigned, opened, synchronize, reopened]
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   validate-pull-request:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.3.4
     - name: composer validate
-      shell: bash
       run: |
         composer validate
     - name: composer install
-      shell: bash
       run: |
         composer install
     - name: run tests
-      shell: bash
       run : |
         vendor/bin/phpunit --exclude-group functional
