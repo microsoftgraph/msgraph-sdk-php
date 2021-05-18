@@ -113,7 +113,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Gets the isValidationOnly
-    * Boolean
+    * A boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
     *
     * @return bool|null The isValidationOnly
     */
@@ -128,7 +128,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
     
     /**
     * Sets the isValidationOnly
-    * Boolean
+    * A boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
     *
     * @param bool $val The isValidationOnly
     *

@@ -118,7 +118,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the assignedLicenses
-    * The licenses that are assigned to the user. Not nullable. Supports $filter.
+    * The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter.
      *
      * @return array|null The assignedLicenses
      */
@@ -133,7 +133,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the assignedLicenses
-    * The licenses that are assigned to the user. Not nullable. Supports $filter.
+    * The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter.
     *
     * @param AssignedLicense $val The assignedLicenses
     *
@@ -322,7 +322,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Returned only on $select. Read-only. Supports $filter with the eq, lt, and ge operators.
+    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Returned only on $select. Read-only. Supports $filter with the eq, ne, le, and ge operators.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -341,7 +341,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Returned only on $select. Read-only. Supports $filter with the eq, lt, and ge operators.
+    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Returned only on $select. Read-only. Supports $filter with the eq, ne, le, and ge operators.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -2673,6 +2673,34 @@ class User extends DirectoryObject
     public function setTransitiveMemberOf($val)
     {
         $this->_propDict["transitiveMemberOf"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the transitiveReports
+     *
+     * @return array|null The transitiveReports
+     */
+    public function getTransitiveReports()
+    {
+        if (array_key_exists("transitiveReports", $this->_propDict)) {
+           return $this->_propDict["transitiveReports"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the transitiveReports
+    *
+    * @param DirectoryObject $val The transitiveReports
+    *
+    * @return User
+    */
+    public function setTransitiveReports($val)
+    {
+        $this->_propDict["transitiveReports"] = $val;
         return $this;
     }
     
