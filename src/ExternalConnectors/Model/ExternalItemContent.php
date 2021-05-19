@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* KeyValue File
+* ExternalItemContent File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\ExternalConnectors\Model;
 /**
-* KeyValue class
+* ExternalItemContent class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,39 +21,41 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class KeyValue extends Entity
+class ExternalItemContent extends \Microsoft\Graph\Model\Entity
 {
+
     /**
-    * Gets the key
-    * Key.
+    * Gets the type
     *
-    * @return string|null The key
+    * @return ExternalItemContentType|null The type
     */
-    public function getKey()
+    public function getType()
     {
-        if (array_key_exists("key", $this->_propDict)) {
-            return $this->_propDict["key"];
-        } else {
-            return null;
+        if (array_key_exists("type", $this->_propDict)) {
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContentType") || is_null($this->_propDict["type"])) {
+                return $this->_propDict["type"];
+            } else {
+                $this->_propDict["type"] = new ExternalItemContentType($this->_propDict["type"]);
+                return $this->_propDict["type"];
+            }
         }
+        return null;
     }
 
     /**
-    * Sets the key
-    * Key.
+    * Sets the type
     *
-    * @param string $val The value of the key
+    * @param ExternalItemContentType $val The value to assign to the type
     *
-    * @return KeyValue
+    * @return ExternalItemContent The ExternalItemContent
     */
-    public function setKey($val)
+    public function setType($val)
     {
-        $this->_propDict["key"] = $val;
-        return $this;
+        $this->_propDict["type"] = $val;
+         return $this;
     }
     /**
     * Gets the value
-    * Value.
     *
     * @return string|null The value
     */
@@ -68,11 +70,10 @@ class KeyValue extends Entity
 
     /**
     * Sets the value
-    * Value.
     *
     * @param string $val The value of the value
     *
-    * @return KeyValue
+    * @return ExternalItemContent
     */
     public function setValue($val)
     {
