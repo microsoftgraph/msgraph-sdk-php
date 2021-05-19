@@ -175,8 +175,7 @@ class GraphCollectionRequest extends GraphRequest
         }
 
         if ($this->nextLink) {
-            $baseLength = strlen($this->baseUrl) + strlen($this->apiVersion);
-            $this->endpoint = substr($this->nextLink, $baseLength);
+            $this->endpoint = "/" . implode("/", array_slice(explode("/", $this->nextLink), 4));
         } else {
             // This is the first request to the endpoint
             if ($this->pageSize) {
