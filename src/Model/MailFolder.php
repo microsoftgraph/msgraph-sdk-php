@@ -83,6 +83,35 @@ class MailFolder extends Entity
     }
     
     /**
+    * Gets the isHidden
+    * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
+    *
+    * @return bool|null The isHidden
+    */
+    public function getIsHidden()
+    {
+        if (array_key_exists("isHidden", $this->_propDict)) {
+            return $this->_propDict["isHidden"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isHidden
+    * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
+    *
+    * @param bool $val The isHidden
+    *
+    * @return MailFolder
+    */
+    public function setIsHidden($val)
+    {
+        $this->_propDict["isHidden"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the parentFolderId
     * The unique identifier for the mailFolder's parent mailFolder.
     *

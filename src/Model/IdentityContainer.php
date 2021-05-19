@@ -113,6 +113,34 @@ class IdentityContainer extends Entity
     
 
      /** 
+     * Gets the identityProviders
+     *
+     * @return array|null The identityProviders
+     */
+    public function getIdentityProviders()
+    {
+        if (array_key_exists("identityProviders", $this->_propDict)) {
+           return $this->_propDict["identityProviders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the identityProviders
+    *
+    * @param IdentityProviderBase $val The identityProviders
+    *
+    * @return IdentityContainer
+    */
+    public function setIdentityProviders($val)
+    {
+        $this->_propDict["identityProviders"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userFlowAttributes
      *
      * @return array|null The userFlowAttributes

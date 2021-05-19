@@ -147,4 +147,32 @@ class B2xIdentityUserFlow extends IdentityUserFlow
         return $this;
     }
     
+
+     /** 
+     * Gets the userFlowIdentityProviders
+     *
+     * @return array|null The userFlowIdentityProviders
+     */
+    public function getUserFlowIdentityProviders()
+    {
+        if (array_key_exists("userFlowIdentityProviders", $this->_propDict)) {
+           return $this->_propDict["userFlowIdentityProviders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userFlowIdentityProviders
+    *
+    * @param IdentityProviderBase $val The userFlowIdentityProviders
+    *
+    * @return B2xIdentityUserFlow
+    */
+    public function setUserFlowIdentityProviders($val)
+    {
+        $this->_propDict["userFlowIdentityProviders"] = $val;
+        return $this;
+    }
+    
 }
