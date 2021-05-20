@@ -558,4 +558,32 @@ class OrgContact extends DirectoryObject
         return $this;
     }
     
+
+     /** 
+     * Gets the transitiveReports
+     *
+     * @return array|null The transitiveReports
+     */
+    public function getTransitiveReports()
+    {
+        if (array_key_exists("transitiveReports", $this->_propDict)) {
+           return $this->_propDict["transitiveReports"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the transitiveReports
+    *
+    * @param DirectoryObject $val The transitiveReports
+    *
+    * @return OrgContact
+    */
+    public function setTransitiveReports($val)
+    {
+        $this->_propDict["transitiveReports"] = $val;
+        return $this;
+    }
+    
 }
