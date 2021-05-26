@@ -26,7 +26,7 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope
 
     /**
     * Gets the inactiveDuration
-    * Defines the length of the duration period of inactivity. Inactivity is based on the last sign in date of the user.
+    * Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
     *
     * @return Duration|null The inactiveDuration
     */
@@ -45,7 +45,7 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope
 
     /**
     * Sets the inactiveDuration
-    * Defines the length of the duration period of inactivity. Inactivity is based on the last sign in date of the user.
+    * Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
     *
     * @param Duration $val The value to assign to the inactiveDuration
     *

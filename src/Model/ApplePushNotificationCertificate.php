@@ -83,6 +83,35 @@ class ApplePushNotificationCertificate extends Entity
     }
     
     /**
+    * Gets the certificateSerialNumber
+    * Certificate serial number. This property is read-only.
+    *
+    * @return string|null The certificateSerialNumber
+    */
+    public function getCertificateSerialNumber()
+    {
+        if (array_key_exists("certificateSerialNumber", $this->_propDict)) {
+            return $this->_propDict["certificateSerialNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certificateSerialNumber
+    * Certificate serial number. This property is read-only.
+    *
+    * @param string $val The certificateSerialNumber
+    *
+    * @return ApplePushNotificationCertificate
+    */
+    public function setCertificateSerialNumber($val)
+    {
+        $this->_propDict["certificateSerialNumber"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the expirationDateTime
     * The expiration date and time for Apple push notification certificate.
     *

@@ -25,7 +25,7 @@ class AccessReviewQueryScope extends AccessReviewScope
 {
     /**
     * Gets the query
-    * The query representing what will be reviewed in an access review. Examples of this include /groups/{id}/members?$filter=…
+    * The query representing what will be reviewed in an access review.
     *
     * @return string|null The query
     */
@@ -40,7 +40,7 @@ class AccessReviewQueryScope extends AccessReviewScope
 
     /**
     * Sets the query
-    * The query representing what will be reviewed in an access review. Examples of this include /groups/{id}/members?$filter=…
+    * The query representing what will be reviewed in an access review.
     *
     * @param string $val The value of the query
     *
