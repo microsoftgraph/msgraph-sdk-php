@@ -28,7 +28,7 @@ class IdentityGovernance implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array(string => string)
+    * @var array $_propDict
     */
     protected $_propDict;
     
@@ -161,9 +161,9 @@ class IdentityGovernance implements \JsonSerializable
     /**
     * Sets the ODataType
     *
-    * @param string The ODataType
+    * @param string $val The ODataType
     *
-    * @return Entity
+    * @return IdentityGovernance
     */
     public function setODataType($val)
     {
