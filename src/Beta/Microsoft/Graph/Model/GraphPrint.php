@@ -28,12 +28,12 @@ class GraphPrint implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array(string => string)
+    * @var array $_propDict
     */
     protected $_propDict;
     
     /**
-    * Construct a new Print
+    * Construct a new GraphPrint
     *
     * @param array $propDict A list of properties to set
     */
@@ -80,7 +80,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param PrintSettings $val The settings
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setSettings($val)
     {
@@ -110,7 +110,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param PrintConnector $val The connectors
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setConnectors($val)
     {
@@ -140,7 +140,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param PrintOperation $val The operations
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setOperations($val)
     {
@@ -170,7 +170,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param Printer $val The printers
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setPrinters($val)
     {
@@ -198,7 +198,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param PrinterShare $val The printerShares
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setPrinterShares($val)
     {
@@ -229,7 +229,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param ReportRoot $val The reports
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setReports($val)
     {
@@ -259,7 +259,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param PrintService $val The services
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setServices($val)
     {
@@ -289,7 +289,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param PrinterShare $val The shares
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setShares($val)
     {
@@ -319,7 +319,7 @@ class GraphPrint implements \JsonSerializable
     *
     * @param PrintTaskDefinition $val The taskDefinitions
     *
-    * @return Print
+    * @return GraphPrint
     */
     public function setTaskDefinitions($val)
     {
@@ -340,9 +340,9 @@ class GraphPrint implements \JsonSerializable
     /**
     * Sets the ODataType
     *
-    * @param string The ODataType
+    * @param string $val The ODataType
     *
-    * @return Entity
+    * @return GraphPrint
     */
     public function setODataType($val)
     {

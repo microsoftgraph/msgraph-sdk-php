@@ -28,7 +28,7 @@ class Admin implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array(string => string)
+    * @var array $_propDict
     */
     protected $_propDict;
     
@@ -101,9 +101,9 @@ class Admin implements \JsonSerializable
     /**
     * Sets the ODataType
     *
-    * @param string The ODataType
+    * @param string $val The ODataType
     *
-    * @return Entity
+    * @return Admin
     */
     public function setODataType($val)
     {

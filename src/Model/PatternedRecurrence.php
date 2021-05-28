@@ -26,7 +26,7 @@ class PatternedRecurrence extends Entity
 
     /**
     * Gets the pattern
-    * The frequency of an event.
+    * The frequency of an event. Do not specify for a one-time access review.
     *
     * @return RecurrencePattern|null The pattern
     */
@@ -45,7 +45,7 @@ class PatternedRecurrence extends Entity
 
     /**
     * Sets the pattern
-    * The frequency of an event.
+    * The frequency of an event. Do not specify for a one-time access review.
     *
     * @param RecurrencePattern $val The value to assign to the pattern
     *
