@@ -28,7 +28,7 @@ class RoleManagement implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array $_propDict
+    * @var array(string => string)
     */
     protected $_propDict;
     
@@ -196,9 +196,9 @@ class RoleManagement implements \JsonSerializable
     /**
     * Sets the ODataType
     *
-    * @param string $val The ODataType
+    * @param string The ODataType
     *
-    * @return RoleManagement
+    * @return Entity
     */
     public function setODataType($val)
     {

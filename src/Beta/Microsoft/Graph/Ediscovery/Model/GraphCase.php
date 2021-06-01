@@ -49,7 +49,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The closedBy
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setClosedBy($val)
     {
@@ -82,7 +82,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param \DateTime $val The closedDateTime
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setClosedDateTime($val)
     {
@@ -115,7 +115,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param \DateTime $val The createdDateTime
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setCreatedDateTime($val)
     {
@@ -144,7 +144,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param string $val The description
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setDescription($val)
     {
@@ -173,7 +173,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param string $val The displayName
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setDisplayName($val)
     {
@@ -202,7 +202,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param string $val The externalId
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setExternalId($val)
     {
@@ -235,7 +235,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param \Beta\Microsoft\Graph\Model\IdentitySet $val The lastModifiedBy
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setLastModifiedBy($val)
     {
@@ -268,7 +268,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setLastModifiedDateTime($val)
     {
@@ -301,7 +301,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param CaseStatus $val The status
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setStatus($val)
     {
@@ -331,7 +331,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param Custodian $val The custodians
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setCustodians($val)
     {
@@ -361,7 +361,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param LegalHold $val The legalHolds
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setLegalHolds($val)
     {
@@ -391,7 +391,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param NoncustodialDataSource $val The noncustodialDataSources
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setNoncustodialDataSources($val)
     {
@@ -421,7 +421,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param CaseOperation $val The operations
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setOperations($val)
     {
@@ -451,7 +451,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param ReviewSet $val The reviewSets
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setReviewSets($val)
     {
@@ -482,7 +482,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param Settings $val The settings
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setSettings($val)
     {
@@ -512,7 +512,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param SourceCollection $val The sourceCollections
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setSourceCollections($val)
     {
@@ -542,7 +542,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param Tag $val The tags
     *
-    * @return GraphCase
+    * @return Case
     */
     public function setTags($val)
     {

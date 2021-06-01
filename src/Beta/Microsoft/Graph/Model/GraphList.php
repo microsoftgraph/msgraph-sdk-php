@@ -45,7 +45,7 @@ class GraphList extends BaseItem
     *
     * @param string $val The displayName
     *
-    * @return GraphList
+    * @return List
     */
     public function setDisplayName($val)
     {
@@ -78,7 +78,7 @@ class GraphList extends BaseItem
     *
     * @param ListInfo $val The list
     *
-    * @return GraphList
+    * @return List
     */
     public function setList($val)
     {
@@ -111,7 +111,7 @@ class GraphList extends BaseItem
     *
     * @param SharepointIds $val The sharepointIds
     *
-    * @return GraphList
+    * @return List
     */
     public function setSharepointIds($val)
     {
@@ -144,7 +144,7 @@ class GraphList extends BaseItem
     *
     * @param SystemFacet $val The system
     *
-    * @return GraphList
+    * @return List
     */
     public function setSystem($val)
     {
@@ -174,7 +174,7 @@ class GraphList extends BaseItem
     *
     * @param ItemActivityOLD $val The activities
     *
-    * @return GraphList
+    * @return List
     */
     public function setActivities($val)
     {
@@ -204,7 +204,7 @@ class GraphList extends BaseItem
     *
     * @param ColumnDefinition $val The columns
     *
-    * @return GraphList
+    * @return List
     */
     public function setColumns($val)
     {
@@ -234,7 +234,7 @@ class GraphList extends BaseItem
     *
     * @param ContentType $val The contentTypes
     *
-    * @return GraphList
+    * @return List
     */
     public function setContentTypes($val)
     {
@@ -267,7 +267,7 @@ class GraphList extends BaseItem
     *
     * @param Drive $val The drive
     *
-    * @return GraphList
+    * @return List
     */
     public function setDrive($val)
     {
@@ -297,7 +297,7 @@ class GraphList extends BaseItem
     *
     * @param ListItem $val The items
     *
-    * @return GraphList
+    * @return List
     */
     public function setItems($val)
     {
@@ -327,7 +327,7 @@ class GraphList extends BaseItem
     *
     * @param Subscription $val The subscriptions
     *
-    * @return GraphList
+    * @return List
     */
     public function setSubscriptions($val)
     {

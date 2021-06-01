@@ -28,7 +28,7 @@ class CommsApplication implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array $_propDict
+    * @var array(string => string)
     */
     protected $_propDict;
     
@@ -124,9 +124,9 @@ class CommsApplication implements \JsonSerializable
     /**
     * Sets the ODataType
     *
-    * @param string $val The ODataType
+    * @param string The ODataType
     *
-    * @return CommsApplication
+    * @return Entity
     */
     public function setODataType($val)
     {

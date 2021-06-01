@@ -26,6 +26,7 @@ class AuthenticationMethodsPolicy extends Entity
 {
     /**
     * Gets the description
+    * A description of the policy.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Sets the description
+    * A description of the policy.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Gets the displayName
+    * The name of the policy.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Sets the displayName
+    * The name of the policy.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time of the last update to the policy.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -98,6 +103,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time of the last update to the policy.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -111,6 +117,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Gets the policyVersion
+    * The version of the policy in use.
     *
     * @return string|null The policyVersion
     */
@@ -125,6 +132,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Sets the policyVersion
+    * The version of the policy in use.
     *
     * @param string $val The policyVersion
     *
@@ -165,6 +173,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Gets the registrationEnforcement
+    * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
     *
     * @return RegistrationEnforcement|null The registrationEnforcement
     */
@@ -183,6 +192,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /**
     * Sets the registrationEnforcement
+    * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
     *
     * @param RegistrationEnforcement $val The registrationEnforcement
     *
@@ -197,6 +207,7 @@ class AuthenticationMethodsPolicy extends Entity
 
      /** 
      * Gets the authenticationMethodConfigurations
+    * Represents the settings for each authentication method.
      *
      * @return array|null The authenticationMethodConfigurations
      */
@@ -211,6 +222,7 @@ class AuthenticationMethodsPolicy extends Entity
     
     /** 
     * Sets the authenticationMethodConfigurations
+    * Represents the settings for each authentication method.
     *
     * @param AuthenticationMethodConfiguration $val The authenticationMethodConfigurations
     *
