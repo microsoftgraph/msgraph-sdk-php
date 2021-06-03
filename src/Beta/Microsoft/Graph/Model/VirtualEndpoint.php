@@ -144,4 +144,32 @@ class VirtualEndpoint extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the userSettings
+     *
+     * @return array|null The userSettings
+     */
+    public function getUserSettings()
+    {
+        if (array_key_exists("userSettings", $this->_propDict)) {
+           return $this->_propDict["userSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userSettings
+    *
+    * @param CloudPcUserSetting $val The userSettings
+    *
+    * @return VirtualEndpoint
+    */
+    public function setUserSettings($val)
+    {
+        $this->_propDict["userSettings"] = $val;
+        return $this;
+    }
+    
 }

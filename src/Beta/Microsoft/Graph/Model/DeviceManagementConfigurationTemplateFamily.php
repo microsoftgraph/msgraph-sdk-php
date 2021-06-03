@@ -33,7 +33,7 @@ class DeviceManagementConfigurationTemplateFamily extends Enum
     const ENDPOINT_SECURITY_ANTIVIRUS = "endpointSecurityAntivirus";
     const ENDPOINT_SECURITY_DISK_ENCRYPTION = "endpointSecurityDiskEncryption";
     const ENDPOINT_SECURITY_FIREWALL = "endpointSecurityFirewall";
-    const ENDPOINT_SECURITY_ENDPOINT_DECTION_AND_RESPONSE = "endpointSecurityEndpointDectionAndResponse";
+    const ENDPOINT_SECURITY_ENDPOINT_DETECTION_AND_RESPONSE = "endpointSecurityEndpointDetectionAndResponse";
     const ENDPOINT_SECURITY_ATTACK_SURFACE_REDUCTION = "endpointSecurityAttackSurfaceReduction";
     const ENDPOINT_SECURITY_ACCOUNT_PROTECTION = "endpointSecurityAccountProtection";
     const ENDPOINT_SECURITY_APPLICATION_CONTROL = "endpointSecurityApplicationControl";

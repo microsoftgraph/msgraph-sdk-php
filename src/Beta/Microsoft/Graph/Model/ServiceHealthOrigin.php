@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WindowsAutopilotDeviceDeletionState File
+* ServiceHealthOrigin File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* WindowsAutopilotDeviceDeletionState class
+* ServiceHealthOrigin class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WindowsAutopilotDeviceDeletionState extends Enum
+class ServiceHealthOrigin extends Enum
 {
     /**
-    * The Enum WindowsAutopilotDeviceDeletionState
+    * The Enum ServiceHealthOrigin
     */
-    const UNKNOWN = "unknown";
-    const FAILED = "failed";
-    const ACCEPTED = "accepted";
-    const ERROR = "error";
+    const MICROSOFT = "microsoft";
+    const THIRD_PARTY = "thirdParty";
+    const CUSTOMER = "customer";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

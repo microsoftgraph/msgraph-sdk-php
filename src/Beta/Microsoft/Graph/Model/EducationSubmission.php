@@ -58,68 +58,6 @@ class EducationSubmission extends Entity
     }
     
     /**
-    * Gets the releasedBy
-    *
-    * @return IdentitySet|null The releasedBy
-    */
-    public function getReleasedBy()
-    {
-        if (array_key_exists("releasedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["releasedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["releasedBy"])) {
-                return $this->_propDict["releasedBy"];
-            } else {
-                $this->_propDict["releasedBy"] = new IdentitySet($this->_propDict["releasedBy"]);
-                return $this->_propDict["releasedBy"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the releasedBy
-    *
-    * @param IdentitySet $val The releasedBy
-    *
-    * @return EducationSubmission
-    */
-    public function setReleasedBy($val)
-    {
-        $this->_propDict["releasedBy"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the releasedDateTime
-    *
-    * @return \DateTime|null The releasedDateTime
-    */
-    public function getReleasedDateTime()
-    {
-        if (array_key_exists("releasedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["releasedDateTime"], "\DateTime") || is_null($this->_propDict["releasedDateTime"])) {
-                return $this->_propDict["releasedDateTime"];
-            } else {
-                $this->_propDict["releasedDateTime"] = new \DateTime($this->_propDict["releasedDateTime"]);
-                return $this->_propDict["releasedDateTime"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the releasedDateTime
-    *
-    * @param \DateTime $val The releasedDateTime
-    *
-    * @return EducationSubmission
-    */
-    public function setReleasedDateTime($val)
-    {
-        $this->_propDict["releasedDateTime"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the resourcesFolderUrl
     * Folder where all file resources for this submission need to be stored.
     *
