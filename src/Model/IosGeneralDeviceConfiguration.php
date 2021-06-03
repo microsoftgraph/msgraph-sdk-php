@@ -3856,7 +3856,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiConnectOnlyToConfiguredNetworks
-    * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode.
+    * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
     *
     * @return bool|null The wiFiConnectOnlyToConfiguredNetworks
     */
@@ -3871,7 +3871,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiConnectOnlyToConfiguredNetworks
-    * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode.
+    * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
     *
     * @param bool $val The wiFiConnectOnlyToConfiguredNetworks
     *
