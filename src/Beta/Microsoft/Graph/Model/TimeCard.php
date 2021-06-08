@@ -27,6 +27,7 @@ class TimeCard extends ChangeTrackedEntity
 
      /** 
      * Gets the breaks
+    * The list of breaks associated with the timeCard.
      *
      * @return array|null The breaks
      */
@@ -41,6 +42,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /** 
     * Sets the breaks
+    * The list of breaks associated with the timeCard.
     *
     * @param TimeCardBreak $val The breaks
     *
@@ -54,6 +56,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Gets the clockInEvent
+    * The clock-in event of the timeCard.
     *
     * @return TimeCardEvent|null The clockInEvent
     */
@@ -72,6 +75,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Sets the clockInEvent
+    * The clock-in event of the timeCard.
     *
     * @param TimeCardEvent $val The clockInEvent
     *
@@ -85,6 +89,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Gets the clockOutEvent
+    * The clock-out event of the timeCard.
     *
     * @return TimeCardEvent|null The clockOutEvent
     */
@@ -103,6 +108,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Sets the clockOutEvent
+    * The clock-out event of the timeCard.
     *
     * @param TimeCardEvent $val The clockOutEvent
     *
@@ -116,6 +122,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Gets the confirmedBy
+    * Indicate if this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
     *
     * @return ConfirmedBy|null The confirmedBy
     */
@@ -134,6 +141,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Sets the confirmedBy
+    * Indicate if this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
     *
     * @param ConfirmedBy $val The confirmedBy
     *
@@ -147,6 +155,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Gets the notes
+    * Notes about the timeCard.
     *
     * @return ItemBody|null The notes
     */
@@ -165,6 +174,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Sets the notes
+    * Notes about the timeCard.
     *
     * @param ItemBody $val The notes
     *
@@ -178,6 +188,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Gets the originalEntry
+    * The original timeCardEntry of the timeCard, before user edits.
     *
     * @return TimeCardEntry|null The originalEntry
     */
@@ -196,6 +207,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Sets the originalEntry
+    * The original timeCardEntry of the timeCard, before user edits.
     *
     * @param TimeCardEntry $val The originalEntry
     *
@@ -209,6 +221,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Gets the state
+    * The current state of the timeCard during its life cycle.Possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
     *
     * @return TimeCardState|null The state
     */
@@ -227,6 +240,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Sets the state
+    * The current state of the timeCard during its life cycle.Possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
     *
     * @param TimeCardState $val The state
     *
@@ -240,6 +254,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Gets the userId
+    * User ID to which  the timeCard belongs.
     *
     * @return string|null The userId
     */
@@ -254,6 +269,7 @@ class TimeCard extends ChangeTrackedEntity
     
     /**
     * Sets the userId
+    * User ID to which  the timeCard belongs.
     *
     * @param string $val The userId
     *

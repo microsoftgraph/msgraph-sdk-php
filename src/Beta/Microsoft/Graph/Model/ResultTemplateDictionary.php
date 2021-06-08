@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TeamsAsyncOperationType File
+* ResultTemplateDictionary File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* TeamsAsyncOperationType class
+* ResultTemplateDictionary class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,18 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TeamsAsyncOperationType extends Enum
+class ResultTemplateDictionary extends Dictionary
 {
-    /**
-    * The Enum TeamsAsyncOperationType
-    */
-    const INVALID = "invalid";
-    const CLONE_TEAM = "cloneTeam";
-    const ARCHIVE_TEAM = "archiveTeam";
-    const UNARCHIVE_TEAM = "unarchiveTeam";
-    const CREATE_TEAM = "createTeam";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const TEAMIFY_GROUP = "teamifyGroup";
-    const CREATE_CHANNEL = "createChannel";
-    const CREATE_CHAT = "createChat";
 }

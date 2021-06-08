@@ -56,6 +56,37 @@ class SearchResultSet extends Entity
         $this->_propDict["hitsContainers"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the resultTemplates
+    *
+    * @return ResultTemplateDictionary|null The resultTemplates
+    */
+    public function getResultTemplates()
+    {
+        if (array_key_exists("resultTemplates", $this->_propDict)) {
+            if (is_a($this->_propDict["resultTemplates"], "\Beta\Microsoft\Graph\Model\ResultTemplateDictionary") || is_null($this->_propDict["resultTemplates"])) {
+                return $this->_propDict["resultTemplates"];
+            } else {
+                $this->_propDict["resultTemplates"] = new ResultTemplateDictionary($this->_propDict["resultTemplates"]);
+                return $this->_propDict["resultTemplates"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the resultTemplates
+    *
+    * @param ResultTemplateDictionary $val The value to assign to the resultTemplates
+    *
+    * @return SearchResultSet The SearchResultSet
+    */
+    public function setResultTemplates($val)
+    {
+        $this->_propDict["resultTemplates"] = $val;
+         return $this;
+    }
     /**
     * Gets the searchTerms
     * Contains the search terms sent in the initial search query.

@@ -244,6 +244,34 @@ class Chat extends Entity
     
 
      /** 
+     * Gets the operations
+     *
+     * @return array|null The operations
+     */
+    public function getOperations()
+    {
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the operations
+    *
+    * @param TeamsAsyncOperation $val The operations
+    *
+    * @return Chat
+    */
+    public function setOperations($val)
+    {
+        $this->_propDict["operations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the permissionGrants
     * A collection of permissions granted to apps for the chat.
      *

@@ -58,6 +58,39 @@ class EducationAssignment extends Entity
     }
     
     /**
+    * Gets the addToCalendarAction
+    * Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. Possible values are: studentsAndPublisher, studentsAndTeamOwners, none. Default value is none.
+    *
+    * @return EducationAddToCalendarOptions|null The addToCalendarAction
+    */
+    public function getAddToCalendarAction()
+    {
+        if (array_key_exists("addToCalendarAction", $this->_propDict)) {
+            if (is_a($this->_propDict["addToCalendarAction"], "\Beta\Microsoft\Graph\Model\EducationAddToCalendarOptions") || is_null($this->_propDict["addToCalendarAction"])) {
+                return $this->_propDict["addToCalendarAction"];
+            } else {
+                $this->_propDict["addToCalendarAction"] = new EducationAddToCalendarOptions($this->_propDict["addToCalendarAction"]);
+                return $this->_propDict["addToCalendarAction"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the addToCalendarAction
+    * Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. Possible values are: studentsAndPublisher, studentsAndTeamOwners, none. Default value is none.
+    *
+    * @param EducationAddToCalendarOptions $val The addToCalendarAction
+    *
+    * @return EducationAssignment
+    */
+    public function setAddToCalendarAction($val)
+    {
+        $this->_propDict["addToCalendarAction"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the allowLateSubmissions
     * Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
     *

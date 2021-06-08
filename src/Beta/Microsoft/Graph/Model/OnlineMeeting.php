@@ -467,7 +467,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the isBroadcast
-    * Indicates whether this is a live event.
+    * Indicates if this is a live event.
     *
     * @return bool|null The isBroadcast
     */
@@ -482,7 +482,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the isBroadcast
-    * Indicates whether this is a live event.
+    * Indicates if this is a live event.
     *
     * @param bool $val The isBroadcast
     *
@@ -523,7 +523,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the isEntryExitAnnounced
-    * Indicates whether to announce when callers join or leave.
+    * Whether or not to announce when callers join or leave.
     *
     * @return bool|null The isEntryExitAnnounced
     */
@@ -538,7 +538,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the isEntryExitAnnounced
-    * Indicates whether to announce when callers join or leave.
+    * Whether or not to announce when callers join or leave.
     *
     * @param bool $val The isEntryExitAnnounced
     *
