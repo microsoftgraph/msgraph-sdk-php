@@ -650,7 +650,7 @@ class ChatMessage extends Entity
 
      /** 
      * Gets the hostedContents
-    * Content in a message hosted by Microsoft Teams e.g., images, code snippets etc.
+    * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
      *
      * @return array|null The hostedContents
      */
@@ -665,7 +665,7 @@ class ChatMessage extends Entity
     
     /** 
     * Sets the hostedContents
-    * Content in a message hosted by Microsoft Teams e.g., images, code snippets etc.
+    * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
     *
     * @param ChatMessageHostedContent $val The hostedContents
     *
