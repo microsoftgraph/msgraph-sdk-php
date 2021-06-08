@@ -142,7 +142,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Gets the platformType
-    * Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+    * Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
     *
     * @return PolicyPlatformType|null The platformType
     */
@@ -161,7 +161,7 @@ class RestrictedAppsViolation extends Entity
     
     /**
     * Sets the platformType
-    * Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+    * Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
     *
     * @param PolicyPlatformType $val The platformType
     *

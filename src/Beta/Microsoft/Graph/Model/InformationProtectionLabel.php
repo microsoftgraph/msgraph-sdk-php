@@ -142,6 +142,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Gets the parent
+    * The parent label associated with a child label. Null if label has no parent.
     *
     * @return ParentLabelDetails|null The parent
     */
@@ -160,6 +161,7 @@ class InformationProtectionLabel extends Entity
     
     /**
     * Sets the parent
+    * The parent label associated with a child label. Null if label has no parent.
     *
     * @param ParentLabelDetails $val The parent
     *

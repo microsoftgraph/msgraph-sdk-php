@@ -33,4 +33,5 @@ class DeviceManagementConfigurationTechnologies extends Enum
     const MDM = "mdm";
     const WINDOWS10_X_MANAGEMENT = "windows10XManagement";
     const CONFIG_MANAGER = "configManager";
+    const MICROSOFT_SENSE = "microsoftSense";
 }

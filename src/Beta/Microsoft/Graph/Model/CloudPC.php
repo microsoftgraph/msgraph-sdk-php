@@ -54,6 +54,37 @@ class CloudPC extends Entity
     }
     
     /**
+    * Gets the gracePeriodEndDateTime
+    *
+    * @return \DateTime|null The gracePeriodEndDateTime
+    */
+    public function getGracePeriodEndDateTime()
+    {
+        if (array_key_exists("gracePeriodEndDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["gracePeriodEndDateTime"], "\DateTime") || is_null($this->_propDict["gracePeriodEndDateTime"])) {
+                return $this->_propDict["gracePeriodEndDateTime"];
+            } else {
+                $this->_propDict["gracePeriodEndDateTime"] = new \DateTime($this->_propDict["gracePeriodEndDateTime"]);
+                return $this->_propDict["gracePeriodEndDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the gracePeriodEndDateTime
+    *
+    * @param \DateTime $val The gracePeriodEndDateTime
+    *
+    * @return CloudPC
+    */
+    public function setGracePeriodEndDateTime($val)
+    {
+        $this->_propDict["gracePeriodEndDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the imageDisplayName
     * Name of the OS image that's on the cloud PC.
     *
@@ -174,6 +205,33 @@ class CloudPC extends Entity
     }
     
     /**
+    * Gets the onPremisesConnectionName
+    *
+    * @return string|null The onPremisesConnectionName
+    */
+    public function getOnPremisesConnectionName()
+    {
+        if (array_key_exists("onPremisesConnectionName", $this->_propDict)) {
+            return $this->_propDict["onPremisesConnectionName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesConnectionName
+    *
+    * @param string $val The onPremisesConnectionName
+    *
+    * @return CloudPC
+    */
+    public function setOnPremisesConnectionName($val)
+    {
+        $this->_propDict["onPremisesConnectionName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the provisioningPolicyId
     * The cloud PC's provisioning policy ID.
     *
@@ -199,6 +257,33 @@ class CloudPC extends Entity
     public function setProvisioningPolicyId($val)
     {
         $this->_propDict["provisioningPolicyId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the provisioningPolicyName
+    *
+    * @return string|null The provisioningPolicyName
+    */
+    public function getProvisioningPolicyName()
+    {
+        if (array_key_exists("provisioningPolicyName", $this->_propDict)) {
+            return $this->_propDict["provisioningPolicyName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the provisioningPolicyName
+    *
+    * @param string $val The provisioningPolicyName
+    *
+    * @return CloudPC
+    */
+    public function setProvisioningPolicyName($val)
+    {
+        $this->_propDict["provisioningPolicyName"] = $val;
         return $this;
     }
     

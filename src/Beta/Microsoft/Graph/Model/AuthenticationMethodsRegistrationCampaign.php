@@ -26,6 +26,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Gets the excludeTargets
+    * Users and groups of users that are excluded from being prompted to set up the authentication method.
     *
     * @return ExcludeTarget|null The excludeTargets
     */
@@ -44,6 +45,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Sets the excludeTargets
+    * Users and groups of users that are excluded from being prompted to set up the authentication method.
     *
     * @param ExcludeTarget $val The value to assign to the excludeTargets
     *
@@ -57,6 +59,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Gets the includeTargets
+    * Users and groups of users that are prompted to set up the authentication method.
     *
     * @return AuthenticationMethodsRegistrationCampaignIncludeTarget|null The includeTargets
     */
@@ -75,6 +78,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Sets the includeTargets
+    * Users and groups of users that are prompted to set up the authentication method.
     *
     * @param AuthenticationMethodsRegistrationCampaignIncludeTarget $val The value to assign to the includeTargets
     *
@@ -87,6 +91,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
     }
     /**
     * Gets the snoozeDurationInDays
+    * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
     *
     * @return int|null The snoozeDurationInDays
     */
@@ -101,6 +106,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Sets the snoozeDurationInDays
+    * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
     *
     * @param int $val The value of the snoozeDurationInDays
     *
@@ -114,6 +120,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Gets the state
+    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
     *
     * @return AdvancedConfigState|null The state
     */
@@ -132,6 +139,7 @@ class AuthenticationMethodsRegistrationCampaign extends Entity
 
     /**
     * Sets the state
+    * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
     *
     * @param AdvancedConfigState $val The value to assign to the state
     *

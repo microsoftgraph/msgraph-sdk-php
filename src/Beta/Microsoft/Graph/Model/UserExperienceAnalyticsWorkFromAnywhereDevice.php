@@ -286,6 +286,64 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     }
     
     /**
+    * Gets the osDescription
+    * The user experience work from anywhere device's OS Description.
+    *
+    * @return string|null The osDescription
+    */
+    public function getOsDescription()
+    {
+        if (array_key_exists("osDescription", $this->_propDict)) {
+            return $this->_propDict["osDescription"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osDescription
+    * The user experience work from anywhere device's OS Description.
+    *
+    * @param string $val The osDescription
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setOsDescription($val)
+    {
+        $this->_propDict["osDescription"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the osVersion
+    * The user experience work from anywhere device's OS Version.
+    *
+    * @return string|null The osVersion
+    */
+    public function getOsVersion()
+    {
+        if (array_key_exists("osVersion", $this->_propDict)) {
+            return $this->_propDict["osVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osVersion
+    * The user experience work from anywhere device's OS Version.
+    *
+    * @param string $val The osVersion
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setOsVersion($val)
+    {
+        $this->_propDict["osVersion"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ownership
     * The user experience work from anywhere device's ownership.
     *

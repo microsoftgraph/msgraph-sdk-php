@@ -1430,6 +1430,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the configurationPolicyTemplates
+    * List of all templates
+     *
+     * @return array|null The configurationPolicyTemplates
+     */
+    public function getConfigurationPolicyTemplates()
+    {
+        if (array_key_exists("configurationPolicyTemplates", $this->_propDict)) {
+           return $this->_propDict["configurationPolicyTemplates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the configurationPolicyTemplates
+    * List of all templates
+    *
+    * @param DeviceManagementConfigurationPolicyTemplate $val The configurationPolicyTemplates
+    *
+    * @return DeviceManagement
+    */
+    public function setConfigurationPolicyTemplates($val)
+    {
+        $this->_propDict["configurationPolicyTemplates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the configurationSettings
     * List of all ConfigurationSettings
      *
@@ -1515,6 +1545,36 @@ class DeviceManagement extends Entity
     public function setReusableSettings($val)
     {
         $this->_propDict["reusableSettings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the templateSettings
+    * List of all TemplateSettings
+     *
+     * @return array|null The templateSettings
+     */
+    public function getTemplateSettings()
+    {
+        if (array_key_exists("templateSettings", $this->_propDict)) {
+           return $this->_propDict["templateSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the templateSettings
+    * List of all TemplateSettings
+    *
+    * @param DeviceManagementConfigurationSettingTemplate $val The templateSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setTemplateSettings($val)
+    {
+        $this->_propDict["templateSettings"] = $val;
         return $this;
     }
     
@@ -1944,6 +2004,36 @@ class DeviceManagement extends Entity
     public function setApplePushNotificationCertificate($val)
     {
         $this->_propDict["applePushNotificationCertificate"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the cloudPCConnectivityIssues
+    * The list of CloudPC Connectivity Issue.
+     *
+     * @return array|null The cloudPCConnectivityIssues
+     */
+    public function getCloudPCConnectivityIssues()
+    {
+        if (array_key_exists("cloudPCConnectivityIssues", $this->_propDict)) {
+           return $this->_propDict["cloudPCConnectivityIssues"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the cloudPCConnectivityIssues
+    * The list of CloudPC Connectivity Issue.
+    *
+    * @param CloudPCConnectivityIssue $val The cloudPCConnectivityIssues
+    *
+    * @return DeviceManagement
+    */
+    public function setCloudPCConnectivityIssues($val)
+    {
+        $this->_propDict["cloudPCConnectivityIssues"] = $val;
         return $this;
     }
     

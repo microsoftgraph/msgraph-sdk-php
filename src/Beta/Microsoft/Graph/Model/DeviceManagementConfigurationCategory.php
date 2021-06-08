@@ -295,7 +295,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Gets the technologies
-    * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager.
+    * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
     *
     * @return DeviceManagementConfigurationTechnologies|null The technologies
     */
@@ -314,7 +314,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Sets the technologies
-    * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager.
+    * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
     *
     * @param DeviceManagementConfigurationTechnologies $val The technologies
     *
