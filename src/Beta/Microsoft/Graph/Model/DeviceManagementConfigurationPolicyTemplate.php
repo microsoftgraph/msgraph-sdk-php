@@ -171,7 +171,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Gets the lifecycleState
-    * Indicate current lifecycle state of template
+    * Indicate current lifecycle state of template. Possible values are: invalid, draft, active, superseded, deprecated, retired.
     *
     * @return DeviceManagementTemplateLifecycleState|null The lifecycleState
     */
@@ -190,7 +190,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Sets the lifecycleState
-    * Indicate current lifecycle state of template
+    * Indicate current lifecycle state of template. Possible values are: invalid, draft, active, superseded, deprecated, retired.
     *
     * @param DeviceManagementTemplateLifecycleState $val The lifecycleState
     *
@@ -204,7 +204,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Gets the platforms
-    * Platforms for this template
+    * Platforms for this template. Possible values are: none, macOS, windows10X, windows10.
     *
     * @return DeviceManagementConfigurationPlatforms|null The platforms
     */
@@ -223,7 +223,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Sets the platforms
-    * Platforms for this template
+    * Platforms for this template. Possible values are: none, macOS, windows10X, windows10.
     *
     * @param DeviceManagementConfigurationPlatforms $val The platforms
     *
@@ -266,7 +266,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Gets the technologies
-    * Technologies for this template
+    * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
     *
     * @return DeviceManagementConfigurationTechnologies|null The technologies
     */
@@ -285,7 +285,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Sets the technologies
-    * Technologies for this template
+    * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
     *
     * @param DeviceManagementConfigurationTechnologies $val The technologies
     *
@@ -299,7 +299,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Gets the templateFamily
-    * TemplateFamily for this template
+    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl.
     *
     * @return DeviceManagementConfigurationTemplateFamily|null The templateFamily
     */
@@ -318,7 +318,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Sets the templateFamily
-    * TemplateFamily for this template
+    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl.
     *
     * @param DeviceManagementConfigurationTemplateFamily $val The templateFamily
     *

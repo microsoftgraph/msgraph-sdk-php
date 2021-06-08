@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 /**
 * Admin class
@@ -56,10 +56,40 @@ class Admin implements \JsonSerializable
     }
     
     /**
-    * Gets the windows
-    * Entity that acts as a container for functionality. Read-only.
+    * Gets the serviceAnnouncement
     *
-    * @return Windows|null The windows
+    * @return ServiceAnnouncement|null The serviceAnnouncement
+    */
+    public function getServiceAnnouncement()
+    {
+        if (array_key_exists("serviceAnnouncement", $this->_propDict)) {
+            if (is_a($this->_propDict["serviceAnnouncement"], "\Beta\Microsoft\Graph\Model\ServiceAnnouncement") || is_null($this->_propDict["serviceAnnouncement"])) {
+                return $this->_propDict["serviceAnnouncement"];
+            } else {
+                $this->_propDict["serviceAnnouncement"] = new ServiceAnnouncement($this->_propDict["serviceAnnouncement"]);
+                return $this->_propDict["serviceAnnouncement"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the serviceAnnouncement
+    *
+    * @param ServiceAnnouncement $val The serviceAnnouncement
+    *
+    * @return Admin
+    */
+    public function setServiceAnnouncement($val)
+    {
+        $this->_propDict["serviceAnnouncement"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windows
+    *
+    * @return \Beta\Microsoft\Graph\WindowsUpdates\Model\Windows|null The windows
     */
     public function getWindows()
     {
@@ -67,7 +97,7 @@ class Admin implements \JsonSerializable
             if (is_a($this->_propDict["windows"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\Windows") || is_null($this->_propDict["windows"])) {
                 return $this->_propDict["windows"];
             } else {
-                $this->_propDict["windows"] = new Windows($this->_propDict["windows"]);
+                $this->_propDict["windows"] = new \Beta\Microsoft\Graph\WindowsUpdates\Model\Windows($this->_propDict["windows"]);
                 return $this->_propDict["windows"];
             }
         }
@@ -76,9 +106,8 @@ class Admin implements \JsonSerializable
     
     /**
     * Sets the windows
-    * Entity that acts as a container for functionality. Read-only.
     *
-    * @param Windows $val The windows
+    * @param \Beta\Microsoft\Graph\WindowsUpdates\Model\Windows $val The windows
     *
     * @return Admin
     */

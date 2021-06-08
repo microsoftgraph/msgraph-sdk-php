@@ -34,6 +34,7 @@ class OfficeConfigurationGroupAssignmentTarget extends OfficeConfigurationAssign
 
     /**
     * Gets the groupId
+    * The Id of the AAD group we are targeting the device configuration to.
     *
     * @return string|null The groupId
     */
@@ -48,6 +49,7 @@ class OfficeConfigurationGroupAssignmentTarget extends OfficeConfigurationAssign
 
     /**
     * Sets the groupId
+    * The Id of the AAD group we are targeting the device configuration to.
     *
     * @param string $val The value of the groupId
     *
