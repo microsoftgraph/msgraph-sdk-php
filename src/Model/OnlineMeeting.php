@@ -220,7 +220,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the isEntryExitAnnounced
-    * Indicates whether to announce when callers join or leave.
+    * Whether or not to announce when callers join or leave.
     *
     * @return bool|null The isEntryExitAnnounced
     */
@@ -235,7 +235,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the isEntryExitAnnounced
-    * Indicates whether to announce when callers join or leave.
+    * Whether or not to announce when callers join or leave.
     *
     * @param bool $val The isEntryExitAnnounced
     *
