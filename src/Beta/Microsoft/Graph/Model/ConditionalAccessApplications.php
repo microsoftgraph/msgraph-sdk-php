@@ -80,6 +80,34 @@ class ConditionalAccessApplications extends Entity
         return $this;
     }
     /**
+    * Gets the includeAuthenticationContextClassReferences
+    * Authentication context class references include. Supported values are c1 through c25.
+    *
+    * @return string|null The includeAuthenticationContextClassReferences
+    */
+    public function getIncludeAuthenticationContextClassReferences()
+    {
+        if (array_key_exists("includeAuthenticationContextClassReferences", $this->_propDict)) {
+            return $this->_propDict["includeAuthenticationContextClassReferences"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeAuthenticationContextClassReferences
+    * Authentication context class references include. Supported values are c1 through c25.
+    *
+    * @param string $val The value of the includeAuthenticationContextClassReferences
+    *
+    * @return ConditionalAccessApplications
+    */
+    public function setIncludeAuthenticationContextClassReferences($val)
+    {
+        $this->_propDict["includeAuthenticationContextClassReferences"] = $val;
+        return $this;
+    }
+    /**
     * Gets the includeUserActions
     * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
     *

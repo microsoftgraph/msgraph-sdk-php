@@ -26,6 +26,34 @@ class VirtualEndpoint extends Entity
 {
 
      /** 
+     * Gets the auditEvents
+     *
+     * @return array|null The auditEvents
+     */
+    public function getAuditEvents()
+    {
+        if (array_key_exists("auditEvents", $this->_propDict)) {
+           return $this->_propDict["auditEvents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the auditEvents
+    *
+    * @param CloudPcAuditEvent $val The auditEvents
+    *
+    * @return VirtualEndpoint
+    */
+    public function setAuditEvents($val)
+    {
+        $this->_propDict["auditEvents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the cloudPCs
     * Cloud managed virtual desktops.
      *

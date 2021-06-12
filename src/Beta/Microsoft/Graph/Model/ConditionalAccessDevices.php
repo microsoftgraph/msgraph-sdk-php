@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ConditionalAccessDevices extends Entity
 {
+
+    /**
+    * Gets the deviceFilter
+    *
+    * @return ConditionalAccessFilter|null The deviceFilter
+    */
+    public function getDeviceFilter()
+    {
+        if (array_key_exists("deviceFilter", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceFilter"], "\Beta\Microsoft\Graph\Model\ConditionalAccessFilter") || is_null($this->_propDict["deviceFilter"])) {
+                return $this->_propDict["deviceFilter"];
+            } else {
+                $this->_propDict["deviceFilter"] = new ConditionalAccessFilter($this->_propDict["deviceFilter"]);
+                return $this->_propDict["deviceFilter"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceFilter
+    *
+    * @param ConditionalAccessFilter $val The value to assign to the deviceFilter
+    *
+    * @return ConditionalAccessDevices The ConditionalAccessDevices
+    */
+    public function setDeviceFilter($val)
+    {
+        $this->_propDict["deviceFilter"] = $val;
+         return $this;
+    }
     /**
     * Gets the excludeDevices
     * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.

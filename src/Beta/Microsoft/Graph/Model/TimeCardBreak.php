@@ -25,6 +25,7 @@ class TimeCardBreak extends Entity
 {
     /**
     * Gets the breakId
+    * ID of the timeCardBreak.
     *
     * @return string|null The breakId
     */
@@ -39,6 +40,7 @@ class TimeCardBreak extends Entity
 
     /**
     * Sets the breakId
+    * ID of the timeCardBreak.
     *
     * @param string $val The value of the breakId
     *
@@ -52,6 +54,7 @@ class TimeCardBreak extends Entity
 
     /**
     * Gets the end
+    * The start event of the timeCardBreak.
     *
     * @return TimeCardEvent|null The end
     */
@@ -70,6 +73,7 @@ class TimeCardBreak extends Entity
 
     /**
     * Sets the end
+    * The start event of the timeCardBreak.
     *
     * @param TimeCardEvent $val The value to assign to the end
     *
@@ -83,6 +87,7 @@ class TimeCardBreak extends Entity
 
     /**
     * Gets the notes
+    * Notes about the timeCardBreak.
     *
     * @return ItemBody|null The notes
     */
@@ -101,6 +106,7 @@ class TimeCardBreak extends Entity
 
     /**
     * Sets the notes
+    * Notes about the timeCardBreak.
     *
     * @param ItemBody $val The value to assign to the notes
     *
@@ -114,6 +120,7 @@ class TimeCardBreak extends Entity
 
     /**
     * Gets the start
+    * The start event of the timeCardBreak.
     *
     * @return TimeCardEvent|null The start
     */
@@ -132,6 +139,7 @@ class TimeCardBreak extends Entity
 
     /**
     * Sets the start
+    * The start event of the timeCardBreak.
     *
     * @param TimeCardEvent $val The value to assign to the start
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TeamsAsyncOperationType File
+* CloudPcAuditCategory File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TeamsAsyncOperationType class
+* CloudPcAuditCategory class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,18 +24,11 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TeamsAsyncOperationType extends Enum
+class CloudPcAuditCategory extends Enum
 {
     /**
-    * The Enum TeamsAsyncOperationType
+    * The Enum CloudPcAuditCategory
     */
-    const INVALID = "invalid";
-    const CLONE_TEAM = "cloneTeam";
-    const ARCHIVE_TEAM = "archiveTeam";
-    const UNARCHIVE_TEAM = "unarchiveTeam";
-    const CREATE_TEAM = "createTeam";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const TEAMIFY_GROUP = "teamifyGroup";
-    const CREATE_CHANNEL = "createChannel";
-    const CREATE_CHAT = "createChat";
+    const CLOUD_PC = "cloudPC";
+    const OTHER = "other";
 }
