@@ -964,6 +964,34 @@ class EducationUser extends Entity
     
 
      /** 
+     * Gets the rubrics
+     *
+     * @return array|null The rubrics
+     */
+    public function getRubrics()
+    {
+        if (array_key_exists("rubrics", $this->_propDict)) {
+           return $this->_propDict["rubrics"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the rubrics
+    *
+    * @param EducationRubric $val The rubrics
+    *
+    * @return EducationUser
+    */
+    public function setRubrics($val)
+    {
+        $this->_propDict["rubrics"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the classes
     * Classes to which the user belongs. Nullable.
      *
