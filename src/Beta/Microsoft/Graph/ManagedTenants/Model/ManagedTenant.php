@@ -278,6 +278,118 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
 
      /** 
+     * Gets the managementActions
+     *
+     * @return array|null The managementActions
+     */
+    public function getManagementActions()
+    {
+        if (array_key_exists("managementActions", $this->_propDict)) {
+           return $this->_propDict["managementActions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementActions
+    *
+    * @param ManagementAction $val The managementActions
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementActions($val)
+    {
+        $this->_propDict["managementActions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managementActionTenantDeploymentStatuses
+     *
+     * @return array|null The managementActionTenantDeploymentStatuses
+     */
+    public function getManagementActionTenantDeploymentStatuses()
+    {
+        if (array_key_exists("managementActionTenantDeploymentStatuses", $this->_propDict)) {
+           return $this->_propDict["managementActionTenantDeploymentStatuses"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementActionTenantDeploymentStatuses
+    *
+    * @param ManagementActionTenantDeploymentStatus $val The managementActionTenantDeploymentStatuses
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementActionTenantDeploymentStatuses($val)
+    {
+        $this->_propDict["managementActionTenantDeploymentStatuses"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managementIntents
+     *
+     * @return array|null The managementIntents
+     */
+    public function getManagementIntents()
+    {
+        if (array_key_exists("managementIntents", $this->_propDict)) {
+           return $this->_propDict["managementIntents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementIntents
+    *
+    * @param ManagementIntent $val The managementIntents
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementIntents($val)
+    {
+        $this->_propDict["managementIntents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managementTemplates
+     *
+     * @return array|null The managementTemplates
+     */
+    public function getManagementTemplates()
+    {
+        if (array_key_exists("managementTemplates", $this->_propDict)) {
+           return $this->_propDict["managementTemplates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementTemplates
+    *
+    * @param ManagementTemplate $val The managementTemplates
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementTemplates($val)
+    {
+        $this->_propDict["managementTemplates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the riskyUsers
      *
      * @return array|null The riskyUsers
@@ -301,6 +413,146 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     public function setRiskyUsers($val)
     {
         $this->_propDict["riskyUsers"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tenantGroups
+     *
+     * @return array|null The tenantGroups
+     */
+    public function getTenantGroups()
+    {
+        if (array_key_exists("tenantGroups", $this->_propDict)) {
+           return $this->_propDict["tenantGroups"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tenantGroups
+    *
+    * @param TenantGroup $val The tenantGroups
+    *
+    * @return ManagedTenant
+    */
+    public function setTenantGroups($val)
+    {
+        $this->_propDict["tenantGroups"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tenants
+     *
+     * @return array|null The tenants
+     */
+    public function getTenants()
+    {
+        if (array_key_exists("tenants", $this->_propDict)) {
+           return $this->_propDict["tenants"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tenants
+    *
+    * @param Tenant $val The tenants
+    *
+    * @return ManagedTenant
+    */
+    public function setTenants($val)
+    {
+        $this->_propDict["tenants"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tenantsCustomizedInformation
+     *
+     * @return array|null The tenantsCustomizedInformation
+     */
+    public function getTenantsCustomizedInformation()
+    {
+        if (array_key_exists("tenantsCustomizedInformation", $this->_propDict)) {
+           return $this->_propDict["tenantsCustomizedInformation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tenantsCustomizedInformation
+    *
+    * @param TenantCustomizedInformation $val The tenantsCustomizedInformation
+    *
+    * @return ManagedTenant
+    */
+    public function setTenantsCustomizedInformation($val)
+    {
+        $this->_propDict["tenantsCustomizedInformation"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tenantsDetailedInformation
+     *
+     * @return array|null The tenantsDetailedInformation
+     */
+    public function getTenantsDetailedInformation()
+    {
+        if (array_key_exists("tenantsDetailedInformation", $this->_propDict)) {
+           return $this->_propDict["tenantsDetailedInformation"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tenantsDetailedInformation
+    *
+    * @param TenantDetailedInformation $val The tenantsDetailedInformation
+    *
+    * @return ManagedTenant
+    */
+    public function setTenantsDetailedInformation($val)
+    {
+        $this->_propDict["tenantsDetailedInformation"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the tenantTags
+     *
+     * @return array|null The tenantTags
+     */
+    public function getTenantTags()
+    {
+        if (array_key_exists("tenantTags", $this->_propDict)) {
+           return $this->_propDict["tenantTags"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the tenantTags
+    *
+    * @param TenantTag $val The tenantTags
+    *
+    * @return ManagedTenant
+    */
+    public function setTenantTags($val)
+    {
+        $this->_propDict["tenantTags"] = $val;
         return $this;
     }
     
