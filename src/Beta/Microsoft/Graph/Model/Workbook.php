@@ -117,7 +117,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the names
-    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
+    * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      *
      * @return array|null The names
      */
@@ -132,7 +132,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the names
-    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
+    * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
     *
     * @param WorkbookNamedItem $val The names
     *

@@ -88,7 +88,7 @@ class Team extends Entity
     
     /**
     * Gets the description
-    * An optional description for the team.
+    * An optional description for the team. Maximum length: 1024 characters.
     *
     * @return string|null The description
     */
@@ -103,7 +103,7 @@ class Team extends Entity
     
     /**
     * Sets the description
-    * An optional description for the team.
+    * An optional description for the team. Maximum length: 1024 characters.
     *
     * @param string $val The description
     *
@@ -669,6 +669,34 @@ class Team extends Entity
     public function setOwners($val)
     {
         $this->_propDict["owners"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the permissionGrants
+     *
+     * @return array|null The permissionGrants
+     */
+    public function getPermissionGrants()
+    {
+        if (array_key_exists("permissionGrants", $this->_propDict)) {
+           return $this->_propDict["permissionGrants"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the permissionGrants
+    *
+    * @param ResourceSpecificPermissionGrant $val The permissionGrants
+    *
+    * @return Team
+    */
+    public function setPermissionGrants($val)
+    {
+        $this->_propDict["permissionGrants"] = $val;
         return $this;
     }
     

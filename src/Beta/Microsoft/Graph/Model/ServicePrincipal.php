@@ -379,6 +379,35 @@ class ServicePrincipal extends DirectoryObject
     }
     
     /**
+    * Gets the disabledByMicrosoftStatus
+    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).
+    *
+    * @return string|null The disabledByMicrosoftStatus
+    */
+    public function getDisabledByMicrosoftStatus()
+    {
+        if (array_key_exists("disabledByMicrosoftStatus", $this->_propDict)) {
+            return $this->_propDict["disabledByMicrosoftStatus"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the disabledByMicrosoftStatus
+    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).
+    *
+    * @param string $val The disabledByMicrosoftStatus
+    *
+    * @return ServicePrincipal
+    */
+    public function setDisabledByMicrosoftStatus($val)
+    {
+        $this->_propDict["disabledByMicrosoftStatus"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The display name for the service principal.
     *

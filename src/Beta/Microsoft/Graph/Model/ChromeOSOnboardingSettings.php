@@ -92,7 +92,7 @@ class ChromeOSOnboardingSettings extends Entity
     
     /**
     * Gets the onboardingStatus
-    * The ChromebookTenant's OnboardingStatus
+    * The ChromebookTenant's OnboardingStatus. Possible values are: unknown, inprogress, onboarded, failed.
     *
     * @return OnboardingStatus|null The onboardingStatus
     */
@@ -111,7 +111,7 @@ class ChromeOSOnboardingSettings extends Entity
     
     /**
     * Sets the onboardingStatus
-    * The ChromebookTenant's OnboardingStatus
+    * The ChromebookTenant's OnboardingStatus. Possible values are: unknown, inprogress, onboarded, failed.
     *
     * @param OnboardingStatus $val The onboardingStatus
     *

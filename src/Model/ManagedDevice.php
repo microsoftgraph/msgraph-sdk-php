@@ -580,6 +580,35 @@ class ManagedDevice extends Entity
     }
     
     /**
+    * Gets the ethernetMacAddress
+    * Ethernet MAC. This property is read-only.
+    *
+    * @return string|null The ethernetMacAddress
+    */
+    public function getEthernetMacAddress()
+    {
+        if (array_key_exists("ethernetMacAddress", $this->_propDict)) {
+            return $this->_propDict["ethernetMacAddress"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ethernetMacAddress
+    * Ethernet MAC. This property is read-only.
+    *
+    * @param string $val The ethernetMacAddress
+    *
+    * @return ManagedDevice
+    */
+    public function setEthernetMacAddress($val)
+    {
+        $this->_propDict["ethernetMacAddress"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the exchangeAccessState
     * The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined.
     *
@@ -704,6 +733,35 @@ class ManagedDevice extends Entity
     public function setFreeStorageSpaceInBytes($val)
     {
         $this->_propDict["freeStorageSpaceInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the iccid
+    * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+    *
+    * @return string|null The iccid
+    */
+    public function getIccid()
+    {
+        if (array_key_exists("iccid", $this->_propDict)) {
+            return $this->_propDict["iccid"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the iccid
+    * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+    *
+    * @param string $val The iccid
+    *
+    * @return ManagedDevice
+    */
+    public function setIccid($val)
+    {
+        $this->_propDict["iccid"] = $val;
         return $this;
     }
     
@@ -920,7 +978,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the managementAgent
-    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
+    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
     *
     * @return ManagementAgentType|null The managementAgent
     */
@@ -939,7 +997,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the managementAgent
-    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
+    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
     *
     * @param ManagementAgentType $val The managementAgent
     *
@@ -1035,6 +1093,35 @@ class ManagedDevice extends Entity
     public function setModel($val)
     {
         $this->_propDict["model"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the notes
+    * Notes on the device created by IT Admin
+    *
+    * @return string|null The notes
+    */
+    public function getNotes()
+    {
+        if (array_key_exists("notes", $this->_propDict)) {
+            return $this->_propDict["notes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notes
+    * Notes on the device created by IT Admin
+    *
+    * @param string $val The notes
+    *
+    * @return ManagedDevice
+    */
+    public function setNotes($val)
+    {
+        $this->_propDict["notes"] = $val;
         return $this;
     }
     
@@ -1155,6 +1242,35 @@ class ManagedDevice extends Entity
     public function setPhoneNumber($val)
     {
         $this->_propDict["phoneNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the physicalMemoryInBytes
+    * Total Memory in Bytes. This property is read-only.
+    *
+    * @return int|null The physicalMemoryInBytes
+    */
+    public function getPhysicalMemoryInBytes()
+    {
+        if (array_key_exists("physicalMemoryInBytes", $this->_propDict)) {
+            return $this->_propDict["physicalMemoryInBytes"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the physicalMemoryInBytes
+    * Total Memory in Bytes. This property is read-only.
+    *
+    * @param int $val The physicalMemoryInBytes
+    *
+    * @return ManagedDevice
+    */
+    public function setPhysicalMemoryInBytes($val)
+    {
+        $this->_propDict["physicalMemoryInBytes"] = intval($val);
         return $this;
     }
     
@@ -1300,6 +1416,35 @@ class ManagedDevice extends Entity
     public function setTotalStorageSpaceInBytes($val)
     {
         $this->_propDict["totalStorageSpaceInBytes"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the udid
+    * Unique Device Identifier for iOS and macOS devices. This property is read-only.
+    *
+    * @return string|null The udid
+    */
+    public function getUdid()
+    {
+        if (array_key_exists("udid", $this->_propDict)) {
+            return $this->_propDict["udid"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the udid
+    * Unique Device Identifier for iOS and macOS devices. This property is read-only.
+    *
+    * @param string $val The udid
+    *
+    * @return ManagedDevice
+    */
+    public function setUdid($val)
+    {
+        $this->_propDict["udid"] = $val;
         return $this;
     }
     

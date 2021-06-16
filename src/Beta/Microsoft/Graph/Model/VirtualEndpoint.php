@@ -26,6 +26,34 @@ class VirtualEndpoint extends Entity
 {
 
      /** 
+     * Gets the auditEvents
+     *
+     * @return array|null The auditEvents
+     */
+    public function getAuditEvents()
+    {
+        if (array_key_exists("auditEvents", $this->_propDict)) {
+           return $this->_propDict["auditEvents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the auditEvents
+    *
+    * @param CloudPcAuditEvent $val The auditEvents
+    *
+    * @return VirtualEndpoint
+    */
+    public function setAuditEvents($val)
+    {
+        $this->_propDict["auditEvents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the cloudPCs
     * Cloud managed virtual desktops.
      *
@@ -141,6 +169,34 @@ class VirtualEndpoint extends Entity
     public function setProvisioningPolicies($val)
     {
         $this->_propDict["provisioningPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userSettings
+     *
+     * @return array|null The userSettings
+     */
+    public function getUserSettings()
+    {
+        if (array_key_exists("userSettings", $this->_propDict)) {
+           return $this->_propDict["userSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userSettings
+    *
+    * @param CloudPcUserSetting $val The userSettings
+    *
+    * @return VirtualEndpoint
+    */
+    public function setUserSettings($val)
+    {
+        $this->_propDict["userSettings"] = $val;
         return $this;
     }
     

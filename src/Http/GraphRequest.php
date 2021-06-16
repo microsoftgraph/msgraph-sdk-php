@@ -179,7 +179,7 @@ class GraphRequest
     *
     * @param string $http_errors A bool option to the Graph call
     *
-    * @return GraphRequest object
+    * @return $this object
     */
     public function setHttpErrors($http_errors)
     {
@@ -192,7 +192,7 @@ class GraphRequest
     *
     * @param string $accessToken A valid access token to validate the Graph call
     *
-    * @return GraphRequest object
+    * @return $this object
     */
     public function setAccessToken($accessToken)
     {
@@ -206,7 +206,7 @@ class GraphRequest
     *
     * @param mixed $returnClass The object class to use
     *
-    * @return GraphRequest object
+    * @return $this object
     */
     public function setReturnType($returnClass)
     {
@@ -224,7 +224,7 @@ class GraphRequest
     *
     * @param array $headers An array of custom headers
     *
-    * @return GraphRequest object
+    * @return $this object
     */
     public function addHeaders($headers)
     {
@@ -248,7 +248,7 @@ class GraphRequest
     *
     * @param mixed $obj The object to include in the request
     *
-    * @return GraphRequest object
+    * @return $this object
     */
     public function attachBody($obj)
     {
@@ -278,7 +278,7 @@ class GraphRequest
     *
     * @param string $timeout The timeout in seconds
     *
-    * @return GraphRequest object
+    * @return $this object
     */
     public function setTimeout($timeout)
     {

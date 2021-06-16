@@ -317,7 +317,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Gets the roleDefinition
-    * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. Read-only. Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
+    * Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
     *
     * @return UnifiedRoleDefinition|null The roleDefinition
     */
@@ -336,7 +336,7 @@ class UnifiedRoleAssignmentMultiple extends Entity
     
     /**
     * Sets the roleDefinition
-    * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. Read-only. Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
+    * Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
     *
     * @param UnifiedRoleDefinition $val The roleDefinition
     *

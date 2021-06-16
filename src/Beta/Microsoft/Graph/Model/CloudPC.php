@@ -54,6 +54,39 @@ class CloudPC extends Entity
     }
     
     /**
+    * Gets the gracePeriodEndDateTime
+    * The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    *
+    * @return \DateTime|null The gracePeriodEndDateTime
+    */
+    public function getGracePeriodEndDateTime()
+    {
+        if (array_key_exists("gracePeriodEndDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["gracePeriodEndDateTime"], "\DateTime") || is_null($this->_propDict["gracePeriodEndDateTime"])) {
+                return $this->_propDict["gracePeriodEndDateTime"];
+            } else {
+                $this->_propDict["gracePeriodEndDateTime"] = new \DateTime($this->_propDict["gracePeriodEndDateTime"]);
+                return $this->_propDict["gracePeriodEndDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the gracePeriodEndDateTime
+    * The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+    *
+    * @param \DateTime $val The gracePeriodEndDateTime
+    *
+    * @return CloudPC
+    */
+    public function setGracePeriodEndDateTime($val)
+    {
+        $this->_propDict["gracePeriodEndDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the imageDisplayName
     * Name of the OS image that's on the cloud PC.
     *
@@ -174,6 +207,35 @@ class CloudPC extends Entity
     }
     
     /**
+    * Gets the onPremisesConnectionName
+    * The on-premises connection that is applied during provisioning of cloud PCs.
+    *
+    * @return string|null The onPremisesConnectionName
+    */
+    public function getOnPremisesConnectionName()
+    {
+        if (array_key_exists("onPremisesConnectionName", $this->_propDict)) {
+            return $this->_propDict["onPremisesConnectionName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onPremisesConnectionName
+    * The on-premises connection that is applied during provisioning of cloud PCs.
+    *
+    * @param string $val The onPremisesConnectionName
+    *
+    * @return CloudPC
+    */
+    public function setOnPremisesConnectionName($val)
+    {
+        $this->_propDict["onPremisesConnectionName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the provisioningPolicyId
     * The cloud PC's provisioning policy ID.
     *
@@ -199,6 +261,35 @@ class CloudPC extends Entity
     public function setProvisioningPolicyId($val)
     {
         $this->_propDict["provisioningPolicyId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the provisioningPolicyName
+    * The provisioning policy that is applied during provisioning of cloud PCs.
+    *
+    * @return string|null The provisioningPolicyName
+    */
+    public function getProvisioningPolicyName()
+    {
+        if (array_key_exists("provisioningPolicyName", $this->_propDict)) {
+            return $this->_propDict["provisioningPolicyName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the provisioningPolicyName
+    * The provisioning policy that is applied during provisioning of cloud PCs.
+    *
+    * @param string $val The provisioningPolicyName
+    *
+    * @return CloudPC
+    */
+    public function setProvisioningPolicyName($val)
+    {
+        $this->_propDict["provisioningPolicyName"] = $val;
         return $this;
     }
     

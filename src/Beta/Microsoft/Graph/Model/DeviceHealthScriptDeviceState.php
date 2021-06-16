@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceHealthScriptDeviceState extends Entity
 {
     /**
+    * Gets the assignmentFilterIds
+    * A list of the assignment filter ids used for health script applicability evaluation
+    *
+    * @return string|null The assignmentFilterIds
+    */
+    public function getAssignmentFilterIds()
+    {
+        if (array_key_exists("assignmentFilterIds", $this->_propDict)) {
+            return $this->_propDict["assignmentFilterIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the assignmentFilterIds
+    * A list of the assignment filter ids used for health script applicability evaluation
+    *
+    * @param string $val The assignmentFilterIds
+    *
+    * @return DeviceHealthScriptDeviceState
+    */
+    public function setAssignmentFilterIds($val)
+    {
+        $this->_propDict["assignmentFilterIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the detectionState
     * Detection state from the lastest device health script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
     *

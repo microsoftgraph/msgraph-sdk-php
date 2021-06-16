@@ -245,6 +245,37 @@ class ChatMessage extends Entity
     }
     
     /**
+    * Gets the eventDetail
+    *
+    * @return EventMessageDetail|null The eventDetail
+    */
+    public function getEventDetail()
+    {
+        if (array_key_exists("eventDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["eventDetail"], "\Beta\Microsoft\Graph\Model\EventMessageDetail") || is_null($this->_propDict["eventDetail"])) {
+                return $this->_propDict["eventDetail"];
+            } else {
+                $this->_propDict["eventDetail"] = new EventMessageDetail($this->_propDict["eventDetail"]);
+                return $this->_propDict["eventDetail"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the eventDetail
+    *
+    * @param EventMessageDetail $val The eventDetail
+    *
+    * @return ChatMessage
+    */
+    public function setEventDetail($val)
+    {
+        $this->_propDict["eventDetail"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the from
     * Read only. Details of the sender of the chat message.
     *
@@ -650,7 +681,7 @@ class ChatMessage extends Entity
 
      /** 
      * Gets the hostedContents
-    * Content in a message hosted by Microsoft Teams e.g., images, code snippets etc.
+    * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
      *
      * @return array|null The hostedContents
      */
@@ -665,7 +696,7 @@ class ChatMessage extends Entity
     
     /** 
     * Sets the hostedContents
-    * Content in a message hosted by Microsoft Teams e.g., images, code snippets etc.
+    * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
     *
     * @param ChatMessageHostedContent $val The hostedContents
     *

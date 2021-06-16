@@ -25,6 +25,7 @@ class ParentLabelDetails extends Entity
 {
     /**
     * Gets the color
+    * The color that the user interface should display for the label, if configured.
     *
     * @return string|null The color
     */
@@ -39,6 +40,7 @@ class ParentLabelDetails extends Entity
 
     /**
     * Sets the color
+    * The color that the user interface should display for the label, if configured.
     *
     * @param string $val The value of the color
     *
@@ -51,6 +53,7 @@ class ParentLabelDetails extends Entity
     }
     /**
     * Gets the description
+    * The admin-defined description for the label.
     *
     * @return string|null The description
     */
@@ -65,6 +68,7 @@ class ParentLabelDetails extends Entity
 
     /**
     * Sets the description
+    * The admin-defined description for the label.
     *
     * @param string $val The value of the description
     *
@@ -77,6 +81,7 @@ class ParentLabelDetails extends Entity
     }
     /**
     * Gets the id
+    * The label ID is a globally unique identifier (GUID).
     *
     * @return string|null The id
     */
@@ -91,6 +96,7 @@ class ParentLabelDetails extends Entity
 
     /**
     * Sets the id
+    * The label ID is a globally unique identifier (GUID).
     *
     * @param string $val The value of the id
     *
@@ -103,6 +109,7 @@ class ParentLabelDetails extends Entity
     }
     /**
     * Gets the isActive
+    * Indicates whether the label is active or not. Active labels should be hidden or disabled in user interfaces.
     *
     * @return bool|null The isActive
     */
@@ -117,6 +124,7 @@ class ParentLabelDetails extends Entity
 
     /**
     * Sets the isActive
+    * Indicates whether the label is active or not. Active labels should be hidden or disabled in user interfaces.
     *
     * @param bool $val The value of the isActive
     *
@@ -129,6 +137,7 @@ class ParentLabelDetails extends Entity
     }
     /**
     * Gets the name
+    * The plaintext name of the label.
     *
     * @return string|null The name
     */
@@ -143,6 +152,7 @@ class ParentLabelDetails extends Entity
 
     /**
     * Sets the name
+    * The plaintext name of the label.
     *
     * @param string $val The value of the name
     *
@@ -186,6 +196,7 @@ class ParentLabelDetails extends Entity
     }
     /**
     * Gets the sensitivity
+    * The sensitivity value of the label, where lower is less sensitive.
     *
     * @return int|null The sensitivity
     */
@@ -200,6 +211,7 @@ class ParentLabelDetails extends Entity
 
     /**
     * Sets the sensitivity
+    * The sensitivity value of the label, where lower is less sensitive.
     *
     * @param int $val The value of the sensitivity
     *
@@ -212,6 +224,7 @@ class ParentLabelDetails extends Entity
     }
     /**
     * Gets the tooltip
+    * The tooltip that should be displayed for the label in a user interface.
     *
     * @return string|null The tooltip
     */
@@ -226,6 +239,7 @@ class ParentLabelDetails extends Entity
 
     /**
     * Sets the tooltip
+    * The tooltip that should be displayed for the label in a user interface.
     *
     * @param string $val The value of the tooltip
     *

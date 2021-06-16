@@ -88,7 +88,7 @@ class Team extends Entity
     
     /**
     * Gets the description
-    * An optional description for the team.
+    * An optional description for the team. Maximum length: 1024 characters.
     *
     * @return string|null The description
     */
@@ -103,7 +103,7 @@ class Team extends Entity
     
     /**
     * Sets the description
-    * An optional description for the team.
+    * An optional description for the team. Maximum length: 1024 characters.
     *
     * @param string $val The description
     *
