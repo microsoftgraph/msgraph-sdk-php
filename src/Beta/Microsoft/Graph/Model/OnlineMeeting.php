@@ -56,6 +56,64 @@ class OnlineMeeting extends Entity
     }
     
     /**
+    * Gets the allowAttendeeToEnableCamera
+    * Indicates whether attendees can turn on their camera.
+    *
+    * @return bool|null The allowAttendeeToEnableCamera
+    */
+    public function getAllowAttendeeToEnableCamera()
+    {
+        if (array_key_exists("allowAttendeeToEnableCamera", $this->_propDict)) {
+            return $this->_propDict["allowAttendeeToEnableCamera"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowAttendeeToEnableCamera
+    * Indicates whether attendees can turn on their camera.
+    *
+    * @param bool $val The allowAttendeeToEnableCamera
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowAttendeeToEnableCamera($val)
+    {
+        $this->_propDict["allowAttendeeToEnableCamera"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the allowAttendeeToEnableMic
+    * Indicates whether attendees can turn on their microphone.
+    *
+    * @return bool|null The allowAttendeeToEnableMic
+    */
+    public function getAllowAttendeeToEnableMic()
+    {
+        if (array_key_exists("allowAttendeeToEnableMic", $this->_propDict)) {
+            return $this->_propDict["allowAttendeeToEnableMic"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowAttendeeToEnableMic
+    * Indicates whether attendees can turn on their microphone.
+    *
+    * @param bool $val The allowAttendeeToEnableMic
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowAttendeeToEnableMic($val)
+    {
+        $this->_propDict["allowAttendeeToEnableMic"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the allowedPresenters
     * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
     *
@@ -85,6 +143,68 @@ class OnlineMeeting extends Entity
     public function setAllowedPresenters($val)
     {
         $this->_propDict["allowedPresenters"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the allowMeetingChat
+    * Specifies the mode of meeting chat.
+    *
+    * @return MeetingChatMode|null The allowMeetingChat
+    */
+    public function getAllowMeetingChat()
+    {
+        if (array_key_exists("allowMeetingChat", $this->_propDict)) {
+            if (is_a($this->_propDict["allowMeetingChat"], "\Beta\Microsoft\Graph\Model\MeetingChatMode") || is_null($this->_propDict["allowMeetingChat"])) {
+                return $this->_propDict["allowMeetingChat"];
+            } else {
+                $this->_propDict["allowMeetingChat"] = new MeetingChatMode($this->_propDict["allowMeetingChat"]);
+                return $this->_propDict["allowMeetingChat"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the allowMeetingChat
+    * Specifies the mode of meeting chat.
+    *
+    * @param MeetingChatMode $val The allowMeetingChat
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowMeetingChat($val)
+    {
+        $this->_propDict["allowMeetingChat"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the allowTeamworkReactions
+    * Indicates if Teams reactions are enabled for the meeting.
+    *
+    * @return bool|null The allowTeamworkReactions
+    */
+    public function getAllowTeamworkReactions()
+    {
+        if (array_key_exists("allowTeamworkReactions", $this->_propDict)) {
+            return $this->_propDict["allowTeamworkReactions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowTeamworkReactions
+    * Indicates if Teams reactions are enabled for the meeting.
+    *
+    * @param bool $val The allowTeamworkReactions
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowTeamworkReactions($val)
+    {
+        $this->_propDict["allowTeamworkReactions"] = boolval($val);
         return $this;
     }
     
@@ -467,7 +587,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the isBroadcast
-    * Indicates if this is a live event.
+    * Indicates whether this is a live event.
     *
     * @return bool|null The isBroadcast
     */
@@ -482,7 +602,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the isBroadcast
-    * Indicates if this is a live event.
+    * Indicates whether this is a live event.
     *
     * @param bool $val The isBroadcast
     *
@@ -523,7 +643,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the isEntryExitAnnounced
-    * Whether or not to announce when callers join or leave.
+    * Indicates whether to announce when callers join or leave.
     *
     * @return bool|null The isEntryExitAnnounced
     */
@@ -538,7 +658,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the isEntryExitAnnounced
-    * Whether or not to announce when callers join or leave.
+    * Indicates whether to announce when callers join or leave.
     *
     * @param bool $val The isEntryExitAnnounced
     *

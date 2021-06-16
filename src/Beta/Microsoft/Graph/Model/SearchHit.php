@@ -108,6 +108,32 @@ class SearchHit extends Entity
         return $this;
     }
     /**
+    * Gets the resultTemplateId
+    *
+    * @return string|null The resultTemplateId
+    */
+    public function getResultTemplateId()
+    {
+        if (array_key_exists("resultTemplateId", $this->_propDict)) {
+            return $this->_propDict["resultTemplateId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resultTemplateId
+    *
+    * @param string $val The value of the resultTemplateId
+    *
+    * @return SearchHit
+    */
+    public function setResultTemplateId($val)
+    {
+        $this->_propDict["resultTemplateId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the summary
     * A summary of the result, if a summary is available.
     *

@@ -33,32 +33,6 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
     }
 
     /**
-    * Gets the conversationMemberId
-    *
-    * @return string|null The conversationMemberId
-    */
-    public function getConversationMemberId()
-    {
-        if (array_key_exists("conversationMemberId", $this->_propDict)) {
-            return $this->_propDict["conversationMemberId"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the conversationMemberId
-    *
-    * @param string $val The value of the conversationMemberId
-    *
-    * @return ConversationMemberRoleUpdatedEventMessageDetail
-    */
-    public function setConversationMemberId($val)
-    {
-        $this->_propDict["conversationMemberId"] = $val;
-        return $this;
-    }
-    /**
     * Gets the conversationMemberRoles
     *
     * @return string|null The conversationMemberRoles
@@ -83,6 +57,37 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
     {
         $this->_propDict["conversationMemberRoles"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the conversationMemberUser
+    *
+    * @return Identity|null The conversationMemberUser
+    */
+    public function getConversationMemberUser()
+    {
+        if (array_key_exists("conversationMemberUser", $this->_propDict)) {
+            if (is_a($this->_propDict["conversationMemberUser"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["conversationMemberUser"])) {
+                return $this->_propDict["conversationMemberUser"];
+            } else {
+                $this->_propDict["conversationMemberUser"] = new Identity($this->_propDict["conversationMemberUser"]);
+                return $this->_propDict["conversationMemberUser"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the conversationMemberUser
+    *
+    * @param Identity $val The value to assign to the conversationMemberUser
+    *
+    * @return ConversationMemberRoleUpdatedEventMessageDetail The ConversationMemberRoleUpdatedEventMessageDetail
+    */
+    public function setConversationMemberUser($val)
+    {
+        $this->_propDict["conversationMemberUser"] = $val;
+         return $this;
     }
 
     /**
