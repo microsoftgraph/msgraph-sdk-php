@@ -145,7 +145,7 @@ class VirtualEndpoint extends Entity
 
      /** 
      * Gets the provisioningPolicies
-    * cloud PC provisioning policy.
+    * Cloud PC provisioning policy.
      *
      * @return array|null The provisioningPolicies
      */
@@ -160,7 +160,7 @@ class VirtualEndpoint extends Entity
     
     /** 
     * Sets the provisioningPolicies
-    * cloud PC provisioning policy.
+    * Cloud PC provisioning policy.
     *
     * @param CloudPcProvisioningPolicy $val The provisioningPolicies
     *
@@ -175,6 +175,7 @@ class VirtualEndpoint extends Entity
 
      /** 
      * Gets the userSettings
+    * Cloud PC user settings.
      *
      * @return array|null The userSettings
      */
@@ -189,6 +190,7 @@ class VirtualEndpoint extends Entity
     
     /** 
     * Sets the userSettings
+    * Cloud PC user settings.
     *
     * @param CloudPcUserSetting $val The userSettings
     *
