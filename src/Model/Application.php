@@ -89,7 +89,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+    * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
     *
     * @return string|null The appId
     */
@@ -104,7 +104,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the appId
-    * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
+    * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
     *
     * @param string $val The appId
     *
@@ -295,7 +295,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     *
     * @return string|null The groupMembershipClaims
     */
@@ -310,7 +310,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the groupMembershipClaims
-    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+    * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
     *
     * @param string $val The groupMembershipClaims
     *
@@ -324,7 +324,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
     *
     * @return string|null The identifierUris
     */
@@ -339,7 +339,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the identifierUris
-    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
     *
     * @param string $val The identifierUris
     *
@@ -353,7 +353,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the info
-    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
     * @return InformationalUrl|null The info
     */
@@ -372,7 +372,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the info
-    * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+    * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
     *
     * @param InformationalUrl $val The info
     *
@@ -415,7 +415,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
     *
     * @return bool|null The isFallbackPublicClient
     */
@@ -430,7 +430,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the isFallbackPublicClient
-    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+    * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
     *
     * @param bool $val The isFallbackPublicClient
     *
@@ -692,7 +692,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the publisherDomain
-    * The verified publisher domain for the application. Read-only.
+    * The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain.
     *
     * @return string|null The publisherDomain
     */
@@ -707,7 +707,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the publisherDomain
-    * The verified publisher domain for the application. Read-only.
+    * The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain.
     *
     * @param string $val The publisherDomain
     *
