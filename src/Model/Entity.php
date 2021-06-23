@@ -87,11 +87,15 @@ class Entity implements \JsonSerializable
     /**
     * Gets the ODataType
     *
-    * @return string The ODataType
+    * @return string|null The ODataType
     */
     public function getODataType()
     {
-        return $this->_propDict["@odata.type"];
+        if (array_key_exists("@odata.type", $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        } else {
+            return null;
+        }
     }
     
     /**
