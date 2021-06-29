@@ -34,7 +34,7 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
 
     /**
     * Gets the recipients
-    * A collection of ids of the recipients.
+    * A collection of IDs of the recipients.
     *
     * @return string|null The recipients
     */
@@ -49,7 +49,7 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
 
     /**
     * Sets the recipients
-    * A collection of ids of the recipients.
+    * A collection of IDs of the recipients.
     *
     * @param string $val The value of the recipients
     *

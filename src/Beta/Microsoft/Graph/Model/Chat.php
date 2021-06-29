@@ -152,6 +152,66 @@ class Chat extends Entity
         return $this;
     }
     
+    /**
+    * Gets the viewpoint
+    *
+    * @return ChatViewpoint|null The viewpoint
+    */
+    public function getViewpoint()
+    {
+        if (array_key_exists("viewpoint", $this->_propDict)) {
+            if (is_a($this->_propDict["viewpoint"], "\Beta\Microsoft\Graph\Model\ChatViewpoint") || is_null($this->_propDict["viewpoint"])) {
+                return $this->_propDict["viewpoint"];
+            } else {
+                $this->_propDict["viewpoint"] = new ChatViewpoint($this->_propDict["viewpoint"]);
+                return $this->_propDict["viewpoint"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the viewpoint
+    *
+    * @param ChatViewpoint $val The viewpoint
+    *
+    * @return Chat
+    */
+    public function setViewpoint($val)
+    {
+        $this->_propDict["viewpoint"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the webUrl
+    * A hyperlink that will go to the chat in Microsoft Teams. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    *
+    * @return string|null The webUrl
+    */
+    public function getWebUrl()
+    {
+        if (array_key_exists("webUrl", $this->_propDict)) {
+            return $this->_propDict["webUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the webUrl
+    * A hyperlink that will go to the chat in Microsoft Teams. This URL should be treated as an opaque blob, and not parsed. Read-only.
+    *
+    * @param string $val The webUrl
+    *
+    * @return Chat
+    */
+    public function setWebUrl($val)
+    {
+        $this->_propDict["webUrl"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the installedApps
@@ -179,6 +239,37 @@ class Chat extends Entity
     public function setInstalledApps($val)
     {
         $this->_propDict["installedApps"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastMessagePreview
+    *
+    * @return ChatMessageInfo|null The lastMessagePreview
+    */
+    public function getLastMessagePreview()
+    {
+        if (array_key_exists("lastMessagePreview", $this->_propDict)) {
+            if (is_a($this->_propDict["lastMessagePreview"], "\Beta\Microsoft\Graph\Model\ChatMessageInfo") || is_null($this->_propDict["lastMessagePreview"])) {
+                return $this->_propDict["lastMessagePreview"];
+            } else {
+                $this->_propDict["lastMessagePreview"] = new ChatMessageInfo($this->_propDict["lastMessagePreview"]);
+                return $this->_propDict["lastMessagePreview"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastMessagePreview
+    *
+    * @param ChatMessageInfo $val The lastMessagePreview
+    *
+    * @return Chat
+    */
+    public function setLastMessagePreview($val)
+    {
+        $this->_propDict["lastMessagePreview"] = $val;
         return $this;
     }
     
@@ -245,6 +336,7 @@ class Chat extends Entity
 
      /** 
      * Gets the operations
+    * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
      *
      * @return array|null The operations
      */
@@ -259,6 +351,7 @@ class Chat extends Entity
     
     /** 
     * Sets the operations
+    * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
     *
     * @param TeamsAsyncOperation $val The operations
     *

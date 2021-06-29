@@ -55,7 +55,7 @@ class Agreement extends Entity
     
     /**
     * Gets the isPerDeviceAcceptanceRequired
-    * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so.
+    * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so.
     *
     * @return bool|null The isPerDeviceAcceptanceRequired
     */
@@ -70,7 +70,7 @@ class Agreement extends Entity
     
     /**
     * Sets the isPerDeviceAcceptanceRequired
-    * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so.
+    * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so.
     *
     * @param bool $val The isPerDeviceAcceptanceRequired
     *
@@ -243,7 +243,7 @@ class Agreement extends Entity
 
      /** 
      * Gets the files
-    * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+    * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
      *
      * @return array|null The files
      */
@@ -258,7 +258,7 @@ class Agreement extends Entity
     
     /** 
     * Sets the files
-    * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+    * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
     *
     * @param AgreementFileLocalization $val The files
     *
