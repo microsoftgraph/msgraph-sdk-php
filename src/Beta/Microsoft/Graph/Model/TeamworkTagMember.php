@@ -26,6 +26,7 @@ class TeamworkTagMember extends Entity
 {
     /**
     * Gets the displayName
+    * The member's display name.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class TeamworkTagMember extends Entity
     
     /**
     * Sets the displayName
+    * The member's display name.
     *
     * @param string $val The displayName
     *

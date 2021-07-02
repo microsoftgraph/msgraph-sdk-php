@@ -59,7 +59,7 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the intuneAccountId
-    * Intune Account ID for given tenant
+    * Intune Account Id for given tenant
     *
     * @return string|null The intuneAccountId
     */
@@ -74,7 +74,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the intuneAccountId
-    * Intune Account ID for given tenant
+    * Intune Account Id for given tenant
     *
     * @param string $val The intuneAccountId
     *
