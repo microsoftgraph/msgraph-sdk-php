@@ -322,7 +322,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, NOT , ge, le, and in operators) and $orderBy.
+    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, NOT , ge, le, and in operators).
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -341,7 +341,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, NOT , ge, le, and in operators) and $orderBy.
+    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, NOT , ge, le, and in operators).
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -2679,6 +2679,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the transitiveReports
+    * The transitive reports for a user. Read-only.
      *
      * @return array|null The transitiveReports
      */
@@ -2693,6 +2694,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the transitiveReports
+    * The transitive reports for a user. Read-only.
     *
     * @param DirectoryObject $val The transitiveReports
     *

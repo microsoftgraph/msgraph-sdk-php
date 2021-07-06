@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AclType File
+* TeamworkConversationIdentityType File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\ExternalConnectors\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AclType class
+* TeamworkConversationIdentityType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AclType extends Enum
+class TeamworkConversationIdentityType extends Enum
 {
     /**
-    * The Enum AclType
+    * The Enum TeamworkConversationIdentityType
     */
-    const USER = "user";
-    const GROUP = "group";
-    const EVERYONE = "everyone";
-    const EVERYONE_EXCEPT_GUESTS = "everyoneExceptGuests";
-    const EXTERNAL_GROUP = "externalGroup";
+    const TEAM = "team";
+    const CHANNEL = "channel";
+    const CHAT = "chat";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

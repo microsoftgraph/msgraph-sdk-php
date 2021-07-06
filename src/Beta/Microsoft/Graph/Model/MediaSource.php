@@ -26,6 +26,7 @@ class MediaSource extends Entity
 
     /**
     * Gets the contentCategory
+    * Enumeration value that indicates the media content category.
     *
     * @return MediaSourceContentCategory|null The contentCategory
     */
@@ -44,6 +45,7 @@ class MediaSource extends Entity
 
     /**
     * Sets the contentCategory
+    * Enumeration value that indicates the media content category.
     *
     * @param MediaSourceContentCategory $val The value to assign to the contentCategory
     *
