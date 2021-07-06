@@ -175,7 +175,7 @@ class Channel extends Entity
     
     /**
     * Gets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+    * The type of the channel. Can be set during creation and can't be changed. Default: standard.
     *
     * @return ChannelMembershipType|null The membershipType
     */
@@ -194,7 +194,7 @@ class Channel extends Entity
     
     /**
     * Sets the membershipType
-    * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+    * The type of the channel. Can be set during creation and can't be changed. Default: standard.
     *
     * @param ChannelMembershipType $val The membershipType
     *

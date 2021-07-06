@@ -296,6 +296,35 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the isAssignableToRole
+    * Indicates whether this group can be assigned to an Azure Active Directory role.This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership).Only callers in Global Administrator and Privileged Role Administrator roles can set this property. For more, see Using a group to manage Azure AD role assignmentsReturned by default.
+    *
+    * @return bool|null The isAssignableToRole
+    */
+    public function getIsAssignableToRole()
+    {
+        if (array_key_exists("isAssignableToRole", $this->_propDict)) {
+            return $this->_propDict["isAssignableToRole"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isAssignableToRole
+    * Indicates whether this group can be assigned to an Azure Active Directory role.This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership).Only callers in Global Administrator and Privileged Role Administrator roles can set this property. For more, see Using a group to manage Azure AD role assignmentsReturned by default.
+    *
+    * @param bool $val The isAssignableToRole
+    *
+    * @return Group
+    */
+    public function setIsAssignableToRole($val)
+    {
+        $this->_propDict["isAssignableToRole"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the licenseProcessingState
     * Indicates status of the group license assignment to all members of the group. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
     *
@@ -1304,7 +1333,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the permissionGrants
-    * The permission that has been granted for a group to a specific application.
+    * The permissions that have been granted for a group to a specific application.
      *
      * @return array|null The permissionGrants
      */
@@ -1319,7 +1348,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the permissionGrants
-    * The permission that has been granted for a group to a specific application.
+    * The permissions that have been granted for a group to a specific application.
     *
     * @param ResourceSpecificPermissionGrant $val The permissionGrants
     *
