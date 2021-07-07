@@ -109,6 +109,7 @@ class SearchHit extends Entity
     }
     /**
     * Gets the resultTemplateId
+    * ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
     *
     * @return string|null The resultTemplateId
     */
@@ -123,6 +124,7 @@ class SearchHit extends Entity
 
     /**
     * Sets the resultTemplateId
+    * ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
     *
     * @param string $val The value of the resultTemplateId
     *

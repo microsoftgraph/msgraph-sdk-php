@@ -561,6 +561,7 @@ class OrgContact extends DirectoryObject
 
      /** 
      * Gets the transitiveReports
+    * The transitive reports for a contact. Read-only.
      *
      * @return array|null The transitiveReports
      */
@@ -575,6 +576,7 @@ class OrgContact extends DirectoryObject
     
     /** 
     * Sets the transitiveReports
+    * The transitive reports for a contact. Read-only.
     *
     * @param DirectoryObject $val The transitiveReports
     *

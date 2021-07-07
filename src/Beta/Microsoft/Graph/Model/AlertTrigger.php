@@ -53,7 +53,7 @@ class AlertTrigger extends Entity
     }
     /**
     * Gets the type
-    * Type of the property in the key:value pair for interpretation. For example, String, Boolean, etc.
+    * Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.
     *
     * @return string|null The type
     */
@@ -68,7 +68,7 @@ class AlertTrigger extends Entity
 
     /**
     * Sets the type
-    * Type of the property in the key:value pair for interpretation. For example, String, Boolean, etc.
+    * Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.
     *
     * @param string $val The value of the type
     *

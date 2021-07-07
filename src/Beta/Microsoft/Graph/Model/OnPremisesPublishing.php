@@ -198,6 +198,7 @@ class OnPremisesPublishing extends Entity
     }
     /**
     * Gets the isBackendCertificateValidationEnabled
+    * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
     *
     * @return bool|null The isBackendCertificateValidationEnabled
     */
@@ -212,6 +213,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the isBackendCertificateValidationEnabled
+    * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
     *
     * @param bool $val The value of the isBackendCertificateValidationEnabled
     *

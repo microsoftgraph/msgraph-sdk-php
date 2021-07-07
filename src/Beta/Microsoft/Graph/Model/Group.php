@@ -1655,7 +1655,7 @@ class Group extends DirectoryObject
 
      /** 
      * Gets the permissionGrants
-    * The permission that has been granted for a group to a specific application.
+    * The permissions that have been granted for a group to a specific application.
      *
      * @return array|null The permissionGrants
      */
@@ -1670,7 +1670,7 @@ class Group extends DirectoryObject
     
     /** 
     * Sets the permissionGrants
-    * The permission that has been granted for a group to a specific application.
+    * The permissions that have been granted for a group to a specific application.
     *
     * @param ResourceSpecificPermissionGrant $val The permissionGrants
     *

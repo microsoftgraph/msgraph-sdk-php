@@ -48,6 +48,9 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const RESOURCE_AVAILABILITY_CHECK_NO_SUBNET_IP = "resourceAvailabilityCheckNoSubnetIP";
     const RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_DISABLED = "resourceAvailabilityCheckSubscriptionDisabled";
     const RESOURCE_AVAILABILITY_CHECK_AZURE_POLICY_VIOLATION = "resourceAvailabilityCheckAzurePolicyViolation";
+    const RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_NOT_FOUND = "resourceAvailabilityCheckSubscriptionNotFound";
+    const RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_TRANSFERRED = "resourceAvailabilityCheckSubscriptionTransferred";
+    const RESOURCE_AVAILABILITY_CHECK_GENERAL_SUBSCRIPTION_ERROR = "resourceAvailabilityCheckGeneralSubscriptionError";
     const RESOURCE_AVAILABILITY_CHECK_UNSUPPORTED_V_NET_REGION = "resourceAvailabilityCheckUnsupportedVNetRegion";
     const RESOURCE_AVAILABILITY_CHECK_UNKNOWN_ERROR = "resourceAvailabilityCheckUnknownError";
     const PERMISSION_CHECK_NO_SUBSCRIPTION_READER_ROLE = "permissionCheckNoSubscriptionReaderRole";
@@ -57,5 +60,6 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const INTERNAL_SERVER_ERROR_DEPLOYMENT_CANCELED = "internalServerErrorDeploymentCanceled";
     const INTERNAL_SERVER_ERROR_ALLOCATE_RESOURCE_FAILED = "internalServerErrorAllocateResourceFailed";
     const INTERNAL_SERVER_ERROR_VM_DEPLOYMENT_TIMEOUT = "internalServerErrorVMDeploymentTimeout";
+    const INTERNAL_SERVER_ERROR_UNABLE_TO_RUN_DSC_SCRIPT = "internalServerErrorUnableToRunDscScript";
     const INTERNAL_SERVER_UNKNOWN_ERROR = "internalServerUnknownError";
 }
