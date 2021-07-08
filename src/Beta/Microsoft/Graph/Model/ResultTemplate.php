@@ -25,6 +25,7 @@ class ResultTemplate extends Entity
 {
     /**
     * Gets the body
+    * JSON schema of the result template.
     *
     * @return string|null The body
     */
@@ -39,6 +40,7 @@ class ResultTemplate extends Entity
 
     /**
     * Sets the body
+    * JSON schema of the result template.
     *
     * @param string $val The value of the body
     *
@@ -51,6 +53,7 @@ class ResultTemplate extends Entity
     }
     /**
     * Gets the displayName
+    * Name of the result template.
     *
     * @return string|null The displayName
     */
@@ -65,6 +68,7 @@ class ResultTemplate extends Entity
 
     /**
     * Sets the displayName
+    * Name of the result template.
     *
     * @param string $val The value of the displayName
     *

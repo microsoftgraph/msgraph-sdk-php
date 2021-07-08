@@ -279,15 +279,15 @@ class ChatMessage extends Entity
     * Gets the from
     * Read only. Details of the sender of the chat message.
     *
-    * @return IdentitySet|null The from
+    * @return ChatMessageFromIdentitySet|null The from
     */
     public function getFrom()
     {
         if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["from"])) {
+            if (is_a($this->_propDict["from"], "\Beta\Microsoft\Graph\Model\ChatMessageFromIdentitySet") || is_null($this->_propDict["from"])) {
                 return $this->_propDict["from"];
             } else {
-                $this->_propDict["from"] = new IdentitySet($this->_propDict["from"]);
+                $this->_propDict["from"] = new ChatMessageFromIdentitySet($this->_propDict["from"]);
                 return $this->_propDict["from"];
             }
         }
@@ -298,7 +298,7 @@ class ChatMessage extends Entity
     * Sets the from
     * Read only. Details of the sender of the chat message.
     *
-    * @param IdentitySet $val The from
+    * @param ChatMessageFromIdentitySet $val The from
     *
     * @return ChatMessage
     */

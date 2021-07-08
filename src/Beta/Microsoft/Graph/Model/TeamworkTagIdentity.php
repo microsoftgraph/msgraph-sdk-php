@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ApplicationIdentityType File
+* TeamworkTagIdentity File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* ApplicationIdentityType class
+* TeamworkTagIdentity class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ApplicationIdentityType extends Enum
+class TeamworkTagIdentity extends Identity
 {
-    /**
-    * The Enum ApplicationIdentityType
-    */
-    const AAD_APPLICATION = "aadApplication";
-    const BOT = "bot";
-    const TENANT_BOT = "tenantBot";
-    const OFFICE365_CONNECTOR = "office365Connector";
-    const OUTGOING_WEBHOOK = "outgoingWebhook";
 }

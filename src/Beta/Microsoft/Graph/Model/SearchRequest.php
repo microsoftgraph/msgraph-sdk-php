@@ -265,6 +265,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the resultTemplateOptions
+    * Provides the search result templates options for rendering connectors search results.
     *
     * @return ResultTemplateOption|null The resultTemplateOptions
     */
@@ -283,6 +284,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the resultTemplateOptions
+    * Provides the search result templates options for rendering connectors search results.
     *
     * @param ResultTemplateOption $val The value to assign to the resultTemplateOptions
     *

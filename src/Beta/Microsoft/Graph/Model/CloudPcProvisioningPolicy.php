@@ -205,7 +205,7 @@ class CloudPcProvisioningPolicy extends Entity
 
      /** 
      * Gets the assignments
-    * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
+    * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
      *
      * @return array|null The assignments
      */
@@ -220,7 +220,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /** 
     * Sets the assignments
-    * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
+    * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
     *
     * @param CloudPcProvisioningPolicyAssignment $val The assignments
     *
