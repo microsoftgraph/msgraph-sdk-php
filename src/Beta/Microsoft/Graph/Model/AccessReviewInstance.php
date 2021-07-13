@@ -57,6 +57,62 @@ class AccessReviewInstance extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the fallbackReviewers
+     *
+     * @return array|null The fallbackReviewers
+     */
+    public function getFallbackReviewers()
+    {
+        if (array_key_exists("fallbackReviewers", $this->_propDict)) {
+           return $this->_propDict["fallbackReviewers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the fallbackReviewers
+    *
+    * @param AccessReviewReviewerScope $val The fallbackReviewers
+    *
+    * @return AccessReviewInstance
+    */
+    public function setFallbackReviewers($val)
+    {
+        $this->_propDict["fallbackReviewers"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the reviewers
+     *
+     * @return array|null The reviewers
+     */
+    public function getReviewers()
+    {
+        if (array_key_exists("reviewers", $this->_propDict)) {
+           return $this->_propDict["reviewers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the reviewers
+    *
+    * @param AccessReviewReviewerScope $val The reviewers
+    *
+    * @return AccessReviewInstance
+    */
+    public function setReviewers($val)
+    {
+        $this->_propDict["reviewers"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the scope
     * Created based on scope and instanceEnumerationScope at the accessReviewScheduleDefinition level. Defines the scope of users reviewed in a group. Supports $select and $filter (contains only). Read-only.

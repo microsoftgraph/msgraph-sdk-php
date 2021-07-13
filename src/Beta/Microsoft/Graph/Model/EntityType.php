@@ -38,4 +38,5 @@ class EntityType extends Enum
     const LIST_ITEM = "listItem";
     const DRIVE = "drive";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const PERSON = "person";
 }

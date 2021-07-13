@@ -84,7 +84,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Gets the originId
-    * The unique identifier of the resource role in the origin system.
+    * The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
     *
     * @return string|null The originId
     */
@@ -99,7 +99,7 @@ class AccessPackageResourceRole extends Entity
     
     /**
     * Sets the originId
-    * The unique identifier of the resource role in the origin system.
+    * The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
     *
     * @param string $val The originId
     *
