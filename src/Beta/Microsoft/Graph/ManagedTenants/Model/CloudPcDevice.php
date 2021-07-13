@@ -26,6 +26,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the cloudPcStatus
+    * The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
     *
     * @return string|null The cloudPcStatus
     */
@@ -40,6 +41,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the cloudPcStatus
+    * The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
     *
     * @param string $val The cloudPcStatus
     *
@@ -53,6 +55,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name for the cloud PC. Required. Read-only.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name for the cloud PC. Required. Read-only.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
     *
     * @return \DateTime|null The lastRefreshedDateTime
     */
@@ -98,6 +103,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
     *
     * @param \DateTime $val The lastRefreshedDateTime
     *
@@ -111,6 +117,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the managedDeviceId
+    * The managed device identifier for the cloud PC. Optional. Read-only.
     *
     * @return string|null The managedDeviceId
     */
@@ -125,6 +132,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the managedDeviceId
+    * The managed device identifier for the cloud PC. Optional. Read-only.
     *
     * @param string $val The managedDeviceId
     *
@@ -138,6 +146,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the managedDeviceName
+    * The managed device display name for the cloud PC. Optional. Read-only.
     *
     * @return string|null The managedDeviceName
     */
@@ -152,6 +161,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the managedDeviceName
+    * The managed device display name for the cloud PC. Optional. Read-only.
     *
     * @param string $val The managedDeviceName
     *
@@ -165,6 +175,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the provisioningPolicyId
+    * The provisioning policy identifier for the cloud PC. Required. Read-only.
     *
     * @return string|null The provisioningPolicyId
     */
@@ -179,6 +190,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the provisioningPolicyId
+    * The provisioning policy identifier for the cloud PC. Required. Read-only.
     *
     * @param string $val The provisioningPolicyId
     *
@@ -192,6 +204,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the servicePlanName
+    * The service plan name for the cloud PC. Required. Read-only.
     *
     * @return string|null The servicePlanName
     */
@@ -206,6 +219,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the servicePlanName
+    * The service plan name for the cloud PC. Required. Read-only.
     *
     * @param string $val The servicePlanName
     *
@@ -219,6 +233,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantDisplayName
+    * The display name for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantDisplayName
     */
@@ -233,6 +248,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantDisplayName
+    * The display name for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantDisplayName
     *
@@ -246,6 +262,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -260,6 +277,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantId
     *
@@ -273,6 +291,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the userPrincipalName
+    * The user principal name (UPN) of the user assigned to the cloud PC. Required. Read-only.
     *
     * @return string|null The userPrincipalName
     */
@@ -287,6 +306,7 @@ class CloudPcDevice extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the userPrincipalName
+    * The user principal name (UPN) of the user assigned to the cloud PC. Required. Read-only.
     *
     * @param string $val The userPrincipalName
     *

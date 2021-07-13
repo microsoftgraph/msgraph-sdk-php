@@ -25,6 +25,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the email
+    * The email address for the contact. Optional
     *
     * @return string|null The email
     */
@@ -39,6 +40,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the email
+    * The email address for the contact. Optional
     *
     * @param string $val The value of the email
     *
@@ -51,6 +53,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the name
+    * The name for the contact. Required.
     *
     * @return string|null The name
     */
@@ -65,6 +68,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the name
+    * The name for the contact. Required.
     *
     * @param string $val The value of the name
     *
@@ -77,6 +81,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the notes
+    * The notes associated with the contact. Optional
     *
     * @return string|null The notes
     */
@@ -91,6 +96,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the notes
+    * The notes associated with the contact. Optional
     *
     * @param string $val The value of the notes
     *
@@ -103,6 +109,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the phone
+    * The phone number for the contact. Optional.
     *
     * @return string|null The phone
     */
@@ -117,6 +124,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the phone
+    * The phone number for the contact. Optional.
     *
     * @param string $val The value of the phone
     *
@@ -129,6 +137,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the title
+    * The title for the contact. Required.
     *
     * @return string|null The title
     */
@@ -143,6 +152,7 @@ class TenantContactInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the title
+    * The title for the contact. Required.
     *
     * @param string $val The value of the title
     *

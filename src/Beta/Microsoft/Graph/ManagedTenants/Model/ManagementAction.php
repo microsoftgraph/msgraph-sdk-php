@@ -26,6 +26,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the category
+    * The category for the management action. Possible values are: custom, devices, identity, unknownFutureValue. Optional. Read-only.
     *
     * @return ManagementCategory|null The category
     */
@@ -44,6 +45,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the category
+    * The category for the management action. Possible values are: custom, devices, identity, unknownFutureValue. Optional. Read-only.
     *
     * @param ManagementCategory $val The category
     *
@@ -57,6 +59,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
+    * The description for the management action. Optional. Read-only.
     *
     * @return string|null The description
     */
@@ -71,6 +74,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * The description for the management action. Optional. Read-only.
     *
     * @param string $val The description
     *
@@ -84,6 +88,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name for the management action. Optional. Read-only.
     *
     * @return string|null The displayName
     */
@@ -98,6 +103,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name for the management action. Optional. Read-only.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the referenceTemplateId
+    * The reference for the management template used to generate the management action. Required. Read-only.
     *
     * @return string|null The referenceTemplateId
     */
@@ -125,6 +132,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the referenceTemplateId
+    * The reference for the management template used to generate the management action. Required. Read-only.
     *
     * @param string $val The referenceTemplateId
     *
@@ -139,6 +147,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the workloadActions
+    * The collection of workload actions associated with the management action. Required. Read-only.
      *
      * @return array|null The workloadActions
      */
@@ -153,6 +162,7 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the workloadActions
+    * The collection of workload actions associated with the management action. Required. Read-only.
     *
     * @param WorkloadAction $val The workloadActions
     *

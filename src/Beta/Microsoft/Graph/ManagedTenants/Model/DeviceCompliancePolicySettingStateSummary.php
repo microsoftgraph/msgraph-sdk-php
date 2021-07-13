@@ -26,6 +26,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
 {
     /**
     * Gets the conflictDeviceCount
+    * The number of devices in a conflict state. Optional. Read-only.
     *
     * @return int|null The conflictDeviceCount
     */
@@ -40,6 +41,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the conflictDeviceCount
+    * The number of devices in a conflict state. Optional. Read-only.
     *
     * @param int $val The conflictDeviceCount
     *
@@ -53,6 +55,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the errorDeviceCount
+    * The number of devices in an error state. Optional. Read-only.
     *
     * @return int|null The errorDeviceCount
     */
@@ -67,6 +70,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the errorDeviceCount
+    * The number of devices in an error state. Optional. Read-only.
     *
     * @param int $val The errorDeviceCount
     *
@@ -80,6 +84,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the failedDeviceCount
+    * The number of devices in a failed state. Optional. Read-only.
     *
     * @return int|null The failedDeviceCount
     */
@@ -94,6 +99,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the failedDeviceCount
+    * The number of devices in a failed state. Optional. Read-only.
     *
     * @param int $val The failedDeviceCount
     *
@@ -107,6 +113,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the intuneAccountId
+    * The identifer for the Microsoft Intune account. Required. Read-only.
     *
     * @return string|null The intuneAccountId
     */
@@ -121,6 +128,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the intuneAccountId
+    * The identifer for the Microsoft Intune account. Required. Read-only.
     *
     * @param string $val The intuneAccountId
     *
@@ -134,6 +142,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the intuneSettingId
+    * The identifier for the Intune setting. Optional. Read-only.
     *
     * @return string|null The intuneSettingId
     */
@@ -148,6 +157,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the intuneSettingId
+    * The identifier for the Intune setting. Optional. Read-only.
     *
     * @param string $val The intuneSettingId
     *
@@ -161,6 +171,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
     *
     * @return \DateTime|null The lastRefreshedDateTime
     */
@@ -179,6 +190,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
     *
     * @param \DateTime $val The lastRefreshedDateTime
     *
@@ -192,6 +204,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the notApplicableDeviceCount
+    * The number of devices in a not applicable state. Optional. Read-only.
     *
     * @return int|null The notApplicableDeviceCount
     */
@@ -206,6 +219,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the notApplicableDeviceCount
+    * The number of devices in a not applicable state. Optional. Read-only.
     *
     * @param int $val The notApplicableDeviceCount
     *
@@ -219,6 +233,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the pendingDeviceCount
+    * The number of devices in a pending state. Optional. Read-only.
     *
     * @return int|null The pendingDeviceCount
     */
@@ -233,6 +248,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the pendingDeviceCount
+    * The number of devices in a pending state. Optional. Read-only.
     *
     * @param int $val The pendingDeviceCount
     *
@@ -246,6 +262,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the policyType
+    * The type for the device compliance policy. Optional. Read-only.
     *
     * @return string|null The policyType
     */
@@ -260,6 +277,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the policyType
+    * The type for the device compliance policy. Optional. Read-only.
     *
     * @param string $val The policyType
     *
@@ -273,6 +291,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the settingName
+    * The name for the setting within the device compliance policy. Optional. Read-only.
     *
     * @return string|null The settingName
     */
@@ -287,6 +306,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the settingName
+    * The name for the setting within the device compliance policy. Optional. Read-only.
     *
     * @param string $val The settingName
     *
@@ -300,6 +320,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the succeededDeviceCount
+    * The number of devices in a succeeded state. Optional. Read-only.
     *
     * @return int|null The succeededDeviceCount
     */
@@ -314,6 +335,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the succeededDeviceCount
+    * The number of devices in a succeeded state. Optional. Read-only.
     *
     * @param int $val The succeededDeviceCount
     *
@@ -327,6 +349,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the tenantDisplayName
+    * The display name for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantDisplayName
     */
@@ -341,6 +364,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the tenantDisplayName
+    * The display name for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantDisplayName
     *
@@ -354,6 +378,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -368,6 +393,7 @@ class DeviceCompliancePolicySettingStateSummary extends \Beta\Microsoft\Graph\Mo
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantId
     *

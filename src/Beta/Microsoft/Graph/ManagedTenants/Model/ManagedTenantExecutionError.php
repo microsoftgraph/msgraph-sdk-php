@@ -25,6 +25,7 @@ class ManagedTenantExecutionError extends ManagedTenantOperationError
 {
     /**
     * Gets the errorDetails
+    * Additional error information for the exception. Optional. Read-only.
     *
     * @return string|null The errorDetails
     */
@@ -39,6 +40,7 @@ class ManagedTenantExecutionError extends ManagedTenantOperationError
 
     /**
     * Sets the errorDetails
+    * Additional error information for the exception. Optional. Read-only.
     *
     * @param string $val The value of the errorDetails
     *
@@ -51,6 +53,7 @@ class ManagedTenantExecutionError extends ManagedTenantOperationError
     }
     /**
     * Gets the nodeId
+    * The node identifier where the exception occurred. Required. Read-only.
     *
     * @return int|null The nodeId
     */
@@ -65,6 +68,7 @@ class ManagedTenantExecutionError extends ManagedTenantOperationError
 
     /**
     * Sets the nodeId
+    * The node identifier where the exception occurred. Required. Read-only.
     *
     * @param int $val The value of the nodeId
     *
@@ -77,6 +81,7 @@ class ManagedTenantExecutionError extends ManagedTenantOperationError
     }
     /**
     * Gets the rawToken
+    * The token for the exception. Optional. Read-only.
     *
     * @return string|null The rawToken
     */
@@ -91,6 +96,7 @@ class ManagedTenantExecutionError extends ManagedTenantOperationError
 
     /**
     * Sets the rawToken
+    * The token for the exception. Optional. Read-only.
     *
     * @param string $val The value of the rawToken
     *
@@ -103,6 +109,7 @@ class ManagedTenantExecutionError extends ManagedTenantOperationError
     }
     /**
     * Gets the statementIndex
+    * The statement index for the exception. Required. Read-only.
     *
     * @return int|null The statementIndex
     */
@@ -117,6 +124,7 @@ class ManagedTenantExecutionError extends ManagedTenantOperationError
 
     /**
     * Sets the statementIndex
+    * The statement index for the exception. Required. Read-only.
     *
     * @param int $val The value of the statementIndex
     *

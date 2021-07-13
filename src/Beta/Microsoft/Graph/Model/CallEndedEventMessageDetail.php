@@ -26,9 +26,11 @@ class CallEndedEventMessageDetail extends EventMessageDetail
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.callEndedEventMessageDetail");
     }
 
@@ -61,6 +63,37 @@ class CallEndedEventMessageDetail extends EventMessageDetail
     public function setCallDuration($val)
     {
         $this->_propDict["callDuration"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the callEventType
+    *
+    * @return TeamworkCallEventType|null The callEventType
+    */
+    public function getCallEventType()
+    {
+        if (array_key_exists("callEventType", $this->_propDict)) {
+            if (is_a($this->_propDict["callEventType"], "\Beta\Microsoft\Graph\Model\TeamworkCallEventType") || is_null($this->_propDict["callEventType"])) {
+                return $this->_propDict["callEventType"];
+            } else {
+                $this->_propDict["callEventType"] = new TeamworkCallEventType($this->_propDict["callEventType"]);
+                return $this->_propDict["callEventType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the callEventType
+    *
+    * @param TeamworkCallEventType $val The value to assign to the callEventType
+    *
+    * @return CallEndedEventMessageDetail The CallEndedEventMessageDetail
+    */
+    public function setCallEventType($val)
+    {
+        $this->_propDict["callEventType"] = $val;
          return $this;
     }
     /**

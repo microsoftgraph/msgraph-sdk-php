@@ -4153,6 +4153,39 @@ class DeviceManagement extends Entity
     }
     
     /**
+    * Gets the remoteAssistanceSettings
+    * The remote assistance settings singleton
+    *
+    * @return RemoteAssistanceSettings|null The remoteAssistanceSettings
+    */
+    public function getRemoteAssistanceSettings()
+    {
+        if (array_key_exists("remoteAssistanceSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["remoteAssistanceSettings"], "\Beta\Microsoft\Graph\Model\RemoteAssistanceSettings") || is_null($this->_propDict["remoteAssistanceSettings"])) {
+                return $this->_propDict["remoteAssistanceSettings"];
+            } else {
+                $this->_propDict["remoteAssistanceSettings"] = new RemoteAssistanceSettings($this->_propDict["remoteAssistanceSettings"]);
+                return $this->_propDict["remoteAssistanceSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the remoteAssistanceSettings
+    * The remote assistance settings singleton
+    *
+    * @param RemoteAssistanceSettings $val The remoteAssistanceSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setRemoteAssistanceSettings($val)
+    {
+        $this->_propDict["remoteAssistanceSettings"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the reports
     * Reports singleton
     *
