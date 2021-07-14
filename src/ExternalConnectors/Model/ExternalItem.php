@@ -24,6 +24,34 @@ namespace Microsoft\Graph\ExternalConnectors\Model;
 */
 class ExternalItem extends \Microsoft\Graph\Model\Entity
 {
+
+     /** 
+     * Gets the acl
+     *
+     * @return array|null The acl
+     */
+    public function getAcl()
+    {
+        if (array_key_exists("acl", $this->_propDict)) {
+           return $this->_propDict["acl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the acl
+    *
+    * @param Acl $val The acl
+    *
+    * @return ExternalItem
+    */
+    public function setAcl($val)
+    {
+        $this->_propDict["acl"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the content
     *
