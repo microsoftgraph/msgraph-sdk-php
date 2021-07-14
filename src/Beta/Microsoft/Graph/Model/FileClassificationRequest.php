@@ -35,7 +35,7 @@ class FileClassificationRequest extends Entity
             if (is_a($this->_propDict["file"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["file"])) {
                 return $this->_propDict["file"];
             } else {
-                $this->_propDict["file"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["file"]);
+                $this->_propDict["file"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["file"]);
                 return $this->_propDict["file"];
             }
         }

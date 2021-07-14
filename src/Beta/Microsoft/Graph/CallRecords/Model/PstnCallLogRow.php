@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\CallRecords\Model;
 */
 class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
 {
+
+    /**
+    * Gets the callDurationSource
+    *
+    * @return PstnCallDurationSource|null The callDurationSource
+    */
+    public function getCallDurationSource()
+    {
+        if (array_key_exists("callDurationSource", $this->_propDict)) {
+            if (is_a($this->_propDict["callDurationSource"], "\Beta\Microsoft\Graph\CallRecords\Model\PstnCallDurationSource") || is_null($this->_propDict["callDurationSource"])) {
+                return $this->_propDict["callDurationSource"];
+            } else {
+                $this->_propDict["callDurationSource"] = new PstnCallDurationSource($this->_propDict["callDurationSource"]);
+                return $this->_propDict["callDurationSource"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the callDurationSource
+    *
+    * @param PstnCallDurationSource $val The value to assign to the callDurationSource
+    *
+    * @return PstnCallLogRow The PstnCallLogRow
+    */
+    public function setCallDurationSource($val)
+    {
+        $this->_propDict["callDurationSource"] = $val;
+         return $this;
+    }
     /**
     * Gets the calleeNumber
     *
@@ -426,6 +457,32 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
     public function setLicenseCapability($val)
     {
         $this->_propDict["licenseCapability"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the operator
+    *
+    * @return string|null The operator
+    */
+    public function getOperator()
+    {
+        if (array_key_exists("operator", $this->_propDict)) {
+            return $this->_propDict["operator"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the operator
+    *
+    * @param string $val The value of the operator
+    *
+    * @return PstnCallLogRow
+    */
+    public function setOperator($val)
+    {
+        $this->_propDict["operator"] = $val;
         return $this;
     }
 

@@ -26,6 +26,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
 {
     /**
     * Gets the actionRequiredByDateTime
+    * The expected deadline of the action for the message.
     *
     * @return \DateTime|null The actionRequiredByDateTime
     */
@@ -44,6 +45,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the actionRequiredByDateTime
+    * The expected deadline of the action for the message.
     *
     * @param \DateTime $val The actionRequiredByDateTime
     *
@@ -57,6 +59,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Gets the body
+    * The content type and content of the service message body.
     *
     * @return ItemBody|null The body
     */
@@ -75,6 +78,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the body
+    * The content type and content of the service message body.
     *
     * @param ItemBody $val The body
     *
@@ -88,6 +92,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Gets the category
+    * The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
     *
     * @return ServiceUpdateCategory|null The category
     */
@@ -106,6 +111,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the category
+    * The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
     *
     * @param ServiceUpdateCategory $val The category
     *
@@ -119,6 +125,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Gets the isMajorChange
+    * Indicates whether the message describes a major update for the service.
     *
     * @return bool|null The isMajorChange
     */
@@ -133,6 +140,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the isMajorChange
+    * Indicates whether the message describes a major update for the service.
     *
     * @param bool $val The isMajorChange
     *
@@ -146,6 +154,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Gets the services
+    * The affected services by the service message.
     *
     * @return string|null The services
     */
@@ -160,6 +169,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the services
+    * The affected services by the service message.
     *
     * @param string $val The services
     *
@@ -173,6 +183,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Gets the severity
+    * The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
     *
     * @return ServiceUpdateSeverity|null The severity
     */
@@ -191,6 +202,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the severity
+    * The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
     *
     * @param ServiceUpdateSeverity $val The severity
     *
@@ -204,6 +216,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Gets the tags
+    * A collection of tags for the service message.
     *
     * @return string|null The tags
     */
@@ -218,6 +231,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the tags
+    * A collection of tags for the service message.
     *
     * @param string $val The tags
     *
@@ -231,6 +245,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Gets the viewPoint
+    * Represents user view points data of the service message.
     *
     * @return ServiceUpdateMessageViewpoint|null The viewPoint
     */
@@ -249,6 +264,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the viewPoint
+    * Represents user view points data of the service message.
     *
     * @param ServiceUpdateMessageViewpoint $val The viewPoint
     *

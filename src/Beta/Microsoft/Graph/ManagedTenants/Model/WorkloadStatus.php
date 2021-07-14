@@ -25,6 +25,7 @@ class WorkloadStatus extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the displayName
+    * The display name for the workload. Required. Read-only.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class WorkloadStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The display name for the workload. Required. Read-only.
     *
     * @param string $val The value of the displayName
     *
@@ -52,6 +54,7 @@ class WorkloadStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the offboardedDateTime
+    * The date and time the workload was offboarded. Optional. Read-only.
     *
     * @return \DateTime|null The offboardedDateTime
     */
@@ -70,6 +73,7 @@ class WorkloadStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the offboardedDateTime
+    * The date and time the workload was offboarded. Optional. Read-only.
     *
     * @param \DateTime $val The value to assign to the offboardedDateTime
     *
@@ -83,6 +87,7 @@ class WorkloadStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the onboardedDateTime
+    * The date and time the workload was onboarded. Optional. Read-only.
     *
     * @return \DateTime|null The onboardedDateTime
     */
@@ -101,6 +106,7 @@ class WorkloadStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the onboardedDateTime
+    * The date and time the workload was onboarded. Optional. Read-only.
     *
     * @param \DateTime $val The value to assign to the onboardedDateTime
     *
@@ -114,6 +120,7 @@ class WorkloadStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the onboardingStatus
+    * The onboarding status for the workload. Possible values are: notOnboarded, onboarded, unknownFutureValue. Optional. Read-only.
     *
     * @return WorkloadOnboardingStatus|null The onboardingStatus
     */
@@ -132,6 +139,7 @@ class WorkloadStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the onboardingStatus
+    * The onboarding status for the workload. Possible values are: notOnboarded, onboarded, unknownFutureValue. Optional. Read-only.
     *
     * @param WorkloadOnboardingStatus $val The value to assign to the onboardingStatus
     *

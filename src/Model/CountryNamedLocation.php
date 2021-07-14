@@ -54,6 +54,39 @@ class CountryNamedLocation extends NamedLocation
     }
     
     /**
+    * Gets the countryLookupMethod
+    * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps.
+    *
+    * @return CountryLookupMethodType|null The countryLookupMethod
+    */
+    public function getCountryLookupMethod()
+    {
+        if (array_key_exists("countryLookupMethod", $this->_propDict)) {
+            if (is_a($this->_propDict["countryLookupMethod"], "\Microsoft\Graph\Model\CountryLookupMethodType") || is_null($this->_propDict["countryLookupMethod"])) {
+                return $this->_propDict["countryLookupMethod"];
+            } else {
+                $this->_propDict["countryLookupMethod"] = new CountryLookupMethodType($this->_propDict["countryLookupMethod"]);
+                return $this->_propDict["countryLookupMethod"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the countryLookupMethod
+    * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps.
+    *
+    * @param CountryLookupMethodType $val The countryLookupMethod
+    *
+    * @return CountryNamedLocation
+    */
+    public function setCountryLookupMethod($val)
+    {
+        $this->_propDict["countryLookupMethod"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the includeUnknownCountriesAndRegions
     * True if IP addresses that don't map to a country or region should be included in the named location.
     *

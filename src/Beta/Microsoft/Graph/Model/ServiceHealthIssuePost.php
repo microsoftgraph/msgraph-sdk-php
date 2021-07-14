@@ -26,6 +26,7 @@ class ServiceHealthIssuePost extends Entity
 
     /**
     * Gets the createdDateTime
+    * The published time of the post.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class ServiceHealthIssuePost extends Entity
 
     /**
     * Sets the createdDateTime
+    * The published time of the post.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -57,6 +59,7 @@ class ServiceHealthIssuePost extends Entity
 
     /**
     * Gets the description
+    * The content of the service issue post.
     *
     * @return ItemBody|null The description
     */
@@ -75,6 +78,7 @@ class ServiceHealthIssuePost extends Entity
 
     /**
     * Sets the description
+    * The content of the service issue post.
     *
     * @param ItemBody $val The value to assign to the description
     *
@@ -88,6 +92,7 @@ class ServiceHealthIssuePost extends Entity
 
     /**
     * Gets the postType
+    * The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
     *
     * @return PostType|null The postType
     */
@@ -106,6 +111,7 @@ class ServiceHealthIssuePost extends Entity
 
     /**
     * Sets the postType
+    * The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
     *
     * @param PostType $val The value to assign to the postType
     *

@@ -26,6 +26,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the contract
+    * The relationship details for the tenant with the managing entity.
     *
     * @return TenantContract|null The contract
     */
@@ -44,6 +45,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the contract
+    * The relationship details for the tenant with the managing entity.
     *
     * @param TenantContract $val The contract
     *
@@ -57,6 +59,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -75,6 +78,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -88,6 +92,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name for the tenant. Required. Read-only.
     *
     * @return string|null The displayName
     */
@@ -102,6 +107,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name for the tenant. Required. Read-only.
     *
     * @param string $val The displayName
     *
@@ -115,6 +121,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastUpdatedDateTime
+    * The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
     *
     * @return \DateTime|null The lastUpdatedDateTime
     */
@@ -133,6 +140,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastUpdatedDateTime
+    * The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *
@@ -146,6 +154,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -160,6 +169,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @param string $val The tenantId
     *
@@ -173,6 +183,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantStatusInformation
+    * The onboarding status information for the tenant. Optional. Read-only.
     *
     * @return TenantStatusInformation|null The tenantStatusInformation
     */
@@ -191,6 +202,7 @@ class Tenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantStatusInformation
+    * The onboarding status information for the tenant. Optional. Read-only.
     *
     * @param TenantStatusInformation $val The tenantStatusInformation
     *

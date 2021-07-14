@@ -26,6 +26,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the isDeleted
+    * A flag indicating whether the account has been deleted. Optional. Read-only.
     *
     * @return bool|null The isDeleted
     */
@@ -40,6 +41,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the isDeleted
+    * A flag indicating whether the account has been deleted. Optional. Read-only.
     *
     * @param bool $val The isDeleted
     *
@@ -53,6 +55,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
     *
     * @return \DateTime|null The lastRefreshedDateTime
     */
@@ -71,6 +74,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
     *
     * @param \DateTime $val The lastRefreshedDateTime
     *
@@ -84,6 +88,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the riskDetail
+    * The risk details for the account flagged for risk. Optional. Read-only.
     *
     * @return string|null The riskDetail
     */
@@ -98,6 +103,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the riskDetail
+    * The risk details for the account flagged for risk. Optional. Read-only.
     *
     * @param string $val The riskDetail
     *
@@ -111,6 +117,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the riskLastUpdatedDateTime
+    * The date and time when the risk information was last updated. Optional. Read-only.
     *
     * @return \DateTime|null The riskLastUpdatedDateTime
     */
@@ -129,6 +136,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the riskLastUpdatedDateTime
+    * The date and time when the risk information was last updated. Optional. Read-only.
     *
     * @param \DateTime $val The riskLastUpdatedDateTime
     *
@@ -142,6 +150,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the riskLevel
+    * The level of risk that was detected. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Optional. Read-only.
     *
     * @return string|null The riskLevel
     */
@@ -156,6 +165,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the riskLevel
+    * The level of risk that was detected. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Optional. Read-only.
     *
     * @param string $val The riskLevel
     *
@@ -169,6 +179,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the riskState
+    * The state of risk that was detected. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Optional. Read-only.
     *
     * @return string|null The riskState
     */
@@ -183,6 +194,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the riskState
+    * The state of risk that was detected. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Optional. Read-only.
     *
     * @param string $val The riskState
     *
@@ -196,6 +208,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantDisplayName
+    * The display name for the managed tenant. Optional. Read-only.
     *
     * @return string|null The tenantDisplayName
     */
@@ -210,6 +223,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantDisplayName
+    * The display name for the managed tenant. Optional. Read-only.
     *
     * @param string $val The tenantDisplayName
     *
@@ -223,6 +237,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -237,6 +252,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantId
     *
@@ -250,6 +266,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the userDisplayName
+    * The display name for the account where risk was detected. Optional. Read-only.
     *
     * @return string|null The userDisplayName
     */
@@ -264,6 +281,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the userDisplayName
+    * The display name for the account where risk was detected. Optional. Read-only.
     *
     * @param string $val The userDisplayName
     *
@@ -277,6 +295,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the userId
+    * The identifier for the user account where risk was detected. Required. Read-only.
     *
     * @return string|null The userId
     */
@@ -291,6 +310,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the userId
+    * The identifier for the user account where risk was detected. Required. Read-only.
     *
     * @param string $val The userId
     *
@@ -304,6 +324,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the userPrincipalName
+    * The user principal name (UPN) for the account where risk was detected. Optional. Read-only.
     *
     * @return string|null The userPrincipalName
     */
@@ -318,6 +339,7 @@ class RiskyUser extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the userPrincipalName
+    * The user principal name (UPN) for the account where risk was detected. Optional. Read-only.
     *
     * @param string $val The userPrincipalName
     *

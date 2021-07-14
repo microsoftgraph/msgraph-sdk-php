@@ -26,6 +26,7 @@ class CloudPcAuditEvent extends Entity
 {
     /**
     * Gets the activity
+    * Friendly name of the activity. Optional.
     *
     * @return string|null The activity
     */
@@ -40,6 +41,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the activity
+    * Friendly name of the activity. Optional.
     *
     * @param string $val The activity
     *
@@ -53,6 +55,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the activityDateTime
+    * The date time in UTC when the activity was performed. Read-only.
     *
     * @return \DateTime|null The activityDateTime
     */
@@ -71,6 +74,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the activityDateTime
+    * The date time in UTC when the activity was performed. Read-only.
     *
     * @param \DateTime $val The activityDateTime
     *
@@ -84,6 +88,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the activityOperationType
+    * The HTTP operation type of the activity. Possible values include create, delete, patch and other. Read-only.
     *
     * @return CloudPcAuditActivityOperationType|null The activityOperationType
     */
@@ -102,6 +107,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the activityOperationType
+    * The HTTP operation type of the activity. Possible values include create, delete, patch and other. Read-only.
     *
     * @param CloudPcAuditActivityOperationType $val The activityOperationType
     *
@@ -115,6 +121,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the activityResult
+    * The result of the activity. Read-only.
     *
     * @return CloudPcAuditActivityResult|null The activityResult
     */
@@ -133,6 +140,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the activityResult
+    * The result of the activity. Read-only.
     *
     * @param CloudPcAuditActivityResult $val The activityResult
     *
@@ -146,6 +154,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the activityType
+    * The type of activity that was performed. Read-only.
     *
     * @return string|null The activityType
     */
@@ -160,6 +169,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the activityType
+    * The type of activity that was performed. Read-only.
     *
     * @param string $val The activityType
     *
@@ -173,6 +183,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the actor
+    * Azure AD user and application associated with the audit event. Read-only.
     *
     * @return CloudPcAuditActor|null The actor
     */
@@ -191,6 +202,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the actor
+    * Azure AD user and application associated with the audit event. Read-only.
     *
     * @param CloudPcAuditActor $val The actor
     *
@@ -204,6 +216,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the category
+    * Audit category. Read-only.
     *
     * @return CloudPcAuditCategory|null The category
     */
@@ -222,6 +235,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the category
+    * Audit category. Read-only.
     *
     * @param CloudPcAuditCategory $val The category
     *
@@ -235,6 +249,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the componentName
+    * Component name. Read-only.
     *
     * @return string|null The componentName
     */
@@ -249,6 +264,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the componentName
+    * Component name. Read-only.
     *
     * @param string $val The componentName
     *
@@ -262,6 +278,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the correlationId
+    * The client request identifier, used to correlate activity within the system. Read-only.
     *
     * @return string|null The correlationId
     */
@@ -276,6 +293,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the correlationId
+    * The client request identifier, used to correlate activity within the system. Read-only.
     *
     * @param string $val The correlationId
     *
@@ -289,6 +307,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Gets the displayName
+    * Event display name. Read-only.
     *
     * @return string|null The displayName
     */
@@ -303,6 +322,7 @@ class CloudPcAuditEvent extends Entity
     
     /**
     * Sets the displayName
+    * Event display name. Read-only.
     *
     * @param string $val The displayName
     *
@@ -317,6 +337,7 @@ class CloudPcAuditEvent extends Entity
 
      /** 
      * Gets the resources
+    * List of cloudPcAuditResource objects. Read-only.
      *
      * @return array|null The resources
      */
@@ -331,6 +352,7 @@ class CloudPcAuditEvent extends Entity
     
     /** 
     * Sets the resources
+    * List of cloudPcAuditResource objects. Read-only.
     *
     * @param CloudPcAuditResource $val The resources
     *

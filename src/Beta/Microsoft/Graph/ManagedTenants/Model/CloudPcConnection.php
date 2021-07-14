@@ -26,6 +26,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the displayName
+    * The display name of the cloud PC connection. Required. Read-only.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name of the cloud PC connection. Required. Read-only.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the healthCheckStatus
+    * The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
     *
     * @return string|null The healthCheckStatus
     */
@@ -67,6 +70,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the healthCheckStatus
+    * The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
     *
     * @param string $val The healthCheckStatus
     *
@@ -80,6 +84,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
     *
     * @return \DateTime|null The lastRefreshedDateTime
     */
@@ -98,6 +103,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
     *
     * @param \DateTime $val The lastRefreshedDateTime
     *
@@ -111,6 +117,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantDisplayName
+    * The display name for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantDisplayName
     */
@@ -125,6 +132,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantDisplayName
+    * The display name for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantDisplayName
     *
@@ -138,6 +146,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -152,6 +161,7 @@ class CloudPcConnection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantId
     *

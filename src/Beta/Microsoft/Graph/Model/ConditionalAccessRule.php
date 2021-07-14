@@ -50,4 +50,6 @@ class ConditionalAccessRule extends Enum
     const DEVICE_FILTER = "deviceFilter";
     const DEVICE_STATE = "deviceState";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const DEVICE_FILTER_INCLUDE_RULE_NOT_MATCHED = "deviceFilterIncludeRuleNotMatched";
+    const ALL_DEVICE_STATES = "allDeviceStates";
 }

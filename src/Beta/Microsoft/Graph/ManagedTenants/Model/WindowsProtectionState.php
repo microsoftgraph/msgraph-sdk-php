@@ -26,6 +26,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the antiMalwareVersion
+    * The anti-malware version for the managed device. Optional. Read-only.
     *
     * @return string|null The antiMalwareVersion
     */
@@ -40,6 +41,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the antiMalwareVersion
+    * The anti-malware version for the managed device. Optional. Read-only.
     *
     * @param string $val The antiMalwareVersion
     *
@@ -53,6 +55,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the attentionRequired
+    * A flag indicating whether attention is required for the managed device. Optional. Read-only.
     *
     * @return bool|null The attentionRequired
     */
@@ -67,6 +70,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the attentionRequired
+    * A flag indicating whether attention is required for the managed device. Optional. Read-only.
     *
     * @param bool $val The attentionRequired
     *
@@ -80,6 +84,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the deviceDeleted
+    * A flag indicating whether the managed device has been deleted. Optional. Read-only.
     *
     * @return bool|null The deviceDeleted
     */
@@ -94,6 +99,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the deviceDeleted
+    * A flag indicating whether the managed device has been deleted. Optional. Read-only.
     *
     * @param bool $val The deviceDeleted
     *
@@ -107,6 +113,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the devicePropertyRefreshDateTime
+    * The date and time the device property has been refreshed. Optional. Read-only.
     *
     * @return \DateTime|null The devicePropertyRefreshDateTime
     */
@@ -125,6 +132,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the devicePropertyRefreshDateTime
+    * The date and time the device property has been refreshed. Optional. Read-only.
     *
     * @param \DateTime $val The devicePropertyRefreshDateTime
     *
@@ -138,6 +146,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the engineVersion
+    * The anti-virus engine version for the managed device. Optional. Read-only.
     *
     * @return string|null The engineVersion
     */
@@ -152,6 +161,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the engineVersion
+    * The anti-virus engine version for the managed device. Optional. Read-only.
     *
     * @param string $val The engineVersion
     *
@@ -165,6 +175,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the fullScanOverdue
+    * A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
     *
     * @return bool|null The fullScanOverdue
     */
@@ -179,6 +190,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the fullScanOverdue
+    * A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
     *
     * @param bool $val The fullScanOverdue
     *
@@ -192,6 +204,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the fullScanRequired
+    * A flag indicating whether full scan is overdue for the managed device. Optional. Read-only.
     *
     * @return bool|null The fullScanRequired
     */
@@ -206,6 +219,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the fullScanRequired
+    * A flag indicating whether full scan is overdue for the managed device. Optional. Read-only.
     *
     * @param bool $val The fullScanRequired
     *
@@ -219,6 +233,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastFullScanDateTime
+    * The date and time a full scan was completed. Optional. Read-only.
     *
     * @return \DateTime|null The lastFullScanDateTime
     */
@@ -237,6 +252,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastFullScanDateTime
+    * The date and time a full scan was completed. Optional. Read-only.
     *
     * @param \DateTime $val The lastFullScanDateTime
     *
@@ -250,6 +266,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastFullScanSignatureVersion
+    * The version anti-malware version used to perform the last full scan. Optional. Read-only.
     *
     * @return string|null The lastFullScanSignatureVersion
     */
@@ -264,6 +281,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastFullScanSignatureVersion
+    * The version anti-malware version used to perform the last full scan. Optional. Read-only.
     *
     * @param string $val The lastFullScanSignatureVersion
     *
@@ -277,6 +295,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastQuickScanDateTime
+    * The date and time a quick scan was completed. Optional. Read-only.
     *
     * @return \DateTime|null The lastQuickScanDateTime
     */
@@ -295,6 +314,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastQuickScanDateTime
+    * The date and time a quick scan was completed. Optional. Read-only.
     *
     * @param \DateTime $val The lastQuickScanDateTime
     *
@@ -308,6 +328,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastQuickScanSignatureVersion
+    * The version anti-malware version used to perform the last full scan. Optional. Read-only.
     *
     * @return string|null The lastQuickScanSignatureVersion
     */
@@ -322,6 +343,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastQuickScanSignatureVersion
+    * The version anti-malware version used to perform the last full scan. Optional. Read-only.
     *
     * @param string $val The lastQuickScanSignatureVersion
     *
@@ -335,6 +357,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
     *
     * @return \DateTime|null The lastRefreshedDateTime
     */
@@ -353,6 +376,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
     *
     * @param \DateTime $val The lastRefreshedDateTime
     *
@@ -366,6 +390,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastReportedDateTime
+    * The date and time the protection state was last reported for the managed device. Optional. Read-only.
     *
     * @return \DateTime|null The lastReportedDateTime
     */
@@ -384,6 +409,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastReportedDateTime
+    * The date and time the protection state was last reported for the managed device. Optional. Read-only.
     *
     * @param \DateTime $val The lastReportedDateTime
     *
@@ -397,6 +423,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the malwareProtectionEnabled
+    * A flag indicating whether malware protection is enabled for the managed device. Optional. Read-only.
     *
     * @return bool|null The malwareProtectionEnabled
     */
@@ -411,6 +438,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the malwareProtectionEnabled
+    * A flag indicating whether malware protection is enabled for the managed device. Optional. Read-only.
     *
     * @param bool $val The malwareProtectionEnabled
     *
@@ -424,6 +452,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the managedDeviceHealthState
+    * The health state for the managed device. Optional. Read-only.
     *
     * @return string|null The managedDeviceHealthState
     */
@@ -438,6 +467,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the managedDeviceHealthState
+    * The health state for the managed device. Optional. Read-only.
     *
     * @param string $val The managedDeviceHealthState
     *
@@ -451,6 +481,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the managedDeviceId
+    * The unique identifier for the managed device. Optional. Read-only.
     *
     * @return string|null The managedDeviceId
     */
@@ -465,6 +496,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the managedDeviceId
+    * The unique identifier for the managed device. Optional. Read-only.
     *
     * @param string $val The managedDeviceId
     *
@@ -478,6 +510,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the managedDeviceName
+    * The display name for the managed device. Optional. Read-only.
     *
     * @return string|null The managedDeviceName
     */
@@ -492,6 +525,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the managedDeviceName
+    * The display name for the managed device. Optional. Read-only.
     *
     * @param string $val The managedDeviceName
     *
@@ -505,6 +539,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the networkInspectionSystemEnabled
+    * A flag indicating whether the network inspection system is enabled. Optional. Read-only.
     *
     * @return bool|null The networkInspectionSystemEnabled
     */
@@ -519,6 +554,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the networkInspectionSystemEnabled
+    * A flag indicating whether the network inspection system is enabled. Optional. Read-only.
     *
     * @param bool $val The networkInspectionSystemEnabled
     *
@@ -532,6 +568,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the quickScanOverdue
+    * A flag indicating weather a quick scan is overdue. Optional. Read-only.
     *
     * @return bool|null The quickScanOverdue
     */
@@ -546,6 +583,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the quickScanOverdue
+    * A flag indicating weather a quick scan is overdue. Optional. Read-only.
     *
     * @param bool $val The quickScanOverdue
     *
@@ -559,6 +597,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the realTimeProtectionEnabled
+    * A flag indicating whether real time protection is enabled. Optional. Read-only.
     *
     * @return bool|null The realTimeProtectionEnabled
     */
@@ -573,6 +612,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the realTimeProtectionEnabled
+    * A flag indicating whether real time protection is enabled. Optional. Read-only.
     *
     * @param bool $val The realTimeProtectionEnabled
     *
@@ -586,6 +626,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the rebootRequired
+    * A flag indicating whether a reboot is required. Optional. Read-only.
     *
     * @return bool|null The rebootRequired
     */
@@ -600,6 +641,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the rebootRequired
+    * A flag indicating whether a reboot is required. Optional. Read-only.
     *
     * @param bool $val The rebootRequired
     *
@@ -613,6 +655,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the signatureUpdateOverdue
+    * A flag indicating whether an signature update is overdue. Optional. Read-only.
     *
     * @return bool|null The signatureUpdateOverdue
     */
@@ -627,6 +670,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the signatureUpdateOverdue
+    * A flag indicating whether an signature update is overdue. Optional. Read-only.
     *
     * @param bool $val The signatureUpdateOverdue
     *
@@ -640,6 +684,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the signatureVersion
+    * The signature version for the managed device. Optional. Read-only.
     *
     * @return string|null The signatureVersion
     */
@@ -654,6 +699,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the signatureVersion
+    * The signature version for the managed device. Optional. Read-only.
     *
     * @param string $val The signatureVersion
     *
@@ -667,6 +713,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantDisplayName
+    * The display name for the managed tenant. Optional. Read-only.
     *
     * @return string|null The tenantDisplayName
     */
@@ -681,6 +728,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantDisplayName
+    * The display name for the managed tenant. Optional. Read-only.
     *
     * @param string $val The tenantDisplayName
     *
@@ -694,6 +742,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -708,6 +757,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @param string $val The tenantId
     *

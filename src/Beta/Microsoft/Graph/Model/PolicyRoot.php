@@ -526,6 +526,62 @@ class PolicyRoot implements \JsonSerializable
     
 
      /** 
+     * Gets the mobileAppManagementPolicies
+     *
+     * @return array|null The mobileAppManagementPolicies
+     */
+    public function getMobileAppManagementPolicies()
+    {
+        if (array_key_exists("mobileAppManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["mobileAppManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileAppManagementPolicies
+    *
+    * @param MobilityManagementPolicy $val The mobileAppManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setMobileAppManagementPolicies($val)
+    {
+        $this->_propDict["mobileAppManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the mobileDeviceManagementPolicies
+     *
+     * @return array|null The mobileDeviceManagementPolicies
+     */
+    public function getMobileDeviceManagementPolicies()
+    {
+        if (array_key_exists("mobileDeviceManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["mobileDeviceManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileDeviceManagementPolicies
+    *
+    * @param MobilityManagementPolicy $val The mobileDeviceManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setMobileDeviceManagementPolicies($val)
+    {
+        $this->_propDict["mobileDeviceManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the roleManagementPolicies
      *
      * @return array|null The roleManagementPolicies
@@ -583,11 +639,14 @@ class PolicyRoot implements \JsonSerializable
     /**
     * Gets the ODataType
     *
-    * @return string The ODataType
+    * @return string|null The ODataType
     */
     public function getODataType()
     {
-        return $this->_propDict["@odata.type"];
+        if (array_key_exists('@odata.type', $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        }
+        return null;
     }
     
     /**

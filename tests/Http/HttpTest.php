@@ -148,7 +148,7 @@ class HttpTest extends TestCase
 
     public function testSendStream()
     {
-        $body = GuzzleHttp\Psr7\stream_for('stream');
+        $body = GuzzleHttp\Psr7\Utils::streamFor('stream');
         $request = $this->getRequest->attachBody($body);
         $this->assertInstanceOf(GraphRequest::class, $request);
 

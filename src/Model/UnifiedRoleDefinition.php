@@ -142,7 +142,7 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Gets the resourceScopes
-    * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
+    * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
     *
     * @return string|null The resourceScopes
     */
@@ -157,7 +157,7 @@ class UnifiedRoleDefinition extends Entity
     
     /**
     * Sets the resourceScopes
-    * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
+    * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
     *
     * @param string $val The resourceScopes
     *

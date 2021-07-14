@@ -25,6 +25,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the actionId
+    * The unique identifier for the workload action. Required. Read-only.
     *
     * @return string|null The actionId
     */
@@ -39,6 +40,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the actionId
+    * The unique identifier for the workload action. Required. Read-only.
     *
     * @param string $val The value of the actionId
     *
@@ -51,6 +53,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the deployedPolicyId
+    * The identifier of any policy that was created by applying the workload action. Optional. Read-only.
     *
     * @return string|null The deployedPolicyId
     */
@@ -65,6 +68,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the deployedPolicyId
+    * The identifier of any policy that was created by applying the workload action. Optional. Read-only.
     *
     * @param string $val The value of the deployedPolicyId
     *
@@ -78,6 +82,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the error
+    * The detailed information for exceptions that occur when deploying the workload action. Optional. Required.
     *
     * @return \Beta\Microsoft\Graph\Model\GenericError|null The error
     */
@@ -96,6 +101,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the error
+    * The detailed information for exceptions that occur when deploying the workload action. Optional. Required.
     *
     * @param \Beta\Microsoft\Graph\Model\GenericError $val The value to assign to the error
     *
@@ -109,6 +115,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastDeploymentDateTime
+    * The date and time the workload action was last deployed. Optional.
     *
     * @return \DateTime|null The lastDeploymentDateTime
     */
@@ -127,6 +134,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastDeploymentDateTime
+    * The date and time the workload action was last deployed. Optional.
     *
     * @param \DateTime $val The value to assign to the lastDeploymentDateTime
     *
@@ -140,6 +148,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the status
+    * The status of the workload action deployment. Possible values are: toAddress, completed, error, timeOut, inProgress, unknownFutureValue. Required. Read-only.
     *
     * @return WorkloadActionStatus|null The status
     */
@@ -158,6 +167,7 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the status
+    * The status of the workload action deployment. Possible values are: toAddress, completed, error, timeOut, inProgress, unknownFutureValue. Required. Read-only.
     *
     * @param WorkloadActionStatus $val The value to assign to the status
     *

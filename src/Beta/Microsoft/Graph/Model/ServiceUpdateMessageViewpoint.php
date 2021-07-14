@@ -25,6 +25,7 @@ class ServiceUpdateMessageViewpoint extends Entity
 {
     /**
     * Gets the isArchived
+    * Indicates whether the user archived the message.
     *
     * @return bool|null The isArchived
     */
@@ -39,6 +40,7 @@ class ServiceUpdateMessageViewpoint extends Entity
 
     /**
     * Sets the isArchived
+    * Indicates whether the user archived the message.
     *
     * @param bool $val The value of the isArchived
     *
@@ -51,6 +53,7 @@ class ServiceUpdateMessageViewpoint extends Entity
     }
     /**
     * Gets the isFavorited
+    * Indicates whether the user marked the message as favorite.
     *
     * @return bool|null The isFavorited
     */
@@ -65,6 +68,7 @@ class ServiceUpdateMessageViewpoint extends Entity
 
     /**
     * Sets the isFavorited
+    * Indicates whether the user marked the message as favorite.
     *
     * @param bool $val The value of the isFavorited
     *
@@ -77,6 +81,7 @@ class ServiceUpdateMessageViewpoint extends Entity
     }
     /**
     * Gets the isRead
+    * Indicates whether the user read the message.
     *
     * @return bool|null The isRead
     */
@@ -91,6 +96,7 @@ class ServiceUpdateMessageViewpoint extends Entity
 
     /**
     * Sets the isRead
+    * Indicates whether the user read the message.
     *
     * @param bool $val The value of the isRead
     *

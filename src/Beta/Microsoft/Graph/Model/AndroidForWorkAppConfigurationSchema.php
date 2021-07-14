@@ -36,7 +36,7 @@ class AndroidForWorkAppConfigurationSchema extends Entity
             if (is_a($this->_propDict["exampleJson"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["exampleJson"])) {
                 return $this->_propDict["exampleJson"];
             } else {
-                $this->_propDict["exampleJson"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["exampleJson"]);
+                $this->_propDict["exampleJson"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["exampleJson"]);
                 return $this->_propDict["exampleJson"];
             }
         }

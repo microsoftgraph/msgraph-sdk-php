@@ -288,6 +288,33 @@ class SignIn extends Entity
     }
     
     /**
+    * Gets the autonomousSystemNumber
+    *
+    * @return int|null The autonomousSystemNumber
+    */
+    public function getAutonomousSystemNumber()
+    {
+        if (array_key_exists("autonomousSystemNumber", $this->_propDict)) {
+            return $this->_propDict["autonomousSystemNumber"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the autonomousSystemNumber
+    *
+    * @param int $val The autonomousSystemNumber
+    *
+    * @return SignIn
+    */
+    public function setAutonomousSystemNumber($val)
+    {
+        $this->_propDict["autonomousSystemNumber"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the clientAppUsed
     * The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).
     *
@@ -408,6 +435,37 @@ class SignIn extends Entity
     public function setCreatedDateTime($val)
     {
         $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the crossTenantAccessType
+    *
+    * @return SignInAccessType|null The crossTenantAccessType
+    */
+    public function getCrossTenantAccessType()
+    {
+        if (array_key_exists("crossTenantAccessType", $this->_propDict)) {
+            if (is_a($this->_propDict["crossTenantAccessType"], "\Beta\Microsoft\Graph\Model\SignInAccessType") || is_null($this->_propDict["crossTenantAccessType"])) {
+                return $this->_propDict["crossTenantAccessType"];
+            } else {
+                $this->_propDict["crossTenantAccessType"] = new SignInAccessType($this->_propDict["crossTenantAccessType"]);
+                return $this->_propDict["crossTenantAccessType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the crossTenantAccessType
+    *
+    * @param SignInAccessType $val The crossTenantAccessType
+    *
+    * @return SignIn
+    */
+    public function setCrossTenantAccessType($val)
+    {
+        $this->_propDict["crossTenantAccessType"] = $val;
         return $this;
     }
     
@@ -584,6 +642,33 @@ class SignIn extends Entity
     }
     
     /**
+    * Gets the isTenantRestricted
+    *
+    * @return bool|null The isTenantRestricted
+    */
+    public function getIsTenantRestricted()
+    {
+        if (array_key_exists("isTenantRestricted", $this->_propDict)) {
+            return $this->_propDict["isTenantRestricted"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isTenantRestricted
+    *
+    * @param bool $val The isTenantRestricted
+    *
+    * @return SignIn
+    */
+    public function setIsTenantRestricted($val)
+    {
+        $this->_propDict["isTenantRestricted"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the location
     * The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
     *
@@ -703,6 +788,37 @@ class SignIn extends Entity
     public function setOriginalRequestId($val)
     {
         $this->_propDict["originalRequestId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the privateLinkDetails
+    *
+    * @return PrivateLinkDetails|null The privateLinkDetails
+    */
+    public function getPrivateLinkDetails()
+    {
+        if (array_key_exists("privateLinkDetails", $this->_propDict)) {
+            if (is_a($this->_propDict["privateLinkDetails"], "\Beta\Microsoft\Graph\Model\PrivateLinkDetails") || is_null($this->_propDict["privateLinkDetails"])) {
+                return $this->_propDict["privateLinkDetails"];
+            } else {
+                $this->_propDict["privateLinkDetails"] = new PrivateLinkDetails($this->_propDict["privateLinkDetails"]);
+                return $this->_propDict["privateLinkDetails"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the privateLinkDetails
+    *
+    * @param PrivateLinkDetails $val The privateLinkDetails
+    *
+    * @return SignIn
+    */
+    public function setPrivateLinkDetails($val)
+    {
+        $this->_propDict["privateLinkDetails"] = $val;
         return $this;
     }
     
@@ -1008,6 +1124,60 @@ class SignIn extends Entity
     public function setRiskState($val)
     {
         $this->_propDict["riskState"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the servicePrincipalCredentialKeyId
+    *
+    * @return string|null The servicePrincipalCredentialKeyId
+    */
+    public function getServicePrincipalCredentialKeyId()
+    {
+        if (array_key_exists("servicePrincipalCredentialKeyId", $this->_propDict)) {
+            return $this->_propDict["servicePrincipalCredentialKeyId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the servicePrincipalCredentialKeyId
+    *
+    * @param string $val The servicePrincipalCredentialKeyId
+    *
+    * @return SignIn
+    */
+    public function setServicePrincipalCredentialKeyId($val)
+    {
+        $this->_propDict["servicePrincipalCredentialKeyId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the servicePrincipalCredentialThumbprint
+    *
+    * @return string|null The servicePrincipalCredentialThumbprint
+    */
+    public function getServicePrincipalCredentialThumbprint()
+    {
+        if (array_key_exists("servicePrincipalCredentialThumbprint", $this->_propDict)) {
+            return $this->_propDict["servicePrincipalCredentialThumbprint"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the servicePrincipalCredentialThumbprint
+    *
+    * @param string $val The servicePrincipalCredentialThumbprint
+    *
+    * @return SignIn
+    */
+    public function setServicePrincipalCredentialThumbprint($val)
+    {
+        $this->_propDict["servicePrincipalCredentialThumbprint"] = $val;
         return $this;
     }
     

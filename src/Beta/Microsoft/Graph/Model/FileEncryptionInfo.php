@@ -36,7 +36,7 @@ class FileEncryptionInfo extends Entity
             if (is_a($this->_propDict["encryptionKey"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["encryptionKey"])) {
                 return $this->_propDict["encryptionKey"];
             } else {
-                $this->_propDict["encryptionKey"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["encryptionKey"]);
+                $this->_propDict["encryptionKey"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["encryptionKey"]);
                 return $this->_propDict["encryptionKey"];
             }
         }
@@ -69,7 +69,7 @@ class FileEncryptionInfo extends Entity
             if (is_a($this->_propDict["fileDigest"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["fileDigest"])) {
                 return $this->_propDict["fileDigest"];
             } else {
-                $this->_propDict["fileDigest"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["fileDigest"]);
+                $this->_propDict["fileDigest"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["fileDigest"]);
                 return $this->_propDict["fileDigest"];
             }
         }
@@ -130,7 +130,7 @@ class FileEncryptionInfo extends Entity
             if (is_a($this->_propDict["initializationVector"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["initializationVector"])) {
                 return $this->_propDict["initializationVector"];
             } else {
-                $this->_propDict["initializationVector"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["initializationVector"]);
+                $this->_propDict["initializationVector"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["initializationVector"]);
                 return $this->_propDict["initializationVector"];
             }
         }
@@ -163,7 +163,7 @@ class FileEncryptionInfo extends Entity
             if (is_a($this->_propDict["mac"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["mac"])) {
                 return $this->_propDict["mac"];
             } else {
-                $this->_propDict["mac"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["mac"]);
+                $this->_propDict["mac"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["mac"]);
                 return $this->_propDict["mac"];
             }
         }
@@ -196,7 +196,7 @@ class FileEncryptionInfo extends Entity
             if (is_a($this->_propDict["macKey"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["macKey"])) {
                 return $this->_propDict["macKey"];
             } else {
-                $this->_propDict["macKey"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["macKey"]);
+                $this->_propDict["macKey"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["macKey"]);
                 return $this->_propDict["macKey"];
             }
         }

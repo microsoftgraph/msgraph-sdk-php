@@ -118,7 +118,6 @@ class B2cIdentityUserFlow extends IdentityUserFlow
 
      /** 
      * Gets the identityProviders
-    * The identity providers included in the user flow.
      *
      * @return array|null The identityProviders
      */
@@ -133,7 +132,6 @@ class B2cIdentityUserFlow extends IdentityUserFlow
     
     /** 
     * Sets the identityProviders
-    * The identity providers included in the user flow.
     *
     * @param IdentityProvider $val The identityProviders
     *

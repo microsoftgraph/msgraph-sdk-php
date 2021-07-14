@@ -25,6 +25,7 @@ class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient
 {
     /**
     * Gets the teamId
+    * The team's identifier.
     *
     * @return string|null The teamId
     */
@@ -39,6 +40,7 @@ class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient
 
     /**
     * Sets the teamId
+    * The team's identifier.
     *
     * @param string $val The value of the teamId
     *

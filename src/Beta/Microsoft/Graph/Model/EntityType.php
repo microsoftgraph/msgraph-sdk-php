@@ -37,5 +37,6 @@ class EntityType extends Enum
     const GRAPHLIST = "list";
     const LIST_ITEM = "listItem";
     const DRIVE = "drive";
-    const UNKNOWNFUTUREVALUE = "unknownfuturevalue";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const PERSON = "person";
 }

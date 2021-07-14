@@ -25,6 +25,7 @@ class CloudPcAuditProperty extends Entity
 {
     /**
     * Gets the displayName
+    * Display name.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class CloudPcAuditProperty extends Entity
 
     /**
     * Sets the displayName
+    * Display name.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class CloudPcAuditProperty extends Entity
     }
     /**
     * Gets the newValue
+    * New value.
     *
     * @return string|null The newValue
     */
@@ -65,6 +68,7 @@ class CloudPcAuditProperty extends Entity
 
     /**
     * Sets the newValue
+    * New value.
     *
     * @param string $val The value of the newValue
     *
@@ -77,6 +81,7 @@ class CloudPcAuditProperty extends Entity
     }
     /**
     * Gets the oldValue
+    * Old value.
     *
     * @return string|null The oldValue
     */
@@ -91,6 +96,7 @@ class CloudPcAuditProperty extends Entity
 
     /**
     * Sets the oldValue
+    * Old value.
     *
     * @param string $val The value of the oldValue
     *

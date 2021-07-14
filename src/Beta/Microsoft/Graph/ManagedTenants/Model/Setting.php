@@ -25,6 +25,7 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the displayName
+    * The display name for the setting. Required. Read-only.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The display name for the setting. Required. Read-only.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the jsonValue
+    * The value for the setting serialized as string of JSON. Required. Read-only.
     *
     * @return string|null The jsonValue
     */
@@ -65,6 +68,7 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the jsonValue
+    * The value for the setting serialized as string of JSON. Required. Read-only.
     *
     * @param string $val The value of the jsonValue
     *
@@ -77,6 +81,7 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the overwriteAllowed
+    * A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
     *
     * @return bool|null The overwriteAllowed
     */
@@ -91,6 +96,7 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the overwriteAllowed
+    * A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
     *
     * @param bool $val The value of the overwriteAllowed
     *
@@ -104,6 +110,7 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the valueType
+    * The data type for the setting. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
     *
     * @return ManagementParameterValueType|null The valueType
     */
@@ -122,6 +129,7 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the valueType
+    * The data type for the setting. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
     *
     * @param ManagementParameterValueType $val The value to assign to the valueType
     *

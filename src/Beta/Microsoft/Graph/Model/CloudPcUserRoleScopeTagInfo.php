@@ -25,6 +25,7 @@ class CloudPcUserRoleScopeTagInfo extends Entity
 {
     /**
     * Gets the displayName
+    * Scope tag display name.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class CloudPcUserRoleScopeTagInfo extends Entity
 
     /**
     * Sets the displayName
+    * Scope tag display name.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class CloudPcUserRoleScopeTagInfo extends Entity
     }
     /**
     * Gets the roleScopeTagId
+    * Scope tag ID.
     *
     * @return string|null The roleScopeTagId
     */
@@ -65,6 +68,7 @@ class CloudPcUserRoleScopeTagInfo extends Entity
 
     /**
     * Sets the roleScopeTagId
+    * Scope tag ID.
     *
     * @param string $val The value of the roleScopeTagId
     *

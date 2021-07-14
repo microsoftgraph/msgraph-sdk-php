@@ -26,6 +26,7 @@ class ServiceHealth extends Entity
 {
     /**
     * Gets the service
+    * The service name.
     *
     * @return string|null The service
     */
@@ -40,6 +41,7 @@ class ServiceHealth extends Entity
     
     /**
     * Sets the service
+    * The service name.
     *
     * @param string $val The service
     *
@@ -53,6 +55,7 @@ class ServiceHealth extends Entity
     
     /**
     * Gets the status
+    * Show the overral service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
     *
     * @return ServiceHealthStatus|null The status
     */
@@ -71,6 +74,7 @@ class ServiceHealth extends Entity
     
     /**
     * Sets the status
+    * Show the overral service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
     *
     * @param ServiceHealthStatus $val The status
     *
@@ -85,6 +89,7 @@ class ServiceHealth extends Entity
 
      /** 
      * Gets the issues
+    * A collection of issues happened on the service, with detailed information for each issue.
      *
      * @return array|null The issues
      */
@@ -99,6 +104,7 @@ class ServiceHealth extends Entity
     
     /** 
     * Sets the issues
+    * A collection of issues happened on the service, with detailed information for each issue.
     *
     * @param ServiceHealthIssue $val The issues
     *

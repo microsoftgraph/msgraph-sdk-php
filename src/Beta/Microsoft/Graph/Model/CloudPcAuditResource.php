@@ -25,6 +25,7 @@ class CloudPcAuditResource extends Entity
 {
     /**
     * Gets the displayName
+    * The resource entity display name.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class CloudPcAuditResource extends Entity
 
     /**
     * Sets the displayName
+    * The resource entity display name.
     *
     * @param string $val The value of the displayName
     *
@@ -52,6 +54,7 @@ class CloudPcAuditResource extends Entity
 
     /**
     * Gets the modifiedProperties
+    * A list of modified properties.
     *
     * @return CloudPcAuditProperty|null The modifiedProperties
     */
@@ -70,6 +73,7 @@ class CloudPcAuditResource extends Entity
 
     /**
     * Sets the modifiedProperties
+    * A list of modified properties.
     *
     * @param CloudPcAuditProperty $val The value to assign to the modifiedProperties
     *
@@ -82,6 +86,7 @@ class CloudPcAuditResource extends Entity
     }
     /**
     * Gets the resourceId
+    * The ID of the audit resource.
     *
     * @return string|null The resourceId
     */
@@ -96,6 +101,7 @@ class CloudPcAuditResource extends Entity
 
     /**
     * Sets the resourceId
+    * The ID of the audit resource.
     *
     * @param string $val The value of the resourceId
     *
@@ -108,6 +114,7 @@ class CloudPcAuditResource extends Entity
     }
     /**
     * Gets the type
+    * The type of the audit resource.
     *
     * @return string|null The type
     */
@@ -122,6 +129,7 @@ class CloudPcAuditResource extends Entity
 
     /**
     * Sets the type
+    * The type of the audit resource.
     *
     * @param string $val The value of the type
     *

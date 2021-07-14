@@ -26,6 +26,7 @@ class DriveItemSource extends Entity
 
     /**
     * Gets the application
+    * Enumeration value that indicates the source application where the file was created.
     *
     * @return DriveItemSourceApplication|null The application
     */
@@ -44,6 +45,7 @@ class DriveItemSource extends Entity
 
     /**
     * Sets the application
+    * Enumeration value that indicates the source application where the file was created.
     *
     * @param DriveItemSourceApplication $val The value to assign to the application
     *
@@ -56,6 +58,7 @@ class DriveItemSource extends Entity
     }
     /**
     * Gets the externalId
+    * The external identifier for the drive item from the source.
     *
     * @return string|null The externalId
     */
@@ -70,6 +73,7 @@ class DriveItemSource extends Entity
 
     /**
     * Sets the externalId
+    * The external identifier for the drive item from the source.
     *
     * @param string $val The value of the externalId
     *

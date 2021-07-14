@@ -26,6 +26,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the delegatedPrivilegeStatus
+    * The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue. Optional. Read-only.
     *
     * @return DelegatedPrivilegeStatus|null The delegatedPrivilegeStatus
     */
@@ -44,6 +45,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the delegatedPrivilegeStatus
+    * The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue. Optional. Read-only.
     *
     * @param DelegatedPrivilegeStatus $val The value to assign to the delegatedPrivilegeStatus
     *
@@ -57,6 +59,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastDelegatedPrivilegeRefreshDateTime
+    * The date and time the delegated admin privileges status was updated. Optional. Read-only.
     *
     * @return \DateTime|null The lastDelegatedPrivilegeRefreshDateTime
     */
@@ -75,6 +78,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastDelegatedPrivilegeRefreshDateTime
+    * The date and time the delegated admin privileges status was updated. Optional. Read-only.
     *
     * @param \DateTime $val The value to assign to the lastDelegatedPrivilegeRefreshDateTime
     *
@@ -87,6 +91,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the offboardedByUserId
+    * The identifier for the account that offboarded the managed tenant. Optional. Read-only.
     *
     * @return string|null The offboardedByUserId
     */
@@ -101,6 +106,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the offboardedByUserId
+    * The identifier for the account that offboarded the managed tenant. Optional. Read-only.
     *
     * @param string $val The value of the offboardedByUserId
     *
@@ -114,6 +120,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the offboardedDateTime
+    * The date and time when the managed tenant was offboarded. Optional. Read-only.
     *
     * @return \DateTime|null The offboardedDateTime
     */
@@ -132,6 +139,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the offboardedDateTime
+    * The date and time when the managed tenant was offboarded. Optional. Read-only.
     *
     * @param \DateTime $val The value to assign to the offboardedDateTime
     *
@@ -144,6 +152,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the onboardedByUserId
+    * The identifier for the account that onboarded the managed tenant. Optional. Read-only.
     *
     * @return string|null The onboardedByUserId
     */
@@ -158,6 +167,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the onboardedByUserId
+    * The identifier for the account that onboarded the managed tenant. Optional. Read-only.
     *
     * @param string $val The value of the onboardedByUserId
     *
@@ -171,6 +181,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the onboardedDateTime
+    * The date and time when the managed tenant was onboarded. Optional. Read-only.
     *
     * @return \DateTime|null The onboardedDateTime
     */
@@ -189,6 +200,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the onboardedDateTime
+    * The date and time when the managed tenant was onboarded. Optional. Read-only.
     *
     * @param \DateTime $val The value to assign to the onboardedDateTime
     *
@@ -202,6 +214,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the onboardingStatus
+    * The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
     *
     * @return TenantOnboardingStatus|null The onboardingStatus
     */
@@ -220,6 +233,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the onboardingStatus
+    * The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
     *
     * @param TenantOnboardingStatus $val The value to assign to the onboardingStatus
     *
@@ -233,6 +247,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the workloadStatuses
+    * The collection of workload statues for the managed tenant. Optional. Read-only.
     *
     * @return WorkloadStatus|null The workloadStatuses
     */
@@ -251,6 +266,7 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the workloadStatuses
+    * The collection of workload statues for the managed tenant. Optional. Read-only.
     *
     * @param WorkloadStatus $val The value to assign to the workloadStatuses
     *

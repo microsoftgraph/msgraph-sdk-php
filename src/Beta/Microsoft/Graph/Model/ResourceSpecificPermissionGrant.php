@@ -84,7 +84,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
     
     /**
     * Gets the permission
-    * The name of the permission. Read-only.
+    * The name of the resource-specific permission. Read-only.
     *
     * @return string|null The permission
     */
@@ -99,7 +99,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject
     
     /**
     * Sets the permission
-    * The name of the permission. Read-only.
+    * The name of the resource-specific permission. Read-only.
     *
     * @param string $val The permission
     *

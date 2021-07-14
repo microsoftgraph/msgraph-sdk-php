@@ -26,6 +26,7 @@ class ManagementTemplateDetailedInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the category
+    * The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
     *
     * @return ManagementCategory|null The category
     */
@@ -44,6 +45,7 @@ class ManagementTemplateDetailedInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
+    * The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
     *
     * @param ManagementCategory $val The value to assign to the category
     *
@@ -56,6 +58,7 @@ class ManagementTemplateDetailedInfo extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the displayName
+    * The display name for the management template. Required. Read-only.
     *
     * @return string|null The displayName
     */
@@ -70,6 +73,7 @@ class ManagementTemplateDetailedInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The display name for the management template. Required. Read-only.
     *
     * @param string $val The value of the displayName
     *
@@ -82,6 +86,7 @@ class ManagementTemplateDetailedInfo extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the managementTemplateId
+    * The unique identifier for the management template. Required. Read-only.
     *
     * @return string|null The managementTemplateId
     */
@@ -96,6 +101,7 @@ class ManagementTemplateDetailedInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the managementTemplateId
+    * The unique identifier for the management template. Required. Read-only.
     *
     * @param string $val The value of the managementTemplateId
     *

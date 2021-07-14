@@ -26,6 +26,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the complianceStatus
+    * Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only.
     *
     * @return string|null The complianceStatus
     */
@@ -40,6 +41,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the complianceStatus
+    * Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only.
     *
     * @param string $val The complianceStatus
     *
@@ -53,6 +55,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the deviceType
+    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
     *
     * @return string|null The deviceType
     */
@@ -67,6 +70,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the deviceType
+    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
     *
     * @param string $val The deviceType
     *
@@ -80,6 +84,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the inGracePeriodUntilDateTime
+    * The date and time when the grace period will expire. Optional. Read-only.
     *
     * @return \DateTime|null The inGracePeriodUntilDateTime
     */
@@ -98,6 +103,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the inGracePeriodUntilDateTime
+    * The date and time when the grace period will expire. Optional. Read-only.
     *
     * @param \DateTime $val The inGracePeriodUntilDateTime
     *
@@ -111,6 +117,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
     *
     * @return \DateTime|null The lastRefreshedDateTime
     */
@@ -129,6 +136,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastRefreshedDateTime
+    * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
     *
     * @param \DateTime $val The lastRefreshedDateTime
     *
@@ -142,6 +150,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastSyncDateTime
+    * The date and time that the device last completed a successful sync with Microsoft Endpoint Manager. Optional. Read-only.
     *
     * @return \DateTime|null The lastSyncDateTime
     */
@@ -160,6 +169,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastSyncDateTime
+    * The date and time that the device last completed a successful sync with Microsoft Endpoint Manager. Optional. Read-only.
     *
     * @param \DateTime $val The lastSyncDateTime
     *
@@ -173,6 +183,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the managedDeviceId
+    * The identifier for the managed device in Microsoft Endpoint Manager. Optional. Read-only.
     *
     * @return string|null The managedDeviceId
     */
@@ -187,6 +198,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the managedDeviceId
+    * The identifier for the managed device in Microsoft Endpoint Manager. Optional. Read-only.
     *
     * @param string $val The managedDeviceId
     *
@@ -200,6 +212,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the managedDeviceName
+    * The display name for the managed device. Optional. Read-only.
     *
     * @return string|null The managedDeviceName
     */
@@ -214,6 +227,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the managedDeviceName
+    * The display name for the managed device. Optional. Read-only.
     *
     * @param string $val The managedDeviceName
     *
@@ -227,6 +241,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the manufacturer
+    * The manufacture for the device. Optional. Read-only.
     *
     * @return string|null The manufacturer
     */
@@ -241,6 +256,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the manufacturer
+    * The manufacture for the device. Optional. Read-only.
     *
     * @param string $val The manufacturer
     *
@@ -254,6 +270,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the model
+    * The model for the device. Optional. Read-only.
     *
     * @return string|null The model
     */
@@ -268,6 +285,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the model
+    * The model for the device. Optional. Read-only.
     *
     * @param string $val The model
     *
@@ -281,6 +299,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the osDescription
+    * The description of the operating system for the managed device. Optional. Read-only.
     *
     * @return string|null The osDescription
     */
@@ -295,6 +314,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the osDescription
+    * The description of the operating system for the managed device. Optional. Read-only.
     *
     * @param string $val The osDescription
     *
@@ -308,6 +328,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the osVersion
+    * The version of the operating system for the managed device. Optional. Read-only.
     *
     * @return string|null The osVersion
     */
@@ -322,6 +343,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the osVersion
+    * The version of the operating system for the managed device. Optional. Read-only.
     *
     * @param string $val The osVersion
     *
@@ -335,6 +357,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the ownerType
+    * The type of owner for the managed device. Optional. Read-only.
     *
     * @return string|null The ownerType
     */
@@ -349,6 +372,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the ownerType
+    * The type of owner for the managed device. Optional. Read-only.
     *
     * @param string $val The ownerType
     *
@@ -362,6 +386,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantDisplayName
+    * The display name for the managed tenant. Optional. Read-only.
     *
     * @return string|null The tenantDisplayName
     */
@@ -376,6 +401,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantDisplayName
+    * The display name for the managed tenant. Optional. Read-only.
     *
     * @param string $val The tenantDisplayName
     *
@@ -389,6 +415,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -403,6 +430,7 @@ class ManagedDeviceCompliance extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @param string $val The tenantId
     *

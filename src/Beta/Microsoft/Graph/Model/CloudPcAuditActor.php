@@ -25,6 +25,7 @@ class CloudPcAuditActor extends Entity
 {
     /**
     * Gets the applicationDisplayName
+    * Name of the application.
     *
     * @return string|null The applicationDisplayName
     */
@@ -39,6 +40,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the applicationDisplayName
+    * Name of the application.
     *
     * @param string $val The value of the applicationDisplayName
     *
@@ -51,6 +53,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the applicationId
+    * Azure AD application ID.
     *
     * @return string|null The applicationId
     */
@@ -65,6 +68,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the applicationId
+    * Azure AD application ID.
     *
     * @param string $val The value of the applicationId
     *
@@ -77,6 +81,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the ipAddress
+    * IP address.
     *
     * @return string|null The ipAddress
     */
@@ -91,6 +96,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the ipAddress
+    * IP address.
     *
     * @param string $val The value of the ipAddress
     *
@@ -103,6 +109,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the remoteTenantId
+    * The delegated partner tenant ID.
     *
     * @return string|null The remoteTenantId
     */
@@ -117,6 +124,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the remoteTenantId
+    * The delegated partner tenant ID.
     *
     * @param string $val The value of the remoteTenantId
     *
@@ -129,6 +137,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the remoteUserId
+    * The delegated partner user ID.
     *
     * @return string|null The remoteUserId
     */
@@ -143,6 +152,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the remoteUserId
+    * The delegated partner user ID.
     *
     * @param string $val The value of the remoteUserId
     *
@@ -155,6 +165,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the servicePrincipalName
+    * Service Principal Name (SPN).
     *
     * @return string|null The servicePrincipalName
     */
@@ -169,6 +180,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the servicePrincipalName
+    * Service Principal Name (SPN).
     *
     * @param string $val The value of the servicePrincipalName
     *
@@ -182,6 +194,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Gets the type
+    * The actor type. Possible values include ItPro, Application, Partner and Unknown.
     *
     * @return CloudPcAuditActorType|null The type
     */
@@ -200,6 +213,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the type
+    * The actor type. Possible values include ItPro, Application, Partner and Unknown.
     *
     * @param CloudPcAuditActorType $val The value to assign to the type
     *
@@ -212,6 +226,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the userId
+    * Azure AD user ID.
     *
     * @return string|null The userId
     */
@@ -226,6 +241,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the userId
+    * Azure AD user ID.
     *
     * @param string $val The value of the userId
     *
@@ -238,6 +254,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the userPermissions
+    * List of user permissions and application permissions when the audit event was performed.
     *
     * @return string|null The userPermissions
     */
@@ -252,6 +269,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the userPermissions
+    * List of user permissions and application permissions when the audit event was performed.
     *
     * @param string $val The value of the userPermissions
     *
@@ -264,6 +282,7 @@ class CloudPcAuditActor extends Entity
     }
     /**
     * Gets the userPrincipalName
+    * User Principal Name (UPN).
     *
     * @return string|null The userPrincipalName
     */
@@ -278,6 +297,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the userPrincipalName
+    * User Principal Name (UPN).
     *
     * @param string $val The value of the userPrincipalName
     *
@@ -291,6 +311,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Gets the userRoleScopeTags
+    * List of role scope tags.
     *
     * @return CloudPcUserRoleScopeTagInfo|null The userRoleScopeTags
     */
@@ -309,6 +330,7 @@ class CloudPcAuditActor extends Entity
 
     /**
     * Sets the userRoleScopeTags
+    * List of role scope tags.
     *
     * @param CloudPcUserRoleScopeTagInfo $val The value to assign to the userRoleScopeTags
     *

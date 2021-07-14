@@ -27,6 +27,7 @@ class ServiceAnnouncement extends Entity
 
      /** 
      * Gets the healthOverviews
+    * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
      * @return array|null The healthOverviews
      */
@@ -41,6 +42,7 @@ class ServiceAnnouncement extends Entity
     
     /** 
     * Sets the healthOverviews
+    * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
     * @param ServiceHealth $val The healthOverviews
     *
@@ -55,6 +57,7 @@ class ServiceAnnouncement extends Entity
 
      /** 
      * Gets the issues
+    * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
      * @return array|null The issues
      */
@@ -69,6 +72,7 @@ class ServiceAnnouncement extends Entity
     
     /** 
     * Sets the issues
+    * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
     * @param ServiceHealthIssue $val The issues
     *
@@ -83,6 +87,7 @@ class ServiceAnnouncement extends Entity
 
      /** 
      * Gets the messages
+    * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
      * @return array|null The messages
      */
@@ -97,6 +102,7 @@ class ServiceAnnouncement extends Entity
     
     /** 
     * Sets the messages
+    * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
     * @param ServiceUpdateMessage $val The messages
     *

@@ -64,7 +64,7 @@ class AlternativeSecurityId extends Entity
             if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["key"])) {
                 return $this->_propDict["key"];
             } else {
-                $this->_propDict["key"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["key"]);
+                $this->_propDict["key"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["key"]);
                 return $this->_propDict["key"];
             }
         }

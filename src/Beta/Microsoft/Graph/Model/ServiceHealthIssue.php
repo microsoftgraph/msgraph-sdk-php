@@ -26,6 +26,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
 {
     /**
     * Gets the classification
+    * The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
     *
     * @return ServiceHealthClassificationType|null The classification
     */
@@ -44,6 +45,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Sets the classification
+    * The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
     *
     * @param ServiceHealthClassificationType $val The classification
     *
@@ -57,6 +59,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Gets the feature
+    * The feature name of the service issue.
     *
     * @return string|null The feature
     */
@@ -71,6 +74,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Sets the feature
+    * The feature name of the service issue.
     *
     * @param string $val The feature
     *
@@ -84,6 +88,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Gets the featureGroup
+    * The feature group name of the service issue.
     *
     * @return string|null The featureGroup
     */
@@ -98,6 +103,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Sets the featureGroup
+    * The feature group name of the service issue.
     *
     * @param string $val The featureGroup
     *
@@ -111,6 +117,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Gets the impactDescription
+    * The description of the service issue impact.
     *
     * @return string|null The impactDescription
     */
@@ -125,6 +132,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Sets the impactDescription
+    * The description of the service issue impact.
     *
     * @param string $val The impactDescription
     *
@@ -138,6 +146,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Gets the isResolved
+    * Indicates whether the issue is resolved.
     *
     * @return bool|null The isResolved
     */
@@ -152,6 +161,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Sets the isResolved
+    * Indicates whether the issue is resolved.
     *
     * @param bool $val The isResolved
     *
@@ -165,6 +175,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Gets the origin
+    * Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
     *
     * @return ServiceHealthOrigin|null The origin
     */
@@ -183,6 +194,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Sets the origin
+    * Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
     *
     * @param ServiceHealthOrigin $val The origin
     *
@@ -197,6 +209,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
 
      /** 
      * Gets the posts
+    * Collection of historical posts for the service issue.
      *
      * @return array|null The posts
      */
@@ -211,6 +224,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /** 
     * Sets the posts
+    * Collection of historical posts for the service issue.
     *
     * @param ServiceHealthIssuePost $val The posts
     *
@@ -224,6 +238,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Gets the service
+    * Indicates the service affected by the issue.
     *
     * @return string|null The service
     */
@@ -238,6 +253,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Sets the service
+    * Indicates the service affected by the issue.
     *
     * @param string $val The service
     *
@@ -251,6 +267,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Gets the status
+    * The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
     *
     * @return ServiceHealthStatus|null The status
     */
@@ -269,6 +286,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     
     /**
     * Sets the status
+    * The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
     *
     * @param ServiceHealthStatus $val The status
     *

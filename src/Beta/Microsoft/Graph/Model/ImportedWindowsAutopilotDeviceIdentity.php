@@ -94,7 +94,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
             if (is_a($this->_propDict["hardwareIdentifier"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["hardwareIdentifier"])) {
                 return $this->_propDict["hardwareIdentifier"];
             } else {
-                $this->_propDict["hardwareIdentifier"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["hardwareIdentifier"]);
+                $this->_propDict["hardwareIdentifier"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["hardwareIdentifier"]);
                 return $this->_propDict["hardwareIdentifier"];
             }
         }

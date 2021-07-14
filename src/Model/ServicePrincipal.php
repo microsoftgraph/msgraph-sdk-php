@@ -26,7 +26,7 @@ class ServicePrincipal extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the service principal account is enabled; otherwise, false.
+    * true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, NOT, in).
     *
     * @return bool|null The accountEnabled
     */
@@ -41,7 +41,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the service principal account is enabled; otherwise, false.
+    * true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, NOT, in).
     *
     * @param bool $val The accountEnabled
     *
@@ -85,7 +85,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the alternativeNames
-    * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+    * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, NOT, ge, le, startsWith).
     *
     * @return string|null The alternativeNames
     */
@@ -100,7 +100,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the alternativeNames
-    * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+    * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, NOT, ge, le, startsWith).
     *
     * @param string $val The alternativeNames
     *
@@ -201,7 +201,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the applicationTemplateId
-    * Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only.
+    * Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith).
     *
     * @return string|null The applicationTemplateId
     */
@@ -216,7 +216,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the applicationTemplateId
-    * Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only.
+    * Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith).
     *
     * @param string $val The applicationTemplateId
     *
@@ -230,7 +230,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the appOwnerOrganizationId
-    * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.
+    * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
     *
     * @return string|null The appOwnerOrganizationId
     */
@@ -245,7 +245,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the appOwnerOrganizationId
-    * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.
+    * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
     *
     * @param string $val The appOwnerOrganizationId
     *
@@ -259,7 +259,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the appRoleAssignmentRequired
-    * Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable.
+    * Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT).
     *
     * @return bool|null The appRoleAssignmentRequired
     */
@@ -274,7 +274,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the appRoleAssignmentRequired
-    * Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable.
+    * Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT).
     *
     * @param bool $val The appRoleAssignmentRequired
     *
@@ -318,7 +318,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the description
-    * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters.
+    * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
     *
     * @return string|null The description
     */
@@ -333,7 +333,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the description
-    * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters.
+    * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
     *
     * @param string $val The description
     *
@@ -347,7 +347,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the disabledByMicrosoftStatus
-    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).
+    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, NOT).
     *
     * @return string|null The disabledByMicrosoftStatus
     */
@@ -362,7 +362,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the disabledByMicrosoftStatus
-    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).
+    * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, NOT).
     *
     * @param string $val The disabledByMicrosoftStatus
     *
@@ -376,7 +376,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the service principal.
+    * The display name for the service principal. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
     *
     * @return string|null The displayName
     */
@@ -391,7 +391,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the service principal.
+    * The display name for the service principal. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
     *
     * @param string $val The displayName
     *
@@ -434,7 +434,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the info
-    * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+    * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).
     *
     * @return InformationalUrl|null The info
     */
@@ -453,7 +453,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the info
-    * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+    * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).
     *
     * @param InformationalUrl $val The info
     *
@@ -468,7 +468,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the keyCredentials
-    * The collection of key credentials associated with the service principal. Not nullable.
+    * The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, NOT, ge, le).
      *
      * @return array|null The keyCredentials
      */
@@ -483,7 +483,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the keyCredentials
-    * The collection of key credentials associated with the service principal. Not nullable.
+    * The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, NOT, ge, le).
     *
     * @param KeyCredential $val The keyCredentials
     *
@@ -793,7 +793,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the servicePrincipalNames
-    * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, NOT, ge, le, startsWith).
     *
     * @return string|null The servicePrincipalNames
     */
@@ -808,7 +808,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the servicePrincipalNames
-    * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.
+    * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, NOT, ge, le, startsWith).
     *
     * @param string $val The servicePrincipalNames
     *
@@ -880,7 +880,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the tags
-    * Custom strings that can be used to categorize and identify the service principal. Not nullable.
+    * Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
     *
     * @return string|null The tags
     */
@@ -895,7 +895,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the tags
-    * Custom strings that can be used to categorize and identify the service principal. Not nullable.
+    * Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
     *
     * @param string $val The tags
     *
@@ -939,7 +939,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignedTo
-    * App role assignments for this app or service, granted to users, groups, and other service principals.
+    * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
      *
      * @return array|null The appRoleAssignedTo
      */
@@ -954,7 +954,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignedTo
-    * App role assignments for this app or service, granted to users, groups, and other service principals.
+    * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
     *
     * @param AppRoleAssignment $val The appRoleAssignedTo
     *
@@ -969,7 +969,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignments
-    * App role assignment for another app or service, granted to this service principal.
+    * App role assignment for another app or service, granted to this service principal. Supports $expand.
      *
      * @return array|null The appRoleAssignments
      */
@@ -984,7 +984,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignments
-    * App role assignment for another app or service, granted to this service principal.
+    * App role assignment for another app or service, granted to this service principal. Supports $expand.
     *
     * @param AppRoleAssignment $val The appRoleAssignments
     *
@@ -999,7 +999,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the claimsMappingPolicies
-    * The claimsMappingPolicies assigned to this service principal.
+    * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      *
      * @return array|null The claimsMappingPolicies
      */
@@ -1014,7 +1014,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the claimsMappingPolicies
-    * The claimsMappingPolicies assigned to this service principal.
+    * The claimsMappingPolicies assigned to this service principal. Supports $expand.
     *
     * @param ClaimsMappingPolicy $val The claimsMappingPolicies
     *
@@ -1059,7 +1059,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the delegatedPermissionClassifications
-    * The permission classifications for delegated permissions exposed by the app that this service principal represents.
+    * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
      *
      * @return array|null The delegatedPermissionClassifications
      */
@@ -1074,7 +1074,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the delegatedPermissionClassifications
-    * The permission classifications for delegated permissions exposed by the app that this service principal represents.
+    * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
     *
     * @param DelegatedPermissionClassification $val The delegatedPermissionClassifications
     *
@@ -1119,7 +1119,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the homeRealmDiscoveryPolicies
-    * The homeRealmDiscoveryPolicies assigned to this service principal.
+    * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
      *
      * @return array|null The homeRealmDiscoveryPolicies
      */
@@ -1134,7 +1134,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the homeRealmDiscoveryPolicies
-    * The homeRealmDiscoveryPolicies assigned to this service principal.
+    * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
     *
     * @param HomeRealmDiscoveryPolicy $val The homeRealmDiscoveryPolicies
     *
@@ -1149,7 +1149,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the memberOf
-    * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable.
+    * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      *
      * @return array|null The memberOf
      */
@@ -1164,7 +1164,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the memberOf
-    * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable.
+    * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject $val The memberOf
     *
@@ -1209,7 +1209,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the ownedObjects
-    * Directory objects that are owned by this service principal. Read-only. Nullable.
+    * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The ownedObjects
      */
@@ -1224,7 +1224,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the ownedObjects
-    * Directory objects that are owned by this service principal. Read-only. Nullable.
+    * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject $val The ownedObjects
     *
@@ -1239,7 +1239,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the owners
-    * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.
+    * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The owners
      */
@@ -1254,7 +1254,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the owners
-    * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.
+    * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject $val The owners
     *
@@ -1269,7 +1269,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the tokenIssuancePolicies
-    * The tokenIssuancePolicies assigned to this service principal.
+    * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
      *
      * @return array|null The tokenIssuancePolicies
      */
@@ -1284,7 +1284,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the tokenIssuancePolicies
-    * The tokenIssuancePolicies assigned to this service principal.
+    * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
     *
     * @param TokenIssuancePolicy $val The tokenIssuancePolicies
     *
@@ -1299,7 +1299,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the tokenLifetimePolicies
-    * The tokenLifetimePolicies assigned to this service principal.
+    * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
      *
      * @return array|null The tokenLifetimePolicies
      */
@@ -1314,7 +1314,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the tokenLifetimePolicies
-    * The tokenLifetimePolicies assigned to this service principal.
+    * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
     *
     * @param TokenLifetimePolicy $val The tokenLifetimePolicies
     *

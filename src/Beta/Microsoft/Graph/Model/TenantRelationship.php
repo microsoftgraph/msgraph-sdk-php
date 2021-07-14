@@ -57,6 +57,7 @@ class TenantRelationship implements \JsonSerializable
     
     /**
     * Gets the managedTenants
+    * The operations available to interact with the multi-tenant management platform.
     *
     * @return \Beta\Microsoft\Graph\ManagedTenants\Model\ManagedTenant|null The managedTenants
     */
@@ -75,6 +76,7 @@ class TenantRelationship implements \JsonSerializable
     
     /**
     * Sets the managedTenants
+    * The operations available to interact with the multi-tenant management platform.
     *
     * @param \Beta\Microsoft\Graph\ManagedTenants\Model\ManagedTenant $val The managedTenants
     *
@@ -89,11 +91,14 @@ class TenantRelationship implements \JsonSerializable
     /**
     * Gets the ODataType
     *
-    * @return string The ODataType
+    * @return string|null The ODataType
     */
     public function getODataType()
     {
-        return $this->_propDict["@odata.type"];
+        if (array_key_exists('@odata.type', $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        }
+        return null;
     }
     
     /**
