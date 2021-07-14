@@ -25,6 +25,7 @@ class ManagementIntentInfo extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the managementIntentDisplayName
+    * The display name for the management intent. Optional. Read-only.
     *
     * @return string|null The managementIntentDisplayName
     */
@@ -39,6 +40,7 @@ class ManagementIntentInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the managementIntentDisplayName
+    * The display name for the management intent. Optional. Read-only.
     *
     * @param string $val The value of the managementIntentDisplayName
     *
@@ -51,6 +53,7 @@ class ManagementIntentInfo extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the managementIntentId
+    * The identifier for the management intent. Required. Read-only.
     *
     * @return string|null The managementIntentId
     */
@@ -65,6 +68,7 @@ class ManagementIntentInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the managementIntentId
+    * The identifier for the management intent. Required. Read-only.
     *
     * @param string $val The value of the managementIntentId
     *
@@ -78,6 +82,7 @@ class ManagementIntentInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the managementTemplates
+    * The collection of management template information associated with the management intent. Optional. Read-only.
     *
     * @return ManagementTemplateDetailedInfo|null The managementTemplates
     */
@@ -96,6 +101,7 @@ class ManagementIntentInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the managementTemplates
+    * The collection of management template information associated with the management intent. Optional. Read-only.
     *
     * @param ManagementTemplateDetailedInfo $val The value to assign to the managementTemplates
     *

@@ -25,6 +25,7 @@ class TenantContract extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the contractType
+    * The type of relationship that exists between the managing entity and tenant. Optional. Read-only.
     *
     * @return int|null The contractType
     */
@@ -39,6 +40,7 @@ class TenantContract extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the contractType
+    * The type of relationship that exists between the managing entity and tenant. Optional. Read-only.
     *
     * @param int $val The value of the contractType
     *
@@ -51,6 +53,7 @@ class TenantContract extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the defaultDomainName
+    * The default domain name for the tenant. Required. Read-only.
     *
     * @return string|null The defaultDomainName
     */
@@ -65,6 +68,7 @@ class TenantContract extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the defaultDomainName
+    * The default domain name for the tenant. Required. Read-only.
     *
     * @param string $val The value of the defaultDomainName
     *
@@ -77,6 +81,7 @@ class TenantContract extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the displayName
+    * The display name for the tenant. Optional. Read-only.
     *
     * @return string|null The displayName
     */
@@ -91,6 +96,7 @@ class TenantContract extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The display name for the tenant. Optional. Read-only.
     *
     * @param string $val The value of the displayName
     *

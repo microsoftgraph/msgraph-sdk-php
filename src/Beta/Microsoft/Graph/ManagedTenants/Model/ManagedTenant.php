@@ -27,6 +27,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the aggregatedPolicyCompliances
+    * Aggregate view of device compliance policies across managed tenants.
      *
      * @return array|null The aggregatedPolicyCompliances
      */
@@ -41,6 +42,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the aggregatedPolicyCompliances
+    * Aggregate view of device compliance policies across managed tenants.
     *
     * @param AggregatedPolicyCompliance $val The aggregatedPolicyCompliances
     *
@@ -55,6 +57,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the cloudPcConnections
+    * The collection of cloud PC connections across managed tenants.
      *
      * @return array|null The cloudPcConnections
      */
@@ -69,6 +72,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the cloudPcConnections
+    * The collection of cloud PC connections across managed tenants.
     *
     * @param CloudPcConnection $val The cloudPcConnections
     *
@@ -83,6 +87,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the cloudPcDevices
+    * The collection of cloud PC devices across managed tenants.
      *
      * @return array|null The cloudPcDevices
      */
@@ -97,6 +102,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the cloudPcDevices
+    * The collection of cloud PC devices across managed tenants.
     *
     * @param CloudPcDevice $val The cloudPcDevices
     *
@@ -111,6 +117,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the cloudPcsOverview
+    * Overview of cloud PC information across managed tenants.
      *
      * @return array|null The cloudPcsOverview
      */
@@ -125,6 +132,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the cloudPcsOverview
+    * Overview of cloud PC information across managed tenants.
     *
     * @param CloudPcOverview $val The cloudPcsOverview
     *
@@ -139,6 +147,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the conditionalAccessPolicyCoverages
+    * Aggregate view of conditional access policy coverage across managed tenants.
      *
      * @return array|null The conditionalAccessPolicyCoverages
      */
@@ -153,6 +162,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the conditionalAccessPolicyCoverages
+    * Aggregate view of conditional access policy coverage across managed tenants.
     *
     * @param ConditionalAccessPolicyCoverage $val The conditionalAccessPolicyCoverages
     *
@@ -167,6 +177,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the credentialUserRegistrationsSummaries
+    * Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
      *
      * @return array|null The credentialUserRegistrationsSummaries
      */
@@ -181,6 +192,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the credentialUserRegistrationsSummaries
+    * Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
     *
     * @param CredentialUserRegistrationsSummary $val The credentialUserRegistrationsSummaries
     *
@@ -195,6 +207,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the deviceCompliancePolicySettingStateSummaries
+    * Summary information for device compliance policy setting states across managed tenants.
      *
      * @return array|null The deviceCompliancePolicySettingStateSummaries
      */
@@ -209,6 +222,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the deviceCompliancePolicySettingStateSummaries
+    * Summary information for device compliance policy setting states across managed tenants.
     *
     * @param DeviceCompliancePolicySettingStateSummary $val The deviceCompliancePolicySettingStateSummaries
     *
@@ -223,6 +237,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the managedDeviceCompliances
+    * The collection of compliance for managed devices across managed tenants.
      *
      * @return array|null The managedDeviceCompliances
      */
@@ -237,6 +252,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the managedDeviceCompliances
+    * The collection of compliance for managed devices across managed tenants.
     *
     * @param ManagedDeviceCompliance $val The managedDeviceCompliances
     *
@@ -251,6 +267,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the managedDeviceComplianceTrends
+    * Trend insights for device compliance across managed tenants.
      *
      * @return array|null The managedDeviceComplianceTrends
      */
@@ -265,6 +282,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the managedDeviceComplianceTrends
+    * Trend insights for device compliance across managed tenants.
     *
     * @param ManagedDeviceComplianceTrend $val The managedDeviceComplianceTrends
     *
@@ -279,6 +297,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the managementActions
+    * The collection of baseline management actions across managed tenants.
      *
      * @return array|null The managementActions
      */
@@ -293,6 +312,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the managementActions
+    * The collection of baseline management actions across managed tenants.
     *
     * @param ManagementAction $val The managementActions
     *
@@ -307,6 +327,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the managementActionTenantDeploymentStatuses
+    * The tenant level status of management actions across managed tenants.
      *
      * @return array|null The managementActionTenantDeploymentStatuses
      */
@@ -321,6 +342,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the managementActionTenantDeploymentStatuses
+    * The tenant level status of management actions across managed tenants.
     *
     * @param ManagementActionTenantDeploymentStatus $val The managementActionTenantDeploymentStatuses
     *
@@ -335,6 +357,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the managementIntents
+    * The collection of baseline management intents across managed tenants.
      *
      * @return array|null The managementIntents
      */
@@ -349,6 +372,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the managementIntents
+    * The collection of baseline management intents across managed tenants.
     *
     * @param ManagementIntent $val The managementIntents
     *
@@ -363,6 +387,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the managementTemplates
+    * The collection of baseline management templates across managed tenants.
      *
      * @return array|null The managementTemplates
      */
@@ -377,6 +402,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the managementTemplates
+    * The collection of baseline management templates across managed tenants.
     *
     * @param ManagementTemplate $val The managementTemplates
     *
@@ -391,6 +417,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the riskyUsers
+    * The collection of users flagged for risk across managed tenants.
      *
      * @return array|null The riskyUsers
      */
@@ -405,6 +432,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the riskyUsers
+    * The collection of users flagged for risk across managed tenants.
     *
     * @param RiskyUser $val The riskyUsers
     *
@@ -419,6 +447,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the tenantGroups
+    * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      *
      * @return array|null The tenantGroups
      */
@@ -433,6 +462,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the tenantGroups
+    * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
     *
     * @param TenantGroup $val The tenantGroups
     *
@@ -447,6 +477,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the tenants
+    * The collection of tenants associated with the managing entity.
      *
      * @return array|null The tenants
      */
@@ -461,6 +492,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the tenants
+    * The collection of tenants associated with the managing entity.
     *
     * @param Tenant $val The tenants
     *
@@ -475,6 +507,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the tenantsCustomizedInformation
+    * The collection of tenant level customized information across managed tenants.
      *
      * @return array|null The tenantsCustomizedInformation
      */
@@ -489,6 +522,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the tenantsCustomizedInformation
+    * The collection of tenant level customized information across managed tenants.
     *
     * @param TenantCustomizedInformation $val The tenantsCustomizedInformation
     *
@@ -503,6 +537,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the tenantsDetailedInformation
+    * The collection tenant level detailed information across managed tenants.
      *
      * @return array|null The tenantsDetailedInformation
      */
@@ -517,6 +552,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the tenantsDetailedInformation
+    * The collection tenant level detailed information across managed tenants.
     *
     * @param TenantDetailedInformation $val The tenantsDetailedInformation
     *
@@ -531,6 +567,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the tenantTags
+    * The collection of tenant tags across managed tenants.
      *
      * @return array|null The tenantTags
      */
@@ -545,6 +582,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the tenantTags
+    * The collection of tenant tags across managed tenants.
     *
     * @param TenantTag $val The tenantTags
     *
@@ -559,6 +597,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the windowsDeviceMalwareStates
+    * The state of malware for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
      *
      * @return array|null The windowsDeviceMalwareStates
      */
@@ -573,6 +612,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the windowsDeviceMalwareStates
+    * The state of malware for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
     *
     * @param WindowsDeviceMalwareState $val The windowsDeviceMalwareStates
     *
@@ -587,6 +627,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the windowsProtectionStates
+    * The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
      *
      * @return array|null The windowsProtectionStates
      */
@@ -601,6 +642,7 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the windowsProtectionStates
+    * The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
     *
     * @param WindowsProtectionState $val The windowsProtectionStates
     *

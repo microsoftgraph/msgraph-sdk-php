@@ -25,6 +25,7 @@ class TenantInfo extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional.
     *
     * @return string|null The tenantId
     */
@@ -39,6 +40,7 @@ class TenantInfo extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional.
     *
     * @param string $val The value of the tenantId
     *

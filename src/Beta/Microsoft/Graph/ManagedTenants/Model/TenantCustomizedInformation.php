@@ -27,6 +27,7 @@ class TenantCustomizedInformation extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the contacts
+    * The collection of contacts for the managed tenant. Optional.
      *
      * @return array|null The contacts
      */
@@ -41,6 +42,7 @@ class TenantCustomizedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the contacts
+    * The collection of contacts for the managed tenant. Optional.
     *
     * @param TenantContactInformation $val The contacts
     *
@@ -54,6 +56,7 @@ class TenantCustomizedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name for the managed tenant. Required. Read-only.
     *
     * @return string|null The displayName
     */
@@ -68,6 +71,7 @@ class TenantCustomizedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name for the managed tenant. Required. Read-only.
     *
     * @param string $val The displayName
     *
@@ -81,6 +85,7 @@ class TenantCustomizedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -95,6 +100,7 @@ class TenantCustomizedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
     *
     * @param string $val The tenantId
     *
@@ -108,6 +114,7 @@ class TenantCustomizedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the website
+    * The website for the managed tenant. Required.
     *
     * @return string|null The website
     */
@@ -122,6 +129,7 @@ class TenantCustomizedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the website
+    * The website for the managed tenant. Required.
     *
     * @param string $val The website
     *
