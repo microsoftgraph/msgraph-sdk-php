@@ -37,15 +37,16 @@ abstract class Enum
     private $_value;
 
     /**
-    * Create a new enum
-    *
-    * @param string $value The value of the enum
+     * Create a new enum
+     *
+     * @param string $value The value of the enum
      *
      * @throws GraphException if enum value is invalid
-    */
-    public function __construct($value)
+     * @throws \ReflectionException
+     */
+    public function __construct(string $value)
     {
-        if (!self::has($value)) {
+        if (!$this->has($value)) {
             throw new GraphException("Invalid enum value $value");
         }
         $this->_value = $value;
@@ -56,10 +57,11 @@ abstract class Enum
      *
      * @param string $value
      * @return bool the enum has the value
+     * @throws \ReflectionException
      */
-    public function has($value)
+    public function has(string $value): bool
     {
-        return in_array($value, self::toArray(), true);
+        return in_array($value, $this->toArray(), true);
     }
 
     /**
@@ -69,7 +71,7 @@ abstract class Enum
     *
     * @return bool True if the value is defined
     */
-    public function is($value)
+    public function is(string $value): bool
     {
         return $this->_value === $value;
     }
@@ -77,12 +79,12 @@ abstract class Enum
 	/**
 	 * Create a new class for the enum in question
 	 *
-	 * @return mixed
+	 * @return array
 	 * @throws \ReflectionException
 	 */
     public function toArray()
     {
-        $class = get_called_class();
+        $class = static::class;
 
         if (!(array_key_exists($class, self::$constants)))
         {
@@ -97,7 +99,7 @@ abstract class Enum
     *
     * @return string value of the enum
     */
-    public function value()
+    public function value(): string
     {
         return $this->_value;
     }
