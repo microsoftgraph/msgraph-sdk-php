@@ -353,7 +353,7 @@ class AccessPackageResource extends Entity
 
      /** 
      * Gets the accessPackageResourceRoles
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
      *
      * @return array|null The accessPackageResourceRoles
      */
@@ -368,7 +368,7 @@ class AccessPackageResource extends Entity
     
     /** 
     * Sets the accessPackageResourceRoles
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackageResourceRole $val The accessPackageResourceRoles
     *
@@ -383,7 +383,7 @@ class AccessPackageResource extends Entity
 
      /** 
      * Gets the accessPackageResourceScopes
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
      *
      * @return array|null The accessPackageResourceScopes
      */
@@ -398,7 +398,7 @@ class AccessPackageResource extends Entity
     
     /** 
     * Sets the accessPackageResourceScopes
-    * Read-only. Nullable.
+    * Read-only. Nullable. Supports $expand.
     *
     * @param AccessPackageResourceScope $val The accessPackageResourceScopes
     *

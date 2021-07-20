@@ -36,6 +36,7 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
 
     /**
     * Gets the channelId
+    * Unique identifier of the channel.
     *
     * @return string|null The channelId
     */
@@ -50,6 +51,7 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
 
     /**
     * Sets the channelId
+    * Unique identifier of the channel.
     *
     * @param string $val The value of the channelId
     *
@@ -63,6 +65,7 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -81,6 +84,7 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *

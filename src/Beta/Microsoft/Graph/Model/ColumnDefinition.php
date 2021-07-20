@@ -555,7 +555,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the isSealed
-    * Specifies whether column can be changed.
+    * Specifies whether the column can be changed.
     *
     * @return bool|null The isSealed
     */
@@ -570,7 +570,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the isSealed
-    * Specifies whether column can be changed.
+    * Specifies whether the column can be changed.
     *
     * @param bool $val The isSealed
     *
@@ -712,7 +712,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the propagateChanges
-    * If 'True' changes to this column will be propagated to lists that implement the column.
+    * If true, changes to this column will be propagated to lists that implement the column.
     *
     * @return bool|null The propagateChanges
     */
@@ -727,7 +727,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the propagateChanges
-    * If 'True' changes to this column will be propagated to lists that implement the column.
+    * If true, changes to this column will be propagated to lists that implement the column.
     *
     * @param bool $val The propagateChanges
     *
@@ -770,7 +770,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the required
-    * Specifies whether the column value is not optional.
+    * Specifies whether the column value isn't optional.
     *
     * @return bool|null The required
     */
@@ -785,7 +785,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the required
-    * Specifies whether the column value is not optional.
+    * Specifies whether the column value isn't optional.
     *
     * @param bool $val The required
     *
@@ -898,7 +898,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the type
-    * For site columns, the type of column. Read-only
+    * For site columns, the type of column. Read-only.
     *
     * @return ColumnTypes|null The type
     */
@@ -917,7 +917,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the type
-    * For site columns, the type of column. Read-only
+    * For site columns, the type of column. Read-only.
     *
     * @param ColumnTypes $val The type
     *

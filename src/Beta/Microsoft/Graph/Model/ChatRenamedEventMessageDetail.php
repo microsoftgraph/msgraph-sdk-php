@@ -36,6 +36,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the chatDisplayName
+    * The updated name of the chat.
     *
     * @return string|null The chatDisplayName
     */
@@ -50,6 +51,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the chatDisplayName
+    * The updated name of the chat.
     *
     * @param string $val The value of the chatDisplayName
     *
@@ -62,6 +64,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the chatId
+    * Unique identifier of the chat.
     *
     * @return string|null The chatId
     */
@@ -76,6 +79,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the chatId
+    * Unique identifier of the chat.
     *
     * @param string $val The value of the chatId
     *
@@ -89,6 +93,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -107,6 +112,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
