@@ -26,7 +26,6 @@ class ExternalGroupMember extends Entity
 {
     /**
     * Gets the identitySource
-    * The identity source that the member belongs to. Possible values are: azureActiveDirectory, external.
     *
     * @return IdentitySourceType|null The identitySource
     */
@@ -45,7 +44,6 @@ class ExternalGroupMember extends Entity
     
     /**
     * Sets the identitySource
-    * The identity source that the member belongs to. Possible values are: azureActiveDirectory, external.
     *
     * @param IdentitySourceType $val The identitySource
     *
@@ -59,7 +57,6 @@ class ExternalGroupMember extends Entity
     
     /**
     * Gets the type
-    * The type of member added to the external group. Possible values are: user or group when the identitySource is azureActiveDirectory and just group when the identitySource is external.
     *
     * @return ExternalGroupMemberType|null The type
     */
@@ -78,7 +75,6 @@ class ExternalGroupMember extends Entity
     
     /**
     * Sets the type
-    * The type of member added to the external group. Possible values are: user or group when the identitySource is azureActiveDirectory and just group when the identitySource is external.
     *
     * @param ExternalGroupMemberType $val The type
     *

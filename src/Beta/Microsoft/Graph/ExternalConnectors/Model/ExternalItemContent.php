@@ -26,6 +26,7 @@ class ExternalItemContent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the type
+    * The type of content in the value property. Possible values are text and html. Required.
     *
     * @return ExternalItemContentType|null The type
     */
@@ -44,6 +45,7 @@ class ExternalItemContent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the type
+    * The type of content in the value property. Possible values are text and html. Required.
     *
     * @param ExternalItemContentType $val The value to assign to the type
     *
@@ -56,6 +58,7 @@ class ExternalItemContent extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the value
+    * The content for the externalItem. Required.
     *
     * @return string|null The value
     */
@@ -70,6 +73,7 @@ class ExternalItemContent extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the value
+    * The content for the externalItem. Required.
     *
     * @param string $val The value of the value
     *

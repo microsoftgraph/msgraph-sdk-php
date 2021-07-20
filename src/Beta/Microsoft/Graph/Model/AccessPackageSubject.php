@@ -53,6 +53,7 @@ class AccessPackageSubject extends Entity
     
     /**
     * Gets the connectedOrganizationId
+    * The identifier of the connected organization of the subject.
     *
     * @return string|null The connectedOrganizationId
     */
@@ -67,6 +68,7 @@ class AccessPackageSubject extends Entity
     
     /**
     * Sets the connectedOrganizationId
+    * The identifier of the connected organization of the subject.
     *
     * @param string $val The connectedOrganizationId
     *
@@ -138,7 +140,7 @@ class AccessPackageSubject extends Entity
     
     /**
     * Gets the objectId
-    * The object ID of the subject.
+    * The object identifier of the subject. null if the subject is not yet a user in the tenant.
     *
     * @return string|null The objectId
     */
@@ -153,7 +155,7 @@ class AccessPackageSubject extends Entity
     
     /**
     * Sets the objectId
-    * The object ID of the subject.
+    * The object identifier of the subject. null if the subject is not yet a user in the tenant.
     *
     * @param string $val The objectId
     *
@@ -252,6 +254,7 @@ class AccessPackageSubject extends Entity
     
     /**
     * Gets the connectedOrganization
+    * The connected organization of the subject. Read-only. Nullable.
     *
     * @return ConnectedOrganization|null The connectedOrganization
     */
@@ -270,6 +273,7 @@ class AccessPackageSubject extends Entity
     
     /**
     * Sets the connectedOrganization
+    * The connected organization of the subject. Read-only. Nullable.
     *
     * @param ConnectedOrganization $val The connectedOrganization
     *

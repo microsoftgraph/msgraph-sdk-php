@@ -26,6 +26,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the description
+    * The description of the external group. Optional.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * The description of the external group. Optional.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The friendly name of the external group. Optional.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The friendly name of the external group. Optional.
     *
     * @param string $val The displayName
     *
@@ -81,6 +85,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the members
+    * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
      *
      * @return array|null The members
      */
@@ -95,6 +100,7 @@ class ExternalGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the members
+    * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
     *
     * @param ExternalGroupMember $val The members
     *

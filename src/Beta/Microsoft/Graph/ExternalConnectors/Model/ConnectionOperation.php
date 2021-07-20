@@ -26,6 +26,7 @@ class ConnectionOperation extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the error
+    * If status is failed, provides more information about the error that caused the failure.
     *
     * @return \Beta\Microsoft\Graph\Model\PublicError|null The error
     */
@@ -44,6 +45,7 @@ class ConnectionOperation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the error
+    * If status is failed, provides more information about the error that caused the failure.
     *
     * @param \Beta\Microsoft\Graph\Model\PublicError $val The error
     *
@@ -57,6 +59,7 @@ class ConnectionOperation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the status
+    * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
     *
     * @return ConnectionOperationStatus|null The status
     */
@@ -75,6 +78,7 @@ class ConnectionOperation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the status
+    * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
     *
     * @param ConnectionOperationStatus $val The status
     *

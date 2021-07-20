@@ -36,6 +36,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the channelDisplayName
+    * Display name of the channel.
     *
     * @return string|null The channelDisplayName
     */
@@ -50,6 +51,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the channelDisplayName
+    * Display name of the channel.
     *
     * @param string $val The value of the channelDisplayName
     *
@@ -62,6 +64,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the channelId
+    * Unique identifier of the channel.
     *
     * @return string|null The channelId
     */
@@ -76,6 +79,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the channelId
+    * Unique identifier of the channel.
     *
     * @param string $val The value of the channelId
     *
@@ -89,6 +93,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -107,6 +112,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *

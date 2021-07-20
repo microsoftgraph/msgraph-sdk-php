@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Schema File
+* RedirectUriSettings File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
 /**
-* Schema class
+* RedirectUriSettings class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,61 +21,58 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Schema extends Entity
+class RedirectUriSettings extends Entity
 {
     /**
-    * Gets the baseType
+    * Gets the index
     *
-    * @return string|null The baseType
+    * @return int|null The index
     */
-    public function getBaseType()
+    public function getIndex()
     {
-        if (array_key_exists("baseType", $this->_propDict)) {
-            return $this->_propDict["baseType"];
+        if (array_key_exists("index", $this->_propDict)) {
+            return $this->_propDict["index"];
         } else {
             return null;
         }
     }
-    
-    /**
-    * Sets the baseType
-    *
-    * @param string $val The baseType
-    *
-    * @return Schema
-    */
-    public function setBaseType($val)
-    {
-        $this->_propDict["baseType"] = $val;
-        return $this;
-    }
-    
 
-     /** 
-     * Gets the schemaProperties
-     *
-     * @return array|null The schemaProperties
-     */
-    public function getSchemaProperties()
+    /**
+    * Sets the index
+    *
+    * @param int $val The value of the index
+    *
+    * @return RedirectUriSettings
+    */
+    public function setIndex($val)
     {
-        if (array_key_exists("properties", $this->_propDict)) {
-           return $this->_propDict["properties"];
+        $this->_propDict["index"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the uri
+    *
+    * @return string|null The uri
+    */
+    public function getUri()
+    {
+        if (array_key_exists("uri", $this->_propDict)) {
+            return $this->_propDict["uri"];
         } else {
             return null;
         }
     }
-    
-    /** 
-    * Sets the schemaProperties
+
+    /**
+    * Sets the uri
     *
-    * @param Property $val The schemaProperties
+    * @param string $val The value of the uri
     *
-    * @return Schema
+    * @return RedirectUriSettings
     */
-    public function setSchemaProperties($val)
+    public function setUri($val)
     {
-        $this->_propDict["properties"] = $val;
+        $this->_propDict["uri"] = $val;
         return $this;
     }
-    
 }

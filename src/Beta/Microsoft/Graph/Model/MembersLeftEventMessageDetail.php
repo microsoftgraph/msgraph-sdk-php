@@ -37,6 +37,7 @@ class MembersLeftEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -55,6 +56,7 @@ class MembersLeftEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -68,6 +70,7 @@ class MembersLeftEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the members
+    * List of members who left the chat.
     *
     * @return TeamworkUserIdentity|null The members
     */
@@ -86,6 +89,7 @@ class MembersLeftEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the members
+    * List of members who left the chat.
     *
     * @param TeamworkUserIdentity $val The value to assign to the members
     *

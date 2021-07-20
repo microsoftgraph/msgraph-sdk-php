@@ -37,6 +37,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -55,6 +56,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -67,6 +69,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the meetingChatEnabled
+    * Represents whether the meeting chat is enabled or not.
     *
     * @return bool|null The meetingChatEnabled
     */
@@ -81,6 +84,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the meetingChatEnabled
+    * Represents whether the meeting chat is enabled or not.
     *
     * @param bool $val The value of the meetingChatEnabled
     *
@@ -93,6 +97,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the meetingChatId
+    * Unique identifier of the meeting chat.
     *
     * @return string|null The meetingChatId
     */
@@ -107,6 +112,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the meetingChatId
+    * Unique identifier of the meeting chat.
     *
     * @param string $val The value of the meetingChatId
     *

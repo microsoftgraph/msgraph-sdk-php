@@ -842,6 +842,39 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the verifiedPublisher
+    * Specifies the verified publisher of the application.
+    *
+    * @return VerifiedPublisher|null The verifiedPublisher
+    */
+    public function getVerifiedPublisher()
+    {
+        if (array_key_exists("verifiedPublisher", $this->_propDict)) {
+            if (is_a($this->_propDict["verifiedPublisher"], "\Beta\Microsoft\Graph\Model\VerifiedPublisher") || is_null($this->_propDict["verifiedPublisher"])) {
+                return $this->_propDict["verifiedPublisher"];
+            } else {
+                $this->_propDict["verifiedPublisher"] = new VerifiedPublisher($this->_propDict["verifiedPublisher"]);
+                return $this->_propDict["verifiedPublisher"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the verifiedPublisher
+    * Specifies the verified publisher of the application.
+    *
+    * @param VerifiedPublisher $val The verifiedPublisher
+    *
+    * @return Application
+    */
+    public function setVerifiedPublisher($val)
+    {
+        $this->_propDict["verifiedPublisher"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the web
     * Specifies settings for a web application.
     *
@@ -904,6 +937,34 @@ class Application extends DirectoryObject
     public function setOnPremisesPublishing($val)
     {
         $this->_propDict["onPremisesPublishing"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the appManagementPolicies
+     *
+     * @return array|null The appManagementPolicies
+     */
+    public function getAppManagementPolicies()
+    {
+        if (array_key_exists("appManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["appManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appManagementPolicies
+    *
+    * @param AppManagementPolicy $val The appManagementPolicies
+    *
+    * @return Application
+    */
+    public function setAppManagementPolicies($val)
+    {
+        $this->_propDict["appManagementPolicies"] = $val;
         return $this;
     }
     

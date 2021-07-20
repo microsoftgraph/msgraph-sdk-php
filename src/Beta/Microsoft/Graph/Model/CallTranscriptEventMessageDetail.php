@@ -36,6 +36,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the callId
+    * Unique identifier of the call.
     *
     * @return string|null The callId
     */
@@ -50,6 +51,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callId
+    * Unique identifier of the call.
     *
     * @param string $val The value of the callId
     *
@@ -62,6 +64,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the callTranscriptICalUid
+    * Unique identifier for a call transcript.
     *
     * @return string|null The callTranscriptICalUid
     */
@@ -76,6 +79,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callTranscriptICalUid
+    * Unique identifier for a call transcript.
     *
     * @param string $val The value of the callTranscriptICalUid
     *
@@ -89,6 +93,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the meetingOrganizer
+    * The organizer of the meeting.
     *
     * @return IdentitySet|null The meetingOrganizer
     */
@@ -107,6 +112,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the meetingOrganizer
+    * The organizer of the meeting.
     *
     * @param IdentitySet $val The value to assign to the meetingOrganizer
     *

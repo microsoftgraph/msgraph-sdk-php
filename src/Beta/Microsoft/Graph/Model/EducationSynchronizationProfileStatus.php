@@ -26,6 +26,7 @@ class EducationSynchronizationProfileStatus extends Entity
 {
     /**
     * Gets the lastActivityDateTime
+    * Represents the time when most recent changes were observed in profile.
     *
     * @return \DateTime|null The lastActivityDateTime
     */
@@ -44,6 +45,7 @@ class EducationSynchronizationProfileStatus extends Entity
     
     /**
     * Sets the lastActivityDateTime
+    * Represents the time when most recent changes were observed in profile.
     *
     * @param \DateTime $val The lastActivityDateTime
     *
@@ -57,7 +59,7 @@ class EducationSynchronizationProfileStatus extends Entity
     
     /**
     * Gets the lastSynchronizationDateTime
-    * Represents the time when most recent changes have been observed in the directory.
+    * Represents the time of the most recent successful  synchronization.
     *
     * @return \DateTime|null The lastSynchronizationDateTime
     */
@@ -76,7 +78,7 @@ class EducationSynchronizationProfileStatus extends Entity
     
     /**
     * Sets the lastSynchronizationDateTime
-    * Represents the time when most recent changes have been observed in the directory.
+    * Represents the time of the most recent successful  synchronization.
     *
     * @param \DateTime $val The lastSynchronizationDateTime
     *
@@ -90,7 +92,7 @@ class EducationSynchronizationProfileStatus extends Entity
     
     /**
     * Gets the status
-    * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError.
+    * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError, extracting, validating.
     *
     * @return EducationSynchronizationStatus|null The status
     */
@@ -109,7 +111,7 @@ class EducationSynchronizationProfileStatus extends Entity
     
     /**
     * Sets the status
-    * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError.
+    * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError, extracting, validating.
     *
     * @param EducationSynchronizationStatus $val The status
     *
