@@ -25,6 +25,7 @@ class Configuration extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the authorizedAppIds
+    * A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
     *
     * @return string|null The authorizedAppIds
     */
@@ -39,6 +40,7 @@ class Configuration extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the authorizedAppIds
+    * A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
     *
     * @param string $val The value of the authorizedAppIds
     *
