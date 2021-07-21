@@ -37,6 +37,7 @@ class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -55,6 +56,7 @@ class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -67,6 +69,7 @@ class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the teamDescription
+    * The updated description for the team.
     *
     * @return string|null The teamDescription
     */
@@ -81,6 +84,7 @@ class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the teamDescription
+    * The updated description for the team.
     *
     * @param string $val The value of the teamDescription
     *
@@ -93,6 +97,7 @@ class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the teamId
+    * Unique identifier of the team.
     *
     * @return string|null The teamId
     */
@@ -107,6 +112,7 @@ class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the teamId
+    * Unique identifier of the team.
     *
     * @param string $val The value of the teamId
     *

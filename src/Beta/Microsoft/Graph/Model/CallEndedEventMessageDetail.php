@@ -37,6 +37,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the callDuration
+    * Duration of the call.
     *
     * @return Duration|null The callDuration
     */
@@ -55,6 +56,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callDuration
+    * Duration of the call.
     *
     * @param Duration $val The value to assign to the callDuration
     *
@@ -68,6 +70,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the callEventType
+    * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
     *
     * @return TeamworkCallEventType|null The callEventType
     */
@@ -86,6 +89,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callEventType
+    * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
     *
     * @param TeamworkCallEventType $val The value to assign to the callEventType
     *
@@ -98,6 +102,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the callId
+    * Unique identifier of the call.
     *
     * @return string|null The callId
     */
@@ -112,6 +117,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callId
+    * Unique identifier of the call.
     *
     * @param string $val The value of the callId
     *
@@ -125,6 +131,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the callParticipants
+    * List of call participants.
     *
     * @return CallParticipantInfo|null The callParticipants
     */
@@ -143,6 +150,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callParticipants
+    * List of call participants.
     *
     * @param CallParticipantInfo $val The value to assign to the callParticipants
     *
@@ -156,6 +164,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -174,6 +183,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *

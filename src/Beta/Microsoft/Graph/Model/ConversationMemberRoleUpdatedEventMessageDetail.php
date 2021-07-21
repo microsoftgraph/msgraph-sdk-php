@@ -36,6 +36,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the conversationMemberRoles
+    * Roles for the coversation member user.
     *
     * @return string|null The conversationMemberRoles
     */
@@ -50,6 +51,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the conversationMemberRoles
+    * Roles for the coversation member user.
     *
     * @param string $val The value of the conversationMemberRoles
     *
@@ -63,6 +65,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the conversationMemberUser
+    * Identity of the conversation member user.
     *
     * @return TeamworkUserIdentity|null The conversationMemberUser
     */
@@ -81,6 +84,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the conversationMemberUser
+    * Identity of the conversation member user.
     *
     * @param TeamworkUserIdentity $val The value to assign to the conversationMemberUser
     *
@@ -94,6 +98,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -112,6 +117,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *

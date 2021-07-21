@@ -37,6 +37,7 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -55,6 +56,7 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -67,6 +69,7 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the tabId
+    * Unique identifier of the tab.
     *
     * @return string|null The tabId
     */
@@ -81,6 +84,7 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the tabId
+    * Unique identifier of the tab.
     *
     * @param string $val The value of the tabId
     *

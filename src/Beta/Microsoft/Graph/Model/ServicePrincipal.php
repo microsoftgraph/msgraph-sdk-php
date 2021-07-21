@@ -1089,6 +1089,34 @@ class ServicePrincipal extends DirectoryObject
     
 
      /** 
+     * Gets the appManagementPolicies
+     *
+     * @return array|null The appManagementPolicies
+     */
+    public function getAppManagementPolicies()
+    {
+        if (array_key_exists("appManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["appManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appManagementPolicies
+    *
+    * @param AppManagementPolicy $val The appManagementPolicies
+    *
+    * @return ServicePrincipal
+    */
+    public function setAppManagementPolicies($val)
+    {
+        $this->_propDict["appManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the appRoleAssignedTo
     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
      *

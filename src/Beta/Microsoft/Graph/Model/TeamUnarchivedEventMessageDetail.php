@@ -37,6 +37,7 @@ class TeamUnarchivedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -55,6 +56,7 @@ class TeamUnarchivedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -67,6 +69,7 @@ class TeamUnarchivedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the teamId
+    * Unique identifier of the team.
     *
     * @return string|null The teamId
     */
@@ -81,6 +84,7 @@ class TeamUnarchivedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the teamId
+    * Unique identifier of the team.
     *
     * @param string $val The value of the teamId
     *

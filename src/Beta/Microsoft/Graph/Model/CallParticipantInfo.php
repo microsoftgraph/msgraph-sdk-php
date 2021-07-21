@@ -26,6 +26,7 @@ class CallParticipantInfo extends Entity
 
     /**
     * Gets the participant
+    * Identity of the call participant.
     *
     * @return IdentitySet|null The participant
     */
@@ -44,6 +45,7 @@ class CallParticipantInfo extends Entity
 
     /**
     * Sets the participant
+    * Identity of the call participant.
     *
     * @param IdentitySet $val The value to assign to the participant
     *
