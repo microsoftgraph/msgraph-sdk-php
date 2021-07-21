@@ -37,6 +37,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -55,6 +56,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -67,6 +69,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the teamsAppDisplayName
+    * Display name of the teamsApp.
     *
     * @return string|null The teamsAppDisplayName
     */
@@ -81,6 +84,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the teamsAppDisplayName
+    * Display name of the teamsApp.
     *
     * @param string $val The value of the teamsAppDisplayName
     *
@@ -93,6 +97,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the teamsAppId
+    * Unique identifier of the teamsApp.
     *
     * @return string|null The teamsAppId
     */
@@ -107,6 +112,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the teamsAppId
+    * Unique identifier of the teamsApp.
     *
     * @param string $val The value of the teamsAppId
     *

@@ -51,7 +51,6 @@ class Configuration extends Entity
     }
     /**
     * Gets the authorizedApps
-    * A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
     *
     * @return string|null The authorizedApps
     */
@@ -66,7 +65,6 @@ class Configuration extends Entity
 
     /**
     * Sets the authorizedApps
-    * A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
     *
     * @param string $val The value of the authorizedApps
     *

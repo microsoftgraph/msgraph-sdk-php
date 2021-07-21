@@ -37,6 +37,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the callEventType
+    * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
     *
     * @return TeamworkCallEventType|null The callEventType
     */
@@ -55,6 +56,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callEventType
+    * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
     *
     * @param TeamworkCallEventType $val The value to assign to the callEventType
     *
@@ -67,6 +69,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the callId
+    * Unique identifier of the call.
     *
     * @return string|null The callId
     */
@@ -81,6 +84,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callId
+    * Unique identifier of the call.
     *
     * @param string $val The value of the callId
     *
@@ -94,6 +98,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -112,6 +117,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
