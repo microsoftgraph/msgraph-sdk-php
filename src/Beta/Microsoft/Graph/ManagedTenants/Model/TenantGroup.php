@@ -26,6 +26,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the allTenantsIncluded
+    * A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only.
     *
     * @return bool|null The allTenantsIncluded
     */
@@ -40,6 +41,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the allTenantsIncluded
+    * A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only.
     *
     * @param bool $val The allTenantsIncluded
     *
@@ -53,6 +55,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name for the tenant group. Optional. Read-only.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name for the tenant group. Optional. Read-only.
     *
     * @param string $val The displayName
     *
@@ -81,6 +85,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the managementActions
+    * The collection of management action associated with the tenant group. Optional. Read-only.
      *
      * @return array|null The managementActions
      */
@@ -95,6 +100,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the managementActions
+    * The collection of management action associated with the tenant group. Optional. Read-only.
     *
     * @param ManagementActionInfo $val The managementActions
     *
@@ -109,6 +115,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the managementIntents
+    * The collection of management intents associated with the tenant group. Optional. Read-only.
      *
      * @return array|null The managementIntents
      */
@@ -123,6 +130,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the managementIntents
+    * The collection of management intents associated with the tenant group. Optional. Read-only.
     *
     * @param ManagementIntentInfo $val The managementIntents
     *
@@ -136,6 +144,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantIds
+    * The collection of managed tenant identifiers include in the tenant group. Optional. Read-only.
     *
     * @return string|null The tenantIds
     */
@@ -150,6 +159,7 @@ class TenantGroup extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantIds
+    * The collection of managed tenant identifiers include in the tenant group. Optional. Read-only.
     *
     * @param string $val The tenantIds
     *

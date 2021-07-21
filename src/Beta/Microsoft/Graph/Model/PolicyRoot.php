@@ -178,6 +178,34 @@ class PolicyRoot implements \JsonSerializable
     
 
      /** 
+     * Gets the appManagementPolicies
+     *
+     * @return array|null The appManagementPolicies
+     */
+    public function getAppManagementPolicies()
+    {
+        if (array_key_exists("appManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["appManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appManagementPolicies
+    *
+    * @param AppManagementPolicy $val The appManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setAppManagementPolicies($val)
+    {
+        $this->_propDict["appManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the authorizationPolicy
      *
      * @return array|null The authorizationPolicy
@@ -229,6 +257,37 @@ class PolicyRoot implements \JsonSerializable
     public function setClaimsMappingPolicies($val)
     {
         $this->_propDict["claimsMappingPolicies"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the defaultAppManagementPolicy
+    *
+    * @return TenantAppManagementPolicy|null The defaultAppManagementPolicy
+    */
+    public function getDefaultAppManagementPolicy()
+    {
+        if (array_key_exists("defaultAppManagementPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["defaultAppManagementPolicy"], "\Beta\Microsoft\Graph\Model\TenantAppManagementPolicy") || is_null($this->_propDict["defaultAppManagementPolicy"])) {
+                return $this->_propDict["defaultAppManagementPolicy"];
+            } else {
+                $this->_propDict["defaultAppManagementPolicy"] = new TenantAppManagementPolicy($this->_propDict["defaultAppManagementPolicy"]);
+                return $this->_propDict["defaultAppManagementPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defaultAppManagementPolicy
+    *
+    * @param TenantAppManagementPolicy $val The defaultAppManagementPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setDefaultAppManagementPolicy($val)
+    {
+        $this->_propDict["defaultAppManagementPolicy"] = $val;
         return $this;
     }
     
@@ -526,6 +585,62 @@ class PolicyRoot implements \JsonSerializable
     
 
      /** 
+     * Gets the mobileAppManagementPolicies
+     *
+     * @return array|null The mobileAppManagementPolicies
+     */
+    public function getMobileAppManagementPolicies()
+    {
+        if (array_key_exists("mobileAppManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["mobileAppManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileAppManagementPolicies
+    *
+    * @param MobilityManagementPolicy $val The mobileAppManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setMobileAppManagementPolicies($val)
+    {
+        $this->_propDict["mobileAppManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the mobileDeviceManagementPolicies
+     *
+     * @return array|null The mobileDeviceManagementPolicies
+     */
+    public function getMobileDeviceManagementPolicies()
+    {
+        if (array_key_exists("mobileDeviceManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["mobileDeviceManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileDeviceManagementPolicies
+    *
+    * @param MobilityManagementPolicy $val The mobileDeviceManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setMobileDeviceManagementPolicies($val)
+    {
+        $this->_propDict["mobileDeviceManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the roleManagementPolicies
      *
      * @return array|null The roleManagementPolicies
@@ -583,11 +698,14 @@ class PolicyRoot implements \JsonSerializable
     /**
     * Gets the ODataType
     *
-    * @return string The ODataType
+    * @return string|null The ODataType
     */
     public function getODataType()
     {
-        return $this->_propDict["@odata.type"];
+        if (array_key_exists('@odata.type', $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        }
+        return null;
     }
     
     /**

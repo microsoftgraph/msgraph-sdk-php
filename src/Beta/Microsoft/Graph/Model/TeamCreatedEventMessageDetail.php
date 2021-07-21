@@ -26,15 +26,18 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.teamCreatedEventMessageDetail");
     }
 
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -53,6 +56,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -65,6 +69,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the teamDescription
+    * Description for the team.
     *
     * @return string|null The teamDescription
     */
@@ -79,6 +84,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the teamDescription
+    * Description for the team.
     *
     * @param string $val The value of the teamDescription
     *
@@ -91,6 +97,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the teamDisplayName
+    * Display name of the team.
     *
     * @return string|null The teamDisplayName
     */
@@ -105,6 +112,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the teamDisplayName
+    * Display name of the team.
     *
     * @param string $val The value of the teamDisplayName
     *
@@ -117,6 +125,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the teamId
+    * Unique identifier of the team.
     *
     * @return string|null The teamId
     */
@@ -131,6 +140,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the teamId
+    * Unique identifier of the team.
     *
     * @param string $val The value of the teamId
     *

@@ -26,6 +26,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the city
+    * The city where the managed tenant is located. Optional. Read-only.
     *
     * @return string|null The city
     */
@@ -40,6 +41,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the city
+    * The city where the managed tenant is located. Optional. Read-only.
     *
     * @param string $val The city
     *
@@ -53,6 +55,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the countryCode
+    * The code for the country where the managed tenant is located. Optional. Read-only.
     *
     * @return string|null The countryCode
     */
@@ -67,6 +70,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the countryCode
+    * The code for the country where the managed tenant is located. Optional. Read-only.
     *
     * @param string $val The countryCode
     *
@@ -80,6 +84,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the countryName
+    * The name for the country where the managed tenant is located. Optional. Read-only.
     *
     * @return string|null The countryName
     */
@@ -94,6 +99,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the countryName
+    * The name for the country where the managed tenant is located. Optional. Read-only.
     *
     * @param string $val The countryName
     *
@@ -107,6 +113,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the defaultDomainName
+    * The default domain name for the managed tenant. Optional. Read-only.
     *
     * @return string|null The defaultDomainName
     */
@@ -121,6 +128,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the defaultDomainName
+    * The default domain name for the managed tenant. Optional. Read-only.
     *
     * @param string $val The defaultDomainName
     *
@@ -134,6 +142,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name for the managed tenant.
     *
     * @return string|null The displayName
     */
@@ -148,6 +157,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name for the managed tenant.
     *
     * @param string $val The displayName
     *
@@ -161,6 +171,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the industryName
+    * The business industry associated with the managed tenant. Optional. Read-only.
     *
     * @return string|null The industryName
     */
@@ -175,6 +186,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the industryName
+    * The business industry associated with the managed tenant. Optional. Read-only.
     *
     * @param string $val The industryName
     *
@@ -188,6 +200,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the region
+    * The region where the managed tenant is located. Optional. Read-only.
     *
     * @return string|null The region
     */
@@ -202,6 +215,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the region
+    * The region where the managed tenant is located. Optional. Read-only.
     *
     * @param string $val The region
     *
@@ -215,6 +229,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the segmentName
+    * The business segment associated with the managed tenant. Optional. Read-only.
     *
     * @return string|null The segmentName
     */
@@ -229,6 +244,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the segmentName
+    * The business segment associated with the managed tenant. Optional. Read-only.
     *
     * @param string $val The segmentName
     *
@@ -242,6 +258,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant.
     *
     * @return string|null The tenantId
     */
@@ -256,6 +273,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant.
     *
     * @param string $val The tenantId
     *
@@ -269,6 +287,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the verticalName
+    * The vertical associated with the managed tenant. Optional. Read-only.
     *
     * @return string|null The verticalName
     */
@@ -283,6 +302,7 @@ class TenantDetailedInformation extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the verticalName
+    * The vertical associated with the managed tenant. Optional. Read-only.
     *
     * @param string $val The verticalName
     *

@@ -26,14 +26,17 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.callRecordingEventMessageDetail");
     }
 
     /**
     * Gets the callId
+    * Unique identifier of the call.
     *
     * @return string|null The callId
     */
@@ -48,6 +51,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callId
+    * Unique identifier of the call.
     *
     * @param string $val The value of the callId
     *
@@ -60,6 +64,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the callRecordingDisplayName
+    * Display name for the call recording.
     *
     * @return string|null The callRecordingDisplayName
     */
@@ -74,6 +79,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callRecordingDisplayName
+    * Display name for the call recording.
     *
     * @param string $val The value of the callRecordingDisplayName
     *
@@ -87,6 +93,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the callRecordingDuration
+    * Duration of the call recording.
     *
     * @return Duration|null The callRecordingDuration
     */
@@ -105,6 +112,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callRecordingDuration
+    * Duration of the call recording.
     *
     * @param Duration $val The value to assign to the callRecordingDuration
     *
@@ -118,6 +126,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the callRecordingStatus
+    * Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
     *
     * @return CallRecordingStatus|null The callRecordingStatus
     */
@@ -136,6 +145,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callRecordingStatus
+    * Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
     *
     * @param CallRecordingStatus $val The value to assign to the callRecordingStatus
     *
@@ -148,6 +158,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the callRecordingUrl
+    * Call recording URL.
     *
     * @return string|null The callRecordingUrl
     */
@@ -162,6 +173,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callRecordingUrl
+    * Call recording URL.
     *
     * @param string $val The value of the callRecordingUrl
     *
@@ -175,6 +187,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -193,6 +206,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -206,6 +220,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the meetingOrganizer
+    * Organizer of the meeting.
     *
     * @return IdentitySet|null The meetingOrganizer
     */
@@ -224,6 +239,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the meetingOrganizer
+    * Organizer of the meeting.
     *
     * @param IdentitySet $val The value to assign to the meetingOrganizer
     *

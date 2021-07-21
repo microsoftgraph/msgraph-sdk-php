@@ -26,15 +26,18 @@ class MembersDeletedEventMessageDetail extends EventMessageDetail
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.membersDeletedEventMessageDetail");
     }
 
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -53,6 +56,7 @@ class MembersDeletedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *
@@ -66,16 +70,17 @@ class MembersDeletedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the members
+    * List of members deleted.
     *
-    * @return Identity|null The members
+    * @return TeamworkUserIdentity|null The members
     */
     public function getMembers()
     {
         if (array_key_exists("members", $this->_propDict)) {
-            if (is_a($this->_propDict["members"], "\Beta\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["members"])) {
+            if (is_a($this->_propDict["members"], "\Beta\Microsoft\Graph\Model\TeamworkUserIdentity") || is_null($this->_propDict["members"])) {
                 return $this->_propDict["members"];
             } else {
-                $this->_propDict["members"] = new Identity($this->_propDict["members"]);
+                $this->_propDict["members"] = new TeamworkUserIdentity($this->_propDict["members"]);
                 return $this->_propDict["members"];
             }
         }
@@ -84,8 +89,9 @@ class MembersDeletedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the members
+    * List of members deleted.
     *
-    * @param Identity $val The value to assign to the members
+    * @param TeamworkUserIdentity $val The value to assign to the members
     *
     * @return MembersDeletedEventMessageDetail The MembersDeletedEventMessageDetail
     */

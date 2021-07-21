@@ -98,7 +98,7 @@ class DeviceComplianceScript extends Entity
             if (is_a($this->_propDict["detectionScriptContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["detectionScriptContent"])) {
                 return $this->_propDict["detectionScriptContent"];
             } else {
-                $this->_propDict["detectionScriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["detectionScriptContent"]);
+                $this->_propDict["detectionScriptContent"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["detectionScriptContent"]);
                 return $this->_propDict["detectionScriptContent"];
             }
         }

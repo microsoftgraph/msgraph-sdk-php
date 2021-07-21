@@ -26,15 +26,18 @@ class CallEndedEventMessageDetail extends EventMessageDetail
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.callEndedEventMessageDetail");
     }
 
 
     /**
     * Gets the callDuration
+    * Duration of the call.
     *
     * @return Duration|null The callDuration
     */
@@ -53,6 +56,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callDuration
+    * Duration of the call.
     *
     * @param Duration $val The value to assign to the callDuration
     *
@@ -63,8 +67,42 @@ class CallEndedEventMessageDetail extends EventMessageDetail
         $this->_propDict["callDuration"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the callEventType
+    * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+    *
+    * @return TeamworkCallEventType|null The callEventType
+    */
+    public function getCallEventType()
+    {
+        if (array_key_exists("callEventType", $this->_propDict)) {
+            if (is_a($this->_propDict["callEventType"], "\Beta\Microsoft\Graph\Model\TeamworkCallEventType") || is_null($this->_propDict["callEventType"])) {
+                return $this->_propDict["callEventType"];
+            } else {
+                $this->_propDict["callEventType"] = new TeamworkCallEventType($this->_propDict["callEventType"]);
+                return $this->_propDict["callEventType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the callEventType
+    * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+    *
+    * @param TeamworkCallEventType $val The value to assign to the callEventType
+    *
+    * @return CallEndedEventMessageDetail The CallEndedEventMessageDetail
+    */
+    public function setCallEventType($val)
+    {
+        $this->_propDict["callEventType"] = $val;
+         return $this;
+    }
     /**
     * Gets the callId
+    * Unique identifier of the call.
     *
     * @return string|null The callId
     */
@@ -79,6 +117,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callId
+    * Unique identifier of the call.
     *
     * @param string $val The value of the callId
     *
@@ -92,6 +131,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the callParticipants
+    * List of call participants.
     *
     * @return CallParticipantInfo|null The callParticipants
     */
@@ -110,6 +150,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the callParticipants
+    * List of call participants.
     *
     * @param CallParticipantInfo $val The value to assign to the callParticipants
     *
@@ -123,6 +164,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -141,6 +183,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *

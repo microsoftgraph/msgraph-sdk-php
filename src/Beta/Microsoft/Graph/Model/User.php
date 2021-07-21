@@ -322,7 +322,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the createdDateTime
-    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, NOT , ge, le, and in operators) and $orderBy.
+    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, NOT , ge, le, and in operators).
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -341,7 +341,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the createdDateTime
-    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, NOT , ge, le, and in operators) and $orderBy.
+    * The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, NOT , ge, le, and in operators).
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -1218,7 +1218,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the onPremisesProvisioningErrors
-    * Errors when using Microsoft synchronization product during provisioning.
+    * Errors when using Microsoft synchronization product during provisioning.  Supports $filter (eq, NOT, ge, le).
      *
      * @return array|null The onPremisesProvisioningErrors
      */
@@ -1233,7 +1233,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the onPremisesProvisioningErrors
-    * Errors when using Microsoft synchronization product during provisioning.
+    * Errors when using Microsoft synchronization product during provisioning.  Supports $filter (eq, NOT, ge, le).
     *
     * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
     *
@@ -1276,7 +1276,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq, ne, NOT, in).
+    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
     *
     * @return string|null The onPremisesSecurityIdentifier
     */
@@ -1291,7 +1291,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the onPremisesSecurityIdentifier
-    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq, ne, NOT, in).
+    * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
     *
     * @param string $val The onPremisesSecurityIdentifier
     *
@@ -1392,7 +1392,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordPolicies
-    * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.Supports $filter (eq, ne, NOT).
+    * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, NOT).
     *
     * @return string|null The passwordPolicies
     */
@@ -1407,7 +1407,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordPolicies
-    * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.Supports $filter (eq, ne, NOT).
+    * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, NOT).
     *
     * @param string $val The passwordPolicies
     *
@@ -1421,7 +1421,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.
+    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon. Supports $filter (eq, ne, NOT, in).
     *
     * @return PasswordProfile|null The passwordProfile
     */
@@ -1440,7 +1440,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the passwordProfile
-    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.
+    * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon. Supports $filter (eq, ne, NOT, in).
     *
     * @param PasswordProfile $val The passwordProfile
     *
@@ -1542,7 +1542,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the provisionedPlans
-    * The plans that are provisioned for the user. Read-only. Not nullable.
+    * The plans that are provisioned for the user. Read-only. Not nullable. Supports $filter (eq, NOT, ge, le).
      *
      * @return array|null The provisionedPlans
      */
@@ -1557,7 +1557,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the provisionedPlans
-    * The plans that are provisioned for the user. Read-only. Not nullable.
+    * The plans that are provisioned for the user. Read-only. Not nullable. Supports $filter (eq, NOT, ge, le).
     *
     * @param ProvisionedPlan $val The provisionedPlans
     *
@@ -1840,7 +1840,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userType
-    * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, NOT, in, startsWith, endsWith).
+    * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, NOT, in,).
     *
     * @return string|null The userType
     */
@@ -1855,7 +1855,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userType
-    * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, NOT, in, startsWith, endsWith).
+    * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, NOT, in,).
     *
     * @param string $val The userType
     *
@@ -2320,7 +2320,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignments
-    * Represents the app roles a user has been granted for an application.
+    * Represents the app roles a user has been granted for an application. Supports $expand.
      *
      * @return array|null The appRoleAssignments
      */
@@ -2335,7 +2335,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignments
-    * Represents the app roles a user has been granted for an application.
+    * Represents the app roles a user has been granted for an application. Supports $expand.
     *
     * @param AppRoleAssignment $val The appRoleAssignments
     *
@@ -2380,7 +2380,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the directReports
-    * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable.
+    * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
      *
      * @return array|null The directReports
      */
@@ -2395,7 +2395,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the directReports
-    * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable.
+    * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject $val The directReports
     *
@@ -2439,7 +2439,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the manager
-    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
+    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
     *
     * @return DirectoryObject|null The manager
     */
@@ -2458,7 +2458,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the manager
-    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
+    * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
     *
     * @param DirectoryObject $val The manager
     *
@@ -2473,7 +2473,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the memberOf
-    * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable.
+    * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The memberOf
      */
@@ -2488,7 +2488,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the memberOf
-    * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable.
+    * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject $val The memberOf
     *
@@ -2531,7 +2531,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the ownedDevices
-    * Devices that are owned by the user. Read-only. Nullable.
+    * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The ownedDevices
      */
@@ -2546,7 +2546,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the ownedDevices
-    * Devices that are owned by the user. Read-only. Nullable.
+    * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject $val The ownedDevices
     *
@@ -2561,7 +2561,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the ownedObjects
-    * Directory objects that are owned by the user. Read-only. Nullable.
+    * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The ownedObjects
      */
@@ -2576,7 +2576,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the ownedObjects
-    * Directory objects that are owned by the user. Read-only. Nullable.
+    * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject $val The ownedObjects
     *
@@ -2591,7 +2591,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the registeredDevices
-    * Devices that are registered for the user. Read-only. Nullable.
+    * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
      *
      * @return array|null The registeredDevices
      */
@@ -2606,7 +2606,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the registeredDevices
-    * Devices that are registered for the user. Read-only. Nullable.
+    * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
     *
     * @param DirectoryObject $val The registeredDevices
     *
@@ -2679,6 +2679,7 @@ class User extends DirectoryObject
 
      /** 
      * Gets the transitiveReports
+    * The transitive reports for a user. Read-only.
      *
      * @return array|null The transitiveReports
      */
@@ -2693,6 +2694,7 @@ class User extends DirectoryObject
     
     /** 
     * Sets the transitiveReports
+    * The transitive reports for a user. Read-only.
     *
     * @param DirectoryObject $val The transitiveReports
     *

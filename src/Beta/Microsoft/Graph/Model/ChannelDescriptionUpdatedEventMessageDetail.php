@@ -26,14 +26,17 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.channelDescriptionUpdatedEventMessageDetail");
     }
 
     /**
     * Gets the channelDescription
+    * The updated description of the channel.
     *
     * @return string|null The channelDescription
     */
@@ -48,6 +51,7 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the channelDescription
+    * The updated description of the channel.
     *
     * @param string $val The value of the channelDescription
     *
@@ -60,6 +64,7 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail
     }
     /**
     * Gets the channelId
+    * Unique identifier of the channel.
     *
     * @return string|null The channelId
     */
@@ -74,6 +79,7 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the channelId
+    * Unique identifier of the channel.
     *
     * @param string $val The value of the channelId
     *
@@ -87,6 +93,7 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the initiator
+    * Initiator of the event.
     *
     * @return IdentitySet|null The initiator
     */
@@ -105,6 +112,7 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the initiator
+    * Initiator of the event.
     *
     * @param IdentitySet $val The value to assign to the initiator
     *

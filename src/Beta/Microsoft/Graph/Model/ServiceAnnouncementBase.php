@@ -27,6 +27,7 @@ class ServiceAnnouncementBase extends Entity
 
      /** 
      * Gets the details
+    * Additional details about service event. This property doesn't support filters.
      *
      * @return array|null The details
      */
@@ -41,6 +42,7 @@ class ServiceAnnouncementBase extends Entity
     
     /** 
     * Sets the details
+    * Additional details about service event. This property doesn't support filters.
     *
     * @param KeyValuePair $val The details
     *
@@ -54,6 +56,7 @@ class ServiceAnnouncementBase extends Entity
     
     /**
     * Gets the endDateTime
+    * The end time of the service event.
     *
     * @return \DateTime|null The endDateTime
     */
@@ -72,6 +75,7 @@ class ServiceAnnouncementBase extends Entity
     
     /**
     * Sets the endDateTime
+    * The end time of the service event.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -85,6 +89,7 @@ class ServiceAnnouncementBase extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The last modified time of the service event.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -103,6 +108,7 @@ class ServiceAnnouncementBase extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The last modified time of the service event.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -116,6 +122,7 @@ class ServiceAnnouncementBase extends Entity
     
     /**
     * Gets the startDateTime
+    * The start time of the service event.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -134,6 +141,7 @@ class ServiceAnnouncementBase extends Entity
     
     /**
     * Sets the startDateTime
+    * The start time of the service event.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -147,6 +155,7 @@ class ServiceAnnouncementBase extends Entity
     
     /**
     * Gets the title
+    * The title of the service event.
     *
     * @return string|null The title
     */
@@ -161,6 +170,7 @@ class ServiceAnnouncementBase extends Entity
     
     /**
     * Sets the title
+    * The title of the service event.
     *
     * @param string $val The title
     *

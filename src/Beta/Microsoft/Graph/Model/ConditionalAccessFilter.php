@@ -26,6 +26,7 @@ class ConditionalAccessFilter extends Entity
 
     /**
     * Gets the mode
+    * Mode to use for the filter. Possible values are include or exclude.
     *
     * @return FilterMode|null The mode
     */
@@ -44,6 +45,7 @@ class ConditionalAccessFilter extends Entity
 
     /**
     * Sets the mode
+    * Mode to use for the filter. Possible values are include or exclude.
     *
     * @param FilterMode $val The value to assign to the mode
     *
@@ -56,6 +58,7 @@ class ConditionalAccessFilter extends Entity
     }
     /**
     * Gets the rule
+    * Rule syntax is similar to that used for membership rules for groups in Azure AD. For details, see rules with multiple expressions
     *
     * @return string|null The rule
     */
@@ -70,6 +73,7 @@ class ConditionalAccessFilter extends Entity
 
     /**
     * Sets the rule
+    * Rule syntax is similar to that used for membership rules for groups in Azure AD. For details, see rules with multiple expressions
     *
     * @param string $val The value of the rule
     *

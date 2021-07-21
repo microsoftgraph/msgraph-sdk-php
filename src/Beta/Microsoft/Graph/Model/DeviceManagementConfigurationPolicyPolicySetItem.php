@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ConversationIdentityType File
+* DeviceManagementConfigurationPolicyPolicySetItem File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* ConversationIdentityType class
+* DeviceManagementConfigurationPolicyPolicySetItem class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,11 +22,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ConversationIdentityType extends Enum
+class DeviceManagementConfigurationPolicyPolicySetItem extends PolicySetItem
 {
-    /**
-    * The Enum ConversationIdentityType
-    */
-    const TEAM = "team";
-    const CHANNEL = "channel";
 }

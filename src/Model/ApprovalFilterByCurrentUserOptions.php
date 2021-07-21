@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UserIdentityType File
+* ApprovalFilterByCurrentUserOptions File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* UserIdentityType class
+* ApprovalFilterByCurrentUserOptions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UserIdentityType extends Enum
+class ApprovalFilterByCurrentUserOptions extends Enum
 {
     /**
-    * The Enum UserIdentityType
+    * The Enum ApprovalFilterByCurrentUserOptions
     */
-    const AAD_USER = "aadUser";
-    const ON_PREMISE_AAD_USER = "onPremiseAadUser";
-    const ANONYMOUS_GUEST = "anonymousGuest";
-    const FEDERATED_USER = "federatedUser";
-    const PERSONAL_MICROSOFT_ACCOUNT_USER = "personalMicrosoftAccountUser";
-    const SKYPE_USER = "skypeUser";
+    const TARGET = "target";
+    const CREATED_BY = "createdBy";
+    const APPROVER = "approver";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

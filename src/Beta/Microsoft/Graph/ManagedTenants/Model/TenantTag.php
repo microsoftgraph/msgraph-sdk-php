@@ -26,6 +26,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdByUserId
+    * The identifier for the account that created the tenant tag. Required. Read-only.
     *
     * @return string|null The createdByUserId
     */
@@ -40,6 +41,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdByUserId
+    * The identifier for the account that created the tenant tag. Required. Read-only.
     *
     * @param string $val The createdByUserId
     *
@@ -53,6 +55,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time when the tenant tag was created. Required. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -71,6 +74,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time when the tenant tag was created. Required. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -84,6 +88,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the deletedDateTime
+    * The date and time when the tenant tag was deleted. Required. Read-only.
     *
     * @return \DateTime|null The deletedDateTime
     */
@@ -102,6 +107,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the deletedDateTime
+    * The date and time when the tenant tag was deleted. Required. Read-only.
     *
     * @param \DateTime $val The deletedDateTime
     *
@@ -115,6 +121,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
+    * The description for the tenant tag. Optional. Read-only.
     *
     * @return string|null The description
     */
@@ -129,6 +136,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
+    * The description for the tenant tag. Optional. Read-only.
     *
     * @param string $val The description
     *
@@ -142,6 +150,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
+    * The display name for the tenant tag. Required. Read-only.
     *
     * @return string|null The displayName
     */
@@ -156,6 +165,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
+    * The display name for the tenant tag. Required. Read-only.
     *
     * @param string $val The displayName
     *
@@ -169,6 +179,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastActionByUserId
+    * The identifier for the account that lasted on the tenant tag. Optional. Read-only.
     *
     * @return string|null The lastActionByUserId
     */
@@ -183,6 +194,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastActionByUserId
+    * The identifier for the account that lasted on the tenant tag. Optional. Read-only.
     *
     * @param string $val The lastActionByUserId
     *
@@ -196,6 +208,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastActionDateTime
+    * The date and time the last action was performed against the tenant tag. Optional. Read-only.
     *
     * @return \DateTime|null The lastActionDateTime
     */
@@ -214,6 +227,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastActionDateTime
+    * The date and time the last action was performed against the tenant tag. Optional. Read-only.
     *
     * @param \DateTime $val The lastActionDateTime
     *
@@ -228,6 +242,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the tenants
+    * The collection of managed tenants associated with the tenant tag. Optional.
      *
      * @return array|null The tenants
      */
@@ -242,6 +257,7 @@ class TenantTag extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the tenants
+    * The collection of managed tenants associated with the tenant tag. Optional.
     *
     * @param TenantInfo $val The tenants
     *

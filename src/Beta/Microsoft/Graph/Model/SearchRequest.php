@@ -143,7 +143,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the entityTypes
-    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
     *
     * @return EntityType|null The entityTypes
     */
@@ -162,7 +162,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the entityTypes
-    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
     *
     * @param EntityType $val The value to assign to the entityTypes
     *
@@ -265,6 +265,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the resultTemplateOptions
+    * Provides the search result templates options for rendering connectors search results.
     *
     * @return ResultTemplateOption|null The resultTemplateOptions
     */
@@ -283,6 +284,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the resultTemplateOptions
+    * Provides the search result templates options for rendering connectors search results.
     *
     * @param ResultTemplateOption $val The value to assign to the resultTemplateOptions
     *

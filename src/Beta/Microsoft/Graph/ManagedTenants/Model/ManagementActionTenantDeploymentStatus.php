@@ -27,6 +27,7 @@ class ManagementActionTenantDeploymentStatus extends \Beta\Microsoft\Graph\Model
 
      /** 
      * Gets the statuses
+    * The collection of deployment status for each instance of a management action. Optional.
      *
      * @return array|null The statuses
      */
@@ -41,6 +42,7 @@ class ManagementActionTenantDeploymentStatus extends \Beta\Microsoft\Graph\Model
     
     /** 
     * Sets the statuses
+    * The collection of deployment status for each instance of a management action. Optional.
     *
     * @param ManagementActionDeploymentStatus $val The statuses
     *
@@ -54,6 +56,7 @@ class ManagementActionTenantDeploymentStatus extends \Beta\Microsoft\Graph\Model
     
     /**
     * Gets the tenantGroupId
+    * The identifier for the tenant group that is associated with the management action. Required. Read-only.
     *
     * @return string|null The tenantGroupId
     */
@@ -68,6 +71,7 @@ class ManagementActionTenantDeploymentStatus extends \Beta\Microsoft\Graph\Model
     
     /**
     * Sets the tenantGroupId
+    * The identifier for the tenant group that is associated with the management action. Required. Read-only.
     *
     * @param string $val The tenantGroupId
     *
@@ -81,6 +85,7 @@ class ManagementActionTenantDeploymentStatus extends \Beta\Microsoft\Graph\Model
     
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -95,6 +100,7 @@ class ManagementActionTenantDeploymentStatus extends \Beta\Microsoft\Graph\Model
     
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
     *
     * @param string $val The tenantId
     *
