@@ -437,7 +437,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the messageType
-    * The type of chat message. The possible value is: message.
+    * The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
     *
     * @return ChatMessageType|null The messageType
     */
@@ -456,7 +456,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the messageType
-    * The type of chat message. The possible value is: message.
+    * The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
     *
     * @param ChatMessageType $val The messageType
     *

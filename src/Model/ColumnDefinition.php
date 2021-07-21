@@ -588,7 +588,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Gets the required
-    * Specifies whether the column value is not optional.
+    * Specifies whether the column value isn't optional.
     *
     * @return bool|null The required
     */
@@ -603,7 +603,7 @@ class ColumnDefinition extends Entity
     
     /**
     * Sets the required
-    * Specifies whether the column value is not optional.
+    * Specifies whether the column value isn't optional.
     *
     * @param bool $val The required
     *
