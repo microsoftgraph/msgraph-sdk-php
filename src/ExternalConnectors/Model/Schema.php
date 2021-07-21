@@ -26,6 +26,7 @@ class Schema extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the baseType
+    * Must be set to microsoft.graph.externalItem. Required.
     *
     * @return string|null The baseType
     */
@@ -40,6 +41,7 @@ class Schema extends \Microsoft\Graph\Model\Entity
     
     /**
     * Sets the baseType
+    * Must be set to microsoft.graph.externalItem. Required.
     *
     * @param string $val The baseType
     *
@@ -54,6 +56,7 @@ class Schema extends \Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the schemaProperties
+    * The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
      *
      * @return array|null The schemaProperties
      */
@@ -68,6 +71,7 @@ class Schema extends \Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the schemaProperties
+    * The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
     *
     * @param Property $val The schemaProperties
     *

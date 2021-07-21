@@ -26,6 +26,7 @@ class Acl extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the accessType
+    * The access granted to the identity. Possible values are: grant, deny.
     *
     * @return AccessType|null The accessType
     */
@@ -44,6 +45,7 @@ class Acl extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the accessType
+    * The access granted to the identity. Possible values are: grant, deny.
     *
     * @param AccessType $val The value to assign to the accessType
     *
@@ -57,6 +59,7 @@ class Acl extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the type
+    * The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external.
     *
     * @return AclType|null The type
     */
@@ -75,6 +78,7 @@ class Acl extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the type
+    * The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external.
     *
     * @param AclType $val The value to assign to the type
     *
@@ -87,6 +91,7 @@ class Acl extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the value
+    * The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
     *
     * @return string|null The value
     */
@@ -101,6 +106,7 @@ class Acl extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the value
+    * The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
     *
     * @param string $val The value of the value
     *
