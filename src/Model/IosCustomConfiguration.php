@@ -36,7 +36,7 @@ class IosCustomConfiguration extends DeviceConfiguration
             if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["payload"])) {
                 return $this->_propDict["payload"];
             } else {
-                $this->_propDict["payload"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["payload"]);
+                $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
                 return $this->_propDict["payload"];
             }
         }

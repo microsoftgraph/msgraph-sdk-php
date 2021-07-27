@@ -26,6 +26,7 @@ class PolicyRoot extends Entity
 {
     /**
     * Gets the authenticationMethodsPolicy
+    * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
     *
     * @return AuthenticationMethodsPolicy|null The authenticationMethodsPolicy
     */
@@ -44,6 +45,7 @@ class PolicyRoot extends Entity
     
     /**
     * Sets the authenticationMethodsPolicy
+    * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
     *
     * @param AuthenticationMethodsPolicy $val The authenticationMethodsPolicy
     *
@@ -57,6 +59,7 @@ class PolicyRoot extends Entity
     
     /**
     * Gets the authenticationFlowsPolicy
+    * The policy configuration of the self-service sign-up experience of external users.
     *
     * @return AuthenticationFlowsPolicy|null The authenticationFlowsPolicy
     */
@@ -75,6 +78,7 @@ class PolicyRoot extends Entity
     
     /**
     * Sets the authenticationFlowsPolicy
+    * The policy configuration of the self-service sign-up experience of external users.
     *
     * @param AuthenticationFlowsPolicy $val The authenticationFlowsPolicy
     *
@@ -89,6 +93,7 @@ class PolicyRoot extends Entity
 
      /** 
      * Gets the activityBasedTimeoutPolicies
+    * The policy that controls the idle time out for web sessions for applications.
      *
      * @return array|null The activityBasedTimeoutPolicies
      */
@@ -103,6 +108,7 @@ class PolicyRoot extends Entity
     
     /** 
     * Sets the activityBasedTimeoutPolicies
+    * The policy that controls the idle time out for web sessions for applications.
     *
     * @param ActivityBasedTimeoutPolicy $val The activityBasedTimeoutPolicies
     *
@@ -116,6 +122,7 @@ class PolicyRoot extends Entity
     
     /**
     * Gets the authorizationPolicy
+    * The policy that controls Azure AD authorization settings.
     *
     * @return AuthorizationPolicy|null The authorizationPolicy
     */
@@ -134,6 +141,7 @@ class PolicyRoot extends Entity
     
     /**
     * Sets the authorizationPolicy
+    * The policy that controls Azure AD authorization settings.
     *
     * @param AuthorizationPolicy $val The authorizationPolicy
     *
@@ -148,6 +156,7 @@ class PolicyRoot extends Entity
 
      /** 
      * Gets the claimsMappingPolicies
+    * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      *
      * @return array|null The claimsMappingPolicies
      */
@@ -162,6 +171,7 @@ class PolicyRoot extends Entity
     
     /** 
     * Sets the claimsMappingPolicies
+    * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
     *
     * @param ClaimsMappingPolicy $val The claimsMappingPolicies
     *
@@ -176,6 +186,7 @@ class PolicyRoot extends Entity
 
      /** 
      * Gets the homeRealmDiscoveryPolicies
+    * The policy to control Azure AD authentication behavior for federated users.
      *
      * @return array|null The homeRealmDiscoveryPolicies
      */
@@ -190,6 +201,7 @@ class PolicyRoot extends Entity
     
     /** 
     * Sets the homeRealmDiscoveryPolicies
+    * The policy to control Azure AD authentication behavior for federated users.
     *
     * @param HomeRealmDiscoveryPolicy $val The homeRealmDiscoveryPolicies
     *
@@ -204,6 +216,7 @@ class PolicyRoot extends Entity
 
      /** 
      * Gets the permissionGrantPolicies
+    * The policy that specifies the conditions under which consent can be granted.
      *
      * @return array|null The permissionGrantPolicies
      */
@@ -218,6 +231,7 @@ class PolicyRoot extends Entity
     
     /** 
     * Sets the permissionGrantPolicies
+    * The policy that specifies the conditions under which consent can be granted.
     *
     * @param PermissionGrantPolicy $val The permissionGrantPolicies
     *
@@ -232,6 +246,7 @@ class PolicyRoot extends Entity
 
      /** 
      * Gets the tokenIssuancePolicies
+    * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
      *
      * @return array|null The tokenIssuancePolicies
      */
@@ -246,6 +261,7 @@ class PolicyRoot extends Entity
     
     /** 
     * Sets the tokenIssuancePolicies
+    * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
     *
     * @param TokenIssuancePolicy $val The tokenIssuancePolicies
     *
@@ -260,6 +276,7 @@ class PolicyRoot extends Entity
 
      /** 
      * Gets the tokenLifetimePolicies
+    * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
      *
      * @return array|null The tokenLifetimePolicies
      */
@@ -274,6 +291,7 @@ class PolicyRoot extends Entity
     
     /** 
     * Sets the tokenLifetimePolicies
+    * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
     *
     * @param TokenLifetimePolicy $val The tokenLifetimePolicies
     *
@@ -288,6 +306,7 @@ class PolicyRoot extends Entity
 
      /** 
      * Gets the featureRolloutPolicies
+    * The feature rollout policy associated with a directory object.
      *
      * @return array|null The featureRolloutPolicies
      */
@@ -302,6 +321,7 @@ class PolicyRoot extends Entity
     
     /** 
     * Sets the featureRolloutPolicies
+    * The feature rollout policy associated with a directory object.
     *
     * @param FeatureRolloutPolicy $val The featureRolloutPolicies
     *
@@ -315,6 +335,7 @@ class PolicyRoot extends Entity
     
     /**
     * Gets the adminConsentRequestPolicy
+    * The policy by which consent requests are created and managed for the entire tenant.
     *
     * @return AdminConsentRequestPolicy|null The adminConsentRequestPolicy
     */
@@ -333,6 +354,7 @@ class PolicyRoot extends Entity
     
     /**
     * Sets the adminConsentRequestPolicy
+    * The policy by which consent requests are created and managed for the entire tenant.
     *
     * @param AdminConsentRequestPolicy $val The adminConsentRequestPolicy
     *
@@ -347,6 +369,7 @@ class PolicyRoot extends Entity
 
      /** 
      * Gets the conditionalAccessPolicies
+    * The custom rules that define an access scenario.
      *
      * @return array|null The conditionalAccessPolicies
      */
@@ -361,6 +384,7 @@ class PolicyRoot extends Entity
     
     /** 
     * Sets the conditionalAccessPolicies
+    * The custom rules that define an access scenario.
     *
     * @param ConditionalAccessPolicy $val The conditionalAccessPolicies
     *
@@ -374,6 +398,7 @@ class PolicyRoot extends Entity
     
     /**
     * Gets the identitySecurityDefaultsEnforcementPolicy
+    * The policy that represents the security defaults that protect against common attacks.
     *
     * @return IdentitySecurityDefaultsEnforcementPolicy|null The identitySecurityDefaultsEnforcementPolicy
     */
@@ -392,6 +417,7 @@ class PolicyRoot extends Entity
     
     /**
     * Sets the identitySecurityDefaultsEnforcementPolicy
+    * The policy that represents the security defaults that protect against common attacks.
     *
     * @param IdentitySecurityDefaultsEnforcementPolicy $val The identitySecurityDefaultsEnforcementPolicy
     *
