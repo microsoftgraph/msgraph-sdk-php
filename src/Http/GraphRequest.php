@@ -466,7 +466,7 @@ class GraphRequest
         try {
             if (file_exists($path) && is_readable($path)) {
                 $file = fopen($path, 'r');
-                $stream = \GuzzleHttp\Psr7\Utils::streamFor($file);
+                $stream = \GuzzleHttp\Psr7\stream_for($file);
                 $this->requestBody = $stream;
                 return $this->execute($client);
             } else {
