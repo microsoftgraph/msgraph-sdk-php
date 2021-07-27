@@ -36,7 +36,7 @@ class PasswordCredential extends Entity
             if (is_a($this->_propDict["customKeyIdentifier"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customKeyIdentifier"])) {
                 return $this->_propDict["customKeyIdentifier"];
             } else {
-                $this->_propDict["customKeyIdentifier"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["customKeyIdentifier"]);
+                $this->_propDict["customKeyIdentifier"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["customKeyIdentifier"]);
                 return $this->_propDict["customKeyIdentifier"];
             }
         }

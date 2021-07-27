@@ -124,7 +124,7 @@ class OfficeClientConfiguration extends Entity
             if (is_a($this->_propDict["policyPayload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["policyPayload"])) {
                 return $this->_propDict["policyPayload"];
             } else {
-                $this->_propDict["policyPayload"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["policyPayload"]);
+                $this->_propDict["policyPayload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["policyPayload"]);
                 return $this->_propDict["policyPayload"];
             }
         }
@@ -219,7 +219,7 @@ class OfficeClientConfiguration extends Entity
             if (is_a($this->_propDict["userPreferencePayload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["userPreferencePayload"])) {
                 return $this->_propDict["userPreferencePayload"];
             } else {
-                $this->_propDict["userPreferencePayload"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["userPreferencePayload"]);
+                $this->_propDict["userPreferencePayload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["userPreferencePayload"]);
                 return $this->_propDict["userPreferencePayload"];
             }
         }
