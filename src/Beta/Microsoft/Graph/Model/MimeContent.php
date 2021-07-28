@@ -64,7 +64,7 @@ class MimeContent extends Entity
             if (is_a($this->_propDict["value"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["value"])) {
                 return $this->_propDict["value"];
             } else {
-                $this->_propDict["value"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["value"]);
+                $this->_propDict["value"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["value"]);
                 return $this->_propDict["value"];
             }
         }

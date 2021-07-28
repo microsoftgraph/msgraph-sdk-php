@@ -187,7 +187,7 @@ class Message extends OutlookItem
             if (is_a($this->_propDict["conversationIndex"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["conversationIndex"])) {
                 return $this->_propDict["conversationIndex"];
             } else {
-                $this->_propDict["conversationIndex"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["conversationIndex"]);
+                $this->_propDict["conversationIndex"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["conversationIndex"]);
                 return $this->_propDict["conversationIndex"];
             }
         }

@@ -65,7 +65,7 @@ class OrganizationalBrandingProperties extends Entity
             if (is_a($this->_propDict["backgroundImage"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["backgroundImage"])) {
                 return $this->_propDict["backgroundImage"];
             } else {
-                $this->_propDict["backgroundImage"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["backgroundImage"]);
+                $this->_propDict["backgroundImage"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["backgroundImage"]);
                 return $this->_propDict["backgroundImage"];
             }
         }
@@ -98,7 +98,7 @@ class OrganizationalBrandingProperties extends Entity
             if (is_a($this->_propDict["bannerLogo"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["bannerLogo"])) {
                 return $this->_propDict["bannerLogo"];
             } else {
-                $this->_propDict["bannerLogo"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["bannerLogo"]);
+                $this->_propDict["bannerLogo"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["bannerLogo"]);
                 return $this->_propDict["bannerLogo"];
             }
         }
@@ -160,7 +160,7 @@ class OrganizationalBrandingProperties extends Entity
             if (is_a($this->_propDict["squareLogo"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["squareLogo"])) {
                 return $this->_propDict["squareLogo"];
             } else {
-                $this->_propDict["squareLogo"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["squareLogo"]);
+                $this->_propDict["squareLogo"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["squareLogo"]);
                 return $this->_propDict["squareLogo"];
             }
         }

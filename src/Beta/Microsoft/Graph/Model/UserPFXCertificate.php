@@ -69,7 +69,7 @@ class UserPFXCertificate extends Entity
             if (is_a($this->_propDict["encryptedPfxBlob"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["encryptedPfxBlob"])) {
                 return $this->_propDict["encryptedPfxBlob"];
             } else {
-                $this->_propDict["encryptedPfxBlob"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["encryptedPfxBlob"]);
+                $this->_propDict["encryptedPfxBlob"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["encryptedPfxBlob"]);
                 return $this->_propDict["encryptedPfxBlob"];
             }
         }
