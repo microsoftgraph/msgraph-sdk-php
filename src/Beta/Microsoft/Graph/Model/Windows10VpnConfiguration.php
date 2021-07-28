@@ -224,7 +224,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
             if (is_a($this->_propDict["eapXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["eapXml"])) {
                 return $this->_propDict["eapXml"];
             } else {
-                $this->_propDict["eapXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["eapXml"]);
+                $this->_propDict["eapXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["eapXml"]);
                 return $this->_propDict["eapXml"];
             }
         }

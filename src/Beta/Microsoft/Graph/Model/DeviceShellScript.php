@@ -342,7 +342,7 @@ class DeviceShellScript extends Entity
             if (is_a($this->_propDict["scriptContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["scriptContent"])) {
                 return $this->_propDict["scriptContent"];
             } else {
-                $this->_propDict["scriptContent"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["scriptContent"]);
+                $this->_propDict["scriptContent"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["scriptContent"]);
                 return $this->_propDict["scriptContent"];
             }
         }
