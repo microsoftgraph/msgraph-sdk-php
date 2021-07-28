@@ -35,7 +35,7 @@ class BufferDecryptionResult extends Entity
             if (is_a($this->_propDict["decryptedBuffer"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["decryptedBuffer"])) {
                 return $this->_propDict["decryptedBuffer"];
             } else {
-                $this->_propDict["decryptedBuffer"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["decryptedBuffer"]);
+                $this->_propDict["decryptedBuffer"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["decryptedBuffer"]);
                 return $this->_propDict["decryptedBuffer"];
             }
         }

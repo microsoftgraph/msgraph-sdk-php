@@ -400,7 +400,7 @@ class MacOSEndpointProtectionConfiguration extends DeviceConfiguration
             if (is_a($this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"])) {
                 return $this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"];
             } else {
-                $this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"]);
+                $this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"]);
                 return $this->_propDict["fileVaultInstitutionalRecoveryKeyCertificate"];
             }
         }

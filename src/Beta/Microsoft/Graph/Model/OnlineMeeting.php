@@ -220,7 +220,7 @@ class OnlineMeeting extends Entity
             if (is_a($this->_propDict["alternativeRecording"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["alternativeRecording"])) {
                 return $this->_propDict["alternativeRecording"];
             } else {
-                $this->_propDict["alternativeRecording"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["alternativeRecording"]);
+                $this->_propDict["alternativeRecording"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["alternativeRecording"]);
                 return $this->_propDict["alternativeRecording"];
             }
         }
@@ -253,7 +253,7 @@ class OnlineMeeting extends Entity
             if (is_a($this->_propDict["attendeeReport"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["attendeeReport"])) {
                 return $this->_propDict["attendeeReport"];
             } else {
-                $this->_propDict["attendeeReport"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["attendeeReport"]);
+                $this->_propDict["attendeeReport"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["attendeeReport"]);
                 return $this->_propDict["attendeeReport"];
             }
         }
@@ -808,7 +808,7 @@ class OnlineMeeting extends Entity
             if (is_a($this->_propDict["recording"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["recording"])) {
                 return $this->_propDict["recording"];
             } else {
-                $this->_propDict["recording"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["recording"]);
+                $this->_propDict["recording"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["recording"]);
                 return $this->_propDict["recording"];
             }
         }

@@ -36,7 +36,7 @@ class FileAttachment extends Attachment
             if (is_a($this->_propDict["contentBytes"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["contentBytes"])) {
                 return $this->_propDict["contentBytes"];
             } else {
-                $this->_propDict["contentBytes"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["contentBytes"]);
+                $this->_propDict["contentBytes"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["contentBytes"]);
                 return $this->_propDict["contentBytes"];
             }
         }

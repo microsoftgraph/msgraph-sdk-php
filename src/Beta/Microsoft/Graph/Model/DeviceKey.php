@@ -61,7 +61,7 @@ class DeviceKey extends Entity
             if (is_a($this->_propDict["keyMaterial"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["keyMaterial"])) {
                 return $this->_propDict["keyMaterial"];
             } else {
-                $this->_propDict["keyMaterial"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["keyMaterial"]);
+                $this->_propDict["keyMaterial"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["keyMaterial"]);
                 return $this->_propDict["keyMaterial"];
             }
         }
