@@ -36,7 +36,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
             if (is_a($this->_propDict["encodedSettingXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["encodedSettingXml"])) {
                 return $this->_propDict["encodedSettingXml"];
             } else {
-                $this->_propDict["encodedSettingXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["encodedSettingXml"]);
+                $this->_propDict["encodedSettingXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["encodedSettingXml"]);
                 return $this->_propDict["encodedSettingXml"];
             }
         }
