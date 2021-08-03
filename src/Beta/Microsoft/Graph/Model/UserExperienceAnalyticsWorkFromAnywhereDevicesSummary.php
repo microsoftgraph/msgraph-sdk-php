@@ -58,6 +58,39 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
 
     /**
+    * Gets the cloudIdentityDevicesSummary
+    * The user experience analytics work from anywhere Cloud Identity devices summary.
+    *
+    * @return UserExperienceAnalyticsCloudIdentityDevicesSummary|null The cloudIdentityDevicesSummary
+    */
+    public function getCloudIdentityDevicesSummary()
+    {
+        if (array_key_exists("cloudIdentityDevicesSummary", $this->_propDict)) {
+            if (is_a($this->_propDict["cloudIdentityDevicesSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCloudIdentityDevicesSummary") || is_null($this->_propDict["cloudIdentityDevicesSummary"])) {
+                return $this->_propDict["cloudIdentityDevicesSummary"];
+            } else {
+                $this->_propDict["cloudIdentityDevicesSummary"] = new UserExperienceAnalyticsCloudIdentityDevicesSummary($this->_propDict["cloudIdentityDevicesSummary"]);
+                return $this->_propDict["cloudIdentityDevicesSummary"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the cloudIdentityDevicesSummary
+    * The user experience analytics work from anywhere Cloud Identity devices summary.
+    *
+    * @param UserExperienceAnalyticsCloudIdentityDevicesSummary $val The value to assign to the cloudIdentityDevicesSummary
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevicesSummary The UserExperienceAnalyticsWorkFromAnywhereDevicesSummary
+    */
+    public function setCloudIdentityDevicesSummary($val)
+    {
+        $this->_propDict["cloudIdentityDevicesSummary"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the cloudManagementDevicesSummary
     * The user experience work from anywhere Cloud management devices summary.
     *

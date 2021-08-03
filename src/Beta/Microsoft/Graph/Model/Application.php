@@ -943,6 +943,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the appManagementPolicies
+    * The appManagementPolicy applied to this application.
      *
      * @return array|null The appManagementPolicies
      */
@@ -957,6 +958,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the appManagementPolicies
+    * The appManagementPolicy applied to this application.
     *
     * @param AppManagementPolicy $val The appManagementPolicies
     *

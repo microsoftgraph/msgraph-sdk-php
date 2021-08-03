@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class MacOSScepCertificateProfile extends MacOSCertificateProfileBase
 {
     /**
+    * Gets the allowAllAppsAccess
+    * AllowAllAppsAccess setting
+    *
+    * @return bool|null The allowAllAppsAccess
+    */
+    public function getAllowAllAppsAccess()
+    {
+        if (array_key_exists("allowAllAppsAccess", $this->_propDict)) {
+            return $this->_propDict["allowAllAppsAccess"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowAllAppsAccess
+    * AllowAllAppsAccess setting
+    *
+    * @param bool $val The allowAllAppsAccess
+    *
+    * @return MacOSScepCertificateProfile
+    */
+    public function setAllowAllAppsAccess($val)
+    {
+        $this->_propDict["allowAllAppsAccess"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the certificateStore
     * Target store certificate. Possible values are: user, machine.
     *

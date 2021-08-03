@@ -25,6 +25,68 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementConfigurationPolicyAssignment extends Entity
 {
     /**
+    * Gets the source
+    * The assignment source for the device compliance policy, direct or parcel/policySet.
+    *
+    * @return DeviceAndAppManagementAssignmentSource|null The source
+    */
+    public function getSource()
+    {
+        if (array_key_exists("source", $this->_propDict)) {
+            if (is_a($this->_propDict["source"], "\Beta\Microsoft\Graph\Model\DeviceAndAppManagementAssignmentSource") || is_null($this->_propDict["source"])) {
+                return $this->_propDict["source"];
+            } else {
+                $this->_propDict["source"] = new DeviceAndAppManagementAssignmentSource($this->_propDict["source"]);
+                return $this->_propDict["source"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the source
+    * The assignment source for the device compliance policy, direct or parcel/policySet.
+    *
+    * @param DeviceAndAppManagementAssignmentSource $val The source
+    *
+    * @return DeviceManagementConfigurationPolicyAssignment
+    */
+    public function setSource($val)
+    {
+        $this->_propDict["source"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the sourceId
+    * The identifier of the source of the assignment.
+    *
+    * @return string|null The sourceId
+    */
+    public function getSourceId()
+    {
+        if (array_key_exists("sourceId", $this->_propDict)) {
+            return $this->_propDict["sourceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the sourceId
+    * The identifier of the source of the assignment.
+    *
+    * @param string $val The sourceId
+    *
+    * @return DeviceManagementConfigurationPolicyAssignment
+    */
+    public function setSourceId($val)
+    {
+        $this->_propDict["sourceId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the target
     * The assignment target for the DeviceManagementConfigurationPolicy.
     *

@@ -2492,6 +2492,66 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    * User experience analytics appHealth Application Performance by App Version details
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    * User experience analytics appHealth Application Performance by App Version details
+    *
+    * @param UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails $val The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    * User experience analytics appHealth Application Performance by App Version Device Id
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    * User experience analytics appHealth Application Performance by App Version Device Id
+    *
+    * @param UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId $val The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion
     * User experience analytics appHealth Application Performance by OS Version
      *
@@ -3186,6 +3246,39 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsScoreHistory($val)
     {
         $this->_propDict["userExperienceAnalyticsScoreHistory"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    * User experience analytics work from anywhere hardware readiness metrics.
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric|null The userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    */
+    public function getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric()
+    {
+        if (array_key_exists("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric") || is_null($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"])) {
+                return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"] = new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"]);
+                return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    * User experience analytics work from anywhere hardware readiness metrics.
+    *
+    * @param UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric $val The userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric($val)
+    {
+        $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"] = $val;
         return $this;
     }
     

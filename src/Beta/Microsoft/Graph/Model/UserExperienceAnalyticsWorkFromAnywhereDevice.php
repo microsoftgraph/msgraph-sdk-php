@@ -170,6 +170,35 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     }
     
     /**
+    * Gets the compliancePolicySetToIntune
+    * The user experience work from anywhere device's compliancePolicySetToIntune.
+    *
+    * @return bool|null The compliancePolicySetToIntune
+    */
+    public function getCompliancePolicySetToIntune()
+    {
+        if (array_key_exists("compliancePolicySetToIntune", $this->_propDict)) {
+            return $this->_propDict["compliancePolicySetToIntune"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the compliancePolicySetToIntune
+    * The user experience work from anywhere device's compliancePolicySetToIntune.
+    *
+    * @param bool $val The compliancePolicySetToIntune
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setCompliancePolicySetToIntune($val)
+    {
+        $this->_propDict["compliancePolicySetToIntune"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the deviceName
     * The work from anywhere device's name.
     *
@@ -286,6 +315,35 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     }
     
     /**
+    * Gets the osCheckFailed
+    * The user experience work from anywhere device, Is OS check failed for device to upgrade to the latest version of windows.
+    *
+    * @return bool|null The osCheckFailed
+    */
+    public function getOsCheckFailed()
+    {
+        if (array_key_exists("osCheckFailed", $this->_propDict)) {
+            return $this->_propDict["osCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the osCheckFailed
+    * The user experience work from anywhere device, Is OS check failed for device to upgrade to the latest version of windows.
+    *
+    * @param bool $val The osCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setOsCheckFailed($val)
+    {
+        $this->_propDict["osCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the osDescription
     * The user experience work from anywhere device's OS Description.
     *
@@ -344,6 +402,35 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     }
     
     /**
+    * Gets the otherWorkloadsSetToIntune
+    * The user experience work from anywhere device's otherWorkloadsSetToIntune.
+    *
+    * @return bool|null The otherWorkloadsSetToIntune
+    */
+    public function getOtherWorkloadsSetToIntune()
+    {
+        if (array_key_exists("otherWorkloadsSetToIntune", $this->_propDict)) {
+            return $this->_propDict["otherWorkloadsSetToIntune"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the otherWorkloadsSetToIntune
+    * The user experience work from anywhere device's otherWorkloadsSetToIntune.
+    *
+    * @param bool $val The otherWorkloadsSetToIntune
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setOtherWorkloadsSetToIntune($val)
+    {
+        $this->_propDict["otherWorkloadsSetToIntune"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the ownership
     * The user experience work from anywhere device's ownership.
     *
@@ -373,6 +460,180 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     }
     
     /**
+    * Gets the processor64BitCheckFailed
+    * The user experience work from anywhere device, Is processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows.
+    *
+    * @return bool|null The processor64BitCheckFailed
+    */
+    public function getProcessor64BitCheckFailed()
+    {
+        if (array_key_exists("processor64BitCheckFailed", $this->_propDict)) {
+            return $this->_propDict["processor64BitCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the processor64BitCheckFailed
+    * The user experience work from anywhere device, Is processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows.
+    *
+    * @param bool $val The processor64BitCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setProcessor64BitCheckFailed($val)
+    {
+        $this->_propDict["processor64BitCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the processorCoreCountCheckFailed
+    * The user experience work from anywhere device, Is processor hardware core count check failed for device to upgrade to the latest version of windows.
+    *
+    * @return bool|null The processorCoreCountCheckFailed
+    */
+    public function getProcessorCoreCountCheckFailed()
+    {
+        if (array_key_exists("processorCoreCountCheckFailed", $this->_propDict)) {
+            return $this->_propDict["processorCoreCountCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the processorCoreCountCheckFailed
+    * The user experience work from anywhere device, Is processor hardware core count check failed for device to upgrade to the latest version of windows.
+    *
+    * @param bool $val The processorCoreCountCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setProcessorCoreCountCheckFailed($val)
+    {
+        $this->_propDict["processorCoreCountCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the processorFamilyCheckFailed
+    * The user experience work from anywhere device, Is processor hardware family check failed for device to upgrade to the latest version of windows.
+    *
+    * @return bool|null The processorFamilyCheckFailed
+    */
+    public function getProcessorFamilyCheckFailed()
+    {
+        if (array_key_exists("processorFamilyCheckFailed", $this->_propDict)) {
+            return $this->_propDict["processorFamilyCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the processorFamilyCheckFailed
+    * The user experience work from anywhere device, Is processor hardware family check failed for device to upgrade to the latest version of windows.
+    *
+    * @param bool $val The processorFamilyCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setProcessorFamilyCheckFailed($val)
+    {
+        $this->_propDict["processorFamilyCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the processorSpeedCheckFailed
+    * The user experience work from anywhere device, Is processor hardware speed check failed for device to upgrade to the latest version of windows.
+    *
+    * @return bool|null The processorSpeedCheckFailed
+    */
+    public function getProcessorSpeedCheckFailed()
+    {
+        if (array_key_exists("processorSpeedCheckFailed", $this->_propDict)) {
+            return $this->_propDict["processorSpeedCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the processorSpeedCheckFailed
+    * The user experience work from anywhere device, Is processor hardware speed check failed for device to upgrade to the latest version of windows.
+    *
+    * @param bool $val The processorSpeedCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setProcessorSpeedCheckFailed($val)
+    {
+        $this->_propDict["processorSpeedCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the ramCheckFailed
+    * Is the user experience analytics work from anywhere device RAM hardware check failed for device to upgrade to the latest version of windows
+    *
+    * @return bool|null The ramCheckFailed
+    */
+    public function getRamCheckFailed()
+    {
+        if (array_key_exists("ramCheckFailed", $this->_propDict)) {
+            return $this->_propDict["ramCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the ramCheckFailed
+    * Is the user experience analytics work from anywhere device RAM hardware check failed for device to upgrade to the latest version of windows
+    *
+    * @param bool $val The ramCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setRamCheckFailed($val)
+    {
+        $this->_propDict["ramCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the secureBootCheckFailed
+    * The user experience work from anywhere device, Is secure boot hardware check failed for device to upgrade to the latest version of windows.
+    *
+    * @return bool|null The secureBootCheckFailed
+    */
+    public function getSecureBootCheckFailed()
+    {
+        if (array_key_exists("secureBootCheckFailed", $this->_propDict)) {
+            return $this->_propDict["secureBootCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the secureBootCheckFailed
+    * The user experience work from anywhere device, Is secure boot hardware check failed for device to upgrade to the latest version of windows.
+    *
+    * @param bool $val The secureBootCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setSecureBootCheckFailed($val)
+    {
+        $this->_propDict["secureBootCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the serialNumber
     * The user experience work from anywhere device's serial number.
     *
@@ -398,6 +659,126 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     public function setSerialNumber($val)
     {
         $this->_propDict["serialNumber"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the storageCheckFailed
+    * The user experience work from anywhere device, Is storage hardware check failed for device to upgrade to the latest version of windows.
+    *
+    * @return bool|null The storageCheckFailed
+    */
+    public function getStorageCheckFailed()
+    {
+        if (array_key_exists("storageCheckFailed", $this->_propDict)) {
+            return $this->_propDict["storageCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the storageCheckFailed
+    * The user experience work from anywhere device, Is storage hardware check failed for device to upgrade to the latest version of windows.
+    *
+    * @param bool $val The storageCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setStorageCheckFailed($val)
+    {
+        $this->_propDict["storageCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the tenantAttached
+    * The user experience work from anywhere device's tenantAttached.
+    *
+    * @return bool|null The tenantAttached
+    */
+    public function getTenantAttached()
+    {
+        if (array_key_exists("tenantAttached", $this->_propDict)) {
+            return $this->_propDict["tenantAttached"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tenantAttached
+    * The user experience work from anywhere device's tenantAttached.
+    *
+    * @param bool $val The tenantAttached
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setTenantAttached($val)
+    {
+        $this->_propDict["tenantAttached"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the tpmCheckFailed
+    * The user experience work from anywhere device, Is Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows.
+    *
+    * @return bool|null The tpmCheckFailed
+    */
+    public function getTpmCheckFailed()
+    {
+        if (array_key_exists("tpmCheckFailed", $this->_propDict)) {
+            return $this->_propDict["tpmCheckFailed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tpmCheckFailed
+    * The user experience work from anywhere device, Is Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows.
+    *
+    * @param bool $val The tpmCheckFailed
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setTpmCheckFailed($val)
+    {
+        $this->_propDict["tpmCheckFailed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the upgradeEligibility
+    * The user experience work from anywhere windows upgrade eligibility status of device.
+    *
+    * @return OperatingSystemUpgradeEligibility|null The upgradeEligibility
+    */
+    public function getUpgradeEligibility()
+    {
+        if (array_key_exists("upgradeEligibility", $this->_propDict)) {
+            if (is_a($this->_propDict["upgradeEligibility"], "\Beta\Microsoft\Graph\Model\OperatingSystemUpgradeEligibility") || is_null($this->_propDict["upgradeEligibility"])) {
+                return $this->_propDict["upgradeEligibility"];
+            } else {
+                $this->_propDict["upgradeEligibility"] = new OperatingSystemUpgradeEligibility($this->_propDict["upgradeEligibility"]);
+                return $this->_propDict["upgradeEligibility"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the upgradeEligibility
+    * The user experience work from anywhere windows upgrade eligibility status of device.
+    *
+    * @param OperatingSystemUpgradeEligibility $val The upgradeEligibility
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setUpgradeEligibility($val)
+    {
+        $this->_propDict["upgradeEligibility"] = $val;
         return $this;
     }
     

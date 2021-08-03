@@ -139,6 +139,33 @@ class UnifiedRoleAssignment extends Entity
     }
     
     /**
+    * Gets the principalOrganizationId
+    *
+    * @return string|null The principalOrganizationId
+    */
+    public function getPrincipalOrganizationId()
+    {
+        if (array_key_exists("principalOrganizationId", $this->_propDict)) {
+            return $this->_propDict["principalOrganizationId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the principalOrganizationId
+    *
+    * @param string $val The principalOrganizationId
+    *
+    * @return UnifiedRoleAssignment
+    */
+    public function setPrincipalOrganizationId($val)
+    {
+        $this->_propDict["principalOrganizationId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the resourceScope
     * The scope at which the unifiedRoleAssignment applies. This is / for service-wide. DO NOT USE. This property will be deprecated soon.
     *
