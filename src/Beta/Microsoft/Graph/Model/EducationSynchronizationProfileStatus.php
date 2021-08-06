@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationSynchronizationProfileStatus extends Entity
 {
     /**
+    * Gets the errorCount
+    * Number of errors during synchronization.
+    *
+    * @return int|null The errorCount
+    */
+    public function getErrorCount()
+    {
+        if (array_key_exists("errorCount", $this->_propDict)) {
+            return $this->_propDict["errorCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the errorCount
+    * Number of errors during synchronization.
+    *
+    * @param int $val The errorCount
+    *
+    * @return EducationSynchronizationProfileStatus
+    */
+    public function setErrorCount($val)
+    {
+        $this->_propDict["errorCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastActivityDateTime
     * Represents the time when most recent changes were observed in profile.
     *
@@ -92,7 +121,7 @@ class EducationSynchronizationProfileStatus extends Entity
     
     /**
     * Gets the status
-    * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError, extracting, validating.
+    * The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
     *
     * @return EducationSynchronizationStatus|null The status
     */
@@ -111,7 +140,7 @@ class EducationSynchronizationProfileStatus extends Entity
     
     /**
     * Sets the status
-    * The status of a sync. Possible values are: paused, inProgress, success, error, quarantined, validationError, extracting, validating.
+    * The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
     *
     * @param EducationSynchronizationStatus $val The status
     *
@@ -120,6 +149,35 @@ class EducationSynchronizationProfileStatus extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the statusMessage
+    * Status message for the current profile's synchronization stage.
+    *
+    * @return string|null The statusMessage
+    */
+    public function getStatusMessage()
+    {
+        if (array_key_exists("statusMessage", $this->_propDict)) {
+            return $this->_propDict["statusMessage"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the statusMessage
+    * Status message for the current profile's synchronization stage.
+    *
+    * @param string $val The statusMessage
+    *
+    * @return EducationSynchronizationProfileStatus
+    */
+    public function setStatusMessage($val)
+    {
+        $this->_propDict["statusMessage"] = $val;
         return $this;
     }
     

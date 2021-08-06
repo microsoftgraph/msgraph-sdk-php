@@ -160,7 +160,7 @@ class OfficeSuiteApp extends MobileApp
             if (is_a($this->_propDict["officeConfigurationXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["officeConfigurationXml"])) {
                 return $this->_propDict["officeConfigurationXml"];
             } else {
-                $this->_propDict["officeConfigurationXml"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["officeConfigurationXml"]);
+                $this->_propDict["officeConfigurationXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["officeConfigurationXml"]);
                 return $this->_propDict["officeConfigurationXml"];
             }
         }

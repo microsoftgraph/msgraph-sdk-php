@@ -276,6 +276,34 @@ class WindowsMinimumOperatingSystem extends Entity
         return $this;
     }
     /**
+    * Gets the v10_21H1
+    * Windows 10 21H1 or later.
+    *
+    * @return bool|null The v10_21H1
+    */
+    public function getV10_21H1()
+    {
+        if (array_key_exists("v1021H1", $this->_propDict)) {
+            return $this->_propDict["v1021H1"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v10_21H1
+    * Windows 10 21H1 or later.
+    *
+    * @param bool $val The value of the v10_21H1
+    *
+    * @return WindowsMinimumOperatingSystem
+    */
+    public function setV10_21H1($val)
+    {
+        $this->_propDict["v1021H1"] = $val;
+        return $this;
+    }
+    /**
     * Gets the v10_2H20
     * Windows 10 2H20 or later.
     *

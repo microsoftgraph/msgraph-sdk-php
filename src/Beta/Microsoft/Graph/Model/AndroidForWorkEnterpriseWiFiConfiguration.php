@@ -186,6 +186,35 @@ class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiFiConfig
     }
     
     /**
+    * Gets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+    *
+    * @return string|null The trustedServerCertificateNames
+    */
+    public function getTrustedServerCertificateNames()
+    {
+        if (array_key_exists("trustedServerCertificateNames", $this->_propDict)) {
+            return $this->_propDict["trustedServerCertificateNames"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the trustedServerCertificateNames
+    * Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+    *
+    * @param string $val The trustedServerCertificateNames
+    *
+    * @return AndroidForWorkEnterpriseWiFiConfiguration
+    */
+    public function setTrustedServerCertificateNames($val)
+    {
+        $this->_propDict["trustedServerCertificateNames"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the identityCertificateForClientAuthentication
     * Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
     *

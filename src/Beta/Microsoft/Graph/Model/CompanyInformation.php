@@ -290,7 +290,7 @@ class CompanyInformation extends Entity
             if (is_a($this->_propDict["picture"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["picture"])) {
                 return $this->_propDict["picture"];
             } else {
-                $this->_propDict["picture"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["picture"]);
+                $this->_propDict["picture"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["picture"]);
                 return $this->_propDict["picture"];
             }
         }
