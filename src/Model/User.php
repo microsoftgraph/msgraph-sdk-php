@@ -862,7 +862,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the mail
-    * The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith).
+    * The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.  Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith).
     *
     * @return string|null The mail
     */
@@ -877,7 +877,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the mail
-    * The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith).
+    * The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.  Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith).
     *
     * @param string $val The mail
     *
@@ -1456,7 +1456,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the proxyAddresses
-    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Read-only, Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
+    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'].  For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only, Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
     *
     * @return string|null The proxyAddresses
     */
@@ -1471,7 +1471,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the proxyAddresses
-    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Read-only, Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
+    * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'].  For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only, Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
     *
     * @param string $val The proxyAddresses
     *
