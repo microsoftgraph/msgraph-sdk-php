@@ -554,4 +554,33 @@ class UserExperienceAnalyticsDevicePerformance extends Entity
         return $this;
     }
     
+    /**
+    * Gets the startupPerformanceScore
+    * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @return float|null The startupPerformanceScore
+    */
+    public function getStartupPerformanceScore()
+    {
+        if (array_key_exists("startupPerformanceScore", $this->_propDict)) {
+            return $this->_propDict["startupPerformanceScore"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the startupPerformanceScore
+    * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @param float $val The startupPerformanceScore
+    *
+    * @return UserExperienceAnalyticsDevicePerformance
+    */
+    public function setStartupPerformanceScore($val)
+    {
+        $this->_propDict["startupPerformanceScore"] = floatval($val);
+        return $this;
+    }
+    
 }

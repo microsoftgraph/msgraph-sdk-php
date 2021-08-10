@@ -857,6 +857,35 @@ class ManagedDevice extends Entity
     }
     
     /**
+    * Gets the enrollmentProfileName
+    * Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+    *
+    * @return string|null The enrollmentProfileName
+    */
+    public function getEnrollmentProfileName()
+    {
+        if (array_key_exists("enrollmentProfileName", $this->_propDict)) {
+            return $this->_propDict["enrollmentProfileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enrollmentProfileName
+    * Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+    *
+    * @param string $val The enrollmentProfileName
+    *
+    * @return ManagedDevice
+    */
+    public function setEnrollmentProfileName($val)
+    {
+        $this->_propDict["enrollmentProfileName"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ethernetMacAddress
     * Ethernet MAC. This property is read-only.
     *

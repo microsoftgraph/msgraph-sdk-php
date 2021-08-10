@@ -112,6 +112,39 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     }
     
     /**
+    * Gets the healthStatus
+    * The health state of the user experience analytics device.
+    *
+    * @return UserExperienceAnalyticsHealthState|null The healthStatus
+    */
+    public function getHealthStatus()
+    {
+        if (array_key_exists("healthStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["healthStatus"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsHealthState") || is_null($this->_propDict["healthStatus"])) {
+                return $this->_propDict["healthStatus"];
+            } else {
+                $this->_propDict["healthStatus"] = new UserExperienceAnalyticsHealthState($this->_propDict["healthStatus"]);
+                return $this->_propDict["healthStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the healthStatus
+    * The health state of the user experience analytics device.
+    *
+    * @param UserExperienceAnalyticsHealthState $val The healthStatus
+    *
+    * @return UserExperienceAnalyticsDeviceScores
+    */
+    public function setHealthStatus($val)
+    {
+        $this->_propDict["healthStatus"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the manufacturer
     * The user experience analytics device manufacturer.
     *

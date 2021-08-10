@@ -1090,6 +1090,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the appManagementPolicies
+    * The appManagementPolicy applied to this service principal.
      *
      * @return array|null The appManagementPolicies
      */
@@ -1104,6 +1105,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the appManagementPolicies
+    * The appManagementPolicy applied to this service principal.
     *
     * @param AppManagementPolicy $val The appManagementPolicies
     *

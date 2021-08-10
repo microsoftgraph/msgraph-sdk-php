@@ -314,4 +314,37 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
         return $this;
     }
     
+    /**
+    * Gets the processedDateTime
+    * The date and time when the statistics were last computed.
+    *
+    * @return \DateTime|null The processedDateTime
+    */
+    public function getProcessedDateTime()
+    {
+        if (array_key_exists("processedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["processedDateTime"], "\DateTime") || is_null($this->_propDict["processedDateTime"])) {
+                return $this->_propDict["processedDateTime"];
+            } else {
+                $this->_propDict["processedDateTime"] = new \DateTime($this->_propDict["processedDateTime"]);
+                return $this->_propDict["processedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the processedDateTime
+    * The date and time when the statistics were last computed.
+    *
+    * @param \DateTime $val The processedDateTime
+    *
+    * @return UserExperienceAnalyticsAppHealthDevicePerformance
+    */
+    public function setProcessedDateTime($val)
+    {
+        $this->_propDict["processedDateTime"] = $val;
+        return $this;
+    }
+    
 }

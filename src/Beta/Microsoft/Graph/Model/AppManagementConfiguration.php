@@ -26,6 +26,7 @@ class AppManagementConfiguration extends Entity
 
     /**
     * Gets the passwordCredentials
+    * Collection of password restrictions settings to be applied to an application or service principal
     *
     * @return PasswordCredentialConfiguration|null The passwordCredentials
     */
@@ -44,6 +45,7 @@ class AppManagementConfiguration extends Entity
 
     /**
     * Sets the passwordCredentials
+    * Collection of password restrictions settings to be applied to an application or service principal
     *
     * @param PasswordCredentialConfiguration $val The value to assign to the passwordCredentials
     *

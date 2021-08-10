@@ -454,7 +454,7 @@ class Application extends DirectoryObject
             if (is_a($this->_propDict["logo"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["logo"])) {
                 return $this->_propDict["logo"];
             } else {
-                $this->_propDict["logo"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["logo"]);
+                $this->_propDict["logo"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["logo"]);
                 return $this->_propDict["logo"];
             }
         }
@@ -943,6 +943,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the appManagementPolicies
+    * The appManagementPolicy applied to this application.
      *
      * @return array|null The appManagementPolicies
      */
@@ -957,6 +958,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the appManagementPolicies
+    * The appManagementPolicy applied to this application.
     *
     * @param AppManagementPolicy $val The appManagementPolicies
     *

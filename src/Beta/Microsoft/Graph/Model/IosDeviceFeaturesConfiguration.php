@@ -116,6 +116,64 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
         return $this;
     }
     
+    /**
+    * Gets the homeScreenGridHeight
+    * Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
+    *
+    * @return int|null The homeScreenGridHeight
+    */
+    public function getHomeScreenGridHeight()
+    {
+        if (array_key_exists("homeScreenGridHeight", $this->_propDict)) {
+            return $this->_propDict["homeScreenGridHeight"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the homeScreenGridHeight
+    * Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
+    *
+    * @param int $val The homeScreenGridHeight
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setHomeScreenGridHeight($val)
+    {
+        $this->_propDict["homeScreenGridHeight"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the homeScreenGridWidth
+    * Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
+    *
+    * @return int|null The homeScreenGridWidth
+    */
+    public function getHomeScreenGridWidth()
+    {
+        if (array_key_exists("homeScreenGridWidth", $this->_propDict)) {
+            return $this->_propDict["homeScreenGridWidth"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the homeScreenGridWidth
+    * Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
+    *
+    * @param int $val The homeScreenGridWidth
+    *
+    * @return IosDeviceFeaturesConfiguration
+    */
+    public function setHomeScreenGridWidth($val)
+    {
+        $this->_propDict["homeScreenGridWidth"] = intval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the homeScreenPages

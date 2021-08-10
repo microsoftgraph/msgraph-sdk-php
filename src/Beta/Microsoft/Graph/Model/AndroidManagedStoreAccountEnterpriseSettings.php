@@ -278,6 +278,35 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
     }
     
     /**
+    * Gets the managedGooglePlayInitialScopeTagIds
+    * Initial scope tags for MGP apps
+    *
+    * @return string|null The managedGooglePlayInitialScopeTagIds
+    */
+    public function getManagedGooglePlayInitialScopeTagIds()
+    {
+        if (array_key_exists("managedGooglePlayInitialScopeTagIds", $this->_propDict)) {
+            return $this->_propDict["managedGooglePlayInitialScopeTagIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedGooglePlayInitialScopeTagIds
+    * Initial scope tags for MGP apps
+    *
+    * @param string $val The managedGooglePlayInitialScopeTagIds
+    *
+    * @return AndroidManagedStoreAccountEnterpriseSettings
+    */
+    public function setManagedGooglePlayInitialScopeTagIds($val)
+    {
+        $this->_propDict["managedGooglePlayInitialScopeTagIds"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ownerOrganizationName
     * Organization name used when onboarding Android Enterprise
     *

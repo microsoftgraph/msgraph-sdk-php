@@ -83,6 +83,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
     
     /**
+    * Gets the carrierActivationUrl
+    * Carrier URL for activating device eSIM.
+    *
+    * @return string|null The carrierActivationUrl
+    */
+    public function getCarrierActivationUrl()
+    {
+        if (array_key_exists("carrierActivationUrl", $this->_propDict)) {
+            return $this->_propDict["carrierActivationUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the carrierActivationUrl
+    * Carrier URL for activating device eSIM.
+    *
+    * @param string $val The carrierActivationUrl
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setCarrierActivationUrl($val)
+    {
+        $this->_propDict["carrierActivationUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the companyPortalVppTokenId
     * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
     *
@@ -224,6 +253,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setExpressLanguageScreenDisabled($val)
     {
         $this->_propDict["expressLanguageScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the forceTemporarySession
+    * Indicates if temporary sessions is enabled
+    *
+    * @return bool|null The forceTemporarySession
+    */
+    public function getForceTemporarySession()
+    {
+        if (array_key_exists("forceTemporarySession", $this->_propDict)) {
+            return $this->_propDict["forceTemporarySession"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the forceTemporarySession
+    * Indicates if temporary sessions is enabled
+    *
+    * @param bool $val The forceTemporarySession
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setForceTemporarySession($val)
+    {
+        $this->_propDict["forceTemporarySession"] = boolval($val);
         return $this;
     }
     
@@ -407,6 +465,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
     
     /**
+    * Gets the passcodeLockGracePeriodInSeconds
+    * Indicates timeout before locked screen requires the user to enter the device passocde to unlock it
+    *
+    * @return int|null The passcodeLockGracePeriodInSeconds
+    */
+    public function getPasscodeLockGracePeriodInSeconds()
+    {
+        if (array_key_exists("passcodeLockGracePeriodInSeconds", $this->_propDict)) {
+            return $this->_propDict["passcodeLockGracePeriodInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the passcodeLockGracePeriodInSeconds
+    * Indicates timeout before locked screen requires the user to enter the device passocde to unlock it
+    *
+    * @param int $val The passcodeLockGracePeriodInSeconds
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setPasscodeLockGracePeriodInSeconds($val)
+    {
+        $this->_propDict["passcodeLockGracePeriodInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the preferredLanguageScreenDisabled
     * Indicates if Preferred language screen is disabled
     *
@@ -581,6 +668,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
     
     /**
+    * Gets the temporarySessionTimeoutInSeconds
+    * Indicates timeout of temporary session
+    *
+    * @return int|null The temporarySessionTimeoutInSeconds
+    */
+    public function getTemporarySessionTimeoutInSeconds()
+    {
+        if (array_key_exists("temporarySessionTimeoutInSeconds", $this->_propDict)) {
+            return $this->_propDict["temporarySessionTimeoutInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the temporarySessionTimeoutInSeconds
+    * Indicates timeout of temporary session
+    *
+    * @param int $val The temporarySessionTimeoutInSeconds
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setTemporarySessionTimeoutInSeconds($val)
+    {
+        $this->_propDict["temporarySessionTimeoutInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the updateCompleteScreenDisabled
     * Indicates if Weclome screen is disabled
     *
@@ -606,6 +722,35 @@ class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setUpdateCompleteScreenDisabled($val)
     {
         $this->_propDict["updateCompleteScreenDisabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userSessionTimeoutInSeconds
+    * Indicates timeout of temporary session
+    *
+    * @return int|null The userSessionTimeoutInSeconds
+    */
+    public function getUserSessionTimeoutInSeconds()
+    {
+        if (array_key_exists("userSessionTimeoutInSeconds", $this->_propDict)) {
+            return $this->_propDict["userSessionTimeoutInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userSessionTimeoutInSeconds
+    * Indicates timeout of temporary session
+    *
+    * @param int $val The userSessionTimeoutInSeconds
+    *
+    * @return DepIOSEnrollmentProfile
+    */
+    public function setUserSessionTimeoutInSeconds($val)
+    {
+        $this->_propDict["userSessionTimeoutInSeconds"] = intval($val);
         return $this;
     }
     

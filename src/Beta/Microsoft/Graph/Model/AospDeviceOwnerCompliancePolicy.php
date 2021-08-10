@@ -232,6 +232,35 @@ class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
+    * Gets the securityBlockJailbrokenDevices
+    * Devices must not be jailbroken or rooted.
+    *
+    * @return bool|null The securityBlockJailbrokenDevices
+    */
+    public function getSecurityBlockJailbrokenDevices()
+    {
+        if (array_key_exists("securityBlockJailbrokenDevices", $this->_propDict)) {
+            return $this->_propDict["securityBlockJailbrokenDevices"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the securityBlockJailbrokenDevices
+    * Devices must not be jailbroken or rooted.
+    *
+    * @param bool $val The securityBlockJailbrokenDevices
+    *
+    * @return AospDeviceOwnerCompliancePolicy
+    */
+    public function setSecurityBlockJailbrokenDevices($val)
+    {
+        $this->_propDict["securityBlockJailbrokenDevices"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the storageRequireEncryption
     * Require encryption on Android devices.
     *

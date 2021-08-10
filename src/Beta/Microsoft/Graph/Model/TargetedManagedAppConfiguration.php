@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class TargetedManagedAppConfiguration extends ManagedAppConfiguration
 {
     /**
+    * Gets the appGroupType
+    * Public Apps selection: group or individual
+    *
+    * @return TargetedManagedAppGroupType|null The appGroupType
+    */
+    public function getAppGroupType()
+    {
+        if (array_key_exists("appGroupType", $this->_propDict)) {
+            if (is_a($this->_propDict["appGroupType"], "\Beta\Microsoft\Graph\Model\TargetedManagedAppGroupType") || is_null($this->_propDict["appGroupType"])) {
+                return $this->_propDict["appGroupType"];
+            } else {
+                $this->_propDict["appGroupType"] = new TargetedManagedAppGroupType($this->_propDict["appGroupType"]);
+                return $this->_propDict["appGroupType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the appGroupType
+    * Public Apps selection: group or individual
+    *
+    * @param TargetedManagedAppGroupType $val The appGroupType
+    *
+    * @return TargetedManagedAppConfiguration
+    */
+    public function setAppGroupType($val)
+    {
+        $this->_propDict["appGroupType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deployedAppCount
     * Count of apps to which the current policy is deployed.
     *
