@@ -56,6 +56,37 @@ class RoleManagement implements \JsonSerializable
     }
     
     /**
+    * Gets the directory
+    *
+    * @return RbacApplication|null The directory
+    */
+    public function getDirectory()
+    {
+        if (array_key_exists("directory", $this->_propDict)) {
+            if (is_a($this->_propDict["directory"], "\Microsoft\Graph\Model\RbacApplication") || is_null($this->_propDict["directory"])) {
+                return $this->_propDict["directory"];
+            } else {
+                $this->_propDict["directory"] = new RbacApplication($this->_propDict["directory"]);
+                return $this->_propDict["directory"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the directory
+    *
+    * @param RbacApplication $val The directory
+    *
+    * @return RoleManagement
+    */
+    public function setDirectory($val)
+    {
+        $this->_propDict["directory"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ODataType
     *
     * @return string|null The ODataType

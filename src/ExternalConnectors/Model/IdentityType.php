@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ManagedAppDataStorageLocation File
+* IdentityType File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\ExternalConnectors\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ManagedAppDataStorageLocation class
+* IdentityType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ManagedAppDataStorageLocation extends Enum
+class IdentityType extends Enum
 {
     /**
-    * The Enum ManagedAppDataStorageLocation
+    * The Enum IdentityType
     */
-    const ONE_DRIVE_FOR_BUSINESS = "oneDriveForBusiness";
-    const SHARE_POINT = "sharePoint";
-    const BOX = "box";
-    const LOCAL_STORAGE = "localStorage";
+    const USER = "user";
+    const GROUP = "group";
+    const EXTERNAL_GROUP = "externalGroup";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
