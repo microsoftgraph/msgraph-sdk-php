@@ -245,7 +245,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Gets the viewPoint
-    * Represents user view points data of the service message.
+    * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
     *
     * @return ServiceUpdateMessageViewpoint|null The viewPoint
     */
@@ -264,7 +264,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     
     /**
     * Sets the viewPoint
-    * Represents user view points data of the service message.
+    * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
     *
     * @param ServiceUpdateMessageViewpoint $val The viewPoint
     *

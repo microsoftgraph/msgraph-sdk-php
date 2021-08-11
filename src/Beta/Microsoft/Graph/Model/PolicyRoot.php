@@ -187,6 +187,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the appManagementPolicies
+    * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      *
      * @return array|null The appManagementPolicies
      */
@@ -201,6 +202,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the appManagementPolicies
+    * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
     *
     * @param AppManagementPolicy $val The appManagementPolicies
     *
@@ -274,6 +276,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Gets the defaultAppManagementPolicy
+    * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
     *
     * @return TenantAppManagementPolicy|null The defaultAppManagementPolicy
     */
@@ -292,6 +295,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Sets the defaultAppManagementPolicy
+    * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
     *
     * @param TenantAppManagementPolicy $val The defaultAppManagementPolicy
     *
