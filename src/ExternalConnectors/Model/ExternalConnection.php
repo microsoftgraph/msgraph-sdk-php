@@ -150,6 +150,34 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
     
 
      /** 
+     * Gets the groups
+     *
+     * @return array|null The groups
+     */
+    public function getGroups()
+    {
+        if (array_key_exists("groups", $this->_propDict)) {
+           return $this->_propDict["groups"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the groups
+    *
+    * @param ExternalGroup $val The groups
+    *
+    * @return ExternalConnection
+    */
+    public function setGroups($val)
+    {
+        $this->_propDict["groups"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the items
     * Read-only. Nullable.
      *

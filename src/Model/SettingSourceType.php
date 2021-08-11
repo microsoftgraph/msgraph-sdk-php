@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ManagedAppDataStorageLocation File
+* SettingSourceType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ManagedAppDataStorageLocation class
+* SettingSourceType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,11 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ManagedAppDataStorageLocation extends Enum
+class SettingSourceType extends Enum
 {
     /**
-    * The Enum ManagedAppDataStorageLocation
+    * The Enum SettingSourceType
     */
-    const ONE_DRIVE_FOR_BUSINESS = "oneDriveForBusiness";
-    const SHARE_POINT = "sharePoint";
-    const BOX = "box";
-    const LOCAL_STORAGE = "localStorage";
+    const DEVICE_CONFIGURATION = "deviceConfiguration";
+    const DEVICE_INTENT = "deviceIntent";
 }
