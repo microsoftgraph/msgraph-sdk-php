@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * SymantecCodeSigningCertificate File
 * PHP version 7
 *
@@ -33,7 +33,7 @@ class SymantecCodeSigningCertificate extends Entity
     public function getContent()
     {
         if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
+            if (is_a($this->_propDict["content"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["content"])) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["content"]);
@@ -42,7 +42,7 @@ class SymantecCodeSigningCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * The Windows Symantec Code-Signing Certificate in the raw data format.
@@ -56,7 +56,7 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * The Cert Expiration Date.
@@ -75,7 +75,7 @@ class SymantecCodeSigningCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * The Cert Expiration Date.
@@ -89,7 +89,7 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuer
     * The Issuer value for the cert.
@@ -104,7 +104,7 @@ class SymantecCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issuer
     * The Issuer value for the cert.
@@ -118,7 +118,7 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["issuer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuerName
     * The Issuer Name for the cert.
@@ -133,7 +133,7 @@ class SymantecCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issuerName
     * The Issuer Name for the cert.
@@ -147,7 +147,7 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["issuerName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the password
     * The Password required for .pfx file.
@@ -162,7 +162,7 @@ class SymantecCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the password
     * The Password required for .pfx file.
@@ -176,7 +176,7 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["password"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The Cert Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
@@ -195,7 +195,7 @@ class SymantecCodeSigningCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The Cert Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
@@ -209,7 +209,7 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     * The Subject value for the cert.
@@ -224,7 +224,7 @@ class SymantecCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     * The Subject value for the cert.
@@ -238,7 +238,7 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subjectName
     * The Subject Name for the cert.
@@ -253,7 +253,7 @@ class SymantecCodeSigningCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subjectName
     * The Subject Name for the cert.
@@ -267,7 +267,7 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["subjectName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the uploadDateTime
     * The Type of the CodeSigning Cert as Symantec Cert.
@@ -286,7 +286,7 @@ class SymantecCodeSigningCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the uploadDateTime
     * The Type of the CodeSigning Cert as Symantec Cert.
@@ -300,5 +300,5 @@ class SymantecCodeSigningCertificate extends Entity
         $this->_propDict["uploadDateTime"] = $val;
         return $this;
     }
-    
+
 }

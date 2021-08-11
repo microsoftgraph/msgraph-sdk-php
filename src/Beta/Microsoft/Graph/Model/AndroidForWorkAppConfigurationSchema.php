@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * AndroidForWorkAppConfigurationSchema File
 * PHP version 7
 *
@@ -12,6 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
+use Psr\Http\Message\StreamInterface;
 
 /**
 * AndroidForWorkAppConfigurationSchema class
@@ -28,12 +30,12 @@ class AndroidForWorkAppConfigurationSchema extends Entity
     * Gets the exampleJson
     * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The exampleJson
+    * @return StreamInterface|null The exampleJson
     */
     public function getExampleJson()
     {
         if (array_key_exists("exampleJson", $this->_propDict)) {
-            if (is_a($this->_propDict["exampleJson"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["exampleJson"])) {
+            if (is_a($this->_propDict["exampleJson"], StreamInterface::class) || is_null($this->_propDict["exampleJson"])) {
                 return $this->_propDict["exampleJson"];
             } else {
                 $this->_propDict["exampleJson"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["exampleJson"]);
@@ -42,12 +44,12 @@ class AndroidForWorkAppConfigurationSchema extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the exampleJson
     * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The exampleJson
+    * @param StreamInterface $val The exampleJson
     *
     * @return AndroidForWorkAppConfigurationSchema
     */
@@ -56,9 +58,9 @@ class AndroidForWorkAppConfigurationSchema extends Entity
         $this->_propDict["exampleJson"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the schemaItems
     * Collection of items each representing a named configuration option in the schema
      *
@@ -72,8 +74,8 @@ class AndroidForWorkAppConfigurationSchema extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the schemaItems
     * Collection of items each representing a named configuration option in the schema
     *
@@ -86,5 +88,5 @@ class AndroidForWorkAppConfigurationSchema extends Entity
         $this->_propDict["schemaItems"] = $val;
         return $this;
     }
-    
+
 }

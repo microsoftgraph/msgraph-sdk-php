@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * TeamworkHostedContent File
 * PHP version 7
 *
@@ -33,7 +33,7 @@ class TeamworkHostedContent extends Entity
     public function getContentBytes()
     {
         if (array_key_exists("contentBytes", $this->_propDict)) {
-            if (is_a($this->_propDict["contentBytes"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["contentBytes"])) {
+            if (is_a($this->_propDict["contentBytes"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["contentBytes"])) {
                 return $this->_propDict["contentBytes"];
             } else {
                 $this->_propDict["contentBytes"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["contentBytes"]);
@@ -42,7 +42,7 @@ class TeamworkHostedContent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the contentBytes
     * Write only. Bytes for the hosted content (such as images).
@@ -56,7 +56,7 @@ class TeamworkHostedContent extends Entity
         $this->_propDict["contentBytes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentType
     * Write only. Content type, such as image/png, image/jpg.
@@ -71,7 +71,7 @@ class TeamworkHostedContent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentType
     * Write only. Content type, such as image/png, image/jpg.
@@ -85,5 +85,5 @@ class TeamworkHostedContent extends Entity
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-    
+
 }

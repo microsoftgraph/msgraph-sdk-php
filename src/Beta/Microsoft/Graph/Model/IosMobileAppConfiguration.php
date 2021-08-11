@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * IosMobileAppConfiguration File
 * PHP version 7
 *
@@ -33,7 +33,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
     public function getEncodedSettingXml()
     {
         if (array_key_exists("encodedSettingXml", $this->_propDict)) {
-            if (is_a($this->_propDict["encodedSettingXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["encodedSettingXml"])) {
+            if (is_a($this->_propDict["encodedSettingXml"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["encodedSettingXml"])) {
                 return $this->_propDict["encodedSettingXml"];
             } else {
                 $this->_propDict["encodedSettingXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["encodedSettingXml"]);
@@ -42,7 +42,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the encodedSettingXml
     * mdm app configuration Base64 binary.
@@ -56,9 +56,9 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
         $this->_propDict["encodedSettingXml"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the settings
     * app configuration setting items.
      *
@@ -72,8 +72,8 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the settings
     * app configuration setting items.
     *
@@ -86,5 +86,5 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
 }

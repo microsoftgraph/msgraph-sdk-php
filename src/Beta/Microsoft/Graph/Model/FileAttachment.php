@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * FileAttachment File
 * PHP version 7
 *
@@ -12,6 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
+use Psr\Http\Message\StreamInterface;
 
 /**
 * FileAttachment class
@@ -28,12 +30,12 @@ class FileAttachment extends Attachment
     * Gets the contentBytes
     * The base64-encoded contents of the file.
     *
-    * @return \GuzzleHttp\Psr7\Stream|null The contentBytes
+    * @return StreamInterface|null The contentBytes
     */
     public function getContentBytes()
     {
         if (array_key_exists("contentBytes", $this->_propDict)) {
-            if (is_a($this->_propDict["contentBytes"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["contentBytes"])) {
+            if (is_a($this->_propDict["contentBytes"], StreamInterface::class) || is_null($this->_propDict["contentBytes"])) {
                 return $this->_propDict["contentBytes"];
             } else {
                 $this->_propDict["contentBytes"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["contentBytes"]);
@@ -42,12 +44,12 @@ class FileAttachment extends Attachment
         }
         return null;
     }
-    
+
     /**
     * Sets the contentBytes
     * The base64-encoded contents of the file.
     *
-    * @param \GuzzleHttp\Psr7\Stream $val The contentBytes
+    * @param StreamInterface $val The contentBytes
     *
     * @return FileAttachment
     */
@@ -56,7 +58,7 @@ class FileAttachment extends Attachment
         $this->_propDict["contentBytes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentId
     * The ID of the attachment in the Exchange store.
@@ -71,7 +73,7 @@ class FileAttachment extends Attachment
             return null;
         }
     }
-    
+
     /**
     * Sets the contentId
     * The ID of the attachment in the Exchange store.
@@ -85,7 +87,7 @@ class FileAttachment extends Attachment
         $this->_propDict["contentId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentLocation
     * Do not use this property as it is not supported.
@@ -100,7 +102,7 @@ class FileAttachment extends Attachment
             return null;
         }
     }
-    
+
     /**
     * Sets the contentLocation
     * Do not use this property as it is not supported.
@@ -114,5 +116,5 @@ class FileAttachment extends Attachment
         $this->_propDict["contentLocation"] = $val;
         return $this;
     }
-    
+
 }

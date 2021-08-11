@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * Windows10XTrustedRootCertificate File
 * PHP version 7
 *
@@ -38,7 +38,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
             return null;
         }
     }
-    
+
     /**
     * Sets the certFileName
     * File name to display in UI.
@@ -52,7 +52,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
         $this->_propDict["certFileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the destinationStore
     * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
@@ -71,7 +71,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
         }
         return null;
     }
-    
+
     /**
     * Sets the destinationStore
     * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
@@ -85,7 +85,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
         $this->_propDict["destinationStore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the trustedRootCertificate
     * Trusted Root Certificate
@@ -95,7 +95,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
     public function getTrustedRootCertificate()
     {
         if (array_key_exists("trustedRootCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["trustedRootCertificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["trustedRootCertificate"])) {
+            if (is_a($this->_propDict["trustedRootCertificate"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["trustedRootCertificate"])) {
                 return $this->_propDict["trustedRootCertificate"];
             } else {
                 $this->_propDict["trustedRootCertificate"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["trustedRootCertificate"]);
@@ -104,7 +104,7 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
         }
         return null;
     }
-    
+
     /**
     * Sets the trustedRootCertificate
     * Trusted Root Certificate
@@ -118,5 +118,5 @@ class Windows10XTrustedRootCertificate extends DeviceManagementResourceAccessPro
         $this->_propDict["trustedRootCertificate"] = $val;
         return $this;
     }
-    
+
 }

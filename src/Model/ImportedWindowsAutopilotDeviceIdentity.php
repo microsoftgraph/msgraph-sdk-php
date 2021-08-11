@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * ImportedWindowsAutopilotDeviceIdentity File
 * PHP version 7
 *
@@ -38,7 +38,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedUserPrincipalName
     * UPN of the user the device will be assigned
@@ -52,7 +52,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         $this->_propDict["assignedUserPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groupTag
     * Group Tag of the Windows autopilot device.
@@ -67,7 +67,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groupTag
     * Group Tag of the Windows autopilot device.
@@ -81,7 +81,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         $this->_propDict["groupTag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hardwareIdentifier
     * Hardware Blob of the Windows autopilot device.
@@ -91,7 +91,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
     public function getHardwareIdentifier()
     {
         if (array_key_exists("hardwareIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["hardwareIdentifier"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["hardwareIdentifier"])) {
+            if (is_a($this->_propDict["hardwareIdentifier"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["hardwareIdentifier"])) {
                 return $this->_propDict["hardwareIdentifier"];
             } else {
                 $this->_propDict["hardwareIdentifier"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["hardwareIdentifier"]);
@@ -100,7 +100,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the hardwareIdentifier
     * Hardware Blob of the Windows autopilot device.
@@ -114,7 +114,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         $this->_propDict["hardwareIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the importId
     * The Import Id of the Windows autopilot device.
@@ -129,7 +129,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the importId
     * The Import Id of the Windows autopilot device.
@@ -143,7 +143,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         $this->_propDict["importId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the productKey
     * Product Key of the Windows autopilot device.
@@ -158,7 +158,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the productKey
     * Product Key of the Windows autopilot device.
@@ -172,7 +172,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         $this->_propDict["productKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serialNumber
     * Serial number of the Windows autopilot device.
@@ -187,7 +187,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serialNumber
     * Serial number of the Windows autopilot device.
@@ -201,7 +201,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         $this->_propDict["serialNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * Current state of the imported device.
@@ -220,7 +220,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * Current state of the imported device.
@@ -234,5 +234,5 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
 }

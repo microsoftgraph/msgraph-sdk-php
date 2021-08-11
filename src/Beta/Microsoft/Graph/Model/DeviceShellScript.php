@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * DeviceShellScript File
 * PHP version 7
 *
@@ -38,7 +38,7 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the blockExecutionNotifications
     * Does not notify the user a script is being executed
@@ -52,7 +52,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["blockExecutionNotifications"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time the device management script was created. This property is read-only.
@@ -71,7 +71,7 @@ class DeviceShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the device management script was created. This property is read-only.
@@ -85,7 +85,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Optional description for the device management script.
@@ -100,7 +100,7 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Optional description for the device management script.
@@ -114,7 +114,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of the device management script.
@@ -129,7 +129,7 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of the device management script.
@@ -143,7 +143,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the executionFrequency
     * The interval for script to run. If not defined the script will run once
@@ -162,7 +162,7 @@ class DeviceShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the executionFrequency
     * The interval for script to run. If not defined the script will run once
@@ -176,7 +176,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["executionFrequency"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileName
     * Script file name.
@@ -191,7 +191,7 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileName
     * Script file name.
@@ -205,7 +205,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the device management script was last modified. This property is read-only.
@@ -224,7 +224,7 @@ class DeviceShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the device management script was last modified. This property is read-only.
@@ -238,7 +238,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the retryCount
     * Number of times for the script to be retried if it fails
@@ -253,7 +253,7 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the retryCount
     * Number of times for the script to be retried if it fails
@@ -267,7 +267,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["retryCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for this PowerShellScript instance.
@@ -282,7 +282,7 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tag IDs for this PowerShellScript instance.
@@ -296,7 +296,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
@@ -315,7 +315,7 @@ class DeviceShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the runAsAccount
     * Indicates the type of execution context. Possible values are: system, user.
@@ -329,7 +329,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["runAsAccount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scriptContent
     * The script content.
@@ -339,7 +339,7 @@ class DeviceShellScript extends Entity
     public function getScriptContent()
     {
         if (array_key_exists("scriptContent", $this->_propDict)) {
-            if (is_a($this->_propDict["scriptContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["scriptContent"])) {
+            if (is_a($this->_propDict["scriptContent"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["scriptContent"])) {
                 return $this->_propDict["scriptContent"];
             } else {
                 $this->_propDict["scriptContent"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["scriptContent"]);
@@ -348,7 +348,7 @@ class DeviceShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the scriptContent
     * The script content.
@@ -362,9 +362,9 @@ class DeviceShellScript extends Entity
         $this->_propDict["scriptContent"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments for the device management script.
      *
@@ -378,8 +378,8 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments for the device management script.
     *
@@ -392,9 +392,9 @@ class DeviceShellScript extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceRunStates
     * List of run states for this script across all devices.
      *
@@ -408,8 +408,8 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceRunStates
     * List of run states for this script across all devices.
     *
@@ -422,9 +422,9 @@ class DeviceShellScript extends Entity
         $this->_propDict["deviceRunStates"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the groupAssignments
     * The list of group assignments for the device management script.
      *
@@ -438,8 +438,8 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the groupAssignments
     * The list of group assignments for the device management script.
     *
@@ -452,7 +452,7 @@ class DeviceShellScript extends Entity
         $this->_propDict["groupAssignments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the runSummary
     * Run summary for device management script.
@@ -471,7 +471,7 @@ class DeviceShellScript extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the runSummary
     * Run summary for device management script.
@@ -485,9 +485,9 @@ class DeviceShellScript extends Entity
         $this->_propDict["runSummary"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userRunStates
     * List of run states for this script across all users.
      *
@@ -501,8 +501,8 @@ class DeviceShellScript extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userRunStates
     * List of run states for this script across all users.
     *
@@ -515,5 +515,5 @@ class DeviceShellScript extends Entity
         $this->_propDict["userRunStates"] = $val;
         return $this;
     }
-    
+
 }

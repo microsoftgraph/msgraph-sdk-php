@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * OrganizationalBrandingProperties File
 * PHP version 7
 *
@@ -38,7 +38,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the backgroundColor
     * Color that will appear in place of the background image in low-bandwidth connections. The primary color of your banner logo or your organization color is recommended to be used here. Specify this in hexadecimal (for example, white is #FFFFFF).
@@ -52,7 +52,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["backgroundColor"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the backgroundImage
     * Image that appears as the background of the sign in page. .png or .jpg not larger than 1920x1080 and smaller than 300kb. A smaller image will reduce bandwidth requirements and make page loads more performant.
@@ -62,7 +62,7 @@ class OrganizationalBrandingProperties extends Entity
     public function getBackgroundImage()
     {
         if (array_key_exists("backgroundImage", $this->_propDict)) {
-            if (is_a($this->_propDict["backgroundImage"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["backgroundImage"])) {
+            if (is_a($this->_propDict["backgroundImage"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["backgroundImage"])) {
                 return $this->_propDict["backgroundImage"];
             } else {
                 $this->_propDict["backgroundImage"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["backgroundImage"]);
@@ -71,7 +71,7 @@ class OrganizationalBrandingProperties extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the backgroundImage
     * Image that appears as the background of the sign in page. .png or .jpg not larger than 1920x1080 and smaller than 300kb. A smaller image will reduce bandwidth requirements and make page loads more performant.
@@ -85,7 +85,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["backgroundImage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the backgroundImageRelativeUrl
     *
@@ -99,7 +99,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the backgroundImageRelativeUrl
     *
@@ -112,7 +112,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["backgroundImageRelativeUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bannerLogo
     * A banner version of your company logo which appears appears on the sign-in page. .png or .jpg no larger than 36x245px. We recommend using a transparent image with no padding around the logo.
@@ -122,7 +122,7 @@ class OrganizationalBrandingProperties extends Entity
     public function getBannerLogo()
     {
         if (array_key_exists("bannerLogo", $this->_propDict)) {
-            if (is_a($this->_propDict["bannerLogo"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["bannerLogo"])) {
+            if (is_a($this->_propDict["bannerLogo"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["bannerLogo"])) {
                 return $this->_propDict["bannerLogo"];
             } else {
                 $this->_propDict["bannerLogo"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["bannerLogo"]);
@@ -131,7 +131,7 @@ class OrganizationalBrandingProperties extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the bannerLogo
     * A banner version of your company logo which appears appears on the sign-in page. .png or .jpg no larger than 36x245px. We recommend using a transparent image with no padding around the logo.
@@ -145,7 +145,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["bannerLogo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bannerLogoRelativeUrl
     *
@@ -159,7 +159,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the bannerLogoRelativeUrl
     *
@@ -172,7 +172,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["bannerLogoRelativeUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the cdnList
     *
@@ -186,7 +186,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the cdnList
     *
@@ -199,7 +199,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["cdnList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customAccountResetCredentialsUrl
     *
@@ -213,7 +213,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customAccountResetCredentialsUrl
     *
@@ -226,7 +226,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customAccountResetCredentialsUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customCannotAccessYourAccountText
     *
@@ -240,7 +240,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customCannotAccessYourAccountText
     *
@@ -253,7 +253,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customCannotAccessYourAccountText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customCannotAccessYourAccountUrl
     *
@@ -267,7 +267,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customCannotAccessYourAccountUrl
     *
@@ -280,7 +280,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customCannotAccessYourAccountUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customForgotMyPasswordText
     *
@@ -294,7 +294,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customForgotMyPasswordText
     *
@@ -307,7 +307,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customForgotMyPasswordText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customPrivacyAndCookiesText
     *
@@ -321,7 +321,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customPrivacyAndCookiesText
     *
@@ -334,7 +334,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customPrivacyAndCookiesText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customPrivacyAndCookiesUrl
     *
@@ -348,7 +348,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customPrivacyAndCookiesUrl
     *
@@ -361,7 +361,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customPrivacyAndCookiesUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customResetItNowText
     *
@@ -375,7 +375,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customResetItNowText
     *
@@ -388,7 +388,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customResetItNowText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customTermsOfUseText
     *
@@ -402,7 +402,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customTermsOfUseText
     *
@@ -415,7 +415,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customTermsOfUseText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customTermsOfUseUrl
     *
@@ -429,7 +429,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customTermsOfUseUrl
     *
@@ -442,7 +442,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["customTermsOfUseUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the favicon
     *
@@ -451,7 +451,7 @@ class OrganizationalBrandingProperties extends Entity
     public function getFavicon()
     {
         if (array_key_exists("favicon", $this->_propDict)) {
-            if (is_a($this->_propDict["favicon"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["favicon"])) {
+            if (is_a($this->_propDict["favicon"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["favicon"])) {
                 return $this->_propDict["favicon"];
             } else {
                 $this->_propDict["favicon"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["favicon"]);
@@ -460,7 +460,7 @@ class OrganizationalBrandingProperties extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the favicon
     *
@@ -473,7 +473,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["favicon"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the faviconRelativeUrl
     *
@@ -487,7 +487,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the faviconRelativeUrl
     *
@@ -500,7 +500,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["faviconRelativeUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the headerBackgroundColor
     *
@@ -514,7 +514,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the headerBackgroundColor
     *
@@ -527,7 +527,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["headerBackgroundColor"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the loginPageTextVisibilitySettings
     *
@@ -545,7 +545,7 @@ class OrganizationalBrandingProperties extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the loginPageTextVisibilitySettings
     *
@@ -558,7 +558,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["loginPageTextVisibilitySettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the signInPageText
     * Text that appears at the bottom of the sign-in box. You can use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be Unicode and not exceed 1024 characters.
@@ -573,7 +573,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the signInPageText
     * Text that appears at the bottom of the sign-in box. You can use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be Unicode and not exceed 1024 characters.
@@ -587,7 +587,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["signInPageText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the squareLogo
     * Square version of your company logo. This appears in Windows 10 out-of-box (OOBE) experiences and when Windows Autopilot is enabled for deployment. .png or .jpg no larger than 240x240px and no more than 10kb in size. We recommend using a transparent image with no padding around the logo.
@@ -597,7 +597,7 @@ class OrganizationalBrandingProperties extends Entity
     public function getSquareLogo()
     {
         if (array_key_exists("squareLogo", $this->_propDict)) {
-            if (is_a($this->_propDict["squareLogo"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["squareLogo"])) {
+            if (is_a($this->_propDict["squareLogo"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["squareLogo"])) {
                 return $this->_propDict["squareLogo"];
             } else {
                 $this->_propDict["squareLogo"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["squareLogo"]);
@@ -606,7 +606,7 @@ class OrganizationalBrandingProperties extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the squareLogo
     * Square version of your company logo. This appears in Windows 10 out-of-box (OOBE) experiences and when Windows Autopilot is enabled for deployment. .png or .jpg no larger than 240x240px and no more than 10kb in size. We recommend using a transparent image with no padding around the logo.
@@ -620,7 +620,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["squareLogo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the squareLogoRelativeUrl
     *
@@ -634,7 +634,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the squareLogoRelativeUrl
     *
@@ -647,7 +647,7 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["squareLogoRelativeUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usernameHintText
     * String that shows as the hint in the username textbox on the sign in screen. This text must be Unicode, without links or code, and can't exceed 64 characters.
@@ -662,7 +662,7 @@ class OrganizationalBrandingProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usernameHintText
     * String that shows as the hint in the username textbox on the sign in screen. This text must be Unicode, without links or code, and can't exceed 64 characters.
@@ -676,5 +676,5 @@ class OrganizationalBrandingProperties extends Entity
         $this->_propDict["usernameHintText"] = $val;
         return $this;
     }
-    
+
 }

@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * CertificateAuthority File
 * PHP version 7
 *
@@ -12,6 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+use Psr\Http\Message\StreamInterface;
+
 /**
 * CertificateAuthority class
 *
@@ -33,7 +35,7 @@ class CertificateAuthority extends Entity
     public function getCertificate()
     {
         if (array_key_exists("certificate", $this->_propDict)) {
-            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["certificate"])) {
+            if (is_a($this->_propDict["certificate"], StreamInterface::class) || is_null($this->_propDict["certificate"])) {
                 return $this->_propDict["certificate"];
             } else {
                 $this->_propDict["certificate"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["certificate"]);

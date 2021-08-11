@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * MobileAppContentFile File
 * PHP version 7
 *
@@ -38,7 +38,7 @@ class MobileAppContentFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureStorageUri
     * The Azure Storage URI.
@@ -52,7 +52,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["azureStorageUri"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureStorageUriExpirationDateTime
     * The time the Azure storage Uri expires.
@@ -71,7 +71,7 @@ class MobileAppContentFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the azureStorageUriExpirationDateTime
     * The time the Azure storage Uri expires.
@@ -85,7 +85,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["azureStorageUriExpirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The time the file was created.
@@ -104,7 +104,7 @@ class MobileAppContentFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The time the file was created.
@@ -118,7 +118,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isCommitted
     * A value indicating whether the file is committed.
@@ -133,7 +133,7 @@ class MobileAppContentFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isCommitted
     * A value indicating whether the file is committed.
@@ -147,7 +147,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["isCommitted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDependency
     * Whether the content file is a dependency for the main content file.
@@ -162,7 +162,7 @@ class MobileAppContentFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDependency
     * Whether the content file is a dependency for the main content file.
@@ -176,7 +176,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["isDependency"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isFrameworkFile
     * A value indicating whether the file is a framework file.
@@ -191,7 +191,7 @@ class MobileAppContentFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isFrameworkFile
     * A value indicating whether the file is a framework file.
@@ -205,7 +205,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["isFrameworkFile"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the manifest
     * The manifest information.
@@ -215,7 +215,7 @@ class MobileAppContentFile extends Entity
     public function getManifest()
     {
         if (array_key_exists("manifest", $this->_propDict)) {
-            if (is_a($this->_propDict["manifest"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["manifest"])) {
+            if (is_a($this->_propDict["manifest"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["manifest"])) {
                 return $this->_propDict["manifest"];
             } else {
                 $this->_propDict["manifest"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["manifest"]);
@@ -224,7 +224,7 @@ class MobileAppContentFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the manifest
     * The manifest information.
@@ -238,7 +238,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["manifest"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * the file name.
@@ -253,7 +253,7 @@ class MobileAppContentFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * the file name.
@@ -267,7 +267,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the size
     * The size of the file prior to encryption.
@@ -282,7 +282,7 @@ class MobileAppContentFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the size
     * The size of the file prior to encryption.
@@ -296,7 +296,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["size"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sizeEncrypted
     * The size of the file after encryption.
@@ -311,7 +311,7 @@ class MobileAppContentFile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sizeEncrypted
     * The size of the file after encryption.
@@ -325,7 +325,7 @@ class MobileAppContentFile extends Entity
         $this->_propDict["sizeEncrypted"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the uploadState
     * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
@@ -344,7 +344,7 @@ class MobileAppContentFile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the uploadState
     * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
@@ -358,5 +358,5 @@ class MobileAppContentFile extends Entity
         $this->_propDict["uploadState"] = $val;
         return $this;
     }
-    
+
 }

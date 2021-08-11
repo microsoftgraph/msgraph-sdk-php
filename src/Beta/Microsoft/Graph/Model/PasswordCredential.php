@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * PasswordCredential File
 * PHP version 7
 *
@@ -33,7 +33,7 @@ class PasswordCredential extends Entity
     public function getCustomKeyIdentifier()
     {
         if (array_key_exists("customKeyIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["customKeyIdentifier"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customKeyIdentifier"])) {
+            if (is_a($this->_propDict["customKeyIdentifier"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["customKeyIdentifier"])) {
                 return $this->_propDict["customKeyIdentifier"];
             } else {
                 $this->_propDict["customKeyIdentifier"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["customKeyIdentifier"]);

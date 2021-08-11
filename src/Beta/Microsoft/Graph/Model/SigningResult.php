@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * SigningResult File
 * PHP version 7
 *
@@ -32,7 +32,7 @@ class SigningResult extends Entity
     public function getSignature()
     {
         if (array_key_exists("signature", $this->_propDict)) {
-            if (is_a($this->_propDict["signature"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["signature"])) {
+            if (is_a($this->_propDict["signature"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["signature"])) {
                 return $this->_propDict["signature"];
             } else {
                 $this->_propDict["signature"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["signature"]);
