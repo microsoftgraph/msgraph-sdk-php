@@ -100,4 +100,35 @@ class MembersAddedEventMessageDetail extends EventMessageDetail
         $this->_propDict["members"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the visibleHistoryStartDateTime
+    *
+    * @return \DateTime|null The visibleHistoryStartDateTime
+    */
+    public function getVisibleHistoryStartDateTime()
+    {
+        if (array_key_exists("visibleHistoryStartDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["visibleHistoryStartDateTime"], "\DateTime") || is_null($this->_propDict["visibleHistoryStartDateTime"])) {
+                return $this->_propDict["visibleHistoryStartDateTime"];
+            } else {
+                $this->_propDict["visibleHistoryStartDateTime"] = new \DateTime($this->_propDict["visibleHistoryStartDateTime"]);
+                return $this->_propDict["visibleHistoryStartDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the visibleHistoryStartDateTime
+    *
+    * @param \DateTime $val The value to assign to the visibleHistoryStartDateTime
+    *
+    * @return MembersAddedEventMessageDetail The MembersAddedEventMessageDetail
+    */
+    public function setVisibleHistoryStartDateTime($val)
+    {
+        $this->_propDict["visibleHistoryStartDateTime"] = $val;
+         return $this;
+    }
 }

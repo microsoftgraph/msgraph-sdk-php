@@ -559,6 +559,35 @@ class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
+    * Gets the securityRequireIntuneAppIntegrity
+    * If setting is set to true, checks that the Intune app installed on fully managed, dedicated, or corporate-owned work profile Android Enterprise enrolled devices, is the one provided by Microsoft from the Managed Google Playstore. If the check fails, the device will be reported as non-compliant.
+    *
+    * @return bool|null The securityRequireIntuneAppIntegrity
+    */
+    public function getSecurityRequireIntuneAppIntegrity()
+    {
+        if (array_key_exists("securityRequireIntuneAppIntegrity", $this->_propDict)) {
+            return $this->_propDict["securityRequireIntuneAppIntegrity"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the securityRequireIntuneAppIntegrity
+    * If setting is set to true, checks that the Intune app installed on fully managed, dedicated, or corporate-owned work profile Android Enterprise enrolled devices, is the one provided by Microsoft from the Managed Google Playstore. If the check fails, the device will be reported as non-compliant.
+    *
+    * @param bool $val The securityRequireIntuneAppIntegrity
+    *
+    * @return AndroidDeviceOwnerCompliancePolicy
+    */
+    public function setSecurityRequireIntuneAppIntegrity($val)
+    {
+        $this->_propDict["securityRequireIntuneAppIntegrity"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the securityRequireSafetyNetAttestationBasicIntegrity
     * Require the device to pass the SafetyNet basic integrity check.
     *

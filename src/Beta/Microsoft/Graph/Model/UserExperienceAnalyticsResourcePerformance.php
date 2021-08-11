@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class UserExperienceAnalyticsResourcePerformance extends Entity
 {
     /**
+    * Gets the averageSpikeTimeScore
+    * AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100
+    *
+    * @return int|null The averageSpikeTimeScore
+    */
+    public function getAverageSpikeTimeScore()
+    {
+        if (array_key_exists("averageSpikeTimeScore", $this->_propDict)) {
+            return $this->_propDict["averageSpikeTimeScore"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the averageSpikeTimeScore
+    * AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100
+    *
+    * @param int $val The averageSpikeTimeScore
+    *
+    * @return UserExperienceAnalyticsResourcePerformance
+    */
+    public function setAverageSpikeTimeScore($val)
+    {
+        $this->_propDict["averageSpikeTimeScore"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the cpuSpikeTimePercentage
     * CPU spike time in percentage. Valid values 0 to 100
     *

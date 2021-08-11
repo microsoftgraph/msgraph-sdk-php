@@ -210,6 +210,34 @@ class AccessReviewInstance extends Entity
     
 
      /** 
+     * Gets the contactedReviewers
+     *
+     * @return array|null The contactedReviewers
+     */
+    public function getContactedReviewers()
+    {
+        if (array_key_exists("contactedReviewers", $this->_propDict)) {
+           return $this->_propDict["contactedReviewers"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the contactedReviewers
+    *
+    * @param AccessReviewReviewer $val The contactedReviewers
+    *
+    * @return AccessReviewInstance
+    */
+    public function setContactedReviewers($val)
+    {
+        $this->_propDict["contactedReviewers"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the decisions
     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      *

@@ -25,6 +25,37 @@ namespace Beta\Microsoft\Graph\Model;
 class AccessReviewReviewer extends Entity
 {
     /**
+    * Gets the createdDateTime
+    *
+    * @return \DateTime|null The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return AccessReviewReviewer
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     *
     * @return string|null The displayName

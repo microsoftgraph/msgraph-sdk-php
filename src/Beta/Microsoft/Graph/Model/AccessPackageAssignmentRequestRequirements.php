@@ -23,32 +23,6 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AccessPackageAssignmentRequestRequirements extends Entity
 {
-    /**
-    * Gets the allowCustomAssignmentSchedule
-    *
-    * @return bool|null The allowCustomAssignmentSchedule
-    */
-    public function getAllowCustomAssignmentSchedule()
-    {
-        if (array_key_exists("allowCustomAssignmentSchedule", $this->_propDict)) {
-            return $this->_propDict["allowCustomAssignmentSchedule"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the allowCustomAssignmentSchedule
-    *
-    * @param bool $val The value of the allowCustomAssignmentSchedule
-    *
-    * @return AccessPackageAssignmentRequestRequirements
-    */
-    public function setAllowCustomAssignmentSchedule($val)
-    {
-        $this->_propDict["allowCustomAssignmentSchedule"] = $val;
-        return $this;
-    }
 
     /**
     * Gets the existingAnswers
@@ -81,55 +55,107 @@ class AccessPackageAssignmentRequestRequirements extends Entity
          return $this;
     }
     /**
-    * Gets the isApprovalRequiredForAdd
+    * Gets the isApprovalRequired
     *
-    * @return bool|null The isApprovalRequiredForAdd
+    * @return bool|null The isApprovalRequired
     */
-    public function getIsApprovalRequiredForAdd()
+    public function getIsApprovalRequired()
     {
-        if (array_key_exists("isApprovalRequiredForAdd", $this->_propDict)) {
-            return $this->_propDict["isApprovalRequiredForAdd"];
+        if (array_key_exists("isApprovalRequired", $this->_propDict)) {
+            return $this->_propDict["isApprovalRequired"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isApprovalRequiredForAdd
+    * Sets the isApprovalRequired
     *
-    * @param bool $val The value of the isApprovalRequiredForAdd
+    * @param bool $val The value of the isApprovalRequired
     *
     * @return AccessPackageAssignmentRequestRequirements
     */
-    public function setIsApprovalRequiredForAdd($val)
+    public function setIsApprovalRequired($val)
     {
-        $this->_propDict["isApprovalRequiredForAdd"] = $val;
+        $this->_propDict["isApprovalRequired"] = $val;
         return $this;
     }
     /**
-    * Gets the isApprovalRequiredForUpdate
+    * Gets the isApprovalRequiredForExtension
     *
-    * @return bool|null The isApprovalRequiredForUpdate
+    * @return bool|null The isApprovalRequiredForExtension
     */
-    public function getIsApprovalRequiredForUpdate()
+    public function getIsApprovalRequiredForExtension()
     {
-        if (array_key_exists("isApprovalRequiredForUpdate", $this->_propDict)) {
-            return $this->_propDict["isApprovalRequiredForUpdate"];
+        if (array_key_exists("isApprovalRequiredForExtension", $this->_propDict)) {
+            return $this->_propDict["isApprovalRequiredForExtension"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isApprovalRequiredForUpdate
+    * Sets the isApprovalRequiredForExtension
     *
-    * @param bool $val The value of the isApprovalRequiredForUpdate
+    * @param bool $val The value of the isApprovalRequiredForExtension
     *
     * @return AccessPackageAssignmentRequestRequirements
     */
-    public function setIsApprovalRequiredForUpdate($val)
+    public function setIsApprovalRequiredForExtension($val)
     {
-        $this->_propDict["isApprovalRequiredForUpdate"] = $val;
+        $this->_propDict["isApprovalRequiredForExtension"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isCustomAssignmentScheduleAllowed
+    *
+    * @return bool|null The isCustomAssignmentScheduleAllowed
+    */
+    public function getIsCustomAssignmentScheduleAllowed()
+    {
+        if (array_key_exists("isCustomAssignmentScheduleAllowed", $this->_propDict)) {
+            return $this->_propDict["isCustomAssignmentScheduleAllowed"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isCustomAssignmentScheduleAllowed
+    *
+    * @param bool $val The value of the isCustomAssignmentScheduleAllowed
+    *
+    * @return AccessPackageAssignmentRequestRequirements
+    */
+    public function setIsCustomAssignmentScheduleAllowed($val)
+    {
+        $this->_propDict["isCustomAssignmentScheduleAllowed"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isRequestorJustificationRequired
+    *
+    * @return bool|null The isRequestorJustificationRequired
+    */
+    public function getIsRequestorJustificationRequired()
+    {
+        if (array_key_exists("isRequestorJustificationRequired", $this->_propDict)) {
+            return $this->_propDict["isRequestorJustificationRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isRequestorJustificationRequired
+    *
+    * @param bool $val The value of the isRequestorJustificationRequired
+    *
+    * @return AccessPackageAssignmentRequestRequirements
+    */
+    public function setIsRequestorJustificationRequired($val)
+    {
+        $this->_propDict["isRequestorJustificationRequired"] = $val;
         return $this;
     }
     /**

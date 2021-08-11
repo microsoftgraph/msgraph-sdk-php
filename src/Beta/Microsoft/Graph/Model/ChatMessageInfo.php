@@ -91,6 +91,37 @@ class ChatMessageInfo extends Entity
     }
     
     /**
+    * Gets the eventDetail
+    *
+    * @return EventMessageDetail|null The eventDetail
+    */
+    public function getEventDetail()
+    {
+        if (array_key_exists("eventDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["eventDetail"], "\Beta\Microsoft\Graph\Model\EventMessageDetail") || is_null($this->_propDict["eventDetail"])) {
+                return $this->_propDict["eventDetail"];
+            } else {
+                $this->_propDict["eventDetail"] = new EventMessageDetail($this->_propDict["eventDetail"]);
+                return $this->_propDict["eventDetail"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the eventDetail
+    *
+    * @param EventMessageDetail $val The eventDetail
+    *
+    * @return ChatMessageInfo
+    */
+    public function setEventDetail($val)
+    {
+        $this->_propDict["eventDetail"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the from
     * Information about the sender of the message.
     *
@@ -149,6 +180,37 @@ class ChatMessageInfo extends Entity
     public function setIsDeleted($val)
     {
         $this->_propDict["isDeleted"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the messageType
+    *
+    * @return ChatMessageType|null The messageType
+    */
+    public function getMessageType()
+    {
+        if (array_key_exists("messageType", $this->_propDict)) {
+            if (is_a($this->_propDict["messageType"], "\Beta\Microsoft\Graph\Model\ChatMessageType") || is_null($this->_propDict["messageType"])) {
+                return $this->_propDict["messageType"];
+            } else {
+                $this->_propDict["messageType"] = new ChatMessageType($this->_propDict["messageType"]);
+                return $this->_propDict["messageType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the messageType
+    *
+    * @param ChatMessageType $val The messageType
+    *
+    * @return ChatMessageInfo
+    */
+    public function setMessageType($val)
+    {
+        $this->_propDict["messageType"] = $val;
         return $this;
     }
     

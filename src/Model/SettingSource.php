@@ -79,4 +79,37 @@ class SettingSource extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the sourceType
+    * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+    *
+    * @return SettingSourceType|null The sourceType
+    */
+    public function getSourceType()
+    {
+        if (array_key_exists("sourceType", $this->_propDict)) {
+            if (is_a($this->_propDict["sourceType"], "\Microsoft\Graph\Model\SettingSourceType") || is_null($this->_propDict["sourceType"])) {
+                return $this->_propDict["sourceType"];
+            } else {
+                $this->_propDict["sourceType"] = new SettingSourceType($this->_propDict["sourceType"]);
+                return $this->_propDict["sourceType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sourceType
+    * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+    *
+    * @param SettingSourceType $val The value to assign to the sourceType
+    *
+    * @return SettingSource The SettingSource
+    */
+    public function setSourceType($val)
+    {
+        $this->_propDict["sourceType"] = $val;
+         return $this;
+    }
 }

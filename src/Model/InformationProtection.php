@@ -24,6 +24,37 @@ namespace Microsoft\Graph\Model;
 */
 class InformationProtection extends Entity
 {
+    /**
+    * Gets the bitlocker
+    *
+    * @return Bitlocker|null The bitlocker
+    */
+    public function getBitlocker()
+    {
+        if (array_key_exists("bitlocker", $this->_propDict)) {
+            if (is_a($this->_propDict["bitlocker"], "\Microsoft\Graph\Model\Bitlocker") || is_null($this->_propDict["bitlocker"])) {
+                return $this->_propDict["bitlocker"];
+            } else {
+                $this->_propDict["bitlocker"] = new Bitlocker($this->_propDict["bitlocker"]);
+                return $this->_propDict["bitlocker"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the bitlocker
+    *
+    * @param Bitlocker $val The bitlocker
+    *
+    * @return InformationProtection
+    */
+    public function setBitlocker($val)
+    {
+        $this->_propDict["bitlocker"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the threatAssessmentRequests

@@ -5367,6 +5367,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the wiFiConnectToAllowedNetworksOnlyForced
+    * Require devices to use Wi-Fi networks set up via configuration profiles. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @return bool|null The wiFiConnectToAllowedNetworksOnlyForced
+    */
+    public function getWiFiConnectToAllowedNetworksOnlyForced()
+    {
+        if (array_key_exists("wiFiConnectToAllowedNetworksOnlyForced", $this->_propDict)) {
+            return $this->_propDict["wiFiConnectToAllowedNetworksOnlyForced"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the wiFiConnectToAllowedNetworksOnlyForced
+    * Require devices to use Wi-Fi networks set up via configuration profiles. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @param bool $val The wiFiConnectToAllowedNetworksOnlyForced
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setWiFiConnectToAllowedNetworksOnlyForced($val)
+    {
+        $this->_propDict["wiFiConnectToAllowedNetworksOnlyForced"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the wifiPowerOnForced
     * Indicates whether or not Wi-Fi remains on, even when device is in airplane mode. Available for devices running iOS and iPadOS, versions 13.0 and later.
     *

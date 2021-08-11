@@ -796,6 +796,33 @@ class Group extends DirectoryObject
     }
     
     /**
+    * Gets the organizationId
+    *
+    * @return string|null The organizationId
+    */
+    public function getOrganizationId()
+    {
+        if (array_key_exists("organizationId", $this->_propDict)) {
+            return $this->_propDict["organizationId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the organizationId
+    *
+    * @param string $val The organizationId
+    *
+    * @return Group
+    */
+    public function setOrganizationId($val)
+    {
+        $this->_propDict["organizationId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the preferredDataLocation
     * The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
     *
