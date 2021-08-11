@@ -87,7 +87,7 @@ class KeyCredential extends Entity
 
     /**
     * Gets the endDateTime
-    * The date and time at which the credential expires.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The date and time at which the credential expires.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The endDateTime
     */
@@ -106,7 +106,7 @@ class KeyCredential extends Entity
 
     /**
     * Sets the endDateTime
-    * The date and time at which the credential expires.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The date and time at which the credential expires.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the endDateTime
     *
@@ -152,7 +152,7 @@ class KeyCredential extends Entity
     }
     /**
     * Gets the keyId
-    * The unique identifier (GUID) for the key.
+    * The unique identifier for the key.
     *
     * @return string|null The keyId
     */
@@ -167,7 +167,7 @@ class KeyCredential extends Entity
 
     /**
     * Sets the keyId
-    * The unique identifier (GUID) for the key.
+    * The unique identifier for the key.
     *
     * @param string $val The value of the keyId
     *
@@ -181,7 +181,7 @@ class KeyCredential extends Entity
 
     /**
     * Gets the startDateTime
-    * The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -200,7 +200,7 @@ class KeyCredential extends Entity
 
     /**
     * Sets the startDateTime
-    * The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -213,7 +213,7 @@ class KeyCredential extends Entity
     }
     /**
     * Gets the type
-    * The type of key credential; for example, 'Symmetric'.
+    * The type of key credential; for example, Symmetric.
     *
     * @return string|null The type
     */
@@ -228,7 +228,7 @@ class KeyCredential extends Entity
 
     /**
     * Sets the type
-    * The type of key credential; for example, 'Symmetric'.
+    * The type of key credential; for example, Symmetric.
     *
     * @param string $val The value of the type
     *
@@ -241,7 +241,7 @@ class KeyCredential extends Entity
     }
     /**
     * Gets the usage
-    * A string that describes the purpose for which the key can be used; for example, 'Verify'.
+    * A string that describes the purpose for which the key can be used; for example, Verify.
     *
     * @return string|null The usage
     */
@@ -256,7 +256,7 @@ class KeyCredential extends Entity
 
     /**
     * Sets the usage
-    * A string that describes the purpose for which the key can be used; for example, 'Verify'.
+    * A string that describes the purpose for which the key can be used; for example, Verify.
     *
     * @param string $val The value of the usage
     *

@@ -26,7 +26,7 @@ class ServiceHealth extends Entity
 {
     /**
     * Gets the service
-    * The service name.
+    * The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
     *
     * @return string|null The service
     */
@@ -41,7 +41,7 @@ class ServiceHealth extends Entity
     
     /**
     * Sets the service
-    * The service name.
+    * The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
     *
     * @param string $val The service
     *
