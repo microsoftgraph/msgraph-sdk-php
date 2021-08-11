@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * AgreementFileData File
 * PHP version 7
 *
@@ -12,8 +12,6 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-use Psr\Http\Message\StreamInterface;
-
 /**
 * AgreementFileData class
 *
@@ -34,7 +32,7 @@ class AgreementFileData extends Entity
     public function getData()
     {
         if (array_key_exists("data", $this->_propDict)) {
-            if (is_a($this->_propDict["data"], StreamInterface::class) || is_null($this->_propDict["data"])) {
+            if (is_a($this->_propDict["data"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["data"])) {
                 return $this->_propDict["data"];
             } else {
                 $this->_propDict["data"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["data"]);

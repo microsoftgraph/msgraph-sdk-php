@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * MacOSCustomAppConfiguration File
 * PHP version 7
 *
@@ -38,7 +38,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
             return null;
         }
     }
-
+    
     /**
     * Sets the bundleId
     * Bundle id for targeting.
@@ -52,7 +52,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
         $this->_propDict["bundleId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the configurationXml
     * Configuration xml. (UTF8 encoded byte array)
@@ -62,7 +62,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
     public function getConfigurationXml()
     {
         if (array_key_exists("configurationXml", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationXml"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["configurationXml"])) {
+            if (is_a($this->_propDict["configurationXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["configurationXml"])) {
                 return $this->_propDict["configurationXml"];
             } else {
                 $this->_propDict["configurationXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["configurationXml"]);
@@ -71,7 +71,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
         }
         return null;
     }
-
+    
     /**
     * Sets the configurationXml
     * Configuration xml. (UTF8 encoded byte array)
@@ -85,7 +85,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
         $this->_propDict["configurationXml"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the fileName
     * Configuration file name (.plist
@@ -100,7 +100,7 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
             return null;
         }
     }
-
+    
     /**
     * Sets the fileName
     * Configuration file name (.plist
@@ -114,5 +114,5 @@ class MacOSCustomAppConfiguration extends DeviceConfiguration
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-
+    
 }

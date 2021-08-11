@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * Windows10XVpnConfiguration File
 * PHP version 7
 *
@@ -38,7 +38,7 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
             return null;
         }
     }
-
+    
     /**
     * Sets the authenticationCertificateId
     * ID to the Authentication Certificate
@@ -52,7 +52,7 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
         $this->_propDict["authenticationCertificateId"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
@@ -62,7 +62,7 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
     public function getCustomXml()
     {
         if (array_key_exists("customXml", $this->_propDict)) {
-            if (is_a($this->_propDict["customXml"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["customXml"])) {
+            if (is_a($this->_propDict["customXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customXml"])) {
                 return $this->_propDict["customXml"];
             } else {
                 $this->_propDict["customXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["customXml"]);
@@ -71,7 +71,7 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
         }
         return null;
     }
-
+    
     /**
     * Sets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
@@ -85,7 +85,7 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
         $this->_propDict["customXml"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the customXmlFileName
     * Custom Xml file name.
@@ -100,7 +100,7 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
             return null;
         }
     }
-
+    
     /**
     * Sets the customXmlFileName
     * Custom Xml file name.
@@ -114,5 +114,5 @@ class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBa
         $this->_propDict["customXmlFileName"] = $val;
         return $this;
     }
-
+    
 }

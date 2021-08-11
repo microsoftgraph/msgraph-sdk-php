@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * UserConfiguration File
 * PHP version 7
 *
@@ -32,7 +32,7 @@ class UserConfiguration extends Entity
     public function getBinaryData()
     {
         if (array_key_exists("binaryData", $this->_propDict)) {
-            if (is_a($this->_propDict["binaryData"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["binaryData"])) {
+            if (is_a($this->_propDict["binaryData"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["binaryData"])) {
                 return $this->_propDict["binaryData"];
             } else {
                 $this->_propDict["binaryData"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["binaryData"]);
@@ -41,7 +41,7 @@ class UserConfiguration extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the binaryData
     *
@@ -54,5 +54,5 @@ class UserConfiguration extends Entity
         $this->_propDict["binaryData"] = $val;
         return $this;
     }
-
+    
 }

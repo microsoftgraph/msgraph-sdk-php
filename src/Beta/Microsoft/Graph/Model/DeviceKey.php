@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * DeviceKey File
 * PHP version 7
 *
@@ -58,7 +58,7 @@ class DeviceKey extends Entity
     public function getKeyMaterial()
     {
         if (array_key_exists("keyMaterial", $this->_propDict)) {
-            if (is_a($this->_propDict["keyMaterial"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["keyMaterial"])) {
+            if (is_a($this->_propDict["keyMaterial"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["keyMaterial"])) {
                 return $this->_propDict["keyMaterial"];
             } else {
                 $this->_propDict["keyMaterial"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["keyMaterial"]);

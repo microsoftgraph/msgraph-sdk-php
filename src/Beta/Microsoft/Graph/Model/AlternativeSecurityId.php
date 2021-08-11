@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * AlternativeSecurityId File
 * PHP version 7
 *
@@ -12,8 +12,6 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-use Psr\Http\Message\StreamInterface;
-
 /**
 * AlternativeSecurityId class
 *
@@ -63,7 +61,7 @@ class AlternativeSecurityId extends Entity
     public function getKey()
     {
         if (array_key_exists("key", $this->_propDict)) {
-            if (is_a($this->_propDict["key"], StreamInterface::class) || is_null($this->_propDict["key"])) {
+            if (is_a($this->_propDict["key"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["key"])) {
                 return $this->_propDict["key"];
             } else {
                 $this->_propDict["key"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["key"]);

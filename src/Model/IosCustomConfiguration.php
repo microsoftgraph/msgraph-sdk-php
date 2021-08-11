@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * IosCustomConfiguration File
 * PHP version 7
 *
@@ -33,7 +33,7 @@ class IosCustomConfiguration extends DeviceConfiguration
     public function getPayload()
     {
         if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["payload"])) {
+            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["payload"])) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["payload"]);
@@ -42,7 +42,7 @@ class IosCustomConfiguration extends DeviceConfiguration
         }
         return null;
     }
-
+    
     /**
     * Sets the payload
     * Payload. (UTF8 encoded byte array)
@@ -56,7 +56,7 @@ class IosCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payload"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the payloadFileName
     * Payload file name (.mobileconfig
@@ -71,7 +71,7 @@ class IosCustomConfiguration extends DeviceConfiguration
             return null;
         }
     }
-
+    
     /**
     * Sets the payloadFileName
     * Payload file name (.mobileconfig
@@ -85,7 +85,7 @@ class IosCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payloadFileName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the payloadName
     * Name that is displayed to the user.
@@ -100,7 +100,7 @@ class IosCustomConfiguration extends DeviceConfiguration
             return null;
         }
     }
-
+    
     /**
     * Sets the payloadName
     * Name that is displayed to the user.
@@ -114,5 +114,5 @@ class IosCustomConfiguration extends DeviceConfiguration
         $this->_propDict["payloadName"] = $val;
         return $this;
     }
-
+    
 }

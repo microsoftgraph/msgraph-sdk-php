@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * AndroidManagedStoreAppConfigurationSchema File
 * PHP version 7
 *
@@ -12,8 +12,6 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Psr\Http\Message\StreamInterface;
 
 /**
 * AndroidManagedStoreAppConfigurationSchema class
@@ -30,12 +28,12 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
     * Gets the exampleJson
     * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
     *
-    * @return StreamInterface|null The exampleJson
+    * @return \GuzzleHttp\Psr7\Stream|null The exampleJson
     */
     public function getExampleJson()
     {
         if (array_key_exists("exampleJson", $this->_propDict)) {
-            if (is_a($this->_propDict["exampleJson"], StreamInterface::class) || is_null($this->_propDict["exampleJson"])) {
+            if (is_a($this->_propDict["exampleJson"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["exampleJson"])) {
                 return $this->_propDict["exampleJson"];
             } else {
                 $this->_propDict["exampleJson"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["exampleJson"]);
@@ -44,12 +42,12 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the exampleJson
     * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
     *
-    * @param StreamInterface $val The exampleJson
+    * @param \GuzzleHttp\Psr7\Stream $val The exampleJson
     *
     * @return AndroidManagedStoreAppConfigurationSchema
     */
@@ -58,9 +56,9 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
         $this->_propDict["exampleJson"] = $val;
         return $this;
     }
+    
 
-
-     /**
+     /** 
      * Gets the nestedSchemaItems
     * Collection of items each representing a named configuration option in the schema. It contains a flat list of all configuration.
      *
@@ -74,8 +72,8 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
             return null;
         }
     }
-
-    /**
+    
+    /** 
     * Sets the nestedSchemaItems
     * Collection of items each representing a named configuration option in the schema. It contains a flat list of all configuration.
     *
@@ -88,9 +86,9 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
         $this->_propDict["nestedSchemaItems"] = $val;
         return $this;
     }
+    
 
-
-     /**
+     /** 
      * Gets the schemaItems
     * Collection of items each representing a named configuration option in the schema. It only contains the root-level configuration.
      *
@@ -104,8 +102,8 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
             return null;
         }
     }
-
-    /**
+    
+    /** 
     * Sets the schemaItems
     * Collection of items each representing a named configuration option in the schema. It only contains the root-level configuration.
     *
@@ -118,5 +116,5 @@ class AndroidManagedStoreAppConfigurationSchema extends Entity
         $this->_propDict["schemaItems"] = $val;
         return $this;
     }
-
+    
 }

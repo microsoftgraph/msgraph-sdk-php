@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * WindowsVpnConfiguration File
 * PHP version 7
 *
@@ -38,7 +38,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-
+    
     /**
     * Sets the connectionName
     * Connection name displayed to the user.
@@ -52,7 +52,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         $this->_propDict["connectionName"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
@@ -62,7 +62,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
     public function getCustomXml()
     {
         if (array_key_exists("customXml", $this->_propDict)) {
-            if (is_a($this->_propDict["customXml"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["customXml"])) {
+            if (is_a($this->_propDict["customXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customXml"])) {
                 return $this->_propDict["customXml"];
             } else {
                 $this->_propDict["customXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["customXml"]);
@@ -71,7 +71,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-
+    
     /**
     * Sets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
@@ -85,9 +85,9 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         $this->_propDict["customXml"] = $val;
         return $this;
     }
+    
 
-
-     /**
+     /** 
      * Gets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
@@ -101,8 +101,8 @@ class WindowsVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-
-    /**
+    
+    /** 
     * Sets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
     *
@@ -115,5 +115,5 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         $this->_propDict["servers"] = $val;
         return $this;
     }
-
+    
 }

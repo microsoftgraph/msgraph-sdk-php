@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-*
+* 
 * FileClassificationRequest File
 * PHP version 7
 *
@@ -32,7 +32,7 @@ class FileClassificationRequest extends Entity
     public function getFile()
     {
         if (array_key_exists("file", $this->_propDict)) {
-            if (is_a($this->_propDict["file"], \Psr\Http\Message\StreamInterface::class) || is_null($this->_propDict["file"])) {
+            if (is_a($this->_propDict["file"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["file"])) {
                 return $this->_propDict["file"];
             } else {
                 $this->_propDict["file"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["file"]);
@@ -41,7 +41,7 @@ class FileClassificationRequest extends Entity
         }
         return null;
     }
-
+    
     /**
     * Sets the file
     *
@@ -54,7 +54,7 @@ class FileClassificationRequest extends Entity
         $this->_propDict["file"] = $val;
         return $this;
     }
-
+    
     /**
     * Gets the sensitiveTypeIds
     *
@@ -68,7 +68,7 @@ class FileClassificationRequest extends Entity
             return null;
         }
     }
-
+    
     /**
     * Sets the sensitiveTypeIds
     *
@@ -81,5 +81,5 @@ class FileClassificationRequest extends Entity
         $this->_propDict["sensitiveTypeIds"] = $val;
         return $this;
     }
-
+    
 }
