@@ -21,8 +21,8 @@ jobs:
           target: docs/
           config: ./phpdoc.dist.xml
 
-      - name: Run PHPDocumentor
-        run: docker run --rm -v $(pwd):/data phpdoc/phpdoc
+      - name: Run PHPDocumentor container
+        run: docker run --rm -v $(pwd):/data phpdoc/phpdoc:3.0 phpdoc run
 
       - name: Config Git user
         run: |
