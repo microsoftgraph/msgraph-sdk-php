@@ -22,12 +22,17 @@ jobs:
           config: ./phpdoc.dist.xml
 
       - name: Run PHPDocumentor
-        run: docker run --rm -v $(pwd):/data phpdoc/phpdoc
+        run: docker run --rm -v $(pwd):/data phpdoc/phpdoc:3.0
 
       - name: Config Git user
         run: |
           git config --global user.email "GraphTooling@service.microsoft.com"
           git config --global user.name "Microsoft Graph DevX Tooling"
+
+      - name: Check Git status
+        run: |
+          git status
+          git add .
 
       - name: Commit changes to docs/ folder (if any)
         run: |
