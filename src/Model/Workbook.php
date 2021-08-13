@@ -117,7 +117,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the names
-    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
+    * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      *
      * @return array|null The names
      */
@@ -132,7 +132,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the names
-    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
+    * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
     *
     * @param WorkbookNamedItem $val The names
     *
@@ -147,7 +147,7 @@ class Workbook extends Entity
 
      /** 
      * Gets the operations
-    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+    * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      *
      * @return array|null The operations
      */
@@ -162,7 +162,7 @@ class Workbook extends Entity
     
     /** 
     * Sets the operations
-    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+    * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
     *
     * @param WorkbookOperation $val The operations
     *

@@ -36,7 +36,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
             if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["payload"])) {
                 return $this->_propDict["payload"];
             } else {
-                $this->_propDict["payload"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["payload"]);
+                $this->_propDict["payload"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["payload"]);
                 return $this->_propDict["payload"];
             }
         }
@@ -59,7 +59,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Gets the payloadFileName
-    * Payload file name (.mobileconfig | .xml).
+    * Payload file name (.mobileconfig
     *
     * @return string|null The payloadFileName
     */
@@ -74,7 +74,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Sets the payloadFileName
-    * Payload file name (.mobileconfig | .xml).
+    * Payload file name (.mobileconfig
     *
     * @param string $val The payloadFileName
     *

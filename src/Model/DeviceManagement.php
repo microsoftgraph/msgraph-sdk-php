@@ -121,7 +121,7 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @return DeviceManagementSubscriptionState|null The subscriptionState
     */
@@ -140,7 +140,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the subscriptionState
-    * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+    * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
     *
     * @param DeviceManagementSubscriptionState $val The subscriptionState
     *
@@ -947,6 +947,39 @@ class DeviceManagement extends Entity
     public function setRemoteAssistancePartners($val)
     {
         $this->_propDict["remoteAssistancePartners"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reports
+    * Reports singleton
+    *
+    * @return DeviceManagementReports|null The reports
+    */
+    public function getReports()
+    {
+        if (array_key_exists("reports", $this->_propDict)) {
+            if (is_a($this->_propDict["reports"], "\Microsoft\Graph\Model\DeviceManagementReports") || is_null($this->_propDict["reports"])) {
+                return $this->_propDict["reports"];
+            } else {
+                $this->_propDict["reports"] = new DeviceManagementReports($this->_propDict["reports"]);
+                return $this->_propDict["reports"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reports
+    * Reports singleton
+    *
+    * @param DeviceManagementReports $val The reports
+    *
+    * @return DeviceManagement
+    */
+    public function setReports($val)
+    {
+        $this->_propDict["reports"] = $val;
         return $this;
     }
     

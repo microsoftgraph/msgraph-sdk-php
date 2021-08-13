@@ -25,6 +25,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
 {
     /**
     * Gets the id
+    * The object identifier of an Azure AD user or group.
     *
     * @return string|null The id
     */
@@ -39,6 +40,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
 
     /**
     * Sets the id
+    * The object identifier of an Azure AD user or group.
     *
     * @param string $val The value of the id
     *
@@ -51,6 +53,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
     }
     /**
     * Gets the targetedAuthenticationMethod
+    * The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
     *
     * @return string|null The targetedAuthenticationMethod
     */
@@ -65,6 +68,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
 
     /**
     * Sets the targetedAuthenticationMethod
+    * The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
     *
     * @param string $val The value of the targetedAuthenticationMethod
     *
@@ -78,6 +82,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
 
     /**
     * Gets the targetType
+    * The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
     *
     * @return AuthenticationMethodTargetType|null The targetType
     */
@@ -96,6 +101,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget extends Entity
 
     /**
     * Sets the targetType
+    * The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
     *
     * @param AuthenticationMethodTargetType $val The value to assign to the targetType
     *

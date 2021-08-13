@@ -53,7 +53,7 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the languageTag
-    * The anguage tag for the label.
+    * The language tag for the label.
     *
     * @return string|null The languageTag
     */
@@ -68,7 +68,7 @@ class LocalizedLabel extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the languageTag
-    * The anguage tag for the label.
+    * The language tag for the label.
     *
     * @param string $val The value of the languageTag
     *

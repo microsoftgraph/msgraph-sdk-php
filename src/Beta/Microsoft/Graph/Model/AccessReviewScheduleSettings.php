@@ -58,7 +58,7 @@ class AccessReviewScheduleSettings extends Entity
     }
     /**
     * Gets the autoApplyDecisionsEnabled
-    * Flag to indicate whether auto-apply feature is enabled.
+    * Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.
     *
     * @return bool|null The autoApplyDecisionsEnabled
     */
@@ -73,7 +73,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the autoApplyDecisionsEnabled
-    * Flag to indicate whether auto-apply feature is enabled.
+    * Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.
     *
     * @param bool $val The value of the autoApplyDecisionsEnabled
     *
@@ -86,7 +86,7 @@ class AccessReviewScheduleSettings extends Entity
     }
     /**
     * Gets the defaultDecision
-    * Decision chosen if defaultDecisionEnabled is enabled. Can be one of 'Approve', 'Deny', or 'Recommendation'.
+    * Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
     *
     * @return string|null The defaultDecision
     */
@@ -101,7 +101,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the defaultDecision
-    * Decision chosen if defaultDecisionEnabled is enabled. Can be one of 'Approve', 'Deny', or 'Recommendation'.
+    * Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
     *
     * @param string $val The value of the defaultDecision
     *
@@ -114,7 +114,7 @@ class AccessReviewScheduleSettings extends Entity
     }
     /**
     * Gets the defaultDecisionEnabled
-    * Flag to indicate whether default decision is enabled/disabled when reviewers do not respond.
+    * Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.
     *
     * @return bool|null The defaultDecisionEnabled
     */
@@ -129,7 +129,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the defaultDecisionEnabled
-    * Flag to indicate whether default decision is enabled/disabled when reviewers do not respond.
+    * Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.
     *
     * @param bool $val The value of the defaultDecisionEnabled
     *
@@ -170,7 +170,7 @@ class AccessReviewScheduleSettings extends Entity
     }
     /**
     * Gets the justificationRequiredOnApproval
-    * Flag to indicate whether reviewers are required to provide justification with their decision.
+    * Indicates whether reviewers are required to provide justification with their decision. Default value is false.
     *
     * @return bool|null The justificationRequiredOnApproval
     */
@@ -185,7 +185,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the justificationRequiredOnApproval
-    * Flag to indicate whether reviewers are required to provide justification with their decision.
+    * Indicates whether reviewers are required to provide justification with their decision. Default value is false.
     *
     * @param bool $val The value of the justificationRequiredOnApproval
     *
@@ -198,7 +198,7 @@ class AccessReviewScheduleSettings extends Entity
     }
     /**
     * Gets the mailNotificationsEnabled
-    * Flag to indicate whether emails are enabled/disabled.
+    * Indicates whether emails are enabled or disabled. Default value is false.
     *
     * @return bool|null The mailNotificationsEnabled
     */
@@ -213,7 +213,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the mailNotificationsEnabled
-    * Flag to indicate whether emails are enabled/disabled.
+    * Indicates whether emails are enabled or disabled. Default value is false.
     *
     * @param bool $val The value of the mailNotificationsEnabled
     *
@@ -224,9 +224,40 @@ class AccessReviewScheduleSettings extends Entity
         $this->_propDict["mailNotificationsEnabled"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the recommendationLookBackDuration
+    *
+    * @return Duration|null The recommendationLookBackDuration
+    */
+    public function getRecommendationLookBackDuration()
+    {
+        if (array_key_exists("recommendationLookBackDuration", $this->_propDict)) {
+            if (is_a($this->_propDict["recommendationLookBackDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["recommendationLookBackDuration"])) {
+                return $this->_propDict["recommendationLookBackDuration"];
+            } else {
+                $this->_propDict["recommendationLookBackDuration"] = new Duration($this->_propDict["recommendationLookBackDuration"]);
+                return $this->_propDict["recommendationLookBackDuration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recommendationLookBackDuration
+    *
+    * @param Duration $val The value to assign to the recommendationLookBackDuration
+    *
+    * @return AccessReviewScheduleSettings The AccessReviewScheduleSettings
+    */
+    public function setRecommendationLookBackDuration($val)
+    {
+        $this->_propDict["recommendationLookBackDuration"] = $val;
+         return $this;
+    }
     /**
     * Gets the recommendationsEnabled
-    * Flag to indicate whether decision recommendations are enabled/disabled.
+    * Indicates whether decision recommendations are enabled/disabled.
     *
     * @return bool|null The recommendationsEnabled
     */
@@ -241,7 +272,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the recommendationsEnabled
-    * Flag to indicate whether decision recommendations are enabled/disabled.
+    * Indicates whether decision recommendations are enabled/disabled.
     *
     * @param bool $val The value of the recommendationsEnabled
     *
@@ -255,7 +286,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Gets the recurrence
-    * Detailed settings for recurrence. Using standard Outlook recurrence object. Note that dayOfMonth is not supported - use property startDate on recurrenceRange to determine the day the review will start on.
+    * Detailed settings for recurrence using the standard Outlook recurrence object. Only weekly and absoluteMonthly on recurrencePattern are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
     *
     * @return PatternedRecurrence|null The recurrence
     */
@@ -274,7 +305,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the recurrence
-    * Detailed settings for recurrence. Using standard Outlook recurrence object. Note that dayOfMonth is not supported - use property startDate on recurrenceRange to determine the day the review will start on.
+    * Detailed settings for recurrence using the standard Outlook recurrence object. Only weekly and absoluteMonthly on recurrencePattern are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
     *
     * @param PatternedRecurrence $val The value to assign to the recurrence
     *
@@ -287,7 +318,7 @@ class AccessReviewScheduleSettings extends Entity
     }
     /**
     * Gets the reminderNotificationsEnabled
-    * Flag to indicate whether reminders are enabled/disabled.
+    * Indicates whether reminders are enabled or disabled. Default value is false.
     *
     * @return bool|null The reminderNotificationsEnabled
     */
@@ -302,7 +333,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the reminderNotificationsEnabled
-    * Flag to indicate whether reminders are enabled/disabled.
+    * Indicates whether reminders are enabled or disabled. Default value is false.
     *
     * @param bool $val The value of the reminderNotificationsEnabled
     *

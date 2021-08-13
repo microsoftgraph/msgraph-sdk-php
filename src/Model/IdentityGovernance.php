@@ -28,7 +28,7 @@ class IdentityGovernance implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array(string => string)
+    * @var array $_propDict
     */
     protected $_propDict;
     
@@ -118,6 +118,37 @@ class IdentityGovernance implements \JsonSerializable
     }
     
     /**
+    * Gets the entitlementManagement
+    *
+    * @return EntitlementManagement|null The entitlementManagement
+    */
+    public function getEntitlementManagement()
+    {
+        if (array_key_exists("entitlementManagement", $this->_propDict)) {
+            if (is_a($this->_propDict["entitlementManagement"], "\Microsoft\Graph\Model\EntitlementManagement") || is_null($this->_propDict["entitlementManagement"])) {
+                return $this->_propDict["entitlementManagement"];
+            } else {
+                $this->_propDict["entitlementManagement"] = new EntitlementManagement($this->_propDict["entitlementManagement"]);
+                return $this->_propDict["entitlementManagement"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the entitlementManagement
+    *
+    * @param EntitlementManagement $val The entitlementManagement
+    *
+    * @return IdentityGovernance
+    */
+    public function setEntitlementManagement($val)
+    {
+        $this->_propDict["entitlementManagement"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the termsOfUse
     *
     * @return TermsOfUseContainer|null The termsOfUse
@@ -151,19 +182,22 @@ class IdentityGovernance implements \JsonSerializable
     /**
     * Gets the ODataType
     *
-    * @return string The ODataType
+    * @return string|null The ODataType
     */
     public function getODataType()
     {
-        return $this->_propDict["@odata.type"];
+        if (array_key_exists('@odata.type', $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        }
+        return null;
     }
     
     /**
     * Sets the ODataType
     *
-    * @param string The ODataType
+    * @param string $val The ODataType
     *
-    * @return Entity
+    * @return IdentityGovernance
     */
     public function setODataType($val)
     {

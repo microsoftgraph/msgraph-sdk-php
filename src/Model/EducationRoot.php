@@ -22,12 +22,42 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EducationRoot extends Entity
+class EducationRoot implements \JsonSerializable
 {
+    /**
+    * The array of properties available
+    * to the model
+    *
+    * @var array $_propDict
+    */
+    protected $_propDict;
+    
+    /**
+    * Construct a new EducationRoot
+    *
+    * @param array $propDict A list of properties to set
+    */
+    function __construct($propDict = array())
+    {
+        if (!is_array($propDict)) {
+           $propDict = array();
+        }
+        $this->_propDict = $propDict;
+    }
+
+    /**
+    * Gets the property dictionary of the EducationRoot
+    *
+    * @return array The list of properties
+    */
+    public function getProperties()
+    {
+        return $this->_propDict;
+    }
+    
 
      /** 
      * Gets the classes
-    * Read-only. Nullable.
      *
      * @return array|null The classes
      */
@@ -42,7 +72,6 @@ class EducationRoot extends Entity
     
     /** 
     * Sets the classes
-    * Read-only. Nullable.
     *
     * @param EducationClass $val The classes
     *
@@ -56,7 +85,6 @@ class EducationRoot extends Entity
     
     /**
     * Gets the me
-    * Read-only. Nullable.
     *
     * @return EducationUser|null The me
     */
@@ -75,7 +103,6 @@ class EducationRoot extends Entity
     
     /**
     * Sets the me
-    * Read-only. Nullable.
     *
     * @param EducationUser $val The me
     *
@@ -90,7 +117,6 @@ class EducationRoot extends Entity
 
      /** 
      * Gets the schools
-    * Read-only. Nullable.
      *
      * @return array|null The schools
      */
@@ -105,7 +131,6 @@ class EducationRoot extends Entity
     
     /** 
     * Sets the schools
-    * Read-only. Nullable.
     *
     * @param EducationSchool $val The schools
     *
@@ -120,7 +145,6 @@ class EducationRoot extends Entity
 
      /** 
      * Gets the users
-    * Read-only. Nullable.
      *
      * @return array|null The users
      */
@@ -135,7 +159,6 @@ class EducationRoot extends Entity
     
     /** 
     * Sets the users
-    * Read-only. Nullable.
     *
     * @param EducationUser $val The users
     *
@@ -147,4 +170,48 @@ class EducationRoot extends Entity
         return $this;
     }
     
+    /**
+    * Gets the ODataType
+    *
+    * @return string|null The ODataType
+    */
+    public function getODataType()
+    {
+        if (array_key_exists('@odata.type', $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the ODataType
+    *
+    * @param string $val The ODataType
+    *
+    * @return EducationRoot
+    */
+    public function setODataType($val)
+    {
+        $this->_propDict["@odata.type"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Serializes the object by property array
+    * Manually serialize DateTime into RFC3339 format
+    *
+    * @return array The list of properties
+    */
+    public function jsonSerialize()
+    {
+        $serializableProperties = $this->getProperties();
+        foreach ($serializableProperties as $property => $val) {
+            if (is_a($val, "\DateTime")) {
+                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
+            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+                $serializableProperties[$property] = $val->value();
+            }
+        }
+        return $serializableProperties;
+    }
 }

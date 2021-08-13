@@ -69,7 +69,7 @@ class DriveItem extends BaseItem
             if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
                 return $this->_propDict["content"];
             } else {
-                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
+                $this->_propDict["content"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["content"]);
                 return $this->_propDict["content"];
             }
         }
@@ -352,7 +352,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the pendingOperations
-    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
     *
     * @return PendingOperations|null The pendingOperations
     */
@@ -371,7 +371,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the pendingOperations
-    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
     *
     * @param PendingOperations $val The pendingOperations
     *

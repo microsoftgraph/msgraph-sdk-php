@@ -530,6 +530,39 @@ class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy
     }
     
     /**
+    * Gets the securityRequiredAndroidSafetyNetEvaluationType
+    * Require a specific SafetyNet evaluation type for compliance. Possible values are: basic, hardwareBacked.
+    *
+    * @return AndroidSafetyNetEvaluationType|null The securityRequiredAndroidSafetyNetEvaluationType
+    */
+    public function getSecurityRequiredAndroidSafetyNetEvaluationType()
+    {
+        if (array_key_exists("securityRequiredAndroidSafetyNetEvaluationType", $this->_propDict)) {
+            if (is_a($this->_propDict["securityRequiredAndroidSafetyNetEvaluationType"], "\Beta\Microsoft\Graph\Model\AndroidSafetyNetEvaluationType") || is_null($this->_propDict["securityRequiredAndroidSafetyNetEvaluationType"])) {
+                return $this->_propDict["securityRequiredAndroidSafetyNetEvaluationType"];
+            } else {
+                $this->_propDict["securityRequiredAndroidSafetyNetEvaluationType"] = new AndroidSafetyNetEvaluationType($this->_propDict["securityRequiredAndroidSafetyNetEvaluationType"]);
+                return $this->_propDict["securityRequiredAndroidSafetyNetEvaluationType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the securityRequiredAndroidSafetyNetEvaluationType
+    * Require a specific SafetyNet evaluation type for compliance. Possible values are: basic, hardwareBacked.
+    *
+    * @param AndroidSafetyNetEvaluationType $val The securityRequiredAndroidSafetyNetEvaluationType
+    *
+    * @return AndroidWorkProfileCompliancePolicy
+    */
+    public function setSecurityRequiredAndroidSafetyNetEvaluationType($val)
+    {
+        $this->_propDict["securityRequiredAndroidSafetyNetEvaluationType"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the securityRequireGooglePlayServices
     * Require Google Play Services to be installed and enabled on the device.
     *

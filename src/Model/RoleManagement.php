@@ -28,7 +28,7 @@ class RoleManagement implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array(string => string)
+    * @var array $_propDict
     */
     protected $_propDict;
     
@@ -56,21 +56,55 @@ class RoleManagement implements \JsonSerializable
     }
     
     /**
+    * Gets the directory
+    *
+    * @return RbacApplication|null The directory
+    */
+    public function getDirectory()
+    {
+        if (array_key_exists("directory", $this->_propDict)) {
+            if (is_a($this->_propDict["directory"], "\Microsoft\Graph\Model\RbacApplication") || is_null($this->_propDict["directory"])) {
+                return $this->_propDict["directory"];
+            } else {
+                $this->_propDict["directory"] = new RbacApplication($this->_propDict["directory"]);
+                return $this->_propDict["directory"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the directory
+    *
+    * @param RbacApplication $val The directory
+    *
+    * @return RoleManagement
+    */
+    public function setDirectory($val)
+    {
+        $this->_propDict["directory"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ODataType
     *
-    * @return string The ODataType
+    * @return string|null The ODataType
     */
     public function getODataType()
     {
-        return $this->_propDict["@odata.type"];
+        if (array_key_exists('@odata.type', $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        }
+        return null;
     }
     
     /**
     * Sets the ODataType
     *
-    * @param string The ODataType
+    * @param string $val The ODataType
     *
-    * @return Entity
+    * @return RoleManagement
     */
     public function setODataType($val)
     {

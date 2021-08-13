@@ -26,7 +26,7 @@ class Report extends Entity
 
     /**
     * Gets the content
-    * Not yet documented
+    * Report content; details vary by report type.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The content
     */
@@ -36,7 +36,7 @@ class Report extends Entity
             if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
                 return $this->_propDict["content"];
             } else {
-                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
+                $this->_propDict["content"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["content"]);
                 return $this->_propDict["content"];
             }
         }
@@ -45,7 +45,7 @@ class Report extends Entity
 
     /**
     * Sets the content
-    * Not yet documented
+    * Report content; details vary by report type.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the content
     *

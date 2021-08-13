@@ -88,7 +88,7 @@ class Team extends Entity
     
     /**
     * Gets the description
-    * An optional description for the team.
+    * An optional description for the team. Maximum length: 1024 characters.
     *
     * @return string|null The description
     */
@@ -103,7 +103,7 @@ class Team extends Entity
     
     /**
     * Sets the description
-    * An optional description for the team.
+    * An optional description for the team. Maximum length: 1024 characters.
     *
     * @param string $val The description
     *
@@ -672,6 +672,36 @@ class Team extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the permissionGrants
+    * A collection of permissions granted to apps to access the team.
+     *
+     * @return array|null The permissionGrants
+     */
+    public function getPermissionGrants()
+    {
+        if (array_key_exists("permissionGrants", $this->_propDict)) {
+           return $this->_propDict["permissionGrants"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the permissionGrants
+    * A collection of permissions granted to apps to access the team.
+    *
+    * @param ResourceSpecificPermissionGrant $val The permissionGrants
+    *
+    * @return Team
+    */
+    public function setPermissionGrants($val)
+    {
+        $this->_propDict["permissionGrants"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the photo
     * The team photo.
@@ -741,6 +771,7 @@ class Team extends Entity
 
      /** 
      * Gets the tags
+    * The tags associated with the team.
      *
      * @return array|null The tags
      */
@@ -755,6 +786,7 @@ class Team extends Entity
     
     /** 
     * Sets the tags
+    * The tags associated with the team.
     *
     * @param TeamworkTag $val The tags
     *

@@ -28,7 +28,7 @@ class OfficeConfiguration implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array(string => string)
+    * @var array $_propDict
     */
     protected $_propDict;
     
@@ -58,6 +58,7 @@ class OfficeConfiguration implements \JsonSerializable
 
      /** 
      * Gets the tenantCheckinStatuses
+    * List of office Client check-in status.
      *
      * @return array|null The tenantCheckinStatuses
      */
@@ -72,6 +73,7 @@ class OfficeConfiguration implements \JsonSerializable
     
     /** 
     * Sets the tenantCheckinStatuses
+    * List of office Client check-in status.
     *
     * @param OfficeClientCheckinStatus $val The tenantCheckinStatuses
     *
@@ -85,6 +87,7 @@ class OfficeConfiguration implements \JsonSerializable
     
     /**
     * Gets the tenantUserCheckinSummary
+    * Entity that describes tenant check-in statues
     *
     * @return OfficeUserCheckinSummary|null The tenantUserCheckinSummary
     */
@@ -103,6 +106,7 @@ class OfficeConfiguration implements \JsonSerializable
     
     /**
     * Sets the tenantUserCheckinSummary
+    * Entity that describes tenant check-in statues
     *
     * @param OfficeUserCheckinSummary $val The tenantUserCheckinSummary
     *
@@ -117,6 +121,7 @@ class OfficeConfiguration implements \JsonSerializable
 
      /** 
      * Gets the clientConfigurations
+    * List of office Client configuration.
      *
      * @return array|null The clientConfigurations
      */
@@ -131,6 +136,7 @@ class OfficeConfiguration implements \JsonSerializable
     
     /** 
     * Sets the clientConfigurations
+    * List of office Client configuration.
     *
     * @param OfficeClientConfiguration $val The clientConfigurations
     *
@@ -145,19 +151,22 @@ class OfficeConfiguration implements \JsonSerializable
     /**
     * Gets the ODataType
     *
-    * @return string The ODataType
+    * @return string|null The ODataType
     */
     public function getODataType()
     {
-        return $this->_propDict["@odata.type"];
+        if (array_key_exists('@odata.type', $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        }
+        return null;
     }
     
     /**
     * Sets the ODataType
     *
-    * @param string The ODataType
+    * @param string $val The ODataType
     *
-    * @return Entity
+    * @return OfficeConfiguration
     */
     public function setODataType($val)
     {

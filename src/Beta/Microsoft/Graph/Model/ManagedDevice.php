@@ -672,7 +672,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the deviceType
-    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, linux, blackberry, palm, unknown, cloudPC.
+    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
     *
     * @return DeviceType|null The deviceType
     */
@@ -691,7 +691,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the deviceType
-    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, linux, blackberry, palm, unknown, cloudPC.
+    * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
     *
     * @param DeviceType $val The deviceType
     *
@@ -853,6 +853,35 @@ class ManagedDevice extends Entity
     public function setEnrolledDateTime($val)
     {
         $this->_propDict["enrolledDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the enrollmentProfileName
+    * Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+    *
+    * @return string|null The enrollmentProfileName
+    */
+    public function getEnrollmentProfileName()
+    {
+        if (array_key_exists("enrollmentProfileName", $this->_propDict)) {
+            return $this->_propDict["enrollmentProfileName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the enrollmentProfileName
+    * Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+    *
+    * @param string $val The enrollmentProfileName
+    *
+    * @return ManagedDevice
+    */
+    public function setEnrollmentProfileName($val)
+    {
+        $this->_propDict["enrollmentProfileName"] = $val;
         return $this;
     }
     
@@ -1354,7 +1383,7 @@ class ManagedDevice extends Entity
     
     /**
     * Gets the managementAgent
-    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
+    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
     *
     * @return ManagementAgentType|null The managementAgent
     */
@@ -1373,7 +1402,7 @@ class ManagedDevice extends Entity
     
     /**
     * Sets the managementAgent
-    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
+    * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
     *
     * @param ManagementAgentType $val The managementAgent
     *

@@ -26,12 +26,47 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.win32LobAppAssignmentSettings");
     }
 
+
+    /**
+    * Gets the deliveryOptimizationPriority
+    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
+    *
+    * @return Win32LobAppDeliveryOptimizationPriority|null The deliveryOptimizationPriority
+    */
+    public function getDeliveryOptimizationPriority()
+    {
+        if (array_key_exists("deliveryOptimizationPriority", $this->_propDict)) {
+            if (is_a($this->_propDict["deliveryOptimizationPriority"], "\Microsoft\Graph\Model\Win32LobAppDeliveryOptimizationPriority") || is_null($this->_propDict["deliveryOptimizationPriority"])) {
+                return $this->_propDict["deliveryOptimizationPriority"];
+            } else {
+                $this->_propDict["deliveryOptimizationPriority"] = new Win32LobAppDeliveryOptimizationPriority($this->_propDict["deliveryOptimizationPriority"]);
+                return $this->_propDict["deliveryOptimizationPriority"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deliveryOptimizationPriority
+    * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
+    *
+    * @param Win32LobAppDeliveryOptimizationPriority $val The value to assign to the deliveryOptimizationPriority
+    *
+    * @return Win32LobAppAssignmentSettings The Win32LobAppAssignmentSettings
+    */
+    public function setDeliveryOptimizationPriority($val)
+    {
+        $this->_propDict["deliveryOptimizationPriority"] = $val;
+         return $this;
+    }
 
     /**
     * Gets the installTimeSettings

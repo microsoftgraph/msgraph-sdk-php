@@ -26,15 +26,17 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.pkcs12Certificate");
     }
 
     /**
     * Gets the password
-    * The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
+    * This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
     *
     * @return string|null The password
     */
@@ -49,7 +51,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase
 
     /**
     * Sets the password
-    * The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
+    * This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
     *
     * @param string $val The value of the password
     *
@@ -62,7 +64,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase
     }
     /**
     * Gets the pkcs12Value
-    * Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
+    * This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
     *
     * @return string|null The pkcs12Value
     */
@@ -77,7 +79,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase
 
     /**
     * Sets the pkcs12Value
-    * Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
+    * This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
     *
     * @param string $val The value of the pkcs12Value
     *

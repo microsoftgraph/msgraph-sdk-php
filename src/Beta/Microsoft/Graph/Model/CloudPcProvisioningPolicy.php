@@ -113,7 +113,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the imageId
-    * The ID of the OS image you want to provision on cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
+    * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
     *
     * @return string|null The imageId
     */
@@ -128,7 +128,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the imageId
-    * The ID of the OS image you want to provision on cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
+    * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
     *
     * @param string $val The imageId
     *
@@ -142,7 +142,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the imageType
-    * The type of OS image (custom or gallery) you want to provision on cloud PCs. Possible values are: gallery, custom.
+    * The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom.
     *
     * @return CloudPcProvisioningPolicyImageType|null The imageType
     */
@@ -161,7 +161,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the imageType
-    * The type of OS image (custom or gallery) you want to provision on cloud PCs. Possible values are: gallery, custom.
+    * The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom.
     *
     * @param CloudPcProvisioningPolicyImageType $val The imageType
     *
@@ -175,7 +175,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the onPremisesConnectionId
-    * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the cloud PC service.
+    * The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
     *
     * @return string|null The onPremisesConnectionId
     */
@@ -190,7 +190,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the onPremisesConnectionId
-    * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the cloud PC service.
+    * The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
     *
     * @param string $val The onPremisesConnectionId
     *
@@ -205,7 +205,7 @@ class CloudPcProvisioningPolicy extends Entity
 
      /** 
      * Gets the assignments
-    * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
+    * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
      *
      * @return array|null The assignments
      */
@@ -220,7 +220,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /** 
     * Sets the assignments
-    * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
+    * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
     *
     * @param CloudPcProvisioningPolicyAssignment $val The assignments
     *

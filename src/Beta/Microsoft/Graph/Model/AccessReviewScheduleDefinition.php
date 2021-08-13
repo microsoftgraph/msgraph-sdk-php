@@ -26,8 +26,37 @@ class AccessReviewScheduleDefinition extends Entity
 {
 
      /** 
+     * Gets the additionalNotificationRecipients
+    * Defines the list of additional users or group members to be notified of the access review progress.
+     *
+     * @return array|null The additionalNotificationRecipients
+     */
+    public function getAdditionalNotificationRecipients()
+    {
+        if (array_key_exists("additionalNotificationRecipients", $this->_propDict)) {
+           return $this->_propDict["additionalNotificationRecipients"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the additionalNotificationRecipients
+    * Defines the list of additional users or group members to be notified of the access review progress.
+    *
+    * @param AccessReviewNotificationRecipientItem $val The additionalNotificationRecipients
+    *
+    * @return AccessReviewScheduleDefinition
+    */
+    public function setAdditionalNotificationRecipients($val)
+    {
+        $this->_propDict["additionalNotificationRecipients"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the backupReviewers
-    * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope.
      *
      * @return array|null The backupReviewers
      */
@@ -42,7 +71,6 @@ class AccessReviewScheduleDefinition extends Entity
     
     /** 
     * Sets the backupReviewers
-    * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope.
     *
     * @param AccessReviewReviewerScope $val The backupReviewers
     *
@@ -56,7 +84,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the createdBy
-    * User who created this review.
+    * User who created this review. Read-only.
     *
     * @return UserIdentity|null The createdBy
     */
@@ -75,7 +103,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the createdBy
-    * User who created this review.
+    * User who created this review. Read-only.
     *
     * @param UserIdentity $val The createdBy
     *
@@ -89,7 +117,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the createdDateTime
-    * Timestamp when review series was created.
+    * Timestamp when the access review series was created. Supports $select. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -108,7 +136,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the createdDateTime
-    * Timestamp when review series was created.
+    * Timestamp when the access review series was created. Supports $select. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -122,7 +150,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the descriptionForAdmins
-    * Description provided by review creators to provide more context of the review to admins.
+    * Description provided by review creators to provide more context of the review to admins. Supports $select.
     *
     * @return string|null The descriptionForAdmins
     */
@@ -137,7 +165,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the descriptionForAdmins
-    * Description provided by review creators to provide more context of the review to admins.
+    * Description provided by review creators to provide more context of the review to admins. Supports $select.
     *
     * @param string $val The descriptionForAdmins
     *
@@ -151,7 +179,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the descriptionForReviewers
-    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review.
+    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Supports $select.
     *
     * @return string|null The descriptionForReviewers
     */
@@ -166,7 +194,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the descriptionForReviewers
-    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review.
+    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Supports $select.
     *
     * @param string $val The descriptionForReviewers
     *
@@ -180,7 +208,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the displayName
-    * Name of access review series. Required on create.
+    * Name of the access review series. Supports $select and $orderBy. Required on create.
     *
     * @return string|null The displayName
     */
@@ -195,7 +223,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the displayName
-    * Name of access review series. Required on create.
+    * Name of the access review series. Supports $select and $orderBy. Required on create.
     *
     * @param string $val The displayName
     *
@@ -210,6 +238,7 @@ class AccessReviewScheduleDefinition extends Entity
 
      /** 
      * Gets the fallbackReviewers
+    * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select.
      *
      * @return array|null The fallbackReviewers
      */
@@ -224,6 +253,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /** 
     * Sets the fallbackReviewers
+    * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select.
     *
     * @param AccessReviewReviewerScope $val The fallbackReviewers
     *
@@ -237,7 +267,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the instanceEnumerationScope
-    * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
+    * This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
     *
     * @return AccessReviewScope|null The instanceEnumerationScope
     */
@@ -256,7 +286,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the instanceEnumerationScope
-    * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
+    * This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
     *
     * @param AccessReviewScope $val The instanceEnumerationScope
     *
@@ -270,7 +300,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Timestamp when review series was last modified.
+    * Timestamp when the access review series was last modified. Supports $select. Read-only.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -289,7 +319,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Timestamp when review series was last modified.
+    * Timestamp when the access review series was last modified. Supports $select. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -304,7 +334,7 @@ class AccessReviewScheduleDefinition extends Entity
 
      /** 
      * Gets the reviewers
-    * This collection of access review scopes is used to define who are the reviewers. See accessReviewReviewerScope. Required on create.
+    * This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
      *
      * @return array|null The reviewers
      */
@@ -319,7 +349,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /** 
     * Sets the reviewers
-    * This collection of access review scopes is used to define who are the reviewers. See accessReviewReviewerScope. Required on create.
+    * This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
     *
     * @param AccessReviewReviewerScope $val The reviewers
     *
@@ -333,7 +363,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the scope
-    * Defines scope of users reviewed. For supported scopes, see accessReviewScope. Required on create.
+    * Defines scope of resources to review. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
     *
     * @return AccessReviewScope|null The scope
     */
@@ -352,7 +382,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the scope
-    * Defines scope of users reviewed. For supported scopes, see accessReviewScope. Required on create.
+    * Defines scope of resources to review. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
     *
     * @param AccessReviewScope $val The scope
     *
@@ -366,7 +396,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the settings
-    * The settings for an access review series, see type definition below.
+    * The settings for an access review series, see type definition below. Supports $select. Required on create.
     *
     * @return AccessReviewScheduleSettings|null The settings
     */
@@ -385,7 +415,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the settings
-    * The settings for an access review series, see type definition below.
+    * The settings for an access review series, see type definition below. Supports $select. Required on create.
     *
     * @param AccessReviewScheduleSettings $val The settings
     *
@@ -399,7 +429,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the status
-    * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
+    * This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only.
     *
     * @return string|null The status
     */
@@ -414,7 +444,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the status
-    * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
+    * This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only.
     *
     * @param string $val The status
     *
@@ -429,7 +459,7 @@ class AccessReviewScheduleDefinition extends Entity
 
      /** 
      * Gets the instances
-    * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there will be an instance for each recurrence.
+    * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
      *
      * @return array|null The instances
      */
@@ -444,7 +474,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /** 
     * Sets the instances
-    * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there will be an instance for each recurrence.
+    * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
     *
     * @param AccessReviewInstance $val The instances
     *

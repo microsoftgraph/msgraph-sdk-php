@@ -26,9 +26,11 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.win32LobAppFileSystemRule");
     }
 
@@ -119,7 +121,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
 
     /**
     * Gets the operationType
-    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB.
+    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
     *
     * @return Win32LobAppFileSystemOperationType|null The operationType
     */
@@ -138,7 +140,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule
 
     /**
     * Sets the operationType
-    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB.
+    * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
     *
     * @param Win32LobAppFileSystemOperationType $val The value to assign to the operationType
     *

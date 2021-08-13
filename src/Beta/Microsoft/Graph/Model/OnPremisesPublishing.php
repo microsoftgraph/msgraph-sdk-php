@@ -197,6 +197,34 @@ class OnPremisesPublishing extends Entity
         return $this;
     }
     /**
+    * Gets the isBackendCertificateValidationEnabled
+    * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
+    *
+    * @return bool|null The isBackendCertificateValidationEnabled
+    */
+    public function getIsBackendCertificateValidationEnabled()
+    {
+        if (array_key_exists("isBackendCertificateValidationEnabled", $this->_propDict)) {
+            return $this->_propDict["isBackendCertificateValidationEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isBackendCertificateValidationEnabled
+    * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
+    *
+    * @param bool $val The value of the isBackendCertificateValidationEnabled
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setIsBackendCertificateValidationEnabled($val)
+    {
+        $this->_propDict["isBackendCertificateValidationEnabled"] = $val;
+        return $this;
+    }
+    /**
     * Gets the isHttpOnlyCookieEnabled
     * Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
     *

@@ -28,7 +28,7 @@ class PolicyRoot implements \JsonSerializable
     * The array of properties available
     * to the model
     *
-    * @var array(string => string)
+    * @var array $_propDict
     */
     protected $_propDict;
     
@@ -57,6 +57,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Gets the authenticationMethodsPolicy
+    * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
     *
     * @return AuthenticationMethodsPolicy|null The authenticationMethodsPolicy
     */
@@ -75,6 +76,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Sets the authenticationMethodsPolicy
+    * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
     *
     * @param AuthenticationMethodsPolicy $val The authenticationMethodsPolicy
     *
@@ -88,6 +90,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Gets the authenticationFlowsPolicy
+    * The policy configuration of the self-service sign-up experience of external users.
     *
     * @return AuthenticationFlowsPolicy|null The authenticationFlowsPolicy
     */
@@ -106,6 +109,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Sets the authenticationFlowsPolicy
+    * The policy configuration of the self-service sign-up experience of external users.
     *
     * @param AuthenticationFlowsPolicy $val The authenticationFlowsPolicy
     *
@@ -119,6 +123,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Gets the b2cAuthenticationMethodsPolicy
+    * The Azure AD B2C policies that define how end users register via local accounts.
     *
     * @return B2cAuthenticationMethodsPolicy|null The b2cAuthenticationMethodsPolicy
     */
@@ -137,6 +142,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Sets the b2cAuthenticationMethodsPolicy
+    * The Azure AD B2C policies that define how end users register via local accounts.
     *
     * @param B2cAuthenticationMethodsPolicy $val The b2cAuthenticationMethodsPolicy
     *
@@ -151,6 +157,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the activityBasedTimeoutPolicies
+    * The policy that controls the idle time out for web sessions for applications.
      *
      * @return array|null The activityBasedTimeoutPolicies
      */
@@ -165,6 +172,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the activityBasedTimeoutPolicies
+    * The policy that controls the idle time out for web sessions for applications.
     *
     * @param ActivityBasedTimeoutPolicy $val The activityBasedTimeoutPolicies
     *
@@ -178,7 +186,38 @@ class PolicyRoot implements \JsonSerializable
     
 
      /** 
+     * Gets the appManagementPolicies
+    * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+     *
+     * @return array|null The appManagementPolicies
+     */
+    public function getAppManagementPolicies()
+    {
+        if (array_key_exists("appManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["appManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the appManagementPolicies
+    * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+    *
+    * @param AppManagementPolicy $val The appManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setAppManagementPolicies($val)
+    {
+        $this->_propDict["appManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the authorizationPolicy
+    * The policy that controls Azure AD authorization settings.
      *
      * @return array|null The authorizationPolicy
      */
@@ -193,6 +232,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the authorizationPolicy
+    * The policy that controls Azure AD authorization settings.
     *
     * @param AuthorizationPolicy $val The authorizationPolicy
     *
@@ -207,6 +247,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the claimsMappingPolicies
+    * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      *
      * @return array|null The claimsMappingPolicies
      */
@@ -221,6 +262,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the claimsMappingPolicies
+    * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
     *
     * @param ClaimsMappingPolicy $val The claimsMappingPolicies
     *
@@ -232,9 +274,43 @@ class PolicyRoot implements \JsonSerializable
         return $this;
     }
     
+    /**
+    * Gets the defaultAppManagementPolicy
+    * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+    *
+    * @return TenantAppManagementPolicy|null The defaultAppManagementPolicy
+    */
+    public function getDefaultAppManagementPolicy()
+    {
+        if (array_key_exists("defaultAppManagementPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["defaultAppManagementPolicy"], "\Beta\Microsoft\Graph\Model\TenantAppManagementPolicy") || is_null($this->_propDict["defaultAppManagementPolicy"])) {
+                return $this->_propDict["defaultAppManagementPolicy"];
+            } else {
+                $this->_propDict["defaultAppManagementPolicy"] = new TenantAppManagementPolicy($this->_propDict["defaultAppManagementPolicy"]);
+                return $this->_propDict["defaultAppManagementPolicy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the defaultAppManagementPolicy
+    * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
+    *
+    * @param TenantAppManagementPolicy $val The defaultAppManagementPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setDefaultAppManagementPolicy($val)
+    {
+        $this->_propDict["defaultAppManagementPolicy"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the homeRealmDiscoveryPolicies
+    * The policy to control Azure AD authentication behavior for federated users.
      *
      * @return array|null The homeRealmDiscoveryPolicies
      */
@@ -249,6 +325,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the homeRealmDiscoveryPolicies
+    * The policy to control Azure AD authentication behavior for federated users.
     *
     * @param HomeRealmDiscoveryPolicy $val The homeRealmDiscoveryPolicies
     *
@@ -263,6 +340,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the permissionGrantPolicies
+    * The policy that specifies the conditions under which consent can be granted.
      *
      * @return array|null The permissionGrantPolicies
      */
@@ -277,6 +355,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the permissionGrantPolicies
+    * The policy that specifies the conditions under which consent can be granted.
     *
     * @param PermissionGrantPolicy $val The permissionGrantPolicies
     *
@@ -291,6 +370,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the tokenIssuancePolicies
+    * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
      *
      * @return array|null The tokenIssuancePolicies
      */
@@ -305,6 +385,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the tokenIssuancePolicies
+    * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
     *
     * @param TokenIssuancePolicy $val The tokenIssuancePolicies
     *
@@ -319,6 +400,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the tokenLifetimePolicies
+    * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
      *
      * @return array|null The tokenLifetimePolicies
      */
@@ -333,6 +415,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the tokenLifetimePolicies
+    * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
     *
     * @param TokenLifetimePolicy $val The tokenLifetimePolicies
     *
@@ -347,6 +430,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the featureRolloutPolicies
+    * The feature rollout policy associated with a directory object.
      *
      * @return array|null The featureRolloutPolicies
      */
@@ -361,6 +445,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the featureRolloutPolicies
+    * The feature rollout policy associated with a directory object.
     *
     * @param FeatureRolloutPolicy $val The featureRolloutPolicies
     *
@@ -374,6 +459,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Gets the accessReviewPolicy
+    * The policy that contains directory-level access review settings.
     *
     * @return AccessReviewPolicy|null The accessReviewPolicy
     */
@@ -392,6 +478,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Sets the accessReviewPolicy
+    * The policy that contains directory-level access review settings.
     *
     * @param AccessReviewPolicy $val The accessReviewPolicy
     *
@@ -405,6 +492,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Gets the adminConsentRequestPolicy
+    * The policy by which consent requests are created and managed for the entire tenant.
     *
     * @return AdminConsentRequestPolicy|null The adminConsentRequestPolicy
     */
@@ -423,6 +511,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Sets the adminConsentRequestPolicy
+    * The policy by which consent requests are created and managed for the entire tenant.
     *
     * @param AdminConsentRequestPolicy $val The adminConsentRequestPolicy
     *
@@ -468,6 +557,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the conditionalAccessPolicies
+    * The custom rules that define an access scenario.
      *
      * @return array|null The conditionalAccessPolicies
      */
@@ -482,6 +572,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the conditionalAccessPolicies
+    * The custom rules that define an access scenario.
     *
     * @param ConditionalAccessPolicy $val The conditionalAccessPolicies
     *
@@ -495,6 +586,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Gets the identitySecurityDefaultsEnforcementPolicy
+    * The policy that represents the security defaults that protect against common attacks.
     *
     * @return IdentitySecurityDefaultsEnforcementPolicy|null The identitySecurityDefaultsEnforcementPolicy
     */
@@ -513,6 +605,7 @@ class PolicyRoot implements \JsonSerializable
     
     /**
     * Sets the identitySecurityDefaultsEnforcementPolicy
+    * The policy that represents the security defaults that protect against common attacks.
     *
     * @param IdentitySecurityDefaultsEnforcementPolicy $val The identitySecurityDefaultsEnforcementPolicy
     *
@@ -526,7 +619,66 @@ class PolicyRoot implements \JsonSerializable
     
 
      /** 
+     * Gets the mobileAppManagementPolicies
+    * The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
+     *
+     * @return array|null The mobileAppManagementPolicies
+     */
+    public function getMobileAppManagementPolicies()
+    {
+        if (array_key_exists("mobileAppManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["mobileAppManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileAppManagementPolicies
+    * The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
+    *
+    * @param MobilityManagementPolicy $val The mobileAppManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setMobileAppManagementPolicies($val)
+    {
+        $this->_propDict["mobileAppManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the mobileDeviceManagementPolicies
+     *
+     * @return array|null The mobileDeviceManagementPolicies
+     */
+    public function getMobileDeviceManagementPolicies()
+    {
+        if (array_key_exists("mobileDeviceManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["mobileDeviceManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the mobileDeviceManagementPolicies
+    *
+    * @param MobilityManagementPolicy $val The mobileDeviceManagementPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setMobileDeviceManagementPolicies($val)
+    {
+        $this->_propDict["mobileDeviceManagementPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the roleManagementPolicies
+    * Represents the role management policies.
      *
      * @return array|null The roleManagementPolicies
      */
@@ -541,6 +693,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the roleManagementPolicies
+    * Represents the role management policies.
     *
     * @param UnifiedRoleManagementPolicy $val The roleManagementPolicies
     *
@@ -555,6 +708,7 @@ class PolicyRoot implements \JsonSerializable
 
      /** 
      * Gets the roleManagementPolicyAssignments
+    * Represents the role management policy assignments.
      *
      * @return array|null The roleManagementPolicyAssignments
      */
@@ -569,6 +723,7 @@ class PolicyRoot implements \JsonSerializable
     
     /** 
     * Sets the roleManagementPolicyAssignments
+    * Represents the role management policy assignments.
     *
     * @param UnifiedRoleManagementPolicyAssignment $val The roleManagementPolicyAssignments
     *
@@ -583,19 +738,22 @@ class PolicyRoot implements \JsonSerializable
     /**
     * Gets the ODataType
     *
-    * @return string The ODataType
+    * @return string|null The ODataType
     */
     public function getODataType()
     {
-        return $this->_propDict["@odata.type"];
+        if (array_key_exists('@odata.type', $this->_propDict)) {
+            return $this->_propDict["@odata.type"];
+        }
+        return null;
     }
     
     /**
     * Sets the ODataType
     *
-    * @param string The ODataType
+    * @param string $val The ODataType
     *
-    * @return Entity
+    * @return PolicyRoot
     */
     public function setODataType($val)
     {

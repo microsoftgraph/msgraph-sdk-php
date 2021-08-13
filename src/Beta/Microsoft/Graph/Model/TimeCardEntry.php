@@ -26,6 +26,7 @@ class TimeCardEntry extends Entity
 
     /**
     * Gets the breaks
+    * The list of breaks associated with the timeCard.
     *
     * @return TimeCardBreak|null The breaks
     */
@@ -44,6 +45,7 @@ class TimeCardEntry extends Entity
 
     /**
     * Sets the breaks
+    * The list of breaks associated with the timeCard.
     *
     * @param TimeCardBreak $val The value to assign to the breaks
     *
@@ -57,6 +59,7 @@ class TimeCardEntry extends Entity
 
     /**
     * Gets the clockInEvent
+    * The clock-in event of the timeCard.
     *
     * @return TimeCardEvent|null The clockInEvent
     */
@@ -75,6 +78,7 @@ class TimeCardEntry extends Entity
 
     /**
     * Sets the clockInEvent
+    * The clock-in event of the timeCard.
     *
     * @param TimeCardEvent $val The value to assign to the clockInEvent
     *
@@ -88,6 +92,7 @@ class TimeCardEntry extends Entity
 
     /**
     * Gets the clockOutEvent
+    * The clock-out event of the timeCard.
     *
     * @return TimeCardEvent|null The clockOutEvent
     */
@@ -106,6 +111,7 @@ class TimeCardEntry extends Entity
 
     /**
     * Sets the clockOutEvent
+    * The clock-out event of the timeCard.
     *
     * @param TimeCardEvent $val The value to assign to the clockOutEvent
     *

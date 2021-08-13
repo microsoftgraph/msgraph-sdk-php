@@ -26,16 +26,18 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
     * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    public function __construct()
+    public function __construct($propDict = array())
     {
+        parent::__construct($propDict);
         $this->setODataType("#microsoft.graph.windowsUpdateScheduledInstall");
     }
 
 
     /**
     * Gets the scheduledInstallDay
-    * Scheduled Install Day in week. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Scheduled Install Day in week. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
     *
     * @return WeeklySchedule|null The scheduledInstallDay
     */
@@ -54,7 +56,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
 
     /**
     * Sets the scheduledInstallDay
-    * Scheduled Install Day in week. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+    * Scheduled Install Day in week. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
     *
     * @param WeeklySchedule $val The value to assign to the scheduledInstallDay
     *

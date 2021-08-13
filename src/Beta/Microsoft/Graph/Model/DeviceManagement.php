@@ -1430,6 +1430,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the configurationPolicyTemplates
+    * List of all templates
+     *
+     * @return array|null The configurationPolicyTemplates
+     */
+    public function getConfigurationPolicyTemplates()
+    {
+        if (array_key_exists("configurationPolicyTemplates", $this->_propDict)) {
+           return $this->_propDict["configurationPolicyTemplates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the configurationPolicyTemplates
+    * List of all templates
+    *
+    * @param DeviceManagementConfigurationPolicyTemplate $val The configurationPolicyTemplates
+    *
+    * @return DeviceManagement
+    */
+    public function setConfigurationPolicyTemplates($val)
+    {
+        $this->_propDict["configurationPolicyTemplates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the configurationSettings
     * List of all ConfigurationSettings
      *
@@ -1515,6 +1545,36 @@ class DeviceManagement extends Entity
     public function setReusableSettings($val)
     {
         $this->_propDict["reusableSettings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the templateSettings
+    * List of all TemplateSettings
+     *
+     * @return array|null The templateSettings
+     */
+    public function getTemplateSettings()
+    {
+        if (array_key_exists("templateSettings", $this->_propDict)) {
+           return $this->_propDict["templateSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the templateSettings
+    * List of all TemplateSettings
+    *
+    * @param DeviceManagementConfigurationSettingTemplate $val The templateSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setTemplateSettings($val)
+    {
+        $this->_propDict["templateSettings"] = $val;
         return $this;
     }
     
@@ -1944,6 +2004,36 @@ class DeviceManagement extends Entity
     public function setApplePushNotificationCertificate($val)
     {
         $this->_propDict["applePushNotificationCertificate"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the cloudPCConnectivityIssues
+    * The list of CloudPC Connectivity Issue.
+     *
+     * @return array|null The cloudPCConnectivityIssues
+     */
+    public function getCloudPCConnectivityIssues()
+    {
+        if (array_key_exists("cloudPCConnectivityIssues", $this->_propDict)) {
+           return $this->_propDict["cloudPCConnectivityIssues"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the cloudPCConnectivityIssues
+    * The list of CloudPC Connectivity Issue.
+    *
+    * @param CloudPCConnectivityIssue $val The cloudPCConnectivityIssues
+    *
+    * @return DeviceManagement
+    */
+    public function setCloudPCConnectivityIssues($val)
+    {
+        $this->_propDict["cloudPCConnectivityIssues"] = $val;
         return $this;
     }
     
@@ -2397,6 +2487,66 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion($val)
     {
         $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    * User experience analytics appHealth Application Performance by App Version details
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    * User experience analytics appHealth Application Performance by App Version details
+    *
+    * @param UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails $val The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    * User experience analytics appHealth Application Performance by App Version Device Id
+     *
+     * @return array|null The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+     */
+    public function getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId()
+    {
+        if (array_key_exists("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    * User experience analytics appHealth Application Performance by App Version Device Id
+    *
+    * @param UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId $val The userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId($val)
+    {
+        $this->_propDict["userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"] = $val;
         return $this;
     }
     
@@ -3096,6 +3246,39 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsScoreHistory($val)
     {
         $this->_propDict["userExperienceAnalyticsScoreHistory"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    * User experience analytics work from anywhere hardware readiness metrics.
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric|null The userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    */
+    public function getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric()
+    {
+        if (array_key_exists("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric") || is_null($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"])) {
+                return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"] = new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric($this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"]);
+                return $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    * User experience analytics work from anywhere hardware readiness metrics.
+    *
+    * @param UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric $val The userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric($val)
+    {
+        $this->_propDict["userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"] = $val;
         return $this;
     }
     
@@ -4059,6 +4242,39 @@ class DeviceManagement extends Entity
     public function setRemoteAssistancePartners($val)
     {
         $this->_propDict["remoteAssistancePartners"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the remoteAssistanceSettings
+    * The remote assistance settings singleton
+    *
+    * @return RemoteAssistanceSettings|null The remoteAssistanceSettings
+    */
+    public function getRemoteAssistanceSettings()
+    {
+        if (array_key_exists("remoteAssistanceSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["remoteAssistanceSettings"], "\Beta\Microsoft\Graph\Model\RemoteAssistanceSettings") || is_null($this->_propDict["remoteAssistanceSettings"])) {
+                return $this->_propDict["remoteAssistanceSettings"];
+            } else {
+                $this->_propDict["remoteAssistanceSettings"] = new RemoteAssistanceSettings($this->_propDict["remoteAssistanceSettings"]);
+                return $this->_propDict["remoteAssistanceSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the remoteAssistanceSettings
+    * The remote assistance settings singleton
+    *
+    * @param RemoteAssistanceSettings $val The remoteAssistanceSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setRemoteAssistanceSettings($val)
+    {
+        $this->_propDict["remoteAssistanceSettings"] = $val;
         return $this;
     }
     

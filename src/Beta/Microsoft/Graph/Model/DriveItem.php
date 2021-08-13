@@ -100,7 +100,7 @@ class DriveItem extends BaseItem
             if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
                 return $this->_propDict["content"];
             } else {
-                $this->_propDict["content"] = \GuzzleHttp\Psr7\stream_for($this->_propDict["content"]);
+                $this->_propDict["content"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["content"]);
                 return $this->_propDict["content"];
             }
         }
@@ -350,6 +350,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the media
+    * Information about the media (audio or video) item. Read-write. Only on OneDrive for Business and SharePoint.
     *
     * @return Media|null The media
     */
@@ -368,6 +369,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the media
+    * Information about the media (audio or video) item. Read-write. Only on OneDrive for Business and SharePoint.
     *
     * @param Media $val The media
     *
@@ -707,6 +709,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the source
+    * Information about the drive item source. Read-only. Only on OneDrive for Business and SharePoint.
     *
     * @return DriveItemSource|null The source
     */
@@ -725,6 +728,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the source
+    * Information about the drive item source. Read-only. Only on OneDrive for Business and SharePoint.
     *
     * @param DriveItemSource $val The source
     *

@@ -1,10 +1,9 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-# This action tags the dev branch with the latest SDK version set in GraphConstants during the PR
-# from dev to main before release
+# Adds a tag to main after a PR is merged succesfully.
 
-name: "tag dev branch"
+name: "tag release"
 
 on:
   push:
@@ -20,21 +19,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Get SDK version and set OS env variable
+
+    - name: Get SDK version and set environment variable
       run: |
-        export SDK_VERSION=$(grep 'SDK_VERSION' src/Core/GraphConstants.php |  grep -oE '[0-9]+\.[0-9]+\.([0-9]+|[0-9]+-[a-z]+)')
-        echo 'OS var SDK_VERSION is:'$SDK_VERSION
+        SDK_VERSION=$(grep 'SDK_VERSION' src/Core/GraphConstants.php |  grep -oE '[0-9]+\.[0-9]+\.([0-9]+|[0-9]+-[a-z]+)')
+        echo "SDK_VERSION=$SDK_VERSION" >> $GITHUB_ENV
 
-    - name: Create tag if not exists
-      run: | 
+    - name: Create and publish tag
+      run: |
+        echo "SDK_VERSION is:"$SDK_VERSION
         git tag $SDK_VERSION && git push origin $SDK_VERSION
-        
-
-
-
-
-
-
-        
-

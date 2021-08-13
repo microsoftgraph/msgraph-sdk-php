@@ -26,7 +26,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow
 {
     /**
     * Gets the apiConnectorConfiguration
-    * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+    * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
     *
     * @return UserFlowApiConnectorConfiguration|null The apiConnectorConfiguration
     */
@@ -45,7 +45,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     
     /**
     * Sets the apiConnectorConfiguration
-    * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+    * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
     *
     * @param UserFlowApiConnectorConfiguration $val The apiConnectorConfiguration
     *
@@ -90,7 +90,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow
 
      /** 
      * Gets the languages
-    * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+    * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
      *
      * @return array|null The languages
      */
@@ -105,7 +105,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     
     /** 
     * Sets the languages
-    * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+    * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
     *
     * @param UserFlowLanguageConfiguration $val The languages
     *
@@ -144,6 +144,34 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     public function setUserAttributeAssignments($val)
     {
         $this->_propDict["userAttributeAssignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userFlowIdentityProviders
+     *
+     * @return array|null The userFlowIdentityProviders
+     */
+    public function getUserFlowIdentityProviders()
+    {
+        if (array_key_exists("userFlowIdentityProviders", $this->_propDict)) {
+           return $this->_propDict["userFlowIdentityProviders"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userFlowIdentityProviders
+    *
+    * @param IdentityProviderBase $val The userFlowIdentityProviders
+    *
+    * @return B2xIdentityUserFlow
+    */
+    public function setUserFlowIdentityProviders($val)
+    {
+        $this->_propDict["userFlowIdentityProviders"] = $val;
         return $this;
     }
     

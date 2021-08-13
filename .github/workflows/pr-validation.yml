@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-name: "validate pull request"
+name: "Validate Pull Request"
 
 on:
   push:
@@ -20,12 +20,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.3.4
-    - name: composer validate
+    - name: Validate composer file
       run: |
         composer validate
-    - name: composer install
+    - name: Install dependencies
       run: |
         composer install
     - name: run tests
       run : |
         vendor/bin/phpunit --exclude-group functional
+  run-static-analysis:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.3.4
+    - name: Validate composer file
+      run: |
+        composer validate
+    - name: Install dependencies
+      run: |
+        composer install
+    - name: Run static analysis
+      run: |
+          vendor/bin/phpstan analyse --memory-limit=1500M --error-format=github

@@ -331,6 +331,35 @@ class WindowsAutopilotDeploymentProfile extends Entity
     }
     
     /**
+    * Gets the managementServiceAppId
+    * AzureAD management app ID used during client device-based enrollment discovery
+    *
+    * @return string|null The managementServiceAppId
+    */
+    public function getManagementServiceAppId()
+    {
+        if (array_key_exists("managementServiceAppId", $this->_propDict)) {
+            return $this->_propDict["managementServiceAppId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managementServiceAppId
+    * AzureAD management app ID used during client device-based enrollment discovery
+    *
+    * @param string $val The managementServiceAppId
+    *
+    * @return WindowsAutopilotDeploymentProfile
+    */
+    public function setManagementServiceAppId($val)
+    {
+        $this->_propDict["managementServiceAppId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the outOfBoxExperienceSettings
     * Out of box experience setting
     *

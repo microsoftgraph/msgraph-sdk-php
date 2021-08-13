@@ -257,6 +257,35 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     }
     
     /**
+    * Gets the manufacturer
+    * The user experience analytics manufacturer.
+    *
+    * @return string|null The manufacturer
+    */
+    public function getManufacturer()
+    {
+        if (array_key_exists("manufacturer", $this->_propDict)) {
+            return $this->_propDict["manufacturer"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the manufacturer
+    * The user experience analytics manufacturer.
+    *
+    * @param string $val The manufacturer
+    *
+    * @return UserExperienceAnalyticsRemoteConnection
+    */
+    public function setManufacturer($val)
+    {
+        $this->_propDict["manufacturer"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the model
     * The user experience analytics device model.
     *
@@ -311,6 +340,35 @@ class UserExperienceAnalyticsRemoteConnection extends Entity
     public function setRemoteSignInTime($val)
     {
         $this->_propDict["remoteSignInTime"] = floatval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the userPrincipalName
+    * The user experience analytics userPrincipalName.
+    *
+    * @return string|null The userPrincipalName
+    */
+    public function getUserPrincipalName()
+    {
+        if (array_key_exists("userPrincipalName", $this->_propDict)) {
+            return $this->_propDict["userPrincipalName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userPrincipalName
+    * The user experience analytics userPrincipalName.
+    *
+    * @param string $val The userPrincipalName
+    *
+    * @return UserExperienceAnalyticsRemoteConnection
+    */
+    public function setUserPrincipalName($val)
+    {
+        $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
     

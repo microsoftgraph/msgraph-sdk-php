@@ -211,7 +211,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Gets the requestState
-    * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, Submitted or Scheduled. Read-only.
+    * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted or Scheduled. Read-only.
     *
     * @return string|null The requestState
     */
@@ -226,7 +226,7 @@ class AccessPackageAssignmentRequest extends Entity
     
     /**
     * Sets the requestState
-    * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, Submitted or Scheduled. Read-only.
+    * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted or Scheduled. Read-only.
     *
     * @param string $val The requestState
     *

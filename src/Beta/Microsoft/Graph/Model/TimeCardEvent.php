@@ -25,6 +25,7 @@ class TimeCardEvent extends Entity
 {
     /**
     * Gets the atApprovedLocation
+    * Indicates whether the entry was recorded at the approved location.
     *
     * @return bool|null The atApprovedLocation
     */
@@ -39,6 +40,7 @@ class TimeCardEvent extends Entity
 
     /**
     * Sets the atApprovedLocation
+    * Indicates whether the entry was recorded at the approved location.
     *
     * @param bool $val The value of the atApprovedLocation
     *
@@ -52,6 +54,7 @@ class TimeCardEvent extends Entity
 
     /**
     * Gets the dateTime
+    * The time the entry is recorded.
     *
     * @return \DateTime|null The dateTime
     */
@@ -70,6 +73,7 @@ class TimeCardEvent extends Entity
 
     /**
     * Sets the dateTime
+    * The time the entry is recorded.
     *
     * @param \DateTime $val The value to assign to the dateTime
     *
@@ -83,6 +87,7 @@ class TimeCardEvent extends Entity
 
     /**
     * Gets the notes
+    * Notes about the timeCardEvent.
     *
     * @return ItemBody|null The notes
     */
@@ -101,6 +106,7 @@ class TimeCardEvent extends Entity
 
     /**
     * Sets the notes
+    * Notes about the timeCardEvent.
     *
     * @param ItemBody $val The value to assign to the notes
     *

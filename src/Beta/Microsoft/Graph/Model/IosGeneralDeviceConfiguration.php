@@ -727,6 +727,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the autoUnlockBlocked
+    * Blocks users from unlocking their device with Apple Watch. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @return bool|null The autoUnlockBlocked
+    */
+    public function getAutoUnlockBlocked()
+    {
+        if (array_key_exists("autoUnlockBlocked", $this->_propDict)) {
+            return $this->_propDict["autoUnlockBlocked"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the autoUnlockBlocked
+    * Blocks users from unlocking their device with Apple Watch. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @param bool $val The autoUnlockBlocked
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setAutoUnlockBlocked($val)
+    {
+        $this->_propDict["autoUnlockBlocked"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the blockSystemAppRemoval
     * Indicates whether or not the removal of system apps from the device is blocked on a supervised device (iOS 11.0 and later).
     *
@@ -4054,6 +4083,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the onDeviceOnlyDictationForced
+    * Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @return bool|null The onDeviceOnlyDictationForced
+    */
+    public function getOnDeviceOnlyDictationForced()
+    {
+        if (array_key_exists("onDeviceOnlyDictationForced", $this->_propDict)) {
+            return $this->_propDict["onDeviceOnlyDictationForced"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the onDeviceOnlyDictationForced
+    * Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @param bool $val The onDeviceOnlyDictationForced
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setOnDeviceOnlyDictationForced($val)
+    {
+        $this->_propDict["onDeviceOnlyDictationForced"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the passcodeBlockFingerprintModification
     * Block modification of registered Touch ID fingerprints when in supervised mode.
     *
@@ -5135,6 +5193,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the unpairedExternalBootToRecoveryAllowed
+    * Allow users to boot devices into recovery mode with unpaired devices. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @return bool|null The unpairedExternalBootToRecoveryAllowed
+    */
+    public function getUnpairedExternalBootToRecoveryAllowed()
+    {
+        if (array_key_exists("unpairedExternalBootToRecoveryAllowed", $this->_propDict)) {
+            return $this->_propDict["unpairedExternalBootToRecoveryAllowed"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the unpairedExternalBootToRecoveryAllowed
+    * Allow users to boot devices into recovery mode with unpaired devices. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @param bool $val The unpairedExternalBootToRecoveryAllowed
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setUnpairedExternalBootToRecoveryAllowed($val)
+    {
+        $this->_propDict["unpairedExternalBootToRecoveryAllowed"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the usbRestrictedModeBlocked
     * Indicates if connecting to USB accessories while the device is locked is allowed (iOS 11.4.1 and later).
     *
@@ -5252,7 +5339,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the wiFiConnectOnlyToConfiguredNetworks
-    * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode.
+    * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
     *
     * @return bool|null The wiFiConnectOnlyToConfiguredNetworks
     */
@@ -5267,7 +5354,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the wiFiConnectOnlyToConfiguredNetworks
-    * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode.
+    * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
     *
     * @param bool $val The wiFiConnectOnlyToConfiguredNetworks
     *
@@ -5276,6 +5363,35 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
     public function setWiFiConnectOnlyToConfiguredNetworks($val)
     {
         $this->_propDict["wiFiConnectOnlyToConfiguredNetworks"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the wiFiConnectToAllowedNetworksOnlyForced
+    * Require devices to use Wi-Fi networks set up via configuration profiles. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @return bool|null The wiFiConnectToAllowedNetworksOnlyForced
+    */
+    public function getWiFiConnectToAllowedNetworksOnlyForced()
+    {
+        if (array_key_exists("wiFiConnectToAllowedNetworksOnlyForced", $this->_propDict)) {
+            return $this->_propDict["wiFiConnectToAllowedNetworksOnlyForced"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the wiFiConnectToAllowedNetworksOnlyForced
+    * Require devices to use Wi-Fi networks set up via configuration profiles. Available for devices running iOS and iPadOS versions 14.5 and later.
+    *
+    * @param bool $val The wiFiConnectToAllowedNetworksOnlyForced
+    *
+    * @return IosGeneralDeviceConfiguration
+    */
+    public function setWiFiConnectToAllowedNetworksOnlyForced($val)
+    {
+        $this->_propDict["wiFiConnectToAllowedNetworksOnlyForced"] = boolval($val);
         return $this;
     }
     
