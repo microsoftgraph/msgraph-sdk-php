@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: docker://phpdoc/phpdoc:3.0
         with:
           target: docs/
@@ -31,6 +33,5 @@ jobs:
 
       - name: Commit changes to docs/ folder (if any)
         run: |
-          git checkout $GITHUB_HEAD_REF
           git add .
           if git commit -vm "Update docs/"; then git push -v origin $GITHUB_HEAD_REF; fi
