@@ -29,12 +29,8 @@ jobs:
           git config --global user.email "GraphTooling@service.microsoft.com"
           git config --global user.name "Microsoft Graph DevX Tooling"
 
-      - name: Check Git status
-        run: |
-          git status
-          git add .
-
       - name: Commit changes to docs/ folder (if any)
         run: |
+          git show ref
           git add .
-          if git commit -m "Update docs/"; then git push -v origin $GITHUB_REF; fi
+          if git commit -vm "Update docs/"; then git push -v origin $GITHUB_HEAD_REF; fi
