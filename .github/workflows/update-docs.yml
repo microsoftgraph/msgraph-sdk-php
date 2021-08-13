@@ -1,0 +1,34 @@
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
+name: "Update Docs"
+
+on:
+  pull_request:
+    branches: dev
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  run-php-documentor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: docker://phpdoc/phpdoc:3.0
+        with:
+          target: docs/
+          config: ./phpdoc.dist.xml
+
+      - name: Run PHPDocumentor
+        run: docker run --rm -v $(pwd):/data phpdoc/phpdoc
+
+      - name: Config Git user
+        run: |
+          git config --global user.email "GraphTooling@service.microsoft.com"
+          git config --global user.name "Microsoft Graph DevX Tooling"
+
+      - name: Commit changes to docs/ folder (if any)
+        run: |
+          if git commit -am "Update docs/ folder"; then git push origin $GITHUB_REF; fi
