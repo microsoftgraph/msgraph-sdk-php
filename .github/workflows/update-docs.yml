@@ -31,6 +31,5 @@ jobs:
 
       - name: Commit changes to docs/ folder (if any)
         run: |
-          git show ref
           git add .
           if git commit -vm "Update docs/"; then git push -v origin $GITHUB_HEAD_REF; fi
