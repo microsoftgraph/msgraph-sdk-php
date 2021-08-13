@@ -24,9 +24,6 @@ jobs:
       - name: Run PHPDocumentor container
         run: docker run --name phpDoc --rm -v $(pwd):/data phpdoc/phpdoc:3.0 run
 
-      # - name: Run PHPDocumentor tool
-      #   run: docker exec -it phpDoc phpdoc
-
       - name: Config Git user
         run: |
           git config --global user.email "GraphTooling@service.microsoft.com"
@@ -39,4 +36,5 @@ jobs:
 
       - name: Commit changes to docs/ folder (if any)
         run: |
-          if git commit -am "Update docs/ folder"; then git push origin $GITHUB_REF; fi
+          git add .
+          if git commit -m "Update docs/"; then git push -v origin $GITHUB_REF; fi

@@ -5,3 +5,4 @@ composer.lock
 .idea/
 tests/Functional/TestConstants.php
 .phpunit.result.cache
+.phpdoc/
