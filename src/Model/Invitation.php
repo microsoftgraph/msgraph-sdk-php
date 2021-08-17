@@ -204,7 +204,7 @@ class Invitation extends Entity
     
     /**
     * Gets the sendInvitationMessage
-    * Indicates whether an email should be sent to the user being invited or not. The default is false.
+    * Indicates whether an email should be sent to the user being invited. The default is false.
     *
     * @return bool|null The sendInvitationMessage
     */
@@ -219,7 +219,7 @@ class Invitation extends Entity
     
     /**
     * Sets the sendInvitationMessage
-    * Indicates whether an email should be sent to the user being invited or not. The default is false.
+    * Indicates whether an email should be sent to the user being invited. The default is false.
     *
     * @param bool $val The sendInvitationMessage
     *
