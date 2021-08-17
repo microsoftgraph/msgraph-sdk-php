@@ -26,7 +26,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
 {
     /**
     * Gets the appGroupType
-    * Public Apps selection: group or individual
+    * Public Apps selection: group or individual. Possible values are: selectedPublicApps, allCoreMicrosoftApps, allMicrosoftApps, allApps.
     *
     * @return TargetedManagedAppGroupType|null The appGroupType
     */
@@ -45,7 +45,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
     
     /**
     * Sets the appGroupType
-    * Public Apps selection: group or individual
+    * Public Apps selection: group or individual. Possible values are: selectedPublicApps, allCoreMicrosoftApps, allMicrosoftApps, allApps.
     *
     * @param TargetedManagedAppGroupType $val The appGroupType
     *

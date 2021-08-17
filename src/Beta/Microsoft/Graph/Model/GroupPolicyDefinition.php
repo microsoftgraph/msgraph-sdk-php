@@ -174,6 +174,35 @@ class GroupPolicyDefinition extends Entity
     }
     
     /**
+    * Gets the hasRelatedDefinitions
+    * Signifies whether or not there are related definitions to this definition
+    *
+    * @return bool|null The hasRelatedDefinitions
+    */
+    public function getHasRelatedDefinitions()
+    {
+        if (array_key_exists("hasRelatedDefinitions", $this->_propDict)) {
+            return $this->_propDict["hasRelatedDefinitions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the hasRelatedDefinitions
+    * Signifies whether or not there are related definitions to this definition
+    *
+    * @param bool $val The hasRelatedDefinitions
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setHasRelatedDefinitions($val)
+    {
+        $this->_propDict["hasRelatedDefinitions"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
     *
@@ -203,6 +232,64 @@ class GroupPolicyDefinition extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minDeviceCspVersion
+    * Minimum required CSP version for device configuration in this definition
+    *
+    * @return string|null The minDeviceCspVersion
+    */
+    public function getMinDeviceCspVersion()
+    {
+        if (array_key_exists("minDeviceCspVersion", $this->_propDict)) {
+            return $this->_propDict["minDeviceCspVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minDeviceCspVersion
+    * Minimum required CSP version for device configuration in this definition
+    *
+    * @param string $val The minDeviceCspVersion
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setMinDeviceCspVersion($val)
+    {
+        $this->_propDict["minDeviceCspVersion"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the minUserCspVersion
+    * Minimum required CSP version for user configuration in this definition
+    *
+    * @return string|null The minUserCspVersion
+    */
+    public function getMinUserCspVersion()
+    {
+        if (array_key_exists("minUserCspVersion", $this->_propDict)) {
+            return $this->_propDict["minUserCspVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the minUserCspVersion
+    * Minimum required CSP version for user configuration in this definition
+    *
+    * @param string $val The minUserCspVersion
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setMinUserCspVersion($val)
+    {
+        $this->_propDict["minUserCspVersion"] = $val;
         return $this;
     }
     
@@ -265,6 +352,35 @@ class GroupPolicyDefinition extends Entity
     public function setSupportedOn($val)
     {
         $this->_propDict["supportedOn"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the version
+    * Setting definition version
+    *
+    * @return string|null The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the version
+    * Setting definition version
+    *
+    * @param string $val The version
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = $val;
         return $this;
     }
     
@@ -334,6 +450,39 @@ class GroupPolicyDefinition extends Entity
         return $this;
     }
     
+    /**
+    * Gets the nextVersionDefinition
+    * Definition of the next version of this definition
+    *
+    * @return GroupPolicyDefinition|null The nextVersionDefinition
+    */
+    public function getNextVersionDefinition()
+    {
+        if (array_key_exists("nextVersionDefinition", $this->_propDict)) {
+            if (is_a($this->_propDict["nextVersionDefinition"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinition") || is_null($this->_propDict["nextVersionDefinition"])) {
+                return $this->_propDict["nextVersionDefinition"];
+            } else {
+                $this->_propDict["nextVersionDefinition"] = new GroupPolicyDefinition($this->_propDict["nextVersionDefinition"]);
+                return $this->_propDict["nextVersionDefinition"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the nextVersionDefinition
+    * Definition of the next version of this definition
+    *
+    * @param GroupPolicyDefinition $val The nextVersionDefinition
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setNextVersionDefinition($val)
+    {
+        $this->_propDict["nextVersionDefinition"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the presentations
@@ -361,6 +510,39 @@ class GroupPolicyDefinition extends Entity
     public function setPresentations($val)
     {
         $this->_propDict["presentations"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the previousVersionDefinition
+    * Definition of the previous version of this definition
+    *
+    * @return GroupPolicyDefinition|null The previousVersionDefinition
+    */
+    public function getPreviousVersionDefinition()
+    {
+        if (array_key_exists("previousVersionDefinition", $this->_propDict)) {
+            if (is_a($this->_propDict["previousVersionDefinition"], "\Beta\Microsoft\Graph\Model\GroupPolicyDefinition") || is_null($this->_propDict["previousVersionDefinition"])) {
+                return $this->_propDict["previousVersionDefinition"];
+            } else {
+                $this->_propDict["previousVersionDefinition"] = new GroupPolicyDefinition($this->_propDict["previousVersionDefinition"]);
+                return $this->_propDict["previousVersionDefinition"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the previousVersionDefinition
+    * Definition of the previous version of this definition
+    *
+    * @param GroupPolicyDefinition $val The previousVersionDefinition
+    *
+    * @return GroupPolicyDefinition
+    */
+    public function setPreviousVersionDefinition($val)
+    {
+        $this->_propDict["previousVersionDefinition"] = $val;
         return $this;
     }
     

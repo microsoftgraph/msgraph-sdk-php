@@ -59,7 +59,7 @@ class EducationAssignmentDefaults extends Entity
     
     /**
     * Gets the addToCalendarAction
-    * Optional field to control the asfor adding assignments to students' and teachers' calendars when the assignment is published. Possible values are: studentsAndPublisher, studentsAndTeamOwners, none. Default value is none.
+    * Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. Possible values are: studentsAndPublisher and studentsAndTeamOwners.
     *
     * @return EducationAddToCalendarOptions|null The addToCalendarAction
     */
@@ -78,7 +78,7 @@ class EducationAssignmentDefaults extends Entity
     
     /**
     * Sets the addToCalendarAction
-    * Optional field to control the asfor adding assignments to students' and teachers' calendars when the assignment is published. Possible values are: studentsAndPublisher, studentsAndTeamOwners, none. Default value is none.
+    * Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. Possible values are: studentsAndPublisher and studentsAndTeamOwners.
     *
     * @param EducationAddToCalendarOptions $val The addToCalendarAction
     *
