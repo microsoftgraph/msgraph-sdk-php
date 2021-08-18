@@ -58,6 +58,33 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     }
     
     /**
+    * Gets the connectorId
+    *
+    * @return string|null The connectorId
+    */
+    public function getConnectorId()
+    {
+        if (array_key_exists("connectorId", $this->_propDict)) {
+            return $this->_propDict["connectorId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the connectorId
+    *
+    * @param string $val The connectorId
+    *
+    * @return ExternalConnection
+    */
+    public function setConnectorId($val)
+    {
+        $this->_propDict["connectorId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     * Description of the connection displayed in the Microsoft 365 admin center. Optional.
     *
@@ -112,6 +139,37 @@ class ExternalConnection extends \Beta\Microsoft\Graph\Model\Entity
     public function setName($val)
     {
         $this->_propDict["name"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the searchSettings
+    *
+    * @return SearchSettings|null The searchSettings
+    */
+    public function getSearchSettings()
+    {
+        if (array_key_exists("searchSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["searchSettings"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\SearchSettings") || is_null($this->_propDict["searchSettings"])) {
+                return $this->_propDict["searchSettings"];
+            } else {
+                $this->_propDict["searchSettings"] = new SearchSettings($this->_propDict["searchSettings"]);
+                return $this->_propDict["searchSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the searchSettings
+    *
+    * @param SearchSettings $val The searchSettings
+    *
+    * @return ExternalConnection
+    */
+    public function setSearchSettings($val)
+    {
+        $this->_propDict["searchSettings"] = $val;
         return $this;
     }
     

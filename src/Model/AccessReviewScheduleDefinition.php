@@ -305,7 +305,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the scope
-    * Defines scope of resources to review. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
+    * Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
     *
     * @return AccessReviewScope|null The scope
     */
@@ -324,7 +324,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the scope
-    * Defines scope of resources to review. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
+    * Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
     *
     * @param AccessReviewScope $val The scope
     *

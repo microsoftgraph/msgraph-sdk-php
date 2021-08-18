@@ -26,7 +26,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
 {
     /**
     * Gets the authenticationMode
-    * Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.
+    * Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
     *
     * @return MicrosoftAuthenticatorAuthenticationMode|null The authenticationMode
     */
@@ -45,7 +45,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     
     /**
     * Sets the authenticationMode
-    * Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.
+    * Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
     *
     * @param MicrosoftAuthenticatorAuthenticationMode $val The authenticationMode
     *
@@ -59,7 +59,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     
     /**
     * Gets the featureSettings
-    * Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).
+    * Determines what additional settings should be applied to Microsoft Authenticator. The possible values are: requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications). Nullable.
     *
     * @return AuthenticatorAppFeatureSettings|null The featureSettings
     */
@@ -78,7 +78,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     
     /**
     * Sets the featureSettings
-    * Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).
+    * Determines what additional settings should be applied to Microsoft Authenticator. The possible values are: requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications). Nullable.
     *
     * @param AuthenticatorAppFeatureSettings $val The featureSettings
     *

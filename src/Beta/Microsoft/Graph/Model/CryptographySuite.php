@@ -59,7 +59,7 @@ class CryptographySuite extends Entity
 
     /**
     * Gets the cipherTransformConstants
-    * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
     *
     * @return VpnEncryptionAlgorithmType|null The cipherTransformConstants
     */
@@ -78,7 +78,7 @@ class CryptographySuite extends Entity
 
     /**
     * Sets the cipherTransformConstants
-    * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
     *
     * @param VpnEncryptionAlgorithmType $val The value to assign to the cipherTransformConstants
     *
@@ -125,7 +125,7 @@ class CryptographySuite extends Entity
 
     /**
     * Gets the encryptionMethod
-    * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
     *
     * @return VpnEncryptionAlgorithmType|null The encryptionMethod
     */
@@ -144,7 +144,7 @@ class CryptographySuite extends Entity
 
     /**
     * Sets the encryptionMethod
-    * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
     *
     * @param VpnEncryptionAlgorithmType $val The value to assign to the encryptionMethod
     *
