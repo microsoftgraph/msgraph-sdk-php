@@ -460,6 +460,67 @@ class Site extends BaseItem
     }
     
     /**
+    * Gets the termStore
+    * The termStore under this site.
+    *
+    * @return \Microsoft\Graph\TermStore\Model\Store|null The termStore
+    */
+    public function getTermStore()
+    {
+        if (array_key_exists("termStore", $this->_propDict)) {
+            if (is_a($this->_propDict["termStore"], "\Microsoft\Graph\TermStore\Model\Store") || is_null($this->_propDict["termStore"])) {
+                return $this->_propDict["termStore"];
+            } else {
+                $this->_propDict["termStore"] = new \Microsoft\Graph\TermStore\Model\Store($this->_propDict["termStore"]);
+                return $this->_propDict["termStore"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the termStore
+    * The termStore under this site.
+    *
+    * @param \Microsoft\Graph\TermStore\Model\Store $val The termStore
+    *
+    * @return Site
+    */
+    public function setTermStore($val)
+    {
+        $this->_propDict["termStore"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the termStores
+     *
+     * @return array|null The termStores
+     */
+    public function getTermStores()
+    {
+        if (array_key_exists("termStores", $this->_propDict)) {
+           return $this->_propDict["termStores"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the termStores
+    *
+    * @param \Microsoft\Graph\TermStore\Model\Store $val The termStores
+    *
+    * @return Site
+    */
+    public function setTermStores($val)
+    {
+        $this->_propDict["termStores"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onenote
     * Calls the OneNote service for notebook related operations.
     *
