@@ -26,7 +26,7 @@ class RemoteAssistanceSettings extends Entity
 {
     /**
     * Gets the allowSessionsToUnenrolledDevices
-    *  Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
+    * Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
     *
     * @return bool|null The allowSessionsToUnenrolledDevices
     */
@@ -41,7 +41,7 @@ class RemoteAssistanceSettings extends Entity
     
     /**
     * Sets the allowSessionsToUnenrolledDevices
-    *  Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
+    * Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
     *
     * @param bool $val The allowSessionsToUnenrolledDevices
     *
@@ -55,7 +55,7 @@ class RemoteAssistanceSettings extends Entity
     
     /**
     * Gets the remoteAssistanceState
-    * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default.
+    * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default. Possible values are: notConfigured, disabled, enabled.
     *
     * @return RemoteAssistanceState|null The remoteAssistanceState
     */
@@ -74,7 +74,7 @@ class RemoteAssistanceSettings extends Entity
     
     /**
     * Sets the remoteAssistanceState
-    * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default.
+    * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default. Possible values are: notConfigured, disabled, enabled.
     *
     * @param RemoteAssistanceState $val The remoteAssistanceState
     *

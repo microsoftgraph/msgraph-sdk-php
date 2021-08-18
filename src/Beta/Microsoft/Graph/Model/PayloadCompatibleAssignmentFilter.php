@@ -26,7 +26,7 @@ class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAssignment
 {
     /**
     * Gets the payloadType
-    * PayloadType of the Assignment Filter.
+    * PayloadType of the Assignment Filter. Possible values are: notSet, enrollmentRestrictions.
     *
     * @return AssignmentFilterPayloadType|null The payloadType
     */
@@ -45,7 +45,7 @@ class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAssignment
     
     /**
     * Sets the payloadType
-    * PayloadType of the Assignment Filter.
+    * PayloadType of the Assignment Filter. Possible values are: notSet, enrollmentRestrictions.
     *
     * @param AssignmentFilterPayloadType $val The payloadType
     *

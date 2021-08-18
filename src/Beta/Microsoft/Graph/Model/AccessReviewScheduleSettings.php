@@ -227,6 +227,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Gets the recommendationLookBackDuration
+    * Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. Supported durations are 30, 60, or 90 days.
     *
     * @return Duration|null The recommendationLookBackDuration
     */
@@ -245,6 +246,7 @@ class AccessReviewScheduleSettings extends Entity
 
     /**
     * Sets the recommendationLookBackDuration
+    * Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. Supported durations are 30, 60, or 90 days.
     *
     * @param Duration $val The value to assign to the recommendationLookBackDuration
     *

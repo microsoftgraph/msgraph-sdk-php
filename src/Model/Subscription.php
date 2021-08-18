@@ -377,6 +377,33 @@ class Subscription extends Entity
     }
     
     /**
+    * Gets the notificationUrlAppId
+    *
+    * @return string|null The notificationUrlAppId
+    */
+    public function getNotificationUrlAppId()
+    {
+        if (array_key_exists("notificationUrlAppId", $this->_propDict)) {
+            return $this->_propDict["notificationUrlAppId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notificationUrlAppId
+    *
+    * @param string $val The notificationUrlAppId
+    *
+    * @return Subscription
+    */
+    public function setNotificationUrlAppId($val)
+    {
+        $this->_propDict["notificationUrlAppId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the resource
     * Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource. Required.
     *

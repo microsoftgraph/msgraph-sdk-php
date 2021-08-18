@@ -82,7 +82,7 @@ class IosVpnSecurityAssociationParameters extends Entity
 
     /**
     * Gets the securityEncryptionAlgorithm
-    * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
     *
     * @return VpnEncryptionAlgorithmType|null The securityEncryptionAlgorithm
     */
@@ -101,7 +101,7 @@ class IosVpnSecurityAssociationParameters extends Entity
 
     /**
     * Sets the securityEncryptionAlgorithm
-    * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+    * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
     *
     * @param VpnEncryptionAlgorithmType $val The value to assign to the securityEncryptionAlgorithm
     *
