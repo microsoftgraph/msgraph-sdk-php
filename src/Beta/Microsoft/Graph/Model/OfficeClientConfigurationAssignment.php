@@ -26,7 +26,6 @@ class OfficeClientConfigurationAssignment extends Entity
 {
     /**
     * Gets the target
-    * The target assignment defined by the admin.
     *
     * @return OfficeConfigurationAssignmentTarget|null The target
     */
@@ -45,7 +44,6 @@ class OfficeClientConfigurationAssignment extends Entity
     
     /**
     * Sets the target
-    * The target assignment defined by the admin.
     *
     * @param OfficeConfigurationAssignmentTarget $val The target
     *

@@ -26,6 +26,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Gets the existingAnswers
+    * Answers that have already been provided.
     *
     * @return AccessPackageAnswer|null The existingAnswers
     */
@@ -44,6 +45,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the existingAnswers
+    * Answers that have already been provided.
     *
     * @param AccessPackageAnswer $val The value to assign to the existingAnswers
     *
@@ -56,6 +58,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
     }
     /**
     * Gets the isApprovalRequired
+    * Indicates whether a request must be approved by an approver.
     *
     * @return bool|null The isApprovalRequired
     */
@@ -70,6 +73,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the isApprovalRequired
+    * Indicates whether a request must be approved by an approver.
     *
     * @param bool $val The value of the isApprovalRequired
     *
@@ -82,6 +86,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
     }
     /**
     * Gets the isApprovalRequiredForExtension
+    * Indicates whether approval is required when a user tries to extend their access.
     *
     * @return bool|null The isApprovalRequiredForExtension
     */
@@ -96,6 +101,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the isApprovalRequiredForExtension
+    * Indicates whether approval is required when a user tries to extend their access.
     *
     * @param bool $val The value of the isApprovalRequiredForExtension
     *
@@ -108,6 +114,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
     }
     /**
     * Gets the isCustomAssignmentScheduleAllowed
+    * Indicates whether the requestor is allowed to set a custom schedule.
     *
     * @return bool|null The isCustomAssignmentScheduleAllowed
     */
@@ -122,6 +129,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the isCustomAssignmentScheduleAllowed
+    * Indicates whether the requestor is allowed to set a custom schedule.
     *
     * @param bool $val The value of the isCustomAssignmentScheduleAllowed
     *
@@ -134,6 +142,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
     }
     /**
     * Gets the isRequestorJustificationRequired
+    * Indicates whether a requestor must supply justification when submitting an assignment request.
     *
     * @return bool|null The isRequestorJustificationRequired
     */
@@ -148,6 +157,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the isRequestorJustificationRequired
+    * Indicates whether a requestor must supply justification when submitting an assignment request.
     *
     * @param bool $val The value of the isRequestorJustificationRequired
     *
@@ -160,6 +170,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
     }
     /**
     * Gets the policyDescription
+    * The description of the policy that the user is trying to request access using.
     *
     * @return string|null The policyDescription
     */
@@ -174,6 +185,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the policyDescription
+    * The description of the policy that the user is trying to request access using.
     *
     * @param string $val The value of the policyDescription
     *
@@ -186,6 +198,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
     }
     /**
     * Gets the policyDisplayName
+    * The display name of the policy that the user is trying to request access using.
     *
     * @return string|null The policyDisplayName
     */
@@ -200,6 +213,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the policyDisplayName
+    * The display name of the policy that the user is trying to request access using.
     *
     * @param string $val The value of the policyDisplayName
     *
@@ -212,6 +226,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
     }
     /**
     * Gets the policyId
+    * The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
     *
     * @return string|null The policyId
     */
@@ -226,6 +241,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the policyId
+    * The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
     *
     * @param string $val The value of the policyId
     *
@@ -239,6 +255,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Gets the questions
+    * Questions that are configured on the policy. The questions can be required or optional; callers can determine whether a question is required or optional based on the isRequired property on accessPackageQuestion.
     *
     * @return AccessPackageQuestion|null The questions
     */
@@ -257,6 +274,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the questions
+    * Questions that are configured on the policy. The questions can be required or optional; callers can determine whether a question is required or optional based on the isRequired property on accessPackageQuestion.
     *
     * @param AccessPackageQuestion $val The value to assign to the questions
     *
@@ -270,6 +288,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Gets the schedule
+    * Schedule restrictions enforced, if any.
     *
     * @return RequestSchedule|null The schedule
     */
@@ -288,6 +307,7 @@ class AccessPackageAssignmentRequestRequirements extends Entity
 
     /**
     * Sets the schedule
+    * Schedule restrictions enforced, if any.
     *
     * @param RequestSchedule $val The value to assign to the schedule
     *

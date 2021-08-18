@@ -113,7 +113,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Gets the healthStatus
-    * The health state of the user experience analytics device.
+    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
     *
     * @return UserExperienceAnalyticsHealthState|null The healthStatus
     */
@@ -132,7 +132,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Sets the healthStatus
-    * The health state of the user experience analytics device.
+    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
     *
     * @param UserExperienceAnalyticsHealthState $val The healthStatus
     *

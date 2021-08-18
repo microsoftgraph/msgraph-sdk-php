@@ -26,7 +26,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
 {
     /**
     * Gets the deploymentChannel
-    * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel.
+    * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel. Possible values are: deviceChannel, userChannel.
     *
     * @return AppleDeploymentChannel|null The deploymentChannel
     */
@@ -45,7 +45,7 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     
     /**
     * Sets the deploymentChannel
-    * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel.
+    * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel. Possible values are: deviceChannel, userChannel.
     *
     * @param AppleDeploymentChannel $val The deploymentChannel
     *

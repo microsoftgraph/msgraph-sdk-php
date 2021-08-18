@@ -751,7 +751,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     
     /**
     * Gets the upgradeEligibility
-    * The user experience work from anywhere windows upgrade eligibility status of device.
+    * The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
     *
     * @return OperatingSystemUpgradeEligibility|null The upgradeEligibility
     */
@@ -770,7 +770,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     
     /**
     * Sets the upgradeEligibility
-    * The user experience work from anywhere windows upgrade eligibility status of device.
+    * The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
     *
     * @param OperatingSystemUpgradeEligibility $val The upgradeEligibility
     *
