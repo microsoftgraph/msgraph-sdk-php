@@ -26,6 +26,7 @@ class AccessReviewReviewer extends Entity
 {
     /**
     * Gets the createdDateTime
+    * The date when the reviewer was added for the access review.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class AccessReviewReviewer extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date when the reviewer was added for the access review.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -57,6 +59,7 @@ class AccessReviewReviewer extends Entity
     
     /**
     * Gets the displayName
+    * Name of reviewer.
     *
     * @return string|null The displayName
     */
@@ -71,6 +74,7 @@ class AccessReviewReviewer extends Entity
     
     /**
     * Sets the displayName
+    * Name of reviewer.
     *
     * @param string $val The displayName
     *
@@ -84,6 +88,7 @@ class AccessReviewReviewer extends Entity
     
     /**
     * Gets the userPrincipalName
+    * User principal name of the user.
     *
     * @return string|null The userPrincipalName
     */
@@ -98,6 +103,7 @@ class AccessReviewReviewer extends Entity
     
     /**
     * Sets the userPrincipalName
+    * User principal name of the user.
     *
     * @param string $val The userPrincipalName
     *

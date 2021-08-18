@@ -26,7 +26,7 @@ class EducationAssignmentResource extends Entity
 {
     /**
     * Gets the distributeForStudentWork
-    * Indicates whether this resource should be copied to each student submission for modification and submission.
+    * Indicates whether this resource should be copied to each student submission for modification and submission. Required
     *
     * @return bool|null The distributeForStudentWork
     */
@@ -41,7 +41,7 @@ class EducationAssignmentResource extends Entity
     
     /**
     * Sets the distributeForStudentWork
-    * Indicates whether this resource should be copied to each student submission for modification and submission.
+    * Indicates whether this resource should be copied to each student submission for modification and submission. Required
     *
     * @param bool $val The distributeForStudentWork
     *
