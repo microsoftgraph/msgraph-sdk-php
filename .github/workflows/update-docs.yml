@@ -39,9 +39,14 @@ jobs:
 
       - name: Commit changes to docs/ folder (if any)
         run: |
-          if git add . && git commit -m "Update docs/ folder"; then git push origin ${{ env.BRANCH }} && echo "CREATE_PR=true" >> $GITHUB_ENV; else echo "CREATE_PR=false" >> $GITHUB_ENV; fi
+          if git add . && git commit -m "Update docs/ folder"; then
+            git push origin ${{ env.BRANCH }} && echo "CREATE_PR=true" >> $GITHUB_ENV
+          else
+            echo "CREATE_PR=false" >> $GITHUB_ENV
+          fi
 
       - name: Create PR
+        if: ${{ env.CREATE_PR == 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE_TITLE: Generated docs using PHPDocumentor
@@ -49,4 +54,4 @@ jobs:
           LABELS: generated
         run: |
           curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
-          if ${{ env.CREATE_PR }}; then bin/hub pull-request -b dev -m "$MESSAGE_TITLE" -m "$MESSAGE_BODY" -l "$LABELS"; fi
+          bin/hub pull-request -b dev -m "$MESSAGE_TITLE" -m "$MESSAGE_BODY" -l "$LABELS"
