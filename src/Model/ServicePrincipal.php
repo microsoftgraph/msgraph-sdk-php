@@ -822,7 +822,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the servicePrincipalType
-    * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity.
+    * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
     *
     * @return string|null The servicePrincipalType
     */
@@ -837,7 +837,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the servicePrincipalType
-    * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity.
+    * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
     *
     * @param string $val The servicePrincipalType
     *
