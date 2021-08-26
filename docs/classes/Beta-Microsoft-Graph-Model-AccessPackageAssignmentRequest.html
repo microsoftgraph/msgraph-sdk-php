@@ -179,14 +179,15 @@ to the model</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessPackage.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessPackage">AccessPackage</abbr></a>|null    </span>
 </dt>
 <dd>Gets the accessPackage
-The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.</dd>
+The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html#method_getAccessPackageAssignment">getAccessPackageAssignment()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignment.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessPackageAssignment">AccessPackageAssignment</abbr></a>|null    </span>
 </dt>
-<dd>Gets the accessPackageAssignment</dd>
+<dd>Gets the accessPackageAssignment
+For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html#method_getAnswers">getAnswers()</a>
@@ -263,7 +264,7 @@ The requestor&#039;s supplied justification.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageSubject.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessPackageSubject">AccessPackageSubject</abbr></a>|null    </span>
 </dt>
 <dd>Gets the requestor
-The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.</dd>
+The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html#method_getRequestState">getRequestState()</a>
@@ -311,14 +312,15 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessPackageAssignmentRequest">AccessPackageAssignmentRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the accessPackage
-The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.</dd>
+The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html#method_setAccessPackageAssignment">setAccessPackageAssignment()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessPackageAssignmentRequest">AccessPackageAssignmentRequest</abbr></a>    </span>
 </dt>
-<dd>Sets the accessPackageAssignment</dd>
+<dd>Sets the accessPackageAssignment
+For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html#method_setAnswers">setAnswers()</a>
@@ -388,7 +390,7 @@ The requestor&#039;s supplied justification.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessPackageAssignmentRequest">AccessPackageAssignmentRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the requestor
-The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.</dd>
+The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessPackageAssignmentRequest.html#method_setRequestState">setRequestState()</a>
@@ -537,7 +539,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the accessPackage
-The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.</p>
+The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -569,10 +571,11 @@ The access package associated with the accessPackageAssignmentRequest. An access
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessPackageAssignmentRequest.php"><a href="files/src-beta-microsoft-graph-model-accesspackageassignmentrequest.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessPackageAssignmentRequest.php">AccessPackageAssignmentRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">370</span>
+    <span class="phpdocumentor-element-found-in__line">371</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the accessPackageAssignment</p>
+        <p class="phpdocumentor-summary">Gets the accessPackageAssignment
+For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -925,11 +928,11 @@ The requestor&#039;s supplied justification.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessPackageAssignmentRequest.php"><a href="files/src-beta-microsoft-graph-model-accesspackageassignmentrequest.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessPackageAssignmentRequest.php">AccessPackageAssignmentRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">402</span>
+    <span class="phpdocumentor-element-found-in__line">404</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the requestor
-The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.</p>
+The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1145,7 +1148,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the accessPackage
-The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.</p>
+The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1188,10 +1191,11 @@ The access package associated with the accessPackageAssignmentRequest. An access
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessPackageAssignmentRequest.php"><a href="files/src-beta-microsoft-graph-model-accesspackageassignmentrequest.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessPackageAssignmentRequest.php">AccessPackageAssignmentRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">390</span>
+    <span class="phpdocumentor-element-found-in__line">392</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the accessPackageAssignment</p>
+        <p class="phpdocumentor-summary">Sets the accessPackageAssignment
+For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1608,11 +1612,11 @@ The requestor&#039;s supplied justification.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessPackageAssignmentRequest.php"><a href="files/src-beta-microsoft-graph-model-accesspackageassignmentrequest.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessPackageAssignmentRequest.php">AccessPackageAssignmentRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">423</span>
+    <span class="phpdocumentor-element-found-in__line">425</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the requestor
-The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.</p>
+The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
