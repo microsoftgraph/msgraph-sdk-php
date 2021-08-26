@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SensitivityLabelTarget File
+* SimulationMode File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SensitivityLabelTarget class
+* SimulationMode class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SensitivityLabelTarget extends Enum
+class SimulationMode extends Enum
 {
     /**
-    * The Enum SensitivityLabelTarget
+    * The Enum SimulationMode
     */
-    const EMAIL = "email";
-    const SITE = "site";
-    const UNIFIED_GROUP = "unifiedGroup";
+    const REAL = "real";
+    const PREVIEW = "preview";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const TEAMWORK = "teamwork";
 }

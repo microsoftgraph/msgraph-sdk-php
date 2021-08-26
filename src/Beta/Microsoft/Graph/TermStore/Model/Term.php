@@ -26,7 +26,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the createdDateTime
-    * Date and time of term creation. Read-only
+    * Date and time of term creation. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,7 +45,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the createdDateTime
-    * Date and time of term creation. Read-only
+    * Date and time of term creation. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -60,7 +60,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the descriptions
-    * Description about term that is dependent on the languageTag
+    * Description about term that is dependent on the languageTag.
      *
      * @return array|null The descriptions
      */
@@ -75,7 +75,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the descriptions
-    * Description about term that is dependent on the languageTag
+    * Description about term that is dependent on the languageTag.
     *
     * @param LocalizedDescription $val The descriptions
     *
@@ -90,7 +90,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the labels
-    * Label metadata for a term
+    * Label metadata for a term.
      *
      * @return array|null The labels
      */
@@ -105,7 +105,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the labels
-    * Label metadata for a term
+    * Label metadata for a term.
     *
     * @param LocalizedLabel $val The labels
     *
@@ -119,7 +119,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the lastModifiedDateTime
-    * Last date and time of term modification. Read-only
+    * Last date and time of term modification. Read-only.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -138,7 +138,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the lastModifiedDateTime
-    * Last date and time of term modification. Read-only
+    * Last date and time of term modification. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -153,7 +153,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the termProperties
-    * Collection of properties on the term
+    * Collection of properties on the term.
      *
      * @return array|null The termProperties
      */
@@ -168,7 +168,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the termProperties
-    * Collection of properties on the term
+    * Collection of properties on the term.
     *
     * @param \Beta\Microsoft\Graph\Model\KeyValue $val The termProperties
     *
@@ -183,7 +183,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the children
-    * Children of current term
+    * Children of current term.
      *
      * @return array|null The children
      */
@@ -198,7 +198,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the children
-    * Children of current term
+    * Children of current term.
     *
     * @param Term $val The children
     *
@@ -213,7 +213,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the relations
-    * To indicate which terms are related to the current term as either pinned or reused
+    * To indicate which terms are related to the current term as either pinned or reused.
      *
      * @return array|null The relations
      */
@@ -228,7 +228,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the relations
-    * To indicate which terms are related to the current term as either pinned or reused
+    * To indicate which terms are related to the current term as either pinned or reused.
     *
     * @param Relation $val The relations
     *
@@ -242,7 +242,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the set
-    * The [set] in which the term is created
+    * The [set] in which the term is created.
     *
     * @return Set|null The set
     */
@@ -261,7 +261,7 @@ class Term extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the set
-    * The [set] in which the term is created
+    * The [set] in which the term is created.
     *
     * @param Set $val The set
     *

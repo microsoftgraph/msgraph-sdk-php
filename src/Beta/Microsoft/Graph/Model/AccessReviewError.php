@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SensitivityLabelTarget File
+* AccessReviewError File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* SensitivityLabelTarget class
+* AccessReviewError class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SensitivityLabelTarget extends Enum
+class AccessReviewError extends GenericError
 {
-    /**
-    * The Enum SensitivityLabelTarget
-    */
-    const EMAIL = "email";
-    const SITE = "site";
-    const UNIFIED_GROUP = "unifiedGroup";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const TEAMWORK = "teamwork";
 }
