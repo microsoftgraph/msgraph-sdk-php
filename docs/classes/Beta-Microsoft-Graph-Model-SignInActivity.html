@@ -186,14 +186,16 @@ Read-only.</dd>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
-<dd>Gets the lastNonInteractiveSignInDateTime</dd>
+<dd>Gets the lastNonInteractiveSignInDateTime
+The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: &#039;2014-01-01T00:00:00Z&#039;. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignInActivity.html#method_getLastNonInteractiveSignInRequestId">getLastNonInteractiveSignInRequestId()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the lastNonInteractiveSignInRequestId</dd>
+<dd>Gets the lastNonInteractiveSignInRequestId
+Request identifier of the last non-interactive sign-in performed by this user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignInActivity.html#method_getLastSignInDateTime">getLastSignInDateTime()</a>
@@ -209,7 +211,7 @@ The last interactive sign-in date for a specific user. You can use this field to
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the lastSignInRequestId
-Request ID of the last sign-in performed by this user.</dd>
+Request identifier of the last interactive sign-in performed by this user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getODataType">getODataType()</a>
@@ -246,14 +248,16 @@ Read-only.</dd>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignInActivity.html"><abbr title="\Beta\Microsoft\Graph\Model\SignInActivity">SignInActivity</abbr></a>    </span>
 </dt>
-<dd>Sets the lastNonInteractiveSignInDateTime</dd>
+<dd>Sets the lastNonInteractiveSignInDateTime
+The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: &#039;2014-01-01T00:00:00Z&#039;. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignInActivity.html#method_setLastNonInteractiveSignInRequestId">setLastNonInteractiveSignInRequestId()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignInActivity.html"><abbr title="\Beta\Microsoft\Graph\Model\SignInActivity">SignInActivity</abbr></a>    </span>
 </dt>
-<dd>Sets the lastNonInteractiveSignInRequestId</dd>
+<dd>Sets the lastNonInteractiveSignInRequestId
+Request identifier of the last non-interactive sign-in performed by this user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignInActivity.html#method_setLastSignInDateTime">setLastSignInDateTime()</a>
@@ -269,7 +273,7 @@ The last interactive sign-in date for a specific user. You can use this field to
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignInActivity.html"><abbr title="\Beta\Microsoft\Graph\Model\SignInActivity">SignInActivity</abbr></a>    </span>
 </dt>
 <dd>Sets the lastSignInRequestId
-Request ID of the last sign-in performed by this user.</dd>
+Request identifier of the last interactive sign-in performed by this user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setODataType">setODataType()</a>
@@ -425,10 +429,11 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignInActivity.php"><a href="files/src-beta-microsoft-graph-model-signinactivity.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignInActivity.php">SignInActivity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the lastNonInteractiveSignInDateTime</p>
+        <p class="phpdocumentor-summary">Gets the lastNonInteractiveSignInDateTime
+The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: &#039;2014-01-01T00:00:00Z&#039;. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -460,10 +465,11 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignInActivity.php"><a href="files/src-beta-microsoft-graph-model-signinactivity.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignInActivity.php">SignInActivity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the lastNonInteractiveSignInRequestId</p>
+        <p class="phpdocumentor-summary">Gets the lastNonInteractiveSignInRequestId
+Request identifier of the last non-interactive sign-in performed by this user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -495,7 +501,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignInActivity.php"><a href="files/src-beta-microsoft-graph-model-signinactivity.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignInActivity.php">SignInActivity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">90</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastSignInDateTime
@@ -531,11 +537,11 @@ The last interactive sign-in date for a specific user. You can use this field to
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignInActivity.php"><a href="files/src-beta-microsoft-graph-model-signinactivity.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignInActivity.php">SignInActivity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">122</span>
+    <span class="phpdocumentor-element-found-in__line">126</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastSignInRequestId
-Request ID of the last sign-in performed by this user.</p>
+Request identifier of the last interactive sign-in performed by this user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -720,10 +726,11 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignInActivity.php"><a href="files/src-beta-microsoft-graph-model-signinactivity.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignInActivity.php">SignInActivity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">52</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the lastNonInteractiveSignInDateTime</p>
+        <p class="phpdocumentor-summary">Sets the lastNonInteractiveSignInDateTime
+The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: &#039;2014-01-01T00:00:00Z&#039;. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -767,10 +774,11 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignInActivity.php"><a href="files/src-beta-microsoft-graph-model-signinactivity.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignInActivity.php">SignInActivity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">78</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the lastNonInteractiveSignInRequestId</p>
+        <p class="phpdocumentor-summary">Sets the lastNonInteractiveSignInRequestId
+Request identifier of the last non-interactive sign-in performed by this user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -813,7 +821,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignInActivity.php"><a href="files/src-beta-microsoft-graph-model-signinactivity.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignInActivity.php">SignInActivity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">115</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastSignInDateTime
@@ -861,11 +869,11 @@ The last interactive sign-in date for a specific user. You can use this field to
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignInActivity.php"><a href="files/src-beta-microsoft-graph-model-signinactivity.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignInActivity.php">SignInActivity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">139</span>
+    <span class="phpdocumentor-element-found-in__line">143</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastSignInRequestId
-Request ID of the last sign-in performed by this user.</p>
+Request identifier of the last interactive sign-in performed by this user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
