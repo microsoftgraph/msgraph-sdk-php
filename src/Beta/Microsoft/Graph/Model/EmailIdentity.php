@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SensitivityLabelTarget File
+* EmailIdentity File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* SensitivityLabelTarget class
+* EmailIdentity class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SensitivityLabelTarget extends Enum
+class EmailIdentity extends Identity
 {
     /**
-    * The Enum SensitivityLabelTarget
+    * Gets the email
+    *
+    * @return string|null The email
     */
-    const EMAIL = "email";
-    const SITE = "site";
-    const UNIFIED_GROUP = "unifiedGroup";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const TEAMWORK = "teamwork";
+    public function getEmail()
+    {
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the email
+    *
+    * @param string $val The value of the email
+    *
+    * @return EmailIdentity
+    */
+    public function setEmail($val)
+    {
+        $this->_propDict["email"] = $val;
+        return $this;
+    }
 }

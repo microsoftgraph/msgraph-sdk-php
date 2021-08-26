@@ -103,6 +103,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail
 
     /**
     * Gets the visibleHistoryStartDateTime
+    * The timestamp denoting how far back a conversation's history is shared with the conversation members.
     *
     * @return \DateTime|null The visibleHistoryStartDateTime
     */
@@ -121,6 +122,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail
 
     /**
     * Sets the visibleHistoryStartDateTime
+    * The timestamp denoting how far back a conversation's history is shared with the conversation members.
     *
     * @param \DateTime $val The value to assign to the visibleHistoryStartDateTime
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SensitivityLabelTarget File
+* TrainingContentPreference File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SensitivityLabelTarget class
+* TrainingContentPreference class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SensitivityLabelTarget extends Enum
+class TrainingContentPreference extends Enum
 {
     /**
-    * The Enum SensitivityLabelTarget
+    * The Enum TrainingContentPreference
     */
-    const EMAIL = "email";
-    const SITE = "site";
-    const UNIFIED_GROUP = "unifiedGroup";
+    const UNKNOWN = "unknown";
+    const MICROSOFT = "microsoft";
+    const CUSTOM = "custom";
+    const NO_TRAINING = "noTraining";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const TEAMWORK = "teamwork";
 }

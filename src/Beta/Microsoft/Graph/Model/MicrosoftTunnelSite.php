@@ -83,6 +83,35 @@ class MicrosoftTunnelSite extends Entity
     }
     
     /**
+    * Gets the internalNetworkProbeUrl
+    * The MicrosoftTunnelSite's Internal Network Access Probe URL
+    *
+    * @return string|null The internalNetworkProbeUrl
+    */
+    public function getInternalNetworkProbeUrl()
+    {
+        if (array_key_exists("internalNetworkProbeUrl", $this->_propDict)) {
+            return $this->_propDict["internalNetworkProbeUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the internalNetworkProbeUrl
+    * The MicrosoftTunnelSite's Internal Network Access Probe URL
+    *
+    * @param string $val The internalNetworkProbeUrl
+    *
+    * @return MicrosoftTunnelSite
+    */
+    public function setInternalNetworkProbeUrl($val)
+    {
+        $this->_propDict["internalNetworkProbeUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the publicAddress
     * The MicrosoftTunnelSite's public domain name or IP address
     *

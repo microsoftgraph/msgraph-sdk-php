@@ -55,7 +55,7 @@ class CountryNamedLocation extends NamedLocation
     
     /**
     * Gets the countryLookupMethod
-    * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps.
+    * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
     *
     * @return CountryLookupMethodType|null The countryLookupMethod
     */
@@ -74,7 +74,7 @@ class CountryNamedLocation extends NamedLocation
     
     /**
     * Sets the countryLookupMethod
-    * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps.
+    * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
     *
     * @param CountryLookupMethodType $val The countryLookupMethod
     *
