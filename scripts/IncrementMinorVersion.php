@@ -45,7 +45,7 @@ function getLatestPackagistVersion(): string
     $versions = $responseJson["package"]["versions"];
     foreach ($versions as $version => $versionMetadata) {
         # Ignore branch versions
-        if (!preg_match('/^dev-.*/', $version)) {
+        if (!preg_match('/^dev-.*|.*-dev$/', $version)) {
             # First non-branch version is the latest based on payload structure
             echo "Latest packagist version: {$version}\n";
             return $version;
