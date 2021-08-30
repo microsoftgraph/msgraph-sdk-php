@@ -797,6 +797,35 @@ class OnlineMeeting extends Entity
     }
     
     /**
+    * Gets the recordAutomatically
+    * Indicates whether to record the meeting automatically.
+    *
+    * @return bool|null The recordAutomatically
+    */
+    public function getRecordAutomatically()
+    {
+        if (array_key_exists("recordAutomatically", $this->_propDict)) {
+            return $this->_propDict["recordAutomatically"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the recordAutomatically
+    * Indicates whether to record the meeting automatically.
+    *
+    * @param bool $val The recordAutomatically
+    *
+    * @return OnlineMeeting
+    */
+    public function setRecordAutomatically($val)
+    {
+        $this->_propDict["recordAutomatically"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the recording
     * The content stream of the recording of a live event. Read-only.
     *
