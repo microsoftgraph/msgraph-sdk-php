@@ -58,6 +58,7 @@ class IdentityContainer extends Entity
 
      /** 
      * Gets the apiConnectors
+    * Represents entry point for API connectors.
      *
      * @return array|null The apiConnectors
      */
@@ -72,6 +73,7 @@ class IdentityContainer extends Entity
     
     /** 
     * Sets the apiConnectors
+    * Represents entry point for API connectors.
     *
     * @param IdentityApiConnector $val The apiConnectors
     *
@@ -86,6 +88,7 @@ class IdentityContainer extends Entity
 
      /** 
      * Gets the b2xUserFlows
+    * Represents entry point for B2X and self-service sign-up identity userflows.
      *
      * @return array|null The b2xUserFlows
      */
@@ -100,6 +103,7 @@ class IdentityContainer extends Entity
     
     /** 
     * Sets the b2xUserFlows
+    * Represents entry point for B2X and self-service sign-up identity userflows.
     *
     * @param B2xIdentityUserFlow $val The b2xUserFlows
     *
@@ -114,6 +118,7 @@ class IdentityContainer extends Entity
 
      /** 
      * Gets the identityProviders
+    * Represents entry point for identity provider base.
      *
      * @return array|null The identityProviders
      */
@@ -128,6 +133,7 @@ class IdentityContainer extends Entity
     
     /** 
     * Sets the identityProviders
+    * Represents entry point for identity provider base.
     *
     * @param IdentityProviderBase $val The identityProviders
     *
@@ -142,6 +148,7 @@ class IdentityContainer extends Entity
 
      /** 
      * Gets the userFlowAttributes
+    * Represents entry point for identity userflow attributes.
      *
      * @return array|null The userFlowAttributes
      */
@@ -156,6 +163,7 @@ class IdentityContainer extends Entity
     
     /** 
     * Sets the userFlowAttributes
+    * Represents entry point for identity userflow attributes.
     *
     * @param IdentityUserFlowAttribute $val The userFlowAttributes
     *

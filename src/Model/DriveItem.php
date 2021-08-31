@@ -58,6 +58,37 @@ class DriveItem extends BaseItem
     }
     
     /**
+    * Gets the bundle
+    *
+    * @return Bundle|null The bundle
+    */
+    public function getBundle()
+    {
+        if (array_key_exists("bundle", $this->_propDict)) {
+            if (is_a($this->_propDict["bundle"], "\Microsoft\Graph\Model\Bundle") || is_null($this->_propDict["bundle"])) {
+                return $this->_propDict["bundle"];
+            } else {
+                $this->_propDict["bundle"] = new Bundle($this->_propDict["bundle"]);
+                return $this->_propDict["bundle"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the bundle
+    *
+    * @param Bundle $val The bundle
+    *
+    * @return DriveItem
+    */
+    public function setBundle($val)
+    {
+        $this->_propDict["bundle"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the content
     * The content stream, if the item represents a file.
     *

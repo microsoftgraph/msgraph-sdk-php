@@ -27,6 +27,7 @@ class Directory extends Entity
 
      /** 
      * Gets the administrativeUnits
+    * Conceptual container for user and group directory objects.
      *
      * @return array|null The administrativeUnits
      */
@@ -41,6 +42,7 @@ class Directory extends Entity
     
     /** 
     * Sets the administrativeUnits
+    * Conceptual container for user and group directory objects.
     *
     * @param AdministrativeUnit $val The administrativeUnits
     *
