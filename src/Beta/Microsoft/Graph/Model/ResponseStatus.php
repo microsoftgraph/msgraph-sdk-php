@@ -26,7 +26,7 @@ class ResponseStatus extends Entity
 
     /**
     * Gets the response
-    * The response type. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
+    * The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded: as an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
     *
     * @return ResponseType|null The response
     */
@@ -45,7 +45,7 @@ class ResponseStatus extends Entity
 
     /**
     * Sets the response
-    * The response type. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
+    * The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded: as an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
     *
     * @param ResponseType $val The value to assign to the response
     *

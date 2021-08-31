@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Search\Model;
 /**
 * AnswerKeyword class
 *
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AnswerKeyword extends Entity
+class AnswerKeyword extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the keywords

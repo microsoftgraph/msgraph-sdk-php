@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Search\Model;
 /**
 * AnswerVariant class
 *
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AnswerVariant extends Entity
+class AnswerVariant extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the description
@@ -105,7 +105,7 @@ class AnswerVariant extends Entity
     /**
     * Gets the platform
     *
-    * @return DevicePlatformType|null The platform
+    * @return \Beta\Microsoft\Graph\Model\DevicePlatformType|null The platform
     */
     public function getPlatform()
     {
@@ -113,7 +113,7 @@ class AnswerVariant extends Entity
             if (is_a($this->_propDict["platform"], "\Beta\Microsoft\Graph\Model\DevicePlatformType") || is_null($this->_propDict["platform"])) {
                 return $this->_propDict["platform"];
             } else {
-                $this->_propDict["platform"] = new DevicePlatformType($this->_propDict["platform"]);
+                $this->_propDict["platform"] = new \Beta\Microsoft\Graph\Model\DevicePlatformType($this->_propDict["platform"]);
                 return $this->_propDict["platform"];
             }
         }
@@ -123,7 +123,7 @@ class AnswerVariant extends Entity
     /**
     * Sets the platform
     *
-    * @param DevicePlatformType $val The value to assign to the platform
+    * @param \Beta\Microsoft\Graph\Model\DevicePlatformType $val The value to assign to the platform
     *
     * @return AnswerVariant The AnswerVariant
     */

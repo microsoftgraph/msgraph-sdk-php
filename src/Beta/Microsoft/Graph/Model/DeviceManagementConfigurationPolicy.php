@@ -299,7 +299,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     
     /**
     * Gets the technologies
-    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
+    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
     *
     * @return DeviceManagementConfigurationTechnologies|null The technologies
     */
@@ -318,7 +318,7 @@ class DeviceManagementConfigurationPolicy extends Entity
     
     /**
     * Sets the technologies
-    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
+    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
     *
     * @param DeviceManagementConfigurationTechnologies $val The technologies
     *

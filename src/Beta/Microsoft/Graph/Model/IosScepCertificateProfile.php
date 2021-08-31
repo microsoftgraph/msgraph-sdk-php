@@ -60,7 +60,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
 
      /** 
      * Gets the customSubjectAlternativeNames
-    * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: http://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
      *
      * @return array|null The customSubjectAlternativeNames
      */
@@ -75,7 +75,7 @@ class IosScepCertificateProfile extends IosCertificateProfileBase
     
     /** 
     * Sets the customSubjectAlternativeNames
-    * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
+    * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: http://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
     *
     * @param CustomSubjectAlternativeName $val The customSubjectAlternativeNames
     *

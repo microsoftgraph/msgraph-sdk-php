@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WindowsFeatureUpdateProfile File
+* WindowsDriverUpdateProfile File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* WindowsFeatureUpdateProfile class
+* WindowsDriverUpdateProfile class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,8 +22,41 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WindowsFeatureUpdateProfile extends Entity
+class WindowsDriverUpdateProfile extends Entity
 {
+    /**
+    * Gets the approvalType
+    * Driver update profile approval type. For example, manual or automatic approval. Possible values are: manual, automatic.
+    *
+    * @return DriverUpdateProfileApprovalType|null The approvalType
+    */
+    public function getApprovalType()
+    {
+        if (array_key_exists("approvalType", $this->_propDict)) {
+            if (is_a($this->_propDict["approvalType"], "\Beta\Microsoft\Graph\Model\DriverUpdateProfileApprovalType") || is_null($this->_propDict["approvalType"])) {
+                return $this->_propDict["approvalType"];
+            } else {
+                $this->_propDict["approvalType"] = new DriverUpdateProfileApprovalType($this->_propDict["approvalType"]);
+                return $this->_propDict["approvalType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the approvalType
+    * Driver update profile approval type. For example, manual or automatic approval. Possible values are: manual, automatic.
+    *
+    * @param DriverUpdateProfileApprovalType $val The approvalType
+    *
+    * @return WindowsDriverUpdateProfile
+    */
+    public function setApprovalType($val)
+    {
+        $this->_propDict["approvalType"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the createdDateTime
     * The date time that the profile was created.
@@ -49,7 +82,7 @@ class WindowsFeatureUpdateProfile extends Entity
     *
     * @param \DateTime $val The createdDateTime
     *
-    * @return WindowsFeatureUpdateProfile
+    * @return WindowsDriverUpdateProfile
     */
     public function setCreatedDateTime($val)
     {
@@ -58,31 +91,31 @@ class WindowsFeatureUpdateProfile extends Entity
     }
     
     /**
-    * Gets the deployableContentDisplayName
-    * Friendly display name of the quality update profile deployable content
+    * Gets the deploymentDeferralInDays
+    * Deployment deferral settings in days, only applicable when ApprovalType is set to automatic approval.
     *
-    * @return string|null The deployableContentDisplayName
+    * @return int|null The deploymentDeferralInDays
     */
-    public function getDeployableContentDisplayName()
+    public function getDeploymentDeferralInDays()
     {
-        if (array_key_exists("deployableContentDisplayName", $this->_propDict)) {
-            return $this->_propDict["deployableContentDisplayName"];
+        if (array_key_exists("deploymentDeferralInDays", $this->_propDict)) {
+            return $this->_propDict["deploymentDeferralInDays"];
         } else {
             return null;
         }
     }
     
     /**
-    * Sets the deployableContentDisplayName
-    * Friendly display name of the quality update profile deployable content
+    * Sets the deploymentDeferralInDays
+    * Deployment deferral settings in days, only applicable when ApprovalType is set to automatic approval.
     *
-    * @param string $val The deployableContentDisplayName
+    * @param int $val The deploymentDeferralInDays
     *
-    * @return WindowsFeatureUpdateProfile
+    * @return WindowsDriverUpdateProfile
     */
-    public function setDeployableContentDisplayName($val)
+    public function setDeploymentDeferralInDays($val)
     {
-        $this->_propDict["deployableContentDisplayName"] = $val;
+        $this->_propDict["deploymentDeferralInDays"] = intval($val);
         return $this;
     }
     
@@ -107,7 +140,7 @@ class WindowsFeatureUpdateProfile extends Entity
     *
     * @param string $val The description
     *
-    * @return WindowsFeatureUpdateProfile
+    * @return WindowsDriverUpdateProfile
     */
     public function setDescription($val)
     {
@@ -116,8 +149,37 @@ class WindowsFeatureUpdateProfile extends Entity
     }
     
     /**
+    * Gets the deviceReporting
+    * Number of devices reporting for this profile
+    *
+    * @return int|null The deviceReporting
+    */
+    public function getDeviceReporting()
+    {
+        if (array_key_exists("deviceReporting", $this->_propDict)) {
+            return $this->_propDict["deviceReporting"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceReporting
+    * Number of devices reporting for this profile
+    *
+    * @param int $val The deviceReporting
+    *
+    * @return WindowsDriverUpdateProfile
+    */
+    public function setDeviceReporting($val)
+    {
+        $this->_propDict["deviceReporting"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
-    * The display name of the profile.
+    * The display name for the profile.
     *
     * @return string|null The displayName
     */
@@ -132,77 +194,15 @@ class WindowsFeatureUpdateProfile extends Entity
     
     /**
     * Sets the displayName
-    * The display name of the profile.
+    * The display name for the profile.
     *
     * @param string $val The displayName
     *
-    * @return WindowsFeatureUpdateProfile
+    * @return WindowsDriverUpdateProfile
     */
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the endOfSupportDate
-    * The last supported date for a feature update
-    *
-    * @return \DateTime|null The endOfSupportDate
-    */
-    public function getEndOfSupportDate()
-    {
-        if (array_key_exists("endOfSupportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endOfSupportDate"], "\DateTime") || is_null($this->_propDict["endOfSupportDate"])) {
-                return $this->_propDict["endOfSupportDate"];
-            } else {
-                $this->_propDict["endOfSupportDate"] = new \DateTime($this->_propDict["endOfSupportDate"]);
-                return $this->_propDict["endOfSupportDate"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the endOfSupportDate
-    * The last supported date for a feature update
-    *
-    * @param \DateTime $val The endOfSupportDate
-    *
-    * @return WindowsFeatureUpdateProfile
-    */
-    public function setEndOfSupportDate($val)
-    {
-        $this->_propDict["endOfSupportDate"] = $val;
-        return $this;
-    }
-    
-    /**
-    * Gets the featureUpdateVersion
-    * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
-    *
-    * @return string|null The featureUpdateVersion
-    */
-    public function getFeatureUpdateVersion()
-    {
-        if (array_key_exists("featureUpdateVersion", $this->_propDict)) {
-            return $this->_propDict["featureUpdateVersion"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the featureUpdateVersion
-    * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
-    *
-    * @param string $val The featureUpdateVersion
-    *
-    * @return WindowsFeatureUpdateProfile
-    */
-    public function setFeatureUpdateVersion($val)
-    {
-        $this->_propDict["featureUpdateVersion"] = $val;
         return $this;
     }
     
@@ -231,7 +231,7 @@ class WindowsFeatureUpdateProfile extends Entity
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
-    * @return WindowsFeatureUpdateProfile
+    * @return WindowsDriverUpdateProfile
     */
     public function setLastModifiedDateTime($val)
     {
@@ -240,8 +240,37 @@ class WindowsFeatureUpdateProfile extends Entity
     }
     
     /**
+    * Gets the newUpdates
+    * Number of new driver updates available for this profile.
+    *
+    * @return int|null The newUpdates
+    */
+    public function getNewUpdates()
+    {
+        if (array_key_exists("newUpdates", $this->_propDict)) {
+            return $this->_propDict["newUpdates"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the newUpdates
+    * Number of new driver updates available for this profile.
+    *
+    * @param int $val The newUpdates
+    *
+    * @return WindowsDriverUpdateProfile
+    */
+    public function setNewUpdates($val)
+    {
+        $this->_propDict["newUpdates"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the roleScopeTagIds
-    * List of Scope Tags for this Feature Update entity.
+    * List of Scope Tags for this Driver Update entity.
     *
     * @return string|null The roleScopeTagIds
     */
@@ -256,11 +285,11 @@ class WindowsFeatureUpdateProfile extends Entity
     
     /**
     * Sets the roleScopeTagIds
-    * List of Scope Tags for this Feature Update entity.
+    * List of Scope Tags for this Driver Update entity.
     *
     * @param string $val The roleScopeTagIds
     *
-    * @return WindowsFeatureUpdateProfile
+    * @return WindowsDriverUpdateProfile
     */
     public function setRoleScopeTagIds($val)
     {
@@ -288,13 +317,43 @@ class WindowsFeatureUpdateProfile extends Entity
     * Sets the assignments
     * The list of group assignments of the profile.
     *
-    * @param WindowsFeatureUpdateProfileAssignment $val The assignments
+    * @param WindowsDriverUpdateProfileAssignment $val The assignments
     *
-    * @return WindowsFeatureUpdateProfile
+    * @return WindowsDriverUpdateProfile
     */
     public function setAssignments($val)
     {
         $this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the driverInventories
+    * Driver inventories for this profile.
+     *
+     * @return array|null The driverInventories
+     */
+    public function getDriverInventories()
+    {
+        if (array_key_exists("driverInventories", $this->_propDict)) {
+           return $this->_propDict["driverInventories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the driverInventories
+    * Driver inventories for this profile.
+    *
+    * @param WindowsDriverUpdateInventory $val The driverInventories
+    *
+    * @return WindowsDriverUpdateProfile
+    */
+    public function setDriverInventories($val)
+    {
+        $this->_propDict["driverInventories"] = $val;
         return $this;
     }
     
