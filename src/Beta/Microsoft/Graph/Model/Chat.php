@@ -124,6 +124,64 @@ class Chat extends Entity
     }
     
     /**
+    * Gets the onlineMeetingInfo
+    *
+    * @return TeamworkOnlineMeetingInfo|null The onlineMeetingInfo
+    */
+    public function getOnlineMeetingInfo()
+    {
+        if (array_key_exists("onlineMeetingInfo", $this->_propDict)) {
+            if (is_a($this->_propDict["onlineMeetingInfo"], "\Beta\Microsoft\Graph\Model\TeamworkOnlineMeetingInfo") || is_null($this->_propDict["onlineMeetingInfo"])) {
+                return $this->_propDict["onlineMeetingInfo"];
+            } else {
+                $this->_propDict["onlineMeetingInfo"] = new TeamworkOnlineMeetingInfo($this->_propDict["onlineMeetingInfo"]);
+                return $this->_propDict["onlineMeetingInfo"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the onlineMeetingInfo
+    *
+    * @param TeamworkOnlineMeetingInfo $val The onlineMeetingInfo
+    *
+    * @return Chat
+    */
+    public function setOnlineMeetingInfo($val)
+    {
+        $this->_propDict["onlineMeetingInfo"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the tenantId
+    *
+    * @return string|null The tenantId
+    */
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The tenantId
+    *
+    * @return Chat
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the topic
     * (Optional) Subject or topic for the chat. Only available for group chats.
     *

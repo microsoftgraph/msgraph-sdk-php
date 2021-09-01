@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MacOSSoftwareUpdateDelayPolicy File
+* DriverUpdateProfileApprovalType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* MacOSSoftwareUpdateDelayPolicy class
+* DriverUpdateProfileApprovalType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,11 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MacOSSoftwareUpdateDelayPolicy extends Enum
+class DriverUpdateProfileApprovalType extends Enum
 {
     /**
-    * The Enum MacOSSoftwareUpdateDelayPolicy
+    * The Enum DriverUpdateProfileApprovalType
     */
-    const NONE = "none";
-    const DELAY_OS_UPDATE_VISIBILITY = "delayOSUpdateVisibility";
-    const DELAY_APP_UPDATE_VISIBILITY = "delayAppUpdateVisibility";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const DELAY_MAJOR_OS_UPDATE_VISIBILITY = "delayMajorOsUpdateVisibility";
+    const MANUAL = "manual";
+    const AUTOMATIC = "automatic";
 }

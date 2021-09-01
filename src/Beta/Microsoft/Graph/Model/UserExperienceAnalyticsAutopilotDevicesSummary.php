@@ -79,4 +79,32 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
         $this->_propDict["devicesWithoutAutopilotProfileAssigned"] = $val;
         return $this;
     }
+    /**
+    * Gets the totalWindows10DevicesWithoutTenantAttached
+    * The count of windows 10 devices that are Intune and Comanaged.
+    *
+    * @return int|null The totalWindows10DevicesWithoutTenantAttached
+    */
+    public function getTotalWindows10DevicesWithoutTenantAttached()
+    {
+        if (array_key_exists("totalWindows10DevicesWithoutTenantAttached", $this->_propDict)) {
+            return $this->_propDict["totalWindows10DevicesWithoutTenantAttached"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the totalWindows10DevicesWithoutTenantAttached
+    * The count of windows 10 devices that are Intune and Comanaged.
+    *
+    * @param int $val The value of the totalWindows10DevicesWithoutTenantAttached
+    *
+    * @return UserExperienceAnalyticsAutopilotDevicesSummary
+    */
+    public function setTotalWindows10DevicesWithoutTenantAttached($val)
+    {
+        $this->_propDict["totalWindows10DevicesWithoutTenantAttached"] = $val;
+        return $this;
+    }
 }

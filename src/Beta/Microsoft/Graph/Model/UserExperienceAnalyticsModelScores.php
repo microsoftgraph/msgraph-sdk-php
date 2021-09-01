@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UserExperienceAnalyticsDeviceScores File
+* UserExperienceAnalyticsModelScores File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* UserExperienceAnalyticsDeviceScores class
+* UserExperienceAnalyticsModelScores class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,11 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UserExperienceAnalyticsDeviceScores extends Entity
+class UserExperienceAnalyticsModelScores extends Entity
 {
     /**
     * Gets the appReliabilityScore
-    * The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The user experience analytics model app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The appReliabilityScore
     */
@@ -41,11 +41,11 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Sets the appReliabilityScore
-    * The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The user experience analytics model app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The appReliabilityScore
     *
-    * @return UserExperienceAnalyticsDeviceScores
+    * @return UserExperienceAnalyticsModelScores
     */
     public function setAppReliabilityScore($val)
     {
@@ -54,37 +54,8 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     }
     
     /**
-    * Gets the deviceName
-    * The user experience analytics device name.
-    *
-    * @return string|null The deviceName
-    */
-    public function getDeviceName()
-    {
-        if (array_key_exists("deviceName", $this->_propDict)) {
-            return $this->_propDict["deviceName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the deviceName
-    * The user experience analytics device name.
-    *
-    * @param string $val The deviceName
-    *
-    * @return UserExperienceAnalyticsDeviceScores
-    */
-    public function setDeviceName($val)
-    {
-        $this->_propDict["deviceName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the endpointAnalyticsScore
-    * The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The endpointAnalyticsScore
     */
@@ -99,11 +70,11 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Sets the endpointAnalyticsScore
-    * The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The endpointAnalyticsScore
     *
-    * @return UserExperienceAnalyticsDeviceScores
+    * @return UserExperienceAnalyticsModelScores
     */
     public function setEndpointAnalyticsScore($val)
     {
@@ -113,7 +84,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Gets the healthStatus
-    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+    * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
     *
     * @return UserExperienceAnalyticsHealthState|null The healthStatus
     */
@@ -132,11 +103,11 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Sets the healthStatus
-    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+    * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
     *
     * @param UserExperienceAnalyticsHealthState $val The healthStatus
     *
-    * @return UserExperienceAnalyticsDeviceScores
+    * @return UserExperienceAnalyticsModelScores
     */
     public function setHealthStatus($val)
     {
@@ -146,7 +117,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Gets the manufacturer
-    * The user experience analytics device manufacturer.
+    * A unique identifier of the user experience analytics model scores: device manufacturer.
     *
     * @return string|null The manufacturer
     */
@@ -161,11 +132,11 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Sets the manufacturer
-    * The user experience analytics device manufacturer.
+    * A unique identifier of the user experience analytics model scores: device manufacturer.
     *
     * @param string $val The manufacturer
     *
-    * @return UserExperienceAnalyticsDeviceScores
+    * @return UserExperienceAnalyticsModelScores
     */
     public function setManufacturer($val)
     {
@@ -175,7 +146,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Gets the model
-    * The user experience analytics device model.
+    * A unique identifier of the user experience analytics model scores: device model.
     *
     * @return string|null The model
     */
@@ -190,11 +161,11 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Sets the model
-    * The user experience analytics device model.
+    * A unique identifier of the user experience analytics model scores: device model.
     *
     * @param string $val The model
     *
-    * @return UserExperienceAnalyticsDeviceScores
+    * @return UserExperienceAnalyticsModelScores
     */
     public function setModel($val)
     {
@@ -203,8 +174,37 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     }
     
     /**
+    * Gets the modelDeviceCount
+    * The user experience analytics model device count. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
+    *
+    * @return int|null The modelDeviceCount
+    */
+    public function getModelDeviceCount()
+    {
+        if (array_key_exists("modelDeviceCount", $this->_propDict)) {
+            return $this->_propDict["modelDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the modelDeviceCount
+    * The user experience analytics model device count. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
+    *
+    * @param int $val The modelDeviceCount
+    *
+    * @return UserExperienceAnalyticsModelScores
+    */
+    public function setModelDeviceCount($val)
+    {
+        $this->_propDict["modelDeviceCount"] = intval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the startupPerformanceScore
-    * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The user experience analytics model startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The startupPerformanceScore
     */
@@ -219,44 +219,15 @@ class UserExperienceAnalyticsDeviceScores extends Entity
     
     /**
     * Sets the startupPerformanceScore
-    * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The user experience analytics model startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The startupPerformanceScore
     *
-    * @return UserExperienceAnalyticsDeviceScores
+    * @return UserExperienceAnalyticsModelScores
     */
     public function setStartupPerformanceScore($val)
     {
         $this->_propDict["startupPerformanceScore"] = floatval($val);
-        return $this;
-    }
-    
-    /**
-    * Gets the workFromAnywhereScore
-    * The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-    *
-    * @return float|null The workFromAnywhereScore
-    */
-    public function getWorkFromAnywhereScore()
-    {
-        if (array_key_exists("workFromAnywhereScore", $this->_propDict)) {
-            return $this->_propDict["workFromAnywhereScore"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the workFromAnywhereScore
-    * The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-    *
-    * @param float $val The workFromAnywhereScore
-    *
-    * @return UserExperienceAnalyticsDeviceScores
-    */
-    public function setWorkFromAnywhereScore($val)
-    {
-        $this->_propDict["workFromAnywhereScore"] = floatval($val);
         return $this;
     }
     

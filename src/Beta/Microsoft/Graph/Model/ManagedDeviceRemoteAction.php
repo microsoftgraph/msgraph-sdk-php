@@ -43,4 +43,6 @@ class ManagedDeviceRemoteAction extends Enum
     const DISABLE = "disable";
     const REENABLE = "reenable";
     const MOVE_DEVICE_TO_ORGANIZATIONAL_UNIT = "moveDeviceToOrganizationalUnit";
+    const ACTIVATE_DEVICE_ESIM = "activateDeviceEsim";
+    const COLLECT_DIAGNOSTICS = "collectDiagnostics";
 }

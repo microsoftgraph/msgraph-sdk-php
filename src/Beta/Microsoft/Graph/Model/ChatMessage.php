@@ -27,7 +27,7 @@ class ChatMessage extends Entity
 
      /** 
      * Gets the attachments
-    * Attached files. Attachments are currently read-only – sending attachments is not supported.
+    * References to attached objects like files, tabs, meetings etc.
      *
      * @return array|null The attachments
      */
@@ -42,7 +42,7 @@ class ChatMessage extends Entity
     
     /** 
     * Sets the attachments
-    * Attached files. Attachments are currently read-only – sending attachments is not supported.
+    * References to attached objects like files, tabs, meetings etc.
     *
     * @param ChatMessageAttachment $val The attachments
     *
@@ -279,7 +279,7 @@ class ChatMessage extends Entity
     
     /**
     * Gets the from
-    * Read only. Details of the sender of the chat message.
+    * Details of the sender of the chat message. Can only be set during migration.
     *
     * @return ChatMessageFromIdentitySet|null The from
     */
@@ -298,7 +298,7 @@ class ChatMessage extends Entity
     
     /**
     * Sets the from
-    * Read only. Details of the sender of the chat message.
+    * Details of the sender of the chat message. Can only be set during migration.
     *
     * @param ChatMessageFromIdentitySet $val The from
     *
@@ -441,7 +441,7 @@ class ChatMessage extends Entity
 
      /** 
      * Gets the mentions
-    * List of entities mentioned in the chat message. Currently supports user, bot, team, channel.
+    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
      *
      * @return array|null The mentions
      */
@@ -456,7 +456,7 @@ class ChatMessage extends Entity
     
     /** 
     * Sets the mentions
-    * List of entities mentioned in the chat message. Currently supports user, bot, team, channel.
+    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
     *
     * @param ChatMessageMention $val The mentions
     *
