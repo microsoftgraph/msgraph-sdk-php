@@ -189,6 +189,13 @@ Analytics about the view activities that took place on this item.</dd>
 Audio metadata, if the item is an audio file. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getBundle">getBundle()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-Bundle.html"><abbr title="\Microsoft\Graph\Model\Bundle">Bundle</abbr></a>|null    </span>
+</dt>
+<dd>Gets the bundle</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getChildren">getChildren()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
@@ -545,6 +552,13 @@ Analytics about the view activities that took place on this item.</dd>
 </dt>
 <dd>Sets the audio
 Audio metadata, if the item is an audio file. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_setBundle">setBundle()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>    </span>
+</dt>
+<dd>Sets the bundle</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_setChildren">setChildren()</a>
@@ -984,7 +998,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">780</span>
+    <span class="phpdocumentor-element-found-in__line">811</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the analytics
@@ -1049,6 +1063,41 @@ Audio metadata, if the item is an audio file. Read-only.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getBundle">
+        getBundle()
+        <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getBundle" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">65</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the bundle</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getBundle</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Bundle.html"><abbr title="\Microsoft\Graph\Model\Bundle">Bundle</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Bundle.html"><abbr title="\Microsoft\Graph\Model\Bundle">Bundle</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The bundle</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getChildren">
         getChildren()
         <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getChildren" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1056,7 +1105,7 @@ Audio metadata, if the item is an audio file. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">814</span>
+    <span class="phpdocumentor-element-found-in__line">845</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the children
@@ -1092,7 +1141,7 @@ Collection containing Item objects for the immediate children of Item. Only item
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">97</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the content
@@ -1236,7 +1285,7 @@ Date and time of item creation. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">99</span>
+    <span class="phpdocumentor-element-found-in__line">130</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the cTag
@@ -1272,7 +1321,7 @@ An eTag for the content of the item. This eTag is not changed if only the metada
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">128</span>
+    <span class="phpdocumentor-element-found-in__line">159</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deleted
@@ -1380,7 +1429,7 @@ ETag for the item. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">192</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the file
@@ -1416,7 +1465,7 @@ File metadata, if the item is a file. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">194</span>
+    <span class="phpdocumentor-element-found-in__line">225</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the fileSystemInfo
@@ -1452,7 +1501,7 @@ File system information on client. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">227</span>
+    <span class="phpdocumentor-element-found-in__line">258</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the folder
@@ -1524,7 +1573,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">260</span>
+    <span class="phpdocumentor-element-found-in__line">291</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the image
@@ -1668,7 +1717,7 @@ Date and time the item was last modified. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">843</span>
+    <span class="phpdocumentor-element-found-in__line">874</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the listItem
@@ -1704,7 +1753,7 @@ For drives in SharePoint, the associated document library list item. Read-only. 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">293</span>
+    <span class="phpdocumentor-element-found-in__line">324</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the location
@@ -1811,7 +1860,7 @@ The name of the item. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">326</span>
+    <span class="phpdocumentor-element-found-in__line">357</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the package
@@ -1883,7 +1932,7 @@ Parent information, if the item has a parent. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">359</span>
+    <span class="phpdocumentor-element-found-in__line">390</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pendingOperations
@@ -1919,7 +1968,7 @@ If present, indicates that indicates that one or more operations that may affect
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">877</span>
+    <span class="phpdocumentor-element-found-in__line">908</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the permissions
@@ -1955,7 +2004,7 @@ The set of permissions for the item. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">392</span>
+    <span class="phpdocumentor-element-found-in__line">423</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the photo
@@ -2026,7 +2075,7 @@ Photo metadata, if the item is a photo. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">425</span>
+    <span class="phpdocumentor-element-found-in__line">456</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the publication
@@ -2062,7 +2111,7 @@ Provides information about the published or checked-out state of an item, in loc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">458</span>
+    <span class="phpdocumentor-element-found-in__line">489</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the remoteItem
@@ -2098,7 +2147,7 @@ Remote item data, if the item is shared from a drive other than the one being ac
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">491</span>
+    <span class="phpdocumentor-element-found-in__line">522</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the root
@@ -2134,7 +2183,7 @@ If this property is non-null, it indicates that the driveItem is the top-most dr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">524</span>
+    <span class="phpdocumentor-element-found-in__line">555</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the searchResult
@@ -2170,7 +2219,7 @@ Search metadata, if the item is from a search result. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">557</span>
+    <span class="phpdocumentor-element-found-in__line">588</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the shared
@@ -2206,7 +2255,7 @@ Indicates that the item has been shared with others and provides information abo
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">590</span>
+    <span class="phpdocumentor-element-found-in__line">621</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the sharepointIds
@@ -2242,7 +2291,7 @@ Returns identifiers useful for SharePoint REST compatibility. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">623</span>
+    <span class="phpdocumentor-element-found-in__line">654</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the size
@@ -2278,7 +2327,7 @@ Size of the item in bytes. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">652</span>
+    <span class="phpdocumentor-element-found-in__line">683</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the specialFolder
@@ -2314,7 +2363,7 @@ If the current item is also available as a special folder, this facet is returne
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">907</span>
+    <span class="phpdocumentor-element-found-in__line">938</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the subscriptions
@@ -2350,7 +2399,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">937</span>
+    <span class="phpdocumentor-element-found-in__line">968</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the thumbnails
@@ -2386,7 +2435,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">967</span>
+    <span class="phpdocumentor-element-found-in__line">998</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the versions
@@ -2422,7 +2471,7 @@ The list of previous versions of the item. For more info, see [getting previous 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">685</span>
+    <span class="phpdocumentor-element-found-in__line">716</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the video
@@ -2458,7 +2507,7 @@ Video metadata, if the item is a video. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">718</span>
+    <span class="phpdocumentor-element-found-in__line">749</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the webDavUrl
@@ -2530,7 +2579,7 @@ URL that displays the resource in the browser. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">747</span>
+    <span class="phpdocumentor-element-found-in__line">778</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workbook
@@ -2602,7 +2651,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">801</span>
+    <span class="phpdocumentor-element-found-in__line">832</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the analytics
@@ -2689,6 +2738,52 @@ Audio metadata, if the item is an audio file. Read-only.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setBundle">
+        setBundle()
+        <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_setBundle" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">85</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the bundle</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setBundle</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Bundle.html"><abbr title="\Microsoft\Graph\Model\Bundle">Bundle</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Bundle.html"><abbr title="\Microsoft\Graph\Model\Bundle">Bundle</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The bundle</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setChildren">
         setChildren()
         <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_setChildren" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2696,7 +2791,7 @@ Audio metadata, if the item is an audio file. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">831</span>
+    <span class="phpdocumentor-element-found-in__line">862</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the children
@@ -2743,7 +2838,7 @@ Collection containing Item objects for the immediate children of Item. Only item
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">87</span>
+    <span class="phpdocumentor-element-found-in__line">118</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the content
@@ -2931,7 +3026,7 @@ Date and time of item creation. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">116</span>
+    <span class="phpdocumentor-element-found-in__line">147</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the cTag
@@ -2978,7 +3073,7 @@ An eTag for the content of the item. This eTag is not changed if only the metada
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">180</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deleted
@@ -3119,7 +3214,7 @@ ETag for the item. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">182</span>
+    <span class="phpdocumentor-element-found-in__line">213</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the file
@@ -3166,7 +3261,7 @@ File metadata, if the item is a file. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">215</span>
+    <span class="phpdocumentor-element-found-in__line">246</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the fileSystemInfo
@@ -3213,7 +3308,7 @@ File system information on client. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">248</span>
+    <span class="phpdocumentor-element-found-in__line">279</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the folder
@@ -3307,7 +3402,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">281</span>
+    <span class="phpdocumentor-element-found-in__line">312</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the image
@@ -3495,7 +3590,7 @@ Date and time the item was last modified. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">864</span>
+    <span class="phpdocumentor-element-found-in__line">895</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the listItem
@@ -3542,7 +3637,7 @@ For drives in SharePoint, the associated document library list item. Read-only. 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">314</span>
+    <span class="phpdocumentor-element-found-in__line">345</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the location
@@ -3682,7 +3777,7 @@ The name of the item. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">347</span>
+    <span class="phpdocumentor-element-found-in__line">378</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the package
@@ -3776,7 +3871,7 @@ Parent information, if the item has a parent. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">380</span>
+    <span class="phpdocumentor-element-found-in__line">411</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pendingOperations
@@ -3823,7 +3918,7 @@ If present, indicates that indicates that one or more operations that may affect
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">894</span>
+    <span class="phpdocumentor-element-found-in__line">925</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the permissions
@@ -3870,7 +3965,7 @@ The set of permissions for the item. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">413</span>
+    <span class="phpdocumentor-element-found-in__line">444</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the photo
@@ -3917,7 +4012,7 @@ Photo metadata, if the item is a photo. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">446</span>
+    <span class="phpdocumentor-element-found-in__line">477</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the publication
@@ -3964,7 +4059,7 @@ Provides information about the published or checked-out state of an item, in loc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">479</span>
+    <span class="phpdocumentor-element-found-in__line">510</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the remoteItem
@@ -4011,7 +4106,7 @@ Remote item data, if the item is shared from a drive other than the one being ac
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">512</span>
+    <span class="phpdocumentor-element-found-in__line">543</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the root
@@ -4058,7 +4153,7 @@ If this property is non-null, it indicates that the driveItem is the top-most dr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">545</span>
+    <span class="phpdocumentor-element-found-in__line">576</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the searchResult
@@ -4105,7 +4200,7 @@ Search metadata, if the item is from a search result. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">578</span>
+    <span class="phpdocumentor-element-found-in__line">609</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the shared
@@ -4152,7 +4247,7 @@ Indicates that the item has been shared with others and provides information abo
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">611</span>
+    <span class="phpdocumentor-element-found-in__line">642</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sharepointIds
@@ -4199,7 +4294,7 @@ Returns identifiers useful for SharePoint REST compatibility. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">640</span>
+    <span class="phpdocumentor-element-found-in__line">671</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the size
@@ -4246,7 +4341,7 @@ Size of the item in bytes. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">673</span>
+    <span class="phpdocumentor-element-found-in__line">704</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the specialFolder
@@ -4293,7 +4388,7 @@ If the current item is also available as a special folder, this facet is returne
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">924</span>
+    <span class="phpdocumentor-element-found-in__line">955</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the subscriptions
@@ -4340,7 +4435,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">954</span>
+    <span class="phpdocumentor-element-found-in__line">985</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the thumbnails
@@ -4387,7 +4482,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">984</span>
+    <span class="phpdocumentor-element-found-in__line">1015</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the versions
@@ -4434,7 +4529,7 @@ The list of previous versions of the item. For more info, see [getting previous 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">706</span>
+    <span class="phpdocumentor-element-found-in__line">737</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the video
@@ -4481,7 +4576,7 @@ Video metadata, if the item is a video. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">735</span>
+    <span class="phpdocumentor-element-found-in__line">766</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the webDavUrl
@@ -4575,7 +4670,7 @@ URL that displays the resource in the browser. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">768</span>
+    <span class="phpdocumentor-element-found-in__line">799</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workbook

@@ -1270,6 +1270,14 @@ Indicates whether or not to block the user from using passbook when the device i
 Indicates whether or not to block the user from using the Today View on the lock screen.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_getManagedPasteboardRequired">getManagedPasteboardRequired()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the managedPasteboardRequired
+Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_getMediaContentRatingApps">getMediaContentRatingApps()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-RatingAppsType.html"><abbr title="\Beta\Microsoft\Graph\Model\RatingAppsType">RatingAppsType</abbr></a>|null    </span>
@@ -1395,6 +1403,14 @@ Indicates whether or not to allow notifications settings modification (iOS 9.3 a
 </dt>
 <dd>Gets the onDeviceOnlyDictationForced
 Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_getOnDeviceOnlyTranslationForced">getOnDeviceOnlyTranslationForced()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the onDeviceOnlyTranslationForced
+When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_getPasscodeBlockFingerprintModification">getPasscodeBlockFingerprintModification()</a>
@@ -2908,6 +2924,14 @@ Indicates whether or not to block the user from using passbook when the device i
 Indicates whether or not to block the user from using the Today View on the lock screen.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_setManagedPasteboardRequired">setManagedPasteboardRequired()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\IosGeneralDeviceConfiguration">IosGeneralDeviceConfiguration</abbr></a>    </span>
+</dt>
+<dd>Sets the managedPasteboardRequired
+Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_setMediaContentRatingApps">setMediaContentRatingApps()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\IosGeneralDeviceConfiguration">IosGeneralDeviceConfiguration</abbr></a>    </span>
@@ -3033,6 +3057,14 @@ Indicates whether or not to allow notifications settings modification (iOS 9.3 a
 </dt>
 <dd>Sets the onDeviceOnlyDictationForced
 Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_setOnDeviceOnlyTranslationForced">setOnDeviceOnlyTranslationForced()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\IosGeneralDeviceConfiguration">IosGeneralDeviceConfiguration</abbr></a>    </span>
+</dt>
+<dd>Sets the onDeviceOnlyTranslationForced
+When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_setPasscodeBlockFingerprintModification">setPasscodeBlockFingerprintModification()</a>
@@ -8470,6 +8502,42 @@ Indicates whether or not to block the user from using the Today View on the lock
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getManagedPasteboardRequired">
+        getManagedPasteboardRequired()
+        <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_getManagedPasteboardRequired" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">3644</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the managedPasteboardRequired
+Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getManagedPasteboardRequired</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The managedPasteboardRequired</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getMediaContentRatingApps">
         getMediaContentRatingApps()
         <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_getMediaContentRatingApps" class="headerlink"><i class="fas fa-link"></i></a>
@@ -8477,7 +8545,7 @@ Indicates whether or not to block the user from using the Today View on the lock
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3644</span>
+    <span class="phpdocumentor-element-found-in__line">3673</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingApps
@@ -8513,7 +8581,7 @@ Media content rating settings for Apps. Possible values are: allAllowed, allBloc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3677</span>
+    <span class="phpdocumentor-element-found-in__line">3706</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingAustralia
@@ -8549,7 +8617,7 @@ Media content rating settings for Australia</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3710</span>
+    <span class="phpdocumentor-element-found-in__line">3739</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingCanada
@@ -8585,7 +8653,7 @@ Media content rating settings for Canada</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3743</span>
+    <span class="phpdocumentor-element-found-in__line">3772</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingFrance
@@ -8621,7 +8689,7 @@ Media content rating settings for France</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3776</span>
+    <span class="phpdocumentor-element-found-in__line">3805</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingGermany
@@ -8657,7 +8725,7 @@ Media content rating settings for Germany</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3809</span>
+    <span class="phpdocumentor-element-found-in__line">3838</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingIreland
@@ -8693,7 +8761,7 @@ Media content rating settings for Ireland</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3842</span>
+    <span class="phpdocumentor-element-found-in__line">3871</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingJapan
@@ -8729,7 +8797,7 @@ Media content rating settings for Japan</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3875</span>
+    <span class="phpdocumentor-element-found-in__line">3904</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingNewZealand
@@ -8765,7 +8833,7 @@ Media content rating settings for New Zealand</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3908</span>
+    <span class="phpdocumentor-element-found-in__line">3937</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingUnitedKingdom
@@ -8801,7 +8869,7 @@ Media content rating settings for United Kingdom</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3941</span>
+    <span class="phpdocumentor-element-found-in__line">3970</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaContentRatingUnitedStates
@@ -8837,7 +8905,7 @@ Media content rating settings for United States</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3974</span>
+    <span class="phpdocumentor-element-found-in__line">4003</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the messagesBlocked
@@ -8873,7 +8941,7 @@ Indicates whether or not to block the user from using the Messages app on the su
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4004</span>
+    <span class="phpdocumentor-element-found-in__line">4033</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the networkUsageRules
@@ -8909,7 +8977,7 @@ List of managed apps and the network rules that applies to them. This collection
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4033</span>
+    <span class="phpdocumentor-element-found-in__line">4062</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the nfcBlocked
@@ -8945,7 +9013,7 @@ Disable NFC to prevent devices from pairing with other NFC-enabled devices. Avai
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4062</span>
+    <span class="phpdocumentor-element-found-in__line">4091</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the notificationsBlockSettingsModification
@@ -9016,7 +9084,7 @@ Indicates whether or not to allow notifications settings modification (iOS 9.3 a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4091</span>
+    <span class="phpdocumentor-element-found-in__line">4120</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onDeviceOnlyDictationForced
@@ -9045,6 +9113,42 @@ Disables connections to Siri servers so that users can’t use Siri to dictate t
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getOnDeviceOnlyTranslationForced">
+        getOnDeviceOnlyTranslationForced()
+        <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_getOnDeviceOnlyTranslationForced" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">4149</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the onDeviceOnlyTranslationForced
+When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getOnDeviceOnlyTranslationForced</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The onDeviceOnlyTranslationForced</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getPasscodeBlockFingerprintModification">
         getPasscodeBlockFingerprintModification()
         <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_getPasscodeBlockFingerprintModification" class="headerlink"><i class="fas fa-link"></i></a>
@@ -9052,7 +9156,7 @@ Disables connections to Siri servers so that users can’t use Siri to dictate t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4120</span>
+    <span class="phpdocumentor-element-found-in__line">4178</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeBlockFingerprintModification
@@ -9088,7 +9192,7 @@ Block modification of registered Touch ID fingerprints when in supervised mode.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4149</span>
+    <span class="phpdocumentor-element-found-in__line">4207</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeBlockFingerprintUnlock
@@ -9124,7 +9228,7 @@ Indicates whether or not to block fingerprint unlock.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4178</span>
+    <span class="phpdocumentor-element-found-in__line">4236</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeBlockModification
@@ -9160,7 +9264,7 @@ Indicates whether or not to allow passcode modification on the supervised device
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4207</span>
+    <span class="phpdocumentor-element-found-in__line">4265</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeBlockSimple
@@ -9196,7 +9300,7 @@ Indicates whether or not to block simple passcodes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4236</span>
+    <span class="phpdocumentor-element-found-in__line">4294</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeExpirationDays
@@ -9232,7 +9336,7 @@ Number of days before the passcode expires. Valid values 1 to 65535</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4265</span>
+    <span class="phpdocumentor-element-found-in__line">4323</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeMinimumCharacterSetCount
@@ -9268,7 +9372,7 @@ Number of character sets a passcode must contain. Valid values 0 to 4</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4294</span>
+    <span class="phpdocumentor-element-found-in__line">4352</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeMinimumLength
@@ -9304,7 +9408,7 @@ Minimum length of passcode. Valid values 4 to 14</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4323</span>
+    <span class="phpdocumentor-element-found-in__line">4381</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeMinutesOfInactivityBeforeLock
@@ -9340,7 +9444,7 @@ Minutes of inactivity before a passcode is required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4352</span>
+    <span class="phpdocumentor-element-found-in__line">4410</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeMinutesOfInactivityBeforeScreenTimeout
@@ -9376,7 +9480,7 @@ Minutes of inactivity before the screen times out.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4381</span>
+    <span class="phpdocumentor-element-found-in__line">4439</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodePreviousPasscodeBlockCount
@@ -9412,7 +9516,7 @@ Number of previous passcodes to block. Valid values 1 to 24</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4410</span>
+    <span class="phpdocumentor-element-found-in__line">4468</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeRequired
@@ -9448,7 +9552,7 @@ Indicates whether or not to require a passcode.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4439</span>
+    <span class="phpdocumentor-element-found-in__line">4497</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeRequiredType
@@ -9484,7 +9588,7 @@ Type of passcode that is required. Possible values are: deviceDefault, alphanume
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4472</span>
+    <span class="phpdocumentor-element-found-in__line">4530</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passcodeSignInFailureCountBeforeWipe
@@ -9520,7 +9624,7 @@ Number of sign in failures allowed before wiping the device. Valid values 2 to 1
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4501</span>
+    <span class="phpdocumentor-element-found-in__line">4559</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockAirDropSharing
@@ -9556,7 +9660,7 @@ Indicates whether or not to block sharing passwords with the AirDrop passwords f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4530</span>
+    <span class="phpdocumentor-element-found-in__line">4588</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockAutoFill
@@ -9592,7 +9696,7 @@ Indicates if the AutoFill passwords feature is allowed (iOS 12.0 and later).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4559</span>
+    <span class="phpdocumentor-element-found-in__line">4617</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockProximityRequests
@@ -9628,7 +9732,7 @@ Indicates whether or not to block requesting passwords from nearby devices (iOS 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4588</span>
+    <span class="phpdocumentor-element-found-in__line">4646</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pkiBlockOTAUpdates
@@ -9664,7 +9768,7 @@ Indicates whether or not over-the-air PKI updates are blocked. Setting this rest
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4617</span>
+    <span class="phpdocumentor-element-found-in__line">4675</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the podcastsBlocked
@@ -9700,7 +9804,7 @@ Indicates whether or not to block the user from using podcasts on the supervised
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4646</span>
+    <span class="phpdocumentor-element-found-in__line">4704</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the privacyForceLimitAdTracking
@@ -9771,7 +9875,7 @@ Indicates if ad tracking is limited.(iOS 7.0 and later).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4675</span>
+    <span class="phpdocumentor-element-found-in__line">4733</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the proximityBlockSetupToNewDevice
@@ -9843,7 +9947,7 @@ List of Scope Tags for this Entity instance.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4704</span>
+    <span class="phpdocumentor-element-found-in__line">4762</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariBlockAutofill
@@ -9879,7 +9983,7 @@ Indicates whether or not to block the user from using Auto fill in Safari. Requi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4733</span>
+    <span class="phpdocumentor-element-found-in__line">4791</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariBlocked
@@ -9915,7 +10019,7 @@ Indicates whether or not to block the user from using Safari. Requires a supervi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4762</span>
+    <span class="phpdocumentor-element-found-in__line">4820</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariBlockJavaScript
@@ -9951,7 +10055,7 @@ Indicates whether or not to block JavaScript in Safari.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4791</span>
+    <span class="phpdocumentor-element-found-in__line">4849</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariBlockPopups
@@ -9987,7 +10091,7 @@ Indicates whether or not to block popups in Safari.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4820</span>
+    <span class="phpdocumentor-element-found-in__line">4878</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariCookieSettings
@@ -10023,7 +10127,7 @@ Cookie settings for Safari. Possible values are: browserDefault, blockAlways, al
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4853</span>
+    <span class="phpdocumentor-element-found-in__line">4911</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariManagedDomains
@@ -10059,7 +10163,7 @@ URLs matching the patterns listed here will be considered managed.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4882</span>
+    <span class="phpdocumentor-element-found-in__line">4940</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariPasswordAutoFillDomains
@@ -10095,7 +10199,7 @@ Users can save passwords in Safari only from URLs matching the patterns listed h
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4911</span>
+    <span class="phpdocumentor-element-found-in__line">4969</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariRequireFraudWarning
@@ -10131,7 +10235,7 @@ Indicates whether or not to require fraud warning in Safari.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4940</span>
+    <span class="phpdocumentor-element-found-in__line">4998</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the screenCaptureBlocked
@@ -10167,7 +10271,7 @@ Indicates whether or not to block the user from taking Screenshots.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4969</span>
+    <span class="phpdocumentor-element-found-in__line">5027</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the sharedDeviceBlockTemporarySessions
@@ -10203,7 +10307,7 @@ Indicates whether or not to block temporary sessions on Shared iPads (iOS 13.4 o
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4998</span>
+    <span class="phpdocumentor-element-found-in__line">5056</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the siriBlocked
@@ -10239,7 +10343,7 @@ Indicates whether or not to block the user from using Siri.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5027</span>
+    <span class="phpdocumentor-element-found-in__line">5085</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the siriBlockedWhenLocked
@@ -10275,7 +10379,7 @@ Indicates whether or not to block the user from using Siri when locked.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5056</span>
+    <span class="phpdocumentor-element-found-in__line">5114</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the siriBlockUserGeneratedContent
@@ -10311,7 +10415,7 @@ Indicates whether or not to block Siri from querying user-generated content when
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5085</span>
+    <span class="phpdocumentor-element-found-in__line">5143</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the siriRequireProfanityFilter
@@ -10347,7 +10451,7 @@ Indicates whether or not to prevent Siri from dictating, or speaking profane lan
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5114</span>
+    <span class="phpdocumentor-element-found-in__line">5172</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the softwareUpdatesEnforcedDelayInDays
@@ -10383,7 +10487,7 @@ Sets how many days a software update will be delyed for a supervised device. Val
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5143</span>
+    <span class="phpdocumentor-element-found-in__line">5201</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the softwareUpdatesForceDelayed
@@ -10419,7 +10523,7 @@ Indicates whether or not to delay user visibility of software updates when the d
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5172</span>
+    <span class="phpdocumentor-element-found-in__line">5230</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the spotlightBlockInternetResults
@@ -10491,7 +10595,7 @@ Indicates whether or not the underlying Device Configuration supports the assign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5201</span>
+    <span class="phpdocumentor-element-found-in__line">5259</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the unpairedExternalBootToRecoveryAllowed
@@ -10527,7 +10631,7 @@ Allow users to boot devices into recovery mode with unpaired devices. Available 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5230</span>
+    <span class="phpdocumentor-element-found-in__line">5288</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the usbRestrictedModeBlocked
@@ -10671,7 +10775,7 @@ Version of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5259</span>
+    <span class="phpdocumentor-element-found-in__line">5317</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the voiceDialingBlocked
@@ -10707,7 +10811,7 @@ Indicates whether or not to block voice dialing.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5288</span>
+    <span class="phpdocumentor-element-found-in__line">5346</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the vpnBlockCreation
@@ -10743,7 +10847,7 @@ Indicates whether or not the creation of VPN configurations is blocked (iOS 11.0
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5317</span>
+    <span class="phpdocumentor-element-found-in__line">5375</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wallpaperBlockModification
@@ -10779,7 +10883,7 @@ Indicates whether or not to allow wallpaper modification on supervised device (i
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5346</span>
+    <span class="phpdocumentor-element-found-in__line">5404</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wiFiConnectOnlyToConfiguredNetworks
@@ -10815,7 +10919,7 @@ Indicates whether or not to force the device to use only Wi-Fi networks from con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5375</span>
+    <span class="phpdocumentor-element-found-in__line">5433</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wiFiConnectToAllowedNetworksOnlyForced
@@ -10851,7 +10955,7 @@ Require devices to use Wi-Fi networks set up via configuration profiles. Availab
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5404</span>
+    <span class="phpdocumentor-element-found-in__line">5462</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wifiPowerOnForced
@@ -17355,6 +17459,53 @@ Indicates whether or not to block the user from using the Today View on the lock
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setManagedPasteboardRequired">
+        setManagedPasteboardRequired()
+        <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_setManagedPasteboardRequired" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">3661</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the managedPasteboardRequired
+Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setManagedPasteboardRequired</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\IosGeneralDeviceConfiguration">IosGeneralDeviceConfiguration</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The managedPasteboardRequired</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\IosGeneralDeviceConfiguration">IosGeneralDeviceConfiguration</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setMediaContentRatingApps">
         setMediaContentRatingApps()
         <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_setMediaContentRatingApps" class="headerlink"><i class="fas fa-link"></i></a>
@@ -17362,7 +17513,7 @@ Indicates whether or not to block the user from using the Today View on the lock
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3665</span>
+    <span class="phpdocumentor-element-found-in__line">3694</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingApps
@@ -17409,7 +17560,7 @@ Media content rating settings for Apps. Possible values are: allAllowed, allBloc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3698</span>
+    <span class="phpdocumentor-element-found-in__line">3727</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingAustralia
@@ -17456,7 +17607,7 @@ Media content rating settings for Australia</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3731</span>
+    <span class="phpdocumentor-element-found-in__line">3760</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingCanada
@@ -17503,7 +17654,7 @@ Media content rating settings for Canada</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3764</span>
+    <span class="phpdocumentor-element-found-in__line">3793</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingFrance
@@ -17550,7 +17701,7 @@ Media content rating settings for France</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3797</span>
+    <span class="phpdocumentor-element-found-in__line">3826</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingGermany
@@ -17597,7 +17748,7 @@ Media content rating settings for Germany</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3830</span>
+    <span class="phpdocumentor-element-found-in__line">3859</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingIreland
@@ -17644,7 +17795,7 @@ Media content rating settings for Ireland</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3863</span>
+    <span class="phpdocumentor-element-found-in__line">3892</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingJapan
@@ -17691,7 +17842,7 @@ Media content rating settings for Japan</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3896</span>
+    <span class="phpdocumentor-element-found-in__line">3925</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingNewZealand
@@ -17738,7 +17889,7 @@ Media content rating settings for New Zealand</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3929</span>
+    <span class="phpdocumentor-element-found-in__line">3958</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingUnitedKingdom
@@ -17785,7 +17936,7 @@ Media content rating settings for United Kingdom</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3962</span>
+    <span class="phpdocumentor-element-found-in__line">3991</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaContentRatingUnitedStates
@@ -17832,7 +17983,7 @@ Media content rating settings for United States</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3991</span>
+    <span class="phpdocumentor-element-found-in__line">4020</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the messagesBlocked
@@ -17879,7 +18030,7 @@ Indicates whether or not to block the user from using the Messages app on the su
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4021</span>
+    <span class="phpdocumentor-element-found-in__line">4050</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the networkUsageRules
@@ -17926,7 +18077,7 @@ List of managed apps and the network rules that applies to them. This collection
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4050</span>
+    <span class="phpdocumentor-element-found-in__line">4079</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the nfcBlocked
@@ -17973,7 +18124,7 @@ Disable NFC to prevent devices from pairing with other NFC-enabled devices. Avai
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4079</span>
+    <span class="phpdocumentor-element-found-in__line">4108</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the notificationsBlockSettingsModification
@@ -18066,7 +18217,7 @@ Indicates whether or not to allow notifications settings modification (iOS 9.3 a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4108</span>
+    <span class="phpdocumentor-element-found-in__line">4137</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onDeviceOnlyDictationForced
@@ -18106,6 +18257,53 @@ Disables connections to Siri servers so that users can’t use Siri to dictate t
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setOnDeviceOnlyTranslationForced">
+        setOnDeviceOnlyTranslationForced()
+        <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_setOnDeviceOnlyTranslationForced" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">4166</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the onDeviceOnlyTranslationForced
+When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setOnDeviceOnlyTranslationForced</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\IosGeneralDeviceConfiguration">IosGeneralDeviceConfiguration</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The onDeviceOnlyTranslationForced</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\IosGeneralDeviceConfiguration">IosGeneralDeviceConfiguration</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setPasscodeBlockFingerprintModification">
         setPasscodeBlockFingerprintModification()
         <a href="classes/Beta-Microsoft-Graph-Model-IosGeneralDeviceConfiguration.html#method_setPasscodeBlockFingerprintModification" class="headerlink"><i class="fas fa-link"></i></a>
@@ -18113,7 +18311,7 @@ Disables connections to Siri servers so that users can’t use Siri to dictate t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4137</span>
+    <span class="phpdocumentor-element-found-in__line">4195</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeBlockFingerprintModification
@@ -18160,7 +18358,7 @@ Block modification of registered Touch ID fingerprints when in supervised mode.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4166</span>
+    <span class="phpdocumentor-element-found-in__line">4224</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeBlockFingerprintUnlock
@@ -18207,7 +18405,7 @@ Indicates whether or not to block fingerprint unlock.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4195</span>
+    <span class="phpdocumentor-element-found-in__line">4253</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeBlockModification
@@ -18254,7 +18452,7 @@ Indicates whether or not to allow passcode modification on the supervised device
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4224</span>
+    <span class="phpdocumentor-element-found-in__line">4282</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeBlockSimple
@@ -18301,7 +18499,7 @@ Indicates whether or not to block simple passcodes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4253</span>
+    <span class="phpdocumentor-element-found-in__line">4311</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeExpirationDays
@@ -18348,7 +18546,7 @@ Number of days before the passcode expires. Valid values 1 to 65535</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4282</span>
+    <span class="phpdocumentor-element-found-in__line">4340</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeMinimumCharacterSetCount
@@ -18395,7 +18593,7 @@ Number of character sets a passcode must contain. Valid values 0 to 4</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4311</span>
+    <span class="phpdocumentor-element-found-in__line">4369</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeMinimumLength
@@ -18442,7 +18640,7 @@ Minimum length of passcode. Valid values 4 to 14</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4340</span>
+    <span class="phpdocumentor-element-found-in__line">4398</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeMinutesOfInactivityBeforeLock
@@ -18489,7 +18687,7 @@ Minutes of inactivity before a passcode is required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4369</span>
+    <span class="phpdocumentor-element-found-in__line">4427</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeMinutesOfInactivityBeforeScreenTimeout
@@ -18536,7 +18734,7 @@ Minutes of inactivity before the screen times out.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4398</span>
+    <span class="phpdocumentor-element-found-in__line">4456</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodePreviousPasscodeBlockCount
@@ -18583,7 +18781,7 @@ Number of previous passcodes to block. Valid values 1 to 24</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4427</span>
+    <span class="phpdocumentor-element-found-in__line">4485</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeRequired
@@ -18630,7 +18828,7 @@ Indicates whether or not to require a passcode.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4460</span>
+    <span class="phpdocumentor-element-found-in__line">4518</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeRequiredType
@@ -18677,7 +18875,7 @@ Type of passcode that is required. Possible values are: deviceDefault, alphanume
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4489</span>
+    <span class="phpdocumentor-element-found-in__line">4547</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passcodeSignInFailureCountBeforeWipe
@@ -18724,7 +18922,7 @@ Number of sign in failures allowed before wiping the device. Valid values 2 to 1
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4518</span>
+    <span class="phpdocumentor-element-found-in__line">4576</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockAirDropSharing
@@ -18771,7 +18969,7 @@ Indicates whether or not to block sharing passwords with the AirDrop passwords f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4547</span>
+    <span class="phpdocumentor-element-found-in__line">4605</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockAutoFill
@@ -18818,7 +19016,7 @@ Indicates if the AutoFill passwords feature is allowed (iOS 12.0 and later).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4576</span>
+    <span class="phpdocumentor-element-found-in__line">4634</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockProximityRequests
@@ -18865,7 +19063,7 @@ Indicates whether or not to block requesting passwords from nearby devices (iOS 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4605</span>
+    <span class="phpdocumentor-element-found-in__line">4663</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pkiBlockOTAUpdates
@@ -18912,7 +19110,7 @@ Indicates whether or not over-the-air PKI updates are blocked. Setting this rest
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4634</span>
+    <span class="phpdocumentor-element-found-in__line">4692</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the podcastsBlocked
@@ -18959,7 +19157,7 @@ Indicates whether or not to block the user from using podcasts on the supervised
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4663</span>
+    <span class="phpdocumentor-element-found-in__line">4721</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the privacyForceLimitAdTracking
@@ -19006,7 +19204,7 @@ Indicates if ad tracking is limited.(iOS 7.0 and later).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4692</span>
+    <span class="phpdocumentor-element-found-in__line">4750</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the proximityBlockSetupToNewDevice
@@ -19100,7 +19298,7 @@ List of Scope Tags for this Entity instance.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4721</span>
+    <span class="phpdocumentor-element-found-in__line">4779</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariBlockAutofill
@@ -19147,7 +19345,7 @@ Indicates whether or not to block the user from using Auto fill in Safari. Requi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4750</span>
+    <span class="phpdocumentor-element-found-in__line">4808</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariBlocked
@@ -19194,7 +19392,7 @@ Indicates whether or not to block the user from using Safari. Requires a supervi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4779</span>
+    <span class="phpdocumentor-element-found-in__line">4837</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariBlockJavaScript
@@ -19241,7 +19439,7 @@ Indicates whether or not to block JavaScript in Safari.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4808</span>
+    <span class="phpdocumentor-element-found-in__line">4866</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariBlockPopups
@@ -19288,7 +19486,7 @@ Indicates whether or not to block popups in Safari.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4841</span>
+    <span class="phpdocumentor-element-found-in__line">4899</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariCookieSettings
@@ -19335,7 +19533,7 @@ Cookie settings for Safari. Possible values are: browserDefault, blockAlways, al
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4870</span>
+    <span class="phpdocumentor-element-found-in__line">4928</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariManagedDomains
@@ -19382,7 +19580,7 @@ URLs matching the patterns listed here will be considered managed.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4899</span>
+    <span class="phpdocumentor-element-found-in__line">4957</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariPasswordAutoFillDomains
@@ -19429,7 +19627,7 @@ Users can save passwords in Safari only from URLs matching the patterns listed h
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4928</span>
+    <span class="phpdocumentor-element-found-in__line">4986</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariRequireFraudWarning
@@ -19476,7 +19674,7 @@ Indicates whether or not to require fraud warning in Safari.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4957</span>
+    <span class="phpdocumentor-element-found-in__line">5015</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the screenCaptureBlocked
@@ -19523,7 +19721,7 @@ Indicates whether or not to block the user from taking Screenshots.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">4986</span>
+    <span class="phpdocumentor-element-found-in__line">5044</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sharedDeviceBlockTemporarySessions
@@ -19570,7 +19768,7 @@ Indicates whether or not to block temporary sessions on Shared iPads (iOS 13.4 o
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5015</span>
+    <span class="phpdocumentor-element-found-in__line">5073</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the siriBlocked
@@ -19617,7 +19815,7 @@ Indicates whether or not to block the user from using Siri.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5044</span>
+    <span class="phpdocumentor-element-found-in__line">5102</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the siriBlockedWhenLocked
@@ -19664,7 +19862,7 @@ Indicates whether or not to block the user from using Siri when locked.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5073</span>
+    <span class="phpdocumentor-element-found-in__line">5131</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the siriBlockUserGeneratedContent
@@ -19711,7 +19909,7 @@ Indicates whether or not to block Siri from querying user-generated content when
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5102</span>
+    <span class="phpdocumentor-element-found-in__line">5160</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the siriRequireProfanityFilter
@@ -19758,7 +19956,7 @@ Indicates whether or not to prevent Siri from dictating, or speaking profane lan
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5131</span>
+    <span class="phpdocumentor-element-found-in__line">5189</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the softwareUpdatesEnforcedDelayInDays
@@ -19805,7 +20003,7 @@ Sets how many days a software update will be delyed for a supervised device. Val
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5160</span>
+    <span class="phpdocumentor-element-found-in__line">5218</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the softwareUpdatesForceDelayed
@@ -19852,7 +20050,7 @@ Indicates whether or not to delay user visibility of software updates when the d
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5189</span>
+    <span class="phpdocumentor-element-found-in__line">5247</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the spotlightBlockInternetResults
@@ -19946,7 +20144,7 @@ Indicates whether or not the underlying Device Configuration supports the assign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5218</span>
+    <span class="phpdocumentor-element-found-in__line">5276</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the unpairedExternalBootToRecoveryAllowed
@@ -19993,7 +20191,7 @@ Allow users to boot devices into recovery mode with unpaired devices. Available 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5247</span>
+    <span class="phpdocumentor-element-found-in__line">5305</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the usbRestrictedModeBlocked
@@ -20181,7 +20379,7 @@ Version of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5276</span>
+    <span class="phpdocumentor-element-found-in__line">5334</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the voiceDialingBlocked
@@ -20228,7 +20426,7 @@ Indicates whether or not to block voice dialing.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5305</span>
+    <span class="phpdocumentor-element-found-in__line">5363</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the vpnBlockCreation
@@ -20275,7 +20473,7 @@ Indicates whether or not the creation of VPN configurations is blocked (iOS 11.0
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5334</span>
+    <span class="phpdocumentor-element-found-in__line">5392</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wallpaperBlockModification
@@ -20322,7 +20520,7 @@ Indicates whether or not to allow wallpaper modification on supervised device (i
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5363</span>
+    <span class="phpdocumentor-element-found-in__line">5421</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wiFiConnectOnlyToConfiguredNetworks
@@ -20369,7 +20567,7 @@ Indicates whether or not to force the device to use only Wi-Fi networks from con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5392</span>
+    <span class="phpdocumentor-element-found-in__line">5450</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wiFiConnectToAllowedNetworksOnlyForced
@@ -20416,7 +20614,7 @@ Require devices to use Wi-Fi networks set up via configuration profiles. Availab
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-iosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosGeneralDeviceConfiguration.php">IosGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5421</span>
+    <span class="phpdocumentor-element-found-in__line">5479</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wifiPowerOnForced

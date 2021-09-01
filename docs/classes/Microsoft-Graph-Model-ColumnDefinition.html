@@ -205,6 +205,14 @@ This column stores data from a list of choices.</dd>
 For site columns, the name of the group this column belongs to. Helps organize related columns.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getContentApprovalStatus">getContentApprovalStatus()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentApprovalStatusColumn.html"><abbr title="\Microsoft\Graph\Model\ContentApprovalStatusColumn">ContentApprovalStatusColumn</abbr></a>|null    </span>
+</dt>
+<dd>Gets the contentApprovalStatus
+This column stores content approval status.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getCurrency">getCurrency()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-CurrencyColumn.html"><abbr title="\Microsoft\Graph\Model\CurrencyColumn">CurrencyColumn</abbr></a>|null    </span>
@@ -269,6 +277,14 @@ This column stores a geolocation.</dd>
 Specifies whether the column is displayed in the user interface.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getHyperlinkOrPicture">getHyperlinkOrPicture()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-HyperlinkOrPictureColumn.html"><abbr title="\Microsoft\Graph\Model\HyperlinkOrPictureColumn">HyperlinkOrPictureColumn</abbr></a>|null    </span>
+</dt>
+<dd>Gets the hyperlinkOrPicture
+This column stores hyperlink or picture values.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -283,6 +299,30 @@ Read-only.</dd>
 </dt>
 <dd>Gets the indexed
 Specifies whether the column values can used for sorting and searching.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getIsDeletable">getIsDeletable()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the isDeletable
+Indicates whether this column can be deleted.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getIsReorderable">getIsReorderable()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the isReorderable
+Indicates whether values in the column can be reordered. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getIsSealed">getIsSealed()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the isSealed
+Specifies whether the column can be changed.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getLookup">getLookup()</a>
@@ -324,6 +364,14 @@ This column stores number values.</dd>
 This column stores Person or Group values.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getPropagateChanges">getPropagateChanges()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the propagateChanges
+If true, changes to this column will be propagated to lists that implement the column.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;    </span>
@@ -347,12 +395,52 @@ Specifies whether the column values can be modified.</dd>
 Specifies whether the column value isn&#039;t optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getSourceColumn">getSourceColumn()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>|null    </span>
+</dt>
+<dd>Gets the sourceColumn
+The source column for content type column.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getTerm">getTerm()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-TermColumn.html"><abbr title="\Microsoft\Graph\Model\TermColumn">TermColumn</abbr></a>|null    </span>
+</dt>
+<dd>Gets the term
+This column stores taxonomy terms.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getText">getText()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-TextColumn.html"><abbr title="\Microsoft\Graph\Model\TextColumn">TextColumn</abbr></a>|null    </span>
 </dt>
 <dd>Gets the text
 This column stores text values.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getThumbnail">getThumbnail()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ThumbnailColumn.html"><abbr title="\Microsoft\Graph\Model\ThumbnailColumn">ThumbnailColumn</abbr></a>|null    </span>
+</dt>
+<dd>Gets the thumbnail
+This column stores thumbnail values.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getType">getType()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnTypes.html"><abbr title="\Microsoft\Graph\Model\ColumnTypes">ColumnTypes</abbr></a>|null    </span>
+</dt>
+<dd>Gets the type
+For site columns, the type of column. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getValidation">getValidation()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnValidation.html"><abbr title="\Microsoft\Graph\Model\ColumnValidation">ColumnValidation</abbr></a>|null    </span>
+</dt>
+<dd>Gets the validation
+This column stores validation formula and message for the column.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -393,6 +481,14 @@ This column stores data from a list of choices.</dd>
 </dt>
 <dd>Sets the columnGroup
 For site columns, the name of the group this column belongs to. Helps organize related columns.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setContentApprovalStatus">setContentApprovalStatus()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the contentApprovalStatus
+This column stores content approval status.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setCurrency">setCurrency()</a>
@@ -459,6 +555,14 @@ This column stores a geolocation.</dd>
 Specifies whether the column is displayed in the user interface.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setHyperlinkOrPicture">setHyperlinkOrPicture()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the hyperlinkOrPicture
+This column stores hyperlink or picture values.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>    </span>
@@ -473,6 +577,30 @@ Read-only.</dd>
 </dt>
 <dd>Sets the indexed
 Specifies whether the column values can used for sorting and searching.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setIsDeletable">setIsDeletable()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the isDeletable
+Indicates whether this column can be deleted.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setIsReorderable">setIsReorderable()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the isReorderable
+Indicates whether values in the column can be reordered. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setIsSealed">setIsSealed()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the isSealed
+Specifies whether the column can be changed.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setLookup">setLookup()</a>
@@ -514,6 +642,14 @@ This column stores number values.</dd>
 This column stores Person or Group values.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setPropagateChanges">setPropagateChanges()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the propagateChanges
+If true, changes to this column will be propagated to lists that implement the column.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setReadOnly">setReadOnly()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
@@ -530,12 +666,52 @@ Specifies whether the column values can be modified.</dd>
 Specifies whether the column value isn&#039;t optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setSourceColumn">setSourceColumn()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the sourceColumn
+The source column for content type column.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setTerm">setTerm()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the term
+This column stores taxonomy terms.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setText">setText()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the text
 This column stores text values.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setThumbnail">setThumbnail()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the thumbnail
+This column stores thumbnail values.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setType">setType()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the type
+For site columns, the type of column. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setValidation">setValidation()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the validation
+This column stores validation formula and message for the column.</dd>
 
         </dl>
 
@@ -785,6 +961,42 @@ For site columns, the name of the group this column belongs to. Helps organize r
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getContentApprovalStatus">
+        getContentApprovalStatus()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getContentApprovalStatus" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">161</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the contentApprovalStatus
+This column stores content approval status.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getContentApprovalStatus</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentApprovalStatusColumn.html"><abbr title="\Microsoft\Graph\Model\ContentApprovalStatusColumn">ContentApprovalStatusColumn</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentApprovalStatusColumn.html"><abbr title="\Microsoft\Graph\Model\ContentApprovalStatusColumn">ContentApprovalStatusColumn</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The contentApprovalStatus</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getCurrency">
         getCurrency()
         <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getCurrency" class="headerlink"><i class="fas fa-link"></i></a>
@@ -792,7 +1004,7 @@ For site columns, the name of the group this column belongs to. Helps organize r
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">194</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the currency
@@ -828,7 +1040,7 @@ This column stores currency values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">194</span>
+    <span class="phpdocumentor-element-found-in__line">227</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the dateTime
@@ -864,7 +1076,7 @@ This column stores DateTime values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">227</span>
+    <span class="phpdocumentor-element-found-in__line">260</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the defaultValue
@@ -900,7 +1112,7 @@ The default value for this column.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">260</span>
+    <span class="phpdocumentor-element-found-in__line">293</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the description
@@ -936,7 +1148,7 @@ The user-facing description of the column.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">289</span>
+    <span class="phpdocumentor-element-found-in__line">322</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the displayName
@@ -972,7 +1184,7 @@ The user-facing name of the column.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">318</span>
+    <span class="phpdocumentor-element-found-in__line">351</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enforceUniqueValues
@@ -1008,7 +1220,7 @@ If true, no two list items may have the same value for this column.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">347</span>
+    <span class="phpdocumentor-element-found-in__line">380</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the geolocation
@@ -1044,7 +1256,7 @@ This column stores a geolocation.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">380</span>
+    <span class="phpdocumentor-element-found-in__line">413</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hidden
@@ -1063,6 +1275,42 @@ Specifies whether the column is displayed in the user interface.</p>
     <span class="phpdocumentor-signature__response_type">bool|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The hidden</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getHyperlinkOrPicture">
+        getHyperlinkOrPicture()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getHyperlinkOrPicture" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">442</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the hyperlinkOrPicture
+This column stores hyperlink or picture values.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getHyperlinkOrPicture</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-HyperlinkOrPictureColumn.html"><abbr title="\Microsoft\Graph\Model\HyperlinkOrPictureColumn">HyperlinkOrPictureColumn</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-HyperlinkOrPictureColumn.html"><abbr title="\Microsoft\Graph\Model\HyperlinkOrPictureColumn">HyperlinkOrPictureColumn</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The hyperlinkOrPicture</p>
 </section>
 
     
@@ -1116,7 +1364,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">409</span>
+    <span class="phpdocumentor-element-found-in__line">475</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the indexed
@@ -1145,6 +1393,114 @@ Specifies whether the column values can used for sorting and searching.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getIsDeletable">
+        getIsDeletable()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getIsDeletable" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">504</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the isDeletable
+Indicates whether this column can be deleted.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getIsDeletable</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The isDeletable</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getIsReorderable">
+        getIsReorderable()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getIsReorderable" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">533</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the isReorderable
+Indicates whether values in the column can be reordered. Read-only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getIsReorderable</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The isReorderable</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getIsSealed">
+        getIsSealed()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getIsSealed" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">562</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the isSealed
+Specifies whether the column can be changed.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getIsSealed</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The isSealed</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getLookup">
         getLookup()
         <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getLookup" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1152,7 +1508,7 @@ Specifies whether the column values can used for sorting and searching.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">438</span>
+    <span class="phpdocumentor-element-found-in__line">591</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lookup
@@ -1188,7 +1544,7 @@ This column&#039;s data is looked up from another source in the site.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">471</span>
+    <span class="phpdocumentor-element-found-in__line">624</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the name
@@ -1224,7 +1580,7 @@ The API-facing name of the column as it appears in the [fields][] on a [listItem
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">500</span>
+    <span class="phpdocumentor-element-found-in__line">653</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the number
@@ -1295,7 +1651,7 @@ This column stores number values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">533</span>
+    <span class="phpdocumentor-element-found-in__line">686</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the personOrGroup
@@ -1314,6 +1670,42 @@ This column stores Person or Group values.</p>
     <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PersonOrGroupColumn.html"><abbr title="\Microsoft\Graph\Model\PersonOrGroupColumn">PersonOrGroupColumn</abbr></a>|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The personOrGroup</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getPropagateChanges">
+        getPropagateChanges()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getPropagateChanges" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">719</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the propagateChanges
+If true, changes to this column will be propagated to lists that implement the column.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getPropagateChanges</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The propagateChanges</p>
 </section>
 
     
@@ -1366,7 +1758,7 @@ This column stores Person or Group values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">566</span>
+    <span class="phpdocumentor-element-found-in__line">748</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the readOnly
@@ -1402,7 +1794,7 @@ Specifies whether the column values can be modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">595</span>
+    <span class="phpdocumentor-element-found-in__line">777</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the required
@@ -1431,6 +1823,78 @@ Specifies whether the column value isn&#039;t optional.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getSourceColumn">
+        getSourceColumn()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getSourceColumn" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">971</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the sourceColumn
+The source column for content type column.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSourceColumn</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The sourceColumn</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getTerm">
+        getTerm()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getTerm" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">806</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the term
+This column stores taxonomy terms.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getTerm</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-TermColumn.html"><abbr title="\Microsoft\Graph\Model\TermColumn">TermColumn</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-TermColumn.html"><abbr title="\Microsoft\Graph\Model\TermColumn">TermColumn</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The term</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getText">
         getText()
         <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getText" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1438,7 +1902,7 @@ Specifies whether the column value isn&#039;t optional.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">624</span>
+    <span class="phpdocumentor-element-found-in__line">839</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the text
@@ -1457,6 +1921,114 @@ This column stores text values.</p>
     <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-TextColumn.html"><abbr title="\Microsoft\Graph\Model\TextColumn">TextColumn</abbr></a>|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The text</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getThumbnail">
+        getThumbnail()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getThumbnail" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">872</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the thumbnail
+This column stores thumbnail values.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getThumbnail</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ThumbnailColumn.html"><abbr title="\Microsoft\Graph\Model\ThumbnailColumn">ThumbnailColumn</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ThumbnailColumn.html"><abbr title="\Microsoft\Graph\Model\ThumbnailColumn">ThumbnailColumn</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The thumbnail</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getType">
+        getType()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getType" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">905</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the type
+For site columns, the type of column. Read-only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getType</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnTypes.html"><abbr title="\Microsoft\Graph\Model\ColumnTypes">ColumnTypes</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnTypes.html"><abbr title="\Microsoft\Graph\Model\ColumnTypes">ColumnTypes</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The type</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getValidation">
+        getValidation()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_getValidation" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">938</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the validation
+This column stores validation formula and message for the column.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getValidation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnValidation.html"><abbr title="\Microsoft\Graph\Model\ColumnValidation">ColumnValidation</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnValidation.html"><abbr title="\Microsoft\Graph\Model\ColumnValidation">ColumnValidation</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The validation</p>
 </section>
 
     
@@ -1691,6 +2263,53 @@ For site columns, the name of the group this column belongs to. Helps organize r
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setContentApprovalStatus">
+        setContentApprovalStatus()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setContentApprovalStatus" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">182</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the contentApprovalStatus
+This column stores content approval status.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setContentApprovalStatus</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ContentApprovalStatusColumn.html"><abbr title="\Microsoft\Graph\Model\ContentApprovalStatusColumn">ContentApprovalStatusColumn</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ContentApprovalStatusColumn.html"><abbr title="\Microsoft\Graph\Model\ContentApprovalStatusColumn">ContentApprovalStatusColumn</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The contentApprovalStatus</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setCurrency">
         setCurrency()
         <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setCurrency" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1698,7 +2317,7 @@ For site columns, the name of the group this column belongs to. Helps organize r
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">182</span>
+    <span class="phpdocumentor-element-found-in__line">215</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the currency
@@ -1745,7 +2364,7 @@ This column stores currency values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">215</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the dateTime
@@ -1792,7 +2411,7 @@ This column stores DateTime values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">248</span>
+    <span class="phpdocumentor-element-found-in__line">281</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the defaultValue
@@ -1839,7 +2458,7 @@ The default value for this column.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">277</span>
+    <span class="phpdocumentor-element-found-in__line">310</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the description
@@ -1886,7 +2505,7 @@ The user-facing description of the column.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">306</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the displayName
@@ -1933,7 +2552,7 @@ The user-facing name of the column.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">335</span>
+    <span class="phpdocumentor-element-found-in__line">368</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enforceUniqueValues
@@ -1980,7 +2599,7 @@ If true, no two list items may have the same value for this column.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">368</span>
+    <span class="phpdocumentor-element-found-in__line">401</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the geolocation
@@ -2027,7 +2646,7 @@ This column stores a geolocation.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">397</span>
+    <span class="phpdocumentor-element-found-in__line">430</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hidden
@@ -2047,6 +2666,53 @@ Specifies whether the column is displayed in the user interface.</p>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The hidden</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setHyperlinkOrPicture">
+        setHyperlinkOrPicture()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setHyperlinkOrPicture" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">463</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the hyperlinkOrPicture
+This column stores hyperlink or picture values.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setHyperlinkOrPicture</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-HyperlinkOrPictureColumn.html"><abbr title="\Microsoft\Graph\Model\HyperlinkOrPictureColumn">HyperlinkOrPictureColumn</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-HyperlinkOrPictureColumn.html"><abbr title="\Microsoft\Graph\Model\HyperlinkOrPictureColumn">HyperlinkOrPictureColumn</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The hyperlinkOrPicture</p>
 </section>
 
             </dd>
@@ -2121,7 +2787,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">426</span>
+    <span class="phpdocumentor-element-found-in__line">492</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the indexed
@@ -2161,6 +2827,147 @@ Specifies whether the column values can used for sorting and searching.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setIsDeletable">
+        setIsDeletable()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setIsDeletable" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">521</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the isDeletable
+Indicates whether this column can be deleted.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIsDeletable</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The isDeletable</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setIsReorderable">
+        setIsReorderable()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setIsReorderable" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">550</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the isReorderable
+Indicates whether values in the column can be reordered. Read-only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIsReorderable</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The isReorderable</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setIsSealed">
+        setIsSealed()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setIsSealed" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">579</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the isSealed
+Specifies whether the column can be changed.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIsSealed</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The isSealed</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setLookup">
         setLookup()
         <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setLookup" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2168,7 +2975,7 @@ Specifies whether the column values can used for sorting and searching.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">459</span>
+    <span class="phpdocumentor-element-found-in__line">612</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lookup
@@ -2215,7 +3022,7 @@ This column&#039;s data is looked up from another source in the site.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">488</span>
+    <span class="phpdocumentor-element-found-in__line">641</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the name
@@ -2262,7 +3069,7 @@ The API-facing name of the column as it appears in the [fields][] on a [listItem
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">521</span>
+    <span class="phpdocumentor-element-found-in__line">674</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the number
@@ -2355,7 +3162,7 @@ This column stores number values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">554</span>
+    <span class="phpdocumentor-element-found-in__line">707</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the personOrGroup
@@ -2395,6 +3202,53 @@ This column stores Person or Group values.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setPropagateChanges">
+        setPropagateChanges()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setPropagateChanges" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">736</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the propagateChanges
+If true, changes to this column will be propagated to lists that implement the column.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setPropagateChanges</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The propagateChanges</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setReadOnly">
         setReadOnly()
         <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setReadOnly" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2402,7 +3256,7 @@ This column stores Person or Group values.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">583</span>
+    <span class="phpdocumentor-element-found-in__line">765</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the readOnly
@@ -2449,7 +3303,7 @@ Specifies whether the column values can be modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">612</span>
+    <span class="phpdocumentor-element-found-in__line">794</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the required
@@ -2489,6 +3343,100 @@ Specifies whether the column value isn&#039;t optional.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setSourceColumn">
+        setSourceColumn()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setSourceColumn" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">992</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the sourceColumn
+The source column for content type column.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSourceColumn</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The sourceColumn</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setTerm">
+        setTerm()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setTerm" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">827</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the term
+This column stores taxonomy terms.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTerm</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TermColumn.html"><abbr title="\Microsoft\Graph\Model\TermColumn">TermColumn</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TermColumn.html"><abbr title="\Microsoft\Graph\Model\TermColumn">TermColumn</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The term</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setText">
         setText()
         <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setText" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2496,7 +3444,7 @@ Specifies whether the column value isn&#039;t optional.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">645</span>
+    <span class="phpdocumentor-element-found-in__line">860</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the text
@@ -2516,6 +3464,147 @@ This column stores text values.</p>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The text</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setThumbnail">
+        setThumbnail()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setThumbnail" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">893</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the thumbnail
+This column stores thumbnail values.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setThumbnail</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ThumbnailColumn.html"><abbr title="\Microsoft\Graph\Model\ThumbnailColumn">ThumbnailColumn</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ThumbnailColumn.html"><abbr title="\Microsoft\Graph\Model\ThumbnailColumn">ThumbnailColumn</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The thumbnail</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setType">
+        setType()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setType" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">926</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the type
+For site columns, the type of column. Read-only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setType</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnTypes.html"><abbr title="\Microsoft\Graph\Model\ColumnTypes">ColumnTypes</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnTypes.html"><abbr title="\Microsoft\Graph\Model\ColumnTypes">ColumnTypes</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The type</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setValidation">
+        setValidation()
+        <a href="classes/Microsoft-Graph-Model-ColumnDefinition.html#method_setValidation" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ColumnDefinition.php"><a href="files/src-model-columndefinition.html"><abbr title="src/Model/ColumnDefinition.php">ColumnDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">959</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the validation
+This column stores validation formula and message for the column.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setValidation</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnValidation.html"><abbr title="\Microsoft\Graph\Model\ColumnValidation">ColumnValidation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnValidation.html"><abbr title="\Microsoft\Graph\Model\ColumnValidation">ColumnValidation</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The validation</p>
 </section>
 
             </dd>

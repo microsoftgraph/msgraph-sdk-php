@@ -173,6 +173,22 @@ to the model</dd>
 <dd>Construct a new Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_getAggregationFilters">getAggregationFilters()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the aggregationFilters
+Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format &#039;{field}:/&#039;{aggregationFilterToken}/&#039;&#039;. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format &#039;{field}:or(/&#039;{aggregationFilterToken1}/&#039;,/&#039;{aggregationFilterToken2}/&#039;)&#039;. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_getAggregations">getAggregations()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-AggregationOption.html"><abbr title="\Microsoft\Graph\Model\AggregationOption">AggregationOption</abbr></a>|null    </span>
+</dt>
+<dd>Gets the aggregations
+Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_getContentSources">getContentSources()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -251,12 +267,36 @@ Contains the query terms. Required.</dd>
 The size of the page to be retrieved. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_getSortProperties">getSortProperties()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SortProperty.html"><abbr title="\Microsoft\Graph\Model\SortProperty">SortProperty</abbr></a>|null    </span>
+</dt>
+<dd>Gets the sortProperties
+Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Serializes the object by property array
 Manually serialize DateTime into RFC3339 format</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_setAggregationFilters">setAggregationFilters()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a>    </span>
+</dt>
+<dd>Sets the aggregationFilters
+Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format &#039;{field}:/&#039;{aggregationFilterToken}/&#039;&#039;. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format &#039;{field}:or(/&#039;{aggregationFilterToken1}/&#039;,/&#039;{aggregationFilterToken2}/&#039;)&#039;. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_setAggregations">setAggregations()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a>    </span>
+</dt>
+<dd>Sets the aggregations
+Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_setContentSources">setContentSources()</a>
@@ -328,6 +368,14 @@ Contains the query terms. Required.</dd>
 </dt>
 <dd>Sets the size
 The size of the page to be retrieved. Optional.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_setSortProperties">setSortProperties()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a>    </span>
+</dt>
+<dd>Sets the sortProperties
+Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.</dd>
 
         </dl>
 
@@ -433,6 +481,78 @@ to the model</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getAggregationFilters">
+        getAggregationFilters()
+        <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_getAggregationFilters" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">32</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the aggregationFilters
+Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format &#039;{field}:/&#039;{aggregationFilterToken}/&#039;&#039;. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format &#039;{field}:or(/&#039;{aggregationFilterToken1}/&#039;,/&#039;{aggregationFilterToken2}/&#039;)&#039;. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAggregationFilters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The aggregationFilters</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getAggregations">
+        getAggregations()
+        <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_getAggregations" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">61</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the aggregations
+Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAggregations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AggregationOption.html"><abbr title="\Microsoft\Graph\Model\AggregationOption">AggregationOption</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AggregationOption.html"><abbr title="\Microsoft\Graph\Model\AggregationOption">AggregationOption</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The aggregations</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getContentSources">
         getContentSources()
         <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_getContentSources" class="headerlink"><i class="fas fa-link"></i></a>
@@ -440,7 +560,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">93</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the contentSources
@@ -476,7 +596,7 @@ Contains the connection to be targeted. Respects the following format : /externa
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">60</span>
+    <span class="phpdocumentor-element-found-in__line">121</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enableTopResults
@@ -512,7 +632,7 @@ This triggers hybrid sort for messages: the first 3 messages are the most releva
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">89</span>
+    <span class="phpdocumentor-element-found-in__line">150</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the entityTypes
@@ -548,7 +668,7 @@ One or more types of resources expected in the response. Possible values are: li
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the fields
@@ -584,7 +704,7 @@ Contains the fields to be returned for each resource object specified in entityT
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">210</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the from
@@ -726,7 +846,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">178</span>
+    <span class="phpdocumentor-element-found-in__line">239</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the query
@@ -762,7 +882,7 @@ Contains the query terms. Required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">210</span>
+    <span class="phpdocumentor-element-found-in__line">271</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the size
@@ -781,6 +901,42 @@ The size of the page to be retrieved. Optional.</p>
     <span class="phpdocumentor-signature__response_type">int|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The size</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getSortProperties">
+        getSortProperties()
+        <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_getSortProperties" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">300</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the sortProperties
+Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSortProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SortProperty.html"><abbr title="\Microsoft\Graph\Model\SortProperty">SortProperty</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SortProperty.html"><abbr title="\Microsoft\Graph\Model\SortProperty">SortProperty</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The sortProperties</p>
 </section>
 
     
@@ -827,6 +983,101 @@ Manually serialize DateTime into RFC3339 format</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setAggregationFilters">
+        setAggregationFilters()
+        <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_setAggregationFilters" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">49</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the aggregationFilters
+Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format &#039;{field}:/&#039;{aggregationFilterToken}/&#039;&#039;. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format &#039;{field}:or(/&#039;{aggregationFilterToken1}/&#039;,/&#039;{aggregationFilterToken2}/&#039;)&#039;. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setAggregationFilters</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value of the aggregationFilters</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setAggregations">
+        setAggregations()
+        <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_setAggregations" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">82</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the aggregations
+Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setAggregations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AggregationOption.html"><abbr title="\Microsoft\Graph\Model\AggregationOption">AggregationOption</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AggregationOption.html"><abbr title="\Microsoft\Graph\Model\AggregationOption">AggregationOption</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value to assign to the aggregations</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The SearchRequest</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setContentSources">
         setContentSources()
         <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_setContentSources" class="headerlink"><i class="fas fa-link"></i></a>
@@ -834,7 +1085,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the contentSources
@@ -881,7 +1132,7 @@ Contains the connection to be targeted. Respects the following format : /externa
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">77</span>
+    <span class="phpdocumentor-element-found-in__line">138</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enableTopResults
@@ -928,7 +1179,7 @@ This triggers hybrid sort for messages: the first 3 messages are the most releva
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">171</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the entityTypes
@@ -976,7 +1227,7 @@ One or more types of resources expected in the response. Possible values are: li
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">199</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the fields
@@ -1023,7 +1274,7 @@ Contains the fields to be returned for each resource object specified in entityT
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">166</span>
+    <span class="phpdocumentor-element-found-in__line">227</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the from
@@ -1163,7 +1414,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">199</span>
+    <span class="phpdocumentor-element-found-in__line">260</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the query
@@ -1211,7 +1462,7 @@ Contains the query terms. Required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">227</span>
+    <span class="phpdocumentor-element-found-in__line">288</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the size
@@ -1242,6 +1493,54 @@ The size of the page to be retrieved. Optional.</p>
     <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a></span>
             &mdash;
             <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setSortProperties">
+        setSortProperties()
+        <a href="classes/Microsoft-Graph-Model-SearchRequest.html#method_setSortProperties" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchRequest.php"><a href="files/src-model-searchrequest.html"><abbr title="src/Model/SearchRequest.php">SearchRequest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">321</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the sortProperties
+Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSortProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SortProperty.html"><abbr title="\Microsoft\Graph\Model\SortProperty">SortProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SortProperty.html"><abbr title="\Microsoft\Graph\Model\SortProperty">SortProperty</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value to assign to the sortProperties</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchRequest.html"><abbr title="\Microsoft\Graph\Model\SearchRequest">SearchRequest</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The SearchRequest</p>
+</section>
 
     
 </article>
