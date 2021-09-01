@@ -178,98 +178,112 @@ to the model</dd>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the calleeNumber</dd>
+<dd>Gets the calleeNumber
+Number of the user or bot who received the call. E.164 format, but may include additional data.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getCallEndSubReason">getCallEndSubReason()</a>
     <span>
                         &nbsp;: int|null    </span>
 </dt>
-<dd>Gets the callEndSubReason</dd>
+<dd>Gets the callEndSubReason
+In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getCallerNumber">getCallerNumber()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the callerNumber</dd>
+<dd>Gets the callerNumber
+Number of the user or bot who made the call. E.164 format, but may include additional data.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getCallType">getCallType()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the callType</dd>
+<dd>Gets the callType
+Call type and direction.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getCorrelationId">getCorrelationId()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the correlationId</dd>
+<dd>Gets the correlationId
+Identifier for the call that you can use when calling Microsoft Support. GUID.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getDuration">getDuration()</a>
     <span>
                         &nbsp;: int|null    </span>
 </dt>
-<dd>Gets the duration</dd>
+<dd>Gets the duration
+Duration of the call in seconds.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getEndDateTime">getEndDateTime()</a>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
-<dd>Gets the endDateTime</dd>
+<dd>Gets the endDateTime
+Only exists for successful (fully established) calls. Time when call ended.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getFailureDateTime">getFailureDateTime()</a>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
-<dd>Gets the failureDateTime</dd>
+<dd>Gets the failureDateTime
+Only exists for failed (not fully established) calls.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getFinalSipCode">getFinalSipCode()</a>
     <span>
                         &nbsp;: int|null    </span>
 </dt>
-<dd>Gets the finalSipCode</dd>
+<dd>Gets the finalSipCode
+The code with which the call ended, RFC 3261.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getFinalSipCodePhrase">getFinalSipCodePhrase()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the finalSipCodePhrase</dd>
+<dd>Gets the finalSipCodePhrase
+Description of the SIP code and Microsoft subcode.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getId">getId()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the id</dd>
+<dd>Gets the id
+Unique call identifier. GUID.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getInviteDateTime">getInviteDateTime()</a>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
-<dd>Gets the inviteDateTime</dd>
+<dd>Gets the inviteDateTime
+When the initial invite was sent.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getMediaBypassEnabled">getMediaBypassEnabled()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the mediaBypassEnabled</dd>
+<dd>Gets the mediaBypassEnabled
+Indicates if the trunk was enabled for media bypass or not.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getMediaPathLocation">getMediaPathLocation()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the mediaPathLocation</dd>
+<dd>Gets the mediaPathLocation
+The datacenter used for media path in non-bypass call.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getODataType">getODataType()</a>
@@ -290,49 +304,56 @@ to the model</dd>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the signalingLocation</dd>
+<dd>Gets the signalingLocation
+The datacenter used for signaling for both bypass and non-bypass calls.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getStartDateTime">getStartDateTime()</a>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
-<dd>Gets the startDateTime</dd>
+<dd>Gets the startDateTime
+Call start time.For failed and unanswered calls, this can be equal to invite or failure time.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getSuccessfulCall">getSuccessfulCall()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the successfulCall</dd>
+<dd>Gets the successfulCall
+Success or attempt.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getTrunkFullyQualifiedDomainName">getTrunkFullyQualifiedDomainName()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the trunkFullyQualifiedDomainName</dd>
+<dd>Gets the trunkFullyQualifiedDomainName
+Fully qualified domain name of the session border controller.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getUserDisplayName">getUserDisplayName()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the userDisplayName</dd>
+<dd>Gets the userDisplayName
+Display name of the user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getUserId">getUserId()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the userId</dd>
+<dd>Gets the userId
+Calling user&#039;s ID in Graph. This and other user info will be null/empty for bot call types. GUID.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_getUserPrincipalName">getUserPrincipalName()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the userPrincipalName</dd>
+<dd>Gets the userPrincipalName
+UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user&#039;s SIP Address, and can be same as user&#039;s e-mail address.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -347,98 +368,112 @@ Manually serialize DateTime into RFC3339 format</dd>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the calleeNumber</dd>
+<dd>Sets the calleeNumber
+Number of the user or bot who received the call. E.164 format, but may include additional data.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setCallEndSubReason">setCallEndSubReason()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the callEndSubReason</dd>
+<dd>Sets the callEndSubReason
+In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setCallerNumber">setCallerNumber()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the callerNumber</dd>
+<dd>Sets the callerNumber
+Number of the user or bot who made the call. E.164 format, but may include additional data.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setCallType">setCallType()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the callType</dd>
+<dd>Sets the callType
+Call type and direction.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setCorrelationId">setCorrelationId()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the correlationId</dd>
+<dd>Sets the correlationId
+Identifier for the call that you can use when calling Microsoft Support. GUID.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setDuration">setDuration()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the duration</dd>
+<dd>Sets the duration
+Duration of the call in seconds.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setEndDateTime">setEndDateTime()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the endDateTime</dd>
+<dd>Sets the endDateTime
+Only exists for successful (fully established) calls. Time when call ended.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setFailureDateTime">setFailureDateTime()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the failureDateTime</dd>
+<dd>Sets the failureDateTime
+Only exists for failed (not fully established) calls.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setFinalSipCode">setFinalSipCode()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the finalSipCode</dd>
+<dd>Sets the finalSipCode
+The code with which the call ended, RFC 3261.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setFinalSipCodePhrase">setFinalSipCodePhrase()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the finalSipCodePhrase</dd>
+<dd>Sets the finalSipCodePhrase
+Description of the SIP code and Microsoft subcode.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setId">setId()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the id</dd>
+<dd>Sets the id
+Unique call identifier. GUID.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setInviteDateTime">setInviteDateTime()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the inviteDateTime</dd>
+<dd>Sets the inviteDateTime
+When the initial invite was sent.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setMediaBypassEnabled">setMediaBypassEnabled()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the mediaBypassEnabled</dd>
+<dd>Sets the mediaBypassEnabled
+Indicates if the trunk was enabled for media bypass or not.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setMediaPathLocation">setMediaPathLocation()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the mediaPathLocation</dd>
+<dd>Sets the mediaPathLocation
+The datacenter used for media path in non-bypass call.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setODataType">setODataType()</a>
@@ -452,49 +487,56 @@ Manually serialize DateTime into RFC3339 format</dd>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the signalingLocation</dd>
+<dd>Sets the signalingLocation
+The datacenter used for signaling for both bypass and non-bypass calls.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setStartDateTime">setStartDateTime()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the startDateTime</dd>
+<dd>Sets the startDateTime
+Call start time.For failed and unanswered calls, this can be equal to invite or failure time.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setSuccessfulCall">setSuccessfulCall()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the successfulCall</dd>
+<dd>Sets the successfulCall
+Success or attempt.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setTrunkFullyQualifiedDomainName">setTrunkFullyQualifiedDomainName()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the trunkFullyQualifiedDomainName</dd>
+<dd>Sets the trunkFullyQualifiedDomainName
+Fully qualified domain name of the session border controller.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setUserDisplayName">setUserDisplayName()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the userDisplayName</dd>
+<dd>Sets the userDisplayName
+Display name of the user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setUserId">setUserId()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the userId</dd>
+<dd>Sets the userId
+Calling user&#039;s ID in Graph. This and other user info will be null/empty for bot call types. GUID.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html#method_setUserPrincipalName">setUserPrincipalName()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-DirectRoutingLogRow.html"><abbr title="\Microsoft\Graph\CallRecords\Model\DirectRoutingLogRow">DirectRoutingLogRow</abbr></a>    </span>
 </dt>
-<dd>Sets the userPrincipalName</dd>
+<dd>Sets the userPrincipalName
+UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user&#039;s SIP Address, and can be same as user&#039;s e-mail address.</dd>
 
         </dl>
 
@@ -607,10 +649,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the calleeNumber</p>
+        <p class="phpdocumentor-summary">Gets the calleeNumber
+Number of the user or bot who received the call. E.164 format, but may include additional data.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -642,10 +685,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the callEndSubReason</p>
+        <p class="phpdocumentor-summary">Gets the callEndSubReason
+In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -677,10 +721,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">83</span>
+    <span class="phpdocumentor-element-found-in__line">88</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the callerNumber</p>
+        <p class="phpdocumentor-summary">Gets the callerNumber
+Number of the user or bot who made the call. E.164 format, but may include additional data.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -712,10 +757,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">109</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the callType</p>
+        <p class="phpdocumentor-summary">Gets the callType
+Call type and direction.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -747,10 +793,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">135</span>
+    <span class="phpdocumentor-element-found-in__line">144</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the correlationId</p>
+        <p class="phpdocumentor-summary">Gets the correlationId
+Identifier for the call that you can use when calling Microsoft Support. GUID.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -782,10 +829,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">172</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the duration</p>
+        <p class="phpdocumentor-summary">Gets the duration
+Duration of the call in seconds.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -817,10 +865,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">188</span>
+    <span class="phpdocumentor-element-found-in__line">201</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the endDateTime</p>
+        <p class="phpdocumentor-summary">Gets the endDateTime
+Only exists for successful (fully established) calls. Time when call ended.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -852,10 +901,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">219</span>
+    <span class="phpdocumentor-element-found-in__line">234</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the failureDateTime</p>
+        <p class="phpdocumentor-summary">Gets the failureDateTime
+Only exists for failed (not fully established) calls.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -887,10 +937,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">249</span>
+    <span class="phpdocumentor-element-found-in__line">266</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the finalSipCode</p>
+        <p class="phpdocumentor-summary">Gets the finalSipCode
+The code with which the call ended, RFC 3261.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -922,10 +973,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">275</span>
+    <span class="phpdocumentor-element-found-in__line">294</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the finalSipCodePhrase</p>
+        <p class="phpdocumentor-summary">Gets the finalSipCodePhrase
+Description of the SIP code and Microsoft subcode.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -957,10 +1009,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">301</span>
+    <span class="phpdocumentor-element-found-in__line">322</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the id</p>
+        <p class="phpdocumentor-summary">Gets the id
+Unique call identifier. GUID.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -992,10 +1045,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">328</span>
+    <span class="phpdocumentor-element-found-in__line">351</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the inviteDateTime</p>
+        <p class="phpdocumentor-summary">Gets the inviteDateTime
+When the initial invite was sent.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1027,10 +1081,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">358</span>
+    <span class="phpdocumentor-element-found-in__line">383</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the mediaBypassEnabled</p>
+        <p class="phpdocumentor-summary">Gets the mediaBypassEnabled
+Indicates if the trunk was enabled for media bypass or not.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1062,10 +1117,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">384</span>
+    <span class="phpdocumentor-element-found-in__line">411</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the mediaPathLocation</p>
+        <p class="phpdocumentor-summary">Gets the mediaPathLocation
+The datacenter used for media path in non-bypass call.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1167,10 +1223,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">410</span>
+    <span class="phpdocumentor-element-found-in__line">439</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the signalingLocation</p>
+        <p class="phpdocumentor-summary">Gets the signalingLocation
+The datacenter used for signaling for both bypass and non-bypass calls.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1202,10 +1259,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">437</span>
+    <span class="phpdocumentor-element-found-in__line">468</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the startDateTime</p>
+        <p class="phpdocumentor-summary">Gets the startDateTime
+Call start time.For failed and unanswered calls, this can be equal to invite or failure time.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1237,10 +1295,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">467</span>
+    <span class="phpdocumentor-element-found-in__line">500</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the successfulCall</p>
+        <p class="phpdocumentor-summary">Gets the successfulCall
+Success or attempt.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1272,10 +1331,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">493</span>
+    <span class="phpdocumentor-element-found-in__line">528</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the trunkFullyQualifiedDomainName</p>
+        <p class="phpdocumentor-summary">Gets the trunkFullyQualifiedDomainName
+Fully qualified domain name of the session border controller.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1307,10 +1367,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">519</span>
+    <span class="phpdocumentor-element-found-in__line">556</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the userDisplayName</p>
+        <p class="phpdocumentor-summary">Gets the userDisplayName
+Display name of the user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1342,10 +1403,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">545</span>
+    <span class="phpdocumentor-element-found-in__line">584</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the userId</p>
+        <p class="phpdocumentor-summary">Gets the userId
+Calling user&#039;s ID in Graph. This and other user info will be null/empty for bot call types. GUID.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1377,10 +1439,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">571</span>
+    <span class="phpdocumentor-element-found-in__line">612</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the userPrincipalName</p>
+        <p class="phpdocumentor-summary">Gets the userPrincipalName
+UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user&#039;s SIP Address, and can be same as user&#039;s e-mail address.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1448,10 +1511,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">47</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the calleeNumber</p>
+        <p class="phpdocumentor-summary">Sets the calleeNumber
+Number of the user or bot who received the call. E.164 format, but may include additional data.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1494,10 +1558,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">73</span>
+    <span class="phpdocumentor-element-found-in__line">77</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the callEndSubReason</p>
+        <p class="phpdocumentor-summary">Sets the callEndSubReason
+In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1540,10 +1605,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">99</span>
+    <span class="phpdocumentor-element-found-in__line">105</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the callerNumber</p>
+        <p class="phpdocumentor-summary">Sets the callerNumber
+Number of the user or bot who made the call. E.164 format, but may include additional data.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1586,10 +1652,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">125</span>
+    <span class="phpdocumentor-element-found-in__line">133</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the callType</p>
+        <p class="phpdocumentor-summary">Sets the callType
+Call type and direction.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1632,10 +1699,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">151</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the correlationId</p>
+        <p class="phpdocumentor-summary">Sets the correlationId
+Identifier for the call that you can use when calling Microsoft Support. GUID.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1678,10 +1746,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">177</span>
+    <span class="phpdocumentor-element-found-in__line">189</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the duration</p>
+        <p class="phpdocumentor-summary">Sets the duration
+Duration of the call in seconds.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1724,10 +1793,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">208</span>
+    <span class="phpdocumentor-element-found-in__line">222</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the endDateTime</p>
+        <p class="phpdocumentor-summary">Sets the endDateTime
+Only exists for successful (fully established) calls. Time when call ended.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1771,10 +1841,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">239</span>
+    <span class="phpdocumentor-element-found-in__line">255</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the failureDateTime</p>
+        <p class="phpdocumentor-summary">Sets the failureDateTime
+Only exists for failed (not fully established) calls.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1818,10 +1889,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">265</span>
+    <span class="phpdocumentor-element-found-in__line">283</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the finalSipCode</p>
+        <p class="phpdocumentor-summary">Sets the finalSipCode
+The code with which the call ended, RFC 3261.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1864,10 +1936,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">291</span>
+    <span class="phpdocumentor-element-found-in__line">311</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the finalSipCodePhrase</p>
+        <p class="phpdocumentor-summary">Sets the finalSipCodePhrase
+Description of the SIP code and Microsoft subcode.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1910,10 +1983,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">317</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the id</p>
+        <p class="phpdocumentor-summary">Sets the id
+Unique call identifier. GUID.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1956,10 +2030,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">348</span>
+    <span class="phpdocumentor-element-found-in__line">372</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the inviteDateTime</p>
+        <p class="phpdocumentor-summary">Sets the inviteDateTime
+When the initial invite was sent.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2003,10 +2078,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">374</span>
+    <span class="phpdocumentor-element-found-in__line">400</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the mediaBypassEnabled</p>
+        <p class="phpdocumentor-summary">Sets the mediaBypassEnabled
+Indicates if the trunk was enabled for media bypass or not.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2049,10 +2125,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">400</span>
+    <span class="phpdocumentor-element-found-in__line">428</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the mediaPathLocation</p>
+        <p class="phpdocumentor-summary">Sets the mediaPathLocation
+The datacenter used for media path in non-bypass call.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2141,10 +2218,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">426</span>
+    <span class="phpdocumentor-element-found-in__line">456</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the signalingLocation</p>
+        <p class="phpdocumentor-summary">Sets the signalingLocation
+The datacenter used for signaling for both bypass and non-bypass calls.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2187,10 +2265,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">457</span>
+    <span class="phpdocumentor-element-found-in__line">489</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the startDateTime</p>
+        <p class="phpdocumentor-summary">Sets the startDateTime
+Call start time.For failed and unanswered calls, this can be equal to invite or failure time.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2234,10 +2313,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">483</span>
+    <span class="phpdocumentor-element-found-in__line">517</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the successfulCall</p>
+        <p class="phpdocumentor-summary">Sets the successfulCall
+Success or attempt.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2280,10 +2360,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">509</span>
+    <span class="phpdocumentor-element-found-in__line">545</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the trunkFullyQualifiedDomainName</p>
+        <p class="phpdocumentor-summary">Sets the trunkFullyQualifiedDomainName
+Fully qualified domain name of the session border controller.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2326,10 +2407,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">535</span>
+    <span class="phpdocumentor-element-found-in__line">573</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the userDisplayName</p>
+        <p class="phpdocumentor-summary">Sets the userDisplayName
+Display name of the user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2372,10 +2454,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">561</span>
+    <span class="phpdocumentor-element-found-in__line">601</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the userId</p>
+        <p class="phpdocumentor-summary">Sets the userId
+Calling user&#039;s ID in Graph. This and other user info will be null/empty for bot call types. GUID.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2418,10 +2501,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/DirectRoutingLogRow.php"><a href="files/src-callrecords-model-directroutinglogrow.html"><abbr title="src/CallRecords/Model/DirectRoutingLogRow.php">DirectRoutingLogRow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">587</span>
+    <span class="phpdocumentor-element-found-in__line">629</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the userPrincipalName</p>
+        <p class="phpdocumentor-summary">Sets the userPrincipalName
+UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user&#039;s SIP Address, and can be same as user&#039;s e-mail address.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

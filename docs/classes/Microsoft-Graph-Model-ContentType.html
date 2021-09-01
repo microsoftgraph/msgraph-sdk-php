@@ -173,6 +173,30 @@ to the model</dd>
 <dd>Construct a new Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getAssociatedHubsUrls">getAssociatedHubsUrls()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the associatedHubsUrls
+List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getBase">getBase()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>|null    </span>
+</dt>
+<dd>Gets the base
+Parent contentType from which this content type is derived.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getBaseTypes">getBaseTypes()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+</dt>
+<dd>Gets the baseTypes
+The collection of content types that are ancestors of this content type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getColumnLinks">getColumnLinks()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
@@ -181,12 +205,44 @@ to the model</dd>
 The collection of columns that are required by this content type</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getColumnPositions">getColumnPositions()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+</dt>
+<dd>Gets the columnPositions
+Column order information in a content type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getColumns">getColumns()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+</dt>
+<dd>Gets the columns
+The collection of column definitions for this contentType.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getDescription">getDescription()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the description
 The descriptive text for the item.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getDocumentSet">getDocumentSet()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-DocumentSet.html"><abbr title="\Microsoft\Graph\Model\DocumentSet">DocumentSet</abbr></a>|null    </span>
+</dt>
+<dd>Gets the documentSet
+Document Set metadata.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getDocumentTemplate">getDocumentTemplate()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-DocumentSetContent.html"><abbr title="\Microsoft\Graph\Model\DocumentSetContent">DocumentSetContent</abbr></a>|null    </span>
+</dt>
+<dd>Gets the documentTemplate
+Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getGroup">getGroup()</a>
@@ -221,6 +277,14 @@ Read-only.</dd>
 If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getIsBuiltIn">getIsBuiltIn()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the isBuiltIn
+Specifies if a content type is a built-in content type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getName">getName()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -250,6 +314,14 @@ Specifies the order in which the content type appears in the selection UI.</dd>
 </dt>
 <dd>Gets the parentId
 The unique identifier of the content type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getPropagateChanges">getPropagateChanges()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the propagateChanges
+If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -283,6 +355,30 @@ If true, the content type cannot be modified by users or through push-down opera
 Manually serialize DateTime into RFC3339 format</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setAssociatedHubsUrls">setAssociatedHubsUrls()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the associatedHubsUrls
+List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setBase">setBase()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the base
+Parent contentType from which this content type is derived.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setBaseTypes">setBaseTypes()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the baseTypes
+The collection of content types that are ancestors of this content type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setColumnLinks">setColumnLinks()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
@@ -291,12 +387,44 @@ Manually serialize DateTime into RFC3339 format</dd>
 The collection of columns that are required by this content type</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setColumnPositions">setColumnPositions()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the columnPositions
+Column order information in a content type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setColumns">setColumns()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the columns
+The collection of column definitions for this contentType.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setDescription">setDescription()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
 </dt>
 <dd>Sets the description
 The descriptive text for the item.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setDocumentSet">setDocumentSet()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the documentSet
+Document Set metadata.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setDocumentTemplate">setDocumentTemplate()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the documentTemplate
+Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setGroup">setGroup()</a>
@@ -331,6 +459,14 @@ Read-only.</dd>
 If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setIsBuiltIn">setIsBuiltIn()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the isBuiltIn
+Specifies if a content type is a built-in content type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setName">setName()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
@@ -360,6 +496,14 @@ Specifies the order in which the content type appears in the selection UI.</dd>
 </dt>
 <dd>Sets the parentId
 The unique identifier of the content type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setPropagateChanges">setPropagateChanges()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>    </span>
+</dt>
+<dd>Sets the propagateChanges
+If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setReadOnly">setReadOnly()</a>
@@ -481,6 +625,114 @@ to the model</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getAssociatedHubsUrls">
+        getAssociatedHubsUrls()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getAssociatedHubsUrls" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the associatedHubsUrls
+List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAssociatedHubsUrls</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The associatedHubsUrls</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getBase">
+        getBase()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getBase" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">455</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the base
+Parent contentType from which this content type is derived.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getBase</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The base</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getBaseTypes">
+        getBaseTypes()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getBaseTypes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">489</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the baseTypes
+The collection of content types that are ancestors of this content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getBaseTypes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The baseTypes</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getColumnLinks">
         getColumnLinks()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getColumnLinks" class="headerlink"><i class="fas fa-link"></i></a>
@@ -488,7 +740,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">303</span>
+    <span class="phpdocumentor-element-found-in__line">519</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the columnLinks
@@ -517,6 +769,78 @@ The collection of columns that are required by this content type</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getColumnPositions">
+        getColumnPositions()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getColumnPositions" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">549</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the columnPositions
+Column order information in a content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getColumnPositions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The columnPositions</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getColumns">
+        getColumns()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getColumns" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">579</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the columns
+The collection of column definitions for this contentType.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getColumns</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The columns</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getDescription">
         getDescription()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getDescription" class="headerlink"><i class="fas fa-link"></i></a>
@@ -524,7 +848,7 @@ The collection of columns that are required by this content type</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the description
@@ -553,6 +877,78 @@ The descriptive text for the item.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getDocumentSet">
+        getDocumentSet()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getDocumentSet" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">91</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the documentSet
+Document Set metadata.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getDocumentSet</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DocumentSet.html"><abbr title="\Microsoft\Graph\Model\DocumentSet">DocumentSet</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DocumentSet.html"><abbr title="\Microsoft\Graph\Model\DocumentSet">DocumentSet</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The documentSet</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getDocumentTemplate">
+        getDocumentTemplate()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getDocumentTemplate" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">124</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the documentTemplate
+Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getDocumentTemplate</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DocumentSetContent.html"><abbr title="\Microsoft\Graph\Model\DocumentSetContent">DocumentSetContent</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DocumentSetContent.html"><abbr title="\Microsoft\Graph\Model\DocumentSetContent">DocumentSetContent</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The documentTemplate</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getGroup">
         getGroup()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getGroup" class="headerlink"><i class="fas fa-link"></i></a>
@@ -560,7 +956,7 @@ The descriptive text for the item.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the group
@@ -596,7 +992,7 @@ The name of the group this content type belongs to. Helps organize related conte
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">91</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hidden
@@ -668,7 +1064,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">120</span>
+    <span class="phpdocumentor-element-found-in__line">215</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the inheritedFrom
@@ -697,6 +1093,42 @@ If this content type is inherited from another scope (like a site), provides a r
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getIsBuiltIn">
+        getIsBuiltIn()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getIsBuiltIn" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">248</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the isBuiltIn
+Specifies if a content type is a built-in content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getIsBuiltIn</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The isBuiltIn</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getName">
         getName()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getName" class="headerlink"><i class="fas fa-link"></i></a>
@@ -704,7 +1136,7 @@ If this content type is inherited from another scope (like a site), provides a r
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">153</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the name
@@ -775,7 +1207,7 @@ The name of the content type.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">182</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the order
@@ -811,7 +1243,7 @@ Specifies the order in which the content type appears in the selection UI.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">215</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the parentId
@@ -830,6 +1262,42 @@ The unique identifier of the content type.</p>
     <span class="phpdocumentor-signature__response_type">string|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The parentId</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getPropagateChanges">
+        getPropagateChanges()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_getPropagateChanges" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">368</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the propagateChanges
+If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getPropagateChanges</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The propagateChanges</p>
 </section>
 
     
@@ -882,7 +1350,7 @@ The unique identifier of the content type.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">244</span>
+    <span class="phpdocumentor-element-found-in__line">397</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the readOnly
@@ -918,7 +1386,7 @@ If true, the content type cannot be modified unless this value is first set to f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">273</span>
+    <span class="phpdocumentor-element-found-in__line">426</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the sealed
@@ -983,6 +1451,147 @@ Manually serialize DateTime into RFC3339 format</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setAssociatedHubsUrls">
+        setAssociatedHubsUrls()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setAssociatedHubsUrls" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">50</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the associatedHubsUrls
+List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setAssociatedHubsUrls</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The associatedHubsUrls</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setBase">
+        setBase()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setBase" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">476</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the base
+Parent contentType from which this content type is derived.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setBase</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The base</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setBaseTypes">
+        setBaseTypes()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setBaseTypes" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">506</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the baseTypes
+The collection of content types that are ancestors of this content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setBaseTypes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The baseTypes</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setColumnLinks">
         setColumnLinks()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setColumnLinks" class="headerlink"><i class="fas fa-link"></i></a>
@@ -990,7 +1599,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">320</span>
+    <span class="phpdocumentor-element-found-in__line">536</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the columnLinks
@@ -1030,6 +1639,100 @@ The collection of columns that are required by this content type</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setColumnPositions">
+        setColumnPositions()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setColumnPositions" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">566</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the columnPositions
+Column order information in a content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setColumnPositions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The columnPositions</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setColumns">
+        setColumns()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setColumns" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">596</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the columns
+The collection of column definitions for this contentType.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setColumns</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ColumnDefinition.html"><abbr title="\Microsoft\Graph\Model\ColumnDefinition">ColumnDefinition</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The columns</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setDescription">
         setDescription()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setDescription" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1037,7 +1740,7 @@ The collection of columns that are required by this content type</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the description
@@ -1077,6 +1780,100 @@ The descriptive text for the item.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setDocumentSet">
+        setDocumentSet()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setDocumentSet" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">112</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the documentSet
+Document Set metadata.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setDocumentSet</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DocumentSet.html"><abbr title="\Microsoft\Graph\Model\DocumentSet">DocumentSet</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DocumentSet.html"><abbr title="\Microsoft\Graph\Model\DocumentSet">DocumentSet</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The documentSet</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setDocumentTemplate">
+        setDocumentTemplate()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setDocumentTemplate" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">145</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the documentTemplate
+Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setDocumentTemplate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DocumentSetContent.html"><abbr title="\Microsoft\Graph\Model\DocumentSetContent">DocumentSetContent</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DocumentSetContent.html"><abbr title="\Microsoft\Graph\Model\DocumentSetContent">DocumentSetContent</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The documentTemplate</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setGroup">
         setGroup()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setGroup" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1084,7 +1881,7 @@ The descriptive text for the item.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">79</span>
+    <span class="phpdocumentor-element-found-in__line">174</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the group
@@ -1131,7 +1928,7 @@ The name of the group this content type belongs to. Helps organize related conte
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">108</span>
+    <span class="phpdocumentor-element-found-in__line">203</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hidden
@@ -1225,7 +2022,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">141</span>
+    <span class="phpdocumentor-element-found-in__line">236</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the inheritedFrom
@@ -1265,6 +2062,53 @@ If this content type is inherited from another scope (like a site), provides a r
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setIsBuiltIn">
+        setIsBuiltIn()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setIsBuiltIn" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">265</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the isBuiltIn
+Specifies if a content type is a built-in content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIsBuiltIn</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The isBuiltIn</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setName">
         setName()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setName" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1272,7 +2116,7 @@ If this content type is inherited from another scope (like a site), provides a r
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">170</span>
+    <span class="phpdocumentor-element-found-in__line">294</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the name
@@ -1365,7 +2209,7 @@ The name of the content type.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">203</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the order
@@ -1412,7 +2256,7 @@ Specifies the order in which the content type appears in the selection UI.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">232</span>
+    <span class="phpdocumentor-element-found-in__line">356</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the parentId
@@ -1452,6 +2296,53 @@ The unique identifier of the content type.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setPropagateChanges">
+        setPropagateChanges()
+        <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setPropagateChanges" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">385</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the propagateChanges
+If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setPropagateChanges</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The propagateChanges</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ContentType.html"><abbr title="\Microsoft\Graph\Model\ContentType">ContentType</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setReadOnly">
         setReadOnly()
         <a href="classes/Microsoft-Graph-Model-ContentType.html#method_setReadOnly" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1459,7 +2350,7 @@ The unique identifier of the content type.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">261</span>
+    <span class="phpdocumentor-element-found-in__line">414</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the readOnly
@@ -1506,7 +2397,7 @@ If true, the content type cannot be modified unless this value is first set to f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ContentType.php"><a href="files/src-model-contenttype.html"><abbr title="src/Model/ContentType.php">ContentType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">290</span>
+    <span class="phpdocumentor-element-found-in__line">443</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sealed

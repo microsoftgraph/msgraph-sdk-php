@@ -366,6 +366,14 @@ Admin provided name of the device configuration.</dd>
 An email address lacking a suffix that matches any of these strings will be considered out-of-domain.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getEraseContentAndSettingsBlocked">getEraseContentAndSettingsBlocked()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the eraseContentAndSettingsBlocked
+TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getGameCenterBlocked">getGameCenterBlocked()</a>
     <span>
                         &nbsp;: bool|null    </span>
@@ -507,7 +515,7 @@ DateTime the object was last modified.</dd>
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the multiplayerGamingBlocked
-Yes prevents multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.</dd>
+TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getODataType">getODataType()</a>
@@ -684,6 +692,30 @@ Indicates whether or not to block the user from using Auto fill in Safari.</dd>
 Indicates whether or not to block the user from taking Screenshots.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getSoftwareUpdateMajorOSDeferredInstallDelayInDays">getSoftwareUpdateMajorOSDeferredInstallDelayInDays()</a>
+    <span>
+                        &nbsp;: int|null    </span>
+</dt>
+<dd>Gets the softwareUpdateMajorOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getSoftwareUpdateMinorOSDeferredInstallDelayInDays">getSoftwareUpdateMinorOSDeferredInstallDelayInDays()</a>
+    <span>
+                        &nbsp;: int|null    </span>
+</dt>
+<dd>Gets the softwareUpdateMinorOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getSoftwareUpdateNonOSDeferredInstallDelayInDays">getSoftwareUpdateNonOSDeferredInstallDelayInDays()</a>
+    <span>
+                        &nbsp;: int|null    </span>
+</dt>
+<dd>Gets the softwareUpdateNonOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getSoftwareUpdatesEnforcedDelayInDays">getSoftwareUpdatesEnforcedDelayInDays()</a>
     <span>
                         &nbsp;: int|null    </span>
@@ -713,7 +745,7 @@ Indicates whether or not the underlying Device Configuration supports the assign
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSSoftwareUpdateDelayPolicy.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSSoftwareUpdateDelayPolicy">MacOSSoftwareUpdateDelayPolicy</abbr></a>|null    </span>
 </dt>
 <dd>Gets the updateDelayPolicy
-Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.</dd>
+Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-DeviceConfiguration.html#method_getUserStatuses">getUserStatuses()</a>
@@ -745,7 +777,7 @@ Version of the device configuration.</dd>
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the wallpaperModificationBlocked
-Yes prevents the wallpaper from being changed. Available for devices running macOS versions 10.13 and later.</dd>
+TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -948,6 +980,14 @@ Admin provided name of the device configuration.</dd>
 An email address lacking a suffix that matches any of these strings will be considered out-of-domain.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setEraseContentAndSettingsBlocked">setEraseContentAndSettingsBlocked()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
+</dt>
+<dd>Sets the eraseContentAndSettingsBlocked
+TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setGameCenterBlocked">setGameCenterBlocked()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
@@ -1089,7 +1129,7 @@ DateTime the object was last modified.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
 </dt>
 <dd>Sets the multiplayerGamingBlocked
-Yes prevents multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.</dd>
+TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setODataType">setODataType()</a>
@@ -1259,6 +1299,30 @@ Indicates whether or not to block the user from using Auto fill in Safari.</dd>
 Indicates whether or not to block the user from taking Screenshots.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setSoftwareUpdateMajorOSDeferredInstallDelayInDays">setSoftwareUpdateMajorOSDeferredInstallDelayInDays()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
+</dt>
+<dd>Sets the softwareUpdateMajorOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setSoftwareUpdateMinorOSDeferredInstallDelayInDays">setSoftwareUpdateMinorOSDeferredInstallDelayInDays()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
+</dt>
+<dd>Sets the softwareUpdateMinorOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setSoftwareUpdateNonOSDeferredInstallDelayInDays">setSoftwareUpdateNonOSDeferredInstallDelayInDays()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
+</dt>
+<dd>Sets the softwareUpdateNonOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setSoftwareUpdatesEnforcedDelayInDays">setSoftwareUpdatesEnforcedDelayInDays()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
@@ -1288,7 +1352,7 @@ Indicates whether or not the underlying Device Configuration supports the assign
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
 </dt>
 <dd>Sets the updateDelayPolicy
-Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.</dd>
+Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-DeviceConfiguration.html#method_setUserStatuses">setUserStatuses()</a>
@@ -1320,7 +1384,7 @@ Version of the device configuration.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a>    </span>
 </dt>
 <dd>Sets the wallpaperModificationBlocked
-Yes prevents the wallpaper from being changed. Available for devices running macOS versions 10.13 and later.</dd>
+TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.</dd>
 
         </dl>
 
@@ -2290,6 +2354,42 @@ An email address lacking a suffix that matches any of these strings will be cons
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getEraseContentAndSettingsBlocked">
+        getEraseContentAndSettingsBlocked()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getEraseContentAndSettingsBlocked" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">444</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the eraseContentAndSettingsBlocked
+TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getEraseContentAndSettingsBlocked</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The eraseContentAndSettingsBlocked</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getGameCenterBlocked">
         getGameCenterBlocked()
         <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getGameCenterBlocked" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2297,7 +2397,7 @@ An email address lacking a suffix that matches any of these strings will be cons
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">444</span>
+    <span class="phpdocumentor-element-found-in__line">473</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the gameCenterBlocked
@@ -2369,7 +2469,7 @@ The list of group assignments for the device configuration profile.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">473</span>
+    <span class="phpdocumentor-element-found-in__line">502</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockActivityContinuation
@@ -2405,7 +2505,7 @@ Indicates whether or not to block the user from continuing work that they starte
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">502</span>
+    <span class="phpdocumentor-element-found-in__line">531</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockAddressBook
@@ -2441,7 +2541,7 @@ Indicates whether or not to block iCloud from syncing contacts.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">531</span>
+    <span class="phpdocumentor-element-found-in__line">560</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockBookmarks
@@ -2477,7 +2577,7 @@ Indicates whether or not to block iCloud from syncing bookmarks.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">560</span>
+    <span class="phpdocumentor-element-found-in__line">589</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockCalendar
@@ -2513,7 +2613,7 @@ Indicates whether or not to block iCloud from syncing calendars.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">589</span>
+    <span class="phpdocumentor-element-found-in__line">618</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockDocumentSync
@@ -2549,7 +2649,7 @@ Indicates whether or not to block iCloud document sync.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">618</span>
+    <span class="phpdocumentor-element-found-in__line">647</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockMail
@@ -2585,7 +2685,7 @@ Indicates whether or not to block iCloud from syncing mail.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">647</span>
+    <span class="phpdocumentor-element-found-in__line">676</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockNotes
@@ -2621,7 +2721,7 @@ Indicates whether or not to block iCloud from syncing notes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">676</span>
+    <span class="phpdocumentor-element-found-in__line">705</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockPhotoLibrary
@@ -2657,7 +2757,7 @@ Indicates whether or not to block iCloud Photo Library.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">705</span>
+    <span class="phpdocumentor-element-found-in__line">734</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCloudBlockReminders
@@ -2729,7 +2829,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">734</span>
+    <span class="phpdocumentor-element-found-in__line">763</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iTunesBlockFileSharing
@@ -2765,7 +2865,7 @@ Indicates whether or not to block files from being transferred using iTunes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">763</span>
+    <span class="phpdocumentor-element-found-in__line">792</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iTunesBlockMusicService
@@ -2801,7 +2901,7 @@ Indicates whether or not to block Music service and revert Music app to classic 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">792</span>
+    <span class="phpdocumentor-element-found-in__line">821</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the keyboardBlockDictation
@@ -2837,7 +2937,7 @@ Indicates whether or not to block the user from using dictation input.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">821</span>
+    <span class="phpdocumentor-element-found-in__line">850</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the keychainBlockCloudSync
@@ -2909,11 +3009,11 @@ DateTime the object was last modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">850</span>
+    <span class="phpdocumentor-element-found-in__line">879</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the multiplayerGamingBlocked
-Yes prevents multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.</p>
+TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2980,7 +3080,7 @@ Yes prevents multiplayer gaming when using Game Center. Available for devices ru
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">879</span>
+    <span class="phpdocumentor-element-found-in__line">908</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockAirDropSharing
@@ -3016,7 +3116,7 @@ Indicates whether or not to block sharing passwords with the AirDrop passwords f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">908</span>
+    <span class="phpdocumentor-element-found-in__line">937</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockAutoFill
@@ -3052,7 +3152,7 @@ Indicates whether or not to block the AutoFill Passwords feature.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">937</span>
+    <span class="phpdocumentor-element-found-in__line">966</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockFingerprintUnlock
@@ -3088,7 +3188,7 @@ Indicates whether or not to block fingerprint unlock.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">966</span>
+    <span class="phpdocumentor-element-found-in__line">995</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockModification
@@ -3124,7 +3224,7 @@ Indicates whether or not to allow passcode modification.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">995</span>
+    <span class="phpdocumentor-element-found-in__line">1024</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockProximityRequests
@@ -3160,7 +3260,7 @@ Indicates whether or not to block requesting passwords from nearby devices.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1024</span>
+    <span class="phpdocumentor-element-found-in__line">1053</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockSimple
@@ -3196,7 +3296,7 @@ Block simple passwords.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1053</span>
+    <span class="phpdocumentor-element-found-in__line">1082</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordExpirationDays
@@ -3232,7 +3332,7 @@ Number of days before the password expires.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1082</span>
+    <span class="phpdocumentor-element-found-in__line">1111</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMaximumAttemptCount
@@ -3268,7 +3368,7 @@ The number of allowed failed attempts to enter the passcode at the device&#039;s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1111</span>
+    <span class="phpdocumentor-element-found-in__line">1140</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinimumCharacterSetCount
@@ -3304,7 +3404,7 @@ Number of character sets a password must contain. Valid values 0 to 4</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1140</span>
+    <span class="phpdocumentor-element-found-in__line">1169</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinimumLength
@@ -3340,7 +3440,7 @@ Minimum length of passwords.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1169</span>
+    <span class="phpdocumentor-element-found-in__line">1198</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinutesOfInactivityBeforeLock
@@ -3376,7 +3476,7 @@ Minutes of inactivity required before a password is required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1198</span>
+    <span class="phpdocumentor-element-found-in__line">1227</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinutesOfInactivityBeforeScreenTimeout
@@ -3412,7 +3512,7 @@ Minutes of inactivity required before the screen times out.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1227</span>
+    <span class="phpdocumentor-element-found-in__line">1256</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinutesUntilFailedLoginReset
@@ -3448,7 +3548,7 @@ The number of minutes before the login is reset after the maximum number of unsu
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1256</span>
+    <span class="phpdocumentor-element-found-in__line">1285</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordPreviousPasswordBlockCount
@@ -3484,7 +3584,7 @@ Number of previous passwords to block.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1285</span>
+    <span class="phpdocumentor-element-found-in__line">1314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordRequired
@@ -3520,7 +3620,7 @@ Whether or not to require a password.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1314</span>
+    <span class="phpdocumentor-element-found-in__line">1343</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordRequiredType
@@ -3556,7 +3656,7 @@ Type of password that is required. Possible values are: deviceDefault, alphanume
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1348</span>
+    <span class="phpdocumentor-element-found-in__line">1377</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the privacyAccessControls
@@ -3663,7 +3763,7 @@ List of Scope Tags for this Entity instance.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1377</span>
+    <span class="phpdocumentor-element-found-in__line">1406</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the safariBlockAutofill
@@ -3699,7 +3799,7 @@ Indicates whether or not to block the user from using Auto fill in Safari.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1406</span>
+    <span class="phpdocumentor-element-found-in__line">1435</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the screenCaptureBlocked
@@ -3728,6 +3828,114 @@ Indicates whether or not to block the user from taking Screenshots.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getSoftwareUpdateMajorOSDeferredInstallDelayInDays">
+        getSoftwareUpdateMajorOSDeferredInstallDelayInDays()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getSoftwareUpdateMajorOSDeferredInstallDelayInDays" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1464</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the softwareUpdateMajorOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSoftwareUpdateMajorOSDeferredInstallDelayInDays</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The softwareUpdateMajorOSDeferredInstallDelayInDays</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getSoftwareUpdateMinorOSDeferredInstallDelayInDays">
+        getSoftwareUpdateMinorOSDeferredInstallDelayInDays()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getSoftwareUpdateMinorOSDeferredInstallDelayInDays" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1493</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the softwareUpdateMinorOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSoftwareUpdateMinorOSDeferredInstallDelayInDays</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The softwareUpdateMinorOSDeferredInstallDelayInDays</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getSoftwareUpdateNonOSDeferredInstallDelayInDays">
+        getSoftwareUpdateNonOSDeferredInstallDelayInDays()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getSoftwareUpdateNonOSDeferredInstallDelayInDays" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1522</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the softwareUpdateNonOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSoftwareUpdateNonOSDeferredInstallDelayInDays</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The softwareUpdateNonOSDeferredInstallDelayInDays</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getSoftwareUpdatesEnforcedDelayInDays">
         getSoftwareUpdatesEnforcedDelayInDays()
         <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_getSoftwareUpdatesEnforcedDelayInDays" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3735,7 +3943,7 @@ Indicates whether or not to block the user from taking Screenshots.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1435</span>
+    <span class="phpdocumentor-element-found-in__line">1551</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the softwareUpdatesEnforcedDelayInDays
@@ -3771,7 +3979,7 @@ Sets how many days a software update will be delyed for a supervised device. Val
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1464</span>
+    <span class="phpdocumentor-element-found-in__line">1580</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the spotlightBlockInternetResults
@@ -3843,11 +4051,11 @@ Indicates whether or not the underlying Device Configuration supports the assign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1493</span>
+    <span class="phpdocumentor-element-found-in__line">1609</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the updateDelayPolicy
-Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.</p>
+Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3987,11 +4195,11 @@ Version of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1526</span>
+    <span class="phpdocumentor-element-found-in__line">1642</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wallpaperModificationBlocked
-Yes prevents the wallpaper from being changed. Available for devices running macOS versions 10.13 and later.</p>
+TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5180,6 +5388,53 @@ An email address lacking a suffix that matches any of these strings will be cons
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setEraseContentAndSettingsBlocked">
+        setEraseContentAndSettingsBlocked()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setEraseContentAndSettingsBlocked" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">461</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the eraseContentAndSettingsBlocked
+TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setEraseContentAndSettingsBlocked</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The eraseContentAndSettingsBlocked</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setGameCenterBlocked">
         setGameCenterBlocked()
         <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setGameCenterBlocked" class="headerlink"><i class="fas fa-link"></i></a>
@@ -5187,7 +5442,7 @@ An email address lacking a suffix that matches any of these strings will be cons
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">461</span>
+    <span class="phpdocumentor-element-found-in__line">490</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the gameCenterBlocked
@@ -5281,7 +5536,7 @@ The list of group assignments for the device configuration profile.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">490</span>
+    <span class="phpdocumentor-element-found-in__line">519</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockActivityContinuation
@@ -5328,7 +5583,7 @@ Indicates whether or not to block the user from continuing work that they starte
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">519</span>
+    <span class="phpdocumentor-element-found-in__line">548</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockAddressBook
@@ -5375,7 +5630,7 @@ Indicates whether or not to block iCloud from syncing contacts.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">548</span>
+    <span class="phpdocumentor-element-found-in__line">577</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockBookmarks
@@ -5422,7 +5677,7 @@ Indicates whether or not to block iCloud from syncing bookmarks.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">577</span>
+    <span class="phpdocumentor-element-found-in__line">606</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockCalendar
@@ -5469,7 +5724,7 @@ Indicates whether or not to block iCloud from syncing calendars.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">606</span>
+    <span class="phpdocumentor-element-found-in__line">635</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockDocumentSync
@@ -5516,7 +5771,7 @@ Indicates whether or not to block iCloud document sync.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">635</span>
+    <span class="phpdocumentor-element-found-in__line">664</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockMail
@@ -5563,7 +5818,7 @@ Indicates whether or not to block iCloud from syncing mail.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">664</span>
+    <span class="phpdocumentor-element-found-in__line">693</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockNotes
@@ -5610,7 +5865,7 @@ Indicates whether or not to block iCloud from syncing notes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">693</span>
+    <span class="phpdocumentor-element-found-in__line">722</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockPhotoLibrary
@@ -5657,7 +5912,7 @@ Indicates whether or not to block iCloud Photo Library.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">722</span>
+    <span class="phpdocumentor-element-found-in__line">751</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCloudBlockReminders
@@ -5751,7 +6006,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">751</span>
+    <span class="phpdocumentor-element-found-in__line">780</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iTunesBlockFileSharing
@@ -5798,7 +6053,7 @@ Indicates whether or not to block files from being transferred using iTunes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">780</span>
+    <span class="phpdocumentor-element-found-in__line">809</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iTunesBlockMusicService
@@ -5845,7 +6100,7 @@ Indicates whether or not to block Music service and revert Music app to classic 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">809</span>
+    <span class="phpdocumentor-element-found-in__line">838</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the keyboardBlockDictation
@@ -5892,7 +6147,7 @@ Indicates whether or not to block the user from using dictation input.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">838</span>
+    <span class="phpdocumentor-element-found-in__line">867</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the keychainBlockCloudSync
@@ -5986,11 +6241,11 @@ DateTime the object was last modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">867</span>
+    <span class="phpdocumentor-element-found-in__line">896</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the multiplayerGamingBlocked
-Yes prevents multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.</p>
+TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -6079,7 +6334,7 @@ Yes prevents multiplayer gaming when using Game Center. Available for devices ru
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">896</span>
+    <span class="phpdocumentor-element-found-in__line">925</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockAirDropSharing
@@ -6126,7 +6381,7 @@ Indicates whether or not to block sharing passwords with the AirDrop passwords f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">925</span>
+    <span class="phpdocumentor-element-found-in__line">954</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockAutoFill
@@ -6173,7 +6428,7 @@ Indicates whether or not to block the AutoFill Passwords feature.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">954</span>
+    <span class="phpdocumentor-element-found-in__line">983</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockFingerprintUnlock
@@ -6220,7 +6475,7 @@ Indicates whether or not to block fingerprint unlock.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">983</span>
+    <span class="phpdocumentor-element-found-in__line">1012</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockModification
@@ -6267,7 +6522,7 @@ Indicates whether or not to allow passcode modification.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1012</span>
+    <span class="phpdocumentor-element-found-in__line">1041</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockProximityRequests
@@ -6314,7 +6569,7 @@ Indicates whether or not to block requesting passwords from nearby devices.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1041</span>
+    <span class="phpdocumentor-element-found-in__line">1070</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockSimple
@@ -6361,7 +6616,7 @@ Block simple passwords.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1070</span>
+    <span class="phpdocumentor-element-found-in__line">1099</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordExpirationDays
@@ -6408,7 +6663,7 @@ Number of days before the password expires.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1099</span>
+    <span class="phpdocumentor-element-found-in__line">1128</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMaximumAttemptCount
@@ -6455,7 +6710,7 @@ The number of allowed failed attempts to enter the passcode at the device&#039;s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1128</span>
+    <span class="phpdocumentor-element-found-in__line">1157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinimumCharacterSetCount
@@ -6502,7 +6757,7 @@ Number of character sets a password must contain. Valid values 0 to 4</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1157</span>
+    <span class="phpdocumentor-element-found-in__line">1186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinimumLength
@@ -6549,7 +6804,7 @@ Minimum length of passwords.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1186</span>
+    <span class="phpdocumentor-element-found-in__line">1215</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinutesOfInactivityBeforeLock
@@ -6596,7 +6851,7 @@ Minutes of inactivity required before a password is required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1215</span>
+    <span class="phpdocumentor-element-found-in__line">1244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinutesOfInactivityBeforeScreenTimeout
@@ -6643,7 +6898,7 @@ Minutes of inactivity required before the screen times out.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1244</span>
+    <span class="phpdocumentor-element-found-in__line">1273</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinutesUntilFailedLoginReset
@@ -6690,7 +6945,7 @@ The number of minutes before the login is reset after the maximum number of unsu
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1273</span>
+    <span class="phpdocumentor-element-found-in__line">1302</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordPreviousPasswordBlockCount
@@ -6737,7 +6992,7 @@ Number of previous passwords to block.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1302</span>
+    <span class="phpdocumentor-element-found-in__line">1331</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordRequired
@@ -6784,7 +7039,7 @@ Whether or not to require a password.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1335</span>
+    <span class="phpdocumentor-element-found-in__line">1364</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordRequiredType
@@ -6831,7 +7086,7 @@ Type of password that is required. Possible values are: deviceDefault, alphanume
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1365</span>
+    <span class="phpdocumentor-element-found-in__line">1394</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the privacyAccessControls
@@ -6925,7 +7180,7 @@ List of Scope Tags for this Entity instance.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1394</span>
+    <span class="phpdocumentor-element-found-in__line">1423</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the safariBlockAutofill
@@ -6972,7 +7227,7 @@ Indicates whether or not to block the user from using Auto fill in Safari.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1423</span>
+    <span class="phpdocumentor-element-found-in__line">1452</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the screenCaptureBlocked
@@ -7012,6 +7267,147 @@ Indicates whether or not to block the user from taking Screenshots.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setSoftwareUpdateMajorOSDeferredInstallDelayInDays">
+        setSoftwareUpdateMajorOSDeferredInstallDelayInDays()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setSoftwareUpdateMajorOSDeferredInstallDelayInDays" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1481</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the softwareUpdateMajorOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSoftwareUpdateMajorOSDeferredInstallDelayInDays</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The softwareUpdateMajorOSDeferredInstallDelayInDays</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setSoftwareUpdateMinorOSDeferredInstallDelayInDays">
+        setSoftwareUpdateMinorOSDeferredInstallDelayInDays()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setSoftwareUpdateMinorOSDeferredInstallDelayInDays" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1510</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the softwareUpdateMinorOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSoftwareUpdateMinorOSDeferredInstallDelayInDays</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The softwareUpdateMinorOSDeferredInstallDelayInDays</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setSoftwareUpdateNonOSDeferredInstallDelayInDays">
+        setSoftwareUpdateNonOSDeferredInstallDelayInDays()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setSoftwareUpdateNonOSDeferredInstallDelayInDays" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1539</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the softwareUpdateNonOSDeferredInstallDelayInDays
+Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSoftwareUpdateNonOSDeferredInstallDelayInDays</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The softwareUpdateNonOSDeferredInstallDelayInDays</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSGeneralDeviceConfiguration">MacOSGeneralDeviceConfiguration</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setSoftwareUpdatesEnforcedDelayInDays">
         setSoftwareUpdatesEnforcedDelayInDays()
         <a href="classes/Beta-Microsoft-Graph-Model-MacOSGeneralDeviceConfiguration.html#method_setSoftwareUpdatesEnforcedDelayInDays" class="headerlink"><i class="fas fa-link"></i></a>
@@ -7019,7 +7415,7 @@ Indicates whether or not to block the user from taking Screenshots.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1452</span>
+    <span class="phpdocumentor-element-found-in__line">1568</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the softwareUpdatesEnforcedDelayInDays
@@ -7066,7 +7462,7 @@ Sets how many days a software update will be delyed for a supervised device. Val
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1481</span>
+    <span class="phpdocumentor-element-found-in__line">1597</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the spotlightBlockInternetResults
@@ -7160,11 +7556,11 @@ Indicates whether or not the underlying Device Configuration supports the assign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1514</span>
+    <span class="phpdocumentor-element-found-in__line">1630</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the updateDelayPolicy
-Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.</p>
+Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -7348,11 +7744,11 @@ Version of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-macosgeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSGeneralDeviceConfiguration.php">MacOSGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1543</span>
+    <span class="phpdocumentor-element-found-in__line">1659</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wallpaperModificationBlocked
-Yes prevents the wallpaper from being changed. Available for devices running macOS versions 10.13 and later.</p>
+TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

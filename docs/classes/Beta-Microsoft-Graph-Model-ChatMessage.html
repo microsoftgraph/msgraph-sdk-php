@@ -179,7 +179,7 @@ to the model</dd>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the attachments
-Attached files. Attachments are currently read-only – sending attachments is not supported.</dd>
+References to attached objects like files, tabs, meetings etc.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html#method_getBody">getBody()</a>
@@ -243,7 +243,7 @@ Read-only.  If present, represents details of an event that happened in a chat, 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ChatMessageFromIdentitySet.html"><abbr title="\Beta\Microsoft\Graph\Model\ChatMessageFromIdentitySet">ChatMessageFromIdentitySet</abbr></a>|null    </span>
 </dt>
 <dd>Gets the from
-Read only. Details of the sender of the chat message.</dd>
+Details of the sender of the chat message. Can only be set during migration.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html#method_getHostedContents">getHostedContents()</a>
@@ -299,7 +299,7 @@ Locale of the chat message set by the client. Always set to en-us.</dd>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the mentions
-List of entities mentioned in the chat message. Currently supports user, bot, team, channel.</dd>
+List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html#method_getMessageType">getMessageType()</a>
@@ -393,7 +393,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Beta\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>    </span>
 </dt>
 <dd>Sets the attachments
-Attached files. Attachments are currently read-only – sending attachments is not supported.</dd>
+References to attached objects like files, tabs, meetings etc.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html#method_setBody">setBody()</a>
@@ -457,7 +457,7 @@ Read-only.  If present, represents details of an event that happened in a chat, 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Beta\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>    </span>
 </dt>
 <dd>Sets the from
-Read only. Details of the sender of the chat message.</dd>
+Details of the sender of the chat message. Can only be set during migration.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html#method_setHostedContents">setHostedContents()</a>
@@ -513,7 +513,7 @@ Locale of the chat message set by the client. Always set to en-us.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Beta\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>    </span>
 </dt>
 <dd>Sets the mentions
-List of entities mentioned in the chat message. Currently supports user, bot, team, channel.</dd>
+List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-ChatMessage.html#method_setMessageType">setMessageType()</a>
@@ -701,7 +701,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the attachments
-Attached files. Attachments are currently read-only – sending attachments is not supported.</p>
+References to attached objects like files, tabs, meetings etc.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -989,7 +989,7 @@ Read-only.  If present, represents details of an event that happened in a chat, 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the from
-Read only. Details of the sender of the chat message.</p>
+Details of the sender of the chat message. Can only be set during migration.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1241,7 +1241,7 @@ Locale of the chat message set by the client. Always set to en-us.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mentions
-List of entities mentioned in the chat message. Currently supports user, bot, team, channel.</p>
+List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1671,7 +1671,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the attachments
-Attached files. Attachments are currently read-only – sending attachments is not supported.</p>
+References to attached objects like files, tabs, meetings etc.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2047,7 +2047,7 @@ Read-only.  If present, represents details of an event that happened in a chat, 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the from
-Read only. Details of the sender of the chat message.</p>
+Details of the sender of the chat message. Can only be set during migration.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2376,7 +2376,7 @@ Locale of the chat message set by the client. Always set to en-us.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mentions
-List of entities mentioned in the chat message. Currently supports user, bot, team, channel.</p>
+List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
