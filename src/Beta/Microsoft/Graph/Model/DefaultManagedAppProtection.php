@@ -401,6 +401,35 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     }
     
     /**
+    * Gets the connectToVpnOnLaunch
+    * Whether the app should connect to the configured VPN on launch (Android only).
+    *
+    * @return bool|null The connectToVpnOnLaunch
+    */
+    public function getConnectToVpnOnLaunch()
+    {
+        if (array_key_exists("connectToVpnOnLaunch", $this->_propDict)) {
+            return $this->_propDict["connectToVpnOnLaunch"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the connectToVpnOnLaunch
+    * Whether the app should connect to the configured VPN on launch (Android only).
+    *
+    * @param bool $val The connectToVpnOnLaunch
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setConnectToVpnOnLaunch($val)
+    {
+        $this->_propDict["connectToVpnOnLaunch"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the customBrowserDisplayName
     * Friendly name of the preferred custom browser to open weblink on Android. (Android only)
     *

@@ -170,6 +170,93 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     }
     
     /**
+    * Gets the cloudIdentityScore
+    * The user experience work from anywhere per device cloud identity score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @return float|null The cloudIdentityScore
+    */
+    public function getCloudIdentityScore()
+    {
+        if (array_key_exists("cloudIdentityScore", $this->_propDict)) {
+            return $this->_propDict["cloudIdentityScore"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cloudIdentityScore
+    * The user experience work from anywhere per device cloud identity score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @param float $val The cloudIdentityScore
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setCloudIdentityScore($val)
+    {
+        $this->_propDict["cloudIdentityScore"] = floatval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the cloudManagementScore
+    * The user experience work from anywhere per device cloud management score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @return float|null The cloudManagementScore
+    */
+    public function getCloudManagementScore()
+    {
+        if (array_key_exists("cloudManagementScore", $this->_propDict)) {
+            return $this->_propDict["cloudManagementScore"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cloudManagementScore
+    * The user experience work from anywhere per device cloud management score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @param float $val The cloudManagementScore
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setCloudManagementScore($val)
+    {
+        $this->_propDict["cloudManagementScore"] = floatval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the cloudProvisioningScore
+    * The user experience work from anywhere per device cloud provisioning score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @return float|null The cloudProvisioningScore
+    */
+    public function getCloudProvisioningScore()
+    {
+        if (array_key_exists("cloudProvisioningScore", $this->_propDict)) {
+            return $this->_propDict["cloudProvisioningScore"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cloudProvisioningScore
+    * The user experience work from anywhere per device cloud provisioning score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @param float $val The cloudProvisioningScore
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setCloudProvisioningScore($val)
+    {
+        $this->_propDict["cloudProvisioningScore"] = floatval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the compliancePolicySetToIntune
     * The user experience work from anywhere device's compliancePolicySetToIntune.
     *
@@ -224,6 +311,39 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     public function setDeviceName($val)
     {
         $this->_propDict["deviceName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the healthStatus
+    * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+    *
+    * @return UserExperienceAnalyticsHealthState|null The healthStatus
+    */
+    public function getHealthStatus()
+    {
+        if (array_key_exists("healthStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["healthStatus"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsHealthState") || is_null($this->_propDict["healthStatus"])) {
+                return $this->_propDict["healthStatus"];
+            } else {
+                $this->_propDict["healthStatus"] = new UserExperienceAnalyticsHealthState($this->_propDict["healthStatus"]);
+                return $this->_propDict["healthStatus"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the healthStatus
+    * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+    *
+    * @param UserExperienceAnalyticsHealthState $val The healthStatus
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setHealthStatus($val)
+    {
+        $this->_propDict["healthStatus"] = $val;
         return $this;
     }
     
@@ -779,6 +899,35 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     public function setUpgradeEligibility($val)
     {
         $this->_propDict["upgradeEligibility"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the windowsScore
+    * The user experience work from anywhere per device windows score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @return float|null The windowsScore
+    */
+    public function getWindowsScore()
+    {
+        if (array_key_exists("windowsScore", $this->_propDict)) {
+            return $this->_propDict["windowsScore"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the windowsScore
+    * The user experience work from anywhere per device windows score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @param float $val The windowsScore
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setWindowsScore($val)
+    {
+        $this->_propDict["windowsScore"] = floatval($val);
         return $this;
     }
     

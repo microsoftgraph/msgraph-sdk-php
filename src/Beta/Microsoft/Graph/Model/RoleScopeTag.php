@@ -84,7 +84,7 @@ class RoleScopeTag extends Entity
     
     /**
     * Gets the isBuiltIn
-    * Description of the Role Scope Tag.
+    * Description of the Role Scope Tag. This property is read-only.
     *
     * @return bool|null The isBuiltIn
     */
@@ -99,7 +99,7 @@ class RoleScopeTag extends Entity
     
     /**
     * Sets the isBuiltIn
-    * Description of the Role Scope Tag.
+    * Description of the Role Scope Tag. This property is read-only.
     *
     * @param bool $val The isBuiltIn
     *

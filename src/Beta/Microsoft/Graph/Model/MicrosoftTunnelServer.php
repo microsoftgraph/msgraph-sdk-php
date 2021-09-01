@@ -26,7 +26,7 @@ class MicrosoftTunnelServer extends Entity
 {
     /**
     * Gets the agentImageDigest
-    * The digest of the current agent image running on this server 
+    * The digest of the current agent image running on this server
     *
     * @return string|null The agentImageDigest
     */
@@ -41,7 +41,7 @@ class MicrosoftTunnelServer extends Entity
     
     /**
     * Sets the agentImageDigest
-    * The digest of the current agent image running on this server 
+    * The digest of the current agent image running on this server
     *
     * @param string $val The agentImageDigest
     *
@@ -117,7 +117,7 @@ class MicrosoftTunnelServer extends Entity
     
     /**
     * Gets the serverImageDigest
-    * The digest of the current server image running on this server 
+    * The digest of the current server image running on this server
     *
     * @return string|null The serverImageDigest
     */
@@ -132,7 +132,7 @@ class MicrosoftTunnelServer extends Entity
     
     /**
     * Sets the serverImageDigest
-    * The digest of the current server image running on this server 
+    * The digest of the current server image running on this server
     *
     * @param string $val The serverImageDigest
     *

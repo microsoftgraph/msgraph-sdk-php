@@ -25,6 +25,7 @@ class Identity extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the id
+    * The unique ID of the identity. It would be the objectId property in case of Azure Active Directory (Azure AD) users or groups and the id property of the externalGroup in the case of external groups.
     *
     * @return string|null The id
     */
@@ -39,6 +40,7 @@ class Identity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the id
+    * The unique ID of the identity. It would be the objectId property in case of Azure Active Directory (Azure AD) users or groups and the id property of the externalGroup in the case of external groups.
     *
     * @param string $val The value of the id
     *
@@ -52,6 +54,7 @@ class Identity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the type
+    * The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
     *
     * @return IdentityType|null The type
     */
@@ -70,6 +73,7 @@ class Identity extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the type
+    * The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
     *
     * @param IdentityType $val The value to assign to the type
     *

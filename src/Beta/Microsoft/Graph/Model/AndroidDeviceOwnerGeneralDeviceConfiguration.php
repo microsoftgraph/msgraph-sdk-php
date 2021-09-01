@@ -1104,6 +1104,271 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the kioskModeManagedHomeScreenAutoSignout
+    * Whether or not to automatically sign-out of MHS and Shared device mode applications after inactive for Managed Home Screen.
+    *
+    * @return bool|null The kioskModeManagedHomeScreenAutoSignout
+    */
+    public function getKioskModeManagedHomeScreenAutoSignout()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenAutoSignout", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedHomeScreenAutoSignout"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenAutoSignout
+    * Whether or not to automatically sign-out of MHS and Shared device mode applications after inactive for Managed Home Screen.
+    *
+    * @param bool $val The kioskModeManagedHomeScreenAutoSignout
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenAutoSignout($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenAutoSignout"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
+    * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999
+    *
+    * @return int|null The kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
+    */
+    public function getKioskModeManagedHomeScreenInactiveSignOutDelayInSeconds()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
+    * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999
+    *
+    * @param int $val The kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenInactiveSignOutDelayInSeconds($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
+    * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999
+    *
+    * @return int|null The kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
+    */
+    public function getKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
+    * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999
+    *
+    * @param int $val The kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds"] = intval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedHomeScreenPinComplexity
+    * Complexity of PIN for sign-in session for Managed Home Screen. Possible values are: notConfigured, simple, complex.
+    *
+    * @return KioskModeManagedHomeScreenPinComplexity|null The kioskModeManagedHomeScreenPinComplexity
+    */
+    public function getKioskModeManagedHomeScreenPinComplexity()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenPinComplexity", $this->_propDict)) {
+            if (is_a($this->_propDict["kioskModeManagedHomeScreenPinComplexity"], "\Beta\Microsoft\Graph\Model\KioskModeManagedHomeScreenPinComplexity") || is_null($this->_propDict["kioskModeManagedHomeScreenPinComplexity"])) {
+                return $this->_propDict["kioskModeManagedHomeScreenPinComplexity"];
+            } else {
+                $this->_propDict["kioskModeManagedHomeScreenPinComplexity"] = new KioskModeManagedHomeScreenPinComplexity($this->_propDict["kioskModeManagedHomeScreenPinComplexity"]);
+                return $this->_propDict["kioskModeManagedHomeScreenPinComplexity"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenPinComplexity
+    * Complexity of PIN for sign-in session for Managed Home Screen. Possible values are: notConfigured, simple, complex.
+    *
+    * @param KioskModeManagedHomeScreenPinComplexity $val The kioskModeManagedHomeScreenPinComplexity
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenPinComplexity($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenPinComplexity"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedHomeScreenPinRequired
+    * Whether or not require user to set a PIN for sign-in session for Managed Home Screen.
+    *
+    * @return bool|null The kioskModeManagedHomeScreenPinRequired
+    */
+    public function getKioskModeManagedHomeScreenPinRequired()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenPinRequired", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedHomeScreenPinRequired"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenPinRequired
+    * Whether or not require user to set a PIN for sign-in session for Managed Home Screen.
+    *
+    * @param bool $val The kioskModeManagedHomeScreenPinRequired
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenPinRequired($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenPinRequired"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedHomeScreenPinRequiredToResume
+    * Whether or not required user to enter session PIN if screensaver has appeared for Managed Home Screen.
+    *
+    * @return bool|null The kioskModeManagedHomeScreenPinRequiredToResume
+    */
+    public function getKioskModeManagedHomeScreenPinRequiredToResume()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenPinRequiredToResume", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedHomeScreenPinRequiredToResume"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenPinRequiredToResume
+    * Whether or not required user to enter session PIN if screensaver has appeared for Managed Home Screen.
+    *
+    * @param bool $val The kioskModeManagedHomeScreenPinRequiredToResume
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenPinRequiredToResume($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenPinRequiredToResume"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedHomeScreenSignInBackground
+    * Custom URL background for sign-in screen for Managed Home Screen.
+    *
+    * @return string|null The kioskModeManagedHomeScreenSignInBackground
+    */
+    public function getKioskModeManagedHomeScreenSignInBackground()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenSignInBackground", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedHomeScreenSignInBackground"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenSignInBackground
+    * Custom URL background for sign-in screen for Managed Home Screen.
+    *
+    * @param string $val The kioskModeManagedHomeScreenSignInBackground
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenSignInBackground($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenSignInBackground"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedHomeScreenSignInBrandingLogo
+    * Custom URL branding logo for sign-in screen and session pin page for Managed Home Screen.
+    *
+    * @return string|null The kioskModeManagedHomeScreenSignInBrandingLogo
+    */
+    public function getKioskModeManagedHomeScreenSignInBrandingLogo()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenSignInBrandingLogo", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedHomeScreenSignInBrandingLogo"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenSignInBrandingLogo
+    * Custom URL branding logo for sign-in screen and session pin page for Managed Home Screen.
+    *
+    * @param string $val The kioskModeManagedHomeScreenSignInBrandingLogo
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenSignInBrandingLogo($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenSignInBrandingLogo"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the kioskModeManagedHomeScreenSignInEnabled
+    * Whether or not show sign-in screen for Managed Home Screen.
+    *
+    * @return bool|null The kioskModeManagedHomeScreenSignInEnabled
+    */
+    public function getKioskModeManagedHomeScreenSignInEnabled()
+    {
+        if (array_key_exists("kioskModeManagedHomeScreenSignInEnabled", $this->_propDict)) {
+            return $this->_propDict["kioskModeManagedHomeScreenSignInEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the kioskModeManagedHomeScreenSignInEnabled
+    * Whether or not show sign-in screen for Managed Home Screen.
+    *
+    * @param bool $val The kioskModeManagedHomeScreenSignInEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setKioskModeManagedHomeScreenSignInEnabled($val)
+    {
+        $this->_propDict["kioskModeManagedHomeScreenSignInEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the kioskModeManagedSettingsEntryDisabled
     * Whether or not to display the Managed Settings entry point on the managed home screen in Kiosk Mode.
     *

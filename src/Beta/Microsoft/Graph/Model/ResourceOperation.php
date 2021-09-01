@@ -84,7 +84,7 @@ class ResourceOperation extends Entity
     
     /**
     * Gets the enabledForScopeValidation
-    * Determines whether the Permission is validated for Scopes defined per Role Assignment.
+    * Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
     *
     * @return bool|null The enabledForScopeValidation
     */
@@ -99,7 +99,7 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the enabledForScopeValidation
-    * Determines whether the Permission is validated for Scopes defined per Role Assignment.
+    * Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
     *
     * @param bool $val The enabledForScopeValidation
     *
@@ -113,7 +113,7 @@ class ResourceOperation extends Entity
     
     /**
     * Gets the resource
-    * Resource category to which this Operation belongs.
+    * Resource category to which this Operation belongs. This property is read-only.
     *
     * @return string|null The resource
     */
@@ -128,7 +128,7 @@ class ResourceOperation extends Entity
     
     /**
     * Sets the resource
-    * Resource category to which this Operation belongs.
+    * Resource category to which this Operation belongs. This property is read-only.
     *
     * @param string $val The resource
     *

@@ -59,7 +59,7 @@ class OpenIdConnectIdentityProvider extends IdentityProviderBase
     
     /**
     * Gets the clientId
-    * The client ID for the application obtained when registering the application with the identity provider. Required.
+    * The client identifier for the application obtained when registering the application with the identity provider. Required.
     *
     * @return string|null The clientId
     */
@@ -74,7 +74,7 @@ class OpenIdConnectIdentityProvider extends IdentityProviderBase
     
     /**
     * Sets the clientId
-    * The client ID for the application obtained when registering the application with the identity provider. Required.
+    * The client identifier for the application obtained when registering the application with the identity provider. Required.
     *
     * @param string $val The clientId
     *

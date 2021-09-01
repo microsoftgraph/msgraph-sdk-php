@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MacOSSoftwareUpdateDelayPolicy File
+* AnswerState File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Search\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* MacOSSoftwareUpdateDelayPolicy class
+* AnswerState class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MacOSSoftwareUpdateDelayPolicy extends Enum
+class AnswerState extends Enum
 {
     /**
-    * The Enum MacOSSoftwareUpdateDelayPolicy
+    * The Enum AnswerState
     */
-    const NONE = "none";
-    const DELAY_OS_UPDATE_VISIBILITY = "delayOSUpdateVisibility";
-    const DELAY_APP_UPDATE_VISIBILITY = "delayAppUpdateVisibility";
+    const PUBLISHED = "published";
+    const DRAFT = "draft";
+    const EXCLUDED = "excluded";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const DELAY_MAJOR_OS_UPDATE_VISIBILITY = "delayMajorOsUpdateVisibility";
 }

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Qna File
+* Bookmark File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\Search\Model;
 
 /**
-* Qna class
+* Bookmark class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Qna extends SearchAnswer
+class Bookmark extends SearchAnswer
 {
     /**
     * Gets the availabilityEndDateTime
@@ -47,7 +47,7 @@ class Qna extends SearchAnswer
     *
     * @param \DateTime $val The availabilityEndDateTime
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setAvailabilityEndDateTime($val)
     {
@@ -78,11 +78,38 @@ class Qna extends SearchAnswer
     *
     * @param \DateTime $val The availabilityStartDateTime
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setAvailabilityStartDateTime($val)
     {
         $this->_propDict["availabilityStartDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the categories
+    *
+    * @return string|null The categories
+    */
+    public function getCategories()
+    {
+        if (array_key_exists("categories", $this->_propDict)) {
+            return $this->_propDict["categories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the categories
+    *
+    * @param string $val The categories
+    *
+    * @return Bookmark
+    */
+    public function setCategories($val)
+    {
+        $this->_propDict["categories"] = $val;
         return $this;
     }
     
@@ -105,7 +132,7 @@ class Qna extends SearchAnswer
     *
     * @param string $val The groupIds
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setGroupIds($val)
     {
@@ -132,7 +159,7 @@ class Qna extends SearchAnswer
     *
     * @param bool $val The isSuggested
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setIsSuggested($val)
     {
@@ -148,7 +175,7 @@ class Qna extends SearchAnswer
     public function getKeywords()
     {
         if (array_key_exists("keywords", $this->_propDict)) {
-            if (is_a($this->_propDict["keywords"], "\Beta\Microsoft\Graph\Model\AnswerKeyword") || is_null($this->_propDict["keywords"])) {
+            if (is_a($this->_propDict["keywords"], "\Beta\Microsoft\Graph\Search\Model\AnswerKeyword") || is_null($this->_propDict["keywords"])) {
                 return $this->_propDict["keywords"];
             } else {
                 $this->_propDict["keywords"] = new AnswerKeyword($this->_propDict["keywords"]);
@@ -163,7 +190,7 @@ class Qna extends SearchAnswer
     *
     * @param AnswerKeyword $val The keywords
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setKeywords($val)
     {
@@ -190,7 +217,7 @@ class Qna extends SearchAnswer
     *
     * @param string $val The languageTags
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setLanguageTags($val)
     {
@@ -216,13 +243,40 @@ class Qna extends SearchAnswer
     /** 
     * Sets the platforms
     *
-    * @param DevicePlatformType $val The platforms
+    * @param \Beta\Microsoft\Graph\Model\DevicePlatformType $val The platforms
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setPlatforms($val)
     {
         $this->_propDict["platforms"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the powerAppIds
+    *
+    * @return string|null The powerAppIds
+    */
+    public function getPowerAppIds()
+    {
+        if (array_key_exists("powerAppIds", $this->_propDict)) {
+            return $this->_propDict["powerAppIds"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the powerAppIds
+    *
+    * @param string $val The powerAppIds
+    *
+    * @return Bookmark
+    */
+    public function setPowerAppIds($val)
+    {
+        $this->_propDict["powerAppIds"] = $val;
         return $this;
     }
     
@@ -234,7 +288,7 @@ class Qna extends SearchAnswer
     public function getState()
     {
         if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Model\AnswerState") || is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Beta\Microsoft\Graph\Search\Model\AnswerState") || is_null($this->_propDict["state"])) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new AnswerState($this->_propDict["state"]);
@@ -249,7 +303,7 @@ class Qna extends SearchAnswer
     *
     * @param AnswerState $val The state
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setState($val)
     {
@@ -277,7 +331,7 @@ class Qna extends SearchAnswer
     *
     * @param AnswerVariant $val The targetedVariations
     *
-    * @return Qna
+    * @return Bookmark
     */
     public function setTargetedVariations($val)
     {

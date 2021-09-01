@@ -89,6 +89,7 @@ class IdentityContainer implements \JsonSerializable
 
      /** 
      * Gets the apiConnectors
+    * Represents entry point for API connectors.
      *
      * @return array|null The apiConnectors
      */
@@ -103,6 +104,7 @@ class IdentityContainer implements \JsonSerializable
     
     /** 
     * Sets the apiConnectors
+    * Represents entry point for API connectors.
     *
     * @param IdentityApiConnector $val The apiConnectors
     *
@@ -117,6 +119,7 @@ class IdentityContainer implements \JsonSerializable
 
      /** 
      * Gets the b2cUserFlows
+    * Represents entry point for B2C identity userflows.
      *
      * @return array|null The b2cUserFlows
      */
@@ -131,6 +134,7 @@ class IdentityContainer implements \JsonSerializable
     
     /** 
     * Sets the b2cUserFlows
+    * Represents entry point for B2C identity userflows.
     *
     * @param B2cIdentityUserFlow $val The b2cUserFlows
     *
@@ -145,6 +149,7 @@ class IdentityContainer implements \JsonSerializable
 
      /** 
      * Gets the b2xUserFlows
+    * Represents entry point for B2X and self-service sign-up identity userflows.
      *
      * @return array|null The b2xUserFlows
      */
@@ -159,6 +164,7 @@ class IdentityContainer implements \JsonSerializable
     
     /** 
     * Sets the b2xUserFlows
+    * Represents entry point for B2X and self-service sign-up identity userflows.
     *
     * @param B2xIdentityUserFlow $val The b2xUserFlows
     *
@@ -173,6 +179,7 @@ class IdentityContainer implements \JsonSerializable
 
      /** 
      * Gets the identityProviders
+    * Represents entry point for identity provider base.
      *
      * @return array|null The identityProviders
      */
@@ -187,6 +194,7 @@ class IdentityContainer implements \JsonSerializable
     
     /** 
     * Sets the identityProviders
+    * Represents entry point for identity provider base.
     *
     * @param IdentityProviderBase $val The identityProviders
     *
@@ -201,6 +209,7 @@ class IdentityContainer implements \JsonSerializable
 
      /** 
      * Gets the userFlowAttributes
+    * Represents entry point for identity userflow attributes.
      *
      * @return array|null The userFlowAttributes
      */
@@ -215,6 +224,7 @@ class IdentityContainer implements \JsonSerializable
     
     /** 
     * Sets the userFlowAttributes
+    * Represents entry point for identity userflow attributes.
     *
     * @param IdentityUserFlowAttribute $val The userFlowAttributes
     *
@@ -256,6 +266,7 @@ class IdentityContainer implements \JsonSerializable
     
     /**
     * Gets the continuousAccessEvaluationPolicy
+    * Represents entry point for continuous access evaluation policy.
     *
     * @return ContinuousAccessEvaluationPolicy|null The continuousAccessEvaluationPolicy
     */
@@ -274,6 +285,7 @@ class IdentityContainer implements \JsonSerializable
     
     /**
     * Sets the continuousAccessEvaluationPolicy
+    * Represents entry point for continuous access evaluation policy.
     *
     * @param ContinuousAccessEvaluationPolicy $val The continuousAccessEvaluationPolicy
     *

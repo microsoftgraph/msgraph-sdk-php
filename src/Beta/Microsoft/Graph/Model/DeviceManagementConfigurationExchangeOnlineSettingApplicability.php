@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AnswerState File
+* DeviceManagementConfigurationExchangeOnlineSettingApplicability File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* AnswerState class
+* DeviceManagementConfigurationExchangeOnlineSettingApplicability class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AnswerState extends Enum
+class DeviceManagementConfigurationExchangeOnlineSettingApplicability extends DeviceManagementConfigurationSettingApplicability
 {
-    /**
-    * The Enum AnswerState
-    */
-    const PUBLISHED = "published";
-    const DRAFT = "draft";
-    const EXCLUDED = "excluded";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
