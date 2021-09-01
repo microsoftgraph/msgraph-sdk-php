@@ -26,7 +26,7 @@ class Conversation extends Entity
 {
     /**
     * Gets the hasAttachments
-    * Indicates whether any of the posts within this Conversation has at least one attachment.
+    * Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
     *
     * @return bool|null The hasAttachments
     */
@@ -41,7 +41,7 @@ class Conversation extends Entity
     
     /**
     * Sets the hasAttachments
-    * Indicates whether any of the posts within this Conversation has at least one attachment.
+    * Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
     *
     * @param bool $val The hasAttachments
     *
@@ -55,7 +55,7 @@ class Conversation extends Entity
     
     /**
     * Gets the lastDeliveredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
     *
     * @return \DateTime|null The lastDeliveredDateTime
     */
@@ -74,7 +74,7 @@ class Conversation extends Entity
     
     /**
     * Sets the lastDeliveredDateTime
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
     *
     * @param \DateTime $val The lastDeliveredDateTime
     *
@@ -88,7 +88,7 @@ class Conversation extends Entity
     
     /**
     * Gets the preview
-    * A short summary from the body of the latest post in this converstaion.
+    * A short summary from the body of the latest post in this conversation.
     *
     * @return string|null The preview
     */
@@ -103,7 +103,7 @@ class Conversation extends Entity
     
     /**
     * Sets the preview
-    * A short summary from the body of the latest post in this converstaion.
+    * A short summary from the body of the latest post in this conversation.
     *
     * @param string $val The preview
     *

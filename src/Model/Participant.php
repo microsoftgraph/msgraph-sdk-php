@@ -146,6 +146,35 @@ class Participant extends Entity
     }
     
     /**
+    * Gets the metadata
+    * A blob of data provided by the participant in the roster.
+    *
+    * @return string|null The metadata
+    */
+    public function getMetadata()
+    {
+        if (array_key_exists("metadata", $this->_propDict)) {
+            return $this->_propDict["metadata"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the metadata
+    * A blob of data provided by the participant in the roster.
+    *
+    * @param string $val The metadata
+    *
+    * @return Participant
+    */
+    public function setMetadata($val)
+    {
+        $this->_propDict["metadata"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the recordingInfo
     * Information on whether the participant has recording capability.
     *

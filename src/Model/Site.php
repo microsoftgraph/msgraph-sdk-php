@@ -341,6 +341,36 @@ class Site extends BaseItem
     
 
      /** 
+     * Gets the externalColumns
+    * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     *
+     * @return array|null The externalColumns
+     */
+    public function getExternalColumns()
+    {
+        if (array_key_exists("externalColumns", $this->_propDict)) {
+           return $this->_propDict["externalColumns"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the externalColumns
+    * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+    *
+    * @param ColumnDefinition $val The externalColumns
+    *
+    * @return Site
+    */
+    public function setExternalColumns($val)
+    {
+        $this->_propDict["externalColumns"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the items
     * Used to address any item contained in this site. This collection cannot be enumerated.
      *
@@ -495,6 +525,7 @@ class Site extends BaseItem
 
      /** 
      * Gets the termStores
+    * The collection of termStores under this site.
      *
      * @return array|null The termStores
      */
@@ -509,6 +540,7 @@ class Site extends BaseItem
     
     /** 
     * Sets the termStores
+    * The collection of termStores under this site.
     *
     * @param \Microsoft\Graph\TermStore\Model\Store $val The termStores
     *

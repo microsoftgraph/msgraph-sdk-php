@@ -24,6 +24,67 @@ namespace Microsoft\Graph\Model;
 class SearchRequest extends Entity
 {
     /**
+    * Gets the aggregationFilters
+    * Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+    *
+    * @return string|null The aggregationFilters
+    */
+    public function getAggregationFilters()
+    {
+        if (array_key_exists("aggregationFilters", $this->_propDict)) {
+            return $this->_propDict["aggregationFilters"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the aggregationFilters
+    * Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+    *
+    * @param string $val The value of the aggregationFilters
+    *
+    * @return SearchRequest
+    */
+    public function setAggregationFilters($val)
+    {
+        $this->_propDict["aggregationFilters"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the aggregations
+    * Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+    *
+    * @return AggregationOption|null The aggregations
+    */
+    public function getAggregations()
+    {
+        if (array_key_exists("aggregations", $this->_propDict)) {
+            if (is_a($this->_propDict["aggregations"], "\Microsoft\Graph\Model\AggregationOption") || is_null($this->_propDict["aggregations"])) {
+                return $this->_propDict["aggregations"];
+            } else {
+                $this->_propDict["aggregations"] = new AggregationOption($this->_propDict["aggregations"]);
+                return $this->_propDict["aggregations"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the aggregations
+    * Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+    *
+    * @param AggregationOption $val The value to assign to the aggregations
+    *
+    * @return SearchRequest The SearchRequest
+    */
+    public function setAggregations($val)
+    {
+        $this->_propDict["aggregations"] = $val;
+         return $this;
+    }
+    /**
     * Gets the contentSources
     * Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
     *
@@ -228,5 +289,38 @@ class SearchRequest extends Entity
     {
         $this->_propDict["size"] = $val;
         return $this;
+    }
+
+    /**
+    * Gets the sortProperties
+    * Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+    *
+    * @return SortProperty|null The sortProperties
+    */
+    public function getSortProperties()
+    {
+        if (array_key_exists("sortProperties", $this->_propDict)) {
+            if (is_a($this->_propDict["sortProperties"], "\Microsoft\Graph\Model\SortProperty") || is_null($this->_propDict["sortProperties"])) {
+                return $this->_propDict["sortProperties"];
+            } else {
+                $this->_propDict["sortProperties"] = new SortProperty($this->_propDict["sortProperties"]);
+                return $this->_propDict["sortProperties"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the sortProperties
+    * Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+    *
+    * @param SortProperty $val The value to assign to the sortProperties
+    *
+    * @return SearchRequest The SearchRequest
+    */
+    public function setSortProperties($val)
+    {
+        $this->_propDict["sortProperties"] = $val;
+         return $this;
     }
 }

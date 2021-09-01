@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EntityType File
+* ColumnTypes File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* EntityType class
+* ColumnTypes class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,18 +24,28 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EntityType extends Enum
+class ColumnTypes extends Enum
 {
     /**
-    * The Enum EntityType
+    * The Enum ColumnTypes
     */
-    const EVENT = "event";
-    const MESSAGE = "message";
-    const DRIVE_ITEM = "driveItem";
-    const EXTERNAL_ITEM = "externalItem";
-    const SITE = "site";
-    const GRAPHLIST = "list";
-    const LIST_ITEM = "listItem";
-    const DRIVE = "drive";
+    const NOTE = "note";
+    const TEXT = "text";
+    const CHOICE = "choice";
+    const MULTICHOICE = "multichoice";
+    const NUMBER = "number";
+    const CURRENCY = "currency";
+    const DATE_TIME = "dateTime";
+    const LOOKUP = "lookup";
+    const BOOLEAN = "boolean";
+    const USER = "user";
+    const URL = "url";
+    const CALCULATED = "calculated";
+    const LOCATION = "location";
+    const GEOLOCATION = "geolocation";
+    const TERM = "term";
+    const MULTITERM = "multiterm";
+    const THUMBNAIL = "thumbnail";
+    const APPROVAL_STATUS = "approvalStatus";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
