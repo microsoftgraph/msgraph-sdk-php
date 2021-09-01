@@ -245,6 +245,13 @@ A collection of all the messages in the chat. Nullable.</dd>
 <dd>Gets the ODataType</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_getOnlineMeetingInfo">getOnlineMeetingInfo()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-TeamworkOnlineMeetingInfo.html"><abbr title="\Beta\Microsoft\Graph\Model\TeamworkOnlineMeetingInfo">TeamworkOnlineMeetingInfo</abbr></a>|null    </span>
+</dt>
+<dd>Gets the onlineMeetingInfo</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_getOperations">getOperations()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
@@ -273,6 +280,13 @@ A collection of permissions granted to apps for the chat.</dd>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the tabs</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_getTenantId">getTenantId()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the tenantId</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_getTopic">getTopic()</a>
@@ -378,6 +392,13 @@ A collection of all the messages in the chat. Nullable.</dd>
 <dd>Sets the ODataType</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_setOnlineMeetingInfo">setOnlineMeetingInfo()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Chat.html"><abbr title="\Beta\Microsoft\Graph\Model\Chat">Chat</abbr></a>    </span>
+</dt>
+<dd>Sets the onlineMeetingInfo</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_setOperations">setOperations()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Chat.html"><abbr title="\Beta\Microsoft\Graph\Model\Chat">Chat</abbr></a>    </span>
@@ -399,6 +420,13 @@ A collection of permissions granted to apps for the chat.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Chat.html"><abbr title="\Beta\Microsoft\Graph\Model\Chat">Chat</abbr></a>    </span>
 </dt>
 <dd>Sets the tabs</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_setTenantId">setTenantId()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Chat.html"><abbr title="\Beta\Microsoft\Graph\Model\Chat">Chat</abbr></a>    </span>
+</dt>
+<dd>Sets the tenantId</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_setTopic">setTopic()</a>
@@ -643,7 +671,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">224</span>
+    <span class="phpdocumentor-element-found-in__line">282</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the installedApps
@@ -679,7 +707,7 @@ A collection of all the apps in the chat. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">253</span>
+    <span class="phpdocumentor-element-found-in__line">311</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastMessagePreview
@@ -751,7 +779,7 @@ Date and time at which the chat was renamed or list of members were last changed
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">287</span>
+    <span class="phpdocumentor-element-found-in__line">345</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the members
@@ -787,7 +815,7 @@ A collection of all the members in the chat. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">317</span>
+    <span class="phpdocumentor-element-found-in__line">375</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the messages
@@ -851,6 +879,41 @@ A collection of all the messages in the chat. Nullable.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getOnlineMeetingInfo">
+        getOnlineMeetingInfo()
+        <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_getOnlineMeetingInfo" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">131</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the onlineMeetingInfo</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getOnlineMeetingInfo</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-TeamworkOnlineMeetingInfo.html"><abbr title="\Beta\Microsoft\Graph\Model\TeamworkOnlineMeetingInfo">TeamworkOnlineMeetingInfo</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-TeamworkOnlineMeetingInfo.html"><abbr title="\Beta\Microsoft\Graph\Model\TeamworkOnlineMeetingInfo">TeamworkOnlineMeetingInfo</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The onlineMeetingInfo</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getOperations">
         getOperations()
         <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_getOperations" class="headerlink"><i class="fas fa-link"></i></a>
@@ -858,7 +921,7 @@ A collection of all the messages in the chat. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">347</span>
+    <span class="phpdocumentor-element-found-in__line">405</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operations
@@ -894,7 +957,7 @@ A collection of all the Teams async operations that ran or are running on the ch
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">377</span>
+    <span class="phpdocumentor-element-found-in__line">435</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the permissionGrants
@@ -965,7 +1028,7 @@ A collection of permissions granted to apps for the chat.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">406</span>
+    <span class="phpdocumentor-element-found-in__line">464</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tabs</p>
@@ -993,6 +1056,41 @@ A collection of permissions granted to apps for the chat.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getTenantId">
+        getTenantId()
+        <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_getTenantId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">162</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the tenantId</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getTenantId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The tenantId</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getTopic">
         getTopic()
         <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_getTopic" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1000,7 +1098,7 @@ A collection of permissions granted to apps for the chat.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">132</span>
+    <span class="phpdocumentor-element-found-in__line">190</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the topic
@@ -1036,7 +1134,7 @@ A collection of permissions granted to apps for the chat.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">161</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the viewpoint
@@ -1072,7 +1170,7 @@ Represents caller-specific information about the chat, such as last message read
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">194</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the webUrl
@@ -1285,7 +1383,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">241</span>
+    <span class="phpdocumentor-element-found-in__line">299</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the installedApps
@@ -1332,7 +1430,7 @@ A collection of all the apps in the chat. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">274</span>
+    <span class="phpdocumentor-element-found-in__line">332</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastMessagePreview
@@ -1426,7 +1524,7 @@ Date and time at which the chat was renamed or list of members were last changed
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">304</span>
+    <span class="phpdocumentor-element-found-in__line">362</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the members
@@ -1473,7 +1571,7 @@ A collection of all the members in the chat. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">334</span>
+    <span class="phpdocumentor-element-found-in__line">392</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the messages
@@ -1559,6 +1657,52 @@ A collection of all the messages in the chat. Nullable.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setOnlineMeetingInfo">
+        setOnlineMeetingInfo()
+        <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_setOnlineMeetingInfo" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">151</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the onlineMeetingInfo</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setOnlineMeetingInfo</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-TeamworkOnlineMeetingInfo.html"><abbr title="\Beta\Microsoft\Graph\Model\TeamworkOnlineMeetingInfo">TeamworkOnlineMeetingInfo</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-Chat.html"><abbr title="\Beta\Microsoft\Graph\Model\Chat">Chat</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-TeamworkOnlineMeetingInfo.html"><abbr title="\Beta\Microsoft\Graph\Model\TeamworkOnlineMeetingInfo">TeamworkOnlineMeetingInfo</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The onlineMeetingInfo</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-Chat.html"><abbr title="\Beta\Microsoft\Graph\Model\Chat">Chat</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setOperations">
         setOperations()
         <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_setOperations" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1566,7 +1710,7 @@ A collection of all the messages in the chat. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">364</span>
+    <span class="phpdocumentor-element-found-in__line">422</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operations
@@ -1613,7 +1757,7 @@ A collection of all the Teams async operations that ran or are running on the ch
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">394</span>
+    <span class="phpdocumentor-element-found-in__line">452</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the permissionGrants
@@ -1660,7 +1804,7 @@ A collection of permissions granted to apps for the chat.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">422</span>
+    <span class="phpdocumentor-element-found-in__line">480</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tabs</p>
@@ -1699,6 +1843,52 @@ A collection of permissions granted to apps for the chat.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setTenantId">
+        setTenantId()
+        <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_setTenantId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">178</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the tenantId</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTenantId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-Chat.html"><abbr title="\Beta\Microsoft\Graph\Model\Chat">Chat</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The tenantId</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-Chat.html"><abbr title="\Beta\Microsoft\Graph\Model\Chat">Chat</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setTopic">
         setTopic()
         <a href="classes/Beta-Microsoft-Graph-Model-Chat.html#method_setTopic" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1706,7 +1896,7 @@ A collection of permissions granted to apps for the chat.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the topic
@@ -1753,7 +1943,7 @@ A collection of permissions granted to apps for the chat.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">182</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the viewpoint
@@ -1800,7 +1990,7 @@ Represents caller-specific information about the chat, such as last message read
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Chat.php"><a href="files/src-beta-microsoft-graph-model-chat.html"><abbr title="src/Beta/Microsoft/Graph/Model/Chat.php">Chat.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">211</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the webUrl
