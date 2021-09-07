@@ -250,6 +250,34 @@ class Authentication extends Entity
     
 
      /** 
+     * Gets the softwareOathMethods
+     *
+     * @return array|null The softwareOathMethods
+     */
+    public function getSoftwareOathMethods()
+    {
+        if (array_key_exists("softwareOathMethods", $this->_propDict)) {
+           return $this->_propDict["softwareOathMethods"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the softwareOathMethods
+    *
+    * @param SoftwareOathAuthenticationMethod $val The softwareOathMethods
+    *
+    * @return Authentication
+    */
+    public function setSoftwareOathMethods($val)
+    {
+        $this->_propDict["softwareOathMethods"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the temporaryAccessPassMethods
      *
      * @return array|null The temporaryAccessPassMethods

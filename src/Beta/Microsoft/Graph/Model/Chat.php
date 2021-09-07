@@ -125,6 +125,7 @@ class Chat extends Entity
     
     /**
     * Gets the onlineMeetingInfo
+    * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
     *
     * @return TeamworkOnlineMeetingInfo|null The onlineMeetingInfo
     */
@@ -143,6 +144,7 @@ class Chat extends Entity
     
     /**
     * Sets the onlineMeetingInfo
+    * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
     *
     * @param TeamworkOnlineMeetingInfo $val The onlineMeetingInfo
     *
@@ -156,6 +158,7 @@ class Chat extends Entity
     
     /**
     * Gets the tenantId
+    * The identifier of the tenant in which the chat was created. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -170,6 +173,7 @@ class Chat extends Entity
     
     /**
     * Sets the tenantId
+    * The identifier of the tenant in which the chat was created. Read-only.
     *
     * @param string $val The tenantId
     *
