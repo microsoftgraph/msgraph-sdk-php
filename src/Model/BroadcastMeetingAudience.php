@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OnlineMeetingRole File
+* BroadcastMeetingAudience File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* OnlineMeetingRole class
+* BroadcastMeetingAudience class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OnlineMeetingRole extends Enum
+class BroadcastMeetingAudience extends Enum
 {
     /**
-    * The Enum OnlineMeetingRole
+    * The Enum BroadcastMeetingAudience
     */
-    const ATTENDEE = "attendee";
-    const PRESENTER = "presenter";
+    const ROLE_IS_ATTENDEE = "roleIsAttendee";
+    const ORGANIZATION = "organization";
+    const EVERYONE = "everyone";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const PRODUCER = "producer";
 }

@@ -349,6 +349,37 @@ class DriveItem extends BaseItem
     }
     
     /**
+    * Gets the malware
+    *
+    * @return Malware|null The malware
+    */
+    public function getMalware()
+    {
+        if (array_key_exists("malware", $this->_propDict)) {
+            if (is_a($this->_propDict["malware"], "\Microsoft\Graph\Model\Malware") || is_null($this->_propDict["malware"])) {
+                return $this->_propDict["malware"];
+            } else {
+                $this->_propDict["malware"] = new Malware($this->_propDict["malware"]);
+                return $this->_propDict["malware"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the malware
+    *
+    * @param Malware $val The malware
+    *
+    * @return DriveItem
+    */
+    public function setMalware($val)
+    {
+        $this->_propDict["malware"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the package
     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
     *
@@ -383,7 +414,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the pendingOperations
-    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     *
     * @return PendingOperations|null The pendingOperations
     */
@@ -402,7 +433,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the pendingOperations
-    * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+    * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
     *
     * @param PendingOperations $val The pendingOperations
     *

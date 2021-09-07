@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AssignmentOrder File
+* ProvisionChannelEmailResult File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Microsoft\Graph\Model;
 /**
-* AssignmentOrder class
+* ProvisionChannelEmailResult class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +21,34 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AssignmentOrder extends Entity
+class ProvisionChannelEmailResult extends Entity
 {
     /**
-    * Gets the order
-    * A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
+    * Gets the email
+    * Represents the provisioned email address.
     *
-    * @return string|null The order
+    * @return string|null The email
     */
-    public function getOrder()
+    public function getEmail()
     {
-        if (array_key_exists("order", $this->_propDict)) {
-            return $this->_propDict["order"];
+        if (array_key_exists("email", $this->_propDict)) {
+            return $this->_propDict["email"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the order
-    * A list of identityUserFlowAttribute object identifiers that determine the order in which attributes should be collected within a user flow.
+    * Sets the email
+    * Represents the provisioned email address.
     *
-    * @param string $val The value of the order
+    * @param string $val The value of the email
     *
-    * @return AssignmentOrder
+    * @return ProvisionChannelEmailResult
     */
-    public function setOrder($val)
+    public function setEmail($val)
     {
-        $this->_propDict["order"] = $val;
+        $this->_propDict["email"] = $val;
         return $this;
     }
 }
