@@ -203,7 +203,7 @@ The display name of the user being invited.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the invitedUserEmailAddress
-The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`</dd>
+The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (&#039;)Angle brackets (&amp;amp;lt; &amp;amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Invitation.html#method_getInvitedUserMessageInfo">getInvitedUserMessageInfo()</a>
@@ -219,7 +219,7 @@ Additional configuration for the message being sent to the invited user, includi
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the invitedUserType
-The userType of the user being invited. By default, this is Guest. You can invite as Member if you&#039;re are company administrator.</dd>
+The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Invitation.html#method_getInviteRedeemUrl">getInviteRedeemUrl()</a>
@@ -235,7 +235,7 @@ The URL the user can use to redeem their invitation. Read-only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the inviteRedirectUrl
-The URL user should be redirected to once the invitation is redeemed. Required.</dd>
+The URL the user should be redirected to once the invitation is redeemed. Required.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getODataType">getODataType()</a>
@@ -272,7 +272,7 @@ Indicates whether an email should be sent to the user being invited. The default
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the status
-The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error</dd>
+The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -312,7 +312,7 @@ The display name of the user being invited.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Invitation.html"><abbr title="\Beta\Microsoft\Graph\Model\Invitation">Invitation</abbr></a>    </span>
 </dt>
 <dd>Sets the invitedUserEmailAddress
-The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`</dd>
+The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (&#039;)Angle brackets (&amp;amp;lt; &amp;amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Invitation.html#method_setInvitedUserMessageInfo">setInvitedUserMessageInfo()</a>
@@ -328,7 +328,7 @@ Additional configuration for the message being sent to the invited user, includi
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Invitation.html"><abbr title="\Beta\Microsoft\Graph\Model\Invitation">Invitation</abbr></a>    </span>
 </dt>
 <dd>Sets the invitedUserType
-The userType of the user being invited. By default, this is Guest. You can invite as Member if you&#039;re are company administrator.</dd>
+The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Invitation.html#method_setInviteRedeemUrl">setInviteRedeemUrl()</a>
@@ -344,7 +344,7 @@ The URL the user can use to redeem their invitation. Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Invitation.html"><abbr title="\Beta\Microsoft\Graph\Model\Invitation">Invitation</abbr></a>    </span>
 </dt>
 <dd>Sets the inviteRedirectUrl
-The URL user should be redirected to once the invitation is redeemed. Required.</dd>
+The URL the user should be redirected to once the invitation is redeemed. Required.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setODataType">setODataType()</a>
@@ -374,7 +374,7 @@ Indicates whether an email should be sent to the user being invited. The default
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Invitation.html"><abbr title="\Beta\Microsoft\Graph\Model\Invitation">Invitation</abbr></a>    </span>
 </dt>
 <dd>Sets the status
-The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error</dd>
+The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.</dd>
 
         </dl>
 
@@ -599,7 +599,7 @@ The display name of the user being invited.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the invitedUserEmailAddress
-The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`</p>
+The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (&#039;)Angle brackets (&amp;amp;lt; &amp;amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -671,7 +671,7 @@ Additional configuration for the message being sent to the invited user, includi
 </aside>
 
         <p class="phpdocumentor-summary">Gets the invitedUserType
-The userType of the user being invited. By default, this is Guest. You can invite as Member if you&#039;re are company administrator.</p>
+The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -743,7 +743,7 @@ The URL the user can use to redeem their invitation. Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the inviteRedirectUrl
-The URL user should be redirected to once the invitation is redeemed. Required.</p>
+The URL the user should be redirected to once the invitation is redeemed. Required.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -920,7 +920,7 @@ Indicates whether an email should be sent to the user being invited. The default
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
-The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error</p>
+The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1133,7 +1133,7 @@ The display name of the user being invited.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the invitedUserEmailAddress
-The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`</p>
+The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (&#039;)Angle brackets (&amp;amp;lt; &amp;amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1227,7 +1227,7 @@ Additional configuration for the message being sent to the invited user, includi
 </aside>
 
         <p class="phpdocumentor-summary">Sets the invitedUserType
-The userType of the user being invited. By default, this is Guest. You can invite as Member if you&#039;re are company administrator.</p>
+The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1321,7 +1321,7 @@ The URL the user can use to redeem their invitation. Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the inviteRedirectUrl
-The URL user should be redirected to once the invitation is redeemed. Required.</p>
+The URL the user should be redirected to once the invitation is redeemed. Required.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1507,7 +1507,7 @@ Indicates whether an email should be sent to the user being invited. The default
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status
-The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error</p>
+The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

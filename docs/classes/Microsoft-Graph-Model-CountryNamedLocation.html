@@ -178,7 +178,7 @@ to the model</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the countriesAndRegions
-List of countries and/or regions in two-letter format specified by ISO 3166-2.</dd>
+List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-CountryNamedLocation.html#method_getCountryLookupMethod">getCountryLookupMethod()</a>
@@ -186,7 +186,7 @@ List of countries and/or regions in two-letter format specified by ISO 3166-2.</
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-CountryLookupMethodType.html"><abbr title="\Microsoft\Graph\Model\CountryLookupMethodType">CountryLookupMethodType</abbr></a>|null    </span>
 </dt>
 <dd>Gets the countryLookupMethod
-Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.</dd>
+Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-NamedLocation.html#method_getCreatedDateTime">getCreatedDateTime()</a>
@@ -218,7 +218,7 @@ Read-only.</dd>
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the includeUnknownCountriesAndRegions
-True if IP addresses that don&#039;t map to a country or region should be included in the named location.</dd>
+true if IP addresses that don&#039;t map to a country or region should be included in the named location. Optional. Default value is false.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-NamedLocation.html#method_getModifiedDateTime">getModifiedDateTime()</a>
@@ -256,7 +256,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-CountryNamedLocation.html"><abbr title="\Microsoft\Graph\Model\CountryNamedLocation">CountryNamedLocation</abbr></a>    </span>
 </dt>
 <dd>Sets the countriesAndRegions
-List of countries and/or regions in two-letter format specified by ISO 3166-2.</dd>
+List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-CountryNamedLocation.html#method_setCountryLookupMethod">setCountryLookupMethod()</a>
@@ -264,7 +264,7 @@ List of countries and/or regions in two-letter format specified by ISO 3166-2.</
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-CountryNamedLocation.html"><abbr title="\Microsoft\Graph\Model\CountryNamedLocation">CountryNamedLocation</abbr></a>    </span>
 </dt>
 <dd>Sets the countryLookupMethod
-Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.</dd>
+Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-NamedLocation.html#method_setCreatedDateTime">setCreatedDateTime()</a>
@@ -296,7 +296,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-CountryNamedLocation.html"><abbr title="\Microsoft\Graph\Model\CountryNamedLocation">CountryNamedLocation</abbr></a>    </span>
 </dt>
 <dd>Sets the includeUnknownCountriesAndRegions
-True if IP addresses that don&#039;t map to a country or region should be included in the named location.</dd>
+true if IP addresses that don&#039;t map to a country or region should be included in the named location. Optional. Default value is false.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-NamedLocation.html#method_setModifiedDateTime">setModifiedDateTime()</a>
@@ -428,7 +428,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the countriesAndRegions
-List of countries and/or regions in two-letter format specified by ISO 3166-2.</p>
+List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -464,7 +464,7 @@ List of countries and/or regions in two-letter format specified by ISO 3166-2.</
 </aside>
 
         <p class="phpdocumentor-summary">Gets the countryLookupMethod
-Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.</p>
+Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -608,7 +608,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the includeUnknownCountriesAndRegions
-True if IP addresses that don&#039;t map to a country or region should be included in the named location.</p>
+true if IP addresses that don&#039;t map to a country or region should be included in the named location. Optional. Default value is false.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -786,7 +786,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the countriesAndRegions
-List of countries and/or regions in two-letter format specified by ISO 3166-2.</p>
+List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -833,7 +833,7 @@ List of countries and/or regions in two-letter format specified by ISO 3166-2.</
 </aside>
 
         <p class="phpdocumentor-summary">Sets the countryLookupMethod
-Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.</p>
+Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1021,7 +1021,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the includeUnknownCountriesAndRegions
-True if IP addresses that don&#039;t map to a country or region should be included in the named location.</p>
+true if IP addresses that don&#039;t map to a country or region should be included in the named location. Optional. Default value is false.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

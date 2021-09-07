@@ -234,7 +234,7 @@ Unique identifier of the applicationTemplate that the servicePrincipal was creat
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the appOwnerOrganizationId
-Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).</dd>
+Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_getAppRoleAssignedTo">getAppRoleAssignedTo()</a>
@@ -242,7 +242,7 @@ Contains the tenant id where the application is registered. This is applicable o
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the appRoleAssignedTo
-App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.</dd>
+App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_getAppRoleAssignmentRequired">getAppRoleAssignmentRequired()</a>
@@ -456,7 +456,7 @@ Directory objects that are owners of this servicePrincipal. The owners are a set
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the passwordCredentials
-The collection of password credentials associated with the service principal. Not nullable.</dd>
+The collection of password credentials associated with the application. Not nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_getPreferredSingleSignOnMode">getPreferredSingleSignOnMode()</a>
@@ -511,7 +511,7 @@ Contains the list of identifiersUris, copied over from the associated applicatio
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the servicePrincipalType
-Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.</dd>
+Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_getSignInAudience">getSignInAudience()</a>
@@ -543,7 +543,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the tokenIssuancePolicies
-The tokenIssuancePolicies assigned to this service principal. Supports $expand.</dd>
+The tokenIssuancePolicies assigned to this service principal.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_getTokenLifetimePolicies">getTokenLifetimePolicies()</a>
@@ -551,7 +551,7 @@ The tokenIssuancePolicies assigned to this service principal. Supports $expand.<
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the tokenLifetimePolicies
-The tokenLifetimePolicies assigned to this service principal. Supports $expand.</dd>
+The tokenLifetimePolicies assigned to this service principal.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_getTransitiveMemberOf">getTransitiveMemberOf()</a>
@@ -630,7 +630,7 @@ Unique identifier of the applicationTemplate that the servicePrincipal was creat
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a>    </span>
 </dt>
 <dd>Sets the appOwnerOrganizationId
-Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).</dd>
+Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_setAppRoleAssignedTo">setAppRoleAssignedTo()</a>
@@ -638,7 +638,7 @@ Contains the tenant id where the application is registered. This is applicable o
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a>    </span>
 </dt>
 <dd>Sets the appRoleAssignedTo
-App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.</dd>
+App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_setAppRoleAssignmentRequired">setAppRoleAssignmentRequired()</a>
@@ -852,7 +852,7 @@ Directory objects that are owners of this servicePrincipal. The owners are a set
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a>    </span>
 </dt>
 <dd>Sets the passwordCredentials
-The collection of password credentials associated with the service principal. Not nullable.</dd>
+The collection of password credentials associated with the application. Not nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_setPreferredSingleSignOnMode">setPreferredSingleSignOnMode()</a>
@@ -900,7 +900,7 @@ Contains the list of identifiersUris, copied over from the associated applicatio
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a>    </span>
 </dt>
 <dd>Sets the servicePrincipalType
-Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.</dd>
+Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_setSignInAudience">setSignInAudience()</a>
@@ -932,7 +932,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a>    </span>
 </dt>
 <dd>Sets the tokenIssuancePolicies
-The tokenIssuancePolicies assigned to this service principal. Supports $expand.</dd>
+The tokenIssuancePolicies assigned to this service principal.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_setTokenLifetimePolicies">setTokenLifetimePolicies()</a>
@@ -940,7 +940,7 @@ The tokenIssuancePolicies assigned to this service principal. Supports $expand.<
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a>    </span>
 </dt>
 <dd>Sets the tokenLifetimePolicies
-The tokenLifetimePolicies assigned to this service principal. Supports $expand.</dd>
+The tokenLifetimePolicies assigned to this service principal.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServicePrincipal.html#method_setTransitiveMemberOf">setTransitiveMemberOf()</a>
@@ -1316,7 +1316,7 @@ Unique identifier of the applicationTemplate that the servicePrincipal was creat
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appOwnerOrganizationId
-Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).</p>
+Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1352,7 +1352,7 @@ Contains the tenant id where the application is registered. This is applicable o
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appRoleAssignedTo
-App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.</p>
+App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2322,7 +2322,7 @@ Directory objects that are owners of this servicePrincipal. The owners are a set
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordCredentials
-The collection of password credentials associated with the service principal. Not nullable.</p>
+The collection of password credentials associated with the application. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2573,7 +2573,7 @@ Contains the list of identifiersUris, copied over from the associated applicatio
 </aside>
 
         <p class="phpdocumentor-summary">Gets the servicePrincipalType
-Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.</p>
+Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2717,7 +2717,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenIssuancePolicies
-The tokenIssuancePolicies assigned to this service principal. Supports $expand.</p>
+The tokenIssuancePolicies assigned to this service principal.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2753,7 +2753,7 @@ The tokenIssuancePolicies assigned to this service principal. Supports $expand.<
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenLifetimePolicies
-The tokenLifetimePolicies assigned to this service principal. Supports $expand.</p>
+The tokenLifetimePolicies assigned to this service principal.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3189,7 +3189,7 @@ Unique identifier of the applicationTemplate that the servicePrincipal was creat
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appOwnerOrganizationId
-Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).</p>
+Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3236,7 +3236,7 @@ Contains the tenant id where the application is registered. This is applicable o
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appRoleAssignedTo
-App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.</p>
+App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4503,7 +4503,7 @@ Directory objects that are owners of this servicePrincipal. The owners are a set
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordCredentials
-The collection of password credentials associated with the service principal. Not nullable.</p>
+The collection of password credentials associated with the application. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4785,7 +4785,7 @@ Contains the list of identifiersUris, copied over from the associated applicatio
 </aside>
 
         <p class="phpdocumentor-summary">Sets the servicePrincipalType
-Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.</p>
+Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4973,7 +4973,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenIssuancePolicies
-The tokenIssuancePolicies assigned to this service principal. Supports $expand.</p>
+The tokenIssuancePolicies assigned to this service principal.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5020,7 +5020,7 @@ The tokenIssuancePolicies assigned to this service principal. Supports $expand.<
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenLifetimePolicies
-The tokenLifetimePolicies assigned to this service principal. Supports $expand.</p>
+The tokenLifetimePolicies assigned to this service principal.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

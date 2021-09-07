@@ -178,7 +178,7 @@ to the model</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-AppScope.html"><abbr title="\Microsoft\Graph\Model\AppScope">AppScope</abbr></a>|null    </span>
 </dt>
 <dd>Gets the appScope
-Details of the app specific scope when the assignment scope is app specific. Containment entity.</dd>
+Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_getAppScopeId">getAppScopeId()</a>
@@ -186,7 +186,7 @@ Details of the app specific scope when the assignment scope is app specific. Con
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the appScopeId
-Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.</dd>
+Identifier of the app-specific scope when the assignment scope is app-specific.  Either this property or directoryScopeId is required. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_getCondition">getCondition()</a>
@@ -201,7 +201,7 @@ Identifier of the app specific scope when the assignment scope is app specific. 
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>|null    </span>
 </dt>
 <dd>Gets the directoryScope
-The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.</dd>
+The directory object that is the scope of the assignment. Read-only. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_getDirectoryScopeId">getDirectoryScopeId()</a>
@@ -209,7 +209,7 @@ The directory object that is the scope of the assignment. Provided so that calle
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the directoryScopeId
-Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the directory object representing the scope of the assignment.  Either this property or appScopeId is required. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -232,7 +232,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>|null    </span>
 </dt>
 <dd>Gets the principal
-The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.</dd>
+Referencing the assigned principal. Read-only. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_getPrincipalId">getPrincipalId()</a>
@@ -240,7 +240,7 @@ The assigned principal. Provided so that callers can get the principal using $ex
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the principalId
-Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).</dd>
+Identifier of the principal to which the assignment is granted. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -255,7 +255,7 @@ Identifier of the principal to which the assignment is granted. Supports $filter
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>|null    </span>
 </dt>
 <dd>Gets the roleDefinition
-The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.</dd>
+The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_getRoleDefinitionId">getRoleDefinitionId()</a>
@@ -263,7 +263,7 @@ The roleDefinition the assignment is for. Provided so that callers can get the r
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the roleDefinitionId
-Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).</dd>
+Identifier of the role definition the assignment is for. Read only. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -279,7 +279,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleAssignment">UnifiedRoleAssignment</abbr></a>    </span>
 </dt>
 <dd>Sets the appScope
-Details of the app specific scope when the assignment scope is app specific. Containment entity.</dd>
+Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_setAppScopeId">setAppScopeId()</a>
@@ -287,7 +287,7 @@ Details of the app specific scope when the assignment scope is app specific. Con
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleAssignment">UnifiedRoleAssignment</abbr></a>    </span>
 </dt>
 <dd>Sets the appScopeId
-Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.</dd>
+Identifier of the app-specific scope when the assignment scope is app-specific.  Either this property or directoryScopeId is required. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_setCondition">setCondition()</a>
@@ -302,7 +302,7 @@ Identifier of the app specific scope when the assignment scope is app specific. 
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleAssignment">UnifiedRoleAssignment</abbr></a>    </span>
 </dt>
 <dd>Sets the directoryScope
-The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.</dd>
+The directory object that is the scope of the assignment. Read-only. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_setDirectoryScopeId">setDirectoryScopeId()</a>
@@ -310,7 +310,7 @@ The directory object that is the scope of the assignment. Provided so that calle
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleAssignment">UnifiedRoleAssignment</abbr></a>    </span>
 </dt>
 <dd>Sets the directoryScopeId
-Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the directory object representing the scope of the assignment.  Either this property or appScopeId is required. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -333,7 +333,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleAssignment">UnifiedRoleAssignment</abbr></a>    </span>
 </dt>
 <dd>Sets the principal
-The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.</dd>
+Referencing the assigned principal. Read-only. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_setPrincipalId">setPrincipalId()</a>
@@ -341,7 +341,7 @@ The assigned principal. Provided so that callers can get the principal using $ex
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleAssignment">UnifiedRoleAssignment</abbr></a>    </span>
 </dt>
 <dd>Sets the principalId
-Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).</dd>
+Identifier of the principal to which the assignment is granted. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_setRoleDefinition">setRoleDefinition()</a>
@@ -349,7 +349,7 @@ Identifier of the principal to which the assignment is granted. Supports $filter
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleAssignment">UnifiedRoleAssignment</abbr></a>    </span>
 </dt>
 <dd>Sets the roleDefinition
-The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.</dd>
+The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html#method_setRoleDefinitionId">setRoleDefinitionId()</a>
@@ -357,7 +357,7 @@ The roleDefinition the assignment is for. Provided so that callers can get the r
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleAssignment">UnifiedRoleAssignment</abbr></a>    </span>
 </dt>
 <dd>Sets the roleDefinitionId
-Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).</dd>
+Identifier of the role definition the assignment is for. Read only. Supports $filter (eq, in).</dd>
 
         </dl>
 
@@ -474,7 +474,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appScope
-Details of the app specific scope when the assignment scope is app specific. Containment entity.</p>
+Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -510,7 +510,7 @@ Details of the app specific scope when the assignment scope is app specific. Con
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appScopeId
-Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.</p>
+Identifier of the app-specific scope when the assignment scope is app-specific.  Either this property or directoryScopeId is required. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -581,7 +581,7 @@ Identifier of the app specific scope when the assignment scope is app specific. 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the directoryScope
-The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.</p>
+The directory object that is the scope of the assignment. Read-only. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -617,7 +617,7 @@ The directory object that is the scope of the assignment. Provided so that calle
 </aside>
 
         <p class="phpdocumentor-summary">Gets the directoryScopeId
-Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the directory object representing the scope of the assignment.  Either this property or appScopeId is required. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -724,7 +724,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the principal
-The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.</p>
+Referencing the assigned principal. Read-only. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -760,7 +760,7 @@ The assigned principal. Provided so that callers can get the principal using $ex
 </aside>
 
         <p class="phpdocumentor-summary">Gets the principalId
-Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).</p>
+Identifier of the principal to which the assignment is granted. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -831,7 +831,7 @@ Identifier of the principal to which the assignment is granted. Supports $filter
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleDefinition
-The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.</p>
+The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -867,7 +867,7 @@ The roleDefinition the assignment is for. Provided so that callers can get the r
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleDefinitionId
-Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).</p>
+Identifier of the role definition the assignment is for. Read only. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -939,7 +939,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appScope
-Details of the app specific scope when the assignment scope is app specific. Containment entity.</p>
+Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -986,7 +986,7 @@ Details of the app specific scope when the assignment scope is app specific. Con
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appScopeId
-Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.</p>
+Identifier of the app-specific scope when the assignment scope is app-specific.  Either this property or directoryScopeId is required. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1079,7 +1079,7 @@ Identifier of the app specific scope when the assignment scope is app specific. 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the directoryScope
-The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.</p>
+The directory object that is the scope of the assignment. Read-only. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1126,7 +1126,7 @@ The directory object that is the scope of the assignment. Provided so that calle
 </aside>
 
         <p class="phpdocumentor-summary">Sets the directoryScopeId
-Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the directory object representing the scope of the assignment.  Either this property or appScopeId is required. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1266,7 +1266,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the principal
-The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.</p>
+Referencing the assigned principal. Read-only. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1313,7 +1313,7 @@ The assigned principal. Provided so that callers can get the principal using $ex
 </aside>
 
         <p class="phpdocumentor-summary">Sets the principalId
-Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).</p>
+Identifier of the principal to which the assignment is granted. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1360,7 +1360,7 @@ Identifier of the principal to which the assignment is granted. Supports $filter
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleDefinition
-The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.</p>
+The roleDefinition the assignment is for.  Supports $expand. roleDefinition.Id will be auto expanded.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1407,7 +1407,7 @@ The roleDefinition the assignment is for. Provided so that callers can get the r
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleDefinitionId
-Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).</p>
+Identifier of the role definition the assignment is for. Read only. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
