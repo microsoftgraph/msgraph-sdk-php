@@ -25,6 +25,7 @@ class TeamworkOnlineMeetingInfo extends Entity
 {
     /**
     * Gets the calendarEventId
+    * The identifier of the calendar event associated with the meeting.
     *
     * @return string|null The calendarEventId
     */
@@ -39,6 +40,7 @@ class TeamworkOnlineMeetingInfo extends Entity
 
     /**
     * Sets the calendarEventId
+    * The identifier of the calendar event associated with the meeting.
     *
     * @param string $val The value of the calendarEventId
     *
@@ -51,6 +53,7 @@ class TeamworkOnlineMeetingInfo extends Entity
     }
     /**
     * Gets the joinWebUrl
+    * The URL which can be clicked on to join or uniquely identify the meeting.
     *
     * @return string|null The joinWebUrl
     */
@@ -65,6 +68,7 @@ class TeamworkOnlineMeetingInfo extends Entity
 
     /**
     * Sets the joinWebUrl
+    * The URL which can be clicked on to join or uniquely identify the meeting.
     *
     * @param string $val The value of the joinWebUrl
     *
@@ -78,6 +82,7 @@ class TeamworkOnlineMeetingInfo extends Entity
 
     /**
     * Gets the organizer
+    * The organizer of the meeting.
     *
     * @return TeamworkUserIdentity|null The organizer
     */
@@ -96,6 +101,7 @@ class TeamworkOnlineMeetingInfo extends Entity
 
     /**
     * Sets the organizer
+    * The organizer of the meeting.
     *
     * @param TeamworkUserIdentity $val The value to assign to the organizer
     *
