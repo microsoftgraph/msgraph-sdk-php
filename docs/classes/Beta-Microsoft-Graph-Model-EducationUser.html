@@ -179,7 +179,7 @@ to the model</dd>
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the accountEnabled
-True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.</dd>
+True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getAssignedLicenses">getAssignedLicenses()</a>
@@ -235,7 +235,7 @@ Entity who created the user.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the department
-The name for the department in which the user works. Supports /$filter.</dd>
+The name for the department in which the user works. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getDisplayName">getDisplayName()</a>
@@ -243,7 +243,7 @@ The name for the department in which the user works. Supports /$filter.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the displayName
-The name displayed in the address book for the user. Supports $filter and $orderby.</dd>
+The name displayed in the address book for the user. This is usually the combination of the user&#039;s first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getExternalSource">getExternalSource()</a>
@@ -251,7 +251,7 @@ The name displayed in the address book for the user. Supports $filter and $order
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationExternalSource.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationExternalSource">EducationExternalSource</abbr></a>|null    </span>
 </dt>
 <dd>Gets the externalSource
-The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.</dd>
+Where this user was created from. Possible values are: sis, manual.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getExternalSourceDetail">getExternalSourceDetail()</a>
@@ -267,7 +267,7 @@ The name of the external source this resources was generated from.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the givenName
-The given name (first name) of the user. Supports /$filter.</dd>
+The given name (first name) of the user. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -283,7 +283,7 @@ Read-only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the mail
-The SMTP address for the user; for example, &#039;jeff@contoso.onmicrosoft.com&#039;. Read-Only. Supports /$filter.</dd>
+The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getMailingAddress">getMailingAddress()</a>
@@ -291,7 +291,7 @@ The SMTP address for the user; for example, &#039;jeff@contoso.onmicrosoft.com&#
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-PhysicalAddress.html"><abbr title="\Beta\Microsoft\Graph\Model\PhysicalAddress">PhysicalAddress</abbr></a>|null    </span>
 </dt>
 <dd>Gets the mailingAddress
-Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.</dd>
+Mail address of user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getMailNickname">getMailNickname()</a>
@@ -299,7 +299,7 @@ Mail address of user. Note: type and postOfficeBox are not supported for educati
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the mailNickname
-The mail alias for the user. This property must be specified when a user is created. Supports /$filter.</dd>
+The mail alias for the user. This property must be specified when a user is created. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getMiddleName">getMiddleName()</a>
@@ -337,7 +337,7 @@ The primary cellular telephone number for the user.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationOnPremisesInfo.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationOnPremisesInfo">EducationOnPremisesInfo</abbr></a>|null    </span>
 </dt>
 <dd>Gets the onPremisesInfo
-Additional information used to associate the AAD user with it&#039;s Active Directory counterpart.</dd>
+Additional information used to associate the Azure AD user with its Active Directory counterpart.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getPasswordPolicies">getPasswordPolicies()</a>
@@ -345,7 +345,7 @@ Additional information used to associate the AAD user with it&#039;s Active Dire
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the passwordPolicies
-Specifies password policies for the user. See standard [user] resource for additional details.</dd>
+Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getPasswordProfile">getPasswordProfile()</a>
@@ -353,7 +353,7 @@ Specifies password policies for the user. See standard [user] resource for addit
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-PasswordProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\PasswordProfile">PasswordProfile</abbr></a>|null    </span>
 </dt>
 <dd>Gets the passwordProfile
-Specifies the password profile for the user. The profile contains the user&#039;s password. This property is required when a user is created. See standard [user] resource for additional details.</dd>
+Specifies the password profile for the user. The profile contains the user&#039;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getPreferredLanguage">getPreferredLanguage()</a>
@@ -369,7 +369,7 @@ The preferred language for the user. Should follow ISO 639-1 Code; for example, 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUserRole.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUserRole">EducationUserRole</abbr></a>|null    </span>
 </dt>
 <dd>Gets the primaryRole
-Default role for a user. The user&#039;s role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter.</dd>
+Default role for a user. The user&#039;s role might be different in an individual class. Possible values are: student, teacher, none, unknownFutureValue.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -407,7 +407,7 @@ Related records related to the user. Possible relationships are parent, relative
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-PhysicalAddress.html"><abbr title="\Beta\Microsoft\Graph\Model\PhysicalAddress">PhysicalAddress</abbr></a>|null    </span>
 </dt>
 <dd>Gets the residenceAddress
-Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.</dd>
+Address where user lives.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getRubrics">getRubrics()</a>
@@ -446,7 +446,7 @@ If the primary role is student, this block will contain student specific data.</
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the surname
-The user&#039;s surname (family name or last name). Supports /$filter.</dd>
+The user&#039;s surname (family name or last name). Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getTaughtClasses">getTaughtClasses()</a>
@@ -470,7 +470,7 @@ If the primary role is teacher, this block will contain teacher specific data.</
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the usageLocation
-A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.</dd>
+A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: &#039;US&#039;, &#039;JP&#039;, and &#039;GB&#039;. Not nullable. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getUser">getUser()</a>
@@ -486,7 +486,7 @@ The directory user corresponding to this user.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the userPrincipalName
-The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.</dd>
+The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user&#039;s email name. The general format is alias@domain, where domain must be present in the tenant&#039;s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_getUserType">getUserType()</a>
@@ -494,7 +494,7 @@ The user principal name (UPN) for the user. Supports $filter and $orderby. See s
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the userType
-A string value that can be used to classify user types in your directory, such as &#039;Member&#039; and &#039;Guest&#039;. Supports /$filter.</dd>
+A string value that can be used to classify user types in your directory, such as &#039;Member&#039; and &#039;Guest&#039;. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -510,7 +510,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the accountEnabled
-True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.</dd>
+True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setAssignedLicenses">setAssignedLicenses()</a>
@@ -566,7 +566,7 @@ Entity who created the user.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the department
-The name for the department in which the user works. Supports /$filter.</dd>
+The name for the department in which the user works. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setDisplayName">setDisplayName()</a>
@@ -574,7 +574,7 @@ The name for the department in which the user works. Supports /$filter.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the displayName
-The name displayed in the address book for the user. Supports $filter and $orderby.</dd>
+The name displayed in the address book for the user. This is usually the combination of the user&#039;s first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setExternalSource">setExternalSource()</a>
@@ -582,7 +582,7 @@ The name displayed in the address book for the user. Supports $filter and $order
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the externalSource
-The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.</dd>
+Where this user was created from. Possible values are: sis, manual.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setExternalSourceDetail">setExternalSourceDetail()</a>
@@ -598,7 +598,7 @@ The name of the external source this resources was generated from.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the givenName
-The given name (first name) of the user. Supports /$filter.</dd>
+The given name (first name) of the user. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -614,7 +614,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the mail
-The SMTP address for the user; for example, &#039;jeff@contoso.onmicrosoft.com&#039;. Read-Only. Supports /$filter.</dd>
+The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setMailingAddress">setMailingAddress()</a>
@@ -622,7 +622,7 @@ The SMTP address for the user; for example, &#039;jeff@contoso.onmicrosoft.com&#
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the mailingAddress
-Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.</dd>
+Mail address of user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setMailNickname">setMailNickname()</a>
@@ -630,7 +630,7 @@ Mail address of user. Note: type and postOfficeBox are not supported for educati
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the mailNickname
-The mail alias for the user. This property must be specified when a user is created. Supports /$filter.</dd>
+The mail alias for the user. This property must be specified when a user is created. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setMiddleName">setMiddleName()</a>
@@ -668,7 +668,7 @@ The primary cellular telephone number for the user.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the onPremisesInfo
-Additional information used to associate the AAD user with it&#039;s Active Directory counterpart.</dd>
+Additional information used to associate the Azure AD user with its Active Directory counterpart.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setPasswordPolicies">setPasswordPolicies()</a>
@@ -676,7 +676,7 @@ Additional information used to associate the AAD user with it&#039;s Active Dire
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the passwordPolicies
-Specifies password policies for the user. See standard [user] resource for additional details.</dd>
+Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setPasswordProfile">setPasswordProfile()</a>
@@ -684,7 +684,7 @@ Specifies password policies for the user. See standard [user] resource for addit
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the passwordProfile
-Specifies the password profile for the user. The profile contains the user&#039;s password. This property is required when a user is created. See standard [user] resource for additional details.</dd>
+Specifies the password profile for the user. The profile contains the user&#039;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setPreferredLanguage">setPreferredLanguage()</a>
@@ -700,7 +700,7 @@ The preferred language for the user. Should follow ISO 639-1 Code; for example, 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the primaryRole
-Default role for a user. The user&#039;s role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter.</dd>
+Default role for a user. The user&#039;s role might be different in an individual class. Possible values are: student, teacher, none, unknownFutureValue.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setProvisionedPlans">setProvisionedPlans()</a>
@@ -731,7 +731,7 @@ Related records related to the user. Possible relationships are parent, relative
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the residenceAddress
-Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.</dd>
+Address where user lives.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setRubrics">setRubrics()</a>
@@ -770,7 +770,7 @@ If the primary role is student, this block will contain student specific data.</
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the surname
-The user&#039;s surname (family name or last name). Supports /$filter.</dd>
+The user&#039;s surname (family name or last name). Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setTaughtClasses">setTaughtClasses()</a>
@@ -794,7 +794,7 @@ If the primary role is teacher, this block will contain teacher specific data.</
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the usageLocation
-A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.</dd>
+A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: &#039;US&#039;, &#039;JP&#039;, and &#039;GB&#039;. Not nullable. Supports $filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setUser">setUser()</a>
@@ -810,7 +810,7 @@ The directory user corresponding to this user.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the userPrincipalName
-The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.</dd>
+The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user&#039;s email name. The general format is alias@domain, where domain must be present in the tenant&#039;s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html#method_setUserType">setUserType()</a>
@@ -818,7 +818,7 @@ The user principal name (UPN) for the user. Supports $filter and $orderby. See s
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-EducationUser.html"><abbr title="\Beta\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a>    </span>
 </dt>
 <dd>Sets the userType
-A string value that can be used to classify user types in your directory, such as &#039;Member&#039; and &#039;Guest&#039;. Supports /$filter.</dd>
+A string value that can be used to classify user types in your directory, such as &#039;Member&#039; and &#039;Guest&#039;. Supports $filter.</dd>
 
         </dl>
 
@@ -935,7 +935,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the accountEnabled
-True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.</p>
+True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1187,7 +1187,7 @@ Entity who created the user.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the department
-The name for the department in which the user works. Supports /$filter.</p>
+The name for the department in which the user works. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1223,7 +1223,7 @@ The name for the department in which the user works. Supports /$filter.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the displayName
-The name displayed in the address book for the user. Supports $filter and $orderby.</p>
+The name displayed in the address book for the user. This is usually the combination of the user&#039;s first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1259,7 +1259,7 @@ The name displayed in the address book for the user. Supports $filter and $order
 </aside>
 
         <p class="phpdocumentor-summary">Gets the externalSource
-The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.</p>
+Where this user was created from. Possible values are: sis, manual.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1331,7 +1331,7 @@ The name of the external source this resources was generated from.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the givenName
-The given name (first name) of the user. Supports /$filter.</p>
+The given name (first name) of the user. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1403,7 +1403,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mail
-The SMTP address for the user; for example, &#039;jeff@contoso.onmicrosoft.com&#039;. Read-Only. Supports /$filter.</p>
+The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1439,7 +1439,7 @@ The SMTP address for the user; for example, &#039;jeff@contoso.onmicrosoft.com&#
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mailingAddress
-Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.</p>
+Mail address of user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1475,7 +1475,7 @@ Mail address of user. Note: type and postOfficeBox are not supported for educati
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mailNickname
-The mail alias for the user. This property must be specified when a user is created. Supports /$filter.</p>
+The mail alias for the user. This property must be specified when a user is created. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1653,7 +1653,7 @@ The primary cellular telephone number for the user.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesInfo
-Additional information used to associate the AAD user with it&#039;s Active Directory counterpart.</p>
+Additional information used to associate the Azure AD user with its Active Directory counterpart.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1689,7 +1689,7 @@ Additional information used to associate the AAD user with it&#039;s Active Dire
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordPolicies
-Specifies password policies for the user. See standard [user] resource for additional details.</p>
+Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1725,7 +1725,7 @@ Specifies password policies for the user. See standard [user] resource for addit
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordProfile
-Specifies the password profile for the user. The profile contains the user&#039;s password. This property is required when a user is created. See standard [user] resource for additional details.</p>
+Specifies the password profile for the user. The profile contains the user&#039;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1797,7 +1797,7 @@ The preferred language for the user. Should follow ISO 639-1 Code; for example, 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the primaryRole
-Default role for a user. The user&#039;s role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter.</p>
+Default role for a user. The user&#039;s role might be different in an individual class. Possible values are: student, teacher, none, unknownFutureValue.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1975,7 +1975,7 @@ Related records related to the user. Possible relationships are parent, relative
 </aside>
 
         <p class="phpdocumentor-summary">Gets the residenceAddress
-Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.</p>
+Address where user lives.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2154,7 +2154,7 @@ If the primary role is student, this block will contain student specific data.</
 </aside>
 
         <p class="phpdocumentor-summary">Gets the surname
-The user&#039;s surname (family name or last name). Supports /$filter.</p>
+The user&#039;s surname (family name or last name). Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2262,7 +2262,7 @@ If the primary role is teacher, this block will contain teacher specific data.</
 </aside>
 
         <p class="phpdocumentor-summary">Gets the usageLocation
-A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.</p>
+A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: &#039;US&#039;, &#039;JP&#039;, and &#039;GB&#039;. Not nullable. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2334,7 +2334,7 @@ The directory user corresponding to this user.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
-The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.</p>
+The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user&#039;s email name. The general format is alias@domain, where domain must be present in the tenant&#039;s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2370,7 +2370,7 @@ The user principal name (UPN) for the user. Supports $filter and $orderby. See s
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userType
-A string value that can be used to classify user types in your directory, such as &#039;Member&#039; and &#039;Guest&#039;. Supports /$filter.</p>
+A string value that can be used to classify user types in your directory, such as &#039;Member&#039; and &#039;Guest&#039;. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2442,7 +2442,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the accountEnabled
-True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.</p>
+True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2771,7 +2771,7 @@ Entity who created the user.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the department
-The name for the department in which the user works. Supports /$filter.</p>
+The name for the department in which the user works. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2818,7 +2818,7 @@ The name for the department in which the user works. Supports /$filter.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the displayName
-The name displayed in the address book for the user. Supports $filter and $orderby.</p>
+The name displayed in the address book for the user. This is usually the combination of the user&#039;s first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2865,7 +2865,7 @@ The name displayed in the address book for the user. Supports $filter and $order
 </aside>
 
         <p class="phpdocumentor-summary">Sets the externalSource
-The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.</p>
+Where this user was created from. Possible values are: sis, manual.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2959,7 +2959,7 @@ The name of the external source this resources was generated from.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the givenName
-The given name (first name) of the user. Supports /$filter.</p>
+The given name (first name) of the user. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3053,7 +3053,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mail
-The SMTP address for the user; for example, &#039;jeff@contoso.onmicrosoft.com&#039;. Read-Only. Supports /$filter.</p>
+The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3100,7 +3100,7 @@ The SMTP address for the user; for example, &#039;jeff@contoso.onmicrosoft.com&#
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mailingAddress
-Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.</p>
+Mail address of user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3147,7 +3147,7 @@ Mail address of user. Note: type and postOfficeBox are not supported for educati
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mailNickname
-The mail alias for the user. This property must be specified when a user is created. Supports /$filter.</p>
+The mail alias for the user. This property must be specified when a user is created. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3380,7 +3380,7 @@ The primary cellular telephone number for the user.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesInfo
-Additional information used to associate the AAD user with it&#039;s Active Directory counterpart.</p>
+Additional information used to associate the Azure AD user with its Active Directory counterpart.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3427,7 +3427,7 @@ Additional information used to associate the AAD user with it&#039;s Active Dire
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordPolicies
-Specifies password policies for the user. See standard [user] resource for additional details.</p>
+Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3474,7 +3474,7 @@ Specifies password policies for the user. See standard [user] resource for addit
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordProfile
-Specifies the password profile for the user. The profile contains the user&#039;s password. This property is required when a user is created. See standard [user] resource for additional details.</p>
+Specifies the password profile for the user. The profile contains the user&#039;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3568,7 +3568,7 @@ The preferred language for the user. Should follow ISO 639-1 Code; for example, 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the primaryRole
-Default role for a user. The user&#039;s role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter.</p>
+Default role for a user. The user&#039;s role might be different in an individual class. Possible values are: student, teacher, none, unknownFutureValue.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3755,7 +3755,7 @@ Related records related to the user. Possible relationships are parent, relative
 </aside>
 
         <p class="phpdocumentor-summary">Sets the residenceAddress
-Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.</p>
+Address where user lives.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3989,7 +3989,7 @@ If the primary role is student, this block will contain student specific data.</
 </aside>
 
         <p class="phpdocumentor-summary">Sets the surname
-The user&#039;s surname (family name or last name). Supports /$filter.</p>
+The user&#039;s surname (family name or last name). Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4130,7 +4130,7 @@ If the primary role is teacher, this block will contain teacher specific data.</
 </aside>
 
         <p class="phpdocumentor-summary">Sets the usageLocation
-A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.</p>
+A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: &#039;US&#039;, &#039;JP&#039;, and &#039;GB&#039;. Not nullable. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4224,7 +4224,7 @@ The directory user corresponding to this user.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName
-The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.</p>
+The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user&#039;s email name. The general format is alias@domain, where domain must be present in the tenant&#039;s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4271,7 +4271,7 @@ The user principal name (UPN) for the user. Supports $filter and $orderby. See s
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userType
-A string value that can be used to classify user types in your directory, such as &#039;Member&#039; and &#039;Guest&#039;. Supports /$filter.</p>
+A string value that can be used to classify user types in your directory, such as &#039;Member&#039; and &#039;Guest&#039;. Supports $filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

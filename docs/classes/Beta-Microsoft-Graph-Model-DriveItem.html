@@ -357,6 +357,13 @@ For drives in SharePoint, the associated document library list item. Read-only. 
 Location metadata, if the item has location data. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_getMalware">getMalware()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Malware.html"><abbr title="\Beta\Microsoft\Graph\Model\Malware">Malware</abbr></a>|null    </span>
+</dt>
+<dd>Gets the malware</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_getMedia">getMedia()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Media.html"><abbr title="\Beta\Microsoft\Graph\Model\Media">Media</abbr></a>|null    </span>
@@ -401,7 +408,7 @@ Parent information, if the item has a parent. Read-write.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-PendingOperations.html"><abbr title="\Beta\Microsoft\Graph\Model\PendingOperations">PendingOperations</abbr></a>|null    </span>
 </dt>
 <dd>Gets the pendingOperations
-If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.</dd>
+If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_getPermissions">getPermissions()</a>
@@ -746,6 +753,13 @@ For drives in SharePoint, the associated document library list item. Read-only. 
 Location metadata, if the item has location data. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_setMalware">setMalware()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html"><abbr title="\Beta\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>    </span>
+</dt>
+<dd>Sets the malware</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_setMedia">setMedia()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html"><abbr title="\Beta\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>    </span>
@@ -790,7 +804,7 @@ Parent information, if the item has a parent. Read-write.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html"><abbr title="\Beta\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>    </span>
 </dt>
 <dd>Sets the pendingOperations
-If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.</dd>
+If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_setPermissions">setPermissions()</a>
@@ -1047,7 +1061,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">878</span>
+    <span class="phpdocumentor-element-found-in__line">909</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the activities
@@ -1083,7 +1097,7 @@ The list of recent activities that took place on this item.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">907</span>
+    <span class="phpdocumentor-element-found-in__line">938</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the analytics
@@ -1190,7 +1204,7 @@ Audio metadata, if the item is an audio file. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">941</span>
+    <span class="phpdocumentor-element-found-in__line">972</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the children
@@ -1802,7 +1816,7 @@ Date and time the item was last modified. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">970</span>
+    <span class="phpdocumentor-element-found-in__line">1001</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the listItem
@@ -1867,6 +1881,41 @@ Location metadata, if the item has location data. Read-only.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getMalware">
+        getMalware()
+        <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_getMalware" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">356</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the malware</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getMalware</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-Malware.html"><abbr title="\Beta\Microsoft\Graph\Model\Malware">Malware</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-Malware.html"><abbr title="\Beta\Microsoft\Graph\Model\Malware">Malware</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The malware</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getMedia">
         getMedia()
         <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_getMedia" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1874,7 +1923,7 @@ Location metadata, if the item has location data. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">357</span>
+    <span class="phpdocumentor-element-found-in__line">388</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the media
@@ -1981,7 +2030,7 @@ The name of the item. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">390</span>
+    <span class="phpdocumentor-element-found-in__line">421</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the package
@@ -2053,11 +2102,11 @@ Parent information, if the item has a parent. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">423</span>
+    <span class="phpdocumentor-element-found-in__line">454</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pendingOperations
-If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.</p>
+If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2089,7 +2138,7 @@ If present, indicates that indicates that one or more operations that may affect
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1004</span>
+    <span class="phpdocumentor-element-found-in__line">1035</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the permissions
@@ -2125,7 +2174,7 @@ The set of permissions for the item. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">456</span>
+    <span class="phpdocumentor-element-found-in__line">487</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the photo
@@ -2196,7 +2245,7 @@ Photo metadata, if the item is a photo. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">489</span>
+    <span class="phpdocumentor-element-found-in__line">520</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the publication
@@ -2232,7 +2281,7 @@ Provides information about the published or checked-out state of an item, in loc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">522</span>
+    <span class="phpdocumentor-element-found-in__line">553</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the remoteItem
@@ -2268,7 +2317,7 @@ Remote item data, if the item is shared from a drive other than the one being ac
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">555</span>
+    <span class="phpdocumentor-element-found-in__line">586</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the root
@@ -2304,7 +2353,7 @@ If this property is non-null, it indicates that the driveItem is the top-most dr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">588</span>
+    <span class="phpdocumentor-element-found-in__line">619</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the searchResult
@@ -2340,7 +2389,7 @@ Search metadata, if the item is from a search result. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">621</span>
+    <span class="phpdocumentor-element-found-in__line">652</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the shared
@@ -2376,7 +2425,7 @@ Indicates that the item has been shared with others and provides information abo
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">654</span>
+    <span class="phpdocumentor-element-found-in__line">685</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the sharepointIds
@@ -2412,7 +2461,7 @@ Returns identifiers useful for SharePoint REST compatibility. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">687</span>
+    <span class="phpdocumentor-element-found-in__line">718</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the size
@@ -2448,7 +2497,7 @@ Size of the item in bytes. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">716</span>
+    <span class="phpdocumentor-element-found-in__line">747</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the source
@@ -2484,7 +2533,7 @@ Information about the drive item source. Read-only. Only on OneDrive for Busines
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">749</span>
+    <span class="phpdocumentor-element-found-in__line">780</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the specialFolder
@@ -2520,7 +2569,7 @@ If the current item is also available as a special folder, this facet is returne
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1034</span>
+    <span class="phpdocumentor-element-found-in__line">1065</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the subscriptions
@@ -2556,7 +2605,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1064</span>
+    <span class="phpdocumentor-element-found-in__line">1095</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the thumbnails
@@ -2592,7 +2641,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1094</span>
+    <span class="phpdocumentor-element-found-in__line">1125</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the versions
@@ -2628,7 +2677,7 @@ The list of previous versions of the item. For more info, see [getting previous 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">782</span>
+    <span class="phpdocumentor-element-found-in__line">813</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the video
@@ -2664,7 +2713,7 @@ Video metadata, if the item is a video. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">815</span>
+    <span class="phpdocumentor-element-found-in__line">846</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the webDavUrl
@@ -2736,7 +2785,7 @@ URL that displays the resource in the browser. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">844</span>
+    <span class="phpdocumentor-element-found-in__line">875</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workbook
@@ -2808,7 +2857,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">895</span>
+    <span class="phpdocumentor-element-found-in__line">926</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the activities
@@ -2855,7 +2904,7 @@ The list of recent activities that took place on this item.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">928</span>
+    <span class="phpdocumentor-element-found-in__line">959</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the analytics
@@ -2995,7 +3044,7 @@ Audio metadata, if the item is an audio file. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">958</span>
+    <span class="phpdocumentor-element-found-in__line">989</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the children
@@ -3794,7 +3843,7 @@ Date and time the item was last modified. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">991</span>
+    <span class="phpdocumentor-element-found-in__line">1022</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the listItem
@@ -3881,6 +3930,52 @@ Location metadata, if the item has location data. Read-only.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setMalware">
+        setMalware()
+        <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_setMalware" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">376</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the malware</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setMalware</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-Malware.html"><abbr title="\Beta\Microsoft\Graph\Model\Malware">Malware</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html"><abbr title="\Beta\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-Malware.html"><abbr title="\Beta\Microsoft\Graph\Model\Malware">Malware</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The malware</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html"><abbr title="\Beta\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setMedia">
         setMedia()
         <a href="classes/Beta-Microsoft-Graph-Model-DriveItem.html#method_setMedia" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3888,7 +3983,7 @@ Location metadata, if the item has location data. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">378</span>
+    <span class="phpdocumentor-element-found-in__line">409</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the media
@@ -4028,7 +4123,7 @@ The name of the item. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">442</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the package
@@ -4122,11 +4217,11 @@ Parent information, if the item has a parent. Read-write.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">444</span>
+    <span class="phpdocumentor-element-found-in__line">475</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pendingOperations
-If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.</p>
+If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4169,7 +4264,7 @@ If present, indicates that indicates that one or more operations that may affect
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1021</span>
+    <span class="phpdocumentor-element-found-in__line">1052</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the permissions
@@ -4216,7 +4311,7 @@ The set of permissions for the item. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">477</span>
+    <span class="phpdocumentor-element-found-in__line">508</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the photo
@@ -4263,7 +4358,7 @@ Photo metadata, if the item is a photo. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">510</span>
+    <span class="phpdocumentor-element-found-in__line">541</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the publication
@@ -4310,7 +4405,7 @@ Provides information about the published or checked-out state of an item, in loc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">543</span>
+    <span class="phpdocumentor-element-found-in__line">574</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the remoteItem
@@ -4357,7 +4452,7 @@ Remote item data, if the item is shared from a drive other than the one being ac
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">576</span>
+    <span class="phpdocumentor-element-found-in__line">607</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the root
@@ -4404,7 +4499,7 @@ If this property is non-null, it indicates that the driveItem is the top-most dr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">609</span>
+    <span class="phpdocumentor-element-found-in__line">640</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the searchResult
@@ -4451,7 +4546,7 @@ Search metadata, if the item is from a search result. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">642</span>
+    <span class="phpdocumentor-element-found-in__line">673</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the shared
@@ -4498,7 +4593,7 @@ Indicates that the item has been shared with others and provides information abo
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">675</span>
+    <span class="phpdocumentor-element-found-in__line">706</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sharepointIds
@@ -4545,7 +4640,7 @@ Returns identifiers useful for SharePoint REST compatibility. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">704</span>
+    <span class="phpdocumentor-element-found-in__line">735</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the size
@@ -4592,7 +4687,7 @@ Size of the item in bytes. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">737</span>
+    <span class="phpdocumentor-element-found-in__line">768</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the source
@@ -4639,7 +4734,7 @@ Information about the drive item source. Read-only. Only on OneDrive for Busines
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">770</span>
+    <span class="phpdocumentor-element-found-in__line">801</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the specialFolder
@@ -4686,7 +4781,7 @@ If the current item is also available as a special folder, this facet is returne
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1051</span>
+    <span class="phpdocumentor-element-found-in__line">1082</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the subscriptions
@@ -4733,7 +4828,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1081</span>
+    <span class="phpdocumentor-element-found-in__line">1112</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the thumbnails
@@ -4780,7 +4875,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1111</span>
+    <span class="phpdocumentor-element-found-in__line">1142</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the versions
@@ -4827,7 +4922,7 @@ The list of previous versions of the item. For more info, see [getting previous 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">803</span>
+    <span class="phpdocumentor-element-found-in__line">834</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the video
@@ -4874,7 +4969,7 @@ Video metadata, if the item is a video. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">832</span>
+    <span class="phpdocumentor-element-found-in__line">863</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the webDavUrl
@@ -4968,7 +5063,7 @@ URL that displays the resource in the browser. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/DriveItem.php"><a href="files/src-beta-microsoft-graph-model-driveitem.html"><abbr title="src/Beta/Microsoft/Graph/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">865</span>
+    <span class="phpdocumentor-element-found-in__line">896</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workbook

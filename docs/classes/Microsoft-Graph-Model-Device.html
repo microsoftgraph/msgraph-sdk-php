@@ -178,7 +178,7 @@ to the model</dd>
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the accountEnabled
-true if the account is enabled; otherwise, false. Default is true. Supports $filter (eq, ne, NOT, in).</dd>
+true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Device.html#method_getAlternativeSecurityIds">getAlternativeSecurityIds()</a>
@@ -217,7 +217,7 @@ The timestamp when the device is no longer deemed compliant. The timestamp type 
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the deviceId
-Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).</dd>
+Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Device.html#method_getDeviceMetadata">getDeviceMetadata()</a>
@@ -328,7 +328,7 @@ The type of operating system on the device. Required. Supports $filter (eq, ne, 
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the operatingSystemVersion
-Operating system version of the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).</dd>
+The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Device.html#method_getPhysicalIds">getPhysicalIds()</a>
@@ -383,7 +383,7 @@ List of labels applied to the device by the system.</dd>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the transitiveMemberOf
-Groups that this device is a member of. This operation is transitive. Supports $expand.</dd>
+Groups that the device is a member of. This operation is transitive. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Device.html#method_getTrustType">getTrustType()</a>
@@ -391,7 +391,7 @@ Groups that this device is a member of. This operation is transitive. Supports $
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the trustType
-Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory</dd>
+Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -407,7 +407,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Device.html"><abbr title="\Microsoft\Graph\Model\Device">Device</abbr></a>    </span>
 </dt>
 <dd>Sets the accountEnabled
-true if the account is enabled; otherwise, false. Default is true. Supports $filter (eq, ne, NOT, in).</dd>
+true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Device.html#method_setAlternativeSecurityIds">setAlternativeSecurityIds()</a>
@@ -446,7 +446,7 @@ The timestamp when the device is no longer deemed compliant. The timestamp type 
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Device.html"><abbr title="\Microsoft\Graph\Model\Device">Device</abbr></a>    </span>
 </dt>
 <dd>Sets the deviceId
-Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).</dd>
+Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Device.html#method_setDeviceMetadata">setDeviceMetadata()</a>
@@ -557,7 +557,7 @@ The type of operating system on the device. Required. Supports $filter (eq, ne, 
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Device.html"><abbr title="\Microsoft\Graph\Model\Device">Device</abbr></a>    </span>
 </dt>
 <dd>Sets the operatingSystemVersion
-Operating system version of the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).</dd>
+The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Device.html#method_setPhysicalIds">setPhysicalIds()</a>
@@ -605,7 +605,7 @@ List of labels applied to the device by the system.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Device.html"><abbr title="\Microsoft\Graph\Model\Device">Device</abbr></a>    </span>
 </dt>
 <dd>Sets the transitiveMemberOf
-Groups that this device is a member of. This operation is transitive. Supports $expand.</dd>
+Groups that the device is a member of. This operation is transitive. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Device.html#method_setTrustType">setTrustType()</a>
@@ -613,7 +613,7 @@ Groups that this device is a member of. This operation is transitive. Supports $
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Device.html"><abbr title="\Microsoft\Graph\Model\Device">Device</abbr></a>    </span>
 </dt>
 <dd>Sets the trustType
-Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory</dd>
+Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory</dd>
 
         </dl>
 
@@ -730,7 +730,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the accountEnabled
-true if the account is enabled; otherwise, false. Default is true. Supports $filter (eq, ne, NOT, in).</p>
+true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -909,7 +909,7 @@ The timestamp when the device is no longer deemed compliant. The timestamp type 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceId
-Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).</p>
+Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1412,7 +1412,7 @@ The type of operating system on the device. Required. Supports $filter (eq, ne, 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operatingSystemVersion
-Operating system version of the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).</p>
+The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1663,7 +1663,7 @@ List of labels applied to the device by the system.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the transitiveMemberOf
-Groups that this device is a member of. This operation is transitive. Supports $expand.</p>
+Groups that the device is a member of. This operation is transitive. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1699,7 +1699,7 @@ Groups that this device is a member of. This operation is transitive. Supports $
 </aside>
 
         <p class="phpdocumentor-summary">Gets the trustType
-Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory</p>
+Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1771,7 +1771,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the accountEnabled
-true if the account is enabled; otherwise, false. Default is true. Supports $filter (eq, ne, NOT, in).</p>
+true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2005,7 +2005,7 @@ The timestamp when the device is no longer deemed compliant. The timestamp type 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceId
-Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).</p>
+Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2662,7 +2662,7 @@ The type of operating system on the device. Required. Supports $filter (eq, ne, 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operatingSystemVersion
-Operating system version of the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).</p>
+The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2944,7 +2944,7 @@ List of labels applied to the device by the system.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the transitiveMemberOf
-Groups that this device is a member of. This operation is transitive. Supports $expand.</p>
+Groups that the device is a member of. This operation is transitive. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2991,7 +2991,7 @@ Groups that this device is a member of. This operation is transitive. Supports $
 </aside>
 
         <p class="phpdocumentor-summary">Sets the trustType
-Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory</p>
+Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

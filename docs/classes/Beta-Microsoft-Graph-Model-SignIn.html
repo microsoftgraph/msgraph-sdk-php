@@ -187,7 +187,7 @@ The alternate sign-in identity whenever you use phone number to sign-in. Support
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the appDisplayName
-The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).</dd>
+App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAppId">getAppId()</a>
@@ -195,7 +195,7 @@ The application name displayed in the Azure Portal. Supports $filter (eq and sta
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the appId
-The application identifier in Azure Active Directory. Supports $filter (eq operator only).</dd>
+Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAppliedConditionalAccessPolicies">getAppliedConditionalAccessPolicies()</a>
@@ -257,7 +257,7 @@ This holds the highest level of authentication needed through all the sign-in st
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the clientAppUsed
-The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).</dd>
+Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getConditionalAccessStatus">getConditionalAccessStatus()</a>
@@ -265,7 +265,7 @@ The legacy client used for sign-in activity. For example: Browser, Exchange Acti
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ConditionalAccessStatus.html"><abbr title="\Beta\Microsoft\Graph\Model\ConditionalAccessStatus">ConditionalAccessStatus</abbr></a>|null    </span>
 </dt>
 <dd>Gets the conditionalAccessStatus
-The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).</dd>
+Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getCorrelationId">getCorrelationId()</a>
@@ -273,7 +273,7 @@ The status of the conditional access policy triggered. Possible values: success,
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the correlationId
-The identifier that&#039;s sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).</dd>
+The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getCreatedDateTime">getCreatedDateTime()</a>
@@ -281,7 +281,7 @@ The identifier that&#039;s sent from the client when sign-in is initiated. This 
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
 <dd>Gets the createdDateTime
-The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).</dd>
+Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getCrossTenantAccessType">getCrossTenantAccessType()</a>
@@ -296,7 +296,7 @@ The date and time the sign-in was initiated. The Timestamp type is always in UTC
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-DeviceDetail.html"><abbr title="\Beta\Microsoft\Graph\Model\DeviceDetail">DeviceDetail</abbr></a>|null    </span>
 </dt>
 <dd>Gets the deviceDetail
-The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.</dd>
+Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getFlaggedForReview">getFlaggedForReview()</a>
@@ -326,7 +326,7 @@ Read-only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the ipAddress
-The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).</dd>
+IP address of the client used to sign in. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getIpAddressFromResourceProvider">getIpAddressFromResourceProvider()</a>
@@ -341,7 +341,7 @@ The IP address of the client from where the sign-in occurred. Supports $filter (
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the isInteractive
-Indicates whether a sign-in is interactive or not.</dd>
+Indicates if a sign-in is interactive or not.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getIsTenantRestricted">getIsTenantRestricted()</a>
@@ -356,7 +356,7 @@ Indicates whether a sign-in is interactive or not.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignInLocation.html"><abbr title="\Beta\Microsoft\Graph\Model\SignInLocation">SignInLocation</abbr></a>|null    </span>
 </dt>
 <dd>Gets the location
-The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.</dd>
+Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getMfaDetail">getMfaDetail()</a>
@@ -416,7 +416,7 @@ The request processing time in milliseconds in AD STS.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the resourceDisplayName
-The name of the resource that the user signed in to. Supports $filter (eq operator only).</dd>
+Name of the resource the user signed into. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getResourceId">getResourceId()</a>
@@ -424,7 +424,7 @@ The name of the resource that the user signed in to. Supports $filter (eq operat
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the resourceId
-The identifier of the resource that the user signed in to. Supports $filter (eq operator only).</dd>
+ID of the resource that the user signed into. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getResourceTenantId">getResourceTenantId()</a>
@@ -439,7 +439,7 @@ The identifier of the resource that the user signed in to. Supports $filter (eq 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-RiskDetail.html"><abbr title="\Beta\Microsoft\Graph\Model\RiskDetail">RiskDetail</abbr></a>|null    </span>
 </dt>
 <dd>Gets the riskDetail
-The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</dd>
+Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getRiskEventTypes">getRiskEventTypes()</a>
@@ -447,7 +447,7 @@ The reason behind a specific state of a risky user, sign-in, or a risk event. Po
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the riskEventTypes
-The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq operator only).</dd>
+Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getRiskEventTypesV2">getRiskEventTypesV2()</a>
@@ -463,7 +463,7 @@ The list of risk event types associated with the sign-in. Possible values: unlik
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-RiskLevel.html"><abbr title="\Beta\Microsoft\Graph\Model\RiskLevel">RiskLevel</abbr></a>|null    </span>
 </dt>
 <dd>Gets the riskLevelAggregated
-The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</dd>
+Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getRiskLevelDuringSignIn">getRiskLevelDuringSignIn()</a>
@@ -471,7 +471,7 @@ The aggregated risk level. Possible values: none, low, medium, high, hidden, or 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-RiskLevel.html"><abbr title="\Beta\Microsoft\Graph\Model\RiskLevel">RiskLevel</abbr></a>|null    </span>
 </dt>
 <dd>Gets the riskLevelDuringSignIn
-The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</dd>
+Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getRiskState">getRiskState()</a>
@@ -479,7 +479,7 @@ The risk level during sign-in. Possible values: none, low, medium, high, hidden,
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-RiskState.html"><abbr title="\Beta\Microsoft\Graph\Model\RiskState">RiskState</abbr></a>|null    </span>
 </dt>
 <dd>Gets the riskState
-The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).</dd>
+Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getServicePrincipalCredentialKeyId">getServicePrincipalCredentialKeyId()</a>
@@ -538,7 +538,7 @@ The application name used for sign-in. This field is populated when you are sign
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignInStatus.html"><abbr title="\Beta\Microsoft\Graph\Model\SignInStatus">SignInStatus</abbr></a>|null    </span>
 </dt>
 <dd>Gets the status
-The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.</dd>
+Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getTokenIssuerName">getTokenIssuerName()</a>
@@ -570,7 +570,7 @@ The user agent information related to sign-in. Supports $filter (eq and startsWi
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the userDisplayName
-The display name of the user. Supports $filter (eq and startsWith operators only).</dd>
+Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getUserId">getUserId()</a>
@@ -578,7 +578,7 @@ The display name of the user. Supports $filter (eq and startsWith operators only
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the userId
-The identifier of the user. Supports $filter (eq operator only).</dd>
+ID of the user that initiated the sign-in. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getUserPrincipalName">getUserPrincipalName()</a>
@@ -586,7 +586,7 @@ The identifier of the user. Supports $filter (eq operator only).</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the userPrincipalName
-The UPN of the user. Supports $filter (eq and startsWith operators only).</dd>
+User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getUserType">getUserType()</a>
@@ -617,7 +617,7 @@ The alternate sign-in identity whenever you use phone number to sign-in. Support
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the appDisplayName
-The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).</dd>
+App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAppId">setAppId()</a>
@@ -625,7 +625,7 @@ The application name displayed in the Azure Portal. Supports $filter (eq and sta
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the appId
-The application identifier in Azure Active Directory. Supports $filter (eq operator only).</dd>
+Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAppliedConditionalAccessPolicies">setAppliedConditionalAccessPolicies()</a>
@@ -687,7 +687,7 @@ This holds the highest level of authentication needed through all the sign-in st
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the clientAppUsed
-The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).</dd>
+Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setConditionalAccessStatus">setConditionalAccessStatus()</a>
@@ -695,7 +695,7 @@ The legacy client used for sign-in activity. For example: Browser, Exchange Acti
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the conditionalAccessStatus
-The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).</dd>
+Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setCorrelationId">setCorrelationId()</a>
@@ -703,7 +703,7 @@ The status of the conditional access policy triggered. Possible values: success,
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the correlationId
-The identifier that&#039;s sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).</dd>
+The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setCreatedDateTime">setCreatedDateTime()</a>
@@ -711,7 +711,7 @@ The identifier that&#039;s sent from the client when sign-in is initiated. This 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the createdDateTime
-The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).</dd>
+Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setCrossTenantAccessType">setCrossTenantAccessType()</a>
@@ -726,7 +726,7 @@ The date and time the sign-in was initiated. The Timestamp type is always in UTC
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the deviceDetail
-The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.</dd>
+Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setFlaggedForReview">setFlaggedForReview()</a>
@@ -756,7 +756,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the ipAddress
-The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).</dd>
+IP address of the client used to sign in. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setIpAddressFromResourceProvider">setIpAddressFromResourceProvider()</a>
@@ -771,7 +771,7 @@ The IP address of the client from where the sign-in occurred. Supports $filter (
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the isInteractive
-Indicates whether a sign-in is interactive or not.</dd>
+Indicates if a sign-in is interactive or not.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setIsTenantRestricted">setIsTenantRestricted()</a>
@@ -786,7 +786,7 @@ Indicates whether a sign-in is interactive or not.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the location
-The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.</dd>
+Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setMfaDetail">setMfaDetail()</a>
@@ -839,7 +839,7 @@ The request processing time in milliseconds in AD STS.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the resourceDisplayName
-The name of the resource that the user signed in to. Supports $filter (eq operator only).</dd>
+Name of the resource the user signed into. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setResourceId">setResourceId()</a>
@@ -847,7 +847,7 @@ The name of the resource that the user signed in to. Supports $filter (eq operat
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the resourceId
-The identifier of the resource that the user signed in to. Supports $filter (eq operator only).</dd>
+ID of the resource that the user signed into. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setResourceTenantId">setResourceTenantId()</a>
@@ -862,7 +862,7 @@ The identifier of the resource that the user signed in to. Supports $filter (eq 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the riskDetail
-The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</dd>
+Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setRiskEventTypes">setRiskEventTypes()</a>
@@ -870,7 +870,7 @@ The reason behind a specific state of a risky user, sign-in, or a risk event. Po
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the riskEventTypes
-The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq operator only).</dd>
+Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setRiskEventTypesV2">setRiskEventTypesV2()</a>
@@ -886,7 +886,7 @@ The list of risk event types associated with the sign-in. Possible values: unlik
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the riskLevelAggregated
-The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</dd>
+Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setRiskLevelDuringSignIn">setRiskLevelDuringSignIn()</a>
@@ -894,7 +894,7 @@ The aggregated risk level. Possible values: none, low, medium, high, hidden, or 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the riskLevelDuringSignIn
-The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</dd>
+Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setRiskState">setRiskState()</a>
@@ -902,7 +902,7 @@ The risk level during sign-in. Possible values: none, low, medium, high, hidden,
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the riskState
-The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).</dd>
+Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setServicePrincipalCredentialKeyId">setServicePrincipalCredentialKeyId()</a>
@@ -961,7 +961,7 @@ The application name used for sign-in. This field is populated when you are sign
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the status
-The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.</dd>
+Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setTokenIssuerName">setTokenIssuerName()</a>
@@ -993,7 +993,7 @@ The user agent information related to sign-in. Supports $filter (eq and startsWi
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the userDisplayName
-The display name of the user. Supports $filter (eq and startsWith operators only).</dd>
+Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setUserId">setUserId()</a>
@@ -1001,7 +1001,7 @@ The display name of the user. Supports $filter (eq and startsWith operators only
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the userId
-The identifier of the user. Supports $filter (eq operator only).</dd>
+ID of the user that initiated the sign-in. Supports $filter (eq operator only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setUserPrincipalName">setUserPrincipalName()</a>
@@ -1009,7 +1009,7 @@ The identifier of the user. Supports $filter (eq operator only).</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
 </dt>
 <dd>Sets the userPrincipalName
-The UPN of the user. Supports $filter (eq and startsWith operators only).</dd>
+User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setUserType">setUserType()</a>
@@ -1169,7 +1169,7 @@ The alternate sign-in identity whenever you use phone number to sign-in. Support
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appDisplayName
-The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).</p>
+App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1205,7 +1205,7 @@ The application name displayed in the Azure Portal. Supports $filter (eq and sta
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appId
-The application identifier in Azure Active Directory. Supports $filter (eq operator only).</p>
+Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1491,7 +1491,7 @@ This holds the highest level of authentication needed through all the sign-in st
 </aside>
 
         <p class="phpdocumentor-summary">Gets the clientAppUsed
-The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).</p>
+Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1527,7 +1527,7 @@ The legacy client used for sign-in activity. For example: Browser, Exchange Acti
 </aside>
 
         <p class="phpdocumentor-summary">Gets the conditionalAccessStatus
-The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).</p>
+Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1563,7 +1563,7 @@ The status of the conditional access policy triggered. Possible values: success,
 </aside>
 
         <p class="phpdocumentor-summary">Gets the correlationId
-The identifier that&#039;s sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).</p>
+The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1599,7 +1599,7 @@ The identifier that&#039;s sent from the client when sign-in is initiated. This 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdDateTime
-The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).</p>
+Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1670,7 +1670,7 @@ The date and time the sign-in was initiated. The Timestamp type is always in UTC
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceDetail
-The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.</p>
+Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1812,7 +1812,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the ipAddress
-The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).</p>
+IP address of the client used to sign in. Supports $filter (eq and startsWith operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1883,7 +1883,7 @@ The IP address of the client from where the sign-in occurred. Supports $filter (
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isInteractive
-Indicates whether a sign-in is interactive or not.</p>
+Indicates if a sign-in is interactive or not.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1954,7 +1954,7 @@ Indicates whether a sign-in is interactive or not.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the location
-The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.</p>
+Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2238,7 +2238,7 @@ The request processing time in milliseconds in AD STS.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceDisplayName
-The name of the resource that the user signed in to. Supports $filter (eq operator only).</p>
+Name of the resource the user signed into. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2274,7 +2274,7 @@ The name of the resource that the user signed in to. Supports $filter (eq operat
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceId
-The identifier of the resource that the user signed in to. Supports $filter (eq operator only).</p>
+ID of the resource that the user signed into. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2345,7 +2345,7 @@ The identifier of the resource that the user signed in to. Supports $filter (eq 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskDetail
-The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</p>
+Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2381,7 +2381,7 @@ The reason behind a specific state of a risky user, sign-in, or a risk event. Po
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskEventTypes
-The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq operator only).</p>
+Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2453,7 +2453,7 @@ The list of risk event types associated with the sign-in. Possible values: unlik
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskLevelAggregated
-The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</p>
+Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2489,7 +2489,7 @@ The aggregated risk level. Possible values: none, low, medium, high, hidden, or 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskLevelDuringSignIn
-The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</p>
+Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2525,7 +2525,7 @@ The risk level during sign-in. Possible values: none, low, medium, high, hidden,
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskState
-The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).</p>
+Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2808,7 +2808,7 @@ The application name used for sign-in. This field is populated when you are sign
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
-The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.</p>
+Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2952,7 +2952,7 @@ The user agent information related to sign-in. Supports $filter (eq and startsWi
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userDisplayName
-The display name of the user. Supports $filter (eq and startsWith operators only).</p>
+Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2988,7 +2988,7 @@ The display name of the user. Supports $filter (eq and startsWith operators only
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userId
-The identifier of the user. Supports $filter (eq operator only).</p>
+ID of the user that initiated the sign-in. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3024,7 +3024,7 @@ The identifier of the user. Supports $filter (eq operator only).</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
-The UPN of the user. Supports $filter (eq and startsWith operators only).</p>
+User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3178,7 +3178,7 @@ The alternate sign-in identity whenever you use phone number to sign-in. Support
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appDisplayName
-The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).</p>
+App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3225,7 +3225,7 @@ The application name displayed in the Azure Portal. Supports $filter (eq and sta
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appId
-The application identifier in Azure Active Directory. Supports $filter (eq operator only).</p>
+Unique GUID representing the app ID in the Azure Active Directory. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3599,7 +3599,7 @@ This holds the highest level of authentication needed through all the sign-in st
 </aside>
 
         <p class="phpdocumentor-summary">Sets the clientAppUsed
-The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).</p>
+Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3646,7 +3646,7 @@ The legacy client used for sign-in activity. For example: Browser, Exchange Acti
 </aside>
 
         <p class="phpdocumentor-summary">Sets the conditionalAccessStatus
-The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue. Supports $filter (eq operator only).</p>
+Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3693,7 +3693,7 @@ The status of the conditional access policy triggered. Possible values: success,
 </aside>
 
         <p class="phpdocumentor-summary">Sets the correlationId
-The identifier that&#039;s sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).</p>
+The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3740,7 +3740,7 @@ The identifier that&#039;s sent from the client when sign-in is initiated. This 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdDateTime
-The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).</p>
+Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3833,7 +3833,7 @@ The date and time the sign-in was initiated. The Timestamp type is always in UTC
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceDetail
-The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.</p>
+Device information from where the sign-in occurred; includes device ID, operating system, and browser. Supports $filter (eq and startsWith operators only) on browser and operatingSytem properties.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4019,7 +4019,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ipAddress
-The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).</p>
+IP address of the client used to sign in. Supports $filter (eq and startsWith operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4112,7 +4112,7 @@ The IP address of the client from where the sign-in occurred. Supports $filter (
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isInteractive
-Indicates whether a sign-in is interactive or not.</p>
+Indicates if a sign-in is interactive or not.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4205,7 +4205,7 @@ Indicates whether a sign-in is interactive or not.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the location
-The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.</p>
+Provides the city, state, and country code where the sign-in originated. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4531,7 +4531,7 @@ The request processing time in milliseconds in AD STS.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceDisplayName
-The name of the resource that the user signed in to. Supports $filter (eq operator only).</p>
+Name of the resource the user signed into. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4578,7 +4578,7 @@ The name of the resource that the user signed in to. Supports $filter (eq operat
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceId
-The identifier of the resource that the user signed in to. Supports $filter (eq operator only).</p>
+ID of the resource that the user signed into. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4671,7 +4671,7 @@ The identifier of the resource that the user signed in to. Supports $filter (eq 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskDetail
-The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</p>
+Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4718,7 +4718,7 @@ The reason behind a specific state of a risky user, sign-in, or a risk event. Po
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskEventTypes
-The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq operator only).</p>
+Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4812,7 +4812,7 @@ The list of risk event types associated with the sign-in. Possible values: unlik
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskLevelAggregated
-The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</p>
+Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only).  Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4859,7 +4859,7 @@ The aggregated risk level. Possible values: none, low, medium, high, hidden, or 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskLevelDuringSignIn
-The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.</p>
+Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq operator only). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4906,7 +4906,7 @@ The risk level during sign-in. Possible values: none, low, medium, high, hidden,
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskState
-The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue. Supports $filter (eq operator only).</p>
+Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5277,7 +5277,7 @@ The application name used for sign-in. This field is populated when you are sign
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status
-The sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.</p>
+Sign-in status. Includes the error code and description of the error (in case of a sign-in failure). Supports $filter (eq operator only) on errorCode property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5465,7 +5465,7 @@ The user agent information related to sign-in. Supports $filter (eq and startsWi
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userDisplayName
-The display name of the user. Supports $filter (eq and startsWith operators only).</p>
+Display name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5512,7 +5512,7 @@ The display name of the user. Supports $filter (eq and startsWith operators only
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userId
-The identifier of the user. Supports $filter (eq operator only).</p>
+ID of the user that initiated the sign-in. Supports $filter (eq operator only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5559,7 +5559,7 @@ The identifier of the user. Supports $filter (eq operator only).</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName
-The UPN of the user. Supports $filter (eq and startsWith operators only).</p>
+User principal name of the user that initiated the sign-in. Supports $filter (eq and startsWith operators only).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

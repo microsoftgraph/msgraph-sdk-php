@@ -186,7 +186,7 @@ The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the displayName
-The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).</dd>
+The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -202,7 +202,7 @@ Read-only.</dd>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the inheritsPermissionsFrom
-Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.</dd>
+Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html#method_getIsBuiltIn">getIsBuiltIn()</a>
@@ -210,7 +210,7 @@ Read-only collection of role definitions that the given role definition inherits
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the isBuiltIn
-Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).</dd>
+Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html#method_getIsEnabled">getIsEnabled()</a>
@@ -218,7 +218,7 @@ Flag indicating if the unifiedRoleDefinition is part of the default set included
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the isEnabled
-Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.</dd>
+Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getODataType">getODataType()</a>
@@ -240,7 +240,7 @@ Flag indicating if the role is enabled for assignment. If false the role is not 
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the resourceScopes
-List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment</dd>
+List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html#method_getRolePermissions">getRolePermissions()</a>
@@ -256,7 +256,7 @@ List of permissions included in the role. Read-only when isBuiltIn is true. Requ
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the templateId
-Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.</dd>
+Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html#method_getVersion">getVersion()</a>
@@ -264,7 +264,7 @@ Custom template identifier that can be set when isBuiltIn is false. This identif
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the version
-Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.</dd>
+Indicates version of the role definition. Read-only when isBuiltIn is true.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -288,7 +288,7 @@ The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the displayName
-The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).</dd>
+The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -304,7 +304,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the inheritsPermissionsFrom
-Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.</dd>
+Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html#method_setIsBuiltIn">setIsBuiltIn()</a>
@@ -312,7 +312,7 @@ Read-only collection of role definitions that the given role definition inherits
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the isBuiltIn
-Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).</dd>
+Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html#method_setIsEnabled">setIsEnabled()</a>
@@ -320,7 +320,7 @@ Flag indicating if the unifiedRoleDefinition is part of the default set included
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the isEnabled
-Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.</dd>
+Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setODataType">setODataType()</a>
@@ -335,7 +335,7 @@ Flag indicating if the role is enabled for assignment. If false the role is not 
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the resourceScopes
-List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment</dd>
+List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html#method_setRolePermissions">setRolePermissions()</a>
@@ -351,7 +351,7 @@ List of permissions included in the role. Read-only when isBuiltIn is true. Requ
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the templateId
-Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.</dd>
+Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html#method_setVersion">setVersion()</a>
@@ -359,7 +359,7 @@ Custom template identifier that can be set when isBuiltIn is false. This identif
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the version
-Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.</dd>
+Indicates version of the role definition. Read-only when isBuiltIn is true.</dd>
 
         </dl>
 
@@ -512,7 +512,7 @@ The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
 </aside>
 
         <p class="phpdocumentor-summary">Gets the displayName
-The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).</p>
+The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -584,7 +584,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the inheritsPermissionsFrom
-Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.</p>
+Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -620,7 +620,7 @@ Read-only collection of role definitions that the given role definition inherits
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isBuiltIn
-Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).</p>
+Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -656,7 +656,7 @@ Flag indicating if the unifiedRoleDefinition is part of the default set included
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isEnabled
-Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.</p>
+Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -762,7 +762,7 @@ Flag indicating if the role is enabled for assignment. If false the role is not 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceScopes
-List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment</p>
+List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -834,7 +834,7 @@ List of permissions included in the role. Read-only when isBuiltIn is true. Requ
 </aside>
 
         <p class="phpdocumentor-summary">Gets the templateId
-Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.</p>
+Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -870,7 +870,7 @@ Custom template identifier that can be set when isBuiltIn is false. This identif
 </aside>
 
         <p class="phpdocumentor-summary">Gets the version
-Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.</p>
+Indicates version of the role definition. Read-only when isBuiltIn is true.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -989,7 +989,7 @@ The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
 </aside>
 
         <p class="phpdocumentor-summary">Sets the displayName
-The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).</p>
+The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1083,7 +1083,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the inheritsPermissionsFrom
-Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.</p>
+Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1130,7 +1130,7 @@ Read-only collection of role definitions that the given role definition inherits
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isBuiltIn
-Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).</p>
+Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1177,7 +1177,7 @@ Flag indicating if the unifiedRoleDefinition is part of the default set included
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isEnabled
-Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.</p>
+Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1270,7 +1270,7 @@ Flag indicating if the role is enabled for assignment. If false the role is not 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceScopes
-List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment</p>
+List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1364,7 +1364,7 @@ List of permissions included in the role. Read-only when isBuiltIn is true. Requ
 </aside>
 
         <p class="phpdocumentor-summary">Sets the templateId
-Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.</p>
+Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1411,7 +1411,7 @@ Custom template identifier that can be set when isBuiltIn is false. This identif
 </aside>
 
         <p class="phpdocumentor-summary">Sets the version
-Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.</p>
+Indicates version of the role definition. Read-only when isBuiltIn is true.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
