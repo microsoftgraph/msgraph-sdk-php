@@ -36,7 +36,7 @@ class IPv6CidrRange extends IpRange
 
     /**
     * Gets the cidrAddress
-    * IPv6 address in CIDR notation
+    * IPv6 address in CIDR notation. Not nullable.
     *
     * @return string|null The cidrAddress
     */
@@ -51,7 +51,7 @@ class IPv6CidrRange extends IpRange
 
     /**
     * Sets the cidrAddress
-    * IPv6 address in CIDR notation
+    * IPv6 address in CIDR notation. Not nullable.
     *
     * @param string $val The value of the cidrAddress
     *

@@ -27,6 +27,7 @@ class RbacApplication extends Entity
 
      /** 
      * Gets the roleAssignments
+    * Resource to grant access to users or groups.
      *
      * @return array|null The roleAssignments
      */
@@ -41,6 +42,7 @@ class RbacApplication extends Entity
     
     /** 
     * Sets the roleAssignments
+    * Resource to grant access to users or groups.
     *
     * @param UnifiedRoleAssignment $val The roleAssignments
     *
@@ -55,6 +57,7 @@ class RbacApplication extends Entity
 
      /** 
      * Gets the roleDefinitions
+    * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
      *
      * @return array|null The roleDefinitions
      */
@@ -69,6 +72,7 @@ class RbacApplication extends Entity
     
     /** 
     * Sets the roleDefinitions
+    * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
     *
     * @param UnifiedRoleDefinition $val The roleDefinitions
     *
