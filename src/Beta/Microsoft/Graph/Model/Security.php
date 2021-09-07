@@ -52,6 +52,34 @@ class Security extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the incidents
+     *
+     * @return array|null The incidents
+     */
+    public function getIncidents()
+    {
+        if (array_key_exists("incidents", $this->_propDict)) {
+           return $this->_propDict["incidents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the incidents
+    *
+    * @param Incident $val The incidents
+    *
+    * @return Security
+    */
+    public function setIncidents($val)
+    {
+        $this->_propDict["incidents"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the attackSimulation
     *

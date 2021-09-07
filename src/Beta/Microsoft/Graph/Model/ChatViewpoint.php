@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class ChatViewpoint extends Entity
 {
+    /**
+    * Gets the isHidden
+    *
+    * @return bool|null The isHidden
+    */
+    public function getIsHidden()
+    {
+        if (array_key_exists("isHidden", $this->_propDict)) {
+            return $this->_propDict["isHidden"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isHidden
+    *
+    * @param bool $val The value of the isHidden
+    *
+    * @return ChatViewpoint
+    */
+    public function setIsHidden($val)
+    {
+        $this->_propDict["isHidden"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the lastMessageReadDateTime

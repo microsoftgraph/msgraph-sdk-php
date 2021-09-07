@@ -275,7 +275,7 @@ class AccessReviewInstance extends Entity
 
      /** 
      * Gets the decisions
-    * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+    * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      *
      * @return array|null The decisions
      */
@@ -290,7 +290,7 @@ class AccessReviewInstance extends Entity
     
     /** 
     * Sets the decisions
-    * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+    * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
     *
     * @param AccessReviewInstanceDecisionItem $val The decisions
     *

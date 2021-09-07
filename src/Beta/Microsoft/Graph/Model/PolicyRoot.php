@@ -369,6 +369,34 @@ class PolicyRoot implements \JsonSerializable
     
 
      /** 
+     * Gets the servicePrincipalCreationPolicies
+     *
+     * @return array|null The servicePrincipalCreationPolicies
+     */
+    public function getServicePrincipalCreationPolicies()
+    {
+        if (array_key_exists("servicePrincipalCreationPolicies", $this->_propDict)) {
+           return $this->_propDict["servicePrincipalCreationPolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the servicePrincipalCreationPolicies
+    *
+    * @param ServicePrincipalCreationPolicy $val The servicePrincipalCreationPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setServicePrincipalCreationPolicies($val)
+    {
+        $this->_propDict["servicePrincipalCreationPolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the tokenIssuancePolicies
     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
      *

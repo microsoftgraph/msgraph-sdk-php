@@ -441,7 +441,7 @@ class ChatMessage extends Entity
 
      /** 
      * Gets the mentions
-    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
+    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
      *
      * @return array|null The mentions
      */
@@ -456,7 +456,7 @@ class ChatMessage extends Entity
     
     /** 
     * Sets the mentions
-    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
+    * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
     *
     * @param ChatMessageMention $val The mentions
     *
