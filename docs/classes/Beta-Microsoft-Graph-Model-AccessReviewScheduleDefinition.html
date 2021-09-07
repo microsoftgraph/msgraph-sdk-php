@@ -202,7 +202,7 @@ User who created this review. Read-only.</dd>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
 <dd>Gets the createdDateTime
-Timestamp when the access review series was created. Supports $select. Read-only.</dd>
+Timestamp when the access review series was created. Supports $select and $orderBy. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getDescriptionForAdmins">getDescriptionForAdmins()</a>
@@ -258,7 +258,7 @@ This property is required when scoping a review to guest users&#039; access acro
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the instances
-Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.</dd>
+If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getLastModifiedDateTime">getLastModifiedDateTime()</a>
@@ -296,7 +296,7 @@ This collection of access review scopes is used to define who are the reviewers.
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScope.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScope">AccessReviewScope</abbr></a>|null    </span>
 </dt>
 <dd>Gets the scope
-Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.</dd>
+Defines the entities whose access is reviewed.  For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getSettings">getSettings()</a>
@@ -351,7 +351,7 @@ User who created this review. Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the createdDateTime
-Timestamp when the access review series was created. Supports $select. Read-only.</dd>
+Timestamp when the access review series was created. Supports $select and $orderBy. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_setDescriptionForAdmins">setDescriptionForAdmins()</a>
@@ -407,7 +407,7 @@ This property is required when scoping a review to guest users&#039; access acro
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the instances
-Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.</dd>
+If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_setLastModifiedDateTime">setLastModifiedDateTime()</a>
@@ -438,7 +438,7 @@ This collection of access review scopes is used to define who are the reviewers.
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a>    </span>
 </dt>
 <dd>Sets the scope
-Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.</dd>
+Defines the entities whose access is reviewed.  For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_setSettings">setSettings()</a>
@@ -678,7 +678,7 @@ User who created this review. Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdDateTime
-Timestamp when the access review series was created. Supports $select. Read-only.</p>
+Timestamp when the access review series was created. Supports $select and $orderBy. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -930,7 +930,7 @@ This property is required when scoping a review to guest users&#039; access acro
 </aside>
 
         <p class="phpdocumentor-summary">Gets the instances
-Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.</p>
+If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1108,7 +1108,7 @@ This collection of access review scopes is used to define who are the reviewers.
 </aside>
 
         <p class="phpdocumentor-summary">Gets the scope
-Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.</p>
+Defines the entities whose access is reviewed.  For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1392,7 +1392,7 @@ User who created this review. Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdDateTime
-Timestamp when the access review series was created. Supports $select. Read-only.</p>
+Timestamp when the access review series was created. Supports $select and $orderBy. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1721,7 +1721,7 @@ This property is required when scoping a review to guest users&#039; access acro
 </aside>
 
         <p class="phpdocumentor-summary">Sets the instances
-Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.</p>
+If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1908,7 +1908,7 @@ This collection of access review scopes is used to define who are the reviewers.
 </aside>
 
         <p class="phpdocumentor-summary">Sets the scope
-Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.</p>
+Defines the entities whose access is reviewed.  For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
