@@ -336,8 +336,37 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
+    * Gets the connectToVpnOnLaunch
+    * Whether the app should connect to the configured VPN on launch.
+    *
+    * @return bool|null The connectToVpnOnLaunch
+    */
+    public function getConnectToVpnOnLaunch()
+    {
+        if (array_key_exists("connectToVpnOnLaunch", $this->_propDict)) {
+            return $this->_propDict["connectToVpnOnLaunch"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the connectToVpnOnLaunch
+    * Whether the app should connect to the configured VPN on launch.
+    *
+    * @param bool $val The connectToVpnOnLaunch
+    *
+    * @return AndroidManagedAppProtection
+    */
+    public function setConnectToVpnOnLaunch($val)
+    {
+        $this->_propDict["connectToVpnOnLaunch"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android.
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
     * @return string|null The customBrowserDisplayName
     */
@@ -352,7 +381,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserDisplayName
-    * Friendly name of the preferred custom browser to open weblink on Android.
+    * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
     * @param string $val The customBrowserDisplayName
     *
@@ -366,7 +395,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Gets the customBrowserPackageId
-    * Unique identifier of a custom browser to open weblink on Android.
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
     * @return string|null The customBrowserPackageId
     */
@@ -381,7 +410,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection
     
     /**
     * Sets the customBrowserPackageId
-    * Unique identifier of a custom browser to open weblink on Android.
+    * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
     *
     * @param string $val The customBrowserPackageId
     *

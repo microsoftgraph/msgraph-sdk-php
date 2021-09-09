@@ -179,14 +179,15 @@ to the model</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the action
-Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.</dd>
+Represents the type of the operation on the role eligibility assignment. The possible values are: AdminAdd: For administrators to assign role eligibility to users or groups to roles.AdminExtend: For administrators to extend expiring assignments.AdminUpdate: For administrators to change existing role assignments.AdminRenew: For administrators to renew expired assignments.AdminRemove: For administrators to remove users or groups from eligible roles.UserAdd: For users to activate their eligible assignments.UserExtend: For users to request to extend their expiring eligible assignments.UserRemove: For users to deactivate their active eligible assignments.UserRenew: For users to request to renew their expired eligible assignments.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_getApprovalId">getApprovalId()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the approvalId</dd>
+<dd>Gets the approvalId
+The identifier of the approval of the request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_getAppScope">getAppScope()</a>
@@ -194,7 +195,7 @@ Representing the type of the operation on the role assignment. The value can be 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AppScope.html"><abbr title="\Beta\Microsoft\Graph\Model\AppScope">AppScope</abbr></a>|null    </span>
 </dt>
 <dd>Gets the appScope
-Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.</dd>
+Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_getAppScopeId">getAppScopeId()</a>
@@ -202,35 +203,39 @@ Read-only property with details of the app specific scope when the assignment sc
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_getCompletedDateTime">getCompletedDateTime()</a>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
-<dd>Gets the completedDateTime</dd>
+<dd>Gets the completedDateTime
+The request completion date time.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_getCreatedBy">getCreatedBy()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Beta\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>|null    </span>
 </dt>
-<dd>Gets the createdBy</dd>
+<dd>Gets the createdBy
+The user who created this request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_getCreatedDateTime">getCreatedDateTime()</a>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
-<dd>Gets the createdDateTime</dd>
+<dd>Gets the createdDateTime
+The request creation date time.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_getCustomData">getCustomData()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the customData</dd>
+<dd>Gets the customData
+Free text field to define any custom data for the request. Not used.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_getDirectoryScope">getDirectoryScope()</a>
@@ -246,7 +251,7 @@ Property referencing the directory object that is the scope of the assignment. P
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -293,7 +298,7 @@ Property referencing the principal that is getting a role assignment through the
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the principalId
-Objectid of the principal to which the assignment is being granted to.</dd>
+Identifier of the principal to which the assignment is being granted to. For example, a user or a group. For groups, they must be assignable to roles, that is, the isAssignableToRole of the group property set to true.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -308,7 +313,7 @@ Objectid of the principal to which the assignment is being granted to.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleDefinition.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleDefinition">UnifiedRoleDefinition</abbr></a>|null    </span>
 </dt>
 <dd>Gets the roleDefinition
-Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded</dd>
+Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_getRoleDefinitionId">getRoleDefinitionId()</a>
@@ -316,7 +321,7 @@ Property indicating the roleDefinition the assignment is for. Provided so that c
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_getScheduleInfo">getScheduleInfo()</a>
@@ -331,14 +336,16 @@ The schedule object of the role assignment request.</dd>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the status</dd>
+<dd>Gets the status
+The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_getTargetSchedule">getTargetSchedule()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilitySchedule.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilitySchedule">UnifiedRoleEligibilitySchedule</abbr></a>|null    </span>
 </dt>
-<dd>Gets the targetSchedule</dd>
+<dd>Gets the targetSchedule
+Property indicating the schedule for an eligible role assignment.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_getTargetScheduleId">getTargetScheduleId()</a>
@@ -346,7 +353,7 @@ The schedule object of the role assignment request.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the targetScheduleId
-ID of the schedule object attached to the assignment.</dd>
+The time period for which the eligibility assignment is valid.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_getTicketInfo">getTicketInfo()</a>
@@ -354,7 +361,7 @@ ID of the schedule object attached to the assignment.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-TicketInfo.html"><abbr title="\Beta\Microsoft\Graph\Model\TicketInfo">TicketInfo</abbr></a>|null    </span>
 </dt>
 <dd>Gets the ticketInfo
-The ticketInfo object attached to the role assignment request which includes details of the ticket number and ticket system.</dd>
+The details of the ticket number and ticket system that is attached to the role assignment request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -370,14 +377,15 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the action
-Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.</dd>
+Represents the type of the operation on the role eligibility assignment. The possible values are: AdminAdd: For administrators to assign role eligibility to users or groups to roles.AdminExtend: For administrators to extend expiring assignments.AdminUpdate: For administrators to change existing role assignments.AdminRenew: For administrators to renew expired assignments.AdminRemove: For administrators to remove users or groups from eligible roles.UserAdd: For users to activate their eligible assignments.UserExtend: For users to request to extend their expiring eligible assignments.UserRemove: For users to deactivate their active eligible assignments.UserRenew: For users to request to renew their expired eligible assignments.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_setApprovalId">setApprovalId()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Request.html"><abbr title="\Beta\Microsoft\Graph\Model\Request">Request</abbr></a>    </span>
 </dt>
-<dd>Sets the approvalId</dd>
+<dd>Sets the approvalId
+The identifier of the approval of the request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setAppScope">setAppScope()</a>
@@ -385,7 +393,7 @@ Representing the type of the operation on the role assignment. The value can be 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the appScope
-Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.</dd>
+Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setAppScopeId">setAppScopeId()</a>
@@ -393,35 +401,39 @@ Read-only property with details of the app specific scope when the assignment sc
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_setCompletedDateTime">setCompletedDateTime()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Request.html"><abbr title="\Beta\Microsoft\Graph\Model\Request">Request</abbr></a>    </span>
 </dt>
-<dd>Sets the completedDateTime</dd>
+<dd>Sets the completedDateTime
+The request completion date time.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_setCreatedBy">setCreatedBy()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Request.html"><abbr title="\Beta\Microsoft\Graph\Model\Request">Request</abbr></a>    </span>
 </dt>
-<dd>Sets the createdBy</dd>
+<dd>Sets the createdBy
+The user who created this request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_setCreatedDateTime">setCreatedDateTime()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Request.html"><abbr title="\Beta\Microsoft\Graph\Model\Request">Request</abbr></a>    </span>
 </dt>
-<dd>Sets the createdDateTime</dd>
+<dd>Sets the createdDateTime
+The request creation date time.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Request.html#method_setCustomData">setCustomData()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Request.html"><abbr title="\Beta\Microsoft\Graph\Model\Request">Request</abbr></a>    </span>
 </dt>
-<dd>Sets the customData</dd>
+<dd>Sets the customData
+Free text field to define any custom data for the request. Not used.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setDirectoryScope">setDirectoryScope()</a>
@@ -437,7 +449,7 @@ Property referencing the directory object that is the scope of the assignment. P
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -484,7 +496,7 @@ Property referencing the principal that is getting a role assignment through the
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the principalId
-Objectid of the principal to which the assignment is being granted to.</dd>
+Identifier of the principal to which the assignment is being granted to. For example, a user or a group. For groups, they must be assignable to roles, that is, the isAssignableToRole of the group property set to true.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setRoleDefinition">setRoleDefinition()</a>
@@ -492,7 +504,7 @@ Objectid of the principal to which the assignment is being granted to.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the roleDefinition
-Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded</dd>
+Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setRoleDefinitionId">setRoleDefinitionId()</a>
@@ -500,7 +512,7 @@ Property indicating the roleDefinition the assignment is for. Provided so that c
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setScheduleInfo">setScheduleInfo()</a>
@@ -515,14 +527,16 @@ The schedule object of the role assignment request.</dd>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Request.html"><abbr title="\Beta\Microsoft\Graph\Model\Request">Request</abbr></a>    </span>
 </dt>
-<dd>Sets the status</dd>
+<dd>Sets the status
+The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setTargetSchedule">setTargetSchedule()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
-<dd>Sets the targetSchedule</dd>
+<dd>Sets the targetSchedule
+Property indicating the schedule for an eligible role assignment.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setTargetScheduleId">setTargetScheduleId()</a>
@@ -530,7 +544,7 @@ The schedule object of the role assignment request.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the targetScheduleId
-ID of the schedule object attached to the assignment.</dd>
+The time period for which the eligibility assignment is valid.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html#method_setTicketInfo">setTicketInfo()</a>
@@ -538,7 +552,7 @@ ID of the schedule object attached to the assignment.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleRequest.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleRequest">UnifiedRoleEligibilityScheduleRequest</abbr></a>    </span>
 </dt>
 <dd>Sets the ticketInfo
-The ticketInfo object attached to the role assignment request which includes details of the ticket number and ticket system.</dd>
+The details of the ticket number and ticket system that is attached to the role assignment request.</dd>
 
         </dl>
 
@@ -655,7 +669,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the action
-Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.</p>
+Represents the type of the operation on the role eligibility assignment. The possible values are: AdminAdd: For administrators to assign role eligibility to users or groups to roles.AdminExtend: For administrators to extend expiring assignments.AdminUpdate: For administrators to change existing role assignments.AdminRenew: For administrators to renew expired assignments.AdminRemove: For administrators to remove users or groups from eligible roles.UserAdd: For users to activate their eligible assignments.UserExtend: For users to request to extend their expiring eligible assignments.UserRemove: For users to deactivate their active eligible assignments.UserRenew: For users to request to renew their expired eligible assignments.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -687,10 +701,11 @@ Representing the type of the operation on the role assignment. The value can be 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the approvalId</p>
+        <p class="phpdocumentor-summary">Gets the approvalId
+The identifier of the approval of the request.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -726,7 +741,7 @@ Representing the type of the operation on the role assignment. The value can be 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appScope
-Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.</p>
+Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -762,7 +777,7 @@ Read-only property with details of the app specific scope when the assignment sc
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -794,10 +809,11 @@ Id of the app specific scope when the assignment scope is app specific. The scop
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the completedDateTime</p>
+        <p class="phpdocumentor-summary">Gets the completedDateTime
+The request completion date time.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -829,10 +845,11 @@ Id of the app specific scope when the assignment scope is app specific. The scop
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">90</span>
+    <span class="phpdocumentor-element-found-in__line">95</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the createdBy</p>
+        <p class="phpdocumentor-summary">Gets the createdBy
+The user who created this request.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -864,10 +881,11 @@ Id of the app specific scope when the assignment scope is app specific. The scop
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the createdDateTime</p>
+        <p class="phpdocumentor-summary">Gets the createdDateTime
+The request creation date time.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -899,10 +917,11 @@ Id of the app specific scope when the assignment scope is app specific. The scop
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">152</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the customData</p>
+        <p class="phpdocumentor-summary">Gets the customData
+Free text field to define any custom data for the request. Not used.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -974,7 +993,7 @@ Property referencing the directory object that is the scope of the assignment. P
 </aside>
 
         <p class="phpdocumentor-summary">Gets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1189,7 +1208,7 @@ Property referencing the principal that is getting a role assignment through the
 </aside>
 
         <p class="phpdocumentor-summary">Gets the principalId
-Objectid of the principal to which the assignment is being granted to.</p>
+Identifier of the principal to which the assignment is being granted to. For example, a user or a group. For groups, they must be assignable to roles, that is, the isAssignableToRole of the group property set to true.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1260,7 +1279,7 @@ Objectid of the principal to which the assignment is being granted to.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleDefinition
-Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded</p>
+Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1296,7 +1315,7 @@ Property indicating the roleDefinition the assignment is for. Provided so that c
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1364,10 +1383,11 @@ The schedule object of the role assignment request.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">190</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the status</p>
+        <p class="phpdocumentor-summary">Gets the status
+The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1399,10 +1419,11 @@ The schedule object of the role assignment request.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/UnifiedRoleEligibilityScheduleRequest.php"><a href="files/src-beta-microsoft-graph-model-unifiedroleeligibilityschedulerequest.html"><abbr title="src/Beta/Microsoft/Graph/Model/UnifiedRoleEligibilityScheduleRequest.php">UnifiedRoleEligibilityScheduleRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">462</span>
+    <span class="phpdocumentor-element-found-in__line">463</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the targetSchedule</p>
+        <p class="phpdocumentor-summary">Gets the targetSchedule
+Property indicating the schedule for an eligible role assignment.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1438,7 +1459,7 @@ The schedule object of the role assignment request.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the targetScheduleId
-ID of the schedule object attached to the assignment.</p>
+The time period for which the eligibility assignment is valid.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1474,7 +1495,7 @@ ID of the schedule object attached to the assignment.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the ticketInfo
-The ticketInfo object attached to the role assignment request which includes details of the ticket number and ticket system.</p>
+The details of the ticket number and ticket system that is attached to the role assignment request.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1546,7 +1567,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the action
-Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.</p>
+Represents the type of the operation on the role eligibility assignment. The possible values are: AdminAdd: For administrators to assign role eligibility to users or groups to roles.AdminExtend: For administrators to extend expiring assignments.AdminUpdate: For administrators to change existing role assignments.AdminRenew: For administrators to renew expired assignments.AdminRemove: For administrators to remove users or groups from eligible roles.UserAdd: For users to activate their eligible assignments.UserExtend: For users to request to extend their expiring eligible assignments.UserRemove: For users to deactivate their active eligible assignments.UserRenew: For users to request to renew their expired eligible assignments.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1589,10 +1610,11 @@ Representing the type of the operation on the role assignment. The value can be 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the approvalId</p>
+        <p class="phpdocumentor-summary">Sets the approvalId
+The identifier of the approval of the request.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1639,7 +1661,7 @@ Representing the type of the operation on the role assignment. The value can be 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appScope
-Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.</p>
+Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1686,7 +1708,7 @@ Read-only property with details of the app specific scope when the assignment sc
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1729,10 +1751,11 @@ Id of the app specific scope when the assignment scope is app specific. The scop
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">79</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the completedDateTime</p>
+        <p class="phpdocumentor-summary">Sets the completedDateTime
+The request completion date time.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1775,10 +1798,11 @@ Id of the app specific scope when the assignment scope is app specific. The scop
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the createdBy</p>
+        <p class="phpdocumentor-summary">Sets the createdBy
+The user who created this request.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1821,10 +1845,11 @@ Id of the app specific scope when the assignment scope is app specific. The scop
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">141</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the createdDateTime</p>
+        <p class="phpdocumentor-summary">Sets the createdDateTime
+The request creation date time.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1867,10 +1892,11 @@ Id of the app specific scope when the assignment scope is app specific. The scop
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">168</span>
+    <span class="phpdocumentor-element-found-in__line">178</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the customData</p>
+        <p class="phpdocumentor-summary">Sets the customData
+Free text field to define any custom data for the request. Not used.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1964,7 +1990,7 @@ Property referencing the directory object that is the scope of the assignment. P
 </aside>
 
         <p class="phpdocumentor-summary">Sets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2245,7 +2271,7 @@ Property referencing the principal that is getting a role assignment through the
 </aside>
 
         <p class="phpdocumentor-summary">Sets the principalId
-Objectid of the principal to which the assignment is being granted to.</p>
+Identifier of the principal to which the assignment is being granted to. For example, a user or a group. For groups, they must be assignable to roles, that is, the isAssignableToRole of the group property set to true.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2292,7 +2318,7 @@ Objectid of the principal to which the assignment is being granted to.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleDefinition
-Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded</p>
+Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2339,7 +2365,7 @@ Property indicating the roleDefinition the assignment is for. Provided so that c
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2429,10 +2455,11 @@ The schedule object of the role assignment request.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Request.php"><a href="files/src-beta-microsoft-graph-model-request.html"><abbr title="src/Beta/Microsoft/Graph/Model/Request.php">Request.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">195</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the status</p>
+        <p class="phpdocumentor-summary">Sets the status
+The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2475,10 +2502,11 @@ The schedule object of the role assignment request.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/UnifiedRoleEligibilityScheduleRequest.php"><a href="files/src-beta-microsoft-graph-model-unifiedroleeligibilityschedulerequest.html"><abbr title="src/Beta/Microsoft/Graph/Model/UnifiedRoleEligibilityScheduleRequest.php">UnifiedRoleEligibilityScheduleRequest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">482</span>
+    <span class="phpdocumentor-element-found-in__line">484</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the targetSchedule</p>
+        <p class="phpdocumentor-summary">Sets the targetSchedule
+Property indicating the schedule for an eligible role assignment.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2525,7 +2553,7 @@ The schedule object of the role assignment request.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the targetScheduleId
-ID of the schedule object attached to the assignment.</p>
+The time period for which the eligibility assignment is valid.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2572,7 +2600,7 @@ ID of the schedule object attached to the assignment.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ticketInfo
-The ticketInfo object attached to the role assignment request which includes details of the ticket number and ticket system.</p>
+The details of the ticket number and ticket system that is attached to the role assignment request.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

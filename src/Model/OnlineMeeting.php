@@ -84,7 +84,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the allowedPresenters
-    * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @return OnlineMeetingPresenters|null The allowedPresenters
     */
@@ -103,7 +103,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the allowedPresenters
-    * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+    * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
     *
     * @param OnlineMeetingPresenters $val The allowedPresenters
     *
@@ -150,7 +150,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the allowTeamworkReactions
-    * Indicates if Teams reactions are enabled for the meeting.
+    * Indicates whether Teams reactions are enabled for the meeting.
     *
     * @return bool|null The allowTeamworkReactions
     */
@@ -165,7 +165,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the allowTeamworkReactions
-    * Indicates if Teams reactions are enabled for the meeting.
+    * Indicates whether Teams reactions are enabled for the meeting.
     *
     * @param bool $val The allowTeamworkReactions
     *
@@ -207,6 +207,39 @@ class OnlineMeeting extends Entity
     public function setAudioConferencing($val)
     {
         $this->_propDict["audioConferencing"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the broadcastSettings
+    * Settings related to a live event.
+    *
+    * @return BroadcastMeetingSettings|null The broadcastSettings
+    */
+    public function getBroadcastSettings()
+    {
+        if (array_key_exists("broadcastSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["broadcastSettings"], "\Microsoft\Graph\Model\BroadcastMeetingSettings") || is_null($this->_propDict["broadcastSettings"])) {
+                return $this->_propDict["broadcastSettings"];
+            } else {
+                $this->_propDict["broadcastSettings"] = new BroadcastMeetingSettings($this->_propDict["broadcastSettings"]);
+                return $this->_propDict["broadcastSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the broadcastSettings
+    * Settings related to a live event.
+    *
+    * @param BroadcastMeetingSettings $val The broadcastSettings
+    *
+    * @return OnlineMeeting
+    */
+    public function setBroadcastSettings($val)
+    {
+        $this->_propDict["broadcastSettings"] = $val;
         return $this;
     }
     
@@ -339,6 +372,35 @@ class OnlineMeeting extends Entity
     }
     
     /**
+    * Gets the isBroadcast
+    * Indicates if this is a live event.
+    *
+    * @return bool|null The isBroadcast
+    */
+    public function getIsBroadcast()
+    {
+        if (array_key_exists("isBroadcast", $this->_propDict)) {
+            return $this->_propDict["isBroadcast"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isBroadcast
+    * Indicates if this is a live event.
+    *
+    * @param bool $val The isBroadcast
+    *
+    * @return OnlineMeeting
+    */
+    public function setIsBroadcast($val)
+    {
+        $this->_propDict["isBroadcast"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the isEntryExitAnnounced
     * Indicates whether to announce when callers join or leave.
     *
@@ -369,7 +431,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the joinInformation
-    * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
     * @return ItemBody|null The joinInformation
     */
@@ -388,7 +450,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the joinInformation
-    * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+    * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
     *
     * @param ItemBody $val The joinInformation
     *
@@ -431,7 +493,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the lobbyBypassSettings
-    * Specifies which participants can bypass the meeting lobby.
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @return LobbyBypassSettings|null The lobbyBypassSettings
     */
@@ -450,7 +512,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the lobbyBypassSettings
-    * Specifies which participants can bypass the meeting lobby.
+    * Specifies which participants can bypass the meeting   lobby.
     *
     * @param LobbyBypassSettings $val The lobbyBypassSettings
     *
@@ -464,7 +526,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the participants
-    * The participants associated with the online meeting. This includes the organizer and the attendees.
+    * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
     * @return MeetingParticipants|null The participants
     */
@@ -483,7 +545,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the participants
-    * The participants associated with the online meeting. This includes the organizer and the attendees.
+    * The participants associated with the online meeting.  This includes the organizer and the attendees.
     *
     * @param MeetingParticipants $val The participants
     *

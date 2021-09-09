@@ -202,7 +202,7 @@ Indicates whether attendees can turn on their microphone.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeetingPresenters.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeetingPresenters">OnlineMeetingPresenters</abbr></a>|null    </span>
 </dt>
 <dd>Gets the allowedPresenters
-Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.</dd>
+Specifies who can be a presenter in a meeting. Possible values are listed in the following table.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getAllowMeetingChat">getAllowMeetingChat()</a>
@@ -218,7 +218,7 @@ Specifies the mode of meeting chat.</dd>
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the allowTeamworkReactions
-Indicates if Teams reactions are enabled for the meeting.</dd>
+Indicates whether Teams reactions are enabled for the meeting.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getAlternativeRecording">getAlternativeRecording()</a>
@@ -250,7 +250,7 @@ The phone access (dial-in) information for an online meeting. Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-BroadcastMeetingSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\BroadcastMeetingSettings">BroadcastMeetingSettings</abbr></a>|null    </span>
 </dt>
 <dd>Gets the broadcastSettings
-Settings related to a live event</dd>
+Settings related to a live event.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getCanceledDateTime">getCanceledDateTime()</a>
@@ -326,7 +326,7 @@ Read-only.</dd>
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the isBroadcast
-Indicates whether this is a live event.</dd>
+Indicates if this is a live event.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getIsCancelled">getIsCancelled()</a>
@@ -349,7 +349,7 @@ Indicates whether to announce when callers join or leave.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ItemBody.html"><abbr title="\Beta\Microsoft\Graph\Model\ItemBody">ItemBody</abbr></a>|null    </span>
 </dt>
 <dd>Gets the joinInformation
-The join information in the language and locale variant specified in &#039;Accept-Language&#039; request HTTP header. Read-only</dd>
+The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getJoinUrl">getJoinUrl()</a>
@@ -364,7 +364,7 @@ The join information in the language and locale variant specified in &#039;Accep
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-LobbyBypassSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\LobbyBypassSettings">LobbyBypassSettings</abbr></a>|null    </span>
 </dt>
 <dd>Gets the lobbyBypassSettings
-Specifies which participants can bypass the meeting lobby.</dd>
+Specifies which participants can bypass the meeting   lobby.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getMeetingAttendanceReport">getMeetingAttendanceReport()</a>
@@ -386,7 +386,7 @@ Specifies which participants can bypass the meeting lobby.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MeetingParticipants.html"><abbr title="\Beta\Microsoft\Graph\Model\MeetingParticipants">MeetingParticipants</abbr></a>|null    </span>
 </dt>
 <dd>Gets the participants
-The participants associated with the online meeting. This includes the organizer and the attendees.</dd>
+The participants associated with the online meeting.  This includes the organizer and the attendees.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -394,6 +394,14 @@ The participants associated with the online meeting. This includes the organizer
                         &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Gets the property dictionary of the Entity</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getRecordAutomatically">getRecordAutomatically()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the recordAutomatically
+Indicates whether to record the meeting automatically.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getRecording">getRecording()</a>
@@ -464,7 +472,7 @@ Indicates whether attendees can turn on their microphone.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
 </dt>
 <dd>Sets the allowedPresenters
-Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.</dd>
+Specifies who can be a presenter in a meeting. Possible values are listed in the following table.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setAllowMeetingChat">setAllowMeetingChat()</a>
@@ -480,7 +488,7 @@ Specifies the mode of meeting chat.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
 </dt>
 <dd>Sets the allowTeamworkReactions
-Indicates if Teams reactions are enabled for the meeting.</dd>
+Indicates whether Teams reactions are enabled for the meeting.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setAlternativeRecording">setAlternativeRecording()</a>
@@ -512,7 +520,7 @@ The phone access (dial-in) information for an online meeting. Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
 </dt>
 <dd>Sets the broadcastSettings
-Settings related to a live event</dd>
+Settings related to a live event.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setCanceledDateTime">setCanceledDateTime()</a>
@@ -588,7 +596,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
 </dt>
 <dd>Sets the isBroadcast
-Indicates whether this is a live event.</dd>
+Indicates if this is a live event.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setIsCancelled">setIsCancelled()</a>
@@ -611,7 +619,7 @@ Indicates whether to announce when callers join or leave.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
 </dt>
 <dd>Sets the joinInformation
-The join information in the language and locale variant specified in &#039;Accept-Language&#039; request HTTP header. Read-only</dd>
+The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setJoinUrl">setJoinUrl()</a>
@@ -626,7 +634,7 @@ The join information in the language and locale variant specified in &#039;Accep
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
 </dt>
 <dd>Sets the lobbyBypassSettings
-Specifies which participants can bypass the meeting lobby.</dd>
+Specifies which participants can bypass the meeting   lobby.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setMeetingAttendanceReport">setMeetingAttendanceReport()</a>
@@ -648,7 +656,15 @@ Specifies which participants can bypass the meeting lobby.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
 </dt>
 <dd>Sets the participants
-The participants associated with the online meeting. This includes the organizer and the attendees.</dd>
+The participants associated with the online meeting.  This includes the organizer and the attendees.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setRecordAutomatically">setRecordAutomatically()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
+</dt>
+<dd>Sets the recordAutomatically
+Indicates whether to record the meeting automatically.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setRecording">setRecording()</a>
@@ -904,7 +920,7 @@ Indicates whether attendees can turn on their microphone.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the allowedPresenters
-Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.</p>
+Specifies who can be a presenter in a meeting. Possible values are listed in the following table.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -976,7 +992,7 @@ Specifies the mode of meeting chat.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the allowTeamworkReactions
-Indicates if Teams reactions are enabled for the meeting.</p>
+Indicates whether Teams reactions are enabled for the meeting.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1120,7 +1136,7 @@ The phone access (dial-in) information for an online meeting. Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the broadcastSettings
-Settings related to a live event</p>
+Settings related to a live event.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1476,7 +1492,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isBroadcast
-Indicates whether this is a live event.</p>
+Indicates if this is a live event.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1583,7 +1599,7 @@ Indicates whether to announce when callers join or leave.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the joinInformation
-The join information in the language and locale variant specified in &#039;Accept-Language&#039; request HTTP header. Read-only</p>
+The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1654,7 +1670,7 @@ The join information in the language and locale variant specified in &#039;Accep
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lobbyBypassSettings
-Specifies which participants can bypass the meeting lobby.</p>
+Specifies which participants can bypass the meeting   lobby.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1686,7 +1702,7 @@ Specifies which participants can bypass the meeting lobby.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">928</span>
+    <span class="phpdocumentor-element-found-in__line">957</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the meetingAttendanceReport</p>
@@ -1760,7 +1776,7 @@ Specifies which participants can bypass the meeting lobby.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the participants
-The participants associated with the online meeting. This includes the organizer and the attendees.</p>
+The participants associated with the online meeting.  This includes the organizer and the attendees.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1820,6 +1836,42 @@ The participants associated with the online meeting. This includes the organizer
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getRecordAutomatically">
+        getRecordAutomatically()
+        <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getRecordAutomatically" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">805</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the recordAutomatically
+Indicates whether to record the meeting automatically.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getRecordAutomatically</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The recordAutomatically</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getRecording">
         getRecording()
         <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_getRecording" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1827,7 +1879,7 @@ The participants associated with the online meeting. This includes the organizer
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">805</span>
+    <span class="phpdocumentor-element-found-in__line">834</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the recording
@@ -1863,7 +1915,7 @@ The content stream of the recording of a live event. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">838</span>
+    <span class="phpdocumentor-element-found-in__line">867</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startDateTime
@@ -1899,7 +1951,7 @@ The meeting start time in UTC.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">871</span>
+    <span class="phpdocumentor-element-found-in__line">900</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the subject
@@ -1935,7 +1987,7 @@ The subject of the online meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">900</span>
+    <span class="phpdocumentor-element-found-in__line">929</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the videoTeleconferenceId
@@ -2151,7 +2203,7 @@ Indicates whether attendees can turn on their microphone.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the allowedPresenters
-Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.</p>
+Specifies who can be a presenter in a meeting. Possible values are listed in the following table.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2245,7 +2297,7 @@ Specifies the mode of meeting chat.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the allowTeamworkReactions
-Indicates if Teams reactions are enabled for the meeting.</p>
+Indicates whether Teams reactions are enabled for the meeting.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2433,7 +2485,7 @@ The phone access (dial-in) information for an online meeting. Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the broadcastSettings
-Settings related to a live event</p>
+Settings related to a live event.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2899,7 +2951,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isBroadcast
-Indicates whether this is a live event.</p>
+Indicates if this is a live event.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3039,7 +3091,7 @@ Indicates whether to announce when callers join or leave.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the joinInformation
-The join information in the language and locale variant specified in &#039;Accept-Language&#039; request HTTP header. Read-only</p>
+The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3132,7 +3184,7 @@ The join information in the language and locale variant specified in &#039;Accep
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lobbyBypassSettings
-Specifies which participants can bypass the meeting lobby.</p>
+Specifies which participants can bypass the meeting   lobby.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3175,7 +3227,7 @@ Specifies which participants can bypass the meeting lobby.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">948</span>
+    <span class="phpdocumentor-element-found-in__line">977</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the meetingAttendanceReport</p>
@@ -3271,7 +3323,7 @@ Specifies which participants can bypass the meeting lobby.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the participants
-The participants associated with the online meeting. This includes the organizer and the attendees.</p>
+The participants associated with the online meeting.  This includes the organizer and the attendees.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3307,6 +3359,53 @@ The participants associated with the online meeting. This includes the organizer
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setRecordAutomatically">
+        setRecordAutomatically()
+        <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setRecordAutomatically" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">822</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the recordAutomatically
+Indicates whether to record the meeting automatically.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setRecordAutomatically</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The recordAutomatically</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Beta\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setRecording">
         setRecording()
         <a href="classes/Beta-Microsoft-Graph-Model-OnlineMeeting.html#method_setRecording" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3314,7 +3413,7 @@ The participants associated with the online meeting. This includes the organizer
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">826</span>
+    <span class="phpdocumentor-element-found-in__line">855</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the recording
@@ -3361,7 +3460,7 @@ The content stream of the recording of a live event. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">859</span>
+    <span class="phpdocumentor-element-found-in__line">888</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startDateTime
@@ -3408,7 +3507,7 @@ The meeting start time in UTC.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">888</span>
+    <span class="phpdocumentor-element-found-in__line">917</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the subject
@@ -3455,7 +3554,7 @@ The subject of the online meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php"><a href="files/src-beta-microsoft-graph-model-onlinemeeting.html"><abbr title="src/Beta/Microsoft/Graph/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">917</span>
+    <span class="phpdocumentor-element-found-in__line">946</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the videoTeleconferenceId

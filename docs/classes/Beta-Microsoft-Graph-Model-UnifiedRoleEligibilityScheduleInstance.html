@@ -187,7 +187,7 @@ Read-only property with details of the app specific scope when the assignment sc
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleInstanceBase.html#method_getDirectoryScope">getDirectoryScope()</a>
@@ -203,7 +203,7 @@ The directory object that is the scope of the assignment. Enables the retrieval 
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html#method_getEndDateTime">getEndDateTime()</a>
@@ -211,7 +211,7 @@ Id of the directory object representing the scope of the assignment. The scope o
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
 <dd>Gets the endDateTime
-Time that the roleEligibilityScheduleInstance will expire</dd>
+Time that the roleEligibilityScheduleInstance will expire.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -250,7 +250,7 @@ The principal that is getting a role assignment through the request. Enables the
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the principalId
-Objectid of the principal to which the assignment is being granted to.</dd>
+Identifier of the principal to which the assignment is being granted to. Can be a group or a user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -273,7 +273,7 @@ The roleDefinition for the assignment. Enables the retrieval of the role definit
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only.  Supports $filter (eq).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html#method_getRoleEligibilityScheduleId">getRoleEligibilityScheduleId()</a>
@@ -281,7 +281,7 @@ ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the roleEligibilityScheduleId
-ID of the parent roleEligibilitySchedule for this instance</dd>
+Identifier of the parent roleEligibilitySchedule for this instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html#method_getStartDateTime">getStartDateTime()</a>
@@ -289,7 +289,7 @@ ID of the parent roleEligibilitySchedule for this instance</dd>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
 <dd>Gets the startDateTime
-Time that the roleEligibilityScheduleInstance will start</dd>
+Time that the roleEligibilityScheduleInstance will start.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -313,7 +313,7 @@ Read-only property with details of the app specific scope when the assignment sc
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleInstanceBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleInstanceBase">UnifiedRoleScheduleInstanceBase</abbr></a>    </span>
 </dt>
 <dd>Sets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleInstanceBase.html#method_setDirectoryScope">setDirectoryScope()</a>
@@ -329,7 +329,7 @@ The directory object that is the scope of the assignment. Enables the retrieval 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleInstanceBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleInstanceBase">UnifiedRoleScheduleInstanceBase</abbr></a>    </span>
 </dt>
 <dd>Sets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html#method_setEndDateTime">setEndDateTime()</a>
@@ -337,7 +337,7 @@ Id of the directory object representing the scope of the assignment. The scope o
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleInstance">UnifiedRoleEligibilityScheduleInstance</abbr></a>    </span>
 </dt>
 <dd>Sets the endDateTime
-Time that the roleEligibilityScheduleInstance will expire</dd>
+Time that the roleEligibilityScheduleInstance will expire.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -376,7 +376,7 @@ The principal that is getting a role assignment through the request. Enables the
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleInstanceBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleInstanceBase">UnifiedRoleScheduleInstanceBase</abbr></a>    </span>
 </dt>
 <dd>Sets the principalId
-Objectid of the principal to which the assignment is being granted to.</dd>
+Identifier of the principal to which the assignment is being granted to. Can be a group or a user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleInstanceBase.html#method_setRoleDefinition">setRoleDefinition()</a>
@@ -392,7 +392,7 @@ The roleDefinition for the assignment. Enables the retrieval of the role definit
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleInstanceBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleInstanceBase">UnifiedRoleScheduleInstanceBase</abbr></a>    </span>
 </dt>
 <dd>Sets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only.  Supports $filter (eq).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html#method_setRoleEligibilityScheduleId">setRoleEligibilityScheduleId()</a>
@@ -400,7 +400,7 @@ ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleInstance">UnifiedRoleEligibilityScheduleInstance</abbr></a>    </span>
 </dt>
 <dd>Sets the roleEligibilityScheduleId
-ID of the parent roleEligibilitySchedule for this instance</dd>
+Identifier of the parent roleEligibilitySchedule for this instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html#method_setStartDateTime">setStartDateTime()</a>
@@ -408,7 +408,7 @@ ID of the parent roleEligibilitySchedule for this instance</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleEligibilityScheduleInstance.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleEligibilityScheduleInstance">UnifiedRoleEligibilityScheduleInstance</abbr></a>    </span>
 </dt>
 <dd>Sets the startDateTime
-Time that the roleEligibilityScheduleInstance will start</dd>
+Time that the roleEligibilityScheduleInstance will start.</dd>
 
         </dl>
 
@@ -561,7 +561,7 @@ Read-only property with details of the app specific scope when the assignment sc
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -633,7 +633,7 @@ The directory object that is the scope of the assignment. Enables the retrieval 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -669,7 +669,7 @@ Id of the directory object representing the scope of the assignment. The scope o
 </aside>
 
         <p class="phpdocumentor-summary">Gets the endDateTime
-Time that the roleEligibilityScheduleInstance will expire</p>
+Time that the roleEligibilityScheduleInstance will expire.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -848,7 +848,7 @@ The principal that is getting a role assignment through the request. Enables the
 </aside>
 
         <p class="phpdocumentor-summary">Gets the principalId
-Objectid of the principal to which the assignment is being granted to.</p>
+Identifier of the principal to which the assignment is being granted to. Can be a group or a user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -955,7 +955,7 @@ The roleDefinition for the assignment. Enables the retrieval of the role definit
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only.  Supports $filter (eq).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -991,7 +991,7 @@ ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleEligibilityScheduleId
-ID of the parent roleEligibilitySchedule for this instance</p>
+Identifier of the parent roleEligibilitySchedule for this instance.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1027,7 +1027,7 @@ ID of the parent roleEligibilitySchedule for this instance</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startDateTime
-Time that the roleEligibilityScheduleInstance will start</p>
+Time that the roleEligibilityScheduleInstance will start.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1146,7 +1146,7 @@ Read-only property with details of the app specific scope when the assignment sc
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1240,7 +1240,7 @@ The directory object that is the scope of the assignment. Enables the retrieval 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1287,7 +1287,7 @@ Id of the directory object representing the scope of the assignment. The scope o
 </aside>
 
         <p class="phpdocumentor-summary">Sets the endDateTime
-Time that the roleEligibilityScheduleInstance will expire</p>
+Time that the roleEligibilityScheduleInstance will expire.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1521,7 +1521,7 @@ The principal that is getting a role assignment through the request. Enables the
 </aside>
 
         <p class="phpdocumentor-summary">Sets the principalId
-Objectid of the principal to which the assignment is being granted to.</p>
+Identifier of the principal to which the assignment is being granted to. Can be a group or a user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1615,7 +1615,7 @@ The roleDefinition for the assignment. Enables the retrieval of the role definit
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only.  Supports $filter (eq).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1662,7 +1662,7 @@ ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleEligibilityScheduleId
-ID of the parent roleEligibilitySchedule for this instance</p>
+Identifier of the parent roleEligibilitySchedule for this instance.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1709,7 +1709,7 @@ ID of the parent roleEligibilitySchedule for this instance</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startDateTime
-Time that the roleEligibilityScheduleInstance will start</p>
+Time that the roleEligibilityScheduleInstance will start.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

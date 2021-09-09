@@ -54,6 +54,65 @@ class Security extends Entity
     
 
      /** 
+     * Gets the incidents
+     *
+     * @return array|null The incidents
+     */
+    public function getIncidents()
+    {
+        if (array_key_exists("incidents", $this->_propDict)) {
+           return $this->_propDict["incidents"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the incidents
+    *
+    * @param Incident $val The incidents
+    *
+    * @return Security
+    */
+    public function setIncidents($val)
+    {
+        $this->_propDict["incidents"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the attackSimulation
+    *
+    * @return AttackSimulationRoot|null The attackSimulation
+    */
+    public function getAttackSimulation()
+    {
+        if (array_key_exists("attackSimulation", $this->_propDict)) {
+            if (is_a($this->_propDict["attackSimulation"], "\Beta\Microsoft\Graph\Model\AttackSimulationRoot") || is_null($this->_propDict["attackSimulation"])) {
+                return $this->_propDict["attackSimulation"];
+            } else {
+                $this->_propDict["attackSimulation"] = new AttackSimulationRoot($this->_propDict["attackSimulation"]);
+                return $this->_propDict["attackSimulation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the attackSimulation
+    *
+    * @param AttackSimulationRoot $val The attackSimulation
+    *
+    * @return Security
+    */
+    public function setAttackSimulation($val)
+    {
+        $this->_propDict["attackSimulation"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the alerts
     * Read-only. Nullable.
      *

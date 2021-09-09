@@ -25,6 +25,7 @@ class CloudPcRemoteActionResult extends Entity
 {
     /**
     * Gets the actionName
+    * The specified action. Supported values: Reprovision, Resize.
     *
     * @return string|null The actionName
     */
@@ -39,6 +40,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Sets the actionName
+    * The specified action. Supported values: Reprovision, Resize.
     *
     * @param string $val The value of the actionName
     *
@@ -52,6 +54,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Gets the actionState
+    * State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
     *
     * @return ActionState|null The actionState
     */
@@ -70,6 +73,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Sets the actionState
+    * State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
     *
     * @param ActionState $val The value to assign to the actionState
     *
@@ -82,6 +86,7 @@ class CloudPcRemoteActionResult extends Entity
     }
     /**
     * Gets the cloudPcId
+    * The ID of the Cloud PC device on which the remote action is performed. Read-only.
     *
     * @return string|null The cloudPcId
     */
@@ -96,6 +101,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Sets the cloudPcId
+    * The ID of the Cloud PC device on which the remote action is performed. Read-only.
     *
     * @param string $val The value of the cloudPcId
     *
@@ -109,6 +115,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Gets the lastUpdatedDateTime
+    * Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime|null The lastUpdatedDateTime
     */
@@ -127,6 +134,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Sets the lastUpdatedDateTime
+    * Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the lastUpdatedDateTime
     *
@@ -139,6 +147,7 @@ class CloudPcRemoteActionResult extends Entity
     }
     /**
     * Gets the managedDeviceId
+    * The ID of the Intune managed device on which the remote action is performed. Read-only.
     *
     * @return string|null The managedDeviceId
     */
@@ -153,6 +162,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Sets the managedDeviceId
+    * The ID of the Intune managed device on which the remote action is performed. Read-only.
     *
     * @param string $val The value of the managedDeviceId
     *
@@ -166,6 +176,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Gets the startDateTime
+    * Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -184,6 +195,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Sets the startDateTime
+    * Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
     *
     * @param \DateTime $val The value to assign to the startDateTime
     *
@@ -197,6 +209,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Gets the statusDetails
+    * The details of the Cloud PC status.
     *
     * @return CloudPcStatusDetails|null The statusDetails
     */
@@ -215,6 +228,7 @@ class CloudPcRemoteActionResult extends Entity
 
     /**
     * Sets the statusDetails
+    * The details of the Cloud PC status.
     *
     * @param CloudPcStatusDetails $val The value to assign to the statusDetails
     *

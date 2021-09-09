@@ -298,34 +298,4 @@ class WindowsFeatureUpdateProfile extends Entity
         return $this;
     }
     
-
-     /** 
-     * Gets the deviceUpdateStates
-    * The list of device states this profile targeted to
-     *
-     * @return array|null The deviceUpdateStates
-     */
-    public function getDeviceUpdateStates()
-    {
-        if (array_key_exists("deviceUpdateStates", $this->_propDict)) {
-           return $this->_propDict["deviceUpdateStates"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the deviceUpdateStates
-    * The list of device states this profile targeted to
-    *
-    * @param WindowsUpdateState $val The deviceUpdateStates
-    *
-    * @return WindowsFeatureUpdateProfile
-    */
-    public function setDeviceUpdateStates($val)
-    {
-        $this->_propDict["deviceUpdateStates"] = $val;
-        return $this;
-    }
-    
 }

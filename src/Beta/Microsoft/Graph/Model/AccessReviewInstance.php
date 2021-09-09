@@ -59,6 +59,36 @@ class AccessReviewInstance extends Entity
     
 
      /** 
+     * Gets the errors
+    * Collection of errors in an access review instance lifecycle. Read-only.
+     *
+     * @return array|null The errors
+     */
+    public function getErrors()
+    {
+        if (array_key_exists("errors", $this->_propDict)) {
+           return $this->_propDict["errors"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the errors
+    * Collection of errors in an access review instance lifecycle. Read-only.
+    *
+    * @param AccessReviewError $val The errors
+    *
+    * @return AccessReviewInstance
+    */
+    public function setErrors($val)
+    {
+        $this->_propDict["errors"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the fallbackReviewers
     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. Supports $select.
      *
@@ -245,7 +275,7 @@ class AccessReviewInstance extends Entity
 
      /** 
      * Gets the decisions
-    * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+    * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      *
      * @return array|null The decisions
      */
@@ -260,7 +290,7 @@ class AccessReviewInstance extends Entity
     
     /** 
     * Sets the decisions
-    * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+    * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
     *
     * @param AccessReviewInstanceDecisionItem $val The decisions
     *

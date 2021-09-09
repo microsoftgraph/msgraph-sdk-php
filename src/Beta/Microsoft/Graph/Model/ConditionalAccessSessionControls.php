@@ -89,6 +89,32 @@ class ConditionalAccessSessionControls extends Entity
         $this->_propDict["cloudAppSecurity"] = $val;
          return $this;
     }
+    /**
+    * Gets the disableResilienceDefaults
+    *
+    * @return bool|null The disableResilienceDefaults
+    */
+    public function getDisableResilienceDefaults()
+    {
+        if (array_key_exists("disableResilienceDefaults", $this->_propDict)) {
+            return $this->_propDict["disableResilienceDefaults"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the disableResilienceDefaults
+    *
+    * @param bool $val The value of the disableResilienceDefaults
+    *
+    * @return ConditionalAccessSessionControls
+    */
+    public function setDisableResilienceDefaults($val)
+    {
+        $this->_propDict["disableResilienceDefaults"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the persistentBrowser

@@ -187,7 +187,7 @@ Identifier of the application used to create the subscription. Read-only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the changeType
-Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Required. Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.</dd>
+Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_getClientState">getClientState()</a>
@@ -195,7 +195,7 @@ Indicates the type of change in the subscribed resource that will raise a change
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the clientState
-Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification. Optional.</dd>
+Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_getCreatorId">getCreatorId()</a>
@@ -203,7 +203,7 @@ Specifies the value of the clientState property sent by the service in each chan
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the creatorId
-Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.</dd>
+Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_getEncryptionCertificate">getEncryptionCertificate()</a>
@@ -219,7 +219,7 @@ A base64-encoded representation of a certificate with a public key used to encry
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the encryptionCertificateId
-A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional. Required when includeResourceData is true.</dd>
+A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_getExpirationDateTime">getExpirationDateTime()</a>
@@ -227,7 +227,7 @@ A custom app-provided identifier to help identify the certificate needed to decr
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
 <dd>Gets the expirationDateTime
-Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time. Required.</dd>
+Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -283,7 +283,7 @@ OData Query Options for specifying value for the targeting resource. Clients rec
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the notificationUrl
-The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Required.</dd>
+Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_getNotificationUrlAppId">getNotificationUrlAppId()</a>
@@ -312,7 +312,7 @@ The URL of the endpoint that receives the change notifications. This URL must ma
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the resource
-Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource. Required.</dd>
+Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -336,7 +336,7 @@ Identifier of the application used to create the subscription. Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html"><abbr title="\Beta\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>    </span>
 </dt>
 <dd>Sets the changeType
-Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Required. Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.</dd>
+Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_setClientState">setClientState()</a>
@@ -344,7 +344,7 @@ Indicates the type of change in the subscribed resource that will raise a change
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html"><abbr title="\Beta\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>    </span>
 </dt>
 <dd>Sets the clientState
-Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification. Optional.</dd>
+Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_setCreatorId">setCreatorId()</a>
@@ -352,7 +352,7 @@ Specifies the value of the clientState property sent by the service in each chan
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html"><abbr title="\Beta\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>    </span>
 </dt>
 <dd>Sets the creatorId
-Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.</dd>
+Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_setEncryptionCertificate">setEncryptionCertificate()</a>
@@ -368,7 +368,7 @@ A base64-encoded representation of a certificate with a public key used to encry
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html"><abbr title="\Beta\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>    </span>
 </dt>
 <dd>Sets the encryptionCertificateId
-A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional. Required when includeResourceData is true.</dd>
+A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_setExpirationDateTime">setExpirationDateTime()</a>
@@ -376,7 +376,7 @@ A custom app-provided identifier to help identify the certificate needed to decr
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html"><abbr title="\Beta\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>    </span>
 </dt>
 <dd>Sets the expirationDateTime
-Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time. Required.</dd>
+Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -432,7 +432,7 @@ OData Query Options for specifying value for the targeting resource. Clients rec
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html"><abbr title="\Beta\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>    </span>
 </dt>
 <dd>Sets the notificationUrl
-The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Required.</dd>
+Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html#method_setNotificationUrlAppId">setNotificationUrlAppId()</a>
@@ -454,7 +454,7 @@ The URL of the endpoint that receives the change notifications. This URL must ma
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Subscription.html"><abbr title="\Beta\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>    </span>
 </dt>
 <dd>Sets the resource
-Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource. Required.</dd>
+Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.</dd>
 
         </dl>
 
@@ -607,7 +607,7 @@ Identifier of the application used to create the subscription. Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the changeType
-Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Required. Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.</p>
+Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -643,7 +643,7 @@ Indicates the type of change in the subscribed resource that will raise a change
 </aside>
 
         <p class="phpdocumentor-summary">Gets the clientState
-Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification. Optional.</p>
+Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -679,7 +679,7 @@ Specifies the value of the clientState property sent by the service in each chan
 </aside>
 
         <p class="phpdocumentor-summary">Gets the creatorId
-Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.</p>
+Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -751,7 +751,7 @@ A base64-encoded representation of a certificate with a public key used to encry
 </aside>
 
         <p class="phpdocumentor-summary">Gets the encryptionCertificateId
-A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional. Required when includeResourceData is true.</p>
+A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -787,7 +787,7 @@ A custom app-provided identifier to help identify the certificate needed to decr
 </aside>
 
         <p class="phpdocumentor-summary">Gets the expirationDateTime
-Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time. Required.</p>
+Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1039,7 +1039,7 @@ OData Query Options for specifying value for the targeting resource. Clients rec
 </aside>
 
         <p class="phpdocumentor-summary">Gets the notificationUrl
-The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Required.</p>
+Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1180,7 +1180,7 @@ The URL of the endpoint that receives the change notifications. This URL must ma
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resource
-Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource. Required.</p>
+Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1299,7 +1299,7 @@ Identifier of the application used to create the subscription. Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the changeType
-Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Required. Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.</p>
+Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1346,7 +1346,7 @@ Indicates the type of change in the subscribed resource that will raise a change
 </aside>
 
         <p class="phpdocumentor-summary">Sets the clientState
-Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification. Optional.</p>
+Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1393,7 +1393,7 @@ Specifies the value of the clientState property sent by the service in each chan
 </aside>
 
         <p class="phpdocumentor-summary">Sets the creatorId
-Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.</p>
+Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1487,7 +1487,7 @@ A base64-encoded representation of a certificate with a public key used to encry
 </aside>
 
         <p class="phpdocumentor-summary">Sets the encryptionCertificateId
-A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional. Required when includeResourceData is true.</p>
+A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1534,7 +1534,7 @@ A custom app-provided identifier to help identify the certificate needed to decr
 </aside>
 
         <p class="phpdocumentor-summary">Sets the expirationDateTime
-Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time. Required.</p>
+Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1863,7 +1863,7 @@ OData Query Options for specifying value for the targeting resource. Clients rec
 </aside>
 
         <p class="phpdocumentor-summary">Sets the notificationUrl
-The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Required.</p>
+Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2002,7 +2002,7 @@ The URL of the endpoint that receives the change notifications. This URL must ma
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resource
-Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource. Required.</p>
+Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

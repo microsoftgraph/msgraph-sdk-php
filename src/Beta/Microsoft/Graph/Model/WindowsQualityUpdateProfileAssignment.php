@@ -26,7 +26,7 @@ class WindowsQualityUpdateProfileAssignment extends Entity
 {
     /**
     * Gets the target
-    * The assignment target that the feature update profile is assigned to.
+    * The assignment target that the quality update profile is assigned to.
     *
     * @return DeviceAndAppManagementAssignmentTarget|null The target
     */
@@ -45,7 +45,7 @@ class WindowsQualityUpdateProfileAssignment extends Entity
     
     /**
     * Sets the target
-    * The assignment target that the feature update profile is assigned to.
+    * The assignment target that the quality update profile is assigned to.
     *
     * @param DeviceAndAppManagementAssignmentTarget $val The target
     *

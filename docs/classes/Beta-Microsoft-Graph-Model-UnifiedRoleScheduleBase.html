@@ -187,7 +187,7 @@ Read-only property with details of the app specific scope when the assignment sc
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units or all users.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html#method_getCreatedDateTime">getCreatedDateTime()</a>
@@ -203,7 +203,7 @@ Time that the schedule was created.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the createdUsing
-ID of the roleAssignmentScheduleRequest that created this schedule.</dd>
+Identifier of the roleAssignmentScheduleRequest that created this schedule.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html#method_getDirectoryScope">getDirectoryScope()</a>
@@ -219,7 +219,7 @@ Property referencing the directory object that is the scope of the assignment. P
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -258,7 +258,7 @@ Property referencing the principal that is getting a role assignment through the
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the principalId
-Objectid of the principal to which the assignment is being granted to.</dd>
+Identifier of the principal to which the assignment is being granted to. Supports $filter (eq).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -281,7 +281,7 @@ Property indicating the roleDefinition the assignment is for. Provided so that c
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only. Supports $filter (eq).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html#method_getStatus">getStatus()</a>
@@ -289,7 +289,7 @@ ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the status
-Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval.</dd>
+Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval. Supports $filter (eq).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -313,7 +313,7 @@ Read-only property with details of the app specific scope when the assignment sc
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleBase">UnifiedRoleScheduleBase</abbr></a>    </span>
 </dt>
 <dd>Sets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units or all users.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html#method_setCreatedDateTime">setCreatedDateTime()</a>
@@ -329,7 +329,7 @@ Time that the schedule was created.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleBase">UnifiedRoleScheduleBase</abbr></a>    </span>
 </dt>
 <dd>Sets the createdUsing
-ID of the roleAssignmentScheduleRequest that created this schedule.</dd>
+Identifier of the roleAssignmentScheduleRequest that created this schedule.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html#method_setDirectoryScope">setDirectoryScope()</a>
@@ -345,7 +345,7 @@ Property referencing the directory object that is the scope of the assignment. P
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleBase">UnifiedRoleScheduleBase</abbr></a>    </span>
 </dt>
 <dd>Sets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</dd>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -384,7 +384,7 @@ Property referencing the principal that is getting a role assignment through the
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleBase">UnifiedRoleScheduleBase</abbr></a>    </span>
 </dt>
 <dd>Sets the principalId
-Objectid of the principal to which the assignment is being granted to.</dd>
+Identifier of the principal to which the assignment is being granted to. Supports $filter (eq).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html#method_setRoleDefinition">setRoleDefinition()</a>
@@ -400,7 +400,7 @@ Property indicating the roleDefinition the assignment is for. Provided so that c
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleBase">UnifiedRoleScheduleBase</abbr></a>    </span>
 </dt>
 <dd>Sets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only. Supports $filter (eq).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html#method_setStatus">setStatus()</a>
@@ -408,7 +408,7 @@ ID of the unifiedRoleDefinition the assignment is for. Read only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-UnifiedRoleScheduleBase.html"><abbr title="\Beta\Microsoft\Graph\Model\UnifiedRoleScheduleBase">UnifiedRoleScheduleBase</abbr></a>    </span>
 </dt>
 <dd>Sets the status
-Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval.</dd>
+Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval. Supports $filter (eq).</dd>
 
         </dl>
 
@@ -561,7 +561,7 @@ Read-only property with details of the app specific scope when the assignment sc
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units or all users.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -633,7 +633,7 @@ Time that the schedule was created.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdUsing
-ID of the roleAssignmentScheduleRequest that created this schedule.</p>
+Identifier of the roleAssignmentScheduleRequest that created this schedule.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -705,7 +705,7 @@ Property referencing the directory object that is the scope of the assignment. P
 </aside>
 
         <p class="phpdocumentor-summary">Gets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -884,7 +884,7 @@ Property referencing the principal that is getting a role assignment through the
 </aside>
 
         <p class="phpdocumentor-summary">Gets the principalId
-Objectid of the principal to which the assignment is being granted to.</p>
+Identifier of the principal to which the assignment is being granted to. Supports $filter (eq).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -991,7 +991,7 @@ Property indicating the roleDefinition the assignment is for. Provided so that c
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only. Supports $filter (eq).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1027,7 +1027,7 @@ ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
-Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval.</p>
+Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval. Supports $filter (eq).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1146,7 +1146,7 @@ Read-only property with details of the app specific scope when the assignment sc
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appScopeId
-Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use &#039;/&#039; for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units or all users.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1240,7 +1240,7 @@ Time that the schedule was created.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdUsing
-ID of the roleAssignmentScheduleRequest that created this schedule.</p>
+Identifier of the roleAssignmentScheduleRequest that created this schedule.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1334,7 +1334,7 @@ Property referencing the directory object that is the scope of the assignment. P
 </aside>
 
         <p class="phpdocumentor-summary">Sets the directoryScopeId
-Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.</p>
+Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1568,7 +1568,7 @@ Property referencing the principal that is getting a role assignment through the
 </aside>
 
         <p class="phpdocumentor-summary">Sets the principalId
-Objectid of the principal to which the assignment is being granted to.</p>
+Identifier of the principal to which the assignment is being granted to. Supports $filter (eq).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1662,7 +1662,7 @@ Property indicating the roleDefinition the assignment is for. Provided so that c
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleDefinitionId
-ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
+Identifier of the unifiedRoleDefinition the assignment is for. Read only. Supports $filter (eq).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1709,7 +1709,7 @@ ID of the unifiedRoleDefinition the assignment is for. Read only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status
-Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval.</p>
+Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval. Supports $filter (eq).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

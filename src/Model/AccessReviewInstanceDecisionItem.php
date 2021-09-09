@@ -241,7 +241,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Gets the principalLink
-    * Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+    * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
     *
     * @return string|null The principalLink
     */
@@ -256,7 +256,7 @@ class AccessReviewInstanceDecisionItem extends Entity
     
     /**
     * Sets the principalLink
-    * Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+    * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
     *
     * @param string $val The principalLink
     *

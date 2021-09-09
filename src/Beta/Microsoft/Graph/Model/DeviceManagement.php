@@ -59,7 +59,7 @@ class DeviceManagement extends Entity
     
     /**
     * Gets the intuneAccountId
-    * Intune Account ID for given tenant
+    * Intune Account Id for given tenant
     *
     * @return string|null The intuneAccountId
     */
@@ -74,7 +74,7 @@ class DeviceManagement extends Entity
     
     /**
     * Sets the intuneAccountId
-    * Intune Account ID for given tenant
+    * Intune Account Id for given tenant
     *
     * @param string $val The intuneAccountId
     *
@@ -3065,6 +3065,36 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the userExperienceAnalyticsModelScores
+    * User experience analytics model scores
+     *
+     * @return array|null The userExperienceAnalyticsModelScores
+     */
+    public function getUserExperienceAnalyticsModelScores()
+    {
+        if (array_key_exists("userExperienceAnalyticsModelScores", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsModelScores"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsModelScores
+    * User experience analytics model scores
+    *
+    * @param UserExperienceAnalyticsModelScores $val The userExperienceAnalyticsModelScores
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsModelScores($val)
+    {
+        $this->_propDict["userExperienceAnalyticsModelScores"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userExperienceAnalyticsNotAutopilotReadyDevice
     * User experience analytics devices not Windows Autopilot ready.
      *
@@ -3885,6 +3915,39 @@ class DeviceManagement extends Entity
         return $this;
     }
     
+    /**
+    * Gets the reports
+    * Reports singleton
+    *
+    * @return DeviceManagementReports|null The reports
+    */
+    public function getReports()
+    {
+        if (array_key_exists("reports", $this->_propDict)) {
+            if (is_a($this->_propDict["reports"], "\Beta\Microsoft\Graph\Model\DeviceManagementReports") || is_null($this->_propDict["reports"])) {
+                return $this->_propDict["reports"];
+            } else {
+                $this->_propDict["reports"] = new DeviceManagementReports($this->_propDict["reports"]);
+                return $this->_propDict["reports"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reports
+    * Reports singleton
+    *
+    * @param DeviceManagementReports $val The reports
+    *
+    * @return DeviceManagement
+    */
+    public function setReports($val)
+    {
+        $this->_propDict["reports"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the microsoftTunnelConfigurations
@@ -4278,39 +4341,6 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-    /**
-    * Gets the reports
-    * Reports singleton
-    *
-    * @return DeviceManagementReports|null The reports
-    */
-    public function getReports()
-    {
-        if (array_key_exists("reports", $this->_propDict)) {
-            if (is_a($this->_propDict["reports"], "\Beta\Microsoft\Graph\Model\DeviceManagementReports") || is_null($this->_propDict["reports"])) {
-                return $this->_propDict["reports"];
-            } else {
-                $this->_propDict["reports"] = new DeviceManagementReports($this->_propDict["reports"]);
-                return $this->_propDict["reports"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reports
-    * Reports singleton
-    *
-    * @param DeviceManagementReports $val The reports
-    *
-    * @return DeviceManagement
-    */
-    public function setReports($val)
-    {
-        $this->_propDict["reports"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the embeddedSIMActivationCodePools
@@ -4428,6 +4458,36 @@ class DeviceManagement extends Entity
     public function setTroubleshootingEvents($val)
     {
         $this->_propDict["troubleshootingEvents"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the windowsDriverUpdateProfiles
+    * A collection of windows driver update profiles
+     *
+     * @return array|null The windowsDriverUpdateProfiles
+     */
+    public function getWindowsDriverUpdateProfiles()
+    {
+        if (array_key_exists("windowsDriverUpdateProfiles", $this->_propDict)) {
+           return $this->_propDict["windowsDriverUpdateProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the windowsDriverUpdateProfiles
+    * A collection of windows driver update profiles
+    *
+    * @param WindowsDriverUpdateProfile $val The windowsDriverUpdateProfiles
+    *
+    * @return DeviceManagement
+    */
+    public function setWindowsDriverUpdateProfiles($val)
+    {
+        $this->_propDict["windowsDriverUpdateProfiles"] = $val;
         return $this;
     }
     

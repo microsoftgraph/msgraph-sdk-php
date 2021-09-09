@@ -173,6 +173,14 @@ to the model</dd>
 <dd>Construct a new Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-Drive.html#method_getBundles">getBundles()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+</dt>
+<dd>Gets the bundles
+Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-BaseItem.html#method_getCreatedBy">getCreatedBy()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>|null    </span>
@@ -368,6 +376,14 @@ URL that displays the resource in the browser. Read-only.</dd>
 </dt>
 <dd>Serializes the object by property array
 Manually serialize DateTime into RFC3339 format</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-Drive.html#method_setBundles">setBundles()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-Drive.html"><abbr title="\Microsoft\Graph\Model\Drive">Drive</abbr></a>    </span>
+</dt>
+<dd>Sets the bundles
+Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-BaseItem.html#method_setCreatedBy">setCreatedBy()</a>
@@ -655,6 +671,42 @@ to the model</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getBundles">
+        getBundles()
+        <a href="classes/Microsoft-Graph-Model-Drive.html#method_getBundles" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">193</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the bundles
+Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getBundles</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The bundles</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getCreatedBy">
         getCreatedBy()
         <a href="classes/Microsoft-Graph-Model-BaseItem.html#method_getCreatedBy" class="headerlink"><i class="fas fa-link"></i></a>
@@ -878,7 +930,7 @@ ETag for the item. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">193</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the following
@@ -950,7 +1002,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">223</span>
+    <span class="phpdocumentor-element-found-in__line">253</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the items
@@ -1094,7 +1146,7 @@ Date and time the item was last modified. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">252</span>
+    <span class="phpdocumentor-element-found-in__line">282</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the list
@@ -1344,7 +1396,7 @@ Optional. Information about the drive&#039;s storage space quota. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">285</span>
+    <span class="phpdocumentor-element-found-in__line">315</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the root
@@ -1415,7 +1467,7 @@ The root folder of the drive. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">319</span>
+    <span class="phpdocumentor-element-found-in__line">349</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the special
@@ -1543,6 +1595,53 @@ Manually serialize DateTime into RFC3339 format</p>
             &mdash;
             <section class="phpdocumentor-description"><p>The list of properties</p>
 </section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setBundles">
+        setBundles()
+        <a href="classes/Microsoft-Graph-Model-Drive.html#method_setBundles" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">210</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the bundles
+Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setBundles</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Drive.html"><abbr title="\Microsoft\Graph\Model\Drive">Drive</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The bundles</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Drive.html"><abbr title="\Microsoft\Graph\Model\Drive">Drive</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
 
     
 </article>
@@ -1841,7 +1940,7 @@ ETag for the item. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">210</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the following
@@ -1935,7 +2034,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">240</span>
+    <span class="phpdocumentor-element-found-in__line">270</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the items
@@ -2123,7 +2222,7 @@ Date and time the item was last modified. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">273</span>
+    <span class="phpdocumentor-element-found-in__line">303</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the list
@@ -2404,7 +2503,7 @@ Optional. Information about the drive&#039;s storage space quota. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">306</span>
+    <span class="phpdocumentor-element-found-in__line">336</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the root
@@ -2497,7 +2596,7 @@ The root folder of the drive. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Drive.php"><a href="files/src-model-drive.html"><abbr title="src/Model/Drive.php">Drive.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">336</span>
+    <span class="phpdocumentor-element-found-in__line">366</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the special

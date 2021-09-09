@@ -319,6 +319,35 @@ class MobileThreatDefenseConnector extends Entity
     }
     
     /**
+    * Gets the microsoftDefenderForEndpointAttachEnabled
+    * When TRUE, configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, configuration profile management via Microsoft Defender for Endpoint is disabled.
+    *
+    * @return bool|null The microsoftDefenderForEndpointAttachEnabled
+    */
+    public function getMicrosoftDefenderForEndpointAttachEnabled()
+    {
+        if (array_key_exists("microsoftDefenderForEndpointAttachEnabled", $this->_propDict)) {
+            return $this->_propDict["microsoftDefenderForEndpointAttachEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftDefenderForEndpointAttachEnabled
+    * When TRUE, configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, configuration profile management via Microsoft Defender for Endpoint is disabled.
+    *
+    * @param bool $val The microsoftDefenderForEndpointAttachEnabled
+    *
+    * @return MobileThreatDefenseConnector
+    */
+    public function setMicrosoftDefenderForEndpointAttachEnabled($val)
+    {
+        $this->_propDict["microsoftDefenderForEndpointAttachEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the partnerState
     * Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
     *

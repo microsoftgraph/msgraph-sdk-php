@@ -179,7 +179,7 @@ to the model</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMode.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode">MicrosoftAuthenticatorAuthenticationMode</abbr></a>|null    </span>
 </dt>
 <dd>Gets the authenticationMode
-Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.</dd>
+Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getFeatureSettings">getFeatureSettings()</a>
@@ -187,7 +187,7 @@ Determines which types of notifications can be used for sign-in. The possible va
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>|null    </span>
 </dt>
 <dd>Gets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. The possible values are: requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications). Nullable.</dd>
+Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -225,7 +225,7 @@ Determines if the user is enforced to register the authentication method.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AuthenticationMethodTargetType.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticationMethodTargetType">AuthenticationMethodTargetType</abbr></a>|null    </span>
 </dt>
 <dd>Gets the targetType
-Possible values are: user, group, and unknownFutureValue.</dd>
+Possible values are: user, group.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -241,7 +241,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a>    </span>
 </dt>
 <dd>Sets the authenticationMode
-Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.</dd>
+Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setFeatureSettings">setFeatureSettings()</a>
@@ -249,7 +249,7 @@ Determines which types of notifications can be used for sign-in. The possible va
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a>    </span>
 </dt>
 <dd>Sets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. The possible values are: requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications). Nullable.</dd>
+Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -280,7 +280,7 @@ Determines if the user is enforced to register the authentication method.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticationMethodTarget">AuthenticationMethodTarget</abbr></a>    </span>
 </dt>
 <dd>Sets the targetType
-Possible values are: user, group, and unknownFutureValue.</dd>
+Possible values are: user, group.</dd>
 
         </dl>
 
@@ -397,7 +397,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the authenticationMode
-Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.</p>
+Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -433,7 +433,7 @@ Determines which types of notifications can be used for sign-in. The possible va
 </aside>
 
         <p class="phpdocumentor-summary">Gets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. The possible values are: requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications). Nullable.</p>
+Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -611,7 +611,7 @@ Determines if the user is enforced to register the authentication method.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the targetType
-Possible values are: user, group, and unknownFutureValue.</p>
+Possible values are: user, group.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -683,7 +683,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the authenticationMode
-Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.</p>
+Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -730,7 +730,7 @@ Determines which types of notifications can be used for sign-in. The possible va
 </aside>
 
         <p class="phpdocumentor-summary">Sets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. The possible values are: requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications). Nullable.</p>
+Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -917,7 +917,7 @@ Determines if the user is enforced to register the authentication method.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the targetType
-Possible values are: user, group, and unknownFutureValue.</p>
+Possible values are: user, group.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

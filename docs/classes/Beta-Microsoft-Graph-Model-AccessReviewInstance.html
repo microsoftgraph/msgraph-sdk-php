@@ -187,7 +187,7 @@ Returns the collection of reviewers who were contacted to complete this review. 
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the decisions
-Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.</dd>
+Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_getDefinition">getDefinition()</a>
@@ -204,6 +204,14 @@ There is exactly one accessReviewScheduleDefinition associated with each instanc
 </dt>
 <dd>Gets the endDateTime
 DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_getErrors">getErrors()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+</dt>
+<dd>Gets the errors
+Collection of errors in an access review instance lifecycle. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_getFallbackReviewers">getFallbackReviewers()</a>
@@ -289,7 +297,7 @@ Returns the collection of reviewers who were contacted to complete this review. 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a>    </span>
 </dt>
 <dd>Sets the decisions
-Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.</dd>
+Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_setDefinition">setDefinition()</a>
@@ -306,6 +314,14 @@ There is exactly one accessReviewScheduleDefinition associated with each instanc
 </dt>
 <dd>Sets the endDateTime
 DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_setErrors">setErrors()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a>    </span>
+</dt>
+<dd>Sets the errors
+Collection of errors in an access review instance lifecycle. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_setFallbackReviewers">setFallbackReviewers()</a>
@@ -473,7 +489,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">222</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the contactedReviewers
@@ -509,11 +525,11 @@ Returns the collection of reviewers who were contacted to complete this review. 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">252</span>
+    <span class="phpdocumentor-element-found-in__line">282</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the decisions
-Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.</p>
+Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -545,7 +561,7 @@ Each user reviewed in an accessReviewInstance has a decision item representing i
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">281</span>
+    <span class="phpdocumentor-element-found-in__line">311</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the definition
@@ -610,6 +626,42 @@ DateTime when review instance is scheduled to end.The DatetimeOffset type repres
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getErrors">
+        getErrors()
+        <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_getErrors" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">67</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the errors
+Collection of errors in an access review instance lifecycle. Read-only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getErrors</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The errors</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getFallbackReviewers">
         getFallbackReviewers()
         <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_getFallbackReviewers" class="headerlink"><i class="fas fa-link"></i></a>
@@ -617,7 +669,7 @@ DateTime when review instance is scheduled to end.The DatetimeOffset type repres
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">67</span>
+    <span class="phpdocumentor-element-found-in__line">97</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the fallbackReviewers
@@ -759,7 +811,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">97</span>
+    <span class="phpdocumentor-element-found-in__line">127</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the reviewers
@@ -795,7 +847,7 @@ This collection of access review scopes is used to define who the reviewers are.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">126</span>
+    <span class="phpdocumentor-element-found-in__line">156</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the scope
@@ -831,7 +883,7 @@ Created based on scope and instanceEnumerationScope at the accessReviewScheduleD
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">159</span>
+    <span class="phpdocumentor-element-found-in__line">189</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startDateTime
@@ -867,7 +919,7 @@ DateTime when review instance is scheduled to start. May be in the future. The D
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">192</span>
+    <span class="phpdocumentor-element-found-in__line">222</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
@@ -939,7 +991,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">239</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the contactedReviewers
@@ -986,11 +1038,11 @@ Returns the collection of reviewers who were contacted to complete this review. 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">269</span>
+    <span class="phpdocumentor-element-found-in__line">299</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the decisions
-Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.</p>
+Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1033,7 +1085,7 @@ Each user reviewed in an accessReviewInstance has a decision item representing i
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">302</span>
+    <span class="phpdocumentor-element-found-in__line">332</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the definition
@@ -1120,6 +1172,53 @@ DateTime when review instance is scheduled to end.The DatetimeOffset type repres
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setErrors">
+        setErrors()
+        <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_setErrors" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">84</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the errors
+Collection of errors in an access review instance lifecycle. Read-only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setErrors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewError.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewError">AccessReviewError</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewError.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewError">AccessReviewError</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The errors</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setFallbackReviewers">
         setFallbackReviewers()
         <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewInstance.html#method_setFallbackReviewers" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1127,7 +1226,7 @@ DateTime when review instance is scheduled to end.The DatetimeOffset type repres
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">84</span>
+    <span class="phpdocumentor-element-found-in__line">114</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the fallbackReviewers
@@ -1267,7 +1366,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">114</span>
+    <span class="phpdocumentor-element-found-in__line">144</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the reviewers
@@ -1314,7 +1413,7 @@ This collection of access review scopes is used to define who the reviewers are.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">147</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the scope
@@ -1361,7 +1460,7 @@ Created based on scope and instanceEnumerationScope at the accessReviewScheduleD
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">180</span>
+    <span class="phpdocumentor-element-found-in__line">210</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startDateTime
@@ -1408,7 +1507,7 @@ DateTime when review instance is scheduled to start. May be in the future. The D
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php"><a href="files/src-beta-microsoft-graph-model-accessreviewinstance.html"><abbr title="src/Beta/Microsoft/Graph/Model/AccessReviewInstance.php">AccessReviewInstance.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">209</span>
+    <span class="phpdocumentor-element-found-in__line">239</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status

@@ -179,7 +179,7 @@ to the model</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the aliases
-A set of aliases or a friendly names for the property. Maximum 32 characters. Each string must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `</dd>
+A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `, ^. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -219,7 +219,7 @@ Specifies if the property is retrievable. Retrievable properties are returned in
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the isSearchable
-Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.</dd>
+Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html#method_getLabels">getLabels()</a>
@@ -227,7 +227,7 @@ Specifies if the property is searchable. Only properties of type string or strin
                         &nbsp;: <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Label.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\Label">Label</abbr></a>|null    </span>
 </dt>
 <dd>Gets the labels
-Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.</dd>
+Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html#method_getName">getName()</a>
@@ -235,7 +235,7 @@ Specifies one or more well-known tags added against a property. Labels help Micr
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the name
-The name of the property. Maximum 32 characters. Must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `</dd>
+The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `, ^.  Required.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getODataType">getODataType()</a>
@@ -257,7 +257,7 @@ The name of the property. Maximum 32 characters. Must not contain control charac
                         &nbsp;: <a href="classes/Microsoft-Graph-ExternalConnectors-Model-PropertyType.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\PropertyType">PropertyType</abbr></a>|null    </span>
 </dt>
 <dd>Gets the type
-The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.</dd>
+The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -273,7 +273,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\Property">Property</abbr></a>    </span>
 </dt>
 <dd>Sets the aliases
-A set of aliases or a friendly names for the property. Maximum 32 characters. Each string must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `</dd>
+A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `, ^. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -313,7 +313,7 @@ Specifies if the property is retrievable. Retrievable properties are returned in
                         &nbsp;: <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\Property">Property</abbr></a>    </span>
 </dt>
 <dd>Sets the isSearchable
-Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.</dd>
+Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html#method_setLabels">setLabels()</a>
@@ -321,7 +321,7 @@ Specifies if the property is searchable. Only properties of type string or strin
                         &nbsp;: <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\Property">Property</abbr></a>    </span>
 </dt>
 <dd>Sets the labels
-Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.</dd>
+Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html#method_setName">setName()</a>
@@ -329,7 +329,7 @@ Specifies one or more well-known tags added against a property. Labels help Micr
                         &nbsp;: <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\Property">Property</abbr></a>    </span>
 </dt>
 <dd>Sets the name
-The name of the property. Maximum 32 characters. Must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `</dd>
+The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `, ^.  Required.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setODataType">setODataType()</a>
@@ -344,7 +344,7 @@ The name of the property. Maximum 32 characters. Must not contain control charac
                         &nbsp;: <a href="classes/Microsoft-Graph-ExternalConnectors-Model-Property.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\Property">Property</abbr></a>    </span>
 </dt>
 <dd>Sets the type
-The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.</dd>
+The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue.</dd>
 
         </dl>
 
@@ -461,7 +461,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the aliases
-A set of aliases or a friendly names for the property. Maximum 32 characters. Each string must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `</p>
+A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `, ^. Optional.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -641,7 +641,7 @@ Specifies if the property is retrievable. Retrievable properties are returned in
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isSearchable
-Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.</p>
+Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -677,7 +677,7 @@ Specifies if the property is searchable. Only properties of type string or strin
 </aside>
 
         <p class="phpdocumentor-summary">Gets the labels
-Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.</p>
+Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -713,7 +713,7 @@ Specifies one or more well-known tags added against a property. Labels help Micr
 </aside>
 
         <p class="phpdocumentor-summary">Gets the name
-The name of the property. Maximum 32 characters. Must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `</p>
+The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `, ^.  Required.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -819,7 +819,7 @@ The name of the property. Maximum 32 characters. Must not contain control charac
 </aside>
 
         <p class="phpdocumentor-summary">Gets the type
-The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.</p>
+The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -891,7 +891,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the aliases
-A set of aliases or a friendly names for the property. Maximum 32 characters. Each string must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `</p>
+A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `, ^. Optional.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1126,7 +1126,7 @@ Specifies if the property is retrievable. Retrievable properties are returned in
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isSearchable
-Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.</p>
+Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1173,7 +1173,7 @@ Specifies if the property is searchable. Only properties of type string or strin
 </aside>
 
         <p class="phpdocumentor-summary">Sets the labels
-Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.</p>
+Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1221,7 +1221,7 @@ Specifies one or more well-known tags added against a property. Labels help Micr
 </aside>
 
         <p class="phpdocumentor-summary">Sets the name
-The name of the property. Maximum 32 characters. Must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `</p>
+The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;amp;, ?, @, #, /, ~, &#039;, &#039;, &amp;amp;lt;, &amp;amp;gt;, `, ^.  Required.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1314,7 +1314,7 @@ The name of the property. Maximum 32 characters. Must not contain control charac
 </aside>
 
         <p class="phpdocumentor-summary">Sets the type
-The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.</p>
+The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

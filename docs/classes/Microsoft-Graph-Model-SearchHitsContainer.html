@@ -173,6 +173,14 @@ to the model</dd>
 <dd>Construct a new Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html#method_getAggregations">getAggregations()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchAggregation.html"><abbr title="\Microsoft\Graph\Model\SearchAggregation">SearchAggregation</abbr></a>|null    </span>
+</dt>
+<dd>Gets the aggregations
+Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html#method_getHits">getHits()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchHit.html"><abbr title="\Microsoft\Graph\Model\SearchHit">SearchHit</abbr></a>|null    </span>
@@ -225,6 +233,14 @@ The total number of results. Note this is not the number of results on the page,
 </dt>
 <dd>Serializes the object by property array
 Manually serialize DateTime into RFC3339 format</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html#method_setAggregations">setAggregations()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html"><abbr title="\Microsoft\Graph\Model\SearchHitsContainer">SearchHitsContainer</abbr></a>    </span>
+</dt>
+<dd>Sets the aggregations
+Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html#method_setHits">setHits()</a>
@@ -369,6 +385,42 @@ to the model</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getAggregations">
+        getAggregations()
+        <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html#method_getAggregations" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchHitsContainer.php"><a href="files/src-model-searchhitscontainer.html"><abbr title="src/Model/SearchHitsContainer.php">SearchHitsContainer.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the aggregations
+Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAggregations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchAggregation.html"><abbr title="\Microsoft\Graph\Model\SearchAggregation">SearchAggregation</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchAggregation.html"><abbr title="\Microsoft\Graph\Model\SearchAggregation">SearchAggregation</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The aggregations</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getHits">
         getHits()
         <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html#method_getHits" class="headerlink"><i class="fas fa-link"></i></a>
@@ -376,7 +428,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchHitsContainer.php"><a href="files/src-model-searchhitscontainer.html"><abbr title="src/Model/SearchHitsContainer.php">SearchHitsContainer.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hits
@@ -448,7 +500,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchHitsContainer.php"><a href="files/src-model-searchhitscontainer.html"><abbr title="src/Model/SearchHitsContainer.php">SearchHitsContainer.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">65</span>
+    <span class="phpdocumentor-element-found-in__line">98</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the moreResultsAvailable
@@ -554,7 +606,7 @@ Provides information if more results are available. Based on this information, y
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchHitsContainer.php"><a href="files/src-model-searchhitscontainer.html"><abbr title="src/Model/SearchHitsContainer.php">SearchHitsContainer.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">126</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the total
@@ -619,6 +671,54 @@ Manually serialize DateTime into RFC3339 format</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setAggregations">
+        setAggregations()
+        <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html#method_setAggregations" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchHitsContainer.php"><a href="files/src-model-searchhitscontainer.html"><abbr title="src/Model/SearchHitsContainer.php">SearchHitsContainer.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">54</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the aggregations
+Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setAggregations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SearchAggregation.html"><abbr title="\Microsoft\Graph\Model\SearchAggregation">SearchAggregation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html"><abbr title="\Microsoft\Graph\Model\SearchHitsContainer">SearchHitsContainer</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SearchAggregation.html"><abbr title="\Microsoft\Graph\Model\SearchAggregation">SearchAggregation</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value to assign to the aggregations</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html"><abbr title="\Microsoft\Graph\Model\SearchHitsContainer">SearchHitsContainer</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The SearchHitsContainer</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setHits">
         setHits()
         <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html#method_setHits" class="headerlink"><i class="fas fa-link"></i></a>
@@ -626,7 +726,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchHitsContainer.php"><a href="files/src-model-searchhitscontainer.html"><abbr title="src/Model/SearchHitsContainer.php">SearchHitsContainer.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hits
@@ -721,7 +821,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchHitsContainer.php"><a href="files/src-model-searchhitscontainer.html"><abbr title="src/Model/SearchHitsContainer.php">SearchHitsContainer.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">82</span>
+    <span class="phpdocumentor-element-found-in__line">115</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the moreResultsAvailable
@@ -814,7 +914,7 @@ Provides information if more results are available. Based on this information, y
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchHitsContainer.php"><a href="files/src-model-searchhitscontainer.html"><abbr title="src/Model/SearchHitsContainer.php">SearchHitsContainer.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">143</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the total

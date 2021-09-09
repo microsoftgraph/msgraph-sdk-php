@@ -187,7 +187,7 @@ Specifies settings for an application that implements a web API.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the appId
-The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.</dd>
+The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getAppManagementPolicies">getAppManagementPolicies()</a>
@@ -249,7 +249,7 @@ Read-only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the description
-An optional description of the application. Returned by default. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.</dd>
+An optional description of the application. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getDisabledByMicrosoftStatus">getDisabledByMicrosoftStatus()</a>
@@ -281,7 +281,7 @@ Read-only. Nullable.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the groupMembershipClaims
-Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).</dd>
+Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getHomeRealmDiscoveryPolicies">getHomeRealmDiscoveryPolicies()</a>
@@ -304,7 +304,7 @@ Read-only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the identifierUris
-The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).</dd>
+The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getInfo">getInfo()</a>
@@ -312,7 +312,7 @@ The URIs that identify the application within its Azure AD tenant, or within a v
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-InformationalUrl.html"><abbr title="\Beta\Microsoft\Graph\Model\InformationalUrl">InformationalUrl</abbr></a>|null    </span>
 </dt>
 <dd>Gets the info
-Basic profile information of the application, such as it&#039;s marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).</dd>
+Basic profile information of the application such as  app&#039;s marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getIsDeviceOnlyAuthSupported">getIsDeviceOnlyAuthSupported()</a>
@@ -328,7 +328,7 @@ Specifies whether this application supports device authentication without a user
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the isFallbackPublicClient
-Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.</dd>
+Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getKeyCredentials">getKeyCredentials()</a>
@@ -422,7 +422,7 @@ Specifies settings for installed clients such as desktop or mobile devices.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the publisherDomain
-The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).</dd>
+The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application&#039;s publisher domain. Supports $filter (eq, ne, ge, le, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getRequiredResourceAccess">getRequiredResourceAccess()</a>
@@ -438,7 +438,7 @@ Specifies the resources that the application needs to access. This property also
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the signInAudience
-Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).</dd>
+Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getSpa">getSpa()</a>
@@ -461,7 +461,7 @@ Specifies settings for a single-page application, including sign out URLs and re
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the tags
-Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, NOT, ge, le, startsWith).</dd>
+Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getTokenEncryptionKeyId">getTokenEncryptionKeyId()</a>
@@ -532,7 +532,7 @@ Specifies settings for an application that implements a web API.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the appId
-The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.</dd>
+The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setAppManagementPolicies">setAppManagementPolicies()</a>
@@ -594,7 +594,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the description
-An optional description of the application. Returned by default. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.</dd>
+An optional description of the application. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setDisabledByMicrosoftStatus">setDisabledByMicrosoftStatus()</a>
@@ -626,7 +626,7 @@ Read-only. Nullable.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the groupMembershipClaims
-Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).</dd>
+Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setHomeRealmDiscoveryPolicies">setHomeRealmDiscoveryPolicies()</a>
@@ -649,7 +649,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the identifierUris
-The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).</dd>
+The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setInfo">setInfo()</a>
@@ -657,7 +657,7 @@ The URIs that identify the application within its Azure AD tenant, or within a v
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the info
-Basic profile information of the application, such as it&#039;s marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).</dd>
+Basic profile information of the application such as  app&#039;s marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setIsDeviceOnlyAuthSupported">setIsDeviceOnlyAuthSupported()</a>
@@ -673,7 +673,7 @@ Specifies whether this application supports device authentication without a user
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the isFallbackPublicClient
-Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.</dd>
+Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setKeyCredentials">setKeyCredentials()</a>
@@ -760,7 +760,7 @@ Specifies settings for installed clients such as desktop or mobile devices.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the publisherDomain
-The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).</dd>
+The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application&#039;s publisher domain. Supports $filter (eq, ne, ge, le, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setRequiredResourceAccess">setRequiredResourceAccess()</a>
@@ -776,7 +776,7 @@ Specifies the resources that the application needs to access. This property also
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the signInAudience
-Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).</dd>
+Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setSpa">setSpa()</a>
@@ -799,7 +799,7 @@ Specifies settings for a single-page application, including sign out URLs and re
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the tags
-Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, NOT, ge, le, startsWith).</dd>
+Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setTokenEncryptionKeyId">setTokenEncryptionKeyId()</a>
@@ -999,7 +999,7 @@ Specifies settings for an application that implements a web API.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appId
-The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.</p>
+The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1285,7 +1285,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the description
-An optional description of the application. Returned by default. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.</p>
+An optional description of the application. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1429,7 +1429,7 @@ Read-only. Nullable.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the groupMembershipClaims
-Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).</p>
+Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1536,7 +1536,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the identifierUris
-The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).</p>
+The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1572,7 +1572,7 @@ The URIs that identify the application within its Azure AD tenant, or within a v
 </aside>
 
         <p class="phpdocumentor-summary">Gets the info
-Basic profile information of the application, such as it&#039;s marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).</p>
+Basic profile information of the application such as  app&#039;s marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1644,7 +1644,7 @@ Specifies whether this application supports device authentication without a user
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isFallbackPublicClient
-Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.</p>
+Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2074,7 +2074,7 @@ Specifies settings for installed clients such as desktop or mobile devices.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the publisherDomain
-The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).</p>
+The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application&#039;s publisher domain. Supports $filter (eq, ne, ge, le, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2146,7 +2146,7 @@ Specifies the resources that the application needs to access. This property also
 </aside>
 
         <p class="phpdocumentor-summary">Gets the signInAudience
-Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).</p>
+Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2253,7 +2253,7 @@ Specifies settings for a single-page application, including sign out URLs and re
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tags
-Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, NOT, ge, le, startsWith).</p>
+Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2587,7 +2587,7 @@ Specifies settings for an application that implements a web API.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appId
-The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.</p>
+The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2961,7 +2961,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the description
-An optional description of the application. Returned by default. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.</p>
+An optional description of the application. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3149,7 +3149,7 @@ Read-only. Nullable.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the groupMembershipClaims
-Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).</p>
+Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3289,7 +3289,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the identifierUris
-The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).</p>
+The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3336,7 +3336,7 @@ The URIs that identify the application within its Azure AD tenant, or within a v
 </aside>
 
         <p class="phpdocumentor-summary">Sets the info
-Basic profile information of the application, such as it&#039;s marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).</p>
+Basic profile information of the application such as  app&#039;s marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3430,7 +3430,7 @@ Specifies whether this application supports device authentication without a user
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isFallbackPublicClient
-Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.</p>
+Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3946,7 +3946,7 @@ Specifies settings for installed clients such as desktop or mobile devices.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the publisherDomain
-The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).</p>
+The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application&#039;s publisher domain. Supports $filter (eq, ne, ge, le, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4040,7 +4040,7 @@ Specifies the resources that the application needs to access. This property also
 </aside>
 
         <p class="phpdocumentor-summary">Sets the signInAudience
-Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).</p>
+Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4180,7 +4180,7 @@ Specifies settings for a single-page application, including sign out URLs and re
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tags
-Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, NOT, ge, le, startsWith).</p>
+Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

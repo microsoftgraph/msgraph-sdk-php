@@ -26,7 +26,7 @@ class Conversation extends Entity
 {
     /**
     * Gets the hasAttachments
-    * Indicates whether any of the posts within this Conversation has at least one attachment.
+    * Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
     *
     * @return bool|null The hasAttachments
     */
@@ -41,7 +41,7 @@ class Conversation extends Entity
     
     /**
     * Sets the hasAttachments
-    * Indicates whether any of the posts within this Conversation has at least one attachment.
+    * Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
     *
     * @param bool $val The hasAttachments
     *
@@ -88,7 +88,7 @@ class Conversation extends Entity
     
     /**
     * Gets the preview
-    * A short summary from the body of the latest post in this converstaion.
+    * A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
     *
     * @return string|null The preview
     */
@@ -103,7 +103,7 @@ class Conversation extends Entity
     
     /**
     * Sets the preview
-    * A short summary from the body of the latest post in this converstaion.
+    * A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
     *
     * @param string $val The preview
     *

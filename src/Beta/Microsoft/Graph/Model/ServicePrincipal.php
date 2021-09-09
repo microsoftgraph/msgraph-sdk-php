@@ -263,7 +263,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the appOwnerOrganizationId
-    * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+    * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
     *
     * @return string|null The appOwnerOrganizationId
     */
@@ -278,7 +278,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the appOwnerOrganizationId
-    * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+    * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
     *
     * @param string $val The appOwnerOrganizationId
     *
@@ -676,7 +676,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the passwordCredentials
-    * The collection of password credentials associated with the service principal. Not nullable.
+    * The collection of password credentials associated with the application. Not nullable.
      *
      * @return array|null The passwordCredentials
      */
@@ -691,7 +691,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the passwordCredentials
-    * The collection of password credentials associated with the service principal. Not nullable.
+    * The collection of password credentials associated with the application. Not nullable.
     *
     * @param PasswordCredential $val The passwordCredentials
     *
@@ -973,7 +973,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Gets the servicePrincipalType
-    * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity.
+    * Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
     *
     * @return string|null The servicePrincipalType
     */
@@ -988,7 +988,7 @@ class ServicePrincipal extends DirectoryObject
     
     /**
     * Sets the servicePrincipalType
-    * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity.
+    * Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
     *
     * @param string $val The servicePrincipalType
     *
@@ -1120,7 +1120,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the appRoleAssignedTo
-    * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+    * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      *
      * @return array|null The appRoleAssignedTo
      */
@@ -1135,7 +1135,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the appRoleAssignedTo
-    * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+    * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
     *
     * @param AppRoleAssignment $val The appRoleAssignedTo
     *
@@ -1478,7 +1478,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the tokenIssuancePolicies
-    * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+    * The tokenIssuancePolicies assigned to this service principal.
      *
      * @return array|null The tokenIssuancePolicies
      */
@@ -1493,7 +1493,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the tokenIssuancePolicies
-    * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
+    * The tokenIssuancePolicies assigned to this service principal.
     *
     * @param TokenIssuancePolicy $val The tokenIssuancePolicies
     *
@@ -1508,7 +1508,7 @@ class ServicePrincipal extends DirectoryObject
 
      /** 
      * Gets the tokenLifetimePolicies
-    * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+    * The tokenLifetimePolicies assigned to this service principal.
      *
      * @return array|null The tokenLifetimePolicies
      */
@@ -1523,7 +1523,7 @@ class ServicePrincipal extends DirectoryObject
     
     /** 
     * Sets the tokenLifetimePolicies
-    * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
+    * The tokenLifetimePolicies assigned to this service principal.
     *
     * @param TokenLifetimePolicy $val The tokenLifetimePolicies
     *

@@ -201,7 +201,7 @@ Telephone number for the organization. Although this is a string collection, onl
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the certificateBasedAuthConfiguration
-Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</dd>
+Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getCity">getCity()</a>
@@ -256,7 +256,7 @@ The display name for the tenant.</dd>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the extensions
-The collection of open extensions defined for the organization resource. Nullable.</dd>
+The collection of open extensions defined for the organization. Read-only. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -295,7 +295,7 @@ Mobile device management authority. Possible values are: unknown, intune, sccm, 
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
 <dd>Gets the onPremisesLastSyncDateTime
-The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.</dd>
+The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getOnPremisesSyncEnabled">getOnPremisesSyncEnabled()</a>
@@ -303,7 +303,7 @@ The time and date at which the tenant was last synced with the on-premises direc
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the onPremisesSyncEnabled
-true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).</dd>
+true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getPostalCode">getPostalCode()</a>
@@ -319,7 +319,7 @@ Postal code of the address for the organization.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the preferredLanguage
-The preferred language for the organization. Should follow ISO 639-1 Code; for example en.</dd>
+The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getPrivacyProfile">getPrivacyProfile()</a>
@@ -434,7 +434,7 @@ Telephone number for the organization. Although this is a string collection, onl
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a>    </span>
 </dt>
 <dd>Sets the certificateBasedAuthConfiguration
-Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</dd>
+Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_setCity">setCity()</a>
@@ -489,7 +489,7 @@ The display name for the tenant.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a>    </span>
 </dt>
 <dd>Sets the extensions
-The collection of open extensions defined for the organization resource. Nullable.</dd>
+The collection of open extensions defined for the organization. Read-only. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -528,7 +528,7 @@ Mobile device management authority. Possible values are: unknown, intune, sccm, 
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a>    </span>
 </dt>
 <dd>Sets the onPremisesLastSyncDateTime
-The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.</dd>
+The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_setOnPremisesSyncEnabled">setOnPremisesSyncEnabled()</a>
@@ -536,7 +536,7 @@ The time and date at which the tenant was last synced with the on-premises direc
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a>    </span>
 </dt>
 <dd>Sets the onPremisesSyncEnabled
-true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).</dd>
+true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_setPostalCode">setPostalCode()</a>
@@ -552,7 +552,7 @@ Postal code of the address for the organization.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a>    </span>
 </dt>
 <dd>Sets the preferredLanguage
-The preferred language for the organization. Should follow ISO 639-1 Code; for example en.</dd>
+The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_setPrivacyProfile">setPrivacyProfile()</a>
@@ -845,7 +845,7 @@ Telephone number for the organization. Although this is a string collection, onl
 </aside>
 
         <p class="phpdocumentor-summary">Gets the certificateBasedAuthConfiguration
-Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</p>
+Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1096,7 +1096,7 @@ The display name for the tenant.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the extensions
-The collection of open extensions defined for the organization resource. Nullable.</p>
+The collection of open extensions defined for the organization. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1275,7 +1275,7 @@ Mobile device management authority. Possible values are: unknown, intune, sccm, 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesLastSyncDateTime
-The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.</p>
+The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1311,7 +1311,7 @@ The time and date at which the tenant was last synced with the on-premises direc
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesSyncEnabled
-true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).</p>
+true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1383,7 +1383,7 @@ Postal code of the address for the organization.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the preferredLanguage
-The preferred language for the organization. Should follow ISO 639-1 Code; for example en.</p>
+The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1951,7 +1951,7 @@ Telephone number for the organization. Although this is a string collection, onl
 </aside>
 
         <p class="phpdocumentor-summary">Sets the certificateBasedAuthConfiguration
-Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</p>
+Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2279,7 +2279,7 @@ The display name for the tenant.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the extensions
-The collection of open extensions defined for the organization resource. Nullable.</p>
+The collection of open extensions defined for the organization. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2513,7 +2513,7 @@ Mobile device management authority. Possible values are: unknown, intune, sccm, 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesLastSyncDateTime
-The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.</p>
+The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2560,7 +2560,7 @@ The time and date at which the tenant was last synced with the on-premises direc
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesSyncEnabled
-true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).</p>
+true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2654,7 +2654,7 @@ Postal code of the address for the organization.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the preferredLanguage
-The preferred language for the organization. Should follow ISO 639-1 Code; for example en.</p>
+The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
