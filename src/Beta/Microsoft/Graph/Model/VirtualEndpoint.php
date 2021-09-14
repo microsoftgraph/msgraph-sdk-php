@@ -176,6 +176,34 @@ class VirtualEndpoint extends Entity
     
 
      /** 
+     * Gets the supportedRegions
+     *
+     * @return array|null The supportedRegions
+     */
+    public function getSupportedRegions()
+    {
+        if (array_key_exists("supportedRegions", $this->_propDict)) {
+           return $this->_propDict["supportedRegions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the supportedRegions
+    *
+    * @param CloudPcSupportedRegion $val The supportedRegions
+    *
+    * @return VirtualEndpoint
+    */
+    public function setSupportedRegions($val)
+    {
+        $this->_propDict["supportedRegions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the userSettings
     * Cloud PC user settings.
      *
