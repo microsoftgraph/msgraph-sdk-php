@@ -58,7 +58,7 @@ class AggregationOption extends Entity
     }
     /**
     * Gets the field
-    * Specifies the field in the schema of the specified entity type that aggregation should be computed on. Required.
+    * Computes aggregation on the field while the field exists in current entity type. Required.
     *
     * @return string|null The field
     */
@@ -73,7 +73,7 @@ class AggregationOption extends Entity
 
     /**
     * Sets the field
-    * Specifies the field in the schema of the specified entity type that aggregation should be computed on. Required.
+    * Computes aggregation on the field while the field exists in current entity type. Required.
     *
     * @param string $val The value of the field
     *

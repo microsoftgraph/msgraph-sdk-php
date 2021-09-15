@@ -121,7 +121,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Gets the descriptionForReviewers
-    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Supports $select.
+    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Email notifications support up to 256 characters. Supports $select.
     *
     * @return string|null The descriptionForReviewers
     */
@@ -136,7 +136,7 @@ class AccessReviewScheduleDefinition extends Entity
     
     /**
     * Sets the descriptionForReviewers
-    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Supports $select.
+    * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Email notifications support up to 256 characters. Supports $select.
     *
     * @param string $val The descriptionForReviewers
     *
