@@ -54,4 +54,33 @@ class MeetingAttendanceReport extends Entity
         return $this;
     }
     
+    /**
+    * Gets the totalParticipantCount
+    * Total number of participants.
+    *
+    * @return int|null The totalParticipantCount
+    */
+    public function getTotalParticipantCount()
+    {
+        if (array_key_exists("totalParticipantCount", $this->_propDict)) {
+            return $this->_propDict["totalParticipantCount"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the totalParticipantCount
+    * Total number of participants.
+    *
+    * @param int $val The totalParticipantCount
+    *
+    * @return MeetingAttendanceReport
+    */
+    public function setTotalParticipantCount($val)
+    {
+        $this->_propDict["totalParticipantCount"] = intval($val);
+        return $this;
+    }
+    
 }

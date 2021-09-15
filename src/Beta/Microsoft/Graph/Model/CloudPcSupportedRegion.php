@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Malware File
+* CloudPcSupportedRegion File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
 /**
-* Malware class
+* CloudPcSupportedRegion class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +22,33 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Malware extends Entity
+class CloudPcSupportedRegion extends Entity
 {
     /**
-    * Gets the description
-    * Contains the virus details for the malware facet.
+    * Gets the displayName
     *
-    * @return string|null The description
+    * @return string|null The displayName
     */
-    public function getDescription()
+    public function getDisplayName()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            return $this->_propDict["description"];
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
         } else {
             return null;
         }
     }
-
+    
     /**
-    * Sets the description
-    * Contains the virus details for the malware facet.
+    * Sets the displayName
     *
-    * @param string $val The value of the description
+    * @param string $val The displayName
     *
-    * @return Malware
+    * @return CloudPcSupportedRegion
     */
-    public function setDescription($val)
+    public function setDisplayName($val)
     {
-        $this->_propDict["description"] = $val;
+        $this->_propDict["displayName"] = $val;
         return $this;
     }
+    
 }
