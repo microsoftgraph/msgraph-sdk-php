@@ -350,6 +350,7 @@ class DriveItem extends BaseItem
     
     /**
     * Gets the malware
+    * Malware metadata, if the item was detected to contain malware. Read-only.
     *
     * @return Malware|null The malware
     */
@@ -368,6 +369,7 @@ class DriveItem extends BaseItem
     
     /**
     * Sets the malware
+    * Malware metadata, if the item was detected to contain malware. Read-only.
     *
     * @param Malware $val The malware
     *

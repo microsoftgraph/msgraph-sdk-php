@@ -86,6 +86,36 @@ class Directory extends Entity
     
 
      /** 
+     * Gets the federationConfigurations
+    * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
+     *
+     * @return array|null The federationConfigurations
+     */
+    public function getFederationConfigurations()
+    {
+        if (array_key_exists("federationConfigurations", $this->_propDict)) {
+           return $this->_propDict["federationConfigurations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the federationConfigurations
+    * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
+    *
+    * @param IdentityProviderBase $val The federationConfigurations
+    *
+    * @return Directory
+    */
+    public function setFederationConfigurations($val)
+    {
+        $this->_propDict["federationConfigurations"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the sharedEmailDomains
      *
      * @return array|null The sharedEmailDomains

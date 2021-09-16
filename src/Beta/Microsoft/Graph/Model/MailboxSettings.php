@@ -236,39 +236,6 @@ class MailboxSettings extends Entity
     }
 
     /**
-    * Gets the userPurpose
-    * The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
-    *
-    * @return UserPurpose|null The userPurpose
-    */
-    public function getUserPurpose()
-    {
-        if (array_key_exists("userPurpose", $this->_propDict)) {
-            if (is_a($this->_propDict["userPurpose"], "\Beta\Microsoft\Graph\Model\UserPurpose") || is_null($this->_propDict["userPurpose"])) {
-                return $this->_propDict["userPurpose"];
-            } else {
-                $this->_propDict["userPurpose"] = new UserPurpose($this->_propDict["userPurpose"]);
-                return $this->_propDict["userPurpose"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the userPurpose
-    * The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
-    *
-    * @param UserPurpose $val The value to assign to the userPurpose
-    *
-    * @return MailboxSettings The MailboxSettings
-    */
-    public function setUserPurpose($val)
-    {
-        $this->_propDict["userPurpose"] = $val;
-         return $this;
-    }
-
-    /**
     * Gets the userPurposeV2
     *
     * @return MailboxRecipientType|null The userPurposeV2

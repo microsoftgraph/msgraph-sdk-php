@@ -141,6 +141,33 @@ class ContinuousAccessEvaluationPolicy extends Entity
     }
     
     /**
+    * Gets the migrate
+    *
+    * @return bool|null The migrate
+    */
+    public function getMigrate()
+    {
+        if (array_key_exists("migrate", $this->_propDict)) {
+            return $this->_propDict["migrate"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the migrate
+    *
+    * @param bool $val The migrate
+    *
+    * @return ContinuousAccessEvaluationPolicy
+    */
+    public function setMigrate($val)
+    {
+        $this->_propDict["migrate"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the users
     * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty.
     *
