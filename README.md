@@ -67,33 +67,6 @@ class UsageExample
 }
 ```
 
-### Call Microsoft Graph using the beta endpoint and models
-
-The following is an example that shows how to call Microsoft Graph.
-
-```php
-use Microsoft\Graph\Graph;
-use Beta\Microsoft\Graph\Model as BetaModel;
-
-class UsageExample
-{
-    public function run()
-    {
-        $accessToken = 'xxx';
-
-        $graph = new Graph();
-        $graph->setAccessToken($accessToken);
-
-        $user = $graph->setApiVersion("beta")
-                      ->createRequest("GET", "/me")
-                      ->setReturnType(BetaModel\User::class)
-                      ->execute();
-
-        echo "Hello, I am $user->getGivenName() ";
-    }
-}
-```
-
 ## Develop
 
 ### Debug
