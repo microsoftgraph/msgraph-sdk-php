@@ -11,7 +11,7 @@ You can install the PHP SDK with Composer, either run `composer require microsof
 ```
 {
     "require": {
-        "microsoft/microsoft-graph": "^1.39.0"
+        "microsoft/microsoft-graph": "^2.0.0-RC1"
     }
 }
 ```
@@ -63,33 +63,6 @@ class UsageExample
                       ->execute();
 
         echo "Hello, I am {$user->getGivenName()}.";
-    }
-}
-```
-
-### Call Microsoft Graph using the beta endpoint and models
-
-The following is an example that shows how to call Microsoft Graph.
-
-```php
-use Microsoft\Graph\Graph;
-use Beta\Microsoft\Graph\Model as BetaModel;
-
-class UsageExample
-{
-    public function run()
-    {
-        $accessToken = 'xxx';
-
-        $graph = new Graph();
-        $graph->setAccessToken($accessToken);
-
-        $user = $graph->setApiVersion("beta")
-                      ->createRequest("GET", "/me")
-                      ->setReturnType(BetaModel\User::class)
-                      ->execute();
-
-        echo "Hello, I am $user->getGivenName() ";
     }
 }
 ```
