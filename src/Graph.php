@@ -8,6 +8,8 @@
 
 namespace Microsoft\Graph;
 
+use Microsoft\Graph\Http\AbstractGraphClient;
+
 /**
  * Class Graph
  * @package Microsoft\Graph
@@ -15,7 +17,7 @@ namespace Microsoft\Graph;
  * @license https://opensource.org/licenses/MIT MIT License
  * @link https://developer.microsoft.com/graph
  */
-class Graph extends Http\AbstractGraphClient
+class Graph extends AbstractGraphClient
 {
 
     /**
