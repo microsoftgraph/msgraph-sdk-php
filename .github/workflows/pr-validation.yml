@@ -5,9 +5,15 @@ name: "Validate Pull Request"
 
 on:
   push:
-    branches: [ main, dev ]
+    branches:
+      - main
+      - dev
+      - feat/[0-9]+.[0-9]+.[0-9]+ # Major rev branches
   pull_request:
-    branches: [ main, dev ]
+    branches:
+      - main
+      - dev
+      - feat/[0-9]+.[0-9]+.[0-9]+ # Major rev branches
     # Add assigned to defaults as a hack to easily trigger code-gen PRs to run validation
     types: [assigned, opened, synchronize, reopened]
 
