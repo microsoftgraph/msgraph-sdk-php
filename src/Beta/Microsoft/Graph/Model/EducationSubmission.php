@@ -25,6 +25,68 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationSubmission extends Entity
 {
     /**
+    * Gets the reassignedBy
+    *
+    * @return IdentitySet|null The reassignedBy
+    */
+    public function getReassignedBy()
+    {
+        if (array_key_exists("reassignedBy", $this->_propDict)) {
+            if (is_a($this->_propDict["reassignedBy"], "\Beta\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["reassignedBy"])) {
+                return $this->_propDict["reassignedBy"];
+            } else {
+                $this->_propDict["reassignedBy"] = new IdentitySet($this->_propDict["reassignedBy"]);
+                return $this->_propDict["reassignedBy"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reassignedBy
+    *
+    * @param IdentitySet $val The reassignedBy
+    *
+    * @return EducationSubmission
+    */
+    public function setReassignedBy($val)
+    {
+        $this->_propDict["reassignedBy"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the reassignedDateTime
+    *
+    * @return \DateTime|null The reassignedDateTime
+    */
+    public function getReassignedDateTime()
+    {
+        if (array_key_exists("reassignedDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["reassignedDateTime"], "\DateTime") || is_null($this->_propDict["reassignedDateTime"])) {
+                return $this->_propDict["reassignedDateTime"];
+            } else {
+                $this->_propDict["reassignedDateTime"] = new \DateTime($this->_propDict["reassignedDateTime"]);
+                return $this->_propDict["reassignedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reassignedDateTime
+    *
+    * @param \DateTime $val The reassignedDateTime
+    *
+    * @return EducationSubmission
+    */
+    public function setReassignedDateTime($val)
+    {
+        $this->_propDict["reassignedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the recipient
     * Who this submission is assigned to.
     *
