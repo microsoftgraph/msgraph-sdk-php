@@ -60,8 +60,9 @@ class ScheduleInformation extends Entity
     */
     public function getError()
     {
-        if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\FreeBusyError") || is_null($this->_propDict["error"])) {
+        if (array_key_exists("error", $this->_propDict) && !is_null($this->_propDict["error"])) {
+     
+            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\FreeBusyError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new FreeBusyError($this->_propDict["error"]);
@@ -117,18 +118,22 @@ class ScheduleInformation extends Entity
     * Gets the scheduleItems
     * Contains the items that describe the availability of the user or resource.
     *
-    * @return ScheduleItem|null The scheduleItems
+    * @return ScheduleItem[]|null The scheduleItems
     */
     public function getScheduleItems()
     {
-        if (array_key_exists("scheduleItems", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduleItems"], "\Microsoft\Graph\Model\ScheduleItem") || is_null($this->_propDict["scheduleItems"])) {
-                return $this->_propDict["scheduleItems"];
-            } else {
-                $this->_propDict["scheduleItems"] = new ScheduleItem($this->_propDict["scheduleItems"]);
-                return $this->_propDict["scheduleItems"];
+        if (array_key_exists("scheduleItems", $this->_propDict) && !is_null($this->_propDict["scheduleItems"])) {
+       
+            if (count($this->_propDict['scheduleItems']) > 0 && is_a($this->_propDict['scheduleItems'][0], 'ScheduleItem')) {
+               return $this->_propDict['scheduleItems'];
             }
-        }
+            $scheduleItems = [];
+            foreach ($this->_propDict['scheduleItems'] as $singleValue) {
+               $scheduleItems []= new ScheduleItem($singleValue);
+            }
+            $this->_propDict['scheduleItems'] = $scheduleItems;
+            return $this->_propDict['scheduleItems'];
+            }
         return null;
     }
 
@@ -136,7 +141,7 @@ class ScheduleInformation extends Entity
     * Sets the scheduleItems
     * Contains the items that describe the availability of the user or resource.
     *
-    * @param ScheduleItem $val The value to assign to the scheduleItems
+    * @param ScheduleItem[] $val The value to assign to the scheduleItems
     *
     * @return ScheduleInformation The ScheduleInformation
     */
@@ -154,8 +159,9 @@ class ScheduleInformation extends Entity
     */
     public function getWorkingHours()
     {
-        if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "\Microsoft\Graph\Model\WorkingHours") || is_null($this->_propDict["workingHours"])) {
+        if (array_key_exists("workingHours", $this->_propDict) && !is_null($this->_propDict["workingHours"])) {
+     
+            if (is_a($this->_propDict["workingHours"], "\Microsoft\Graph\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);

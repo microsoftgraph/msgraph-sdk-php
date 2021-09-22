@@ -29,22 +29,29 @@ class ManagedAppProtection extends ManagedAppPolicy
      * Gets the allowedDataStorageLocations
     * Data storage locations where a user may store managed data.
      *
-     * @return array|null The allowedDataStorageLocations
+     * @return ManagedAppDataStorageLocation[]|null The allowedDataStorageLocations
      */
     public function getAllowedDataStorageLocations()
     {
-        if (array_key_exists("allowedDataStorageLocations", $this->_propDict)) {
-           return $this->_propDict["allowedDataStorageLocations"];
-        } else {
-            return null;
+        if (array_key_exists('allowedDataStorageLocations', $this->_propDict) && !is_null($this->_propDict['allowedDataStorageLocations'])) {
+            $allowedDataStorageLocations = [];
+            if (count($this->_propDict['allowedDataStorageLocations']) > 0 && is_a($this->_propDict['allowedDataStorageLocations'][0], 'ManagedAppDataStorageLocation')) {
+                return $this->_propDict['allowedDataStorageLocations'];
+            }
+            foreach ($this->_propDict['allowedDataStorageLocations'] as $singleValue) {
+                $allowedDataStorageLocations []= new ManagedAppDataStorageLocation($singleValue);
+            }
+            $this->_propDict['allowedDataStorageLocations'] = $allowedDataStorageLocations;
+            return $this->_propDict['allowedDataStorageLocations'];
         }
+        return null;
     }
     
     /** 
     * Sets the allowedDataStorageLocations
     * Data storage locations where a user may store managed data.
     *
-    * @param ManagedAppDataStorageLocation $val The allowedDataStorageLocations
+    * @param ManagedAppDataStorageLocation[] $val The allowedDataStorageLocations
     *
     * @return ManagedAppProtection
     */
@@ -62,8 +69,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getAllowedInboundDataTransferSources()
     {
-        if (array_key_exists("allowedInboundDataTransferSources", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedInboundDataTransferSources"], "\Microsoft\Graph\Model\ManagedAppDataTransferLevel") || is_null($this->_propDict["allowedInboundDataTransferSources"])) {
+        if (array_key_exists("allowedInboundDataTransferSources", $this->_propDict) && !is_null($this->_propDict["allowedInboundDataTransferSources"])) {
+            if (is_a($this->_propDict["allowedInboundDataTransferSources"], "\Microsoft\Graph\Model\ManagedAppDataTransferLevel")) {
                 return $this->_propDict["allowedInboundDataTransferSources"];
             } else {
                 $this->_propDict["allowedInboundDataTransferSources"] = new ManagedAppDataTransferLevel($this->_propDict["allowedInboundDataTransferSources"]);
@@ -95,8 +102,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getAllowedOutboundClipboardSharingLevel()
     {
-        if (array_key_exists("allowedOutboundClipboardSharingLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedOutboundClipboardSharingLevel"], "\Microsoft\Graph\Model\ManagedAppClipboardSharingLevel") || is_null($this->_propDict["allowedOutboundClipboardSharingLevel"])) {
+        if (array_key_exists("allowedOutboundClipboardSharingLevel", $this->_propDict) && !is_null($this->_propDict["allowedOutboundClipboardSharingLevel"])) {
+            if (is_a($this->_propDict["allowedOutboundClipboardSharingLevel"], "\Microsoft\Graph\Model\ManagedAppClipboardSharingLevel")) {
                 return $this->_propDict["allowedOutboundClipboardSharingLevel"];
             } else {
                 $this->_propDict["allowedOutboundClipboardSharingLevel"] = new ManagedAppClipboardSharingLevel($this->_propDict["allowedOutboundClipboardSharingLevel"]);
@@ -128,8 +135,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getAllowedOutboundDataTransferDestinations()
     {
-        if (array_key_exists("allowedOutboundDataTransferDestinations", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedOutboundDataTransferDestinations"], "\Microsoft\Graph\Model\ManagedAppDataTransferLevel") || is_null($this->_propDict["allowedOutboundDataTransferDestinations"])) {
+        if (array_key_exists("allowedOutboundDataTransferDestinations", $this->_propDict) && !is_null($this->_propDict["allowedOutboundDataTransferDestinations"])) {
+            if (is_a($this->_propDict["allowedOutboundDataTransferDestinations"], "\Microsoft\Graph\Model\ManagedAppDataTransferLevel")) {
                 return $this->_propDict["allowedOutboundDataTransferDestinations"];
             } else {
                 $this->_propDict["allowedOutboundDataTransferDestinations"] = new ManagedAppDataTransferLevel($this->_propDict["allowedOutboundDataTransferDestinations"]);
@@ -306,8 +313,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getManagedBrowser()
     {
-        if (array_key_exists("managedBrowser", $this->_propDict)) {
-            if (is_a($this->_propDict["managedBrowser"], "\Microsoft\Graph\Model\ManagedBrowserType") || is_null($this->_propDict["managedBrowser"])) {
+        if (array_key_exists("managedBrowser", $this->_propDict) && !is_null($this->_propDict["managedBrowser"])) {
+            if (is_a($this->_propDict["managedBrowser"], "\Microsoft\Graph\Model\ManagedBrowserType")) {
                 return $this->_propDict["managedBrowser"];
             } else {
                 $this->_propDict["managedBrowser"] = new ManagedBrowserType($this->_propDict["managedBrowser"]);
@@ -571,8 +578,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getPeriodBeforePinReset()
     {
-        if (array_key_exists("periodBeforePinReset", $this->_propDict)) {
-            if (is_a($this->_propDict["periodBeforePinReset"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodBeforePinReset"])) {
+        if (array_key_exists("periodBeforePinReset", $this->_propDict) && !is_null($this->_propDict["periodBeforePinReset"])) {
+            if (is_a($this->_propDict["periodBeforePinReset"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["periodBeforePinReset"];
             } else {
                 $this->_propDict["periodBeforePinReset"] = new Duration($this->_propDict["periodBeforePinReset"]);
@@ -604,8 +611,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getPeriodOfflineBeforeAccessCheck()
     {
-        if (array_key_exists("periodOfflineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOfflineBeforeAccessCheck"])) {
+        if (array_key_exists("periodOfflineBeforeAccessCheck", $this->_propDict) && !is_null($this->_propDict["periodOfflineBeforeAccessCheck"])) {
+            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["periodOfflineBeforeAccessCheck"];
             } else {
                 $this->_propDict["periodOfflineBeforeAccessCheck"] = new Duration($this->_propDict["periodOfflineBeforeAccessCheck"]);
@@ -637,8 +644,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getPeriodOfflineBeforeWipeIsEnforced()
     {
-        if (array_key_exists("periodOfflineBeforeWipeIsEnforced", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeWipeIsEnforced"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOfflineBeforeWipeIsEnforced"])) {
+        if (array_key_exists("periodOfflineBeforeWipeIsEnforced", $this->_propDict) && !is_null($this->_propDict["periodOfflineBeforeWipeIsEnforced"])) {
+            if (is_a($this->_propDict["periodOfflineBeforeWipeIsEnforced"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["periodOfflineBeforeWipeIsEnforced"];
             } else {
                 $this->_propDict["periodOfflineBeforeWipeIsEnforced"] = new Duration($this->_propDict["periodOfflineBeforeWipeIsEnforced"]);
@@ -670,8 +677,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getPeriodOnlineBeforeAccessCheck()
     {
-        if (array_key_exists("periodOnlineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOnlineBeforeAccessCheck"])) {
+        if (array_key_exists("periodOnlineBeforeAccessCheck", $this->_propDict) && !is_null($this->_propDict["periodOnlineBeforeAccessCheck"])) {
+            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["periodOnlineBeforeAccessCheck"];
             } else {
                 $this->_propDict["periodOnlineBeforeAccessCheck"] = new Duration($this->_propDict["periodOnlineBeforeAccessCheck"]);
@@ -703,8 +710,8 @@ class ManagedAppProtection extends ManagedAppPolicy
     */
     public function getPinCharacterSet()
     {
-        if (array_key_exists("pinCharacterSet", $this->_propDict)) {
-            if (is_a($this->_propDict["pinCharacterSet"], "\Microsoft\Graph\Model\ManagedAppPinCharacterSet") || is_null($this->_propDict["pinCharacterSet"])) {
+        if (array_key_exists("pinCharacterSet", $this->_propDict) && !is_null($this->_propDict["pinCharacterSet"])) {
+            if (is_a($this->_propDict["pinCharacterSet"], "\Microsoft\Graph\Model\ManagedAppPinCharacterSet")) {
                 return $this->_propDict["pinCharacterSet"];
             } else {
                 $this->_propDict["pinCharacterSet"] = new ManagedAppPinCharacterSet($this->_propDict["pinCharacterSet"]);

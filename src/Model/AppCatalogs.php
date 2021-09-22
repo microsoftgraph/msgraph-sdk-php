@@ -28,21 +28,28 @@ class AppCatalogs extends Entity
      /** 
      * Gets the teamsApps
      *
-     * @return array|null The teamsApps
+     * @return TeamsApp[]|null The teamsApps
      */
     public function getTeamsApps()
     {
-        if (array_key_exists("teamsApps", $this->_propDict)) {
-           return $this->_propDict["teamsApps"];
-        } else {
-            return null;
+        if (array_key_exists('teamsApps', $this->_propDict) && !is_null($this->_propDict['teamsApps'])) {
+            $teamsApps = [];
+            if (count($this->_propDict['teamsApps']) > 0 && is_a($this->_propDict['teamsApps'][0], 'TeamsApp')) {
+                return $this->_propDict['teamsApps'];
+            }
+            foreach ($this->_propDict['teamsApps'] as $singleValue) {
+                $teamsApps []= new TeamsApp($singleValue);
+            }
+            $this->_propDict['teamsApps'] = $teamsApps;
+            return $this->_propDict['teamsApps'];
         }
+        return null;
     }
     
     /** 
     * Sets the teamsApps
     *
-    * @param TeamsApp $val The teamsApps
+    * @param TeamsApp[] $val The teamsApps
     *
     * @return AppCatalogs
     */

@@ -28,18 +28,22 @@ class RubricQuality extends Entity
     * Gets the criteria
     * The collection of criteria for this rubric quality.
     *
-    * @return RubricCriterion|null The criteria
+    * @return RubricCriterion[]|null The criteria
     */
     public function getCriteria()
     {
-        if (array_key_exists("criteria", $this->_propDict)) {
-            if (is_a($this->_propDict["criteria"], "\Microsoft\Graph\Model\RubricCriterion") || is_null($this->_propDict["criteria"])) {
-                return $this->_propDict["criteria"];
-            } else {
-                $this->_propDict["criteria"] = new RubricCriterion($this->_propDict["criteria"]);
-                return $this->_propDict["criteria"];
+        if (array_key_exists("criteria", $this->_propDict) && !is_null($this->_propDict["criteria"])) {
+       
+            if (count($this->_propDict['criteria']) > 0 && is_a($this->_propDict['criteria'][0], 'RubricCriterion')) {
+               return $this->_propDict['criteria'];
             }
-        }
+            $criteria = [];
+            foreach ($this->_propDict['criteria'] as $singleValue) {
+               $criteria []= new RubricCriterion($singleValue);
+            }
+            $this->_propDict['criteria'] = $criteria;
+            return $this->_propDict['criteria'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class RubricQuality extends Entity
     * Sets the criteria
     * The collection of criteria for this rubric quality.
     *
-    * @param RubricCriterion $val The value to assign to the criteria
+    * @param RubricCriterion[] $val The value to assign to the criteria
     *
     * @return RubricQuality The RubricQuality
     */
@@ -65,8 +69,9 @@ class RubricQuality extends Entity
     */
     public function getDescription()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            if (is_a($this->_propDict["description"], "\Microsoft\Graph\Model\EducationItemBody") || is_null($this->_propDict["description"])) {
+        if (array_key_exists("description", $this->_propDict) && !is_null($this->_propDict["description"])) {
+     
+            if (is_a($this->_propDict["description"], "\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["description"];
             } else {
                 $this->_propDict["description"] = new EducationItemBody($this->_propDict["description"]);

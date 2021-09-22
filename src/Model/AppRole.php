@@ -42,7 +42,7 @@ class AppRole extends Entity
     * Sets the allowedMemberTypes
     * Specifies whether this app role can be assigned to users and groups (by setting to ['User']), to other application's (by setting to ['Application'], or both (by setting to ['User', 'Application']). App roles supporting assignment to other applications' service principals are also known as application permissions. The 'Application' value is only supported for app roles defined on application entities.
     *
-    * @param string $val The value of the allowedMemberTypes
+    * @param string[] $val The value of the allowedMemberTypes
     *
     * @return AppRole
     */

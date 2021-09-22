@@ -28,18 +28,22 @@ class SearchAggregation extends Entity
     * Gets the buckets
     * Defines the actual buckets of the computed aggregation.
     *
-    * @return SearchBucket|null The buckets
+    * @return SearchBucket[]|null The buckets
     */
     public function getBuckets()
     {
-        if (array_key_exists("buckets", $this->_propDict)) {
-            if (is_a($this->_propDict["buckets"], "\Microsoft\Graph\Model\SearchBucket") || is_null($this->_propDict["buckets"])) {
-                return $this->_propDict["buckets"];
-            } else {
-                $this->_propDict["buckets"] = new SearchBucket($this->_propDict["buckets"]);
-                return $this->_propDict["buckets"];
+        if (array_key_exists("buckets", $this->_propDict) && !is_null($this->_propDict["buckets"])) {
+       
+            if (count($this->_propDict['buckets']) > 0 && is_a($this->_propDict['buckets'][0], 'SearchBucket')) {
+               return $this->_propDict['buckets'];
             }
-        }
+            $buckets = [];
+            foreach ($this->_propDict['buckets'] as $singleValue) {
+               $buckets []= new SearchBucket($singleValue);
+            }
+            $this->_propDict['buckets'] = $buckets;
+            return $this->_propDict['buckets'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class SearchAggregation extends Entity
     * Sets the buckets
     * Defines the actual buckets of the computed aggregation.
     *
-    * @param SearchBucket $val The value to assign to the buckets
+    * @param SearchBucket[] $val The value to assign to the buckets
     *
     * @return SearchAggregation The SearchAggregation
     */

@@ -32,8 +32,8 @@ class OpenShift extends ChangeTrackedEntity
     */
     public function getDraftOpenShift()
     {
-        if (array_key_exists("draftOpenShift", $this->_propDict)) {
-            if (is_a($this->_propDict["draftOpenShift"], "\Microsoft\Graph\Model\OpenShiftItem") || is_null($this->_propDict["draftOpenShift"])) {
+        if (array_key_exists("draftOpenShift", $this->_propDict) && !is_null($this->_propDict["draftOpenShift"])) {
+            if (is_a($this->_propDict["draftOpenShift"], "\Microsoft\Graph\Model\OpenShiftItem")) {
                 return $this->_propDict["draftOpenShift"];
             } else {
                 $this->_propDict["draftOpenShift"] = new OpenShiftItem($this->_propDict["draftOpenShift"]);
@@ -94,8 +94,8 @@ class OpenShift extends ChangeTrackedEntity
     */
     public function getSharedOpenShift()
     {
-        if (array_key_exists("sharedOpenShift", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedOpenShift"], "\Microsoft\Graph\Model\OpenShiftItem") || is_null($this->_propDict["sharedOpenShift"])) {
+        if (array_key_exists("sharedOpenShift", $this->_propDict) && !is_null($this->_propDict["sharedOpenShift"])) {
+            if (is_a($this->_propDict["sharedOpenShift"], "\Microsoft\Graph\Model\OpenShiftItem")) {
                 return $this->_propDict["sharedOpenShift"];
             } else {
                 $this->_propDict["sharedOpenShift"] = new OpenShiftItem($this->_propDict["sharedOpenShift"]);

@@ -32,8 +32,9 @@ class CommsNotification extends Entity
     */
     public function getChangeType()
     {
-        if (array_key_exists("changeType", $this->_propDict)) {
-            if (is_a($this->_propDict["changeType"], "\Microsoft\Graph\Model\ChangeType") || is_null($this->_propDict["changeType"])) {
+        if (array_key_exists("changeType", $this->_propDict) && !is_null($this->_propDict["changeType"])) {
+     
+            if (is_a($this->_propDict["changeType"], "\Microsoft\Graph\Model\ChangeType")) {
                 return $this->_propDict["changeType"];
             } else {
                 $this->_propDict["changeType"] = new ChangeType($this->_propDict["changeType"]);

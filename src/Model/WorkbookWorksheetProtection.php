@@ -32,8 +32,8 @@ class WorkbookWorksheetProtection extends Entity
     */
     public function getOptions()
     {
-        if (array_key_exists("options", $this->_propDict)) {
-            if (is_a($this->_propDict["options"], "\Microsoft\Graph\Model\WorkbookWorksheetProtectionOptions") || is_null($this->_propDict["options"])) {
+        if (array_key_exists("options", $this->_propDict) && !is_null($this->_propDict["options"])) {
+            if (is_a($this->_propDict["options"], "\Microsoft\Graph\Model\WorkbookWorksheetProtectionOptions")) {
                 return $this->_propDict["options"];
             } else {
                 $this->_propDict["options"] = new WorkbookWorksheetProtectionOptions($this->_propDict["options"]);

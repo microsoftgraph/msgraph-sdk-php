@@ -29,22 +29,29 @@ class InferenceClassification extends Entity
      * Gets the overrides
     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      *
-     * @return array|null The overrides
+     * @return InferenceClassificationOverride[]|null The overrides
      */
     public function getOverrides()
     {
-        if (array_key_exists("overrides", $this->_propDict)) {
-           return $this->_propDict["overrides"];
-        } else {
-            return null;
+        if (array_key_exists('overrides', $this->_propDict) && !is_null($this->_propDict['overrides'])) {
+            $overrides = [];
+            if (count($this->_propDict['overrides']) > 0 && is_a($this->_propDict['overrides'][0], 'InferenceClassificationOverride')) {
+                return $this->_propDict['overrides'];
+            }
+            foreach ($this->_propDict['overrides'] as $singleValue) {
+                $overrides []= new InferenceClassificationOverride($singleValue);
+            }
+            $this->_propDict['overrides'] = $overrides;
+            return $this->_propDict['overrides'];
         }
+        return null;
     }
     
     /** 
     * Sets the overrides
     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
     *
-    * @param InferenceClassificationOverride $val The overrides
+    * @param InferenceClassificationOverride[] $val The overrides
     *
     * @return InferenceClassification
     */

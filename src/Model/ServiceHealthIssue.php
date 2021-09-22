@@ -32,8 +32,8 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     */
     public function getClassification()
     {
-        if (array_key_exists("classification", $this->_propDict)) {
-            if (is_a($this->_propDict["classification"], "\Microsoft\Graph\Model\ServiceHealthClassificationType") || is_null($this->_propDict["classification"])) {
+        if (array_key_exists("classification", $this->_propDict) && !is_null($this->_propDict["classification"])) {
+            if (is_a($this->_propDict["classification"], "\Microsoft\Graph\Model\ServiceHealthClassificationType")) {
                 return $this->_propDict["classification"];
             } else {
                 $this->_propDict["classification"] = new ServiceHealthClassificationType($this->_propDict["classification"]);
@@ -181,8 +181,8 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     */
     public function getOrigin()
     {
-        if (array_key_exists("origin", $this->_propDict)) {
-            if (is_a($this->_propDict["origin"], "\Microsoft\Graph\Model\ServiceHealthOrigin") || is_null($this->_propDict["origin"])) {
+        if (array_key_exists("origin", $this->_propDict) && !is_null($this->_propDict["origin"])) {
+            if (is_a($this->_propDict["origin"], "\Microsoft\Graph\Model\ServiceHealthOrigin")) {
                 return $this->_propDict["origin"];
             } else {
                 $this->_propDict["origin"] = new ServiceHealthOrigin($this->_propDict["origin"]);
@@ -211,22 +211,29 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
      * Gets the posts
     * Collection of historical posts for the service issue.
      *
-     * @return array|null The posts
+     * @return ServiceHealthIssuePost[]|null The posts
      */
     public function getPosts()
     {
-        if (array_key_exists("posts", $this->_propDict)) {
-           return $this->_propDict["posts"];
-        } else {
-            return null;
+        if (array_key_exists('posts', $this->_propDict) && !is_null($this->_propDict['posts'])) {
+            $posts = [];
+            if (count($this->_propDict['posts']) > 0 && is_a($this->_propDict['posts'][0], 'ServiceHealthIssuePost')) {
+                return $this->_propDict['posts'];
+            }
+            foreach ($this->_propDict['posts'] as $singleValue) {
+                $posts []= new ServiceHealthIssuePost($singleValue);
+            }
+            $this->_propDict['posts'] = $posts;
+            return $this->_propDict['posts'];
         }
+        return null;
     }
     
     /** 
     * Sets the posts
     * Collection of historical posts for the service issue.
     *
-    * @param ServiceHealthIssuePost $val The posts
+    * @param ServiceHealthIssuePost[] $val The posts
     *
     * @return ServiceHealthIssue
     */
@@ -273,8 +280,8 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ServiceHealthStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ServiceHealthStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ServiceHealthStatus($this->_propDict["status"]);

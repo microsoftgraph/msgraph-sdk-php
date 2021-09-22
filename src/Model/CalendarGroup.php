@@ -116,22 +116,29 @@ class CalendarGroup extends Entity
      * Gets the calendars
     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
      *
-     * @return array|null The calendars
+     * @return Calendar[]|null The calendars
      */
     public function getCalendars()
     {
-        if (array_key_exists("calendars", $this->_propDict)) {
-           return $this->_propDict["calendars"];
-        } else {
-            return null;
+        if (array_key_exists('calendars', $this->_propDict) && !is_null($this->_propDict['calendars'])) {
+            $calendars = [];
+            if (count($this->_propDict['calendars']) > 0 && is_a($this->_propDict['calendars'][0], 'Calendar')) {
+                return $this->_propDict['calendars'];
+            }
+            foreach ($this->_propDict['calendars'] as $singleValue) {
+                $calendars []= new Calendar($singleValue);
+            }
+            $this->_propDict['calendars'] = $calendars;
+            return $this->_propDict['calendars'];
         }
+        return null;
     }
     
     /** 
     * Sets the calendars
     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
     *
-    * @param Calendar $val The calendars
+    * @param Calendar[] $val The calendars
     *
     * @return CalendarGroup
     */

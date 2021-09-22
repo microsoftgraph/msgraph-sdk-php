@@ -148,8 +148,8 @@ class MobileThreatDefenseConnector extends Entity
     */
     public function getLastHeartbeatDateTime()
     {
-        if (array_key_exists("lastHeartbeatDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime") || is_null($this->_propDict["lastHeartbeatDateTime"])) {
+        if (array_key_exists("lastHeartbeatDateTime", $this->_propDict) && !is_null($this->_propDict["lastHeartbeatDateTime"])) {
+            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime")) {
                 return $this->_propDict["lastHeartbeatDateTime"];
             } else {
                 $this->_propDict["lastHeartbeatDateTime"] = new \DateTime($this->_propDict["lastHeartbeatDateTime"]);
@@ -181,8 +181,8 @@ class MobileThreatDefenseConnector extends Entity
     */
     public function getPartnerState()
     {
-        if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\MobileThreatPartnerTenantState") || is_null($this->_propDict["partnerState"])) {
+        if (array_key_exists("partnerState", $this->_propDict) && !is_null($this->_propDict["partnerState"])) {
+            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\MobileThreatPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new MobileThreatPartnerTenantState($this->_propDict["partnerState"]);

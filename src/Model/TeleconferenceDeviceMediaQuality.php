@@ -32,8 +32,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getAverageInboundJitter()
     {
-        if (array_key_exists("averageInboundJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["averageInboundJitter"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["averageInboundJitter"])) {
+        if (array_key_exists("averageInboundJitter", $this->_propDict) && !is_null($this->_propDict["averageInboundJitter"])) {
+     
+            if (is_a($this->_propDict["averageInboundJitter"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["averageInboundJitter"];
             } else {
                 $this->_propDict["averageInboundJitter"] = new Duration($this->_propDict["averageInboundJitter"]);
@@ -93,8 +94,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getAverageInboundRoundTripDelay()
     {
-        if (array_key_exists("averageInboundRoundTripDelay", $this->_propDict)) {
-            if (is_a($this->_propDict["averageInboundRoundTripDelay"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["averageInboundRoundTripDelay"])) {
+        if (array_key_exists("averageInboundRoundTripDelay", $this->_propDict) && !is_null($this->_propDict["averageInboundRoundTripDelay"])) {
+     
+            if (is_a($this->_propDict["averageInboundRoundTripDelay"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["averageInboundRoundTripDelay"];
             } else {
                 $this->_propDict["averageInboundRoundTripDelay"] = new Duration($this->_propDict["averageInboundRoundTripDelay"]);
@@ -126,8 +128,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getAverageOutboundJitter()
     {
-        if (array_key_exists("averageOutboundJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["averageOutboundJitter"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["averageOutboundJitter"])) {
+        if (array_key_exists("averageOutboundJitter", $this->_propDict) && !is_null($this->_propDict["averageOutboundJitter"])) {
+     
+            if (is_a($this->_propDict["averageOutboundJitter"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["averageOutboundJitter"];
             } else {
                 $this->_propDict["averageOutboundJitter"] = new Duration($this->_propDict["averageOutboundJitter"]);
@@ -187,8 +190,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getAverageOutboundRoundTripDelay()
     {
-        if (array_key_exists("averageOutboundRoundTripDelay", $this->_propDict)) {
-            if (is_a($this->_propDict["averageOutboundRoundTripDelay"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["averageOutboundRoundTripDelay"])) {
+        if (array_key_exists("averageOutboundRoundTripDelay", $this->_propDict) && !is_null($this->_propDict["averageOutboundRoundTripDelay"])) {
+     
+            if (is_a($this->_propDict["averageOutboundRoundTripDelay"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["averageOutboundRoundTripDelay"];
             } else {
                 $this->_propDict["averageOutboundRoundTripDelay"] = new Duration($this->_propDict["averageOutboundRoundTripDelay"]);
@@ -332,8 +336,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getMaximumInboundJitter()
     {
-        if (array_key_exists("maximumInboundJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumInboundJitter"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maximumInboundJitter"])) {
+        if (array_key_exists("maximumInboundJitter", $this->_propDict) && !is_null($this->_propDict["maximumInboundJitter"])) {
+     
+            if (is_a($this->_propDict["maximumInboundJitter"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maximumInboundJitter"];
             } else {
                 $this->_propDict["maximumInboundJitter"] = new Duration($this->_propDict["maximumInboundJitter"]);
@@ -393,8 +398,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getMaximumInboundRoundTripDelay()
     {
-        if (array_key_exists("maximumInboundRoundTripDelay", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumInboundRoundTripDelay"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maximumInboundRoundTripDelay"])) {
+        if (array_key_exists("maximumInboundRoundTripDelay", $this->_propDict) && !is_null($this->_propDict["maximumInboundRoundTripDelay"])) {
+     
+            if (is_a($this->_propDict["maximumInboundRoundTripDelay"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maximumInboundRoundTripDelay"];
             } else {
                 $this->_propDict["maximumInboundRoundTripDelay"] = new Duration($this->_propDict["maximumInboundRoundTripDelay"]);
@@ -426,8 +432,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getMaximumOutboundJitter()
     {
-        if (array_key_exists("maximumOutboundJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumOutboundJitter"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maximumOutboundJitter"])) {
+        if (array_key_exists("maximumOutboundJitter", $this->_propDict) && !is_null($this->_propDict["maximumOutboundJitter"])) {
+     
+            if (is_a($this->_propDict["maximumOutboundJitter"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maximumOutboundJitter"];
             } else {
                 $this->_propDict["maximumOutboundJitter"] = new Duration($this->_propDict["maximumOutboundJitter"]);
@@ -487,8 +494,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getMaximumOutboundRoundTripDelay()
     {
-        if (array_key_exists("maximumOutboundRoundTripDelay", $this->_propDict)) {
-            if (is_a($this->_propDict["maximumOutboundRoundTripDelay"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maximumOutboundRoundTripDelay"])) {
+        if (array_key_exists("maximumOutboundRoundTripDelay", $this->_propDict) && !is_null($this->_propDict["maximumOutboundRoundTripDelay"])) {
+     
+            if (is_a($this->_propDict["maximumOutboundRoundTripDelay"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["maximumOutboundRoundTripDelay"];
             } else {
                 $this->_propDict["maximumOutboundRoundTripDelay"] = new Duration($this->_propDict["maximumOutboundRoundTripDelay"]);
@@ -520,8 +528,9 @@ class TeleconferenceDeviceMediaQuality extends Entity
     */
     public function getMediaDuration()
     {
-        if (array_key_exists("mediaDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaDuration"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["mediaDuration"])) {
+        if (array_key_exists("mediaDuration", $this->_propDict) && !is_null($this->_propDict["mediaDuration"])) {
+     
+            if (is_a($this->_propDict["mediaDuration"], "\Microsoft\Graph\Model\Duration")) {
                 return $this->_propDict["mediaDuration"];
             } else {
                 $this->_propDict["mediaDuration"] = new Duration($this->_propDict["mediaDuration"]);

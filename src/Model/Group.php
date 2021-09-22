@@ -29,22 +29,29 @@ class Group extends DirectoryObject
      * Gets the assignedLabels
     * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
      *
-     * @return array|null The assignedLabels
+     * @return AssignedLabel[]|null The assignedLabels
      */
     public function getAssignedLabels()
     {
-        if (array_key_exists("assignedLabels", $this->_propDict)) {
-           return $this->_propDict["assignedLabels"];
-        } else {
-            return null;
+        if (array_key_exists('assignedLabels', $this->_propDict) && !is_null($this->_propDict['assignedLabels'])) {
+            $assignedLabels = [];
+            if (count($this->_propDict['assignedLabels']) > 0 && is_a($this->_propDict['assignedLabels'][0], 'AssignedLabel')) {
+                return $this->_propDict['assignedLabels'];
+            }
+            foreach ($this->_propDict['assignedLabels'] as $singleValue) {
+                $assignedLabels []= new AssignedLabel($singleValue);
+            }
+            $this->_propDict['assignedLabels'] = $assignedLabels;
+            return $this->_propDict['assignedLabels'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignedLabels
     * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
     *
-    * @param AssignedLabel $val The assignedLabels
+    * @param AssignedLabel[] $val The assignedLabels
     *
     * @return Group
     */
@@ -59,22 +66,29 @@ class Group extends DirectoryObject
      * Gets the assignedLicenses
     * The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq).Read-only.
      *
-     * @return array|null The assignedLicenses
+     * @return AssignedLicense[]|null The assignedLicenses
      */
     public function getAssignedLicenses()
     {
-        if (array_key_exists("assignedLicenses", $this->_propDict)) {
-           return $this->_propDict["assignedLicenses"];
-        } else {
-            return null;
+        if (array_key_exists('assignedLicenses', $this->_propDict) && !is_null($this->_propDict['assignedLicenses'])) {
+            $assignedLicenses = [];
+            if (count($this->_propDict['assignedLicenses']) > 0 && is_a($this->_propDict['assignedLicenses'][0], 'AssignedLicense')) {
+                return $this->_propDict['assignedLicenses'];
+            }
+            foreach ($this->_propDict['assignedLicenses'] as $singleValue) {
+                $assignedLicenses []= new AssignedLicense($singleValue);
+            }
+            $this->_propDict['assignedLicenses'] = $assignedLicenses;
+            return $this->_propDict['assignedLicenses'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignedLicenses
     * The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq).Read-only.
     *
-    * @param AssignedLicense $val The assignedLicenses
+    * @param AssignedLicense[] $val The assignedLicenses
     *
     * @return Group
     */
@@ -121,8 +135,8 @@ class Group extends DirectoryObject
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -212,8 +226,8 @@ class Group extends DirectoryObject
     */
     public function getExpirationDateTime()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+        if (array_key_exists("expirationDateTime", $this->_propDict) && !is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -332,8 +346,8 @@ class Group extends DirectoryObject
     */
     public function getLicenseProcessingState()
     {
-        if (array_key_exists("licenseProcessingState", $this->_propDict)) {
-            if (is_a($this->_propDict["licenseProcessingState"], "\Microsoft\Graph\Model\LicenseProcessingState") || is_null($this->_propDict["licenseProcessingState"])) {
+        if (array_key_exists("licenseProcessingState", $this->_propDict) && !is_null($this->_propDict["licenseProcessingState"])) {
+            if (is_a($this->_propDict["licenseProcessingState"], "\Microsoft\Graph\Model\LicenseProcessingState")) {
                 return $this->_propDict["licenseProcessingState"];
             } else {
                 $this->_propDict["licenseProcessingState"] = new LicenseProcessingState($this->_propDict["licenseProcessingState"]);
@@ -539,8 +553,8 @@ class Group extends DirectoryObject
     */
     public function getOnPremisesLastSyncDateTime()
     {
-        if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime") || is_null($this->_propDict["onPremisesLastSyncDateTime"])) {
+        if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict) && !is_null($this->_propDict["onPremisesLastSyncDateTime"])) {
+            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["onPremisesLastSyncDateTime"];
             } else {
                 $this->_propDict["onPremisesLastSyncDateTime"] = new \DateTime($this->_propDict["onPremisesLastSyncDateTime"]);
@@ -598,22 +612,29 @@ class Group extends DirectoryObject
      * Gets the onPremisesProvisioningErrors
     * Errors when using Microsoft synchronization product during provisioning. Returned by default. Supports $filter (eq, NOT).
      *
-     * @return array|null The onPremisesProvisioningErrors
+     * @return OnPremisesProvisioningError[]|null The onPremisesProvisioningErrors
      */
     public function getOnPremisesProvisioningErrors()
     {
-        if (array_key_exists("onPremisesProvisioningErrors", $this->_propDict)) {
-           return $this->_propDict["onPremisesProvisioningErrors"];
-        } else {
-            return null;
+        if (array_key_exists('onPremisesProvisioningErrors', $this->_propDict) && !is_null($this->_propDict['onPremisesProvisioningErrors'])) {
+            $onPremisesProvisioningErrors = [];
+            if (count($this->_propDict['onPremisesProvisioningErrors']) > 0 && is_a($this->_propDict['onPremisesProvisioningErrors'][0], 'OnPremisesProvisioningError')) {
+                return $this->_propDict['onPremisesProvisioningErrors'];
+            }
+            foreach ($this->_propDict['onPremisesProvisioningErrors'] as $singleValue) {
+                $onPremisesProvisioningErrors []= new OnPremisesProvisioningError($singleValue);
+            }
+            $this->_propDict['onPremisesProvisioningErrors'] = $onPremisesProvisioningErrors;
+            return $this->_propDict['onPremisesProvisioningErrors'];
         }
+        return null;
     }
     
     /** 
     * Sets the onPremisesProvisioningErrors
     * Errors when using Microsoft synchronization product during provisioning. Returned by default. Supports $filter (eq, NOT).
     *
-    * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
+    * @param OnPremisesProvisioningError[] $val The onPremisesProvisioningErrors
     *
     * @return Group
     */
@@ -805,8 +826,8 @@ class Group extends DirectoryObject
     */
     public function getRenewedDateTime()
     {
-        if (array_key_exists("renewedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["renewedDateTime"], "\DateTime") || is_null($this->_propDict["renewedDateTime"])) {
+        if (array_key_exists("renewedDateTime", $this->_propDict) && !is_null($this->_propDict["renewedDateTime"])) {
+            if (is_a($this->_propDict["renewedDateTime"], "\DateTime")) {
                 return $this->_propDict["renewedDateTime"];
             } else {
                 $this->_propDict["renewedDateTime"] = new \DateTime($this->_propDict["renewedDateTime"]);
@@ -1152,22 +1173,29 @@ class Group extends DirectoryObject
      * Gets the appRoleAssignments
     * Represents the app roles a group has been granted for an application. Supports $expand.
      *
-     * @return array|null The appRoleAssignments
+     * @return AppRoleAssignment[]|null The appRoleAssignments
      */
     public function getAppRoleAssignments()
     {
-        if (array_key_exists("appRoleAssignments", $this->_propDict)) {
-           return $this->_propDict["appRoleAssignments"];
-        } else {
-            return null;
+        if (array_key_exists('appRoleAssignments', $this->_propDict) && !is_null($this->_propDict['appRoleAssignments'])) {
+            $appRoleAssignments = [];
+            if (count($this->_propDict['appRoleAssignments']) > 0 && is_a($this->_propDict['appRoleAssignments'][0], 'AppRoleAssignment')) {
+                return $this->_propDict['appRoleAssignments'];
+            }
+            foreach ($this->_propDict['appRoleAssignments'] as $singleValue) {
+                $appRoleAssignments []= new AppRoleAssignment($singleValue);
+            }
+            $this->_propDict['appRoleAssignments'] = $appRoleAssignments;
+            return $this->_propDict['appRoleAssignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the appRoleAssignments
     * Represents the app roles a group has been granted for an application. Supports $expand.
     *
-    * @param AppRoleAssignment $val The appRoleAssignments
+    * @param AppRoleAssignment[] $val The appRoleAssignments
     *
     * @return Group
     */
@@ -1185,8 +1213,8 @@ class Group extends DirectoryObject
     */
     public function getCreatedOnBehalfOf()
     {
-        if (array_key_exists("createdOnBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["createdOnBehalfOf"], "\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["createdOnBehalfOf"])) {
+        if (array_key_exists("createdOnBehalfOf", $this->_propDict) && !is_null($this->_propDict["createdOnBehalfOf"])) {
+            if (is_a($this->_propDict["createdOnBehalfOf"], "\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["createdOnBehalfOf"];
             } else {
                 $this->_propDict["createdOnBehalfOf"] = new DirectoryObject($this->_propDict["createdOnBehalfOf"]);
@@ -1215,22 +1243,29 @@ class Group extends DirectoryObject
      * Gets the memberOf
     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The memberOf
+     * @return DirectoryObject[]|null The memberOf
      */
     public function getMemberOf()
     {
-        if (array_key_exists("memberOf", $this->_propDict)) {
-           return $this->_propDict["memberOf"];
-        } else {
-            return null;
+        if (array_key_exists('memberOf', $this->_propDict) && !is_null($this->_propDict['memberOf'])) {
+            $memberOf = [];
+            if (count($this->_propDict['memberOf']) > 0 && is_a($this->_propDict['memberOf'][0], 'DirectoryObject')) {
+                return $this->_propDict['memberOf'];
+            }
+            foreach ($this->_propDict['memberOf'] as $singleValue) {
+                $memberOf []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['memberOf'] = $memberOf;
+            return $this->_propDict['memberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the memberOf
     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The memberOf
+    * @param DirectoryObject[] $val The memberOf
     *
     * @return Group
     */
@@ -1245,22 +1280,29 @@ class Group extends DirectoryObject
      * Gets the members
     * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable. Supports $expand.
      *
-     * @return array|null The members
+     * @return DirectoryObject[]|null The members
      */
     public function getMembers()
     {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
+        if (array_key_exists('members', $this->_propDict) && !is_null($this->_propDict['members'])) {
+            $members = [];
+            if (count($this->_propDict['members']) > 0 && is_a($this->_propDict['members'][0], 'DirectoryObject')) {
+                return $this->_propDict['members'];
+            }
+            foreach ($this->_propDict['members'] as $singleValue) {
+                $members []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['members'] = $members;
+            return $this->_propDict['members'];
         }
+        return null;
     }
     
     /** 
     * Sets the members
     * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The members
+    * @param DirectoryObject[] $val The members
     *
     * @return Group
     */
@@ -1275,22 +1317,29 @@ class Group extends DirectoryObject
      * Gets the membersWithLicenseErrors
     * A list of group members with license errors from this group-based license assignment. Read-only.
      *
-     * @return array|null The membersWithLicenseErrors
+     * @return DirectoryObject[]|null The membersWithLicenseErrors
      */
     public function getMembersWithLicenseErrors()
     {
-        if (array_key_exists("membersWithLicenseErrors", $this->_propDict)) {
-           return $this->_propDict["membersWithLicenseErrors"];
-        } else {
-            return null;
+        if (array_key_exists('membersWithLicenseErrors', $this->_propDict) && !is_null($this->_propDict['membersWithLicenseErrors'])) {
+            $membersWithLicenseErrors = [];
+            if (count($this->_propDict['membersWithLicenseErrors']) > 0 && is_a($this->_propDict['membersWithLicenseErrors'][0], 'DirectoryObject')) {
+                return $this->_propDict['membersWithLicenseErrors'];
+            }
+            foreach ($this->_propDict['membersWithLicenseErrors'] as $singleValue) {
+                $membersWithLicenseErrors []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['membersWithLicenseErrors'] = $membersWithLicenseErrors;
+            return $this->_propDict['membersWithLicenseErrors'];
         }
+        return null;
     }
     
     /** 
     * Sets the membersWithLicenseErrors
     * A list of group members with license errors from this group-based license assignment. Read-only.
     *
-    * @param DirectoryObject $val The membersWithLicenseErrors
+    * @param DirectoryObject[] $val The membersWithLicenseErrors
     *
     * @return Group
     */
@@ -1305,22 +1354,29 @@ class Group extends DirectoryObject
      * Gets the owners
     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable. Supports $expand.
      *
-     * @return array|null The owners
+     * @return DirectoryObject[]|null The owners
      */
     public function getOwners()
     {
-        if (array_key_exists("owners", $this->_propDict)) {
-           return $this->_propDict["owners"];
-        } else {
-            return null;
+        if (array_key_exists('owners', $this->_propDict) && !is_null($this->_propDict['owners'])) {
+            $owners = [];
+            if (count($this->_propDict['owners']) > 0 && is_a($this->_propDict['owners'][0], 'DirectoryObject')) {
+                return $this->_propDict['owners'];
+            }
+            foreach ($this->_propDict['owners'] as $singleValue) {
+                $owners []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['owners'] = $owners;
+            return $this->_propDict['owners'];
         }
+        return null;
     }
     
     /** 
     * Sets the owners
     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The owners
+    * @param DirectoryObject[] $val The owners
     *
     * @return Group
     */
@@ -1335,22 +1391,29 @@ class Group extends DirectoryObject
      * Gets the permissionGrants
     * The permission that has been granted for a group to a specific application. Supports $expand.
      *
-     * @return array|null The permissionGrants
+     * @return ResourceSpecificPermissionGrant[]|null The permissionGrants
      */
     public function getPermissionGrants()
     {
-        if (array_key_exists("permissionGrants", $this->_propDict)) {
-           return $this->_propDict["permissionGrants"];
-        } else {
-            return null;
+        if (array_key_exists('permissionGrants', $this->_propDict) && !is_null($this->_propDict['permissionGrants'])) {
+            $permissionGrants = [];
+            if (count($this->_propDict['permissionGrants']) > 0 && is_a($this->_propDict['permissionGrants'][0], 'ResourceSpecificPermissionGrant')) {
+                return $this->_propDict['permissionGrants'];
+            }
+            foreach ($this->_propDict['permissionGrants'] as $singleValue) {
+                $permissionGrants []= new ResourceSpecificPermissionGrant($singleValue);
+            }
+            $this->_propDict['permissionGrants'] = $permissionGrants;
+            return $this->_propDict['permissionGrants'];
         }
+        return null;
     }
     
     /** 
     * Sets the permissionGrants
     * The permission that has been granted for a group to a specific application. Supports $expand.
     *
-    * @param ResourceSpecificPermissionGrant $val The permissionGrants
+    * @param ResourceSpecificPermissionGrant[] $val The permissionGrants
     *
     * @return Group
     */
@@ -1365,22 +1428,29 @@ class Group extends DirectoryObject
      * Gets the settings
     * Read-only. Nullable.
      *
-     * @return array|null The settings
+     * @return GroupSetting[]|null The settings
      */
     public function getSettings()
     {
-        if (array_key_exists("settings", $this->_propDict)) {
-           return $this->_propDict["settings"];
-        } else {
-            return null;
+        if (array_key_exists('settings', $this->_propDict) && !is_null($this->_propDict['settings'])) {
+            $settings = [];
+            if (count($this->_propDict['settings']) > 0 && is_a($this->_propDict['settings'][0], 'GroupSetting')) {
+                return $this->_propDict['settings'];
+            }
+            foreach ($this->_propDict['settings'] as $singleValue) {
+                $settings []= new GroupSetting($singleValue);
+            }
+            $this->_propDict['settings'] = $settings;
+            return $this->_propDict['settings'];
         }
+        return null;
     }
     
     /** 
     * Sets the settings
     * Read-only. Nullable.
     *
-    * @param GroupSetting $val The settings
+    * @param GroupSetting[] $val The settings
     *
     * @return Group
     */
@@ -1394,21 +1464,28 @@ class Group extends DirectoryObject
      /** 
      * Gets the transitiveMemberOf
      *
-     * @return array|null The transitiveMemberOf
+     * @return DirectoryObject[]|null The transitiveMemberOf
      */
     public function getTransitiveMemberOf()
     {
-        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
-           return $this->_propDict["transitiveMemberOf"];
-        } else {
-            return null;
+        if (array_key_exists('transitiveMemberOf', $this->_propDict) && !is_null($this->_propDict['transitiveMemberOf'])) {
+            $transitiveMemberOf = [];
+            if (count($this->_propDict['transitiveMemberOf']) > 0 && is_a($this->_propDict['transitiveMemberOf'][0], 'DirectoryObject')) {
+                return $this->_propDict['transitiveMemberOf'];
+            }
+            foreach ($this->_propDict['transitiveMemberOf'] as $singleValue) {
+                $transitiveMemberOf []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['transitiveMemberOf'] = $transitiveMemberOf;
+            return $this->_propDict['transitiveMemberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the transitiveMemberOf
     *
-    * @param DirectoryObject $val The transitiveMemberOf
+    * @param DirectoryObject[] $val The transitiveMemberOf
     *
     * @return Group
     */
@@ -1422,21 +1499,28 @@ class Group extends DirectoryObject
      /** 
      * Gets the transitiveMembers
      *
-     * @return array|null The transitiveMembers
+     * @return DirectoryObject[]|null The transitiveMembers
      */
     public function getTransitiveMembers()
     {
-        if (array_key_exists("transitiveMembers", $this->_propDict)) {
-           return $this->_propDict["transitiveMembers"];
-        } else {
-            return null;
+        if (array_key_exists('transitiveMembers', $this->_propDict) && !is_null($this->_propDict['transitiveMembers'])) {
+            $transitiveMembers = [];
+            if (count($this->_propDict['transitiveMembers']) > 0 && is_a($this->_propDict['transitiveMembers'][0], 'DirectoryObject')) {
+                return $this->_propDict['transitiveMembers'];
+            }
+            foreach ($this->_propDict['transitiveMembers'] as $singleValue) {
+                $transitiveMembers []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['transitiveMembers'] = $transitiveMembers;
+            return $this->_propDict['transitiveMembers'];
         }
+        return null;
     }
     
     /** 
     * Sets the transitiveMembers
     *
-    * @param DirectoryObject $val The transitiveMembers
+    * @param DirectoryObject[] $val The transitiveMembers
     *
     * @return Group
     */
@@ -1451,22 +1535,29 @@ class Group extends DirectoryObject
      * Gets the acceptedSenders
     * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
      *
-     * @return array|null The acceptedSenders
+     * @return DirectoryObject[]|null The acceptedSenders
      */
     public function getAcceptedSenders()
     {
-        if (array_key_exists("acceptedSenders", $this->_propDict)) {
-           return $this->_propDict["acceptedSenders"];
-        } else {
-            return null;
+        if (array_key_exists('acceptedSenders', $this->_propDict) && !is_null($this->_propDict['acceptedSenders'])) {
+            $acceptedSenders = [];
+            if (count($this->_propDict['acceptedSenders']) > 0 && is_a($this->_propDict['acceptedSenders'][0], 'DirectoryObject')) {
+                return $this->_propDict['acceptedSenders'];
+            }
+            foreach ($this->_propDict['acceptedSenders'] as $singleValue) {
+                $acceptedSenders []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['acceptedSenders'] = $acceptedSenders;
+            return $this->_propDict['acceptedSenders'];
         }
+        return null;
     }
     
     /** 
     * Sets the acceptedSenders
     * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
     *
-    * @param DirectoryObject $val The acceptedSenders
+    * @param DirectoryObject[] $val The acceptedSenders
     *
     * @return Group
     */
@@ -1484,8 +1575,8 @@ class Group extends DirectoryObject
     */
     public function getCalendar()
     {
-        if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "\Microsoft\Graph\Model\Calendar") || is_null($this->_propDict["calendar"])) {
+        if (array_key_exists("calendar", $this->_propDict) && !is_null($this->_propDict["calendar"])) {
+            if (is_a($this->_propDict["calendar"], "\Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -1514,22 +1605,29 @@ class Group extends DirectoryObject
      * Gets the calendarView
     * The calendar view for the calendar. Read-only.
      *
-     * @return array|null The calendarView
+     * @return Event[]|null The calendarView
      */
     public function getCalendarView()
     {
-        if (array_key_exists("calendarView", $this->_propDict)) {
-           return $this->_propDict["calendarView"];
-        } else {
-            return null;
+        if (array_key_exists('calendarView', $this->_propDict) && !is_null($this->_propDict['calendarView'])) {
+            $calendarView = [];
+            if (count($this->_propDict['calendarView']) > 0 && is_a($this->_propDict['calendarView'][0], 'Event')) {
+                return $this->_propDict['calendarView'];
+            }
+            foreach ($this->_propDict['calendarView'] as $singleValue) {
+                $calendarView []= new Event($singleValue);
+            }
+            $this->_propDict['calendarView'] = $calendarView;
+            return $this->_propDict['calendarView'];
         }
+        return null;
     }
     
     /** 
     * Sets the calendarView
     * The calendar view for the calendar. Read-only.
     *
-    * @param Event $val The calendarView
+    * @param Event[] $val The calendarView
     *
     * @return Group
     */
@@ -1544,22 +1642,29 @@ class Group extends DirectoryObject
      * Gets the conversations
     * The group's conversations.
      *
-     * @return array|null The conversations
+     * @return Conversation[]|null The conversations
      */
     public function getConversations()
     {
-        if (array_key_exists("conversations", $this->_propDict)) {
-           return $this->_propDict["conversations"];
-        } else {
-            return null;
+        if (array_key_exists('conversations', $this->_propDict) && !is_null($this->_propDict['conversations'])) {
+            $conversations = [];
+            if (count($this->_propDict['conversations']) > 0 && is_a($this->_propDict['conversations'][0], 'Conversation')) {
+                return $this->_propDict['conversations'];
+            }
+            foreach ($this->_propDict['conversations'] as $singleValue) {
+                $conversations []= new Conversation($singleValue);
+            }
+            $this->_propDict['conversations'] = $conversations;
+            return $this->_propDict['conversations'];
         }
+        return null;
     }
     
     /** 
     * Sets the conversations
     * The group's conversations.
     *
-    * @param Conversation $val The conversations
+    * @param Conversation[] $val The conversations
     *
     * @return Group
     */
@@ -1574,22 +1679,29 @@ class Group extends DirectoryObject
      * Gets the events
     * The group's calendar events.
      *
-     * @return array|null The events
+     * @return Event[]|null The events
      */
     public function getEvents()
     {
-        if (array_key_exists("events", $this->_propDict)) {
-           return $this->_propDict["events"];
-        } else {
-            return null;
+        if (array_key_exists('events', $this->_propDict) && !is_null($this->_propDict['events'])) {
+            $events = [];
+            if (count($this->_propDict['events']) > 0 && is_a($this->_propDict['events'][0], 'Event')) {
+                return $this->_propDict['events'];
+            }
+            foreach ($this->_propDict['events'] as $singleValue) {
+                $events []= new Event($singleValue);
+            }
+            $this->_propDict['events'] = $events;
+            return $this->_propDict['events'];
         }
+        return null;
     }
     
     /** 
     * Sets the events
     * The group's calendar events.
     *
-    * @param Event $val The events
+    * @param Event[] $val The events
     *
     * @return Group
     */
@@ -1607,8 +1719,8 @@ class Group extends DirectoryObject
     */
     public function getPhoto()
     {
-        if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto") || is_null($this->_propDict["photo"])) {
+        if (array_key_exists("photo", $this->_propDict) && !is_null($this->_propDict["photo"])) {
+            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -1637,22 +1749,29 @@ class Group extends DirectoryObject
      * Gets the photos
     * The profile photos owned by the group. Read-only. Nullable.
      *
-     * @return array|null The photos
+     * @return ProfilePhoto[]|null The photos
      */
     public function getPhotos()
     {
-        if (array_key_exists("photos", $this->_propDict)) {
-           return $this->_propDict["photos"];
-        } else {
-            return null;
+        if (array_key_exists('photos', $this->_propDict) && !is_null($this->_propDict['photos'])) {
+            $photos = [];
+            if (count($this->_propDict['photos']) > 0 && is_a($this->_propDict['photos'][0], 'ProfilePhoto')) {
+                return $this->_propDict['photos'];
+            }
+            foreach ($this->_propDict['photos'] as $singleValue) {
+                $photos []= new ProfilePhoto($singleValue);
+            }
+            $this->_propDict['photos'] = $photos;
+            return $this->_propDict['photos'];
         }
+        return null;
     }
     
     /** 
     * Sets the photos
     * The profile photos owned by the group. Read-only. Nullable.
     *
-    * @param ProfilePhoto $val The photos
+    * @param ProfilePhoto[] $val The photos
     *
     * @return Group
     */
@@ -1667,22 +1786,29 @@ class Group extends DirectoryObject
      * Gets the rejectedSenders
     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      *
-     * @return array|null The rejectedSenders
+     * @return DirectoryObject[]|null The rejectedSenders
      */
     public function getRejectedSenders()
     {
-        if (array_key_exists("rejectedSenders", $this->_propDict)) {
-           return $this->_propDict["rejectedSenders"];
-        } else {
-            return null;
+        if (array_key_exists('rejectedSenders', $this->_propDict) && !is_null($this->_propDict['rejectedSenders'])) {
+            $rejectedSenders = [];
+            if (count($this->_propDict['rejectedSenders']) > 0 && is_a($this->_propDict['rejectedSenders'][0], 'DirectoryObject')) {
+                return $this->_propDict['rejectedSenders'];
+            }
+            foreach ($this->_propDict['rejectedSenders'] as $singleValue) {
+                $rejectedSenders []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['rejectedSenders'] = $rejectedSenders;
+            return $this->_propDict['rejectedSenders'];
         }
+        return null;
     }
     
     /** 
     * Sets the rejectedSenders
     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
     *
-    * @param DirectoryObject $val The rejectedSenders
+    * @param DirectoryObject[] $val The rejectedSenders
     *
     * @return Group
     */
@@ -1697,22 +1823,29 @@ class Group extends DirectoryObject
      * Gets the threads
     * The group's conversation threads. Nullable.
      *
-     * @return array|null The threads
+     * @return ConversationThread[]|null The threads
      */
     public function getThreads()
     {
-        if (array_key_exists("threads", $this->_propDict)) {
-           return $this->_propDict["threads"];
-        } else {
-            return null;
+        if (array_key_exists('threads', $this->_propDict) && !is_null($this->_propDict['threads'])) {
+            $threads = [];
+            if (count($this->_propDict['threads']) > 0 && is_a($this->_propDict['threads'][0], 'ConversationThread')) {
+                return $this->_propDict['threads'];
+            }
+            foreach ($this->_propDict['threads'] as $singleValue) {
+                $threads []= new ConversationThread($singleValue);
+            }
+            $this->_propDict['threads'] = $threads;
+            return $this->_propDict['threads'];
         }
+        return null;
     }
     
     /** 
     * Sets the threads
     * The group's conversation threads. Nullable.
     *
-    * @param ConversationThread $val The threads
+    * @param ConversationThread[] $val The threads
     *
     * @return Group
     */
@@ -1730,8 +1863,8 @@ class Group extends DirectoryObject
     */
     public function getDrive()
     {
-        if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive") || is_null($this->_propDict["drive"])) {
+        if (array_key_exists("drive", $this->_propDict) && !is_null($this->_propDict["drive"])) {
+            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -1760,22 +1893,29 @@ class Group extends DirectoryObject
      * Gets the drives
     * The group's drives. Read-only.
      *
-     * @return array|null The drives
+     * @return Drive[]|null The drives
      */
     public function getDrives()
     {
-        if (array_key_exists("drives", $this->_propDict)) {
-           return $this->_propDict["drives"];
-        } else {
-            return null;
+        if (array_key_exists('drives', $this->_propDict) && !is_null($this->_propDict['drives'])) {
+            $drives = [];
+            if (count($this->_propDict['drives']) > 0 && is_a($this->_propDict['drives'][0], 'Drive')) {
+                return $this->_propDict['drives'];
+            }
+            foreach ($this->_propDict['drives'] as $singleValue) {
+                $drives []= new Drive($singleValue);
+            }
+            $this->_propDict['drives'] = $drives;
+            return $this->_propDict['drives'];
         }
+        return null;
     }
     
     /** 
     * Sets the drives
     * The group's drives. Read-only.
     *
-    * @param Drive $val The drives
+    * @param Drive[] $val The drives
     *
     * @return Group
     */
@@ -1790,22 +1930,29 @@ class Group extends DirectoryObject
      * Gets the sites
     * The list of SharePoint sites in this group. Access the default site with /sites/root.
      *
-     * @return array|null The sites
+     * @return Site[]|null The sites
      */
     public function getSites()
     {
-        if (array_key_exists("sites", $this->_propDict)) {
-           return $this->_propDict["sites"];
-        } else {
-            return null;
+        if (array_key_exists('sites', $this->_propDict) && !is_null($this->_propDict['sites'])) {
+            $sites = [];
+            if (count($this->_propDict['sites']) > 0 && is_a($this->_propDict['sites'][0], 'Site')) {
+                return $this->_propDict['sites'];
+            }
+            foreach ($this->_propDict['sites'] as $singleValue) {
+                $sites []= new Site($singleValue);
+            }
+            $this->_propDict['sites'] = $sites;
+            return $this->_propDict['sites'];
         }
+        return null;
     }
     
     /** 
     * Sets the sites
     * The list of SharePoint sites in this group. Access the default site with /sites/root.
     *
-    * @param Site $val The sites
+    * @param Site[] $val The sites
     *
     * @return Group
     */
@@ -1820,22 +1967,29 @@ class Group extends DirectoryObject
      * Gets the extensions
     * The collection of open extensions defined for the group. Read-only. Nullable.
      *
-     * @return array|null The extensions
+     * @return Extension[]|null The extensions
      */
     public function getExtensions()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
+        if (array_key_exists('extensions', $this->_propDict) && !is_null($this->_propDict['extensions'])) {
+            $extensions = [];
+            if (count($this->_propDict['extensions']) > 0 && is_a($this->_propDict['extensions'][0], 'Extension')) {
+                return $this->_propDict['extensions'];
+            }
+            foreach ($this->_propDict['extensions'] as $singleValue) {
+                $extensions []= new Extension($singleValue);
+            }
+            $this->_propDict['extensions'] = $extensions;
+            return $this->_propDict['extensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the extensions
     * The collection of open extensions defined for the group. Read-only. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return Group
     */
@@ -1850,22 +2004,29 @@ class Group extends DirectoryObject
      * Gets the groupLifecyclePolicies
     * The collection of lifecycle policies for this group. Read-only. Nullable.
      *
-     * @return array|null The groupLifecyclePolicies
+     * @return GroupLifecyclePolicy[]|null The groupLifecyclePolicies
      */
     public function getGroupLifecyclePolicies()
     {
-        if (array_key_exists("groupLifecyclePolicies", $this->_propDict)) {
-           return $this->_propDict["groupLifecyclePolicies"];
-        } else {
-            return null;
+        if (array_key_exists('groupLifecyclePolicies', $this->_propDict) && !is_null($this->_propDict['groupLifecyclePolicies'])) {
+            $groupLifecyclePolicies = [];
+            if (count($this->_propDict['groupLifecyclePolicies']) > 0 && is_a($this->_propDict['groupLifecyclePolicies'][0], 'GroupLifecyclePolicy')) {
+                return $this->_propDict['groupLifecyclePolicies'];
+            }
+            foreach ($this->_propDict['groupLifecyclePolicies'] as $singleValue) {
+                $groupLifecyclePolicies []= new GroupLifecyclePolicy($singleValue);
+            }
+            $this->_propDict['groupLifecyclePolicies'] = $groupLifecyclePolicies;
+            return $this->_propDict['groupLifecyclePolicies'];
         }
+        return null;
     }
     
     /** 
     * Sets the groupLifecyclePolicies
     * The collection of lifecycle policies for this group. Read-only. Nullable.
     *
-    * @param GroupLifecyclePolicy $val The groupLifecyclePolicies
+    * @param GroupLifecyclePolicy[] $val The groupLifecyclePolicies
     *
     * @return Group
     */
@@ -1883,8 +2044,8 @@ class Group extends DirectoryObject
     */
     public function getPlanner()
     {
-        if (array_key_exists("planner", $this->_propDict)) {
-            if (is_a($this->_propDict["planner"], "\Microsoft\Graph\Model\PlannerGroup") || is_null($this->_propDict["planner"])) {
+        if (array_key_exists("planner", $this->_propDict) && !is_null($this->_propDict["planner"])) {
+            if (is_a($this->_propDict["planner"], "\Microsoft\Graph\Model\PlannerGroup")) {
                 return $this->_propDict["planner"];
             } else {
                 $this->_propDict["planner"] = new PlannerGroup($this->_propDict["planner"]);
@@ -1916,8 +2077,8 @@ class Group extends DirectoryObject
     */
     public function getOnenote()
     {
-        if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "\Microsoft\Graph\Model\Onenote") || is_null($this->_propDict["onenote"])) {
+        if (array_key_exists("onenote", $this->_propDict) && !is_null($this->_propDict["onenote"])) {
+            if (is_a($this->_propDict["onenote"], "\Microsoft\Graph\Model\Onenote")) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
@@ -1948,8 +2109,8 @@ class Group extends DirectoryObject
     */
     public function getTeam()
     {
-        if (array_key_exists("team", $this->_propDict)) {
-            if (is_a($this->_propDict["team"], "\Microsoft\Graph\Model\Team") || is_null($this->_propDict["team"])) {
+        if (array_key_exists("team", $this->_propDict) && !is_null($this->_propDict["team"])) {
+            if (is_a($this->_propDict["team"], "\Microsoft\Graph\Model\Team")) {
                 return $this->_propDict["team"];
             } else {
                 $this->_propDict["team"] = new Team($this->_propDict["team"]);

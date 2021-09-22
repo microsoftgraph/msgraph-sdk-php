@@ -90,8 +90,8 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     */
     public function getParentNotebook()
     {
-        if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "\Microsoft\Graph\Model\Notebook") || is_null($this->_propDict["parentNotebook"])) {
+        if (array_key_exists("parentNotebook", $this->_propDict) && !is_null($this->_propDict["parentNotebook"])) {
+            if (is_a($this->_propDict["parentNotebook"], "\Microsoft\Graph\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -123,8 +123,8 @@ class SectionGroup extends OnenoteEntityHierarchyModel
     */
     public function getParentSectionGroup()
     {
-        if (array_key_exists("parentSectionGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSectionGroup"], "\Microsoft\Graph\Model\SectionGroup") || is_null($this->_propDict["parentSectionGroup"])) {
+        if (array_key_exists("parentSectionGroup", $this->_propDict) && !is_null($this->_propDict["parentSectionGroup"])) {
+            if (is_a($this->_propDict["parentSectionGroup"], "\Microsoft\Graph\Model\SectionGroup")) {
                 return $this->_propDict["parentSectionGroup"];
             } else {
                 $this->_propDict["parentSectionGroup"] = new SectionGroup($this->_propDict["parentSectionGroup"]);
@@ -153,22 +153,29 @@ class SectionGroup extends OnenoteEntityHierarchyModel
      * Gets the sectionGroups
     * The section groups in the section. Read-only. Nullable.
      *
-     * @return array|null The sectionGroups
+     * @return SectionGroup[]|null The sectionGroups
      */
     public function getSectionGroups()
     {
-        if (array_key_exists("sectionGroups", $this->_propDict)) {
-           return $this->_propDict["sectionGroups"];
-        } else {
-            return null;
+        if (array_key_exists('sectionGroups', $this->_propDict) && !is_null($this->_propDict['sectionGroups'])) {
+            $sectionGroups = [];
+            if (count($this->_propDict['sectionGroups']) > 0 && is_a($this->_propDict['sectionGroups'][0], 'SectionGroup')) {
+                return $this->_propDict['sectionGroups'];
+            }
+            foreach ($this->_propDict['sectionGroups'] as $singleValue) {
+                $sectionGroups []= new SectionGroup($singleValue);
+            }
+            $this->_propDict['sectionGroups'] = $sectionGroups;
+            return $this->_propDict['sectionGroups'];
         }
+        return null;
     }
     
     /** 
     * Sets the sectionGroups
     * The section groups in the section. Read-only. Nullable.
     *
-    * @param SectionGroup $val The sectionGroups
+    * @param SectionGroup[] $val The sectionGroups
     *
     * @return SectionGroup
     */
@@ -183,22 +190,29 @@ class SectionGroup extends OnenoteEntityHierarchyModel
      * Gets the sections
     * The sections in the section group. Read-only. Nullable.
      *
-     * @return array|null The sections
+     * @return OnenoteSection[]|null The sections
      */
     public function getSections()
     {
-        if (array_key_exists("sections", $this->_propDict)) {
-           return $this->_propDict["sections"];
-        } else {
-            return null;
+        if (array_key_exists('sections', $this->_propDict) && !is_null($this->_propDict['sections'])) {
+            $sections = [];
+            if (count($this->_propDict['sections']) > 0 && is_a($this->_propDict['sections'][0], 'OnenoteSection')) {
+                return $this->_propDict['sections'];
+            }
+            foreach ($this->_propDict['sections'] as $singleValue) {
+                $sections []= new OnenoteSection($singleValue);
+            }
+            $this->_propDict['sections'] = $sections;
+            return $this->_propDict['sections'];
         }
+        return null;
     }
     
     /** 
     * Sets the sections
     * The sections in the section group. Read-only. Nullable.
     *
-    * @param OnenoteSection $val The sections
+    * @param OnenoteSection[] $val The sections
     *
     * @return SectionGroup
     */

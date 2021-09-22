@@ -32,8 +32,9 @@ class ConvertIdResult extends Entity
     */
     public function getErrorDetails()
     {
-        if (array_key_exists("errorDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["errorDetails"], "\Microsoft\Graph\Model\GenericError") || is_null($this->_propDict["errorDetails"])) {
+        if (array_key_exists("errorDetails", $this->_propDict) && !is_null($this->_propDict["errorDetails"])) {
+     
+            if (is_a($this->_propDict["errorDetails"], "\Microsoft\Graph\Model\GenericError")) {
                 return $this->_propDict["errorDetails"];
             } else {
                 $this->_propDict["errorDetails"] = new GenericError($this->_propDict["errorDetails"]);

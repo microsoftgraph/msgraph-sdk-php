@@ -31,8 +31,8 @@ class IdentityUserFlow extends Entity
     */
     public function getUserFlowType()
     {
-        if (array_key_exists("userFlowType", $this->_propDict)) {
-            if (is_a($this->_propDict["userFlowType"], "\Microsoft\Graph\Model\UserFlowType") || is_null($this->_propDict["userFlowType"])) {
+        if (array_key_exists("userFlowType", $this->_propDict) && !is_null($this->_propDict["userFlowType"])) {
+            if (is_a($this->_propDict["userFlowType"], "\Microsoft\Graph\Model\UserFlowType")) {
                 return $this->_propDict["userFlowType"];
             } else {
                 $this->_propDict["userFlowType"] = new UserFlowType($this->_propDict["userFlowType"]);

@@ -32,8 +32,9 @@ class VerifiedPublisher extends Entity
     */
     public function getAddedDateTime()
     {
-        if (array_key_exists("addedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["addedDateTime"], "\DateTime") || is_null($this->_propDict["addedDateTime"])) {
+        if (array_key_exists("addedDateTime", $this->_propDict) && !is_null($this->_propDict["addedDateTime"])) {
+     
+            if (is_a($this->_propDict["addedDateTime"], "\DateTime")) {
                 return $this->_propDict["addedDateTime"];
             } else {
                 $this->_propDict["addedDateTime"] = new \DateTime($this->_propDict["addedDateTime"]);

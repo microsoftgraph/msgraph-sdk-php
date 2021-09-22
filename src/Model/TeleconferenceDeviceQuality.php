@@ -252,18 +252,22 @@ class TeleconferenceDeviceQuality extends Entity
     * Gets the mediaQualityList
     * The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
     *
-    * @return TeleconferenceDeviceMediaQuality|null The mediaQualityList
+    * @return TeleconferenceDeviceMediaQuality[]|null The mediaQualityList
     */
     public function getMediaQualityList()
     {
-        if (array_key_exists("mediaQualityList", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaQualityList"], "\Microsoft\Graph\Model\TeleconferenceDeviceMediaQuality") || is_null($this->_propDict["mediaQualityList"])) {
-                return $this->_propDict["mediaQualityList"];
-            } else {
-                $this->_propDict["mediaQualityList"] = new TeleconferenceDeviceMediaQuality($this->_propDict["mediaQualityList"]);
-                return $this->_propDict["mediaQualityList"];
+        if (array_key_exists("mediaQualityList", $this->_propDict) && !is_null($this->_propDict["mediaQualityList"])) {
+       
+            if (count($this->_propDict['mediaQualityList']) > 0 && is_a($this->_propDict['mediaQualityList'][0], 'TeleconferenceDeviceMediaQuality')) {
+               return $this->_propDict['mediaQualityList'];
             }
-        }
+            $mediaQualityList = [];
+            foreach ($this->_propDict['mediaQualityList'] as $singleValue) {
+               $mediaQualityList []= new TeleconferenceDeviceMediaQuality($singleValue);
+            }
+            $this->_propDict['mediaQualityList'] = $mediaQualityList;
+            return $this->_propDict['mediaQualityList'];
+            }
         return null;
     }
 
@@ -271,7 +275,7 @@ class TeleconferenceDeviceQuality extends Entity
     * Sets the mediaQualityList
     * The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
     *
-    * @param TeleconferenceDeviceMediaQuality $val The value to assign to the mediaQualityList
+    * @param TeleconferenceDeviceMediaQuality[] $val The value to assign to the mediaQualityList
     *
     * @return TeleconferenceDeviceQuality The TeleconferenceDeviceQuality
     */

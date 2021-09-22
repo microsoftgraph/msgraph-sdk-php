@@ -87,22 +87,29 @@ class Store extends \Microsoft\Graph\Model\Entity
      * Gets the groups
     * Collection of all groups available in the term store.
      *
-     * @return array|null The groups
+     * @return Group[]|null The groups
      */
     public function getGroups()
     {
-        if (array_key_exists("groups", $this->_propDict)) {
-           return $this->_propDict["groups"];
-        } else {
-            return null;
+        if (array_key_exists('groups', $this->_propDict) && !is_null($this->_propDict['groups'])) {
+            $groups = [];
+            if (count($this->_propDict['groups']) > 0 && is_a($this->_propDict['groups'][0], 'Group')) {
+                return $this->_propDict['groups'];
+            }
+            foreach ($this->_propDict['groups'] as $singleValue) {
+                $groups []= new Group($singleValue);
+            }
+            $this->_propDict['groups'] = $groups;
+            return $this->_propDict['groups'];
         }
+        return null;
     }
     
     /** 
     * Sets the groups
     * Collection of all groups available in the term store.
     *
-    * @param Group $val The groups
+    * @param Group[] $val The groups
     *
     * @return Store
     */
@@ -117,22 +124,29 @@ class Store extends \Microsoft\Graph\Model\Entity
      * Gets the sets
     * Collection of all sets available in the term store.
      *
-     * @return array|null The sets
+     * @return Set[]|null The sets
      */
     public function getSets()
     {
-        if (array_key_exists("sets", $this->_propDict)) {
-           return $this->_propDict["sets"];
-        } else {
-            return null;
+        if (array_key_exists('sets', $this->_propDict) && !is_null($this->_propDict['sets'])) {
+            $sets = [];
+            if (count($this->_propDict['sets']) > 0 && is_a($this->_propDict['sets'][0], 'Set')) {
+                return $this->_propDict['sets'];
+            }
+            foreach ($this->_propDict['sets'] as $singleValue) {
+                $sets []= new Set($singleValue);
+            }
+            $this->_propDict['sets'] = $sets;
+            return $this->_propDict['sets'];
         }
+        return null;
     }
     
     /** 
     * Sets the sets
     * Collection of all sets available in the term store.
     *
-    * @param Set $val The sets
+    * @param Set[] $val The sets
     *
     * @return Store
     */

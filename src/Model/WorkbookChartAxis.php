@@ -148,8 +148,8 @@ class WorkbookChartAxis extends Entity
     */
     public function getFormat()
     {
-        if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\WorkbookChartAxisFormat") || is_null($this->_propDict["format"])) {
+        if (array_key_exists("format", $this->_propDict) && !is_null($this->_propDict["format"])) {
+            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\WorkbookChartAxisFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartAxisFormat($this->_propDict["format"]);
@@ -181,8 +181,8 @@ class WorkbookChartAxis extends Entity
     */
     public function getMajorGridlines()
     {
-        if (array_key_exists("majorGridlines", $this->_propDict)) {
-            if (is_a($this->_propDict["majorGridlines"], "\Microsoft\Graph\Model\WorkbookChartGridlines") || is_null($this->_propDict["majorGridlines"])) {
+        if (array_key_exists("majorGridlines", $this->_propDict) && !is_null($this->_propDict["majorGridlines"])) {
+            if (is_a($this->_propDict["majorGridlines"], "\Microsoft\Graph\Model\WorkbookChartGridlines")) {
                 return $this->_propDict["majorGridlines"];
             } else {
                 $this->_propDict["majorGridlines"] = new WorkbookChartGridlines($this->_propDict["majorGridlines"]);
@@ -214,8 +214,8 @@ class WorkbookChartAxis extends Entity
     */
     public function getMinorGridlines()
     {
-        if (array_key_exists("minorGridlines", $this->_propDict)) {
-            if (is_a($this->_propDict["minorGridlines"], "\Microsoft\Graph\Model\WorkbookChartGridlines") || is_null($this->_propDict["minorGridlines"])) {
+        if (array_key_exists("minorGridlines", $this->_propDict) && !is_null($this->_propDict["minorGridlines"])) {
+            if (is_a($this->_propDict["minorGridlines"], "\Microsoft\Graph\Model\WorkbookChartGridlines")) {
                 return $this->_propDict["minorGridlines"];
             } else {
                 $this->_propDict["minorGridlines"] = new WorkbookChartGridlines($this->_propDict["minorGridlines"]);
@@ -247,8 +247,8 @@ class WorkbookChartAxis extends Entity
     */
     public function getTitle()
     {
-        if (array_key_exists("title", $this->_propDict)) {
-            if (is_a($this->_propDict["title"], "\Microsoft\Graph\Model\WorkbookChartAxisTitle") || is_null($this->_propDict["title"])) {
+        if (array_key_exists("title", $this->_propDict) && !is_null($this->_propDict["title"])) {
+            if (is_a($this->_propDict["title"], "\Microsoft\Graph\Model\WorkbookChartAxisTitle")) {
                 return $this->_propDict["title"];
             } else {
                 $this->_propDict["title"] = new WorkbookChartAxisTitle($this->_propDict["title"]);

@@ -70,7 +70,7 @@ class Windows10NetworkProxyServer extends Entity
     * Sets the exceptions
     * Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
     *
-    * @param string $val The value of the exceptions
+    * @param string[] $val The value of the exceptions
     *
     * @return Windows10NetworkProxyServer
     */

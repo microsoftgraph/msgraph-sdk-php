@@ -68,7 +68,7 @@ class PreAuthorizedApplication extends Entity
     /**
     * Sets the delegatedPermissionIds
     *
-    * @param string $val The value of the delegatedPermissionIds
+    * @param string[] $val The value of the delegatedPermissionIds
     *
     * @return PreAuthorizedApplication
     */

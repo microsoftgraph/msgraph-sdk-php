@@ -32,8 +32,8 @@ class TeamworkHostedContent extends Entity
     */
     public function getContentBytes()
     {
-        if (array_key_exists("contentBytes", $this->_propDict)) {
-            if (is_a($this->_propDict["contentBytes"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["contentBytes"])) {
+        if (array_key_exists("contentBytes", $this->_propDict) && !is_null($this->_propDict["contentBytes"])) {
+            if (is_a($this->_propDict["contentBytes"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["contentBytes"];
             } else {
                 $this->_propDict["contentBytes"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["contentBytes"]);

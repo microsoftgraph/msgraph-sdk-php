@@ -29,22 +29,29 @@ class PermissionGrantPolicy extends PolicyBase
      * Gets the excludes
     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
      *
-     * @return array|null The excludes
+     * @return PermissionGrantConditionSet[]|null The excludes
      */
     public function getExcludes()
     {
-        if (array_key_exists("excludes", $this->_propDict)) {
-           return $this->_propDict["excludes"];
-        } else {
-            return null;
+        if (array_key_exists('excludes', $this->_propDict) && !is_null($this->_propDict['excludes'])) {
+            $excludes = [];
+            if (count($this->_propDict['excludes']) > 0 && is_a($this->_propDict['excludes'][0], 'PermissionGrantConditionSet')) {
+                return $this->_propDict['excludes'];
+            }
+            foreach ($this->_propDict['excludes'] as $singleValue) {
+                $excludes []= new PermissionGrantConditionSet($singleValue);
+            }
+            $this->_propDict['excludes'] = $excludes;
+            return $this->_propDict['excludes'];
         }
+        return null;
     }
     
     /** 
     * Sets the excludes
     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
     *
-    * @param PermissionGrantConditionSet $val The excludes
+    * @param PermissionGrantConditionSet[] $val The excludes
     *
     * @return PermissionGrantPolicy
     */
@@ -59,22 +66,29 @@ class PermissionGrantPolicy extends PolicyBase
      * Gets the includes
     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
      *
-     * @return array|null The includes
+     * @return PermissionGrantConditionSet[]|null The includes
      */
     public function getIncludes()
     {
-        if (array_key_exists("includes", $this->_propDict)) {
-           return $this->_propDict["includes"];
-        } else {
-            return null;
+        if (array_key_exists('includes', $this->_propDict) && !is_null($this->_propDict['includes'])) {
+            $includes = [];
+            if (count($this->_propDict['includes']) > 0 && is_a($this->_propDict['includes'][0], 'PermissionGrantConditionSet')) {
+                return $this->_propDict['includes'];
+            }
+            foreach ($this->_propDict['includes'] as $singleValue) {
+                $includes []= new PermissionGrantConditionSet($singleValue);
+            }
+            $this->_propDict['includes'] = $includes;
+            return $this->_propDict['includes'];
         }
+        return null;
     }
     
     /** 
     * Sets the includes
     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
     *
-    * @param PermissionGrantConditionSet $val The includes
+    * @param PermissionGrantConditionSet[] $val The includes
     *
     * @return PermissionGrantPolicy
     */

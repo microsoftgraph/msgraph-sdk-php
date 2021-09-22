@@ -42,7 +42,7 @@ class SearchRequest extends Entity
     * Sets the aggregationFilters
     * Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
     *
-    * @param string $val The value of the aggregationFilters
+    * @param string[] $val The value of the aggregationFilters
     *
     * @return SearchRequest
     */
@@ -56,18 +56,22 @@ class SearchRequest extends Entity
     * Gets the aggregations
     * Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
     *
-    * @return AggregationOption|null The aggregations
+    * @return AggregationOption[]|null The aggregations
     */
     public function getAggregations()
     {
-        if (array_key_exists("aggregations", $this->_propDict)) {
-            if (is_a($this->_propDict["aggregations"], "\Microsoft\Graph\Model\AggregationOption") || is_null($this->_propDict["aggregations"])) {
-                return $this->_propDict["aggregations"];
-            } else {
-                $this->_propDict["aggregations"] = new AggregationOption($this->_propDict["aggregations"]);
-                return $this->_propDict["aggregations"];
+        if (array_key_exists("aggregations", $this->_propDict) && !is_null($this->_propDict["aggregations"])) {
+       
+            if (count($this->_propDict['aggregations']) > 0 && is_a($this->_propDict['aggregations'][0], 'AggregationOption')) {
+               return $this->_propDict['aggregations'];
             }
-        }
+            $aggregations = [];
+            foreach ($this->_propDict['aggregations'] as $singleValue) {
+               $aggregations []= new AggregationOption($singleValue);
+            }
+            $this->_propDict['aggregations'] = $aggregations;
+            return $this->_propDict['aggregations'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class SearchRequest extends Entity
     * Sets the aggregations
     * Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
     *
-    * @param AggregationOption $val The value to assign to the aggregations
+    * @param AggregationOption[] $val The value to assign to the aggregations
     *
     * @return SearchRequest The SearchRequest
     */
@@ -103,7 +107,7 @@ class SearchRequest extends Entity
     * Sets the contentSources
     * Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
     *
-    * @param string $val The value of the contentSources
+    * @param string[] $val The value of the contentSources
     *
     * @return SearchRequest
     */
@@ -145,18 +149,22 @@ class SearchRequest extends Entity
     * Gets the entityTypes
     * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
     *
-    * @return EntityType|null The entityTypes
+    * @return EntityType[]|null The entityTypes
     */
     public function getEntityTypes()
     {
-        if (array_key_exists("entityTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["entityTypes"], "\Microsoft\Graph\Model\EntityType") || is_null($this->_propDict["entityTypes"])) {
-                return $this->_propDict["entityTypes"];
-            } else {
-                $this->_propDict["entityTypes"] = new EntityType($this->_propDict["entityTypes"]);
-                return $this->_propDict["entityTypes"];
+        if (array_key_exists("entityTypes", $this->_propDict) && !is_null($this->_propDict["entityTypes"])) {
+       
+            if (count($this->_propDict['entityTypes']) > 0 && is_a($this->_propDict['entityTypes'][0], 'EntityType')) {
+               return $this->_propDict['entityTypes'];
             }
-        }
+            $entityTypes = [];
+            foreach ($this->_propDict['entityTypes'] as $singleValue) {
+               $entityTypes []= new EntityType($singleValue);
+            }
+            $this->_propDict['entityTypes'] = $entityTypes;
+            return $this->_propDict['entityTypes'];
+            }
         return null;
     }
 
@@ -164,7 +172,7 @@ class SearchRequest extends Entity
     * Sets the entityTypes
     * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
     *
-    * @param EntityType $val The value to assign to the entityTypes
+    * @param EntityType[] $val The value to assign to the entityTypes
     *
     * @return SearchRequest The SearchRequest
     */
@@ -192,7 +200,7 @@ class SearchRequest extends Entity
     * Sets the fields
     * Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
     *
-    * @param string $val The value of the fields
+    * @param string[] $val The value of the fields
     *
     * @return SearchRequest
     */
@@ -238,8 +246,9 @@ class SearchRequest extends Entity
     */
     public function getQuery()
     {
-        if (array_key_exists("query", $this->_propDict)) {
-            if (is_a($this->_propDict["query"], "\Microsoft\Graph\Model\SearchQuery") || is_null($this->_propDict["query"])) {
+        if (array_key_exists("query", $this->_propDict) && !is_null($this->_propDict["query"])) {
+     
+            if (is_a($this->_propDict["query"], "\Microsoft\Graph\Model\SearchQuery")) {
                 return $this->_propDict["query"];
             } else {
                 $this->_propDict["query"] = new SearchQuery($this->_propDict["query"]);
@@ -295,18 +304,22 @@ class SearchRequest extends Entity
     * Gets the sortProperties
     * Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
     *
-    * @return SortProperty|null The sortProperties
+    * @return SortProperty[]|null The sortProperties
     */
     public function getSortProperties()
     {
-        if (array_key_exists("sortProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["sortProperties"], "\Microsoft\Graph\Model\SortProperty") || is_null($this->_propDict["sortProperties"])) {
-                return $this->_propDict["sortProperties"];
-            } else {
-                $this->_propDict["sortProperties"] = new SortProperty($this->_propDict["sortProperties"]);
-                return $this->_propDict["sortProperties"];
+        if (array_key_exists("sortProperties", $this->_propDict) && !is_null($this->_propDict["sortProperties"])) {
+       
+            if (count($this->_propDict['sortProperties']) > 0 && is_a($this->_propDict['sortProperties'][0], 'SortProperty')) {
+               return $this->_propDict['sortProperties'];
             }
-        }
+            $sortProperties = [];
+            foreach ($this->_propDict['sortProperties'] as $singleValue) {
+               $sortProperties []= new SortProperty($singleValue);
+            }
+            $this->_propDict['sortProperties'] = $sortProperties;
+            return $this->_propDict['sortProperties'];
+            }
         return null;
     }
 
@@ -314,7 +327,7 @@ class SearchRequest extends Entity
     * Sets the sortProperties
     * Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
     *
-    * @param SortProperty $val The value to assign to the sortProperties
+    * @param SortProperty[] $val The value to assign to the sortProperties
     *
     * @return SearchRequest The SearchRequest
     */

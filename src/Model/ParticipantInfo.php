@@ -60,8 +60,9 @@ class ParticipantInfo extends Entity
     */
     public function getEndpointType()
     {
-        if (array_key_exists("endpointType", $this->_propDict)) {
-            if (is_a($this->_propDict["endpointType"], "\Microsoft\Graph\Model\EndpointType") || is_null($this->_propDict["endpointType"])) {
+        if (array_key_exists("endpointType", $this->_propDict) && !is_null($this->_propDict["endpointType"])) {
+     
+            if (is_a($this->_propDict["endpointType"], "\Microsoft\Graph\Model\EndpointType")) {
                 return $this->_propDict["endpointType"];
             } else {
                 $this->_propDict["endpointType"] = new EndpointType($this->_propDict["endpointType"]);
@@ -93,8 +94,9 @@ class ParticipantInfo extends Entity
     */
     public function getIdentity()
     {
-        if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["identity"])) {
+        if (array_key_exists("identity", $this->_propDict) && !is_null($this->_propDict["identity"])) {
+     
+            if (is_a($this->_propDict["identity"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["identity"];
             } else {
                 $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);

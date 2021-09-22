@@ -29,22 +29,29 @@ class Planner extends Entity
      * Gets the buckets
     * Read-only. Nullable. Returns a collection of the specified buckets
      *
-     * @return array|null The buckets
+     * @return PlannerBucket[]|null The buckets
      */
     public function getBuckets()
     {
-        if (array_key_exists("buckets", $this->_propDict)) {
-           return $this->_propDict["buckets"];
-        } else {
-            return null;
+        if (array_key_exists('buckets', $this->_propDict) && !is_null($this->_propDict['buckets'])) {
+            $buckets = [];
+            if (count($this->_propDict['buckets']) > 0 && is_a($this->_propDict['buckets'][0], 'PlannerBucket')) {
+                return $this->_propDict['buckets'];
+            }
+            foreach ($this->_propDict['buckets'] as $singleValue) {
+                $buckets []= new PlannerBucket($singleValue);
+            }
+            $this->_propDict['buckets'] = $buckets;
+            return $this->_propDict['buckets'];
         }
+        return null;
     }
     
     /** 
     * Sets the buckets
     * Read-only. Nullable. Returns a collection of the specified buckets
     *
-    * @param PlannerBucket $val The buckets
+    * @param PlannerBucket[] $val The buckets
     *
     * @return Planner
     */
@@ -59,22 +66,29 @@ class Planner extends Entity
      * Gets the plans
     * Read-only. Nullable. Returns a collection of the specified plans
      *
-     * @return array|null The plans
+     * @return PlannerPlan[]|null The plans
      */
     public function getPlans()
     {
-        if (array_key_exists("plans", $this->_propDict)) {
-           return $this->_propDict["plans"];
-        } else {
-            return null;
+        if (array_key_exists('plans', $this->_propDict) && !is_null($this->_propDict['plans'])) {
+            $plans = [];
+            if (count($this->_propDict['plans']) > 0 && is_a($this->_propDict['plans'][0], 'PlannerPlan')) {
+                return $this->_propDict['plans'];
+            }
+            foreach ($this->_propDict['plans'] as $singleValue) {
+                $plans []= new PlannerPlan($singleValue);
+            }
+            $this->_propDict['plans'] = $plans;
+            return $this->_propDict['plans'];
         }
+        return null;
     }
     
     /** 
     * Sets the plans
     * Read-only. Nullable. Returns a collection of the specified plans
     *
-    * @param PlannerPlan $val The plans
+    * @param PlannerPlan[] $val The plans
     *
     * @return Planner
     */
@@ -89,22 +103,29 @@ class Planner extends Entity
      * Gets the tasks
     * Read-only. Nullable. Returns a collection of the specified tasks
      *
-     * @return array|null The tasks
+     * @return PlannerTask[]|null The tasks
      */
     public function getTasks()
     {
-        if (array_key_exists("tasks", $this->_propDict)) {
-           return $this->_propDict["tasks"];
-        } else {
-            return null;
+        if (array_key_exists('tasks', $this->_propDict) && !is_null($this->_propDict['tasks'])) {
+            $tasks = [];
+            if (count($this->_propDict['tasks']) > 0 && is_a($this->_propDict['tasks'][0], 'PlannerTask')) {
+                return $this->_propDict['tasks'];
+            }
+            foreach ($this->_propDict['tasks'] as $singleValue) {
+                $tasks []= new PlannerTask($singleValue);
+            }
+            $this->_propDict['tasks'] = $tasks;
+            return $this->_propDict['tasks'];
         }
+        return null;
     }
     
     /** 
     * Sets the tasks
     * Read-only. Nullable. Returns a collection of the specified tasks
     *
-    * @param PlannerTask $val The tasks
+    * @param PlannerTask[] $val The tasks
     *
     * @return Planner
     */

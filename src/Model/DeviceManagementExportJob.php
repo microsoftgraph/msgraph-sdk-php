@@ -32,8 +32,8 @@ class DeviceManagementExportJob extends Entity
     */
     public function getExpirationDateTime()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+        if (array_key_exists("expirationDateTime", $this->_propDict) && !is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -94,8 +94,8 @@ class DeviceManagementExportJob extends Entity
     */
     public function getFormat()
     {
-        if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\DeviceManagementReportFileFormat") || is_null($this->_propDict["format"])) {
+        if (array_key_exists("format", $this->_propDict) && !is_null($this->_propDict["format"])) {
+            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\DeviceManagementReportFileFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new DeviceManagementReportFileFormat($this->_propDict["format"]);
@@ -127,8 +127,8 @@ class DeviceManagementExportJob extends Entity
     */
     public function getLocalizationType()
     {
-        if (array_key_exists("localizationType", $this->_propDict)) {
-            if (is_a($this->_propDict["localizationType"], "\Microsoft\Graph\Model\DeviceManagementExportJobLocalizationType") || is_null($this->_propDict["localizationType"])) {
+        if (array_key_exists("localizationType", $this->_propDict) && !is_null($this->_propDict["localizationType"])) {
+            if (is_a($this->_propDict["localizationType"], "\Microsoft\Graph\Model\DeviceManagementExportJobLocalizationType")) {
                 return $this->_propDict["localizationType"];
             } else {
                 $this->_propDict["localizationType"] = new DeviceManagementExportJobLocalizationType($this->_propDict["localizationType"]);
@@ -189,8 +189,8 @@ class DeviceManagementExportJob extends Entity
     */
     public function getRequestDateTime()
     {
-        if (array_key_exists("requestDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["requestDateTime"], "\DateTime") || is_null($this->_propDict["requestDateTime"])) {
+        if (array_key_exists("requestDateTime", $this->_propDict) && !is_null($this->_propDict["requestDateTime"])) {
+            if (is_a($this->_propDict["requestDateTime"], "\DateTime")) {
                 return $this->_propDict["requestDateTime"];
             } else {
                 $this->_propDict["requestDateTime"] = new \DateTime($this->_propDict["requestDateTime"]);
@@ -280,8 +280,8 @@ class DeviceManagementExportJob extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\DeviceManagementReportStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\DeviceManagementReportStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DeviceManagementReportStatus($this->_propDict["status"]);

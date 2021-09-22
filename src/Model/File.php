@@ -32,8 +32,9 @@ class File extends Entity
     */
     public function getHashes()
     {
-        if (array_key_exists("hashes", $this->_propDict)) {
-            if (is_a($this->_propDict["hashes"], "\Microsoft\Graph\Model\Hashes") || is_null($this->_propDict["hashes"])) {
+        if (array_key_exists("hashes", $this->_propDict) && !is_null($this->_propDict["hashes"])) {
+     
+            if (is_a($this->_propDict["hashes"], "\Microsoft\Graph\Model\Hashes")) {
                 return $this->_propDict["hashes"];
             } else {
                 $this->_propDict["hashes"] = new Hashes($this->_propDict["hashes"]);

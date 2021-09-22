@@ -32,8 +32,8 @@ class ItemActivityStat extends Entity
     */
     public function getAccess()
     {
-        if (array_key_exists("access", $this->_propDict)) {
-            if (is_a($this->_propDict["access"], "\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["access"])) {
+        if (array_key_exists("access", $this->_propDict) && !is_null($this->_propDict["access"])) {
+            if (is_a($this->_propDict["access"], "\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["access"];
             } else {
                 $this->_propDict["access"] = new ItemActionStat($this->_propDict["access"]);
@@ -65,8 +65,8 @@ class ItemActivityStat extends Entity
     */
     public function getCreate()
     {
-        if (array_key_exists("create", $this->_propDict)) {
-            if (is_a($this->_propDict["create"], "\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["create"])) {
+        if (array_key_exists("create", $this->_propDict) && !is_null($this->_propDict["create"])) {
+            if (is_a($this->_propDict["create"], "\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["create"];
             } else {
                 $this->_propDict["create"] = new ItemActionStat($this->_propDict["create"]);
@@ -98,8 +98,8 @@ class ItemActivityStat extends Entity
     */
     public function getDelete()
     {
-        if (array_key_exists("delete", $this->_propDict)) {
-            if (is_a($this->_propDict["delete"], "\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["delete"])) {
+        if (array_key_exists("delete", $this->_propDict) && !is_null($this->_propDict["delete"])) {
+            if (is_a($this->_propDict["delete"], "\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["delete"];
             } else {
                 $this->_propDict["delete"] = new ItemActionStat($this->_propDict["delete"]);
@@ -131,8 +131,8 @@ class ItemActivityStat extends Entity
     */
     public function getEdit()
     {
-        if (array_key_exists("edit", $this->_propDict)) {
-            if (is_a($this->_propDict["edit"], "\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["edit"])) {
+        if (array_key_exists("edit", $this->_propDict) && !is_null($this->_propDict["edit"])) {
+            if (is_a($this->_propDict["edit"], "\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["edit"];
             } else {
                 $this->_propDict["edit"] = new ItemActionStat($this->_propDict["edit"]);
@@ -164,8 +164,8 @@ class ItemActivityStat extends Entity
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -197,8 +197,8 @@ class ItemActivityStat extends Entity
     */
     public function getIncompleteData()
     {
-        if (array_key_exists("incompleteData", $this->_propDict)) {
-            if (is_a($this->_propDict["incompleteData"], "\Microsoft\Graph\Model\IncompleteData") || is_null($this->_propDict["incompleteData"])) {
+        if (array_key_exists("incompleteData", $this->_propDict) && !is_null($this->_propDict["incompleteData"])) {
+            if (is_a($this->_propDict["incompleteData"], "\Microsoft\Graph\Model\IncompleteData")) {
                 return $this->_propDict["incompleteData"];
             } else {
                 $this->_propDict["incompleteData"] = new IncompleteData($this->_propDict["incompleteData"]);
@@ -259,8 +259,8 @@ class ItemActivityStat extends Entity
     */
     public function getMove()
     {
-        if (array_key_exists("move", $this->_propDict)) {
-            if (is_a($this->_propDict["move"], "\Microsoft\Graph\Model\ItemActionStat") || is_null($this->_propDict["move"])) {
+        if (array_key_exists("move", $this->_propDict) && !is_null($this->_propDict["move"])) {
+            if (is_a($this->_propDict["move"], "\Microsoft\Graph\Model\ItemActionStat")) {
                 return $this->_propDict["move"];
             } else {
                 $this->_propDict["move"] = new ItemActionStat($this->_propDict["move"]);
@@ -292,8 +292,8 @@ class ItemActivityStat extends Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -322,22 +322,29 @@ class ItemActivityStat extends Entity
      * Gets the activities
     * Exposes the itemActivities represented in this itemActivityStat resource.
      *
-     * @return array|null The activities
+     * @return ItemActivity[]|null The activities
      */
     public function getActivities()
     {
-        if (array_key_exists("activities", $this->_propDict)) {
-           return $this->_propDict["activities"];
-        } else {
-            return null;
+        if (array_key_exists('activities', $this->_propDict) && !is_null($this->_propDict['activities'])) {
+            $activities = [];
+            if (count($this->_propDict['activities']) > 0 && is_a($this->_propDict['activities'][0], 'ItemActivity')) {
+                return $this->_propDict['activities'];
+            }
+            foreach ($this->_propDict['activities'] as $singleValue) {
+                $activities []= new ItemActivity($singleValue);
+            }
+            $this->_propDict['activities'] = $activities;
+            return $this->_propDict['activities'];
         }
+        return null;
     }
     
     /** 
     * Sets the activities
     * Exposes the itemActivities represented in this itemActivityStat resource.
     *
-    * @param ItemActivity $val The activities
+    * @param ItemActivity[] $val The activities
     *
     * @return ItemActivityStat
     */

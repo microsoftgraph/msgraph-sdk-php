@@ -56,18 +56,22 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
     * Gets the ranges
     * Collection of ip ranges
     *
-    * @return IpRange|null The ranges
+    * @return IpRange[]|null The ranges
     */
     public function getRanges()
     {
-        if (array_key_exists("ranges", $this->_propDict)) {
-            if (is_a($this->_propDict["ranges"], "\Microsoft\Graph\Model\IpRange") || is_null($this->_propDict["ranges"])) {
-                return $this->_propDict["ranges"];
-            } else {
-                $this->_propDict["ranges"] = new IpRange($this->_propDict["ranges"]);
-                return $this->_propDict["ranges"];
+        if (array_key_exists("ranges", $this->_propDict) && !is_null($this->_propDict["ranges"])) {
+       
+            if (count($this->_propDict['ranges']) > 0 && is_a($this->_propDict['ranges'][0], 'IpRange')) {
+               return $this->_propDict['ranges'];
             }
-        }
+            $ranges = [];
+            foreach ($this->_propDict['ranges'] as $singleValue) {
+               $ranges []= new IpRange($singleValue);
+            }
+            $this->_propDict['ranges'] = $ranges;
+            return $this->_propDict['ranges'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
     * Sets the ranges
     * Collection of ip ranges
     *
-    * @param IpRange $val The value to assign to the ranges
+    * @param IpRange[] $val The value to assign to the ranges
     *
     * @return WindowsInformationProtectionIPRangeCollection The WindowsInformationProtectionIPRangeCollection
     */

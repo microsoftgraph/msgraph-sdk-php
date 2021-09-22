@@ -32,8 +32,8 @@ class ManagedDeviceOverview extends Entity
     */
     public function getDeviceExchangeAccessStateSummary()
     {
-        if (array_key_exists("deviceExchangeAccessStateSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceExchangeAccessStateSummary"], "\Microsoft\Graph\Model\DeviceExchangeAccessStateSummary") || is_null($this->_propDict["deviceExchangeAccessStateSummary"])) {
+        if (array_key_exists("deviceExchangeAccessStateSummary", $this->_propDict) && !is_null($this->_propDict["deviceExchangeAccessStateSummary"])) {
+            if (is_a($this->_propDict["deviceExchangeAccessStateSummary"], "\Microsoft\Graph\Model\DeviceExchangeAccessStateSummary")) {
                 return $this->_propDict["deviceExchangeAccessStateSummary"];
             } else {
                 $this->_propDict["deviceExchangeAccessStateSummary"] = new DeviceExchangeAccessStateSummary($this->_propDict["deviceExchangeAccessStateSummary"]);
@@ -65,8 +65,8 @@ class ManagedDeviceOverview extends Entity
     */
     public function getDeviceOperatingSystemSummary()
     {
-        if (array_key_exists("deviceOperatingSystemSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceOperatingSystemSummary"], "\Microsoft\Graph\Model\DeviceOperatingSystemSummary") || is_null($this->_propDict["deviceOperatingSystemSummary"])) {
+        if (array_key_exists("deviceOperatingSystemSummary", $this->_propDict) && !is_null($this->_propDict["deviceOperatingSystemSummary"])) {
+            if (is_a($this->_propDict["deviceOperatingSystemSummary"], "\Microsoft\Graph\Model\DeviceOperatingSystemSummary")) {
                 return $this->_propDict["deviceOperatingSystemSummary"];
             } else {
                 $this->_propDict["deviceOperatingSystemSummary"] = new DeviceOperatingSystemSummary($this->_propDict["deviceOperatingSystemSummary"]);

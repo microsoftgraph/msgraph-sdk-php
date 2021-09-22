@@ -174,22 +174,29 @@ class UnifiedRoleDefinition extends Entity
      * Gets the rolePermissions
     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      *
-     * @return array|null The rolePermissions
+     * @return UnifiedRolePermission[]|null The rolePermissions
      */
     public function getRolePermissions()
     {
-        if (array_key_exists("rolePermissions", $this->_propDict)) {
-           return $this->_propDict["rolePermissions"];
-        } else {
-            return null;
+        if (array_key_exists('rolePermissions', $this->_propDict) && !is_null($this->_propDict['rolePermissions'])) {
+            $rolePermissions = [];
+            if (count($this->_propDict['rolePermissions']) > 0 && is_a($this->_propDict['rolePermissions'][0], 'UnifiedRolePermission')) {
+                return $this->_propDict['rolePermissions'];
+            }
+            foreach ($this->_propDict['rolePermissions'] as $singleValue) {
+                $rolePermissions []= new UnifiedRolePermission($singleValue);
+            }
+            $this->_propDict['rolePermissions'] = $rolePermissions;
+            return $this->_propDict['rolePermissions'];
         }
+        return null;
     }
     
     /** 
     * Sets the rolePermissions
     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
     *
-    * @param UnifiedRolePermission $val The rolePermissions
+    * @param UnifiedRolePermission[] $val The rolePermissions
     *
     * @return UnifiedRoleDefinition
     */
@@ -262,22 +269,29 @@ class UnifiedRoleDefinition extends Entity
      * Gets the inheritsPermissionsFrom
     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
      *
-     * @return array|null The inheritsPermissionsFrom
+     * @return UnifiedRoleDefinition[]|null The inheritsPermissionsFrom
      */
     public function getInheritsPermissionsFrom()
     {
-        if (array_key_exists("inheritsPermissionsFrom", $this->_propDict)) {
-           return $this->_propDict["inheritsPermissionsFrom"];
-        } else {
-            return null;
+        if (array_key_exists('inheritsPermissionsFrom', $this->_propDict) && !is_null($this->_propDict['inheritsPermissionsFrom'])) {
+            $inheritsPermissionsFrom = [];
+            if (count($this->_propDict['inheritsPermissionsFrom']) > 0 && is_a($this->_propDict['inheritsPermissionsFrom'][0], 'UnifiedRoleDefinition')) {
+                return $this->_propDict['inheritsPermissionsFrom'];
+            }
+            foreach ($this->_propDict['inheritsPermissionsFrom'] as $singleValue) {
+                $inheritsPermissionsFrom []= new UnifiedRoleDefinition($singleValue);
+            }
+            $this->_propDict['inheritsPermissionsFrom'] = $inheritsPermissionsFrom;
+            return $this->_propDict['inheritsPermissionsFrom'];
         }
+        return null;
     }
     
     /** 
     * Sets the inheritsPermissionsFrom
     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
     *
-    * @param UnifiedRoleDefinition $val The inheritsPermissionsFrom
+    * @param UnifiedRoleDefinition[] $val The inheritsPermissionsFrom
     *
     * @return UnifiedRoleDefinition
     */

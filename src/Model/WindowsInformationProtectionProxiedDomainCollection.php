@@ -56,18 +56,22 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
     * Gets the proxiedDomains
     * Collection of proxied domains
     *
-    * @return ProxiedDomain|null The proxiedDomains
+    * @return ProxiedDomain[]|null The proxiedDomains
     */
     public function getProxiedDomains()
     {
-        if (array_key_exists("proxiedDomains", $this->_propDict)) {
-            if (is_a($this->_propDict["proxiedDomains"], "\Microsoft\Graph\Model\ProxiedDomain") || is_null($this->_propDict["proxiedDomains"])) {
-                return $this->_propDict["proxiedDomains"];
-            } else {
-                $this->_propDict["proxiedDomains"] = new ProxiedDomain($this->_propDict["proxiedDomains"]);
-                return $this->_propDict["proxiedDomains"];
+        if (array_key_exists("proxiedDomains", $this->_propDict) && !is_null($this->_propDict["proxiedDomains"])) {
+       
+            if (count($this->_propDict['proxiedDomains']) > 0 && is_a($this->_propDict['proxiedDomains'][0], 'ProxiedDomain')) {
+               return $this->_propDict['proxiedDomains'];
             }
-        }
+            $proxiedDomains = [];
+            foreach ($this->_propDict['proxiedDomains'] as $singleValue) {
+               $proxiedDomains []= new ProxiedDomain($singleValue);
+            }
+            $this->_propDict['proxiedDomains'] = $proxiedDomains;
+            return $this->_propDict['proxiedDomains'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class WindowsInformationProtectionProxiedDomainCollection extends Entity
     * Sets the proxiedDomains
     * Collection of proxied domains
     *
-    * @param ProxiedDomain $val The value to assign to the proxiedDomains
+    * @param ProxiedDomain[] $val The value to assign to the proxiedDomains
     *
     * @return WindowsInformationProtectionProxiedDomainCollection The WindowsInformationProtectionProxiedDomainCollection
     */

@@ -203,22 +203,29 @@ class MailFolder extends Entity
      * Gets the childFolders
     * The collection of child folders in the mailFolder.
      *
-     * @return array|null The childFolders
+     * @return MailFolder[]|null The childFolders
      */
     public function getChildFolders()
     {
-        if (array_key_exists("childFolders", $this->_propDict)) {
-           return $this->_propDict["childFolders"];
-        } else {
-            return null;
+        if (array_key_exists('childFolders', $this->_propDict) && !is_null($this->_propDict['childFolders'])) {
+            $childFolders = [];
+            if (count($this->_propDict['childFolders']) > 0 && is_a($this->_propDict['childFolders'][0], 'MailFolder')) {
+                return $this->_propDict['childFolders'];
+            }
+            foreach ($this->_propDict['childFolders'] as $singleValue) {
+                $childFolders []= new MailFolder($singleValue);
+            }
+            $this->_propDict['childFolders'] = $childFolders;
+            return $this->_propDict['childFolders'];
         }
+        return null;
     }
     
     /** 
     * Sets the childFolders
     * The collection of child folders in the mailFolder.
     *
-    * @param MailFolder $val The childFolders
+    * @param MailFolder[] $val The childFolders
     *
     * @return MailFolder
     */
@@ -233,22 +240,29 @@ class MailFolder extends Entity
      * Gets the messageRules
     * The collection of rules that apply to the user's Inbox folder.
      *
-     * @return array|null The messageRules
+     * @return MessageRule[]|null The messageRules
      */
     public function getMessageRules()
     {
-        if (array_key_exists("messageRules", $this->_propDict)) {
-           return $this->_propDict["messageRules"];
-        } else {
-            return null;
+        if (array_key_exists('messageRules', $this->_propDict) && !is_null($this->_propDict['messageRules'])) {
+            $messageRules = [];
+            if (count($this->_propDict['messageRules']) > 0 && is_a($this->_propDict['messageRules'][0], 'MessageRule')) {
+                return $this->_propDict['messageRules'];
+            }
+            foreach ($this->_propDict['messageRules'] as $singleValue) {
+                $messageRules []= new MessageRule($singleValue);
+            }
+            $this->_propDict['messageRules'] = $messageRules;
+            return $this->_propDict['messageRules'];
         }
+        return null;
     }
     
     /** 
     * Sets the messageRules
     * The collection of rules that apply to the user's Inbox folder.
     *
-    * @param MessageRule $val The messageRules
+    * @param MessageRule[] $val The messageRules
     *
     * @return MailFolder
     */
@@ -263,22 +277,29 @@ class MailFolder extends Entity
      * Gets the messages
     * The collection of messages in the mailFolder.
      *
-     * @return array|null The messages
+     * @return Message[]|null The messages
      */
     public function getMessages()
     {
-        if (array_key_exists("messages", $this->_propDict)) {
-           return $this->_propDict["messages"];
-        } else {
-            return null;
+        if (array_key_exists('messages', $this->_propDict) && !is_null($this->_propDict['messages'])) {
+            $messages = [];
+            if (count($this->_propDict['messages']) > 0 && is_a($this->_propDict['messages'][0], 'Message')) {
+                return $this->_propDict['messages'];
+            }
+            foreach ($this->_propDict['messages'] as $singleValue) {
+                $messages []= new Message($singleValue);
+            }
+            $this->_propDict['messages'] = $messages;
+            return $this->_propDict['messages'];
         }
+        return null;
     }
     
     /** 
     * Sets the messages
     * The collection of messages in the mailFolder.
     *
-    * @param Message $val The messages
+    * @param Message[] $val The messages
     *
     * @return MailFolder
     */
@@ -293,22 +314,29 @@ class MailFolder extends Entity
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      *
-     * @return array|null The multiValueExtendedProperties
+     * @return MultiValueLegacyExtendedProperty[]|null The multiValueExtendedProperties
      */
     public function getMultiValueExtendedProperties()
     {
-        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["multiValueExtendedProperties"];
-        } else {
-            return null;
+        if (array_key_exists('multiValueExtendedProperties', $this->_propDict) && !is_null($this->_propDict['multiValueExtendedProperties'])) {
+            $multiValueExtendedProperties = [];
+            if (count($this->_propDict['multiValueExtendedProperties']) > 0 && is_a($this->_propDict['multiValueExtendedProperties'][0], 'MultiValueLegacyExtendedProperty')) {
+                return $this->_propDict['multiValueExtendedProperties'];
+            }
+            foreach ($this->_propDict['multiValueExtendedProperties'] as $singleValue) {
+                $multiValueExtendedProperties []= new MultiValueLegacyExtendedProperty($singleValue);
+            }
+            $this->_propDict['multiValueExtendedProperties'] = $multiValueExtendedProperties;
+            return $this->_propDict['multiValueExtendedProperties'];
         }
+        return null;
     }
     
     /** 
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty[] $val The multiValueExtendedProperties
     *
     * @return MailFolder
     */
@@ -323,22 +351,29 @@ class MailFolder extends Entity
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      *
-     * @return array|null The singleValueExtendedProperties
+     * @return SingleValueLegacyExtendedProperty[]|null The singleValueExtendedProperties
      */
     public function getSingleValueExtendedProperties()
     {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
-        } else {
-            return null;
+        if (array_key_exists('singleValueExtendedProperties', $this->_propDict) && !is_null($this->_propDict['singleValueExtendedProperties'])) {
+            $singleValueExtendedProperties = [];
+            if (count($this->_propDict['singleValueExtendedProperties']) > 0 && is_a($this->_propDict['singleValueExtendedProperties'][0], 'SingleValueLegacyExtendedProperty')) {
+                return $this->_propDict['singleValueExtendedProperties'];
+            }
+            foreach ($this->_propDict['singleValueExtendedProperties'] as $singleValue) {
+                $singleValueExtendedProperties []= new SingleValueLegacyExtendedProperty($singleValue);
+            }
+            $this->_propDict['singleValueExtendedProperties'] = $singleValueExtendedProperties;
+            return $this->_propDict['singleValueExtendedProperties'];
         }
+        return null;
     }
     
     /** 
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
     *
-    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty[] $val The singleValueExtendedProperties
     *
     * @return MailFolder
     */

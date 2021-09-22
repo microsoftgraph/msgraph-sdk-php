@@ -148,8 +148,8 @@ class ManagedDevice extends Entity
     */
     public function getComplianceGracePeriodExpirationDateTime()
     {
-        if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
+        if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict) && !is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
+            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime")) {
                 return $this->_propDict["complianceGracePeriodExpirationDateTime"];
             } else {
                 $this->_propDict["complianceGracePeriodExpirationDateTime"] = new \DateTime($this->_propDict["complianceGracePeriodExpirationDateTime"]);
@@ -181,8 +181,8 @@ class ManagedDevice extends Entity
     */
     public function getComplianceState()
     {
-        if (array_key_exists("complianceState", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceState"], "\Microsoft\Graph\Model\ComplianceState") || is_null($this->_propDict["complianceState"])) {
+        if (array_key_exists("complianceState", $this->_propDict) && !is_null($this->_propDict["complianceState"])) {
+            if (is_a($this->_propDict["complianceState"], "\Microsoft\Graph\Model\ComplianceState")) {
                 return $this->_propDict["complianceState"];
             } else {
                 $this->_propDict["complianceState"] = new ComplianceState($this->_propDict["complianceState"]);
@@ -214,8 +214,8 @@ class ManagedDevice extends Entity
     */
     public function getConfigurationManagerClientEnabledFeatures()
     {
-        if (array_key_exists("configurationManagerClientEnabledFeatures", $this->_propDict)) {
-            if (is_a($this->_propDict["configurationManagerClientEnabledFeatures"], "\Microsoft\Graph\Model\ConfigurationManagerClientEnabledFeatures") || is_null($this->_propDict["configurationManagerClientEnabledFeatures"])) {
+        if (array_key_exists("configurationManagerClientEnabledFeatures", $this->_propDict) && !is_null($this->_propDict["configurationManagerClientEnabledFeatures"])) {
+            if (is_a($this->_propDict["configurationManagerClientEnabledFeatures"], "\Microsoft\Graph\Model\ConfigurationManagerClientEnabledFeatures")) {
                 return $this->_propDict["configurationManagerClientEnabledFeatures"];
             } else {
                 $this->_propDict["configurationManagerClientEnabledFeatures"] = new ConfigurationManagerClientEnabledFeatures($this->_propDict["configurationManagerClientEnabledFeatures"]);
@@ -244,22 +244,29 @@ class ManagedDevice extends Entity
      * Gets the deviceActionResults
     * List of ComplexType deviceActionResult objects. This property is read-only.
      *
-     * @return array|null The deviceActionResults
+     * @return DeviceActionResult[]|null The deviceActionResults
      */
     public function getDeviceActionResults()
     {
-        if (array_key_exists("deviceActionResults", $this->_propDict)) {
-           return $this->_propDict["deviceActionResults"];
-        } else {
-            return null;
+        if (array_key_exists('deviceActionResults', $this->_propDict) && !is_null($this->_propDict['deviceActionResults'])) {
+            $deviceActionResults = [];
+            if (count($this->_propDict['deviceActionResults']) > 0 && is_a($this->_propDict['deviceActionResults'][0], 'DeviceActionResult')) {
+                return $this->_propDict['deviceActionResults'];
+            }
+            foreach ($this->_propDict['deviceActionResults'] as $singleValue) {
+                $deviceActionResults []= new DeviceActionResult($singleValue);
+            }
+            $this->_propDict['deviceActionResults'] = $deviceActionResults;
+            return $this->_propDict['deviceActionResults'];
         }
+        return null;
     }
     
     /** 
     * Sets the deviceActionResults
     * List of ComplexType deviceActionResult objects. This property is read-only.
     *
-    * @param DeviceActionResult $val The deviceActionResults
+    * @param DeviceActionResult[] $val The deviceActionResults
     *
     * @return ManagedDevice
     */
@@ -306,8 +313,8 @@ class ManagedDevice extends Entity
     */
     public function getDeviceEnrollmentType()
     {
-        if (array_key_exists("deviceEnrollmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceEnrollmentType"], "\Microsoft\Graph\Model\DeviceEnrollmentType") || is_null($this->_propDict["deviceEnrollmentType"])) {
+        if (array_key_exists("deviceEnrollmentType", $this->_propDict) && !is_null($this->_propDict["deviceEnrollmentType"])) {
+            if (is_a($this->_propDict["deviceEnrollmentType"], "\Microsoft\Graph\Model\DeviceEnrollmentType")) {
                 return $this->_propDict["deviceEnrollmentType"];
             } else {
                 $this->_propDict["deviceEnrollmentType"] = new DeviceEnrollmentType($this->_propDict["deviceEnrollmentType"]);
@@ -339,8 +346,8 @@ class ManagedDevice extends Entity
     */
     public function getDeviceHealthAttestationState()
     {
-        if (array_key_exists("deviceHealthAttestationState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceHealthAttestationState"], "\Microsoft\Graph\Model\DeviceHealthAttestationState") || is_null($this->_propDict["deviceHealthAttestationState"])) {
+        if (array_key_exists("deviceHealthAttestationState", $this->_propDict) && !is_null($this->_propDict["deviceHealthAttestationState"])) {
+            if (is_a($this->_propDict["deviceHealthAttestationState"], "\Microsoft\Graph\Model\DeviceHealthAttestationState")) {
                 return $this->_propDict["deviceHealthAttestationState"];
             } else {
                 $this->_propDict["deviceHealthAttestationState"] = new DeviceHealthAttestationState($this->_propDict["deviceHealthAttestationState"]);
@@ -401,8 +408,8 @@ class ManagedDevice extends Entity
     */
     public function getDeviceRegistrationState()
     {
-        if (array_key_exists("deviceRegistrationState", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceRegistrationState"], "\Microsoft\Graph\Model\DeviceRegistrationState") || is_null($this->_propDict["deviceRegistrationState"])) {
+        if (array_key_exists("deviceRegistrationState", $this->_propDict) && !is_null($this->_propDict["deviceRegistrationState"])) {
+            if (is_a($this->_propDict["deviceRegistrationState"], "\Microsoft\Graph\Model\DeviceRegistrationState")) {
                 return $this->_propDict["deviceRegistrationState"];
             } else {
                 $this->_propDict["deviceRegistrationState"] = new DeviceRegistrationState($this->_propDict["deviceRegistrationState"]);
@@ -463,8 +470,8 @@ class ManagedDevice extends Entity
     */
     public function getEasActivationDateTime()
     {
-        if (array_key_exists("easActivationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["easActivationDateTime"], "\DateTime") || is_null($this->_propDict["easActivationDateTime"])) {
+        if (array_key_exists("easActivationDateTime", $this->_propDict) && !is_null($this->_propDict["easActivationDateTime"])) {
+            if (is_a($this->_propDict["easActivationDateTime"], "\DateTime")) {
                 return $this->_propDict["easActivationDateTime"];
             } else {
                 $this->_propDict["easActivationDateTime"] = new \DateTime($this->_propDict["easActivationDateTime"]);
@@ -554,8 +561,8 @@ class ManagedDevice extends Entity
     */
     public function getEnrolledDateTime()
     {
-        if (array_key_exists("enrolledDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["enrolledDateTime"], "\DateTime") || is_null($this->_propDict["enrolledDateTime"])) {
+        if (array_key_exists("enrolledDateTime", $this->_propDict) && !is_null($this->_propDict["enrolledDateTime"])) {
+            if (is_a($this->_propDict["enrolledDateTime"], "\DateTime")) {
                 return $this->_propDict["enrolledDateTime"];
             } else {
                 $this->_propDict["enrolledDateTime"] = new \DateTime($this->_propDict["enrolledDateTime"]);
@@ -616,8 +623,8 @@ class ManagedDevice extends Entity
     */
     public function getExchangeAccessState()
     {
-        if (array_key_exists("exchangeAccessState", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeAccessState"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessState") || is_null($this->_propDict["exchangeAccessState"])) {
+        if (array_key_exists("exchangeAccessState", $this->_propDict) && !is_null($this->_propDict["exchangeAccessState"])) {
+            if (is_a($this->_propDict["exchangeAccessState"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessState")) {
                 return $this->_propDict["exchangeAccessState"];
             } else {
                 $this->_propDict["exchangeAccessState"] = new DeviceManagementExchangeAccessState($this->_propDict["exchangeAccessState"]);
@@ -649,8 +656,8 @@ class ManagedDevice extends Entity
     */
     public function getExchangeAccessStateReason()
     {
-        if (array_key_exists("exchangeAccessStateReason", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeAccessStateReason"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessStateReason") || is_null($this->_propDict["exchangeAccessStateReason"])) {
+        if (array_key_exists("exchangeAccessStateReason", $this->_propDict) && !is_null($this->_propDict["exchangeAccessStateReason"])) {
+            if (is_a($this->_propDict["exchangeAccessStateReason"], "\Microsoft\Graph\Model\DeviceManagementExchangeAccessStateReason")) {
                 return $this->_propDict["exchangeAccessStateReason"];
             } else {
                 $this->_propDict["exchangeAccessStateReason"] = new DeviceManagementExchangeAccessStateReason($this->_propDict["exchangeAccessStateReason"]);
@@ -682,8 +689,8 @@ class ManagedDevice extends Entity
     */
     public function getExchangeLastSuccessfulSyncDateTime()
     {
-        if (array_key_exists("exchangeLastSuccessfulSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["exchangeLastSuccessfulSyncDateTime"], "\DateTime") || is_null($this->_propDict["exchangeLastSuccessfulSyncDateTime"])) {
+        if (array_key_exists("exchangeLastSuccessfulSyncDateTime", $this->_propDict) && !is_null($this->_propDict["exchangeLastSuccessfulSyncDateTime"])) {
+            if (is_a($this->_propDict["exchangeLastSuccessfulSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["exchangeLastSuccessfulSyncDateTime"];
             } else {
                 $this->_propDict["exchangeLastSuccessfulSyncDateTime"] = new \DateTime($this->_propDict["exchangeLastSuccessfulSyncDateTime"]);
@@ -889,8 +896,8 @@ class ManagedDevice extends Entity
     */
     public function getLastSyncDateTime()
     {
-        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
+        if (array_key_exists("lastSyncDateTime", $this->_propDict) && !is_null($this->_propDict["lastSyncDateTime"])) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -951,8 +958,8 @@ class ManagedDevice extends Entity
     */
     public function getManagedDeviceOwnerType()
     {
-        if (array_key_exists("managedDeviceOwnerType", $this->_propDict)) {
-            if (is_a($this->_propDict["managedDeviceOwnerType"], "\Microsoft\Graph\Model\ManagedDeviceOwnerType") || is_null($this->_propDict["managedDeviceOwnerType"])) {
+        if (array_key_exists("managedDeviceOwnerType", $this->_propDict) && !is_null($this->_propDict["managedDeviceOwnerType"])) {
+            if (is_a($this->_propDict["managedDeviceOwnerType"], "\Microsoft\Graph\Model\ManagedDeviceOwnerType")) {
                 return $this->_propDict["managedDeviceOwnerType"];
             } else {
                 $this->_propDict["managedDeviceOwnerType"] = new ManagedDeviceOwnerType($this->_propDict["managedDeviceOwnerType"]);
@@ -984,8 +991,8 @@ class ManagedDevice extends Entity
     */
     public function getManagementAgent()
     {
-        if (array_key_exists("managementAgent", $this->_propDict)) {
-            if (is_a($this->_propDict["managementAgent"], "\Microsoft\Graph\Model\ManagementAgentType") || is_null($this->_propDict["managementAgent"])) {
+        if (array_key_exists("managementAgent", $this->_propDict) && !is_null($this->_propDict["managementAgent"])) {
+            if (is_a($this->_propDict["managementAgent"], "\Microsoft\Graph\Model\ManagementAgentType")) {
                 return $this->_propDict["managementAgent"];
             } else {
                 $this->_propDict["managementAgent"] = new ManagementAgentType($this->_propDict["managementAgent"]);
@@ -1191,8 +1198,8 @@ class ManagedDevice extends Entity
     */
     public function getPartnerReportedThreatState()
     {
-        if (array_key_exists("partnerReportedThreatState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerReportedThreatState"], "\Microsoft\Graph\Model\ManagedDevicePartnerReportedHealthState") || is_null($this->_propDict["partnerReportedThreatState"])) {
+        if (array_key_exists("partnerReportedThreatState", $this->_propDict) && !is_null($this->_propDict["partnerReportedThreatState"])) {
+            if (is_a($this->_propDict["partnerReportedThreatState"], "\Microsoft\Graph\Model\ManagedDevicePartnerReportedHealthState")) {
                 return $this->_propDict["partnerReportedThreatState"];
             } else {
                 $this->_propDict["partnerReportedThreatState"] = new ManagedDevicePartnerReportedHealthState($this->_propDict["partnerReportedThreatState"]);
@@ -1569,22 +1576,29 @@ class ManagedDevice extends Entity
      * Gets the deviceCompliancePolicyStates
     * Device compliance policy states for this device.
      *
-     * @return array|null The deviceCompliancePolicyStates
+     * @return DeviceCompliancePolicyState[]|null The deviceCompliancePolicyStates
      */
     public function getDeviceCompliancePolicyStates()
     {
-        if (array_key_exists("deviceCompliancePolicyStates", $this->_propDict)) {
-           return $this->_propDict["deviceCompliancePolicyStates"];
-        } else {
-            return null;
+        if (array_key_exists('deviceCompliancePolicyStates', $this->_propDict) && !is_null($this->_propDict['deviceCompliancePolicyStates'])) {
+            $deviceCompliancePolicyStates = [];
+            if (count($this->_propDict['deviceCompliancePolicyStates']) > 0 && is_a($this->_propDict['deviceCompliancePolicyStates'][0], 'DeviceCompliancePolicyState')) {
+                return $this->_propDict['deviceCompliancePolicyStates'];
+            }
+            foreach ($this->_propDict['deviceCompliancePolicyStates'] as $singleValue) {
+                $deviceCompliancePolicyStates []= new DeviceCompliancePolicyState($singleValue);
+            }
+            $this->_propDict['deviceCompliancePolicyStates'] = $deviceCompliancePolicyStates;
+            return $this->_propDict['deviceCompliancePolicyStates'];
         }
+        return null;
     }
     
     /** 
     * Sets the deviceCompliancePolicyStates
     * Device compliance policy states for this device.
     *
-    * @param DeviceCompliancePolicyState $val The deviceCompliancePolicyStates
+    * @param DeviceCompliancePolicyState[] $val The deviceCompliancePolicyStates
     *
     * @return ManagedDevice
     */
@@ -1599,22 +1613,29 @@ class ManagedDevice extends Entity
      * Gets the deviceConfigurationStates
     * Device configuration states for this device.
      *
-     * @return array|null The deviceConfigurationStates
+     * @return DeviceConfigurationState[]|null The deviceConfigurationStates
      */
     public function getDeviceConfigurationStates()
     {
-        if (array_key_exists("deviceConfigurationStates", $this->_propDict)) {
-           return $this->_propDict["deviceConfigurationStates"];
-        } else {
-            return null;
+        if (array_key_exists('deviceConfigurationStates', $this->_propDict) && !is_null($this->_propDict['deviceConfigurationStates'])) {
+            $deviceConfigurationStates = [];
+            if (count($this->_propDict['deviceConfigurationStates']) > 0 && is_a($this->_propDict['deviceConfigurationStates'][0], 'DeviceConfigurationState')) {
+                return $this->_propDict['deviceConfigurationStates'];
+            }
+            foreach ($this->_propDict['deviceConfigurationStates'] as $singleValue) {
+                $deviceConfigurationStates []= new DeviceConfigurationState($singleValue);
+            }
+            $this->_propDict['deviceConfigurationStates'] = $deviceConfigurationStates;
+            return $this->_propDict['deviceConfigurationStates'];
         }
+        return null;
     }
     
     /** 
     * Sets the deviceConfigurationStates
     * Device configuration states for this device.
     *
-    * @param DeviceConfigurationState $val The deviceConfigurationStates
+    * @param DeviceConfigurationState[] $val The deviceConfigurationStates
     *
     * @return ManagedDevice
     */
@@ -1632,8 +1653,8 @@ class ManagedDevice extends Entity
     */
     public function getDeviceCategory()
     {
-        if (array_key_exists("deviceCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceCategory"], "\Microsoft\Graph\Model\DeviceCategory") || is_null($this->_propDict["deviceCategory"])) {
+        if (array_key_exists("deviceCategory", $this->_propDict) && !is_null($this->_propDict["deviceCategory"])) {
+            if (is_a($this->_propDict["deviceCategory"], "\Microsoft\Graph\Model\DeviceCategory")) {
                 return $this->_propDict["deviceCategory"];
             } else {
                 $this->_propDict["deviceCategory"] = new DeviceCategory($this->_propDict["deviceCategory"]);

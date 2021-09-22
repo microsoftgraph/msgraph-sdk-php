@@ -32,8 +32,9 @@ class TeamworkConversationIdentity extends Identity
     */
     public function getConversationIdentityType()
     {
-        if (array_key_exists("conversationIdentityType", $this->_propDict)) {
-            if (is_a($this->_propDict["conversationIdentityType"], "\Microsoft\Graph\Model\TeamworkConversationIdentityType") || is_null($this->_propDict["conversationIdentityType"])) {
+        if (array_key_exists("conversationIdentityType", $this->_propDict) && !is_null($this->_propDict["conversationIdentityType"])) {
+     
+            if (is_a($this->_propDict["conversationIdentityType"], "\Microsoft\Graph\Model\TeamworkConversationIdentityType")) {
                 return $this->_propDict["conversationIdentityType"];
             } else {
                 $this->_propDict["conversationIdentityType"] = new TeamworkConversationIdentityType($this->_propDict["conversationIdentityType"]);

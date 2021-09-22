@@ -39,18 +39,22 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
     * Gets the certificateList
     * The list of certificates uploaded for this API connector.
     *
-    * @return Pkcs12CertificateInformation|null The certificateList
+    * @return Pkcs12CertificateInformation[]|null The certificateList
     */
     public function getCertificateList()
     {
-        if (array_key_exists("certificateList", $this->_propDict)) {
-            if (is_a($this->_propDict["certificateList"], "\Microsoft\Graph\Model\Pkcs12CertificateInformation") || is_null($this->_propDict["certificateList"])) {
-                return $this->_propDict["certificateList"];
-            } else {
-                $this->_propDict["certificateList"] = new Pkcs12CertificateInformation($this->_propDict["certificateList"]);
-                return $this->_propDict["certificateList"];
+        if (array_key_exists("certificateList", $this->_propDict) && !is_null($this->_propDict["certificateList"])) {
+       
+            if (count($this->_propDict['certificateList']) > 0 && is_a($this->_propDict['certificateList'][0], 'Pkcs12CertificateInformation')) {
+               return $this->_propDict['certificateList'];
             }
-        }
+            $certificateList = [];
+            foreach ($this->_propDict['certificateList'] as $singleValue) {
+               $certificateList []= new Pkcs12CertificateInformation($singleValue);
+            }
+            $this->_propDict['certificateList'] = $certificateList;
+            return $this->_propDict['certificateList'];
+            }
         return null;
     }
 
@@ -58,7 +62,7 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
     * Sets the certificateList
     * The list of certificates uploaded for this API connector.
     *
-    * @param Pkcs12CertificateInformation $val The value to assign to the certificateList
+    * @param Pkcs12CertificateInformation[] $val The value to assign to the certificateList
     *
     * @return ClientCertificateAuthentication The ClientCertificateAuthentication
     */

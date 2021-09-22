@@ -60,8 +60,9 @@ class UpdateWindowsDeviceAccountActionParameter extends Entity
     */
     public function getDeviceAccount()
     {
-        if (array_key_exists("deviceAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceAccount"], "\Microsoft\Graph\Model\WindowsDeviceAccount") || is_null($this->_propDict["deviceAccount"])) {
+        if (array_key_exists("deviceAccount", $this->_propDict) && !is_null($this->_propDict["deviceAccount"])) {
+     
+            if (is_a($this->_propDict["deviceAccount"], "\Microsoft\Graph\Model\WindowsDeviceAccount")) {
                 return $this->_propDict["deviceAccount"];
             } else {
                 $this->_propDict["deviceAccount"] = new WindowsDeviceAccount($this->_propDict["deviceAccount"]);

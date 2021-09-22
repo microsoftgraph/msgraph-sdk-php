@@ -58,22 +58,29 @@ class RoomList extends Place
      * Gets the rooms
     * Read-only. Nullable.
      *
-     * @return array|null The rooms
+     * @return Room[]|null The rooms
      */
     public function getRooms()
     {
-        if (array_key_exists("rooms", $this->_propDict)) {
-           return $this->_propDict["rooms"];
-        } else {
-            return null;
+        if (array_key_exists('rooms', $this->_propDict) && !is_null($this->_propDict['rooms'])) {
+            $rooms = [];
+            if (count($this->_propDict['rooms']) > 0 && is_a($this->_propDict['rooms'][0], 'Room')) {
+                return $this->_propDict['rooms'];
+            }
+            foreach ($this->_propDict['rooms'] as $singleValue) {
+                $rooms []= new Room($singleValue);
+            }
+            $this->_propDict['rooms'] = $rooms;
+            return $this->_propDict['rooms'];
         }
+        return null;
     }
     
     /** 
     * Sets the rooms
     * Read-only. Nullable.
     *
-    * @param Room $val The rooms
+    * @param Room[] $val The rooms
     *
     * @return RoomList
     */

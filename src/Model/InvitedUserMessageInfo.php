@@ -28,18 +28,22 @@ class InvitedUserMessageInfo extends Entity
     * Gets the ccRecipients
     * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
     *
-    * @return Recipient|null The ccRecipients
+    * @return Recipient[]|null The ccRecipients
     */
     public function getCcRecipients()
     {
-        if (array_key_exists("ccRecipients", $this->_propDict)) {
-            if (is_a($this->_propDict["ccRecipients"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["ccRecipients"])) {
-                return $this->_propDict["ccRecipients"];
-            } else {
-                $this->_propDict["ccRecipients"] = new Recipient($this->_propDict["ccRecipients"]);
-                return $this->_propDict["ccRecipients"];
+        if (array_key_exists("ccRecipients", $this->_propDict) && !is_null($this->_propDict["ccRecipients"])) {
+       
+            if (count($this->_propDict['ccRecipients']) > 0 && is_a($this->_propDict['ccRecipients'][0], 'Recipient')) {
+               return $this->_propDict['ccRecipients'];
             }
-        }
+            $ccRecipients = [];
+            foreach ($this->_propDict['ccRecipients'] as $singleValue) {
+               $ccRecipients []= new Recipient($singleValue);
+            }
+            $this->_propDict['ccRecipients'] = $ccRecipients;
+            return $this->_propDict['ccRecipients'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class InvitedUserMessageInfo extends Entity
     * Sets the ccRecipients
     * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
     *
-    * @param Recipient $val The value to assign to the ccRecipients
+    * @param Recipient[] $val The value to assign to the ccRecipients
     *
     * @return InvitedUserMessageInfo The InvitedUserMessageInfo
     */

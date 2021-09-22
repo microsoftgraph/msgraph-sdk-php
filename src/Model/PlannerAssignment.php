@@ -32,8 +32,9 @@ class PlannerAssignment extends Entity
     */
     public function getAssignedBy()
     {
-        if (array_key_exists("assignedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["assignedBy"])) {
+        if (array_key_exists("assignedBy", $this->_propDict) && !is_null($this->_propDict["assignedBy"])) {
+     
+            if (is_a($this->_propDict["assignedBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["assignedBy"];
             } else {
                 $this->_propDict["assignedBy"] = new IdentitySet($this->_propDict["assignedBy"]);
@@ -65,8 +66,9 @@ class PlannerAssignment extends Entity
     */
     public function getAssignedDateTime()
     {
-        if (array_key_exists("assignedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedDateTime"], "\DateTime") || is_null($this->_propDict["assignedDateTime"])) {
+        if (array_key_exists("assignedDateTime", $this->_propDict) && !is_null($this->_propDict["assignedDateTime"])) {
+     
+            if (is_a($this->_propDict["assignedDateTime"], "\DateTime")) {
                 return $this->_propDict["assignedDateTime"];
             } else {
                 $this->_propDict["assignedDateTime"] = new \DateTime($this->_propDict["assignedDateTime"]);

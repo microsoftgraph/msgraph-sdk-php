@@ -32,8 +32,8 @@ class PrintTaskTrigger extends Entity
     */
     public function getEvent()
     {
-        if (array_key_exists("event", $this->_propDict)) {
-            if (is_a($this->_propDict["event"], "\Microsoft\Graph\Model\PrintEvent") || is_null($this->_propDict["event"])) {
+        if (array_key_exists("event", $this->_propDict) && !is_null($this->_propDict["event"])) {
+            if (is_a($this->_propDict["event"], "\Microsoft\Graph\Model\PrintEvent")) {
                 return $this->_propDict["event"];
             } else {
                 $this->_propDict["event"] = new PrintEvent($this->_propDict["event"]);
@@ -65,8 +65,8 @@ class PrintTaskTrigger extends Entity
     */
     public function getDefinition()
     {
-        if (array_key_exists("definition", $this->_propDict)) {
-            if (is_a($this->_propDict["definition"], "\Microsoft\Graph\Model\PrintTaskDefinition") || is_null($this->_propDict["definition"])) {
+        if (array_key_exists("definition", $this->_propDict) && !is_null($this->_propDict["definition"])) {
+            if (is_a($this->_propDict["definition"], "\Microsoft\Graph\Model\PrintTaskDefinition")) {
                 return $this->_propDict["definition"];
             } else {
                 $this->_propDict["definition"] = new PrintTaskDefinition($this->_propDict["definition"]);

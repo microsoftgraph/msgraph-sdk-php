@@ -29,22 +29,29 @@ class PlannerUser extends Entity
      * Gets the plans
     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *
-     * @return array|null The plans
+     * @return PlannerPlan[]|null The plans
      */
     public function getPlans()
     {
-        if (array_key_exists("plans", $this->_propDict)) {
-           return $this->_propDict["plans"];
-        } else {
-            return null;
+        if (array_key_exists('plans', $this->_propDict) && !is_null($this->_propDict['plans'])) {
+            $plans = [];
+            if (count($this->_propDict['plans']) > 0 && is_a($this->_propDict['plans'][0], 'PlannerPlan')) {
+                return $this->_propDict['plans'];
+            }
+            foreach ($this->_propDict['plans'] as $singleValue) {
+                $plans []= new PlannerPlan($singleValue);
+            }
+            $this->_propDict['plans'] = $plans;
+            return $this->_propDict['plans'];
         }
+        return null;
     }
     
     /** 
     * Sets the plans
     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
     *
-    * @param PlannerPlan $val The plans
+    * @param PlannerPlan[] $val The plans
     *
     * @return PlannerUser
     */
@@ -59,22 +66,29 @@ class PlannerUser extends Entity
      * Gets the tasks
     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      *
-     * @return array|null The tasks
+     * @return PlannerTask[]|null The tasks
      */
     public function getTasks()
     {
-        if (array_key_exists("tasks", $this->_propDict)) {
-           return $this->_propDict["tasks"];
-        } else {
-            return null;
+        if (array_key_exists('tasks', $this->_propDict) && !is_null($this->_propDict['tasks'])) {
+            $tasks = [];
+            if (count($this->_propDict['tasks']) > 0 && is_a($this->_propDict['tasks'][0], 'PlannerTask')) {
+                return $this->_propDict['tasks'];
+            }
+            foreach ($this->_propDict['tasks'] as $singleValue) {
+                $tasks []= new PlannerTask($singleValue);
+            }
+            $this->_propDict['tasks'] = $tasks;
+            return $this->_propDict['tasks'];
         }
+        return null;
     }
     
     /** 
     * Sets the tasks
     * Read-only. Nullable. Returns the plannerPlans shared with the user.
     *
-    * @param PlannerTask $val The tasks
+    * @param PlannerTask[] $val The tasks
     *
     * @return PlannerUser
     */

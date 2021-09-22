@@ -32,8 +32,8 @@ class Permission extends Entity
     */
     public function getExpirationDateTime()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+        if (array_key_exists("expirationDateTime", $this->_propDict) && !is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -65,8 +65,8 @@ class Permission extends Entity
     */
     public function getGrantedTo()
     {
-        if (array_key_exists("grantedTo", $this->_propDict)) {
-            if (is_a($this->_propDict["grantedTo"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["grantedTo"])) {
+        if (array_key_exists("grantedTo", $this->_propDict) && !is_null($this->_propDict["grantedTo"])) {
+            if (is_a($this->_propDict["grantedTo"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["grantedTo"];
             } else {
                 $this->_propDict["grantedTo"] = new IdentitySet($this->_propDict["grantedTo"]);
@@ -95,22 +95,29 @@ class Permission extends Entity
      * Gets the grantedToIdentities
     * For link type permissions, the details of the users to whom permission was granted. Read-only.
      *
-     * @return array|null The grantedToIdentities
+     * @return IdentitySet[]|null The grantedToIdentities
      */
     public function getGrantedToIdentities()
     {
-        if (array_key_exists("grantedToIdentities", $this->_propDict)) {
-           return $this->_propDict["grantedToIdentities"];
-        } else {
-            return null;
+        if (array_key_exists('grantedToIdentities', $this->_propDict) && !is_null($this->_propDict['grantedToIdentities'])) {
+            $grantedToIdentities = [];
+            if (count($this->_propDict['grantedToIdentities']) > 0 && is_a($this->_propDict['grantedToIdentities'][0], 'IdentitySet')) {
+                return $this->_propDict['grantedToIdentities'];
+            }
+            foreach ($this->_propDict['grantedToIdentities'] as $singleValue) {
+                $grantedToIdentities []= new IdentitySet($singleValue);
+            }
+            $this->_propDict['grantedToIdentities'] = $grantedToIdentities;
+            return $this->_propDict['grantedToIdentities'];
         }
+        return null;
     }
     
     /** 
     * Sets the grantedToIdentities
     * For link type permissions, the details of the users to whom permission was granted. Read-only.
     *
-    * @param IdentitySet $val The grantedToIdentities
+    * @param IdentitySet[] $val The grantedToIdentities
     *
     * @return Permission
     */
@@ -157,8 +164,8 @@ class Permission extends Entity
     */
     public function getInheritedFrom()
     {
-        if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "\Microsoft\Graph\Model\ItemReference") || is_null($this->_propDict["inheritedFrom"])) {
+        if (array_key_exists("inheritedFrom", $this->_propDict) && !is_null($this->_propDict["inheritedFrom"])) {
+            if (is_a($this->_propDict["inheritedFrom"], "\Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -190,8 +197,8 @@ class Permission extends Entity
     */
     public function getInvitation()
     {
-        if (array_key_exists("invitation", $this->_propDict)) {
-            if (is_a($this->_propDict["invitation"], "\Microsoft\Graph\Model\SharingInvitation") || is_null($this->_propDict["invitation"])) {
+        if (array_key_exists("invitation", $this->_propDict) && !is_null($this->_propDict["invitation"])) {
+            if (is_a($this->_propDict["invitation"], "\Microsoft\Graph\Model\SharingInvitation")) {
                 return $this->_propDict["invitation"];
             } else {
                 $this->_propDict["invitation"] = new SharingInvitation($this->_propDict["invitation"]);
@@ -223,8 +230,8 @@ class Permission extends Entity
     */
     public function getLink()
     {
-        if (array_key_exists("link", $this->_propDict)) {
-            if (is_a($this->_propDict["link"], "\Microsoft\Graph\Model\SharingLink") || is_null($this->_propDict["link"])) {
+        if (array_key_exists("link", $this->_propDict) && !is_null($this->_propDict["link"])) {
+            if (is_a($this->_propDict["link"], "\Microsoft\Graph\Model\SharingLink")) {
                 return $this->_propDict["link"];
             } else {
                 $this->_propDict["link"] = new SharingLink($this->_propDict["link"]);

@@ -32,8 +32,8 @@ class EducationAssignmentDefaults extends Entity
     */
     public function getAddedStudentAction()
     {
-        if (array_key_exists("addedStudentAction", $this->_propDict)) {
-            if (is_a($this->_propDict["addedStudentAction"], "\Microsoft\Graph\Model\EducationAddedStudentAction") || is_null($this->_propDict["addedStudentAction"])) {
+        if (array_key_exists("addedStudentAction", $this->_propDict) && !is_null($this->_propDict["addedStudentAction"])) {
+            if (is_a($this->_propDict["addedStudentAction"], "\Microsoft\Graph\Model\EducationAddedStudentAction")) {
                 return $this->_propDict["addedStudentAction"];
             } else {
                 $this->_propDict["addedStudentAction"] = new EducationAddedStudentAction($this->_propDict["addedStudentAction"]);
@@ -65,8 +65,8 @@ class EducationAssignmentDefaults extends Entity
     */
     public function getDueTime()
     {
-        if (array_key_exists("dueTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueTime"], "\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["dueTime"])) {
+        if (array_key_exists("dueTime", $this->_propDict) && !is_null($this->_propDict["dueTime"])) {
+            if (is_a($this->_propDict["dueTime"], "\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["dueTime"];
             } else {
                 $this->_propDict["dueTime"] = new TimeOfDay($this->_propDict["dueTime"]);

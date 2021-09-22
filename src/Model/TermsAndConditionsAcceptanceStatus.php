@@ -32,8 +32,8 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     */
     public function getAcceptedDateTime()
     {
-        if (array_key_exists("acceptedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["acceptedDateTime"], "\DateTime") || is_null($this->_propDict["acceptedDateTime"])) {
+        if (array_key_exists("acceptedDateTime", $this->_propDict) && !is_null($this->_propDict["acceptedDateTime"])) {
+            if (is_a($this->_propDict["acceptedDateTime"], "\DateTime")) {
                 return $this->_propDict["acceptedDateTime"];
             } else {
                 $this->_propDict["acceptedDateTime"] = new \DateTime($this->_propDict["acceptedDateTime"]);
@@ -152,8 +152,8 @@ class TermsAndConditionsAcceptanceStatus extends Entity
     */
     public function getTermsAndConditions()
     {
-        if (array_key_exists("termsAndConditions", $this->_propDict)) {
-            if (is_a($this->_propDict["termsAndConditions"], "\Microsoft\Graph\Model\TermsAndConditions") || is_null($this->_propDict["termsAndConditions"])) {
+        if (array_key_exists("termsAndConditions", $this->_propDict) && !is_null($this->_propDict["termsAndConditions"])) {
+            if (is_a($this->_propDict["termsAndConditions"], "\Microsoft\Graph\Model\TermsAndConditions")) {
                 return $this->_propDict["termsAndConditions"];
             } else {
                 $this->_propDict["termsAndConditions"] = new TermsAndConditions($this->_propDict["termsAndConditions"]);

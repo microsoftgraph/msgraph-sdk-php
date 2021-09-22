@@ -56,18 +56,22 @@ class RecurrencePattern extends Entity
     * Gets the daysOfWeek
     * A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
     *
-    * @return DayOfWeek|null The daysOfWeek
+    * @return DayOfWeek[]|null The daysOfWeek
     */
     public function getDaysOfWeek()
     {
-        if (array_key_exists("daysOfWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["daysOfWeek"], "\Microsoft\Graph\Model\DayOfWeek") || is_null($this->_propDict["daysOfWeek"])) {
-                return $this->_propDict["daysOfWeek"];
-            } else {
-                $this->_propDict["daysOfWeek"] = new DayOfWeek($this->_propDict["daysOfWeek"]);
-                return $this->_propDict["daysOfWeek"];
+        if (array_key_exists("daysOfWeek", $this->_propDict) && !is_null($this->_propDict["daysOfWeek"])) {
+       
+            if (count($this->_propDict['daysOfWeek']) > 0 && is_a($this->_propDict['daysOfWeek'][0], 'DayOfWeek')) {
+               return $this->_propDict['daysOfWeek'];
             }
-        }
+            $daysOfWeek = [];
+            foreach ($this->_propDict['daysOfWeek'] as $singleValue) {
+               $daysOfWeek []= new DayOfWeek($singleValue);
+            }
+            $this->_propDict['daysOfWeek'] = $daysOfWeek;
+            return $this->_propDict['daysOfWeek'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class RecurrencePattern extends Entity
     * Sets the daysOfWeek
     * A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
     *
-    * @param DayOfWeek $val The value to assign to the daysOfWeek
+    * @param DayOfWeek[] $val The value to assign to the daysOfWeek
     *
     * @return RecurrencePattern The RecurrencePattern
     */
@@ -93,8 +97,9 @@ class RecurrencePattern extends Entity
     */
     public function getFirstDayOfWeek()
     {
-        if (array_key_exists("firstDayOfWeek", $this->_propDict)) {
-            if (is_a($this->_propDict["firstDayOfWeek"], "\Microsoft\Graph\Model\DayOfWeek") || is_null($this->_propDict["firstDayOfWeek"])) {
+        if (array_key_exists("firstDayOfWeek", $this->_propDict) && !is_null($this->_propDict["firstDayOfWeek"])) {
+     
+            if (is_a($this->_propDict["firstDayOfWeek"], "\Microsoft\Graph\Model\DayOfWeek")) {
                 return $this->_propDict["firstDayOfWeek"];
             } else {
                 $this->_propDict["firstDayOfWeek"] = new DayOfWeek($this->_propDict["firstDayOfWeek"]);
@@ -126,8 +131,9 @@ class RecurrencePattern extends Entity
     */
     public function getIndex()
     {
-        if (array_key_exists("index", $this->_propDict)) {
-            if (is_a($this->_propDict["index"], "\Microsoft\Graph\Model\WeekIndex") || is_null($this->_propDict["index"])) {
+        if (array_key_exists("index", $this->_propDict) && !is_null($this->_propDict["index"])) {
+     
+            if (is_a($this->_propDict["index"], "\Microsoft\Graph\Model\WeekIndex")) {
                 return $this->_propDict["index"];
             } else {
                 $this->_propDict["index"] = new WeekIndex($this->_propDict["index"]);
@@ -215,8 +221,9 @@ class RecurrencePattern extends Entity
     */
     public function getType()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\RecurrencePatternType") || is_null($this->_propDict["type"])) {
+        if (array_key_exists("type", $this->_propDict) && !is_null($this->_propDict["type"])) {
+     
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\RecurrencePatternType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new RecurrencePatternType($this->_propDict["type"]);

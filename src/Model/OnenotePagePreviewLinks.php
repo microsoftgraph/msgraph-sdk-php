@@ -31,8 +31,9 @@ class OnenotePagePreviewLinks extends Entity
     */
     public function getPreviewImageUrl()
     {
-        if (array_key_exists("previewImageUrl", $this->_propDict)) {
-            if (is_a($this->_propDict["previewImageUrl"], "\Microsoft\Graph\Model\ExternalLink") || is_null($this->_propDict["previewImageUrl"])) {
+        if (array_key_exists("previewImageUrl", $this->_propDict) && !is_null($this->_propDict["previewImageUrl"])) {
+     
+            if (is_a($this->_propDict["previewImageUrl"], "\Microsoft\Graph\Model\ExternalLink")) {
                 return $this->_propDict["previewImageUrl"];
             } else {
                 $this->_propDict["previewImageUrl"] = new ExternalLink($this->_propDict["previewImageUrl"]);

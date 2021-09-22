@@ -32,8 +32,9 @@ class SharingDetail extends Entity
     */
     public function getSharedBy()
     {
-        if (array_key_exists("sharedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedBy"], "\Microsoft\Graph\Model\InsightIdentity") || is_null($this->_propDict["sharedBy"])) {
+        if (array_key_exists("sharedBy", $this->_propDict) && !is_null($this->_propDict["sharedBy"])) {
+     
+            if (is_a($this->_propDict["sharedBy"], "\Microsoft\Graph\Model\InsightIdentity")) {
                 return $this->_propDict["sharedBy"];
             } else {
                 $this->_propDict["sharedBy"] = new InsightIdentity($this->_propDict["sharedBy"]);
@@ -65,8 +66,9 @@ class SharingDetail extends Entity
     */
     public function getSharedDateTime()
     {
-        if (array_key_exists("sharedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedDateTime"], "\DateTime") || is_null($this->_propDict["sharedDateTime"])) {
+        if (array_key_exists("sharedDateTime", $this->_propDict) && !is_null($this->_propDict["sharedDateTime"])) {
+     
+            if (is_a($this->_propDict["sharedDateTime"], "\DateTime")) {
                 return $this->_propDict["sharedDateTime"];
             } else {
                 $this->_propDict["sharedDateTime"] = new \DateTime($this->_propDict["sharedDateTime"]);
@@ -97,8 +99,9 @@ class SharingDetail extends Entity
     */
     public function getSharingReference()
     {
-        if (array_key_exists("sharingReference", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingReference"], "\Microsoft\Graph\Model\ResourceReference") || is_null($this->_propDict["sharingReference"])) {
+        if (array_key_exists("sharingReference", $this->_propDict) && !is_null($this->_propDict["sharingReference"])) {
+     
+            if (is_a($this->_propDict["sharingReference"], "\Microsoft\Graph\Model\ResourceReference")) {
                 return $this->_propDict["sharingReference"];
             } else {
                 $this->_propDict["sharingReference"] = new ResourceReference($this->_propDict["sharingReference"]);

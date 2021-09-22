@@ -29,22 +29,29 @@ class DeviceManagementReports extends Entity
      * Gets the exportJobs
     * Entity representing a job to export a report
      *
-     * @return array|null The exportJobs
+     * @return DeviceManagementExportJob[]|null The exportJobs
      */
     public function getExportJobs()
     {
-        if (array_key_exists("exportJobs", $this->_propDict)) {
-           return $this->_propDict["exportJobs"];
-        } else {
-            return null;
+        if (array_key_exists('exportJobs', $this->_propDict) && !is_null($this->_propDict['exportJobs'])) {
+            $exportJobs = [];
+            if (count($this->_propDict['exportJobs']) > 0 && is_a($this->_propDict['exportJobs'][0], 'DeviceManagementExportJob')) {
+                return $this->_propDict['exportJobs'];
+            }
+            foreach ($this->_propDict['exportJobs'] as $singleValue) {
+                $exportJobs []= new DeviceManagementExportJob($singleValue);
+            }
+            $this->_propDict['exportJobs'] = $exportJobs;
+            return $this->_propDict['exportJobs'];
         }
+        return null;
     }
     
     /** 
     * Sets the exportJobs
     * Entity representing a job to export a report
     *
-    * @param DeviceManagementExportJob $val The exportJobs
+    * @param DeviceManagementExportJob[] $val The exportJobs
     *
     * @return DeviceManagementReports
     */

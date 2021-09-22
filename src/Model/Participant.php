@@ -32,8 +32,8 @@ class Participant extends Entity
     */
     public function getInfo()
     {
-        if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "\Microsoft\Graph\Model\ParticipantInfo") || is_null($this->_propDict["info"])) {
+        if (array_key_exists("info", $this->_propDict) && !is_null($this->_propDict["info"])) {
+            if (is_a($this->_propDict["info"], "\Microsoft\Graph\Model\ParticipantInfo")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new ParticipantInfo($this->_propDict["info"]);
@@ -120,22 +120,29 @@ class Participant extends Entity
      * Gets the mediaStreams
     * The list of media streams.
      *
-     * @return array|null The mediaStreams
+     * @return MediaStream[]|null The mediaStreams
      */
     public function getMediaStreams()
     {
-        if (array_key_exists("mediaStreams", $this->_propDict)) {
-           return $this->_propDict["mediaStreams"];
-        } else {
-            return null;
+        if (array_key_exists('mediaStreams', $this->_propDict) && !is_null($this->_propDict['mediaStreams'])) {
+            $mediaStreams = [];
+            if (count($this->_propDict['mediaStreams']) > 0 && is_a($this->_propDict['mediaStreams'][0], 'MediaStream')) {
+                return $this->_propDict['mediaStreams'];
+            }
+            foreach ($this->_propDict['mediaStreams'] as $singleValue) {
+                $mediaStreams []= new MediaStream($singleValue);
+            }
+            $this->_propDict['mediaStreams'] = $mediaStreams;
+            return $this->_propDict['mediaStreams'];
         }
+        return null;
     }
     
     /** 
     * Sets the mediaStreams
     * The list of media streams.
     *
-    * @param MediaStream $val The mediaStreams
+    * @param MediaStream[] $val The mediaStreams
     *
     * @return Participant
     */
@@ -182,8 +189,8 @@ class Participant extends Entity
     */
     public function getRecordingInfo()
     {
-        if (array_key_exists("recordingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["recordingInfo"], "\Microsoft\Graph\Model\RecordingInfo") || is_null($this->_propDict["recordingInfo"])) {
+        if (array_key_exists("recordingInfo", $this->_propDict) && !is_null($this->_propDict["recordingInfo"])) {
+            if (is_a($this->_propDict["recordingInfo"], "\Microsoft\Graph\Model\RecordingInfo")) {
                 return $this->_propDict["recordingInfo"];
             } else {
                 $this->_propDict["recordingInfo"] = new RecordingInfo($this->_propDict["recordingInfo"]);

@@ -58,22 +58,29 @@ class ManagedAppPolicyDeploymentSummary extends Entity
      * Gets the configurationDeploymentSummaryPerApp
     * Not yet documented
      *
-     * @return array|null The configurationDeploymentSummaryPerApp
+     * @return ManagedAppPolicyDeploymentSummaryPerApp[]|null The configurationDeploymentSummaryPerApp
      */
     public function getConfigurationDeploymentSummaryPerApp()
     {
-        if (array_key_exists("configurationDeploymentSummaryPerApp", $this->_propDict)) {
-           return $this->_propDict["configurationDeploymentSummaryPerApp"];
-        } else {
-            return null;
+        if (array_key_exists('configurationDeploymentSummaryPerApp', $this->_propDict) && !is_null($this->_propDict['configurationDeploymentSummaryPerApp'])) {
+            $configurationDeploymentSummaryPerApp = [];
+            if (count($this->_propDict['configurationDeploymentSummaryPerApp']) > 0 && is_a($this->_propDict['configurationDeploymentSummaryPerApp'][0], 'ManagedAppPolicyDeploymentSummaryPerApp')) {
+                return $this->_propDict['configurationDeploymentSummaryPerApp'];
+            }
+            foreach ($this->_propDict['configurationDeploymentSummaryPerApp'] as $singleValue) {
+                $configurationDeploymentSummaryPerApp []= new ManagedAppPolicyDeploymentSummaryPerApp($singleValue);
+            }
+            $this->_propDict['configurationDeploymentSummaryPerApp'] = $configurationDeploymentSummaryPerApp;
+            return $this->_propDict['configurationDeploymentSummaryPerApp'];
         }
+        return null;
     }
     
     /** 
     * Sets the configurationDeploymentSummaryPerApp
     * Not yet documented
     *
-    * @param ManagedAppPolicyDeploymentSummaryPerApp $val The configurationDeploymentSummaryPerApp
+    * @param ManagedAppPolicyDeploymentSummaryPerApp[] $val The configurationDeploymentSummaryPerApp
     *
     * @return ManagedAppPolicyDeploymentSummary
     */
@@ -120,8 +127,8 @@ class ManagedAppPolicyDeploymentSummary extends Entity
     */
     public function getLastRefreshTime()
     {
-        if (array_key_exists("lastRefreshTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastRefreshTime"], "\DateTime") || is_null($this->_propDict["lastRefreshTime"])) {
+        if (array_key_exists("lastRefreshTime", $this->_propDict) && !is_null($this->_propDict["lastRefreshTime"])) {
+            if (is_a($this->_propDict["lastRefreshTime"], "\DateTime")) {
                 return $this->_propDict["lastRefreshTime"];
             } else {
                 $this->_propDict["lastRefreshTime"] = new \DateTime($this->_propDict["lastRefreshTime"]);

@@ -28,18 +28,22 @@ class CommsNotifications extends Entity
     * Gets the value
     * The notification of a change in the resource.
     *
-    * @return CommsNotification|null The value
+    * @return CommsNotification[]|null The value
     */
     public function getValue()
     {
-        if (array_key_exists("value", $this->_propDict)) {
-            if (is_a($this->_propDict["value"], "\Microsoft\Graph\Model\CommsNotification") || is_null($this->_propDict["value"])) {
-                return $this->_propDict["value"];
-            } else {
-                $this->_propDict["value"] = new CommsNotification($this->_propDict["value"]);
-                return $this->_propDict["value"];
+        if (array_key_exists("value", $this->_propDict) && !is_null($this->_propDict["value"])) {
+       
+            if (count($this->_propDict['value']) > 0 && is_a($this->_propDict['value'][0], 'CommsNotification')) {
+               return $this->_propDict['value'];
             }
-        }
+            $value = [];
+            foreach ($this->_propDict['value'] as $singleValue) {
+               $value []= new CommsNotification($singleValue);
+            }
+            $this->_propDict['value'] = $value;
+            return $this->_propDict['value'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class CommsNotifications extends Entity
     * Sets the value
     * The notification of a change in the resource.
     *
-    * @param CommsNotification $val The value to assign to the value
+    * @param CommsNotification[] $val The value to assign to the value
     *
     * @return CommsNotifications The CommsNotifications
     */

@@ -88,8 +88,9 @@ class SignInLocation extends Entity
     */
     public function getGeoCoordinates()
     {
-        if (array_key_exists("geoCoordinates", $this->_propDict)) {
-            if (is_a($this->_propDict["geoCoordinates"], "\Microsoft\Graph\Model\GeoCoordinates") || is_null($this->_propDict["geoCoordinates"])) {
+        if (array_key_exists("geoCoordinates", $this->_propDict) && !is_null($this->_propDict["geoCoordinates"])) {
+     
+            if (is_a($this->_propDict["geoCoordinates"], "\Microsoft\Graph\Model\GeoCoordinates")) {
                 return $this->_propDict["geoCoordinates"];
             } else {
                 $this->_propDict["geoCoordinates"] = new GeoCoordinates($this->_propDict["geoCoordinates"]);

@@ -32,8 +32,8 @@ class ItemActivity extends Entity
     */
     public function getAccess()
     {
-        if (array_key_exists("access", $this->_propDict)) {
-            if (is_a($this->_propDict["access"], "\Microsoft\Graph\Model\AccessAction") || is_null($this->_propDict["access"])) {
+        if (array_key_exists("access", $this->_propDict) && !is_null($this->_propDict["access"])) {
+            if (is_a($this->_propDict["access"], "\Microsoft\Graph\Model\AccessAction")) {
                 return $this->_propDict["access"];
             } else {
                 $this->_propDict["access"] = new AccessAction($this->_propDict["access"]);
@@ -65,8 +65,8 @@ class ItemActivity extends Entity
     */
     public function getActivityDateTime()
     {
-        if (array_key_exists("activityDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["activityDateTime"], "\DateTime") || is_null($this->_propDict["activityDateTime"])) {
+        if (array_key_exists("activityDateTime", $this->_propDict) && !is_null($this->_propDict["activityDateTime"])) {
+            if (is_a($this->_propDict["activityDateTime"], "\DateTime")) {
                 return $this->_propDict["activityDateTime"];
             } else {
                 $this->_propDict["activityDateTime"] = new \DateTime($this->_propDict["activityDateTime"]);
@@ -98,8 +98,8 @@ class ItemActivity extends Entity
     */
     public function getActor()
     {
-        if (array_key_exists("actor", $this->_propDict)) {
-            if (is_a($this->_propDict["actor"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["actor"])) {
+        if (array_key_exists("actor", $this->_propDict) && !is_null($this->_propDict["actor"])) {
+            if (is_a($this->_propDict["actor"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["actor"];
             } else {
                 $this->_propDict["actor"] = new IdentitySet($this->_propDict["actor"]);
@@ -131,8 +131,8 @@ class ItemActivity extends Entity
     */
     public function getDriveItem()
     {
-        if (array_key_exists("driveItem", $this->_propDict)) {
-            if (is_a($this->_propDict["driveItem"], "\Microsoft\Graph\Model\DriveItem") || is_null($this->_propDict["driveItem"])) {
+        if (array_key_exists("driveItem", $this->_propDict) && !is_null($this->_propDict["driveItem"])) {
+            if (is_a($this->_propDict["driveItem"], "\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["driveItem"];
             } else {
                 $this->_propDict["driveItem"] = new DriveItem($this->_propDict["driveItem"]);

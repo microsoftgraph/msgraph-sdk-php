@@ -89,8 +89,8 @@ class Call extends Entity
     */
     public function getCallOptions()
     {
-        if (array_key_exists("callOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["callOptions"], "\Microsoft\Graph\Model\CallOptions") || is_null($this->_propDict["callOptions"])) {
+        if (array_key_exists("callOptions", $this->_propDict) && !is_null($this->_propDict["callOptions"])) {
+            if (is_a($this->_propDict["callOptions"], "\Microsoft\Graph\Model\CallOptions")) {
                 return $this->_propDict["callOptions"];
             } else {
                 $this->_propDict["callOptions"] = new CallOptions($this->_propDict["callOptions"]);
@@ -118,22 +118,29 @@ class Call extends Entity
      * Gets the callRoutes
     * The routing information on how the call was retargeted. Read-only.
      *
-     * @return array|null The callRoutes
+     * @return CallRoute[]|null The callRoutes
      */
     public function getCallRoutes()
     {
-        if (array_key_exists("callRoutes", $this->_propDict)) {
-           return $this->_propDict["callRoutes"];
-        } else {
-            return null;
+        if (array_key_exists('callRoutes', $this->_propDict) && !is_null($this->_propDict['callRoutes'])) {
+            $callRoutes = [];
+            if (count($this->_propDict['callRoutes']) > 0 && is_a($this->_propDict['callRoutes'][0], 'CallRoute')) {
+                return $this->_propDict['callRoutes'];
+            }
+            foreach ($this->_propDict['callRoutes'] as $singleValue) {
+                $callRoutes []= new CallRoute($singleValue);
+            }
+            $this->_propDict['callRoutes'] = $callRoutes;
+            return $this->_propDict['callRoutes'];
         }
+        return null;
     }
     
     /** 
     * Sets the callRoutes
     * The routing information on how the call was retargeted. Read-only.
     *
-    * @param CallRoute $val The callRoutes
+    * @param CallRoute[] $val The callRoutes
     *
     * @return Call
     */
@@ -151,8 +158,8 @@ class Call extends Entity
     */
     public function getChatInfo()
     {
-        if (array_key_exists("chatInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["chatInfo"], "\Microsoft\Graph\Model\ChatInfo") || is_null($this->_propDict["chatInfo"])) {
+        if (array_key_exists("chatInfo", $this->_propDict) && !is_null($this->_propDict["chatInfo"])) {
+            if (is_a($this->_propDict["chatInfo"], "\Microsoft\Graph\Model\ChatInfo")) {
                 return $this->_propDict["chatInfo"];
             } else {
                 $this->_propDict["chatInfo"] = new ChatInfo($this->_propDict["chatInfo"]);
@@ -184,8 +191,8 @@ class Call extends Entity
     */
     public function getDirection()
     {
-        if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "\Microsoft\Graph\Model\CallDirection") || is_null($this->_propDict["direction"])) {
+        if (array_key_exists("direction", $this->_propDict) && !is_null($this->_propDict["direction"])) {
+            if (is_a($this->_propDict["direction"], "\Microsoft\Graph\Model\CallDirection")) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new CallDirection($this->_propDict["direction"]);
@@ -217,8 +224,8 @@ class Call extends Entity
     */
     public function getIncomingContext()
     {
-        if (array_key_exists("incomingContext", $this->_propDict)) {
-            if (is_a($this->_propDict["incomingContext"], "\Microsoft\Graph\Model\IncomingContext") || is_null($this->_propDict["incomingContext"])) {
+        if (array_key_exists("incomingContext", $this->_propDict) && !is_null($this->_propDict["incomingContext"])) {
+            if (is_a($this->_propDict["incomingContext"], "\Microsoft\Graph\Model\IncomingContext")) {
                 return $this->_propDict["incomingContext"];
             } else {
                 $this->_propDict["incomingContext"] = new IncomingContext($this->_propDict["incomingContext"]);
@@ -250,8 +257,8 @@ class Call extends Entity
     */
     public function getMediaConfig()
     {
-        if (array_key_exists("mediaConfig", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaConfig"], "\Microsoft\Graph\Model\MediaConfig") || is_null($this->_propDict["mediaConfig"])) {
+        if (array_key_exists("mediaConfig", $this->_propDict) && !is_null($this->_propDict["mediaConfig"])) {
+            if (is_a($this->_propDict["mediaConfig"], "\Microsoft\Graph\Model\MediaConfig")) {
                 return $this->_propDict["mediaConfig"];
             } else {
                 $this->_propDict["mediaConfig"] = new MediaConfig($this->_propDict["mediaConfig"]);
@@ -283,8 +290,8 @@ class Call extends Entity
     */
     public function getMediaState()
     {
-        if (array_key_exists("mediaState", $this->_propDict)) {
-            if (is_a($this->_propDict["mediaState"], "\Microsoft\Graph\Model\CallMediaState") || is_null($this->_propDict["mediaState"])) {
+        if (array_key_exists("mediaState", $this->_propDict) && !is_null($this->_propDict["mediaState"])) {
+            if (is_a($this->_propDict["mediaState"], "\Microsoft\Graph\Model\CallMediaState")) {
                 return $this->_propDict["mediaState"];
             } else {
                 $this->_propDict["mediaState"] = new CallMediaState($this->_propDict["mediaState"]);
@@ -316,8 +323,8 @@ class Call extends Entity
     */
     public function getMeetingInfo()
     {
-        if (array_key_exists("meetingInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingInfo"], "\Microsoft\Graph\Model\MeetingInfo") || is_null($this->_propDict["meetingInfo"])) {
+        if (array_key_exists("meetingInfo", $this->_propDict) && !is_null($this->_propDict["meetingInfo"])) {
+            if (is_a($this->_propDict["meetingInfo"], "\Microsoft\Graph\Model\MeetingInfo")) {
                 return $this->_propDict["meetingInfo"];
             } else {
                 $this->_propDict["meetingInfo"] = new MeetingInfo($this->_propDict["meetingInfo"]);
@@ -372,21 +379,28 @@ class Call extends Entity
      /** 
      * Gets the requestedModalities
      *
-     * @return array|null The requestedModalities
+     * @return Modality[]|null The requestedModalities
      */
     public function getRequestedModalities()
     {
-        if (array_key_exists("requestedModalities", $this->_propDict)) {
-           return $this->_propDict["requestedModalities"];
-        } else {
-            return null;
+        if (array_key_exists('requestedModalities', $this->_propDict) && !is_null($this->_propDict['requestedModalities'])) {
+            $requestedModalities = [];
+            if (count($this->_propDict['requestedModalities']) > 0 && is_a($this->_propDict['requestedModalities'][0], 'Modality')) {
+                return $this->_propDict['requestedModalities'];
+            }
+            foreach ($this->_propDict['requestedModalities'] as $singleValue) {
+                $requestedModalities []= new Modality($singleValue);
+            }
+            $this->_propDict['requestedModalities'] = $requestedModalities;
+            return $this->_propDict['requestedModalities'];
         }
+        return null;
     }
     
     /** 
     * Sets the requestedModalities
     *
-    * @param Modality $val The requestedModalities
+    * @param Modality[] $val The requestedModalities
     *
     * @return Call
     */
@@ -403,8 +417,8 @@ class Call extends Entity
     */
     public function getResultInfo()
     {
-        if (array_key_exists("resultInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["resultInfo"], "\Microsoft\Graph\Model\ResultInfo") || is_null($this->_propDict["resultInfo"])) {
+        if (array_key_exists("resultInfo", $this->_propDict) && !is_null($this->_propDict["resultInfo"])) {
+            if (is_a($this->_propDict["resultInfo"], "\Microsoft\Graph\Model\ResultInfo")) {
                 return $this->_propDict["resultInfo"];
             } else {
                 $this->_propDict["resultInfo"] = new ResultInfo($this->_propDict["resultInfo"]);
@@ -434,8 +448,8 @@ class Call extends Entity
     */
     public function getSource()
     {
-        if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "\Microsoft\Graph\Model\ParticipantInfo") || is_null($this->_propDict["source"])) {
+        if (array_key_exists("source", $this->_propDict) && !is_null($this->_propDict["source"])) {
+            if (is_a($this->_propDict["source"], "\Microsoft\Graph\Model\ParticipantInfo")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new ParticipantInfo($this->_propDict["source"]);
@@ -465,8 +479,8 @@ class Call extends Entity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\CallState") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\CallState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new CallState($this->_propDict["state"]);
@@ -520,21 +534,28 @@ class Call extends Entity
      /** 
      * Gets the targets
      *
-     * @return array|null The targets
+     * @return InvitationParticipantInfo[]|null The targets
      */
     public function getTargets()
     {
-        if (array_key_exists("targets", $this->_propDict)) {
-           return $this->_propDict["targets"];
-        } else {
-            return null;
+        if (array_key_exists('targets', $this->_propDict) && !is_null($this->_propDict['targets'])) {
+            $targets = [];
+            if (count($this->_propDict['targets']) > 0 && is_a($this->_propDict['targets'][0], 'InvitationParticipantInfo')) {
+                return $this->_propDict['targets'];
+            }
+            foreach ($this->_propDict['targets'] as $singleValue) {
+                $targets []= new InvitationParticipantInfo($singleValue);
+            }
+            $this->_propDict['targets'] = $targets;
+            return $this->_propDict['targets'];
         }
+        return null;
     }
     
     /** 
     * Sets the targets
     *
-    * @param InvitationParticipantInfo $val The targets
+    * @param InvitationParticipantInfo[] $val The targets
     *
     * @return Call
     */
@@ -578,8 +599,8 @@ class Call extends Entity
     */
     public function getToneInfo()
     {
-        if (array_key_exists("toneInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["toneInfo"], "\Microsoft\Graph\Model\ToneInfo") || is_null($this->_propDict["toneInfo"])) {
+        if (array_key_exists("toneInfo", $this->_propDict) && !is_null($this->_propDict["toneInfo"])) {
+            if (is_a($this->_propDict["toneInfo"], "\Microsoft\Graph\Model\ToneInfo")) {
                 return $this->_propDict["toneInfo"];
             } else {
                 $this->_propDict["toneInfo"] = new ToneInfo($this->_propDict["toneInfo"]);
@@ -610,8 +631,8 @@ class Call extends Entity
     */
     public function getTranscription()
     {
-        if (array_key_exists("transcription", $this->_propDict)) {
-            if (is_a($this->_propDict["transcription"], "\Microsoft\Graph\Model\CallTranscriptionInfo") || is_null($this->_propDict["transcription"])) {
+        if (array_key_exists("transcription", $this->_propDict) && !is_null($this->_propDict["transcription"])) {
+            if (is_a($this->_propDict["transcription"], "\Microsoft\Graph\Model\CallTranscriptionInfo")) {
                 return $this->_propDict["transcription"];
             } else {
                 $this->_propDict["transcription"] = new CallTranscriptionInfo($this->_propDict["transcription"]);
@@ -640,22 +661,29 @@ class Call extends Entity
      * Gets the operations
     * Read-only. Nullable.
      *
-     * @return array|null The operations
+     * @return CommsOperation[]|null The operations
      */
     public function getOperations()
     {
-        if (array_key_exists("operations", $this->_propDict)) {
-           return $this->_propDict["operations"];
-        } else {
-            return null;
+        if (array_key_exists('operations', $this->_propDict) && !is_null($this->_propDict['operations'])) {
+            $operations = [];
+            if (count($this->_propDict['operations']) > 0 && is_a($this->_propDict['operations'][0], 'CommsOperation')) {
+                return $this->_propDict['operations'];
+            }
+            foreach ($this->_propDict['operations'] as $singleValue) {
+                $operations []= new CommsOperation($singleValue);
+            }
+            $this->_propDict['operations'] = $operations;
+            return $this->_propDict['operations'];
         }
+        return null;
     }
     
     /** 
     * Sets the operations
     * Read-only. Nullable.
     *
-    * @param CommsOperation $val The operations
+    * @param CommsOperation[] $val The operations
     *
     * @return Call
     */
@@ -670,22 +698,29 @@ class Call extends Entity
      * Gets the participants
     * Read-only. Nullable.
      *
-     * @return array|null The participants
+     * @return Participant[]|null The participants
      */
     public function getParticipants()
     {
-        if (array_key_exists("participants", $this->_propDict)) {
-           return $this->_propDict["participants"];
-        } else {
-            return null;
+        if (array_key_exists('participants', $this->_propDict) && !is_null($this->_propDict['participants'])) {
+            $participants = [];
+            if (count($this->_propDict['participants']) > 0 && is_a($this->_propDict['participants'][0], 'Participant')) {
+                return $this->_propDict['participants'];
+            }
+            foreach ($this->_propDict['participants'] as $singleValue) {
+                $participants []= new Participant($singleValue);
+            }
+            $this->_propDict['participants'] = $participants;
+            return $this->_propDict['participants'];
         }
+        return null;
     }
     
     /** 
     * Sets the participants
     * Read-only. Nullable.
     *
-    * @param Participant $val The participants
+    * @param Participant[] $val The participants
     *
     * @return Call
     */

@@ -61,8 +61,8 @@ class ActivityHistoryItem extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -94,8 +94,8 @@ class ActivityHistoryItem extends Entity
     */
     public function getExpirationDateTime()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+        if (array_key_exists("expirationDateTime", $this->_propDict) && !is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -127,8 +127,8 @@ class ActivityHistoryItem extends Entity
     */
     public function getLastActiveDateTime()
     {
-        if (array_key_exists("lastActiveDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActiveDateTime"], "\DateTime") || is_null($this->_propDict["lastActiveDateTime"])) {
+        if (array_key_exists("lastActiveDateTime", $this->_propDict) && !is_null($this->_propDict["lastActiveDateTime"])) {
+            if (is_a($this->_propDict["lastActiveDateTime"], "\DateTime")) {
                 return $this->_propDict["lastActiveDateTime"];
             } else {
                 $this->_propDict["lastActiveDateTime"] = new \DateTime($this->_propDict["lastActiveDateTime"]);
@@ -160,8 +160,8 @@ class ActivityHistoryItem extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -193,8 +193,8 @@ class ActivityHistoryItem extends Entity
     */
     public function getStartedDateTime()
     {
-        if (array_key_exists("startedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startedDateTime"], "\DateTime") || is_null($this->_propDict["startedDateTime"])) {
+        if (array_key_exists("startedDateTime", $this->_propDict) && !is_null($this->_propDict["startedDateTime"])) {
+            if (is_a($this->_propDict["startedDateTime"], "\DateTime")) {
                 return $this->_propDict["startedDateTime"];
             } else {
                 $this->_propDict["startedDateTime"] = new \DateTime($this->_propDict["startedDateTime"]);
@@ -226,8 +226,8 @@ class ActivityHistoryItem extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\Status") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\Status")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new Status($this->_propDict["status"]);
@@ -288,8 +288,8 @@ class ActivityHistoryItem extends Entity
     */
     public function getActivity()
     {
-        if (array_key_exists("activity", $this->_propDict)) {
-            if (is_a($this->_propDict["activity"], "\Microsoft\Graph\Model\UserActivity") || is_null($this->_propDict["activity"])) {
+        if (array_key_exists("activity", $this->_propDict) && !is_null($this->_propDict["activity"])) {
+            if (is_a($this->_propDict["activity"], "\Microsoft\Graph\Model\UserActivity")) {
                 return $this->_propDict["activity"];
             } else {
                 $this->_propDict["activity"] = new UserActivity($this->_propDict["activity"]);

@@ -61,8 +61,8 @@ class CountryNamedLocation extends NamedLocation
     */
     public function getCountryLookupMethod()
     {
-        if (array_key_exists("countryLookupMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["countryLookupMethod"], "\Microsoft\Graph\Model\CountryLookupMethodType") || is_null($this->_propDict["countryLookupMethod"])) {
+        if (array_key_exists("countryLookupMethod", $this->_propDict) && !is_null($this->_propDict["countryLookupMethod"])) {
+            if (is_a($this->_propDict["countryLookupMethod"], "\Microsoft\Graph\Model\CountryLookupMethodType")) {
                 return $this->_propDict["countryLookupMethod"];
             } else {
                 $this->_propDict["countryLookupMethod"] = new CountryLookupMethodType($this->_propDict["countryLookupMethod"]);

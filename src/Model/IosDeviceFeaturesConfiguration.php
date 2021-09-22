@@ -58,22 +58,29 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the homeScreenDockIcons
     * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The homeScreenDockIcons
+     * @return IosHomeScreenItem[]|null The homeScreenDockIcons
      */
     public function getHomeScreenDockIcons()
     {
-        if (array_key_exists("homeScreenDockIcons", $this->_propDict)) {
-           return $this->_propDict["homeScreenDockIcons"];
-        } else {
-            return null;
+        if (array_key_exists('homeScreenDockIcons', $this->_propDict) && !is_null($this->_propDict['homeScreenDockIcons'])) {
+            $homeScreenDockIcons = [];
+            if (count($this->_propDict['homeScreenDockIcons']) > 0 && is_a($this->_propDict['homeScreenDockIcons'][0], 'IosHomeScreenItem')) {
+                return $this->_propDict['homeScreenDockIcons'];
+            }
+            foreach ($this->_propDict['homeScreenDockIcons'] as $singleValue) {
+                $homeScreenDockIcons []= new IosHomeScreenItem($singleValue);
+            }
+            $this->_propDict['homeScreenDockIcons'] = $homeScreenDockIcons;
+            return $this->_propDict['homeScreenDockIcons'];
         }
+        return null;
     }
     
     /** 
     * Sets the homeScreenDockIcons
     * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
     *
-    * @param IosHomeScreenItem $val The homeScreenDockIcons
+    * @param IosHomeScreenItem[] $val The homeScreenDockIcons
     *
     * @return IosDeviceFeaturesConfiguration
     */
@@ -88,22 +95,29 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the homeScreenPages
     * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The homeScreenPages
+     * @return IosHomeScreenPage[]|null The homeScreenPages
      */
     public function getHomeScreenPages()
     {
-        if (array_key_exists("homeScreenPages", $this->_propDict)) {
-           return $this->_propDict["homeScreenPages"];
-        } else {
-            return null;
+        if (array_key_exists('homeScreenPages', $this->_propDict) && !is_null($this->_propDict['homeScreenPages'])) {
+            $homeScreenPages = [];
+            if (count($this->_propDict['homeScreenPages']) > 0 && is_a($this->_propDict['homeScreenPages'][0], 'IosHomeScreenPage')) {
+                return $this->_propDict['homeScreenPages'];
+            }
+            foreach ($this->_propDict['homeScreenPages'] as $singleValue) {
+                $homeScreenPages []= new IosHomeScreenPage($singleValue);
+            }
+            $this->_propDict['homeScreenPages'] = $homeScreenPages;
+            return $this->_propDict['homeScreenPages'];
         }
+        return null;
     }
     
     /** 
     * Sets the homeScreenPages
     * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
     *
-    * @param IosHomeScreenPage $val The homeScreenPages
+    * @param IosHomeScreenPage[] $val The homeScreenPages
     *
     * @return IosDeviceFeaturesConfiguration
     */
@@ -147,22 +161,29 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
      * Gets the notificationSettings
     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The notificationSettings
+     * @return IosNotificationSettings[]|null The notificationSettings
      */
     public function getNotificationSettings()
     {
-        if (array_key_exists("notificationSettings", $this->_propDict)) {
-           return $this->_propDict["notificationSettings"];
-        } else {
-            return null;
+        if (array_key_exists('notificationSettings', $this->_propDict) && !is_null($this->_propDict['notificationSettings'])) {
+            $notificationSettings = [];
+            if (count($this->_propDict['notificationSettings']) > 0 && is_a($this->_propDict['notificationSettings'][0], 'IosNotificationSettings')) {
+                return $this->_propDict['notificationSettings'];
+            }
+            foreach ($this->_propDict['notificationSettings'] as $singleValue) {
+                $notificationSettings []= new IosNotificationSettings($singleValue);
+            }
+            $this->_propDict['notificationSettings'] = $notificationSettings;
+            return $this->_propDict['notificationSettings'];
         }
+        return null;
     }
     
     /** 
     * Sets the notificationSettings
     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
     *
-    * @param IosNotificationSettings $val The notificationSettings
+    * @param IosNotificationSettings[] $val The notificationSettings
     *
     * @return IosDeviceFeaturesConfiguration
     */

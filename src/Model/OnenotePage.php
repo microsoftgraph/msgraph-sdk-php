@@ -32,8 +32,8 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     */
     public function getContent()
     {
-        if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["content"])) {
+        if (array_key_exists("content", $this->_propDict) && !is_null($this->_propDict["content"])) {
+            if (is_a($this->_propDict["content"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["content"]);
@@ -123,8 +123,8 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -185,8 +185,8 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     */
     public function getLinks()
     {
-        if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\PageLinks") || is_null($this->_propDict["links"])) {
+        if (array_key_exists("links", $this->_propDict) && !is_null($this->_propDict["links"])) {
+            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\PageLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new PageLinks($this->_propDict["links"]);
@@ -303,8 +303,8 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     */
     public function getParentNotebook()
     {
-        if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "\Microsoft\Graph\Model\Notebook") || is_null($this->_propDict["parentNotebook"])) {
+        if (array_key_exists("parentNotebook", $this->_propDict) && !is_null($this->_propDict["parentNotebook"])) {
+            if (is_a($this->_propDict["parentNotebook"], "\Microsoft\Graph\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -336,8 +336,8 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     */
     public function getParentSection()
     {
-        if (array_key_exists("parentSection", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSection"], "\Microsoft\Graph\Model\OnenoteSection") || is_null($this->_propDict["parentSection"])) {
+        if (array_key_exists("parentSection", $this->_propDict) && !is_null($this->_propDict["parentSection"])) {
+            if (is_a($this->_propDict["parentSection"], "\Microsoft\Graph\Model\OnenoteSection")) {
                 return $this->_propDict["parentSection"];
             } else {
                 $this->_propDict["parentSection"] = new OnenoteSection($this->_propDict["parentSection"]);

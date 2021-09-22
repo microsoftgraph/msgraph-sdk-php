@@ -90,8 +90,8 @@ class WorkbookChartAxisTitle extends Entity
     */
     public function getFormat()
     {
-        if (array_key_exists("format", $this->_propDict)) {
-            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\WorkbookChartAxisTitleFormat") || is_null($this->_propDict["format"])) {
+        if (array_key_exists("format", $this->_propDict) && !is_null($this->_propDict["format"])) {
+            if (is_a($this->_propDict["format"], "\Microsoft\Graph\Model\WorkbookChartAxisTitleFormat")) {
                 return $this->_propDict["format"];
             } else {
                 $this->_propDict["format"] = new WorkbookChartAxisTitleFormat($this->_propDict["format"]);

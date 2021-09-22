@@ -42,7 +42,7 @@ class ConditionalAccessLocations extends Entity
     * Sets the excludeLocations
     * Location IDs excluded from scope of policy.
     *
-    * @param string $val The value of the excludeLocations
+    * @param string[] $val The value of the excludeLocations
     *
     * @return ConditionalAccessLocations
     */
@@ -70,7 +70,7 @@ class ConditionalAccessLocations extends Entity
     * Sets the includeLocations
     * Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
     *
-    * @param string $val The value of the includeLocations
+    * @param string[] $val The value of the includeLocations
     *
     * @return ConditionalAccessLocations
     */

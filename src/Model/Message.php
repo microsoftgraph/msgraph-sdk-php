@@ -29,22 +29,29 @@ class Message extends OutlookItem
      * Gets the bccRecipients
     * The Bcc: recipients for the message.
      *
-     * @return array|null The bccRecipients
+     * @return Recipient[]|null The bccRecipients
      */
     public function getBccRecipients()
     {
-        if (array_key_exists("bccRecipients", $this->_propDict)) {
-           return $this->_propDict["bccRecipients"];
-        } else {
-            return null;
+        if (array_key_exists('bccRecipients', $this->_propDict) && !is_null($this->_propDict['bccRecipients'])) {
+            $bccRecipients = [];
+            if (count($this->_propDict['bccRecipients']) > 0 && is_a($this->_propDict['bccRecipients'][0], 'Recipient')) {
+                return $this->_propDict['bccRecipients'];
+            }
+            foreach ($this->_propDict['bccRecipients'] as $singleValue) {
+                $bccRecipients []= new Recipient($singleValue);
+            }
+            $this->_propDict['bccRecipients'] = $bccRecipients;
+            return $this->_propDict['bccRecipients'];
         }
+        return null;
     }
     
     /** 
     * Sets the bccRecipients
     * The Bcc: recipients for the message.
     *
-    * @param Recipient $val The bccRecipients
+    * @param Recipient[] $val The bccRecipients
     *
     * @return Message
     */
@@ -62,8 +69,8 @@ class Message extends OutlookItem
     */
     public function getBody()
     {
-        if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["body"])) {
+        if (array_key_exists("body", $this->_propDict) && !is_null($this->_propDict["body"])) {
+            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -121,22 +128,29 @@ class Message extends OutlookItem
      * Gets the ccRecipients
     * The Cc: recipients for the message.
      *
-     * @return array|null The ccRecipients
+     * @return Recipient[]|null The ccRecipients
      */
     public function getCcRecipients()
     {
-        if (array_key_exists("ccRecipients", $this->_propDict)) {
-           return $this->_propDict["ccRecipients"];
-        } else {
-            return null;
+        if (array_key_exists('ccRecipients', $this->_propDict) && !is_null($this->_propDict['ccRecipients'])) {
+            $ccRecipients = [];
+            if (count($this->_propDict['ccRecipients']) > 0 && is_a($this->_propDict['ccRecipients'][0], 'Recipient')) {
+                return $this->_propDict['ccRecipients'];
+            }
+            foreach ($this->_propDict['ccRecipients'] as $singleValue) {
+                $ccRecipients []= new Recipient($singleValue);
+            }
+            $this->_propDict['ccRecipients'] = $ccRecipients;
+            return $this->_propDict['ccRecipients'];
         }
+        return null;
     }
     
     /** 
     * Sets the ccRecipients
     * The Cc: recipients for the message.
     *
-    * @param Recipient $val The ccRecipients
+    * @param Recipient[] $val The ccRecipients
     *
     * @return Message
     */
@@ -183,8 +197,8 @@ class Message extends OutlookItem
     */
     public function getConversationIndex()
     {
-        if (array_key_exists("conversationIndex", $this->_propDict)) {
-            if (is_a($this->_propDict["conversationIndex"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["conversationIndex"])) {
+        if (array_key_exists("conversationIndex", $this->_propDict) && !is_null($this->_propDict["conversationIndex"])) {
+            if (is_a($this->_propDict["conversationIndex"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["conversationIndex"];
             } else {
                 $this->_propDict["conversationIndex"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["conversationIndex"]);
@@ -216,8 +230,8 @@ class Message extends OutlookItem
     */
     public function getFlag()
     {
-        if (array_key_exists("flag", $this->_propDict)) {
-            if (is_a($this->_propDict["flag"], "\Microsoft\Graph\Model\FollowupFlag") || is_null($this->_propDict["flag"])) {
+        if (array_key_exists("flag", $this->_propDict) && !is_null($this->_propDict["flag"])) {
+            if (is_a($this->_propDict["flag"], "\Microsoft\Graph\Model\FollowupFlag")) {
                 return $this->_propDict["flag"];
             } else {
                 $this->_propDict["flag"] = new FollowupFlag($this->_propDict["flag"]);
@@ -249,8 +263,8 @@ class Message extends OutlookItem
     */
     public function getFrom()
     {
-        if (array_key_exists("from", $this->_propDict)) {
-            if (is_a($this->_propDict["from"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["from"])) {
+        if (array_key_exists("from", $this->_propDict) && !is_null($this->_propDict["from"])) {
+            if (is_a($this->_propDict["from"], "\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["from"];
             } else {
                 $this->_propDict["from"] = new Recipient($this->_propDict["from"]);
@@ -311,8 +325,8 @@ class Message extends OutlookItem
     */
     public function getImportance()
     {
-        if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\Importance") || is_null($this->_propDict["importance"])) {
+        if (array_key_exists("importance", $this->_propDict) && !is_null($this->_propDict["importance"])) {
+            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -344,8 +358,8 @@ class Message extends OutlookItem
     */
     public function getInferenceClassification()
     {
-        if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "\Microsoft\Graph\Model\InferenceClassificationType") || is_null($this->_propDict["inferenceClassification"])) {
+        if (array_key_exists("inferenceClassification", $this->_propDict) && !is_null($this->_propDict["inferenceClassification"])) {
+            if (is_a($this->_propDict["inferenceClassification"], "\Microsoft\Graph\Model\InferenceClassificationType")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassificationType($this->_propDict["inferenceClassification"]);
@@ -374,22 +388,29 @@ class Message extends OutlookItem
      * Gets the internetMessageHeaders
     * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.  Returned only on applying a $select query option. Read-only.
      *
-     * @return array|null The internetMessageHeaders
+     * @return InternetMessageHeader[]|null The internetMessageHeaders
      */
     public function getInternetMessageHeaders()
     {
-        if (array_key_exists("internetMessageHeaders", $this->_propDict)) {
-           return $this->_propDict["internetMessageHeaders"];
-        } else {
-            return null;
+        if (array_key_exists('internetMessageHeaders', $this->_propDict) && !is_null($this->_propDict['internetMessageHeaders'])) {
+            $internetMessageHeaders = [];
+            if (count($this->_propDict['internetMessageHeaders']) > 0 && is_a($this->_propDict['internetMessageHeaders'][0], 'InternetMessageHeader')) {
+                return $this->_propDict['internetMessageHeaders'];
+            }
+            foreach ($this->_propDict['internetMessageHeaders'] as $singleValue) {
+                $internetMessageHeaders []= new InternetMessageHeader($singleValue);
+            }
+            $this->_propDict['internetMessageHeaders'] = $internetMessageHeaders;
+            return $this->_propDict['internetMessageHeaders'];
         }
+        return null;
     }
     
     /** 
     * Sets the internetMessageHeaders
     * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.  Returned only on applying a $select query option. Read-only.
     *
-    * @param InternetMessageHeader $val The internetMessageHeaders
+    * @param InternetMessageHeader[] $val The internetMessageHeaders
     *
     * @return Message
     */
@@ -581,8 +602,8 @@ class Message extends OutlookItem
     */
     public function getReceivedDateTime()
     {
-        if (array_key_exists("receivedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["receivedDateTime"], "\DateTime") || is_null($this->_propDict["receivedDateTime"])) {
+        if (array_key_exists("receivedDateTime", $this->_propDict) && !is_null($this->_propDict["receivedDateTime"])) {
+            if (is_a($this->_propDict["receivedDateTime"], "\DateTime")) {
                 return $this->_propDict["receivedDateTime"];
             } else {
                 $this->_propDict["receivedDateTime"] = new \DateTime($this->_propDict["receivedDateTime"]);
@@ -611,22 +632,29 @@ class Message extends OutlookItem
      * Gets the replyTo
     * The email addresses to use when replying.
      *
-     * @return array|null The replyTo
+     * @return Recipient[]|null The replyTo
      */
     public function getReplyTo()
     {
-        if (array_key_exists("replyTo", $this->_propDict)) {
-           return $this->_propDict["replyTo"];
-        } else {
-            return null;
+        if (array_key_exists('replyTo', $this->_propDict) && !is_null($this->_propDict['replyTo'])) {
+            $replyTo = [];
+            if (count($this->_propDict['replyTo']) > 0 && is_a($this->_propDict['replyTo'][0], 'Recipient')) {
+                return $this->_propDict['replyTo'];
+            }
+            foreach ($this->_propDict['replyTo'] as $singleValue) {
+                $replyTo []= new Recipient($singleValue);
+            }
+            $this->_propDict['replyTo'] = $replyTo;
+            return $this->_propDict['replyTo'];
         }
+        return null;
     }
     
     /** 
     * Sets the replyTo
     * The email addresses to use when replying.
     *
-    * @param Recipient $val The replyTo
+    * @param Recipient[] $val The replyTo
     *
     * @return Message
     */
@@ -644,8 +672,8 @@ class Message extends OutlookItem
     */
     public function getSender()
     {
-        if (array_key_exists("sender", $this->_propDict)) {
-            if (is_a($this->_propDict["sender"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["sender"])) {
+        if (array_key_exists("sender", $this->_propDict) && !is_null($this->_propDict["sender"])) {
+            if (is_a($this->_propDict["sender"], "\Microsoft\Graph\Model\Recipient")) {
                 return $this->_propDict["sender"];
             } else {
                 $this->_propDict["sender"] = new Recipient($this->_propDict["sender"]);
@@ -677,8 +705,8 @@ class Message extends OutlookItem
     */
     public function getSentDateTime()
     {
-        if (array_key_exists("sentDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["sentDateTime"], "\DateTime") || is_null($this->_propDict["sentDateTime"])) {
+        if (array_key_exists("sentDateTime", $this->_propDict) && !is_null($this->_propDict["sentDateTime"])) {
+            if (is_a($this->_propDict["sentDateTime"], "\DateTime")) {
                 return $this->_propDict["sentDateTime"];
             } else {
                 $this->_propDict["sentDateTime"] = new \DateTime($this->_propDict["sentDateTime"]);
@@ -736,22 +764,29 @@ class Message extends OutlookItem
      * Gets the toRecipients
     * The To: recipients for the message.
      *
-     * @return array|null The toRecipients
+     * @return Recipient[]|null The toRecipients
      */
     public function getToRecipients()
     {
-        if (array_key_exists("toRecipients", $this->_propDict)) {
-           return $this->_propDict["toRecipients"];
-        } else {
-            return null;
+        if (array_key_exists('toRecipients', $this->_propDict) && !is_null($this->_propDict['toRecipients'])) {
+            $toRecipients = [];
+            if (count($this->_propDict['toRecipients']) > 0 && is_a($this->_propDict['toRecipients'][0], 'Recipient')) {
+                return $this->_propDict['toRecipients'];
+            }
+            foreach ($this->_propDict['toRecipients'] as $singleValue) {
+                $toRecipients []= new Recipient($singleValue);
+            }
+            $this->_propDict['toRecipients'] = $toRecipients;
+            return $this->_propDict['toRecipients'];
         }
+        return null;
     }
     
     /** 
     * Sets the toRecipients
     * The To: recipients for the message.
     *
-    * @param Recipient $val The toRecipients
+    * @param Recipient[] $val The toRecipients
     *
     * @return Message
     */
@@ -769,8 +804,8 @@ class Message extends OutlookItem
     */
     public function getUniqueBody()
     {
-        if (array_key_exists("uniqueBody", $this->_propDict)) {
-            if (is_a($this->_propDict["uniqueBody"], "\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["uniqueBody"])) {
+        if (array_key_exists("uniqueBody", $this->_propDict) && !is_null($this->_propDict["uniqueBody"])) {
+            if (is_a($this->_propDict["uniqueBody"], "\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["uniqueBody"];
             } else {
                 $this->_propDict["uniqueBody"] = new ItemBody($this->_propDict["uniqueBody"]);
@@ -828,22 +863,29 @@ class Message extends OutlookItem
      * Gets the attachments
     * The fileAttachment and itemAttachment attachments for the message.
      *
-     * @return array|null The attachments
+     * @return Attachment[]|null The attachments
      */
     public function getAttachments()
     {
-        if (array_key_exists("attachments", $this->_propDict)) {
-           return $this->_propDict["attachments"];
-        } else {
-            return null;
+        if (array_key_exists('attachments', $this->_propDict) && !is_null($this->_propDict['attachments'])) {
+            $attachments = [];
+            if (count($this->_propDict['attachments']) > 0 && is_a($this->_propDict['attachments'][0], 'Attachment')) {
+                return $this->_propDict['attachments'];
+            }
+            foreach ($this->_propDict['attachments'] as $singleValue) {
+                $attachments []= new Attachment($singleValue);
+            }
+            $this->_propDict['attachments'] = $attachments;
+            return $this->_propDict['attachments'];
         }
+        return null;
     }
     
     /** 
     * Sets the attachments
     * The fileAttachment and itemAttachment attachments for the message.
     *
-    * @param Attachment $val The attachments
+    * @param Attachment[] $val The attachments
     *
     * @return Message
     */
@@ -858,22 +900,29 @@ class Message extends OutlookItem
      * Gets the extensions
     * The collection of open extensions defined for the message. Nullable.
      *
-     * @return array|null The extensions
+     * @return Extension[]|null The extensions
      */
     public function getExtensions()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
+        if (array_key_exists('extensions', $this->_propDict) && !is_null($this->_propDict['extensions'])) {
+            $extensions = [];
+            if (count($this->_propDict['extensions']) > 0 && is_a($this->_propDict['extensions'][0], 'Extension')) {
+                return $this->_propDict['extensions'];
+            }
+            foreach ($this->_propDict['extensions'] as $singleValue) {
+                $extensions []= new Extension($singleValue);
+            }
+            $this->_propDict['extensions'] = $extensions;
+            return $this->_propDict['extensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the extensions
     * The collection of open extensions defined for the message. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return Message
     */
@@ -888,22 +937,29 @@ class Message extends OutlookItem
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the message. Nullable.
      *
-     * @return array|null The multiValueExtendedProperties
+     * @return MultiValueLegacyExtendedProperty[]|null The multiValueExtendedProperties
      */
     public function getMultiValueExtendedProperties()
     {
-        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["multiValueExtendedProperties"];
-        } else {
-            return null;
+        if (array_key_exists('multiValueExtendedProperties', $this->_propDict) && !is_null($this->_propDict['multiValueExtendedProperties'])) {
+            $multiValueExtendedProperties = [];
+            if (count($this->_propDict['multiValueExtendedProperties']) > 0 && is_a($this->_propDict['multiValueExtendedProperties'][0], 'MultiValueLegacyExtendedProperty')) {
+                return $this->_propDict['multiValueExtendedProperties'];
+            }
+            foreach ($this->_propDict['multiValueExtendedProperties'] as $singleValue) {
+                $multiValueExtendedProperties []= new MultiValueLegacyExtendedProperty($singleValue);
+            }
+            $this->_propDict['multiValueExtendedProperties'] = $multiValueExtendedProperties;
+            return $this->_propDict['multiValueExtendedProperties'];
         }
+        return null;
     }
     
     /** 
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the message. Nullable.
     *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty[] $val The multiValueExtendedProperties
     *
     * @return Message
     */
@@ -918,22 +974,29 @@ class Message extends OutlookItem
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the message. Nullable.
      *
-     * @return array|null The singleValueExtendedProperties
+     * @return SingleValueLegacyExtendedProperty[]|null The singleValueExtendedProperties
      */
     public function getSingleValueExtendedProperties()
     {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
-        } else {
-            return null;
+        if (array_key_exists('singleValueExtendedProperties', $this->_propDict) && !is_null($this->_propDict['singleValueExtendedProperties'])) {
+            $singleValueExtendedProperties = [];
+            if (count($this->_propDict['singleValueExtendedProperties']) > 0 && is_a($this->_propDict['singleValueExtendedProperties'][0], 'SingleValueLegacyExtendedProperty')) {
+                return $this->_propDict['singleValueExtendedProperties'];
+            }
+            foreach ($this->_propDict['singleValueExtendedProperties'] as $singleValue) {
+                $singleValueExtendedProperties []= new SingleValueLegacyExtendedProperty($singleValue);
+            }
+            $this->_propDict['singleValueExtendedProperties'] = $singleValueExtendedProperties;
+            return $this->_propDict['singleValueExtendedProperties'];
         }
+        return null;
     }
     
     /** 
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the message. Nullable.
     *
-    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty[] $val The singleValueExtendedProperties
     *
     * @return Message
     */

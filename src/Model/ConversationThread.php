@@ -29,22 +29,29 @@ class ConversationThread extends Entity
      * Gets the ccRecipients
     * The Cc: recipients for the thread. Returned only on $select.
      *
-     * @return array|null The ccRecipients
+     * @return Recipient[]|null The ccRecipients
      */
     public function getCcRecipients()
     {
-        if (array_key_exists("ccRecipients", $this->_propDict)) {
-           return $this->_propDict["ccRecipients"];
-        } else {
-            return null;
+        if (array_key_exists('ccRecipients', $this->_propDict) && !is_null($this->_propDict['ccRecipients'])) {
+            $ccRecipients = [];
+            if (count($this->_propDict['ccRecipients']) > 0 && is_a($this->_propDict['ccRecipients'][0], 'Recipient')) {
+                return $this->_propDict['ccRecipients'];
+            }
+            foreach ($this->_propDict['ccRecipients'] as $singleValue) {
+                $ccRecipients []= new Recipient($singleValue);
+            }
+            $this->_propDict['ccRecipients'] = $ccRecipients;
+            return $this->_propDict['ccRecipients'];
         }
+        return null;
     }
     
     /** 
     * Sets the ccRecipients
     * The Cc: recipients for the thread. Returned only on $select.
     *
-    * @param Recipient $val The ccRecipients
+    * @param Recipient[] $val The ccRecipients
     *
     * @return ConversationThread
     */
@@ -120,8 +127,8 @@ class ConversationThread extends Entity
     */
     public function getLastDeliveredDateTime()
     {
-        if (array_key_exists("lastDeliveredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastDeliveredDateTime"], "\DateTime") || is_null($this->_propDict["lastDeliveredDateTime"])) {
+        if (array_key_exists("lastDeliveredDateTime", $this->_propDict) && !is_null($this->_propDict["lastDeliveredDateTime"])) {
+            if (is_a($this->_propDict["lastDeliveredDateTime"], "\DateTime")) {
                 return $this->_propDict["lastDeliveredDateTime"];
             } else {
                 $this->_propDict["lastDeliveredDateTime"] = new \DateTime($this->_propDict["lastDeliveredDateTime"]);
@@ -208,22 +215,29 @@ class ConversationThread extends Entity
      * Gets the toRecipients
     * The To: recipients for the thread. Returned only on $select.
      *
-     * @return array|null The toRecipients
+     * @return Recipient[]|null The toRecipients
      */
     public function getToRecipients()
     {
-        if (array_key_exists("toRecipients", $this->_propDict)) {
-           return $this->_propDict["toRecipients"];
-        } else {
-            return null;
+        if (array_key_exists('toRecipients', $this->_propDict) && !is_null($this->_propDict['toRecipients'])) {
+            $toRecipients = [];
+            if (count($this->_propDict['toRecipients']) > 0 && is_a($this->_propDict['toRecipients'][0], 'Recipient')) {
+                return $this->_propDict['toRecipients'];
+            }
+            foreach ($this->_propDict['toRecipients'] as $singleValue) {
+                $toRecipients []= new Recipient($singleValue);
+            }
+            $this->_propDict['toRecipients'] = $toRecipients;
+            return $this->_propDict['toRecipients'];
         }
+        return null;
     }
     
     /** 
     * Sets the toRecipients
     * The To: recipients for the thread. Returned only on $select.
     *
-    * @param Recipient $val The toRecipients
+    * @param Recipient[] $val The toRecipients
     *
     * @return ConversationThread
     */
@@ -267,22 +281,29 @@ class ConversationThread extends Entity
      * Gets the posts
     * Read-only. Nullable.
      *
-     * @return array|null The posts
+     * @return Post[]|null The posts
      */
     public function getPosts()
     {
-        if (array_key_exists("posts", $this->_propDict)) {
-           return $this->_propDict["posts"];
-        } else {
-            return null;
+        if (array_key_exists('posts', $this->_propDict) && !is_null($this->_propDict['posts'])) {
+            $posts = [];
+            if (count($this->_propDict['posts']) > 0 && is_a($this->_propDict['posts'][0], 'Post')) {
+                return $this->_propDict['posts'];
+            }
+            foreach ($this->_propDict['posts'] as $singleValue) {
+                $posts []= new Post($singleValue);
+            }
+            $this->_propDict['posts'] = $posts;
+            return $this->_propDict['posts'];
         }
+        return null;
     }
     
     /** 
     * Sets the posts
     * Read-only. Nullable.
     *
-    * @param Post $val The posts
+    * @param Post[] $val The posts
     *
     * @return ConversationThread
     */

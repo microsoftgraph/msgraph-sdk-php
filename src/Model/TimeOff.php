@@ -32,8 +32,8 @@ class TimeOff extends ChangeTrackedEntity
     */
     public function getDraftTimeOff()
     {
-        if (array_key_exists("draftTimeOff", $this->_propDict)) {
-            if (is_a($this->_propDict["draftTimeOff"], "\Microsoft\Graph\Model\TimeOffItem") || is_null($this->_propDict["draftTimeOff"])) {
+        if (array_key_exists("draftTimeOff", $this->_propDict) && !is_null($this->_propDict["draftTimeOff"])) {
+            if (is_a($this->_propDict["draftTimeOff"], "\Microsoft\Graph\Model\TimeOffItem")) {
                 return $this->_propDict["draftTimeOff"];
             } else {
                 $this->_propDict["draftTimeOff"] = new TimeOffItem($this->_propDict["draftTimeOff"]);
@@ -65,8 +65,8 @@ class TimeOff extends ChangeTrackedEntity
     */
     public function getSharedTimeOff()
     {
-        if (array_key_exists("sharedTimeOff", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedTimeOff"], "\Microsoft\Graph\Model\TimeOffItem") || is_null($this->_propDict["sharedTimeOff"])) {
+        if (array_key_exists("sharedTimeOff", $this->_propDict) && !is_null($this->_propDict["sharedTimeOff"])) {
+            if (is_a($this->_propDict["sharedTimeOff"], "\Microsoft\Graph\Model\TimeOffItem")) {
                 return $this->_propDict["sharedTimeOff"];
             } else {
                 $this->_propDict["sharedTimeOff"] = new TimeOffItem($this->_propDict["sharedTimeOff"]);

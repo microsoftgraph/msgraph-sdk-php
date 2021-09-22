@@ -61,8 +61,8 @@ class GraphList extends BaseItem
     */
     public function getList()
     {
-        if (array_key_exists("list", $this->_propDict)) {
-            if (is_a($this->_propDict["list"], "\Microsoft\Graph\Model\ListInfo") || is_null($this->_propDict["list"])) {
+        if (array_key_exists("list", $this->_propDict) && !is_null($this->_propDict["list"])) {
+            if (is_a($this->_propDict["list"], "\Microsoft\Graph\Model\ListInfo")) {
                 return $this->_propDict["list"];
             } else {
                 $this->_propDict["list"] = new ListInfo($this->_propDict["list"]);
@@ -94,8 +94,8 @@ class GraphList extends BaseItem
     */
     public function getSharepointIds()
     {
-        if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "\Microsoft\Graph\Model\SharepointIds") || is_null($this->_propDict["sharepointIds"])) {
+        if (array_key_exists("sharepointIds", $this->_propDict) && !is_null($this->_propDict["sharepointIds"])) {
+            if (is_a($this->_propDict["sharepointIds"], "\Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -127,8 +127,8 @@ class GraphList extends BaseItem
     */
     public function getSystem()
     {
-        if (array_key_exists("system", $this->_propDict)) {
-            if (is_a($this->_propDict["system"], "\Microsoft\Graph\Model\SystemFacet") || is_null($this->_propDict["system"])) {
+        if (array_key_exists("system", $this->_propDict) && !is_null($this->_propDict["system"])) {
+            if (is_a($this->_propDict["system"], "\Microsoft\Graph\Model\SystemFacet")) {
                 return $this->_propDict["system"];
             } else {
                 $this->_propDict["system"] = new SystemFacet($this->_propDict["system"]);
@@ -157,22 +157,29 @@ class GraphList extends BaseItem
      * Gets the columns
     * The collection of field definitions for this list.
      *
-     * @return array|null The columns
+     * @return ColumnDefinition[]|null The columns
      */
     public function getColumns()
     {
-        if (array_key_exists("columns", $this->_propDict)) {
-           return $this->_propDict["columns"];
-        } else {
-            return null;
+        if (array_key_exists('columns', $this->_propDict) && !is_null($this->_propDict['columns'])) {
+            $columns = [];
+            if (count($this->_propDict['columns']) > 0 && is_a($this->_propDict['columns'][0], 'ColumnDefinition')) {
+                return $this->_propDict['columns'];
+            }
+            foreach ($this->_propDict['columns'] as $singleValue) {
+                $columns []= new ColumnDefinition($singleValue);
+            }
+            $this->_propDict['columns'] = $columns;
+            return $this->_propDict['columns'];
         }
+        return null;
     }
     
     /** 
     * Sets the columns
     * The collection of field definitions for this list.
     *
-    * @param ColumnDefinition $val The columns
+    * @param ColumnDefinition[] $val The columns
     *
     * @return GraphList
     */
@@ -187,22 +194,29 @@ class GraphList extends BaseItem
      * Gets the contentTypes
     * The collection of content types present in this list.
      *
-     * @return array|null The contentTypes
+     * @return ContentType[]|null The contentTypes
      */
     public function getContentTypes()
     {
-        if (array_key_exists("contentTypes", $this->_propDict)) {
-           return $this->_propDict["contentTypes"];
-        } else {
-            return null;
+        if (array_key_exists('contentTypes', $this->_propDict) && !is_null($this->_propDict['contentTypes'])) {
+            $contentTypes = [];
+            if (count($this->_propDict['contentTypes']) > 0 && is_a($this->_propDict['contentTypes'][0], 'ContentType')) {
+                return $this->_propDict['contentTypes'];
+            }
+            foreach ($this->_propDict['contentTypes'] as $singleValue) {
+                $contentTypes []= new ContentType($singleValue);
+            }
+            $this->_propDict['contentTypes'] = $contentTypes;
+            return $this->_propDict['contentTypes'];
         }
+        return null;
     }
     
     /** 
     * Sets the contentTypes
     * The collection of content types present in this list.
     *
-    * @param ContentType $val The contentTypes
+    * @param ContentType[] $val The contentTypes
     *
     * @return GraphList
     */
@@ -220,8 +234,8 @@ class GraphList extends BaseItem
     */
     public function getDrive()
     {
-        if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive") || is_null($this->_propDict["drive"])) {
+        if (array_key_exists("drive", $this->_propDict) && !is_null($this->_propDict["drive"])) {
+            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -250,22 +264,29 @@ class GraphList extends BaseItem
      * Gets the items
     * All items contained in the list.
      *
-     * @return array|null The items
+     * @return ListItem[]|null The items
      */
     public function getItems()
     {
-        if (array_key_exists("items", $this->_propDict)) {
-           return $this->_propDict["items"];
-        } else {
-            return null;
+        if (array_key_exists('items', $this->_propDict) && !is_null($this->_propDict['items'])) {
+            $items = [];
+            if (count($this->_propDict['items']) > 0 && is_a($this->_propDict['items'][0], 'ListItem')) {
+                return $this->_propDict['items'];
+            }
+            foreach ($this->_propDict['items'] as $singleValue) {
+                $items []= new ListItem($singleValue);
+            }
+            $this->_propDict['items'] = $items;
+            return $this->_propDict['items'];
         }
+        return null;
     }
     
     /** 
     * Sets the items
     * All items contained in the list.
     *
-    * @param ListItem $val The items
+    * @param ListItem[] $val The items
     *
     * @return GraphList
     */
@@ -280,22 +301,29 @@ class GraphList extends BaseItem
      * Gets the subscriptions
     * The set of subscriptions on the list.
      *
-     * @return array|null The subscriptions
+     * @return Subscription[]|null The subscriptions
      */
     public function getSubscriptions()
     {
-        if (array_key_exists("subscriptions", $this->_propDict)) {
-           return $this->_propDict["subscriptions"];
-        } else {
-            return null;
+        if (array_key_exists('subscriptions', $this->_propDict) && !is_null($this->_propDict['subscriptions'])) {
+            $subscriptions = [];
+            if (count($this->_propDict['subscriptions']) > 0 && is_a($this->_propDict['subscriptions'][0], 'Subscription')) {
+                return $this->_propDict['subscriptions'];
+            }
+            foreach ($this->_propDict['subscriptions'] as $singleValue) {
+                $subscriptions []= new Subscription($singleValue);
+            }
+            $this->_propDict['subscriptions'] = $subscriptions;
+            return $this->_propDict['subscriptions'];
         }
+        return null;
     }
     
     /** 
     * Sets the subscriptions
     * The set of subscriptions on the list.
     *
-    * @param Subscription $val The subscriptions
+    * @param Subscription[] $val The subscriptions
     *
     * @return GraphList
     */

@@ -28,18 +28,22 @@ class RolePermission extends Entity
     * Gets the resourceActions
     * Resource Actions each containing a set of allowed and not allowed permissions.
     *
-    * @return ResourceAction|null The resourceActions
+    * @return ResourceAction[]|null The resourceActions
     */
     public function getResourceActions()
     {
-        if (array_key_exists("resourceActions", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceActions"], "\Microsoft\Graph\Model\ResourceAction") || is_null($this->_propDict["resourceActions"])) {
-                return $this->_propDict["resourceActions"];
-            } else {
-                $this->_propDict["resourceActions"] = new ResourceAction($this->_propDict["resourceActions"]);
-                return $this->_propDict["resourceActions"];
+        if (array_key_exists("resourceActions", $this->_propDict) && !is_null($this->_propDict["resourceActions"])) {
+       
+            if (count($this->_propDict['resourceActions']) > 0 && is_a($this->_propDict['resourceActions'][0], 'ResourceAction')) {
+               return $this->_propDict['resourceActions'];
             }
-        }
+            $resourceActions = [];
+            foreach ($this->_propDict['resourceActions'] as $singleValue) {
+               $resourceActions []= new ResourceAction($singleValue);
+            }
+            $this->_propDict['resourceActions'] = $resourceActions;
+            return $this->_propDict['resourceActions'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class RolePermission extends Entity
     * Sets the resourceActions
     * Resource Actions each containing a set of allowed and not allowed permissions.
     *
-    * @param ResourceAction $val The value to assign to the resourceActions
+    * @param ResourceAction[] $val The value to assign to the resourceActions
     *
     * @return RolePermission The RolePermission
     */

@@ -32,8 +32,9 @@ class TeamworkActivityTopic extends Entity
     */
     public function getSource()
     {
-        if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "\Microsoft\Graph\Model\TeamworkActivityTopicSource") || is_null($this->_propDict["source"])) {
+        if (array_key_exists("source", $this->_propDict) && !is_null($this->_propDict["source"])) {
+     
+            if (is_a($this->_propDict["source"], "\Microsoft\Graph\Model\TeamworkActivityTopicSource")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new TeamworkActivityTopicSource($this->_propDict["source"]);

@@ -32,8 +32,8 @@ class EducationRubric extends Entity
     */
     public function getCreatedBy()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
+        if (array_key_exists("createdBy", $this->_propDict) && !is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -65,8 +65,8 @@ class EducationRubric extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -98,8 +98,8 @@ class EducationRubric extends Entity
     */
     public function getDescription()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            if (is_a($this->_propDict["description"], "\Microsoft\Graph\Model\EducationItemBody") || is_null($this->_propDict["description"])) {
+        if (array_key_exists("description", $this->_propDict) && !is_null($this->_propDict["description"])) {
+            if (is_a($this->_propDict["description"], "\Microsoft\Graph\Model\EducationItemBody")) {
                 return $this->_propDict["description"];
             } else {
                 $this->_propDict["description"] = new EducationItemBody($this->_propDict["description"]);
@@ -160,8 +160,8 @@ class EducationRubric extends Entity
     */
     public function getGrading()
     {
-        if (array_key_exists("grading", $this->_propDict)) {
-            if (is_a($this->_propDict["grading"], "\Microsoft\Graph\Model\EducationAssignmentGradeType") || is_null($this->_propDict["grading"])) {
+        if (array_key_exists("grading", $this->_propDict) && !is_null($this->_propDict["grading"])) {
+            if (is_a($this->_propDict["grading"], "\Microsoft\Graph\Model\EducationAssignmentGradeType")) {
                 return $this->_propDict["grading"];
             } else {
                 $this->_propDict["grading"] = new EducationAssignmentGradeType($this->_propDict["grading"]);
@@ -193,8 +193,8 @@ class EducationRubric extends Entity
     */
     public function getLastModifiedBy()
     {
-        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["lastModifiedBy"])) {
+        if (array_key_exists("lastModifiedBy", $this->_propDict) && !is_null($this->_propDict["lastModifiedBy"])) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -226,8 +226,8 @@ class EducationRubric extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -256,22 +256,29 @@ class EducationRubric extends Entity
      * Gets the levels
     * The collection of levels making up this rubric.
      *
-     * @return array|null The levels
+     * @return RubricLevel[]|null The levels
      */
     public function getLevels()
     {
-        if (array_key_exists("levels", $this->_propDict)) {
-           return $this->_propDict["levels"];
-        } else {
-            return null;
+        if (array_key_exists('levels', $this->_propDict) && !is_null($this->_propDict['levels'])) {
+            $levels = [];
+            if (count($this->_propDict['levels']) > 0 && is_a($this->_propDict['levels'][0], 'RubricLevel')) {
+                return $this->_propDict['levels'];
+            }
+            foreach ($this->_propDict['levels'] as $singleValue) {
+                $levels []= new RubricLevel($singleValue);
+            }
+            $this->_propDict['levels'] = $levels;
+            return $this->_propDict['levels'];
         }
+        return null;
     }
     
     /** 
     * Sets the levels
     * The collection of levels making up this rubric.
     *
-    * @param RubricLevel $val The levels
+    * @param RubricLevel[] $val The levels
     *
     * @return EducationRubric
     */
@@ -286,22 +293,29 @@ class EducationRubric extends Entity
      * Gets the qualities
     * The collection of qualities making up this rubric.
      *
-     * @return array|null The qualities
+     * @return RubricQuality[]|null The qualities
      */
     public function getQualities()
     {
-        if (array_key_exists("qualities", $this->_propDict)) {
-           return $this->_propDict["qualities"];
-        } else {
-            return null;
+        if (array_key_exists('qualities', $this->_propDict) && !is_null($this->_propDict['qualities'])) {
+            $qualities = [];
+            if (count($this->_propDict['qualities']) > 0 && is_a($this->_propDict['qualities'][0], 'RubricQuality')) {
+                return $this->_propDict['qualities'];
+            }
+            foreach ($this->_propDict['qualities'] as $singleValue) {
+                $qualities []= new RubricQuality($singleValue);
+            }
+            $this->_propDict['qualities'] = $qualities;
+            return $this->_propDict['qualities'];
         }
+        return null;
     }
     
     /** 
     * Sets the qualities
     * The collection of qualities making up this rubric.
     *
-    * @param RubricQuality $val The qualities
+    * @param RubricQuality[] $val The qualities
     *
     * @return EducationRubric
     */

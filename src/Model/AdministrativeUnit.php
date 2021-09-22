@@ -116,22 +116,29 @@ class AdministrativeUnit extends DirectoryObject
      * Gets the members
     * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
      *
-     * @return array|null The members
+     * @return DirectoryObject[]|null The members
      */
     public function getMembers()
     {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
+        if (array_key_exists('members', $this->_propDict) && !is_null($this->_propDict['members'])) {
+            $members = [];
+            if (count($this->_propDict['members']) > 0 && is_a($this->_propDict['members'][0], 'DirectoryObject')) {
+                return $this->_propDict['members'];
+            }
+            foreach ($this->_propDict['members'] as $singleValue) {
+                $members []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['members'] = $members;
+            return $this->_propDict['members'];
         }
+        return null;
     }
     
     /** 
     * Sets the members
     * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
     *
-    * @param DirectoryObject $val The members
+    * @param DirectoryObject[] $val The members
     *
     * @return AdministrativeUnit
     */
@@ -146,22 +153,29 @@ class AdministrativeUnit extends DirectoryObject
      * Gets the scopedRoleMembers
     * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
      *
-     * @return array|null The scopedRoleMembers
+     * @return ScopedRoleMembership[]|null The scopedRoleMembers
      */
     public function getScopedRoleMembers()
     {
-        if (array_key_exists("scopedRoleMembers", $this->_propDict)) {
-           return $this->_propDict["scopedRoleMembers"];
-        } else {
-            return null;
+        if (array_key_exists('scopedRoleMembers', $this->_propDict) && !is_null($this->_propDict['scopedRoleMembers'])) {
+            $scopedRoleMembers = [];
+            if (count($this->_propDict['scopedRoleMembers']) > 0 && is_a($this->_propDict['scopedRoleMembers'][0], 'ScopedRoleMembership')) {
+                return $this->_propDict['scopedRoleMembers'];
+            }
+            foreach ($this->_propDict['scopedRoleMembers'] as $singleValue) {
+                $scopedRoleMembers []= new ScopedRoleMembership($singleValue);
+            }
+            $this->_propDict['scopedRoleMembers'] = $scopedRoleMembers;
+            return $this->_propDict['scopedRoleMembers'];
         }
+        return null;
     }
     
     /** 
     * Sets the scopedRoleMembers
     * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
     *
-    * @param ScopedRoleMembership $val The scopedRoleMembers
+    * @param ScopedRoleMembership[] $val The scopedRoleMembers
     *
     * @return AdministrativeUnit
     */
@@ -176,22 +190,29 @@ class AdministrativeUnit extends DirectoryObject
      * Gets the extensions
     * The collection of open extensions defined for this Administrative Unit. Nullable.
      *
-     * @return array|null The extensions
+     * @return Extension[]|null The extensions
      */
     public function getExtensions()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
+        if (array_key_exists('extensions', $this->_propDict) && !is_null($this->_propDict['extensions'])) {
+            $extensions = [];
+            if (count($this->_propDict['extensions']) > 0 && is_a($this->_propDict['extensions'][0], 'Extension')) {
+                return $this->_propDict['extensions'];
+            }
+            foreach ($this->_propDict['extensions'] as $singleValue) {
+                $extensions []= new Extension($singleValue);
+            }
+            $this->_propDict['extensions'] = $extensions;
+            return $this->_propDict['extensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the extensions
     * The collection of open extensions defined for this Administrative Unit. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return AdministrativeUnit
     */

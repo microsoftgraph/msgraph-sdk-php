@@ -32,8 +32,8 @@ class Channel extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -181,8 +181,8 @@ class Channel extends Entity
     */
     public function getMembershipType()
     {
-        if (array_key_exists("membershipType", $this->_propDict)) {
-            if (is_a($this->_propDict["membershipType"], "\Microsoft\Graph\Model\ChannelMembershipType") || is_null($this->_propDict["membershipType"])) {
+        if (array_key_exists("membershipType", $this->_propDict) && !is_null($this->_propDict["membershipType"])) {
+            if (is_a($this->_propDict["membershipType"], "\Microsoft\Graph\Model\ChannelMembershipType")) {
                 return $this->_propDict["membershipType"];
             } else {
                 $this->_propDict["membershipType"] = new ChannelMembershipType($this->_propDict["membershipType"]);
@@ -243,8 +243,8 @@ class Channel extends Entity
     */
     public function getFilesFolder()
     {
-        if (array_key_exists("filesFolder", $this->_propDict)) {
-            if (is_a($this->_propDict["filesFolder"], "\Microsoft\Graph\Model\DriveItem") || is_null($this->_propDict["filesFolder"])) {
+        if (array_key_exists("filesFolder", $this->_propDict) && !is_null($this->_propDict["filesFolder"])) {
+            if (is_a($this->_propDict["filesFolder"], "\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["filesFolder"];
             } else {
                 $this->_propDict["filesFolder"] = new DriveItem($this->_propDict["filesFolder"]);
@@ -273,22 +273,29 @@ class Channel extends Entity
      * Gets the members
     * A collection of membership records associated with the channel.
      *
-     * @return array|null The members
+     * @return ConversationMember[]|null The members
      */
     public function getMembers()
     {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
+        if (array_key_exists('members', $this->_propDict) && !is_null($this->_propDict['members'])) {
+            $members = [];
+            if (count($this->_propDict['members']) > 0 && is_a($this->_propDict['members'][0], 'ConversationMember')) {
+                return $this->_propDict['members'];
+            }
+            foreach ($this->_propDict['members'] as $singleValue) {
+                $members []= new ConversationMember($singleValue);
+            }
+            $this->_propDict['members'] = $members;
+            return $this->_propDict['members'];
         }
+        return null;
     }
     
     /** 
     * Sets the members
     * A collection of membership records associated with the channel.
     *
-    * @param ConversationMember $val The members
+    * @param ConversationMember[] $val The members
     *
     * @return Channel
     */
@@ -303,22 +310,29 @@ class Channel extends Entity
      * Gets the messages
     * A collection of all the messages in the channel. A navigation property. Nullable.
      *
-     * @return array|null The messages
+     * @return ChatMessage[]|null The messages
      */
     public function getMessages()
     {
-        if (array_key_exists("messages", $this->_propDict)) {
-           return $this->_propDict["messages"];
-        } else {
-            return null;
+        if (array_key_exists('messages', $this->_propDict) && !is_null($this->_propDict['messages'])) {
+            $messages = [];
+            if (count($this->_propDict['messages']) > 0 && is_a($this->_propDict['messages'][0], 'ChatMessage')) {
+                return $this->_propDict['messages'];
+            }
+            foreach ($this->_propDict['messages'] as $singleValue) {
+                $messages []= new ChatMessage($singleValue);
+            }
+            $this->_propDict['messages'] = $messages;
+            return $this->_propDict['messages'];
         }
+        return null;
     }
     
     /** 
     * Sets the messages
     * A collection of all the messages in the channel. A navigation property. Nullable.
     *
-    * @param ChatMessage $val The messages
+    * @param ChatMessage[] $val The messages
     *
     * @return Channel
     */
@@ -333,22 +347,29 @@ class Channel extends Entity
      * Gets the tabs
     * A collection of all the tabs in the channel. A navigation property.
      *
-     * @return array|null The tabs
+     * @return TeamsTab[]|null The tabs
      */
     public function getTabs()
     {
-        if (array_key_exists("tabs", $this->_propDict)) {
-           return $this->_propDict["tabs"];
-        } else {
-            return null;
+        if (array_key_exists('tabs', $this->_propDict) && !is_null($this->_propDict['tabs'])) {
+            $tabs = [];
+            if (count($this->_propDict['tabs']) > 0 && is_a($this->_propDict['tabs'][0], 'TeamsTab')) {
+                return $this->_propDict['tabs'];
+            }
+            foreach ($this->_propDict['tabs'] as $singleValue) {
+                $tabs []= new TeamsTab($singleValue);
+            }
+            $this->_propDict['tabs'] = $tabs;
+            return $this->_propDict['tabs'];
         }
+        return null;
     }
     
     /** 
     * Sets the tabs
     * A collection of all the tabs in the channel. A navigation property.
     *
-    * @param TeamsTab $val The tabs
+    * @param TeamsTab[] $val The tabs
     *
     * @return Channel
     */

@@ -145,22 +145,29 @@ class UserInstallStateSummary extends Entity
      * Gets the deviceStates
     * The install state of the eBook.
      *
-     * @return array|null The deviceStates
+     * @return DeviceInstallState[]|null The deviceStates
      */
     public function getDeviceStates()
     {
-        if (array_key_exists("deviceStates", $this->_propDict)) {
-           return $this->_propDict["deviceStates"];
-        } else {
-            return null;
+        if (array_key_exists('deviceStates', $this->_propDict) && !is_null($this->_propDict['deviceStates'])) {
+            $deviceStates = [];
+            if (count($this->_propDict['deviceStates']) > 0 && is_a($this->_propDict['deviceStates'][0], 'DeviceInstallState')) {
+                return $this->_propDict['deviceStates'];
+            }
+            foreach ($this->_propDict['deviceStates'] as $singleValue) {
+                $deviceStates []= new DeviceInstallState($singleValue);
+            }
+            $this->_propDict['deviceStates'] = $deviceStates;
+            return $this->_propDict['deviceStates'];
         }
+        return null;
     }
     
     /** 
     * Sets the deviceStates
     * The install state of the eBook.
     *
-    * @param DeviceInstallState $val The deviceStates
+    * @param DeviceInstallState[] $val The deviceStates
     *
     * @return UserInstallStateSummary
     */

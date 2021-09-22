@@ -29,22 +29,29 @@ class OutlookUser extends Entity
      * Gets the masterCategories
     * A list of categories defined for the user.
      *
-     * @return array|null The masterCategories
+     * @return OutlookCategory[]|null The masterCategories
      */
     public function getMasterCategories()
     {
-        if (array_key_exists("masterCategories", $this->_propDict)) {
-           return $this->_propDict["masterCategories"];
-        } else {
-            return null;
+        if (array_key_exists('masterCategories', $this->_propDict) && !is_null($this->_propDict['masterCategories'])) {
+            $masterCategories = [];
+            if (count($this->_propDict['masterCategories']) > 0 && is_a($this->_propDict['masterCategories'][0], 'OutlookCategory')) {
+                return $this->_propDict['masterCategories'];
+            }
+            foreach ($this->_propDict['masterCategories'] as $singleValue) {
+                $masterCategories []= new OutlookCategory($singleValue);
+            }
+            $this->_propDict['masterCategories'] = $masterCategories;
+            return $this->_propDict['masterCategories'];
         }
+        return null;
     }
     
     /** 
     * Sets the masterCategories
     * A list of categories defined for the user.
     *
-    * @param OutlookCategory $val The masterCategories
+    * @param OutlookCategory[] $val The masterCategories
     *
     * @return OutlookUser
     */

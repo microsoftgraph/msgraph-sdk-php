@@ -29,22 +29,29 @@ class Todo extends Entity
      * Gets the lists
     * The task lists in the users mailbox.
      *
-     * @return array|null The lists
+     * @return TodoTaskList[]|null The lists
      */
     public function getLists()
     {
-        if (array_key_exists("lists", $this->_propDict)) {
-           return $this->_propDict["lists"];
-        } else {
-            return null;
+        if (array_key_exists('lists', $this->_propDict) && !is_null($this->_propDict['lists'])) {
+            $lists = [];
+            if (count($this->_propDict['lists']) > 0 && is_a($this->_propDict['lists'][0], 'TodoTaskList')) {
+                return $this->_propDict['lists'];
+            }
+            foreach ($this->_propDict['lists'] as $singleValue) {
+                $lists []= new TodoTaskList($singleValue);
+            }
+            $this->_propDict['lists'] = $lists;
+            return $this->_propDict['lists'];
         }
+        return null;
     }
     
     /** 
     * Sets the lists
     * The task lists in the users mailbox.
     *
-    * @param TodoTaskList $val The lists
+    * @param TodoTaskList[] $val The lists
     *
     * @return Todo
     */

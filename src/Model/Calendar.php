@@ -29,22 +29,29 @@ class Calendar extends Entity
      * Gets the allowedOnlineMeetingProviders
     * Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      *
-     * @return array|null The allowedOnlineMeetingProviders
+     * @return OnlineMeetingProviderType[]|null The allowedOnlineMeetingProviders
      */
     public function getAllowedOnlineMeetingProviders()
     {
-        if (array_key_exists("allowedOnlineMeetingProviders", $this->_propDict)) {
-           return $this->_propDict["allowedOnlineMeetingProviders"];
-        } else {
-            return null;
+        if (array_key_exists('allowedOnlineMeetingProviders', $this->_propDict) && !is_null($this->_propDict['allowedOnlineMeetingProviders'])) {
+            $allowedOnlineMeetingProviders = [];
+            if (count($this->_propDict['allowedOnlineMeetingProviders']) > 0 && is_a($this->_propDict['allowedOnlineMeetingProviders'][0], 'OnlineMeetingProviderType')) {
+                return $this->_propDict['allowedOnlineMeetingProviders'];
+            }
+            foreach ($this->_propDict['allowedOnlineMeetingProviders'] as $singleValue) {
+                $allowedOnlineMeetingProviders []= new OnlineMeetingProviderType($singleValue);
+            }
+            $this->_propDict['allowedOnlineMeetingProviders'] = $allowedOnlineMeetingProviders;
+            return $this->_propDict['allowedOnlineMeetingProviders'];
         }
+        return null;
     }
     
     /** 
     * Sets the allowedOnlineMeetingProviders
     * Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
     *
-    * @param OnlineMeetingProviderType $val The allowedOnlineMeetingProviders
+    * @param OnlineMeetingProviderType[] $val The allowedOnlineMeetingProviders
     *
     * @return Calendar
     */
@@ -178,8 +185,8 @@ class Calendar extends Entity
     */
     public function getColor()
     {
-        if (array_key_exists("color", $this->_propDict)) {
-            if (is_a($this->_propDict["color"], "\Microsoft\Graph\Model\CalendarColor") || is_null($this->_propDict["color"])) {
+        if (array_key_exists("color", $this->_propDict) && !is_null($this->_propDict["color"])) {
+            if (is_a($this->_propDict["color"], "\Microsoft\Graph\Model\CalendarColor")) {
                 return $this->_propDict["color"];
             } else {
                 $this->_propDict["color"] = new CalendarColor($this->_propDict["color"]);
@@ -211,8 +218,8 @@ class Calendar extends Entity
     */
     public function getDefaultOnlineMeetingProvider()
     {
-        if (array_key_exists("defaultOnlineMeetingProvider", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultOnlineMeetingProvider"], "\Microsoft\Graph\Model\OnlineMeetingProviderType") || is_null($this->_propDict["defaultOnlineMeetingProvider"])) {
+        if (array_key_exists("defaultOnlineMeetingProvider", $this->_propDict) && !is_null($this->_propDict["defaultOnlineMeetingProvider"])) {
+            if (is_a($this->_propDict["defaultOnlineMeetingProvider"], "\Microsoft\Graph\Model\OnlineMeetingProviderType")) {
                 return $this->_propDict["defaultOnlineMeetingProvider"];
             } else {
                 $this->_propDict["defaultOnlineMeetingProvider"] = new OnlineMeetingProviderType($this->_propDict["defaultOnlineMeetingProvider"]);
@@ -389,8 +396,8 @@ class Calendar extends Entity
     */
     public function getOwner()
     {
-        if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "\Microsoft\Graph\Model\EmailAddress") || is_null($this->_propDict["owner"])) {
+        if (array_key_exists("owner", $this->_propDict) && !is_null($this->_propDict["owner"])) {
+            if (is_a($this->_propDict["owner"], "\Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new EmailAddress($this->_propDict["owner"]);
@@ -419,22 +426,29 @@ class Calendar extends Entity
      * Gets the calendarPermissions
     * The permissions of the users with whom the calendar is shared.
      *
-     * @return array|null The calendarPermissions
+     * @return CalendarPermission[]|null The calendarPermissions
      */
     public function getCalendarPermissions()
     {
-        if (array_key_exists("calendarPermissions", $this->_propDict)) {
-           return $this->_propDict["calendarPermissions"];
-        } else {
-            return null;
+        if (array_key_exists('calendarPermissions', $this->_propDict) && !is_null($this->_propDict['calendarPermissions'])) {
+            $calendarPermissions = [];
+            if (count($this->_propDict['calendarPermissions']) > 0 && is_a($this->_propDict['calendarPermissions'][0], 'CalendarPermission')) {
+                return $this->_propDict['calendarPermissions'];
+            }
+            foreach ($this->_propDict['calendarPermissions'] as $singleValue) {
+                $calendarPermissions []= new CalendarPermission($singleValue);
+            }
+            $this->_propDict['calendarPermissions'] = $calendarPermissions;
+            return $this->_propDict['calendarPermissions'];
         }
+        return null;
     }
     
     /** 
     * Sets the calendarPermissions
     * The permissions of the users with whom the calendar is shared.
     *
-    * @param CalendarPermission $val The calendarPermissions
+    * @param CalendarPermission[] $val The calendarPermissions
     *
     * @return Calendar
     */
@@ -449,22 +463,29 @@ class Calendar extends Entity
      * Gets the calendarView
     * The calendar view for the calendar. Navigation property. Read-only.
      *
-     * @return array|null The calendarView
+     * @return Event[]|null The calendarView
      */
     public function getCalendarView()
     {
-        if (array_key_exists("calendarView", $this->_propDict)) {
-           return $this->_propDict["calendarView"];
-        } else {
-            return null;
+        if (array_key_exists('calendarView', $this->_propDict) && !is_null($this->_propDict['calendarView'])) {
+            $calendarView = [];
+            if (count($this->_propDict['calendarView']) > 0 && is_a($this->_propDict['calendarView'][0], 'Event')) {
+                return $this->_propDict['calendarView'];
+            }
+            foreach ($this->_propDict['calendarView'] as $singleValue) {
+                $calendarView []= new Event($singleValue);
+            }
+            $this->_propDict['calendarView'] = $calendarView;
+            return $this->_propDict['calendarView'];
         }
+        return null;
     }
     
     /** 
     * Sets the calendarView
     * The calendar view for the calendar. Navigation property. Read-only.
     *
-    * @param Event $val The calendarView
+    * @param Event[] $val The calendarView
     *
     * @return Calendar
     */
@@ -479,22 +500,29 @@ class Calendar extends Entity
      * Gets the events
     * The events in the calendar. Navigation property. Read-only.
      *
-     * @return array|null The events
+     * @return Event[]|null The events
      */
     public function getEvents()
     {
-        if (array_key_exists("events", $this->_propDict)) {
-           return $this->_propDict["events"];
-        } else {
-            return null;
+        if (array_key_exists('events', $this->_propDict) && !is_null($this->_propDict['events'])) {
+            $events = [];
+            if (count($this->_propDict['events']) > 0 && is_a($this->_propDict['events'][0], 'Event')) {
+                return $this->_propDict['events'];
+            }
+            foreach ($this->_propDict['events'] as $singleValue) {
+                $events []= new Event($singleValue);
+            }
+            $this->_propDict['events'] = $events;
+            return $this->_propDict['events'];
         }
+        return null;
     }
     
     /** 
     * Sets the events
     * The events in the calendar. Navigation property. Read-only.
     *
-    * @param Event $val The events
+    * @param Event[] $val The events
     *
     * @return Calendar
     */
@@ -509,22 +537,29 @@ class Calendar extends Entity
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      *
-     * @return array|null The multiValueExtendedProperties
+     * @return MultiValueLegacyExtendedProperty[]|null The multiValueExtendedProperties
      */
     public function getMultiValueExtendedProperties()
     {
-        if (array_key_exists("multiValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["multiValueExtendedProperties"];
-        } else {
-            return null;
+        if (array_key_exists('multiValueExtendedProperties', $this->_propDict) && !is_null($this->_propDict['multiValueExtendedProperties'])) {
+            $multiValueExtendedProperties = [];
+            if (count($this->_propDict['multiValueExtendedProperties']) > 0 && is_a($this->_propDict['multiValueExtendedProperties'][0], 'MultiValueLegacyExtendedProperty')) {
+                return $this->_propDict['multiValueExtendedProperties'];
+            }
+            foreach ($this->_propDict['multiValueExtendedProperties'] as $singleValue) {
+                $multiValueExtendedProperties []= new MultiValueLegacyExtendedProperty($singleValue);
+            }
+            $this->_propDict['multiValueExtendedProperties'] = $multiValueExtendedProperties;
+            return $this->_propDict['multiValueExtendedProperties'];
         }
+        return null;
     }
     
     /** 
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
     *
-    * @param MultiValueLegacyExtendedProperty $val The multiValueExtendedProperties
+    * @param MultiValueLegacyExtendedProperty[] $val The multiValueExtendedProperties
     *
     * @return Calendar
     */
@@ -539,22 +574,29 @@ class Calendar extends Entity
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      *
-     * @return array|null The singleValueExtendedProperties
+     * @return SingleValueLegacyExtendedProperty[]|null The singleValueExtendedProperties
      */
     public function getSingleValueExtendedProperties()
     {
-        if (array_key_exists("singleValueExtendedProperties", $this->_propDict)) {
-           return $this->_propDict["singleValueExtendedProperties"];
-        } else {
-            return null;
+        if (array_key_exists('singleValueExtendedProperties', $this->_propDict) && !is_null($this->_propDict['singleValueExtendedProperties'])) {
+            $singleValueExtendedProperties = [];
+            if (count($this->_propDict['singleValueExtendedProperties']) > 0 && is_a($this->_propDict['singleValueExtendedProperties'][0], 'SingleValueLegacyExtendedProperty')) {
+                return $this->_propDict['singleValueExtendedProperties'];
+            }
+            foreach ($this->_propDict['singleValueExtendedProperties'] as $singleValue) {
+                $singleValueExtendedProperties []= new SingleValueLegacyExtendedProperty($singleValue);
+            }
+            $this->_propDict['singleValueExtendedProperties'] = $singleValueExtendedProperties;
+            return $this->_propDict['singleValueExtendedProperties'];
         }
+        return null;
     }
     
     /** 
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
     *
-    * @param SingleValueLegacyExtendedProperty $val The singleValueExtendedProperties
+    * @param SingleValueLegacyExtendedProperty[] $val The singleValueExtendedProperties
     *
     * @return Calendar
     */

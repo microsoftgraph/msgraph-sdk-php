@@ -206,8 +206,8 @@ class AgreementAcceptance extends Entity
     */
     public function getExpirationDateTime()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+        if (array_key_exists("expirationDateTime", $this->_propDict) && !is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -239,8 +239,8 @@ class AgreementAcceptance extends Entity
     */
     public function getRecordedDateTime()
     {
-        if (array_key_exists("recordedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["recordedDateTime"], "\DateTime") || is_null($this->_propDict["recordedDateTime"])) {
+        if (array_key_exists("recordedDateTime", $this->_propDict) && !is_null($this->_propDict["recordedDateTime"])) {
+            if (is_a($this->_propDict["recordedDateTime"], "\DateTime")) {
                 return $this->_propDict["recordedDateTime"];
             } else {
                 $this->_propDict["recordedDateTime"] = new \DateTime($this->_propDict["recordedDateTime"]);
@@ -272,8 +272,8 @@ class AgreementAcceptance extends Entity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\AgreementAcceptanceState") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\AgreementAcceptanceState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new AgreementAcceptanceState($this->_propDict["state"]);

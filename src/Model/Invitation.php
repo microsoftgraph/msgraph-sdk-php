@@ -90,8 +90,8 @@ class Invitation extends Entity
     */
     public function getInvitedUserMessageInfo()
     {
-        if (array_key_exists("invitedUserMessageInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedUserMessageInfo"], "\Microsoft\Graph\Model\InvitedUserMessageInfo") || is_null($this->_propDict["invitedUserMessageInfo"])) {
+        if (array_key_exists("invitedUserMessageInfo", $this->_propDict) && !is_null($this->_propDict["invitedUserMessageInfo"])) {
+            if (is_a($this->_propDict["invitedUserMessageInfo"], "\Microsoft\Graph\Model\InvitedUserMessageInfo")) {
                 return $this->_propDict["invitedUserMessageInfo"];
             } else {
                 $this->_propDict["invitedUserMessageInfo"] = new InvitedUserMessageInfo($this->_propDict["invitedUserMessageInfo"]);
@@ -268,8 +268,8 @@ class Invitation extends Entity
     */
     public function getInvitedUser()
     {
-        if (array_key_exists("invitedUser", $this->_propDict)) {
-            if (is_a($this->_propDict["invitedUser"], "\Microsoft\Graph\Model\User") || is_null($this->_propDict["invitedUser"])) {
+        if (array_key_exists("invitedUser", $this->_propDict) && !is_null($this->_propDict["invitedUser"])) {
+            if (is_a($this->_propDict["invitedUser"], "\Microsoft\Graph\Model\User")) {
                 return $this->_propDict["invitedUser"];
             } else {
                 $this->_propDict["invitedUser"] = new User($this->_propDict["invitedUser"]);

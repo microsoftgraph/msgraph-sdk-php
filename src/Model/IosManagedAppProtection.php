@@ -32,8 +32,8 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     */
     public function getAppDataEncryptionType()
     {
-        if (array_key_exists("appDataEncryptionType", $this->_propDict)) {
-            if (is_a($this->_propDict["appDataEncryptionType"], "\Microsoft\Graph\Model\ManagedAppDataEncryptionType") || is_null($this->_propDict["appDataEncryptionType"])) {
+        if (array_key_exists("appDataEncryptionType", $this->_propDict) && !is_null($this->_propDict["appDataEncryptionType"])) {
+            if (is_a($this->_propDict["appDataEncryptionType"], "\Microsoft\Graph\Model\ManagedAppDataEncryptionType")) {
                 return $this->_propDict["appDataEncryptionType"];
             } else {
                 $this->_propDict["appDataEncryptionType"] = new ManagedAppDataEncryptionType($this->_propDict["appDataEncryptionType"]);
@@ -178,22 +178,29 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
      * Gets the apps
     * List of apps to which the policy is deployed.
      *
-     * @return array|null The apps
+     * @return ManagedMobileApp[]|null The apps
      */
     public function getApps()
     {
-        if (array_key_exists("apps", $this->_propDict)) {
-           return $this->_propDict["apps"];
-        } else {
-            return null;
+        if (array_key_exists('apps', $this->_propDict) && !is_null($this->_propDict['apps'])) {
+            $apps = [];
+            if (count($this->_propDict['apps']) > 0 && is_a($this->_propDict['apps'][0], 'ManagedMobileApp')) {
+                return $this->_propDict['apps'];
+            }
+            foreach ($this->_propDict['apps'] as $singleValue) {
+                $apps []= new ManagedMobileApp($singleValue);
+            }
+            $this->_propDict['apps'] = $apps;
+            return $this->_propDict['apps'];
         }
+        return null;
     }
     
     /** 
     * Sets the apps
     * List of apps to which the policy is deployed.
     *
-    * @param ManagedMobileApp $val The apps
+    * @param ManagedMobileApp[] $val The apps
     *
     * @return IosManagedAppProtection
     */
@@ -211,8 +218,8 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     */
     public function getDeploymentSummary()
     {
-        if (array_key_exists("deploymentSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary") || is_null($this->_propDict["deploymentSummary"])) {
+        if (array_key_exists("deploymentSummary", $this->_propDict) && !is_null($this->_propDict["deploymentSummary"])) {
+            if (is_a($this->_propDict["deploymentSummary"], "\Microsoft\Graph\Model\ManagedAppPolicyDeploymentSummary")) {
                 return $this->_propDict["deploymentSummary"];
             } else {
                 $this->_propDict["deploymentSummary"] = new ManagedAppPolicyDeploymentSummary($this->_propDict["deploymentSummary"]);

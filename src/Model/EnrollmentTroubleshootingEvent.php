@@ -61,8 +61,8 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     */
     public function getEnrollmentType()
     {
-        if (array_key_exists("enrollmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentType"], "\Microsoft\Graph\Model\DeviceEnrollmentType") || is_null($this->_propDict["enrollmentType"])) {
+        if (array_key_exists("enrollmentType", $this->_propDict) && !is_null($this->_propDict["enrollmentType"])) {
+            if (is_a($this->_propDict["enrollmentType"], "\Microsoft\Graph\Model\DeviceEnrollmentType")) {
                 return $this->_propDict["enrollmentType"];
             } else {
                 $this->_propDict["enrollmentType"] = new DeviceEnrollmentType($this->_propDict["enrollmentType"]);
@@ -94,8 +94,8 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     */
     public function getFailureCategory()
     {
-        if (array_key_exists("failureCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["failureCategory"], "\Microsoft\Graph\Model\DeviceEnrollmentFailureReason") || is_null($this->_propDict["failureCategory"])) {
+        if (array_key_exists("failureCategory", $this->_propDict) && !is_null($this->_propDict["failureCategory"])) {
+            if (is_a($this->_propDict["failureCategory"], "\Microsoft\Graph\Model\DeviceEnrollmentFailureReason")) {
                 return $this->_propDict["failureCategory"];
             } else {
                 $this->_propDict["failureCategory"] = new DeviceEnrollmentFailureReason($this->_propDict["failureCategory"]);

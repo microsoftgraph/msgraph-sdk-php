@@ -61,8 +61,8 @@ class PrinterShare extends PrinterBase
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -91,22 +91,29 @@ class PrinterShare extends PrinterBase
      * Gets the allowedGroups
     * The groups whose users have access to print using the printer.
      *
-     * @return array|null The allowedGroups
+     * @return Group[]|null The allowedGroups
      */
     public function getAllowedGroups()
     {
-        if (array_key_exists("allowedGroups", $this->_propDict)) {
-           return $this->_propDict["allowedGroups"];
-        } else {
-            return null;
+        if (array_key_exists('allowedGroups', $this->_propDict) && !is_null($this->_propDict['allowedGroups'])) {
+            $allowedGroups = [];
+            if (count($this->_propDict['allowedGroups']) > 0 && is_a($this->_propDict['allowedGroups'][0], 'Group')) {
+                return $this->_propDict['allowedGroups'];
+            }
+            foreach ($this->_propDict['allowedGroups'] as $singleValue) {
+                $allowedGroups []= new Group($singleValue);
+            }
+            $this->_propDict['allowedGroups'] = $allowedGroups;
+            return $this->_propDict['allowedGroups'];
         }
+        return null;
     }
     
     /** 
     * Sets the allowedGroups
     * The groups whose users have access to print using the printer.
     *
-    * @param Group $val The allowedGroups
+    * @param Group[] $val The allowedGroups
     *
     * @return PrinterShare
     */
@@ -121,22 +128,29 @@ class PrinterShare extends PrinterBase
      * Gets the allowedUsers
     * The users who have access to print using the printer.
      *
-     * @return array|null The allowedUsers
+     * @return User[]|null The allowedUsers
      */
     public function getAllowedUsers()
     {
-        if (array_key_exists("allowedUsers", $this->_propDict)) {
-           return $this->_propDict["allowedUsers"];
-        } else {
-            return null;
+        if (array_key_exists('allowedUsers', $this->_propDict) && !is_null($this->_propDict['allowedUsers'])) {
+            $allowedUsers = [];
+            if (count($this->_propDict['allowedUsers']) > 0 && is_a($this->_propDict['allowedUsers'][0], 'User')) {
+                return $this->_propDict['allowedUsers'];
+            }
+            foreach ($this->_propDict['allowedUsers'] as $singleValue) {
+                $allowedUsers []= new User($singleValue);
+            }
+            $this->_propDict['allowedUsers'] = $allowedUsers;
+            return $this->_propDict['allowedUsers'];
         }
+        return null;
     }
     
     /** 
     * Sets the allowedUsers
     * The users who have access to print using the printer.
     *
-    * @param User $val The allowedUsers
+    * @param User[] $val The allowedUsers
     *
     * @return PrinterShare
     */
@@ -154,8 +168,8 @@ class PrinterShare extends PrinterBase
     */
     public function getPrinter()
     {
-        if (array_key_exists("printer", $this->_propDict)) {
-            if (is_a($this->_propDict["printer"], "\Microsoft\Graph\Model\Printer") || is_null($this->_propDict["printer"])) {
+        if (array_key_exists("printer", $this->_propDict) && !is_null($this->_propDict["printer"])) {
+            if (is_a($this->_propDict["printer"], "\Microsoft\Graph\Model\Printer")) {
                 return $this->_propDict["printer"];
             } else {
                 $this->_propDict["printer"] = new Printer($this->_propDict["printer"]);

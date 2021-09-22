@@ -32,8 +32,8 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     */
     public function getAuthenticationMode()
     {
-        if (array_key_exists("authenticationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationMode"], "\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode") || is_null($this->_propDict["authenticationMode"])) {
+        if (array_key_exists("authenticationMode", $this->_propDict) && !is_null($this->_propDict["authenticationMode"])) {
+            if (is_a($this->_propDict["authenticationMode"], "\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode")) {
                 return $this->_propDict["authenticationMode"];
             } else {
                 $this->_propDict["authenticationMode"] = new MicrosoftAuthenticatorAuthenticationMode($this->_propDict["authenticationMode"]);
@@ -65,8 +65,8 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     */
     public function getFeatureSettings()
     {
-        if (array_key_exists("featureSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["featureSettings"], "\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings") || is_null($this->_propDict["featureSettings"])) {
+        if (array_key_exists("featureSettings", $this->_propDict) && !is_null($this->_propDict["featureSettings"])) {
+            if (is_a($this->_propDict["featureSettings"], "\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings")) {
                 return $this->_propDict["featureSettings"];
             } else {
                 $this->_propDict["featureSettings"] = new AuthenticatorAppFeatureSettings($this->_propDict["featureSettings"]);

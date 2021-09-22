@@ -32,8 +32,8 @@ class Session extends \Microsoft\Graph\Model\Entity
     */
     public function getCallee()
     {
-        if (array_key_exists("callee", $this->_propDict)) {
-            if (is_a($this->_propDict["callee"], "\Microsoft\Graph\CallRecords\Model\Endpoint") || is_null($this->_propDict["callee"])) {
+        if (array_key_exists("callee", $this->_propDict) && !is_null($this->_propDict["callee"])) {
+            if (is_a($this->_propDict["callee"], "\Microsoft\Graph\CallRecords\Model\Endpoint")) {
                 return $this->_propDict["callee"];
             } else {
                 $this->_propDict["callee"] = new Endpoint($this->_propDict["callee"]);
@@ -65,8 +65,8 @@ class Session extends \Microsoft\Graph\Model\Entity
     */
     public function getCaller()
     {
-        if (array_key_exists("caller", $this->_propDict)) {
-            if (is_a($this->_propDict["caller"], "\Microsoft\Graph\CallRecords\Model\Endpoint") || is_null($this->_propDict["caller"])) {
+        if (array_key_exists("caller", $this->_propDict) && !is_null($this->_propDict["caller"])) {
+            if (is_a($this->_propDict["caller"], "\Microsoft\Graph\CallRecords\Model\Endpoint")) {
                 return $this->_propDict["caller"];
             } else {
                 $this->_propDict["caller"] = new Endpoint($this->_propDict["caller"]);
@@ -98,8 +98,8 @@ class Session extends \Microsoft\Graph\Model\Entity
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -131,8 +131,8 @@ class Session extends \Microsoft\Graph\Model\Entity
     */
     public function getFailureInfo()
     {
-        if (array_key_exists("failureInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["failureInfo"], "\Microsoft\Graph\CallRecords\Model\FailureInfo") || is_null($this->_propDict["failureInfo"])) {
+        if (array_key_exists("failureInfo", $this->_propDict) && !is_null($this->_propDict["failureInfo"])) {
+            if (is_a($this->_propDict["failureInfo"], "\Microsoft\Graph\CallRecords\Model\FailureInfo")) {
                 return $this->_propDict["failureInfo"];
             } else {
                 $this->_propDict["failureInfo"] = new FailureInfo($this->_propDict["failureInfo"]);
@@ -161,22 +161,29 @@ class Session extends \Microsoft\Graph\Model\Entity
      * Gets the modalities
     * List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      *
-     * @return array|null The modalities
+     * @return Modality[]|null The modalities
      */
     public function getModalities()
     {
-        if (array_key_exists("modalities", $this->_propDict)) {
-           return $this->_propDict["modalities"];
-        } else {
-            return null;
+        if (array_key_exists('modalities', $this->_propDict) && !is_null($this->_propDict['modalities'])) {
+            $modalities = [];
+            if (count($this->_propDict['modalities']) > 0 && is_a($this->_propDict['modalities'][0], 'Modality')) {
+                return $this->_propDict['modalities'];
+            }
+            foreach ($this->_propDict['modalities'] as $singleValue) {
+                $modalities []= new Modality($singleValue);
+            }
+            $this->_propDict['modalities'] = $modalities;
+            return $this->_propDict['modalities'];
         }
+        return null;
     }
     
     /** 
     * Sets the modalities
     * List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
     *
-    * @param Modality $val The modalities
+    * @param Modality[] $val The modalities
     *
     * @return Session
     */
@@ -194,8 +201,8 @@ class Session extends \Microsoft\Graph\Model\Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -224,22 +231,29 @@ class Session extends \Microsoft\Graph\Model\Entity
      * Gets the segments
     * The list of segments involved in the session. Read-only. Nullable.
      *
-     * @return array|null The segments
+     * @return Segment[]|null The segments
      */
     public function getSegments()
     {
-        if (array_key_exists("segments", $this->_propDict)) {
-           return $this->_propDict["segments"];
-        } else {
-            return null;
+        if (array_key_exists('segments', $this->_propDict) && !is_null($this->_propDict['segments'])) {
+            $segments = [];
+            if (count($this->_propDict['segments']) > 0 && is_a($this->_propDict['segments'][0], 'Segment')) {
+                return $this->_propDict['segments'];
+            }
+            foreach ($this->_propDict['segments'] as $singleValue) {
+                $segments []= new Segment($singleValue);
+            }
+            $this->_propDict['segments'] = $segments;
+            return $this->_propDict['segments'];
         }
+        return null;
     }
     
     /** 
     * Sets the segments
     * The list of segments involved in the session. Read-only. Nullable.
     *
-    * @param Segment $val The segments
+    * @param Segment[] $val The segments
     *
     * @return Session
     */

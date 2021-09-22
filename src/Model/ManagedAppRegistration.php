@@ -32,8 +32,8 @@ class ManagedAppRegistration extends Entity
     */
     public function getAppIdentifier()
     {
-        if (array_key_exists("appIdentifier", $this->_propDict)) {
-            if (is_a($this->_propDict["appIdentifier"], "\Microsoft\Graph\Model\MobileAppIdentifier") || is_null($this->_propDict["appIdentifier"])) {
+        if (array_key_exists("appIdentifier", $this->_propDict) && !is_null($this->_propDict["appIdentifier"])) {
+            if (is_a($this->_propDict["appIdentifier"], "\Microsoft\Graph\Model\MobileAppIdentifier")) {
                 return $this->_propDict["appIdentifier"];
             } else {
                 $this->_propDict["appIdentifier"] = new MobileAppIdentifier($this->_propDict["appIdentifier"]);
@@ -94,8 +94,8 @@ class ManagedAppRegistration extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -211,22 +211,29 @@ class ManagedAppRegistration extends Entity
      * Gets the flaggedReasons
     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      *
-     * @return array|null The flaggedReasons
+     * @return ManagedAppFlaggedReason[]|null The flaggedReasons
      */
     public function getFlaggedReasons()
     {
-        if (array_key_exists("flaggedReasons", $this->_propDict)) {
-           return $this->_propDict["flaggedReasons"];
-        } else {
-            return null;
+        if (array_key_exists('flaggedReasons', $this->_propDict) && !is_null($this->_propDict['flaggedReasons'])) {
+            $flaggedReasons = [];
+            if (count($this->_propDict['flaggedReasons']) > 0 && is_a($this->_propDict['flaggedReasons'][0], 'ManagedAppFlaggedReason')) {
+                return $this->_propDict['flaggedReasons'];
+            }
+            foreach ($this->_propDict['flaggedReasons'] as $singleValue) {
+                $flaggedReasons []= new ManagedAppFlaggedReason($singleValue);
+            }
+            $this->_propDict['flaggedReasons'] = $flaggedReasons;
+            return $this->_propDict['flaggedReasons'];
         }
+        return null;
     }
     
     /** 
     * Sets the flaggedReasons
     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
     *
-    * @param ManagedAppFlaggedReason $val The flaggedReasons
+    * @param ManagedAppFlaggedReason[] $val The flaggedReasons
     *
     * @return ManagedAppRegistration
     */
@@ -244,8 +251,8 @@ class ManagedAppRegistration extends Entity
     */
     public function getLastSyncDateTime()
     {
-        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
+        if (array_key_exists("lastSyncDateTime", $this->_propDict) && !is_null($this->_propDict["lastSyncDateTime"])) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);
@@ -390,22 +397,29 @@ class ManagedAppRegistration extends Entity
      * Gets the appliedPolicies
     * Zero or more policys already applied on the registered app when it last synchronized with managment service.
      *
-     * @return array|null The appliedPolicies
+     * @return ManagedAppPolicy[]|null The appliedPolicies
      */
     public function getAppliedPolicies()
     {
-        if (array_key_exists("appliedPolicies", $this->_propDict)) {
-           return $this->_propDict["appliedPolicies"];
-        } else {
-            return null;
+        if (array_key_exists('appliedPolicies', $this->_propDict) && !is_null($this->_propDict['appliedPolicies'])) {
+            $appliedPolicies = [];
+            if (count($this->_propDict['appliedPolicies']) > 0 && is_a($this->_propDict['appliedPolicies'][0], 'ManagedAppPolicy')) {
+                return $this->_propDict['appliedPolicies'];
+            }
+            foreach ($this->_propDict['appliedPolicies'] as $singleValue) {
+                $appliedPolicies []= new ManagedAppPolicy($singleValue);
+            }
+            $this->_propDict['appliedPolicies'] = $appliedPolicies;
+            return $this->_propDict['appliedPolicies'];
         }
+        return null;
     }
     
     /** 
     * Sets the appliedPolicies
     * Zero or more policys already applied on the registered app when it last synchronized with managment service.
     *
-    * @param ManagedAppPolicy $val The appliedPolicies
+    * @param ManagedAppPolicy[] $val The appliedPolicies
     *
     * @return ManagedAppRegistration
     */
@@ -420,22 +434,29 @@ class ManagedAppRegistration extends Entity
      * Gets the intendedPolicies
     * Zero or more policies admin intended for the app as of now.
      *
-     * @return array|null The intendedPolicies
+     * @return ManagedAppPolicy[]|null The intendedPolicies
      */
     public function getIntendedPolicies()
     {
-        if (array_key_exists("intendedPolicies", $this->_propDict)) {
-           return $this->_propDict["intendedPolicies"];
-        } else {
-            return null;
+        if (array_key_exists('intendedPolicies', $this->_propDict) && !is_null($this->_propDict['intendedPolicies'])) {
+            $intendedPolicies = [];
+            if (count($this->_propDict['intendedPolicies']) > 0 && is_a($this->_propDict['intendedPolicies'][0], 'ManagedAppPolicy')) {
+                return $this->_propDict['intendedPolicies'];
+            }
+            foreach ($this->_propDict['intendedPolicies'] as $singleValue) {
+                $intendedPolicies []= new ManagedAppPolicy($singleValue);
+            }
+            $this->_propDict['intendedPolicies'] = $intendedPolicies;
+            return $this->_propDict['intendedPolicies'];
         }
+        return null;
     }
     
     /** 
     * Sets the intendedPolicies
     * Zero or more policies admin intended for the app as of now.
     *
-    * @param ManagedAppPolicy $val The intendedPolicies
+    * @param ManagedAppPolicy[] $val The intendedPolicies
     *
     * @return ManagedAppRegistration
     */
@@ -450,22 +471,29 @@ class ManagedAppRegistration extends Entity
      * Gets the operations
     * Zero or more long running operations triggered on the app registration.
      *
-     * @return array|null The operations
+     * @return ManagedAppOperation[]|null The operations
      */
     public function getOperations()
     {
-        if (array_key_exists("operations", $this->_propDict)) {
-           return $this->_propDict["operations"];
-        } else {
-            return null;
+        if (array_key_exists('operations', $this->_propDict) && !is_null($this->_propDict['operations'])) {
+            $operations = [];
+            if (count($this->_propDict['operations']) > 0 && is_a($this->_propDict['operations'][0], 'ManagedAppOperation')) {
+                return $this->_propDict['operations'];
+            }
+            foreach ($this->_propDict['operations'] as $singleValue) {
+                $operations []= new ManagedAppOperation($singleValue);
+            }
+            $this->_propDict['operations'] = $operations;
+            return $this->_propDict['operations'];
         }
+        return null;
     }
     
     /** 
     * Sets the operations
     * Zero or more long running operations triggered on the app registration.
     *
-    * @param ManagedAppOperation $val The operations
+    * @param ManagedAppOperation[] $val The operations
     *
     * @return ManagedAppRegistration
     */

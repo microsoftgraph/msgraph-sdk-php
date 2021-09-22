@@ -56,18 +56,22 @@ class PrinterStatus extends Entity
     * Gets the details
     * The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
     *
-    * @return PrinterProcessingStateDetail|null The details
+    * @return PrinterProcessingStateDetail[]|null The details
     */
     public function getDetails()
     {
-        if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\PrinterProcessingStateDetail") || is_null($this->_propDict["details"])) {
-                return $this->_propDict["details"];
-            } else {
-                $this->_propDict["details"] = new PrinterProcessingStateDetail($this->_propDict["details"]);
-                return $this->_propDict["details"];
+        if (array_key_exists("details", $this->_propDict) && !is_null($this->_propDict["details"])) {
+       
+            if (count($this->_propDict['details']) > 0 && is_a($this->_propDict['details'][0], 'PrinterProcessingStateDetail')) {
+               return $this->_propDict['details'];
             }
-        }
+            $details = [];
+            foreach ($this->_propDict['details'] as $singleValue) {
+               $details []= new PrinterProcessingStateDetail($singleValue);
+            }
+            $this->_propDict['details'] = $details;
+            return $this->_propDict['details'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class PrinterStatus extends Entity
     * Sets the details
     * The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
     *
-    * @param PrinterProcessingStateDetail $val The value to assign to the details
+    * @param PrinterProcessingStateDetail[] $val The value to assign to the details
     *
     * @return PrinterStatus The PrinterStatus
     */
@@ -93,8 +97,9 @@ class PrinterStatus extends Entity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\PrinterProcessingState") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+     
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\PrinterProcessingState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new PrinterProcessingState($this->_propDict["state"]);

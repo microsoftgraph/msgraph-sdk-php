@@ -32,8 +32,8 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     */
     public function getActionRequiredByDateTime()
     {
-        if (array_key_exists("actionRequiredByDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["actionRequiredByDateTime"], "\DateTime") || is_null($this->_propDict["actionRequiredByDateTime"])) {
+        if (array_key_exists("actionRequiredByDateTime", $this->_propDict) && !is_null($this->_propDict["actionRequiredByDateTime"])) {
+            if (is_a($this->_propDict["actionRequiredByDateTime"], "\DateTime")) {
                 return $this->_propDict["actionRequiredByDateTime"];
             } else {
                 $this->_propDict["actionRequiredByDateTime"] = new \DateTime($this->_propDict["actionRequiredByDateTime"]);
@@ -65,8 +65,8 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     */
     public function getBody()
     {
-        if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["body"])) {
+        if (array_key_exists("body", $this->_propDict) && !is_null($this->_propDict["body"])) {
+            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -98,8 +98,8 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     */
     public function getCategory()
     {
-        if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "\Microsoft\Graph\Model\ServiceUpdateCategory") || is_null($this->_propDict["category"])) {
+        if (array_key_exists("category", $this->_propDict) && !is_null($this->_propDict["category"])) {
+            if (is_a($this->_propDict["category"], "\Microsoft\Graph\Model\ServiceUpdateCategory")) {
                 return $this->_propDict["category"];
             } else {
                 $this->_propDict["category"] = new ServiceUpdateCategory($this->_propDict["category"]);
@@ -189,8 +189,8 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     */
     public function getSeverity()
     {
-        if (array_key_exists("severity", $this->_propDict)) {
-            if (is_a($this->_propDict["severity"], "\Microsoft\Graph\Model\ServiceUpdateSeverity") || is_null($this->_propDict["severity"])) {
+        if (array_key_exists("severity", $this->_propDict) && !is_null($this->_propDict["severity"])) {
+            if (is_a($this->_propDict["severity"], "\Microsoft\Graph\Model\ServiceUpdateSeverity")) {
                 return $this->_propDict["severity"];
             } else {
                 $this->_propDict["severity"] = new ServiceUpdateSeverity($this->_propDict["severity"]);
@@ -251,8 +251,8 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     */
     public function getViewPoint()
     {
-        if (array_key_exists("viewPoint", $this->_propDict)) {
-            if (is_a($this->_propDict["viewPoint"], "\Microsoft\Graph\Model\ServiceUpdateMessageViewpoint") || is_null($this->_propDict["viewPoint"])) {
+        if (array_key_exists("viewPoint", $this->_propDict) && !is_null($this->_propDict["viewPoint"])) {
+            if (is_a($this->_propDict["viewPoint"], "\Microsoft\Graph\Model\ServiceUpdateMessageViewpoint")) {
                 return $this->_propDict["viewPoint"];
             } else {
                 $this->_propDict["viewPoint"] = new ServiceUpdateMessageViewpoint($this->_propDict["viewPoint"]);

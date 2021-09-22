@@ -32,8 +32,9 @@ class VisualInfo extends Entity
     */
     public function getAttribution()
     {
-        if (array_key_exists("attribution", $this->_propDict)) {
-            if (is_a($this->_propDict["attribution"], "\Microsoft\Graph\Model\ImageInfo") || is_null($this->_propDict["attribution"])) {
+        if (array_key_exists("attribution", $this->_propDict) && !is_null($this->_propDict["attribution"])) {
+     
+            if (is_a($this->_propDict["attribution"], "\Microsoft\Graph\Model\ImageInfo")) {
                 return $this->_propDict["attribution"];
             } else {
                 $this->_propDict["attribution"] = new ImageInfo($this->_propDict["attribution"]);

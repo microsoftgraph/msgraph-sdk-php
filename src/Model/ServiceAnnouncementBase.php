@@ -29,22 +29,29 @@ class ServiceAnnouncementBase extends Entity
      * Gets the details
     * Additional details about service event. This property doesn't support filters.
      *
-     * @return array|null The details
+     * @return KeyValuePair[]|null The details
      */
     public function getDetails()
     {
-        if (array_key_exists("details", $this->_propDict)) {
-           return $this->_propDict["details"];
-        } else {
-            return null;
+        if (array_key_exists('details', $this->_propDict) && !is_null($this->_propDict['details'])) {
+            $details = [];
+            if (count($this->_propDict['details']) > 0 && is_a($this->_propDict['details'][0], 'KeyValuePair')) {
+                return $this->_propDict['details'];
+            }
+            foreach ($this->_propDict['details'] as $singleValue) {
+                $details []= new KeyValuePair($singleValue);
+            }
+            $this->_propDict['details'] = $details;
+            return $this->_propDict['details'];
         }
+        return null;
     }
     
     /** 
     * Sets the details
     * Additional details about service event. This property doesn't support filters.
     *
-    * @param KeyValuePair $val The details
+    * @param KeyValuePair[] $val The details
     *
     * @return ServiceAnnouncementBase
     */
@@ -62,8 +69,8 @@ class ServiceAnnouncementBase extends Entity
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -95,8 +102,8 @@ class ServiceAnnouncementBase extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -128,8 +135,8 @@ class ServiceAnnouncementBase extends Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

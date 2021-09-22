@@ -32,8 +32,8 @@ class IosVppApp extends MobileApp
     */
     public function getApplicableDeviceType()
     {
-        if (array_key_exists("applicableDeviceType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceType"], "\Microsoft\Graph\Model\IosDeviceType") || is_null($this->_propDict["applicableDeviceType"])) {
+        if (array_key_exists("applicableDeviceType", $this->_propDict) && !is_null($this->_propDict["applicableDeviceType"])) {
+            if (is_a($this->_propDict["applicableDeviceType"], "\Microsoft\Graph\Model\IosDeviceType")) {
                 return $this->_propDict["applicableDeviceType"];
             } else {
                 $this->_propDict["applicableDeviceType"] = new IosDeviceType($this->_propDict["applicableDeviceType"]);
@@ -123,8 +123,8 @@ class IosVppApp extends MobileApp
     */
     public function getLicensingType()
     {
-        if (array_key_exists("licensingType", $this->_propDict)) {
-            if (is_a($this->_propDict["licensingType"], "\Microsoft\Graph\Model\VppLicensingType") || is_null($this->_propDict["licensingType"])) {
+        if (array_key_exists("licensingType", $this->_propDict) && !is_null($this->_propDict["licensingType"])) {
+            if (is_a($this->_propDict["licensingType"], "\Microsoft\Graph\Model\VppLicensingType")) {
                 return $this->_propDict["licensingType"];
             } else {
                 $this->_propDict["licensingType"] = new VppLicensingType($this->_propDict["licensingType"]);
@@ -156,8 +156,8 @@ class IosVppApp extends MobileApp
     */
     public function getReleaseDateTime()
     {
-        if (array_key_exists("releaseDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["releaseDateTime"], "\DateTime") || is_null($this->_propDict["releaseDateTime"])) {
+        if (array_key_exists("releaseDateTime", $this->_propDict) && !is_null($this->_propDict["releaseDateTime"])) {
+            if (is_a($this->_propDict["releaseDateTime"], "\DateTime")) {
                 return $this->_propDict["releaseDateTime"];
             } else {
                 $this->_propDict["releaseDateTime"] = new \DateTime($this->_propDict["releaseDateTime"]);
@@ -247,8 +247,8 @@ class IosVppApp extends MobileApp
     */
     public function getVppTokenAccountType()
     {
-        if (array_key_exists("vppTokenAccountType", $this->_propDict)) {
-            if (is_a($this->_propDict["vppTokenAccountType"], "\Microsoft\Graph\Model\VppTokenAccountType") || is_null($this->_propDict["vppTokenAccountType"])) {
+        if (array_key_exists("vppTokenAccountType", $this->_propDict) && !is_null($this->_propDict["vppTokenAccountType"])) {
+            if (is_a($this->_propDict["vppTokenAccountType"], "\Microsoft\Graph\Model\VppTokenAccountType")) {
                 return $this->_propDict["vppTokenAccountType"];
             } else {
                 $this->_propDict["vppTokenAccountType"] = new VppTokenAccountType($this->_propDict["vppTokenAccountType"]);

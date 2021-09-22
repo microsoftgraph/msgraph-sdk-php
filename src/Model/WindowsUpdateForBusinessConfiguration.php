@@ -32,8 +32,8 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     */
     public function getAutomaticUpdateMode()
     {
-        if (array_key_exists("automaticUpdateMode", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticUpdateMode"], "\Microsoft\Graph\Model\AutomaticUpdateMode") || is_null($this->_propDict["automaticUpdateMode"])) {
+        if (array_key_exists("automaticUpdateMode", $this->_propDict) && !is_null($this->_propDict["automaticUpdateMode"])) {
+            if (is_a($this->_propDict["automaticUpdateMode"], "\Microsoft\Graph\Model\AutomaticUpdateMode")) {
                 return $this->_propDict["automaticUpdateMode"];
             } else {
                 $this->_propDict["automaticUpdateMode"] = new AutomaticUpdateMode($this->_propDict["automaticUpdateMode"]);
@@ -65,8 +65,8 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     */
     public function getBusinessReadyUpdatesOnly()
     {
-        if (array_key_exists("businessReadyUpdatesOnly", $this->_propDict)) {
-            if (is_a($this->_propDict["businessReadyUpdatesOnly"], "\Microsoft\Graph\Model\WindowsUpdateType") || is_null($this->_propDict["businessReadyUpdatesOnly"])) {
+        if (array_key_exists("businessReadyUpdatesOnly", $this->_propDict) && !is_null($this->_propDict["businessReadyUpdatesOnly"])) {
+            if (is_a($this->_propDict["businessReadyUpdatesOnly"], "\Microsoft\Graph\Model\WindowsUpdateType")) {
                 return $this->_propDict["businessReadyUpdatesOnly"];
             } else {
                 $this->_propDict["businessReadyUpdatesOnly"] = new WindowsUpdateType($this->_propDict["businessReadyUpdatesOnly"]);
@@ -98,8 +98,8 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     */
     public function getDeliveryOptimizationMode()
     {
-        if (array_key_exists("deliveryOptimizationMode", $this->_propDict)) {
-            if (is_a($this->_propDict["deliveryOptimizationMode"], "\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode") || is_null($this->_propDict["deliveryOptimizationMode"])) {
+        if (array_key_exists("deliveryOptimizationMode", $this->_propDict) && !is_null($this->_propDict["deliveryOptimizationMode"])) {
+            if (is_a($this->_propDict["deliveryOptimizationMode"], "\Microsoft\Graph\Model\WindowsDeliveryOptimizationMode")) {
                 return $this->_propDict["deliveryOptimizationMode"];
             } else {
                 $this->_propDict["deliveryOptimizationMode"] = new WindowsDeliveryOptimizationMode($this->_propDict["deliveryOptimizationMode"]);
@@ -218,8 +218,8 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     */
     public function getFeatureUpdatesPauseExpiryDateTime()
     {
-        if (array_key_exists("featureUpdatesPauseExpiryDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["featureUpdatesPauseExpiryDateTime"], "\DateTime") || is_null($this->_propDict["featureUpdatesPauseExpiryDateTime"])) {
+        if (array_key_exists("featureUpdatesPauseExpiryDateTime", $this->_propDict) && !is_null($this->_propDict["featureUpdatesPauseExpiryDateTime"])) {
+            if (is_a($this->_propDict["featureUpdatesPauseExpiryDateTime"], "\DateTime")) {
                 return $this->_propDict["featureUpdatesPauseExpiryDateTime"];
             } else {
                 $this->_propDict["featureUpdatesPauseExpiryDateTime"] = new \DateTime($this->_propDict["featureUpdatesPauseExpiryDateTime"]);
@@ -251,8 +251,8 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     */
     public function getInstallationSchedule()
     {
-        if (array_key_exists("installationSchedule", $this->_propDict)) {
-            if (is_a($this->_propDict["installationSchedule"], "\Microsoft\Graph\Model\WindowsUpdateInstallScheduleType") || is_null($this->_propDict["installationSchedule"])) {
+        if (array_key_exists("installationSchedule", $this->_propDict) && !is_null($this->_propDict["installationSchedule"])) {
+            if (is_a($this->_propDict["installationSchedule"], "\Microsoft\Graph\Model\WindowsUpdateInstallScheduleType")) {
                 return $this->_propDict["installationSchedule"];
             } else {
                 $this->_propDict["installationSchedule"] = new WindowsUpdateInstallScheduleType($this->_propDict["installationSchedule"]);
@@ -313,8 +313,8 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     */
     public function getPrereleaseFeatures()
     {
-        if (array_key_exists("prereleaseFeatures", $this->_propDict)) {
-            if (is_a($this->_propDict["prereleaseFeatures"], "\Microsoft\Graph\Model\PrereleaseFeatures") || is_null($this->_propDict["prereleaseFeatures"])) {
+        if (array_key_exists("prereleaseFeatures", $this->_propDict) && !is_null($this->_propDict["prereleaseFeatures"])) {
+            if (is_a($this->_propDict["prereleaseFeatures"], "\Microsoft\Graph\Model\PrereleaseFeatures")) {
                 return $this->_propDict["prereleaseFeatures"];
             } else {
                 $this->_propDict["prereleaseFeatures"] = new PrereleaseFeatures($this->_propDict["prereleaseFeatures"]);
@@ -404,8 +404,8 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     */
     public function getQualityUpdatesPauseExpiryDateTime()
     {
-        if (array_key_exists("qualityUpdatesPauseExpiryDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["qualityUpdatesPauseExpiryDateTime"], "\DateTime") || is_null($this->_propDict["qualityUpdatesPauseExpiryDateTime"])) {
+        if (array_key_exists("qualityUpdatesPauseExpiryDateTime", $this->_propDict) && !is_null($this->_propDict["qualityUpdatesPauseExpiryDateTime"])) {
+            if (is_a($this->_propDict["qualityUpdatesPauseExpiryDateTime"], "\DateTime")) {
                 return $this->_propDict["qualityUpdatesPauseExpiryDateTime"];
             } else {
                 $this->_propDict["qualityUpdatesPauseExpiryDateTime"] = new \DateTime($this->_propDict["qualityUpdatesPauseExpiryDateTime"]);

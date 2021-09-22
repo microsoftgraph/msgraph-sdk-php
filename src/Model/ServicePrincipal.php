@@ -58,22 +58,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the addIns
     * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
      *
-     * @return array|null The addIns
+     * @return AddIn[]|null The addIns
      */
     public function getAddIns()
     {
-        if (array_key_exists("addIns", $this->_propDict)) {
-           return $this->_propDict["addIns"];
-        } else {
-            return null;
+        if (array_key_exists('addIns', $this->_propDict) && !is_null($this->_propDict['addIns'])) {
+            $addIns = [];
+            if (count($this->_propDict['addIns']) > 0 && is_a($this->_propDict['addIns'][0], 'AddIn')) {
+                return $this->_propDict['addIns'];
+            }
+            foreach ($this->_propDict['addIns'] as $singleValue) {
+                $addIns []= new AddIn($singleValue);
+            }
+            $this->_propDict['addIns'] = $addIns;
+            return $this->_propDict['addIns'];
         }
+        return null;
     }
     
     /** 
     * Sets the addIns
     * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
     *
-    * @param AddIn $val The addIns
+    * @param AddIn[] $val The addIns
     *
     * @return ServicePrincipal
     */
@@ -291,22 +298,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the appRoles
     * The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
      *
-     * @return array|null The appRoles
+     * @return AppRole[]|null The appRoles
      */
     public function getAppRoles()
     {
-        if (array_key_exists("appRoles", $this->_propDict)) {
-           return $this->_propDict["appRoles"];
-        } else {
-            return null;
+        if (array_key_exists('appRoles', $this->_propDict) && !is_null($this->_propDict['appRoles'])) {
+            $appRoles = [];
+            if (count($this->_propDict['appRoles']) > 0 && is_a($this->_propDict['appRoles'][0], 'AppRole')) {
+                return $this->_propDict['appRoles'];
+            }
+            foreach ($this->_propDict['appRoles'] as $singleValue) {
+                $appRoles []= new AppRole($singleValue);
+            }
+            $this->_propDict['appRoles'] = $appRoles;
+            return $this->_propDict['appRoles'];
         }
+        return null;
     }
     
     /** 
     * Sets the appRoles
     * The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
     *
-    * @param AppRole $val The appRoles
+    * @param AppRole[] $val The appRoles
     *
     * @return ServicePrincipal
     */
@@ -440,8 +454,8 @@ class ServicePrincipal extends DirectoryObject
     */
     public function getInfo()
     {
-        if (array_key_exists("info", $this->_propDict)) {
-            if (is_a($this->_propDict["info"], "\Microsoft\Graph\Model\InformationalUrl") || is_null($this->_propDict["info"])) {
+        if (array_key_exists("info", $this->_propDict) && !is_null($this->_propDict["info"])) {
+            if (is_a($this->_propDict["info"], "\Microsoft\Graph\Model\InformationalUrl")) {
                 return $this->_propDict["info"];
             } else {
                 $this->_propDict["info"] = new InformationalUrl($this->_propDict["info"]);
@@ -470,22 +484,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the keyCredentials
     * The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, NOT, ge, le).
      *
-     * @return array|null The keyCredentials
+     * @return KeyCredential[]|null The keyCredentials
      */
     public function getKeyCredentials()
     {
-        if (array_key_exists("keyCredentials", $this->_propDict)) {
-           return $this->_propDict["keyCredentials"];
-        } else {
-            return null;
+        if (array_key_exists('keyCredentials', $this->_propDict) && !is_null($this->_propDict['keyCredentials'])) {
+            $keyCredentials = [];
+            if (count($this->_propDict['keyCredentials']) > 0 && is_a($this->_propDict['keyCredentials'][0], 'KeyCredential')) {
+                return $this->_propDict['keyCredentials'];
+            }
+            foreach ($this->_propDict['keyCredentials'] as $singleValue) {
+                $keyCredentials []= new KeyCredential($singleValue);
+            }
+            $this->_propDict['keyCredentials'] = $keyCredentials;
+            return $this->_propDict['keyCredentials'];
         }
+        return null;
     }
     
     /** 
     * Sets the keyCredentials
     * The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, NOT, ge, le).
     *
-    * @param KeyCredential $val The keyCredentials
+    * @param KeyCredential[] $val The keyCredentials
     *
     * @return ServicePrincipal
     */
@@ -616,22 +637,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the oauth2PermissionScopes
     * The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
      *
-     * @return array|null The oauth2PermissionScopes
+     * @return PermissionScope[]|null The oauth2PermissionScopes
      */
     public function getOauth2PermissionScopes()
     {
-        if (array_key_exists("oauth2PermissionScopes", $this->_propDict)) {
-           return $this->_propDict["oauth2PermissionScopes"];
-        } else {
-            return null;
+        if (array_key_exists('oauth2PermissionScopes', $this->_propDict) && !is_null($this->_propDict['oauth2PermissionScopes'])) {
+            $oauth2PermissionScopes = [];
+            if (count($this->_propDict['oauth2PermissionScopes']) > 0 && is_a($this->_propDict['oauth2PermissionScopes'][0], 'PermissionScope')) {
+                return $this->_propDict['oauth2PermissionScopes'];
+            }
+            foreach ($this->_propDict['oauth2PermissionScopes'] as $singleValue) {
+                $oauth2PermissionScopes []= new PermissionScope($singleValue);
+            }
+            $this->_propDict['oauth2PermissionScopes'] = $oauth2PermissionScopes;
+            return $this->_propDict['oauth2PermissionScopes'];
         }
+        return null;
     }
     
     /** 
     * Sets the oauth2PermissionScopes
     * The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
     *
-    * @param PermissionScope $val The oauth2PermissionScopes
+    * @param PermissionScope[] $val The oauth2PermissionScopes
     *
     * @return ServicePrincipal
     */
@@ -646,22 +674,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the passwordCredentials
     * The collection of password credentials associated with the application. Not nullable.
      *
-     * @return array|null The passwordCredentials
+     * @return PasswordCredential[]|null The passwordCredentials
      */
     public function getPasswordCredentials()
     {
-        if (array_key_exists("passwordCredentials", $this->_propDict)) {
-           return $this->_propDict["passwordCredentials"];
-        } else {
-            return null;
+        if (array_key_exists('passwordCredentials', $this->_propDict) && !is_null($this->_propDict['passwordCredentials'])) {
+            $passwordCredentials = [];
+            if (count($this->_propDict['passwordCredentials']) > 0 && is_a($this->_propDict['passwordCredentials'][0], 'PasswordCredential')) {
+                return $this->_propDict['passwordCredentials'];
+            }
+            foreach ($this->_propDict['passwordCredentials'] as $singleValue) {
+                $passwordCredentials []= new PasswordCredential($singleValue);
+            }
+            $this->_propDict['passwordCredentials'] = $passwordCredentials;
+            return $this->_propDict['passwordCredentials'];
         }
+        return null;
     }
     
     /** 
     * Sets the passwordCredentials
     * The collection of password credentials associated with the application. Not nullable.
     *
-    * @param PasswordCredential $val The passwordCredentials
+    * @param PasswordCredential[] $val The passwordCredentials
     *
     * @return ServicePrincipal
     */
@@ -766,8 +801,8 @@ class ServicePrincipal extends DirectoryObject
     */
     public function getSamlSingleSignOnSettings()
     {
-        if (array_key_exists("samlSingleSignOnSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["samlSingleSignOnSettings"], "\Microsoft\Graph\Model\SamlSingleSignOnSettings") || is_null($this->_propDict["samlSingleSignOnSettings"])) {
+        if (array_key_exists("samlSingleSignOnSettings", $this->_propDict) && !is_null($this->_propDict["samlSingleSignOnSettings"])) {
+            if (is_a($this->_propDict["samlSingleSignOnSettings"], "\Microsoft\Graph\Model\SamlSingleSignOnSettings")) {
                 return $this->_propDict["samlSingleSignOnSettings"];
             } else {
                 $this->_propDict["samlSingleSignOnSettings"] = new SamlSingleSignOnSettings($this->_propDict["samlSingleSignOnSettings"]);
@@ -941,22 +976,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the appRoleAssignedTo
     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
      *
-     * @return array|null The appRoleAssignedTo
+     * @return AppRoleAssignment[]|null The appRoleAssignedTo
      */
     public function getAppRoleAssignedTo()
     {
-        if (array_key_exists("appRoleAssignedTo", $this->_propDict)) {
-           return $this->_propDict["appRoleAssignedTo"];
-        } else {
-            return null;
+        if (array_key_exists('appRoleAssignedTo', $this->_propDict) && !is_null($this->_propDict['appRoleAssignedTo'])) {
+            $appRoleAssignedTo = [];
+            if (count($this->_propDict['appRoleAssignedTo']) > 0 && is_a($this->_propDict['appRoleAssignedTo'][0], 'AppRoleAssignment')) {
+                return $this->_propDict['appRoleAssignedTo'];
+            }
+            foreach ($this->_propDict['appRoleAssignedTo'] as $singleValue) {
+                $appRoleAssignedTo []= new AppRoleAssignment($singleValue);
+            }
+            $this->_propDict['appRoleAssignedTo'] = $appRoleAssignedTo;
+            return $this->_propDict['appRoleAssignedTo'];
         }
+        return null;
     }
     
     /** 
     * Sets the appRoleAssignedTo
     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
     *
-    * @param AppRoleAssignment $val The appRoleAssignedTo
+    * @param AppRoleAssignment[] $val The appRoleAssignedTo
     *
     * @return ServicePrincipal
     */
@@ -971,22 +1013,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the appRoleAssignments
     * App role assignment for another app or service, granted to this service principal. Supports $expand.
      *
-     * @return array|null The appRoleAssignments
+     * @return AppRoleAssignment[]|null The appRoleAssignments
      */
     public function getAppRoleAssignments()
     {
-        if (array_key_exists("appRoleAssignments", $this->_propDict)) {
-           return $this->_propDict["appRoleAssignments"];
-        } else {
-            return null;
+        if (array_key_exists('appRoleAssignments', $this->_propDict) && !is_null($this->_propDict['appRoleAssignments'])) {
+            $appRoleAssignments = [];
+            if (count($this->_propDict['appRoleAssignments']) > 0 && is_a($this->_propDict['appRoleAssignments'][0], 'AppRoleAssignment')) {
+                return $this->_propDict['appRoleAssignments'];
+            }
+            foreach ($this->_propDict['appRoleAssignments'] as $singleValue) {
+                $appRoleAssignments []= new AppRoleAssignment($singleValue);
+            }
+            $this->_propDict['appRoleAssignments'] = $appRoleAssignments;
+            return $this->_propDict['appRoleAssignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the appRoleAssignments
     * App role assignment for another app or service, granted to this service principal. Supports $expand.
     *
-    * @param AppRoleAssignment $val The appRoleAssignments
+    * @param AppRoleAssignment[] $val The appRoleAssignments
     *
     * @return ServicePrincipal
     */
@@ -1001,22 +1050,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the claimsMappingPolicies
     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      *
-     * @return array|null The claimsMappingPolicies
+     * @return ClaimsMappingPolicy[]|null The claimsMappingPolicies
      */
     public function getClaimsMappingPolicies()
     {
-        if (array_key_exists("claimsMappingPolicies", $this->_propDict)) {
-           return $this->_propDict["claimsMappingPolicies"];
-        } else {
-            return null;
+        if (array_key_exists('claimsMappingPolicies', $this->_propDict) && !is_null($this->_propDict['claimsMappingPolicies'])) {
+            $claimsMappingPolicies = [];
+            if (count($this->_propDict['claimsMappingPolicies']) > 0 && is_a($this->_propDict['claimsMappingPolicies'][0], 'ClaimsMappingPolicy')) {
+                return $this->_propDict['claimsMappingPolicies'];
+            }
+            foreach ($this->_propDict['claimsMappingPolicies'] as $singleValue) {
+                $claimsMappingPolicies []= new ClaimsMappingPolicy($singleValue);
+            }
+            $this->_propDict['claimsMappingPolicies'] = $claimsMappingPolicies;
+            return $this->_propDict['claimsMappingPolicies'];
         }
+        return null;
     }
     
     /** 
     * Sets the claimsMappingPolicies
     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
     *
-    * @param ClaimsMappingPolicy $val The claimsMappingPolicies
+    * @param ClaimsMappingPolicy[] $val The claimsMappingPolicies
     *
     * @return ServicePrincipal
     */
@@ -1031,22 +1087,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the createdObjects
     * Directory objects created by this service principal. Read-only. Nullable.
      *
-     * @return array|null The createdObjects
+     * @return DirectoryObject[]|null The createdObjects
      */
     public function getCreatedObjects()
     {
-        if (array_key_exists("createdObjects", $this->_propDict)) {
-           return $this->_propDict["createdObjects"];
-        } else {
-            return null;
+        if (array_key_exists('createdObjects', $this->_propDict) && !is_null($this->_propDict['createdObjects'])) {
+            $createdObjects = [];
+            if (count($this->_propDict['createdObjects']) > 0 && is_a($this->_propDict['createdObjects'][0], 'DirectoryObject')) {
+                return $this->_propDict['createdObjects'];
+            }
+            foreach ($this->_propDict['createdObjects'] as $singleValue) {
+                $createdObjects []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['createdObjects'] = $createdObjects;
+            return $this->_propDict['createdObjects'];
         }
+        return null;
     }
     
     /** 
     * Sets the createdObjects
     * Directory objects created by this service principal. Read-only. Nullable.
     *
-    * @param DirectoryObject $val The createdObjects
+    * @param DirectoryObject[] $val The createdObjects
     *
     * @return ServicePrincipal
     */
@@ -1061,22 +1124,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the delegatedPermissionClassifications
     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
      *
-     * @return array|null The delegatedPermissionClassifications
+     * @return DelegatedPermissionClassification[]|null The delegatedPermissionClassifications
      */
     public function getDelegatedPermissionClassifications()
     {
-        if (array_key_exists("delegatedPermissionClassifications", $this->_propDict)) {
-           return $this->_propDict["delegatedPermissionClassifications"];
-        } else {
-            return null;
+        if (array_key_exists('delegatedPermissionClassifications', $this->_propDict) && !is_null($this->_propDict['delegatedPermissionClassifications'])) {
+            $delegatedPermissionClassifications = [];
+            if (count($this->_propDict['delegatedPermissionClassifications']) > 0 && is_a($this->_propDict['delegatedPermissionClassifications'][0], 'DelegatedPermissionClassification')) {
+                return $this->_propDict['delegatedPermissionClassifications'];
+            }
+            foreach ($this->_propDict['delegatedPermissionClassifications'] as $singleValue) {
+                $delegatedPermissionClassifications []= new DelegatedPermissionClassification($singleValue);
+            }
+            $this->_propDict['delegatedPermissionClassifications'] = $delegatedPermissionClassifications;
+            return $this->_propDict['delegatedPermissionClassifications'];
         }
+        return null;
     }
     
     /** 
     * Sets the delegatedPermissionClassifications
     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
     *
-    * @param DelegatedPermissionClassification $val The delegatedPermissionClassifications
+    * @param DelegatedPermissionClassification[] $val The delegatedPermissionClassifications
     *
     * @return ServicePrincipal
     */
@@ -1091,22 +1161,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the endpoints
     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
      *
-     * @return array|null The endpoints
+     * @return Endpoint[]|null The endpoints
      */
     public function getEndpoints()
     {
-        if (array_key_exists("endpoints", $this->_propDict)) {
-           return $this->_propDict["endpoints"];
-        } else {
-            return null;
+        if (array_key_exists('endpoints', $this->_propDict) && !is_null($this->_propDict['endpoints'])) {
+            $endpoints = [];
+            if (count($this->_propDict['endpoints']) > 0 && is_a($this->_propDict['endpoints'][0], 'Endpoint')) {
+                return $this->_propDict['endpoints'];
+            }
+            foreach ($this->_propDict['endpoints'] as $singleValue) {
+                $endpoints []= new Endpoint($singleValue);
+            }
+            $this->_propDict['endpoints'] = $endpoints;
+            return $this->_propDict['endpoints'];
         }
+        return null;
     }
     
     /** 
     * Sets the endpoints
     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
     *
-    * @param Endpoint $val The endpoints
+    * @param Endpoint[] $val The endpoints
     *
     * @return ServicePrincipal
     */
@@ -1121,22 +1198,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the homeRealmDiscoveryPolicies
     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
      *
-     * @return array|null The homeRealmDiscoveryPolicies
+     * @return HomeRealmDiscoveryPolicy[]|null The homeRealmDiscoveryPolicies
      */
     public function getHomeRealmDiscoveryPolicies()
     {
-        if (array_key_exists("homeRealmDiscoveryPolicies", $this->_propDict)) {
-           return $this->_propDict["homeRealmDiscoveryPolicies"];
-        } else {
-            return null;
+        if (array_key_exists('homeRealmDiscoveryPolicies', $this->_propDict) && !is_null($this->_propDict['homeRealmDiscoveryPolicies'])) {
+            $homeRealmDiscoveryPolicies = [];
+            if (count($this->_propDict['homeRealmDiscoveryPolicies']) > 0 && is_a($this->_propDict['homeRealmDiscoveryPolicies'][0], 'HomeRealmDiscoveryPolicy')) {
+                return $this->_propDict['homeRealmDiscoveryPolicies'];
+            }
+            foreach ($this->_propDict['homeRealmDiscoveryPolicies'] as $singleValue) {
+                $homeRealmDiscoveryPolicies []= new HomeRealmDiscoveryPolicy($singleValue);
+            }
+            $this->_propDict['homeRealmDiscoveryPolicies'] = $homeRealmDiscoveryPolicies;
+            return $this->_propDict['homeRealmDiscoveryPolicies'];
         }
+        return null;
     }
     
     /** 
     * Sets the homeRealmDiscoveryPolicies
     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
     *
-    * @param HomeRealmDiscoveryPolicy $val The homeRealmDiscoveryPolicies
+    * @param HomeRealmDiscoveryPolicy[] $val The homeRealmDiscoveryPolicies
     *
     * @return ServicePrincipal
     */
@@ -1151,22 +1235,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the memberOf
     * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The memberOf
+     * @return DirectoryObject[]|null The memberOf
      */
     public function getMemberOf()
     {
-        if (array_key_exists("memberOf", $this->_propDict)) {
-           return $this->_propDict["memberOf"];
-        } else {
-            return null;
+        if (array_key_exists('memberOf', $this->_propDict) && !is_null($this->_propDict['memberOf'])) {
+            $memberOf = [];
+            if (count($this->_propDict['memberOf']) > 0 && is_a($this->_propDict['memberOf'][0], 'DirectoryObject')) {
+                return $this->_propDict['memberOf'];
+            }
+            foreach ($this->_propDict['memberOf'] as $singleValue) {
+                $memberOf []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['memberOf'] = $memberOf;
+            return $this->_propDict['memberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the memberOf
     * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The memberOf
+    * @param DirectoryObject[] $val The memberOf
     *
     * @return ServicePrincipal
     */
@@ -1181,22 +1272,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the oauth2PermissionGrants
     * Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
      *
-     * @return array|null The oauth2PermissionGrants
+     * @return OAuth2PermissionGrant[]|null The oauth2PermissionGrants
      */
     public function getOauth2PermissionGrants()
     {
-        if (array_key_exists("oauth2PermissionGrants", $this->_propDict)) {
-           return $this->_propDict["oauth2PermissionGrants"];
-        } else {
-            return null;
+        if (array_key_exists('oauth2PermissionGrants', $this->_propDict) && !is_null($this->_propDict['oauth2PermissionGrants'])) {
+            $oauth2PermissionGrants = [];
+            if (count($this->_propDict['oauth2PermissionGrants']) > 0 && is_a($this->_propDict['oauth2PermissionGrants'][0], 'OAuth2PermissionGrant')) {
+                return $this->_propDict['oauth2PermissionGrants'];
+            }
+            foreach ($this->_propDict['oauth2PermissionGrants'] as $singleValue) {
+                $oauth2PermissionGrants []= new OAuth2PermissionGrant($singleValue);
+            }
+            $this->_propDict['oauth2PermissionGrants'] = $oauth2PermissionGrants;
+            return $this->_propDict['oauth2PermissionGrants'];
         }
+        return null;
     }
     
     /** 
     * Sets the oauth2PermissionGrants
     * Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
     *
-    * @param OAuth2PermissionGrant $val The oauth2PermissionGrants
+    * @param OAuth2PermissionGrant[] $val The oauth2PermissionGrants
     *
     * @return ServicePrincipal
     */
@@ -1211,22 +1309,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the ownedObjects
     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The ownedObjects
+     * @return DirectoryObject[]|null The ownedObjects
      */
     public function getOwnedObjects()
     {
-        if (array_key_exists("ownedObjects", $this->_propDict)) {
-           return $this->_propDict["ownedObjects"];
-        } else {
-            return null;
+        if (array_key_exists('ownedObjects', $this->_propDict) && !is_null($this->_propDict['ownedObjects'])) {
+            $ownedObjects = [];
+            if (count($this->_propDict['ownedObjects']) > 0 && is_a($this->_propDict['ownedObjects'][0], 'DirectoryObject')) {
+                return $this->_propDict['ownedObjects'];
+            }
+            foreach ($this->_propDict['ownedObjects'] as $singleValue) {
+                $ownedObjects []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['ownedObjects'] = $ownedObjects;
+            return $this->_propDict['ownedObjects'];
         }
+        return null;
     }
     
     /** 
     * Sets the ownedObjects
     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The ownedObjects
+    * @param DirectoryObject[] $val The ownedObjects
     *
     * @return ServicePrincipal
     */
@@ -1241,22 +1346,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the owners
     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The owners
+     * @return DirectoryObject[]|null The owners
      */
     public function getOwners()
     {
-        if (array_key_exists("owners", $this->_propDict)) {
-           return $this->_propDict["owners"];
-        } else {
-            return null;
+        if (array_key_exists('owners', $this->_propDict) && !is_null($this->_propDict['owners'])) {
+            $owners = [];
+            if (count($this->_propDict['owners']) > 0 && is_a($this->_propDict['owners'][0], 'DirectoryObject')) {
+                return $this->_propDict['owners'];
+            }
+            foreach ($this->_propDict['owners'] as $singleValue) {
+                $owners []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['owners'] = $owners;
+            return $this->_propDict['owners'];
         }
+        return null;
     }
     
     /** 
     * Sets the owners
     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The owners
+    * @param DirectoryObject[] $val The owners
     *
     * @return ServicePrincipal
     */
@@ -1271,22 +1383,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the tokenIssuancePolicies
     * The tokenIssuancePolicies assigned to this service principal.
      *
-     * @return array|null The tokenIssuancePolicies
+     * @return TokenIssuancePolicy[]|null The tokenIssuancePolicies
      */
     public function getTokenIssuancePolicies()
     {
-        if (array_key_exists("tokenIssuancePolicies", $this->_propDict)) {
-           return $this->_propDict["tokenIssuancePolicies"];
-        } else {
-            return null;
+        if (array_key_exists('tokenIssuancePolicies', $this->_propDict) && !is_null($this->_propDict['tokenIssuancePolicies'])) {
+            $tokenIssuancePolicies = [];
+            if (count($this->_propDict['tokenIssuancePolicies']) > 0 && is_a($this->_propDict['tokenIssuancePolicies'][0], 'TokenIssuancePolicy')) {
+                return $this->_propDict['tokenIssuancePolicies'];
+            }
+            foreach ($this->_propDict['tokenIssuancePolicies'] as $singleValue) {
+                $tokenIssuancePolicies []= new TokenIssuancePolicy($singleValue);
+            }
+            $this->_propDict['tokenIssuancePolicies'] = $tokenIssuancePolicies;
+            return $this->_propDict['tokenIssuancePolicies'];
         }
+        return null;
     }
     
     /** 
     * Sets the tokenIssuancePolicies
     * The tokenIssuancePolicies assigned to this service principal.
     *
-    * @param TokenIssuancePolicy $val The tokenIssuancePolicies
+    * @param TokenIssuancePolicy[] $val The tokenIssuancePolicies
     *
     * @return ServicePrincipal
     */
@@ -1301,22 +1420,29 @@ class ServicePrincipal extends DirectoryObject
      * Gets the tokenLifetimePolicies
     * The tokenLifetimePolicies assigned to this service principal.
      *
-     * @return array|null The tokenLifetimePolicies
+     * @return TokenLifetimePolicy[]|null The tokenLifetimePolicies
      */
     public function getTokenLifetimePolicies()
     {
-        if (array_key_exists("tokenLifetimePolicies", $this->_propDict)) {
-           return $this->_propDict["tokenLifetimePolicies"];
-        } else {
-            return null;
+        if (array_key_exists('tokenLifetimePolicies', $this->_propDict) && !is_null($this->_propDict['tokenLifetimePolicies'])) {
+            $tokenLifetimePolicies = [];
+            if (count($this->_propDict['tokenLifetimePolicies']) > 0 && is_a($this->_propDict['tokenLifetimePolicies'][0], 'TokenLifetimePolicy')) {
+                return $this->_propDict['tokenLifetimePolicies'];
+            }
+            foreach ($this->_propDict['tokenLifetimePolicies'] as $singleValue) {
+                $tokenLifetimePolicies []= new TokenLifetimePolicy($singleValue);
+            }
+            $this->_propDict['tokenLifetimePolicies'] = $tokenLifetimePolicies;
+            return $this->_propDict['tokenLifetimePolicies'];
         }
+        return null;
     }
     
     /** 
     * Sets the tokenLifetimePolicies
     * The tokenLifetimePolicies assigned to this service principal.
     *
-    * @param TokenLifetimePolicy $val The tokenLifetimePolicies
+    * @param TokenLifetimePolicy[] $val The tokenLifetimePolicies
     *
     * @return ServicePrincipal
     */
@@ -1330,21 +1456,28 @@ class ServicePrincipal extends DirectoryObject
      /** 
      * Gets the transitiveMemberOf
      *
-     * @return array|null The transitiveMemberOf
+     * @return DirectoryObject[]|null The transitiveMemberOf
      */
     public function getTransitiveMemberOf()
     {
-        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
-           return $this->_propDict["transitiveMemberOf"];
-        } else {
-            return null;
+        if (array_key_exists('transitiveMemberOf', $this->_propDict) && !is_null($this->_propDict['transitiveMemberOf'])) {
+            $transitiveMemberOf = [];
+            if (count($this->_propDict['transitiveMemberOf']) > 0 && is_a($this->_propDict['transitiveMemberOf'][0], 'DirectoryObject')) {
+                return $this->_propDict['transitiveMemberOf'];
+            }
+            foreach ($this->_propDict['transitiveMemberOf'] as $singleValue) {
+                $transitiveMemberOf []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['transitiveMemberOf'] = $transitiveMemberOf;
+            return $this->_propDict['transitiveMemberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the transitiveMemberOf
     *
-    * @param DirectoryObject $val The transitiveMemberOf
+    * @param DirectoryObject[] $val The transitiveMemberOf
     *
     * @return ServicePrincipal
     */

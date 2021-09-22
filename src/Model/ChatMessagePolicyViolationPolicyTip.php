@@ -98,7 +98,7 @@ class ChatMessagePolicyViolationPolicyTip extends Entity
     * Sets the matchedConditionDescriptions
     * The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
     *
-    * @param string $val The value of the matchedConditionDescriptions
+    * @param string[] $val The value of the matchedConditionDescriptions
     *
     * @return ChatMessagePolicyViolationPolicyTip
     */

@@ -28,18 +28,22 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
     * Gets the principalScopes
     * Defines the scopes of the principals whose access to resources are reviewed in the access review.
     *
-    * @return AccessReviewScope|null The principalScopes
+    * @return AccessReviewScope[]|null The principalScopes
     */
     public function getPrincipalScopes()
     {
-        if (array_key_exists("principalScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["principalScopes"], "\Microsoft\Graph\Model\AccessReviewScope") || is_null($this->_propDict["principalScopes"])) {
-                return $this->_propDict["principalScopes"];
-            } else {
-                $this->_propDict["principalScopes"] = new AccessReviewScope($this->_propDict["principalScopes"]);
-                return $this->_propDict["principalScopes"];
+        if (array_key_exists("principalScopes", $this->_propDict) && !is_null($this->_propDict["principalScopes"])) {
+       
+            if (count($this->_propDict['principalScopes']) > 0 && is_a($this->_propDict['principalScopes'][0], 'AccessReviewScope')) {
+               return $this->_propDict['principalScopes'];
             }
-        }
+            $principalScopes = [];
+            foreach ($this->_propDict['principalScopes'] as $singleValue) {
+               $principalScopes []= new AccessReviewScope($singleValue);
+            }
+            $this->_propDict['principalScopes'] = $principalScopes;
+            return $this->_propDict['principalScopes'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
     * Sets the principalScopes
     * Defines the scopes of the principals whose access to resources are reviewed in the access review.
     *
-    * @param AccessReviewScope $val The value to assign to the principalScopes
+    * @param AccessReviewScope[] $val The value to assign to the principalScopes
     *
     * @return PrincipalResourceMembershipsScope The PrincipalResourceMembershipsScope
     */
@@ -61,18 +65,22 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
     * Gets the resourceScopes
     * Defines the scopes of the resources for which access is reviewed.
     *
-    * @return AccessReviewScope|null The resourceScopes
+    * @return AccessReviewScope[]|null The resourceScopes
     */
     public function getResourceScopes()
     {
-        if (array_key_exists("resourceScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceScopes"], "\Microsoft\Graph\Model\AccessReviewScope") || is_null($this->_propDict["resourceScopes"])) {
-                return $this->_propDict["resourceScopes"];
-            } else {
-                $this->_propDict["resourceScopes"] = new AccessReviewScope($this->_propDict["resourceScopes"]);
-                return $this->_propDict["resourceScopes"];
+        if (array_key_exists("resourceScopes", $this->_propDict) && !is_null($this->_propDict["resourceScopes"])) {
+       
+            if (count($this->_propDict['resourceScopes']) > 0 && is_a($this->_propDict['resourceScopes'][0], 'AccessReviewScope')) {
+               return $this->_propDict['resourceScopes'];
             }
-        }
+            $resourceScopes = [];
+            foreach ($this->_propDict['resourceScopes'] as $singleValue) {
+               $resourceScopes []= new AccessReviewScope($singleValue);
+            }
+            $this->_propDict['resourceScopes'] = $resourceScopes;
+            return $this->_propDict['resourceScopes'];
+            }
         return null;
     }
 
@@ -80,7 +88,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
     * Sets the resourceScopes
     * Defines the scopes of the resources for which access is reviewed.
     *
-    * @param AccessReviewScope $val The value to assign to the resourceScopes
+    * @param AccessReviewScope[] $val The value to assign to the resourceScopes
     *
     * @return PrincipalResourceMembershipsScope The PrincipalResourceMembershipsScope
     */

@@ -60,8 +60,9 @@ class TargetResource extends Entity
     */
     public function getGroupType()
     {
-        if (array_key_exists("groupType", $this->_propDict)) {
-            if (is_a($this->_propDict["groupType"], "\Microsoft\Graph\Model\GroupType") || is_null($this->_propDict["groupType"])) {
+        if (array_key_exists("groupType", $this->_propDict) && !is_null($this->_propDict["groupType"])) {
+     
+            if (is_a($this->_propDict["groupType"], "\Microsoft\Graph\Model\GroupType")) {
                 return $this->_propDict["groupType"];
             } else {
                 $this->_propDict["groupType"] = new GroupType($this->_propDict["groupType"]);
@@ -117,18 +118,22 @@ class TargetResource extends Entity
     * Gets the modifiedProperties
     * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
     *
-    * @return ModifiedProperty|null The modifiedProperties
+    * @return ModifiedProperty[]|null The modifiedProperties
     */
     public function getModifiedProperties()
     {
-        if (array_key_exists("modifiedProperties", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedProperties"], "\Microsoft\Graph\Model\ModifiedProperty") || is_null($this->_propDict["modifiedProperties"])) {
-                return $this->_propDict["modifiedProperties"];
-            } else {
-                $this->_propDict["modifiedProperties"] = new ModifiedProperty($this->_propDict["modifiedProperties"]);
-                return $this->_propDict["modifiedProperties"];
+        if (array_key_exists("modifiedProperties", $this->_propDict) && !is_null($this->_propDict["modifiedProperties"])) {
+       
+            if (count($this->_propDict['modifiedProperties']) > 0 && is_a($this->_propDict['modifiedProperties'][0], 'ModifiedProperty')) {
+               return $this->_propDict['modifiedProperties'];
             }
-        }
+            $modifiedProperties = [];
+            foreach ($this->_propDict['modifiedProperties'] as $singleValue) {
+               $modifiedProperties []= new ModifiedProperty($singleValue);
+            }
+            $this->_propDict['modifiedProperties'] = $modifiedProperties;
+            return $this->_propDict['modifiedProperties'];
+            }
         return null;
     }
 
@@ -136,7 +141,7 @@ class TargetResource extends Entity
     * Sets the modifiedProperties
     * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
     *
-    * @param ModifiedProperty $val The value to assign to the modifiedProperties
+    * @param ModifiedProperty[] $val The value to assign to the modifiedProperties
     *
     * @return TargetResource The TargetResource
     */

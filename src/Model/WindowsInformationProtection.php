@@ -61,8 +61,8 @@ class WindowsInformationProtection extends ManagedAppPolicy
     */
     public function getDataRecoveryCertificate()
     {
-        if (array_key_exists("dataRecoveryCertificate", $this->_propDict)) {
-            if (is_a($this->_propDict["dataRecoveryCertificate"], "\Microsoft\Graph\Model\WindowsInformationProtectionDataRecoveryCertificate") || is_null($this->_propDict["dataRecoveryCertificate"])) {
+        if (array_key_exists("dataRecoveryCertificate", $this->_propDict) && !is_null($this->_propDict["dataRecoveryCertificate"])) {
+            if (is_a($this->_propDict["dataRecoveryCertificate"], "\Microsoft\Graph\Model\WindowsInformationProtectionDataRecoveryCertificate")) {
                 return $this->_propDict["dataRecoveryCertificate"];
             } else {
                 $this->_propDict["dataRecoveryCertificate"] = new WindowsInformationProtectionDataRecoveryCertificate($this->_propDict["dataRecoveryCertificate"]);
@@ -94,8 +94,8 @@ class WindowsInformationProtection extends ManagedAppPolicy
     */
     public function getEnforcementLevel()
     {
-        if (array_key_exists("enforcementLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["enforcementLevel"], "\Microsoft\Graph\Model\WindowsInformationProtectionEnforcementLevel") || is_null($this->_propDict["enforcementLevel"])) {
+        if (array_key_exists("enforcementLevel", $this->_propDict) && !is_null($this->_propDict["enforcementLevel"])) {
+            if (is_a($this->_propDict["enforcementLevel"], "\Microsoft\Graph\Model\WindowsInformationProtectionEnforcementLevel")) {
                 return $this->_propDict["enforcementLevel"];
             } else {
                 $this->_propDict["enforcementLevel"] = new WindowsInformationProtectionEnforcementLevel($this->_propDict["enforcementLevel"]);
@@ -153,22 +153,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the enterpriseInternalProxyServers
     * This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
      *
-     * @return array|null The enterpriseInternalProxyServers
+     * @return WindowsInformationProtectionResourceCollection[]|null The enterpriseInternalProxyServers
      */
     public function getEnterpriseInternalProxyServers()
     {
-        if (array_key_exists("enterpriseInternalProxyServers", $this->_propDict)) {
-           return $this->_propDict["enterpriseInternalProxyServers"];
-        } else {
-            return null;
+        if (array_key_exists('enterpriseInternalProxyServers', $this->_propDict) && !is_null($this->_propDict['enterpriseInternalProxyServers'])) {
+            $enterpriseInternalProxyServers = [];
+            if (count($this->_propDict['enterpriseInternalProxyServers']) > 0 && is_a($this->_propDict['enterpriseInternalProxyServers'][0], 'WindowsInformationProtectionResourceCollection')) {
+                return $this->_propDict['enterpriseInternalProxyServers'];
+            }
+            foreach ($this->_propDict['enterpriseInternalProxyServers'] as $singleValue) {
+                $enterpriseInternalProxyServers []= new WindowsInformationProtectionResourceCollection($singleValue);
+            }
+            $this->_propDict['enterpriseInternalProxyServers'] = $enterpriseInternalProxyServers;
+            return $this->_propDict['enterpriseInternalProxyServers'];
         }
+        return null;
     }
     
     /** 
     * Sets the enterpriseInternalProxyServers
     * This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
     *
-    * @param WindowsInformationProtectionResourceCollection $val The enterpriseInternalProxyServers
+    * @param WindowsInformationProtectionResourceCollection[] $val The enterpriseInternalProxyServers
     *
     * @return WindowsInformationProtection
     */
@@ -183,22 +190,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the enterpriseIPRanges
     * Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to
      *
-     * @return array|null The enterpriseIPRanges
+     * @return WindowsInformationProtectionIPRangeCollection[]|null The enterpriseIPRanges
      */
     public function getEnterpriseIPRanges()
     {
-        if (array_key_exists("enterpriseIPRanges", $this->_propDict)) {
-           return $this->_propDict["enterpriseIPRanges"];
-        } else {
-            return null;
+        if (array_key_exists('enterpriseIPRanges', $this->_propDict) && !is_null($this->_propDict['enterpriseIPRanges'])) {
+            $enterpriseIPRanges = [];
+            if (count($this->_propDict['enterpriseIPRanges']) > 0 && is_a($this->_propDict['enterpriseIPRanges'][0], 'WindowsInformationProtectionIPRangeCollection')) {
+                return $this->_propDict['enterpriseIPRanges'];
+            }
+            foreach ($this->_propDict['enterpriseIPRanges'] as $singleValue) {
+                $enterpriseIPRanges []= new WindowsInformationProtectionIPRangeCollection($singleValue);
+            }
+            $this->_propDict['enterpriseIPRanges'] = $enterpriseIPRanges;
+            return $this->_propDict['enterpriseIPRanges'];
         }
+        return null;
     }
     
     /** 
     * Sets the enterpriseIPRanges
     * Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to
     *
-    * @param WindowsInformationProtectionIPRangeCollection $val The enterpriseIPRanges
+    * @param WindowsInformationProtectionIPRangeCollection[] $val The enterpriseIPRanges
     *
     * @return WindowsInformationProtection
     */
@@ -242,22 +256,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the enterpriseNetworkDomainNames
     * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
      *
-     * @return array|null The enterpriseNetworkDomainNames
+     * @return WindowsInformationProtectionResourceCollection[]|null The enterpriseNetworkDomainNames
      */
     public function getEnterpriseNetworkDomainNames()
     {
-        if (array_key_exists("enterpriseNetworkDomainNames", $this->_propDict)) {
-           return $this->_propDict["enterpriseNetworkDomainNames"];
-        } else {
-            return null;
+        if (array_key_exists('enterpriseNetworkDomainNames', $this->_propDict) && !is_null($this->_propDict['enterpriseNetworkDomainNames'])) {
+            $enterpriseNetworkDomainNames = [];
+            if (count($this->_propDict['enterpriseNetworkDomainNames']) > 0 && is_a($this->_propDict['enterpriseNetworkDomainNames'][0], 'WindowsInformationProtectionResourceCollection')) {
+                return $this->_propDict['enterpriseNetworkDomainNames'];
+            }
+            foreach ($this->_propDict['enterpriseNetworkDomainNames'] as $singleValue) {
+                $enterpriseNetworkDomainNames []= new WindowsInformationProtectionResourceCollection($singleValue);
+            }
+            $this->_propDict['enterpriseNetworkDomainNames'] = $enterpriseNetworkDomainNames;
+            return $this->_propDict['enterpriseNetworkDomainNames'];
         }
+        return null;
     }
     
     /** 
     * Sets the enterpriseNetworkDomainNames
     * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
     *
-    * @param WindowsInformationProtectionResourceCollection $val The enterpriseNetworkDomainNames
+    * @param WindowsInformationProtectionResourceCollection[] $val The enterpriseNetworkDomainNames
     *
     * @return WindowsInformationProtection
     */
@@ -272,22 +293,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the enterpriseProtectedDomainNames
     * List of enterprise domains to be protected
      *
-     * @return array|null The enterpriseProtectedDomainNames
+     * @return WindowsInformationProtectionResourceCollection[]|null The enterpriseProtectedDomainNames
      */
     public function getEnterpriseProtectedDomainNames()
     {
-        if (array_key_exists("enterpriseProtectedDomainNames", $this->_propDict)) {
-           return $this->_propDict["enterpriseProtectedDomainNames"];
-        } else {
-            return null;
+        if (array_key_exists('enterpriseProtectedDomainNames', $this->_propDict) && !is_null($this->_propDict['enterpriseProtectedDomainNames'])) {
+            $enterpriseProtectedDomainNames = [];
+            if (count($this->_propDict['enterpriseProtectedDomainNames']) > 0 && is_a($this->_propDict['enterpriseProtectedDomainNames'][0], 'WindowsInformationProtectionResourceCollection')) {
+                return $this->_propDict['enterpriseProtectedDomainNames'];
+            }
+            foreach ($this->_propDict['enterpriseProtectedDomainNames'] as $singleValue) {
+                $enterpriseProtectedDomainNames []= new WindowsInformationProtectionResourceCollection($singleValue);
+            }
+            $this->_propDict['enterpriseProtectedDomainNames'] = $enterpriseProtectedDomainNames;
+            return $this->_propDict['enterpriseProtectedDomainNames'];
         }
+        return null;
     }
     
     /** 
     * Sets the enterpriseProtectedDomainNames
     * List of enterprise domains to be protected
     *
-    * @param WindowsInformationProtectionResourceCollection $val The enterpriseProtectedDomainNames
+    * @param WindowsInformationProtectionResourceCollection[] $val The enterpriseProtectedDomainNames
     *
     * @return WindowsInformationProtection
     */
@@ -302,22 +330,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the enterpriseProxiedDomains
     * Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
      *
-     * @return array|null The enterpriseProxiedDomains
+     * @return WindowsInformationProtectionProxiedDomainCollection[]|null The enterpriseProxiedDomains
      */
     public function getEnterpriseProxiedDomains()
     {
-        if (array_key_exists("enterpriseProxiedDomains", $this->_propDict)) {
-           return $this->_propDict["enterpriseProxiedDomains"];
-        } else {
-            return null;
+        if (array_key_exists('enterpriseProxiedDomains', $this->_propDict) && !is_null($this->_propDict['enterpriseProxiedDomains'])) {
+            $enterpriseProxiedDomains = [];
+            if (count($this->_propDict['enterpriseProxiedDomains']) > 0 && is_a($this->_propDict['enterpriseProxiedDomains'][0], 'WindowsInformationProtectionProxiedDomainCollection')) {
+                return $this->_propDict['enterpriseProxiedDomains'];
+            }
+            foreach ($this->_propDict['enterpriseProxiedDomains'] as $singleValue) {
+                $enterpriseProxiedDomains []= new WindowsInformationProtectionProxiedDomainCollection($singleValue);
+            }
+            $this->_propDict['enterpriseProxiedDomains'] = $enterpriseProxiedDomains;
+            return $this->_propDict['enterpriseProxiedDomains'];
         }
+        return null;
     }
     
     /** 
     * Sets the enterpriseProxiedDomains
     * Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
     *
-    * @param WindowsInformationProtectionProxiedDomainCollection $val The enterpriseProxiedDomains
+    * @param WindowsInformationProtectionProxiedDomainCollection[] $val The enterpriseProxiedDomains
     *
     * @return WindowsInformationProtection
     */
@@ -332,22 +367,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the enterpriseProxyServers
     * This is a list of proxy servers. Any server not on this list is considered non-enterprise
      *
-     * @return array|null The enterpriseProxyServers
+     * @return WindowsInformationProtectionResourceCollection[]|null The enterpriseProxyServers
      */
     public function getEnterpriseProxyServers()
     {
-        if (array_key_exists("enterpriseProxyServers", $this->_propDict)) {
-           return $this->_propDict["enterpriseProxyServers"];
-        } else {
-            return null;
+        if (array_key_exists('enterpriseProxyServers', $this->_propDict) && !is_null($this->_propDict['enterpriseProxyServers'])) {
+            $enterpriseProxyServers = [];
+            if (count($this->_propDict['enterpriseProxyServers']) > 0 && is_a($this->_propDict['enterpriseProxyServers'][0], 'WindowsInformationProtectionResourceCollection')) {
+                return $this->_propDict['enterpriseProxyServers'];
+            }
+            foreach ($this->_propDict['enterpriseProxyServers'] as $singleValue) {
+                $enterpriseProxyServers []= new WindowsInformationProtectionResourceCollection($singleValue);
+            }
+            $this->_propDict['enterpriseProxyServers'] = $enterpriseProxyServers;
+            return $this->_propDict['enterpriseProxyServers'];
         }
+        return null;
     }
     
     /** 
     * Sets the enterpriseProxyServers
     * This is a list of proxy servers. Any server not on this list is considered non-enterprise
     *
-    * @param WindowsInformationProtectionResourceCollection $val The enterpriseProxyServers
+    * @param WindowsInformationProtectionResourceCollection[] $val The enterpriseProxyServers
     *
     * @return WindowsInformationProtection
     */
@@ -391,22 +433,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the exemptApps
     * Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
      *
-     * @return array|null The exemptApps
+     * @return WindowsInformationProtectionApp[]|null The exemptApps
      */
     public function getExemptApps()
     {
-        if (array_key_exists("exemptApps", $this->_propDict)) {
-           return $this->_propDict["exemptApps"];
-        } else {
-            return null;
+        if (array_key_exists('exemptApps', $this->_propDict) && !is_null($this->_propDict['exemptApps'])) {
+            $exemptApps = [];
+            if (count($this->_propDict['exemptApps']) > 0 && is_a($this->_propDict['exemptApps'][0], 'WindowsInformationProtectionApp')) {
+                return $this->_propDict['exemptApps'];
+            }
+            foreach ($this->_propDict['exemptApps'] as $singleValue) {
+                $exemptApps []= new WindowsInformationProtectionApp($singleValue);
+            }
+            $this->_propDict['exemptApps'] = $exemptApps;
+            return $this->_propDict['exemptApps'];
         }
+        return null;
     }
     
     /** 
     * Sets the exemptApps
     * Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
     *
-    * @param WindowsInformationProtectionApp $val The exemptApps
+    * @param WindowsInformationProtectionApp[] $val The exemptApps
     *
     * @return WindowsInformationProtection
     */
@@ -508,22 +557,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the neutralDomainResources
     * List of domain names that can used for work or personal resource
      *
-     * @return array|null The neutralDomainResources
+     * @return WindowsInformationProtectionResourceCollection[]|null The neutralDomainResources
      */
     public function getNeutralDomainResources()
     {
-        if (array_key_exists("neutralDomainResources", $this->_propDict)) {
-           return $this->_propDict["neutralDomainResources"];
-        } else {
-            return null;
+        if (array_key_exists('neutralDomainResources', $this->_propDict) && !is_null($this->_propDict['neutralDomainResources'])) {
+            $neutralDomainResources = [];
+            if (count($this->_propDict['neutralDomainResources']) > 0 && is_a($this->_propDict['neutralDomainResources'][0], 'WindowsInformationProtectionResourceCollection')) {
+                return $this->_propDict['neutralDomainResources'];
+            }
+            foreach ($this->_propDict['neutralDomainResources'] as $singleValue) {
+                $neutralDomainResources []= new WindowsInformationProtectionResourceCollection($singleValue);
+            }
+            $this->_propDict['neutralDomainResources'] = $neutralDomainResources;
+            return $this->_propDict['neutralDomainResources'];
         }
+        return null;
     }
     
     /** 
     * Sets the neutralDomainResources
     * List of domain names that can used for work or personal resource
     *
-    * @param WindowsInformationProtectionResourceCollection $val The neutralDomainResources
+    * @param WindowsInformationProtectionResourceCollection[] $val The neutralDomainResources
     *
     * @return WindowsInformationProtection
     */
@@ -538,22 +594,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the protectedApps
     * Protected applications can access enterprise data and the data handled by those applications are protected with encryption
      *
-     * @return array|null The protectedApps
+     * @return WindowsInformationProtectionApp[]|null The protectedApps
      */
     public function getProtectedApps()
     {
-        if (array_key_exists("protectedApps", $this->_propDict)) {
-           return $this->_propDict["protectedApps"];
-        } else {
-            return null;
+        if (array_key_exists('protectedApps', $this->_propDict) && !is_null($this->_propDict['protectedApps'])) {
+            $protectedApps = [];
+            if (count($this->_propDict['protectedApps']) > 0 && is_a($this->_propDict['protectedApps'][0], 'WindowsInformationProtectionApp')) {
+                return $this->_propDict['protectedApps'];
+            }
+            foreach ($this->_propDict['protectedApps'] as $singleValue) {
+                $protectedApps []= new WindowsInformationProtectionApp($singleValue);
+            }
+            $this->_propDict['protectedApps'] = $protectedApps;
+            return $this->_propDict['protectedApps'];
         }
+        return null;
     }
     
     /** 
     * Sets the protectedApps
     * Protected applications can access enterprise data and the data handled by those applications are protected with encryption
     *
-    * @param WindowsInformationProtectionApp $val The protectedApps
+    * @param WindowsInformationProtectionApp[] $val The protectedApps
     *
     * @return WindowsInformationProtection
     */
@@ -655,22 +718,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the smbAutoEncryptedFileExtensions
     * Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
      *
-     * @return array|null The smbAutoEncryptedFileExtensions
+     * @return WindowsInformationProtectionResourceCollection[]|null The smbAutoEncryptedFileExtensions
      */
     public function getSmbAutoEncryptedFileExtensions()
     {
-        if (array_key_exists("smbAutoEncryptedFileExtensions", $this->_propDict)) {
-           return $this->_propDict["smbAutoEncryptedFileExtensions"];
-        } else {
-            return null;
+        if (array_key_exists('smbAutoEncryptedFileExtensions', $this->_propDict) && !is_null($this->_propDict['smbAutoEncryptedFileExtensions'])) {
+            $smbAutoEncryptedFileExtensions = [];
+            if (count($this->_propDict['smbAutoEncryptedFileExtensions']) > 0 && is_a($this->_propDict['smbAutoEncryptedFileExtensions'][0], 'WindowsInformationProtectionResourceCollection')) {
+                return $this->_propDict['smbAutoEncryptedFileExtensions'];
+            }
+            foreach ($this->_propDict['smbAutoEncryptedFileExtensions'] as $singleValue) {
+                $smbAutoEncryptedFileExtensions []= new WindowsInformationProtectionResourceCollection($singleValue);
+            }
+            $this->_propDict['smbAutoEncryptedFileExtensions'] = $smbAutoEncryptedFileExtensions;
+            return $this->_propDict['smbAutoEncryptedFileExtensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the smbAutoEncryptedFileExtensions
     * Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
     *
-    * @param WindowsInformationProtectionResourceCollection $val The smbAutoEncryptedFileExtensions
+    * @param WindowsInformationProtectionResourceCollection[] $val The smbAutoEncryptedFileExtensions
     *
     * @return WindowsInformationProtection
     */
@@ -685,22 +755,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the assignments
     * Navigation property to list of security groups targeted for policy.
      *
-     * @return array|null The assignments
+     * @return TargetedManagedAppPolicyAssignment[]|null The assignments
      */
     public function getAssignments()
     {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
+        if (array_key_exists('assignments', $this->_propDict) && !is_null($this->_propDict['assignments'])) {
+            $assignments = [];
+            if (count($this->_propDict['assignments']) > 0 && is_a($this->_propDict['assignments'][0], 'TargetedManagedAppPolicyAssignment')) {
+                return $this->_propDict['assignments'];
+            }
+            foreach ($this->_propDict['assignments'] as $singleValue) {
+                $assignments []= new TargetedManagedAppPolicyAssignment($singleValue);
+            }
+            $this->_propDict['assignments'] = $assignments;
+            return $this->_propDict['assignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignments
     * Navigation property to list of security groups targeted for policy.
     *
-    * @param TargetedManagedAppPolicyAssignment $val The assignments
+    * @param TargetedManagedAppPolicyAssignment[] $val The assignments
     *
     * @return WindowsInformationProtection
     */
@@ -715,22 +792,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the exemptAppLockerFiles
     * Another way to input exempt apps through xml files
      *
-     * @return array|null The exemptAppLockerFiles
+     * @return WindowsInformationProtectionAppLockerFile[]|null The exemptAppLockerFiles
      */
     public function getExemptAppLockerFiles()
     {
-        if (array_key_exists("exemptAppLockerFiles", $this->_propDict)) {
-           return $this->_propDict["exemptAppLockerFiles"];
-        } else {
-            return null;
+        if (array_key_exists('exemptAppLockerFiles', $this->_propDict) && !is_null($this->_propDict['exemptAppLockerFiles'])) {
+            $exemptAppLockerFiles = [];
+            if (count($this->_propDict['exemptAppLockerFiles']) > 0 && is_a($this->_propDict['exemptAppLockerFiles'][0], 'WindowsInformationProtectionAppLockerFile')) {
+                return $this->_propDict['exemptAppLockerFiles'];
+            }
+            foreach ($this->_propDict['exemptAppLockerFiles'] as $singleValue) {
+                $exemptAppLockerFiles []= new WindowsInformationProtectionAppLockerFile($singleValue);
+            }
+            $this->_propDict['exemptAppLockerFiles'] = $exemptAppLockerFiles;
+            return $this->_propDict['exemptAppLockerFiles'];
         }
+        return null;
     }
     
     /** 
     * Sets the exemptAppLockerFiles
     * Another way to input exempt apps through xml files
     *
-    * @param WindowsInformationProtectionAppLockerFile $val The exemptAppLockerFiles
+    * @param WindowsInformationProtectionAppLockerFile[] $val The exemptAppLockerFiles
     *
     * @return WindowsInformationProtection
     */
@@ -745,22 +829,29 @@ class WindowsInformationProtection extends ManagedAppPolicy
      * Gets the protectedAppLockerFiles
     * Another way to input protected apps through xml files
      *
-     * @return array|null The protectedAppLockerFiles
+     * @return WindowsInformationProtectionAppLockerFile[]|null The protectedAppLockerFiles
      */
     public function getProtectedAppLockerFiles()
     {
-        if (array_key_exists("protectedAppLockerFiles", $this->_propDict)) {
-           return $this->_propDict["protectedAppLockerFiles"];
-        } else {
-            return null;
+        if (array_key_exists('protectedAppLockerFiles', $this->_propDict) && !is_null($this->_propDict['protectedAppLockerFiles'])) {
+            $protectedAppLockerFiles = [];
+            if (count($this->_propDict['protectedAppLockerFiles']) > 0 && is_a($this->_propDict['protectedAppLockerFiles'][0], 'WindowsInformationProtectionAppLockerFile')) {
+                return $this->_propDict['protectedAppLockerFiles'];
+            }
+            foreach ($this->_propDict['protectedAppLockerFiles'] as $singleValue) {
+                $protectedAppLockerFiles []= new WindowsInformationProtectionAppLockerFile($singleValue);
+            }
+            $this->_propDict['protectedAppLockerFiles'] = $protectedAppLockerFiles;
+            return $this->_propDict['protectedAppLockerFiles'];
         }
+        return null;
     }
     
     /** 
     * Sets the protectedAppLockerFiles
     * Another way to input protected apps through xml files
     *
-    * @param WindowsInformationProtectionAppLockerFile $val The protectedAppLockerFiles
+    * @param WindowsInformationProtectionAppLockerFile[] $val The protectedAppLockerFiles
     *
     * @return WindowsInformationProtection
     */

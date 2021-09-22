@@ -32,8 +32,9 @@ class ServiceHealthIssuePost extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+     
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -65,8 +66,9 @@ class ServiceHealthIssuePost extends Entity
     */
     public function getDescription()
     {
-        if (array_key_exists("description", $this->_propDict)) {
-            if (is_a($this->_propDict["description"], "\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["description"])) {
+        if (array_key_exists("description", $this->_propDict) && !is_null($this->_propDict["description"])) {
+     
+            if (is_a($this->_propDict["description"], "\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["description"];
             } else {
                 $this->_propDict["description"] = new ItemBody($this->_propDict["description"]);
@@ -98,8 +100,9 @@ class ServiceHealthIssuePost extends Entity
     */
     public function getPostType()
     {
-        if (array_key_exists("postType", $this->_propDict)) {
-            if (is_a($this->_propDict["postType"], "\Microsoft\Graph\Model\PostType") || is_null($this->_propDict["postType"])) {
+        if (array_key_exists("postType", $this->_propDict) && !is_null($this->_propDict["postType"])) {
+     
+            if (is_a($this->_propDict["postType"], "\Microsoft\Graph\Model\PostType")) {
                 return $this->_propDict["postType"];
             } else {
                 $this->_propDict["postType"] = new PostType($this->_propDict["postType"]);

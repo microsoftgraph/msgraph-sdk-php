@@ -32,8 +32,8 @@ class TodoTask extends Entity
     */
     public function getBody()
     {
-        if (array_key_exists("body", $this->_propDict)) {
-            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody") || is_null($this->_propDict["body"])) {
+        if (array_key_exists("body", $this->_propDict) && !is_null($this->_propDict["body"])) {
+            if (is_a($this->_propDict["body"], "\Microsoft\Graph\Model\ItemBody")) {
                 return $this->_propDict["body"];
             } else {
                 $this->_propDict["body"] = new ItemBody($this->_propDict["body"]);
@@ -65,8 +65,8 @@ class TodoTask extends Entity
     */
     public function getBodyLastModifiedDateTime()
     {
-        if (array_key_exists("bodyLastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["bodyLastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["bodyLastModifiedDateTime"])) {
+        if (array_key_exists("bodyLastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["bodyLastModifiedDateTime"])) {
+            if (is_a($this->_propDict["bodyLastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["bodyLastModifiedDateTime"];
             } else {
                 $this->_propDict["bodyLastModifiedDateTime"] = new \DateTime($this->_propDict["bodyLastModifiedDateTime"]);
@@ -98,8 +98,8 @@ class TodoTask extends Entity
     */
     public function getCompletedDateTime()
     {
-        if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["completedDateTime"])) {
+        if (array_key_exists("completedDateTime", $this->_propDict) && !is_null($this->_propDict["completedDateTime"])) {
+            if (is_a($this->_propDict["completedDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new DateTimeTimeZone($this->_propDict["completedDateTime"]);
@@ -131,8 +131,8 @@ class TodoTask extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -164,8 +164,8 @@ class TodoTask extends Entity
     */
     public function getDueDateTime()
     {
-        if (array_key_exists("dueDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["dueDateTime"])) {
+        if (array_key_exists("dueDateTime", $this->_propDict) && !is_null($this->_propDict["dueDateTime"])) {
+            if (is_a($this->_propDict["dueDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["dueDateTime"];
             } else {
                 $this->_propDict["dueDateTime"] = new DateTimeTimeZone($this->_propDict["dueDateTime"]);
@@ -197,8 +197,8 @@ class TodoTask extends Entity
     */
     public function getImportance()
     {
-        if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\Importance") || is_null($this->_propDict["importance"])) {
+        if (array_key_exists("importance", $this->_propDict) && !is_null($this->_propDict["importance"])) {
+            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -259,8 +259,8 @@ class TodoTask extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -292,8 +292,8 @@ class TodoTask extends Entity
     */
     public function getRecurrence()
     {
-        if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence") || is_null($this->_propDict["recurrence"])) {
+        if (array_key_exists("recurrence", $this->_propDict) && !is_null($this->_propDict["recurrence"])) {
+            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -325,8 +325,8 @@ class TodoTask extends Entity
     */
     public function getReminderDateTime()
     {
-        if (array_key_exists("reminderDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["reminderDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["reminderDateTime"])) {
+        if (array_key_exists("reminderDateTime", $this->_propDict) && !is_null($this->_propDict["reminderDateTime"])) {
+            if (is_a($this->_propDict["reminderDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["reminderDateTime"];
             } else {
                 $this->_propDict["reminderDateTime"] = new DateTimeTimeZone($this->_propDict["reminderDateTime"]);
@@ -358,8 +358,8 @@ class TodoTask extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\TaskStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\TaskStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new TaskStatus($this->_propDict["status"]);
@@ -417,22 +417,29 @@ class TodoTask extends Entity
      * Gets the extensions
     * The collection of open extensions defined for the task. Nullable.
      *
-     * @return array|null The extensions
+     * @return Extension[]|null The extensions
      */
     public function getExtensions()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
+        if (array_key_exists('extensions', $this->_propDict) && !is_null($this->_propDict['extensions'])) {
+            $extensions = [];
+            if (count($this->_propDict['extensions']) > 0 && is_a($this->_propDict['extensions'][0], 'Extension')) {
+                return $this->_propDict['extensions'];
+            }
+            foreach ($this->_propDict['extensions'] as $singleValue) {
+                $extensions []= new Extension($singleValue);
+            }
+            $this->_propDict['extensions'] = $extensions;
+            return $this->_propDict['extensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the extensions
     * The collection of open extensions defined for the task. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return TodoTask
     */
@@ -447,22 +454,29 @@ class TodoTask extends Entity
      * Gets the linkedResources
     * A collection of resources linked to the task.
      *
-     * @return array|null The linkedResources
+     * @return LinkedResource[]|null The linkedResources
      */
     public function getLinkedResources()
     {
-        if (array_key_exists("linkedResources", $this->_propDict)) {
-           return $this->_propDict["linkedResources"];
-        } else {
-            return null;
+        if (array_key_exists('linkedResources', $this->_propDict) && !is_null($this->_propDict['linkedResources'])) {
+            $linkedResources = [];
+            if (count($this->_propDict['linkedResources']) > 0 && is_a($this->_propDict['linkedResources'][0], 'LinkedResource')) {
+                return $this->_propDict['linkedResources'];
+            }
+            foreach ($this->_propDict['linkedResources'] as $singleValue) {
+                $linkedResources []= new LinkedResource($singleValue);
+            }
+            $this->_propDict['linkedResources'] = $linkedResources;
+            return $this->_propDict['linkedResources'];
         }
+        return null;
     }
     
     /** 
     * Sets the linkedResources
     * A collection of resources linked to the task.
     *
-    * @param LinkedResource $val The linkedResources
+    * @param LinkedResource[] $val The linkedResources
     *
     * @return TodoTask
     */

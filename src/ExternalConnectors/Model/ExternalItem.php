@@ -29,22 +29,29 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
      * Gets the acl
     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
      *
-     * @return array|null The acl
+     * @return Acl[]|null The acl
      */
     public function getAcl()
     {
-        if (array_key_exists("acl", $this->_propDict)) {
-           return $this->_propDict["acl"];
-        } else {
-            return null;
+        if (array_key_exists('acl', $this->_propDict) && !is_null($this->_propDict['acl'])) {
+            $acl = [];
+            if (count($this->_propDict['acl']) > 0 && is_a($this->_propDict['acl'][0], 'Acl')) {
+                return $this->_propDict['acl'];
+            }
+            foreach ($this->_propDict['acl'] as $singleValue) {
+                $acl []= new Acl($singleValue);
+            }
+            $this->_propDict['acl'] = $acl;
+            return $this->_propDict['acl'];
         }
+        return null;
     }
     
     /** 
     * Sets the acl
     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
     *
-    * @param Acl $val The acl
+    * @param Acl[] $val The acl
     *
     * @return ExternalItem
     */
@@ -62,8 +69,8 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
     */
     public function getContent()
     {
-        if (array_key_exists("content", $this->_propDict)) {
-            if (is_a($this->_propDict["content"], "\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContent") || is_null($this->_propDict["content"])) {
+        if (array_key_exists("content", $this->_propDict) && !is_null($this->_propDict["content"])) {
+            if (is_a($this->_propDict["content"], "\Microsoft\Graph\ExternalConnectors\Model\ExternalItemContent")) {
                 return $this->_propDict["content"];
             } else {
                 $this->_propDict["content"] = new ExternalItemContent($this->_propDict["content"]);
@@ -95,8 +102,8 @@ class ExternalItem extends \Microsoft\Graph\Model\Entity
     */
     public function getExternalItemProperties()
     {
-        if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "\Microsoft\Graph\ExternalConnectors\Model\Properties") || is_null($this->_propDict["properties"])) {
+        if (array_key_exists("properties", $this->_propDict) && !is_null($this->_propDict["properties"])) {
+            if (is_a($this->_propDict["properties"], "\Microsoft\Graph\ExternalConnectors\Model\Properties")) {
                 return $this->_propDict["properties"];
             } else {
                 $this->_propDict["properties"] = new Properties($this->_propDict["properties"]);

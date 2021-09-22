@@ -58,22 +58,29 @@ class SecureScore extends Entity
      * Gets the averageComparativeScores
     * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
      *
-     * @return array|null The averageComparativeScores
+     * @return AverageComparativeScore[]|null The averageComparativeScores
      */
     public function getAverageComparativeScores()
     {
-        if (array_key_exists("averageComparativeScores", $this->_propDict)) {
-           return $this->_propDict["averageComparativeScores"];
-        } else {
-            return null;
+        if (array_key_exists('averageComparativeScores', $this->_propDict) && !is_null($this->_propDict['averageComparativeScores'])) {
+            $averageComparativeScores = [];
+            if (count($this->_propDict['averageComparativeScores']) > 0 && is_a($this->_propDict['averageComparativeScores'][0], 'AverageComparativeScore')) {
+                return $this->_propDict['averageComparativeScores'];
+            }
+            foreach ($this->_propDict['averageComparativeScores'] as $singleValue) {
+                $averageComparativeScores []= new AverageComparativeScore($singleValue);
+            }
+            $this->_propDict['averageComparativeScores'] = $averageComparativeScores;
+            return $this->_propDict['averageComparativeScores'];
         }
+        return null;
     }
     
     /** 
     * Sets the averageComparativeScores
     * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
     *
-    * @param AverageComparativeScore $val The averageComparativeScores
+    * @param AverageComparativeScore[] $val The averageComparativeScores
     *
     * @return SecureScore
     */
@@ -117,22 +124,29 @@ class SecureScore extends Entity
      * Gets the controlScores
     * Contains tenant scores for a set of controls.
      *
-     * @return array|null The controlScores
+     * @return ControlScore[]|null The controlScores
      */
     public function getControlScores()
     {
-        if (array_key_exists("controlScores", $this->_propDict)) {
-           return $this->_propDict["controlScores"];
-        } else {
-            return null;
+        if (array_key_exists('controlScores', $this->_propDict) && !is_null($this->_propDict['controlScores'])) {
+            $controlScores = [];
+            if (count($this->_propDict['controlScores']) > 0 && is_a($this->_propDict['controlScores'][0], 'ControlScore')) {
+                return $this->_propDict['controlScores'];
+            }
+            foreach ($this->_propDict['controlScores'] as $singleValue) {
+                $controlScores []= new ControlScore($singleValue);
+            }
+            $this->_propDict['controlScores'] = $controlScores;
+            return $this->_propDict['controlScores'];
         }
+        return null;
     }
     
     /** 
     * Sets the controlScores
     * Contains tenant scores for a set of controls.
     *
-    * @param ControlScore $val The controlScores
+    * @param ControlScore[] $val The controlScores
     *
     * @return SecureScore
     */
@@ -150,8 +164,8 @@ class SecureScore extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -299,8 +313,8 @@ class SecureScore extends Entity
     */
     public function getVendorInformation()
     {
-        if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "\Microsoft\Graph\Model\SecurityVendorInformation") || is_null($this->_propDict["vendorInformation"])) {
+        if (array_key_exists("vendorInformation", $this->_propDict) && !is_null($this->_propDict["vendorInformation"])) {
+            if (is_a($this->_propDict["vendorInformation"], "\Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

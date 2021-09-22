@@ -32,8 +32,9 @@ class MediaContentRatingFrance extends Entity
     */
     public function getMovieRating()
     {
-        if (array_key_exists("movieRating", $this->_propDict)) {
-            if (is_a($this->_propDict["movieRating"], "\Microsoft\Graph\Model\RatingFranceMoviesType") || is_null($this->_propDict["movieRating"])) {
+        if (array_key_exists("movieRating", $this->_propDict) && !is_null($this->_propDict["movieRating"])) {
+     
+            if (is_a($this->_propDict["movieRating"], "\Microsoft\Graph\Model\RatingFranceMoviesType")) {
                 return $this->_propDict["movieRating"];
             } else {
                 $this->_propDict["movieRating"] = new RatingFranceMoviesType($this->_propDict["movieRating"]);
@@ -65,8 +66,9 @@ class MediaContentRatingFrance extends Entity
     */
     public function getTvRating()
     {
-        if (array_key_exists("tvRating", $this->_propDict)) {
-            if (is_a($this->_propDict["tvRating"], "\Microsoft\Graph\Model\RatingFranceTelevisionType") || is_null($this->_propDict["tvRating"])) {
+        if (array_key_exists("tvRating", $this->_propDict) && !is_null($this->_propDict["tvRating"])) {
+     
+            if (is_a($this->_propDict["tvRating"], "\Microsoft\Graph\Model\RatingFranceTelevisionType")) {
                 return $this->_propDict["tvRating"];
             } else {
                 $this->_propDict["tvRating"] = new RatingFranceTelevisionType($this->_propDict["tvRating"]);

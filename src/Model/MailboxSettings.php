@@ -60,8 +60,9 @@ class MailboxSettings extends Entity
     */
     public function getAutomaticRepliesSetting()
     {
-        if (array_key_exists("automaticRepliesSetting", $this->_propDict)) {
-            if (is_a($this->_propDict["automaticRepliesSetting"], "\Microsoft\Graph\Model\AutomaticRepliesSetting") || is_null($this->_propDict["automaticRepliesSetting"])) {
+        if (array_key_exists("automaticRepliesSetting", $this->_propDict) && !is_null($this->_propDict["automaticRepliesSetting"])) {
+     
+            if (is_a($this->_propDict["automaticRepliesSetting"], "\Microsoft\Graph\Model\AutomaticRepliesSetting")) {
                 return $this->_propDict["automaticRepliesSetting"];
             } else {
                 $this->_propDict["automaticRepliesSetting"] = new AutomaticRepliesSetting($this->_propDict["automaticRepliesSetting"]);
@@ -121,8 +122,9 @@ class MailboxSettings extends Entity
     */
     public function getDelegateMeetingMessageDeliveryOptions()
     {
-        if (array_key_exists("delegateMeetingMessageDeliveryOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["delegateMeetingMessageDeliveryOptions"], "\Microsoft\Graph\Model\DelegateMeetingMessageDeliveryOptions") || is_null($this->_propDict["delegateMeetingMessageDeliveryOptions"])) {
+        if (array_key_exists("delegateMeetingMessageDeliveryOptions", $this->_propDict) && !is_null($this->_propDict["delegateMeetingMessageDeliveryOptions"])) {
+     
+            if (is_a($this->_propDict["delegateMeetingMessageDeliveryOptions"], "\Microsoft\Graph\Model\DelegateMeetingMessageDeliveryOptions")) {
                 return $this->_propDict["delegateMeetingMessageDeliveryOptions"];
             } else {
                 $this->_propDict["delegateMeetingMessageDeliveryOptions"] = new DelegateMeetingMessageDeliveryOptions($this->_propDict["delegateMeetingMessageDeliveryOptions"]);
@@ -154,8 +156,9 @@ class MailboxSettings extends Entity
     */
     public function getLanguage()
     {
-        if (array_key_exists("language", $this->_propDict)) {
-            if (is_a($this->_propDict["language"], "\Microsoft\Graph\Model\LocaleInfo") || is_null($this->_propDict["language"])) {
+        if (array_key_exists("language", $this->_propDict) && !is_null($this->_propDict["language"])) {
+     
+            if (is_a($this->_propDict["language"], "\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["language"];
             } else {
                 $this->_propDict["language"] = new LocaleInfo($this->_propDict["language"]);
@@ -243,8 +246,9 @@ class MailboxSettings extends Entity
     */
     public function getWorkingHours()
     {
-        if (array_key_exists("workingHours", $this->_propDict)) {
-            if (is_a($this->_propDict["workingHours"], "\Microsoft\Graph\Model\WorkingHours") || is_null($this->_propDict["workingHours"])) {
+        if (array_key_exists("workingHours", $this->_propDict) && !is_null($this->_propDict["workingHours"])) {
+     
+            if (is_a($this->_propDict["workingHours"], "\Microsoft\Graph\Model\WorkingHours")) {
                 return $this->_propDict["workingHours"];
             } else {
                 $this->_propDict["workingHours"] = new WorkingHours($this->_propDict["workingHours"]);

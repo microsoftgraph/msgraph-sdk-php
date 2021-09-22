@@ -31,8 +31,8 @@ class ItemAnalytics extends Entity
     */
     public function getAllTime()
     {
-        if (array_key_exists("allTime", $this->_propDict)) {
-            if (is_a($this->_propDict["allTime"], "\Microsoft\Graph\Model\ItemActivityStat") || is_null($this->_propDict["allTime"])) {
+        if (array_key_exists("allTime", $this->_propDict) && !is_null($this->_propDict["allTime"])) {
+            if (is_a($this->_propDict["allTime"], "\Microsoft\Graph\Model\ItemActivityStat")) {
                 return $this->_propDict["allTime"];
             } else {
                 $this->_propDict["allTime"] = new ItemActivityStat($this->_propDict["allTime"]);
@@ -59,21 +59,28 @@ class ItemAnalytics extends Entity
      /** 
      * Gets the itemActivityStats
      *
-     * @return array|null The itemActivityStats
+     * @return ItemActivityStat[]|null The itemActivityStats
      */
     public function getItemActivityStats()
     {
-        if (array_key_exists("itemActivityStats", $this->_propDict)) {
-           return $this->_propDict["itemActivityStats"];
-        } else {
-            return null;
+        if (array_key_exists('itemActivityStats', $this->_propDict) && !is_null($this->_propDict['itemActivityStats'])) {
+            $itemActivityStats = [];
+            if (count($this->_propDict['itemActivityStats']) > 0 && is_a($this->_propDict['itemActivityStats'][0], 'ItemActivityStat')) {
+                return $this->_propDict['itemActivityStats'];
+            }
+            foreach ($this->_propDict['itemActivityStats'] as $singleValue) {
+                $itemActivityStats []= new ItemActivityStat($singleValue);
+            }
+            $this->_propDict['itemActivityStats'] = $itemActivityStats;
+            return $this->_propDict['itemActivityStats'];
         }
+        return null;
     }
     
     /** 
     * Sets the itemActivityStats
     *
-    * @param ItemActivityStat $val The itemActivityStats
+    * @param ItemActivityStat[] $val The itemActivityStats
     *
     * @return ItemAnalytics
     */
@@ -90,8 +97,8 @@ class ItemAnalytics extends Entity
     */
     public function getLastSevenDays()
     {
-        if (array_key_exists("lastSevenDays", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSevenDays"], "\Microsoft\Graph\Model\ItemActivityStat") || is_null($this->_propDict["lastSevenDays"])) {
+        if (array_key_exists("lastSevenDays", $this->_propDict) && !is_null($this->_propDict["lastSevenDays"])) {
+            if (is_a($this->_propDict["lastSevenDays"], "\Microsoft\Graph\Model\ItemActivityStat")) {
                 return $this->_propDict["lastSevenDays"];
             } else {
                 $this->_propDict["lastSevenDays"] = new ItemActivityStat($this->_propDict["lastSevenDays"]);

@@ -116,22 +116,29 @@ class MobileLobApp extends MobileApp
      * Gets the contentVersions
     * The list of content versions for this app.
      *
-     * @return array|null The contentVersions
+     * @return MobileAppContent[]|null The contentVersions
      */
     public function getContentVersions()
     {
-        if (array_key_exists("contentVersions", $this->_propDict)) {
-           return $this->_propDict["contentVersions"];
-        } else {
-            return null;
+        if (array_key_exists('contentVersions', $this->_propDict) && !is_null($this->_propDict['contentVersions'])) {
+            $contentVersions = [];
+            if (count($this->_propDict['contentVersions']) > 0 && is_a($this->_propDict['contentVersions'][0], 'MobileAppContent')) {
+                return $this->_propDict['contentVersions'];
+            }
+            foreach ($this->_propDict['contentVersions'] as $singleValue) {
+                $contentVersions []= new MobileAppContent($singleValue);
+            }
+            $this->_propDict['contentVersions'] = $contentVersions;
+            return $this->_propDict['contentVersions'];
         }
+        return null;
     }
     
     /** 
     * Sets the contentVersions
     * The list of content versions for this app.
     *
-    * @param MobileAppContent $val The contentVersions
+    * @param MobileAppContent[] $val The contentVersions
     *
     * @return MobileLobApp
     */

@@ -32,8 +32,9 @@ class ChatMessagePolicyViolation extends Entity
     */
     public function getDlpAction()
     {
-        if (array_key_exists("dlpAction", $this->_propDict)) {
-            if (is_a($this->_propDict["dlpAction"], "\Microsoft\Graph\Model\ChatMessagePolicyViolationDlpActionTypes") || is_null($this->_propDict["dlpAction"])) {
+        if (array_key_exists("dlpAction", $this->_propDict) && !is_null($this->_propDict["dlpAction"])) {
+     
+            if (is_a($this->_propDict["dlpAction"], "\Microsoft\Graph\Model\ChatMessagePolicyViolationDlpActionTypes")) {
                 return $this->_propDict["dlpAction"];
             } else {
                 $this->_propDict["dlpAction"] = new ChatMessagePolicyViolationDlpActionTypes($this->_propDict["dlpAction"]);
@@ -93,8 +94,9 @@ class ChatMessagePolicyViolation extends Entity
     */
     public function getPolicyTip()
     {
-        if (array_key_exists("policyTip", $this->_propDict)) {
-            if (is_a($this->_propDict["policyTip"], "\Microsoft\Graph\Model\ChatMessagePolicyViolationPolicyTip") || is_null($this->_propDict["policyTip"])) {
+        if (array_key_exists("policyTip", $this->_propDict) && !is_null($this->_propDict["policyTip"])) {
+     
+            if (is_a($this->_propDict["policyTip"], "\Microsoft\Graph\Model\ChatMessagePolicyViolationPolicyTip")) {
                 return $this->_propDict["policyTip"];
             } else {
                 $this->_propDict["policyTip"] = new ChatMessagePolicyViolationPolicyTip($this->_propDict["policyTip"]);
@@ -126,8 +128,9 @@ class ChatMessagePolicyViolation extends Entity
     */
     public function getUserAction()
     {
-        if (array_key_exists("userAction", $this->_propDict)) {
-            if (is_a($this->_propDict["userAction"], "\Microsoft\Graph\Model\ChatMessagePolicyViolationUserActionTypes") || is_null($this->_propDict["userAction"])) {
+        if (array_key_exists("userAction", $this->_propDict) && !is_null($this->_propDict["userAction"])) {
+     
+            if (is_a($this->_propDict["userAction"], "\Microsoft\Graph\Model\ChatMessagePolicyViolationUserActionTypes")) {
                 return $this->_propDict["userAction"];
             } else {
                 $this->_propDict["userAction"] = new ChatMessagePolicyViolationUserActionTypes($this->_propDict["userAction"]);
@@ -159,8 +162,9 @@ class ChatMessagePolicyViolation extends Entity
     */
     public function getVerdictDetails()
     {
-        if (array_key_exists("verdictDetails", $this->_propDict)) {
-            if (is_a($this->_propDict["verdictDetails"], "\Microsoft\Graph\Model\ChatMessagePolicyViolationVerdictDetailsTypes") || is_null($this->_propDict["verdictDetails"])) {
+        if (array_key_exists("verdictDetails", $this->_propDict) && !is_null($this->_propDict["verdictDetails"])) {
+     
+            if (is_a($this->_propDict["verdictDetails"], "\Microsoft\Graph\Model\ChatMessagePolicyViolationVerdictDetailsTypes")) {
                 return $this->_propDict["verdictDetails"];
             } else {
                 $this->_propDict["verdictDetails"] = new ChatMessagePolicyViolationVerdictDetailsTypes($this->_propDict["verdictDetails"]);

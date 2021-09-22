@@ -32,8 +32,8 @@ class AuthenticationMethodConfiguration extends Entity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\AuthenticationMethodState") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\AuthenticationMethodState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new AuthenticationMethodState($this->_propDict["state"]);

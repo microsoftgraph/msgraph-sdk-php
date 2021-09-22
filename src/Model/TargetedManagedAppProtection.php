@@ -58,22 +58,29 @@ class TargetedManagedAppProtection extends ManagedAppProtection
      * Gets the assignments
     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *
-     * @return array|null The assignments
+     * @return TargetedManagedAppPolicyAssignment[]|null The assignments
      */
     public function getAssignments()
     {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
+        if (array_key_exists('assignments', $this->_propDict) && !is_null($this->_propDict['assignments'])) {
+            $assignments = [];
+            if (count($this->_propDict['assignments']) > 0 && is_a($this->_propDict['assignments'][0], 'TargetedManagedAppPolicyAssignment')) {
+                return $this->_propDict['assignments'];
+            }
+            foreach ($this->_propDict['assignments'] as $singleValue) {
+                $assignments []= new TargetedManagedAppPolicyAssignment($singleValue);
+            }
+            $this->_propDict['assignments'] = $assignments;
+            return $this->_propDict['assignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignments
     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
     *
-    * @param TargetedManagedAppPolicyAssignment $val The assignments
+    * @param TargetedManagedAppPolicyAssignment[] $val The assignments
     *
     * @return TargetedManagedAppProtection
     */

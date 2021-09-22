@@ -32,8 +32,8 @@ class SharedDriveItem extends BaseItem
     */
     public function getOwner()
     {
-        if (array_key_exists("owner", $this->_propDict)) {
-            if (is_a($this->_propDict["owner"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["owner"])) {
+        if (array_key_exists("owner", $this->_propDict) && !is_null($this->_propDict["owner"])) {
+            if (is_a($this->_propDict["owner"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["owner"];
             } else {
                 $this->_propDict["owner"] = new IdentitySet($this->_propDict["owner"]);
@@ -65,8 +65,8 @@ class SharedDriveItem extends BaseItem
     */
     public function getDriveItem()
     {
-        if (array_key_exists("driveItem", $this->_propDict)) {
-            if (is_a($this->_propDict["driveItem"], "\Microsoft\Graph\Model\DriveItem") || is_null($this->_propDict["driveItem"])) {
+        if (array_key_exists("driveItem", $this->_propDict) && !is_null($this->_propDict["driveItem"])) {
+            if (is_a($this->_propDict["driveItem"], "\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["driveItem"];
             } else {
                 $this->_propDict["driveItem"] = new DriveItem($this->_propDict["driveItem"]);
@@ -95,22 +95,29 @@ class SharedDriveItem extends BaseItem
      * Gets the items
     * All driveItems contained in the sharing root. This collection cannot be enumerated.
      *
-     * @return array|null The items
+     * @return DriveItem[]|null The items
      */
     public function getItems()
     {
-        if (array_key_exists("items", $this->_propDict)) {
-           return $this->_propDict["items"];
-        } else {
-            return null;
+        if (array_key_exists('items', $this->_propDict) && !is_null($this->_propDict['items'])) {
+            $items = [];
+            if (count($this->_propDict['items']) > 0 && is_a($this->_propDict['items'][0], 'DriveItem')) {
+                return $this->_propDict['items'];
+            }
+            foreach ($this->_propDict['items'] as $singleValue) {
+                $items []= new DriveItem($singleValue);
+            }
+            $this->_propDict['items'] = $items;
+            return $this->_propDict['items'];
         }
+        return null;
     }
     
     /** 
     * Sets the items
     * All driveItems contained in the sharing root. This collection cannot be enumerated.
     *
-    * @param DriveItem $val The items
+    * @param DriveItem[] $val The items
     *
     * @return SharedDriveItem
     */
@@ -128,8 +135,8 @@ class SharedDriveItem extends BaseItem
     */
     public function getList()
     {
-        if (array_key_exists("list", $this->_propDict)) {
-            if (is_a($this->_propDict["list"], "\Microsoft\Graph\Model\GraphList") || is_null($this->_propDict["list"])) {
+        if (array_key_exists("list", $this->_propDict) && !is_null($this->_propDict["list"])) {
+            if (is_a($this->_propDict["list"], "\Microsoft\Graph\Model\GraphList")) {
                 return $this->_propDict["list"];
             } else {
                 $this->_propDict["list"] = new GraphList($this->_propDict["list"]);
@@ -161,8 +168,8 @@ class SharedDriveItem extends BaseItem
     */
     public function getListItem()
     {
-        if (array_key_exists("listItem", $this->_propDict)) {
-            if (is_a($this->_propDict["listItem"], "\Microsoft\Graph\Model\ListItem") || is_null($this->_propDict["listItem"])) {
+        if (array_key_exists("listItem", $this->_propDict) && !is_null($this->_propDict["listItem"])) {
+            if (is_a($this->_propDict["listItem"], "\Microsoft\Graph\Model\ListItem")) {
                 return $this->_propDict["listItem"];
             } else {
                 $this->_propDict["listItem"] = new ListItem($this->_propDict["listItem"]);
@@ -194,8 +201,8 @@ class SharedDriveItem extends BaseItem
     */
     public function getPermission()
     {
-        if (array_key_exists("permission", $this->_propDict)) {
-            if (is_a($this->_propDict["permission"], "\Microsoft\Graph\Model\Permission") || is_null($this->_propDict["permission"])) {
+        if (array_key_exists("permission", $this->_propDict) && !is_null($this->_propDict["permission"])) {
+            if (is_a($this->_propDict["permission"], "\Microsoft\Graph\Model\Permission")) {
                 return $this->_propDict["permission"];
             } else {
                 $this->_propDict["permission"] = new Permission($this->_propDict["permission"]);
@@ -227,8 +234,8 @@ class SharedDriveItem extends BaseItem
     */
     public function getRoot()
     {
-        if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\DriveItem") || is_null($this->_propDict["root"])) {
+        if (array_key_exists("root", $this->_propDict) && !is_null($this->_propDict["root"])) {
+            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new DriveItem($this->_propDict["root"]);
@@ -260,8 +267,8 @@ class SharedDriveItem extends BaseItem
     */
     public function getSite()
     {
-        if (array_key_exists("site", $this->_propDict)) {
-            if (is_a($this->_propDict["site"], "\Microsoft\Graph\Model\Site") || is_null($this->_propDict["site"])) {
+        if (array_key_exists("site", $this->_propDict) && !is_null($this->_propDict["site"])) {
+            if (is_a($this->_propDict["site"], "\Microsoft\Graph\Model\Site")) {
                 return $this->_propDict["site"];
             } else {
                 $this->_propDict["site"] = new Site($this->_propDict["site"]);

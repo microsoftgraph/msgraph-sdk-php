@@ -32,8 +32,8 @@ class SharedPCConfiguration extends DeviceConfiguration
     */
     public function getAccountManagerPolicy()
     {
-        if (array_key_exists("accountManagerPolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["accountManagerPolicy"], "\Microsoft\Graph\Model\SharedPCAccountManagerPolicy") || is_null($this->_propDict["accountManagerPolicy"])) {
+        if (array_key_exists("accountManagerPolicy", $this->_propDict) && !is_null($this->_propDict["accountManagerPolicy"])) {
+            if (is_a($this->_propDict["accountManagerPolicy"], "\Microsoft\Graph\Model\SharedPCAccountManagerPolicy")) {
                 return $this->_propDict["accountManagerPolicy"];
             } else {
                 $this->_propDict["accountManagerPolicy"] = new SharedPCAccountManagerPolicy($this->_propDict["accountManagerPolicy"]);
@@ -65,8 +65,8 @@ class SharedPCConfiguration extends DeviceConfiguration
     */
     public function getAllowedAccounts()
     {
-        if (array_key_exists("allowedAccounts", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAccounts"], "\Microsoft\Graph\Model\SharedPCAllowedAccountType") || is_null($this->_propDict["allowedAccounts"])) {
+        if (array_key_exists("allowedAccounts", $this->_propDict) && !is_null($this->_propDict["allowedAccounts"])) {
+            if (is_a($this->_propDict["allowedAccounts"], "\Microsoft\Graph\Model\SharedPCAllowedAccountType")) {
                 return $this->_propDict["allowedAccounts"];
             } else {
                 $this->_propDict["allowedAccounts"] = new SharedPCAllowedAccountType($this->_propDict["allowedAccounts"]);
@@ -359,8 +359,8 @@ class SharedPCConfiguration extends DeviceConfiguration
     */
     public function getMaintenanceStartTime()
     {
-        if (array_key_exists("maintenanceStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceStartTime"], "\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["maintenanceStartTime"])) {
+        if (array_key_exists("maintenanceStartTime", $this->_propDict) && !is_null($this->_propDict["maintenanceStartTime"])) {
+            if (is_a($this->_propDict["maintenanceStartTime"], "\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["maintenanceStartTime"];
             } else {
                 $this->_propDict["maintenanceStartTime"] = new TimeOfDay($this->_propDict["maintenanceStartTime"]);

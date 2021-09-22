@@ -206,8 +206,8 @@ class UserActivity extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -239,8 +239,8 @@ class UserActivity extends Entity
     */
     public function getExpirationDateTime()
     {
-        if (array_key_exists("expirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDateTime"], "\DateTime") || is_null($this->_propDict["expirationDateTime"])) {
+        if (array_key_exists("expirationDateTime", $this->_propDict) && !is_null($this->_propDict["expirationDateTime"])) {
+            if (is_a($this->_propDict["expirationDateTime"], "\DateTime")) {
                 return $this->_propDict["expirationDateTime"];
             } else {
                 $this->_propDict["expirationDateTime"] = new \DateTime($this->_propDict["expirationDateTime"]);
@@ -301,8 +301,8 @@ class UserActivity extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -334,8 +334,8 @@ class UserActivity extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\Status") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\Status")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new Status($this->_propDict["status"]);
@@ -396,8 +396,8 @@ class UserActivity extends Entity
     */
     public function getVisualElements()
     {
-        if (array_key_exists("visualElements", $this->_propDict)) {
-            if (is_a($this->_propDict["visualElements"], "\Microsoft\Graph\Model\VisualInfo") || is_null($this->_propDict["visualElements"])) {
+        if (array_key_exists("visualElements", $this->_propDict) && !is_null($this->_propDict["visualElements"])) {
+            if (is_a($this->_propDict["visualElements"], "\Microsoft\Graph\Model\VisualInfo")) {
                 return $this->_propDict["visualElements"];
             } else {
                 $this->_propDict["visualElements"] = new VisualInfo($this->_propDict["visualElements"]);
@@ -426,22 +426,29 @@ class UserActivity extends Entity
      * Gets the historyItems
     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      *
-     * @return array|null The historyItems
+     * @return ActivityHistoryItem[]|null The historyItems
      */
     public function getHistoryItems()
     {
-        if (array_key_exists("historyItems", $this->_propDict)) {
-           return $this->_propDict["historyItems"];
-        } else {
-            return null;
+        if (array_key_exists('historyItems', $this->_propDict) && !is_null($this->_propDict['historyItems'])) {
+            $historyItems = [];
+            if (count($this->_propDict['historyItems']) > 0 && is_a($this->_propDict['historyItems'][0], 'ActivityHistoryItem')) {
+                return $this->_propDict['historyItems'];
+            }
+            foreach ($this->_propDict['historyItems'] as $singleValue) {
+                $historyItems []= new ActivityHistoryItem($singleValue);
+            }
+            $this->_propDict['historyItems'] = $historyItems;
+            return $this->_propDict['historyItems'];
         }
+        return null;
     }
     
     /** 
     * Sets the historyItems
     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
     *
-    * @param ActivityHistoryItem $val The historyItems
+    * @param ActivityHistoryItem[] $val The historyItems
     *
     * @return UserActivity
     */

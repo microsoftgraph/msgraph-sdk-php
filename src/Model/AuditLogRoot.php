@@ -29,22 +29,29 @@ class AuditLogRoot extends Entity
      * Gets the directoryAudits
     * Read-only. Nullable.
      *
-     * @return array|null The directoryAudits
+     * @return DirectoryAudit[]|null The directoryAudits
      */
     public function getDirectoryAudits()
     {
-        if (array_key_exists("directoryAudits", $this->_propDict)) {
-           return $this->_propDict["directoryAudits"];
-        } else {
-            return null;
+        if (array_key_exists('directoryAudits', $this->_propDict) && !is_null($this->_propDict['directoryAudits'])) {
+            $directoryAudits = [];
+            if (count($this->_propDict['directoryAudits']) > 0 && is_a($this->_propDict['directoryAudits'][0], 'DirectoryAudit')) {
+                return $this->_propDict['directoryAudits'];
+            }
+            foreach ($this->_propDict['directoryAudits'] as $singleValue) {
+                $directoryAudits []= new DirectoryAudit($singleValue);
+            }
+            $this->_propDict['directoryAudits'] = $directoryAudits;
+            return $this->_propDict['directoryAudits'];
         }
+        return null;
     }
     
     /** 
     * Sets the directoryAudits
     * Read-only. Nullable.
     *
-    * @param DirectoryAudit $val The directoryAudits
+    * @param DirectoryAudit[] $val The directoryAudits
     *
     * @return AuditLogRoot
     */
@@ -58,21 +65,28 @@ class AuditLogRoot extends Entity
      /** 
      * Gets the provisioning
      *
-     * @return array|null The provisioning
+     * @return ProvisioningObjectSummary[]|null The provisioning
      */
     public function getProvisioning()
     {
-        if (array_key_exists("provisioning", $this->_propDict)) {
-           return $this->_propDict["provisioning"];
-        } else {
-            return null;
+        if (array_key_exists('provisioning', $this->_propDict) && !is_null($this->_propDict['provisioning'])) {
+            $provisioning = [];
+            if (count($this->_propDict['provisioning']) > 0 && is_a($this->_propDict['provisioning'][0], 'ProvisioningObjectSummary')) {
+                return $this->_propDict['provisioning'];
+            }
+            foreach ($this->_propDict['provisioning'] as $singleValue) {
+                $provisioning []= new ProvisioningObjectSummary($singleValue);
+            }
+            $this->_propDict['provisioning'] = $provisioning;
+            return $this->_propDict['provisioning'];
         }
+        return null;
     }
     
     /** 
     * Sets the provisioning
     *
-    * @param ProvisioningObjectSummary $val The provisioning
+    * @param ProvisioningObjectSummary[] $val The provisioning
     *
     * @return AuditLogRoot
     */
@@ -86,21 +100,28 @@ class AuditLogRoot extends Entity
      /** 
      * Gets the restrictedSignIns
      *
-     * @return array|null The restrictedSignIns
+     * @return RestrictedSignIn[]|null The restrictedSignIns
      */
     public function getRestrictedSignIns()
     {
-        if (array_key_exists("restrictedSignIns", $this->_propDict)) {
-           return $this->_propDict["restrictedSignIns"];
-        } else {
-            return null;
+        if (array_key_exists('restrictedSignIns', $this->_propDict) && !is_null($this->_propDict['restrictedSignIns'])) {
+            $restrictedSignIns = [];
+            if (count($this->_propDict['restrictedSignIns']) > 0 && is_a($this->_propDict['restrictedSignIns'][0], 'RestrictedSignIn')) {
+                return $this->_propDict['restrictedSignIns'];
+            }
+            foreach ($this->_propDict['restrictedSignIns'] as $singleValue) {
+                $restrictedSignIns []= new RestrictedSignIn($singleValue);
+            }
+            $this->_propDict['restrictedSignIns'] = $restrictedSignIns;
+            return $this->_propDict['restrictedSignIns'];
         }
+        return null;
     }
     
     /** 
     * Sets the restrictedSignIns
     *
-    * @param RestrictedSignIn $val The restrictedSignIns
+    * @param RestrictedSignIn[] $val The restrictedSignIns
     *
     * @return AuditLogRoot
     */
@@ -115,22 +136,29 @@ class AuditLogRoot extends Entity
      * Gets the signIns
     * Read-only. Nullable.
      *
-     * @return array|null The signIns
+     * @return SignIn[]|null The signIns
      */
     public function getSignIns()
     {
-        if (array_key_exists("signIns", $this->_propDict)) {
-           return $this->_propDict["signIns"];
-        } else {
-            return null;
+        if (array_key_exists('signIns', $this->_propDict) && !is_null($this->_propDict['signIns'])) {
+            $signIns = [];
+            if (count($this->_propDict['signIns']) > 0 && is_a($this->_propDict['signIns'][0], 'SignIn')) {
+                return $this->_propDict['signIns'];
+            }
+            foreach ($this->_propDict['signIns'] as $singleValue) {
+                $signIns []= new SignIn($singleValue);
+            }
+            $this->_propDict['signIns'] = $signIns;
+            return $this->_propDict['signIns'];
         }
+        return null;
     }
     
     /** 
     * Sets the signIns
     * Read-only. Nullable.
     *
-    * @param SignIn $val The signIns
+    * @param SignIn[] $val The signIns
     *
     * @return AuditLogRoot
     */

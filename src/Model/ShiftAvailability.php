@@ -32,8 +32,9 @@ class ShiftAvailability extends Entity
     */
     public function getRecurrence()
     {
-        if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence") || is_null($this->_propDict["recurrence"])) {
+        if (array_key_exists("recurrence", $this->_propDict) && !is_null($this->_propDict["recurrence"])) {
+     
+            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -61,18 +62,22 @@ class ShiftAvailability extends Entity
     * Gets the timeSlots
     * The time slot(s) preferred by the user.
     *
-    * @return TimeRange|null The timeSlots
+    * @return TimeRange[]|null The timeSlots
     */
     public function getTimeSlots()
     {
-        if (array_key_exists("timeSlots", $this->_propDict)) {
-            if (is_a($this->_propDict["timeSlots"], "\Microsoft\Graph\Model\TimeRange") || is_null($this->_propDict["timeSlots"])) {
-                return $this->_propDict["timeSlots"];
-            } else {
-                $this->_propDict["timeSlots"] = new TimeRange($this->_propDict["timeSlots"]);
-                return $this->_propDict["timeSlots"];
+        if (array_key_exists("timeSlots", $this->_propDict) && !is_null($this->_propDict["timeSlots"])) {
+       
+            if (count($this->_propDict['timeSlots']) > 0 && is_a($this->_propDict['timeSlots'][0], 'TimeRange')) {
+               return $this->_propDict['timeSlots'];
             }
-        }
+            $timeSlots = [];
+            foreach ($this->_propDict['timeSlots'] as $singleValue) {
+               $timeSlots []= new TimeRange($singleValue);
+            }
+            $this->_propDict['timeSlots'] = $timeSlots;
+            return $this->_propDict['timeSlots'];
+            }
         return null;
     }
 
@@ -80,7 +85,7 @@ class ShiftAvailability extends Entity
     * Sets the timeSlots
     * The time slot(s) preferred by the user.
     *
-    * @param TimeRange $val The value to assign to the timeSlots
+    * @param TimeRange[] $val The value to assign to the timeSlots
     *
     * @return ShiftAvailability The ShiftAvailability
     */

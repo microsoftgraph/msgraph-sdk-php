@@ -60,8 +60,9 @@ class Reminder extends Entity
     */
     public function getEventEndTime()
     {
-        if (array_key_exists("eventEndTime", $this->_propDict)) {
-            if (is_a($this->_propDict["eventEndTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["eventEndTime"])) {
+        if (array_key_exists("eventEndTime", $this->_propDict) && !is_null($this->_propDict["eventEndTime"])) {
+     
+            if (is_a($this->_propDict["eventEndTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["eventEndTime"];
             } else {
                 $this->_propDict["eventEndTime"] = new DateTimeTimeZone($this->_propDict["eventEndTime"]);
@@ -121,8 +122,9 @@ class Reminder extends Entity
     */
     public function getEventLocation()
     {
-        if (array_key_exists("eventLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["eventLocation"], "\Microsoft\Graph\Model\Location") || is_null($this->_propDict["eventLocation"])) {
+        if (array_key_exists("eventLocation", $this->_propDict) && !is_null($this->_propDict["eventLocation"])) {
+     
+            if (is_a($this->_propDict["eventLocation"], "\Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["eventLocation"];
             } else {
                 $this->_propDict["eventLocation"] = new Location($this->_propDict["eventLocation"]);
@@ -154,8 +156,9 @@ class Reminder extends Entity
     */
     public function getEventStartTime()
     {
-        if (array_key_exists("eventStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["eventStartTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["eventStartTime"])) {
+        if (array_key_exists("eventStartTime", $this->_propDict) && !is_null($this->_propDict["eventStartTime"])) {
+     
+            if (is_a($this->_propDict["eventStartTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["eventStartTime"];
             } else {
                 $this->_propDict["eventStartTime"] = new DateTimeTimeZone($this->_propDict["eventStartTime"]);
@@ -243,8 +246,9 @@ class Reminder extends Entity
     */
     public function getReminderFireTime()
     {
-        if (array_key_exists("reminderFireTime", $this->_propDict)) {
-            if (is_a($this->_propDict["reminderFireTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["reminderFireTime"])) {
+        if (array_key_exists("reminderFireTime", $this->_propDict) && !is_null($this->_propDict["reminderFireTime"])) {
+     
+            if (is_a($this->_propDict["reminderFireTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["reminderFireTime"];
             } else {
                 $this->_propDict["reminderFireTime"] = new DateTimeTimeZone($this->_propDict["reminderFireTime"]);

@@ -62,8 +62,8 @@ class IdentityGovernance implements \JsonSerializable
     */
     public function getAccessReviews()
     {
-        if (array_key_exists("accessReviews", $this->_propDict)) {
-            if (is_a($this->_propDict["accessReviews"], "\Microsoft\Graph\Model\AccessReviewSet") || is_null($this->_propDict["accessReviews"])) {
+        if (array_key_exists("accessReviews", $this->_propDict) && !is_null($this->_propDict["accessReviews"])) {
+            if (is_a($this->_propDict["accessReviews"], "\Microsoft\Graph\Model\AccessReviewSet")) {
                 return $this->_propDict["accessReviews"];
             } else {
                 $this->_propDict["accessReviews"] = new AccessReviewSet($this->_propDict["accessReviews"]);
@@ -93,8 +93,8 @@ class IdentityGovernance implements \JsonSerializable
     */
     public function getAppConsent()
     {
-        if (array_key_exists("appConsent", $this->_propDict)) {
-            if (is_a($this->_propDict["appConsent"], "\Microsoft\Graph\Model\AppConsentApprovalRoute") || is_null($this->_propDict["appConsent"])) {
+        if (array_key_exists("appConsent", $this->_propDict) && !is_null($this->_propDict["appConsent"])) {
+            if (is_a($this->_propDict["appConsent"], "\Microsoft\Graph\Model\AppConsentApprovalRoute")) {
                 return $this->_propDict["appConsent"];
             } else {
                 $this->_propDict["appConsent"] = new AppConsentApprovalRoute($this->_propDict["appConsent"]);
@@ -124,8 +124,8 @@ class IdentityGovernance implements \JsonSerializable
     */
     public function getEntitlementManagement()
     {
-        if (array_key_exists("entitlementManagement", $this->_propDict)) {
-            if (is_a($this->_propDict["entitlementManagement"], "\Microsoft\Graph\Model\EntitlementManagement") || is_null($this->_propDict["entitlementManagement"])) {
+        if (array_key_exists("entitlementManagement", $this->_propDict) && !is_null($this->_propDict["entitlementManagement"])) {
+            if (is_a($this->_propDict["entitlementManagement"], "\Microsoft\Graph\Model\EntitlementManagement")) {
                 return $this->_propDict["entitlementManagement"];
             } else {
                 $this->_propDict["entitlementManagement"] = new EntitlementManagement($this->_propDict["entitlementManagement"]);
@@ -155,8 +155,8 @@ class IdentityGovernance implements \JsonSerializable
     */
     public function getTermsOfUse()
     {
-        if (array_key_exists("termsOfUse", $this->_propDict)) {
-            if (is_a($this->_propDict["termsOfUse"], "\Microsoft\Graph\Model\TermsOfUseContainer") || is_null($this->_propDict["termsOfUse"])) {
+        if (array_key_exists("termsOfUse", $this->_propDict) && !is_null($this->_propDict["termsOfUse"])) {
+            if (is_a($this->_propDict["termsOfUse"], "\Microsoft\Graph\Model\TermsOfUseContainer")) {
                 return $this->_propDict["termsOfUse"];
             } else {
                 $this->_propDict["termsOfUse"] = new TermsOfUseContainer($this->_propDict["termsOfUse"]);
@@ -215,10 +215,22 @@ class IdentityGovernance implements \JsonSerializable
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, "\DateTime")) {
-                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+            if (is_a($val, '\DateTime')) {
+                $serializableProperties[$property] = $val->format(\DateTimeInterface::RFC3339);
+            } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
                 $serializableProperties[$property] = $val->value();
+            } else if (is_array($val)) {
+                $values = [];
+                if (count($val) > 0 && is_a($val[0], '\DateTime')) {
+                   foreach ($values as $propertyValue) {
+                       $values []= $propertyValue->format(\DateTimeInterface::RFC3339);
+                   }
+                } else if(count > 0 && is_a($val[0], '\Microsoft\Graph\Core\Enum')) {
+                    foreach ($values as $propertyValue) {
+                       $values []= $propertyValue->value();
+                   }
+                }
+                $serializableProperties[$property] = $values;
             }
         }
         return $serializableProperties;

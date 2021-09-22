@@ -31,8 +31,9 @@ class ProvisioningStatusInfo extends Entity
     */
     public function getErrorInformation()
     {
-        if (array_key_exists("errorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["errorInformation"], "\Microsoft\Graph\Model\ProvisioningErrorInfo") || is_null($this->_propDict["errorInformation"])) {
+        if (array_key_exists("errorInformation", $this->_propDict) && !is_null($this->_propDict["errorInformation"])) {
+     
+            if (is_a($this->_propDict["errorInformation"], "\Microsoft\Graph\Model\ProvisioningErrorInfo")) {
                 return $this->_propDict["errorInformation"];
             } else {
                 $this->_propDict["errorInformation"] = new ProvisioningErrorInfo($this->_propDict["errorInformation"]);
@@ -63,8 +64,9 @@ class ProvisioningStatusInfo extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ProvisioningResult") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+     
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ProvisioningResult")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ProvisioningResult($this->_propDict["status"]);

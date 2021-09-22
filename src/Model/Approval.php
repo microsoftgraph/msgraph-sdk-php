@@ -29,22 +29,29 @@ class Approval extends Entity
      * Gets the stages
     * A collection of stages in the approval decision.
      *
-     * @return array|null The stages
+     * @return ApprovalStage[]|null The stages
      */
     public function getStages()
     {
-        if (array_key_exists("stages", $this->_propDict)) {
-           return $this->_propDict["stages"];
-        } else {
-            return null;
+        if (array_key_exists('stages', $this->_propDict) && !is_null($this->_propDict['stages'])) {
+            $stages = [];
+            if (count($this->_propDict['stages']) > 0 && is_a($this->_propDict['stages'][0], 'ApprovalStage')) {
+                return $this->_propDict['stages'];
+            }
+            foreach ($this->_propDict['stages'] as $singleValue) {
+                $stages []= new ApprovalStage($singleValue);
+            }
+            $this->_propDict['stages'] = $stages;
+            return $this->_propDict['stages'];
         }
+        return null;
     }
     
     /** 
     * Sets the stages
     * A collection of stages in the approval decision.
     *
-    * @param ApprovalStage $val The stages
+    * @param ApprovalStage[] $val The stages
     *
     * @return Approval
     */
