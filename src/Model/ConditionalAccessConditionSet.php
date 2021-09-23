@@ -91,6 +91,39 @@ class ConditionalAccessConditionSet extends Entity
     }
 
     /**
+    * Gets the devices
+    * Devices in the policy.
+    *
+    * @return ConditionalAccessDevices|null The devices
+    */
+    public function getDevices()
+    {
+        if (array_key_exists("devices", $this->_propDict)) {
+            if (is_a($this->_propDict["devices"], "\Microsoft\Graph\Model\ConditionalAccessDevices") || is_null($this->_propDict["devices"])) {
+                return $this->_propDict["devices"];
+            } else {
+                $this->_propDict["devices"] = new ConditionalAccessDevices($this->_propDict["devices"]);
+                return $this->_propDict["devices"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the devices
+    * Devices in the policy.
+    *
+    * @param ConditionalAccessDevices $val The value to assign to the devices
+    *
+    * @return ConditionalAccessConditionSet The ConditionalAccessConditionSet
+    */
+    public function setDevices($val)
+    {
+        $this->_propDict["devices"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the locations
     * Locations included in and excluded from the policy.
     *

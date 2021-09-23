@@ -113,7 +113,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the imageId
-    * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
+    * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os.
     *
     * @return string|null The imageId
     */
@@ -128,7 +128,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the imageId
-    * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
+    * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os.
     *
     * @param string $val The imageId
     *

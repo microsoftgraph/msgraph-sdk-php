@@ -33,4 +33,5 @@ class EducationAddToCalendarOptions extends Enum
     const STUDENTS_AND_PUBLISHER = "studentsAndPublisher";
     const STUDENTS_AND_TEAM_OWNERS = "studentsAndTeamOwners";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const STUDENTS_ONLY = "studentsOnly";
 }
