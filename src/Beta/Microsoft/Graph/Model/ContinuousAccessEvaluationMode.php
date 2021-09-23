@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EducationAddToCalendarOptions File
+* ContinuousAccessEvaluationMode File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* EducationAddToCalendarOptions class
+* ContinuousAccessEvaluationMode class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EducationAddToCalendarOptions extends Enum
+class ContinuousAccessEvaluationMode extends Enum
 {
     /**
-    * The Enum EducationAddToCalendarOptions
+    * The Enum ContinuousAccessEvaluationMode
     */
-    const NONE = "none";
-    const STUDENTS_AND_PUBLISHER = "studentsAndPublisher";
-    const STUDENTS_AND_TEAM_OWNERS = "studentsAndTeamOwners";
+    const STRICT_ENFORCEMENT = "strictEnforcement";
+    const DISABLED = "disabled";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const STUDENTS_ONLY = "studentsOnly";
 }
