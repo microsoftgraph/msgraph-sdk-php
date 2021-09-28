@@ -55,15 +55,15 @@ class BookingService extends BookingNamedEntity
     * Gets the defaultDuration
     * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
     *
-    * @return Duration|null The defaultDuration
+    * @return \DateInterval|null The defaultDuration
     */
     public function getDefaultDuration()
     {
         if (array_key_exists("defaultDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["defaultDuration"])) {
+            if (is_a($this->_propDict["defaultDuration"], "\DateInterval") || is_null($this->_propDict["defaultDuration"])) {
                 return $this->_propDict["defaultDuration"];
             } else {
-                $this->_propDict["defaultDuration"] = new Duration($this->_propDict["defaultDuration"]);
+                $this->_propDict["defaultDuration"] = new \DateInterval($this->_propDict["defaultDuration"]);
                 return $this->_propDict["defaultDuration"];
             }
         }
@@ -74,7 +74,7 @@ class BookingService extends BookingNamedEntity
     * Sets the defaultDuration
     * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
     *
-    * @param Duration $val The defaultDuration
+    * @param \DateInterval $val The defaultDuration
     *
     * @return BookingService
     */
@@ -327,15 +327,15 @@ class BookingService extends BookingNamedEntity
     * Gets the postBuffer
     * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
     *
-    * @return Duration|null The postBuffer
+    * @return \DateInterval|null The postBuffer
     */
     public function getPostBuffer()
     {
         if (array_key_exists("postBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["postBuffer"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["postBuffer"])) {
+            if (is_a($this->_propDict["postBuffer"], "\DateInterval") || is_null($this->_propDict["postBuffer"])) {
                 return $this->_propDict["postBuffer"];
             } else {
-                $this->_propDict["postBuffer"] = new Duration($this->_propDict["postBuffer"]);
+                $this->_propDict["postBuffer"] = new \DateInterval($this->_propDict["postBuffer"]);
                 return $this->_propDict["postBuffer"];
             }
         }
@@ -346,7 +346,7 @@ class BookingService extends BookingNamedEntity
     * Sets the postBuffer
     * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
     *
-    * @param Duration $val The postBuffer
+    * @param \DateInterval $val The postBuffer
     *
     * @return BookingService
     */
@@ -360,15 +360,15 @@ class BookingService extends BookingNamedEntity
     * Gets the preBuffer
     * The time to buffer before an appointment for this service can start.
     *
-    * @return Duration|null The preBuffer
+    * @return \DateInterval|null The preBuffer
     */
     public function getPreBuffer()
     {
         if (array_key_exists("preBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["preBuffer"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["preBuffer"])) {
+            if (is_a($this->_propDict["preBuffer"], "\DateInterval") || is_null($this->_propDict["preBuffer"])) {
                 return $this->_propDict["preBuffer"];
             } else {
-                $this->_propDict["preBuffer"] = new Duration($this->_propDict["preBuffer"]);
+                $this->_propDict["preBuffer"] = new \DateInterval($this->_propDict["preBuffer"]);
                 return $this->_propDict["preBuffer"];
             }
         }
@@ -379,7 +379,7 @@ class BookingService extends BookingNamedEntity
     * Sets the preBuffer
     * The time to buffer before an appointment for this service can start.
     *
-    * @param Duration $val The preBuffer
+    * @param \DateInterval $val The preBuffer
     *
     * @return BookingService
     */

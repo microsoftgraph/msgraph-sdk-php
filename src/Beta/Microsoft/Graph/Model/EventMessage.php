@@ -86,7 +86,6 @@ class EventMessage extends Message
     
     /**
     * Gets the isDelegated
-    * True if this meeting request is accessible to a delegate, false otherwise. Default is false.
     *
     * @return bool|null The isDelegated
     */
@@ -101,7 +100,6 @@ class EventMessage extends Message
     
     /**
     * Sets the isDelegated
-    * True if this meeting request is accessible to a delegate, false otherwise. Default is false.
     *
     * @param bool $val The isDelegated
     *
@@ -173,7 +171,6 @@ class EventMessage extends Message
     
     /**
     * Gets the meetingMessageType
-    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
     *
     * @return MeetingMessageType|null The meetingMessageType
     */
@@ -192,7 +189,6 @@ class EventMessage extends Message
     
     /**
     * Sets the meetingMessageType
-    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
     *
     * @param MeetingMessageType $val The meetingMessageType
     *

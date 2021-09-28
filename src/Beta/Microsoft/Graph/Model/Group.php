@@ -824,7 +824,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the preferredDataLocation
-    * The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
+    * The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see  OneDrive Online Multi-Geo. Nullable. Returned by default.
     *
     * @return string|null The preferredDataLocation
     */
@@ -839,7 +839,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the preferredDataLocation
-    * The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
+    * The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator's preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see  OneDrive Online Multi-Geo. Nullable. Returned by default.
     *
     * @param string $val The preferredDataLocation
     *
@@ -853,7 +853,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the preferredLanguage
-    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
     *
     * @return string|null The preferredLanguage
     */
@@ -868,7 +868,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the preferredLanguage
-    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
     *
     * @param string $val The preferredLanguage
     *
@@ -1089,7 +1089,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the visibility
-    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. See group visibility options to learn more. Returned by default. Nullable.
+    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
     *
     * @return string|null The visibility
     */
@@ -1104,7 +1104,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the visibility
-    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. See group visibility options to learn more. Returned by default. Nullable.
+    * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
     *
     * @param string $val The visibility
     *
@@ -1408,7 +1408,7 @@ class Group extends DirectoryObject
     
     /**
     * Gets the membershipRuleProcessingStatus
-    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Read-only.
+    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.
     *
     * @return MembershipRuleProcessingStatus|null The membershipRuleProcessingStatus
     */
@@ -1427,7 +1427,7 @@ class Group extends DirectoryObject
     
     /**
     * Sets the membershipRuleProcessingStatus
-    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Read-only.
+    * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.
     *
     * @param MembershipRuleProcessingStatus $val The membershipRuleProcessingStatus
     *

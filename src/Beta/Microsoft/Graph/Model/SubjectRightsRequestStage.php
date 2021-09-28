@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AuthenticatorAppFeatureSettings File
+* SubjectRightsRequestStage File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AuthenticatorAppFeatureSettings class
+* SubjectRightsRequestStage class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,10 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AuthenticatorAppFeatureSettings extends Enum
+class SubjectRightsRequestStage extends Enum
 {
     /**
-    * The Enum AuthenticatorAppFeatureSettings
+    * The Enum SubjectRightsRequestStage
     */
-    const REQUIRE_NUMBER_MATCHING = "requireNumberMatching";
+    const CONTENT_RETRIEVAL = "contentRetrieval";
+    const CONTENT_REVIEW = "contentReview";
+    const GENERATE_REPORT = "generateReport";
+    const CONTENT_DELETION = "contentDeletion";
+    const CASE_RESOLVED = "caseResolved";
+    const CONTENT_ESTIMATE = "contentEstimate";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

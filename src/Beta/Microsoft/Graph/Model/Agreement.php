@@ -148,15 +148,15 @@ class Agreement extends Entity
     * Gets the userReacceptRequiredFrequency
     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The userReacceptRequiredFrequency
+    * @return \DateInterval|null The userReacceptRequiredFrequency
     */
     public function getUserReacceptRequiredFrequency()
     {
         if (array_key_exists("userReacceptRequiredFrequency", $this->_propDict)) {
-            if (is_a($this->_propDict["userReacceptRequiredFrequency"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["userReacceptRequiredFrequency"])) {
+            if (is_a($this->_propDict["userReacceptRequiredFrequency"], "\DateInterval") || is_null($this->_propDict["userReacceptRequiredFrequency"])) {
                 return $this->_propDict["userReacceptRequiredFrequency"];
             } else {
-                $this->_propDict["userReacceptRequiredFrequency"] = new Duration($this->_propDict["userReacceptRequiredFrequency"]);
+                $this->_propDict["userReacceptRequiredFrequency"] = new \DateInterval($this->_propDict["userReacceptRequiredFrequency"]);
                 return $this->_propDict["userReacceptRequiredFrequency"];
             }
         }
@@ -167,7 +167,7 @@ class Agreement extends Entity
     * Sets the userReacceptRequiredFrequency
     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
     *
-    * @param Duration $val The userReacceptRequiredFrequency
+    * @param \DateInterval $val The userReacceptRequiredFrequency
     *
     * @return Agreement
     */

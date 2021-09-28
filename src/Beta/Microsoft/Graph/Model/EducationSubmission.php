@@ -26,6 +26,7 @@ class EducationSubmission extends Entity
 {
     /**
     * Gets the reassignedBy
+    * User who moved the status of this submission to reassigned.
     *
     * @return IdentitySet|null The reassignedBy
     */
@@ -44,6 +45,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the reassignedBy
+    * User who moved the status of this submission to reassigned.
     *
     * @param IdentitySet $val The reassignedBy
     *
@@ -57,6 +59,7 @@ class EducationSubmission extends Entity
     
     /**
     * Gets the reassignedDateTime
+    * Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The reassignedDateTime
     */
@@ -75,6 +78,7 @@ class EducationSubmission extends Entity
     
     /**
     * Sets the reassignedDateTime
+    * Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The reassignedDateTime
     *

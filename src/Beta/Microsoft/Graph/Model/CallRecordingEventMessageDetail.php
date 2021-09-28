@@ -95,15 +95,15 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
     * Gets the callRecordingDuration
     * Duration of the call recording.
     *
-    * @return Duration|null The callRecordingDuration
+    * @return \DateInterval|null The callRecordingDuration
     */
     public function getCallRecordingDuration()
     {
         if (array_key_exists("callRecordingDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["callRecordingDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["callRecordingDuration"])) {
+            if (is_a($this->_propDict["callRecordingDuration"], "\DateInterval") || is_null($this->_propDict["callRecordingDuration"])) {
                 return $this->_propDict["callRecordingDuration"];
             } else {
-                $this->_propDict["callRecordingDuration"] = new Duration($this->_propDict["callRecordingDuration"]);
+                $this->_propDict["callRecordingDuration"] = new \DateInterval($this->_propDict["callRecordingDuration"]);
                 return $this->_propDict["callRecordingDuration"];
             }
         }
@@ -114,7 +114,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail
     * Sets the callRecordingDuration
     * Duration of the call recording.
     *
-    * @param Duration $val The value to assign to the callRecordingDuration
+    * @param \DateInterval $val The value to assign to the callRecordingDuration
     *
     * @return CallRecordingEventMessageDetail The CallRecordingEventMessageDetail
     */

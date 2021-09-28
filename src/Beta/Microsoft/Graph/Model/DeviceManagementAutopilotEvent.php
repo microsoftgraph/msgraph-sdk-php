@@ -28,15 +28,15 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the accountSetupDuration
     * Time spent in user ESP.
     *
-    * @return Duration|null The accountSetupDuration
+    * @return \DateInterval|null The accountSetupDuration
     */
     public function getAccountSetupDuration()
     {
         if (array_key_exists("accountSetupDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["accountSetupDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["accountSetupDuration"])) {
+            if (is_a($this->_propDict["accountSetupDuration"], "\DateInterval") || is_null($this->_propDict["accountSetupDuration"])) {
                 return $this->_propDict["accountSetupDuration"];
             } else {
-                $this->_propDict["accountSetupDuration"] = new Duration($this->_propDict["accountSetupDuration"]);
+                $this->_propDict["accountSetupDuration"] = new \DateInterval($this->_propDict["accountSetupDuration"]);
                 return $this->_propDict["accountSetupDuration"];
             }
         }
@@ -47,7 +47,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Sets the accountSetupDuration
     * Time spent in user ESP.
     *
-    * @param Duration $val The accountSetupDuration
+    * @param \DateInterval $val The accountSetupDuration
     *
     * @return DeviceManagementAutopilotEvent
     */
@@ -94,15 +94,15 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deploymentDuration
     * Autopilot deployment duration including enrollment.
     *
-    * @return Duration|null The deploymentDuration
+    * @return \DateInterval|null The deploymentDuration
     */
     public function getDeploymentDuration()
     {
         if (array_key_exists("deploymentDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["deploymentDuration"])) {
+            if (is_a($this->_propDict["deploymentDuration"], "\DateInterval") || is_null($this->_propDict["deploymentDuration"])) {
                 return $this->_propDict["deploymentDuration"];
             } else {
-                $this->_propDict["deploymentDuration"] = new Duration($this->_propDict["deploymentDuration"]);
+                $this->_propDict["deploymentDuration"] = new \DateInterval($this->_propDict["deploymentDuration"]);
                 return $this->_propDict["deploymentDuration"];
             }
         }
@@ -113,7 +113,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Sets the deploymentDuration
     * Autopilot deployment duration including enrollment.
     *
-    * @param Duration $val The deploymentDuration
+    * @param \DateInterval $val The deploymentDuration
     *
     * @return DeviceManagementAutopilotEvent
     */
@@ -226,15 +226,15 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deploymentTotalDuration
     * Total deployment duration from enrollment to Desktop screen.
     *
-    * @return Duration|null The deploymentTotalDuration
+    * @return \DateInterval|null The deploymentTotalDuration
     */
     public function getDeploymentTotalDuration()
     {
         if (array_key_exists("deploymentTotalDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["deploymentTotalDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["deploymentTotalDuration"])) {
+            if (is_a($this->_propDict["deploymentTotalDuration"], "\DateInterval") || is_null($this->_propDict["deploymentTotalDuration"])) {
                 return $this->_propDict["deploymentTotalDuration"];
             } else {
-                $this->_propDict["deploymentTotalDuration"] = new Duration($this->_propDict["deploymentTotalDuration"]);
+                $this->_propDict["deploymentTotalDuration"] = new \DateInterval($this->_propDict["deploymentTotalDuration"]);
                 return $this->_propDict["deploymentTotalDuration"];
             }
         }
@@ -245,7 +245,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Sets the deploymentTotalDuration
     * Total deployment duration from enrollment to Desktop screen.
     *
-    * @param Duration $val The deploymentTotalDuration
+    * @param \DateInterval $val The deploymentTotalDuration
     *
     * @return DeviceManagementAutopilotEvent
     */
@@ -288,15 +288,15 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the devicePreparationDuration
     * Time spent in device enrollment.
     *
-    * @return Duration|null The devicePreparationDuration
+    * @return \DateInterval|null The devicePreparationDuration
     */
     public function getDevicePreparationDuration()
     {
         if (array_key_exists("devicePreparationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["devicePreparationDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["devicePreparationDuration"])) {
+            if (is_a($this->_propDict["devicePreparationDuration"], "\DateInterval") || is_null($this->_propDict["devicePreparationDuration"])) {
                 return $this->_propDict["devicePreparationDuration"];
             } else {
-                $this->_propDict["devicePreparationDuration"] = new Duration($this->_propDict["devicePreparationDuration"]);
+                $this->_propDict["devicePreparationDuration"] = new \DateInterval($this->_propDict["devicePreparationDuration"]);
                 return $this->_propDict["devicePreparationDuration"];
             }
         }
@@ -307,7 +307,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Sets the devicePreparationDuration
     * Time spent in device enrollment.
     *
-    * @param Duration $val The devicePreparationDuration
+    * @param \DateInterval $val The devicePreparationDuration
     *
     * @return DeviceManagementAutopilotEvent
     */
@@ -383,15 +383,15 @@ class DeviceManagementAutopilotEvent extends Entity
     * Gets the deviceSetupDuration
     * Time spent in device ESP.
     *
-    * @return Duration|null The deviceSetupDuration
+    * @return \DateInterval|null The deviceSetupDuration
     */
     public function getDeviceSetupDuration()
     {
         if (array_key_exists("deviceSetupDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceSetupDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["deviceSetupDuration"])) {
+            if (is_a($this->_propDict["deviceSetupDuration"], "\DateInterval") || is_null($this->_propDict["deviceSetupDuration"])) {
                 return $this->_propDict["deviceSetupDuration"];
             } else {
-                $this->_propDict["deviceSetupDuration"] = new Duration($this->_propDict["deviceSetupDuration"]);
+                $this->_propDict["deviceSetupDuration"] = new \DateInterval($this->_propDict["deviceSetupDuration"]);
                 return $this->_propDict["deviceSetupDuration"];
             }
         }
@@ -402,7 +402,7 @@ class DeviceManagementAutopilotEvent extends Entity
     * Sets the deviceSetupDuration
     * Time spent in device ESP.
     *
-    * @param Duration $val The deviceSetupDuration
+    * @param \DateInterval $val The deviceSetupDuration
     *
     * @return DeviceManagementAutopilotEvent
     */

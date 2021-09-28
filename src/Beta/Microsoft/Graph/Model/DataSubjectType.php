@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EmailIdentity File
+* DataSubjectType File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,11 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* EmailIdentity class
+* DataSubjectType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +24,18 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EmailIdentity extends Identity
+class DataSubjectType extends Enum
 {
     /**
-    * Gets the email
-    * Email address of the user.
-    *
-    * @return string|null The email
+    * The Enum DataSubjectType
     */
-    public function getEmail()
-    {
-        if (array_key_exists("email", $this->_propDict)) {
-            return $this->_propDict["email"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the email
-    * Email address of the user.
-    *
-    * @param string $val The value of the email
-    *
-    * @return EmailIdentity
-    */
-    public function setEmail($val)
-    {
-        $this->_propDict["email"] = $val;
-        return $this;
-    }
+    const CUSTOMER = "customer";
+    const CURRENT_EMPLOYEE = "currentEmployee";
+    const FORMER_EMPLOYEE = "formerEmployee";
+    const PROSPECTIVE_EMPLOYEE = "prospectiveEmployee";
+    const STUDENT = "student";
+    const TEACHER = "teacher";
+    const FACULTY = "faculty";
+    const OTHER = "other";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

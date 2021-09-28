@@ -383,7 +383,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the imAddresses
-    * The contact's instant messaging (IM) addresses.
     *
     * @return string|null The imAddresses
     */
@@ -398,7 +397,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the imAddresses
-    * The contact's instant messaging (IM) addresses.
     *
     * @param string $val The imAddresses
     *
@@ -412,7 +410,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the initials
-    * The contact's initials.
     *
     * @return string|null The initials
     */
@@ -427,7 +424,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the initials
-    * The contact's initials.
     *
     * @param string $val The initials
     *
@@ -468,7 +464,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the jobTitle
-    * The contact’s job title.
     *
     * @return string|null The jobTitle
     */
@@ -483,7 +478,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the jobTitle
-    * The contact’s job title.
     *
     * @param string $val The jobTitle
     *
@@ -497,7 +491,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the manager
-    * The name of the contact's manager.
     *
     * @return string|null The manager
     */
@@ -512,7 +505,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the manager
-    * The name of the contact's manager.
     *
     * @param string $val The manager
     *
@@ -526,7 +518,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the middleName
-    * The contact's middle name.
     *
     * @return string|null The middleName
     */
@@ -541,7 +532,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the middleName
-    * The contact's middle name.
     *
     * @param string $val The middleName
     *
@@ -555,7 +545,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the nickName
-    * The contact's nickname.
     *
     * @return string|null The nickName
     */
@@ -570,7 +559,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the nickName
-    * The contact's nickname.
     *
     * @param string $val The nickName
     *
@@ -584,7 +572,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the officeLocation
-    * The location of the contact's office.
     *
     * @return string|null The officeLocation
     */
@@ -599,7 +586,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the officeLocation
-    * The location of the contact's office.
     *
     * @param string $val The officeLocation
     *
@@ -613,7 +599,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the parentFolderId
-    * The ID of the contact's parent folder.
     *
     * @return string|null The parentFolderId
     */
@@ -628,7 +613,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the parentFolderId
-    * The ID of the contact's parent folder.
     *
     * @param string $val The parentFolderId
     *
@@ -642,7 +626,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the personalNotes
-    * The user's notes about the contact.
     *
     * @return string|null The personalNotes
     */
@@ -657,7 +640,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the personalNotes
-    * The user's notes about the contact.
     *
     * @param string $val The personalNotes
     *
@@ -727,7 +709,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the profession
-    * The contact's profession.
     *
     * @return string|null The profession
     */
@@ -742,7 +723,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the profession
-    * The contact's profession.
     *
     * @param string $val The profession
     *
@@ -756,7 +736,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the spouseName
-    * The name of the contact's spouse/partner.
     *
     * @return string|null The spouseName
     */
@@ -771,7 +750,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the spouseName
-    * The name of the contact's spouse/partner.
     *
     * @param string $val The spouseName
     *
@@ -785,7 +763,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the surname
-    * The contact's surname.
     *
     * @return string|null The surname
     */
@@ -800,7 +777,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the surname
-    * The contact's surname.
     *
     * @param string $val The surname
     *
@@ -814,7 +790,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the title
-    * The contact's title.
     *
     * @return string|null The title
     */
@@ -829,7 +804,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the title
-    * The contact's title.
     *
     * @param string $val The title
     *
@@ -902,7 +876,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the yomiCompanyName
-    * The phonetic Japanese company name of the contact.
     *
     * @return string|null The yomiCompanyName
     */
@@ -917,7 +890,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the yomiCompanyName
-    * The phonetic Japanese company name of the contact.
     *
     * @param string $val The yomiCompanyName
     *
@@ -931,7 +903,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the yomiGivenName
-    * The phonetic Japanese given name (first name) of the contact.
     *
     * @return string|null The yomiGivenName
     */
@@ -946,7 +917,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the yomiGivenName
-    * The phonetic Japanese given name (first name) of the contact.
     *
     * @param string $val The yomiGivenName
     *
@@ -960,7 +930,6 @@ class Contact extends OutlookItem
     
     /**
     * Gets the yomiSurname
-    * The phonetic Japanese surname (last name)  of the contact.
     *
     * @return string|null The yomiSurname
     */
@@ -975,7 +944,6 @@ class Contact extends OutlookItem
     
     /**
     * Sets the yomiSurname
-    * The phonetic Japanese surname (last name)  of the contact.
     *
     * @param string $val The yomiSurname
     *
