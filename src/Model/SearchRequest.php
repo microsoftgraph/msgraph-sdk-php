@@ -262,6 +262,39 @@ class SearchRequest extends Entity
         $this->_propDict["query"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the resultTemplateOptions
+    * Provides the search result templates options for rendering connectors search results.
+    *
+    * @return ResultTemplateOption|null The resultTemplateOptions
+    */
+    public function getResultTemplateOptions()
+    {
+        if (array_key_exists("resultTemplateOptions", $this->_propDict)) {
+            if (is_a($this->_propDict["resultTemplateOptions"], "\Microsoft\Graph\Model\ResultTemplateOption") || is_null($this->_propDict["resultTemplateOptions"])) {
+                return $this->_propDict["resultTemplateOptions"];
+            } else {
+                $this->_propDict["resultTemplateOptions"] = new ResultTemplateOption($this->_propDict["resultTemplateOptions"]);
+                return $this->_propDict["resultTemplateOptions"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the resultTemplateOptions
+    * Provides the search result templates options for rendering connectors search results.
+    *
+    * @param ResultTemplateOption $val The value to assign to the resultTemplateOptions
+    *
+    * @return SearchRequest The SearchRequest
+    */
+    public function setResultTemplateOptions($val)
+    {
+        $this->_propDict["resultTemplateOptions"] = $val;
+         return $this;
+    }
     /**
     * Gets the size
     * The size of the page to be retrieved. Optional.

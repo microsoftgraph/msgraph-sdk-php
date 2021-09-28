@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OrganizationalBranding File
+* SharePointIdentity File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
-
 /**
-* OrganizationalBranding class
+* SharePointIdentity class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,36 +21,32 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OrganizationalBranding extends OrganizationalBrandingProperties
+class SharePointIdentity extends Identity
 {
-
-     /** 
-     * Gets the localizations
-    * Add different branding based on a locale.
-     *
-     * @return array|null The localizations
-     */
-    public function getLocalizations()
+    /**
+    * Gets the loginName
+    *
+    * @return string|null The loginName
+    */
+    public function getLoginName()
     {
-        if (array_key_exists("localizations", $this->_propDict)) {
-           return $this->_propDict["localizations"];
+        if (array_key_exists("loginName", $this->_propDict)) {
+            return $this->_propDict["loginName"];
         } else {
             return null;
         }
     }
-    
-    /** 
-    * Sets the localizations
-    * Add different branding based on a locale.
+
+    /**
+    * Sets the loginName
     *
-    * @param OrganizationalBrandingLocalization $val The localizations
+    * @param string $val The value of the loginName
     *
-    * @return OrganizationalBranding
+    * @return SharePointIdentity
     */
-    public function setLocalizations($val)
+    public function setLoginName($val)
     {
-        $this->_propDict["localizations"] = $val;
+        $this->_propDict["loginName"] = $val;
         return $this;
     }
-    
 }
