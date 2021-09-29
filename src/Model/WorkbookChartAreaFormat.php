@@ -32,8 +32,8 @@ class WorkbookChartAreaFormat extends Entity
     */
     public function getFill()
     {
-        if (array_key_exists("fill", $this->_propDict)) {
-            if (is_a($this->_propDict["fill"], "\Microsoft\Graph\Model\WorkbookChartFill") || is_null($this->_propDict["fill"])) {
+        if (array_key_exists("fill", $this->_propDict) && !is_null($this->_propDict["fill"])) {
+            if (is_a($this->_propDict["fill"], "\Microsoft\Graph\Model\WorkbookChartFill")) {
                 return $this->_propDict["fill"];
             } else {
                 $this->_propDict["fill"] = new WorkbookChartFill($this->_propDict["fill"]);
@@ -65,8 +65,8 @@ class WorkbookChartAreaFormat extends Entity
     */
     public function getFont()
     {
-        if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "\Microsoft\Graph\Model\WorkbookChartFont") || is_null($this->_propDict["font"])) {
+        if (array_key_exists("font", $this->_propDict) && !is_null($this->_propDict["font"])) {
+            if (is_a($this->_propDict["font"], "\Microsoft\Graph\Model\WorkbookChartFont")) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookChartFont($this->_propDict["font"]);

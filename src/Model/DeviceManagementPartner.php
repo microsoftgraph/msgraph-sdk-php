@@ -90,8 +90,8 @@ class DeviceManagementPartner extends Entity
     */
     public function getLastHeartbeatDateTime()
     {
-        if (array_key_exists("lastHeartbeatDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime") || is_null($this->_propDict["lastHeartbeatDateTime"])) {
+        if (array_key_exists("lastHeartbeatDateTime", $this->_propDict) && !is_null($this->_propDict["lastHeartbeatDateTime"])) {
+            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime")) {
                 return $this->_propDict["lastHeartbeatDateTime"];
             } else {
                 $this->_propDict["lastHeartbeatDateTime"] = new \DateTime($this->_propDict["lastHeartbeatDateTime"]);
@@ -123,8 +123,8 @@ class DeviceManagementPartner extends Entity
     */
     public function getPartnerAppType()
     {
-        if (array_key_exists("partnerAppType", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerAppType"], "\Microsoft\Graph\Model\DeviceManagementPartnerAppType") || is_null($this->_propDict["partnerAppType"])) {
+        if (array_key_exists("partnerAppType", $this->_propDict) && !is_null($this->_propDict["partnerAppType"])) {
+            if (is_a($this->_propDict["partnerAppType"], "\Microsoft\Graph\Model\DeviceManagementPartnerAppType")) {
                 return $this->_propDict["partnerAppType"];
             } else {
                 $this->_propDict["partnerAppType"] = new DeviceManagementPartnerAppType($this->_propDict["partnerAppType"]);
@@ -156,8 +156,8 @@ class DeviceManagementPartner extends Entity
     */
     public function getPartnerState()
     {
-        if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState") || is_null($this->_propDict["partnerState"])) {
+        if (array_key_exists("partnerState", $this->_propDict) && !is_null($this->_propDict["partnerState"])) {
+            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);
@@ -218,8 +218,8 @@ class DeviceManagementPartner extends Entity
     */
     public function getWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime()
     {
-        if (array_key_exists("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"], "\DateTime") || is_null($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"])) {
+        if (array_key_exists("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", $this->_propDict) && !is_null($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"])) {
+            if (is_a($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"], "\DateTime")) {
                 return $this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"];
             } else {
                 $this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"] = new \DateTime($this->_propDict["whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"]);
@@ -251,8 +251,8 @@ class DeviceManagementPartner extends Entity
     */
     public function getWhenPartnerDevicesWillBeRemovedDateTime()
     {
-        if (array_key_exists("whenPartnerDevicesWillBeRemovedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"], "\DateTime") || is_null($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"])) {
+        if (array_key_exists("whenPartnerDevicesWillBeRemovedDateTime", $this->_propDict) && !is_null($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"])) {
+            if (is_a($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"], "\DateTime")) {
                 return $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"];
             } else {
                 $this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"] = new \DateTime($this->_propDict["whenPartnerDevicesWillBeRemovedDateTime"]);

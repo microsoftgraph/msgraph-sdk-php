@@ -28,21 +28,28 @@ class EntitlementManagement extends Entity
      /** 
      * Gets the accessPackageAssignmentApprovals
      *
-     * @return array|null The accessPackageAssignmentApprovals
+     * @return Approval[]|null The accessPackageAssignmentApprovals
      */
     public function getAccessPackageAssignmentApprovals()
     {
-        if (array_key_exists("accessPackageAssignmentApprovals", $this->_propDict)) {
-           return $this->_propDict["accessPackageAssignmentApprovals"];
-        } else {
-            return null;
+        if (array_key_exists('accessPackageAssignmentApprovals', $this->_propDict) && !is_null($this->_propDict['accessPackageAssignmentApprovals'])) {
+            $accessPackageAssignmentApprovals = [];
+            if (count($this->_propDict['accessPackageAssignmentApprovals']) > 0 && is_a($this->_propDict['accessPackageAssignmentApprovals'][0], 'Approval')) {
+                return $this->_propDict['accessPackageAssignmentApprovals'];
+            }
+            foreach ($this->_propDict['accessPackageAssignmentApprovals'] as $singleValue) {
+                $accessPackageAssignmentApprovals []= new Approval($singleValue);
+            }
+            $this->_propDict['accessPackageAssignmentApprovals'] = $accessPackageAssignmentApprovals;
+            return $this->_propDict['accessPackageAssignmentApprovals'];
         }
+        return null;
     }
     
     /** 
     * Sets the accessPackageAssignmentApprovals
     *
-    * @param Approval $val The accessPackageAssignmentApprovals
+    * @param Approval[] $val The accessPackageAssignmentApprovals
     *
     * @return EntitlementManagement
     */

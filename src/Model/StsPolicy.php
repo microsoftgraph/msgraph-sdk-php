@@ -86,21 +86,28 @@ class StsPolicy extends PolicyBase
      /** 
      * Gets the appliesTo
      *
-     * @return array|null The appliesTo
+     * @return DirectoryObject[]|null The appliesTo
      */
     public function getAppliesTo()
     {
-        if (array_key_exists("appliesTo", $this->_propDict)) {
-           return $this->_propDict["appliesTo"];
-        } else {
-            return null;
+        if (array_key_exists('appliesTo', $this->_propDict) && !is_null($this->_propDict['appliesTo'])) {
+            $appliesTo = [];
+            if (count($this->_propDict['appliesTo']) > 0 && is_a($this->_propDict['appliesTo'][0], 'DirectoryObject')) {
+                return $this->_propDict['appliesTo'];
+            }
+            foreach ($this->_propDict['appliesTo'] as $singleValue) {
+                $appliesTo []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['appliesTo'] = $appliesTo;
+            return $this->_propDict['appliesTo'];
         }
+        return null;
     }
     
     /** 
     * Sets the appliesTo
     *
-    * @param DirectoryObject $val The appliesTo
+    * @param DirectoryObject[] $val The appliesTo
     *
     * @return StsPolicy
     */

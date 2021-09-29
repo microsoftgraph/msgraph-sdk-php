@@ -87,22 +87,29 @@ class UserFlowLanguageConfiguration extends Entity
      * Gets the defaultPages
     * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
      *
-     * @return array|null The defaultPages
+     * @return UserFlowLanguagePage[]|null The defaultPages
      */
     public function getDefaultPages()
     {
-        if (array_key_exists("defaultPages", $this->_propDict)) {
-           return $this->_propDict["defaultPages"];
-        } else {
-            return null;
+        if (array_key_exists('defaultPages', $this->_propDict) && !is_null($this->_propDict['defaultPages'])) {
+            $defaultPages = [];
+            if (count($this->_propDict['defaultPages']) > 0 && is_a($this->_propDict['defaultPages'][0], 'UserFlowLanguagePage')) {
+                return $this->_propDict['defaultPages'];
+            }
+            foreach ($this->_propDict['defaultPages'] as $singleValue) {
+                $defaultPages []= new UserFlowLanguagePage($singleValue);
+            }
+            $this->_propDict['defaultPages'] = $defaultPages;
+            return $this->_propDict['defaultPages'];
         }
+        return null;
     }
     
     /** 
     * Sets the defaultPages
     * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
     *
-    * @param UserFlowLanguagePage $val The defaultPages
+    * @param UserFlowLanguagePage[] $val The defaultPages
     *
     * @return UserFlowLanguageConfiguration
     */
@@ -117,22 +124,29 @@ class UserFlowLanguageConfiguration extends Entity
      * Gets the overridesPages
     * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
      *
-     * @return array|null The overridesPages
+     * @return UserFlowLanguagePage[]|null The overridesPages
      */
     public function getOverridesPages()
     {
-        if (array_key_exists("overridesPages", $this->_propDict)) {
-           return $this->_propDict["overridesPages"];
-        } else {
-            return null;
+        if (array_key_exists('overridesPages', $this->_propDict) && !is_null($this->_propDict['overridesPages'])) {
+            $overridesPages = [];
+            if (count($this->_propDict['overridesPages']) > 0 && is_a($this->_propDict['overridesPages'][0], 'UserFlowLanguagePage')) {
+                return $this->_propDict['overridesPages'];
+            }
+            foreach ($this->_propDict['overridesPages'] as $singleValue) {
+                $overridesPages []= new UserFlowLanguagePage($singleValue);
+            }
+            $this->_propDict['overridesPages'] = $overridesPages;
+            return $this->_propDict['overridesPages'];
         }
+        return null;
     }
     
     /** 
     * Sets the overridesPages
     * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
     *
-    * @param UserFlowLanguagePage $val The overridesPages
+    * @param UserFlowLanguagePage[] $val The overridesPages
     *
     * @return UserFlowLanguageConfiguration
     */

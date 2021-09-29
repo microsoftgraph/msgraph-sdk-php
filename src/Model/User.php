@@ -87,22 +87,29 @@ class User extends DirectoryObject
      * Gets the assignedLicenses
     * The licenses that are assigned to the user, including inherited (group-based) licenses.  Not nullable. Returned only on $select. Supports $filter (eq and NOT).
      *
-     * @return array|null The assignedLicenses
+     * @return AssignedLicense[]|null The assignedLicenses
      */
     public function getAssignedLicenses()
     {
-        if (array_key_exists("assignedLicenses", $this->_propDict)) {
-           return $this->_propDict["assignedLicenses"];
-        } else {
-            return null;
+        if (array_key_exists('assignedLicenses', $this->_propDict) && !is_null($this->_propDict['assignedLicenses'])) {
+            $assignedLicenses = [];
+            if (count($this->_propDict['assignedLicenses']) > 0 && is_a($this->_propDict['assignedLicenses'][0], 'AssignedLicense')) {
+                return $this->_propDict['assignedLicenses'];
+            }
+            foreach ($this->_propDict['assignedLicenses'] as $singleValue) {
+                $assignedLicenses []= new AssignedLicense($singleValue);
+            }
+            $this->_propDict['assignedLicenses'] = $assignedLicenses;
+            return $this->_propDict['assignedLicenses'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignedLicenses
     * The licenses that are assigned to the user, including inherited (group-based) licenses.  Not nullable. Returned only on $select. Supports $filter (eq and NOT).
     *
-    * @param AssignedLicense $val The assignedLicenses
+    * @param AssignedLicense[] $val The assignedLicenses
     *
     * @return User
     */
@@ -117,22 +124,29 @@ class User extends DirectoryObject
      * Gets the assignedPlans
     * The plans that are assigned to the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq and NOT).
      *
-     * @return array|null The assignedPlans
+     * @return AssignedPlan[]|null The assignedPlans
      */
     public function getAssignedPlans()
     {
-        if (array_key_exists("assignedPlans", $this->_propDict)) {
-           return $this->_propDict["assignedPlans"];
-        } else {
-            return null;
+        if (array_key_exists('assignedPlans', $this->_propDict) && !is_null($this->_propDict['assignedPlans'])) {
+            $assignedPlans = [];
+            if (count($this->_propDict['assignedPlans']) > 0 && is_a($this->_propDict['assignedPlans'][0], 'AssignedPlan')) {
+                return $this->_propDict['assignedPlans'];
+            }
+            foreach ($this->_propDict['assignedPlans'] as $singleValue) {
+                $assignedPlans []= new AssignedPlan($singleValue);
+            }
+            $this->_propDict['assignedPlans'] = $assignedPlans;
+            return $this->_propDict['assignedPlans'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignedPlans
     * The plans that are assigned to the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq and NOT).
     *
-    * @param AssignedPlan $val The assignedPlans
+    * @param AssignedPlan[] $val The assignedPlans
     *
     * @return User
     */
@@ -295,8 +309,8 @@ class User extends DirectoryObject
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -415,8 +429,8 @@ class User extends DirectoryObject
     */
     public function getEmployeeHireDate()
     {
-        if (array_key_exists("employeeHireDate", $this->_propDict)) {
-            if (is_a($this->_propDict["employeeHireDate"], "\DateTime") || is_null($this->_propDict["employeeHireDate"])) {
+        if (array_key_exists("employeeHireDate", $this->_propDict) && !is_null($this->_propDict["employeeHireDate"])) {
+            if (is_a($this->_propDict["employeeHireDate"], "\DateTime")) {
                 return $this->_propDict["employeeHireDate"];
             } else {
                 $this->_propDict["employeeHireDate"] = new \DateTime($this->_propDict["employeeHireDate"]);
@@ -477,8 +491,8 @@ class User extends DirectoryObject
     */
     public function getEmployeeOrgData()
     {
-        if (array_key_exists("employeeOrgData", $this->_propDict)) {
-            if (is_a($this->_propDict["employeeOrgData"], "\Microsoft\Graph\Model\EmployeeOrgData") || is_null($this->_propDict["employeeOrgData"])) {
+        if (array_key_exists("employeeOrgData", $this->_propDict) && !is_null($this->_propDict["employeeOrgData"])) {
+            if (is_a($this->_propDict["employeeOrgData"], "\Microsoft\Graph\Model\EmployeeOrgData")) {
                 return $this->_propDict["employeeOrgData"];
             } else {
                 $this->_propDict["employeeOrgData"] = new EmployeeOrgData($this->_propDict["employeeOrgData"]);
@@ -568,8 +582,8 @@ class User extends DirectoryObject
     */
     public function getExternalUserStateChangeDateTime()
     {
-        if (array_key_exists("externalUserStateChangeDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["externalUserStateChangeDateTime"], "\DateTime") || is_null($this->_propDict["externalUserStateChangeDateTime"])) {
+        if (array_key_exists("externalUserStateChangeDateTime", $this->_propDict) && !is_null($this->_propDict["externalUserStateChangeDateTime"])) {
+            if (is_a($this->_propDict["externalUserStateChangeDateTime"], "\DateTime")) {
                 return $this->_propDict["externalUserStateChangeDateTime"];
             } else {
                 $this->_propDict["externalUserStateChangeDateTime"] = new \DateTime($this->_propDict["externalUserStateChangeDateTime"]);
@@ -656,22 +670,29 @@ class User extends DirectoryObject
      * Gets the identities
     * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Returned only on $select. Supports $filter (eq) only where the signInType is not userPrincipalName.
      *
-     * @return array|null The identities
+     * @return ObjectIdentity[]|null The identities
      */
     public function getIdentities()
     {
-        if (array_key_exists("identities", $this->_propDict)) {
-           return $this->_propDict["identities"];
-        } else {
-            return null;
+        if (array_key_exists('identities', $this->_propDict) && !is_null($this->_propDict['identities'])) {
+            $identities = [];
+            if (count($this->_propDict['identities']) > 0 && is_a($this->_propDict['identities'][0], 'ObjectIdentity')) {
+                return $this->_propDict['identities'];
+            }
+            foreach ($this->_propDict['identities'] as $singleValue) {
+                $identities []= new ObjectIdentity($singleValue);
+            }
+            $this->_propDict['identities'] = $identities;
+            return $this->_propDict['identities'];
         }
+        return null;
     }
     
     /** 
     * Sets the identities
     * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Returned only on $select. Supports $filter (eq) only where the signInType is not userPrincipalName.
     *
-    * @param ObjectIdentity $val The identities
+    * @param ObjectIdentity[] $val The identities
     *
     * @return User
     */
@@ -776,8 +797,8 @@ class User extends DirectoryObject
     */
     public function getLastPasswordChangeDateTime()
     {
-        if (array_key_exists("lastPasswordChangeDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastPasswordChangeDateTime"], "\DateTime") || is_null($this->_propDict["lastPasswordChangeDateTime"])) {
+        if (array_key_exists("lastPasswordChangeDateTime", $this->_propDict) && !is_null($this->_propDict["lastPasswordChangeDateTime"])) {
+            if (is_a($this->_propDict["lastPasswordChangeDateTime"], "\DateTime")) {
                 return $this->_propDict["lastPasswordChangeDateTime"];
             } else {
                 $this->_propDict["lastPasswordChangeDateTime"] = new \DateTime($this->_propDict["lastPasswordChangeDateTime"]);
@@ -835,22 +856,29 @@ class User extends DirectoryObject
      * Gets the licenseAssignmentStates
     * State of license assignments for this user. Read-only. Returned only on $select.
      *
-     * @return array|null The licenseAssignmentStates
+     * @return LicenseAssignmentState[]|null The licenseAssignmentStates
      */
     public function getLicenseAssignmentStates()
     {
-        if (array_key_exists("licenseAssignmentStates", $this->_propDict)) {
-           return $this->_propDict["licenseAssignmentStates"];
-        } else {
-            return null;
+        if (array_key_exists('licenseAssignmentStates', $this->_propDict) && !is_null($this->_propDict['licenseAssignmentStates'])) {
+            $licenseAssignmentStates = [];
+            if (count($this->_propDict['licenseAssignmentStates']) > 0 && is_a($this->_propDict['licenseAssignmentStates'][0], 'LicenseAssignmentState')) {
+                return $this->_propDict['licenseAssignmentStates'];
+            }
+            foreach ($this->_propDict['licenseAssignmentStates'] as $singleValue) {
+                $licenseAssignmentStates []= new LicenseAssignmentState($singleValue);
+            }
+            $this->_propDict['licenseAssignmentStates'] = $licenseAssignmentStates;
+            return $this->_propDict['licenseAssignmentStates'];
         }
+        return null;
     }
     
     /** 
     * Sets the licenseAssignmentStates
     * State of license assignments for this user. Read-only. Returned only on $select.
     *
-    * @param LicenseAssignmentState $val The licenseAssignmentStates
+    * @param LicenseAssignmentState[] $val The licenseAssignmentStates
     *
     * @return User
     */
@@ -1042,8 +1070,8 @@ class User extends DirectoryObject
     */
     public function getOnPremisesExtensionAttributes()
     {
-        if (array_key_exists("onPremisesExtensionAttributes", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesExtensionAttributes"], "\Microsoft\Graph\Model\OnPremisesExtensionAttributes") || is_null($this->_propDict["onPremisesExtensionAttributes"])) {
+        if (array_key_exists("onPremisesExtensionAttributes", $this->_propDict) && !is_null($this->_propDict["onPremisesExtensionAttributes"])) {
+            if (is_a($this->_propDict["onPremisesExtensionAttributes"], "\Microsoft\Graph\Model\OnPremisesExtensionAttributes")) {
                 return $this->_propDict["onPremisesExtensionAttributes"];
             } else {
                 $this->_propDict["onPremisesExtensionAttributes"] = new OnPremisesExtensionAttributes($this->_propDict["onPremisesExtensionAttributes"]);
@@ -1104,8 +1132,8 @@ class User extends DirectoryObject
     */
     public function getOnPremisesLastSyncDateTime()
     {
-        if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime") || is_null($this->_propDict["onPremisesLastSyncDateTime"])) {
+        if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict) && !is_null($this->_propDict["onPremisesLastSyncDateTime"])) {
+            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["onPremisesLastSyncDateTime"];
             } else {
                 $this->_propDict["onPremisesLastSyncDateTime"] = new \DateTime($this->_propDict["onPremisesLastSyncDateTime"]);
@@ -1134,22 +1162,29 @@ class User extends DirectoryObject
      * Gets the onPremisesProvisioningErrors
     * Errors when using Microsoft synchronization product during provisioning. Returned only on $select. Supports $filter (eq, NOT, ge, le).
      *
-     * @return array|null The onPremisesProvisioningErrors
+     * @return OnPremisesProvisioningError[]|null The onPremisesProvisioningErrors
      */
     public function getOnPremisesProvisioningErrors()
     {
-        if (array_key_exists("onPremisesProvisioningErrors", $this->_propDict)) {
-           return $this->_propDict["onPremisesProvisioningErrors"];
-        } else {
-            return null;
+        if (array_key_exists('onPremisesProvisioningErrors', $this->_propDict) && !is_null($this->_propDict['onPremisesProvisioningErrors'])) {
+            $onPremisesProvisioningErrors = [];
+            if (count($this->_propDict['onPremisesProvisioningErrors']) > 0 && is_a($this->_propDict['onPremisesProvisioningErrors'][0], 'OnPremisesProvisioningError')) {
+                return $this->_propDict['onPremisesProvisioningErrors'];
+            }
+            foreach ($this->_propDict['onPremisesProvisioningErrors'] as $singleValue) {
+                $onPremisesProvisioningErrors []= new OnPremisesProvisioningError($singleValue);
+            }
+            $this->_propDict['onPremisesProvisioningErrors'] = $onPremisesProvisioningErrors;
+            return $this->_propDict['onPremisesProvisioningErrors'];
         }
+        return null;
     }
     
     /** 
     * Sets the onPremisesProvisioningErrors
     * Errors when using Microsoft synchronization product during provisioning. Returned only on $select. Supports $filter (eq, NOT, ge, le).
     *
-    * @param OnPremisesProvisioningError $val The onPremisesProvisioningErrors
+    * @param OnPremisesProvisioningError[] $val The onPremisesProvisioningErrors
     *
     * @return User
     */
@@ -1341,8 +1376,8 @@ class User extends DirectoryObject
     */
     public function getPasswordProfile()
     {
-        if (array_key_exists("passwordProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordProfile"], "\Microsoft\Graph\Model\PasswordProfile") || is_null($this->_propDict["passwordProfile"])) {
+        if (array_key_exists("passwordProfile", $this->_propDict) && !is_null($this->_propDict["passwordProfile"])) {
+            if (is_a($this->_propDict["passwordProfile"], "\Microsoft\Graph\Model\PasswordProfile")) {
                 return $this->_propDict["passwordProfile"];
             } else {
                 $this->_propDict["passwordProfile"] = new PasswordProfile($this->_propDict["passwordProfile"]);
@@ -1429,22 +1464,29 @@ class User extends DirectoryObject
      * Gets the provisionedPlans
     * The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, NOT, ge, le).
      *
-     * @return array|null The provisionedPlans
+     * @return ProvisionedPlan[]|null The provisionedPlans
      */
     public function getProvisionedPlans()
     {
-        if (array_key_exists("provisionedPlans", $this->_propDict)) {
-           return $this->_propDict["provisionedPlans"];
-        } else {
-            return null;
+        if (array_key_exists('provisionedPlans', $this->_propDict) && !is_null($this->_propDict['provisionedPlans'])) {
+            $provisionedPlans = [];
+            if (count($this->_propDict['provisionedPlans']) > 0 && is_a($this->_propDict['provisionedPlans'][0], 'ProvisionedPlan')) {
+                return $this->_propDict['provisionedPlans'];
+            }
+            foreach ($this->_propDict['provisionedPlans'] as $singleValue) {
+                $provisionedPlans []= new ProvisionedPlan($singleValue);
+            }
+            $this->_propDict['provisionedPlans'] = $provisionedPlans;
+            return $this->_propDict['provisionedPlans'];
         }
+        return null;
     }
     
     /** 
     * Sets the provisionedPlans
     * The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, NOT, ge, le).
     *
-    * @param ProvisionedPlan $val The provisionedPlans
+    * @param ProvisionedPlan[] $val The provisionedPlans
     *
     * @return User
     */
@@ -1520,8 +1562,8 @@ class User extends DirectoryObject
     */
     public function getSignInSessionsValidFromDateTime()
     {
-        if (array_key_exists("signInSessionsValidFromDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["signInSessionsValidFromDateTime"], "\DateTime") || is_null($this->_propDict["signInSessionsValidFromDateTime"])) {
+        if (array_key_exists("signInSessionsValidFromDateTime", $this->_propDict) && !is_null($this->_propDict["signInSessionsValidFromDateTime"])) {
+            if (is_a($this->_propDict["signInSessionsValidFromDateTime"], "\DateTime")) {
                 return $this->_propDict["signInSessionsValidFromDateTime"];
             } else {
                 $this->_propDict["signInSessionsValidFromDateTime"] = new \DateTime($this->_propDict["signInSessionsValidFromDateTime"]);
@@ -1727,8 +1769,8 @@ class User extends DirectoryObject
     */
     public function getMailboxSettings()
     {
-        if (array_key_exists("mailboxSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["mailboxSettings"], "\Microsoft\Graph\Model\MailboxSettings") || is_null($this->_propDict["mailboxSettings"])) {
+        if (array_key_exists("mailboxSettings", $this->_propDict) && !is_null($this->_propDict["mailboxSettings"])) {
+            if (is_a($this->_propDict["mailboxSettings"], "\Microsoft\Graph\Model\MailboxSettings")) {
                 return $this->_propDict["mailboxSettings"];
             } else {
                 $this->_propDict["mailboxSettings"] = new MailboxSettings($this->_propDict["mailboxSettings"]);
@@ -1818,8 +1860,8 @@ class User extends DirectoryObject
     */
     public function getBirthday()
     {
-        if (array_key_exists("birthday", $this->_propDict)) {
-            if (is_a($this->_propDict["birthday"], "\DateTime") || is_null($this->_propDict["birthday"])) {
+        if (array_key_exists("birthday", $this->_propDict) && !is_null($this->_propDict["birthday"])) {
+            if (is_a($this->_propDict["birthday"], "\DateTime")) {
                 return $this->_propDict["birthday"];
             } else {
                 $this->_propDict["birthday"] = new \DateTime($this->_propDict["birthday"]);
@@ -1851,8 +1893,8 @@ class User extends DirectoryObject
     */
     public function getHireDate()
     {
-        if (array_key_exists("hireDate", $this->_propDict)) {
-            if (is_a($this->_propDict["hireDate"], "\DateTime") || is_null($this->_propDict["hireDate"])) {
+        if (array_key_exists("hireDate", $this->_propDict) && !is_null($this->_propDict["hireDate"])) {
+            if (is_a($this->_propDict["hireDate"], "\DateTime")) {
                 return $this->_propDict["hireDate"];
             } else {
                 $this->_propDict["hireDate"] = new \DateTime($this->_propDict["hireDate"]);
@@ -2084,22 +2126,29 @@ class User extends DirectoryObject
      * Gets the appRoleAssignments
     * Represents the app roles a user has been granted for an application. Supports $expand.
      *
-     * @return array|null The appRoleAssignments
+     * @return AppRoleAssignment[]|null The appRoleAssignments
      */
     public function getAppRoleAssignments()
     {
-        if (array_key_exists("appRoleAssignments", $this->_propDict)) {
-           return $this->_propDict["appRoleAssignments"];
-        } else {
-            return null;
+        if (array_key_exists('appRoleAssignments', $this->_propDict) && !is_null($this->_propDict['appRoleAssignments'])) {
+            $appRoleAssignments = [];
+            if (count($this->_propDict['appRoleAssignments']) > 0 && is_a($this->_propDict['appRoleAssignments'][0], 'AppRoleAssignment')) {
+                return $this->_propDict['appRoleAssignments'];
+            }
+            foreach ($this->_propDict['appRoleAssignments'] as $singleValue) {
+                $appRoleAssignments []= new AppRoleAssignment($singleValue);
+            }
+            $this->_propDict['appRoleAssignments'] = $appRoleAssignments;
+            return $this->_propDict['appRoleAssignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the appRoleAssignments
     * Represents the app roles a user has been granted for an application. Supports $expand.
     *
-    * @param AppRoleAssignment $val The appRoleAssignments
+    * @param AppRoleAssignment[] $val The appRoleAssignments
     *
     * @return User
     */
@@ -2114,22 +2163,29 @@ class User extends DirectoryObject
      * Gets the createdObjects
     * Directory objects that were created by the user. Read-only. Nullable.
      *
-     * @return array|null The createdObjects
+     * @return DirectoryObject[]|null The createdObjects
      */
     public function getCreatedObjects()
     {
-        if (array_key_exists("createdObjects", $this->_propDict)) {
-           return $this->_propDict["createdObjects"];
-        } else {
-            return null;
+        if (array_key_exists('createdObjects', $this->_propDict) && !is_null($this->_propDict['createdObjects'])) {
+            $createdObjects = [];
+            if (count($this->_propDict['createdObjects']) > 0 && is_a($this->_propDict['createdObjects'][0], 'DirectoryObject')) {
+                return $this->_propDict['createdObjects'];
+            }
+            foreach ($this->_propDict['createdObjects'] as $singleValue) {
+                $createdObjects []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['createdObjects'] = $createdObjects;
+            return $this->_propDict['createdObjects'];
         }
+        return null;
     }
     
     /** 
     * Sets the createdObjects
     * Directory objects that were created by the user. Read-only. Nullable.
     *
-    * @param DirectoryObject $val The createdObjects
+    * @param DirectoryObject[] $val The createdObjects
     *
     * @return User
     */
@@ -2144,22 +2200,29 @@ class User extends DirectoryObject
      * Gets the directReports
     * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The directReports
+     * @return DirectoryObject[]|null The directReports
      */
     public function getDirectReports()
     {
-        if (array_key_exists("directReports", $this->_propDict)) {
-           return $this->_propDict["directReports"];
-        } else {
-            return null;
+        if (array_key_exists('directReports', $this->_propDict) && !is_null($this->_propDict['directReports'])) {
+            $directReports = [];
+            if (count($this->_propDict['directReports']) > 0 && is_a($this->_propDict['directReports'][0], 'DirectoryObject')) {
+                return $this->_propDict['directReports'];
+            }
+            foreach ($this->_propDict['directReports'] as $singleValue) {
+                $directReports []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['directReports'] = $directReports;
+            return $this->_propDict['directReports'];
         }
+        return null;
     }
     
     /** 
     * Sets the directReports
     * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The directReports
+    * @param DirectoryObject[] $val The directReports
     *
     * @return User
     */
@@ -2174,22 +2237,29 @@ class User extends DirectoryObject
      * Gets the licenseDetails
     * A collection of this user's license details. Read-only.
      *
-     * @return array|null The licenseDetails
+     * @return LicenseDetails[]|null The licenseDetails
      */
     public function getLicenseDetails()
     {
-        if (array_key_exists("licenseDetails", $this->_propDict)) {
-           return $this->_propDict["licenseDetails"];
-        } else {
-            return null;
+        if (array_key_exists('licenseDetails', $this->_propDict) && !is_null($this->_propDict['licenseDetails'])) {
+            $licenseDetails = [];
+            if (count($this->_propDict['licenseDetails']) > 0 && is_a($this->_propDict['licenseDetails'][0], 'LicenseDetails')) {
+                return $this->_propDict['licenseDetails'];
+            }
+            foreach ($this->_propDict['licenseDetails'] as $singleValue) {
+                $licenseDetails []= new LicenseDetails($singleValue);
+            }
+            $this->_propDict['licenseDetails'] = $licenseDetails;
+            return $this->_propDict['licenseDetails'];
         }
+        return null;
     }
     
     /** 
     * Sets the licenseDetails
     * A collection of this user's license details. Read-only.
     *
-    * @param LicenseDetails $val The licenseDetails
+    * @param LicenseDetails[] $val The licenseDetails
     *
     * @return User
     */
@@ -2207,8 +2277,8 @@ class User extends DirectoryObject
     */
     public function getManager()
     {
-        if (array_key_exists("manager", $this->_propDict)) {
-            if (is_a($this->_propDict["manager"], "\Microsoft\Graph\Model\DirectoryObject") || is_null($this->_propDict["manager"])) {
+        if (array_key_exists("manager", $this->_propDict) && !is_null($this->_propDict["manager"])) {
+            if (is_a($this->_propDict["manager"], "\Microsoft\Graph\Model\DirectoryObject")) {
                 return $this->_propDict["manager"];
             } else {
                 $this->_propDict["manager"] = new DirectoryObject($this->_propDict["manager"]);
@@ -2237,22 +2307,29 @@ class User extends DirectoryObject
      * Gets the memberOf
     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The memberOf
+     * @return DirectoryObject[]|null The memberOf
      */
     public function getMemberOf()
     {
-        if (array_key_exists("memberOf", $this->_propDict)) {
-           return $this->_propDict["memberOf"];
-        } else {
-            return null;
+        if (array_key_exists('memberOf', $this->_propDict) && !is_null($this->_propDict['memberOf'])) {
+            $memberOf = [];
+            if (count($this->_propDict['memberOf']) > 0 && is_a($this->_propDict['memberOf'][0], 'DirectoryObject')) {
+                return $this->_propDict['memberOf'];
+            }
+            foreach ($this->_propDict['memberOf'] as $singleValue) {
+                $memberOf []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['memberOf'] = $memberOf;
+            return $this->_propDict['memberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the memberOf
     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The memberOf
+    * @param DirectoryObject[] $val The memberOf
     *
     * @return User
     */
@@ -2266,21 +2343,28 @@ class User extends DirectoryObject
      /** 
      * Gets the oauth2PermissionGrants
      *
-     * @return array|null The oauth2PermissionGrants
+     * @return OAuth2PermissionGrant[]|null The oauth2PermissionGrants
      */
     public function getOauth2PermissionGrants()
     {
-        if (array_key_exists("oauth2PermissionGrants", $this->_propDict)) {
-           return $this->_propDict["oauth2PermissionGrants"];
-        } else {
-            return null;
+        if (array_key_exists('oauth2PermissionGrants', $this->_propDict) && !is_null($this->_propDict['oauth2PermissionGrants'])) {
+            $oauth2PermissionGrants = [];
+            if (count($this->_propDict['oauth2PermissionGrants']) > 0 && is_a($this->_propDict['oauth2PermissionGrants'][0], 'OAuth2PermissionGrant')) {
+                return $this->_propDict['oauth2PermissionGrants'];
+            }
+            foreach ($this->_propDict['oauth2PermissionGrants'] as $singleValue) {
+                $oauth2PermissionGrants []= new OAuth2PermissionGrant($singleValue);
+            }
+            $this->_propDict['oauth2PermissionGrants'] = $oauth2PermissionGrants;
+            return $this->_propDict['oauth2PermissionGrants'];
         }
+        return null;
     }
     
     /** 
     * Sets the oauth2PermissionGrants
     *
-    * @param OAuth2PermissionGrant $val The oauth2PermissionGrants
+    * @param OAuth2PermissionGrant[] $val The oauth2PermissionGrants
     *
     * @return User
     */
@@ -2295,22 +2379,29 @@ class User extends DirectoryObject
      * Gets the ownedDevices
     * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The ownedDevices
+     * @return DirectoryObject[]|null The ownedDevices
      */
     public function getOwnedDevices()
     {
-        if (array_key_exists("ownedDevices", $this->_propDict)) {
-           return $this->_propDict["ownedDevices"];
-        } else {
-            return null;
+        if (array_key_exists('ownedDevices', $this->_propDict) && !is_null($this->_propDict['ownedDevices'])) {
+            $ownedDevices = [];
+            if (count($this->_propDict['ownedDevices']) > 0 && is_a($this->_propDict['ownedDevices'][0], 'DirectoryObject')) {
+                return $this->_propDict['ownedDevices'];
+            }
+            foreach ($this->_propDict['ownedDevices'] as $singleValue) {
+                $ownedDevices []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['ownedDevices'] = $ownedDevices;
+            return $this->_propDict['ownedDevices'];
         }
+        return null;
     }
     
     /** 
     * Sets the ownedDevices
     * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The ownedDevices
+    * @param DirectoryObject[] $val The ownedDevices
     *
     * @return User
     */
@@ -2325,22 +2416,29 @@ class User extends DirectoryObject
      * Gets the ownedObjects
     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The ownedObjects
+     * @return DirectoryObject[]|null The ownedObjects
      */
     public function getOwnedObjects()
     {
-        if (array_key_exists("ownedObjects", $this->_propDict)) {
-           return $this->_propDict["ownedObjects"];
-        } else {
-            return null;
+        if (array_key_exists('ownedObjects', $this->_propDict) && !is_null($this->_propDict['ownedObjects'])) {
+            $ownedObjects = [];
+            if (count($this->_propDict['ownedObjects']) > 0 && is_a($this->_propDict['ownedObjects'][0], 'DirectoryObject')) {
+                return $this->_propDict['ownedObjects'];
+            }
+            foreach ($this->_propDict['ownedObjects'] as $singleValue) {
+                $ownedObjects []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['ownedObjects'] = $ownedObjects;
+            return $this->_propDict['ownedObjects'];
         }
+        return null;
     }
     
     /** 
     * Sets the ownedObjects
     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The ownedObjects
+    * @param DirectoryObject[] $val The ownedObjects
     *
     * @return User
     */
@@ -2355,22 +2453,29 @@ class User extends DirectoryObject
      * Gets the registeredDevices
     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The registeredDevices
+     * @return DirectoryObject[]|null The registeredDevices
      */
     public function getRegisteredDevices()
     {
-        if (array_key_exists("registeredDevices", $this->_propDict)) {
-           return $this->_propDict["registeredDevices"];
-        } else {
-            return null;
+        if (array_key_exists('registeredDevices', $this->_propDict) && !is_null($this->_propDict['registeredDevices'])) {
+            $registeredDevices = [];
+            if (count($this->_propDict['registeredDevices']) > 0 && is_a($this->_propDict['registeredDevices'][0], 'DirectoryObject')) {
+                return $this->_propDict['registeredDevices'];
+            }
+            foreach ($this->_propDict['registeredDevices'] as $singleValue) {
+                $registeredDevices []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['registeredDevices'] = $registeredDevices;
+            return $this->_propDict['registeredDevices'];
         }
+        return null;
     }
     
     /** 
     * Sets the registeredDevices
     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The registeredDevices
+    * @param DirectoryObject[] $val The registeredDevices
     *
     * @return User
     */
@@ -2385,22 +2490,29 @@ class User extends DirectoryObject
      * Gets the scopedRoleMemberOf
     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
      *
-     * @return array|null The scopedRoleMemberOf
+     * @return ScopedRoleMembership[]|null The scopedRoleMemberOf
      */
     public function getScopedRoleMemberOf()
     {
-        if (array_key_exists("scopedRoleMemberOf", $this->_propDict)) {
-           return $this->_propDict["scopedRoleMemberOf"];
-        } else {
-            return null;
+        if (array_key_exists('scopedRoleMemberOf', $this->_propDict) && !is_null($this->_propDict['scopedRoleMemberOf'])) {
+            $scopedRoleMemberOf = [];
+            if (count($this->_propDict['scopedRoleMemberOf']) > 0 && is_a($this->_propDict['scopedRoleMemberOf'][0], 'ScopedRoleMembership')) {
+                return $this->_propDict['scopedRoleMemberOf'];
+            }
+            foreach ($this->_propDict['scopedRoleMemberOf'] as $singleValue) {
+                $scopedRoleMemberOf []= new ScopedRoleMembership($singleValue);
+            }
+            $this->_propDict['scopedRoleMemberOf'] = $scopedRoleMemberOf;
+            return $this->_propDict['scopedRoleMemberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the scopedRoleMemberOf
     * The scoped-role administrative unit memberships for this user. Read-only. Nullable.
     *
-    * @param ScopedRoleMembership $val The scopedRoleMemberOf
+    * @param ScopedRoleMembership[] $val The scopedRoleMemberOf
     *
     * @return User
     */
@@ -2414,21 +2526,28 @@ class User extends DirectoryObject
      /** 
      * Gets the transitiveMemberOf
      *
-     * @return array|null The transitiveMemberOf
+     * @return DirectoryObject[]|null The transitiveMemberOf
      */
     public function getTransitiveMemberOf()
     {
-        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
-           return $this->_propDict["transitiveMemberOf"];
-        } else {
-            return null;
+        if (array_key_exists('transitiveMemberOf', $this->_propDict) && !is_null($this->_propDict['transitiveMemberOf'])) {
+            $transitiveMemberOf = [];
+            if (count($this->_propDict['transitiveMemberOf']) > 0 && is_a($this->_propDict['transitiveMemberOf'][0], 'DirectoryObject')) {
+                return $this->_propDict['transitiveMemberOf'];
+            }
+            foreach ($this->_propDict['transitiveMemberOf'] as $singleValue) {
+                $transitiveMemberOf []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['transitiveMemberOf'] = $transitiveMemberOf;
+            return $this->_propDict['transitiveMemberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the transitiveMemberOf
     *
-    * @param DirectoryObject $val The transitiveMemberOf
+    * @param DirectoryObject[] $val The transitiveMemberOf
     *
     * @return User
     */
@@ -2446,8 +2565,8 @@ class User extends DirectoryObject
     */
     public function getCalendar()
     {
-        if (array_key_exists("calendar", $this->_propDict)) {
-            if (is_a($this->_propDict["calendar"], "\Microsoft\Graph\Model\Calendar") || is_null($this->_propDict["calendar"])) {
+        if (array_key_exists("calendar", $this->_propDict) && !is_null($this->_propDict["calendar"])) {
+            if (is_a($this->_propDict["calendar"], "\Microsoft\Graph\Model\Calendar")) {
                 return $this->_propDict["calendar"];
             } else {
                 $this->_propDict["calendar"] = new Calendar($this->_propDict["calendar"]);
@@ -2476,22 +2595,29 @@ class User extends DirectoryObject
      * Gets the calendarGroups
     * The user's calendar groups. Read-only. Nullable.
      *
-     * @return array|null The calendarGroups
+     * @return CalendarGroup[]|null The calendarGroups
      */
     public function getCalendarGroups()
     {
-        if (array_key_exists("calendarGroups", $this->_propDict)) {
-           return $this->_propDict["calendarGroups"];
-        } else {
-            return null;
+        if (array_key_exists('calendarGroups', $this->_propDict) && !is_null($this->_propDict['calendarGroups'])) {
+            $calendarGroups = [];
+            if (count($this->_propDict['calendarGroups']) > 0 && is_a($this->_propDict['calendarGroups'][0], 'CalendarGroup')) {
+                return $this->_propDict['calendarGroups'];
+            }
+            foreach ($this->_propDict['calendarGroups'] as $singleValue) {
+                $calendarGroups []= new CalendarGroup($singleValue);
+            }
+            $this->_propDict['calendarGroups'] = $calendarGroups;
+            return $this->_propDict['calendarGroups'];
         }
+        return null;
     }
     
     /** 
     * Sets the calendarGroups
     * The user's calendar groups. Read-only. Nullable.
     *
-    * @param CalendarGroup $val The calendarGroups
+    * @param CalendarGroup[] $val The calendarGroups
     *
     * @return User
     */
@@ -2506,22 +2632,29 @@ class User extends DirectoryObject
      * Gets the calendars
     * The user's calendars. Read-only. Nullable.
      *
-     * @return array|null The calendars
+     * @return Calendar[]|null The calendars
      */
     public function getCalendars()
     {
-        if (array_key_exists("calendars", $this->_propDict)) {
-           return $this->_propDict["calendars"];
-        } else {
-            return null;
+        if (array_key_exists('calendars', $this->_propDict) && !is_null($this->_propDict['calendars'])) {
+            $calendars = [];
+            if (count($this->_propDict['calendars']) > 0 && is_a($this->_propDict['calendars'][0], 'Calendar')) {
+                return $this->_propDict['calendars'];
+            }
+            foreach ($this->_propDict['calendars'] as $singleValue) {
+                $calendars []= new Calendar($singleValue);
+            }
+            $this->_propDict['calendars'] = $calendars;
+            return $this->_propDict['calendars'];
         }
+        return null;
     }
     
     /** 
     * Sets the calendars
     * The user's calendars. Read-only. Nullable.
     *
-    * @param Calendar $val The calendars
+    * @param Calendar[] $val The calendars
     *
     * @return User
     */
@@ -2536,22 +2669,29 @@ class User extends DirectoryObject
      * Gets the calendarView
     * The calendar view for the calendar. Read-only. Nullable.
      *
-     * @return array|null The calendarView
+     * @return Event[]|null The calendarView
      */
     public function getCalendarView()
     {
-        if (array_key_exists("calendarView", $this->_propDict)) {
-           return $this->_propDict["calendarView"];
-        } else {
-            return null;
+        if (array_key_exists('calendarView', $this->_propDict) && !is_null($this->_propDict['calendarView'])) {
+            $calendarView = [];
+            if (count($this->_propDict['calendarView']) > 0 && is_a($this->_propDict['calendarView'][0], 'Event')) {
+                return $this->_propDict['calendarView'];
+            }
+            foreach ($this->_propDict['calendarView'] as $singleValue) {
+                $calendarView []= new Event($singleValue);
+            }
+            $this->_propDict['calendarView'] = $calendarView;
+            return $this->_propDict['calendarView'];
         }
+        return null;
     }
     
     /** 
     * Sets the calendarView
     * The calendar view for the calendar. Read-only. Nullable.
     *
-    * @param Event $val The calendarView
+    * @param Event[] $val The calendarView
     *
     * @return User
     */
@@ -2566,22 +2706,29 @@ class User extends DirectoryObject
      * Gets the contactFolders
     * The user's contacts folders. Read-only. Nullable.
      *
-     * @return array|null The contactFolders
+     * @return ContactFolder[]|null The contactFolders
      */
     public function getContactFolders()
     {
-        if (array_key_exists("contactFolders", $this->_propDict)) {
-           return $this->_propDict["contactFolders"];
-        } else {
-            return null;
+        if (array_key_exists('contactFolders', $this->_propDict) && !is_null($this->_propDict['contactFolders'])) {
+            $contactFolders = [];
+            if (count($this->_propDict['contactFolders']) > 0 && is_a($this->_propDict['contactFolders'][0], 'ContactFolder')) {
+                return $this->_propDict['contactFolders'];
+            }
+            foreach ($this->_propDict['contactFolders'] as $singleValue) {
+                $contactFolders []= new ContactFolder($singleValue);
+            }
+            $this->_propDict['contactFolders'] = $contactFolders;
+            return $this->_propDict['contactFolders'];
         }
+        return null;
     }
     
     /** 
     * Sets the contactFolders
     * The user's contacts folders. Read-only. Nullable.
     *
-    * @param ContactFolder $val The contactFolders
+    * @param ContactFolder[] $val The contactFolders
     *
     * @return User
     */
@@ -2596,22 +2743,29 @@ class User extends DirectoryObject
      * Gets the contacts
     * The user's contacts. Read-only. Nullable.
      *
-     * @return array|null The contacts
+     * @return Contact[]|null The contacts
      */
     public function getContacts()
     {
-        if (array_key_exists("contacts", $this->_propDict)) {
-           return $this->_propDict["contacts"];
-        } else {
-            return null;
+        if (array_key_exists('contacts', $this->_propDict) && !is_null($this->_propDict['contacts'])) {
+            $contacts = [];
+            if (count($this->_propDict['contacts']) > 0 && is_a($this->_propDict['contacts'][0], 'Contact')) {
+                return $this->_propDict['contacts'];
+            }
+            foreach ($this->_propDict['contacts'] as $singleValue) {
+                $contacts []= new Contact($singleValue);
+            }
+            $this->_propDict['contacts'] = $contacts;
+            return $this->_propDict['contacts'];
         }
+        return null;
     }
     
     /** 
     * Sets the contacts
     * The user's contacts. Read-only. Nullable.
     *
-    * @param Contact $val The contacts
+    * @param Contact[] $val The contacts
     *
     * @return User
     */
@@ -2626,22 +2780,29 @@ class User extends DirectoryObject
      * Gets the events
     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      *
-     * @return array|null The events
+     * @return Event[]|null The events
      */
     public function getEvents()
     {
-        if (array_key_exists("events", $this->_propDict)) {
-           return $this->_propDict["events"];
-        } else {
-            return null;
+        if (array_key_exists('events', $this->_propDict) && !is_null($this->_propDict['events'])) {
+            $events = [];
+            if (count($this->_propDict['events']) > 0 && is_a($this->_propDict['events'][0], 'Event')) {
+                return $this->_propDict['events'];
+            }
+            foreach ($this->_propDict['events'] as $singleValue) {
+                $events []= new Event($singleValue);
+            }
+            $this->_propDict['events'] = $events;
+            return $this->_propDict['events'];
         }
+        return null;
     }
     
     /** 
     * Sets the events
     * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
     *
-    * @param Event $val The events
+    * @param Event[] $val The events
     *
     * @return User
     */
@@ -2659,8 +2820,8 @@ class User extends DirectoryObject
     */
     public function getInferenceClassification()
     {
-        if (array_key_exists("inferenceClassification", $this->_propDict)) {
-            if (is_a($this->_propDict["inferenceClassification"], "\Microsoft\Graph\Model\InferenceClassification") || is_null($this->_propDict["inferenceClassification"])) {
+        if (array_key_exists("inferenceClassification", $this->_propDict) && !is_null($this->_propDict["inferenceClassification"])) {
+            if (is_a($this->_propDict["inferenceClassification"], "\Microsoft\Graph\Model\InferenceClassification")) {
                 return $this->_propDict["inferenceClassification"];
             } else {
                 $this->_propDict["inferenceClassification"] = new InferenceClassification($this->_propDict["inferenceClassification"]);
@@ -2689,22 +2850,29 @@ class User extends DirectoryObject
      * Gets the mailFolders
     * The user's mail folders. Read-only. Nullable.
      *
-     * @return array|null The mailFolders
+     * @return MailFolder[]|null The mailFolders
      */
     public function getMailFolders()
     {
-        if (array_key_exists("mailFolders", $this->_propDict)) {
-           return $this->_propDict["mailFolders"];
-        } else {
-            return null;
+        if (array_key_exists('mailFolders', $this->_propDict) && !is_null($this->_propDict['mailFolders'])) {
+            $mailFolders = [];
+            if (count($this->_propDict['mailFolders']) > 0 && is_a($this->_propDict['mailFolders'][0], 'MailFolder')) {
+                return $this->_propDict['mailFolders'];
+            }
+            foreach ($this->_propDict['mailFolders'] as $singleValue) {
+                $mailFolders []= new MailFolder($singleValue);
+            }
+            $this->_propDict['mailFolders'] = $mailFolders;
+            return $this->_propDict['mailFolders'];
         }
+        return null;
     }
     
     /** 
     * Sets the mailFolders
     * The user's mail folders. Read-only. Nullable.
     *
-    * @param MailFolder $val The mailFolders
+    * @param MailFolder[] $val The mailFolders
     *
     * @return User
     */
@@ -2719,22 +2887,29 @@ class User extends DirectoryObject
      * Gets the messages
     * The messages in a mailbox or folder. Read-only. Nullable.
      *
-     * @return array|null The messages
+     * @return Message[]|null The messages
      */
     public function getMessages()
     {
-        if (array_key_exists("messages", $this->_propDict)) {
-           return $this->_propDict["messages"];
-        } else {
-            return null;
+        if (array_key_exists('messages', $this->_propDict) && !is_null($this->_propDict['messages'])) {
+            $messages = [];
+            if (count($this->_propDict['messages']) > 0 && is_a($this->_propDict['messages'][0], 'Message')) {
+                return $this->_propDict['messages'];
+            }
+            foreach ($this->_propDict['messages'] as $singleValue) {
+                $messages []= new Message($singleValue);
+            }
+            $this->_propDict['messages'] = $messages;
+            return $this->_propDict['messages'];
         }
+        return null;
     }
     
     /** 
     * Sets the messages
     * The messages in a mailbox or folder. Read-only. Nullable.
     *
-    * @param Message $val The messages
+    * @param Message[] $val The messages
     *
     * @return User
     */
@@ -2752,8 +2927,8 @@ class User extends DirectoryObject
     */
     public function getOutlook()
     {
-        if (array_key_exists("outlook", $this->_propDict)) {
-            if (is_a($this->_propDict["outlook"], "\Microsoft\Graph\Model\OutlookUser") || is_null($this->_propDict["outlook"])) {
+        if (array_key_exists("outlook", $this->_propDict) && !is_null($this->_propDict["outlook"])) {
+            if (is_a($this->_propDict["outlook"], "\Microsoft\Graph\Model\OutlookUser")) {
                 return $this->_propDict["outlook"];
             } else {
                 $this->_propDict["outlook"] = new OutlookUser($this->_propDict["outlook"]);
@@ -2782,22 +2957,29 @@ class User extends DirectoryObject
      * Gets the people
     * People that are relevant to the user. Read-only. Nullable.
      *
-     * @return array|null The people
+     * @return Person[]|null The people
      */
     public function getPeople()
     {
-        if (array_key_exists("people", $this->_propDict)) {
-           return $this->_propDict["people"];
-        } else {
-            return null;
+        if (array_key_exists('people', $this->_propDict) && !is_null($this->_propDict['people'])) {
+            $people = [];
+            if (count($this->_propDict['people']) > 0 && is_a($this->_propDict['people'][0], 'Person')) {
+                return $this->_propDict['people'];
+            }
+            foreach ($this->_propDict['people'] as $singleValue) {
+                $people []= new Person($singleValue);
+            }
+            $this->_propDict['people'] = $people;
+            return $this->_propDict['people'];
         }
+        return null;
     }
     
     /** 
     * Sets the people
     * People that are relevant to the user. Read-only. Nullable.
     *
-    * @param Person $val The people
+    * @param Person[] $val The people
     *
     * @return User
     */
@@ -2815,8 +2997,8 @@ class User extends DirectoryObject
     */
     public function getPhoto()
     {
-        if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto") || is_null($this->_propDict["photo"])) {
+        if (array_key_exists("photo", $this->_propDict) && !is_null($this->_propDict["photo"])) {
+            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto")) {
                 return $this->_propDict["photo"];
             } else {
                 $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
@@ -2845,22 +3027,29 @@ class User extends DirectoryObject
      * Gets the photos
     * Read-only. Nullable.
      *
-     * @return array|null The photos
+     * @return ProfilePhoto[]|null The photos
      */
     public function getPhotos()
     {
-        if (array_key_exists("photos", $this->_propDict)) {
-           return $this->_propDict["photos"];
-        } else {
-            return null;
+        if (array_key_exists('photos', $this->_propDict) && !is_null($this->_propDict['photos'])) {
+            $photos = [];
+            if (count($this->_propDict['photos']) > 0 && is_a($this->_propDict['photos'][0], 'ProfilePhoto')) {
+                return $this->_propDict['photos'];
+            }
+            foreach ($this->_propDict['photos'] as $singleValue) {
+                $photos []= new ProfilePhoto($singleValue);
+            }
+            $this->_propDict['photos'] = $photos;
+            return $this->_propDict['photos'];
         }
+        return null;
     }
     
     /** 
     * Sets the photos
     * Read-only. Nullable.
     *
-    * @param ProfilePhoto $val The photos
+    * @param ProfilePhoto[] $val The photos
     *
     * @return User
     */
@@ -2878,8 +3067,8 @@ class User extends DirectoryObject
     */
     public function getDrive()
     {
-        if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive") || is_null($this->_propDict["drive"])) {
+        if (array_key_exists("drive", $this->_propDict) && !is_null($this->_propDict["drive"])) {
+            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -2908,22 +3097,29 @@ class User extends DirectoryObject
      * Gets the drives
     * A collection of drives available for this user. Read-only.
      *
-     * @return array|null The drives
+     * @return Drive[]|null The drives
      */
     public function getDrives()
     {
-        if (array_key_exists("drives", $this->_propDict)) {
-           return $this->_propDict["drives"];
-        } else {
-            return null;
+        if (array_key_exists('drives', $this->_propDict) && !is_null($this->_propDict['drives'])) {
+            $drives = [];
+            if (count($this->_propDict['drives']) > 0 && is_a($this->_propDict['drives'][0], 'Drive')) {
+                return $this->_propDict['drives'];
+            }
+            foreach ($this->_propDict['drives'] as $singleValue) {
+                $drives []= new Drive($singleValue);
+            }
+            $this->_propDict['drives'] = $drives;
+            return $this->_propDict['drives'];
         }
+        return null;
     }
     
     /** 
     * Sets the drives
     * A collection of drives available for this user. Read-only.
     *
-    * @param Drive $val The drives
+    * @param Drive[] $val The drives
     *
     * @return User
     */
@@ -2937,21 +3133,28 @@ class User extends DirectoryObject
      /** 
      * Gets the followedSites
      *
-     * @return array|null The followedSites
+     * @return Site[]|null The followedSites
      */
     public function getFollowedSites()
     {
-        if (array_key_exists("followedSites", $this->_propDict)) {
-           return $this->_propDict["followedSites"];
-        } else {
-            return null;
+        if (array_key_exists('followedSites', $this->_propDict) && !is_null($this->_propDict['followedSites'])) {
+            $followedSites = [];
+            if (count($this->_propDict['followedSites']) > 0 && is_a($this->_propDict['followedSites'][0], 'Site')) {
+                return $this->_propDict['followedSites'];
+            }
+            foreach ($this->_propDict['followedSites'] as $singleValue) {
+                $followedSites []= new Site($singleValue);
+            }
+            $this->_propDict['followedSites'] = $followedSites;
+            return $this->_propDict['followedSites'];
         }
+        return null;
     }
     
     /** 
     * Sets the followedSites
     *
-    * @param Site $val The followedSites
+    * @param Site[] $val The followedSites
     *
     * @return User
     */
@@ -2966,22 +3169,29 @@ class User extends DirectoryObject
      * Gets the extensions
     * The collection of open extensions defined for the user. Read-only. Nullable.
      *
-     * @return array|null The extensions
+     * @return Extension[]|null The extensions
      */
     public function getExtensions()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
+        if (array_key_exists('extensions', $this->_propDict) && !is_null($this->_propDict['extensions'])) {
+            $extensions = [];
+            if (count($this->_propDict['extensions']) > 0 && is_a($this->_propDict['extensions'][0], 'Extension')) {
+                return $this->_propDict['extensions'];
+            }
+            foreach ($this->_propDict['extensions'] as $singleValue) {
+                $extensions []= new Extension($singleValue);
+            }
+            $this->_propDict['extensions'] = $extensions;
+            return $this->_propDict['extensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the extensions
     * The collection of open extensions defined for the user. Read-only. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return User
     */
@@ -2996,22 +3206,29 @@ class User extends DirectoryObject
      * Gets the agreementAcceptances
     * The user's terms of use acceptance statuses. Read-only. Nullable.
      *
-     * @return array|null The agreementAcceptances
+     * @return AgreementAcceptance[]|null The agreementAcceptances
      */
     public function getAgreementAcceptances()
     {
-        if (array_key_exists("agreementAcceptances", $this->_propDict)) {
-           return $this->_propDict["agreementAcceptances"];
-        } else {
-            return null;
+        if (array_key_exists('agreementAcceptances', $this->_propDict) && !is_null($this->_propDict['agreementAcceptances'])) {
+            $agreementAcceptances = [];
+            if (count($this->_propDict['agreementAcceptances']) > 0 && is_a($this->_propDict['agreementAcceptances'][0], 'AgreementAcceptance')) {
+                return $this->_propDict['agreementAcceptances'];
+            }
+            foreach ($this->_propDict['agreementAcceptances'] as $singleValue) {
+                $agreementAcceptances []= new AgreementAcceptance($singleValue);
+            }
+            $this->_propDict['agreementAcceptances'] = $agreementAcceptances;
+            return $this->_propDict['agreementAcceptances'];
         }
+        return null;
     }
     
     /** 
     * Sets the agreementAcceptances
     * The user's terms of use acceptance statuses. Read-only. Nullable.
     *
-    * @param AgreementAcceptance $val The agreementAcceptances
+    * @param AgreementAcceptance[] $val The agreementAcceptances
     *
     * @return User
     */
@@ -3026,22 +3243,29 @@ class User extends DirectoryObject
      * Gets the managedDevices
     * The managed devices associated with the user.
      *
-     * @return array|null The managedDevices
+     * @return ManagedDevice[]|null The managedDevices
      */
     public function getManagedDevices()
     {
-        if (array_key_exists("managedDevices", $this->_propDict)) {
-           return $this->_propDict["managedDevices"];
-        } else {
-            return null;
+        if (array_key_exists('managedDevices', $this->_propDict) && !is_null($this->_propDict['managedDevices'])) {
+            $managedDevices = [];
+            if (count($this->_propDict['managedDevices']) > 0 && is_a($this->_propDict['managedDevices'][0], 'ManagedDevice')) {
+                return $this->_propDict['managedDevices'];
+            }
+            foreach ($this->_propDict['managedDevices'] as $singleValue) {
+                $managedDevices []= new ManagedDevice($singleValue);
+            }
+            $this->_propDict['managedDevices'] = $managedDevices;
+            return $this->_propDict['managedDevices'];
         }
+        return null;
     }
     
     /** 
     * Sets the managedDevices
     * The managed devices associated with the user.
     *
-    * @param ManagedDevice $val The managedDevices
+    * @param ManagedDevice[] $val The managedDevices
     *
     * @return User
     */
@@ -3056,22 +3280,29 @@ class User extends DirectoryObject
      * Gets the managedAppRegistrations
     * Zero or more managed app registrations that belong to the user.
      *
-     * @return array|null The managedAppRegistrations
+     * @return ManagedAppRegistration[]|null The managedAppRegistrations
      */
     public function getManagedAppRegistrations()
     {
-        if (array_key_exists("managedAppRegistrations", $this->_propDict)) {
-           return $this->_propDict["managedAppRegistrations"];
-        } else {
-            return null;
+        if (array_key_exists('managedAppRegistrations', $this->_propDict) && !is_null($this->_propDict['managedAppRegistrations'])) {
+            $managedAppRegistrations = [];
+            if (count($this->_propDict['managedAppRegistrations']) > 0 && is_a($this->_propDict['managedAppRegistrations'][0], 'ManagedAppRegistration')) {
+                return $this->_propDict['managedAppRegistrations'];
+            }
+            foreach ($this->_propDict['managedAppRegistrations'] as $singleValue) {
+                $managedAppRegistrations []= new ManagedAppRegistration($singleValue);
+            }
+            $this->_propDict['managedAppRegistrations'] = $managedAppRegistrations;
+            return $this->_propDict['managedAppRegistrations'];
         }
+        return null;
     }
     
     /** 
     * Sets the managedAppRegistrations
     * Zero or more managed app registrations that belong to the user.
     *
-    * @param ManagedAppRegistration $val The managedAppRegistrations
+    * @param ManagedAppRegistration[] $val The managedAppRegistrations
     *
     * @return User
     */
@@ -3086,22 +3317,29 @@ class User extends DirectoryObject
      * Gets the deviceManagementTroubleshootingEvents
     * The list of troubleshooting events for this user.
      *
-     * @return array|null The deviceManagementTroubleshootingEvents
+     * @return DeviceManagementTroubleshootingEvent[]|null The deviceManagementTroubleshootingEvents
      */
     public function getDeviceManagementTroubleshootingEvents()
     {
-        if (array_key_exists("deviceManagementTroubleshootingEvents", $this->_propDict)) {
-           return $this->_propDict["deviceManagementTroubleshootingEvents"];
-        } else {
-            return null;
+        if (array_key_exists('deviceManagementTroubleshootingEvents', $this->_propDict) && !is_null($this->_propDict['deviceManagementTroubleshootingEvents'])) {
+            $deviceManagementTroubleshootingEvents = [];
+            if (count($this->_propDict['deviceManagementTroubleshootingEvents']) > 0 && is_a($this->_propDict['deviceManagementTroubleshootingEvents'][0], 'DeviceManagementTroubleshootingEvent')) {
+                return $this->_propDict['deviceManagementTroubleshootingEvents'];
+            }
+            foreach ($this->_propDict['deviceManagementTroubleshootingEvents'] as $singleValue) {
+                $deviceManagementTroubleshootingEvents []= new DeviceManagementTroubleshootingEvent($singleValue);
+            }
+            $this->_propDict['deviceManagementTroubleshootingEvents'] = $deviceManagementTroubleshootingEvents;
+            return $this->_propDict['deviceManagementTroubleshootingEvents'];
         }
+        return null;
     }
     
     /** 
     * Sets the deviceManagementTroubleshootingEvents
     * The list of troubleshooting events for this user.
     *
-    * @param DeviceManagementTroubleshootingEvent $val The deviceManagementTroubleshootingEvents
+    * @param DeviceManagementTroubleshootingEvent[] $val The deviceManagementTroubleshootingEvents
     *
     * @return User
     */
@@ -3119,8 +3357,8 @@ class User extends DirectoryObject
     */
     public function getPlanner()
     {
-        if (array_key_exists("planner", $this->_propDict)) {
-            if (is_a($this->_propDict["planner"], "\Microsoft\Graph\Model\PlannerUser") || is_null($this->_propDict["planner"])) {
+        if (array_key_exists("planner", $this->_propDict) && !is_null($this->_propDict["planner"])) {
+            if (is_a($this->_propDict["planner"], "\Microsoft\Graph\Model\PlannerUser")) {
                 return $this->_propDict["planner"];
             } else {
                 $this->_propDict["planner"] = new PlannerUser($this->_propDict["planner"]);
@@ -3152,8 +3390,8 @@ class User extends DirectoryObject
     */
     public function getInsights()
     {
-        if (array_key_exists("insights", $this->_propDict)) {
-            if (is_a($this->_propDict["insights"], "\Microsoft\Graph\Model\OfficeGraphInsights") || is_null($this->_propDict["insights"])) {
+        if (array_key_exists("insights", $this->_propDict) && !is_null($this->_propDict["insights"])) {
+            if (is_a($this->_propDict["insights"], "\Microsoft\Graph\Model\OfficeGraphInsights")) {
                 return $this->_propDict["insights"];
             } else {
                 $this->_propDict["insights"] = new OfficeGraphInsights($this->_propDict["insights"]);
@@ -3185,8 +3423,8 @@ class User extends DirectoryObject
     */
     public function getSettings()
     {
-        if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\UserSettings") || is_null($this->_propDict["settings"])) {
+        if (array_key_exists("settings", $this->_propDict) && !is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\UserSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new UserSettings($this->_propDict["settings"]);
@@ -3218,8 +3456,8 @@ class User extends DirectoryObject
     */
     public function getOnenote()
     {
-        if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "\Microsoft\Graph\Model\Onenote") || is_null($this->_propDict["onenote"])) {
+        if (array_key_exists("onenote", $this->_propDict) && !is_null($this->_propDict["onenote"])) {
+            if (is_a($this->_propDict["onenote"], "\Microsoft\Graph\Model\Onenote")) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);
@@ -3248,22 +3486,29 @@ class User extends DirectoryObject
      * Gets the activities
     * The user's activities across devices. Read-only. Nullable.
      *
-     * @return array|null The activities
+     * @return UserActivity[]|null The activities
      */
     public function getActivities()
     {
-        if (array_key_exists("activities", $this->_propDict)) {
-           return $this->_propDict["activities"];
-        } else {
-            return null;
+        if (array_key_exists('activities', $this->_propDict) && !is_null($this->_propDict['activities'])) {
+            $activities = [];
+            if (count($this->_propDict['activities']) > 0 && is_a($this->_propDict['activities'][0], 'UserActivity')) {
+                return $this->_propDict['activities'];
+            }
+            foreach ($this->_propDict['activities'] as $singleValue) {
+                $activities []= new UserActivity($singleValue);
+            }
+            $this->_propDict['activities'] = $activities;
+            return $this->_propDict['activities'];
         }
+        return null;
     }
     
     /** 
     * Sets the activities
     * The user's activities across devices. Read-only. Nullable.
     *
-    * @param UserActivity $val The activities
+    * @param UserActivity[] $val The activities
     *
     * @return User
     */
@@ -3277,21 +3522,28 @@ class User extends DirectoryObject
      /** 
      * Gets the onlineMeetings
      *
-     * @return array|null The onlineMeetings
+     * @return OnlineMeeting[]|null The onlineMeetings
      */
     public function getOnlineMeetings()
     {
-        if (array_key_exists("onlineMeetings", $this->_propDict)) {
-           return $this->_propDict["onlineMeetings"];
-        } else {
-            return null;
+        if (array_key_exists('onlineMeetings', $this->_propDict) && !is_null($this->_propDict['onlineMeetings'])) {
+            $onlineMeetings = [];
+            if (count($this->_propDict['onlineMeetings']) > 0 && is_a($this->_propDict['onlineMeetings'][0], 'OnlineMeeting')) {
+                return $this->_propDict['onlineMeetings'];
+            }
+            foreach ($this->_propDict['onlineMeetings'] as $singleValue) {
+                $onlineMeetings []= new OnlineMeeting($singleValue);
+            }
+            $this->_propDict['onlineMeetings'] = $onlineMeetings;
+            return $this->_propDict['onlineMeetings'];
         }
+        return null;
     }
     
     /** 
     * Sets the onlineMeetings
     *
-    * @param OnlineMeeting $val The onlineMeetings
+    * @param OnlineMeeting[] $val The onlineMeetings
     *
     * @return User
     */
@@ -3308,8 +3560,8 @@ class User extends DirectoryObject
     */
     public function getPresence()
     {
-        if (array_key_exists("presence", $this->_propDict)) {
-            if (is_a($this->_propDict["presence"], "\Microsoft\Graph\Model\Presence") || is_null($this->_propDict["presence"])) {
+        if (array_key_exists("presence", $this->_propDict) && !is_null($this->_propDict["presence"])) {
+            if (is_a($this->_propDict["presence"], "\Microsoft\Graph\Model\Presence")) {
                 return $this->_propDict["presence"];
             } else {
                 $this->_propDict["presence"] = new Presence($this->_propDict["presence"]);
@@ -3339,8 +3591,8 @@ class User extends DirectoryObject
     */
     public function getAuthentication()
     {
-        if (array_key_exists("authentication", $this->_propDict)) {
-            if (is_a($this->_propDict["authentication"], "\Microsoft\Graph\Model\Authentication") || is_null($this->_propDict["authentication"])) {
+        if (array_key_exists("authentication", $this->_propDict) && !is_null($this->_propDict["authentication"])) {
+            if (is_a($this->_propDict["authentication"], "\Microsoft\Graph\Model\Authentication")) {
                 return $this->_propDict["authentication"];
             } else {
                 $this->_propDict["authentication"] = new Authentication($this->_propDict["authentication"]);
@@ -3367,21 +3619,28 @@ class User extends DirectoryObject
      /** 
      * Gets the chats
      *
-     * @return array|null The chats
+     * @return Chat[]|null The chats
      */
     public function getChats()
     {
-        if (array_key_exists("chats", $this->_propDict)) {
-           return $this->_propDict["chats"];
-        } else {
-            return null;
+        if (array_key_exists('chats', $this->_propDict) && !is_null($this->_propDict['chats'])) {
+            $chats = [];
+            if (count($this->_propDict['chats']) > 0 && is_a($this->_propDict['chats'][0], 'Chat')) {
+                return $this->_propDict['chats'];
+            }
+            foreach ($this->_propDict['chats'] as $singleValue) {
+                $chats []= new Chat($singleValue);
+            }
+            $this->_propDict['chats'] = $chats;
+            return $this->_propDict['chats'];
         }
+        return null;
     }
     
     /** 
     * Sets the chats
     *
-    * @param Chat $val The chats
+    * @param Chat[] $val The chats
     *
     * @return User
     */
@@ -3396,22 +3655,29 @@ class User extends DirectoryObject
      * Gets the joinedTeams
     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
      *
-     * @return array|null The joinedTeams
+     * @return Team[]|null The joinedTeams
      */
     public function getJoinedTeams()
     {
-        if (array_key_exists("joinedTeams", $this->_propDict)) {
-           return $this->_propDict["joinedTeams"];
-        } else {
-            return null;
+        if (array_key_exists('joinedTeams', $this->_propDict) && !is_null($this->_propDict['joinedTeams'])) {
+            $joinedTeams = [];
+            if (count($this->_propDict['joinedTeams']) > 0 && is_a($this->_propDict['joinedTeams'][0], 'Team')) {
+                return $this->_propDict['joinedTeams'];
+            }
+            foreach ($this->_propDict['joinedTeams'] as $singleValue) {
+                $joinedTeams []= new Team($singleValue);
+            }
+            $this->_propDict['joinedTeams'] = $joinedTeams;
+            return $this->_propDict['joinedTeams'];
         }
+        return null;
     }
     
     /** 
     * Sets the joinedTeams
     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
     *
-    * @param Team $val The joinedTeams
+    * @param Team[] $val The joinedTeams
     *
     * @return User
     */
@@ -3429,8 +3695,8 @@ class User extends DirectoryObject
     */
     public function getTeamwork()
     {
-        if (array_key_exists("teamwork", $this->_propDict)) {
-            if (is_a($this->_propDict["teamwork"], "\Microsoft\Graph\Model\UserTeamwork") || is_null($this->_propDict["teamwork"])) {
+        if (array_key_exists("teamwork", $this->_propDict) && !is_null($this->_propDict["teamwork"])) {
+            if (is_a($this->_propDict["teamwork"], "\Microsoft\Graph\Model\UserTeamwork")) {
                 return $this->_propDict["teamwork"];
             } else {
                 $this->_propDict["teamwork"] = new UserTeamwork($this->_propDict["teamwork"]);
@@ -3462,8 +3728,8 @@ class User extends DirectoryObject
     */
     public function getTodo()
     {
-        if (array_key_exists("todo", $this->_propDict)) {
-            if (is_a($this->_propDict["todo"], "\Microsoft\Graph\Model\Todo") || is_null($this->_propDict["todo"])) {
+        if (array_key_exists("todo", $this->_propDict) && !is_null($this->_propDict["todo"])) {
+            if (is_a($this->_propDict["todo"], "\Microsoft\Graph\Model\Todo")) {
                 return $this->_propDict["todo"];
             } else {
                 $this->_propDict["todo"] = new Todo($this->_propDict["todo"]);

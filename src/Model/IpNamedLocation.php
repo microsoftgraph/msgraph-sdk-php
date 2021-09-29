@@ -29,22 +29,29 @@ class IpNamedLocation extends NamedLocation
      * Gets the ipRanges
     * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
      *
-     * @return array|null The ipRanges
+     * @return IpRange[]|null The ipRanges
      */
     public function getIpRanges()
     {
-        if (array_key_exists("ipRanges", $this->_propDict)) {
-           return $this->_propDict["ipRanges"];
-        } else {
-            return null;
+        if (array_key_exists('ipRanges', $this->_propDict) && !is_null($this->_propDict['ipRanges'])) {
+            $ipRanges = [];
+            if (count($this->_propDict['ipRanges']) > 0 && is_a($this->_propDict['ipRanges'][0], 'IpRange')) {
+                return $this->_propDict['ipRanges'];
+            }
+            foreach ($this->_propDict['ipRanges'] as $singleValue) {
+                $ipRanges []= new IpRange($singleValue);
+            }
+            $this->_propDict['ipRanges'] = $ipRanges;
+            return $this->_propDict['ipRanges'];
         }
+        return null;
     }
     
     /** 
     * Sets the ipRanges
     * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
     *
-    * @param IpRange $val The ipRanges
+    * @param IpRange[] $val The ipRanges
     *
     * @return IpNamedLocation
     */

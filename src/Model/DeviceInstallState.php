@@ -119,8 +119,8 @@ class DeviceInstallState extends Entity
     */
     public function getInstallState()
     {
-        if (array_key_exists("installState", $this->_propDict)) {
-            if (is_a($this->_propDict["installState"], "\Microsoft\Graph\Model\InstallState") || is_null($this->_propDict["installState"])) {
+        if (array_key_exists("installState", $this->_propDict) && !is_null($this->_propDict["installState"])) {
+            if (is_a($this->_propDict["installState"], "\Microsoft\Graph\Model\InstallState")) {
                 return $this->_propDict["installState"];
             } else {
                 $this->_propDict["installState"] = new InstallState($this->_propDict["installState"]);
@@ -152,8 +152,8 @@ class DeviceInstallState extends Entity
     */
     public function getLastSyncDateTime()
     {
-        if (array_key_exists("lastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime") || is_null($this->_propDict["lastSyncDateTime"])) {
+        if (array_key_exists("lastSyncDateTime", $this->_propDict) && !is_null($this->_propDict["lastSyncDateTime"])) {
+            if (is_a($this->_propDict["lastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSyncDateTime"];
             } else {
                 $this->_propDict["lastSyncDateTime"] = new \DateTime($this->_propDict["lastSyncDateTime"]);

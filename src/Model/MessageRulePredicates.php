@@ -42,7 +42,7 @@ class MessageRulePredicates extends Entity
     * Sets the bodyContains
     * Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
     *
-    * @param string $val The value of the bodyContains
+    * @param string[] $val The value of the bodyContains
     *
     * @return MessageRulePredicates
     */
@@ -70,7 +70,7 @@ class MessageRulePredicates extends Entity
     * Sets the bodyOrSubjectContains
     * Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
     *
-    * @param string $val The value of the bodyOrSubjectContains
+    * @param string[] $val The value of the bodyOrSubjectContains
     *
     * @return MessageRulePredicates
     */
@@ -98,7 +98,7 @@ class MessageRulePredicates extends Entity
     * Sets the categories
     * Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
     *
-    * @param string $val The value of the categories
+    * @param string[] $val The value of the categories
     *
     * @return MessageRulePredicates
     */
@@ -112,18 +112,22 @@ class MessageRulePredicates extends Entity
     * Gets the fromAddresses
     * Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
     *
-    * @return Recipient|null The fromAddresses
+    * @return Recipient[]|null The fromAddresses
     */
     public function getFromAddresses()
     {
-        if (array_key_exists("fromAddresses", $this->_propDict)) {
-            if (is_a($this->_propDict["fromAddresses"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["fromAddresses"])) {
-                return $this->_propDict["fromAddresses"];
-            } else {
-                $this->_propDict["fromAddresses"] = new Recipient($this->_propDict["fromAddresses"]);
-                return $this->_propDict["fromAddresses"];
+        if (array_key_exists("fromAddresses", $this->_propDict) && !is_null($this->_propDict["fromAddresses"])) {
+       
+            if (count($this->_propDict['fromAddresses']) > 0 && is_a($this->_propDict['fromAddresses'][0], 'Recipient')) {
+               return $this->_propDict['fromAddresses'];
             }
-        }
+            $fromAddresses = [];
+            foreach ($this->_propDict['fromAddresses'] as $singleValue) {
+               $fromAddresses []= new Recipient($singleValue);
+            }
+            $this->_propDict['fromAddresses'] = $fromAddresses;
+            return $this->_propDict['fromAddresses'];
+            }
         return null;
     }
 
@@ -131,7 +135,7 @@ class MessageRulePredicates extends Entity
     * Sets the fromAddresses
     * Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
     *
-    * @param Recipient $val The value to assign to the fromAddresses
+    * @param Recipient[] $val The value to assign to the fromAddresses
     *
     * @return MessageRulePredicates The MessageRulePredicates
     */
@@ -187,7 +191,7 @@ class MessageRulePredicates extends Entity
     * Sets the headerContains
     * Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
     *
-    * @param string $val The value of the headerContains
+    * @param string[] $val The value of the headerContains
     *
     * @return MessageRulePredicates
     */
@@ -205,8 +209,9 @@ class MessageRulePredicates extends Entity
     */
     public function getImportance()
     {
-        if (array_key_exists("importance", $this->_propDict)) {
-            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\Importance") || is_null($this->_propDict["importance"])) {
+        if (array_key_exists("importance", $this->_propDict) && !is_null($this->_propDict["importance"])) {
+     
+            if (is_a($this->_propDict["importance"], "\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["importance"];
             } else {
                 $this->_propDict["importance"] = new Importance($this->_propDict["importance"]);
@@ -546,8 +551,9 @@ class MessageRulePredicates extends Entity
     */
     public function getMessageActionFlag()
     {
-        if (array_key_exists("messageActionFlag", $this->_propDict)) {
-            if (is_a($this->_propDict["messageActionFlag"], "\Microsoft\Graph\Model\MessageActionFlag") || is_null($this->_propDict["messageActionFlag"])) {
+        if (array_key_exists("messageActionFlag", $this->_propDict) && !is_null($this->_propDict["messageActionFlag"])) {
+     
+            if (is_a($this->_propDict["messageActionFlag"], "\Microsoft\Graph\Model\MessageActionFlag")) {
                 return $this->_propDict["messageActionFlag"];
             } else {
                 $this->_propDict["messageActionFlag"] = new MessageActionFlag($this->_propDict["messageActionFlag"]);
@@ -617,7 +623,7 @@ class MessageRulePredicates extends Entity
     * Sets the recipientContains
     * Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
     *
-    * @param string $val The value of the recipientContains
+    * @param string[] $val The value of the recipientContains
     *
     * @return MessageRulePredicates
     */
@@ -645,7 +651,7 @@ class MessageRulePredicates extends Entity
     * Sets the senderContains
     * Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
     *
-    * @param string $val The value of the senderContains
+    * @param string[] $val The value of the senderContains
     *
     * @return MessageRulePredicates
     */
@@ -663,8 +669,9 @@ class MessageRulePredicates extends Entity
     */
     public function getSensitivity()
     {
-        if (array_key_exists("sensitivity", $this->_propDict)) {
-            if (is_a($this->_propDict["sensitivity"], "\Microsoft\Graph\Model\Sensitivity") || is_null($this->_propDict["sensitivity"])) {
+        if (array_key_exists("sensitivity", $this->_propDict) && !is_null($this->_propDict["sensitivity"])) {
+     
+            if (is_a($this->_propDict["sensitivity"], "\Microsoft\Graph\Model\Sensitivity")) {
                 return $this->_propDict["sensitivity"];
             } else {
                 $this->_propDict["sensitivity"] = new Sensitivity($this->_propDict["sensitivity"]);
@@ -748,18 +755,22 @@ class MessageRulePredicates extends Entity
     * Gets the sentToAddresses
     * Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
     *
-    * @return Recipient|null The sentToAddresses
+    * @return Recipient[]|null The sentToAddresses
     */
     public function getSentToAddresses()
     {
-        if (array_key_exists("sentToAddresses", $this->_propDict)) {
-            if (is_a($this->_propDict["sentToAddresses"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["sentToAddresses"])) {
-                return $this->_propDict["sentToAddresses"];
-            } else {
-                $this->_propDict["sentToAddresses"] = new Recipient($this->_propDict["sentToAddresses"]);
-                return $this->_propDict["sentToAddresses"];
+        if (array_key_exists("sentToAddresses", $this->_propDict) && !is_null($this->_propDict["sentToAddresses"])) {
+       
+            if (count($this->_propDict['sentToAddresses']) > 0 && is_a($this->_propDict['sentToAddresses'][0], 'Recipient')) {
+               return $this->_propDict['sentToAddresses'];
             }
-        }
+            $sentToAddresses = [];
+            foreach ($this->_propDict['sentToAddresses'] as $singleValue) {
+               $sentToAddresses []= new Recipient($singleValue);
+            }
+            $this->_propDict['sentToAddresses'] = $sentToAddresses;
+            return $this->_propDict['sentToAddresses'];
+            }
         return null;
     }
 
@@ -767,7 +778,7 @@ class MessageRulePredicates extends Entity
     * Sets the sentToAddresses
     * Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
     *
-    * @param Recipient $val The value to assign to the sentToAddresses
+    * @param Recipient[] $val The value to assign to the sentToAddresses
     *
     * @return MessageRulePredicates The MessageRulePredicates
     */
@@ -851,7 +862,7 @@ class MessageRulePredicates extends Entity
     * Sets the subjectContains
     * Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
     *
-    * @param string $val The value of the subjectContains
+    * @param string[] $val The value of the subjectContains
     *
     * @return MessageRulePredicates
     */
@@ -869,8 +880,9 @@ class MessageRulePredicates extends Entity
     */
     public function getWithinSizeRange()
     {
-        if (array_key_exists("withinSizeRange", $this->_propDict)) {
-            if (is_a($this->_propDict["withinSizeRange"], "\Microsoft\Graph\Model\SizeRange") || is_null($this->_propDict["withinSizeRange"])) {
+        if (array_key_exists("withinSizeRange", $this->_propDict) && !is_null($this->_propDict["withinSizeRange"])) {
+     
+            if (is_a($this->_propDict["withinSizeRange"], "\Microsoft\Graph\Model\SizeRange")) {
                 return $this->_propDict["withinSizeRange"];
             } else {
                 $this->_propDict["withinSizeRange"] = new SizeRange($this->_propDict["withinSizeRange"]);

@@ -29,22 +29,29 @@ class ServiceAnnouncement extends Entity
      * Gets the healthOverviews
     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
-     * @return array|null The healthOverviews
+     * @return ServiceHealth[]|null The healthOverviews
      */
     public function getHealthOverviews()
     {
-        if (array_key_exists("healthOverviews", $this->_propDict)) {
-           return $this->_propDict["healthOverviews"];
-        } else {
-            return null;
+        if (array_key_exists('healthOverviews', $this->_propDict) && !is_null($this->_propDict['healthOverviews'])) {
+            $healthOverviews = [];
+            if (count($this->_propDict['healthOverviews']) > 0 && is_a($this->_propDict['healthOverviews'][0], 'ServiceHealth')) {
+                return $this->_propDict['healthOverviews'];
+            }
+            foreach ($this->_propDict['healthOverviews'] as $singleValue) {
+                $healthOverviews []= new ServiceHealth($singleValue);
+            }
+            $this->_propDict['healthOverviews'] = $healthOverviews;
+            return $this->_propDict['healthOverviews'];
         }
+        return null;
     }
     
     /** 
     * Sets the healthOverviews
     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
-    * @param ServiceHealth $val The healthOverviews
+    * @param ServiceHealth[] $val The healthOverviews
     *
     * @return ServiceAnnouncement
     */
@@ -59,22 +66,29 @@ class ServiceAnnouncement extends Entity
      * Gets the issues
     * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
-     * @return array|null The issues
+     * @return ServiceHealthIssue[]|null The issues
      */
     public function getIssues()
     {
-        if (array_key_exists("issues", $this->_propDict)) {
-           return $this->_propDict["issues"];
-        } else {
-            return null;
+        if (array_key_exists('issues', $this->_propDict) && !is_null($this->_propDict['issues'])) {
+            $issues = [];
+            if (count($this->_propDict['issues']) > 0 && is_a($this->_propDict['issues'][0], 'ServiceHealthIssue')) {
+                return $this->_propDict['issues'];
+            }
+            foreach ($this->_propDict['issues'] as $singleValue) {
+                $issues []= new ServiceHealthIssue($singleValue);
+            }
+            $this->_propDict['issues'] = $issues;
+            return $this->_propDict['issues'];
         }
+        return null;
     }
     
     /** 
     * Sets the issues
     * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
-    * @param ServiceHealthIssue $val The issues
+    * @param ServiceHealthIssue[] $val The issues
     *
     * @return ServiceAnnouncement
     */
@@ -89,22 +103,29 @@ class ServiceAnnouncement extends Entity
      * Gets the messages
     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
-     * @return array|null The messages
+     * @return ServiceUpdateMessage[]|null The messages
      */
     public function getMessages()
     {
-        if (array_key_exists("messages", $this->_propDict)) {
-           return $this->_propDict["messages"];
-        } else {
-            return null;
+        if (array_key_exists('messages', $this->_propDict) && !is_null($this->_propDict['messages'])) {
+            $messages = [];
+            if (count($this->_propDict['messages']) > 0 && is_a($this->_propDict['messages'][0], 'ServiceUpdateMessage')) {
+                return $this->_propDict['messages'];
+            }
+            foreach ($this->_propDict['messages'] as $singleValue) {
+                $messages []= new ServiceUpdateMessage($singleValue);
+            }
+            $this->_propDict['messages'] = $messages;
+            return $this->_propDict['messages'];
         }
+        return null;
     }
     
     /** 
     * Sets the messages
     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
-    * @param ServiceUpdateMessage $val The messages
+    * @param ServiceUpdateMessage[] $val The messages
     *
     * @return ServiceAnnouncement
     */

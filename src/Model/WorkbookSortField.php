@@ -116,8 +116,9 @@ class WorkbookSortField extends Entity
     */
     public function getIcon()
     {
-        if (array_key_exists("icon", $this->_propDict)) {
-            if (is_a($this->_propDict["icon"], "\Microsoft\Graph\Model\WorkbookIcon") || is_null($this->_propDict["icon"])) {
+        if (array_key_exists("icon", $this->_propDict) && !is_null($this->_propDict["icon"])) {
+     
+            if (is_a($this->_propDict["icon"], "\Microsoft\Graph\Model\WorkbookIcon")) {
                 return $this->_propDict["icon"];
             } else {
                 $this->_propDict["icon"] = new WorkbookIcon($this->_propDict["icon"]);

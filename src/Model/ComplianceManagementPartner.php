@@ -29,22 +29,29 @@ class ComplianceManagementPartner extends Entity
      * Gets the androidEnrollmentAssignments
     * User groups which enroll Android devices through partner.
      *
-     * @return array|null The androidEnrollmentAssignments
+     * @return ComplianceManagementPartnerAssignment[]|null The androidEnrollmentAssignments
      */
     public function getAndroidEnrollmentAssignments()
     {
-        if (array_key_exists("androidEnrollmentAssignments", $this->_propDict)) {
-           return $this->_propDict["androidEnrollmentAssignments"];
-        } else {
-            return null;
+        if (array_key_exists('androidEnrollmentAssignments', $this->_propDict) && !is_null($this->_propDict['androidEnrollmentAssignments'])) {
+            $androidEnrollmentAssignments = [];
+            if (count($this->_propDict['androidEnrollmentAssignments']) > 0 && is_a($this->_propDict['androidEnrollmentAssignments'][0], 'ComplianceManagementPartnerAssignment')) {
+                return $this->_propDict['androidEnrollmentAssignments'];
+            }
+            foreach ($this->_propDict['androidEnrollmentAssignments'] as $singleValue) {
+                $androidEnrollmentAssignments []= new ComplianceManagementPartnerAssignment($singleValue);
+            }
+            $this->_propDict['androidEnrollmentAssignments'] = $androidEnrollmentAssignments;
+            return $this->_propDict['androidEnrollmentAssignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the androidEnrollmentAssignments
     * User groups which enroll Android devices through partner.
     *
-    * @param ComplianceManagementPartnerAssignment $val The androidEnrollmentAssignments
+    * @param ComplianceManagementPartnerAssignment[] $val The androidEnrollmentAssignments
     *
     * @return ComplianceManagementPartner
     */
@@ -117,22 +124,29 @@ class ComplianceManagementPartner extends Entity
      * Gets the iosEnrollmentAssignments
     * User groups which enroll ios devices through partner.
      *
-     * @return array|null The iosEnrollmentAssignments
+     * @return ComplianceManagementPartnerAssignment[]|null The iosEnrollmentAssignments
      */
     public function getIosEnrollmentAssignments()
     {
-        if (array_key_exists("iosEnrollmentAssignments", $this->_propDict)) {
-           return $this->_propDict["iosEnrollmentAssignments"];
-        } else {
-            return null;
+        if (array_key_exists('iosEnrollmentAssignments', $this->_propDict) && !is_null($this->_propDict['iosEnrollmentAssignments'])) {
+            $iosEnrollmentAssignments = [];
+            if (count($this->_propDict['iosEnrollmentAssignments']) > 0 && is_a($this->_propDict['iosEnrollmentAssignments'][0], 'ComplianceManagementPartnerAssignment')) {
+                return $this->_propDict['iosEnrollmentAssignments'];
+            }
+            foreach ($this->_propDict['iosEnrollmentAssignments'] as $singleValue) {
+                $iosEnrollmentAssignments []= new ComplianceManagementPartnerAssignment($singleValue);
+            }
+            $this->_propDict['iosEnrollmentAssignments'] = $iosEnrollmentAssignments;
+            return $this->_propDict['iosEnrollmentAssignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the iosEnrollmentAssignments
     * User groups which enroll ios devices through partner.
     *
-    * @param ComplianceManagementPartnerAssignment $val The iosEnrollmentAssignments
+    * @param ComplianceManagementPartnerAssignment[] $val The iosEnrollmentAssignments
     *
     * @return ComplianceManagementPartner
     */
@@ -179,8 +193,8 @@ class ComplianceManagementPartner extends Entity
     */
     public function getLastHeartbeatDateTime()
     {
-        if (array_key_exists("lastHeartbeatDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime") || is_null($this->_propDict["lastHeartbeatDateTime"])) {
+        if (array_key_exists("lastHeartbeatDateTime", $this->_propDict) && !is_null($this->_propDict["lastHeartbeatDateTime"])) {
+            if (is_a($this->_propDict["lastHeartbeatDateTime"], "\DateTime")) {
                 return $this->_propDict["lastHeartbeatDateTime"];
             } else {
                 $this->_propDict["lastHeartbeatDateTime"] = new \DateTime($this->_propDict["lastHeartbeatDateTime"]);
@@ -209,22 +223,29 @@ class ComplianceManagementPartner extends Entity
      * Gets the macOsEnrollmentAssignments
     * User groups which enroll Mac devices through partner.
      *
-     * @return array|null The macOsEnrollmentAssignments
+     * @return ComplianceManagementPartnerAssignment[]|null The macOsEnrollmentAssignments
      */
     public function getMacOsEnrollmentAssignments()
     {
-        if (array_key_exists("macOsEnrollmentAssignments", $this->_propDict)) {
-           return $this->_propDict["macOsEnrollmentAssignments"];
-        } else {
-            return null;
+        if (array_key_exists('macOsEnrollmentAssignments', $this->_propDict) && !is_null($this->_propDict['macOsEnrollmentAssignments'])) {
+            $macOsEnrollmentAssignments = [];
+            if (count($this->_propDict['macOsEnrollmentAssignments']) > 0 && is_a($this->_propDict['macOsEnrollmentAssignments'][0], 'ComplianceManagementPartnerAssignment')) {
+                return $this->_propDict['macOsEnrollmentAssignments'];
+            }
+            foreach ($this->_propDict['macOsEnrollmentAssignments'] as $singleValue) {
+                $macOsEnrollmentAssignments []= new ComplianceManagementPartnerAssignment($singleValue);
+            }
+            $this->_propDict['macOsEnrollmentAssignments'] = $macOsEnrollmentAssignments;
+            return $this->_propDict['macOsEnrollmentAssignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the macOsEnrollmentAssignments
     * User groups which enroll Mac devices through partner.
     *
-    * @param ComplianceManagementPartnerAssignment $val The macOsEnrollmentAssignments
+    * @param ComplianceManagementPartnerAssignment[] $val The macOsEnrollmentAssignments
     *
     * @return ComplianceManagementPartner
     */
@@ -271,8 +292,8 @@ class ComplianceManagementPartner extends Entity
     */
     public function getPartnerState()
     {
-        if (array_key_exists("partnerState", $this->_propDict)) {
-            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState") || is_null($this->_propDict["partnerState"])) {
+        if (array_key_exists("partnerState", $this->_propDict) && !is_null($this->_propDict["partnerState"])) {
+            if (is_a($this->_propDict["partnerState"], "\Microsoft\Graph\Model\DeviceManagementPartnerTenantState")) {
                 return $this->_propDict["partnerState"];
             } else {
                 $this->_propDict["partnerState"] = new DeviceManagementPartnerTenantState($this->_propDict["partnerState"]);

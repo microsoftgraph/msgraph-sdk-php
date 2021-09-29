@@ -27,22 +27,31 @@ class OrganizationalBranding extends OrganizationalBrandingProperties
 
      /** 
      * Gets the localizations
+    * Add different branding based on a locale.
      *
-     * @return array|null The localizations
+     * @return OrganizationalBrandingLocalization[]|null The localizations
      */
     public function getLocalizations()
     {
-        if (array_key_exists("localizations", $this->_propDict)) {
-           return $this->_propDict["localizations"];
-        } else {
-            return null;
+        if (array_key_exists('localizations', $this->_propDict) && !is_null($this->_propDict['localizations'])) {
+            $localizations = [];
+            if (count($this->_propDict['localizations']) > 0 && is_a($this->_propDict['localizations'][0], 'OrganizationalBrandingLocalization')) {
+                return $this->_propDict['localizations'];
+            }
+            foreach ($this->_propDict['localizations'] as $singleValue) {
+                $localizations []= new OrganizationalBrandingLocalization($singleValue);
+            }
+            $this->_propDict['localizations'] = $localizations;
+            return $this->_propDict['localizations'];
         }
+        return null;
     }
     
     /** 
     * Sets the localizations
+    * Add different branding based on a locale.
     *
-    * @param OrganizationalBrandingLocalization $val The localizations
+    * @param OrganizationalBrandingLocalization[] $val The localizations
     *
     * @return OrganizationalBranding
     */

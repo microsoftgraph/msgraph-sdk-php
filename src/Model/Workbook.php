@@ -31,8 +31,8 @@ class Workbook extends Entity
     */
     public function getApplication()
     {
-        if (array_key_exists("application", $this->_propDict)) {
-            if (is_a($this->_propDict["application"], "\Microsoft\Graph\Model\WorkbookApplication") || is_null($this->_propDict["application"])) {
+        if (array_key_exists("application", $this->_propDict) && !is_null($this->_propDict["application"])) {
+            if (is_a($this->_propDict["application"], "\Microsoft\Graph\Model\WorkbookApplication")) {
                 return $this->_propDict["application"];
             } else {
                 $this->_propDict["application"] = new WorkbookApplication($this->_propDict["application"]);
@@ -59,21 +59,28 @@ class Workbook extends Entity
      /** 
      * Gets the comments
      *
-     * @return array|null The comments
+     * @return WorkbookComment[]|null The comments
      */
     public function getComments()
     {
-        if (array_key_exists("comments", $this->_propDict)) {
-           return $this->_propDict["comments"];
-        } else {
-            return null;
+        if (array_key_exists('comments', $this->_propDict) && !is_null($this->_propDict['comments'])) {
+            $comments = [];
+            if (count($this->_propDict['comments']) > 0 && is_a($this->_propDict['comments'][0], 'WorkbookComment')) {
+                return $this->_propDict['comments'];
+            }
+            foreach ($this->_propDict['comments'] as $singleValue) {
+                $comments []= new WorkbookComment($singleValue);
+            }
+            $this->_propDict['comments'] = $comments;
+            return $this->_propDict['comments'];
         }
+        return null;
     }
     
     /** 
     * Sets the comments
     *
-    * @param WorkbookComment $val The comments
+    * @param WorkbookComment[] $val The comments
     *
     * @return Workbook
     */
@@ -90,8 +97,8 @@ class Workbook extends Entity
     */
     public function getFunctions()
     {
-        if (array_key_exists("functions", $this->_propDict)) {
-            if (is_a($this->_propDict["functions"], "\Microsoft\Graph\Model\WorkbookFunctions") || is_null($this->_propDict["functions"])) {
+        if (array_key_exists("functions", $this->_propDict) && !is_null($this->_propDict["functions"])) {
+            if (is_a($this->_propDict["functions"], "\Microsoft\Graph\Model\WorkbookFunctions")) {
                 return $this->_propDict["functions"];
             } else {
                 $this->_propDict["functions"] = new WorkbookFunctions($this->_propDict["functions"]);
@@ -119,22 +126,29 @@ class Workbook extends Entity
      * Gets the names
     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      *
-     * @return array|null The names
+     * @return WorkbookNamedItem[]|null The names
      */
     public function getNames()
     {
-        if (array_key_exists("names", $this->_propDict)) {
-           return $this->_propDict["names"];
-        } else {
-            return null;
+        if (array_key_exists('names', $this->_propDict) && !is_null($this->_propDict['names'])) {
+            $names = [];
+            if (count($this->_propDict['names']) > 0 && is_a($this->_propDict['names'][0], 'WorkbookNamedItem')) {
+                return $this->_propDict['names'];
+            }
+            foreach ($this->_propDict['names'] as $singleValue) {
+                $names []= new WorkbookNamedItem($singleValue);
+            }
+            $this->_propDict['names'] = $names;
+            return $this->_propDict['names'];
         }
+        return null;
     }
     
     /** 
     * Sets the names
     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
     *
-    * @param WorkbookNamedItem $val The names
+    * @param WorkbookNamedItem[] $val The names
     *
     * @return Workbook
     */
@@ -149,22 +163,29 @@ class Workbook extends Entity
      * Gets the operations
     * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      *
-     * @return array|null The operations
+     * @return WorkbookOperation[]|null The operations
      */
     public function getOperations()
     {
-        if (array_key_exists("operations", $this->_propDict)) {
-           return $this->_propDict["operations"];
-        } else {
-            return null;
+        if (array_key_exists('operations', $this->_propDict) && !is_null($this->_propDict['operations'])) {
+            $operations = [];
+            if (count($this->_propDict['operations']) > 0 && is_a($this->_propDict['operations'][0], 'WorkbookOperation')) {
+                return $this->_propDict['operations'];
+            }
+            foreach ($this->_propDict['operations'] as $singleValue) {
+                $operations []= new WorkbookOperation($singleValue);
+            }
+            $this->_propDict['operations'] = $operations;
+            return $this->_propDict['operations'];
         }
+        return null;
     }
     
     /** 
     * Sets the operations
     * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
     *
-    * @param WorkbookOperation $val The operations
+    * @param WorkbookOperation[] $val The operations
     *
     * @return Workbook
     */
@@ -179,22 +200,29 @@ class Workbook extends Entity
      * Gets the tables
     * Represents a collection of tables associated with the workbook. Read-only.
      *
-     * @return array|null The tables
+     * @return WorkbookTable[]|null The tables
      */
     public function getTables()
     {
-        if (array_key_exists("tables", $this->_propDict)) {
-           return $this->_propDict["tables"];
-        } else {
-            return null;
+        if (array_key_exists('tables', $this->_propDict) && !is_null($this->_propDict['tables'])) {
+            $tables = [];
+            if (count($this->_propDict['tables']) > 0 && is_a($this->_propDict['tables'][0], 'WorkbookTable')) {
+                return $this->_propDict['tables'];
+            }
+            foreach ($this->_propDict['tables'] as $singleValue) {
+                $tables []= new WorkbookTable($singleValue);
+            }
+            $this->_propDict['tables'] = $tables;
+            return $this->_propDict['tables'];
         }
+        return null;
     }
     
     /** 
     * Sets the tables
     * Represents a collection of tables associated with the workbook. Read-only.
     *
-    * @param WorkbookTable $val The tables
+    * @param WorkbookTable[] $val The tables
     *
     * @return Workbook
     */
@@ -209,22 +237,29 @@ class Workbook extends Entity
      * Gets the worksheets
     * Represents a collection of worksheets associated with the workbook. Read-only.
      *
-     * @return array|null The worksheets
+     * @return WorkbookWorksheet[]|null The worksheets
      */
     public function getWorksheets()
     {
-        if (array_key_exists("worksheets", $this->_propDict)) {
-           return $this->_propDict["worksheets"];
-        } else {
-            return null;
+        if (array_key_exists('worksheets', $this->_propDict) && !is_null($this->_propDict['worksheets'])) {
+            $worksheets = [];
+            if (count($this->_propDict['worksheets']) > 0 && is_a($this->_propDict['worksheets'][0], 'WorkbookWorksheet')) {
+                return $this->_propDict['worksheets'];
+            }
+            foreach ($this->_propDict['worksheets'] as $singleValue) {
+                $worksheets []= new WorkbookWorksheet($singleValue);
+            }
+            $this->_propDict['worksheets'] = $worksheets;
+            return $this->_propDict['worksheets'];
         }
+        return null;
     }
     
     /** 
     * Sets the worksheets
     * Represents a collection of worksheets associated with the workbook. Read-only.
     *
-    * @param WorkbookWorksheet $val The worksheets
+    * @param WorkbookWorksheet[] $val The worksheets
     *
     * @return Workbook
     */

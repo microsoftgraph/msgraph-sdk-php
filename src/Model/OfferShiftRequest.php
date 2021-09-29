@@ -32,8 +32,8 @@ class OfferShiftRequest extends ScheduleChangeRequest
     */
     public function getRecipientActionDateTime()
     {
-        if (array_key_exists("recipientActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["recipientActionDateTime"], "\DateTime") || is_null($this->_propDict["recipientActionDateTime"])) {
+        if (array_key_exists("recipientActionDateTime", $this->_propDict) && !is_null($this->_propDict["recipientActionDateTime"])) {
+            if (is_a($this->_propDict["recipientActionDateTime"], "\DateTime")) {
                 return $this->_propDict["recipientActionDateTime"];
             } else {
                 $this->_propDict["recipientActionDateTime"] = new \DateTime($this->_propDict["recipientActionDateTime"]);

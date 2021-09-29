@@ -61,8 +61,8 @@ class DeviceConfigurationState extends Entity
     */
     public function getPlatformType()
     {
-        if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Microsoft\Graph\Model\PolicyPlatformType") || is_null($this->_propDict["platformType"])) {
+        if (array_key_exists("platformType", $this->_propDict) && !is_null($this->_propDict["platformType"])) {
+            if (is_a($this->_propDict["platformType"], "\Microsoft\Graph\Model\PolicyPlatformType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -119,21 +119,28 @@ class DeviceConfigurationState extends Entity
      /** 
      * Gets the settingStates
      *
-     * @return array|null The settingStates
+     * @return DeviceConfigurationSettingState[]|null The settingStates
      */
     public function getSettingStates()
     {
-        if (array_key_exists("settingStates", $this->_propDict)) {
-           return $this->_propDict["settingStates"];
-        } else {
-            return null;
+        if (array_key_exists('settingStates', $this->_propDict) && !is_null($this->_propDict['settingStates'])) {
+            $settingStates = [];
+            if (count($this->_propDict['settingStates']) > 0 && is_a($this->_propDict['settingStates'][0], 'DeviceConfigurationSettingState')) {
+                return $this->_propDict['settingStates'];
+            }
+            foreach ($this->_propDict['settingStates'] as $singleValue) {
+                $settingStates []= new DeviceConfigurationSettingState($singleValue);
+            }
+            $this->_propDict['settingStates'] = $settingStates;
+            return $this->_propDict['settingStates'];
         }
+        return null;
     }
     
     /** 
     * Sets the settingStates
     *
-    * @param DeviceConfigurationSettingState $val The settingStates
+    * @param DeviceConfigurationSettingState[] $val The settingStates
     *
     * @return DeviceConfigurationState
     */
@@ -151,8 +158,8 @@ class DeviceConfigurationState extends Entity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);

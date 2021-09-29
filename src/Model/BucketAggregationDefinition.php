@@ -112,18 +112,22 @@ class BucketAggregationDefinition extends Entity
     * Gets the ranges
     * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
     *
-    * @return BucketAggregationRange|null The ranges
+    * @return BucketAggregationRange[]|null The ranges
     */
     public function getRanges()
     {
-        if (array_key_exists("ranges", $this->_propDict)) {
-            if (is_a($this->_propDict["ranges"], "\Microsoft\Graph\Model\BucketAggregationRange") || is_null($this->_propDict["ranges"])) {
-                return $this->_propDict["ranges"];
-            } else {
-                $this->_propDict["ranges"] = new BucketAggregationRange($this->_propDict["ranges"]);
-                return $this->_propDict["ranges"];
+        if (array_key_exists("ranges", $this->_propDict) && !is_null($this->_propDict["ranges"])) {
+       
+            if (count($this->_propDict['ranges']) > 0 && is_a($this->_propDict['ranges'][0], 'BucketAggregationRange')) {
+               return $this->_propDict['ranges'];
             }
-        }
+            $ranges = [];
+            foreach ($this->_propDict['ranges'] as $singleValue) {
+               $ranges []= new BucketAggregationRange($singleValue);
+            }
+            $this->_propDict['ranges'] = $ranges;
+            return $this->_propDict['ranges'];
+            }
         return null;
     }
 
@@ -131,7 +135,7 @@ class BucketAggregationDefinition extends Entity
     * Sets the ranges
     * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
     *
-    * @param BucketAggregationRange $val The value to assign to the ranges
+    * @param BucketAggregationRange[] $val The value to assign to the ranges
     *
     * @return BucketAggregationDefinition The BucketAggregationDefinition
     */
@@ -149,8 +153,9 @@ class BucketAggregationDefinition extends Entity
     */
     public function getSortBy()
     {
-        if (array_key_exists("sortBy", $this->_propDict)) {
-            if (is_a($this->_propDict["sortBy"], "\Microsoft\Graph\Model\BucketAggregationSortProperty") || is_null($this->_propDict["sortBy"])) {
+        if (array_key_exists("sortBy", $this->_propDict) && !is_null($this->_propDict["sortBy"])) {
+     
+            if (is_a($this->_propDict["sortBy"], "\Microsoft\Graph\Model\BucketAggregationSortProperty")) {
                 return $this->_propDict["sortBy"];
             } else {
                 $this->_propDict["sortBy"] = new BucketAggregationSortProperty($this->_propDict["sortBy"]);

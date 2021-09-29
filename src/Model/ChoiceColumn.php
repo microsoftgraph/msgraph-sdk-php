@@ -70,7 +70,7 @@ class ChoiceColumn extends Entity
     * Sets the choices
     * The list of values available for this column.
     *
-    * @param string $val The value of the choices
+    * @param string[] $val The value of the choices
     *
     * @return ChoiceColumn
     */

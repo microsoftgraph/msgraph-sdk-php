@@ -99,8 +99,9 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule
     */
     public function getProductVersionOperator()
     {
-        if (array_key_exists("productVersionOperator", $this->_propDict)) {
-            if (is_a($this->_propDict["productVersionOperator"], "\Microsoft\Graph\Model\Win32LobAppRuleOperator") || is_null($this->_propDict["productVersionOperator"])) {
+        if (array_key_exists("productVersionOperator", $this->_propDict) && !is_null($this->_propDict["productVersionOperator"])) {
+     
+            if (is_a($this->_propDict["productVersionOperator"], "\Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
                 return $this->_propDict["productVersionOperator"];
             } else {
                 $this->_propDict["productVersionOperator"] = new Win32LobAppRuleOperator($this->_propDict["productVersionOperator"]);

@@ -32,8 +32,8 @@ class MacOSCustomConfiguration extends DeviceConfiguration
     */
     public function getPayload()
     {
-        if (array_key_exists("payload", $this->_propDict)) {
-            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["payload"])) {
+        if (array_key_exists("payload", $this->_propDict) && !is_null($this->_propDict["payload"])) {
+            if (is_a($this->_propDict["payload"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["payload"];
             } else {
                 $this->_propDict["payload"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["payload"]);

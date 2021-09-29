@@ -70,7 +70,7 @@ class LicenseAssignmentState extends Entity
     * Sets the disabledPlans
     * The service plans that are disabled in this assignment. Read-Only.
     *
-    * @param string $val The value of the disabledPlans
+    * @param string[] $val The value of the disabledPlans
     *
     * @return LicenseAssignmentState
     */

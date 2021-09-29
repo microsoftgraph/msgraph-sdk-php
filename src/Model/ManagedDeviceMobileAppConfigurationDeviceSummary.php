@@ -119,8 +119,8 @@ class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity
     */
     public function getLastUpdateDateTime()
     {
-        if (array_key_exists("lastUpdateDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdateDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdateDateTime"])) {
+        if (array_key_exists("lastUpdateDateTime", $this->_propDict) && !is_null($this->_propDict["lastUpdateDateTime"])) {
+            if (is_a($this->_propDict["lastUpdateDateTime"], "\DateTime")) {
                 return $this->_propDict["lastUpdateDateTime"];
             } else {
                 $this->_propDict["lastUpdateDateTime"] = new \DateTime($this->_propDict["lastUpdateDateTime"]);

@@ -90,8 +90,8 @@ class TermsAndConditions extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -181,8 +181,8 @@ class TermsAndConditions extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -269,22 +269,29 @@ class TermsAndConditions extends Entity
      * Gets the acceptanceStatuses
     * The list of acceptance statuses for this T&amp;C policy.
      *
-     * @return array|null The acceptanceStatuses
+     * @return TermsAndConditionsAcceptanceStatus[]|null The acceptanceStatuses
      */
     public function getAcceptanceStatuses()
     {
-        if (array_key_exists("acceptanceStatuses", $this->_propDict)) {
-           return $this->_propDict["acceptanceStatuses"];
-        } else {
-            return null;
+        if (array_key_exists('acceptanceStatuses', $this->_propDict) && !is_null($this->_propDict['acceptanceStatuses'])) {
+            $acceptanceStatuses = [];
+            if (count($this->_propDict['acceptanceStatuses']) > 0 && is_a($this->_propDict['acceptanceStatuses'][0], 'TermsAndConditionsAcceptanceStatus')) {
+                return $this->_propDict['acceptanceStatuses'];
+            }
+            foreach ($this->_propDict['acceptanceStatuses'] as $singleValue) {
+                $acceptanceStatuses []= new TermsAndConditionsAcceptanceStatus($singleValue);
+            }
+            $this->_propDict['acceptanceStatuses'] = $acceptanceStatuses;
+            return $this->_propDict['acceptanceStatuses'];
         }
+        return null;
     }
     
     /** 
     * Sets the acceptanceStatuses
     * The list of acceptance statuses for this T&amp;C policy.
     *
-    * @param TermsAndConditionsAcceptanceStatus $val The acceptanceStatuses
+    * @param TermsAndConditionsAcceptanceStatus[] $val The acceptanceStatuses
     *
     * @return TermsAndConditions
     */
@@ -299,22 +306,29 @@ class TermsAndConditions extends Entity
      * Gets the assignments
     * The list of assignments for this T&amp;C policy.
      *
-     * @return array|null The assignments
+     * @return TermsAndConditionsAssignment[]|null The assignments
      */
     public function getAssignments()
     {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
+        if (array_key_exists('assignments', $this->_propDict) && !is_null($this->_propDict['assignments'])) {
+            $assignments = [];
+            if (count($this->_propDict['assignments']) > 0 && is_a($this->_propDict['assignments'][0], 'TermsAndConditionsAssignment')) {
+                return $this->_propDict['assignments'];
+            }
+            foreach ($this->_propDict['assignments'] as $singleValue) {
+                $assignments []= new TermsAndConditionsAssignment($singleValue);
+            }
+            $this->_propDict['assignments'] = $assignments;
+            return $this->_propDict['assignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignments
     * The list of assignments for this T&amp;C policy.
     *
-    * @param TermsAndConditionsAssignment $val The assignments
+    * @param TermsAndConditionsAssignment[] $val The assignments
     *
     * @return TermsAndConditions
     */

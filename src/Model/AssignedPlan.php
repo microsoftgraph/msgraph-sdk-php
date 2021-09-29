@@ -32,8 +32,9 @@ class AssignedPlan extends Entity
     */
     public function getAssignedDateTime()
     {
-        if (array_key_exists("assignedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedDateTime"], "\DateTime") || is_null($this->_propDict["assignedDateTime"])) {
+        if (array_key_exists("assignedDateTime", $this->_propDict) && !is_null($this->_propDict["assignedDateTime"])) {
+     
+            if (is_a($this->_propDict["assignedDateTime"], "\DateTime")) {
                 return $this->_propDict["assignedDateTime"];
             } else {
                 $this->_propDict["assignedDateTime"] = new \DateTime($this->_propDict["assignedDateTime"]);

@@ -31,8 +31,8 @@ class ParticipantJoiningNotification extends Entity
     */
     public function getCall()
     {
-        if (array_key_exists("call", $this->_propDict)) {
-            if (is_a($this->_propDict["call"], "\Microsoft\Graph\Model\Call") || is_null($this->_propDict["call"])) {
+        if (array_key_exists("call", $this->_propDict) && !is_null($this->_propDict["call"])) {
+            if (is_a($this->_propDict["call"], "\Microsoft\Graph\Model\Call")) {
                 return $this->_propDict["call"];
             } else {
                 $this->_propDict["call"] = new Call($this->_propDict["call"]);

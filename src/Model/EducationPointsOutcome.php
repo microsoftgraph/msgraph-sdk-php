@@ -32,8 +32,8 @@ class EducationPointsOutcome extends EducationOutcome
     */
     public function getPoints()
     {
-        if (array_key_exists("points", $this->_propDict)) {
-            if (is_a($this->_propDict["points"], "\Microsoft\Graph\Model\EducationAssignmentPointsGrade") || is_null($this->_propDict["points"])) {
+        if (array_key_exists("points", $this->_propDict) && !is_null($this->_propDict["points"])) {
+            if (is_a($this->_propDict["points"], "\Microsoft\Graph\Model\EducationAssignmentPointsGrade")) {
                 return $this->_propDict["points"];
             } else {
                 $this->_propDict["points"] = new EducationAssignmentPointsGrade($this->_propDict["points"]);
@@ -65,8 +65,8 @@ class EducationPointsOutcome extends EducationOutcome
     */
     public function getPublishedPoints()
     {
-        if (array_key_exists("publishedPoints", $this->_propDict)) {
-            if (is_a($this->_propDict["publishedPoints"], "\Microsoft\Graph\Model\EducationAssignmentPointsGrade") || is_null($this->_propDict["publishedPoints"])) {
+        if (array_key_exists("publishedPoints", $this->_propDict) && !is_null($this->_propDict["publishedPoints"])) {
+            if (is_a($this->_propDict["publishedPoints"], "\Microsoft\Graph\Model\EducationAssignmentPointsGrade")) {
                 return $this->_propDict["publishedPoints"];
             } else {
                 $this->_propDict["publishedPoints"] = new EducationAssignmentPointsGrade($this->_propDict["publishedPoints"]);

@@ -32,8 +32,9 @@ class PendingContentUpdate extends Entity
     */
     public function getQueuedDateTime()
     {
-        if (array_key_exists("queuedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["queuedDateTime"], "\DateTime") || is_null($this->_propDict["queuedDateTime"])) {
+        if (array_key_exists("queuedDateTime", $this->_propDict) && !is_null($this->_propDict["queuedDateTime"])) {
+     
+            if (is_a($this->_propDict["queuedDateTime"], "\DateTime")) {
                 return $this->_propDict["queuedDateTime"];
             } else {
                 $this->_propDict["queuedDateTime"] = new \DateTime($this->_propDict["queuedDateTime"]);

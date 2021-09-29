@@ -90,8 +90,8 @@ class EducationOrganization extends Entity
     */
     public function getExternalSource()
     {
-        if (array_key_exists("externalSource", $this->_propDict)) {
-            if (is_a($this->_propDict["externalSource"], "\Microsoft\Graph\Model\EducationExternalSource") || is_null($this->_propDict["externalSource"])) {
+        if (array_key_exists("externalSource", $this->_propDict) && !is_null($this->_propDict["externalSource"])) {
+            if (is_a($this->_propDict["externalSource"], "\Microsoft\Graph\Model\EducationExternalSource")) {
                 return $this->_propDict["externalSource"];
             } else {
                 $this->_propDict["externalSource"] = new EducationExternalSource($this->_propDict["externalSource"]);

@@ -32,8 +32,9 @@ class ChatMessageMentionedIdentitySet extends IdentitySet
     */
     public function getConversation()
     {
-        if (array_key_exists("conversation", $this->_propDict)) {
-            if (is_a($this->_propDict["conversation"], "\Microsoft\Graph\Model\TeamworkConversationIdentity") || is_null($this->_propDict["conversation"])) {
+        if (array_key_exists("conversation", $this->_propDict) && !is_null($this->_propDict["conversation"])) {
+     
+            if (is_a($this->_propDict["conversation"], "\Microsoft\Graph\Model\TeamworkConversationIdentity")) {
                 return $this->_propDict["conversation"];
             } else {
                 $this->_propDict["conversation"] = new TeamworkConversationIdentity($this->_propDict["conversation"]);

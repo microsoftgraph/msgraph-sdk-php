@@ -32,8 +32,8 @@ class PlannerTaskDetails extends Entity
     */
     public function getChecklist()
     {
-        if (array_key_exists("checklist", $this->_propDict)) {
-            if (is_a($this->_propDict["checklist"], "\Microsoft\Graph\Model\PlannerChecklistItems") || is_null($this->_propDict["checklist"])) {
+        if (array_key_exists("checklist", $this->_propDict) && !is_null($this->_propDict["checklist"])) {
+            if (is_a($this->_propDict["checklist"], "\Microsoft\Graph\Model\PlannerChecklistItems")) {
                 return $this->_propDict["checklist"];
             } else {
                 $this->_propDict["checklist"] = new PlannerChecklistItems($this->_propDict["checklist"]);
@@ -94,8 +94,8 @@ class PlannerTaskDetails extends Entity
     */
     public function getPreviewType()
     {
-        if (array_key_exists("previewType", $this->_propDict)) {
-            if (is_a($this->_propDict["previewType"], "\Microsoft\Graph\Model\PlannerPreviewType") || is_null($this->_propDict["previewType"])) {
+        if (array_key_exists("previewType", $this->_propDict) && !is_null($this->_propDict["previewType"])) {
+            if (is_a($this->_propDict["previewType"], "\Microsoft\Graph\Model\PlannerPreviewType")) {
                 return $this->_propDict["previewType"];
             } else {
                 $this->_propDict["previewType"] = new PlannerPreviewType($this->_propDict["previewType"]);
@@ -127,8 +127,8 @@ class PlannerTaskDetails extends Entity
     */
     public function getReferences()
     {
-        if (array_key_exists("references", $this->_propDict)) {
-            if (is_a($this->_propDict["references"], "\Microsoft\Graph\Model\PlannerExternalReferences") || is_null($this->_propDict["references"])) {
+        if (array_key_exists("references", $this->_propDict) && !is_null($this->_propDict["references"])) {
+            if (is_a($this->_propDict["references"], "\Microsoft\Graph\Model\PlannerExternalReferences")) {
                 return $this->_propDict["references"];
             } else {
                 $this->_propDict["references"] = new PlannerExternalReferences($this->_propDict["references"]);

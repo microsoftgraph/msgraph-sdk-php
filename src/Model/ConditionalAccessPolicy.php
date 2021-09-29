@@ -32,8 +32,8 @@ class ConditionalAccessPolicy extends Entity
     */
     public function getConditions()
     {
-        if (array_key_exists("conditions", $this->_propDict)) {
-            if (is_a($this->_propDict["conditions"], "\Microsoft\Graph\Model\ConditionalAccessConditionSet") || is_null($this->_propDict["conditions"])) {
+        if (array_key_exists("conditions", $this->_propDict) && !is_null($this->_propDict["conditions"])) {
+            if (is_a($this->_propDict["conditions"], "\Microsoft\Graph\Model\ConditionalAccessConditionSet")) {
                 return $this->_propDict["conditions"];
             } else {
                 $this->_propDict["conditions"] = new ConditionalAccessConditionSet($this->_propDict["conditions"]);
@@ -65,8 +65,8 @@ class ConditionalAccessPolicy extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -156,8 +156,8 @@ class ConditionalAccessPolicy extends Entity
     */
     public function getGrantControls()
     {
-        if (array_key_exists("grantControls", $this->_propDict)) {
-            if (is_a($this->_propDict["grantControls"], "\Microsoft\Graph\Model\ConditionalAccessGrantControls") || is_null($this->_propDict["grantControls"])) {
+        if (array_key_exists("grantControls", $this->_propDict) && !is_null($this->_propDict["grantControls"])) {
+            if (is_a($this->_propDict["grantControls"], "\Microsoft\Graph\Model\ConditionalAccessGrantControls")) {
                 return $this->_propDict["grantControls"];
             } else {
                 $this->_propDict["grantControls"] = new ConditionalAccessGrantControls($this->_propDict["grantControls"]);
@@ -189,8 +189,8 @@ class ConditionalAccessPolicy extends Entity
     */
     public function getModifiedDateTime()
     {
-        if (array_key_exists("modifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime") || is_null($this->_propDict["modifiedDateTime"])) {
+        if (array_key_exists("modifiedDateTime", $this->_propDict) && !is_null($this->_propDict["modifiedDateTime"])) {
+            if (is_a($this->_propDict["modifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["modifiedDateTime"];
             } else {
                 $this->_propDict["modifiedDateTime"] = new \DateTime($this->_propDict["modifiedDateTime"]);
@@ -222,8 +222,8 @@ class ConditionalAccessPolicy extends Entity
     */
     public function getSessionControls()
     {
-        if (array_key_exists("sessionControls", $this->_propDict)) {
-            if (is_a($this->_propDict["sessionControls"], "\Microsoft\Graph\Model\ConditionalAccessSessionControls") || is_null($this->_propDict["sessionControls"])) {
+        if (array_key_exists("sessionControls", $this->_propDict) && !is_null($this->_propDict["sessionControls"])) {
+            if (is_a($this->_propDict["sessionControls"], "\Microsoft\Graph\Model\ConditionalAccessSessionControls")) {
                 return $this->_propDict["sessionControls"];
             } else {
                 $this->_propDict["sessionControls"] = new ConditionalAccessSessionControls($this->_propDict["sessionControls"]);
@@ -255,8 +255,8 @@ class ConditionalAccessPolicy extends Entity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ConditionalAccessPolicyState") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ConditionalAccessPolicyState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ConditionalAccessPolicyState($this->_propDict["state"]);

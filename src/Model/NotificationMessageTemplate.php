@@ -32,8 +32,8 @@ class NotificationMessageTemplate extends Entity
     */
     public function getBrandingOptions()
     {
-        if (array_key_exists("brandingOptions", $this->_propDict)) {
-            if (is_a($this->_propDict["brandingOptions"], "\Microsoft\Graph\Model\NotificationTemplateBrandingOptions") || is_null($this->_propDict["brandingOptions"])) {
+        if (array_key_exists("brandingOptions", $this->_propDict) && !is_null($this->_propDict["brandingOptions"])) {
+            if (is_a($this->_propDict["brandingOptions"], "\Microsoft\Graph\Model\NotificationTemplateBrandingOptions")) {
                 return $this->_propDict["brandingOptions"];
             } else {
                 $this->_propDict["brandingOptions"] = new NotificationTemplateBrandingOptions($this->_propDict["brandingOptions"]);
@@ -123,8 +123,8 @@ class NotificationMessageTemplate extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -153,22 +153,29 @@ class NotificationMessageTemplate extends Entity
      * Gets the localizedNotificationMessages
     * The list of localized messages for this Notification Message Template.
      *
-     * @return array|null The localizedNotificationMessages
+     * @return LocalizedNotificationMessage[]|null The localizedNotificationMessages
      */
     public function getLocalizedNotificationMessages()
     {
-        if (array_key_exists("localizedNotificationMessages", $this->_propDict)) {
-           return $this->_propDict["localizedNotificationMessages"];
-        } else {
-            return null;
+        if (array_key_exists('localizedNotificationMessages', $this->_propDict) && !is_null($this->_propDict['localizedNotificationMessages'])) {
+            $localizedNotificationMessages = [];
+            if (count($this->_propDict['localizedNotificationMessages']) > 0 && is_a($this->_propDict['localizedNotificationMessages'][0], 'LocalizedNotificationMessage')) {
+                return $this->_propDict['localizedNotificationMessages'];
+            }
+            foreach ($this->_propDict['localizedNotificationMessages'] as $singleValue) {
+                $localizedNotificationMessages []= new LocalizedNotificationMessage($singleValue);
+            }
+            $this->_propDict['localizedNotificationMessages'] = $localizedNotificationMessages;
+            return $this->_propDict['localizedNotificationMessages'];
         }
+        return null;
     }
     
     /** 
     * Sets the localizedNotificationMessages
     * The list of localized messages for this Notification Message Template.
     *
-    * @param LocalizedNotificationMessage $val The localizedNotificationMessages
+    * @param LocalizedNotificationMessage[] $val The localizedNotificationMessages
     *
     * @return NotificationMessageTemplate
     */

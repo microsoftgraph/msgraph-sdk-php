@@ -32,8 +32,8 @@ class Chat extends Entity
     */
     public function getChatType()
     {
-        if (array_key_exists("chatType", $this->_propDict)) {
-            if (is_a($this->_propDict["chatType"], "\Microsoft\Graph\Model\ChatType") || is_null($this->_propDict["chatType"])) {
+        if (array_key_exists("chatType", $this->_propDict) && !is_null($this->_propDict["chatType"])) {
+            if (is_a($this->_propDict["chatType"], "\Microsoft\Graph\Model\ChatType")) {
                 return $this->_propDict["chatType"];
             } else {
                 $this->_propDict["chatType"] = new ChatType($this->_propDict["chatType"]);
@@ -65,8 +65,8 @@ class Chat extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -98,8 +98,8 @@ class Chat extends Entity
     */
     public function getLastUpdatedDateTime()
     {
-        if (array_key_exists("lastUpdatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime") || is_null($this->_propDict["lastUpdatedDateTime"])) {
+        if (array_key_exists("lastUpdatedDateTime", $this->_propDict) && !is_null($this->_propDict["lastUpdatedDateTime"])) {
+            if (is_a($this->_propDict["lastUpdatedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastUpdatedDateTime"];
             } else {
                 $this->_propDict["lastUpdatedDateTime"] = new \DateTime($this->_propDict["lastUpdatedDateTime"]);
@@ -157,22 +157,29 @@ class Chat extends Entity
      * Gets the installedApps
     * A collection of all the apps in the chat. Nullable.
      *
-     * @return array|null The installedApps
+     * @return TeamsAppInstallation[]|null The installedApps
      */
     public function getInstalledApps()
     {
-        if (array_key_exists("installedApps", $this->_propDict)) {
-           return $this->_propDict["installedApps"];
-        } else {
-            return null;
+        if (array_key_exists('installedApps', $this->_propDict) && !is_null($this->_propDict['installedApps'])) {
+            $installedApps = [];
+            if (count($this->_propDict['installedApps']) > 0 && is_a($this->_propDict['installedApps'][0], 'TeamsAppInstallation')) {
+                return $this->_propDict['installedApps'];
+            }
+            foreach ($this->_propDict['installedApps'] as $singleValue) {
+                $installedApps []= new TeamsAppInstallation($singleValue);
+            }
+            $this->_propDict['installedApps'] = $installedApps;
+            return $this->_propDict['installedApps'];
         }
+        return null;
     }
     
     /** 
     * Sets the installedApps
     * A collection of all the apps in the chat. Nullable.
     *
-    * @param TeamsAppInstallation $val The installedApps
+    * @param TeamsAppInstallation[] $val The installedApps
     *
     * @return Chat
     */
@@ -187,22 +194,29 @@ class Chat extends Entity
      * Gets the members
     * A collection of all the members in the chat. Nullable.
      *
-     * @return array|null The members
+     * @return ConversationMember[]|null The members
      */
     public function getMembers()
     {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
+        if (array_key_exists('members', $this->_propDict) && !is_null($this->_propDict['members'])) {
+            $members = [];
+            if (count($this->_propDict['members']) > 0 && is_a($this->_propDict['members'][0], 'ConversationMember')) {
+                return $this->_propDict['members'];
+            }
+            foreach ($this->_propDict['members'] as $singleValue) {
+                $members []= new ConversationMember($singleValue);
+            }
+            $this->_propDict['members'] = $members;
+            return $this->_propDict['members'];
         }
+        return null;
     }
     
     /** 
     * Sets the members
     * A collection of all the members in the chat. Nullable.
     *
-    * @param ConversationMember $val The members
+    * @param ConversationMember[] $val The members
     *
     * @return Chat
     */
@@ -217,22 +231,29 @@ class Chat extends Entity
      * Gets the messages
     * A collection of all the messages in the chat. Nullable.
      *
-     * @return array|null The messages
+     * @return ChatMessage[]|null The messages
      */
     public function getMessages()
     {
-        if (array_key_exists("messages", $this->_propDict)) {
-           return $this->_propDict["messages"];
-        } else {
-            return null;
+        if (array_key_exists('messages', $this->_propDict) && !is_null($this->_propDict['messages'])) {
+            $messages = [];
+            if (count($this->_propDict['messages']) > 0 && is_a($this->_propDict['messages'][0], 'ChatMessage')) {
+                return $this->_propDict['messages'];
+            }
+            foreach ($this->_propDict['messages'] as $singleValue) {
+                $messages []= new ChatMessage($singleValue);
+            }
+            $this->_propDict['messages'] = $messages;
+            return $this->_propDict['messages'];
         }
+        return null;
     }
     
     /** 
     * Sets the messages
     * A collection of all the messages in the chat. Nullable.
     *
-    * @param ChatMessage $val The messages
+    * @param ChatMessage[] $val The messages
     *
     * @return Chat
     */
@@ -246,21 +267,28 @@ class Chat extends Entity
      /** 
      * Gets the tabs
      *
-     * @return array|null The tabs
+     * @return TeamsTab[]|null The tabs
      */
     public function getTabs()
     {
-        if (array_key_exists("tabs", $this->_propDict)) {
-           return $this->_propDict["tabs"];
-        } else {
-            return null;
+        if (array_key_exists('tabs', $this->_propDict) && !is_null($this->_propDict['tabs'])) {
+            $tabs = [];
+            if (count($this->_propDict['tabs']) > 0 && is_a($this->_propDict['tabs'][0], 'TeamsTab')) {
+                return $this->_propDict['tabs'];
+            }
+            foreach ($this->_propDict['tabs'] as $singleValue) {
+                $tabs []= new TeamsTab($singleValue);
+            }
+            $this->_propDict['tabs'] = $tabs;
+            return $this->_propDict['tabs'];
         }
+        return null;
     }
     
     /** 
     * Sets the tabs
     *
-    * @param TeamsTab $val The tabs
+    * @param TeamsTab[] $val The tabs
     *
     * @return Chat
     */

@@ -32,8 +32,8 @@ class AccessReviewInstance extends Entity
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -62,22 +62,29 @@ class AccessReviewInstance extends Entity
      * Gets the fallbackReviewers
     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. Supports $select.
      *
-     * @return array|null The fallbackReviewers
+     * @return AccessReviewReviewerScope[]|null The fallbackReviewers
      */
     public function getFallbackReviewers()
     {
-        if (array_key_exists("fallbackReviewers", $this->_propDict)) {
-           return $this->_propDict["fallbackReviewers"];
-        } else {
-            return null;
+        if (array_key_exists('fallbackReviewers', $this->_propDict) && !is_null($this->_propDict['fallbackReviewers'])) {
+            $fallbackReviewers = [];
+            if (count($this->_propDict['fallbackReviewers']) > 0 && is_a($this->_propDict['fallbackReviewers'][0], 'AccessReviewReviewerScope')) {
+                return $this->_propDict['fallbackReviewers'];
+            }
+            foreach ($this->_propDict['fallbackReviewers'] as $singleValue) {
+                $fallbackReviewers []= new AccessReviewReviewerScope($singleValue);
+            }
+            $this->_propDict['fallbackReviewers'] = $fallbackReviewers;
+            return $this->_propDict['fallbackReviewers'];
         }
+        return null;
     }
     
     /** 
     * Sets the fallbackReviewers
     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. Supports $select.
     *
-    * @param AccessReviewReviewerScope $val The fallbackReviewers
+    * @param AccessReviewReviewerScope[] $val The fallbackReviewers
     *
     * @return AccessReviewInstance
     */
@@ -92,22 +99,29 @@ class AccessReviewInstance extends Entity
      * Gets the reviewers
     * This collection of access review scopes is used to define who the reviewers are. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
      *
-     * @return array|null The reviewers
+     * @return AccessReviewReviewerScope[]|null The reviewers
      */
     public function getReviewers()
     {
-        if (array_key_exists("reviewers", $this->_propDict)) {
-           return $this->_propDict["reviewers"];
-        } else {
-            return null;
+        if (array_key_exists('reviewers', $this->_propDict) && !is_null($this->_propDict['reviewers'])) {
+            $reviewers = [];
+            if (count($this->_propDict['reviewers']) > 0 && is_a($this->_propDict['reviewers'][0], 'AccessReviewReviewerScope')) {
+                return $this->_propDict['reviewers'];
+            }
+            foreach ($this->_propDict['reviewers'] as $singleValue) {
+                $reviewers []= new AccessReviewReviewerScope($singleValue);
+            }
+            $this->_propDict['reviewers'] = $reviewers;
+            return $this->_propDict['reviewers'];
         }
+        return null;
     }
     
     /** 
     * Sets the reviewers
     * This collection of access review scopes is used to define who the reviewers are. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
     *
-    * @param AccessReviewReviewerScope $val The reviewers
+    * @param AccessReviewReviewerScope[] $val The reviewers
     *
     * @return AccessReviewInstance
     */
@@ -125,8 +139,8 @@ class AccessReviewInstance extends Entity
     */
     public function getScope()
     {
-        if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "\Microsoft\Graph\Model\AccessReviewScope") || is_null($this->_propDict["scope"])) {
+        if (array_key_exists("scope", $this->_propDict) && !is_null($this->_propDict["scope"])) {
+            if (is_a($this->_propDict["scope"], "\Microsoft\Graph\Model\AccessReviewScope")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new AccessReviewScope($this->_propDict["scope"]);
@@ -158,8 +172,8 @@ class AccessReviewInstance extends Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -217,22 +231,29 @@ class AccessReviewInstance extends Entity
      * Gets the decisions
     * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      *
-     * @return array|null The decisions
+     * @return AccessReviewInstanceDecisionItem[]|null The decisions
      */
     public function getDecisions()
     {
-        if (array_key_exists("decisions", $this->_propDict)) {
-           return $this->_propDict["decisions"];
-        } else {
-            return null;
+        if (array_key_exists('decisions', $this->_propDict) && !is_null($this->_propDict['decisions'])) {
+            $decisions = [];
+            if (count($this->_propDict['decisions']) > 0 && is_a($this->_propDict['decisions'][0], 'AccessReviewInstanceDecisionItem')) {
+                return $this->_propDict['decisions'];
+            }
+            foreach ($this->_propDict['decisions'] as $singleValue) {
+                $decisions []= new AccessReviewInstanceDecisionItem($singleValue);
+            }
+            $this->_propDict['decisions'] = $decisions;
+            return $this->_propDict['decisions'];
         }
+        return null;
     }
     
     /** 
     * Sets the decisions
     * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
     *
-    * @param AccessReviewInstanceDecisionItem $val The decisions
+    * @param AccessReviewInstanceDecisionItem[] $val The decisions
     *
     * @return AccessReviewInstance
     */

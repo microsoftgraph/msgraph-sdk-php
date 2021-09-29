@@ -60,8 +60,9 @@ class ToneInfo extends Entity
     */
     public function getTone()
     {
-        if (array_key_exists("tone", $this->_propDict)) {
-            if (is_a($this->_propDict["tone"], "\Microsoft\Graph\Model\Tone") || is_null($this->_propDict["tone"])) {
+        if (array_key_exists("tone", $this->_propDict) && !is_null($this->_propDict["tone"])) {
+     
+            if (is_a($this->_propDict["tone"], "\Microsoft\Graph\Model\Tone")) {
                 return $this->_propDict["tone"];
             } else {
                 $this->_propDict["tone"] = new Tone($this->_propDict["tone"]);

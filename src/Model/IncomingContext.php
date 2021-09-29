@@ -60,8 +60,9 @@ class IncomingContext extends Entity
     */
     public function getOnBehalfOf()
     {
-        if (array_key_exists("onBehalfOf", $this->_propDict)) {
-            if (is_a($this->_propDict["onBehalfOf"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["onBehalfOf"])) {
+        if (array_key_exists("onBehalfOf", $this->_propDict) && !is_null($this->_propDict["onBehalfOf"])) {
+     
+            if (is_a($this->_propDict["onBehalfOf"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["onBehalfOf"];
             } else {
                 $this->_propDict["onBehalfOf"] = new IdentitySet($this->_propDict["onBehalfOf"]);
@@ -121,8 +122,9 @@ class IncomingContext extends Entity
     */
     public function getTransferor()
     {
-        if (array_key_exists("transferor", $this->_propDict)) {
-            if (is_a($this->_propDict["transferor"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["transferor"])) {
+        if (array_key_exists("transferor", $this->_propDict) && !is_null($this->_propDict["transferor"])) {
+     
+            if (is_a($this->_propDict["transferor"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["transferor"];
             } else {
                 $this->_propDict["transferor"] = new IdentitySet($this->_propDict["transferor"]);

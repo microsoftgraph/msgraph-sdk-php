@@ -42,7 +42,7 @@ class ConditionalAccessUsers extends Entity
     * Sets the excludeGroups
     * Group IDs excluded from scope of policy.
     *
-    * @param string $val The value of the excludeGroups
+    * @param string[] $val The value of the excludeGroups
     *
     * @return ConditionalAccessUsers
     */
@@ -70,7 +70,7 @@ class ConditionalAccessUsers extends Entity
     * Sets the excludeRoles
     * Role IDs excluded from scope of policy.
     *
-    * @param string $val The value of the excludeRoles
+    * @param string[] $val The value of the excludeRoles
     *
     * @return ConditionalAccessUsers
     */
@@ -98,7 +98,7 @@ class ConditionalAccessUsers extends Entity
     * Sets the excludeUsers
     * User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
     *
-    * @param string $val The value of the excludeUsers
+    * @param string[] $val The value of the excludeUsers
     *
     * @return ConditionalAccessUsers
     */
@@ -126,7 +126,7 @@ class ConditionalAccessUsers extends Entity
     * Sets the includeGroups
     * Group IDs in scope of policy unless explicitly excluded, or All.
     *
-    * @param string $val The value of the includeGroups
+    * @param string[] $val The value of the includeGroups
     *
     * @return ConditionalAccessUsers
     */
@@ -154,7 +154,7 @@ class ConditionalAccessUsers extends Entity
     * Sets the includeRoles
     * Role IDs in scope of policy unless explicitly excluded, or All.
     *
-    * @param string $val The value of the includeRoles
+    * @param string[] $val The value of the includeRoles
     *
     * @return ConditionalAccessUsers
     */
@@ -182,7 +182,7 @@ class ConditionalAccessUsers extends Entity
     * Sets the includeUsers
     * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
     *
-    * @param string $val The value of the includeUsers
+    * @param string[] $val The value of the includeUsers
     *
     * @return ConditionalAccessUsers
     */

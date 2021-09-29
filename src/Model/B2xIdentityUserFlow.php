@@ -32,8 +32,8 @@ class B2xIdentityUserFlow extends IdentityUserFlow
     */
     public function getApiConnectorConfiguration()
     {
-        if (array_key_exists("apiConnectorConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["apiConnectorConfiguration"], "\Microsoft\Graph\Model\UserFlowApiConnectorConfiguration") || is_null($this->_propDict["apiConnectorConfiguration"])) {
+        if (array_key_exists("apiConnectorConfiguration", $this->_propDict) && !is_null($this->_propDict["apiConnectorConfiguration"])) {
+            if (is_a($this->_propDict["apiConnectorConfiguration"], "\Microsoft\Graph\Model\UserFlowApiConnectorConfiguration")) {
                 return $this->_propDict["apiConnectorConfiguration"];
             } else {
                 $this->_propDict["apiConnectorConfiguration"] = new UserFlowApiConnectorConfiguration($this->_propDict["apiConnectorConfiguration"]);
@@ -62,22 +62,29 @@ class B2xIdentityUserFlow extends IdentityUserFlow
      * Gets the identityProviders
     * The identity providers included in the user flow.
      *
-     * @return array|null The identityProviders
+     * @return IdentityProvider[]|null The identityProviders
      */
     public function getIdentityProviders()
     {
-        if (array_key_exists("identityProviders", $this->_propDict)) {
-           return $this->_propDict["identityProviders"];
-        } else {
-            return null;
+        if (array_key_exists('identityProviders', $this->_propDict) && !is_null($this->_propDict['identityProviders'])) {
+            $identityProviders = [];
+            if (count($this->_propDict['identityProviders']) > 0 && is_a($this->_propDict['identityProviders'][0], 'IdentityProvider')) {
+                return $this->_propDict['identityProviders'];
+            }
+            foreach ($this->_propDict['identityProviders'] as $singleValue) {
+                $identityProviders []= new IdentityProvider($singleValue);
+            }
+            $this->_propDict['identityProviders'] = $identityProviders;
+            return $this->_propDict['identityProviders'];
         }
+        return null;
     }
     
     /** 
     * Sets the identityProviders
     * The identity providers included in the user flow.
     *
-    * @param IdentityProvider $val The identityProviders
+    * @param IdentityProvider[] $val The identityProviders
     *
     * @return B2xIdentityUserFlow
     */
@@ -92,22 +99,29 @@ class B2xIdentityUserFlow extends IdentityUserFlow
      * Gets the languages
     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      *
-     * @return array|null The languages
+     * @return UserFlowLanguageConfiguration[]|null The languages
      */
     public function getLanguages()
     {
-        if (array_key_exists("languages", $this->_propDict)) {
-           return $this->_propDict["languages"];
-        } else {
-            return null;
+        if (array_key_exists('languages', $this->_propDict) && !is_null($this->_propDict['languages'])) {
+            $languages = [];
+            if (count($this->_propDict['languages']) > 0 && is_a($this->_propDict['languages'][0], 'UserFlowLanguageConfiguration')) {
+                return $this->_propDict['languages'];
+            }
+            foreach ($this->_propDict['languages'] as $singleValue) {
+                $languages []= new UserFlowLanguageConfiguration($singleValue);
+            }
+            $this->_propDict['languages'] = $languages;
+            return $this->_propDict['languages'];
         }
+        return null;
     }
     
     /** 
     * Sets the languages
     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
     *
-    * @param UserFlowLanguageConfiguration $val The languages
+    * @param UserFlowLanguageConfiguration[] $val The languages
     *
     * @return B2xIdentityUserFlow
     */
@@ -122,22 +136,29 @@ class B2xIdentityUserFlow extends IdentityUserFlow
      * Gets the userAttributeAssignments
     * The user attribute assignments included in the user flow.
      *
-     * @return array|null The userAttributeAssignments
+     * @return IdentityUserFlowAttributeAssignment[]|null The userAttributeAssignments
      */
     public function getUserAttributeAssignments()
     {
-        if (array_key_exists("userAttributeAssignments", $this->_propDict)) {
-           return $this->_propDict["userAttributeAssignments"];
-        } else {
-            return null;
+        if (array_key_exists('userAttributeAssignments', $this->_propDict) && !is_null($this->_propDict['userAttributeAssignments'])) {
+            $userAttributeAssignments = [];
+            if (count($this->_propDict['userAttributeAssignments']) > 0 && is_a($this->_propDict['userAttributeAssignments'][0], 'IdentityUserFlowAttributeAssignment')) {
+                return $this->_propDict['userAttributeAssignments'];
+            }
+            foreach ($this->_propDict['userAttributeAssignments'] as $singleValue) {
+                $userAttributeAssignments []= new IdentityUserFlowAttributeAssignment($singleValue);
+            }
+            $this->_propDict['userAttributeAssignments'] = $userAttributeAssignments;
+            return $this->_propDict['userAttributeAssignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the userAttributeAssignments
     * The user attribute assignments included in the user flow.
     *
-    * @param IdentityUserFlowAttributeAssignment $val The userAttributeAssignments
+    * @param IdentityUserFlowAttributeAssignment[] $val The userAttributeAssignments
     *
     * @return B2xIdentityUserFlow
     */
@@ -151,21 +172,28 @@ class B2xIdentityUserFlow extends IdentityUserFlow
      /** 
      * Gets the userFlowIdentityProviders
      *
-     * @return array|null The userFlowIdentityProviders
+     * @return IdentityProviderBase[]|null The userFlowIdentityProviders
      */
     public function getUserFlowIdentityProviders()
     {
-        if (array_key_exists("userFlowIdentityProviders", $this->_propDict)) {
-           return $this->_propDict["userFlowIdentityProviders"];
-        } else {
-            return null;
+        if (array_key_exists('userFlowIdentityProviders', $this->_propDict) && !is_null($this->_propDict['userFlowIdentityProviders'])) {
+            $userFlowIdentityProviders = [];
+            if (count($this->_propDict['userFlowIdentityProviders']) > 0 && is_a($this->_propDict['userFlowIdentityProviders'][0], 'IdentityProviderBase')) {
+                return $this->_propDict['userFlowIdentityProviders'];
+            }
+            foreach ($this->_propDict['userFlowIdentityProviders'] as $singleValue) {
+                $userFlowIdentityProviders []= new IdentityProviderBase($singleValue);
+            }
+            $this->_propDict['userFlowIdentityProviders'] = $userFlowIdentityProviders;
+            return $this->_propDict['userFlowIdentityProviders'];
         }
+        return null;
     }
     
     /** 
     * Sets the userFlowIdentityProviders
     *
-    * @param IdentityProviderBase $val The userFlowIdentityProviders
+    * @param IdentityProviderBase[] $val The userFlowIdentityProviders
     *
     * @return B2xIdentityUserFlow
     */

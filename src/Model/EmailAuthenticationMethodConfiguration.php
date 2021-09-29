@@ -32,8 +32,8 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     */
     public function getAllowExternalIdToUseEmailOtp()
     {
-        if (array_key_exists("allowExternalIdToUseEmailOtp", $this->_propDict)) {
-            if (is_a($this->_propDict["allowExternalIdToUseEmailOtp"], "\Microsoft\Graph\Model\ExternalEmailOtpState") || is_null($this->_propDict["allowExternalIdToUseEmailOtp"])) {
+        if (array_key_exists("allowExternalIdToUseEmailOtp", $this->_propDict) && !is_null($this->_propDict["allowExternalIdToUseEmailOtp"])) {
+            if (is_a($this->_propDict["allowExternalIdToUseEmailOtp"], "\Microsoft\Graph\Model\ExternalEmailOtpState")) {
                 return $this->_propDict["allowExternalIdToUseEmailOtp"];
             } else {
                 $this->_propDict["allowExternalIdToUseEmailOtp"] = new ExternalEmailOtpState($this->_propDict["allowExternalIdToUseEmailOtp"]);
@@ -62,22 +62,29 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * Gets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
      *
-     * @return array|null The includeTargets
+     * @return AuthenticationMethodTarget[]|null The includeTargets
      */
     public function getIncludeTargets()
     {
-        if (array_key_exists("includeTargets", $this->_propDict)) {
-           return $this->_propDict["includeTargets"];
-        } else {
-            return null;
+        if (array_key_exists('includeTargets', $this->_propDict) && !is_null($this->_propDict['includeTargets'])) {
+            $includeTargets = [];
+            if (count($this->_propDict['includeTargets']) > 0 && is_a($this->_propDict['includeTargets'][0], 'AuthenticationMethodTarget')) {
+                return $this->_propDict['includeTargets'];
+            }
+            foreach ($this->_propDict['includeTargets'] as $singleValue) {
+                $includeTargets []= new AuthenticationMethodTarget($singleValue);
+            }
+            $this->_propDict['includeTargets'] = $includeTargets;
+            return $this->_propDict['includeTargets'];
         }
+        return null;
     }
     
     /** 
     * Sets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
     *
-    * @param AuthenticationMethodTarget $val The includeTargets
+    * @param AuthenticationMethodTarget[] $val The includeTargets
     *
     * @return EmailAuthenticationMethodConfiguration
     */

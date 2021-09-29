@@ -90,8 +90,8 @@ class ConversationMember extends Entity
     */
     public function getVisibleHistoryStartDateTime()
     {
-        if (array_key_exists("visibleHistoryStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["visibleHistoryStartDateTime"], "\DateTime") || is_null($this->_propDict["visibleHistoryStartDateTime"])) {
+        if (array_key_exists("visibleHistoryStartDateTime", $this->_propDict) && !is_null($this->_propDict["visibleHistoryStartDateTime"])) {
+            if (is_a($this->_propDict["visibleHistoryStartDateTime"], "\DateTime")) {
                 return $this->_propDict["visibleHistoryStartDateTime"];
             } else {
                 $this->_propDict["visibleHistoryStartDateTime"] = new \DateTime($this->_propDict["visibleHistoryStartDateTime"]);

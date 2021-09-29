@@ -32,8 +32,9 @@ class Win32LobAppRule extends Entity
     */
     public function getRuleType()
     {
-        if (array_key_exists("ruleType", $this->_propDict)) {
-            if (is_a($this->_propDict["ruleType"], "\Microsoft\Graph\Model\Win32LobAppRuleType") || is_null($this->_propDict["ruleType"])) {
+        if (array_key_exists("ruleType", $this->_propDict) && !is_null($this->_propDict["ruleType"])) {
+     
+            if (is_a($this->_propDict["ruleType"], "\Microsoft\Graph\Model\Win32LobAppRuleType")) {
                 return $this->_propDict["ruleType"];
             } else {
                 $this->_propDict["ruleType"] = new Win32LobAppRuleType($this->_propDict["ruleType"]);

@@ -206,8 +206,8 @@ class PermissionGrantConditionSet extends Entity
     */
     public function getPermissionType()
     {
-        if (array_key_exists("permissionType", $this->_propDict)) {
-            if (is_a($this->_propDict["permissionType"], "\Microsoft\Graph\Model\PermissionType") || is_null($this->_propDict["permissionType"])) {
+        if (array_key_exists("permissionType", $this->_propDict) && !is_null($this->_propDict["permissionType"])) {
+            if (is_a($this->_propDict["permissionType"], "\Microsoft\Graph\Model\PermissionType")) {
                 return $this->_propDict["permissionType"];
             } else {
                 $this->_propDict["permissionType"] = new PermissionType($this->_propDict["permissionType"]);

@@ -32,8 +32,8 @@ class TeamsAppInstallation extends Entity
     */
     public function getTeamsApp()
     {
-        if (array_key_exists("teamsApp", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsApp"], "\Microsoft\Graph\Model\TeamsApp") || is_null($this->_propDict["teamsApp"])) {
+        if (array_key_exists("teamsApp", $this->_propDict) && !is_null($this->_propDict["teamsApp"])) {
+            if (is_a($this->_propDict["teamsApp"], "\Microsoft\Graph\Model\TeamsApp")) {
                 return $this->_propDict["teamsApp"];
             } else {
                 $this->_propDict["teamsApp"] = new TeamsApp($this->_propDict["teamsApp"]);
@@ -65,8 +65,8 @@ class TeamsAppInstallation extends Entity
     */
     public function getTeamsAppDefinition()
     {
-        if (array_key_exists("teamsAppDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["teamsAppDefinition"], "\Microsoft\Graph\Model\TeamsAppDefinition") || is_null($this->_propDict["teamsAppDefinition"])) {
+        if (array_key_exists("teamsAppDefinition", $this->_propDict) && !is_null($this->_propDict["teamsAppDefinition"])) {
+            if (is_a($this->_propDict["teamsAppDefinition"], "\Microsoft\Graph\Model\TeamsAppDefinition")) {
                 return $this->_propDict["teamsAppDefinition"];
             } else {
                 $this->_propDict["teamsAppDefinition"] = new TeamsAppDefinition($this->_propDict["teamsAppDefinition"]);

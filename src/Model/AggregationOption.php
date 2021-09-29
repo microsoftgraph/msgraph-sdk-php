@@ -32,8 +32,9 @@ class AggregationOption extends Entity
     */
     public function getBucketDefinition()
     {
-        if (array_key_exists("bucketDefinition", $this->_propDict)) {
-            if (is_a($this->_propDict["bucketDefinition"], "\Microsoft\Graph\Model\BucketAggregationDefinition") || is_null($this->_propDict["bucketDefinition"])) {
+        if (array_key_exists("bucketDefinition", $this->_propDict) && !is_null($this->_propDict["bucketDefinition"])) {
+     
+            if (is_a($this->_propDict["bucketDefinition"], "\Microsoft\Graph\Model\BucketAggregationDefinition")) {
                 return $this->_propDict["bucketDefinition"];
             } else {
                 $this->_propDict["bucketDefinition"] = new BucketAggregationDefinition($this->_propDict["bucketDefinition"]);

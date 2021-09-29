@@ -29,22 +29,29 @@ class CertificateBasedAuthConfiguration extends Entity
      * Gets the certificateAuthorities
     * Collection of certificate authorities which creates a trusted certificate chain.
      *
-     * @return array|null The certificateAuthorities
+     * @return CertificateAuthority[]|null The certificateAuthorities
      */
     public function getCertificateAuthorities()
     {
-        if (array_key_exists("certificateAuthorities", $this->_propDict)) {
-           return $this->_propDict["certificateAuthorities"];
-        } else {
-            return null;
+        if (array_key_exists('certificateAuthorities', $this->_propDict) && !is_null($this->_propDict['certificateAuthorities'])) {
+            $certificateAuthorities = [];
+            if (count($this->_propDict['certificateAuthorities']) > 0 && is_a($this->_propDict['certificateAuthorities'][0], 'CertificateAuthority')) {
+                return $this->_propDict['certificateAuthorities'];
+            }
+            foreach ($this->_propDict['certificateAuthorities'] as $singleValue) {
+                $certificateAuthorities []= new CertificateAuthority($singleValue);
+            }
+            $this->_propDict['certificateAuthorities'] = $certificateAuthorities;
+            return $this->_propDict['certificateAuthorities'];
         }
+        return null;
     }
     
     /** 
     * Sets the certificateAuthorities
     * Collection of certificate authorities which creates a trusted certificate chain.
     *
-    * @param CertificateAuthority $val The certificateAuthorities
+    * @param CertificateAuthority[] $val The certificateAuthorities
     *
     * @return CertificateBasedAuthConfiguration
     */

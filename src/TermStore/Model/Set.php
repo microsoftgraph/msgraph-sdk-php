@@ -32,8 +32,8 @@ class Set extends \Microsoft\Graph\Model\Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -91,22 +91,29 @@ class Set extends \Microsoft\Graph\Model\Entity
      * Gets the localizedNames
     * Name of the set for each languageTag.
      *
-     * @return array|null The localizedNames
+     * @return LocalizedName[]|null The localizedNames
      */
     public function getLocalizedNames()
     {
-        if (array_key_exists("localizedNames", $this->_propDict)) {
-           return $this->_propDict["localizedNames"];
-        } else {
-            return null;
+        if (array_key_exists('localizedNames', $this->_propDict) && !is_null($this->_propDict['localizedNames'])) {
+            $localizedNames = [];
+            if (count($this->_propDict['localizedNames']) > 0 && is_a($this->_propDict['localizedNames'][0], 'LocalizedName')) {
+                return $this->_propDict['localizedNames'];
+            }
+            foreach ($this->_propDict['localizedNames'] as $singleValue) {
+                $localizedNames []= new LocalizedName($singleValue);
+            }
+            $this->_propDict['localizedNames'] = $localizedNames;
+            return $this->_propDict['localizedNames'];
         }
+        return null;
     }
     
     /** 
     * Sets the localizedNames
     * Name of the set for each languageTag.
     *
-    * @param LocalizedName $val The localizedNames
+    * @param LocalizedName[] $val The localizedNames
     *
     * @return Set
     */
@@ -121,22 +128,29 @@ class Set extends \Microsoft\Graph\Model\Entity
      * Gets the setProperties
     * Custom properties for the set.
      *
-     * @return array|null The setProperties
+     * @return \Microsoft\Graph\Model\KeyValue[]|null The setProperties
      */
     public function getSetProperties()
     {
-        if (array_key_exists("properties", $this->_propDict)) {
-           return $this->_propDict["properties"];
-        } else {
-            return null;
+        if (array_key_exists('properties', $this->_propDict) && !is_null($this->_propDict['properties'])) {
+            $properties = [];
+            if (count($this->_propDict['properties']) > 0 && is_a($this->_propDict['properties'][0], '\Microsoft\Graph\Model\KeyValue')) {
+                return $this->_propDict['properties'];
+            }
+            foreach ($this->_propDict['properties'] as $singleValue) {
+                $properties []= new \Microsoft\Graph\Model\KeyValue($singleValue);
+            }
+            $this->_propDict['properties'] = $properties;
+            return $this->_propDict['properties'];
         }
+        return null;
     }
     
     /** 
     * Sets the setProperties
     * Custom properties for the set.
     *
-    * @param \Microsoft\Graph\Model\KeyValue $val The setProperties
+    * @param \Microsoft\Graph\Model\KeyValue[] $val The setProperties
     *
     * @return Set
     */
@@ -151,22 +165,29 @@ class Set extends \Microsoft\Graph\Model\Entity
      * Gets the children
     * Children terms of set in term [store].
      *
-     * @return array|null The children
+     * @return Term[]|null The children
      */
     public function getChildren()
     {
-        if (array_key_exists("children", $this->_propDict)) {
-           return $this->_propDict["children"];
-        } else {
-            return null;
+        if (array_key_exists('children', $this->_propDict) && !is_null($this->_propDict['children'])) {
+            $children = [];
+            if (count($this->_propDict['children']) > 0 && is_a($this->_propDict['children'][0], 'Term')) {
+                return $this->_propDict['children'];
+            }
+            foreach ($this->_propDict['children'] as $singleValue) {
+                $children []= new Term($singleValue);
+            }
+            $this->_propDict['children'] = $children;
+            return $this->_propDict['children'];
         }
+        return null;
     }
     
     /** 
     * Sets the children
     * Children terms of set in term [store].
     *
-    * @param Term $val The children
+    * @param Term[] $val The children
     *
     * @return Set
     */
@@ -184,8 +205,8 @@ class Set extends \Microsoft\Graph\Model\Entity
     */
     public function getParentGroup()
     {
-        if (array_key_exists("parentGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["parentGroup"], "\Microsoft\Graph\TermStore\Model\Group") || is_null($this->_propDict["parentGroup"])) {
+        if (array_key_exists("parentGroup", $this->_propDict) && !is_null($this->_propDict["parentGroup"])) {
+            if (is_a($this->_propDict["parentGroup"], "\Microsoft\Graph\TermStore\Model\Group")) {
                 return $this->_propDict["parentGroup"];
             } else {
                 $this->_propDict["parentGroup"] = new Group($this->_propDict["parentGroup"]);
@@ -214,22 +235,29 @@ class Set extends \Microsoft\Graph\Model\Entity
      * Gets the relations
     * Indicates which terms have been pinned or reused directly under the set.
      *
-     * @return array|null The relations
+     * @return Relation[]|null The relations
      */
     public function getRelations()
     {
-        if (array_key_exists("relations", $this->_propDict)) {
-           return $this->_propDict["relations"];
-        } else {
-            return null;
+        if (array_key_exists('relations', $this->_propDict) && !is_null($this->_propDict['relations'])) {
+            $relations = [];
+            if (count($this->_propDict['relations']) > 0 && is_a($this->_propDict['relations'][0], 'Relation')) {
+                return $this->_propDict['relations'];
+            }
+            foreach ($this->_propDict['relations'] as $singleValue) {
+                $relations []= new Relation($singleValue);
+            }
+            $this->_propDict['relations'] = $relations;
+            return $this->_propDict['relations'];
         }
+        return null;
     }
     
     /** 
     * Sets the relations
     * Indicates which terms have been pinned or reused directly under the set.
     *
-    * @param Relation $val The relations
+    * @param Relation[] $val The relations
     *
     * @return Set
     */
@@ -244,22 +272,29 @@ class Set extends \Microsoft\Graph\Model\Entity
      * Gets the terms
     * All the terms under the set.
      *
-     * @return array|null The terms
+     * @return Term[]|null The terms
      */
     public function getTerms()
     {
-        if (array_key_exists("terms", $this->_propDict)) {
-           return $this->_propDict["terms"];
-        } else {
-            return null;
+        if (array_key_exists('terms', $this->_propDict) && !is_null($this->_propDict['terms'])) {
+            $terms = [];
+            if (count($this->_propDict['terms']) > 0 && is_a($this->_propDict['terms'][0], 'Term')) {
+                return $this->_propDict['terms'];
+            }
+            foreach ($this->_propDict['terms'] as $singleValue) {
+                $terms []= new Term($singleValue);
+            }
+            $this->_propDict['terms'] = $terms;
+            return $this->_propDict['terms'];
         }
+        return null;
     }
     
     /** 
     * Sets the terms
     * All the terms under the set.
     *
-    * @param Term $val The terms
+    * @param Term[] $val The terms
     *
     * @return Set
     */

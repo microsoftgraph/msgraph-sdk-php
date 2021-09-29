@@ -32,8 +32,8 @@ class ThreatAssessmentRequest extends Entity
     */
     public function getCategory()
     {
-        if (array_key_exists("category", $this->_propDict)) {
-            if (is_a($this->_propDict["category"], "\Microsoft\Graph\Model\ThreatCategory") || is_null($this->_propDict["category"])) {
+        if (array_key_exists("category", $this->_propDict) && !is_null($this->_propDict["category"])) {
+            if (is_a($this->_propDict["category"], "\Microsoft\Graph\Model\ThreatCategory")) {
                 return $this->_propDict["category"];
             } else {
                 $this->_propDict["category"] = new ThreatCategory($this->_propDict["category"]);
@@ -65,8 +65,8 @@ class ThreatAssessmentRequest extends Entity
     */
     public function getContentType()
     {
-        if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "\Microsoft\Graph\Model\ThreatAssessmentContentType") || is_null($this->_propDict["contentType"])) {
+        if (array_key_exists("contentType", $this->_propDict) && !is_null($this->_propDict["contentType"])) {
+            if (is_a($this->_propDict["contentType"], "\Microsoft\Graph\Model\ThreatAssessmentContentType")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new ThreatAssessmentContentType($this->_propDict["contentType"]);
@@ -98,8 +98,8 @@ class ThreatAssessmentRequest extends Entity
     */
     public function getCreatedBy()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
+        if (array_key_exists("createdBy", $this->_propDict) && !is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -131,8 +131,8 @@ class ThreatAssessmentRequest extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -164,8 +164,8 @@ class ThreatAssessmentRequest extends Entity
     */
     public function getExpectedAssessment()
     {
-        if (array_key_exists("expectedAssessment", $this->_propDict)) {
-            if (is_a($this->_propDict["expectedAssessment"], "\Microsoft\Graph\Model\ThreatExpectedAssessment") || is_null($this->_propDict["expectedAssessment"])) {
+        if (array_key_exists("expectedAssessment", $this->_propDict) && !is_null($this->_propDict["expectedAssessment"])) {
+            if (is_a($this->_propDict["expectedAssessment"], "\Microsoft\Graph\Model\ThreatExpectedAssessment")) {
                 return $this->_propDict["expectedAssessment"];
             } else {
                 $this->_propDict["expectedAssessment"] = new ThreatExpectedAssessment($this->_propDict["expectedAssessment"]);
@@ -197,8 +197,8 @@ class ThreatAssessmentRequest extends Entity
     */
     public function getRequestSource()
     {
-        if (array_key_exists("requestSource", $this->_propDict)) {
-            if (is_a($this->_propDict["requestSource"], "\Microsoft\Graph\Model\ThreatAssessmentRequestSource") || is_null($this->_propDict["requestSource"])) {
+        if (array_key_exists("requestSource", $this->_propDict) && !is_null($this->_propDict["requestSource"])) {
+            if (is_a($this->_propDict["requestSource"], "\Microsoft\Graph\Model\ThreatAssessmentRequestSource")) {
                 return $this->_propDict["requestSource"];
             } else {
                 $this->_propDict["requestSource"] = new ThreatAssessmentRequestSource($this->_propDict["requestSource"]);
@@ -230,8 +230,8 @@ class ThreatAssessmentRequest extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ThreatAssessmentStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ThreatAssessmentStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ThreatAssessmentStatus($this->_propDict["status"]);
@@ -260,22 +260,29 @@ class ThreatAssessmentRequest extends Entity
      * Gets the results
     * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      *
-     * @return array|null The results
+     * @return ThreatAssessmentResult[]|null The results
      */
     public function getResults()
     {
-        if (array_key_exists("results", $this->_propDict)) {
-           return $this->_propDict["results"];
-        } else {
-            return null;
+        if (array_key_exists('results', $this->_propDict) && !is_null($this->_propDict['results'])) {
+            $results = [];
+            if (count($this->_propDict['results']) > 0 && is_a($this->_propDict['results'][0], 'ThreatAssessmentResult')) {
+                return $this->_propDict['results'];
+            }
+            foreach ($this->_propDict['results'] as $singleValue) {
+                $results []= new ThreatAssessmentResult($singleValue);
+            }
+            $this->_propDict['results'] = $results;
+            return $this->_propDict['results'];
         }
+        return null;
     }
     
     /** 
     * Sets the results
     * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
     *
-    * @param ThreatAssessmentResult $val The results
+    * @param ThreatAssessmentResult[] $val The results
     *
     * @return ThreatAssessmentRequest
     */

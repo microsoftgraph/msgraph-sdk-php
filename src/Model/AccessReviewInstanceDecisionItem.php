@@ -61,8 +61,8 @@ class AccessReviewInstanceDecisionItem extends Entity
     */
     public function getAppliedBy()
     {
-        if (array_key_exists("appliedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["appliedBy"], "\Microsoft\Graph\Model\UserIdentity") || is_null($this->_propDict["appliedBy"])) {
+        if (array_key_exists("appliedBy", $this->_propDict) && !is_null($this->_propDict["appliedBy"])) {
+            if (is_a($this->_propDict["appliedBy"], "\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["appliedBy"];
             } else {
                 $this->_propDict["appliedBy"] = new UserIdentity($this->_propDict["appliedBy"]);
@@ -94,8 +94,8 @@ class AccessReviewInstanceDecisionItem extends Entity
     */
     public function getAppliedDateTime()
     {
-        if (array_key_exists("appliedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["appliedDateTime"], "\DateTime") || is_null($this->_propDict["appliedDateTime"])) {
+        if (array_key_exists("appliedDateTime", $this->_propDict) && !is_null($this->_propDict["appliedDateTime"])) {
+            if (is_a($this->_propDict["appliedDateTime"], "\DateTime")) {
                 return $this->_propDict["appliedDateTime"];
             } else {
                 $this->_propDict["appliedDateTime"] = new \DateTime($this->_propDict["appliedDateTime"]);
@@ -214,8 +214,8 @@ class AccessReviewInstanceDecisionItem extends Entity
     */
     public function getPrincipal()
     {
-        if (array_key_exists("principal", $this->_propDict)) {
-            if (is_a($this->_propDict["principal"], "\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["principal"])) {
+        if (array_key_exists("principal", $this->_propDict) && !is_null($this->_propDict["principal"])) {
+            if (is_a($this->_propDict["principal"], "\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["principal"];
             } else {
                 $this->_propDict["principal"] = new Identity($this->_propDict["principal"]);
@@ -305,8 +305,8 @@ class AccessReviewInstanceDecisionItem extends Entity
     */
     public function getResource()
     {
-        if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemResource") || is_null($this->_propDict["resource"])) {
+        if (array_key_exists("resource", $this->_propDict) && !is_null($this->_propDict["resource"])) {
+            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\AccessReviewInstanceDecisionItemResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new AccessReviewInstanceDecisionItemResource($this->_propDict["resource"]);
@@ -367,8 +367,8 @@ class AccessReviewInstanceDecisionItem extends Entity
     */
     public function getReviewedBy()
     {
-        if (array_key_exists("reviewedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedBy"], "\Microsoft\Graph\Model\UserIdentity") || is_null($this->_propDict["reviewedBy"])) {
+        if (array_key_exists("reviewedBy", $this->_propDict) && !is_null($this->_propDict["reviewedBy"])) {
+            if (is_a($this->_propDict["reviewedBy"], "\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["reviewedBy"];
             } else {
                 $this->_propDict["reviewedBy"] = new UserIdentity($this->_propDict["reviewedBy"]);
@@ -400,8 +400,8 @@ class AccessReviewInstanceDecisionItem extends Entity
     */
     public function getReviewedDateTime()
     {
-        if (array_key_exists("reviewedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedDateTime"], "\DateTime") || is_null($this->_propDict["reviewedDateTime"])) {
+        if (array_key_exists("reviewedDateTime", $this->_propDict) && !is_null($this->_propDict["reviewedDateTime"])) {
+            if (is_a($this->_propDict["reviewedDateTime"], "\DateTime")) {
                 return $this->_propDict["reviewedDateTime"];
             } else {
                 $this->_propDict["reviewedDateTime"] = new \DateTime($this->_propDict["reviewedDateTime"]);

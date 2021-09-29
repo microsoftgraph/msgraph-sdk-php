@@ -32,8 +32,9 @@ class Initiator extends Identity
     */
     public function getInitiatorType()
     {
-        if (array_key_exists("initiatorType", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatorType"], "\Microsoft\Graph\Model\InitiatorType") || is_null($this->_propDict["initiatorType"])) {
+        if (array_key_exists("initiatorType", $this->_propDict) && !is_null($this->_propDict["initiatorType"])) {
+     
+            if (is_a($this->_propDict["initiatorType"], "\Microsoft\Graph\Model\InitiatorType")) {
                 return $this->_propDict["initiatorType"];
             } else {
                 $this->_propDict["initiatorType"] = new InitiatorType($this->_propDict["initiatorType"]);

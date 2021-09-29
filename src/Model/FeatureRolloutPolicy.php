@@ -90,8 +90,8 @@ class FeatureRolloutPolicy extends Entity
     */
     public function getFeature()
     {
-        if (array_key_exists("feature", $this->_propDict)) {
-            if (is_a($this->_propDict["feature"], "\Microsoft\Graph\Model\StagedFeatureName") || is_null($this->_propDict["feature"])) {
+        if (array_key_exists("feature", $this->_propDict) && !is_null($this->_propDict["feature"])) {
+            if (is_a($this->_propDict["feature"], "\Microsoft\Graph\Model\StagedFeatureName")) {
                 return $this->_propDict["feature"];
             } else {
                 $this->_propDict["feature"] = new StagedFeatureName($this->_propDict["feature"]);
@@ -178,22 +178,29 @@ class FeatureRolloutPolicy extends Entity
      * Gets the appliesTo
     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
      *
-     * @return array|null The appliesTo
+     * @return DirectoryObject[]|null The appliesTo
      */
     public function getAppliesTo()
     {
-        if (array_key_exists("appliesTo", $this->_propDict)) {
-           return $this->_propDict["appliesTo"];
-        } else {
-            return null;
+        if (array_key_exists('appliesTo', $this->_propDict) && !is_null($this->_propDict['appliesTo'])) {
+            $appliesTo = [];
+            if (count($this->_propDict['appliesTo']) > 0 && is_a($this->_propDict['appliesTo'][0], 'DirectoryObject')) {
+                return $this->_propDict['appliesTo'];
+            }
+            foreach ($this->_propDict['appliesTo'] as $singleValue) {
+                $appliesTo []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['appliesTo'] = $appliesTo;
+            return $this->_propDict['appliesTo'];
         }
+        return null;
     }
     
     /** 
     * Sets the appliesTo
     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
     *
-    * @param DirectoryObject $val The appliesTo
+    * @param DirectoryObject[] $val The appliesTo
     *
     * @return FeatureRolloutPolicy
     */

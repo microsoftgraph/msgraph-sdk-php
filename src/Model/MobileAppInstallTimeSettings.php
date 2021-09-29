@@ -32,8 +32,9 @@ class MobileAppInstallTimeSettings extends Entity
     */
     public function getDeadlineDateTime()
     {
-        if (array_key_exists("deadlineDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deadlineDateTime"], "\DateTime") || is_null($this->_propDict["deadlineDateTime"])) {
+        if (array_key_exists("deadlineDateTime", $this->_propDict) && !is_null($this->_propDict["deadlineDateTime"])) {
+     
+            if (is_a($this->_propDict["deadlineDateTime"], "\DateTime")) {
                 return $this->_propDict["deadlineDateTime"];
             } else {
                 $this->_propDict["deadlineDateTime"] = new \DateTime($this->_propDict["deadlineDateTime"]);
@@ -65,8 +66,9 @@ class MobileAppInstallTimeSettings extends Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+     
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

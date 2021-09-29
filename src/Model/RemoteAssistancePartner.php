@@ -61,8 +61,8 @@ class RemoteAssistancePartner extends Entity
     */
     public function getLastConnectionDateTime()
     {
-        if (array_key_exists("lastConnectionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastConnectionDateTime"], "\DateTime") || is_null($this->_propDict["lastConnectionDateTime"])) {
+        if (array_key_exists("lastConnectionDateTime", $this->_propDict) && !is_null($this->_propDict["lastConnectionDateTime"])) {
+            if (is_a($this->_propDict["lastConnectionDateTime"], "\DateTime")) {
                 return $this->_propDict["lastConnectionDateTime"];
             } else {
                 $this->_propDict["lastConnectionDateTime"] = new \DateTime($this->_propDict["lastConnectionDateTime"]);
@@ -94,8 +94,8 @@ class RemoteAssistancePartner extends Entity
     */
     public function getOnboardingStatus()
     {
-        if (array_key_exists("onboardingStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["onboardingStatus"], "\Microsoft\Graph\Model\RemoteAssistanceOnboardingStatus") || is_null($this->_propDict["onboardingStatus"])) {
+        if (array_key_exists("onboardingStatus", $this->_propDict) && !is_null($this->_propDict["onboardingStatus"])) {
+            if (is_a($this->_propDict["onboardingStatus"], "\Microsoft\Graph\Model\RemoteAssistanceOnboardingStatus")) {
                 return $this->_propDict["onboardingStatus"];
             } else {
                 $this->_propDict["onboardingStatus"] = new RemoteAssistanceOnboardingStatus($this->_propDict["onboardingStatus"]);

@@ -61,8 +61,8 @@ class AuthenticationMethodTarget extends Entity
     */
     public function getTargetType()
     {
-        if (array_key_exists("targetType", $this->_propDict)) {
-            if (is_a($this->_propDict["targetType"], "\Microsoft\Graph\Model\AuthenticationMethodTargetType") || is_null($this->_propDict["targetType"])) {
+        if (array_key_exists("targetType", $this->_propDict) && !is_null($this->_propDict["targetType"])) {
+            if (is_a($this->_propDict["targetType"], "\Microsoft\Graph\Model\AuthenticationMethodTargetType")) {
                 return $this->_propDict["targetType"];
             } else {
                 $this->_propDict["targetType"] = new AuthenticationMethodTargetType($this->_propDict["targetType"]);

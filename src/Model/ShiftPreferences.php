@@ -29,22 +29,29 @@ class ShiftPreferences extends ChangeTrackedEntity
      * Gets the availability
     * Availability of the user to be scheduled for work and its recurrence pattern.
      *
-     * @return array|null The availability
+     * @return ShiftAvailability[]|null The availability
      */
     public function getAvailability()
     {
-        if (array_key_exists("availability", $this->_propDict)) {
-           return $this->_propDict["availability"];
-        } else {
-            return null;
+        if (array_key_exists('availability', $this->_propDict) && !is_null($this->_propDict['availability'])) {
+            $availability = [];
+            if (count($this->_propDict['availability']) > 0 && is_a($this->_propDict['availability'][0], 'ShiftAvailability')) {
+                return $this->_propDict['availability'];
+            }
+            foreach ($this->_propDict['availability'] as $singleValue) {
+                $availability []= new ShiftAvailability($singleValue);
+            }
+            $this->_propDict['availability'] = $availability;
+            return $this->_propDict['availability'];
         }
+        return null;
     }
     
     /** 
     * Sets the availability
     * Availability of the user to be scheduled for work and its recurrence pattern.
     *
-    * @param ShiftAvailability $val The availability
+    * @param ShiftAvailability[] $val The availability
     *
     * @return ShiftPreferences
     */

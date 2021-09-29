@@ -174,22 +174,29 @@ class WorkbookRangeFormat extends Entity
      * Gets the borders
     * Collection of border objects that apply to the overall range selected Read-only.
      *
-     * @return array|null The borders
+     * @return WorkbookRangeBorder[]|null The borders
      */
     public function getBorders()
     {
-        if (array_key_exists("borders", $this->_propDict)) {
-           return $this->_propDict["borders"];
-        } else {
-            return null;
+        if (array_key_exists('borders', $this->_propDict) && !is_null($this->_propDict['borders'])) {
+            $borders = [];
+            if (count($this->_propDict['borders']) > 0 && is_a($this->_propDict['borders'][0], 'WorkbookRangeBorder')) {
+                return $this->_propDict['borders'];
+            }
+            foreach ($this->_propDict['borders'] as $singleValue) {
+                $borders []= new WorkbookRangeBorder($singleValue);
+            }
+            $this->_propDict['borders'] = $borders;
+            return $this->_propDict['borders'];
         }
+        return null;
     }
     
     /** 
     * Sets the borders
     * Collection of border objects that apply to the overall range selected Read-only.
     *
-    * @param WorkbookRangeBorder $val The borders
+    * @param WorkbookRangeBorder[] $val The borders
     *
     * @return WorkbookRangeFormat
     */
@@ -207,8 +214,8 @@ class WorkbookRangeFormat extends Entity
     */
     public function getFill()
     {
-        if (array_key_exists("fill", $this->_propDict)) {
-            if (is_a($this->_propDict["fill"], "\Microsoft\Graph\Model\WorkbookRangeFill") || is_null($this->_propDict["fill"])) {
+        if (array_key_exists("fill", $this->_propDict) && !is_null($this->_propDict["fill"])) {
+            if (is_a($this->_propDict["fill"], "\Microsoft\Graph\Model\WorkbookRangeFill")) {
                 return $this->_propDict["fill"];
             } else {
                 $this->_propDict["fill"] = new WorkbookRangeFill($this->_propDict["fill"]);
@@ -240,8 +247,8 @@ class WorkbookRangeFormat extends Entity
     */
     public function getFont()
     {
-        if (array_key_exists("font", $this->_propDict)) {
-            if (is_a($this->_propDict["font"], "\Microsoft\Graph\Model\WorkbookRangeFont") || is_null($this->_propDict["font"])) {
+        if (array_key_exists("font", $this->_propDict) && !is_null($this->_propDict["font"])) {
+            if (is_a($this->_propDict["font"], "\Microsoft\Graph\Model\WorkbookRangeFont")) {
                 return $this->_propDict["font"];
             } else {
                 $this->_propDict["font"] = new WorkbookRangeFont($this->_propDict["font"]);
@@ -273,8 +280,8 @@ class WorkbookRangeFormat extends Entity
     */
     public function getProtection()
     {
-        if (array_key_exists("protection", $this->_propDict)) {
-            if (is_a($this->_propDict["protection"], "\Microsoft\Graph\Model\WorkbookFormatProtection") || is_null($this->_propDict["protection"])) {
+        if (array_key_exists("protection", $this->_propDict) && !is_null($this->_propDict["protection"])) {
+            if (is_a($this->_propDict["protection"], "\Microsoft\Graph\Model\WorkbookFormatProtection")) {
                 return $this->_propDict["protection"];
             } else {
                 $this->_propDict["protection"] = new WorkbookFormatProtection($this->_propDict["protection"]);

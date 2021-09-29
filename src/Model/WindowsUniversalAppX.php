@@ -32,8 +32,8 @@ class WindowsUniversalAppX extends MobileLobApp
     */
     public function getApplicableArchitectures()
     {
-        if (array_key_exists("applicableArchitectures", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableArchitectures"], "\Microsoft\Graph\Model\WindowsArchitecture") || is_null($this->_propDict["applicableArchitectures"])) {
+        if (array_key_exists("applicableArchitectures", $this->_propDict) && !is_null($this->_propDict["applicableArchitectures"])) {
+            if (is_a($this->_propDict["applicableArchitectures"], "\Microsoft\Graph\Model\WindowsArchitecture")) {
                 return $this->_propDict["applicableArchitectures"];
             } else {
                 $this->_propDict["applicableArchitectures"] = new WindowsArchitecture($this->_propDict["applicableArchitectures"]);
@@ -65,8 +65,8 @@ class WindowsUniversalAppX extends MobileLobApp
     */
     public function getApplicableDeviceTypes()
     {
-        if (array_key_exists("applicableDeviceTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableDeviceTypes"], "\Microsoft\Graph\Model\WindowsDeviceType") || is_null($this->_propDict["applicableDeviceTypes"])) {
+        if (array_key_exists("applicableDeviceTypes", $this->_propDict) && !is_null($this->_propDict["applicableDeviceTypes"])) {
+            if (is_a($this->_propDict["applicableDeviceTypes"], "\Microsoft\Graph\Model\WindowsDeviceType")) {
                 return $this->_propDict["applicableDeviceTypes"];
             } else {
                 $this->_propDict["applicableDeviceTypes"] = new WindowsDeviceType($this->_propDict["applicableDeviceTypes"]);
@@ -243,8 +243,8 @@ class WindowsUniversalAppX extends MobileLobApp
     */
     public function getMinimumSupportedOperatingSystem()
     {
-        if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict)) {
-            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\WindowsMinimumOperatingSystem") || is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
+        if (array_key_exists("minimumSupportedOperatingSystem", $this->_propDict) && !is_null($this->_propDict["minimumSupportedOperatingSystem"])) {
+            if (is_a($this->_propDict["minimumSupportedOperatingSystem"], "\Microsoft\Graph\Model\WindowsMinimumOperatingSystem")) {
                 return $this->_propDict["minimumSupportedOperatingSystem"];
             } else {
                 $this->_propDict["minimumSupportedOperatingSystem"] = new WindowsMinimumOperatingSystem($this->_propDict["minimumSupportedOperatingSystem"]);

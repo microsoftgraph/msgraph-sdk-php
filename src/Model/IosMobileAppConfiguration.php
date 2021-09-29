@@ -32,8 +32,8 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
     */
     public function getEncodedSettingXml()
     {
-        if (array_key_exists("encodedSettingXml", $this->_propDict)) {
-            if (is_a($this->_propDict["encodedSettingXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["encodedSettingXml"])) {
+        if (array_key_exists("encodedSettingXml", $this->_propDict) && !is_null($this->_propDict["encodedSettingXml"])) {
+            if (is_a($this->_propDict["encodedSettingXml"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["encodedSettingXml"];
             } else {
                 $this->_propDict["encodedSettingXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["encodedSettingXml"]);
@@ -62,22 +62,29 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration
      * Gets the settings
     * app configuration setting items.
      *
-     * @return array|null The settings
+     * @return AppConfigurationSettingItem[]|null The settings
      */
     public function getSettings()
     {
-        if (array_key_exists("settings", $this->_propDict)) {
-           return $this->_propDict["settings"];
-        } else {
-            return null;
+        if (array_key_exists('settings', $this->_propDict) && !is_null($this->_propDict['settings'])) {
+            $settings = [];
+            if (count($this->_propDict['settings']) > 0 && is_a($this->_propDict['settings'][0], 'AppConfigurationSettingItem')) {
+                return $this->_propDict['settings'];
+            }
+            foreach ($this->_propDict['settings'] as $singleValue) {
+                $settings []= new AppConfigurationSettingItem($singleValue);
+            }
+            $this->_propDict['settings'] = $settings;
+            return $this->_propDict['settings'];
         }
+        return null;
     }
     
     /** 
     * Sets the settings
     * app configuration setting items.
     *
-    * @param AppConfigurationSettingItem $val The settings
+    * @param AppConfigurationSettingItem[] $val The settings
     *
     * @return IosMobileAppConfiguration
     */

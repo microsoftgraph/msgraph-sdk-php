@@ -145,22 +145,29 @@ class DetectedApp extends Entity
      * Gets the managedDevices
     * The devices that have the discovered application installed
      *
-     * @return array|null The managedDevices
+     * @return ManagedDevice[]|null The managedDevices
      */
     public function getManagedDevices()
     {
-        if (array_key_exists("managedDevices", $this->_propDict)) {
-           return $this->_propDict["managedDevices"];
-        } else {
-            return null;
+        if (array_key_exists('managedDevices', $this->_propDict) && !is_null($this->_propDict['managedDevices'])) {
+            $managedDevices = [];
+            if (count($this->_propDict['managedDevices']) > 0 && is_a($this->_propDict['managedDevices'][0], 'ManagedDevice')) {
+                return $this->_propDict['managedDevices'];
+            }
+            foreach ($this->_propDict['managedDevices'] as $singleValue) {
+                $managedDevices []= new ManagedDevice($singleValue);
+            }
+            $this->_propDict['managedDevices'] = $managedDevices;
+            return $this->_propDict['managedDevices'];
         }
+        return null;
     }
     
     /** 
     * Sets the managedDevices
     * The devices that have the discovered application installed
     *
-    * @param ManagedDevice $val The managedDevices
+    * @param ManagedDevice[] $val The managedDevices
     *
     * @return DetectedApp
     */

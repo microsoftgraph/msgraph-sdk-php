@@ -116,22 +116,29 @@ class DirectoryRole extends DirectoryObject
      * Gets the members
     * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
      *
-     * @return array|null The members
+     * @return DirectoryObject[]|null The members
      */
     public function getMembers()
     {
-        if (array_key_exists("members", $this->_propDict)) {
-           return $this->_propDict["members"];
-        } else {
-            return null;
+        if (array_key_exists('members', $this->_propDict) && !is_null($this->_propDict['members'])) {
+            $members = [];
+            if (count($this->_propDict['members']) > 0 && is_a($this->_propDict['members'][0], 'DirectoryObject')) {
+                return $this->_propDict['members'];
+            }
+            foreach ($this->_propDict['members'] as $singleValue) {
+                $members []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['members'] = $members;
+            return $this->_propDict['members'];
         }
+        return null;
     }
     
     /** 
     * Sets the members
     * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
     *
-    * @param DirectoryObject $val The members
+    * @param DirectoryObject[] $val The members
     *
     * @return DirectoryRole
     */
@@ -146,22 +153,29 @@ class DirectoryRole extends DirectoryObject
      * Gets the scopedMembers
     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      *
-     * @return array|null The scopedMembers
+     * @return ScopedRoleMembership[]|null The scopedMembers
      */
     public function getScopedMembers()
     {
-        if (array_key_exists("scopedMembers", $this->_propDict)) {
-           return $this->_propDict["scopedMembers"];
-        } else {
-            return null;
+        if (array_key_exists('scopedMembers', $this->_propDict) && !is_null($this->_propDict['scopedMembers'])) {
+            $scopedMembers = [];
+            if (count($this->_propDict['scopedMembers']) > 0 && is_a($this->_propDict['scopedMembers'][0], 'ScopedRoleMembership')) {
+                return $this->_propDict['scopedMembers'];
+            }
+            foreach ($this->_propDict['scopedMembers'] as $singleValue) {
+                $scopedMembers []= new ScopedRoleMembership($singleValue);
+            }
+            $this->_propDict['scopedMembers'] = $scopedMembers;
+            return $this->_propDict['scopedMembers'];
         }
+        return null;
     }
     
     /** 
     * Sets the scopedMembers
     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
     *
-    * @param ScopedRoleMembership $val The scopedMembers
+    * @param ScopedRoleMembership[] $val The scopedMembers
     *
     * @return DirectoryRole
     */

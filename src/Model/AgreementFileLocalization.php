@@ -28,21 +28,28 @@ class AgreementFileLocalization extends AgreementFileProperties
      /** 
      * Gets the versions
      *
-     * @return array|null The versions
+     * @return AgreementFileVersion[]|null The versions
      */
     public function getVersions()
     {
-        if (array_key_exists("versions", $this->_propDict)) {
-           return $this->_propDict["versions"];
-        } else {
-            return null;
+        if (array_key_exists('versions', $this->_propDict) && !is_null($this->_propDict['versions'])) {
+            $versions = [];
+            if (count($this->_propDict['versions']) > 0 && is_a($this->_propDict['versions'][0], 'AgreementFileVersion')) {
+                return $this->_propDict['versions'];
+            }
+            foreach ($this->_propDict['versions'] as $singleValue) {
+                $versions []= new AgreementFileVersion($singleValue);
+            }
+            $this->_propDict['versions'] = $versions;
+            return $this->_propDict['versions'];
         }
+        return null;
     }
     
     /** 
     * Sets the versions
     *
-    * @param AgreementFileVersion $val The versions
+    * @param AgreementFileVersion[] $val The versions
     *
     * @return AgreementFileLocalization
     */

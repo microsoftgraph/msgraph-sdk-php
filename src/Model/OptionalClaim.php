@@ -42,7 +42,7 @@ class OptionalClaim extends Entity
     * Sets the additionalProperties
     * Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
     *
-    * @param string $val The value of the additionalProperties
+    * @param string[] $val The value of the additionalProperties
     *
     * @return OptionalClaim
     */

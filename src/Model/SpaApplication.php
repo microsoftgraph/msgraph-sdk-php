@@ -42,7 +42,7 @@ class SpaApplication extends Entity
     * Sets the redirectUris
     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
     *
-    * @param string $val The value of the redirectUris
+    * @param string[] $val The value of the redirectUris
     *
     * @return SpaApplication
     */

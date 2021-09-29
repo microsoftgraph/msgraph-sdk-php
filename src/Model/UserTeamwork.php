@@ -29,22 +29,29 @@ class UserTeamwork extends Entity
      * Gets the installedApps
     * The apps installed in the personal scope of this user.
      *
-     * @return array|null The installedApps
+     * @return UserScopeTeamsAppInstallation[]|null The installedApps
      */
     public function getInstalledApps()
     {
-        if (array_key_exists("installedApps", $this->_propDict)) {
-           return $this->_propDict["installedApps"];
-        } else {
-            return null;
+        if (array_key_exists('installedApps', $this->_propDict) && !is_null($this->_propDict['installedApps'])) {
+            $installedApps = [];
+            if (count($this->_propDict['installedApps']) > 0 && is_a($this->_propDict['installedApps'][0], 'UserScopeTeamsAppInstallation')) {
+                return $this->_propDict['installedApps'];
+            }
+            foreach ($this->_propDict['installedApps'] as $singleValue) {
+                $installedApps []= new UserScopeTeamsAppInstallation($singleValue);
+            }
+            $this->_propDict['installedApps'] = $installedApps;
+            return $this->_propDict['installedApps'];
         }
+        return null;
     }
     
     /** 
     * Sets the installedApps
     * The apps installed in the personal scope of this user.
     *
-    * @param UserScopeTeamsAppInstallation $val The installedApps
+    * @param UserScopeTeamsAppInstallation[] $val The installedApps
     *
     * @return UserTeamwork
     */

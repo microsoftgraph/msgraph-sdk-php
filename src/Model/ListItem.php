@@ -32,8 +32,8 @@ class ListItem extends BaseItem
     */
     public function getContentType()
     {
-        if (array_key_exists("contentType", $this->_propDict)) {
-            if (is_a($this->_propDict["contentType"], "\Microsoft\Graph\Model\ContentTypeInfo") || is_null($this->_propDict["contentType"])) {
+        if (array_key_exists("contentType", $this->_propDict) && !is_null($this->_propDict["contentType"])) {
+            if (is_a($this->_propDict["contentType"], "\Microsoft\Graph\Model\ContentTypeInfo")) {
                 return $this->_propDict["contentType"];
             } else {
                 $this->_propDict["contentType"] = new ContentTypeInfo($this->_propDict["contentType"]);
@@ -65,8 +65,8 @@ class ListItem extends BaseItem
     */
     public function getSharepointIds()
     {
-        if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "\Microsoft\Graph\Model\SharepointIds") || is_null($this->_propDict["sharepointIds"])) {
+        if (array_key_exists("sharepointIds", $this->_propDict) && !is_null($this->_propDict["sharepointIds"])) {
+            if (is_a($this->_propDict["sharepointIds"], "\Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -98,8 +98,8 @@ class ListItem extends BaseItem
     */
     public function getAnalytics()
     {
-        if (array_key_exists("analytics", $this->_propDict)) {
-            if (is_a($this->_propDict["analytics"], "\Microsoft\Graph\Model\ItemAnalytics") || is_null($this->_propDict["analytics"])) {
+        if (array_key_exists("analytics", $this->_propDict) && !is_null($this->_propDict["analytics"])) {
+            if (is_a($this->_propDict["analytics"], "\Microsoft\Graph\Model\ItemAnalytics")) {
                 return $this->_propDict["analytics"];
             } else {
                 $this->_propDict["analytics"] = new ItemAnalytics($this->_propDict["analytics"]);
@@ -131,8 +131,8 @@ class ListItem extends BaseItem
     */
     public function getDriveItem()
     {
-        if (array_key_exists("driveItem", $this->_propDict)) {
-            if (is_a($this->_propDict["driveItem"], "\Microsoft\Graph\Model\DriveItem") || is_null($this->_propDict["driveItem"])) {
+        if (array_key_exists("driveItem", $this->_propDict) && !is_null($this->_propDict["driveItem"])) {
+            if (is_a($this->_propDict["driveItem"], "\Microsoft\Graph\Model\DriveItem")) {
                 return $this->_propDict["driveItem"];
             } else {
                 $this->_propDict["driveItem"] = new DriveItem($this->_propDict["driveItem"]);
@@ -164,8 +164,8 @@ class ListItem extends BaseItem
     */
     public function getFields()
     {
-        if (array_key_exists("fields", $this->_propDict)) {
-            if (is_a($this->_propDict["fields"], "\Microsoft\Graph\Model\FieldValueSet") || is_null($this->_propDict["fields"])) {
+        if (array_key_exists("fields", $this->_propDict) && !is_null($this->_propDict["fields"])) {
+            if (is_a($this->_propDict["fields"], "\Microsoft\Graph\Model\FieldValueSet")) {
                 return $this->_propDict["fields"];
             } else {
                 $this->_propDict["fields"] = new FieldValueSet($this->_propDict["fields"]);
@@ -194,22 +194,29 @@ class ListItem extends BaseItem
      * Gets the versions
     * The list of previous versions of the list item.
      *
-     * @return array|null The versions
+     * @return ListItemVersion[]|null The versions
      */
     public function getVersions()
     {
-        if (array_key_exists("versions", $this->_propDict)) {
-           return $this->_propDict["versions"];
-        } else {
-            return null;
+        if (array_key_exists('versions', $this->_propDict) && !is_null($this->_propDict['versions'])) {
+            $versions = [];
+            if (count($this->_propDict['versions']) > 0 && is_a($this->_propDict['versions'][0], 'ListItemVersion')) {
+                return $this->_propDict['versions'];
+            }
+            foreach ($this->_propDict['versions'] as $singleValue) {
+                $versions []= new ListItemVersion($singleValue);
+            }
+            $this->_propDict['versions'] = $versions;
+            return $this->_propDict['versions'];
         }
+        return null;
     }
     
     /** 
     * Sets the versions
     * The list of previous versions of the list item.
     *
-    * @param ListItemVersion $val The versions
+    * @param ListItemVersion[] $val The versions
     *
     * @return ListItem
     */

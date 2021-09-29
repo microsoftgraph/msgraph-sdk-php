@@ -200,8 +200,9 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+     
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -233,8 +234,9 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getFailureDateTime()
     {
-        if (array_key_exists("failureDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["failureDateTime"], "\DateTime") || is_null($this->_propDict["failureDateTime"])) {
+        if (array_key_exists("failureDateTime", $this->_propDict) && !is_null($this->_propDict["failureDateTime"])) {
+     
+            if (is_a($this->_propDict["failureDateTime"], "\DateTime")) {
                 return $this->_propDict["failureDateTime"];
             } else {
                 $this->_propDict["failureDateTime"] = new \DateTime($this->_propDict["failureDateTime"]);
@@ -350,8 +352,9 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getInviteDateTime()
     {
-        if (array_key_exists("inviteDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["inviteDateTime"], "\DateTime") || is_null($this->_propDict["inviteDateTime"])) {
+        if (array_key_exists("inviteDateTime", $this->_propDict) && !is_null($this->_propDict["inviteDateTime"])) {
+     
+            if (is_a($this->_propDict["inviteDateTime"], "\DateTime")) {
                 return $this->_propDict["inviteDateTime"];
             } else {
                 $this->_propDict["inviteDateTime"] = new \DateTime($this->_propDict["inviteDateTime"]);
@@ -467,8 +470,9 @@ class DirectRoutingLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+     
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

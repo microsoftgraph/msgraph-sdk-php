@@ -42,7 +42,7 @@ class MessageRuleActions extends Entity
     * Sets the assignCategories
     * A list of categories to be assigned to a message.
     *
-    * @param string $val The value of the assignCategories
+    * @param string[] $val The value of the assignCategories
     *
     * @return MessageRuleActions
     */
@@ -112,18 +112,22 @@ class MessageRuleActions extends Entity
     * Gets the forwardAsAttachmentTo
     * The email addresses of the recipients to which a message should be forwarded as an attachment.
     *
-    * @return Recipient|null The forwardAsAttachmentTo
+    * @return Recipient[]|null The forwardAsAttachmentTo
     */
     public function getForwardAsAttachmentTo()
     {
-        if (array_key_exists("forwardAsAttachmentTo", $this->_propDict)) {
-            if (is_a($this->_propDict["forwardAsAttachmentTo"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["forwardAsAttachmentTo"])) {
-                return $this->_propDict["forwardAsAttachmentTo"];
-            } else {
-                $this->_propDict["forwardAsAttachmentTo"] = new Recipient($this->_propDict["forwardAsAttachmentTo"]);
-                return $this->_propDict["forwardAsAttachmentTo"];
+        if (array_key_exists("forwardAsAttachmentTo", $this->_propDict) && !is_null($this->_propDict["forwardAsAttachmentTo"])) {
+       
+            if (count($this->_propDict['forwardAsAttachmentTo']) > 0 && is_a($this->_propDict['forwardAsAttachmentTo'][0], 'Recipient')) {
+               return $this->_propDict['forwardAsAttachmentTo'];
             }
-        }
+            $forwardAsAttachmentTo = [];
+            foreach ($this->_propDict['forwardAsAttachmentTo'] as $singleValue) {
+               $forwardAsAttachmentTo []= new Recipient($singleValue);
+            }
+            $this->_propDict['forwardAsAttachmentTo'] = $forwardAsAttachmentTo;
+            return $this->_propDict['forwardAsAttachmentTo'];
+            }
         return null;
     }
 
@@ -131,7 +135,7 @@ class MessageRuleActions extends Entity
     * Sets the forwardAsAttachmentTo
     * The email addresses of the recipients to which a message should be forwarded as an attachment.
     *
-    * @param Recipient $val The value to assign to the forwardAsAttachmentTo
+    * @param Recipient[] $val The value to assign to the forwardAsAttachmentTo
     *
     * @return MessageRuleActions The MessageRuleActions
     */
@@ -145,18 +149,22 @@ class MessageRuleActions extends Entity
     * Gets the forwardTo
     * The email addresses of the recipients to which a message should be forwarded.
     *
-    * @return Recipient|null The forwardTo
+    * @return Recipient[]|null The forwardTo
     */
     public function getForwardTo()
     {
-        if (array_key_exists("forwardTo", $this->_propDict)) {
-            if (is_a($this->_propDict["forwardTo"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["forwardTo"])) {
-                return $this->_propDict["forwardTo"];
-            } else {
-                $this->_propDict["forwardTo"] = new Recipient($this->_propDict["forwardTo"]);
-                return $this->_propDict["forwardTo"];
+        if (array_key_exists("forwardTo", $this->_propDict) && !is_null($this->_propDict["forwardTo"])) {
+       
+            if (count($this->_propDict['forwardTo']) > 0 && is_a($this->_propDict['forwardTo'][0], 'Recipient')) {
+               return $this->_propDict['forwardTo'];
             }
-        }
+            $forwardTo = [];
+            foreach ($this->_propDict['forwardTo'] as $singleValue) {
+               $forwardTo []= new Recipient($singleValue);
+            }
+            $this->_propDict['forwardTo'] = $forwardTo;
+            return $this->_propDict['forwardTo'];
+            }
         return null;
     }
 
@@ -164,7 +172,7 @@ class MessageRuleActions extends Entity
     * Sets the forwardTo
     * The email addresses of the recipients to which a message should be forwarded.
     *
-    * @param Recipient $val The value to assign to the forwardTo
+    * @param Recipient[] $val The value to assign to the forwardTo
     *
     * @return MessageRuleActions The MessageRuleActions
     */
@@ -210,8 +218,9 @@ class MessageRuleActions extends Entity
     */
     public function getMarkImportance()
     {
-        if (array_key_exists("markImportance", $this->_propDict)) {
-            if (is_a($this->_propDict["markImportance"], "\Microsoft\Graph\Model\Importance") || is_null($this->_propDict["markImportance"])) {
+        if (array_key_exists("markImportance", $this->_propDict) && !is_null($this->_propDict["markImportance"])) {
+     
+            if (is_a($this->_propDict["markImportance"], "\Microsoft\Graph\Model\Importance")) {
                 return $this->_propDict["markImportance"];
             } else {
                 $this->_propDict["markImportance"] = new Importance($this->_propDict["markImportance"]);
@@ -295,18 +304,22 @@ class MessageRuleActions extends Entity
     * Gets the redirectTo
     * The email addresses to which a message should be redirected.
     *
-    * @return Recipient|null The redirectTo
+    * @return Recipient[]|null The redirectTo
     */
     public function getRedirectTo()
     {
-        if (array_key_exists("redirectTo", $this->_propDict)) {
-            if (is_a($this->_propDict["redirectTo"], "\Microsoft\Graph\Model\Recipient") || is_null($this->_propDict["redirectTo"])) {
-                return $this->_propDict["redirectTo"];
-            } else {
-                $this->_propDict["redirectTo"] = new Recipient($this->_propDict["redirectTo"]);
-                return $this->_propDict["redirectTo"];
+        if (array_key_exists("redirectTo", $this->_propDict) && !is_null($this->_propDict["redirectTo"])) {
+       
+            if (count($this->_propDict['redirectTo']) > 0 && is_a($this->_propDict['redirectTo'][0], 'Recipient')) {
+               return $this->_propDict['redirectTo'];
             }
-        }
+            $redirectTo = [];
+            foreach ($this->_propDict['redirectTo'] as $singleValue) {
+               $redirectTo []= new Recipient($singleValue);
+            }
+            $this->_propDict['redirectTo'] = $redirectTo;
+            return $this->_propDict['redirectTo'];
+            }
         return null;
     }
 
@@ -314,7 +327,7 @@ class MessageRuleActions extends Entity
     * Sets the redirectTo
     * The email addresses to which a message should be redirected.
     *
-    * @param Recipient $val The value to assign to the redirectTo
+    * @param Recipient[] $val The value to assign to the redirectTo
     *
     * @return MessageRuleActions The MessageRuleActions
     */

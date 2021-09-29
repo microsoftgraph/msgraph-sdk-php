@@ -32,8 +32,8 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     */
     public function getEnhancedBiometricsState()
     {
-        if (array_key_exists("enhancedBiometricsState", $this->_propDict)) {
-            if (is_a($this->_propDict["enhancedBiometricsState"], "\Microsoft\Graph\Model\Enablement") || is_null($this->_propDict["enhancedBiometricsState"])) {
+        if (array_key_exists("enhancedBiometricsState", $this->_propDict) && !is_null($this->_propDict["enhancedBiometricsState"])) {
+            if (is_a($this->_propDict["enhancedBiometricsState"], "\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["enhancedBiometricsState"];
             } else {
                 $this->_propDict["enhancedBiometricsState"] = new Enablement($this->_propDict["enhancedBiometricsState"]);
@@ -94,8 +94,8 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     */
     public function getPinLowercaseCharactersUsage()
     {
-        if (array_key_exists("pinLowercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage") || is_null($this->_propDict["pinLowercaseCharactersUsage"])) {
+        if (array_key_exists("pinLowercaseCharactersUsage", $this->_propDict) && !is_null($this->_propDict["pinLowercaseCharactersUsage"])) {
+            if (is_a($this->_propDict["pinLowercaseCharactersUsage"], "\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinLowercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinLowercaseCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinLowercaseCharactersUsage"]);
@@ -214,8 +214,8 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     */
     public function getPinSpecialCharactersUsage()
     {
-        if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage") || is_null($this->_propDict["pinSpecialCharactersUsage"])) {
+        if (array_key_exists("pinSpecialCharactersUsage", $this->_propDict) && !is_null($this->_propDict["pinSpecialCharactersUsage"])) {
+            if (is_a($this->_propDict["pinSpecialCharactersUsage"], "\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinSpecialCharactersUsage"];
             } else {
                 $this->_propDict["pinSpecialCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinSpecialCharactersUsage"]);
@@ -247,8 +247,8 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     */
     public function getPinUppercaseCharactersUsage()
     {
-        if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict)) {
-            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage") || is_null($this->_propDict["pinUppercaseCharactersUsage"])) {
+        if (array_key_exists("pinUppercaseCharactersUsage", $this->_propDict) && !is_null($this->_propDict["pinUppercaseCharactersUsage"])) {
+            if (is_a($this->_propDict["pinUppercaseCharactersUsage"], "\Microsoft\Graph\Model\WindowsHelloForBusinessPinUsage")) {
                 return $this->_propDict["pinUppercaseCharactersUsage"];
             } else {
                 $this->_propDict["pinUppercaseCharactersUsage"] = new WindowsHelloForBusinessPinUsage($this->_propDict["pinUppercaseCharactersUsage"]);
@@ -338,8 +338,8 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\Enablement") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\Enablement")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new Enablement($this->_propDict["state"]);

@@ -32,8 +32,9 @@ class ProvisionedIdentity extends Identity
     */
     public function getDetails()
     {
-        if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\DetailsInfo") || is_null($this->_propDict["details"])) {
+        if (array_key_exists("details", $this->_propDict) && !is_null($this->_propDict["details"])) {
+     
+            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\DetailsInfo")) {
                 return $this->_propDict["details"];
             } else {
                 $this->_propDict["details"] = new DetailsInfo($this->_propDict["details"]);

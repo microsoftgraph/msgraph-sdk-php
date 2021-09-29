@@ -28,21 +28,28 @@ class AgreementFile extends AgreementFileProperties
      /** 
      * Gets the localizations
      *
-     * @return array|null The localizations
+     * @return AgreementFileLocalization[]|null The localizations
      */
     public function getLocalizations()
     {
-        if (array_key_exists("localizations", $this->_propDict)) {
-           return $this->_propDict["localizations"];
-        } else {
-            return null;
+        if (array_key_exists('localizations', $this->_propDict) && !is_null($this->_propDict['localizations'])) {
+            $localizations = [];
+            if (count($this->_propDict['localizations']) > 0 && is_a($this->_propDict['localizations'][0], 'AgreementFileLocalization')) {
+                return $this->_propDict['localizations'];
+            }
+            foreach ($this->_propDict['localizations'] as $singleValue) {
+                $localizations []= new AgreementFileLocalization($singleValue);
+            }
+            $this->_propDict['localizations'] = $localizations;
+            return $this->_propDict['localizations'];
         }
+        return null;
     }
     
     /** 
     * Sets the localizations
     *
-    * @param AgreementFileLocalization $val The localizations
+    * @param AgreementFileLocalization[] $val The localizations
     *
     * @return AgreementFile
     */

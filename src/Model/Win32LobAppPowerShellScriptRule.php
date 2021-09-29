@@ -127,8 +127,9 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     */
     public function getOperationType()
     {
-        if (array_key_exists("operationType", $this->_propDict)) {
-            if (is_a($this->_propDict["operationType"], "\Microsoft\Graph\Model\Win32LobAppPowerShellScriptRuleOperationType") || is_null($this->_propDict["operationType"])) {
+        if (array_key_exists("operationType", $this->_propDict) && !is_null($this->_propDict["operationType"])) {
+     
+            if (is_a($this->_propDict["operationType"], "\Microsoft\Graph\Model\Win32LobAppPowerShellScriptRuleOperationType")) {
                 return $this->_propDict["operationType"];
             } else {
                 $this->_propDict["operationType"] = new Win32LobAppPowerShellScriptRuleOperationType($this->_propDict["operationType"]);
@@ -160,8 +161,9 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     */
     public function getOperator()
     {
-        if (array_key_exists("operator", $this->_propDict)) {
-            if (is_a($this->_propDict["operator"], "\Microsoft\Graph\Model\Win32LobAppRuleOperator") || is_null($this->_propDict["operator"])) {
+        if (array_key_exists("operator", $this->_propDict) && !is_null($this->_propDict["operator"])) {
+     
+            if (is_a($this->_propDict["operator"], "\Microsoft\Graph\Model\Win32LobAppRuleOperator")) {
                 return $this->_propDict["operator"];
             } else {
                 $this->_propDict["operator"] = new Win32LobAppRuleOperator($this->_propDict["operator"]);
@@ -221,8 +223,9 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule
     */
     public function getRunAsAccount()
     {
-        if (array_key_exists("runAsAccount", $this->_propDict)) {
-            if (is_a($this->_propDict["runAsAccount"], "\Microsoft\Graph\Model\RunAsAccountType") || is_null($this->_propDict["runAsAccount"])) {
+        if (array_key_exists("runAsAccount", $this->_propDict) && !is_null($this->_propDict["runAsAccount"])) {
+     
+            if (is_a($this->_propDict["runAsAccount"], "\Microsoft\Graph\Model\RunAsAccountType")) {
                 return $this->_propDict["runAsAccount"];
             } else {
                 $this->_propDict["runAsAccount"] = new RunAsAccountType($this->_propDict["runAsAccount"]);

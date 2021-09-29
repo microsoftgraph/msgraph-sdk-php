@@ -90,8 +90,8 @@ class ScopedRoleMembership extends Entity
     */
     public function getRoleMemberInfo()
     {
-        if (array_key_exists("roleMemberInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["roleMemberInfo"], "\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["roleMemberInfo"])) {
+        if (array_key_exists("roleMemberInfo", $this->_propDict) && !is_null($this->_propDict["roleMemberInfo"])) {
+            if (is_a($this->_propDict["roleMemberInfo"], "\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["roleMemberInfo"];
             } else {
                 $this->_propDict["roleMemberInfo"] = new Identity($this->_propDict["roleMemberInfo"]);

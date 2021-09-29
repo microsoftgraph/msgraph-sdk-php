@@ -56,18 +56,22 @@ class IosHomeScreenPage extends Entity
     * Gets the icons
     * A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements.
     *
-    * @return IosHomeScreenItem|null The icons
+    * @return IosHomeScreenItem[]|null The icons
     */
     public function getIcons()
     {
-        if (array_key_exists("icons", $this->_propDict)) {
-            if (is_a($this->_propDict["icons"], "\Microsoft\Graph\Model\IosHomeScreenItem") || is_null($this->_propDict["icons"])) {
-                return $this->_propDict["icons"];
-            } else {
-                $this->_propDict["icons"] = new IosHomeScreenItem($this->_propDict["icons"]);
-                return $this->_propDict["icons"];
+        if (array_key_exists("icons", $this->_propDict) && !is_null($this->_propDict["icons"])) {
+       
+            if (count($this->_propDict['icons']) > 0 && is_a($this->_propDict['icons'][0], 'IosHomeScreenItem')) {
+               return $this->_propDict['icons'];
             }
-        }
+            $icons = [];
+            foreach ($this->_propDict['icons'] as $singleValue) {
+               $icons []= new IosHomeScreenItem($singleValue);
+            }
+            $this->_propDict['icons'] = $icons;
+            return $this->_propDict['icons'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class IosHomeScreenPage extends Entity
     * Sets the icons
     * A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements.
     *
-    * @param IosHomeScreenItem $val The value to assign to the icons
+    * @param IosHomeScreenItem[] $val The value to assign to the icons
     *
     * @return IosHomeScreenPage The IosHomeScreenPage
     */

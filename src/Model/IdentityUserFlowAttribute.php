@@ -32,8 +32,8 @@ class IdentityUserFlowAttribute extends Entity
     */
     public function getDataType()
     {
-        if (array_key_exists("dataType", $this->_propDict)) {
-            if (is_a($this->_propDict["dataType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeDataType") || is_null($this->_propDict["dataType"])) {
+        if (array_key_exists("dataType", $this->_propDict) && !is_null($this->_propDict["dataType"])) {
+            if (is_a($this->_propDict["dataType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeDataType")) {
                 return $this->_propDict["dataType"];
             } else {
                 $this->_propDict["dataType"] = new IdentityUserFlowAttributeDataType($this->_propDict["dataType"]);
@@ -123,8 +123,8 @@ class IdentityUserFlowAttribute extends Entity
     */
     public function getUserFlowAttributeType()
     {
-        if (array_key_exists("userFlowAttributeType", $this->_propDict)) {
-            if (is_a($this->_propDict["userFlowAttributeType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeType") || is_null($this->_propDict["userFlowAttributeType"])) {
+        if (array_key_exists("userFlowAttributeType", $this->_propDict) && !is_null($this->_propDict["userFlowAttributeType"])) {
+            if (is_a($this->_propDict["userFlowAttributeType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeType")) {
                 return $this->_propDict["userFlowAttributeType"];
             } else {
                 $this->_propDict["userFlowAttributeType"] = new IdentityUserFlowAttributeType($this->_propDict["userFlowAttributeType"]);

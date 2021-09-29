@@ -32,8 +32,9 @@ class Attendee extends AttendeeBase
     */
     public function getProposedNewTime()
     {
-        if (array_key_exists("proposedNewTime", $this->_propDict)) {
-            if (is_a($this->_propDict["proposedNewTime"], "\Microsoft\Graph\Model\TimeSlot") || is_null($this->_propDict["proposedNewTime"])) {
+        if (array_key_exists("proposedNewTime", $this->_propDict) && !is_null($this->_propDict["proposedNewTime"])) {
+     
+            if (is_a($this->_propDict["proposedNewTime"], "\Microsoft\Graph\Model\TimeSlot")) {
                 return $this->_propDict["proposedNewTime"];
             } else {
                 $this->_propDict["proposedNewTime"] = new TimeSlot($this->_propDict["proposedNewTime"]);
@@ -65,8 +66,9 @@ class Attendee extends AttendeeBase
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ResponseStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+     
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ResponseStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ResponseStatus($this->_propDict["status"]);

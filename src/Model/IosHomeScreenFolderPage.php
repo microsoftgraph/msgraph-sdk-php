@@ -28,18 +28,22 @@ class IosHomeScreenFolderPage extends Entity
     * Gets the apps
     * A list of apps and web clips to appear on a page within a folder. This collection can contain a maximum of 500 elements.
     *
-    * @return IosHomeScreenApp|null The apps
+    * @return IosHomeScreenApp[]|null The apps
     */
     public function getApps()
     {
-        if (array_key_exists("apps", $this->_propDict)) {
-            if (is_a($this->_propDict["apps"], "\Microsoft\Graph\Model\IosHomeScreenApp") || is_null($this->_propDict["apps"])) {
-                return $this->_propDict["apps"];
-            } else {
-                $this->_propDict["apps"] = new IosHomeScreenApp($this->_propDict["apps"]);
-                return $this->_propDict["apps"];
+        if (array_key_exists("apps", $this->_propDict) && !is_null($this->_propDict["apps"])) {
+       
+            if (count($this->_propDict['apps']) > 0 && is_a($this->_propDict['apps'][0], 'IosHomeScreenApp')) {
+               return $this->_propDict['apps'];
             }
-        }
+            $apps = [];
+            foreach ($this->_propDict['apps'] as $singleValue) {
+               $apps []= new IosHomeScreenApp($singleValue);
+            }
+            $this->_propDict['apps'] = $apps;
+            return $this->_propDict['apps'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class IosHomeScreenFolderPage extends Entity
     * Sets the apps
     * A list of apps and web clips to appear on a page within a folder. This collection can contain a maximum of 500 elements.
     *
-    * @param IosHomeScreenApp $val The value to assign to the apps
+    * @param IosHomeScreenApp[] $val The value to assign to the apps
     *
     * @return IosHomeScreenFolderPage The IosHomeScreenFolderPage
     */

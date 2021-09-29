@@ -206,8 +206,8 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     */
     public function getMaintenanceWindowStartTime()
     {
-        if (array_key_exists("maintenanceWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceWindowStartTime"], "\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["maintenanceWindowStartTime"])) {
+        if (array_key_exists("maintenanceWindowStartTime", $this->_propDict) && !is_null($this->_propDict["maintenanceWindowStartTime"])) {
+            if (is_a($this->_propDict["maintenanceWindowStartTime"], "\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["maintenanceWindowStartTime"];
             } else {
                 $this->_propDict["maintenanceWindowStartTime"] = new TimeOfDay($this->_propDict["maintenanceWindowStartTime"]);
@@ -268,8 +268,8 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     */
     public function getMiracastChannel()
     {
-        if (array_key_exists("miracastChannel", $this->_propDict)) {
-            if (is_a($this->_propDict["miracastChannel"], "\Microsoft\Graph\Model\MiracastChannel") || is_null($this->_propDict["miracastChannel"])) {
+        if (array_key_exists("miracastChannel", $this->_propDict) && !is_null($this->_propDict["miracastChannel"])) {
+            if (is_a($this->_propDict["miracastChannel"], "\Microsoft\Graph\Model\MiracastChannel")) {
                 return $this->_propDict["miracastChannel"];
             } else {
                 $this->_propDict["miracastChannel"] = new MiracastChannel($this->_propDict["miracastChannel"]);
@@ -591,8 +591,8 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     */
     public function getWelcomeScreenMeetingInformation()
     {
-        if (array_key_exists("welcomeScreenMeetingInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["welcomeScreenMeetingInformation"], "\Microsoft\Graph\Model\WelcomeScreenMeetingInformation") || is_null($this->_propDict["welcomeScreenMeetingInformation"])) {
+        if (array_key_exists("welcomeScreenMeetingInformation", $this->_propDict) && !is_null($this->_propDict["welcomeScreenMeetingInformation"])) {
+            if (is_a($this->_propDict["welcomeScreenMeetingInformation"], "\Microsoft\Graph\Model\WelcomeScreenMeetingInformation")) {
                 return $this->_propDict["welcomeScreenMeetingInformation"];
             } else {
                 $this->_propDict["welcomeScreenMeetingInformation"] = new WelcomeScreenMeetingInformation($this->_propDict["welcomeScreenMeetingInformation"]);

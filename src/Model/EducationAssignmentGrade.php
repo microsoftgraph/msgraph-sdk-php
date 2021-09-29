@@ -32,8 +32,9 @@ class EducationAssignmentGrade extends Entity
     */
     public function getGradedBy()
     {
-        if (array_key_exists("gradedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["gradedBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["gradedBy"])) {
+        if (array_key_exists("gradedBy", $this->_propDict) && !is_null($this->_propDict["gradedBy"])) {
+     
+            if (is_a($this->_propDict["gradedBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["gradedBy"];
             } else {
                 $this->_propDict["gradedBy"] = new IdentitySet($this->_propDict["gradedBy"]);
@@ -65,8 +66,9 @@ class EducationAssignmentGrade extends Entity
     */
     public function getGradedDateTime()
     {
-        if (array_key_exists("gradedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["gradedDateTime"], "\DateTime") || is_null($this->_propDict["gradedDateTime"])) {
+        if (array_key_exists("gradedDateTime", $this->_propDict) && !is_null($this->_propDict["gradedDateTime"])) {
+     
+            if (is_a($this->_propDict["gradedDateTime"], "\DateTime")) {
                 return $this->_propDict["gradedDateTime"];
             } else {
                 $this->_propDict["gradedDateTime"] = new \DateTime($this->_propDict["gradedDateTime"]);

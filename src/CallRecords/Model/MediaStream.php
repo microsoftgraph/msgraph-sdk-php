@@ -56,15 +56,16 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageAudioNetworkJitter
     * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return \Microsoft\Graph\Model\Duration|null The averageAudioNetworkJitter
+    * @return \DateInterval|null The averageAudioNetworkJitter
     */
     public function getAverageAudioNetworkJitter()
     {
-        if (array_key_exists("averageAudioNetworkJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["averageAudioNetworkJitter"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["averageAudioNetworkJitter"])) {
+        if (array_key_exists("averageAudioNetworkJitter", $this->_propDict) && !is_null($this->_propDict["averageAudioNetworkJitter"])) {
+     
+            if (is_a($this->_propDict["averageAudioNetworkJitter"], "\DateInterval")) {
                 return $this->_propDict["averageAudioNetworkJitter"];
             } else {
-                $this->_propDict["averageAudioNetworkJitter"] = new \Microsoft\Graph\Model\Duration($this->_propDict["averageAudioNetworkJitter"]);
+                $this->_propDict["averageAudioNetworkJitter"] = new \DateInterval($this->_propDict["averageAudioNetworkJitter"]);
                 return $this->_propDict["averageAudioNetworkJitter"];
             }
         }
@@ -75,7 +76,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageAudioNetworkJitter
     * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the averageAudioNetworkJitter
+    * @param \DateInterval $val The value to assign to the averageAudioNetworkJitter
     *
     * @return MediaStream The MediaStream
     */
@@ -117,15 +118,16 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageJitter
     * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return \Microsoft\Graph\Model\Duration|null The averageJitter
+    * @return \DateInterval|null The averageJitter
     */
     public function getAverageJitter()
     {
-        if (array_key_exists("averageJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["averageJitter"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["averageJitter"])) {
+        if (array_key_exists("averageJitter", $this->_propDict) && !is_null($this->_propDict["averageJitter"])) {
+     
+            if (is_a($this->_propDict["averageJitter"], "\DateInterval")) {
                 return $this->_propDict["averageJitter"];
             } else {
-                $this->_propDict["averageJitter"] = new \Microsoft\Graph\Model\Duration($this->_propDict["averageJitter"]);
+                $this->_propDict["averageJitter"] = new \DateInterval($this->_propDict["averageJitter"]);
                 return $this->_propDict["averageJitter"];
             }
         }
@@ -136,7 +138,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageJitter
     * Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the averageJitter
+    * @param \DateInterval $val The value to assign to the averageJitter
     *
     * @return MediaStream The MediaStream
     */
@@ -234,15 +236,16 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the averageRoundTripTime
     * Average network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return \Microsoft\Graph\Model\Duration|null The averageRoundTripTime
+    * @return \DateInterval|null The averageRoundTripTime
     */
     public function getAverageRoundTripTime()
     {
-        if (array_key_exists("averageRoundTripTime", $this->_propDict)) {
-            if (is_a($this->_propDict["averageRoundTripTime"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["averageRoundTripTime"])) {
+        if (array_key_exists("averageRoundTripTime", $this->_propDict) && !is_null($this->_propDict["averageRoundTripTime"])) {
+     
+            if (is_a($this->_propDict["averageRoundTripTime"], "\DateInterval")) {
                 return $this->_propDict["averageRoundTripTime"];
             } else {
-                $this->_propDict["averageRoundTripTime"] = new \Microsoft\Graph\Model\Duration($this->_propDict["averageRoundTripTime"]);
+                $this->_propDict["averageRoundTripTime"] = new \DateInterval($this->_propDict["averageRoundTripTime"]);
                 return $this->_propDict["averageRoundTripTime"];
             }
         }
@@ -253,7 +256,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the averageRoundTripTime
     * Average network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the averageRoundTripTime
+    * @param \DateInterval $val The value to assign to the averageRoundTripTime
     *
     * @return MediaStream The MediaStream
     */
@@ -355,8 +358,9 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+     
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -440,15 +444,16 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the maxAudioNetworkJitter
     * Maximum of audio network jitter computed over each of the 20 second windows during the session, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return \Microsoft\Graph\Model\Duration|null The maxAudioNetworkJitter
+    * @return \DateInterval|null The maxAudioNetworkJitter
     */
     public function getMaxAudioNetworkJitter()
     {
-        if (array_key_exists("maxAudioNetworkJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["maxAudioNetworkJitter"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maxAudioNetworkJitter"])) {
+        if (array_key_exists("maxAudioNetworkJitter", $this->_propDict) && !is_null($this->_propDict["maxAudioNetworkJitter"])) {
+     
+            if (is_a($this->_propDict["maxAudioNetworkJitter"], "\DateInterval")) {
                 return $this->_propDict["maxAudioNetworkJitter"];
             } else {
-                $this->_propDict["maxAudioNetworkJitter"] = new \Microsoft\Graph\Model\Duration($this->_propDict["maxAudioNetworkJitter"]);
+                $this->_propDict["maxAudioNetworkJitter"] = new \DateInterval($this->_propDict["maxAudioNetworkJitter"]);
                 return $this->_propDict["maxAudioNetworkJitter"];
             }
         }
@@ -459,7 +464,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the maxAudioNetworkJitter
     * Maximum of audio network jitter computed over each of the 20 second windows during the session, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the maxAudioNetworkJitter
+    * @param \DateInterval $val The value to assign to the maxAudioNetworkJitter
     *
     * @return MediaStream The MediaStream
     */
@@ -473,15 +478,16 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the maxJitter
     * Maximum jitter for the stream computed as specified in RFC 3550, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return \Microsoft\Graph\Model\Duration|null The maxJitter
+    * @return \DateInterval|null The maxJitter
     */
     public function getMaxJitter()
     {
-        if (array_key_exists("maxJitter", $this->_propDict)) {
-            if (is_a($this->_propDict["maxJitter"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maxJitter"])) {
+        if (array_key_exists("maxJitter", $this->_propDict) && !is_null($this->_propDict["maxJitter"])) {
+     
+            if (is_a($this->_propDict["maxJitter"], "\DateInterval")) {
                 return $this->_propDict["maxJitter"];
             } else {
-                $this->_propDict["maxJitter"] = new \Microsoft\Graph\Model\Duration($this->_propDict["maxJitter"]);
+                $this->_propDict["maxJitter"] = new \DateInterval($this->_propDict["maxJitter"]);
                 return $this->_propDict["maxJitter"];
             }
         }
@@ -492,7 +498,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the maxJitter
     * Maximum jitter for the stream computed as specified in RFC 3550, denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the maxJitter
+    * @param \DateInterval $val The value to assign to the maxJitter
     *
     * @return MediaStream The MediaStream
     */
@@ -562,15 +568,16 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Gets the maxRoundTripTime
     * Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @return \Microsoft\Graph\Model\Duration|null The maxRoundTripTime
+    * @return \DateInterval|null The maxRoundTripTime
     */
     public function getMaxRoundTripTime()
     {
-        if (array_key_exists("maxRoundTripTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maxRoundTripTime"], "\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maxRoundTripTime"])) {
+        if (array_key_exists("maxRoundTripTime", $this->_propDict) && !is_null($this->_propDict["maxRoundTripTime"])) {
+     
+            if (is_a($this->_propDict["maxRoundTripTime"], "\DateInterval")) {
                 return $this->_propDict["maxRoundTripTime"];
             } else {
-                $this->_propDict["maxRoundTripTime"] = new \Microsoft\Graph\Model\Duration($this->_propDict["maxRoundTripTime"]);
+                $this->_propDict["maxRoundTripTime"] = new \DateInterval($this->_propDict["maxRoundTripTime"]);
                 return $this->_propDict["maxRoundTripTime"];
             }
         }
@@ -581,7 +588,7 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     * Sets the maxRoundTripTime
     * Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
     *
-    * @param \Microsoft\Graph\Model\Duration $val The value to assign to the maxRoundTripTime
+    * @param \DateInterval $val The value to assign to the maxRoundTripTime
     *
     * @return MediaStream The MediaStream
     */
@@ -655,8 +662,9 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+     
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);
@@ -688,8 +696,9 @@ class MediaStream extends \Microsoft\Graph\Model\Entity
     */
     public function getStreamDirection()
     {
-        if (array_key_exists("streamDirection", $this->_propDict)) {
-            if (is_a($this->_propDict["streamDirection"], "\Microsoft\Graph\CallRecords\Model\MediaStreamDirection") || is_null($this->_propDict["streamDirection"])) {
+        if (array_key_exists("streamDirection", $this->_propDict) && !is_null($this->_propDict["streamDirection"])) {
+     
+            if (is_a($this->_propDict["streamDirection"], "\Microsoft\Graph\CallRecords\Model\MediaStreamDirection")) {
                 return $this->_propDict["streamDirection"];
             } else {
                 $this->_propDict["streamDirection"] = new MediaStreamDirection($this->_propDict["streamDirection"]);

@@ -57,8 +57,9 @@ class UriClickSecurityState extends Entity
     */
     public function getClickDateTime()
     {
-        if (array_key_exists("clickDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["clickDateTime"], "\DateTime") || is_null($this->_propDict["clickDateTime"])) {
+        if (array_key_exists("clickDateTime", $this->_propDict) && !is_null($this->_propDict["clickDateTime"])) {
+     
+            if (is_a($this->_propDict["clickDateTime"], "\DateTime")) {
                 return $this->_propDict["clickDateTime"];
             } else {
                 $this->_propDict["clickDateTime"] = new \DateTime($this->_propDict["clickDateTime"]);

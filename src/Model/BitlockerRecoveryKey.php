@@ -32,8 +32,8 @@ class BitlockerRecoveryKey extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -123,8 +123,8 @@ class BitlockerRecoveryKey extends Entity
     */
     public function getVolumeType()
     {
-        if (array_key_exists("volumeType", $this->_propDict)) {
-            if (is_a($this->_propDict["volumeType"], "\Microsoft\Graph\Model\VolumeType") || is_null($this->_propDict["volumeType"])) {
+        if (array_key_exists("volumeType", $this->_propDict) && !is_null($this->_propDict["volumeType"])) {
+            if (is_a($this->_propDict["volumeType"], "\Microsoft\Graph\Model\VolumeType")) {
                 return $this->_propDict["volumeType"];
             } else {
                 $this->_propDict["volumeType"] = new VolumeType($this->_propDict["volumeType"]);

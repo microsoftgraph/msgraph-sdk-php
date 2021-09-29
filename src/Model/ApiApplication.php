@@ -70,7 +70,7 @@ class ApiApplication extends Entity
     * Sets the knownClientApplications
     * Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
     *
-    * @param string $val The value of the knownClientApplications
+    * @param string[] $val The value of the knownClientApplications
     *
     * @return ApiApplication
     */
@@ -84,18 +84,22 @@ class ApiApplication extends Entity
     * Gets the oauth2PermissionScopes
     * The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
     *
-    * @return PermissionScope|null The oauth2PermissionScopes
+    * @return PermissionScope[]|null The oauth2PermissionScopes
     */
     public function getOauth2PermissionScopes()
     {
-        if (array_key_exists("oauth2PermissionScopes", $this->_propDict)) {
-            if (is_a($this->_propDict["oauth2PermissionScopes"], "\Microsoft\Graph\Model\PermissionScope") || is_null($this->_propDict["oauth2PermissionScopes"])) {
-                return $this->_propDict["oauth2PermissionScopes"];
-            } else {
-                $this->_propDict["oauth2PermissionScopes"] = new PermissionScope($this->_propDict["oauth2PermissionScopes"]);
-                return $this->_propDict["oauth2PermissionScopes"];
+        if (array_key_exists("oauth2PermissionScopes", $this->_propDict) && !is_null($this->_propDict["oauth2PermissionScopes"])) {
+       
+            if (count($this->_propDict['oauth2PermissionScopes']) > 0 && is_a($this->_propDict['oauth2PermissionScopes'][0], 'PermissionScope')) {
+               return $this->_propDict['oauth2PermissionScopes'];
             }
-        }
+            $oauth2PermissionScopes = [];
+            foreach ($this->_propDict['oauth2PermissionScopes'] as $singleValue) {
+               $oauth2PermissionScopes []= new PermissionScope($singleValue);
+            }
+            $this->_propDict['oauth2PermissionScopes'] = $oauth2PermissionScopes;
+            return $this->_propDict['oauth2PermissionScopes'];
+            }
         return null;
     }
 
@@ -103,7 +107,7 @@ class ApiApplication extends Entity
     * Sets the oauth2PermissionScopes
     * The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
     *
-    * @param PermissionScope $val The value to assign to the oauth2PermissionScopes
+    * @param PermissionScope[] $val The value to assign to the oauth2PermissionScopes
     *
     * @return ApiApplication The ApiApplication
     */
@@ -117,18 +121,22 @@ class ApiApplication extends Entity
     * Gets the preAuthorizedApplications
     * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
     *
-    * @return PreAuthorizedApplication|null The preAuthorizedApplications
+    * @return PreAuthorizedApplication[]|null The preAuthorizedApplications
     */
     public function getPreAuthorizedApplications()
     {
-        if (array_key_exists("preAuthorizedApplications", $this->_propDict)) {
-            if (is_a($this->_propDict["preAuthorizedApplications"], "\Microsoft\Graph\Model\PreAuthorizedApplication") || is_null($this->_propDict["preAuthorizedApplications"])) {
-                return $this->_propDict["preAuthorizedApplications"];
-            } else {
-                $this->_propDict["preAuthorizedApplications"] = new PreAuthorizedApplication($this->_propDict["preAuthorizedApplications"]);
-                return $this->_propDict["preAuthorizedApplications"];
+        if (array_key_exists("preAuthorizedApplications", $this->_propDict) && !is_null($this->_propDict["preAuthorizedApplications"])) {
+       
+            if (count($this->_propDict['preAuthorizedApplications']) > 0 && is_a($this->_propDict['preAuthorizedApplications'][0], 'PreAuthorizedApplication')) {
+               return $this->_propDict['preAuthorizedApplications'];
             }
-        }
+            $preAuthorizedApplications = [];
+            foreach ($this->_propDict['preAuthorizedApplications'] as $singleValue) {
+               $preAuthorizedApplications []= new PreAuthorizedApplication($singleValue);
+            }
+            $this->_propDict['preAuthorizedApplications'] = $preAuthorizedApplications;
+            return $this->_propDict['preAuthorizedApplications'];
+            }
         return null;
     }
 
@@ -136,7 +144,7 @@ class ApiApplication extends Entity
     * Sets the preAuthorizedApplications
     * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
     *
-    * @param PreAuthorizedApplication $val The value to assign to the preAuthorizedApplications
+    * @param PreAuthorizedApplication[] $val The value to assign to the preAuthorizedApplications
     *
     * @return ApiApplication The ApiApplication
     */

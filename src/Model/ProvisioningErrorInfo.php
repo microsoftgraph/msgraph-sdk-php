@@ -60,8 +60,9 @@ class ProvisioningErrorInfo extends Entity
     */
     public function getErrorCategory()
     {
-        if (array_key_exists("errorCategory", $this->_propDict)) {
-            if (is_a($this->_propDict["errorCategory"], "\Microsoft\Graph\Model\ProvisioningStatusErrorCategory") || is_null($this->_propDict["errorCategory"])) {
+        if (array_key_exists("errorCategory", $this->_propDict) && !is_null($this->_propDict["errorCategory"])) {
+     
+            if (is_a($this->_propDict["errorCategory"], "\Microsoft\Graph\Model\ProvisioningStatusErrorCategory")) {
                 return $this->_propDict["errorCategory"];
             } else {
                 $this->_propDict["errorCategory"] = new ProvisioningStatusErrorCategory($this->_propDict["errorCategory"]);

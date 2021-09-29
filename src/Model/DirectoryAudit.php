@@ -32,8 +32,8 @@ class DirectoryAudit extends Entity
     */
     public function getActivityDateTime()
     {
-        if (array_key_exists("activityDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["activityDateTime"], "\DateTime") || is_null($this->_propDict["activityDateTime"])) {
+        if (array_key_exists("activityDateTime", $this->_propDict) && !is_null($this->_propDict["activityDateTime"])) {
+            if (is_a($this->_propDict["activityDateTime"], "\DateTime")) {
                 return $this->_propDict["activityDateTime"];
             } else {
                 $this->_propDict["activityDateTime"] = new \DateTime($this->_propDict["activityDateTime"]);
@@ -91,22 +91,29 @@ class DirectoryAudit extends Entity
      * Gets the additionalDetails
     * Indicates additional details on the activity.
      *
-     * @return array|null The additionalDetails
+     * @return KeyValue[]|null The additionalDetails
      */
     public function getAdditionalDetails()
     {
-        if (array_key_exists("additionalDetails", $this->_propDict)) {
-           return $this->_propDict["additionalDetails"];
-        } else {
-            return null;
+        if (array_key_exists('additionalDetails', $this->_propDict) && !is_null($this->_propDict['additionalDetails'])) {
+            $additionalDetails = [];
+            if (count($this->_propDict['additionalDetails']) > 0 && is_a($this->_propDict['additionalDetails'][0], 'KeyValue')) {
+                return $this->_propDict['additionalDetails'];
+            }
+            foreach ($this->_propDict['additionalDetails'] as $singleValue) {
+                $additionalDetails []= new KeyValue($singleValue);
+            }
+            $this->_propDict['additionalDetails'] = $additionalDetails;
+            return $this->_propDict['additionalDetails'];
         }
+        return null;
     }
     
     /** 
     * Sets the additionalDetails
     * Indicates additional details on the activity.
     *
-    * @param KeyValue $val The additionalDetails
+    * @param KeyValue[] $val The additionalDetails
     *
     * @return DirectoryAudit
     */
@@ -182,8 +189,8 @@ class DirectoryAudit extends Entity
     */
     public function getInitiatedBy()
     {
-        if (array_key_exists("initiatedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["initiatedBy"], "\Microsoft\Graph\Model\AuditActivityInitiator") || is_null($this->_propDict["initiatedBy"])) {
+        if (array_key_exists("initiatedBy", $this->_propDict) && !is_null($this->_propDict["initiatedBy"])) {
+            if (is_a($this->_propDict["initiatedBy"], "\Microsoft\Graph\Model\AuditActivityInitiator")) {
                 return $this->_propDict["initiatedBy"];
             } else {
                 $this->_propDict["initiatedBy"] = new AuditActivityInitiator($this->_propDict["initiatedBy"]);
@@ -271,8 +278,8 @@ class DirectoryAudit extends Entity
     */
     public function getResult()
     {
-        if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "\Microsoft\Graph\Model\OperationResult") || is_null($this->_propDict["result"])) {
+        if (array_key_exists("result", $this->_propDict) && !is_null($this->_propDict["result"])) {
+            if (is_a($this->_propDict["result"], "\Microsoft\Graph\Model\OperationResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new OperationResult($this->_propDict["result"]);
@@ -330,22 +337,29 @@ class DirectoryAudit extends Entity
      * Gets the targetResources
     * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
      *
-     * @return array|null The targetResources
+     * @return TargetResource[]|null The targetResources
      */
     public function getTargetResources()
     {
-        if (array_key_exists("targetResources", $this->_propDict)) {
-           return $this->_propDict["targetResources"];
-        } else {
-            return null;
+        if (array_key_exists('targetResources', $this->_propDict) && !is_null($this->_propDict['targetResources'])) {
+            $targetResources = [];
+            if (count($this->_propDict['targetResources']) > 0 && is_a($this->_propDict['targetResources'][0], 'TargetResource')) {
+                return $this->_propDict['targetResources'];
+            }
+            foreach ($this->_propDict['targetResources'] as $singleValue) {
+                $targetResources []= new TargetResource($singleValue);
+            }
+            $this->_propDict['targetResources'] = $targetResources;
+            return $this->_propDict['targetResources'];
         }
+        return null;
     }
     
     /** 
     * Sets the targetResources
     * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
     *
-    * @param TargetResource $val The targetResources
+    * @param TargetResource[] $val The targetResources
     *
     * @return DirectoryAudit
     */

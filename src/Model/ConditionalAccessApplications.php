@@ -42,7 +42,7 @@ class ConditionalAccessApplications extends Entity
     * Sets the excludeApplications
     * The list of application IDs explicitly excluded from the policy.
     *
-    * @param string $val The value of the excludeApplications
+    * @param string[] $val The value of the excludeApplications
     *
     * @return ConditionalAccessApplications
     */
@@ -70,7 +70,7 @@ class ConditionalAccessApplications extends Entity
     * Sets the includeApplications
     * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
     *
-    * @param string $val The value of the includeApplications
+    * @param string[] $val The value of the includeApplications
     *
     * @return ConditionalAccessApplications
     */
@@ -98,7 +98,7 @@ class ConditionalAccessApplications extends Entity
     * Sets the includeAuthenticationContextClassReferences
     * Authentication context class references include. Supported values are c1 through c25.
     *
-    * @param string $val The value of the includeAuthenticationContextClassReferences
+    * @param string[] $val The value of the includeAuthenticationContextClassReferences
     *
     * @return ConditionalAccessApplications
     */
@@ -126,7 +126,7 @@ class ConditionalAccessApplications extends Entity
     * Sets the includeUserActions
     * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
     *
-    * @param string $val The value of the includeUserActions
+    * @param string[] $val The value of the includeUserActions
     *
     * @return ConditionalAccessApplications
     */

@@ -32,8 +32,9 @@ class FileSecurityState extends Entity
     */
     public function getFileHash()
     {
-        if (array_key_exists("fileHash", $this->_propDict)) {
-            if (is_a($this->_propDict["fileHash"], "\Microsoft\Graph\Model\FileHash") || is_null($this->_propDict["fileHash"])) {
+        if (array_key_exists("fileHash", $this->_propDict) && !is_null($this->_propDict["fileHash"])) {
+     
+            if (is_a($this->_propDict["fileHash"], "\Microsoft\Graph\Model\FileHash")) {
                 return $this->_propDict["fileHash"];
             } else {
                 $this->_propDict["fileHash"] = new FileHash($this->_propDict["fileHash"]);

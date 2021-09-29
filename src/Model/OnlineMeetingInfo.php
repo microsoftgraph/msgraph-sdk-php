@@ -84,18 +84,22 @@ class OnlineMeetingInfo extends Entity
     * Gets the phones
     * All of the phone numbers associated with this conference.
     *
-    * @return Phone|null The phones
+    * @return Phone[]|null The phones
     */
     public function getPhones()
     {
-        if (array_key_exists("phones", $this->_propDict)) {
-            if (is_a($this->_propDict["phones"], "\Microsoft\Graph\Model\Phone") || is_null($this->_propDict["phones"])) {
-                return $this->_propDict["phones"];
-            } else {
-                $this->_propDict["phones"] = new Phone($this->_propDict["phones"]);
-                return $this->_propDict["phones"];
+        if (array_key_exists("phones", $this->_propDict) && !is_null($this->_propDict["phones"])) {
+       
+            if (count($this->_propDict['phones']) > 0 && is_a($this->_propDict['phones'][0], 'Phone')) {
+               return $this->_propDict['phones'];
             }
-        }
+            $phones = [];
+            foreach ($this->_propDict['phones'] as $singleValue) {
+               $phones []= new Phone($singleValue);
+            }
+            $this->_propDict['phones'] = $phones;
+            return $this->_propDict['phones'];
+            }
         return null;
     }
 
@@ -103,7 +107,7 @@ class OnlineMeetingInfo extends Entity
     * Sets the phones
     * All of the phone numbers associated with this conference.
     *
-    * @param Phone $val The value to assign to the phones
+    * @param Phone[] $val The value to assign to the phones
     *
     * @return OnlineMeetingInfo The OnlineMeetingInfo
     */
@@ -159,7 +163,7 @@ class OnlineMeetingInfo extends Entity
     * Sets the tollFreeNumbers
     * The toll free numbers that can be used to join the conference.
     *
-    * @param string $val The value of the tollFreeNumbers
+    * @param string[] $val The value of the tollFreeNumbers
     *
     * @return OnlineMeetingInfo
     */

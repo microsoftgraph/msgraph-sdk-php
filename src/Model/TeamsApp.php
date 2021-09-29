@@ -61,8 +61,8 @@ class TeamsApp extends Entity
     */
     public function getDistributionMethod()
     {
-        if (array_key_exists("distributionMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["distributionMethod"], "\Microsoft\Graph\Model\TeamsAppDistributionMethod") || is_null($this->_propDict["distributionMethod"])) {
+        if (array_key_exists("distributionMethod", $this->_propDict) && !is_null($this->_propDict["distributionMethod"])) {
+            if (is_a($this->_propDict["distributionMethod"], "\Microsoft\Graph\Model\TeamsAppDistributionMethod")) {
                 return $this->_propDict["distributionMethod"];
             } else {
                 $this->_propDict["distributionMethod"] = new TeamsAppDistributionMethod($this->_propDict["distributionMethod"]);
@@ -120,22 +120,29 @@ class TeamsApp extends Entity
      * Gets the appDefinitions
     * The details for each version of the app.
      *
-     * @return array|null The appDefinitions
+     * @return TeamsAppDefinition[]|null The appDefinitions
      */
     public function getAppDefinitions()
     {
-        if (array_key_exists("appDefinitions", $this->_propDict)) {
-           return $this->_propDict["appDefinitions"];
-        } else {
-            return null;
+        if (array_key_exists('appDefinitions', $this->_propDict) && !is_null($this->_propDict['appDefinitions'])) {
+            $appDefinitions = [];
+            if (count($this->_propDict['appDefinitions']) > 0 && is_a($this->_propDict['appDefinitions'][0], 'TeamsAppDefinition')) {
+                return $this->_propDict['appDefinitions'];
+            }
+            foreach ($this->_propDict['appDefinitions'] as $singleValue) {
+                $appDefinitions []= new TeamsAppDefinition($singleValue);
+            }
+            $this->_propDict['appDefinitions'] = $appDefinitions;
+            return $this->_propDict['appDefinitions'];
         }
+        return null;
     }
     
     /** 
     * Sets the appDefinitions
     * The details for each version of the app.
     *
-    * @param TeamsAppDefinition $val The appDefinitions
+    * @param TeamsAppDefinition[] $val The appDefinitions
     *
     * @return TeamsApp
     */

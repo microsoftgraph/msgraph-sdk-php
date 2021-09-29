@@ -177,8 +177,8 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
     */
     public function getPlatformType()
     {
-        if (array_key_exists("platformType", $this->_propDict)) {
-            if (is_a($this->_propDict["platformType"], "\Microsoft\Graph\Model\PolicyPlatformType") || is_null($this->_propDict["platformType"])) {
+        if (array_key_exists("platformType", $this->_propDict) && !is_null($this->_propDict["platformType"])) {
+            if (is_a($this->_propDict["platformType"], "\Microsoft\Graph\Model\PolicyPlatformType")) {
                 return $this->_propDict["platformType"];
             } else {
                 $this->_propDict["platformType"] = new PolicyPlatformType($this->_propDict["platformType"]);
@@ -323,22 +323,29 @@ class DeviceCompliancePolicySettingStateSummary extends Entity
      * Gets the deviceComplianceSettingStates
     * Not yet documented
      *
-     * @return array|null The deviceComplianceSettingStates
+     * @return DeviceComplianceSettingState[]|null The deviceComplianceSettingStates
      */
     public function getDeviceComplianceSettingStates()
     {
-        if (array_key_exists("deviceComplianceSettingStates", $this->_propDict)) {
-           return $this->_propDict["deviceComplianceSettingStates"];
-        } else {
-            return null;
+        if (array_key_exists('deviceComplianceSettingStates', $this->_propDict) && !is_null($this->_propDict['deviceComplianceSettingStates'])) {
+            $deviceComplianceSettingStates = [];
+            if (count($this->_propDict['deviceComplianceSettingStates']) > 0 && is_a($this->_propDict['deviceComplianceSettingStates'][0], 'DeviceComplianceSettingState')) {
+                return $this->_propDict['deviceComplianceSettingStates'];
+            }
+            foreach ($this->_propDict['deviceComplianceSettingStates'] as $singleValue) {
+                $deviceComplianceSettingStates []= new DeviceComplianceSettingState($singleValue);
+            }
+            $this->_propDict['deviceComplianceSettingStates'] = $deviceComplianceSettingStates;
+            return $this->_propDict['deviceComplianceSettingStates'];
         }
+        return null;
     }
     
     /** 
     * Sets the deviceComplianceSettingStates
     * Not yet documented
     *
-    * @param DeviceComplianceSettingState $val The deviceComplianceSettingStates
+    * @param DeviceComplianceSettingState[] $val The deviceComplianceSettingStates
     *
     * @return DeviceCompliancePolicySettingStateSummary
     */

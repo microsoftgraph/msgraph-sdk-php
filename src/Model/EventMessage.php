@@ -32,8 +32,8 @@ class EventMessage extends Message
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new DateTimeTimeZone($this->_propDict["endDateTime"]);
@@ -86,7 +86,6 @@ class EventMessage extends Message
     
     /**
     * Gets the isDelegated
-    * True if this meeting request is accessible to a delegate, false otherwise. Default is false.
     *
     * @return bool|null The isDelegated
     */
@@ -101,7 +100,6 @@ class EventMessage extends Message
     
     /**
     * Sets the isDelegated
-    * True if this meeting request is accessible to a delegate, false otherwise. Default is false.
     *
     * @param bool $val The isDelegated
     *
@@ -147,8 +145,8 @@ class EventMessage extends Message
     */
     public function getLocation()
     {
-        if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\Location") || is_null($this->_propDict["location"])) {
+        if (array_key_exists("location", $this->_propDict) && !is_null($this->_propDict["location"])) {
+            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new Location($this->_propDict["location"]);
@@ -173,14 +171,13 @@ class EventMessage extends Message
     
     /**
     * Gets the meetingMessageType
-    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
     *
     * @return MeetingMessageType|null The meetingMessageType
     */
     public function getMeetingMessageType()
     {
-        if (array_key_exists("meetingMessageType", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingMessageType"], "\Microsoft\Graph\Model\MeetingMessageType") || is_null($this->_propDict["meetingMessageType"])) {
+        if (array_key_exists("meetingMessageType", $this->_propDict) && !is_null($this->_propDict["meetingMessageType"])) {
+            if (is_a($this->_propDict["meetingMessageType"], "\Microsoft\Graph\Model\MeetingMessageType")) {
                 return $this->_propDict["meetingMessageType"];
             } else {
                 $this->_propDict["meetingMessageType"] = new MeetingMessageType($this->_propDict["meetingMessageType"]);
@@ -192,7 +189,6 @@ class EventMessage extends Message
     
     /**
     * Sets the meetingMessageType
-    * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
     *
     * @param MeetingMessageType $val The meetingMessageType
     *
@@ -211,8 +207,8 @@ class EventMessage extends Message
     */
     public function getRecurrence()
     {
-        if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence") || is_null($this->_propDict["recurrence"])) {
+        if (array_key_exists("recurrence", $this->_propDict) && !is_null($this->_propDict["recurrence"])) {
+            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);
@@ -242,8 +238,8 @@ class EventMessage extends Message
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new DateTimeTimeZone($this->_propDict["startDateTime"]);
@@ -273,8 +269,8 @@ class EventMessage extends Message
     */
     public function getType()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\EventType") || is_null($this->_propDict["type"])) {
+        if (array_key_exists("type", $this->_propDict) && !is_null($this->_propDict["type"])) {
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\EventType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new EventType($this->_propDict["type"]);
@@ -305,8 +301,8 @@ class EventMessage extends Message
     */
     public function getEvent()
     {
-        if (array_key_exists("event", $this->_propDict)) {
-            if (is_a($this->_propDict["event"], "\Microsoft\Graph\Model\Event") || is_null($this->_propDict["event"])) {
+        if (array_key_exists("event", $this->_propDict) && !is_null($this->_propDict["event"])) {
+            if (is_a($this->_propDict["event"], "\Microsoft\Graph\Model\Event")) {
                 return $this->_propDict["event"];
             } else {
                 $this->_propDict["event"] = new Event($this->_propDict["event"]);

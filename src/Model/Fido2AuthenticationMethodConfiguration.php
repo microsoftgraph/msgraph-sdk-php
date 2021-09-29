@@ -90,8 +90,8 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     */
     public function getKeyRestrictions()
     {
-        if (array_key_exists("keyRestrictions", $this->_propDict)) {
-            if (is_a($this->_propDict["keyRestrictions"], "\Microsoft\Graph\Model\Fido2KeyRestrictions") || is_null($this->_propDict["keyRestrictions"])) {
+        if (array_key_exists("keyRestrictions", $this->_propDict) && !is_null($this->_propDict["keyRestrictions"])) {
+            if (is_a($this->_propDict["keyRestrictions"], "\Microsoft\Graph\Model\Fido2KeyRestrictions")) {
                 return $this->_propDict["keyRestrictions"];
             } else {
                 $this->_propDict["keyRestrictions"] = new Fido2KeyRestrictions($this->_propDict["keyRestrictions"]);
@@ -120,22 +120,29 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * Gets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
      *
-     * @return array|null The includeTargets
+     * @return AuthenticationMethodTarget[]|null The includeTargets
      */
     public function getIncludeTargets()
     {
-        if (array_key_exists("includeTargets", $this->_propDict)) {
-           return $this->_propDict["includeTargets"];
-        } else {
-            return null;
+        if (array_key_exists('includeTargets', $this->_propDict) && !is_null($this->_propDict['includeTargets'])) {
+            $includeTargets = [];
+            if (count($this->_propDict['includeTargets']) > 0 && is_a($this->_propDict['includeTargets'][0], 'AuthenticationMethodTarget')) {
+                return $this->_propDict['includeTargets'];
+            }
+            foreach ($this->_propDict['includeTargets'] as $singleValue) {
+                $includeTargets []= new AuthenticationMethodTarget($singleValue);
+            }
+            $this->_propDict['includeTargets'] = $includeTargets;
+            return $this->_propDict['includeTargets'];
         }
+        return null;
     }
     
     /** 
     * Sets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
     *
-    * @param AuthenticationMethodTarget $val The includeTargets
+    * @param AuthenticationMethodTarget[] $val The includeTargets
     *
     * @return Fido2AuthenticationMethodConfiguration
     */

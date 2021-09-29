@@ -58,8 +58,8 @@ class CalendarSharingMessage extends Message
     */
     public function getSharingMessageAction()
     {
-        if (array_key_exists("sharingMessageAction", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingMessageAction"], "\Microsoft\Graph\Model\CalendarSharingMessageAction") || is_null($this->_propDict["sharingMessageAction"])) {
+        if (array_key_exists("sharingMessageAction", $this->_propDict) && !is_null($this->_propDict["sharingMessageAction"])) {
+            if (is_a($this->_propDict["sharingMessageAction"], "\Microsoft\Graph\Model\CalendarSharingMessageAction")) {
                 return $this->_propDict["sharingMessageAction"];
             } else {
                 $this->_propDict["sharingMessageAction"] = new CalendarSharingMessageAction($this->_propDict["sharingMessageAction"]);
@@ -86,21 +86,28 @@ class CalendarSharingMessage extends Message
      /** 
      * Gets the sharingMessageActions
      *
-     * @return array|null The sharingMessageActions
+     * @return CalendarSharingMessageAction[]|null The sharingMessageActions
      */
     public function getSharingMessageActions()
     {
-        if (array_key_exists("sharingMessageActions", $this->_propDict)) {
-           return $this->_propDict["sharingMessageActions"];
-        } else {
-            return null;
+        if (array_key_exists('sharingMessageActions', $this->_propDict) && !is_null($this->_propDict['sharingMessageActions'])) {
+            $sharingMessageActions = [];
+            if (count($this->_propDict['sharingMessageActions']) > 0 && is_a($this->_propDict['sharingMessageActions'][0], 'CalendarSharingMessageAction')) {
+                return $this->_propDict['sharingMessageActions'];
+            }
+            foreach ($this->_propDict['sharingMessageActions'] as $singleValue) {
+                $sharingMessageActions []= new CalendarSharingMessageAction($singleValue);
+            }
+            $this->_propDict['sharingMessageActions'] = $sharingMessageActions;
+            return $this->_propDict['sharingMessageActions'];
         }
+        return null;
     }
     
     /** 
     * Sets the sharingMessageActions
     *
-    * @param CalendarSharingMessageAction $val The sharingMessageActions
+    * @param CalendarSharingMessageAction[] $val The sharingMessageActions
     *
     * @return CalendarSharingMessage
     */

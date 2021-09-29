@@ -119,8 +119,8 @@ class AuthorizationPolicy extends PolicyBase
     */
     public function getAllowInvitesFrom()
     {
-        if (array_key_exists("allowInvitesFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["allowInvitesFrom"], "\Microsoft\Graph\Model\AllowInvitesFrom") || is_null($this->_propDict["allowInvitesFrom"])) {
+        if (array_key_exists("allowInvitesFrom", $this->_propDict) && !is_null($this->_propDict["allowInvitesFrom"])) {
+            if (is_a($this->_propDict["allowInvitesFrom"], "\Microsoft\Graph\Model\AllowInvitesFrom")) {
                 return $this->_propDict["allowInvitesFrom"];
             } else {
                 $this->_propDict["allowInvitesFrom"] = new AllowInvitesFrom($this->_propDict["allowInvitesFrom"]);
@@ -181,8 +181,8 @@ class AuthorizationPolicy extends PolicyBase
     */
     public function getDefaultUserRolePermissions()
     {
-        if (array_key_exists("defaultUserRolePermissions", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultUserRolePermissions"], "\Microsoft\Graph\Model\DefaultUserRolePermissions") || is_null($this->_propDict["defaultUserRolePermissions"])) {
+        if (array_key_exists("defaultUserRolePermissions", $this->_propDict) && !is_null($this->_propDict["defaultUserRolePermissions"])) {
+            if (is_a($this->_propDict["defaultUserRolePermissions"], "\Microsoft\Graph\Model\DefaultUserRolePermissions")) {
                 return $this->_propDict["defaultUserRolePermissions"];
             } else {
                 $this->_propDict["defaultUserRolePermissions"] = new DefaultUserRolePermissions($this->_propDict["defaultUserRolePermissions"]);

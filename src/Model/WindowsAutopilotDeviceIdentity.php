@@ -119,8 +119,8 @@ class WindowsAutopilotDeviceIdentity extends Entity
     */
     public function getEnrollmentState()
     {
-        if (array_key_exists("enrollmentState", $this->_propDict)) {
-            if (is_a($this->_propDict["enrollmentState"], "\Microsoft\Graph\Model\EnrollmentState") || is_null($this->_propDict["enrollmentState"])) {
+        if (array_key_exists("enrollmentState", $this->_propDict) && !is_null($this->_propDict["enrollmentState"])) {
+            if (is_a($this->_propDict["enrollmentState"], "\Microsoft\Graph\Model\EnrollmentState")) {
                 return $this->_propDict["enrollmentState"];
             } else {
                 $this->_propDict["enrollmentState"] = new EnrollmentState($this->_propDict["enrollmentState"]);
@@ -181,8 +181,8 @@ class WindowsAutopilotDeviceIdentity extends Entity
     */
     public function getLastContactedDateTime()
     {
-        if (array_key_exists("lastContactedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime") || is_null($this->_propDict["lastContactedDateTime"])) {
+        if (array_key_exists("lastContactedDateTime", $this->_propDict) && !is_null($this->_propDict["lastContactedDateTime"])) {
+            if (is_a($this->_propDict["lastContactedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastContactedDateTime"];
             } else {
                 $this->_propDict["lastContactedDateTime"] = new \DateTime($this->_propDict["lastContactedDateTime"]);

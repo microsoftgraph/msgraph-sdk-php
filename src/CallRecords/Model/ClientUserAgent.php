@@ -32,8 +32,9 @@ class ClientUserAgent extends UserAgent
     */
     public function getPlatform()
     {
-        if (array_key_exists("platform", $this->_propDict)) {
-            if (is_a($this->_propDict["platform"], "\Microsoft\Graph\CallRecords\Model\ClientPlatform") || is_null($this->_propDict["platform"])) {
+        if (array_key_exists("platform", $this->_propDict) && !is_null($this->_propDict["platform"])) {
+     
+            if (is_a($this->_propDict["platform"], "\Microsoft\Graph\CallRecords\Model\ClientPlatform")) {
                 return $this->_propDict["platform"];
             } else {
                 $this->_propDict["platform"] = new ClientPlatform($this->_propDict["platform"]);
@@ -65,8 +66,9 @@ class ClientUserAgent extends UserAgent
     */
     public function getProductFamily()
     {
-        if (array_key_exists("productFamily", $this->_propDict)) {
-            if (is_a($this->_propDict["productFamily"], "\Microsoft\Graph\CallRecords\Model\ProductFamily") || is_null($this->_propDict["productFamily"])) {
+        if (array_key_exists("productFamily", $this->_propDict) && !is_null($this->_propDict["productFamily"])) {
+     
+            if (is_a($this->_propDict["productFamily"], "\Microsoft\Graph\CallRecords\Model\ProductFamily")) {
                 return $this->_propDict["productFamily"];
             } else {
                 $this->_propDict["productFamily"] = new ProductFamily($this->_propDict["productFamily"]);

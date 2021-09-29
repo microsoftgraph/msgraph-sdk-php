@@ -60,8 +60,9 @@ class RecentNotebook extends Entity
     */
     public function getLastAccessedTime()
     {
-        if (array_key_exists("lastAccessedTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastAccessedTime"], "\DateTime") || is_null($this->_propDict["lastAccessedTime"])) {
+        if (array_key_exists("lastAccessedTime", $this->_propDict) && !is_null($this->_propDict["lastAccessedTime"])) {
+     
+            if (is_a($this->_propDict["lastAccessedTime"], "\DateTime")) {
                 return $this->_propDict["lastAccessedTime"];
             } else {
                 $this->_propDict["lastAccessedTime"] = new \DateTime($this->_propDict["lastAccessedTime"]);
@@ -93,8 +94,9 @@ class RecentNotebook extends Entity
     */
     public function getLinks()
     {
-        if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\RecentNotebookLinks") || is_null($this->_propDict["links"])) {
+        if (array_key_exists("links", $this->_propDict) && !is_null($this->_propDict["links"])) {
+     
+            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\RecentNotebookLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new RecentNotebookLinks($this->_propDict["links"]);
@@ -126,8 +128,9 @@ class RecentNotebook extends Entity
     */
     public function getSourceService()
     {
-        if (array_key_exists("sourceService", $this->_propDict)) {
-            if (is_a($this->_propDict["sourceService"], "\Microsoft\Graph\Model\OnenoteSourceService") || is_null($this->_propDict["sourceService"])) {
+        if (array_key_exists("sourceService", $this->_propDict) && !is_null($this->_propDict["sourceService"])) {
+     
+            if (is_a($this->_propDict["sourceService"], "\Microsoft\Graph\Model\OnenoteSourceService")) {
                 return $this->_propDict["sourceService"];
             } else {
                 $this->_propDict["sourceService"] = new OnenoteSourceService($this->_propDict["sourceService"]);

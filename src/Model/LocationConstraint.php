@@ -56,18 +56,22 @@ class LocationConstraint extends Entity
     * Gets the locations
     * Constraint information for one or more locations that the client requests for the meeting.
     *
-    * @return LocationConstraintItem|null The locations
+    * @return LocationConstraintItem[]|null The locations
     */
     public function getLocations()
     {
-        if (array_key_exists("locations", $this->_propDict)) {
-            if (is_a($this->_propDict["locations"], "\Microsoft\Graph\Model\LocationConstraintItem") || is_null($this->_propDict["locations"])) {
-                return $this->_propDict["locations"];
-            } else {
-                $this->_propDict["locations"] = new LocationConstraintItem($this->_propDict["locations"]);
-                return $this->_propDict["locations"];
+        if (array_key_exists("locations", $this->_propDict) && !is_null($this->_propDict["locations"])) {
+       
+            if (count($this->_propDict['locations']) > 0 && is_a($this->_propDict['locations'][0], 'LocationConstraintItem')) {
+               return $this->_propDict['locations'];
             }
-        }
+            $locations = [];
+            foreach ($this->_propDict['locations'] as $singleValue) {
+               $locations []= new LocationConstraintItem($singleValue);
+            }
+            $this->_propDict['locations'] = $locations;
+            return $this->_propDict['locations'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class LocationConstraint extends Entity
     * Sets the locations
     * Constraint information for one or more locations that the client requests for the meeting.
     *
-    * @param LocationConstraintItem $val The value to assign to the locations
+    * @param LocationConstraintItem[] $val The value to assign to the locations
     *
     * @return LocationConstraint The LocationConstraint
     */

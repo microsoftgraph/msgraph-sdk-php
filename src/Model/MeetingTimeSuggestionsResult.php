@@ -56,18 +56,22 @@ class MeetingTimeSuggestionsResult extends Entity
     * Gets the meetingTimeSuggestions
     * An array of meeting suggestions.
     *
-    * @return MeetingTimeSuggestion|null The meetingTimeSuggestions
+    * @return MeetingTimeSuggestion[]|null The meetingTimeSuggestions
     */
     public function getMeetingTimeSuggestions()
     {
-        if (array_key_exists("meetingTimeSuggestions", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingTimeSuggestions"], "\Microsoft\Graph\Model\MeetingTimeSuggestion") || is_null($this->_propDict["meetingTimeSuggestions"])) {
-                return $this->_propDict["meetingTimeSuggestions"];
-            } else {
-                $this->_propDict["meetingTimeSuggestions"] = new MeetingTimeSuggestion($this->_propDict["meetingTimeSuggestions"]);
-                return $this->_propDict["meetingTimeSuggestions"];
+        if (array_key_exists("meetingTimeSuggestions", $this->_propDict) && !is_null($this->_propDict["meetingTimeSuggestions"])) {
+       
+            if (count($this->_propDict['meetingTimeSuggestions']) > 0 && is_a($this->_propDict['meetingTimeSuggestions'][0], 'MeetingTimeSuggestion')) {
+               return $this->_propDict['meetingTimeSuggestions'];
             }
-        }
+            $meetingTimeSuggestions = [];
+            foreach ($this->_propDict['meetingTimeSuggestions'] as $singleValue) {
+               $meetingTimeSuggestions []= new MeetingTimeSuggestion($singleValue);
+            }
+            $this->_propDict['meetingTimeSuggestions'] = $meetingTimeSuggestions;
+            return $this->_propDict['meetingTimeSuggestions'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class MeetingTimeSuggestionsResult extends Entity
     * Sets the meetingTimeSuggestions
     * An array of meeting suggestions.
     *
-    * @param MeetingTimeSuggestion $val The value to assign to the meetingTimeSuggestions
+    * @param MeetingTimeSuggestion[] $val The value to assign to the meetingTimeSuggestions
     *
     * @return MeetingTimeSuggestionsResult The MeetingTimeSuggestionsResult
     */

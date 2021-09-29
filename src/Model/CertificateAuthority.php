@@ -32,8 +32,9 @@ class CertificateAuthority extends Entity
     */
     public function getCertificate()
     {
-        if (array_key_exists("certificate", $this->_propDict)) {
-            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["certificate"])) {
+        if (array_key_exists("certificate", $this->_propDict) && !is_null($this->_propDict["certificate"])) {
+     
+            if (is_a($this->_propDict["certificate"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["certificate"];
             } else {
                 $this->_propDict["certificate"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["certificate"]);

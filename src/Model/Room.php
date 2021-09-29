@@ -61,8 +61,8 @@ class Room extends Place
     */
     public function getBookingType()
     {
-        if (array_key_exists("bookingType", $this->_propDict)) {
-            if (is_a($this->_propDict["bookingType"], "\Microsoft\Graph\Model\BookingType") || is_null($this->_propDict["bookingType"])) {
+        if (array_key_exists("bookingType", $this->_propDict) && !is_null($this->_propDict["bookingType"])) {
+            if (is_a($this->_propDict["bookingType"], "\Microsoft\Graph\Model\BookingType")) {
                 return $this->_propDict["bookingType"];
             } else {
                 $this->_propDict["bookingType"] = new BookingType($this->_propDict["bookingType"]);

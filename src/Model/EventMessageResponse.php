@@ -31,8 +31,8 @@ class EventMessageResponse extends EventMessage
     */
     public function getProposedNewTime()
     {
-        if (array_key_exists("proposedNewTime", $this->_propDict)) {
-            if (is_a($this->_propDict["proposedNewTime"], "\Microsoft\Graph\Model\TimeSlot") || is_null($this->_propDict["proposedNewTime"])) {
+        if (array_key_exists("proposedNewTime", $this->_propDict) && !is_null($this->_propDict["proposedNewTime"])) {
+            if (is_a($this->_propDict["proposedNewTime"], "\Microsoft\Graph\Model\TimeSlot")) {
                 return $this->_propDict["proposedNewTime"];
             } else {
                 $this->_propDict["proposedNewTime"] = new TimeSlot($this->_propDict["proposedNewTime"]);
@@ -62,8 +62,8 @@ class EventMessageResponse extends EventMessage
     */
     public function getResponseType()
     {
-        if (array_key_exists("responseType", $this->_propDict)) {
-            if (is_a($this->_propDict["responseType"], "\Microsoft\Graph\Model\ResponseType") || is_null($this->_propDict["responseType"])) {
+        if (array_key_exists("responseType", $this->_propDict) && !is_null($this->_propDict["responseType"])) {
+            if (is_a($this->_propDict["responseType"], "\Microsoft\Graph\Model\ResponseType")) {
                 return $this->_propDict["responseType"];
             } else {
                 $this->_propDict["responseType"] = new ResponseType($this->_propDict["responseType"]);

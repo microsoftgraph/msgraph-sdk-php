@@ -116,22 +116,29 @@ class IdentityUserFlowAttributeAssignment extends Entity
      * Gets the userAttributeValues
     * The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
      *
-     * @return array|null The userAttributeValues
+     * @return UserAttributeValuesItem[]|null The userAttributeValues
      */
     public function getUserAttributeValues()
     {
-        if (array_key_exists("userAttributeValues", $this->_propDict)) {
-           return $this->_propDict["userAttributeValues"];
-        } else {
-            return null;
+        if (array_key_exists('userAttributeValues', $this->_propDict) && !is_null($this->_propDict['userAttributeValues'])) {
+            $userAttributeValues = [];
+            if (count($this->_propDict['userAttributeValues']) > 0 && is_a($this->_propDict['userAttributeValues'][0], 'UserAttributeValuesItem')) {
+                return $this->_propDict['userAttributeValues'];
+            }
+            foreach ($this->_propDict['userAttributeValues'] as $singleValue) {
+                $userAttributeValues []= new UserAttributeValuesItem($singleValue);
+            }
+            $this->_propDict['userAttributeValues'] = $userAttributeValues;
+            return $this->_propDict['userAttributeValues'];
         }
+        return null;
     }
     
     /** 
     * Sets the userAttributeValues
     * The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
     *
-    * @param UserAttributeValuesItem $val The userAttributeValues
+    * @param UserAttributeValuesItem[] $val The userAttributeValues
     *
     * @return IdentityUserFlowAttributeAssignment
     */
@@ -149,8 +156,8 @@ class IdentityUserFlowAttributeAssignment extends Entity
     */
     public function getUserInputType()
     {
-        if (array_key_exists("userInputType", $this->_propDict)) {
-            if (is_a($this->_propDict["userInputType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeInputType") || is_null($this->_propDict["userInputType"])) {
+        if (array_key_exists("userInputType", $this->_propDict) && !is_null($this->_propDict["userInputType"])) {
+            if (is_a($this->_propDict["userInputType"], "\Microsoft\Graph\Model\IdentityUserFlowAttributeInputType")) {
                 return $this->_propDict["userInputType"];
             } else {
                 $this->_propDict["userInputType"] = new IdentityUserFlowAttributeInputType($this->_propDict["userInputType"]);
@@ -182,8 +189,8 @@ class IdentityUserFlowAttributeAssignment extends Entity
     */
     public function getUserAttribute()
     {
-        if (array_key_exists("userAttribute", $this->_propDict)) {
-            if (is_a($this->_propDict["userAttribute"], "\Microsoft\Graph\Model\IdentityUserFlowAttribute") || is_null($this->_propDict["userAttribute"])) {
+        if (array_key_exists("userAttribute", $this->_propDict) && !is_null($this->_propDict["userAttribute"])) {
+            if (is_a($this->_propDict["userAttribute"], "\Microsoft\Graph\Model\IdentityUserFlowAttribute")) {
                 return $this->_propDict["userAttribute"];
             } else {
                 $this->_propDict["userAttribute"] = new IdentityUserFlowAttribute($this->_propDict["userAttribute"]);

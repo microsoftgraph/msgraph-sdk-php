@@ -32,8 +32,9 @@ class TeamworkUserIdentity extends Identity
     */
     public function getUserIdentityType()
     {
-        if (array_key_exists("userIdentityType", $this->_propDict)) {
-            if (is_a($this->_propDict["userIdentityType"], "\Microsoft\Graph\Model\TeamworkUserIdentityType") || is_null($this->_propDict["userIdentityType"])) {
+        if (array_key_exists("userIdentityType", $this->_propDict) && !is_null($this->_propDict["userIdentityType"])) {
+     
+            if (is_a($this->_propDict["userIdentityType"], "\Microsoft\Graph\Model\TeamworkUserIdentityType")) {
                 return $this->_propDict["userIdentityType"];
             } else {
                 $this->_propDict["userIdentityType"] = new TeamworkUserIdentityType($this->_propDict["userIdentityType"]);

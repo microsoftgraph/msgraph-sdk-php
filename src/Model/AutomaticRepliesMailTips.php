@@ -60,8 +60,9 @@ class AutomaticRepliesMailTips extends Entity
     */
     public function getMessageLanguage()
     {
-        if (array_key_exists("messageLanguage", $this->_propDict)) {
-            if (is_a($this->_propDict["messageLanguage"], "\Microsoft\Graph\Model\LocaleInfo") || is_null($this->_propDict["messageLanguage"])) {
+        if (array_key_exists("messageLanguage", $this->_propDict) && !is_null($this->_propDict["messageLanguage"])) {
+     
+            if (is_a($this->_propDict["messageLanguage"], "\Microsoft\Graph\Model\LocaleInfo")) {
                 return $this->_propDict["messageLanguage"];
             } else {
                 $this->_propDict["messageLanguage"] = new LocaleInfo($this->_propDict["messageLanguage"]);
@@ -93,8 +94,9 @@ class AutomaticRepliesMailTips extends Entity
     */
     public function getScheduledEndTime()
     {
-        if (array_key_exists("scheduledEndTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledEndTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["scheduledEndTime"])) {
+        if (array_key_exists("scheduledEndTime", $this->_propDict) && !is_null($this->_propDict["scheduledEndTime"])) {
+     
+            if (is_a($this->_propDict["scheduledEndTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledEndTime"];
             } else {
                 $this->_propDict["scheduledEndTime"] = new DateTimeTimeZone($this->_propDict["scheduledEndTime"]);
@@ -126,8 +128,9 @@ class AutomaticRepliesMailTips extends Entity
     */
     public function getScheduledStartTime()
     {
-        if (array_key_exists("scheduledStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledStartTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["scheduledStartTime"])) {
+        if (array_key_exists("scheduledStartTime", $this->_propDict) && !is_null($this->_propDict["scheduledStartTime"])) {
+     
+            if (is_a($this->_propDict["scheduledStartTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["scheduledStartTime"];
             } else {
                 $this->_propDict["scheduledStartTime"] = new DateTimeTimeZone($this->_propDict["scheduledStartTime"]);

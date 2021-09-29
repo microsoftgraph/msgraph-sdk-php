@@ -29,22 +29,29 @@ class ManagedAppConfiguration extends ManagedAppPolicy
      * Gets the customSettings
     * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
      *
-     * @return array|null The customSettings
+     * @return KeyValuePair[]|null The customSettings
      */
     public function getCustomSettings()
     {
-        if (array_key_exists("customSettings", $this->_propDict)) {
-           return $this->_propDict["customSettings"];
-        } else {
-            return null;
+        if (array_key_exists('customSettings', $this->_propDict) && !is_null($this->_propDict['customSettings'])) {
+            $customSettings = [];
+            if (count($this->_propDict['customSettings']) > 0 && is_a($this->_propDict['customSettings'][0], 'KeyValuePair')) {
+                return $this->_propDict['customSettings'];
+            }
+            foreach ($this->_propDict['customSettings'] as $singleValue) {
+                $customSettings []= new KeyValuePair($singleValue);
+            }
+            $this->_propDict['customSettings'] = $customSettings;
+            return $this->_propDict['customSettings'];
         }
+        return null;
     }
     
     /** 
     * Sets the customSettings
     * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
     *
-    * @param KeyValuePair $val The customSettings
+    * @param KeyValuePair[] $val The customSettings
     *
     * @return ManagedAppConfiguration
     */

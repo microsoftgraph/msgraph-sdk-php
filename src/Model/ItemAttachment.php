@@ -32,8 +32,8 @@ class ItemAttachment extends Attachment
     */
     public function getItem()
     {
-        if (array_key_exists("item", $this->_propDict)) {
-            if (is_a($this->_propDict["item"], "\Microsoft\Graph\Model\OutlookItem") || is_null($this->_propDict["item"])) {
+        if (array_key_exists("item", $this->_propDict) && !is_null($this->_propDict["item"])) {
+            if (is_a($this->_propDict["item"], "\Microsoft\Graph\Model\OutlookItem")) {
                 return $this->_propDict["item"];
             } else {
                 $this->_propDict["item"] = new OutlookItem($this->_propDict["item"]);

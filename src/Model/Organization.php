@@ -29,22 +29,29 @@ class Organization extends DirectoryObject
      * Gets the assignedPlans
     * The collection of service plans associated with the tenant. Not nullable.
      *
-     * @return array|null The assignedPlans
+     * @return AssignedPlan[]|null The assignedPlans
      */
     public function getAssignedPlans()
     {
-        if (array_key_exists("assignedPlans", $this->_propDict)) {
-           return $this->_propDict["assignedPlans"];
-        } else {
-            return null;
+        if (array_key_exists('assignedPlans', $this->_propDict) && !is_null($this->_propDict['assignedPlans'])) {
+            $assignedPlans = [];
+            if (count($this->_propDict['assignedPlans']) > 0 && is_a($this->_propDict['assignedPlans'][0], 'AssignedPlan')) {
+                return $this->_propDict['assignedPlans'];
+            }
+            foreach ($this->_propDict['assignedPlans'] as $singleValue) {
+                $assignedPlans []= new AssignedPlan($singleValue);
+            }
+            $this->_propDict['assignedPlans'] = $assignedPlans;
+            return $this->_propDict['assignedPlans'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignedPlans
     * The collection of service plans associated with the tenant. Not nullable.
     *
-    * @param AssignedPlan $val The assignedPlans
+    * @param AssignedPlan[] $val The assignedPlans
     *
     * @return Organization
     */
@@ -178,8 +185,8 @@ class Organization extends DirectoryObject
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -269,8 +276,8 @@ class Organization extends DirectoryObject
     */
     public function getOnPremisesLastSyncDateTime()
     {
-        if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime") || is_null($this->_propDict["onPremisesLastSyncDateTime"])) {
+        if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict) && !is_null($this->_propDict["onPremisesLastSyncDateTime"])) {
+            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["onPremisesLastSyncDateTime"];
             } else {
                 $this->_propDict["onPremisesLastSyncDateTime"] = new \DateTime($this->_propDict["onPremisesLastSyncDateTime"]);
@@ -389,8 +396,8 @@ class Organization extends DirectoryObject
     */
     public function getPrivacyProfile()
     {
-        if (array_key_exists("privacyProfile", $this->_propDict)) {
-            if (is_a($this->_propDict["privacyProfile"], "\Microsoft\Graph\Model\PrivacyProfile") || is_null($this->_propDict["privacyProfile"])) {
+        if (array_key_exists("privacyProfile", $this->_propDict) && !is_null($this->_propDict["privacyProfile"])) {
+            if (is_a($this->_propDict["privacyProfile"], "\Microsoft\Graph\Model\PrivacyProfile")) {
                 return $this->_propDict["privacyProfile"];
             } else {
                 $this->_propDict["privacyProfile"] = new PrivacyProfile($this->_propDict["privacyProfile"]);
@@ -419,22 +426,29 @@ class Organization extends DirectoryObject
      * Gets the provisionedPlans
     * Not nullable.
      *
-     * @return array|null The provisionedPlans
+     * @return ProvisionedPlan[]|null The provisionedPlans
      */
     public function getProvisionedPlans()
     {
-        if (array_key_exists("provisionedPlans", $this->_propDict)) {
-           return $this->_propDict["provisionedPlans"];
-        } else {
-            return null;
+        if (array_key_exists('provisionedPlans', $this->_propDict) && !is_null($this->_propDict['provisionedPlans'])) {
+            $provisionedPlans = [];
+            if (count($this->_propDict['provisionedPlans']) > 0 && is_a($this->_propDict['provisionedPlans'][0], 'ProvisionedPlan')) {
+                return $this->_propDict['provisionedPlans'];
+            }
+            foreach ($this->_propDict['provisionedPlans'] as $singleValue) {
+                $provisionedPlans []= new ProvisionedPlan($singleValue);
+            }
+            $this->_propDict['provisionedPlans'] = $provisionedPlans;
+            return $this->_propDict['provisionedPlans'];
         }
+        return null;
     }
     
     /** 
     * Sets the provisionedPlans
     * Not nullable.
     *
-    * @param ProvisionedPlan $val The provisionedPlans
+    * @param ProvisionedPlan[] $val The provisionedPlans
     *
     * @return Organization
     */
@@ -617,22 +631,29 @@ class Organization extends DirectoryObject
      * Gets the verifiedDomains
     * The collection of domains associated with this tenant. Not nullable.
      *
-     * @return array|null The verifiedDomains
+     * @return VerifiedDomain[]|null The verifiedDomains
      */
     public function getVerifiedDomains()
     {
-        if (array_key_exists("verifiedDomains", $this->_propDict)) {
-           return $this->_propDict["verifiedDomains"];
-        } else {
-            return null;
+        if (array_key_exists('verifiedDomains', $this->_propDict) && !is_null($this->_propDict['verifiedDomains'])) {
+            $verifiedDomains = [];
+            if (count($this->_propDict['verifiedDomains']) > 0 && is_a($this->_propDict['verifiedDomains'][0], 'VerifiedDomain')) {
+                return $this->_propDict['verifiedDomains'];
+            }
+            foreach ($this->_propDict['verifiedDomains'] as $singleValue) {
+                $verifiedDomains []= new VerifiedDomain($singleValue);
+            }
+            $this->_propDict['verifiedDomains'] = $verifiedDomains;
+            return $this->_propDict['verifiedDomains'];
         }
+        return null;
     }
     
     /** 
     * Sets the verifiedDomains
     * The collection of domains associated with this tenant. Not nullable.
     *
-    * @param VerifiedDomain $val The verifiedDomains
+    * @param VerifiedDomain[] $val The verifiedDomains
     *
     * @return Organization
     */
@@ -650,8 +671,8 @@ class Organization extends DirectoryObject
     */
     public function getMobileDeviceManagementAuthority()
     {
-        if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict)) {
-            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "\Microsoft\Graph\Model\MdmAuthority") || is_null($this->_propDict["mobileDeviceManagementAuthority"])) {
+        if (array_key_exists("mobileDeviceManagementAuthority", $this->_propDict) && !is_null($this->_propDict["mobileDeviceManagementAuthority"])) {
+            if (is_a($this->_propDict["mobileDeviceManagementAuthority"], "\Microsoft\Graph\Model\MdmAuthority")) {
                 return $this->_propDict["mobileDeviceManagementAuthority"];
             } else {
                 $this->_propDict["mobileDeviceManagementAuthority"] = new MdmAuthority($this->_propDict["mobileDeviceManagementAuthority"]);
@@ -682,8 +703,8 @@ class Organization extends DirectoryObject
     */
     public function getBranding()
     {
-        if (array_key_exists("branding", $this->_propDict)) {
-            if (is_a($this->_propDict["branding"], "\Microsoft\Graph\Model\OrganizationalBranding") || is_null($this->_propDict["branding"])) {
+        if (array_key_exists("branding", $this->_propDict) && !is_null($this->_propDict["branding"])) {
+            if (is_a($this->_propDict["branding"], "\Microsoft\Graph\Model\OrganizationalBranding")) {
                 return $this->_propDict["branding"];
             } else {
                 $this->_propDict["branding"] = new OrganizationalBranding($this->_propDict["branding"]);
@@ -711,22 +732,29 @@ class Organization extends DirectoryObject
      * Gets the certificateBasedAuthConfiguration
     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      *
-     * @return array|null The certificateBasedAuthConfiguration
+     * @return CertificateBasedAuthConfiguration[]|null The certificateBasedAuthConfiguration
      */
     public function getCertificateBasedAuthConfiguration()
     {
-        if (array_key_exists("certificateBasedAuthConfiguration", $this->_propDict)) {
-           return $this->_propDict["certificateBasedAuthConfiguration"];
-        } else {
-            return null;
+        if (array_key_exists('certificateBasedAuthConfiguration', $this->_propDict) && !is_null($this->_propDict['certificateBasedAuthConfiguration'])) {
+            $certificateBasedAuthConfiguration = [];
+            if (count($this->_propDict['certificateBasedAuthConfiguration']) > 0 && is_a($this->_propDict['certificateBasedAuthConfiguration'][0], 'CertificateBasedAuthConfiguration')) {
+                return $this->_propDict['certificateBasedAuthConfiguration'];
+            }
+            foreach ($this->_propDict['certificateBasedAuthConfiguration'] as $singleValue) {
+                $certificateBasedAuthConfiguration []= new CertificateBasedAuthConfiguration($singleValue);
+            }
+            $this->_propDict['certificateBasedAuthConfiguration'] = $certificateBasedAuthConfiguration;
+            return $this->_propDict['certificateBasedAuthConfiguration'];
         }
+        return null;
     }
     
     /** 
     * Sets the certificateBasedAuthConfiguration
     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
     *
-    * @param CertificateBasedAuthConfiguration $val The certificateBasedAuthConfiguration
+    * @param CertificateBasedAuthConfiguration[] $val The certificateBasedAuthConfiguration
     *
     * @return Organization
     */
@@ -741,22 +769,29 @@ class Organization extends DirectoryObject
      * Gets the extensions
     * The collection of open extensions defined for the organization. Read-only. Nullable.
      *
-     * @return array|null The extensions
+     * @return Extension[]|null The extensions
      */
     public function getExtensions()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
+        if (array_key_exists('extensions', $this->_propDict) && !is_null($this->_propDict['extensions'])) {
+            $extensions = [];
+            if (count($this->_propDict['extensions']) > 0 && is_a($this->_propDict['extensions'][0], 'Extension')) {
+                return $this->_propDict['extensions'];
+            }
+            foreach ($this->_propDict['extensions'] as $singleValue) {
+                $extensions []= new Extension($singleValue);
+            }
+            $this->_propDict['extensions'] = $extensions;
+            return $this->_propDict['extensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the extensions
     * The collection of open extensions defined for the organization. Read-only. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return Organization
     */

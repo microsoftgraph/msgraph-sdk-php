@@ -59,21 +59,28 @@ class EducationRoot implements \JsonSerializable
      /** 
      * Gets the classes
      *
-     * @return array|null The classes
+     * @return EducationClass[]|null The classes
      */
     public function getClasses()
     {
-        if (array_key_exists("classes", $this->_propDict)) {
-           return $this->_propDict["classes"];
-        } else {
-            return null;
+        if (array_key_exists('classes', $this->_propDict) && !is_null($this->_propDict['classes'])) {
+            $classes = [];
+            if (count($this->_propDict['classes']) > 0 && is_a($this->_propDict['classes'][0], 'EducationClass')) {
+                return $this->_propDict['classes'];
+            }
+            foreach ($this->_propDict['classes'] as $singleValue) {
+                $classes []= new EducationClass($singleValue);
+            }
+            $this->_propDict['classes'] = $classes;
+            return $this->_propDict['classes'];
         }
+        return null;
     }
     
     /** 
     * Sets the classes
     *
-    * @param EducationClass $val The classes
+    * @param EducationClass[] $val The classes
     *
     * @return EducationRoot
     */
@@ -90,8 +97,8 @@ class EducationRoot implements \JsonSerializable
     */
     public function getMe()
     {
-        if (array_key_exists("me", $this->_propDict)) {
-            if (is_a($this->_propDict["me"], "\Microsoft\Graph\Model\EducationUser") || is_null($this->_propDict["me"])) {
+        if (array_key_exists("me", $this->_propDict) && !is_null($this->_propDict["me"])) {
+            if (is_a($this->_propDict["me"], "\Microsoft\Graph\Model\EducationUser")) {
                 return $this->_propDict["me"];
             } else {
                 $this->_propDict["me"] = new EducationUser($this->_propDict["me"]);
@@ -118,21 +125,28 @@ class EducationRoot implements \JsonSerializable
      /** 
      * Gets the schools
      *
-     * @return array|null The schools
+     * @return EducationSchool[]|null The schools
      */
     public function getSchools()
     {
-        if (array_key_exists("schools", $this->_propDict)) {
-           return $this->_propDict["schools"];
-        } else {
-            return null;
+        if (array_key_exists('schools', $this->_propDict) && !is_null($this->_propDict['schools'])) {
+            $schools = [];
+            if (count($this->_propDict['schools']) > 0 && is_a($this->_propDict['schools'][0], 'EducationSchool')) {
+                return $this->_propDict['schools'];
+            }
+            foreach ($this->_propDict['schools'] as $singleValue) {
+                $schools []= new EducationSchool($singleValue);
+            }
+            $this->_propDict['schools'] = $schools;
+            return $this->_propDict['schools'];
         }
+        return null;
     }
     
     /** 
     * Sets the schools
     *
-    * @param EducationSchool $val The schools
+    * @param EducationSchool[] $val The schools
     *
     * @return EducationRoot
     */
@@ -146,21 +160,28 @@ class EducationRoot implements \JsonSerializable
      /** 
      * Gets the users
      *
-     * @return array|null The users
+     * @return EducationUser[]|null The users
      */
     public function getUsers()
     {
-        if (array_key_exists("users", $this->_propDict)) {
-           return $this->_propDict["users"];
-        } else {
-            return null;
+        if (array_key_exists('users', $this->_propDict) && !is_null($this->_propDict['users'])) {
+            $users = [];
+            if (count($this->_propDict['users']) > 0 && is_a($this->_propDict['users'][0], 'EducationUser')) {
+                return $this->_propDict['users'];
+            }
+            foreach ($this->_propDict['users'] as $singleValue) {
+                $users []= new EducationUser($singleValue);
+            }
+            $this->_propDict['users'] = $users;
+            return $this->_propDict['users'];
         }
+        return null;
     }
     
     /** 
     * Sets the users
     *
-    * @param EducationUser $val The users
+    * @param EducationUser[] $val The users
     *
     * @return EducationRoot
     */
@@ -206,10 +227,22 @@ class EducationRoot implements \JsonSerializable
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, "\DateTime")) {
-                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+            if (is_a($val, '\DateTime')) {
+                $serializableProperties[$property] = $val->format(\DateTimeInterface::RFC3339);
+            } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
                 $serializableProperties[$property] = $val->value();
+            } else if (is_array($val)) {
+                $values = [];
+                if (count($val) > 0 && is_a($val[0], '\DateTime')) {
+                   foreach ($values as $propertyValue) {
+                       $values []= $propertyValue->format(\DateTimeInterface::RFC3339);
+                   }
+                } else if(count($val) > 0 && is_a($val[0], '\Microsoft\Graph\Core\Enum')) {
+                    foreach ($values as $propertyValue) {
+                       $values []= $propertyValue->value();
+                   }
+                }
+                $serializableProperties[$property] = $values;
             }
         }
         return $serializableProperties;

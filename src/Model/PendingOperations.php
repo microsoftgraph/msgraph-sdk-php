@@ -32,8 +32,9 @@ class PendingOperations extends Entity
     */
     public function getPendingContentUpdate()
     {
-        if (array_key_exists("pendingContentUpdate", $this->_propDict)) {
-            if (is_a($this->_propDict["pendingContentUpdate"], "\Microsoft\Graph\Model\PendingContentUpdate") || is_null($this->_propDict["pendingContentUpdate"])) {
+        if (array_key_exists("pendingContentUpdate", $this->_propDict) && !is_null($this->_propDict["pendingContentUpdate"])) {
+     
+            if (is_a($this->_propDict["pendingContentUpdate"], "\Microsoft\Graph\Model\PendingContentUpdate")) {
                 return $this->_propDict["pendingContentUpdate"];
             } else {
                 $this->_propDict["pendingContentUpdate"] = new PendingContentUpdate($this->_propDict["pendingContentUpdate"]);

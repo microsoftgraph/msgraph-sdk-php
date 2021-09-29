@@ -56,18 +56,22 @@ class PublicInnerError extends Entity
     * Gets the details
     * A collection of error details.
     *
-    * @return PublicErrorDetail|null The details
+    * @return PublicErrorDetail[]|null The details
     */
     public function getDetails()
     {
-        if (array_key_exists("details", $this->_propDict)) {
-            if (is_a($this->_propDict["details"], "\Microsoft\Graph\Model\PublicErrorDetail") || is_null($this->_propDict["details"])) {
-                return $this->_propDict["details"];
-            } else {
-                $this->_propDict["details"] = new PublicErrorDetail($this->_propDict["details"]);
-                return $this->_propDict["details"];
+        if (array_key_exists("details", $this->_propDict) && !is_null($this->_propDict["details"])) {
+       
+            if (count($this->_propDict['details']) > 0 && is_a($this->_propDict['details'][0], 'PublicErrorDetail')) {
+               return $this->_propDict['details'];
             }
-        }
+            $details = [];
+            foreach ($this->_propDict['details'] as $singleValue) {
+               $details []= new PublicErrorDetail($singleValue);
+            }
+            $this->_propDict['details'] = $details;
+            return $this->_propDict['details'];
+            }
         return null;
     }
 
@@ -75,7 +79,7 @@ class PublicInnerError extends Entity
     * Sets the details
     * A collection of error details.
     *
-    * @param PublicErrorDetail $val The value to assign to the details
+    * @param PublicErrorDetail[] $val The value to assign to the details
     *
     * @return PublicInnerError The PublicInnerError
     */
