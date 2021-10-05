@@ -2808,69 +2808,6 @@ class User extends DirectoryObject
     }
     
     /**
-    * Gets the photo
-    * The user's profile photo. Read-only.
-    *
-    * @return ProfilePhoto|null The photo
-    */
-    public function getPhoto()
-    {
-        if (array_key_exists("photo", $this->_propDict)) {
-            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto") || is_null($this->_propDict["photo"])) {
-                return $this->_propDict["photo"];
-            } else {
-                $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
-                return $this->_propDict["photo"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the photo
-    * The user's profile photo. Read-only.
-    *
-    * @param ProfilePhoto $val The photo
-    *
-    * @return User
-    */
-    public function setPhoto($val)
-    {
-        $this->_propDict["photo"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the photos
-    * Read-only. Nullable.
-     *
-     * @return array|null The photos
-     */
-    public function getPhotos()
-    {
-        if (array_key_exists("photos", $this->_propDict)) {
-           return $this->_propDict["photos"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the photos
-    * Read-only. Nullable.
-    *
-    * @param ProfilePhoto $val The photos
-    *
-    * @return User
-    */
-    public function setPhotos($val)
-    {
-        $this->_propDict["photos"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the drive
     * The user's OneDrive. Read-only.
     *
@@ -3240,6 +3177,69 @@ class User extends DirectoryObject
     public function setOnenote($val)
     {
         $this->_propDict["onenote"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the photo
+    * The user's profile photo. Read-only.
+    *
+    * @return ProfilePhoto|null The photo
+    */
+    public function getPhoto()
+    {
+        if (array_key_exists("photo", $this->_propDict)) {
+            if (is_a($this->_propDict["photo"], "\Microsoft\Graph\Model\ProfilePhoto") || is_null($this->_propDict["photo"])) {
+                return $this->_propDict["photo"];
+            } else {
+                $this->_propDict["photo"] = new ProfilePhoto($this->_propDict["photo"]);
+                return $this->_propDict["photo"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the photo
+    * The user's profile photo. Read-only.
+    *
+    * @param ProfilePhoto $val The photo
+    *
+    * @return User
+    */
+    public function setPhoto($val)
+    {
+        $this->_propDict["photo"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the photos
+    * Read-only. Nullable.
+     *
+     * @return array|null The photos
+     */
+    public function getPhotos()
+    {
+        if (array_key_exists("photos", $this->_propDict)) {
+           return $this->_propDict["photos"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the photos
+    * Read-only. Nullable.
+    *
+    * @param ProfilePhoto $val The photos
+    *
+    * @return User
+    */
+    public function setPhotos($val)
+    {
+        $this->_propDict["photos"] = $val;
         return $this;
     }
     

@@ -267,7 +267,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the importance
-    * The importance of the event. The possible values are: low, normal, high.
     *
     * @return Importance|null The importance
     */
@@ -286,7 +285,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the importance
-    * The importance of the event. The possible values are: low, normal, high.
     *
     * @param Importance $val The importance
     *
@@ -300,7 +298,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isAllDay
-    * Set to true if the event lasts all day.
     *
     * @return bool|null The isAllDay
     */
@@ -315,7 +312,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isAllDay
-    * Set to true if the event lasts all day.
     *
     * @param bool $val The isAllDay
     *
@@ -329,7 +325,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isCancelled
-    * Set to true if the event has been canceled.
     *
     * @return bool|null The isCancelled
     */
@@ -344,7 +339,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isCancelled
-    * Set to true if the event has been canceled.
     *
     * @param bool $val The isCancelled
     *
@@ -358,7 +352,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isDraft
-    * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
     *
     * @return bool|null The isDraft
     */
@@ -373,7 +366,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isDraft
-    * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
     *
     * @param bool $val The isDraft
     *
@@ -387,7 +379,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isOnlineMeeting
-    * True if this event has online meeting information, false otherwise. Default is false. Optional.
     *
     * @return bool|null The isOnlineMeeting
     */
@@ -402,7 +393,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isOnlineMeeting
-    * True if this event has online meeting information, false otherwise. Default is false. Optional.
     *
     * @param bool $val The isOnlineMeeting
     *
@@ -416,7 +406,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isOrganizer
-    * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
     *
     * @return bool|null The isOrganizer
     */
@@ -431,7 +420,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isOrganizer
-    * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
     *
     * @param bool $val The isOrganizer
     *
@@ -445,7 +433,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the isReminderOn
-    * Set to true if an alert is set to remind the user of the event.
     *
     * @return bool|null The isReminderOn
     */
@@ -460,7 +447,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the isReminderOn
-    * Set to true if an alert is set to remind the user of the event.
     *
     * @param bool $val The isReminderOn
     *
@@ -474,7 +460,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the location
-    * The location of the event.
     *
     * @return Location|null The location
     */
@@ -493,7 +478,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the location
-    * The location of the event.
     *
     * @param Location $val The location
     *
@@ -508,7 +492,6 @@ class Event extends OutlookItem
 
      /** 
      * Gets the locations
-    * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
      *
      * @return array|null The locations
      */
@@ -523,7 +506,6 @@ class Event extends OutlookItem
     
     /** 
     * Sets the locations
-    * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
     *
     * @param Location $val The locations
     *
@@ -537,7 +519,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the onlineMeeting
-    * Details for an attendee to join the meeting online. Read-only.
     *
     * @return OnlineMeetingInfo|null The onlineMeeting
     */
@@ -556,7 +537,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the onlineMeeting
-    * Details for an attendee to join the meeting online. Read-only.
     *
     * @param OnlineMeetingInfo $val The onlineMeeting
     *
@@ -570,7 +550,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the onlineMeetingProvider
-    * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
     *
     * @return OnlineMeetingProviderType|null The onlineMeetingProvider
     */
@@ -589,7 +568,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the onlineMeetingProvider
-    * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
     *
     * @param OnlineMeetingProviderType $val The onlineMeetingProvider
     *
@@ -603,7 +581,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the onlineMeetingUrl
-    * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
     *
     * @return string|null The onlineMeetingUrl
     */
@@ -618,7 +595,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the onlineMeetingUrl
-    * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
     *
     * @param string $val The onlineMeetingUrl
     *
@@ -632,7 +608,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the organizer
-    * The organizer of the event.
     *
     * @return Recipient|null The organizer
     */
@@ -651,7 +626,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the organizer
-    * The organizer of the event.
     *
     * @param Recipient $val The organizer
     *
@@ -665,7 +639,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the originalEndTimeZone
-    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @return string|null The originalEndTimeZone
     */
@@ -680,7 +653,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalEndTimeZone
-    * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @param string $val The originalEndTimeZone
     *
@@ -694,7 +666,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the originalStart
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @return \DateTime|null The originalStart
     */
@@ -713,7 +684,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalStart
-    * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *
     * @param \DateTime $val The originalStart
     *
@@ -727,7 +697,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the originalStartTimeZone
-    * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @return string|null The originalStartTimeZone
     */
@@ -742,7 +711,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the originalStartTimeZone
-    * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
     *
     * @param string $val The originalStartTimeZone
     *
@@ -756,7 +724,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the recurrence
-    * The recurrence pattern for the event.
     *
     * @return PatternedRecurrence|null The recurrence
     */
@@ -775,7 +742,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the recurrence
-    * The recurrence pattern for the event.
     *
     * @param PatternedRecurrence $val The recurrence
     *
@@ -789,7 +755,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the reminderMinutesBeforeStart
-    * The number of minutes before the event start time that the reminder alert occurs.
     *
     * @return int|null The reminderMinutesBeforeStart
     */
@@ -804,7 +769,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the reminderMinutesBeforeStart
-    * The number of minutes before the event start time that the reminder alert occurs.
     *
     * @param int $val The reminderMinutesBeforeStart
     *
@@ -818,7 +782,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the responseRequested
-    * Default is true, which represents the organizer would like an invitee to send a response to the event.
     *
     * @return bool|null The responseRequested
     */
@@ -833,7 +796,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the responseRequested
-    * Default is true, which represents the organizer would like an invitee to send a response to the event.
     *
     * @param bool $val The responseRequested
     *
@@ -847,7 +809,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the responseStatus
-    * Indicates the type of response sent in response to an event message.
     *
     * @return ResponseStatus|null The responseStatus
     */
@@ -866,7 +827,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the responseStatus
-    * Indicates the type of response sent in response to an event message.
     *
     * @param ResponseStatus $val The responseStatus
     *
@@ -880,7 +840,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the sensitivity
-    * The possible values are: normal, personal, private, confidential.
     *
     * @return Sensitivity|null The sensitivity
     */
@@ -899,7 +858,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the sensitivity
-    * The possible values are: normal, personal, private, confidential.
     *
     * @param Sensitivity $val The sensitivity
     *
@@ -913,7 +871,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the seriesMasterId
-    * The ID for the recurring series master item, if this event is part of a recurring series.
     *
     * @return string|null The seriesMasterId
     */
@@ -928,7 +885,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the seriesMasterId
-    * The ID for the recurring series master item, if this event is part of a recurring series.
     *
     * @param string $val The seriesMasterId
     *
@@ -942,7 +898,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the showAs
-    * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @return FreeBusyStatus|null The showAs
     */
@@ -961,7 +916,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the showAs
-    * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
     *
     * @param FreeBusyStatus $val The showAs
     *
@@ -975,7 +929,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the start
-    * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
     * @return DateTimeTimeZone|null The start
     */
@@ -994,7 +947,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the start
-    * The date, time, and time zone that the event starts. By default, the start time is in UTC.
     *
     * @param DateTimeTimeZone $val The start
     *
@@ -1008,7 +960,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the subject
-    * The text of the event's subject line.
     *
     * @return string|null The subject
     */
@@ -1023,7 +974,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the subject
-    * The text of the event's subject line.
     *
     * @param string $val The subject
     *
@@ -1037,7 +987,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the transactionId
-    * A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
     *
     * @return string|null The transactionId
     */
@@ -1052,7 +1001,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the transactionId
-    * A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
     *
     * @param string $val The transactionId
     *
@@ -1066,7 +1014,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the type
-    * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
     * @return EventType|null The type
     */
@@ -1085,7 +1032,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the type
-    * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
     *
     * @param EventType $val The type
     *
@@ -1099,7 +1045,6 @@ class Event extends OutlookItem
     
     /**
     * Gets the webLink
-    * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
     *
     * @return string|null The webLink
     */
@@ -1114,7 +1059,6 @@ class Event extends OutlookItem
     
     /**
     * Sets the webLink
-    * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
     *
     * @param string $val The webLink
     *
@@ -1129,7 +1073,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      *
      * @return array|null The attachments
      */
@@ -1144,7 +1088,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the attachments
-    * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+    * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
     *
     * @param Attachment $val The attachments
     *
@@ -1192,7 +1136,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the extensions
-    * The collection of open extensions defined for the event. Read-only. Nullable.
+    * The collection of open extensions defined for the event. Nullable.
      *
      * @return array|null The extensions
      */
@@ -1207,7 +1151,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the extensions
-    * The collection of open extensions defined for the event. Read-only. Nullable.
+    * The collection of open extensions defined for the event. Nullable.
     *
     * @param Extension $val The extensions
     *
@@ -1222,7 +1166,7 @@ class Event extends OutlookItem
 
      /** 
      * Gets the instances
-    * The instances of the event. Navigation property. Read-only. Nullable.
+    * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      *
      * @return array|null The instances
      */
@@ -1237,7 +1181,7 @@ class Event extends OutlookItem
     
     /** 
     * Sets the instances
-    * The instances of the event. Navigation property. Read-only. Nullable.
+    * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
     *
     * @param Event $val The instances
     *
