@@ -86,15 +86,15 @@ class PrivilegedRoleSettings extends Entity
     * Gets the elevationDuration
     * The duration when the role is activated.
     *
-    * @return Duration|null The elevationDuration
+    * @return \DateInterval|null The elevationDuration
     */
     public function getElevationDuration()
     {
         if (array_key_exists("elevationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["elevationDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["elevationDuration"])) {
+            if (is_a($this->_propDict["elevationDuration"], "\DateInterval") || is_null($this->_propDict["elevationDuration"])) {
                 return $this->_propDict["elevationDuration"];
             } else {
-                $this->_propDict["elevationDuration"] = new Duration($this->_propDict["elevationDuration"]);
+                $this->_propDict["elevationDuration"] = new \DateInterval($this->_propDict["elevationDuration"]);
                 return $this->_propDict["elevationDuration"];
             }
         }
@@ -105,7 +105,7 @@ class PrivilegedRoleSettings extends Entity
     * Sets the elevationDuration
     * The duration when the role is activated.
     *
-    * @param Duration $val The elevationDuration
+    * @param \DateInterval $val The elevationDuration
     *
     * @return PrivilegedRoleSettings
     */
@@ -177,15 +177,15 @@ class PrivilegedRoleSettings extends Entity
     * Gets the maxElavationDuration
     * Maximal duration for the activated role.
     *
-    * @return Duration|null The maxElavationDuration
+    * @return \DateInterval|null The maxElavationDuration
     */
     public function getMaxElavationDuration()
     {
         if (array_key_exists("maxElavationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["maxElavationDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maxElavationDuration"])) {
+            if (is_a($this->_propDict["maxElavationDuration"], "\DateInterval") || is_null($this->_propDict["maxElavationDuration"])) {
                 return $this->_propDict["maxElavationDuration"];
             } else {
-                $this->_propDict["maxElavationDuration"] = new Duration($this->_propDict["maxElavationDuration"]);
+                $this->_propDict["maxElavationDuration"] = new \DateInterval($this->_propDict["maxElavationDuration"]);
                 return $this->_propDict["maxElavationDuration"];
             }
         }
@@ -196,7 +196,7 @@ class PrivilegedRoleSettings extends Entity
     * Sets the maxElavationDuration
     * Maximal duration for the activated role.
     *
-    * @param Duration $val The maxElavationDuration
+    * @param \DateInterval $val The maxElavationDuration
     *
     * @return PrivilegedRoleSettings
     */
@@ -239,15 +239,15 @@ class PrivilegedRoleSettings extends Entity
     * Gets the minElevationDuration
     * Minimal duration for the activated role.
     *
-    * @return Duration|null The minElevationDuration
+    * @return \DateInterval|null The minElevationDuration
     */
     public function getMinElevationDuration()
     {
         if (array_key_exists("minElevationDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["minElevationDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["minElevationDuration"])) {
+            if (is_a($this->_propDict["minElevationDuration"], "\DateInterval") || is_null($this->_propDict["minElevationDuration"])) {
                 return $this->_propDict["minElevationDuration"];
             } else {
-                $this->_propDict["minElevationDuration"] = new Duration($this->_propDict["minElevationDuration"]);
+                $this->_propDict["minElevationDuration"] = new \DateInterval($this->_propDict["minElevationDuration"]);
                 return $this->_propDict["minElevationDuration"];
             }
         }
@@ -258,7 +258,7 @@ class PrivilegedRoleSettings extends Entity
     * Sets the minElevationDuration
     * Minimal duration for the activated role.
     *
-    * @param Duration $val The minElevationDuration
+    * @param \DateInterval $val The minElevationDuration
     *
     * @return PrivilegedRoleSettings
     */

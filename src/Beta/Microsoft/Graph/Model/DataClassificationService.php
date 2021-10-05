@@ -54,34 +54,6 @@ class DataClassificationService extends Entity
     
 
      /** 
-     * Gets the classifyFile
-     *
-     * @return array|null The classifyFile
-     */
-    public function getClassifyFile()
-    {
-        if (array_key_exists("classifyFile", $this->_propDict)) {
-           return $this->_propDict["classifyFile"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the classifyFile
-    *
-    * @param FileClassificationRequest $val The classifyFile
-    *
-    * @return DataClassificationService
-    */
-    public function setClassifyFile($val)
-    {
-        $this->_propDict["classifyFile"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the classifyFileJobs
      *
      * @return array|null The classifyFileJobs
@@ -105,34 +77,6 @@ class DataClassificationService extends Entity
     public function setClassifyFileJobs($val)
     {
         $this->_propDict["classifyFileJobs"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the classifyText
-     *
-     * @return array|null The classifyText
-     */
-    public function getClassifyText()
-    {
-        if (array_key_exists("classifyText", $this->_propDict)) {
-           return $this->_propDict["classifyText"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the classifyText
-    *
-    * @param TextClassificationRequest $val The classifyText
-    *
-    * @return DataClassificationService
-    */
-    public function setClassifyText($val)
-    {
-        $this->_propDict["classifyText"] = $val;
         return $this;
     }
     

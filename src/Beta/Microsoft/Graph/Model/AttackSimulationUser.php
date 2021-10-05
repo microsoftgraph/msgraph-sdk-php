@@ -25,6 +25,7 @@ class AttackSimulationUser extends Entity
 {
     /**
     * Gets the displayName
+    * Display name of the user.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class AttackSimulationUser extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the user.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class AttackSimulationUser extends Entity
     }
     /**
     * Gets the email
+    * Email address of the user.
     *
     * @return string|null The email
     */
@@ -65,6 +68,7 @@ class AttackSimulationUser extends Entity
 
     /**
     * Sets the email
+    * Email address of the user.
     *
     * @param string $val The value of the email
     *
@@ -77,6 +81,7 @@ class AttackSimulationUser extends Entity
     }
     /**
     * Gets the userId
+    * This is the id property value of the user resource that represents the user in the Azure AD tenant.
     *
     * @return string|null The userId
     */
@@ -91,6 +96,7 @@ class AttackSimulationUser extends Entity
 
     /**
     * Sets the userId
+    * This is the id property value of the user resource that represents the user in the Azure AD tenant.
     *
     * @param string $val The value of the userId
     *

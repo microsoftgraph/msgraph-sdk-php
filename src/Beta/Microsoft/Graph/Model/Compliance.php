@@ -55,6 +55,34 @@ class Compliance implements \JsonSerializable
         return $this->_propDict;
     }
     
+
+     /** 
+     * Gets the subjectRightsRequests
+     *
+     * @return array|null The subjectRightsRequests
+     */
+    public function getSubjectRightsRequests()
+    {
+        if (array_key_exists("subjectRightsRequests", $this->_propDict)) {
+           return $this->_propDict["subjectRightsRequests"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the subjectRightsRequests
+    *
+    * @param SubjectRightsRequest $val The subjectRightsRequests
+    *
+    * @return Compliance
+    */
+    public function setSubjectRightsRequests($val)
+    {
+        $this->_propDict["subjectRightsRequests"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the ediscovery
     *

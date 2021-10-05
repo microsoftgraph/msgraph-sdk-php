@@ -151,6 +151,7 @@ class Application extends DirectoryObject
     
     /**
     * Gets the defaultRedirectUri
+    * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
     *
     * @return string|null The defaultRedirectUri
     */
@@ -165,6 +166,7 @@ class Application extends DirectoryObject
     
     /**
     * Sets the defaultRedirectUri
+    * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
     *
     * @param string $val The defaultRedirectUri
     *

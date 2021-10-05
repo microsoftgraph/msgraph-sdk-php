@@ -28,15 +28,15 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Gets the afterHours
     * Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The afterHours
+    * @return \DateInterval|null The afterHours
     */
     public function getAfterHours()
     {
         if (array_key_exists("afterHours", $this->_propDict)) {
-            if (is_a($this->_propDict["afterHours"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["afterHours"])) {
+            if (is_a($this->_propDict["afterHours"], "\DateInterval") || is_null($this->_propDict["afterHours"])) {
                 return $this->_propDict["afterHours"];
             } else {
-                $this->_propDict["afterHours"] = new Duration($this->_propDict["afterHours"]);
+                $this->_propDict["afterHours"] = new \DateInterval($this->_propDict["afterHours"]);
                 return $this->_propDict["afterHours"];
             }
         }
@@ -47,7 +47,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Sets the afterHours
     * Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
     *
-    * @param Duration $val The afterHours
+    * @param \DateInterval $val The afterHours
     *
     * @return MeetingActivityStatistics
     */
@@ -61,15 +61,15 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Gets the conflicting
     * Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the person’s status is set to Busy). The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The conflicting
+    * @return \DateInterval|null The conflicting
     */
     public function getConflicting()
     {
         if (array_key_exists("conflicting", $this->_propDict)) {
-            if (is_a($this->_propDict["conflicting"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["conflicting"])) {
+            if (is_a($this->_propDict["conflicting"], "\DateInterval") || is_null($this->_propDict["conflicting"])) {
                 return $this->_propDict["conflicting"];
             } else {
-                $this->_propDict["conflicting"] = new Duration($this->_propDict["conflicting"]);
+                $this->_propDict["conflicting"] = new \DateInterval($this->_propDict["conflicting"]);
                 return $this->_propDict["conflicting"];
             }
         }
@@ -80,7 +80,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Sets the conflicting
     * Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the person’s status is set to Busy). The value is represented in ISO 8601 format for durations.
     *
-    * @param Duration $val The conflicting
+    * @param \DateInterval $val The conflicting
     *
     * @return MeetingActivityStatistics
     */
@@ -94,15 +94,15 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Gets the long
     * Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The long
+    * @return \DateInterval|null The long
     */
     public function getLong()
     {
         if (array_key_exists("long", $this->_propDict)) {
-            if (is_a($this->_propDict["long"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["long"])) {
+            if (is_a($this->_propDict["long"], "\DateInterval") || is_null($this->_propDict["long"])) {
                 return $this->_propDict["long"];
             } else {
-                $this->_propDict["long"] = new Duration($this->_propDict["long"]);
+                $this->_propDict["long"] = new \DateInterval($this->_propDict["long"]);
                 return $this->_propDict["long"];
             }
         }
@@ -113,7 +113,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Sets the long
     * Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations.
     *
-    * @param Duration $val The long
+    * @param \DateInterval $val The long
     *
     * @return MeetingActivityStatistics
     */
@@ -127,15 +127,15 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Gets the multitasking
     * Time spent in meetings where the person was multitasking (read/sent more than a minimum number of emails and/or sent more than a minimum number of messages in Teams or in Skype for Business). The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The multitasking
+    * @return \DateInterval|null The multitasking
     */
     public function getMultitasking()
     {
         if (array_key_exists("multitasking", $this->_propDict)) {
-            if (is_a($this->_propDict["multitasking"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["multitasking"])) {
+            if (is_a($this->_propDict["multitasking"], "\DateInterval") || is_null($this->_propDict["multitasking"])) {
                 return $this->_propDict["multitasking"];
             } else {
-                $this->_propDict["multitasking"] = new Duration($this->_propDict["multitasking"]);
+                $this->_propDict["multitasking"] = new \DateInterval($this->_propDict["multitasking"]);
                 return $this->_propDict["multitasking"];
             }
         }
@@ -146,7 +146,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Sets the multitasking
     * Time spent in meetings where the person was multitasking (read/sent more than a minimum number of emails and/or sent more than a minimum number of messages in Teams or in Skype for Business). The value is represented in ISO 8601 format for durations.
     *
-    * @param Duration $val The multitasking
+    * @param \DateInterval $val The multitasking
     *
     * @return MeetingActivityStatistics
     */
@@ -160,15 +160,15 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Gets the organized
     * Time spent in meetings organized by the user. The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The organized
+    * @return \DateInterval|null The organized
     */
     public function getOrganized()
     {
         if (array_key_exists("organized", $this->_propDict)) {
-            if (is_a($this->_propDict["organized"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["organized"])) {
+            if (is_a($this->_propDict["organized"], "\DateInterval") || is_null($this->_propDict["organized"])) {
                 return $this->_propDict["organized"];
             } else {
-                $this->_propDict["organized"] = new Duration($this->_propDict["organized"]);
+                $this->_propDict["organized"] = new \DateInterval($this->_propDict["organized"]);
                 return $this->_propDict["organized"];
             }
         }
@@ -179,7 +179,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Sets the organized
     * Time spent in meetings organized by the user. The value is represented in ISO 8601 format for durations.
     *
-    * @param Duration $val The organized
+    * @param \DateInterval $val The organized
     *
     * @return MeetingActivityStatistics
     */
@@ -193,15 +193,15 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Gets the recurring
     * Time spent on recurring meetings. The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The recurring
+    * @return \DateInterval|null The recurring
     */
     public function getRecurring()
     {
         if (array_key_exists("recurring", $this->_propDict)) {
-            if (is_a($this->_propDict["recurring"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["recurring"])) {
+            if (is_a($this->_propDict["recurring"], "\DateInterval") || is_null($this->_propDict["recurring"])) {
                 return $this->_propDict["recurring"];
             } else {
-                $this->_propDict["recurring"] = new Duration($this->_propDict["recurring"]);
+                $this->_propDict["recurring"] = new \DateInterval($this->_propDict["recurring"]);
                 return $this->_propDict["recurring"];
             }
         }
@@ -212,7 +212,7 @@ class MeetingActivityStatistics extends ActivityStatistics
     * Sets the recurring
     * Time spent on recurring meetings. The value is represented in ISO 8601 format for durations.
     *
-    * @param Duration $val The recurring
+    * @param \DateInterval $val The recurring
     *
     * @return MeetingActivityStatistics
     */

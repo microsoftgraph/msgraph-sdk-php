@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class AssignmentReviewSettings extends Entity
 {
+
+    /**
+    * Gets the accessReviewTimeoutBehavior
+    *
+    * @return AccessReviewTimeoutBehavior|null The accessReviewTimeoutBehavior
+    */
+    public function getAccessReviewTimeoutBehavior()
+    {
+        if (array_key_exists("accessReviewTimeoutBehavior", $this->_propDict)) {
+            if (is_a($this->_propDict["accessReviewTimeoutBehavior"], "\Beta\Microsoft\Graph\Model\AccessReviewTimeoutBehavior") || is_null($this->_propDict["accessReviewTimeoutBehavior"])) {
+                return $this->_propDict["accessReviewTimeoutBehavior"];
+            } else {
+                $this->_propDict["accessReviewTimeoutBehavior"] = new AccessReviewTimeoutBehavior($this->_propDict["accessReviewTimeoutBehavior"]);
+                return $this->_propDict["accessReviewTimeoutBehavior"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the accessReviewTimeoutBehavior
+    *
+    * @param AccessReviewTimeoutBehavior $val The value to assign to the accessReviewTimeoutBehavior
+    *
+    * @return AssignmentReviewSettings The AssignmentReviewSettings
+    */
+    public function setAccessReviewTimeoutBehavior($val)
+    {
+        $this->_propDict["accessReviewTimeoutBehavior"] = $val;
+         return $this;
+    }
     /**
     * Gets the durationInDays
     * The number of days to allow input from reviewers.
@@ -49,6 +80,58 @@ class AssignmentReviewSettings extends Entity
     public function setDurationInDays($val)
     {
         $this->_propDict["durationInDays"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isAccessRecommendationEnabled
+    *
+    * @return bool|null The isAccessRecommendationEnabled
+    */
+    public function getIsAccessRecommendationEnabled()
+    {
+        if (array_key_exists("isAccessRecommendationEnabled", $this->_propDict)) {
+            return $this->_propDict["isAccessRecommendationEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isAccessRecommendationEnabled
+    *
+    * @param bool $val The value of the isAccessRecommendationEnabled
+    *
+    * @return AssignmentReviewSettings
+    */
+    public function setIsAccessRecommendationEnabled($val)
+    {
+        $this->_propDict["isAccessRecommendationEnabled"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isApprovalJustificationRequired
+    *
+    * @return bool|null The isApprovalJustificationRequired
+    */
+    public function getIsApprovalJustificationRequired()
+    {
+        if (array_key_exists("isApprovalJustificationRequired", $this->_propDict)) {
+            return $this->_propDict["isApprovalJustificationRequired"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isApprovalJustificationRequired
+    *
+    * @param bool $val The value of the isApprovalJustificationRequired
+    *
+    * @return AssignmentReviewSettings
+    */
+    public function setIsApprovalJustificationRequired($val)
+    {
+        $this->_propDict["isApprovalJustificationRequired"] = $val;
         return $this;
     }
     /**

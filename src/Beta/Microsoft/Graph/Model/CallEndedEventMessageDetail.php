@@ -39,15 +39,15 @@ class CallEndedEventMessageDetail extends EventMessageDetail
     * Gets the callDuration
     * Duration of the call.
     *
-    * @return Duration|null The callDuration
+    * @return \DateInterval|null The callDuration
     */
     public function getCallDuration()
     {
         if (array_key_exists("callDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["callDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["callDuration"])) {
+            if (is_a($this->_propDict["callDuration"], "\DateInterval") || is_null($this->_propDict["callDuration"])) {
                 return $this->_propDict["callDuration"];
             } else {
-                $this->_propDict["callDuration"] = new Duration($this->_propDict["callDuration"]);
+                $this->_propDict["callDuration"] = new \DateInterval($this->_propDict["callDuration"]);
                 return $this->_propDict["callDuration"];
             }
         }
@@ -58,7 +58,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail
     * Sets the callDuration
     * Duration of the call.
     *
-    * @param Duration $val The value to assign to the callDuration
+    * @param \DateInterval $val The value to assign to the callDuration
     *
     * @return CallEndedEventMessageDetail The CallEndedEventMessageDetail
     */

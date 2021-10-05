@@ -177,6 +177,7 @@ class VirtualEndpoint extends Entity
 
      /** 
      * Gets the supportedRegions
+    * Cloud PC supported regions.
      *
      * @return array|null The supportedRegions
      */
@@ -191,6 +192,7 @@ class VirtualEndpoint extends Entity
     
     /** 
     * Sets the supportedRegions
+    * Cloud PC supported regions.
     *
     * @param CloudPcSupportedRegion $val The supportedRegions
     *

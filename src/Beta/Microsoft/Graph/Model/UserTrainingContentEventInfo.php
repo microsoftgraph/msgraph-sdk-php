@@ -25,6 +25,7 @@ class UserTrainingContentEventInfo extends Entity
 {
     /**
     * Gets the browser
+    * Browser of the user from where the training event was generated.
     *
     * @return string|null The browser
     */
@@ -39,6 +40,7 @@ class UserTrainingContentEventInfo extends Entity
 
     /**
     * Sets the browser
+    * Browser of the user from where the training event was generated.
     *
     * @param string $val The value of the browser
     *
@@ -52,6 +54,7 @@ class UserTrainingContentEventInfo extends Entity
 
     /**
     * Gets the contentDateTime
+    * Date and time of the training content playback by the user.
     *
     * @return \DateTime|null The contentDateTime
     */
@@ -70,6 +73,7 @@ class UserTrainingContentEventInfo extends Entity
 
     /**
     * Sets the contentDateTime
+    * Date and time of the training content playback by the user.
     *
     * @param \DateTime $val The value to assign to the contentDateTime
     *
@@ -82,6 +86,7 @@ class UserTrainingContentEventInfo extends Entity
     }
     /**
     * Gets the ipAddress
+    * IP address of the user for the training event.
     *
     * @return string|null The ipAddress
     */
@@ -96,6 +101,7 @@ class UserTrainingContentEventInfo extends Entity
 
     /**
     * Sets the ipAddress
+    * IP address of the user for the training event.
     *
     * @param string $val The value of the ipAddress
     *
@@ -108,6 +114,7 @@ class UserTrainingContentEventInfo extends Entity
     }
     /**
     * Gets the osPlatformDeviceDetails
+    * The operating system, platform, and device details of the user for the training event.
     *
     * @return string|null The osPlatformDeviceDetails
     */
@@ -122,6 +129,7 @@ class UserTrainingContentEventInfo extends Entity
 
     /**
     * Sets the osPlatformDeviceDetails
+    * The operating system, platform, and device details of the user for the training event.
     *
     * @param string $val The value of the osPlatformDeviceDetails
     *
@@ -134,6 +142,7 @@ class UserTrainingContentEventInfo extends Entity
     }
     /**
     * Gets the potentialScoreImpact
+    * Potential improvement in security posture of the tenant after completion of the training by the user.
     *
     * @return float|null The potentialScoreImpact
     */
@@ -148,6 +157,7 @@ class UserTrainingContentEventInfo extends Entity
 
     /**
     * Sets the potentialScoreImpact
+    * Potential improvement in security posture of the tenant after completion of the training by the user.
     *
     * @param float $val The value of the potentialScoreImpact
     *
