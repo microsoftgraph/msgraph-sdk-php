@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -87,6 +91,13 @@
     GraphPrint
 
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
             <span class="phpdocumentor-element__implements">
             implements
@@ -186,7 +197,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-GraphPrint.html#method_getConnectors">getConnectors()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintConnector.html"><abbr title="\Microsoft\Graph\Model\PrintConnector">PrintConnector</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the connectors
 The list of available print connectors.</dd>
@@ -201,7 +212,7 @@ The list of available print connectors.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-GraphPrint.html#method_getOperations">getOperations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOperation.html"><abbr title="\Microsoft\Graph\Model\PrintOperation">PrintOperation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the operations
 The list of print long running operations.</dd>
@@ -209,7 +220,7 @@ The list of print long running operations.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-GraphPrint.html#method_getPrinters">getPrinters()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Printer.html"><abbr title="\Microsoft\Graph\Model\Printer">Printer</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the printers
 The list of printers registered in the tenant.</dd>
@@ -224,7 +235,7 @@ The list of printers registered in the tenant.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-GraphPrint.html#method_getServices">getServices()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintService.html"><abbr title="\Microsoft\Graph\Model\PrintService">PrintService</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the services
 The list of available Universal Print service endpoints.</dd>
@@ -240,7 +251,7 @@ Tenant-wide settings for the Universal Print service.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-GraphPrint.html#method_getShares">getShares()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterShare.html"><abbr title="\Microsoft\Graph\Model\PrinterShare">PrinterShare</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the shares
 The list of printer shares registered in the tenant.</dd>
@@ -248,7 +259,7 @@ The list of printer shares registered in the tenant.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-GraphPrint.html#method_getTaskDefinitions">getTaskDefinitions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintTaskDefinition.html"><abbr title="\Microsoft\Graph\Model\PrintTaskDefinition">PrintTaskDefinition</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the taskDefinitions
 List of abstract definition for a task that can be triggered when various events occur within Universal Print.</dd>
@@ -443,7 +454,7 @@ The list of available print connectors.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getConnectors</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getConnectors</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintConnector.html"><abbr title="\Microsoft\Graph\Model\PrintConnector">PrintConnector</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -451,7 +462,7 @@ The list of available print connectors.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintConnector.html"><abbr title="\Microsoft\Graph\Model\PrintConnector">PrintConnector</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The connectors</p>
 </section>
@@ -471,7 +482,7 @@ The list of available print connectors.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">276</span>
+    <span class="phpdocumentor-element-found-in__line">318</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the ODataType</p>
@@ -506,7 +517,7 @@ The list of available print connectors.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">128</span>
+    <span class="phpdocumentor-element-found-in__line">135</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operations
@@ -514,7 +525,7 @@ The list of print long running operations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOperation.html"><abbr title="\Microsoft\Graph\Model\PrintOperation">PrintOperation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -522,7 +533,7 @@ The list of print long running operations.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOperation.html"><abbr title="\Microsoft\Graph\Model\PrintOperation">PrintOperation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The operations</p>
 </section>
@@ -542,7 +553,7 @@ The list of print long running operations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">158</span>
+    <span class="phpdocumentor-element-found-in__line">172</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the printers
@@ -550,7 +561,7 @@ The list of printers registered in the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPrinters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getPrinters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Printer.html"><abbr title="\Microsoft\Graph\Model\Printer">Printer</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -558,7 +569,7 @@ The list of printers registered in the tenant.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Printer.html"><abbr title="\Microsoft\Graph\Model\Printer">Printer</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The printers</p>
 </section>
@@ -613,7 +624,7 @@ The list of printers registered in the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">188</span>
+    <span class="phpdocumentor-element-found-in__line">209</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the services
@@ -621,7 +632,7 @@ The list of available Universal Print service endpoints.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getServices</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getServices</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintService.html"><abbr title="\Microsoft\Graph\Model\PrintService">PrintService</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -629,7 +640,7 @@ The list of available Universal Print service endpoints.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintService.html"><abbr title="\Microsoft\Graph\Model\PrintService">PrintService</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The services</p>
 </section>
@@ -685,7 +696,7 @@ Tenant-wide settings for the Universal Print service.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">218</span>
+    <span class="phpdocumentor-element-found-in__line">246</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the shares
@@ -693,7 +704,7 @@ The list of printer shares registered in the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getShares</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getShares</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterShare.html"><abbr title="\Microsoft\Graph\Model\PrinterShare">PrinterShare</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -701,7 +712,7 @@ The list of printer shares registered in the tenant.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterShare.html"><abbr title="\Microsoft\Graph\Model\PrinterShare">PrinterShare</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The shares</p>
 </section>
@@ -721,7 +732,7 @@ The list of printer shares registered in the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">248</span>
+    <span class="phpdocumentor-element-found-in__line">283</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the taskDefinitions
@@ -729,7 +740,7 @@ List of abstract definition for a task that can be triggered when various events
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTaskDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTaskDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintTaskDefinition.html"><abbr title="\Microsoft\Graph\Model\PrintTaskDefinition">PrintTaskDefinition</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -737,7 +748,7 @@ List of abstract definition for a task that can be triggered when various events
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintTaskDefinition.html"><abbr title="\Microsoft\Graph\Model\PrintTaskDefinition">PrintTaskDefinition</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The taskDefinitions</p>
 </section>
@@ -757,7 +768,7 @@ List of abstract definition for a task that can be triggered when various events
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">303</span>
+    <span class="phpdocumentor-element-found-in__line">345</span>
 </aside>
 
         <p class="phpdocumentor-summary">Serializes the object by property array
@@ -793,7 +804,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">115</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the connectors
@@ -801,7 +812,7 @@ The list of available print connectors.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setConnectors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintConnector.html"><abbr title="\Microsoft\Graph\Model\PrintConnector">PrintConnector</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setConnectors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintConnector.html"><abbr title="\Microsoft\Graph\Model\PrintConnector">PrintConnector</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -809,7 +820,7 @@ The list of available print connectors.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintConnector.html"><abbr title="\Microsoft\Graph\Model\PrintConnector">PrintConnector</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintConnector.html"><abbr title="\Microsoft\Graph\Model\PrintConnector">PrintConnector</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The connectors</p>
@@ -840,7 +851,7 @@ The list of available print connectors.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">291</span>
+    <span class="phpdocumentor-element-found-in__line">333</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ODataType</p>
@@ -886,7 +897,7 @@ The list of available print connectors.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">145</span>
+    <span class="phpdocumentor-element-found-in__line">159</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operations
@@ -894,7 +905,7 @@ The list of print long running operations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintOperation.html"><abbr title="\Microsoft\Graph\Model\PrintOperation">PrintOperation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOperation.html"><abbr title="\Microsoft\Graph\Model\PrintOperation">PrintOperation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -902,7 +913,7 @@ The list of print long running operations.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintOperation.html"><abbr title="\Microsoft\Graph\Model\PrintOperation">PrintOperation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOperation.html"><abbr title="\Microsoft\Graph\Model\PrintOperation">PrintOperation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The operations</p>
@@ -933,7 +944,7 @@ The list of print long running operations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">175</span>
+    <span class="phpdocumentor-element-found-in__line">196</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the printers
@@ -941,7 +952,7 @@ The list of printers registered in the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPrinters</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Printer.html"><abbr title="\Microsoft\Graph\Model\Printer">Printer</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPrinters</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Printer.html"><abbr title="\Microsoft\Graph\Model\Printer">Printer</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -949,7 +960,7 @@ The list of printers registered in the tenant.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Printer.html"><abbr title="\Microsoft\Graph\Model\Printer">Printer</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Printer.html"><abbr title="\Microsoft\Graph\Model\Printer">Printer</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The printers</p>
@@ -980,7 +991,7 @@ The list of printers registered in the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">205</span>
+    <span class="phpdocumentor-element-found-in__line">233</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the services
@@ -988,7 +999,7 @@ The list of available Universal Print service endpoints.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setServices</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintService.html"><abbr title="\Microsoft\Graph\Model\PrintService">PrintService</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setServices</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintService.html"><abbr title="\Microsoft\Graph\Model\PrintService">PrintService</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -996,7 +1007,7 @@ The list of available Universal Print service endpoints.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintService.html"><abbr title="\Microsoft\Graph\Model\PrintService">PrintService</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintService.html"><abbr title="\Microsoft\Graph\Model\PrintService">PrintService</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The services</p>
@@ -1074,7 +1085,7 @@ Tenant-wide settings for the Universal Print service.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">235</span>
+    <span class="phpdocumentor-element-found-in__line">270</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the shares
@@ -1082,7 +1093,7 @@ The list of printer shares registered in the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setShares</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrinterShare.html"><abbr title="\Microsoft\Graph\Model\PrinterShare">PrinterShare</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setShares</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterShare.html"><abbr title="\Microsoft\Graph\Model\PrinterShare">PrinterShare</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1090,7 +1101,7 @@ The list of printer shares registered in the tenant.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrinterShare.html"><abbr title="\Microsoft\Graph\Model\PrinterShare">PrinterShare</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterShare.html"><abbr title="\Microsoft\Graph\Model\PrinterShare">PrinterShare</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The shares</p>
@@ -1121,7 +1132,7 @@ The list of printer shares registered in the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/GraphPrint.php"><a href="files/src-model-graphprint.html"><abbr title="src/Model/GraphPrint.php">GraphPrint.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">265</span>
+    <span class="phpdocumentor-element-found-in__line">307</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the taskDefinitions
@@ -1129,7 +1140,7 @@ List of abstract definition for a task that can be triggered when various events
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTaskDefinitions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintTaskDefinition.html"><abbr title="\Microsoft\Graph\Model\PrintTaskDefinition">PrintTaskDefinition</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTaskDefinitions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintTaskDefinition.html"><abbr title="\Microsoft\Graph\Model\PrintTaskDefinition">PrintTaskDefinition</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-GraphPrint.html"><abbr title="\Microsoft\Graph\Model\GraphPrint">GraphPrint</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1137,7 +1148,7 @@ List of abstract definition for a task that can be triggered when various events
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintTaskDefinition.html"><abbr title="\Microsoft\Graph\Model\PrintTaskDefinition">PrintTaskDefinition</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintTaskDefinition.html"><abbr title="\Microsoft\Graph\Model\PrintTaskDefinition">PrintTaskDefinition</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The taskDefinitions</p>

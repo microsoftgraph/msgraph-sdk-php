@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-AuthenticationMethodTarget.html"><abbr title="\Microsoft\Graph\Model\AuthenticationMethodTarget">AuthenticationMethodTarget</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -181,14 +192,6 @@ to the model</dd>
 Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getFeatureSettings">getFeatureSettings()</a>
-    <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>|null    </span>
-</dt>
-<dd>Gets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -241,14 +244,6 @@ Manually serialize DateTime into RFC3339 format</dd>
 </dt>
 <dd>Sets the authenticationMode
 Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setFeatureSettings">setFeatureSettings()</a>
-    <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a>    </span>
-</dt>
-<dd>Sets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -411,42 +406,6 @@ Determines which types of notifications can be used for sign-in. Possible values
     <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMode.html"><abbr title="\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMode">MicrosoftAuthenticatorAuthenticationMode</abbr></a>|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The authenticationMode</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getFeatureSettings">
-        getFeatureSettings()
-        <a href="classes/Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getFeatureSettings" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php"><a href="files/src-model-microsoftauthenticatorauthenticationmethodtarget.html"><abbr title="src/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php">MicrosoftAuthenticatorAuthenticationMethodTarget.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">66</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Gets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFeatureSettings</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>|null</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>|null</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>The featureSettings</p>
 </section>
 
     
@@ -698,53 +657,6 @@ Determines which types of notifications can be used for sign-in. Possible values
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The authenticationMode</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setFeatureSettings">
-        setFeatureSettings()
-        <a href="classes/Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setFeatureSettings" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php"><a href="files/src-model-microsoftauthenticatorauthenticationmethodtarget.html"><abbr title="src/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php">MicrosoftAuthenticatorAuthenticationMethodTarget.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">87</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Sets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setFeatureSettings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a></span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The featureSettings</p>
 </section>
 
             </dd>

@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-AccessReviewQueryScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewQueryScope">AccessReviewQueryScope</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -183,7 +194,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-AccessReviewInactiveUsersQueryScope.html#method_getInactiveDuration">getInactiveDuration()</a>
     <span>
-                        &nbsp;: <abbr title="\Microsoft\Graph\Model\Duration">Duration</abbr>|null    </span>
+                        &nbsp;: <abbr title="\DateInterval">DateInterval</abbr>|null    </span>
 </dt>
 <dd>Gets the inactiveDuration
 Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance&#039;s start date. If this property is not specified, it&#039;s assigned the default value PT0S.</dd>
@@ -436,7 +447,7 @@ Defines the duration of inactivity. Inactivity is based on the last sign in date
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getInactiveDuration</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span></code>
+                <span class="phpdocumentor-signature__name">getInactiveDuration</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -444,7 +455,7 @@ Defines the duration of inactivity. Inactivity is based on the last sign in date
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The inactiveDuration</p>
 </section>
@@ -725,7 +736,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewInactiveUsersQueryScope.php"><a href="files/src-model-accessreviewinactiveusersqueryscope.html"><abbr title="src/Model/AccessReviewInactiveUsersQueryScope.php">AccessReviewInactiveUsersQueryScope.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the inactiveDuration
@@ -733,7 +744,7 @@ Defines the duration of inactivity. Inactivity is based on the last sign in date
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setInactiveDuration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Microsoft\Graph\Model\Duration">Duration</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewInactiveUsersQueryScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInactiveUsersQueryScope">AccessReviewInactiveUsersQueryScope</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setInactiveDuration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewInactiveUsersQueryScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInactiveUsersQueryScope">AccessReviewInactiveUsersQueryScope</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -741,7 +752,7 @@ Defines the duration of inactivity. Inactivity is based on the last sign in date
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Microsoft\Graph\Model\Duration">Duration</abbr></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the inactiveDuration</p>

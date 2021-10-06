@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -223,7 +234,7 @@ Which users, or whole class should receive a submission object once the assignme
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationAssignment.html#method_getCategories">getCategories()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationCategory.html"><abbr title="\Microsoft\Graph\Model\EducationCategory">EducationCategory</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the categories
 When set, enables users to easily find assignments of a given type.  Read-only. Nullable.</dd>
@@ -341,7 +352,7 @@ Optional field to specify the URL of the channel to post the assignment publish 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationAssignment.html#method_getResources">getResources()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationAssignmentResource.html"><abbr title="\Microsoft\Graph\Model\EducationAssignmentResource">EducationAssignmentResource</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the resources
 Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.</dd>
@@ -373,7 +384,7 @@ Status of the Assignment.  You can&#039;t PATCH this value.  Possible values are
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationAssignment.html#method_getSubmissions">getSubmissions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the submissions
 Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.</dd>
@@ -936,7 +947,7 @@ When set, enables users to easily find assignments of a given type.  Read-only. 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCategories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getCategories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationCategory.html"><abbr title="\Microsoft\Graph\Model\EducationCategory">EducationCategory</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -944,7 +955,7 @@ When set, enables users to easily find assignments of a given type.  Read-only. 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationCategory.html"><abbr title="\Microsoft\Graph\Model\EducationCategory">EducationCategory</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The categories</p>
 </section>
@@ -1466,7 +1477,7 @@ Optional field to specify the URL of the channel to post the assignment publish 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationAssignment.php"><a href="files/src-model-educationassignment.html"><abbr title="src/Model/EducationAssignment.php">EducationAssignment.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">696</span>
+    <span class="phpdocumentor-element-found-in__line">703</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resources
@@ -1474,7 +1485,7 @@ Learning objects that are associated with this assignment.  Only teachers can mo
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationAssignmentResource.html"><abbr title="\Microsoft\Graph\Model\EducationAssignmentResource">EducationAssignmentResource</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1482,7 +1493,7 @@ Learning objects that are associated with this assignment.  Only teachers can mo
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationAssignmentResource.html"><abbr title="\Microsoft\Graph\Model\EducationAssignmentResource">EducationAssignmentResource</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The resources</p>
 </section>
@@ -1538,7 +1549,7 @@ Folder URL where all the file resources for this assignment are stored.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationAssignment.php"><a href="files/src-model-educationassignment.html"><abbr title="src/Model/EducationAssignment.php">EducationAssignment.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">725</span>
+    <span class="phpdocumentor-element-found-in__line">739</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the rubric
@@ -1610,7 +1621,7 @@ Status of the Assignment.  You can&#039;t PATCH this value.  Possible values are
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationAssignment.php"><a href="files/src-model-educationassignment.html"><abbr title="src/Model/EducationAssignment.php">EducationAssignment.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">759</span>
+    <span class="phpdocumentor-element-found-in__line">773</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the submissions
@@ -1618,7 +1629,7 @@ Once published, there is a submission object for each student representing their
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSubmissions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSubmissions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1626,7 +1637,7 @@ Once published, there is a submission object for each student representing their
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The submissions</p>
 </section>
@@ -2000,7 +2011,7 @@ Which users, or whole class should receive a submission object once the assignme
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationAssignment.php"><a href="files/src-model-educationassignment.html"><abbr title="src/Model/EducationAssignment.php">EducationAssignment.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">683</span>
+    <span class="phpdocumentor-element-found-in__line">690</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the categories
@@ -2008,7 +2019,7 @@ When set, enables users to easily find assignments of a given type.  Read-only. 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCategories</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationCategory.html"><abbr title="\Microsoft\Graph\Model\EducationCategory">EducationCategory</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationAssignment.html"><abbr title="\Microsoft\Graph\Model\EducationAssignment">EducationAssignment</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setCategories</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationCategory.html"><abbr title="\Microsoft\Graph\Model\EducationCategory">EducationCategory</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationAssignment.html"><abbr title="\Microsoft\Graph\Model\EducationAssignment">EducationAssignment</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2016,7 +2027,7 @@ When set, enables users to easily find assignments of a given type.  Read-only. 
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationCategory.html"><abbr title="\Microsoft\Graph\Model\EducationCategory">EducationCategory</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationCategory.html"><abbr title="\Microsoft\Graph\Model\EducationCategory">EducationCategory</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The categories</p>
@@ -2657,7 +2668,7 @@ Optional field to specify the URL of the channel to post the assignment publish 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationAssignment.php"><a href="files/src-model-educationassignment.html"><abbr title="src/Model/EducationAssignment.php">EducationAssignment.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">713</span>
+    <span class="phpdocumentor-element-found-in__line">727</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resources
@@ -2665,7 +2676,7 @@ Learning objects that are associated with this assignment.  Only teachers can mo
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationAssignmentResource.html"><abbr title="\Microsoft\Graph\Model\EducationAssignmentResource">EducationAssignmentResource</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationAssignment.html"><abbr title="\Microsoft\Graph\Model\EducationAssignment">EducationAssignment</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationAssignmentResource.html"><abbr title="\Microsoft\Graph\Model\EducationAssignmentResource">EducationAssignmentResource</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationAssignment.html"><abbr title="\Microsoft\Graph\Model\EducationAssignment">EducationAssignment</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2673,7 +2684,7 @@ Learning objects that are associated with this assignment.  Only teachers can mo
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationAssignmentResource.html"><abbr title="\Microsoft\Graph\Model\EducationAssignmentResource">EducationAssignmentResource</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationAssignmentResource.html"><abbr title="\Microsoft\Graph\Model\EducationAssignmentResource">EducationAssignmentResource</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The resources</p>
@@ -2751,7 +2762,7 @@ Folder URL where all the file resources for this assignment are stored.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationAssignment.php"><a href="files/src-model-educationassignment.html"><abbr title="src/Model/EducationAssignment.php">EducationAssignment.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">746</span>
+    <span class="phpdocumentor-element-found-in__line">760</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the rubric
@@ -2845,7 +2856,7 @@ Status of the Assignment.  You can&#039;t PATCH this value.  Possible values are
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationAssignment.php"><a href="files/src-model-educationassignment.html"><abbr title="src/Model/EducationAssignment.php">EducationAssignment.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">776</span>
+    <span class="phpdocumentor-element-found-in__line">797</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the submissions
@@ -2853,7 +2864,7 @@ Once published, there is a submission object for each student representing their
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSubmissions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationAssignment.html"><abbr title="\Microsoft\Graph\Model\EducationAssignment">EducationAssignment</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSubmissions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationAssignment.html"><abbr title="\Microsoft\Graph\Model\EducationAssignment">EducationAssignment</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2861,7 +2872,7 @@ Once published, there is a submission object for each student representing their
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The submissions</p>

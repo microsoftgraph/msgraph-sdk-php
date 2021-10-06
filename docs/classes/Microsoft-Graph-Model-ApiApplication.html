@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -199,7 +210,7 @@ Used for bundling consent if you have a solution that contains two parts: a clie
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ApiApplication.html#method_getOauth2PermissionScopes">getOauth2PermissionScopes()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the oauth2PermissionScopes
 The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.</dd>
@@ -214,7 +225,7 @@ The definition of the delegated permissions exposed by the web API represented b
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ApiApplication.html#method_getPreAuthorizedApplications">getPreAuthorizedApplications()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the preAuthorizedApplications
 Lists the client applications that are pre-authorized with the specified delegated permissions to access this application&#039;s APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.</dd>
@@ -524,7 +535,7 @@ The definition of the delegated permissions exposed by the web API represented b
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getOauth2PermissionScopes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getOauth2PermissionScopes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -532,7 +543,7 @@ The definition of the delegated permissions exposed by the web API represented b
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The oauth2PermissionScopes</p>
 </section>
@@ -587,7 +598,7 @@ The definition of the delegated permissions exposed by the web API represented b
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ApiApplication.php"><a href="files/src-model-apiapplication.html"><abbr title="src/Model/ApiApplication.php">ApiApplication.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">122</span>
+    <span class="phpdocumentor-element-found-in__line">126</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the preAuthorizedApplications
@@ -595,7 +606,7 @@ Lists the client applications that are pre-authorized with the specified delegat
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPreAuthorizedApplications</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getPreAuthorizedApplications</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -603,7 +614,7 @@ Lists the client applications that are pre-authorized with the specified delegat
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The preAuthorizedApplications</p>
 </section>
@@ -658,7 +669,7 @@ Lists the client applications that are pre-authorized with the specified delegat
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ApiApplication.php"><a href="files/src-model-apiapplication.html"><abbr title="src/Model/ApiApplication.php">ApiApplication.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">162</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the requestedAccessTokenVersion
@@ -832,7 +843,7 @@ Used for bundling consent if you have a solution that contains two parts: a clie
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setKnownClientApplications</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ApiApplication.html"><abbr title="\Microsoft\Graph\Model\ApiApplication">ApiApplication</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setKnownClientApplications</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ApiApplication.html"><abbr title="\Microsoft\Graph\Model\ApiApplication">ApiApplication</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -840,7 +851,7 @@ Used for bundling consent if you have a solution that contains two parts: a clie
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the knownClientApplications</p>
@@ -871,7 +882,7 @@ Used for bundling consent if you have a solution that contains two parts: a clie
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ApiApplication.php"><a href="files/src-model-apiapplication.html"><abbr title="src/Model/ApiApplication.php">ApiApplication.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">114</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the oauth2PermissionScopes
@@ -879,7 +890,7 @@ The definition of the delegated permissions exposed by the web API represented b
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOauth2PermissionScopes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ApiApplication.html"><abbr title="\Microsoft\Graph\Model\ApiApplication">ApiApplication</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOauth2PermissionScopes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ApiApplication.html"><abbr title="\Microsoft\Graph\Model\ApiApplication">ApiApplication</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -887,7 +898,7 @@ The definition of the delegated permissions exposed by the web API represented b
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionScope.html"><abbr title="\Microsoft\Graph\Model\PermissionScope">PermissionScope</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the oauth2PermissionScopes</p>
@@ -965,7 +976,7 @@ The definition of the delegated permissions exposed by the web API represented b
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ApiApplication.php"><a href="files/src-model-apiapplication.html"><abbr title="src/Model/ApiApplication.php">ApiApplication.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">143</span>
+    <span class="phpdocumentor-element-found-in__line">151</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the preAuthorizedApplications
@@ -973,7 +984,7 @@ Lists the client applications that are pre-authorized with the specified delegat
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPreAuthorizedApplications</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ApiApplication.html"><abbr title="\Microsoft\Graph\Model\ApiApplication">ApiApplication</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPreAuthorizedApplications</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ApiApplication.html"><abbr title="\Microsoft\Graph\Model\ApiApplication">ApiApplication</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -981,7 +992,7 @@ Lists the client applications that are pre-authorized with the specified delegat
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PreAuthorizedApplication.html"><abbr title="\Microsoft\Graph\Model\PreAuthorizedApplication">PreAuthorizedApplication</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the preAuthorizedApplications</p>
@@ -1013,7 +1024,7 @@ Lists the client applications that are pre-authorized with the specified delegat
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ApiApplication.php"><a href="files/src-model-apiapplication.html"><abbr title="src/Model/ApiApplication.php">ApiApplication.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">179</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the requestedAccessTokenVersion

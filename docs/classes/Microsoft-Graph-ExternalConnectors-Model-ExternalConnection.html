@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -91,6 +95,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -192,7 +203,7 @@ Description of the connection displayed in the Microsoft 365 admin center. Optio
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html#method_getGroups">getGroups()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalGroup.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalGroup">ExternalGroup</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the groups</dd>
 
@@ -207,7 +218,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html#method_getItems">getItems()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalItem.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalItem">ExternalItem</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the items
 Read-only. Nullable.</dd>
@@ -230,7 +241,7 @@ The display name of the connection to be displayed in the Microsoft 365 admin ce
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html#method_getOperations">getOperations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ConnectionOperation.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperation">ConnectionOperation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the operations
 Read-only. Nullable.</dd>
@@ -534,7 +545,7 @@ Description of the connection displayed in the Microsoft 365 admin center. Optio
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getGroups</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getGroups</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalGroup.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalGroup">ExternalGroup</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -542,7 +553,7 @@ Description of the connection displayed in the Microsoft 365 admin center. Optio
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalGroup.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalGroup">ExternalGroup</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The groups</p>
 </section>
@@ -598,7 +609,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExternalConnectors/Model/ExternalConnection.php"><a href="files/src-externalconnectors-model-externalconnection.html"><abbr title="src/ExternalConnectors/Model/ExternalConnection.php">ExternalConnection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">186</span>
+    <span class="phpdocumentor-element-found-in__line">193</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the items
@@ -606,7 +617,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getItems</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getItems</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalItem.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalItem">ExternalItem</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -614,7 +625,7 @@ Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalItem.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalItem">ExternalItem</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The items</p>
 </section>
@@ -705,7 +716,7 @@ The display name of the connection to be displayed in the Microsoft 365 admin ce
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExternalConnectors/Model/ExternalConnection.php"><a href="files/src-externalconnectors-model-externalconnection.html"><abbr title="src/ExternalConnectors/Model/ExternalConnection.php">ExternalConnection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">216</span>
+    <span class="phpdocumentor-element-found-in__line">230</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operations
@@ -713,7 +724,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ConnectionOperation.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperation">ConnectionOperation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -721,7 +732,7 @@ Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ConnectionOperation.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperation">ConnectionOperation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The operations</p>
 </section>
@@ -776,7 +787,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExternalConnectors/Model/ExternalConnection.php"><a href="files/src-externalconnectors-model-externalconnection.html"><abbr title="src/ExternalConnectors/Model/ExternalConnection.php">ExternalConnection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">266</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the schema
@@ -978,14 +989,14 @@ Description of the connection displayed in the Microsoft 365 admin center. Optio
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExternalConnectors/Model/ExternalConnection.php"><a href="files/src-externalconnectors-model-externalconnection.html"><abbr title="src/ExternalConnectors/Model/ExternalConnection.php">ExternalConnection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">173</span>
+    <span class="phpdocumentor-element-found-in__line">180</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the groups</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setGroups</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalGroup.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalGroup">ExternalGroup</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalConnection">ExternalConnection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setGroups</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalGroup.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalGroup">ExternalGroup</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalConnection">ExternalConnection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -993,7 +1004,7 @@ Description of the connection displayed in the Microsoft 365 admin center. Optio
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalGroup.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalGroup">ExternalGroup</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalGroup.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalGroup">ExternalGroup</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The groups</p>
@@ -1071,7 +1082,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExternalConnectors/Model/ExternalConnection.php"><a href="files/src-externalconnectors-model-externalconnection.html"><abbr title="src/ExternalConnectors/Model/ExternalConnection.php">ExternalConnection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">203</span>
+    <span class="phpdocumentor-element-found-in__line">217</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the items
@@ -1079,7 +1090,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalItem.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalItem">ExternalItem</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalConnection">ExternalConnection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalItem.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalItem">ExternalItem</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalConnection">ExternalConnection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1087,7 +1098,7 @@ Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalItem.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalItem">ExternalItem</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalItem.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalItem">ExternalItem</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The items</p>
@@ -1211,7 +1222,7 @@ The display name of the connection to be displayed in the Microsoft 365 admin ce
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExternalConnectors/Model/ExternalConnection.php"><a href="files/src-externalconnectors-model-externalconnection.html"><abbr title="src/ExternalConnectors/Model/ExternalConnection.php">ExternalConnection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">254</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operations
@@ -1219,7 +1230,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ConnectionOperation.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperation">ConnectionOperation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalConnection">ExternalConnection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ConnectionOperation.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperation">ConnectionOperation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ExternalConnection.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ExternalConnection">ExternalConnection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1227,7 +1238,7 @@ Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-ExternalConnectors-Model-ConnectionOperation.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperation">ConnectionOperation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-ExternalConnectors-Model-ConnectionOperation.html"><abbr title="\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperation">ConnectionOperation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The operations</p>
@@ -1258,7 +1269,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/ExternalConnectors/Model/ExternalConnection.php"><a href="files/src-externalconnectors-model-externalconnection.html"><abbr title="src/ExternalConnectors/Model/ExternalConnection.php">ExternalConnection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">266</span>
+    <span class="phpdocumentor-element-found-in__line">287</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the schema

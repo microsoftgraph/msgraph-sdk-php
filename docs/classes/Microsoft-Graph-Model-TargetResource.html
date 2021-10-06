@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -199,7 +210,7 @@ Indicates the unique ID of the resource.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-TargetResource.html#method_getModifiedProperties">getModifiedProperties()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the modifiedProperties
 Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.</dd>
@@ -480,7 +491,7 @@ When type is set to Group, this indicates the group type. Possible values are: u
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the id
@@ -516,7 +527,7 @@ Indicates the unique ID of the resource.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">122</span>
+    <span class="phpdocumentor-element-found-in__line">123</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the modifiedProperties
@@ -524,7 +535,7 @@ Indicates name, old value and new value of each attribute that changed. Property
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getModifiedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getModifiedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -532,7 +543,7 @@ Indicates name, old value and new value of each attribute that changed. Property
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The modifiedProperties</p>
 </section>
@@ -622,7 +633,7 @@ Indicates name, old value and new value of each attribute that changed. Property
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">159</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the type
@@ -658,7 +669,7 @@ Describes the resource type.  Example values include Application, Group, Service
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">182</span>
+    <span class="phpdocumentor-element-found-in__line">187</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
@@ -777,7 +788,7 @@ Indicates the visible name defined for the resource. Typically specified when th
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">82</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the groupType
@@ -825,7 +836,7 @@ When type is set to Group, this indicates the group type. Possible values are: u
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">111</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the id
@@ -872,7 +883,7 @@ Indicates the unique ID of the resource.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">143</span>
+    <span class="phpdocumentor-element-found-in__line">148</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the modifiedProperties
@@ -880,7 +891,7 @@ Indicates name, old value and new value of each attribute that changed. Property
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setModifiedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setModifiedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -888,7 +899,7 @@ Indicates name, old value and new value of each attribute that changed. Property
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ModifiedProperty.html"><abbr title="\Microsoft\Graph\Model\ModifiedProperty">ModifiedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the modifiedProperties</p>
@@ -966,7 +977,7 @@ Indicates name, old value and new value of each attribute that changed. Property
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">176</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the type
@@ -1013,7 +1024,7 @@ Describes the resource type.  Example values include Application, Group, Service
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/TargetResource.php"><a href="files/src-model-targetresource.html"><abbr title="src/Model/TargetResource.php">TargetResource.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">199</span>
+    <span class="phpdocumentor-element-found-in__line">204</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName

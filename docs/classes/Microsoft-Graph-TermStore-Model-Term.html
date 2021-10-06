@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -91,6 +95,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -176,7 +187,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-TermStore-Model-Term.html#method_getChildren">getChildren()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the children
 Children of current term.</dd>
@@ -192,7 +203,7 @@ Date and time of term creation. Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-TermStore-Model-Term.html#method_getDescriptions">getDescriptions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedDescription.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedDescription">LocalizedDescription</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the descriptions
 Description about term that is dependent on the languageTag.</dd>
@@ -208,7 +219,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-TermStore-Model-Term.html#method_getLabels">getLabels()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedLabel.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedLabel">LocalizedLabel</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the labels
 Label metadata for a term.</dd>
@@ -238,7 +249,7 @@ Last date and time of term modification. Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-TermStore-Model-Term.html#method_getRelations">getRelations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Relation.html"><abbr title="\Microsoft\Graph\TermStore\Model\Relation">Relation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the relations
 To indicate which terms are related to the current term as either pinned or reused.</dd>
@@ -254,7 +265,7 @@ The [set] in which the term is created.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-TermStore-Model-Term.html#method_getTermProperties">getTermProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the termProperties
 Collection of properties on the term.</dd>
@@ -457,7 +468,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">190</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the children
@@ -465,7 +476,7 @@ Children of current term.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getChildren</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getChildren</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -473,7 +484,7 @@ Children of current term.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The children</p>
 </section>
@@ -537,7 +548,7 @@ Description about term that is dependent on the languageTag.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDescriptions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDescriptions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedDescription.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedDescription">LocalizedDescription</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -545,7 +556,7 @@ Description about term that is dependent on the languageTag.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedDescription.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedDescription">LocalizedDescription</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The descriptions</p>
 </section>
@@ -601,7 +612,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">97</span>
+    <span class="phpdocumentor-element-found-in__line">104</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the labels
@@ -609,7 +620,7 @@ Label metadata for a term.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getLabels</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getLabels</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedLabel.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedLabel">LocalizedLabel</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -617,7 +628,7 @@ Label metadata for a term.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedLabel.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedLabel">LocalizedLabel</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The labels</p>
 </section>
@@ -637,7 +648,7 @@ Label metadata for a term.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">126</span>
+    <span class="phpdocumentor-element-found-in__line">140</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastModifiedDateTime
@@ -743,7 +754,7 @@ Last date and time of term modification. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">220</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the relations
@@ -751,7 +762,7 @@ To indicate which terms are related to the current term as either pinned or reus
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRelations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getRelations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Relation.html"><abbr title="\Microsoft\Graph\TermStore\Model\Relation">Relation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -759,7 +770,7 @@ To indicate which terms are related to the current term as either pinned or reus
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Relation.html"><abbr title="\Microsoft\Graph\TermStore\Model\Relation">Relation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The relations</p>
 </section>
@@ -779,7 +790,7 @@ To indicate which terms are related to the current term as either pinned or reus
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">249</span>
+    <span class="phpdocumentor-element-found-in__line">284</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the set
@@ -815,7 +826,7 @@ The [set] in which the term is created.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">160</span>
+    <span class="phpdocumentor-element-found-in__line">174</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the termProperties
@@ -823,7 +834,7 @@ Collection of properties on the term.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTermProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTermProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -831,7 +842,7 @@ Collection of properties on the term.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The termProperties</p>
 </section>
@@ -887,7 +898,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">207</span>
+    <span class="phpdocumentor-element-found-in__line">235</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the children
@@ -895,7 +906,7 @@ Children of current term.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setChildren</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setChildren</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -903,7 +914,7 @@ Children of current term.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The children</p>
@@ -981,7 +992,7 @@ Date and time of term creation. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">84</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the descriptions
@@ -989,7 +1000,7 @@ Description about term that is dependent on the languageTag.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDescriptions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-TermStore-Model-LocalizedDescription.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedDescription">LocalizedDescription</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDescriptions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedDescription.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedDescription">LocalizedDescription</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -997,7 +1008,7 @@ Description about term that is dependent on the languageTag.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-TermStore-Model-LocalizedDescription.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedDescription">LocalizedDescription</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedDescription.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedDescription">LocalizedDescription</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The descriptions</p>
@@ -1075,7 +1086,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">114</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the labels
@@ -1083,7 +1094,7 @@ Label metadata for a term.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setLabels</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-TermStore-Model-LocalizedLabel.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedLabel">LocalizedLabel</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setLabels</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedLabel.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedLabel">LocalizedLabel</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1091,7 +1102,7 @@ Label metadata for a term.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-TermStore-Model-LocalizedLabel.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedLabel">LocalizedLabel</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-LocalizedLabel.html"><abbr title="\Microsoft\Graph\TermStore\Model\LocalizedLabel">LocalizedLabel</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The labels</p>
@@ -1122,7 +1133,7 @@ Label metadata for a term.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">147</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastModifiedDateTime
@@ -1215,7 +1226,7 @@ Last date and time of term modification. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">237</span>
+    <span class="phpdocumentor-element-found-in__line">272</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the relations
@@ -1223,7 +1234,7 @@ To indicate which terms are related to the current term as either pinned or reus
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRelations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-TermStore-Model-Relation.html"><abbr title="\Microsoft\Graph\TermStore\Model\Relation">Relation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRelations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Relation.html"><abbr title="\Microsoft\Graph\TermStore\Model\Relation">Relation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1231,7 +1242,7 @@ To indicate which terms are related to the current term as either pinned or reus
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-TermStore-Model-Relation.html"><abbr title="\Microsoft\Graph\TermStore\Model\Relation">Relation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-TermStore-Model-Relation.html"><abbr title="\Microsoft\Graph\TermStore\Model\Relation">Relation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The relations</p>
@@ -1262,7 +1273,7 @@ To indicate which terms are related to the current term as either pinned or reus
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">270</span>
+    <span class="phpdocumentor-element-found-in__line">305</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the set
@@ -1309,7 +1320,7 @@ The [set] in which the term is created.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/TermStore/Model/Term.php"><a href="files/src-termstore-model-term.html"><abbr title="src/TermStore/Model/Term.php">Term.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">177</span>
+    <span class="phpdocumentor-element-found-in__line">198</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the termProperties
@@ -1317,7 +1328,7 @@ Collection of properties on the term.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTermProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTermProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-TermStore-Model-Term.html"><abbr title="\Microsoft\Graph\TermStore\Model\Term">Term</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1325,7 +1336,7 @@ Collection of properties on the term.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The termProperties</p>

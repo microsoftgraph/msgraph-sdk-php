@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Calendar.html#method_getAllowedOnlineMeetingProviders">getAllowedOnlineMeetingProviders()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnlineMeetingProviderType.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingProviderType">OnlineMeetingProviderType</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the allowedOnlineMeetingProviders
 Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.</dd>
@@ -183,7 +194,7 @@ Represent the online meeting service providers that can be used to create online
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Calendar.html#method_getCalendarPermissions">getCalendarPermissions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CalendarPermission.html"><abbr title="\Microsoft\Graph\Model\CalendarPermission">CalendarPermission</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the calendarPermissions
 The permissions of the users with whom the calendar is shared.</dd>
@@ -191,7 +202,7 @@ The permissions of the users with whom the calendar is shared.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Calendar.html#method_getCalendarView">getCalendarView()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the calendarView
 The calendar view for the calendar. Navigation property. Read-only.</dd>
@@ -247,7 +258,7 @@ The default online meeting provider for meetings sent from this calendar. Possib
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Calendar.html#method_getEvents">getEvents()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the events
 The events in the calendar. Navigation property. Read-only.</dd>
@@ -295,7 +306,7 @@ Indicates whether this user calendar supports tracking of meeting responses. Onl
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Calendar.html#method_getMultiValueExtendedProperties">getMultiValueExtendedProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the multiValueExtendedProperties
 The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.</dd>
@@ -333,7 +344,7 @@ If set, this represents the user who created or added the calendar. For a calend
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Calendar.html#method_getSingleValueExtendedProperties">getSingleValueExtendedProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the singleValueExtendedProperties
 The collection of single-value extended properties defined for the calendar. Read-only. Nullable.</dd>
@@ -624,7 +635,7 @@ Represent the online meeting service providers that can be used to create online
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAllowedOnlineMeetingProviders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAllowedOnlineMeetingProviders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnlineMeetingProviderType.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingProviderType">OnlineMeetingProviderType</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -632,7 +643,7 @@ Represent the online meeting service providers that can be used to create online
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnlineMeetingProviderType.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingProviderType">OnlineMeetingProviderType</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The allowedOnlineMeetingProviders</p>
 </section>
@@ -652,7 +663,7 @@ Represent the online meeting service providers that can be used to create online
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">424</span>
+    <span class="phpdocumentor-element-found-in__line">431</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the calendarPermissions
@@ -660,7 +671,7 @@ The permissions of the users with whom the calendar is shared.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCalendarPermissions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getCalendarPermissions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CalendarPermission.html"><abbr title="\Microsoft\Graph\Model\CalendarPermission">CalendarPermission</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -668,7 +679,7 @@ The permissions of the users with whom the calendar is shared.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CalendarPermission.html"><abbr title="\Microsoft\Graph\Model\CalendarPermission">CalendarPermission</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The calendarPermissions</p>
 </section>
@@ -688,7 +699,7 @@ The permissions of the users with whom the calendar is shared.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">454</span>
+    <span class="phpdocumentor-element-found-in__line">468</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the calendarView
@@ -696,7 +707,7 @@ The calendar view for the calendar. Navigation property. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCalendarView</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getCalendarView</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -704,7 +715,7 @@ The calendar view for the calendar. Navigation property. Read-only.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The calendarView</p>
 </section>
@@ -724,7 +735,7 @@ The calendar view for the calendar. Navigation property. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the canEdit
@@ -760,7 +771,7 @@ true if the user can write to the calendar, false otherwise. This property is tr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the canShare
@@ -796,7 +807,7 @@ true if the user has the permission to share the calendar, false otherwise. Only
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the canViewPrivateItems
@@ -832,7 +843,7 @@ true if the user can read calendar items that have been marked private, false ot
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the changeKey
@@ -868,7 +879,7 @@ Identifies the version of the calendar object. Every time the calendar is change
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the color
@@ -904,7 +915,7 @@ Specifies the color theme to distinguish the calendar from other calendars in a 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">212</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the defaultOnlineMeetingProvider
@@ -940,7 +951,7 @@ The default online meeting provider for meetings sent from this calendar. Possib
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">484</span>
+    <span class="phpdocumentor-element-found-in__line">505</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the events
@@ -948,7 +959,7 @@ The events in the calendar. Navigation property. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getEvents</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getEvents</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -956,7 +967,7 @@ The events in the calendar. Navigation property. Read-only.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The events</p>
 </section>
@@ -976,7 +987,7 @@ The events in the calendar. Navigation property. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hexColor
@@ -1048,7 +1059,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">274</span>
+    <span class="phpdocumentor-element-found-in__line">281</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isDefaultCalendar
@@ -1084,7 +1095,7 @@ true if this is the default calendar where new events are created by default, fa
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">303</span>
+    <span class="phpdocumentor-element-found-in__line">310</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isRemovable
@@ -1120,7 +1131,7 @@ Indicates whether this user calendar can be deleted from the user mailbox.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">332</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isTallyingResponses
@@ -1156,7 +1167,7 @@ Indicates whether this user calendar supports tracking of meeting responses. Onl
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">514</span>
+    <span class="phpdocumentor-element-found-in__line">542</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the multiValueExtendedProperties
@@ -1164,7 +1175,7 @@ The collection of multi-value extended properties defined for the calendar. Read
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMultiValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMultiValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1172,7 +1183,7 @@ The collection of multi-value extended properties defined for the calendar. Read
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The multiValueExtendedProperties</p>
 </section>
@@ -1192,7 +1203,7 @@ The collection of multi-value extended properties defined for the calendar. Read
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">361</span>
+    <span class="phpdocumentor-element-found-in__line">368</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the name
@@ -1263,7 +1274,7 @@ The calendar name.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">390</span>
+    <span class="phpdocumentor-element-found-in__line">397</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the owner
@@ -1334,7 +1345,7 @@ If set, this represents the user who created or added the calendar. For a calend
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">544</span>
+    <span class="phpdocumentor-element-found-in__line">579</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the singleValueExtendedProperties
@@ -1342,7 +1353,7 @@ The collection of single-value extended properties defined for the calendar. Rea
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSingleValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSingleValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1350,7 +1361,7 @@ The collection of single-value extended properties defined for the calendar. Rea
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The singleValueExtendedProperties</p>
 </section>
@@ -1406,7 +1417,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the allowedOnlineMeetingProviders
@@ -1414,7 +1425,7 @@ Represent the online meeting service providers that can be used to create online
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAllowedOnlineMeetingProviders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnlineMeetingProviderType.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingProviderType">OnlineMeetingProviderType</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAllowedOnlineMeetingProviders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnlineMeetingProviderType.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingProviderType">OnlineMeetingProviderType</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1422,7 +1433,7 @@ Represent the online meeting service providers that can be used to create online
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnlineMeetingProviderType.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingProviderType">OnlineMeetingProviderType</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnlineMeetingProviderType.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingProviderType">OnlineMeetingProviderType</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The allowedOnlineMeetingProviders</p>
@@ -1453,7 +1464,7 @@ Represent the online meeting service providers that can be used to create online
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">441</span>
+    <span class="phpdocumentor-element-found-in__line">455</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the calendarPermissions
@@ -1461,7 +1472,7 @@ The permissions of the users with whom the calendar is shared.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCalendarPermissions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-CalendarPermission.html"><abbr title="\Microsoft\Graph\Model\CalendarPermission">CalendarPermission</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setCalendarPermissions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CalendarPermission.html"><abbr title="\Microsoft\Graph\Model\CalendarPermission">CalendarPermission</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1469,7 +1480,7 @@ The permissions of the users with whom the calendar is shared.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-CalendarPermission.html"><abbr title="\Microsoft\Graph\Model\CalendarPermission">CalendarPermission</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CalendarPermission.html"><abbr title="\Microsoft\Graph\Model\CalendarPermission">CalendarPermission</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The calendarPermissions</p>
@@ -1500,7 +1511,7 @@ The permissions of the users with whom the calendar is shared.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">471</span>
+    <span class="phpdocumentor-element-found-in__line">492</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the calendarView
@@ -1508,7 +1519,7 @@ The calendar view for the calendar. Navigation property. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCalendarView</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setCalendarView</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1516,7 +1527,7 @@ The calendar view for the calendar. Navigation property. Read-only.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The calendarView</p>
@@ -1547,7 +1558,7 @@ The calendar view for the calendar. Navigation property. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the canEdit
@@ -1594,7 +1605,7 @@ true if the user can write to the calendar, false otherwise. This property is tr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">109</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the canShare
@@ -1641,7 +1652,7 @@ true if the user has the permission to share the calendar, false otherwise. Only
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the canViewPrivateItems
@@ -1688,7 +1699,7 @@ true if the user can read calendar items that have been marked private, false ot
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">167</span>
+    <span class="phpdocumentor-element-found-in__line">174</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the changeKey
@@ -1735,7 +1746,7 @@ Identifies the version of the calendar object. Every time the calendar is change
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">200</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the color
@@ -1782,7 +1793,7 @@ Specifies the color theme to distinguish the calendar from other calendars in a 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the defaultOnlineMeetingProvider
@@ -1829,7 +1840,7 @@ The default online meeting provider for meetings sent from this calendar. Possib
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">501</span>
+    <span class="phpdocumentor-element-found-in__line">529</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the events
@@ -1837,7 +1848,7 @@ The events in the calendar. Navigation property. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setEvents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setEvents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1845,7 +1856,7 @@ The events in the calendar. Navigation property. Read-only.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The events</p>
@@ -1876,7 +1887,7 @@ The events in the calendar. Navigation property. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">262</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hexColor
@@ -1970,7 +1981,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">291</span>
+    <span class="phpdocumentor-element-found-in__line">298</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isDefaultCalendar
@@ -2017,7 +2028,7 @@ true if this is the default calendar where new events are created by default, fa
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">320</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isRemovable
@@ -2064,7 +2075,7 @@ Indicates whether this user calendar can be deleted from the user mailbox.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">349</span>
+    <span class="phpdocumentor-element-found-in__line">356</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isTallyingResponses
@@ -2111,7 +2122,7 @@ Indicates whether this user calendar supports tracking of meeting responses. Onl
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">531</span>
+    <span class="phpdocumentor-element-found-in__line">566</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the multiValueExtendedProperties
@@ -2119,7 +2130,7 @@ The collection of multi-value extended properties defined for the calendar. Read
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMultiValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMultiValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2127,7 +2138,7 @@ The collection of multi-value extended properties defined for the calendar. Read
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The multiValueExtendedProperties</p>
@@ -2158,7 +2169,7 @@ The collection of multi-value extended properties defined for the calendar. Read
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">378</span>
+    <span class="phpdocumentor-element-found-in__line">385</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the name
@@ -2251,7 +2262,7 @@ The calendar name.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">418</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the owner
@@ -2298,7 +2309,7 @@ If set, this represents the user who created or added the calendar. For a calend
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Calendar.php"><a href="files/src-model-calendar.html"><abbr title="src/Model/Calendar.php">Calendar.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">561</span>
+    <span class="phpdocumentor-element-found-in__line">603</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the singleValueExtendedProperties
@@ -2306,7 +2317,7 @@ The collection of single-value extended properties defined for the calendar. Rea
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSingleValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSingleValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Calendar.html"><abbr title="\Microsoft\Graph\Model\Calendar">Calendar</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2314,7 +2325,7 @@ The collection of single-value extended properties defined for the calendar. Rea
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The singleValueExtendedProperties</p>

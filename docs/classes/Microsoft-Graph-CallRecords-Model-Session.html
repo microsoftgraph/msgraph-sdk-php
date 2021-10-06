@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -91,6 +95,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -216,7 +227,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-Session.html#method_getModalities">getModalities()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the modalities
 List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.</dd>
@@ -238,7 +249,7 @@ List of modalities present in the session. Possible values are: unknown, audio, 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-Session.html#method_getSegments">getSegments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Segment.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Segment">Segment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the segments
 The list of segments involved in the session. Read-only. Nullable.</dd>
@@ -629,7 +640,7 @@ List of modalities present in the session. Possible values are: unknown, audio, 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getModalities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getModalities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -637,7 +648,7 @@ List of modalities present in the session. Possible values are: unknown, audio, 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The modalities</p>
 </section>
@@ -727,7 +738,7 @@ List of modalities present in the session. Possible values are: unknown, audio, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Session.php"><a href="files/src-callrecords-model-session.html"><abbr title="src/CallRecords/Model/Session.php">Session.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">229</span>
+    <span class="phpdocumentor-element-found-in__line">236</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the segments
@@ -735,7 +746,7 @@ The list of segments involved in the session. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSegments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSegments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Segment.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Segment">Segment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -743,7 +754,7 @@ The list of segments involved in the session. Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Segment.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Segment">Segment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The segments</p>
 </section>
@@ -763,7 +774,7 @@ The list of segments involved in the session. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Session.php"><a href="files/src-callrecords-model-session.html"><abbr title="src/CallRecords/Model/Session.php">Session.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">195</span>
+    <span class="phpdocumentor-element-found-in__line">202</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startDateTime
@@ -1070,7 +1081,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Session.php"><a href="files/src-callrecords-model-session.html"><abbr title="src/CallRecords/Model/Session.php">Session.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">190</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the modalities
@@ -1078,7 +1089,7 @@ List of modalities present in the session. Possible values are: unknown, audio, 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setModalities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setModalities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1086,7 +1097,7 @@ List of modalities present in the session. Possible values are: unknown, audio, 
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The modalities</p>
@@ -1163,7 +1174,7 @@ List of modalities present in the session. Possible values are: unknown, audio, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Session.php"><a href="files/src-callrecords-model-session.html"><abbr title="src/CallRecords/Model/Session.php">Session.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">246</span>
+    <span class="phpdocumentor-element-found-in__line">260</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the segments
@@ -1171,7 +1182,7 @@ The list of segments involved in the session. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSegments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-Segment.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Segment">Segment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSegments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Segment.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Segment">Segment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1179,7 +1190,7 @@ The list of segments involved in the session. Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-Segment.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Segment">Segment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Segment.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Segment">Segment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The segments</p>
@@ -1210,7 +1221,7 @@ The list of segments involved in the session. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Session.php"><a href="files/src-callrecords-model-session.html"><abbr title="src/CallRecords/Model/Session.php">Session.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">216</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startDateTime

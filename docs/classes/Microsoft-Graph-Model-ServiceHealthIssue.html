@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-ServiceAnnouncementBase.html"><abbr title="\Microsoft\Graph\Model\ServiceAnnouncementBase">ServiceAnnouncementBase</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -183,7 +194,7 @@ The type of service health issue. Possible values are: advisory, incident, unkno
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServiceAnnouncementBase.html#method_getDetails">getDetails()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValuePair.html"><abbr title="\Microsoft\Graph\Model\KeyValuePair">KeyValuePair</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the details
 Additional details about service event. This property doesn&#039;t support filters.</dd>
@@ -262,7 +273,7 @@ Indicates the origin of the service issue. Possible values are: microsoft, third
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ServiceHealthIssue.html#method_getPosts">getPosts()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ServiceHealthIssuePost.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssuePost">ServiceHealthIssuePost</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the posts
 Collection of historical posts for the service issue.</dd>
@@ -596,7 +607,7 @@ Additional details about service event. This property doesn&#039;t support filte
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDetails</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDetails</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValuePair.html"><abbr title="\Microsoft\Graph\Model\KeyValuePair">KeyValuePair</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -604,7 +615,7 @@ Additional details about service event. This property doesn&#039;t support filte
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValuePair.html"><abbr title="\Microsoft\Graph\Model\KeyValuePair">KeyValuePair</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The details</p>
 </section>
@@ -624,7 +635,7 @@ Additional details about service event. This property doesn&#039;t support filte
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the endDateTime
@@ -840,7 +851,7 @@ Indicates whether the issue is resolved.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">96</span>
+    <span class="phpdocumentor-element-found-in__line">103</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastModifiedDateTime
@@ -955,7 +966,7 @@ Collection of historical posts for the service issue.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPosts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getPosts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ServiceHealthIssuePost.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssuePost">ServiceHealthIssuePost</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -963,7 +974,7 @@ Collection of historical posts for the service issue.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ServiceHealthIssuePost.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssuePost">ServiceHealthIssuePost</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The posts</p>
 </section>
@@ -1018,7 +1029,7 @@ Collection of historical posts for the service issue.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceHealthIssue.php"><a href="files/src-model-servicehealthissue.html"><abbr title="src/Model/ServiceHealthIssue.php">ServiceHealthIssue.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the service
@@ -1054,7 +1065,7 @@ Indicates the service affected by the issue.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">129</span>
+    <span class="phpdocumentor-element-found-in__line">136</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startDateTime
@@ -1090,7 +1101,7 @@ The start time of the service event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceHealthIssue.php"><a href="files/src-model-servicehealthissue.html"><abbr title="src/Model/ServiceHealthIssue.php">ServiceHealthIssue.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">274</span>
+    <span class="phpdocumentor-element-found-in__line">281</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
@@ -1126,7 +1137,7 @@ The status of the service issue. Possible values are: serviceOperational, invest
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">162</span>
+    <span class="phpdocumentor-element-found-in__line">169</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the title
@@ -1245,7 +1256,7 @@ The type of service health issue. Possible values are: advisory, incident, unkno
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the details
@@ -1253,7 +1264,7 @@ Additional details about service event. This property doesn&#039;t support filte
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDetails</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-KeyValuePair.html"><abbr title="\Microsoft\Graph\Model\KeyValuePair">KeyValuePair</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ServiceAnnouncementBase.html"><abbr title="\Microsoft\Graph\Model\ServiceAnnouncementBase">ServiceAnnouncementBase</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDetails</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValuePair.html"><abbr title="\Microsoft\Graph\Model\KeyValuePair">KeyValuePair</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ServiceAnnouncementBase.html"><abbr title="\Microsoft\Graph\Model\ServiceAnnouncementBase">ServiceAnnouncementBase</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1261,7 +1272,7 @@ Additional details about service event. This property doesn&#039;t support filte
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-KeyValuePair.html"><abbr title="\Microsoft\Graph\Model\KeyValuePair">KeyValuePair</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValuePair.html"><abbr title="\Microsoft\Graph\Model\KeyValuePair">KeyValuePair</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The details</p>
@@ -1292,7 +1303,7 @@ Additional details about service event. This property doesn&#039;t support filte
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">84</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the endDateTime
@@ -1574,7 +1585,7 @@ Indicates whether the issue is resolved.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">117</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastModifiedDateTime
@@ -1714,7 +1725,7 @@ Indicates the origin of the service issue. Possible values are: microsoft, third
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceHealthIssue.php"><a href="files/src-model-servicehealthissue.html"><abbr title="src/Model/ServiceHealthIssue.php">ServiceHealthIssue.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the posts
@@ -1722,7 +1733,7 @@ Collection of historical posts for the service issue.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPosts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ServiceHealthIssuePost.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssuePost">ServiceHealthIssuePost</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ServiceHealthIssue.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssue">ServiceHealthIssue</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPosts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ServiceHealthIssuePost.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssuePost">ServiceHealthIssuePost</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ServiceHealthIssue.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssue">ServiceHealthIssue</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1730,7 +1741,7 @@ Collection of historical posts for the service issue.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ServiceHealthIssuePost.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssuePost">ServiceHealthIssuePost</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ServiceHealthIssuePost.html"><abbr title="\Microsoft\Graph\Model\ServiceHealthIssuePost">ServiceHealthIssuePost</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The posts</p>
@@ -1761,7 +1772,7 @@ Collection of historical posts for the service issue.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceHealthIssue.php"><a href="files/src-model-servicehealthissue.html"><abbr title="src/Model/ServiceHealthIssue.php">ServiceHealthIssue.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">262</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the service
@@ -1808,7 +1819,7 @@ Indicates the service affected by the issue.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startDateTime
@@ -1855,7 +1866,7 @@ The start time of the service event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceHealthIssue.php"><a href="files/src-model-servicehealthissue.html"><abbr title="src/Model/ServiceHealthIssue.php">ServiceHealthIssue.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">302</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status
@@ -1902,7 +1913,7 @@ The status of the service issue. Possible values are: serviceOperational, invest
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ServiceAnnouncementBase.php"><a href="files/src-model-serviceannouncementbase.html"><abbr title="src/Model/ServiceAnnouncementBase.php">ServiceAnnouncementBase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the title

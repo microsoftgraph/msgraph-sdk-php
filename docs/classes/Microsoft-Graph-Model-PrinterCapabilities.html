@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -191,7 +202,7 @@ True if the printer supports collating when printing muliple copies of a multi-p
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html#method_getColorModes">getColorModes()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the colorModes
 The color modes supported by the printer. Valid values are described in the following table.</dd>
@@ -223,7 +234,7 @@ The list of print resolutions in DPI that are supported by the printer.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html#method_getDuplexModes">getDuplexModes()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the duplexModes
 The list of duplex modes that are supported by the printer. Valid values are described in the following table.</dd>
@@ -231,7 +242,7 @@ The list of duplex modes that are supported by the printer. Valid values are des
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html#method_getFeedOrientations">getFeedOrientations()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the feedOrientations
 The list of feed orientations that are supported by the printer.</dd>
@@ -239,7 +250,7 @@ The list of feed orientations that are supported by the printer.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html#method_getFinishings">getFinishings()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the finishings
 Finishing processes the printer supports for a printed document.</dd>
@@ -311,7 +322,7 @@ The media types supported by the printer.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html#method_getMultipageLayouts">getMultipageLayouts()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the multipageLayouts
 The presentation directions supported by the printer. Supported values are described in the following table.</dd>
@@ -326,7 +337,7 @@ The presentation directions supported by the printer. Supported values are descr
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html#method_getOrientations">getOrientations()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the orientations
 The print orientations supported by the printer. Valid values are described in the following table.</dd>
@@ -357,7 +368,7 @@ Supported number of Input Pages to impose upon a single Impression.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html#method_getQualities">getQualities()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the qualities
 The print qualities supported by the printer.</dd>
@@ -373,7 +384,7 @@ A list of supported right margins(in microns) for the printer.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html#method_getScalings">getScalings()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the scalings
 Supported print scalings.</dd>
@@ -808,7 +819,7 @@ The color modes supported by the printer. Valid values are described in the foll
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getColorModes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getColorModes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -816,7 +827,7 @@ The color modes supported by the printer. Valid values are described in the foll
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The colorModes</p>
 </section>
@@ -836,7 +847,7 @@ The color modes supported by the printer. Valid values are described in the foll
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">125</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the contentTypes
@@ -872,7 +883,7 @@ A list of supported content (MIME) types that the printer supports. It is not gu
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">154</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the copiesPerJob
@@ -908,7 +919,7 @@ The range of copies per job supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">182</span>
+    <span class="phpdocumentor-element-found-in__line">187</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the dpis
@@ -944,7 +955,7 @@ The list of print resolutions in DPI that are supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">211</span>
+    <span class="phpdocumentor-element-found-in__line">216</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the duplexModes
@@ -952,7 +963,7 @@ The list of duplex modes that are supported by the printer. Valid values are des
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDuplexModes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getDuplexModes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -960,7 +971,7 @@ The list of duplex modes that are supported by the printer. Valid values are des
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The duplexModes</p>
 </section>
@@ -980,7 +991,7 @@ The list of duplex modes that are supported by the printer. Valid values are des
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">244</span>
+    <span class="phpdocumentor-element-found-in__line">253</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the feedOrientations
@@ -988,7 +999,7 @@ The list of feed orientations that are supported by the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFeedOrientations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getFeedOrientations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -996,7 +1007,7 @@ The list of feed orientations that are supported by the printer.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The feedOrientations</p>
 </section>
@@ -1016,7 +1027,7 @@ The list of feed orientations that are supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">277</span>
+    <span class="phpdocumentor-element-found-in__line">290</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the finishings
@@ -1024,7 +1035,7 @@ Finishing processes the printer supports for a printed document.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFinishings</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getFinishings</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1032,7 +1043,7 @@ Finishing processes the printer supports for a printed document.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The finishings</p>
 </section>
@@ -1088,7 +1099,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">309</span>
+    <span class="phpdocumentor-element-found-in__line">326</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the inputBins
@@ -1124,7 +1135,7 @@ Supported input bins for the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">337</span>
+    <span class="phpdocumentor-element-found-in__line">354</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isColorPrintingSupported
@@ -1160,7 +1171,7 @@ True if color printing is supported by the printer; false otherwise. Read-only.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">365</span>
+    <span class="phpdocumentor-element-found-in__line">382</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isPageRangeSupported
@@ -1196,7 +1207,7 @@ True if the printer supports printing by page ranges; false otherwise.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">393</span>
+    <span class="phpdocumentor-element-found-in__line">410</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the leftMargins
@@ -1232,7 +1243,7 @@ A list of supported left margins(in microns) for the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">421</span>
+    <span class="phpdocumentor-element-found-in__line">438</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaColors
@@ -1268,7 +1279,7 @@ The media (i.e., paper) colors supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">449</span>
+    <span class="phpdocumentor-element-found-in__line">466</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaSizes
@@ -1304,7 +1315,7 @@ The media sizes supported by the printer. Supports standard size names for ISO a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">477</span>
+    <span class="phpdocumentor-element-found-in__line">494</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaTypes
@@ -1340,7 +1351,7 @@ The media types supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">506</span>
+    <span class="phpdocumentor-element-found-in__line">523</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the multipageLayouts
@@ -1348,7 +1359,7 @@ The presentation directions supported by the printer. Supported values are descr
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMultipageLayouts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getMultipageLayouts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1356,7 +1367,7 @@ The presentation directions supported by the printer. Supported values are descr
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The multipageLayouts</p>
 </section>
@@ -1411,7 +1422,7 @@ The presentation directions supported by the printer. Supported values are descr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">539</span>
+    <span class="phpdocumentor-element-found-in__line">560</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the orientations
@@ -1419,7 +1430,7 @@ The print orientations supported by the printer. Valid values are described in t
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getOrientations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getOrientations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1427,7 +1438,7 @@ The print orientations supported by the printer. Valid values are described in t
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The orientations</p>
 </section>
@@ -1447,7 +1458,7 @@ The print orientations supported by the printer. Valid values are described in t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">571</span>
+    <span class="phpdocumentor-element-found-in__line">596</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the outputBins
@@ -1483,7 +1494,7 @@ The printer&#039;s supported output bins (trays).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">599</span>
+    <span class="phpdocumentor-element-found-in__line">624</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pagesPerSheet
@@ -1554,7 +1565,7 @@ Supported number of Input Pages to impose upon a single Impression.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">628</span>
+    <span class="phpdocumentor-element-found-in__line">653</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the qualities
@@ -1562,7 +1573,7 @@ The print qualities supported by the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getQualities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getQualities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1570,7 +1581,7 @@ The print qualities supported by the printer.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The qualities</p>
 </section>
@@ -1590,7 +1601,7 @@ The print qualities supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">660</span>
+    <span class="phpdocumentor-element-found-in__line">689</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the rightMargins
@@ -1626,7 +1637,7 @@ A list of supported right margins(in microns) for the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">689</span>
+    <span class="phpdocumentor-element-found-in__line">718</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the scalings
@@ -1634,7 +1645,7 @@ Supported print scalings.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getScalings</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getScalings</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1642,7 +1653,7 @@ Supported print scalings.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The scalings</p>
 </section>
@@ -1662,7 +1673,7 @@ Supported print scalings.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">721</span>
+    <span class="phpdocumentor-element-found-in__line">754</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the supportsFitPdfToPage
@@ -1698,7 +1709,7 @@ True if the printer supports scaling PDF pages to match the print media size; fa
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">749</span>
+    <span class="phpdocumentor-element-found-in__line">782</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the topMargins
@@ -1778,7 +1789,7 @@ A list of supported bottom margins(in microns) for the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setBottomMargins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setBottomMargins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1786,7 +1797,7 @@ A list of supported bottom margins(in microns) for the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the bottomMargins</p>
@@ -1864,7 +1875,7 @@ True if the printer supports collating when printing muliple copies of a multi-p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">114</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the colorModes
@@ -1872,7 +1883,7 @@ The color modes supported by the printer. Valid values are described in the foll
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setColorModes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setColorModes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1880,7 +1891,7 @@ The color modes supported by the printer. Valid values are described in the foll
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintColorMode.html"><abbr title="\Microsoft\Graph\Model\PrintColorMode">PrintColorMode</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the colorModes</p>
@@ -1912,7 +1923,7 @@ The color modes supported by the printer. Valid values are described in the foll
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">142</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the contentTypes
@@ -1920,7 +1931,7 @@ A list of supported content (MIME) types that the printer supports. It is not gu
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setContentTypes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setContentTypes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1928,7 +1939,7 @@ A list of supported content (MIME) types that the printer supports. It is not gu
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the contentTypes</p>
@@ -1959,7 +1970,7 @@ A list of supported content (MIME) types that the printer supports. It is not gu
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">176</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the copiesPerJob
@@ -2007,7 +2018,7 @@ The range of copies per job supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">199</span>
+    <span class="phpdocumentor-element-found-in__line">204</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the dpis
@@ -2015,7 +2026,7 @@ The list of print resolutions in DPI that are supported by the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDpis</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDpis</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2023,7 +2034,7 @@ The list of print resolutions in DPI that are supported by the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the dpis</p>
@@ -2054,7 +2065,7 @@ The list of print resolutions in DPI that are supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">232</span>
+    <span class="phpdocumentor-element-found-in__line">241</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the duplexModes
@@ -2062,7 +2073,7 @@ The list of duplex modes that are supported by the printer. Valid values are des
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDuplexModes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDuplexModes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2070,7 +2081,7 @@ The list of duplex modes that are supported by the printer. Valid values are des
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintDuplexMode.html"><abbr title="\Microsoft\Graph\Model\PrintDuplexMode">PrintDuplexMode</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the duplexModes</p>
@@ -2102,7 +2113,7 @@ The list of duplex modes that are supported by the printer. Valid values are des
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">265</span>
+    <span class="phpdocumentor-element-found-in__line">278</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the feedOrientations
@@ -2110,7 +2121,7 @@ The list of feed orientations that are supported by the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setFeedOrientations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setFeedOrientations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2118,7 +2129,7 @@ The list of feed orientations that are supported by the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrinterFeedOrientation.html"><abbr title="\Microsoft\Graph\Model\PrinterFeedOrientation">PrinterFeedOrientation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the feedOrientations</p>
@@ -2150,7 +2161,7 @@ The list of feed orientations that are supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">298</span>
+    <span class="phpdocumentor-element-found-in__line">315</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the finishings
@@ -2158,7 +2169,7 @@ Finishing processes the printer supports for a printed document.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setFinishings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setFinishings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2166,7 +2177,7 @@ Finishing processes the printer supports for a printed document.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the finishings</p>
@@ -2245,7 +2256,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">326</span>
+    <span class="phpdocumentor-element-found-in__line">343</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the inputBins
@@ -2253,7 +2264,7 @@ Supported input bins for the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setInputBins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setInputBins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2261,7 +2272,7 @@ Supported input bins for the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the inputBins</p>
@@ -2292,7 +2303,7 @@ Supported input bins for the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">354</span>
+    <span class="phpdocumentor-element-found-in__line">371</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isColorPrintingSupported
@@ -2339,7 +2350,7 @@ True if color printing is supported by the printer; false otherwise. Read-only.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">382</span>
+    <span class="phpdocumentor-element-found-in__line">399</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isPageRangeSupported
@@ -2386,7 +2397,7 @@ True if the printer supports printing by page ranges; false otherwise.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">410</span>
+    <span class="phpdocumentor-element-found-in__line">427</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the leftMargins
@@ -2394,7 +2405,7 @@ A list of supported left margins(in microns) for the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setLeftMargins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setLeftMargins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2402,7 +2413,7 @@ A list of supported left margins(in microns) for the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the leftMargins</p>
@@ -2433,7 +2444,7 @@ A list of supported left margins(in microns) for the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">438</span>
+    <span class="phpdocumentor-element-found-in__line">455</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaColors
@@ -2441,7 +2452,7 @@ The media (i.e., paper) colors supported by the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMediaColors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMediaColors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2449,7 +2460,7 @@ The media (i.e., paper) colors supported by the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the mediaColors</p>
@@ -2480,7 +2491,7 @@ The media (i.e., paper) colors supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">466</span>
+    <span class="phpdocumentor-element-found-in__line">483</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaSizes
@@ -2488,7 +2499,7 @@ The media sizes supported by the printer. Supports standard size names for ISO a
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMediaSizes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMediaSizes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2496,7 +2507,7 @@ The media sizes supported by the printer. Supports standard size names for ISO a
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the mediaSizes</p>
@@ -2527,7 +2538,7 @@ The media sizes supported by the printer. Supports standard size names for ISO a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">494</span>
+    <span class="phpdocumentor-element-found-in__line">511</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaTypes
@@ -2535,7 +2546,7 @@ The media types supported by the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMediaTypes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMediaTypes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2543,7 +2554,7 @@ The media types supported by the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the mediaTypes</p>
@@ -2574,7 +2585,7 @@ The media types supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">527</span>
+    <span class="phpdocumentor-element-found-in__line">548</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the multipageLayouts
@@ -2582,7 +2593,7 @@ The presentation directions supported by the printer. Supported values are descr
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMultipageLayouts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMultipageLayouts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2590,7 +2601,7 @@ The presentation directions supported by the printer. Supported values are descr
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintMultipageLayout.html"><abbr title="\Microsoft\Graph\Model\PrintMultipageLayout">PrintMultipageLayout</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the multipageLayouts</p>
@@ -2668,7 +2679,7 @@ The presentation directions supported by the printer. Supported values are descr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">560</span>
+    <span class="phpdocumentor-element-found-in__line">585</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the orientations
@@ -2676,7 +2687,7 @@ The print orientations supported by the printer. Valid values are described in t
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOrientations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOrientations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2684,7 +2695,7 @@ The print orientations supported by the printer. Valid values are described in t
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintOrientation.html"><abbr title="\Microsoft\Graph\Model\PrintOrientation">PrintOrientation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the orientations</p>
@@ -2716,7 +2727,7 @@ The print orientations supported by the printer. Valid values are described in t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">588</span>
+    <span class="phpdocumentor-element-found-in__line">613</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the outputBins
@@ -2724,7 +2735,7 @@ The printer&#039;s supported output bins (trays).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOutputBins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOutputBins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2732,7 +2743,7 @@ The printer&#039;s supported output bins (trays).</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the outputBins</p>
@@ -2763,7 +2774,7 @@ The printer&#039;s supported output bins (trays).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">616</span>
+    <span class="phpdocumentor-element-found-in__line">641</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pagesPerSheet
@@ -2771,7 +2782,7 @@ Supported number of Input Pages to impose upon a single Impression.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPagesPerSheet</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPagesPerSheet</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2779,7 +2790,7 @@ Supported number of Input Pages to impose upon a single Impression.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the pagesPerSheet</p>
@@ -2810,7 +2821,7 @@ Supported number of Input Pages to impose upon a single Impression.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">649</span>
+    <span class="phpdocumentor-element-found-in__line">678</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the qualities
@@ -2818,7 +2829,7 @@ The print qualities supported by the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setQualities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setQualities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2826,7 +2837,7 @@ The print qualities supported by the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintQuality.html"><abbr title="\Microsoft\Graph\Model\PrintQuality">PrintQuality</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the qualities</p>
@@ -2858,7 +2869,7 @@ The print qualities supported by the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">677</span>
+    <span class="phpdocumentor-element-found-in__line">706</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the rightMargins
@@ -2866,7 +2877,7 @@ A list of supported right margins(in microns) for the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRightMargins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRightMargins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2874,7 +2885,7 @@ A list of supported right margins(in microns) for the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the rightMargins</p>
@@ -2905,7 +2916,7 @@ A list of supported right margins(in microns) for the printer.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">710</span>
+    <span class="phpdocumentor-element-found-in__line">743</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the scalings
@@ -2913,7 +2924,7 @@ Supported print scalings.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setScalings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setScalings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2921,7 +2932,7 @@ Supported print scalings.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintScaling.html"><abbr title="\Microsoft\Graph\Model\PrintScaling">PrintScaling</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the scalings</p>
@@ -2953,7 +2964,7 @@ Supported print scalings.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">738</span>
+    <span class="phpdocumentor-element-found-in__line">771</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the supportsFitPdfToPage
@@ -3000,7 +3011,7 @@ True if the printer supports scaling PDF pages to match the print media size; fa
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterCapabilities.php"><a href="files/src-model-printercapabilities.html"><abbr title="src/Model/PrinterCapabilities.php">PrinterCapabilities.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">766</span>
+    <span class="phpdocumentor-element-found-in__line">799</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the topMargins
@@ -3008,7 +3019,7 @@ A list of supported top margins(in microns) for the printer.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTopMargins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTopMargins</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterCapabilities.html"><abbr title="\Microsoft\Graph\Model\PrinterCapabilities">PrinterCapabilities</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3016,7 +3027,7 @@ A list of supported top margins(in microns) for the printer.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, int&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value of the topMargins</p>

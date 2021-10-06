@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -191,7 +202,7 @@ Indicates whether or not to block copy paste.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html#method_getAssignments">getAssignments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the assignments
 The list of assignments for the device configuration profile.</dd>
@@ -231,7 +242,7 @@ List that is in the AppComplianceList. Possible values are: none, appsInListComp
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsPhone81GeneralConfiguration.html#method_getCompliantAppsList">getCompliantAppsList()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppListItem.html"><abbr title="\Microsoft\Graph\Model\AppListItem">AppListItem</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the compliantAppsList
 List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.</dd>
@@ -255,7 +266,7 @@ Admin provided description of the Device Configuration.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html#method_getDeviceSettingStateSummaries">getDeviceSettingStateSummaries()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceSettingStateSummaries
 Device Configuration Setting State Device Summary</dd>
@@ -263,7 +274,7 @@ Device Configuration Setting State Device Summary</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html#method_getDeviceStatuses">getDeviceStatuses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceStatuses
 Device configuration installation status by device.</dd>
@@ -453,7 +464,7 @@ Indicates whether or not to require encryption.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html#method_getUserStatuses">getUserStatuses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the userStatuses
 Device configuration installation status by user.</dd>
@@ -1048,7 +1059,7 @@ The list of assignments for the device configuration profile.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1056,7 +1067,7 @@ The list of assignments for the device configuration profile.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The assignments</p>
 </section>
@@ -1228,7 +1239,7 @@ List of apps in the compliance (either allow list or block list, controlled by C
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCompliantAppsList</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getCompliantAppsList</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppListItem.html"><abbr title="\Microsoft\Graph\Model\AppListItem">AppListItem</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1236,7 +1247,7 @@ List of apps in the compliance (either allow list or block list, controlled by C
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppListItem.html"><abbr title="\Microsoft\Graph\Model\AppListItem">AppListItem</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The compliantAppsList</p>
 </section>
@@ -1328,7 +1339,7 @@ Admin provided description of the Device Configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">217</span>
+    <span class="phpdocumentor-element-found-in__line">224</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceSettingStateSummaries
@@ -1336,7 +1347,7 @@ Device Configuration Setting State Device Summary</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceSettingStateSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceSettingStateSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1344,7 +1355,7 @@ Device Configuration Setting State Device Summary</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceSettingStateSummaries</p>
 </section>
@@ -1364,7 +1375,7 @@ Device Configuration Setting State Device Summary</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">247</span>
+    <span class="phpdocumentor-element-found-in__line">261</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceStatuses
@@ -1372,7 +1383,7 @@ Device configuration installation status by device.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1380,7 +1391,7 @@ Device configuration installation status by device.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceStatuses</p>
 </section>
@@ -1400,7 +1411,7 @@ Device configuration installation status by device.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">276</span>
+    <span class="phpdocumentor-element-found-in__line">297</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceStatusOverview
@@ -1436,7 +1447,7 @@ Device Configuration devices status overview</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">241</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the diagnosticDataBlockSubmission
@@ -1508,7 +1519,7 @@ Admin provided name of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">270</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the emailBlockAddingAccounts
@@ -1616,7 +1627,7 @@ DateTime the object was last modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">299</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the locationServicesBlocked
@@ -1652,7 +1663,7 @@ Indicates whether or not to block location services.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">328</span>
+    <span class="phpdocumentor-element-found-in__line">335</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the microsoftAccountBlocked
@@ -1688,7 +1699,7 @@ Indicates whether or not to block using a Microsoft Account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">357</span>
+    <span class="phpdocumentor-element-found-in__line">364</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the nfcBlocked
@@ -1759,7 +1770,7 @@ Indicates whether or not to block Near-Field Communication.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">386</span>
+    <span class="phpdocumentor-element-found-in__line">393</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockSimple
@@ -1795,7 +1806,7 @@ Indicates whether or not to block syncing the calendar.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">415</span>
+    <span class="phpdocumentor-element-found-in__line">422</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordExpirationDays
@@ -1831,7 +1842,7 @@ Number of days before the password expires.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">444</span>
+    <span class="phpdocumentor-element-found-in__line">451</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinimumCharacterSetCount
@@ -1867,7 +1878,7 @@ Number of character sets a password must contain.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">473</span>
+    <span class="phpdocumentor-element-found-in__line">480</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinimumLength
@@ -1903,7 +1914,7 @@ Minimum length of passwords.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">502</span>
+    <span class="phpdocumentor-element-found-in__line">509</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinutesOfInactivityBeforeScreenTimeout
@@ -1939,7 +1950,7 @@ Minutes of inactivity before screen timeout.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">531</span>
+    <span class="phpdocumentor-element-found-in__line">538</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordPreviousPasswordBlockCount
@@ -1975,7 +1986,7 @@ Number of previous passwords to block. Valid values 0 to 24</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">560</span>
+    <span class="phpdocumentor-element-found-in__line">567</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordRequired
@@ -2011,7 +2022,7 @@ Indicates whether or not to require a password.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">589</span>
+    <span class="phpdocumentor-element-found-in__line">596</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordRequiredType
@@ -2047,7 +2058,7 @@ Password type that is required. Possible values are: deviceDefault, alphanumeric
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">622</span>
+    <span class="phpdocumentor-element-found-in__line">629</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordSignInFailureCountBeforeFactoryReset
@@ -2118,7 +2129,7 @@ Number of sign in failures allowed before factory reset.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">651</span>
+    <span class="phpdocumentor-element-found-in__line">658</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the screenCaptureBlocked
@@ -2154,7 +2165,7 @@ Indicates whether or not to block screenshots.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">680</span>
+    <span class="phpdocumentor-element-found-in__line">687</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the storageBlockRemovableStorage
@@ -2190,7 +2201,7 @@ Indicates whether or not to block removable storage.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">709</span>
+    <span class="phpdocumentor-element-found-in__line">716</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the storageRequireEncryption
@@ -2226,7 +2237,7 @@ Indicates whether or not to require encryption.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">310</span>
+    <span class="phpdocumentor-element-found-in__line">331</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userStatuses
@@ -2234,7 +2245,7 @@ Device configuration installation status by user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getUserStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getUserStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2242,7 +2253,7 @@ Device configuration installation status by user.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The userStatuses</p>
 </section>
@@ -2262,7 +2273,7 @@ Device configuration installation status by user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">339</span>
+    <span class="phpdocumentor-element-found-in__line">367</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userStatusOverview
@@ -2334,7 +2345,7 @@ Version of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">738</span>
+    <span class="phpdocumentor-element-found-in__line">745</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the webBrowserBlocked
@@ -2370,7 +2381,7 @@ Indicates whether or not to block the web browser.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">767</span>
+    <span class="phpdocumentor-element-found-in__line">774</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wifiBlockAutomaticConnectHotspots
@@ -2406,7 +2417,7 @@ Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Ha
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">796</span>
+    <span class="phpdocumentor-element-found-in__line">803</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wifiBlocked
@@ -2442,7 +2453,7 @@ Indicates whether or not to block Wi-Fi.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">825</span>
+    <span class="phpdocumentor-element-found-in__line">832</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wifiBlockHotspotReporting
@@ -2478,7 +2489,7 @@ Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-F
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">854</span>
+    <span class="phpdocumentor-element-found-in__line">861</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the windowsStoreBlocked
@@ -2644,7 +2655,7 @@ Indicates whether or not to block copy paste.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">204</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the assignments
@@ -2652,7 +2663,7 @@ The list of assignments for the device configuration profile.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2660,7 +2671,7 @@ The list of assignments for the device configuration profile.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The assignments</p>
@@ -2879,7 +2890,7 @@ List that is in the AppComplianceList. Possible values are: none, appsInListComp
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">229</span>
+    <span class="phpdocumentor-element-found-in__line">236</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the compliantAppsList
@@ -2887,7 +2898,7 @@ List of apps in the compliance (either allow list or block list, controlled by C
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCompliantAppsList</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AppListItem.html"><abbr title="\Microsoft\Graph\Model\AppListItem">AppListItem</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsPhone81GeneralConfiguration.html"><abbr title="\Microsoft\Graph\Model\WindowsPhone81GeneralConfiguration">WindowsPhone81GeneralConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setCompliantAppsList</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppListItem.html"><abbr title="\Microsoft\Graph\Model\AppListItem">AppListItem</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsPhone81GeneralConfiguration.html"><abbr title="\Microsoft\Graph\Model\WindowsPhone81GeneralConfiguration">WindowsPhone81GeneralConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2895,7 +2906,7 @@ List of apps in the compliance (either allow list or block list, controlled by C
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AppListItem.html"><abbr title="\Microsoft\Graph\Model\AppListItem">AppListItem</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppListItem.html"><abbr title="\Microsoft\Graph\Model\AppListItem">AppListItem</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The compliantAppsList</p>
@@ -3020,7 +3031,7 @@ Admin provided description of the Device Configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">234</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceSettingStateSummaries
@@ -3028,7 +3039,7 @@ Device Configuration Setting State Device Summary</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceSettingStateSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceSettingStateSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3036,7 +3047,7 @@ Device Configuration Setting State Device Summary</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceSettingStateSummaries</p>
@@ -3067,7 +3078,7 @@ Device Configuration Setting State Device Summary</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">264</span>
+    <span class="phpdocumentor-element-found-in__line">285</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceStatuses
@@ -3075,7 +3086,7 @@ Device configuration installation status by device.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3083,7 +3094,7 @@ Device configuration installation status by device.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceStatuses</p>
@@ -3114,7 +3125,7 @@ Device configuration installation status by device.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">297</span>
+    <span class="phpdocumentor-element-found-in__line">318</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceStatusOverview
@@ -3161,7 +3172,7 @@ Device Configuration devices status overview</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">258</span>
+    <span class="phpdocumentor-element-found-in__line">265</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the diagnosticDataBlockSubmission
@@ -3255,7 +3266,7 @@ Admin provided name of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">287</span>
+    <span class="phpdocumentor-element-found-in__line">294</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the emailBlockAddingAccounts
@@ -3396,7 +3407,7 @@ DateTime the object was last modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">316</span>
+    <span class="phpdocumentor-element-found-in__line">323</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the locationServicesBlocked
@@ -3443,7 +3454,7 @@ Indicates whether or not to block location services.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">345</span>
+    <span class="phpdocumentor-element-found-in__line">352</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the microsoftAccountBlocked
@@ -3490,7 +3501,7 @@ Indicates whether or not to block using a Microsoft Account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">374</span>
+    <span class="phpdocumentor-element-found-in__line">381</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the nfcBlocked
@@ -3583,7 +3594,7 @@ Indicates whether or not to block Near-Field Communication.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">403</span>
+    <span class="phpdocumentor-element-found-in__line">410</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockSimple
@@ -3630,7 +3641,7 @@ Indicates whether or not to block syncing the calendar.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">432</span>
+    <span class="phpdocumentor-element-found-in__line">439</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordExpirationDays
@@ -3677,7 +3688,7 @@ Number of days before the password expires.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">461</span>
+    <span class="phpdocumentor-element-found-in__line">468</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinimumCharacterSetCount
@@ -3724,7 +3735,7 @@ Number of character sets a password must contain.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">490</span>
+    <span class="phpdocumentor-element-found-in__line">497</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinimumLength
@@ -3771,7 +3782,7 @@ Minimum length of passwords.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">519</span>
+    <span class="phpdocumentor-element-found-in__line">526</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinutesOfInactivityBeforeScreenTimeout
@@ -3818,7 +3829,7 @@ Minutes of inactivity before screen timeout.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">548</span>
+    <span class="phpdocumentor-element-found-in__line">555</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordPreviousPasswordBlockCount
@@ -3865,7 +3876,7 @@ Number of previous passwords to block. Valid values 0 to 24</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">577</span>
+    <span class="phpdocumentor-element-found-in__line">584</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordRequired
@@ -3912,7 +3923,7 @@ Indicates whether or not to require a password.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">610</span>
+    <span class="phpdocumentor-element-found-in__line">617</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordRequiredType
@@ -3959,7 +3970,7 @@ Password type that is required. Possible values are: deviceDefault, alphanumeric
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">639</span>
+    <span class="phpdocumentor-element-found-in__line">646</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordSignInFailureCountBeforeFactoryReset
@@ -4006,7 +4017,7 @@ Number of sign in failures allowed before factory reset.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">668</span>
+    <span class="phpdocumentor-element-found-in__line">675</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the screenCaptureBlocked
@@ -4053,7 +4064,7 @@ Indicates whether or not to block screenshots.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">697</span>
+    <span class="phpdocumentor-element-found-in__line">704</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the storageBlockRemovableStorage
@@ -4100,7 +4111,7 @@ Indicates whether or not to block removable storage.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">726</span>
+    <span class="phpdocumentor-element-found-in__line">733</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the storageRequireEncryption
@@ -4147,7 +4158,7 @@ Indicates whether or not to require encryption.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">327</span>
+    <span class="phpdocumentor-element-found-in__line">355</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userStatuses
@@ -4155,7 +4166,7 @@ Device configuration installation status by user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setUserStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setUserStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -4163,7 +4174,7 @@ Device configuration installation status by user.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The userStatuses</p>
@@ -4194,7 +4205,7 @@ Device configuration installation status by user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">360</span>
+    <span class="phpdocumentor-element-found-in__line">388</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userStatusOverview
@@ -4288,7 +4299,7 @@ Version of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">755</span>
+    <span class="phpdocumentor-element-found-in__line">762</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the webBrowserBlocked
@@ -4335,7 +4346,7 @@ Indicates whether or not to block the web browser.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">784</span>
+    <span class="phpdocumentor-element-found-in__line">791</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wifiBlockAutomaticConnectHotspots
@@ -4382,7 +4393,7 @@ Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Ha
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">813</span>
+    <span class="phpdocumentor-element-found-in__line">820</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wifiBlocked
@@ -4429,7 +4440,7 @@ Indicates whether or not to block Wi-Fi.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">842</span>
+    <span class="phpdocumentor-element-found-in__line">849</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wifiBlockHotspotReporting
@@ -4476,7 +4487,7 @@ Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-F
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsPhone81GeneralConfiguration.php"><a href="files/src-model-windowsphone81generalconfiguration.html"><abbr title="src/Model/WindowsPhone81GeneralConfiguration.php">WindowsPhone81GeneralConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">871</span>
+    <span class="phpdocumentor-element-found-in__line">878</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the windowsStoreBlocked

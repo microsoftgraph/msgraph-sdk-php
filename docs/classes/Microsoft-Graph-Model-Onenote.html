@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -183,7 +194,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Onenote.html#method_getNotebooks">getNotebooks()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Notebook.html"><abbr title="\Microsoft\Graph\Model\Notebook">Notebook</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the notebooks
 The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.</dd>
@@ -198,7 +209,7 @@ The collection of OneNote notebooks that are owned by the user or group. Read-on
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Onenote.html#method_getOperations">getOperations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteOperation.html"><abbr title="\Microsoft\Graph\Model\OnenoteOperation">OnenoteOperation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the operations
 The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.</dd>
@@ -206,7 +217,7 @@ The status of OneNote operations. Getting an operations collection is not suppor
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Onenote.html#method_getPages">getPages()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenotePage.html"><abbr title="\Microsoft\Graph\Model\OnenotePage">OnenotePage</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the pages
 The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.</dd>
@@ -221,7 +232,7 @@ The pages in all OneNote notebooks that are owned by the user or group.  Read-on
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Onenote.html#method_getResources">getResources()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteResource.html"><abbr title="\Microsoft\Graph\Model\OnenoteResource">OnenoteResource</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the resources
 The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.</dd>
@@ -229,7 +240,7 @@ The image and other file resources in OneNote pages. Getting a resources collect
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Onenote.html#method_getSectionGroups">getSectionGroups()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SectionGroup.html"><abbr title="\Microsoft\Graph\Model\SectionGroup">SectionGroup</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the sectionGroups
 The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.</dd>
@@ -237,7 +248,7 @@ The section groups in all OneNote notebooks that are owned by the user or group.
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Onenote.html#method_getSections">getSections()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteSection.html"><abbr title="\Microsoft\Graph\Model\OnenoteSection">OnenoteSection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the sections
 The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.</dd>
@@ -468,7 +479,7 @@ The collection of OneNote notebooks that are owned by the user or group. Read-on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getNotebooks</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getNotebooks</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Notebook.html"><abbr title="\Microsoft\Graph\Model\Notebook">Notebook</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -476,7 +487,7 @@ The collection of OneNote notebooks that are owned by the user or group. Read-on
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Notebook.html"><abbr title="\Microsoft\Graph\Model\Notebook">Notebook</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The notebooks</p>
 </section>
@@ -531,7 +542,7 @@ The collection of OneNote notebooks that are owned by the user or group. Read-on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operations
@@ -539,7 +550,7 @@ The status of OneNote operations. Getting an operations collection is not suppor
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteOperation.html"><abbr title="\Microsoft\Graph\Model\OnenoteOperation">OnenoteOperation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -547,7 +558,7 @@ The status of OneNote operations. Getting an operations collection is not suppor
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteOperation.html"><abbr title="\Microsoft\Graph\Model\OnenoteOperation">OnenoteOperation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The operations</p>
 </section>
@@ -567,7 +578,7 @@ The status of OneNote operations. Getting an operations collection is not suppor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">108</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pages
@@ -575,7 +586,7 @@ The pages in all OneNote notebooks that are owned by the user or group.  Read-on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getPages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenotePage.html"><abbr title="\Microsoft\Graph\Model\OnenotePage">OnenotePage</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -583,7 +594,7 @@ The pages in all OneNote notebooks that are owned by the user or group.  Read-on
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenotePage.html"><abbr title="\Microsoft\Graph\Model\OnenotePage">OnenotePage</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The pages</p>
 </section>
@@ -638,7 +649,7 @@ The pages in all OneNote notebooks that are owned by the user or group.  Read-on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">124</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resources
@@ -646,7 +657,7 @@ The image and other file resources in OneNote pages. Getting a resources collect
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteResource.html"><abbr title="\Microsoft\Graph\Model\OnenoteResource">OnenoteResource</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -654,7 +665,7 @@ The image and other file resources in OneNote pages. Getting a resources collect
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteResource.html"><abbr title="\Microsoft\Graph\Model\OnenoteResource">OnenoteResource</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The resources</p>
 </section>
@@ -674,7 +685,7 @@ The image and other file resources in OneNote pages. Getting a resources collect
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the sectionGroups
@@ -682,7 +693,7 @@ The section groups in all OneNote notebooks that are owned by the user or group.
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSectionGroups</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSectionGroups</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SectionGroup.html"><abbr title="\Microsoft\Graph\Model\SectionGroup">SectionGroup</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -690,7 +701,7 @@ The section groups in all OneNote notebooks that are owned by the user or group.
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SectionGroup.html"><abbr title="\Microsoft\Graph\Model\SectionGroup">SectionGroup</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The sectionGroups</p>
 </section>
@@ -710,7 +721,7 @@ The section groups in all OneNote notebooks that are owned by the user or group.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the sections
@@ -718,7 +729,7 @@ The sections in all OneNote notebooks that are owned by the user or group.  Read
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteSection.html"><abbr title="\Microsoft\Graph\Model\OnenoteSection">OnenoteSection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -726,7 +737,7 @@ The sections in all OneNote notebooks that are owned by the user or group.  Read
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteSection.html"><abbr title="\Microsoft\Graph\Model\OnenoteSection">OnenoteSection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The sections</p>
 </section>
@@ -829,7 +840,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the notebooks
@@ -837,7 +848,7 @@ The collection of OneNote notebooks that are owned by the user or group. Read-on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setNotebooks</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Notebook.html"><abbr title="\Microsoft\Graph\Model\Notebook">Notebook</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setNotebooks</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Notebook.html"><abbr title="\Microsoft\Graph\Model\Notebook">Notebook</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -845,7 +856,7 @@ The collection of OneNote notebooks that are owned by the user or group. Read-on
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Notebook.html"><abbr title="\Microsoft\Graph\Model\Notebook">Notebook</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Notebook.html"><abbr title="\Microsoft\Graph\Model\Notebook">Notebook</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The notebooks</p>
@@ -922,7 +933,7 @@ The collection of OneNote notebooks that are owned by the user or group. Read-on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">81</span>
+    <span class="phpdocumentor-element-found-in__line">95</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operations
@@ -930,7 +941,7 @@ The status of OneNote operations. Getting an operations collection is not suppor
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnenoteOperation.html"><abbr title="\Microsoft\Graph\Model\OnenoteOperation">OnenoteOperation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteOperation.html"><abbr title="\Microsoft\Graph\Model\OnenoteOperation">OnenoteOperation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -938,7 +949,7 @@ The status of OneNote operations. Getting an operations collection is not suppor
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnenoteOperation.html"><abbr title="\Microsoft\Graph\Model\OnenoteOperation">OnenoteOperation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteOperation.html"><abbr title="\Microsoft\Graph\Model\OnenoteOperation">OnenoteOperation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The operations</p>
@@ -969,7 +980,7 @@ The status of OneNote operations. Getting an operations collection is not suppor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pages
@@ -977,7 +988,7 @@ The pages in all OneNote notebooks that are owned by the user or group.  Read-on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnenotePage.html"><abbr title="\Microsoft\Graph\Model\OnenotePage">OnenotePage</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenotePage.html"><abbr title="\Microsoft\Graph\Model\OnenotePage">OnenotePage</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -985,7 +996,7 @@ The pages in all OneNote notebooks that are owned by the user or group.  Read-on
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnenotePage.html"><abbr title="\Microsoft\Graph\Model\OnenotePage">OnenotePage</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenotePage.html"><abbr title="\Microsoft\Graph\Model\OnenotePage">OnenotePage</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The pages</p>
@@ -1016,7 +1027,7 @@ The pages in all OneNote notebooks that are owned by the user or group.  Read-on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">141</span>
+    <span class="phpdocumentor-element-found-in__line">169</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resources
@@ -1024,7 +1035,7 @@ The image and other file resources in OneNote pages. Getting a resources collect
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnenoteResource.html"><abbr title="\Microsoft\Graph\Model\OnenoteResource">OnenoteResource</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteResource.html"><abbr title="\Microsoft\Graph\Model\OnenoteResource">OnenoteResource</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1032,7 +1043,7 @@ The image and other file resources in OneNote pages. Getting a resources collect
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnenoteResource.html"><abbr title="\Microsoft\Graph\Model\OnenoteResource">OnenoteResource</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteResource.html"><abbr title="\Microsoft\Graph\Model\OnenoteResource">OnenoteResource</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The resources</p>
@@ -1063,7 +1074,7 @@ The image and other file resources in OneNote pages. Getting a resources collect
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">206</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sectionGroups
@@ -1071,7 +1082,7 @@ The section groups in all OneNote notebooks that are owned by the user or group.
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSectionGroups</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SectionGroup.html"><abbr title="\Microsoft\Graph\Model\SectionGroup">SectionGroup</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSectionGroups</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SectionGroup.html"><abbr title="\Microsoft\Graph\Model\SectionGroup">SectionGroup</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1079,7 +1090,7 @@ The section groups in all OneNote notebooks that are owned by the user or group.
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SectionGroup.html"><abbr title="\Microsoft\Graph\Model\SectionGroup">SectionGroup</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SectionGroup.html"><abbr title="\Microsoft\Graph\Model\SectionGroup">SectionGroup</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The sectionGroups</p>
@@ -1110,7 +1121,7 @@ The section groups in all OneNote notebooks that are owned by the user or group.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Onenote.php"><a href="files/src-model-onenote.html"><abbr title="src/Model/Onenote.php">Onenote.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">201</span>
+    <span class="phpdocumentor-element-found-in__line">243</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sections
@@ -1118,7 +1129,7 @@ The sections in all OneNote notebooks that are owned by the user or group.  Read
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSections</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnenoteSection.html"><abbr title="\Microsoft\Graph\Model\OnenoteSection">OnenoteSection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSections</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteSection.html"><abbr title="\Microsoft\Graph\Model\OnenoteSection">OnenoteSection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Onenote.html"><abbr title="\Microsoft\Graph\Model\Onenote">Onenote</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1126,7 +1137,7 @@ The sections in all OneNote notebooks that are owned by the user or group.  Read
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-OnenoteSection.html"><abbr title="\Microsoft\Graph\Model\OnenoteSection">OnenoteSection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-OnenoteSection.html"><abbr title="\Microsoft\Graph\Model\OnenoteSection">OnenoteSection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The sections</p>

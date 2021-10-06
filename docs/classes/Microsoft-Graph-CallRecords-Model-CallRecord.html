@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -91,6 +95,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -208,7 +219,7 @@ UTC time when the call record was created. The DatetimeOffset type represents da
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html#method_getModalities">getModalities()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the modalities
 List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.</dd>
@@ -231,7 +242,7 @@ The organizing party&#039;s identity.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html#method_getParticipants">getParticipants()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the participants
 List of distinct identities involved in the call.</dd>
@@ -246,7 +257,7 @@ List of distinct identities involved in the call.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html#method_getSessions">getSessions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the sessions
 List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.</dd>
@@ -641,7 +652,7 @@ List of all the modalities used in the call. Possible values are: unknown, audio
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getModalities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getModalities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -649,7 +660,7 @@ List of all the modalities used in the call. Possible values are: unknown, audio
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The modalities</p>
 </section>
@@ -704,7 +715,7 @@ List of all the modalities used in the call. Possible values are: unknown, audio
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">158</span>
+    <span class="phpdocumentor-element-found-in__line">165</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the organizer
@@ -740,7 +751,7 @@ The organizing party&#039;s identity.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">192</span>
+    <span class="phpdocumentor-element-found-in__line">199</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the participants
@@ -748,7 +759,7 @@ List of distinct identities involved in the call.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getParticipants</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getParticipants</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -756,7 +767,7 @@ List of distinct identities involved in the call.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The participants</p>
 </section>
@@ -811,7 +822,7 @@ List of distinct identities involved in the call.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">317</span>
+    <span class="phpdocumentor-element-found-in__line">331</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the sessions
@@ -819,7 +830,7 @@ List of sessions involved in the call. Peer-to-peer calls typically only have on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSessions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSessions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -827,7 +838,7 @@ List of sessions involved in the call. Peer-to-peer calls typically only have on
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The sessions</p>
 </section>
@@ -847,7 +858,7 @@ List of sessions involved in the call. Peer-to-peer calls typically only have on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">221</span>
+    <span class="phpdocumentor-element-found-in__line">235</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startDateTime
@@ -883,7 +894,7 @@ UTC time when the first user joined the call. The DatetimeOffset type represents
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">254</span>
+    <span class="phpdocumentor-element-found-in__line">268</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the type
@@ -919,7 +930,7 @@ Indicates the type of the call. Possible values are: unknown, groupCall, peerToP
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">287</span>
+    <span class="phpdocumentor-element-found-in__line">301</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the version
@@ -1179,7 +1190,7 @@ UTC time when the call record was created. The DatetimeOffset type represents da
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">146</span>
+    <span class="phpdocumentor-element-found-in__line">153</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the modalities
@@ -1187,7 +1198,7 @@ List of all the modalities used in the call. Possible values are: unknown, audio
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setModalities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html"><abbr title="\Microsoft\Graph\CallRecords\Model\CallRecord">CallRecord</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setModalities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html"><abbr title="\Microsoft\Graph\CallRecords\Model\CallRecord">CallRecord</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1195,7 +1206,7 @@ List of all the modalities used in the call. Possible values are: unknown, audio
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Modality.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Modality">Modality</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The modalities</p>
@@ -1272,7 +1283,7 @@ List of all the modalities used in the call. Possible values are: unknown, audio
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the organizer
@@ -1319,7 +1330,7 @@ The organizing party&#039;s identity.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">209</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the participants
@@ -1327,7 +1338,7 @@ List of distinct identities involved in the call.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setParticipants</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html"><abbr title="\Microsoft\Graph\CallRecords\Model\CallRecord">CallRecord</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setParticipants</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html"><abbr title="\Microsoft\Graph\CallRecords\Model\CallRecord">CallRecord</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1335,7 +1346,7 @@ List of distinct identities involved in the call.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The participants</p>
@@ -1366,7 +1377,7 @@ List of distinct identities involved in the call.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">334</span>
+    <span class="phpdocumentor-element-found-in__line">355</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sessions
@@ -1374,7 +1385,7 @@ List of sessions involved in the call. Peer-to-peer calls typically only have on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSessions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html"><abbr title="\Microsoft\Graph\CallRecords\Model\CallRecord">CallRecord</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSessions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-CallRecord.html"><abbr title="\Microsoft\Graph\CallRecords\Model\CallRecord">CallRecord</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1382,7 +1393,7 @@ List of sessions involved in the call. Peer-to-peer calls typically only have on
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-Session.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Session">Session</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The sessions</p>
@@ -1413,7 +1424,7 @@ List of sessions involved in the call. Peer-to-peer calls typically only have on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">242</span>
+    <span class="phpdocumentor-element-found-in__line">256</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startDateTime
@@ -1460,7 +1471,7 @@ UTC time when the first user joined the call. The DatetimeOffset type represents
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">275</span>
+    <span class="phpdocumentor-element-found-in__line">289</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the type
@@ -1507,7 +1518,7 @@ Indicates the type of the call. Possible values are: unknown, groupCall, peerToP
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/CallRecord.php"><a href="files/src-callrecords-model-callrecord.html"><abbr title="src/CallRecords/Model/CallRecord.php">CallRecord.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">304</span>
+    <span class="phpdocumentor-element-found-in__line">318</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the version

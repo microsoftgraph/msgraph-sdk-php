@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WorkingHours.html#method_getDaysOfWeek">getDaysOfWeek()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the daysOfWeek
 The days of the week on which the user works.</dd>
@@ -400,7 +411,7 @@ The days of the week on which the user works.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDaysOfWeek</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getDaysOfWeek</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -408,7 +419,7 @@ The days of the week on which the user works.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The daysOfWeek</p>
 </section>
@@ -428,7 +439,7 @@ The days of the week on which the user works.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WorkingHours.php"><a href="files/src-model-workinghours.html"><abbr title="src/Model/WorkingHours.php">WorkingHours.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the endTime
@@ -570,7 +581,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WorkingHours.php"><a href="files/src-model-workinghours.html"><abbr title="src/Model/WorkingHours.php">WorkingHours.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">99</span>
+    <span class="phpdocumentor-element-found-in__line">104</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startTime
@@ -606,7 +617,7 @@ The time of the day that the user starts working.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WorkingHours.php"><a href="files/src-model-workinghours.html"><abbr title="src/Model/WorkingHours.php">WorkingHours.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">132</span>
+    <span class="phpdocumentor-element-found-in__line">138</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the timeZone
@@ -678,7 +689,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WorkingHours.php"><a href="files/src-model-workinghours.html"><abbr title="src/Model/WorkingHours.php">WorkingHours.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the daysOfWeek
@@ -686,7 +697,7 @@ The days of the week on which the user works.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDaysOfWeek</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WorkingHours.html"><abbr title="\Microsoft\Graph\Model\WorkingHours">WorkingHours</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDaysOfWeek</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WorkingHours.html"><abbr title="\Microsoft\Graph\Model\WorkingHours">WorkingHours</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -694,7 +705,7 @@ The days of the week on which the user works.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DayOfWeek.html"><abbr title="\Microsoft\Graph\Model\DayOfWeek">DayOfWeek</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the daysOfWeek</p>
@@ -726,7 +737,7 @@ The days of the week on which the user works.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WorkingHours.php"><a href="files/src-model-workinghours.html"><abbr title="src/Model/WorkingHours.php">WorkingHours.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">87</span>
+    <span class="phpdocumentor-element-found-in__line">92</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the endTime
@@ -867,7 +878,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WorkingHours.php"><a href="files/src-model-workinghours.html"><abbr title="src/Model/WorkingHours.php">WorkingHours.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">120</span>
+    <span class="phpdocumentor-element-found-in__line">126</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startTime
@@ -915,7 +926,7 @@ The time of the day that the user starts working.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WorkingHours.php"><a href="files/src-model-workinghours.html"><abbr title="src/Model/WorkingHours.php">WorkingHours.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">153</span>
+    <span class="phpdocumentor-element-found-in__line">160</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the timeZone

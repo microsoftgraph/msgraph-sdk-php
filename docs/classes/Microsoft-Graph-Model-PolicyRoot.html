@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PolicyRoot.html#method_getActivityBasedTimeoutPolicies">getActivityBasedTimeoutPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ActivityBasedTimeoutPolicy.html"><abbr title="\Microsoft\Graph\Model\ActivityBasedTimeoutPolicy">ActivityBasedTimeoutPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the activityBasedTimeoutPolicies
 The policy that controls the idle time out for web sessions for applications.</dd>
@@ -215,7 +226,7 @@ The policy that controls Azure AD authorization settings.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PolicyRoot.html#method_getClaimsMappingPolicies">getClaimsMappingPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ClaimsMappingPolicy.html"><abbr title="\Microsoft\Graph\Model\ClaimsMappingPolicy">ClaimsMappingPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the claimsMappingPolicies
 The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.</dd>
@@ -223,7 +234,7 @@ The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect proto
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PolicyRoot.html#method_getConditionalAccessPolicies">getConditionalAccessPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\ConditionalAccessPolicy">ConditionalAccessPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the conditionalAccessPolicies
 The custom rules that define an access scenario.</dd>
@@ -231,7 +242,7 @@ The custom rules that define an access scenario.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PolicyRoot.html#method_getFeatureRolloutPolicies">getFeatureRolloutPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-FeatureRolloutPolicy.html"><abbr title="\Microsoft\Graph\Model\FeatureRolloutPolicy">FeatureRolloutPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the featureRolloutPolicies
 The feature rollout policy associated with a directory object.</dd>
@@ -239,7 +250,7 @@ The feature rollout policy associated with a directory object.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PolicyRoot.html#method_getHomeRealmDiscoveryPolicies">getHomeRealmDiscoveryPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-HomeRealmDiscoveryPolicy.html"><abbr title="\Microsoft\Graph\Model\HomeRealmDiscoveryPolicy">HomeRealmDiscoveryPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the homeRealmDiscoveryPolicies
 The policy to control Azure AD authentication behavior for federated users.</dd>
@@ -270,7 +281,7 @@ The policy that represents the security defaults that protect against common att
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PolicyRoot.html#method_getPermissionGrantPolicies">getPermissionGrantPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionGrantPolicy.html"><abbr title="\Microsoft\Graph\Model\PermissionGrantPolicy">PermissionGrantPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the permissionGrantPolicies
 The policy that specifies the conditions under which consent can be granted.</dd>
@@ -285,7 +296,7 @@ The policy that specifies the conditions under which consent can be granted.</dd
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PolicyRoot.html#method_getTokenIssuancePolicies">getTokenIssuancePolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenIssuancePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenIssuancePolicy">TokenIssuancePolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the tokenIssuancePolicies
 The policy that specifies the characteristics of SAML tokens issued by Azure AD.</dd>
@@ -293,7 +304,7 @@ The policy that specifies the characteristics of SAML tokens issued by Azure AD.
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PolicyRoot.html#method_getTokenLifetimePolicies">getTokenLifetimePolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenLifetimePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenLifetimePolicy">TokenLifetimePolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the tokenLifetimePolicies
 The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.</dd>
@@ -544,7 +555,7 @@ The policy that controls the idle time out for web sessions for applications.</p
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getActivityBasedTimeoutPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getActivityBasedTimeoutPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ActivityBasedTimeoutPolicy.html"><abbr title="\Microsoft\Graph\Model\ActivityBasedTimeoutPolicy">ActivityBasedTimeoutPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -552,7 +563,7 @@ The policy that controls the idle time out for web sessions for applications.</p
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ActivityBasedTimeoutPolicy.html"><abbr title="\Microsoft\Graph\Model\ActivityBasedTimeoutPolicy">ActivityBasedTimeoutPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The activityBasedTimeoutPolicies</p>
 </section>
@@ -572,7 +583,7 @@ The policy that controls the idle time out for web sessions for applications.</p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">342</span>
+    <span class="phpdocumentor-element-found-in__line">391</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the adminConsentRequestPolicy
@@ -680,7 +691,7 @@ The authentication methods and the users that are allowed to use them to sign in
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">129</span>
+    <span class="phpdocumentor-element-found-in__line">136</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the authorizationPolicy
@@ -716,7 +727,7 @@ The policy that controls Azure AD authorization settings.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">163</span>
+    <span class="phpdocumentor-element-found-in__line">170</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the claimsMappingPolicies
@@ -724,7 +735,7 @@ The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect proto
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getClaimsMappingPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getClaimsMappingPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ClaimsMappingPolicy.html"><abbr title="\Microsoft\Graph\Model\ClaimsMappingPolicy">ClaimsMappingPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -732,7 +743,7 @@ The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect proto
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ClaimsMappingPolicy.html"><abbr title="\Microsoft\Graph\Model\ClaimsMappingPolicy">ClaimsMappingPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The claimsMappingPolicies</p>
 </section>
@@ -752,7 +763,7 @@ The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect proto
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">376</span>
+    <span class="phpdocumentor-element-found-in__line">425</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the conditionalAccessPolicies
@@ -760,7 +771,7 @@ The custom rules that define an access scenario.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getConditionalAccessPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getConditionalAccessPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\ConditionalAccessPolicy">ConditionalAccessPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -768,7 +779,7 @@ The custom rules that define an access scenario.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\ConditionalAccessPolicy">ConditionalAccessPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The conditionalAccessPolicies</p>
 </section>
@@ -788,7 +799,7 @@ The custom rules that define an access scenario.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">313</span>
+    <span class="phpdocumentor-element-found-in__line">355</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the featureRolloutPolicies
@@ -796,7 +807,7 @@ The feature rollout policy associated with a directory object.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFeatureRolloutPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getFeatureRolloutPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-FeatureRolloutPolicy.html"><abbr title="\Microsoft\Graph\Model\FeatureRolloutPolicy">FeatureRolloutPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -804,7 +815,7 @@ The feature rollout policy associated with a directory object.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-FeatureRolloutPolicy.html"><abbr title="\Microsoft\Graph\Model\FeatureRolloutPolicy">FeatureRolloutPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The featureRolloutPolicies</p>
 </section>
@@ -824,7 +835,7 @@ The feature rollout policy associated with a directory object.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">193</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the homeRealmDiscoveryPolicies
@@ -832,7 +843,7 @@ The policy to control Azure AD authentication behavior for federated users.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getHomeRealmDiscoveryPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getHomeRealmDiscoveryPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-HomeRealmDiscoveryPolicy.html"><abbr title="\Microsoft\Graph\Model\HomeRealmDiscoveryPolicy">HomeRealmDiscoveryPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -840,7 +851,7 @@ The policy to control Azure AD authentication behavior for federated users.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-HomeRealmDiscoveryPolicy.html"><abbr title="\Microsoft\Graph\Model\HomeRealmDiscoveryPolicy">HomeRealmDiscoveryPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The homeRealmDiscoveryPolicies</p>
 </section>
@@ -896,7 +907,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">405</span>
+    <span class="phpdocumentor-element-found-in__line">461</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the identitySecurityDefaultsEnforcementPolicy
@@ -967,7 +978,7 @@ The policy that represents the security defaults that protect against common att
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">223</span>
+    <span class="phpdocumentor-element-found-in__line">244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the permissionGrantPolicies
@@ -975,7 +986,7 @@ The policy that specifies the conditions under which consent can be granted.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPermissionGrantPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getPermissionGrantPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionGrantPolicy.html"><abbr title="\Microsoft\Graph\Model\PermissionGrantPolicy">PermissionGrantPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -983,7 +994,7 @@ The policy that specifies the conditions under which consent can be granted.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionGrantPolicy.html"><abbr title="\Microsoft\Graph\Model\PermissionGrantPolicy">PermissionGrantPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The permissionGrantPolicies</p>
 </section>
@@ -1038,7 +1049,7 @@ The policy that specifies the conditions under which consent can be granted.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">253</span>
+    <span class="phpdocumentor-element-found-in__line">281</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenIssuancePolicies
@@ -1046,7 +1057,7 @@ The policy that specifies the characteristics of SAML tokens issued by Azure AD.
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTokenIssuancePolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTokenIssuancePolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenIssuancePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenIssuancePolicy">TokenIssuancePolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1054,7 +1065,7 @@ The policy that specifies the characteristics of SAML tokens issued by Azure AD.
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenIssuancePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenIssuancePolicy">TokenIssuancePolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The tokenIssuancePolicies</p>
 </section>
@@ -1074,7 +1085,7 @@ The policy that specifies the characteristics of SAML tokens issued by Azure AD.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">283</span>
+    <span class="phpdocumentor-element-found-in__line">318</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenLifetimePolicies
@@ -1082,7 +1093,7 @@ The policy that controls the lifetime of a JWT access token, an ID token, or a S
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTokenLifetimePolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTokenLifetimePolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenLifetimePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenLifetimePolicy">TokenLifetimePolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1090,7 +1101,7 @@ The policy that controls the lifetime of a JWT access token, an ID token, or a S
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenLifetimePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenLifetimePolicy">TokenLifetimePolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The tokenLifetimePolicies</p>
 </section>
@@ -1146,7 +1157,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">117</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the activityBasedTimeoutPolicies
@@ -1154,7 +1165,7 @@ The policy that controls the idle time out for web sessions for applications.</p
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setActivityBasedTimeoutPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ActivityBasedTimeoutPolicy.html"><abbr title="\Microsoft\Graph\Model\ActivityBasedTimeoutPolicy">ActivityBasedTimeoutPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setActivityBasedTimeoutPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ActivityBasedTimeoutPolicy.html"><abbr title="\Microsoft\Graph\Model\ActivityBasedTimeoutPolicy">ActivityBasedTimeoutPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1162,7 +1173,7 @@ The policy that controls the idle time out for web sessions for applications.</p
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ActivityBasedTimeoutPolicy.html"><abbr title="\Microsoft\Graph\Model\ActivityBasedTimeoutPolicy">ActivityBasedTimeoutPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ActivityBasedTimeoutPolicy.html"><abbr title="\Microsoft\Graph\Model\ActivityBasedTimeoutPolicy">ActivityBasedTimeoutPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The activityBasedTimeoutPolicies</p>
@@ -1193,7 +1204,7 @@ The policy that controls the idle time out for web sessions for applications.</p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">363</span>
+    <span class="phpdocumentor-element-found-in__line">412</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the adminConsentRequestPolicy
@@ -1334,7 +1345,7 @@ The authentication methods and the users that are allowed to use them to sign in
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the authorizationPolicy
@@ -1381,7 +1392,7 @@ The policy that controls Azure AD authorization settings.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">180</span>
+    <span class="phpdocumentor-element-found-in__line">194</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the claimsMappingPolicies
@@ -1389,7 +1400,7 @@ The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect proto
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setClaimsMappingPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ClaimsMappingPolicy.html"><abbr title="\Microsoft\Graph\Model\ClaimsMappingPolicy">ClaimsMappingPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setClaimsMappingPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ClaimsMappingPolicy.html"><abbr title="\Microsoft\Graph\Model\ClaimsMappingPolicy">ClaimsMappingPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1397,7 +1408,7 @@ The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect proto
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ClaimsMappingPolicy.html"><abbr title="\Microsoft\Graph\Model\ClaimsMappingPolicy">ClaimsMappingPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ClaimsMappingPolicy.html"><abbr title="\Microsoft\Graph\Model\ClaimsMappingPolicy">ClaimsMappingPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The claimsMappingPolicies</p>
@@ -1428,7 +1439,7 @@ The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect proto
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">393</span>
+    <span class="phpdocumentor-element-found-in__line">449</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the conditionalAccessPolicies
@@ -1436,7 +1447,7 @@ The custom rules that define an access scenario.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setConditionalAccessPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\ConditionalAccessPolicy">ConditionalAccessPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setConditionalAccessPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\ConditionalAccessPolicy">ConditionalAccessPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1444,7 +1455,7 @@ The custom rules that define an access scenario.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\ConditionalAccessPolicy">ConditionalAccessPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\ConditionalAccessPolicy">ConditionalAccessPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The conditionalAccessPolicies</p>
@@ -1475,7 +1486,7 @@ The custom rules that define an access scenario.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">330</span>
+    <span class="phpdocumentor-element-found-in__line">379</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the featureRolloutPolicies
@@ -1483,7 +1494,7 @@ The feature rollout policy associated with a directory object.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setFeatureRolloutPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-FeatureRolloutPolicy.html"><abbr title="\Microsoft\Graph\Model\FeatureRolloutPolicy">FeatureRolloutPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setFeatureRolloutPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-FeatureRolloutPolicy.html"><abbr title="\Microsoft\Graph\Model\FeatureRolloutPolicy">FeatureRolloutPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1491,7 +1502,7 @@ The feature rollout policy associated with a directory object.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-FeatureRolloutPolicy.html"><abbr title="\Microsoft\Graph\Model\FeatureRolloutPolicy">FeatureRolloutPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-FeatureRolloutPolicy.html"><abbr title="\Microsoft\Graph\Model\FeatureRolloutPolicy">FeatureRolloutPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The featureRolloutPolicies</p>
@@ -1522,7 +1533,7 @@ The feature rollout policy associated with a directory object.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">210</span>
+    <span class="phpdocumentor-element-found-in__line">231</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the homeRealmDiscoveryPolicies
@@ -1530,7 +1541,7 @@ The policy to control Azure AD authentication behavior for federated users.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setHomeRealmDiscoveryPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-HomeRealmDiscoveryPolicy.html"><abbr title="\Microsoft\Graph\Model\HomeRealmDiscoveryPolicy">HomeRealmDiscoveryPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setHomeRealmDiscoveryPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-HomeRealmDiscoveryPolicy.html"><abbr title="\Microsoft\Graph\Model\HomeRealmDiscoveryPolicy">HomeRealmDiscoveryPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1538,7 +1549,7 @@ The policy to control Azure AD authentication behavior for federated users.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-HomeRealmDiscoveryPolicy.html"><abbr title="\Microsoft\Graph\Model\HomeRealmDiscoveryPolicy">HomeRealmDiscoveryPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-HomeRealmDiscoveryPolicy.html"><abbr title="\Microsoft\Graph\Model\HomeRealmDiscoveryPolicy">HomeRealmDiscoveryPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The homeRealmDiscoveryPolicies</p>
@@ -1616,7 +1627,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">426</span>
+    <span class="phpdocumentor-element-found-in__line">482</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the identitySecurityDefaultsEnforcementPolicy
@@ -1709,7 +1720,7 @@ The policy that represents the security defaults that protect against common att
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">240</span>
+    <span class="phpdocumentor-element-found-in__line">268</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the permissionGrantPolicies
@@ -1717,7 +1728,7 @@ The policy that specifies the conditions under which consent can be granted.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPermissionGrantPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PermissionGrantPolicy.html"><abbr title="\Microsoft\Graph\Model\PermissionGrantPolicy">PermissionGrantPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPermissionGrantPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionGrantPolicy.html"><abbr title="\Microsoft\Graph\Model\PermissionGrantPolicy">PermissionGrantPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1725,7 +1736,7 @@ The policy that specifies the conditions under which consent can be granted.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PermissionGrantPolicy.html"><abbr title="\Microsoft\Graph\Model\PermissionGrantPolicy">PermissionGrantPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PermissionGrantPolicy.html"><abbr title="\Microsoft\Graph\Model\PermissionGrantPolicy">PermissionGrantPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The permissionGrantPolicies</p>
@@ -1756,7 +1767,7 @@ The policy that specifies the conditions under which consent can be granted.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">270</span>
+    <span class="phpdocumentor-element-found-in__line">305</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenIssuancePolicies
@@ -1764,7 +1775,7 @@ The policy that specifies the characteristics of SAML tokens issued by Azure AD.
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTokenIssuancePolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TokenIssuancePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenIssuancePolicy">TokenIssuancePolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTokenIssuancePolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenIssuancePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenIssuancePolicy">TokenIssuancePolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1772,7 +1783,7 @@ The policy that specifies the characteristics of SAML tokens issued by Azure AD.
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TokenIssuancePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenIssuancePolicy">TokenIssuancePolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenIssuancePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenIssuancePolicy">TokenIssuancePolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The tokenIssuancePolicies</p>
@@ -1803,7 +1814,7 @@ The policy that specifies the characteristics of SAML tokens issued by Azure AD.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PolicyRoot.php"><a href="files/src-model-policyroot.html"><abbr title="src/Model/PolicyRoot.php">PolicyRoot.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">300</span>
+    <span class="phpdocumentor-element-found-in__line">342</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenLifetimePolicies
@@ -1811,7 +1822,7 @@ The policy that controls the lifetime of a JWT access token, an ID token, or a S
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTokenLifetimePolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TokenLifetimePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenLifetimePolicy">TokenLifetimePolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTokenLifetimePolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenLifetimePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenLifetimePolicy">TokenLifetimePolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PolicyRoot.html"><abbr title="\Microsoft\Graph\Model\PolicyRoot">PolicyRoot</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1819,7 +1830,7 @@ The policy that controls the lifetime of a JWT access token, an ID token, or a S
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TokenLifetimePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenLifetimePolicy">TokenLifetimePolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TokenLifetimePolicy.html"><abbr title="\Microsoft\Graph\Model\TokenLifetimePolicy">TokenLifetimePolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The tokenLifetimePolicies</p>

@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ConversationThread.html#method_getCcRecipients">getCcRecipients()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the ccRecipients
 The Cc: recipients for the thread. Returned only on $select.</dd>
@@ -222,7 +233,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ConversationThread.html#method_getPosts">getPosts()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the posts
 Read-only. Nullable.</dd>
@@ -253,7 +264,7 @@ The topic of the conversation. This property can be set when the conversation is
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ConversationThread.html#method_getToRecipients">getToRecipients()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the toRecipients
 The To: recipients for the thread. Returned only on $select.</dd>
@@ -480,7 +491,7 @@ The Cc: recipients for the thread. Returned only on $select.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCcRecipients</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getCcRecipients</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -488,7 +499,7 @@ The Cc: recipients for the thread. Returned only on $select.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The ccRecipients</p>
 </section>
@@ -508,7 +519,7 @@ The Cc: recipients for the thread. Returned only on $select.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hasAttachments
@@ -580,7 +591,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isLocked
@@ -616,7 +627,7 @@ Indicates if the thread is locked. Returned by default.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastDeliveredDateTime
@@ -687,7 +698,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">272</span>
+    <span class="phpdocumentor-element-found-in__line">286</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the posts
@@ -695,7 +706,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPosts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getPosts</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -703,7 +714,7 @@ Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The posts</p>
 </section>
@@ -723,7 +734,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the preview
@@ -794,7 +805,7 @@ A short summary from the body of the latest post in this conversation. Returned 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">190</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the topic
@@ -830,7 +841,7 @@ The topic of the conversation. This property can be set when the conversation is
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">213</span>
+    <span class="phpdocumentor-element-found-in__line">220</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the toRecipients
@@ -838,7 +849,7 @@ The To: recipients for the thread. Returned only on $select.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getToRecipients</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getToRecipients</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -846,7 +857,7 @@ The To: recipients for the thread. Returned only on $select.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The toRecipients</p>
 </section>
@@ -866,7 +877,7 @@ The To: recipients for the thread. Returned only on $select.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">242</span>
+    <span class="phpdocumentor-element-found-in__line">256</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the uniqueSenders
@@ -938,7 +949,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ccRecipients
@@ -946,7 +957,7 @@ The Cc: recipients for the thread. Returned only on $select.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCcRecipients</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ConversationThread.html"><abbr title="\Microsoft\Graph\Model\ConversationThread">ConversationThread</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setCcRecipients</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ConversationThread.html"><abbr title="\Microsoft\Graph\Model\ConversationThread">ConversationThread</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -954,7 +965,7 @@ The Cc: recipients for the thread. Returned only on $select.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The ccRecipients</p>
@@ -985,7 +996,7 @@ The Cc: recipients for the thread. Returned only on $select.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hasAttachments
@@ -1079,7 +1090,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">109</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isLocked
@@ -1126,7 +1137,7 @@ Indicates if the thread is locked. Returned by default.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">142</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastDeliveredDateTime
@@ -1219,7 +1230,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">289</span>
+    <span class="phpdocumentor-element-found-in__line">310</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the posts
@@ -1227,7 +1238,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPosts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ConversationThread.html"><abbr title="\Microsoft\Graph\Model\ConversationThread">ConversationThread</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPosts</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ConversationThread.html"><abbr title="\Microsoft\Graph\Model\ConversationThread">ConversationThread</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1235,7 +1246,7 @@ Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The posts</p>
@@ -1266,7 +1277,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">178</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the preview
@@ -1313,7 +1324,7 @@ A short summary from the body of the latest post in this conversation. Returned 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">200</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the topic
@@ -1360,7 +1371,7 @@ The topic of the conversation. This property can be set when the conversation is
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">230</span>
+    <span class="phpdocumentor-element-found-in__line">244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the toRecipients
@@ -1368,7 +1379,7 @@ The To: recipients for the thread. Returned only on $select.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setToRecipients</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ConversationThread.html"><abbr title="\Microsoft\Graph\Model\ConversationThread">ConversationThread</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setToRecipients</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ConversationThread.html"><abbr title="\Microsoft\Graph\Model\ConversationThread">ConversationThread</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1376,7 +1387,7 @@ The To: recipients for the thread. Returned only on $select.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The toRecipients</p>
@@ -1407,7 +1418,7 @@ The To: recipients for the thread. Returned only on $select.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ConversationThread.php"><a href="files/src-model-conversationthread.html"><abbr title="src/Model/ConversationThread.php">ConversationThread.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">259</span>
+    <span class="phpdocumentor-element-found-in__line">273</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the uniqueSenders

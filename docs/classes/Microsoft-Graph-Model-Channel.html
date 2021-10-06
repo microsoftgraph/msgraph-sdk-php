@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -231,7 +242,7 @@ Indicates whether the channel should automatically be marked &#039;favorite&#039
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Channel.html#method_getMembers">getMembers()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConversationMember.html"><abbr title="\Microsoft\Graph\Model\ConversationMember">ConversationMember</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the members
 A collection of membership records associated with the channel.</dd>
@@ -247,7 +258,7 @@ The type of the channel. Can be set during creation and can&#039;t be changed. P
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Channel.html#method_getMessages">getMessages()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the messages
 A collection of all the messages in the channel. A navigation property. Nullable.</dd>
@@ -269,7 +280,7 @@ A collection of all the messages in the channel. A navigation property. Nullable
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Channel.html#method_getTabs">getTabs()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TeamsTab.html"><abbr title="\Microsoft\Graph\Model\TeamsTab">TeamsTab</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the tabs
 A collection of all the tabs in the channel. A navigation property.</dd>
@@ -764,7 +775,7 @@ A collection of membership records associated with the channel.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMembers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMembers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConversationMember.html"><abbr title="\Microsoft\Graph\Model\ConversationMember">ConversationMember</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -772,7 +783,7 @@ A collection of membership records associated with the channel.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConversationMember.html"><abbr title="\Microsoft\Graph\Model\ConversationMember">ConversationMember</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The members</p>
 </section>
@@ -828,7 +839,7 @@ The type of the channel. Can be set during creation and can&#039;t be changed. P
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Channel.php"><a href="files/src-model-channel.html"><abbr title="src/Model/Channel.php">Channel.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">308</span>
+    <span class="phpdocumentor-element-found-in__line">315</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the messages
@@ -836,7 +847,7 @@ A collection of all the messages in the channel. A navigation property. Nullable
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMessages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMessages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -844,7 +855,7 @@ A collection of all the messages in the channel. A navigation property. Nullable
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The messages</p>
 </section>
@@ -934,7 +945,7 @@ A collection of all the messages in the channel. A navigation property. Nullable
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Channel.php"><a href="files/src-model-channel.html"><abbr title="src/Model/Channel.php">Channel.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">338</span>
+    <span class="phpdocumentor-element-found-in__line">352</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tabs
@@ -942,7 +953,7 @@ A collection of all the tabs in the channel. A navigation property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTabs</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTabs</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TeamsTab.html"><abbr title="\Microsoft\Graph\Model\TeamsTab">TeamsTab</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -950,7 +961,7 @@ A collection of all the tabs in the channel. A navigation property.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TeamsTab.html"><abbr title="\Microsoft\Graph\Model\TeamsTab">TeamsTab</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The tabs</p>
 </section>
@@ -1371,7 +1382,7 @@ Indicates whether the channel should automatically be marked &#039;favorite&#039
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Channel.php"><a href="files/src-model-channel.html"><abbr title="src/Model/Channel.php">Channel.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">302</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the members
@@ -1379,7 +1390,7 @@ A collection of membership records associated with the channel.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMembers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ConversationMember.html"><abbr title="\Microsoft\Graph\Model\ConversationMember">ConversationMember</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Channel.html"><abbr title="\Microsoft\Graph\Model\Channel">Channel</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMembers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConversationMember.html"><abbr title="\Microsoft\Graph\Model\ConversationMember">ConversationMember</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Channel.html"><abbr title="\Microsoft\Graph\Model\Channel">Channel</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1387,7 +1398,7 @@ A collection of membership records associated with the channel.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ConversationMember.html"><abbr title="\Microsoft\Graph\Model\ConversationMember">ConversationMember</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ConversationMember.html"><abbr title="\Microsoft\Graph\Model\ConversationMember">ConversationMember</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The members</p>
@@ -1465,7 +1476,7 @@ The type of the channel. Can be set during creation and can&#039;t be changed. P
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Channel.php"><a href="files/src-model-channel.html"><abbr title="src/Model/Channel.php">Channel.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">325</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the messages
@@ -1473,7 +1484,7 @@ A collection of all the messages in the channel. A navigation property. Nullable
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMessages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Channel.html"><abbr title="\Microsoft\Graph\Model\Channel">Channel</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMessages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Channel.html"><abbr title="\Microsoft\Graph\Model\Channel">Channel</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1481,7 +1492,7 @@ A collection of all the messages in the channel. A navigation property. Nullable
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ChatMessage.html"><abbr title="\Microsoft\Graph\Model\ChatMessage">ChatMessage</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The messages</p>
@@ -1558,7 +1569,7 @@ A collection of all the messages in the channel. A navigation property. Nullable
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Channel.php"><a href="files/src-model-channel.html"><abbr title="src/Model/Channel.php">Channel.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">355</span>
+    <span class="phpdocumentor-element-found-in__line">376</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tabs
@@ -1566,7 +1577,7 @@ A collection of all the tabs in the channel. A navigation property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTabs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TeamsTab.html"><abbr title="\Microsoft\Graph\Model\TeamsTab">TeamsTab</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Channel.html"><abbr title="\Microsoft\Graph\Model\Channel">Channel</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTabs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TeamsTab.html"><abbr title="\Microsoft\Graph\Model\TeamsTab">TeamsTab</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Channel.html"><abbr title="\Microsoft\Graph\Model\Channel">Channel</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1574,7 +1585,7 @@ A collection of all the tabs in the channel. A navigation property.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TeamsTab.html"><abbr title="\Microsoft\Graph\Model\TeamsTab">TeamsTab</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TeamsTab.html"><abbr title="\Microsoft\Graph\Model\TeamsTab">TeamsTab</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The tabs</p>

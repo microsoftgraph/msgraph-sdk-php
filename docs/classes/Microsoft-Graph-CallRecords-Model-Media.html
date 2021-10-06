@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -91,6 +95,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -238,7 +249,7 @@ How the media was identified during media negotiation stage.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-CallRecords-Model-Media.html#method_getStreams">getStreams()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the streams
 Network streams associated with this media.</dd>
@@ -461,7 +472,7 @@ Device information associated with the callee endpoint of this media.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">67</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the calleeNetwork
@@ -497,7 +508,7 @@ Network information associated with the callee endpoint of this media.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">99</span>
+    <span class="phpdocumentor-element-found-in__line">101</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the callerDevice
@@ -533,7 +544,7 @@ Device information associated with the caller endpoint of this media.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">132</span>
+    <span class="phpdocumentor-element-found-in__line">135</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the callerNetwork
@@ -605,7 +616,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">164</span>
+    <span class="phpdocumentor-element-found-in__line">168</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the label
@@ -711,7 +722,7 @@ How the media was identified during media negotiation stage.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">193</span>
+    <span class="phpdocumentor-element-found-in__line">197</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the streams
@@ -719,7 +730,7 @@ Network streams associated with this media.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getStreams</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getStreams</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -727,7 +738,7 @@ Network streams associated with this media.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The streams</p>
 </section>
@@ -783,7 +794,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the calleeDevice
@@ -831,7 +842,7 @@ Device information associated with the callee endpoint of this media.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">87</span>
+    <span class="phpdocumentor-element-found-in__line">89</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the calleeNetwork
@@ -879,7 +890,7 @@ Network information associated with the callee endpoint of this media.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">120</span>
+    <span class="phpdocumentor-element-found-in__line">123</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the callerDevice
@@ -927,7 +938,7 @@ Device information associated with the caller endpoint of this media.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">153</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the callerNetwork
@@ -1022,7 +1033,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">181</span>
+    <span class="phpdocumentor-element-found-in__line">185</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the label
@@ -1115,7 +1126,7 @@ How the media was identified during media negotiation stage.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/CallRecords/Model/Media.php"><a href="files/src-callrecords-model-media.html"><abbr title="src/CallRecords/Model/Media.php">Media.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">214</span>
+    <span class="phpdocumentor-element-found-in__line">222</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the streams
@@ -1123,7 +1134,7 @@ Network streams associated with this media.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setStreams</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-Media.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Media">Media</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setStreams</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-CallRecords-Model-Media.html"><abbr title="\Microsoft\Graph\CallRecords\Model\Media">Media</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1131,7 +1142,7 @@ Network streams associated with this media.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-CallRecords-Model-MediaStream.html"><abbr title="\Microsoft\Graph\CallRecords\Model\MediaStream">MediaStream</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the streams</p>

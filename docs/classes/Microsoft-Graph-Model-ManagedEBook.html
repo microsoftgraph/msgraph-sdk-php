@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ManagedEBook.html#method_getAssignments">getAssignments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBookAssignment.html"><abbr title="\Microsoft\Graph\Model\ManagedEBookAssignment">ManagedEBookAssignment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the assignments
 The list of assignments for this eBook.</dd>
@@ -199,7 +210,7 @@ Description.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ManagedEBook.html#method_getDeviceStates">getDeviceStates()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceInstallState.html"><abbr title="\Microsoft\Graph\Model\DeviceInstallState">DeviceInstallState</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceStates
 The list of installation states for this eBook.</dd>
@@ -293,7 +304,7 @@ Publisher.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-ManagedEBook.html#method_getUserStateSummary">getUserStateSummary()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserInstallStateSummary.html"><abbr title="\Microsoft\Graph\Model\UserInstallStateSummary">UserInstallStateSummary</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the userStateSummary
 The list of installation states for this eBook.</dd>
@@ -544,7 +555,7 @@ The list of assignments for this eBook.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBookAssignment.html"><abbr title="\Microsoft\Graph\Model\ManagedEBookAssignment">ManagedEBookAssignment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -552,7 +563,7 @@ The list of assignments for this eBook.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBookAssignment.html"><abbr title="\Microsoft\Graph\Model\ManagedEBookAssignment">ManagedEBookAssignment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The assignments</p>
 </section>
@@ -644,7 +655,7 @@ Description.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ManagedEBook.php"><a href="files/src-model-managedebook.html"><abbr title="src/Model/ManagedEBook.php">ManagedEBook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">341</span>
+    <span class="phpdocumentor-element-found-in__line">348</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceStates
@@ -652,7 +663,7 @@ The list of installation states for this eBook.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceStates</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceStates</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceInstallState.html"><abbr title="\Microsoft\Graph\Model\DeviceInstallState">DeviceInstallState</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -660,7 +671,7 @@ The list of installation states for this eBook.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceInstallState.html"><abbr title="\Microsoft\Graph\Model\DeviceInstallState">DeviceInstallState</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceStates</p>
 </section>
@@ -788,7 +799,7 @@ The more information Url.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ManagedEBook.php"><a href="files/src-model-managedebook.html"><abbr title="src/Model/ManagedEBook.php">ManagedEBook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">370</span>
+    <span class="phpdocumentor-element-found-in__line">384</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the installSummary
@@ -1074,7 +1085,7 @@ Publisher.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ManagedEBook.php"><a href="files/src-model-managedebook.html"><abbr title="src/Model/ManagedEBook.php">ManagedEBook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">404</span>
+    <span class="phpdocumentor-element-found-in__line">418</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userStateSummary
@@ -1082,7 +1093,7 @@ The list of installation states for this eBook.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getUserStateSummary</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getUserStateSummary</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserInstallStateSummary.html"><abbr title="\Microsoft\Graph\Model\UserInstallStateSummary">UserInstallStateSummary</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1090,7 +1101,7 @@ The list of installation states for this eBook.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserInstallStateSummary.html"><abbr title="\Microsoft\Graph\Model\UserInstallStateSummary">UserInstallStateSummary</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The userStateSummary</p>
 </section>
@@ -1146,7 +1157,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ManagedEBook.php"><a href="files/src-model-managedebook.html"><abbr title="src/Model/ManagedEBook.php">ManagedEBook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">328</span>
+    <span class="phpdocumentor-element-found-in__line">335</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the assignments
@@ -1154,7 +1165,7 @@ The list of assignments for this eBook.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedEBookAssignment.html"><abbr title="\Microsoft\Graph\Model\ManagedEBookAssignment">ManagedEBookAssignment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBookAssignment.html"><abbr title="\Microsoft\Graph\Model\ManagedEBookAssignment">ManagedEBookAssignment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1162,7 +1173,7 @@ The list of assignments for this eBook.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedEBookAssignment.html"><abbr title="\Microsoft\Graph\Model\ManagedEBookAssignment">ManagedEBookAssignment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBookAssignment.html"><abbr title="\Microsoft\Graph\Model\ManagedEBookAssignment">ManagedEBookAssignment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The assignments</p>
@@ -1287,7 +1298,7 @@ Description.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ManagedEBook.php"><a href="files/src-model-managedebook.html"><abbr title="src/Model/ManagedEBook.php">ManagedEBook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">358</span>
+    <span class="phpdocumentor-element-found-in__line">372</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceStates
@@ -1295,7 +1306,7 @@ The list of installation states for this eBook.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceStates</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceInstallState.html"><abbr title="\Microsoft\Graph\Model\DeviceInstallState">DeviceInstallState</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceStates</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceInstallState.html"><abbr title="\Microsoft\Graph\Model\DeviceInstallState">DeviceInstallState</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1303,7 +1314,7 @@ The list of installation states for this eBook.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceInstallState.html"><abbr title="\Microsoft\Graph\Model\DeviceInstallState">DeviceInstallState</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceInstallState.html"><abbr title="\Microsoft\Graph\Model\DeviceInstallState">DeviceInstallState</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceStates</p>
@@ -1475,7 +1486,7 @@ The more information Url.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ManagedEBook.php"><a href="files/src-model-managedebook.html"><abbr title="src/Model/ManagedEBook.php">ManagedEBook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">391</span>
+    <span class="phpdocumentor-element-found-in__line">405</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the installSummary
@@ -1803,7 +1814,7 @@ Publisher.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/ManagedEBook.php"><a href="files/src-model-managedebook.html"><abbr title="src/Model/ManagedEBook.php">ManagedEBook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">421</span>
+    <span class="phpdocumentor-element-found-in__line">442</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userStateSummary
@@ -1811,7 +1822,7 @@ The list of installation states for this eBook.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setUserStateSummary</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-UserInstallStateSummary.html"><abbr title="\Microsoft\Graph\Model\UserInstallStateSummary">UserInstallStateSummary</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setUserStateSummary</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserInstallStateSummary.html"><abbr title="\Microsoft\Graph\Model\UserInstallStateSummary">UserInstallStateSummary</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1819,7 +1830,7 @@ The list of installation states for this eBook.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-UserInstallStateSummary.html"><abbr title="\Microsoft\Graph\Model\UserInstallStateSummary">UserInstallStateSummary</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserInstallStateSummary.html"><abbr title="\Microsoft\Graph\Model\UserInstallStateSummary">UserInstallStateSummary</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The userStateSummary</p>
