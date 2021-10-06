@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getAssignedPlans">getAssignedPlans()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the assignedPlans
 The collection of service plans associated with the tenant. Not nullable.</dd>
@@ -198,7 +209,7 @@ Telephone number for the organization. Although this is a string collection, onl
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getCertificateBasedAuthConfiguration">getCertificateBasedAuthConfiguration()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CertificateBasedAuthConfiguration.html"><abbr title="\Microsoft\Graph\Model\CertificateBasedAuthConfiguration">CertificateBasedAuthConfiguration</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the certificateBasedAuthConfiguration
 Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.</dd>
@@ -253,7 +264,7 @@ The display name for the tenant.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getExtensions">getExtensions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the extensions
 The collection of open extensions defined for the organization. Read-only. Nullable.</dd>
@@ -339,7 +350,7 @@ The privacy profile of an organization.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getProvisionedPlans">getProvisionedPlans()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the provisionedPlans
 Not nullable.</dd>
@@ -392,7 +403,7 @@ Not nullable.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Organization.html#method_getVerifiedDomains">getVerifiedDomains()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VerifiedDomain.html"><abbr title="\Microsoft\Graph\Model\VerifiedDomain">VerifiedDomain</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the verifiedDomains
 The collection of domains associated with this tenant. Not nullable.</dd>
@@ -742,7 +753,7 @@ The collection of service plans associated with the tenant. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAssignedPlans</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAssignedPlans</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -750,7 +761,7 @@ The collection of service plans associated with the tenant. Not nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The assignedPlans</p>
 </section>
@@ -770,7 +781,7 @@ The collection of service plans associated with the tenant. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">683</span>
+    <span class="phpdocumentor-element-found-in__line">704</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the branding</p>
@@ -805,7 +816,7 @@ The collection of service plans associated with the tenant. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the businessPhones
@@ -841,7 +852,7 @@ Telephone number for the organization. Although this is a string collection, onl
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">716</span>
+    <span class="phpdocumentor-element-found-in__line">737</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the certificateBasedAuthConfiguration
@@ -849,7 +860,7 @@ Navigation property to manage certificate-based authentication configuration. On
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCertificateBasedAuthConfiguration</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getCertificateBasedAuthConfiguration</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CertificateBasedAuthConfiguration.html"><abbr title="\Microsoft\Graph\Model\CertificateBasedAuthConfiguration">CertificateBasedAuthConfiguration</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -857,7 +868,7 @@ Navigation property to manage certificate-based authentication configuration. On
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CertificateBasedAuthConfiguration.html"><abbr title="\Microsoft\Graph\Model\CertificateBasedAuthConfiguration">CertificateBasedAuthConfiguration</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The certificateBasedAuthConfiguration</p>
 </section>
@@ -877,7 +888,7 @@ Navigation property to manage certificate-based authentication configuration. On
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the city
@@ -913,7 +924,7 @@ City name of the address for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the country
@@ -949,7 +960,7 @@ Country/region name of the address for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the countryLetterCode
@@ -985,7 +996,7 @@ Country/region abbreviation for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdDateTime
@@ -1056,7 +1067,7 @@ Timestamp of when the organization was created. The value cannot be modified and
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">212</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the displayName
@@ -1092,7 +1103,7 @@ The display name for the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">746</span>
+    <span class="phpdocumentor-element-found-in__line">774</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the extensions
@@ -1100,7 +1111,7 @@ The collection of open extensions defined for the organization. Read-only. Nulla
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExtensions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getExtensions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1108,7 +1119,7 @@ The collection of open extensions defined for the organization. Read-only. Nulla
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The extensions</p>
 </section>
@@ -1164,7 +1175,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">241</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the marketingNotificationEmails
@@ -1200,7 +1211,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">651</span>
+    <span class="phpdocumentor-element-found-in__line">672</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mobileDeviceManagementAuthority
@@ -1271,7 +1282,7 @@ Mobile device management authority. Possible values are: unknown, intune, sccm, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">270</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesLastSyncDateTime
@@ -1307,7 +1318,7 @@ The time and date at which the tenant was last synced with the on-premises direc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">303</span>
+    <span class="phpdocumentor-element-found-in__line">310</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesSyncEnabled
@@ -1343,7 +1354,7 @@ true if this object is synced from an on-premises directory; false if this objec
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">332</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the postalCode
@@ -1379,7 +1390,7 @@ Postal code of the address for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">361</span>
+    <span class="phpdocumentor-element-found-in__line">368</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the preferredLanguage
@@ -1415,7 +1426,7 @@ The preferred language for the organization. Should follow ISO 639-1 Code; for e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">390</span>
+    <span class="phpdocumentor-element-found-in__line">397</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the privacyProfile
@@ -1486,7 +1497,7 @@ The privacy profile of an organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">424</span>
+    <span class="phpdocumentor-element-found-in__line">431</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the provisionedPlans
@@ -1494,7 +1505,7 @@ Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getProvisionedPlans</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getProvisionedPlans</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1502,7 +1513,7 @@ Not nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The provisionedPlans</p>
 </section>
@@ -1522,7 +1533,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">452</span>
+    <span class="phpdocumentor-element-found-in__line">466</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the securityComplianceNotificationMails</p>
@@ -1557,7 +1568,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">479</span>
+    <span class="phpdocumentor-element-found-in__line">493</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the securityComplianceNotificationPhones</p>
@@ -1592,7 +1603,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">507</span>
+    <span class="phpdocumentor-element-found-in__line">521</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the state
@@ -1628,7 +1639,7 @@ State name of the address for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">536</span>
+    <span class="phpdocumentor-element-found-in__line">550</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the street
@@ -1664,7 +1675,7 @@ Street name of the address for organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">565</span>
+    <span class="phpdocumentor-element-found-in__line">579</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the technicalNotificationMails
@@ -1700,7 +1711,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">593</span>
+    <span class="phpdocumentor-element-found-in__line">607</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tenantType</p>
@@ -1735,7 +1746,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">622</span>
+    <span class="phpdocumentor-element-found-in__line">636</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the verifiedDomains
@@ -1743,7 +1754,7 @@ The collection of domains associated with this tenant. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getVerifiedDomains</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getVerifiedDomains</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VerifiedDomain.html"><abbr title="\Microsoft\Graph\Model\VerifiedDomain">VerifiedDomain</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1751,7 +1762,7 @@ The collection of domains associated with this tenant. Not nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VerifiedDomain.html"><abbr title="\Microsoft\Graph\Model\VerifiedDomain">VerifiedDomain</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The verifiedDomains</p>
 </section>
@@ -1807,7 +1818,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the assignedPlans
@@ -1815,7 +1826,7 @@ The collection of service plans associated with the tenant. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAssignedPlans</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAssignedPlans</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1823,7 +1834,7 @@ The collection of service plans associated with the tenant. Not nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The assignedPlans</p>
@@ -1854,7 +1865,7 @@ The collection of service plans associated with the tenant. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">703</span>
+    <span class="phpdocumentor-element-found-in__line">724</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the branding</p>
@@ -1900,7 +1911,7 @@ The collection of service plans associated with the tenant. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the businessPhones
@@ -1947,7 +1958,7 @@ Telephone number for the organization. Although this is a string collection, onl
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">733</span>
+    <span class="phpdocumentor-element-found-in__line">761</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the certificateBasedAuthConfiguration
@@ -1955,7 +1966,7 @@ Navigation property to manage certificate-based authentication configuration. On
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCertificateBasedAuthConfiguration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-CertificateBasedAuthConfiguration.html"><abbr title="\Microsoft\Graph\Model\CertificateBasedAuthConfiguration">CertificateBasedAuthConfiguration</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setCertificateBasedAuthConfiguration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CertificateBasedAuthConfiguration.html"><abbr title="\Microsoft\Graph\Model\CertificateBasedAuthConfiguration">CertificateBasedAuthConfiguration</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1963,7 +1974,7 @@ Navigation property to manage certificate-based authentication configuration. On
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-CertificateBasedAuthConfiguration.html"><abbr title="\Microsoft\Graph\Model\CertificateBasedAuthConfiguration">CertificateBasedAuthConfiguration</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CertificateBasedAuthConfiguration.html"><abbr title="\Microsoft\Graph\Model\CertificateBasedAuthConfiguration">CertificateBasedAuthConfiguration</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The certificateBasedAuthConfiguration</p>
@@ -1994,7 +2005,7 @@ Navigation property to manage certificate-based authentication configuration. On
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">109</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the city
@@ -2041,7 +2052,7 @@ City name of the address for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the country
@@ -2088,7 +2099,7 @@ Country/region name of the address for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">167</span>
+    <span class="phpdocumentor-element-found-in__line">174</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the countryLetterCode
@@ -2135,7 +2146,7 @@ Country/region abbreviation for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">200</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdDateTime
@@ -2228,7 +2239,7 @@ Timestamp of when the organization was created. The value cannot be modified and
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">229</span>
+    <span class="phpdocumentor-element-found-in__line">236</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the displayName
@@ -2275,7 +2286,7 @@ The display name for the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">763</span>
+    <span class="phpdocumentor-element-found-in__line">798</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the extensions
@@ -2283,7 +2294,7 @@ The collection of open extensions defined for the organization. Read-only. Nulla
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setExtensions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setExtensions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2291,7 +2302,7 @@ The collection of open extensions defined for the organization. Read-only. Nulla
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The extensions</p>
@@ -2369,7 +2380,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">258</span>
+    <span class="phpdocumentor-element-found-in__line">265</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the marketingNotificationEmails
@@ -2416,7 +2427,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">672</span>
+    <span class="phpdocumentor-element-found-in__line">693</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mobileDeviceManagementAuthority
@@ -2509,7 +2520,7 @@ Mobile device management authority. Possible values are: unknown, intune, sccm, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">291</span>
+    <span class="phpdocumentor-element-found-in__line">298</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesLastSyncDateTime
@@ -2556,7 +2567,7 @@ The time and date at which the tenant was last synced with the on-premises direc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">320</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesSyncEnabled
@@ -2603,7 +2614,7 @@ true if this object is synced from an on-premises directory; false if this objec
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">349</span>
+    <span class="phpdocumentor-element-found-in__line">356</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the postalCode
@@ -2650,7 +2661,7 @@ Postal code of the address for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">378</span>
+    <span class="phpdocumentor-element-found-in__line">385</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the preferredLanguage
@@ -2697,7 +2708,7 @@ The preferred language for the organization. Should follow ISO 639-1 Code; for e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">418</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the privacyProfile
@@ -2744,7 +2755,7 @@ The privacy profile of an organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">441</span>
+    <span class="phpdocumentor-element-found-in__line">455</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the provisionedPlans
@@ -2752,7 +2763,7 @@ Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setProvisionedPlans</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setProvisionedPlans</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2760,7 +2771,7 @@ Not nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The provisionedPlans</p>
@@ -2791,7 +2802,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">468</span>
+    <span class="phpdocumentor-element-found-in__line">482</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the securityComplianceNotificationMails</p>
@@ -2837,7 +2848,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">495</span>
+    <span class="phpdocumentor-element-found-in__line">509</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the securityComplianceNotificationPhones</p>
@@ -2883,7 +2894,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">524</span>
+    <span class="phpdocumentor-element-found-in__line">538</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the state
@@ -2930,7 +2941,7 @@ State name of the address for the organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">553</span>
+    <span class="phpdocumentor-element-found-in__line">567</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the street
@@ -2977,7 +2988,7 @@ Street name of the address for organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">582</span>
+    <span class="phpdocumentor-element-found-in__line">596</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the technicalNotificationMails
@@ -3024,7 +3035,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">609</span>
+    <span class="phpdocumentor-element-found-in__line">623</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tenantType</p>
@@ -3070,7 +3081,7 @@ Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Organization.php"><a href="files/src-model-organization.html"><abbr title="src/Model/Organization.php">Organization.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">639</span>
+    <span class="phpdocumentor-element-found-in__line">660</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the verifiedDomains
@@ -3078,7 +3089,7 @@ The collection of domains associated with this tenant. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setVerifiedDomains</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-VerifiedDomain.html"><abbr title="\Microsoft\Graph\Model\VerifiedDomain">VerifiedDomain</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setVerifiedDomains</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VerifiedDomain.html"><abbr title="\Microsoft\Graph\Model\VerifiedDomain">VerifiedDomain</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Organization.html"><abbr title="\Microsoft\Graph\Model\Organization">Organization</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3086,7 +3097,7 @@ The collection of domains associated with this tenant. Not nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-VerifiedDomain.html"><abbr title="\Microsoft\Graph\Model\VerifiedDomain">VerifiedDomain</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VerifiedDomain.html"><abbr title="\Microsoft\Graph\Model\VerifiedDomain">VerifiedDomain</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The verifiedDomains</p>

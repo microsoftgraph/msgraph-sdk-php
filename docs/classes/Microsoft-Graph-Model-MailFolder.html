@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -183,7 +194,7 @@ The number of immediate child mailFolders in the current mailFolder.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-MailFolder.html#method_getChildFolders">getChildFolders()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the childFolders
 The collection of child folders in the mailFolder.</dd>
@@ -215,7 +226,7 @@ Indicates whether the mailFolder is hidden. This property can be set only when c
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-MailFolder.html#method_getMessageRules">getMessageRules()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MessageRule.html"><abbr title="\Microsoft\Graph\Model\MessageRule">MessageRule</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the messageRules
 The collection of rules that apply to the user&#039;s Inbox folder.</dd>
@@ -223,7 +234,7 @@ The collection of rules that apply to the user&#039;s Inbox folder.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-MailFolder.html#method_getMessages">getMessages()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Message.html"><abbr title="\Microsoft\Graph\Model\Message">Message</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the messages
 The collection of messages in the mailFolder.</dd>
@@ -231,7 +242,7 @@ The collection of messages in the mailFolder.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-MailFolder.html#method_getMultiValueExtendedProperties">getMultiValueExtendedProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the multiValueExtendedProperties
 The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.</dd>
@@ -261,7 +272,7 @@ The unique identifier for the mailFolder&#039;s parent mailFolder.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-MailFolder.html#method_getSingleValueExtendedProperties">getSingleValueExtendedProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the singleValueExtendedProperties
 The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.</dd>
@@ -548,7 +559,7 @@ The collection of child folders in the mailFolder.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getChildFolders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getChildFolders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -556,7 +567,7 @@ The collection of child folders in the mailFolder.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The childFolders</p>
 </section>
@@ -684,7 +695,7 @@ Indicates whether the mailFolder is hidden. This property can be set only when c
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">238</span>
+    <span class="phpdocumentor-element-found-in__line">245</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the messageRules
@@ -692,7 +703,7 @@ The collection of rules that apply to the user&#039;s Inbox folder.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMessageRules</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMessageRules</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MessageRule.html"><abbr title="\Microsoft\Graph\Model\MessageRule">MessageRule</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -700,7 +711,7 @@ The collection of rules that apply to the user&#039;s Inbox folder.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MessageRule.html"><abbr title="\Microsoft\Graph\Model\MessageRule">MessageRule</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The messageRules</p>
 </section>
@@ -720,7 +731,7 @@ The collection of rules that apply to the user&#039;s Inbox folder.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">268</span>
+    <span class="phpdocumentor-element-found-in__line">282</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the messages
@@ -728,7 +739,7 @@ The collection of messages in the mailFolder.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMessages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMessages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Message.html"><abbr title="\Microsoft\Graph\Model\Message">Message</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -736,7 +747,7 @@ The collection of messages in the mailFolder.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Message.html"><abbr title="\Microsoft\Graph\Model\Message">Message</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The messages</p>
 </section>
@@ -756,7 +767,7 @@ The collection of messages in the mailFolder.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">298</span>
+    <span class="phpdocumentor-element-found-in__line">319</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the multiValueExtendedProperties
@@ -764,7 +775,7 @@ The collection of multi-value extended properties defined for the mailFolder. Re
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMultiValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMultiValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -772,7 +783,7 @@ The collection of multi-value extended properties defined for the mailFolder. Re
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The multiValueExtendedProperties</p>
 </section>
@@ -898,7 +909,7 @@ The unique identifier for the mailFolder&#039;s parent mailFolder.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">328</span>
+    <span class="phpdocumentor-element-found-in__line">356</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the singleValueExtendedProperties
@@ -906,7 +917,7 @@ The collection of single-value extended properties defined for the mailFolder. R
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSingleValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSingleValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -914,7 +925,7 @@ The collection of single-value extended properties defined for the mailFolder. R
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The singleValueExtendedProperties</p>
 </section>
@@ -1089,7 +1100,7 @@ The number of immediate child mailFolders in the current mailFolder.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">225</span>
+    <span class="phpdocumentor-element-found-in__line">232</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the childFolders
@@ -1097,7 +1108,7 @@ The collection of child folders in the mailFolder.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setChildFolders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setChildFolders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1105,7 +1116,7 @@ The collection of child folders in the mailFolder.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The childFolders</p>
@@ -1277,7 +1288,7 @@ Indicates whether the mailFolder is hidden. This property can be set only when c
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">255</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the messageRules
@@ -1285,7 +1296,7 @@ The collection of rules that apply to the user&#039;s Inbox folder.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMessageRules</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MessageRule.html"><abbr title="\Microsoft\Graph\Model\MessageRule">MessageRule</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMessageRules</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MessageRule.html"><abbr title="\Microsoft\Graph\Model\MessageRule">MessageRule</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1293,7 +1304,7 @@ The collection of rules that apply to the user&#039;s Inbox folder.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MessageRule.html"><abbr title="\Microsoft\Graph\Model\MessageRule">MessageRule</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MessageRule.html"><abbr title="\Microsoft\Graph\Model\MessageRule">MessageRule</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The messageRules</p>
@@ -1324,7 +1335,7 @@ The collection of rules that apply to the user&#039;s Inbox folder.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">285</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the messages
@@ -1332,7 +1343,7 @@ The collection of messages in the mailFolder.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMessages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Message.html"><abbr title="\Microsoft\Graph\Model\Message">Message</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMessages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Message.html"><abbr title="\Microsoft\Graph\Model\Message">Message</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1340,7 +1351,7 @@ The collection of messages in the mailFolder.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Message.html"><abbr title="\Microsoft\Graph\Model\Message">Message</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Message.html"><abbr title="\Microsoft\Graph\Model\Message">Message</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The messages</p>
@@ -1371,7 +1382,7 @@ The collection of messages in the mailFolder.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">315</span>
+    <span class="phpdocumentor-element-found-in__line">343</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the multiValueExtendedProperties
@@ -1379,7 +1390,7 @@ The collection of multi-value extended properties defined for the mailFolder. Re
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMultiValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMultiValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1387,7 +1398,7 @@ The collection of multi-value extended properties defined for the mailFolder. Re
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The multiValueExtendedProperties</p>
@@ -1511,7 +1522,7 @@ The unique identifier for the mailFolder&#039;s parent mailFolder.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MailFolder.php"><a href="files/src-model-mailfolder.html"><abbr title="src/Model/MailFolder.php">MailFolder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">345</span>
+    <span class="phpdocumentor-element-found-in__line">380</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the singleValueExtendedProperties
@@ -1519,7 +1530,7 @@ The collection of single-value extended properties defined for the mailFolder. R
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSingleValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSingleValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MailFolder.html"><abbr title="\Microsoft\Graph\Model\MailFolder">MailFolder</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1527,7 +1538,7 @@ The collection of single-value extended properties defined for the mailFolder. R
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The singleValueExtendedProperties</p>

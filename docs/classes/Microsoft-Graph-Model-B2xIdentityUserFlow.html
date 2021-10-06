@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-IdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\IdentityUserFlow">IdentityUserFlow</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -191,7 +202,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html#method_getIdentityProviders">getIdentityProviders()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProvider.html"><abbr title="\Microsoft\Graph\Model\IdentityProvider">IdentityProvider</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the identityProviders
 The identity providers included in the user flow.</dd>
@@ -199,7 +210,7 @@ The identity providers included in the user flow.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html#method_getLanguages">getLanguages()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserFlowLanguageConfiguration.html"><abbr title="\Microsoft\Graph\Model\UserFlowLanguageConfiguration">UserFlowLanguageConfiguration</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the languages
 The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.</dd>
@@ -221,7 +232,7 @@ The languages supported for customization within the user flow. Language customi
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html#method_getUserAttributeAssignments">getUserAttributeAssignments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityUserFlowAttributeAssignment.html"><abbr title="\Microsoft\Graph\Model\IdentityUserFlowAttributeAssignment">IdentityUserFlowAttributeAssignment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the userAttributeAssignments
 The user attribute assignments included in the user flow.</dd>
@@ -229,7 +240,7 @@ The user attribute assignments included in the user flow.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html#method_getUserFlowIdentityProviders">getUserFlowIdentityProviders()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProviderBase.html"><abbr title="\Microsoft\Graph\Model\IdentityProviderBase">IdentityProviderBase</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the userFlowIdentityProviders</dd>
 
@@ -514,7 +525,7 @@ The identity providers included in the user flow.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getIdentityProviders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getIdentityProviders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProvider.html"><abbr title="\Microsoft\Graph\Model\IdentityProvider">IdentityProvider</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -522,7 +533,7 @@ The identity providers included in the user flow.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProvider.html"><abbr title="\Microsoft\Graph\Model\IdentityProvider">IdentityProvider</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The identityProviders</p>
 </section>
@@ -542,7 +553,7 @@ The identity providers included in the user flow.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/B2xIdentityUserFlow.php"><a href="files/src-model-b2xidentityuserflow.html"><abbr title="src/Model/B2xIdentityUserFlow.php">B2xIdentityUserFlow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">97</span>
+    <span class="phpdocumentor-element-found-in__line">104</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the languages
@@ -550,7 +561,7 @@ The languages supported for customization within the user flow. Language customi
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getLanguages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getLanguages</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserFlowLanguageConfiguration.html"><abbr title="\Microsoft\Graph\Model\UserFlowLanguageConfiguration">UserFlowLanguageConfiguration</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -558,7 +569,7 @@ The languages supported for customization within the user flow. Language customi
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserFlowLanguageConfiguration.html"><abbr title="\Microsoft\Graph\Model\UserFlowLanguageConfiguration">UserFlowLanguageConfiguration</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The languages</p>
 </section>
@@ -648,7 +659,7 @@ The languages supported for customization within the user flow. Language customi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/B2xIdentityUserFlow.php"><a href="files/src-model-b2xidentityuserflow.html"><abbr title="src/Model/B2xIdentityUserFlow.php">B2xIdentityUserFlow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">127</span>
+    <span class="phpdocumentor-element-found-in__line">141</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userAttributeAssignments
@@ -656,7 +667,7 @@ The user attribute assignments included in the user flow.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getUserAttributeAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getUserAttributeAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityUserFlowAttributeAssignment.html"><abbr title="\Microsoft\Graph\Model\IdentityUserFlowAttributeAssignment">IdentityUserFlowAttributeAssignment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -664,7 +675,7 @@ The user attribute assignments included in the user flow.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityUserFlowAttributeAssignment.html"><abbr title="\Microsoft\Graph\Model\IdentityUserFlowAttributeAssignment">IdentityUserFlowAttributeAssignment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The userAttributeAssignments</p>
 </section>
@@ -684,14 +695,14 @@ The user attribute assignments included in the user flow.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/B2xIdentityUserFlow.php"><a href="files/src-model-b2xidentityuserflow.html"><abbr title="src/Model/B2xIdentityUserFlow.php">B2xIdentityUserFlow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">156</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userFlowIdentityProviders</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getUserFlowIdentityProviders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getUserFlowIdentityProviders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProviderBase.html"><abbr title="\Microsoft\Graph\Model\IdentityProviderBase">IdentityProviderBase</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -699,7 +710,7 @@ The user attribute assignments included in the user flow.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProviderBase.html"><abbr title="\Microsoft\Graph\Model\IdentityProviderBase">IdentityProviderBase</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The userFlowIdentityProviders</p>
 </section>
@@ -919,7 +930,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/B2xIdentityUserFlow.php"><a href="files/src-model-b2xidentityuserflow.html"><abbr title="src/Model/B2xIdentityUserFlow.php">B2xIdentityUserFlow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">84</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the identityProviders
@@ -927,7 +938,7 @@ The identity providers included in the user flow.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setIdentityProviders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentityProvider.html"><abbr title="\Microsoft\Graph\Model\IdentityProvider">IdentityProvider</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\B2xIdentityUserFlow">B2xIdentityUserFlow</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setIdentityProviders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProvider.html"><abbr title="\Microsoft\Graph\Model\IdentityProvider">IdentityProvider</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\B2xIdentityUserFlow">B2xIdentityUserFlow</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -935,7 +946,7 @@ The identity providers included in the user flow.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentityProvider.html"><abbr title="\Microsoft\Graph\Model\IdentityProvider">IdentityProvider</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProvider.html"><abbr title="\Microsoft\Graph\Model\IdentityProvider">IdentityProvider</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The identityProviders</p>
@@ -966,7 +977,7 @@ The identity providers included in the user flow.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/B2xIdentityUserFlow.php"><a href="files/src-model-b2xidentityuserflow.html"><abbr title="src/Model/B2xIdentityUserFlow.php">B2xIdentityUserFlow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">114</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the languages
@@ -974,7 +985,7 @@ The languages supported for customization within the user flow. Language customi
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setLanguages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-UserFlowLanguageConfiguration.html"><abbr title="\Microsoft\Graph\Model\UserFlowLanguageConfiguration">UserFlowLanguageConfiguration</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\B2xIdentityUserFlow">B2xIdentityUserFlow</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setLanguages</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserFlowLanguageConfiguration.html"><abbr title="\Microsoft\Graph\Model\UserFlowLanguageConfiguration">UserFlowLanguageConfiguration</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\B2xIdentityUserFlow">B2xIdentityUserFlow</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -982,7 +993,7 @@ The languages supported for customization within the user flow. Language customi
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-UserFlowLanguageConfiguration.html"><abbr title="\Microsoft\Graph\Model\UserFlowLanguageConfiguration">UserFlowLanguageConfiguration</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-UserFlowLanguageConfiguration.html"><abbr title="\Microsoft\Graph\Model\UserFlowLanguageConfiguration">UserFlowLanguageConfiguration</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The languages</p>
@@ -1059,7 +1070,7 @@ The languages supported for customization within the user flow. Language customi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/B2xIdentityUserFlow.php"><a href="files/src-model-b2xidentityuserflow.html"><abbr title="src/Model/B2xIdentityUserFlow.php">B2xIdentityUserFlow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">144</span>
+    <span class="phpdocumentor-element-found-in__line">165</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userAttributeAssignments
@@ -1067,7 +1078,7 @@ The user attribute assignments included in the user flow.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setUserAttributeAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentityUserFlowAttributeAssignment.html"><abbr title="\Microsoft\Graph\Model\IdentityUserFlowAttributeAssignment">IdentityUserFlowAttributeAssignment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\B2xIdentityUserFlow">B2xIdentityUserFlow</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setUserAttributeAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityUserFlowAttributeAssignment.html"><abbr title="\Microsoft\Graph\Model\IdentityUserFlowAttributeAssignment">IdentityUserFlowAttributeAssignment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\B2xIdentityUserFlow">B2xIdentityUserFlow</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1075,7 +1086,7 @@ The user attribute assignments included in the user flow.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentityUserFlowAttributeAssignment.html"><abbr title="\Microsoft\Graph\Model\IdentityUserFlowAttributeAssignment">IdentityUserFlowAttributeAssignment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityUserFlowAttributeAssignment.html"><abbr title="\Microsoft\Graph\Model\IdentityUserFlowAttributeAssignment">IdentityUserFlowAttributeAssignment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The userAttributeAssignments</p>
@@ -1106,14 +1117,14 @@ The user attribute assignments included in the user flow.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/B2xIdentityUserFlow.php"><a href="files/src-model-b2xidentityuserflow.html"><abbr title="src/Model/B2xIdentityUserFlow.php">B2xIdentityUserFlow.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">172</span>
+    <span class="phpdocumentor-element-found-in__line">200</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userFlowIdentityProviders</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setUserFlowIdentityProviders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentityProviderBase.html"><abbr title="\Microsoft\Graph\Model\IdentityProviderBase">IdentityProviderBase</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\B2xIdentityUserFlow">B2xIdentityUserFlow</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setUserFlowIdentityProviders</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProviderBase.html"><abbr title="\Microsoft\Graph\Model\IdentityProviderBase">IdentityProviderBase</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-B2xIdentityUserFlow.html"><abbr title="\Microsoft\Graph\Model\B2xIdentityUserFlow">B2xIdentityUserFlow</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1121,7 +1132,7 @@ The user attribute assignments included in the user flow.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentityProviderBase.html"><abbr title="\Microsoft\Graph\Model\IdentityProviderBase">IdentityProviderBase</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentityProviderBase.html"><abbr title="\Microsoft\Graph\Model\IdentityProviderBase">IdentityProviderBase</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The userFlowIdentityProviders</p>

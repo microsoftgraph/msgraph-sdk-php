@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-BaseItem.html"><abbr title="\Microsoft\Graph\Model\BaseItem">BaseItem</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -198,7 +209,7 @@ Audio metadata, if the item is an audio file. Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getChildren">getChildren()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the children
 Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.</dd>
@@ -397,7 +408,7 @@ If present, indicates that one or more operations that might affect the state of
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getPermissions">getPermissions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the permissions
 The set of permissions for the item. Read-only. Nullable.</dd>
@@ -484,7 +495,7 @@ If the current item is also available as a special folder, this facet is returne
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getSubscriptions">getSubscriptions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Subscription.html"><abbr title="\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the subscriptions
 The set of subscriptions on the item. Only supported on the root of a drive.</dd>
@@ -492,7 +503,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</dd
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getThumbnails">getThumbnails()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ThumbnailSet.html"><abbr title="\Microsoft\Graph\Model\ThumbnailSet">ThumbnailSet</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the thumbnails
 Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.</dd>
@@ -500,7 +511,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DriveItem.html#method_getVersions">getVersions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItemVersion.html"><abbr title="\Microsoft\Graph\Model\DriveItemVersion">DriveItemVersion</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the versions
 The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.</dd>
@@ -1129,7 +1140,7 @@ Collection containing Item objects for the immediate children of Item. Only item
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getChildren</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getChildren</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1137,7 +1148,7 @@ Collection containing Item objects for the immediate children of Item. Only item
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The children</p>
 </section>
@@ -1733,7 +1744,7 @@ Date and time the item was last modified. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">907</span>
+    <span class="phpdocumentor-element-found-in__line">914</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the listItem
@@ -2020,7 +2031,7 @@ If present, indicates that one or more operations that might affect the state of
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">941</span>
+    <span class="phpdocumentor-element-found-in__line">948</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the permissions
@@ -2028,7 +2039,7 @@ The set of permissions for the item. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPermissions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getPermissions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2036,7 +2047,7 @@ The set of permissions for the item. Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The permissions</p>
 </section>
@@ -2415,7 +2426,7 @@ If the current item is also available as a special folder, this facet is returne
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">971</span>
+    <span class="phpdocumentor-element-found-in__line">985</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the subscriptions
@@ -2423,7 +2434,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSubscriptions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSubscriptions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Subscription.html"><abbr title="\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2431,7 +2442,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Subscription.html"><abbr title="\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The subscriptions</p>
 </section>
@@ -2451,7 +2462,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1001</span>
+    <span class="phpdocumentor-element-found-in__line">1022</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the thumbnails
@@ -2459,7 +2470,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getThumbnails</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getThumbnails</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ThumbnailSet.html"><abbr title="\Microsoft\Graph\Model\ThumbnailSet">ThumbnailSet</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2467,7 +2478,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ThumbnailSet.html"><abbr title="\Microsoft\Graph\Model\ThumbnailSet">ThumbnailSet</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The thumbnails</p>
 </section>
@@ -2487,7 +2498,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1031</span>
+    <span class="phpdocumentor-element-found-in__line">1059</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the versions
@@ -2495,7 +2506,7 @@ The list of previous versions of the item. For more info, see [getting previous 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getVersions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getVersions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItemVersion.html"><abbr title="\Microsoft\Graph\Model\DriveItemVersion">DriveItemVersion</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2503,7 +2514,7 @@ The list of previous versions of the item. For more info, see [getting previous 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItemVersion.html"><abbr title="\Microsoft\Graph\Model\DriveItemVersion">DriveItemVersion</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The versions</p>
 </section>
@@ -2843,7 +2854,7 @@ Audio metadata, if the item is an audio file. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">895</span>
+    <span class="phpdocumentor-element-found-in__line">902</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the children
@@ -2851,7 +2862,7 @@ Collection containing Item objects for the immediate children of Item. Only item
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setChildren</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setChildren</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2859,7 +2870,7 @@ Collection containing Item objects for the immediate children of Item. Only item
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The children</p>
@@ -3642,7 +3653,7 @@ Date and time the item was last modified. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">928</span>
+    <span class="phpdocumentor-element-found-in__line">935</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the listItem
@@ -4017,7 +4028,7 @@ If present, indicates that one or more operations that might affect the state of
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">958</span>
+    <span class="phpdocumentor-element-found-in__line">972</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the permissions
@@ -4025,7 +4036,7 @@ The set of permissions for the item. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPermissions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPermissions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -4033,7 +4044,7 @@ The set of permissions for the item. Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The permissions</p>
@@ -4487,7 +4498,7 @@ If the current item is also available as a special folder, this facet is returne
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">988</span>
+    <span class="phpdocumentor-element-found-in__line">1009</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the subscriptions
@@ -4495,7 +4506,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSubscriptions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Subscription.html"><abbr title="\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSubscriptions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Subscription.html"><abbr title="\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -4503,7 +4514,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Subscription.html"><abbr title="\Microsoft\Graph\Model\Subscription">Subscription</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Subscription.html"><abbr title="\Microsoft\Graph\Model\Subscription">Subscription</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The subscriptions</p>
@@ -4534,7 +4545,7 @@ The set of subscriptions on the item. Only supported on the root of a drive.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1018</span>
+    <span class="phpdocumentor-element-found-in__line">1046</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the thumbnails
@@ -4542,7 +4553,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setThumbnails</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ThumbnailSet.html"><abbr title="\Microsoft\Graph\Model\ThumbnailSet">ThumbnailSet</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setThumbnails</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ThumbnailSet.html"><abbr title="\Microsoft\Graph\Model\ThumbnailSet">ThumbnailSet</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -4550,7 +4561,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ThumbnailSet.html"><abbr title="\Microsoft\Graph\Model\ThumbnailSet">ThumbnailSet</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ThumbnailSet.html"><abbr title="\Microsoft\Graph\Model\ThumbnailSet">ThumbnailSet</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The thumbnails</p>
@@ -4581,7 +4592,7 @@ Collection containing [ThumbnailSet][] objects associated with the item. For mor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DriveItem.php"><a href="files/src-model-driveitem.html"><abbr title="src/Model/DriveItem.php">DriveItem.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1048</span>
+    <span class="phpdocumentor-element-found-in__line">1083</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the versions
@@ -4589,7 +4600,7 @@ The list of previous versions of the item. For more info, see [getting previous 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setVersions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DriveItemVersion.html"><abbr title="\Microsoft\Graph\Model\DriveItemVersion">DriveItemVersion</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setVersions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItemVersion.html"><abbr title="\Microsoft\Graph\Model\DriveItemVersion">DriveItemVersion</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DriveItem.html"><abbr title="\Microsoft\Graph\Model\DriveItem">DriveItem</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -4597,7 +4608,7 @@ The list of previous versions of the item. For more info, see [getting previous 
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DriveItemVersion.html"><abbr title="\Microsoft\Graph\Model\DriveItemVersion">DriveItemVersion</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DriveItemVersion.html"><abbr title="\Microsoft\Graph\Model\DriveItemVersion">DriveItemVersion</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The versions</p>

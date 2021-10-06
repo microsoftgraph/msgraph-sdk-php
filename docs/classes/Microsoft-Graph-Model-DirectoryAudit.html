@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -191,7 +202,7 @@ Indicates the activity name or the operation name (examples: &#039;Create User&#
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DirectoryAudit.html#method_getAdditionalDetails">getAdditionalDetails()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the additionalDetails
 Indicates additional details on the activity.</dd>
@@ -276,7 +287,7 @@ Indicates the reason for failure if the result is failure or timeout.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DirectoryAudit.html#method_getTargetResources">getTargetResources()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the targetResources
 Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.</dd>
@@ -582,7 +593,7 @@ Indicates additional details on the activity.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAdditionalDetails</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAdditionalDetails</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -590,7 +601,7 @@ Indicates additional details on the activity.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The additionalDetails</p>
 </section>
@@ -610,7 +621,7 @@ Indicates additional details on the activity.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">125</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the category
@@ -646,7 +657,7 @@ Indicates which resource category that&#039;s targeted by the activity. (For exa
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the correlationId
@@ -718,7 +729,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">190</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the initiatedBy
@@ -754,7 +765,7 @@ Indicates information about the user or app initiated the activity.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">216</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the loggedByService
@@ -825,7 +836,7 @@ Indicates information on which service initiated the activity (For example: Self
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">244</span>
+    <span class="phpdocumentor-element-found-in__line">251</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operationType</p>
@@ -895,7 +906,7 @@ Indicates information on which service initiated the activity (For example: Self
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">272</span>
+    <span class="phpdocumentor-element-found-in__line">279</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the result
@@ -931,7 +942,7 @@ Indicates the result of the activity. Possible values are: success, failure, tim
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">305</span>
+    <span class="phpdocumentor-element-found-in__line">312</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resultReason
@@ -967,7 +978,7 @@ Indicates the reason for failure if the result is failure or timeout.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">335</span>
+    <span class="phpdocumentor-element-found-in__line">342</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the targetResources
@@ -975,7 +986,7 @@ Indicates information on which resource was changed due to the activity. Target 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTargetResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTargetResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -983,7 +994,7 @@ Indicates information on which resource was changed due to the activity. Target 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The targetResources</p>
 </section>
@@ -1133,7 +1144,7 @@ Indicates the activity name or the operation name (examples: &#039;Create User&#
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">113</span>
+    <span class="phpdocumentor-element-found-in__line">120</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the additionalDetails
@@ -1141,7 +1152,7 @@ Indicates additional details on the activity.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAdditionalDetails</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DirectoryAudit.html"><abbr title="\Microsoft\Graph\Model\DirectoryAudit">DirectoryAudit</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAdditionalDetails</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DirectoryAudit.html"><abbr title="\Microsoft\Graph\Model\DirectoryAudit">DirectoryAudit</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1149,7 +1160,7 @@ Indicates additional details on the activity.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-KeyValue.html"><abbr title="\Microsoft\Graph\Model\KeyValue">KeyValue</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The additionalDetails</p>
@@ -1180,7 +1191,7 @@ Indicates additional details on the activity.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">142</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the category
@@ -1227,7 +1238,7 @@ Indicates which resource category that&#039;s targeted by the activity. (For exa
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">178</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the correlationId
@@ -1321,7 +1332,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">204</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the initiatedBy
@@ -1368,7 +1379,7 @@ Indicates information about the user or app initiated the activity.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the loggedByService
@@ -1461,7 +1472,7 @@ Indicates information on which service initiated the activity (For example: Self
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">260</span>
+    <span class="phpdocumentor-element-found-in__line">267</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operationType</p>
@@ -1507,7 +1518,7 @@ Indicates information on which service initiated the activity (For example: Self
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">293</span>
+    <span class="phpdocumentor-element-found-in__line">300</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the result
@@ -1554,7 +1565,7 @@ Indicates the result of the activity. Possible values are: success, failure, tim
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">322</span>
+    <span class="phpdocumentor-element-found-in__line">329</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resultReason
@@ -1601,7 +1612,7 @@ Indicates the reason for failure if the result is failure or timeout.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryAudit.php"><a href="files/src-model-directoryaudit.html"><abbr title="src/Model/DirectoryAudit.php">DirectoryAudit.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">352</span>
+    <span class="phpdocumentor-element-found-in__line">366</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the targetResources
@@ -1609,7 +1620,7 @@ Indicates information on which resource was changed due to the activity. Target 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTargetResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DirectoryAudit.html"><abbr title="\Microsoft\Graph\Model\DirectoryAudit">DirectoryAudit</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTargetResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DirectoryAudit.html"><abbr title="\Microsoft\Graph\Model\DirectoryAudit">DirectoryAudit</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1617,7 +1628,7 @@ Indicates information on which resource was changed due to the activity. Target 
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetResource.html"><abbr title="\Microsoft\Graph\Model\TargetResource">TargetResource</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The targetResources</p>

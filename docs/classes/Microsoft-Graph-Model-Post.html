@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-OutlookItem.html"><abbr title="\Microsoft\Graph\Model\OutlookItem">OutlookItem</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Post.html#method_getAttachments">getAttachments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the attachments
 Read-only. Nullable. Supports $expand.</dd>
@@ -231,7 +242,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Post.html#method_getExtensions">getExtensions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the extensions
 The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.</dd>
@@ -279,7 +290,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Post.html#method_getMultiValueExtendedProperties">getMultiValueExtendedProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the multiValueExtendedProperties
 The collection of multi-value extended properties defined for the post. Read-only. Nullable.</dd>
@@ -287,7 +298,7 @@ The collection of multi-value extended properties defined for the post. Read-onl
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Post.html#method_getNewParticipants">getNewParticipants()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the newParticipants
 Conversation participants that were added to the thread as part of this post.</dd>
@@ -325,7 +336,7 @@ Contains the address of the sender. The value of Sender is assumed to be the add
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Post.html#method_getSingleValueExtendedProperties">getSingleValueExtendedProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the singleValueExtendedProperties
 The collection of single-value extended properties defined for the post. Read-only. Nullable.</dd>
@@ -600,7 +611,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">283</span>
+    <span class="phpdocumentor-element-found-in__line">290</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the attachments
@@ -608,7 +619,7 @@ Read-only. Nullable. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAttachments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAttachments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -616,7 +627,7 @@ Read-only. Nullable. Supports $expand.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The attachments</p>
 </section>
@@ -852,7 +863,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">313</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the extensions
@@ -860,7 +871,7 @@ The collection of open extensions defined for the post. Read-only. Nullable. Sup
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExtensions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getExtensions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -868,7 +879,7 @@ The collection of open extensions defined for the post. Read-only. Nullable. Sup
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The extensions</p>
 </section>
@@ -996,7 +1007,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">342</span>
+    <span class="phpdocumentor-element-found-in__line">363</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the inReplyTo
@@ -1068,7 +1079,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">376</span>
+    <span class="phpdocumentor-element-found-in__line">397</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the multiValueExtendedProperties
@@ -1076,7 +1087,7 @@ The collection of multi-value extended properties defined for the post. Read-onl
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMultiValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMultiValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1084,7 +1095,7 @@ The collection of multi-value extended properties defined for the post. Read-onl
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The multiValueExtendedProperties</p>
 </section>
@@ -1112,7 +1123,7 @@ Conversation participants that were added to the thread as part of this post.</p
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getNewParticipants</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getNewParticipants</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1120,7 +1131,7 @@ Conversation participants that were added to the thread as part of this post.</p
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The newParticipants</p>
 </section>
@@ -1210,7 +1221,7 @@ Conversation participants that were added to the thread as part of this post.</p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">216</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the receivedDateTime
@@ -1246,7 +1257,7 @@ Specifies when the post was received. The DateTimeOffset type represents date an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">249</span>
+    <span class="phpdocumentor-element-found-in__line">256</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the sender
@@ -1282,7 +1293,7 @@ Contains the address of the sender. The value of Sender is assumed to be the add
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">406</span>
+    <span class="phpdocumentor-element-found-in__line">434</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the singleValueExtendedProperties
@@ -1290,7 +1301,7 @@ The collection of single-value extended properties defined for the post. Read-on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSingleValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSingleValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1298,7 +1309,7 @@ The collection of single-value extended properties defined for the post. Read-on
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The singleValueExtendedProperties</p>
 </section>
@@ -1354,7 +1365,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">300</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the attachments
@@ -1362,7 +1373,7 @@ Read-only. Nullable. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAttachments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAttachments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1370,7 +1381,7 @@ Read-only. Nullable. Supports $expand.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The attachments</p>
@@ -1683,7 +1694,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">330</span>
+    <span class="phpdocumentor-element-found-in__line">351</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the extensions
@@ -1691,7 +1702,7 @@ The collection of open extensions defined for the post. Read-only. Nullable. Sup
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setExtensions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setExtensions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1699,7 +1710,7 @@ The collection of open extensions defined for the post. Read-only. Nullable. Sup
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The extensions</p>
@@ -1871,7 +1882,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">363</span>
+    <span class="phpdocumentor-element-found-in__line">384</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the inReplyTo
@@ -1965,7 +1976,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">393</span>
+    <span class="phpdocumentor-element-found-in__line">421</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the multiValueExtendedProperties
@@ -1973,7 +1984,7 @@ The collection of multi-value extended properties defined for the post. Read-onl
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMultiValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMultiValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1981,7 +1992,7 @@ The collection of multi-value extended properties defined for the post. Read-onl
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The multiValueExtendedProperties</p>
@@ -2012,7 +2023,7 @@ The collection of multi-value extended properties defined for the post. Read-onl
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">204</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the newParticipants
@@ -2020,7 +2031,7 @@ Conversation participants that were added to the thread as part of this post.</p
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setNewParticipants</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setNewParticipants</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2028,7 +2039,7 @@ Conversation participants that were added to the thread as part of this post.</p
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The newParticipants</p>
@@ -2105,7 +2116,7 @@ Conversation participants that were added to the thread as part of this post.</p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">237</span>
+    <span class="phpdocumentor-element-found-in__line">244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the receivedDateTime
@@ -2152,7 +2163,7 @@ Specifies when the post was received. The DateTimeOffset type represents date an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">270</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sender
@@ -2199,7 +2210,7 @@ Contains the address of the sender. The value of Sender is assumed to be the add
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Post.php"><a href="files/src-model-post.html"><abbr title="src/Model/Post.php">Post.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">423</span>
+    <span class="phpdocumentor-element-found-in__line">458</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the singleValueExtendedProperties
@@ -2207,7 +2218,7 @@ The collection of single-value extended properties defined for the post. Read-on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSingleValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSingleValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Post.html"><abbr title="\Microsoft\Graph\Model\Post">Post</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2215,7 +2226,7 @@ The collection of single-value extended properties defined for the post. Read-on
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The singleValueExtendedProperties</p>

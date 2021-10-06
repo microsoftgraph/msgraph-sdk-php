@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getAndroidManagedAppProtections">getAndroidManagedAppProtections()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AndroidManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\AndroidManagedAppProtection">AndroidManagedAppProtection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the androidManagedAppProtections
 Android managed app policies.</dd>
@@ -183,7 +194,7 @@ Android managed app policies.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getDefaultManagedAppProtections">getDefaultManagedAppProtections()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DefaultManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\DefaultManagedAppProtection">DefaultManagedAppProtection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the defaultManagedAppProtections
 Default managed app policies.</dd>
@@ -199,7 +210,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getIosManagedAppProtections">getIosManagedAppProtections()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\IosManagedAppProtection">IosManagedAppProtection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the iosManagedAppProtections
 iOS managed app policies.</dd>
@@ -215,7 +226,7 @@ Whether the account is enabled for syncing applications from the Microsoft Store
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getManagedAppPolicies">getManagedAppPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppPolicy.html"><abbr title="\Microsoft\Graph\Model\ManagedAppPolicy">ManagedAppPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the managedAppPolicies
 Managed app policies.</dd>
@@ -223,7 +234,7 @@ Managed app policies.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getManagedAppRegistrations">getManagedAppRegistrations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppRegistration.html"><abbr title="\Microsoft\Graph\Model\ManagedAppRegistration">ManagedAppRegistration</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the managedAppRegistrations
 The managed app registrations.</dd>
@@ -231,7 +242,7 @@ The managed app registrations.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getManagedAppStatuses">getManagedAppStatuses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppStatus.html"><abbr title="\Microsoft\Graph\Model\ManagedAppStatus">ManagedAppStatus</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the managedAppStatuses
 The managed app statuses.</dd>
@@ -239,7 +250,7 @@ The managed app statuses.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getManagedEBooks">getManagedEBooks()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the managedEBooks
 The Managed eBook.</dd>
@@ -247,7 +258,7 @@ The Managed eBook.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getMdmWindowsInformationProtectionPolicies">getMdmWindowsInformationProtectionPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MdmWindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\MdmWindowsInformationProtectionPolicy">MdmWindowsInformationProtectionPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the mdmWindowsInformationProtectionPolicies
 Windows information protection for apps running on devices which are MDM enrolled.</dd>
@@ -279,7 +290,7 @@ The last time the apps from the Microsoft Store for Business were synced success
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getMobileAppCategories">getMobileAppCategories()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the mobileAppCategories
 The mobile app categories.</dd>
@@ -287,7 +298,7 @@ The mobile app categories.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getMobileAppConfigurations">getMobileAppConfigurations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDeviceMobileAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\ManagedDeviceMobileAppConfiguration">ManagedDeviceMobileAppConfiguration</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the mobileAppConfigurations
 The Managed Device Mobile Application Configurations.</dd>
@@ -295,7 +306,7 @@ The Managed Device Mobile Application Configurations.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getMobileApps">getMobileApps()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the mobileApps
 The mobile apps.</dd>
@@ -317,7 +328,7 @@ The mobile apps.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getTargetedManagedAppConfigurations">getTargetedManagedAppConfigurations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppConfiguration">TargetedManagedAppConfiguration</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the targetedManagedAppConfigurations
 Targeted managed app configurations.</dd>
@@ -325,7 +336,7 @@ Targeted managed app configurations.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getVppTokens">getVppTokens()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VppToken.html"><abbr title="\Microsoft\Graph\Model\VppToken">VppToken</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the vppTokens
 List of Vpp tokens for this organization.</dd>
@@ -333,7 +344,7 @@ List of Vpp tokens for this organization.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html#method_getWindowsInformationProtectionPolicies">getWindowsInformationProtectionPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionPolicy">WindowsInformationProtectionPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the windowsInformationProtectionPolicies
 Windows information protection for apps running on devices which are not MDM enrolled.</dd>
@@ -616,7 +627,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">308</span>
+    <span class="phpdocumentor-element-found-in__line">343</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the androidManagedAppProtections
@@ -624,7 +635,7 @@ Android managed app policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAndroidManagedAppProtections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAndroidManagedAppProtections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AndroidManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\AndroidManagedAppProtection">AndroidManagedAppProtection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -632,7 +643,7 @@ Android managed app policies.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AndroidManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\AndroidManagedAppProtection">AndroidManagedAppProtection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The androidManagedAppProtections</p>
 </section>
@@ -652,7 +663,7 @@ Android managed app policies.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">338</span>
+    <span class="phpdocumentor-element-found-in__line">380</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the defaultManagedAppProtections
@@ -660,7 +671,7 @@ Default managed app policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDefaultManagedAppProtections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDefaultManagedAppProtections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DefaultManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\DefaultManagedAppProtection">DefaultManagedAppProtection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -668,7 +679,7 @@ Default managed app policies.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DefaultManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\DefaultManagedAppProtection">DefaultManagedAppProtection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The defaultManagedAppProtections</p>
 </section>
@@ -724,7 +735,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">368</span>
+    <span class="phpdocumentor-element-found-in__line">417</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iosManagedAppProtections
@@ -732,7 +743,7 @@ iOS managed app policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getIosManagedAppProtections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getIosManagedAppProtections</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\IosManagedAppProtection">IosManagedAppProtection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -740,7 +751,7 @@ iOS managed app policies.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\IosManagedAppProtection">IosManagedAppProtection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The iosManagedAppProtections</p>
 </section>
@@ -796,7 +807,7 @@ Whether the account is enabled for syncing applications from the Microsoft Store
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">398</span>
+    <span class="phpdocumentor-element-found-in__line">454</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedAppPolicies
@@ -804,7 +815,7 @@ Managed app policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getManagedAppPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getManagedAppPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppPolicy.html"><abbr title="\Microsoft\Graph\Model\ManagedAppPolicy">ManagedAppPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -812,7 +823,7 @@ Managed app policies.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppPolicy.html"><abbr title="\Microsoft\Graph\Model\ManagedAppPolicy">ManagedAppPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The managedAppPolicies</p>
 </section>
@@ -832,7 +843,7 @@ Managed app policies.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">428</span>
+    <span class="phpdocumentor-element-found-in__line">491</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedAppRegistrations
@@ -840,7 +851,7 @@ The managed app registrations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getManagedAppRegistrations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getManagedAppRegistrations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppRegistration.html"><abbr title="\Microsoft\Graph\Model\ManagedAppRegistration">ManagedAppRegistration</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -848,7 +859,7 @@ The managed app registrations.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppRegistration.html"><abbr title="\Microsoft\Graph\Model\ManagedAppRegistration">ManagedAppRegistration</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The managedAppRegistrations</p>
 </section>
@@ -868,7 +879,7 @@ The managed app registrations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">458</span>
+    <span class="phpdocumentor-element-found-in__line">528</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedAppStatuses
@@ -876,7 +887,7 @@ The managed app statuses.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getManagedAppStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getManagedAppStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppStatus.html"><abbr title="\Microsoft\Graph\Model\ManagedAppStatus">ManagedAppStatus</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -884,7 +895,7 @@ The managed app statuses.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppStatus.html"><abbr title="\Microsoft\Graph\Model\ManagedAppStatus">ManagedAppStatus</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The managedAppStatuses</p>
 </section>
@@ -912,7 +923,7 @@ The Managed eBook.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getManagedEBooks</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getManagedEBooks</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -920,7 +931,7 @@ The Managed eBook.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The managedEBooks</p>
 </section>
@@ -940,7 +951,7 @@ The Managed eBook.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">488</span>
+    <span class="phpdocumentor-element-found-in__line">565</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mdmWindowsInformationProtectionPolicies
@@ -948,7 +959,7 @@ Windows information protection for apps running on devices which are MDM enrolle
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMdmWindowsInformationProtectionPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMdmWindowsInformationProtectionPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MdmWindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\MdmWindowsInformationProtectionPolicy">MdmWindowsInformationProtectionPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -956,7 +967,7 @@ Windows information protection for apps running on devices which are MDM enrolle
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MdmWindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\MdmWindowsInformationProtectionPolicy">MdmWindowsInformationProtectionPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The mdmWindowsInformationProtectionPolicies</p>
 </section>
@@ -1084,7 +1095,7 @@ The last time the apps from the Microsoft Store for Business were synced success
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">188</span>
+    <span class="phpdocumentor-element-found-in__line">195</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mobileAppCategories
@@ -1092,7 +1103,7 @@ The mobile app categories.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMobileAppCategories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMobileAppCategories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1100,7 +1111,7 @@ The mobile app categories.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The mobileAppCategories</p>
 </section>
@@ -1120,7 +1131,7 @@ The mobile app categories.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">218</span>
+    <span class="phpdocumentor-element-found-in__line">232</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mobileAppConfigurations
@@ -1128,7 +1139,7 @@ The Managed Device Mobile Application Configurations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMobileAppConfigurations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMobileAppConfigurations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDeviceMobileAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\ManagedDeviceMobileAppConfiguration">ManagedDeviceMobileAppConfiguration</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1136,7 +1147,7 @@ The Managed Device Mobile Application Configurations.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDeviceMobileAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\ManagedDeviceMobileAppConfiguration">ManagedDeviceMobileAppConfiguration</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The mobileAppConfigurations</p>
 </section>
@@ -1156,7 +1167,7 @@ The Managed Device Mobile Application Configurations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">248</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mobileApps
@@ -1164,7 +1175,7 @@ The mobile apps.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMobileApps</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMobileApps</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1172,7 +1183,7 @@ The mobile apps.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The mobileApps</p>
 </section>
@@ -1262,7 +1273,7 @@ The mobile apps.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">518</span>
+    <span class="phpdocumentor-element-found-in__line">602</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the targetedManagedAppConfigurations
@@ -1270,7 +1281,7 @@ Targeted managed app configurations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTargetedManagedAppConfigurations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTargetedManagedAppConfigurations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppConfiguration">TargetedManagedAppConfiguration</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1278,7 +1289,7 @@ Targeted managed app configurations.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppConfiguration">TargetedManagedAppConfiguration</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The targetedManagedAppConfigurations</p>
 </section>
@@ -1298,7 +1309,7 @@ Targeted managed app configurations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">278</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the vppTokens
@@ -1306,7 +1317,7 @@ List of Vpp tokens for this organization.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getVppTokens</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getVppTokens</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VppToken.html"><abbr title="\Microsoft\Graph\Model\VppToken">VppToken</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1314,7 +1325,7 @@ List of Vpp tokens for this organization.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VppToken.html"><abbr title="\Microsoft\Graph\Model\VppToken">VppToken</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The vppTokens</p>
 </section>
@@ -1334,7 +1345,7 @@ List of Vpp tokens for this organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">548</span>
+    <span class="phpdocumentor-element-found-in__line">639</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the windowsInformationProtectionPolicies
@@ -1342,7 +1353,7 @@ Windows information protection for apps running on devices which are not MDM enr
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getWindowsInformationProtectionPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getWindowsInformationProtectionPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionPolicy">WindowsInformationProtectionPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1350,7 +1361,7 @@ Windows information protection for apps running on devices which are not MDM enr
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionPolicy">WindowsInformationProtectionPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The windowsInformationProtectionPolicies</p>
 </section>
@@ -1406,7 +1417,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">325</span>
+    <span class="phpdocumentor-element-found-in__line">367</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the androidManagedAppProtections
@@ -1414,7 +1425,7 @@ Android managed app policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAndroidManagedAppProtections</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AndroidManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\AndroidManagedAppProtection">AndroidManagedAppProtection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAndroidManagedAppProtections</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AndroidManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\AndroidManagedAppProtection">AndroidManagedAppProtection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1422,7 +1433,7 @@ Android managed app policies.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AndroidManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\AndroidManagedAppProtection">AndroidManagedAppProtection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AndroidManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\AndroidManagedAppProtection">AndroidManagedAppProtection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The androidManagedAppProtections</p>
@@ -1453,7 +1464,7 @@ Android managed app policies.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">355</span>
+    <span class="phpdocumentor-element-found-in__line">404</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the defaultManagedAppProtections
@@ -1461,7 +1472,7 @@ Default managed app policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDefaultManagedAppProtections</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DefaultManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\DefaultManagedAppProtection">DefaultManagedAppProtection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDefaultManagedAppProtections</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DefaultManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\DefaultManagedAppProtection">DefaultManagedAppProtection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1469,7 +1480,7 @@ Default managed app policies.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DefaultManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\DefaultManagedAppProtection">DefaultManagedAppProtection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DefaultManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\DefaultManagedAppProtection">DefaultManagedAppProtection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The defaultManagedAppProtections</p>
@@ -1547,7 +1558,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">385</span>
+    <span class="phpdocumentor-element-found-in__line">441</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iosManagedAppProtections
@@ -1555,7 +1566,7 @@ iOS managed app policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setIosManagedAppProtections</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IosManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\IosManagedAppProtection">IosManagedAppProtection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setIosManagedAppProtections</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\IosManagedAppProtection">IosManagedAppProtection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1563,7 +1574,7 @@ iOS managed app policies.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IosManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\IosManagedAppProtection">IosManagedAppProtection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosManagedAppProtection.html"><abbr title="\Microsoft\Graph\Model\IosManagedAppProtection">IosManagedAppProtection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The iosManagedAppProtections</p>
@@ -1641,7 +1652,7 @@ Whether the account is enabled for syncing applications from the Microsoft Store
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">415</span>
+    <span class="phpdocumentor-element-found-in__line">478</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedAppPolicies
@@ -1649,7 +1660,7 @@ Managed app policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setManagedAppPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedAppPolicy.html"><abbr title="\Microsoft\Graph\Model\ManagedAppPolicy">ManagedAppPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setManagedAppPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppPolicy.html"><abbr title="\Microsoft\Graph\Model\ManagedAppPolicy">ManagedAppPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1657,7 +1668,7 @@ Managed app policies.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedAppPolicy.html"><abbr title="\Microsoft\Graph\Model\ManagedAppPolicy">ManagedAppPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppPolicy.html"><abbr title="\Microsoft\Graph\Model\ManagedAppPolicy">ManagedAppPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The managedAppPolicies</p>
@@ -1688,7 +1699,7 @@ Managed app policies.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">445</span>
+    <span class="phpdocumentor-element-found-in__line">515</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedAppRegistrations
@@ -1696,7 +1707,7 @@ The managed app registrations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setManagedAppRegistrations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedAppRegistration.html"><abbr title="\Microsoft\Graph\Model\ManagedAppRegistration">ManagedAppRegistration</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setManagedAppRegistrations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppRegistration.html"><abbr title="\Microsoft\Graph\Model\ManagedAppRegistration">ManagedAppRegistration</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1704,7 +1715,7 @@ The managed app registrations.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedAppRegistration.html"><abbr title="\Microsoft\Graph\Model\ManagedAppRegistration">ManagedAppRegistration</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppRegistration.html"><abbr title="\Microsoft\Graph\Model\ManagedAppRegistration">ManagedAppRegistration</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The managedAppRegistrations</p>
@@ -1735,7 +1746,7 @@ The managed app registrations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">475</span>
+    <span class="phpdocumentor-element-found-in__line">552</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedAppStatuses
@@ -1743,7 +1754,7 @@ The managed app statuses.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setManagedAppStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedAppStatus.html"><abbr title="\Microsoft\Graph\Model\ManagedAppStatus">ManagedAppStatus</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setManagedAppStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppStatus.html"><abbr title="\Microsoft\Graph\Model\ManagedAppStatus">ManagedAppStatus</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1751,7 +1762,7 @@ The managed app statuses.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedAppStatus.html"><abbr title="\Microsoft\Graph\Model\ManagedAppStatus">ManagedAppStatus</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedAppStatus.html"><abbr title="\Microsoft\Graph\Model\ManagedAppStatus">ManagedAppStatus</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The managedAppStatuses</p>
@@ -1782,7 +1793,7 @@ The managed app statuses.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">175</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedEBooks
@@ -1790,7 +1801,7 @@ The Managed eBook.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setManagedEBooks</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setManagedEBooks</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1798,7 +1809,7 @@ The Managed eBook.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedEBook.html"><abbr title="\Microsoft\Graph\Model\ManagedEBook">ManagedEBook</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The managedEBooks</p>
@@ -1829,7 +1840,7 @@ The Managed eBook.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">505</span>
+    <span class="phpdocumentor-element-found-in__line">589</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mdmWindowsInformationProtectionPolicies
@@ -1837,7 +1848,7 @@ Windows information protection for apps running on devices which are MDM enrolle
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMdmWindowsInformationProtectionPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MdmWindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\MdmWindowsInformationProtectionPolicy">MdmWindowsInformationProtectionPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMdmWindowsInformationProtectionPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MdmWindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\MdmWindowsInformationProtectionPolicy">MdmWindowsInformationProtectionPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1845,7 +1856,7 @@ Windows information protection for apps running on devices which are MDM enrolle
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MdmWindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\MdmWindowsInformationProtectionPolicy">MdmWindowsInformationProtectionPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MdmWindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\MdmWindowsInformationProtectionPolicy">MdmWindowsInformationProtectionPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The mdmWindowsInformationProtectionPolicies</p>
@@ -2017,7 +2028,7 @@ The last time the apps from the Microsoft Store for Business were synced success
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">205</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mobileAppCategories
@@ -2025,7 +2036,7 @@ The mobile app categories.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMobileAppCategories</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMobileAppCategories</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2033,7 +2044,7 @@ The mobile app categories.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The mobileAppCategories</p>
@@ -2064,7 +2075,7 @@ The mobile app categories.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">235</span>
+    <span class="phpdocumentor-element-found-in__line">256</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mobileAppConfigurations
@@ -2072,7 +2083,7 @@ The Managed Device Mobile Application Configurations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMobileAppConfigurations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedDeviceMobileAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\ManagedDeviceMobileAppConfiguration">ManagedDeviceMobileAppConfiguration</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMobileAppConfigurations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDeviceMobileAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\ManagedDeviceMobileAppConfiguration">ManagedDeviceMobileAppConfiguration</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2080,7 +2091,7 @@ The Managed Device Mobile Application Configurations.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedDeviceMobileAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\ManagedDeviceMobileAppConfiguration">ManagedDeviceMobileAppConfiguration</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDeviceMobileAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\ManagedDeviceMobileAppConfiguration">ManagedDeviceMobileAppConfiguration</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The mobileAppConfigurations</p>
@@ -2111,7 +2122,7 @@ The Managed Device Mobile Application Configurations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">265</span>
+    <span class="phpdocumentor-element-found-in__line">293</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mobileApps
@@ -2119,7 +2130,7 @@ The mobile apps.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMobileApps</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMobileApps</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2127,7 +2138,7 @@ The mobile apps.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The mobileApps</p>
@@ -2204,7 +2215,7 @@ The mobile apps.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">535</span>
+    <span class="phpdocumentor-element-found-in__line">626</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the targetedManagedAppConfigurations
@@ -2212,7 +2223,7 @@ Targeted managed app configurations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTargetedManagedAppConfigurations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TargetedManagedAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppConfiguration">TargetedManagedAppConfiguration</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTargetedManagedAppConfigurations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppConfiguration">TargetedManagedAppConfiguration</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2220,7 +2231,7 @@ Targeted managed app configurations.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TargetedManagedAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppConfiguration">TargetedManagedAppConfiguration</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppConfiguration.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppConfiguration">TargetedManagedAppConfiguration</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The targetedManagedAppConfigurations</p>
@@ -2251,7 +2262,7 @@ Targeted managed app configurations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">330</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the vppTokens
@@ -2259,7 +2270,7 @@ List of Vpp tokens for this organization.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setVppTokens</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-VppToken.html"><abbr title="\Microsoft\Graph\Model\VppToken">VppToken</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setVppTokens</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VppToken.html"><abbr title="\Microsoft\Graph\Model\VppToken">VppToken</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2267,7 +2278,7 @@ List of Vpp tokens for this organization.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-VppToken.html"><abbr title="\Microsoft\Graph\Model\VppToken">VppToken</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-VppToken.html"><abbr title="\Microsoft\Graph\Model\VppToken">VppToken</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The vppTokens</p>
@@ -2298,7 +2309,7 @@ List of Vpp tokens for this organization.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceAppManagement.php"><a href="files/src-model-deviceappmanagement.html"><abbr title="src/Model/DeviceAppManagement.php">DeviceAppManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">565</span>
+    <span class="phpdocumentor-element-found-in__line">663</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the windowsInformationProtectionPolicies
@@ -2306,7 +2317,7 @@ Windows information protection for apps running on devices which are not MDM enr
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setWindowsInformationProtectionPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionPolicy">WindowsInformationProtectionPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setWindowsInformationProtectionPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionPolicy">WindowsInformationProtectionPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceAppManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceAppManagement">DeviceAppManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2314,7 +2325,7 @@ Windows information protection for apps running on devices which are not MDM enr
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionPolicy">WindowsInformationProtectionPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionPolicy.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionPolicy">WindowsInformationProtectionPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The windowsInformationProtectionPolicies</p>

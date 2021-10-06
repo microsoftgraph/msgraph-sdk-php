@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -182,7 +193,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Workbook.html#method_getComments">getComments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookComment.html"><abbr title="\Microsoft\Graph\Model\WorkbookComment">WorkbookComment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the comments</dd>
 
@@ -204,7 +215,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Workbook.html#method_getNames">getNames()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookNamedItem.html"><abbr title="\Microsoft\Graph\Model\WorkbookNamedItem">WorkbookNamedItem</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the names
 Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.</dd>
@@ -219,7 +230,7 @@ Represents a collection of workbooks scoped named items (named ranges and consta
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Workbook.html#method_getOperations">getOperations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookOperation.html"><abbr title="\Microsoft\Graph\Model\WorkbookOperation">WorkbookOperation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the operations
 The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.</dd>
@@ -234,7 +245,7 @@ The status of workbook operations. Getting an operation collection is not suppor
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Workbook.html#method_getTables">getTables()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookTable.html"><abbr title="\Microsoft\Graph\Model\WorkbookTable">WorkbookTable</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the tables
 Represents a collection of tables associated with the workbook. Read-only.</dd>
@@ -242,7 +253,7 @@ Represents a collection of tables associated with the workbook. Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Workbook.html#method_getWorksheets">getWorksheets()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookWorksheet.html"><abbr title="\Microsoft\Graph\Model\WorkbookWorksheet">WorkbookWorksheet</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the worksheets
 Represents a collection of worksheets associated with the workbook. Read-only.</dd>
@@ -476,7 +487,7 @@ to the model</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getComments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getComments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookComment.html"><abbr title="\Microsoft\Graph\Model\WorkbookComment">WorkbookComment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -484,7 +495,7 @@ to the model</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookComment.html"><abbr title="\Microsoft\Graph\Model\WorkbookComment">WorkbookComment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The comments</p>
 </section>
@@ -504,7 +515,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">91</span>
+    <span class="phpdocumentor-element-found-in__line">98</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the functions</p>
@@ -575,7 +586,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">124</span>
+    <span class="phpdocumentor-element-found-in__line">131</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the names
@@ -583,7 +594,7 @@ Represents a collection of workbooks scoped named items (named ranges and consta
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getNames</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getNames</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookNamedItem.html"><abbr title="\Microsoft\Graph\Model\WorkbookNamedItem">WorkbookNamedItem</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -591,7 +602,7 @@ Represents a collection of workbooks scoped named items (named ranges and consta
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookNamedItem.html"><abbr title="\Microsoft\Graph\Model\WorkbookNamedItem">WorkbookNamedItem</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The names</p>
 </section>
@@ -646,7 +657,7 @@ Represents a collection of workbooks scoped named items (named ranges and consta
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">168</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operations
@@ -654,7 +665,7 @@ The status of workbook operations. Getting an operation collection is not suppor
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookOperation.html"><abbr title="\Microsoft\Graph\Model\WorkbookOperation">WorkbookOperation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -662,7 +673,7 @@ The status of workbook operations. Getting an operation collection is not suppor
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookOperation.html"><abbr title="\Microsoft\Graph\Model\WorkbookOperation">WorkbookOperation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The operations</p>
 </section>
@@ -717,7 +728,7 @@ The status of workbook operations. Getting an operation collection is not suppor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">205</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tables
@@ -725,7 +736,7 @@ Represents a collection of tables associated with the workbook. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTables</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTables</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookTable.html"><abbr title="\Microsoft\Graph\Model\WorkbookTable">WorkbookTable</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -733,7 +744,7 @@ Represents a collection of tables associated with the workbook. Read-only.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookTable.html"><abbr title="\Microsoft\Graph\Model\WorkbookTable">WorkbookTable</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The tables</p>
 </section>
@@ -753,7 +764,7 @@ Represents a collection of tables associated with the workbook. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">214</span>
+    <span class="phpdocumentor-element-found-in__line">242</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the worksheets
@@ -761,7 +772,7 @@ Represents a collection of worksheets associated with the workbook. Read-only.</
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getWorksheets</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getWorksheets</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookWorksheet.html"><abbr title="\Microsoft\Graph\Model\WorkbookWorksheet">WorkbookWorksheet</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -769,7 +780,7 @@ Represents a collection of worksheets associated with the workbook. Read-only.</
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookWorksheet.html"><abbr title="\Microsoft\Graph\Model\WorkbookWorksheet">WorkbookWorksheet</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The worksheets</p>
 </section>
@@ -871,14 +882,14 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the comments</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setComments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookComment.html"><abbr title="\Microsoft\Graph\Model\WorkbookComment">WorkbookComment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setComments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookComment.html"><abbr title="\Microsoft\Graph\Model\WorkbookComment">WorkbookComment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -886,7 +897,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookComment.html"><abbr title="\Microsoft\Graph\Model\WorkbookComment">WorkbookComment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookComment.html"><abbr title="\Microsoft\Graph\Model\WorkbookComment">WorkbookComment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The comments</p>
@@ -917,7 +928,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">118</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the functions</p>
@@ -1010,7 +1021,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">141</span>
+    <span class="phpdocumentor-element-found-in__line">155</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the names
@@ -1018,7 +1029,7 @@ Represents a collection of workbooks scoped named items (named ranges and consta
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setNames</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookNamedItem.html"><abbr title="\Microsoft\Graph\Model\WorkbookNamedItem">WorkbookNamedItem</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setNames</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookNamedItem.html"><abbr title="\Microsoft\Graph\Model\WorkbookNamedItem">WorkbookNamedItem</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1026,7 +1037,7 @@ Represents a collection of workbooks scoped named items (named ranges and consta
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookNamedItem.html"><abbr title="\Microsoft\Graph\Model\WorkbookNamedItem">WorkbookNamedItem</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookNamedItem.html"><abbr title="\Microsoft\Graph\Model\WorkbookNamedItem">WorkbookNamedItem</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The names</p>
@@ -1103,7 +1114,7 @@ Represents a collection of workbooks scoped named items (named ranges and consta
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">192</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operations
@@ -1111,7 +1122,7 @@ The status of workbook operations. Getting an operation collection is not suppor
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookOperation.html"><abbr title="\Microsoft\Graph\Model\WorkbookOperation">WorkbookOperation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookOperation.html"><abbr title="\Microsoft\Graph\Model\WorkbookOperation">WorkbookOperation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1119,7 +1130,7 @@ The status of workbook operations. Getting an operation collection is not suppor
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookOperation.html"><abbr title="\Microsoft\Graph\Model\WorkbookOperation">WorkbookOperation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookOperation.html"><abbr title="\Microsoft\Graph\Model\WorkbookOperation">WorkbookOperation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The operations</p>
@@ -1150,7 +1161,7 @@ The status of workbook operations. Getting an operation collection is not suppor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">201</span>
+    <span class="phpdocumentor-element-found-in__line">229</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tables
@@ -1158,7 +1169,7 @@ Represents a collection of tables associated with the workbook. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTables</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookTable.html"><abbr title="\Microsoft\Graph\Model\WorkbookTable">WorkbookTable</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTables</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookTable.html"><abbr title="\Microsoft\Graph\Model\WorkbookTable">WorkbookTable</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1166,7 +1177,7 @@ Represents a collection of tables associated with the workbook. Read-only.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookTable.html"><abbr title="\Microsoft\Graph\Model\WorkbookTable">WorkbookTable</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookTable.html"><abbr title="\Microsoft\Graph\Model\WorkbookTable">WorkbookTable</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The tables</p>
@@ -1197,7 +1208,7 @@ Represents a collection of tables associated with the workbook. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Workbook.php"><a href="files/src-model-workbook.html"><abbr title="src/Model/Workbook.php">Workbook.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">231</span>
+    <span class="phpdocumentor-element-found-in__line">266</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the worksheets
@@ -1205,7 +1216,7 @@ Represents a collection of worksheets associated with the workbook. Read-only.</
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setWorksheets</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookWorksheet.html"><abbr title="\Microsoft\Graph\Model\WorkbookWorksheet">WorkbookWorksheet</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setWorksheets</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookWorksheet.html"><abbr title="\Microsoft\Graph\Model\WorkbookWorksheet">WorkbookWorksheet</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Workbook.html"><abbr title="\Microsoft\Graph\Model\Workbook">Workbook</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1213,7 +1224,7 @@ Represents a collection of worksheets associated with the workbook. Read-only.</
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WorkbookWorksheet.html"><abbr title="\Microsoft\Graph\Model\WorkbookWorksheet">WorkbookWorksheet</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WorkbookWorksheet.html"><abbr title="\Microsoft\Graph\Model\WorkbookWorksheet">WorkbookWorksheet</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The worksheets</p>

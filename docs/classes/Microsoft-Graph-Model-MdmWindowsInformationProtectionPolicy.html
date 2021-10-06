@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -175,7 +186,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getAssignments">getAssignments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppPolicyAssignment.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppPolicyAssignment">TargetedManagedAppPolicyAssignment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the assignments
 Navigation property to list of security groups targeted for policy.</dd>
@@ -239,7 +250,7 @@ Primary enterprise domain</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getEnterpriseInternalProxyServers">getEnterpriseInternalProxyServers()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the enterpriseInternalProxyServers
 This is the comma-separated list of internal proxy servers. For example, &#039;157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59&#039;. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies</dd>
@@ -247,7 +258,7 @@ This is the comma-separated list of internal proxy servers. For example, &#039;1
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getEnterpriseIPRanges">getEnterpriseIPRanges()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionIPRangeCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionIPRangeCollection">WindowsInformationProtectionIPRangeCollection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the enterpriseIPRanges
 Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to</dd>
@@ -263,7 +274,7 @@ Boolean value that tells the client to accept the configured list and not to use
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getEnterpriseNetworkDomainNames">getEnterpriseNetworkDomainNames()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the enterpriseNetworkDomainNames
 This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to</dd>
@@ -271,7 +282,7 @@ This is the list of domains that comprise the boundaries of the enterprise. Data
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getEnterpriseProtectedDomainNames">getEnterpriseProtectedDomainNames()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the enterpriseProtectedDomainNames
 List of enterprise domains to be protected</dd>
@@ -279,7 +290,7 @@ List of enterprise domains to be protected</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getEnterpriseProxiedDomains">getEnterpriseProxiedDomains()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionProxiedDomainCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionProxiedDomainCollection">WindowsInformationProtectionProxiedDomainCollection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the enterpriseProxiedDomains
 Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy</dd>
@@ -287,7 +298,7 @@ Contains a list of Enterprise resource domains hosted in the cloud that need to 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getEnterpriseProxyServers">getEnterpriseProxyServers()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the enterpriseProxyServers
 This is a list of proxy servers. Any server not on this list is considered non-enterprise</dd>
@@ -303,7 +314,7 @@ Boolean value that tells the client to accept the configured list of proxies and
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getExemptAppLockerFiles">getExemptAppLockerFiles()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the exemptAppLockerFiles
 Another way to input exempt apps through xml files</dd>
@@ -311,7 +322,7 @@ Another way to input exempt apps through xml files</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getExemptApps">getExemptApps()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the exemptApps
 Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.</dd>
@@ -359,7 +370,7 @@ Last time the policy was modified.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getNeutralDomainResources">getNeutralDomainResources()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the neutralDomainResources
 List of domain names that can used for work or personal resource</dd>
@@ -381,7 +392,7 @@ List of domain names that can used for work or personal resource</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getProtectedAppLockerFiles">getProtectedAppLockerFiles()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the protectedAppLockerFiles
 Another way to input protected apps through xml files</dd>
@@ -389,7 +400,7 @@ Another way to input protected apps through xml files</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getProtectedApps">getProtectedApps()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the protectedApps
 Protected applications can access enterprise data and the data handled by those applications are protected with encryption</dd>
@@ -421,7 +432,7 @@ TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html#method_getSmbAutoEncryptedFileExtensions">getSmbAutoEncryptedFileExtensions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the smbAutoEncryptedFileExtensions
 Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary</dd>
@@ -808,7 +819,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">690</span>
+    <span class="phpdocumentor-element-found-in__line">760</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the assignments
@@ -816,7 +827,7 @@ Navigation property to list of security groups targeted for policy.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppPolicyAssignment.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppPolicyAssignment">TargetedManagedAppPolicyAssignment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -824,7 +835,7 @@ Navigation property to list of security groups targeted for policy.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppPolicyAssignment.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppPolicyAssignment">TargetedManagedAppPolicyAssignment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The assignments</p>
 </section>
@@ -1104,7 +1115,7 @@ This is the comma-separated list of internal proxy servers. For example, &#039;1
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getEnterpriseInternalProxyServers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getEnterpriseInternalProxyServers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1112,7 +1123,7 @@ This is the comma-separated list of internal proxy servers. For example, &#039;1
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The enterpriseInternalProxyServers</p>
 </section>
@@ -1132,7 +1143,7 @@ This is the comma-separated list of internal proxy servers. For example, &#039;1
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">188</span>
+    <span class="phpdocumentor-element-found-in__line">195</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enterpriseIPRanges
@@ -1140,7 +1151,7 @@ Sets the enterprise IP ranges that define the computers in the enterprise networ
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getEnterpriseIPRanges</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getEnterpriseIPRanges</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionIPRangeCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionIPRangeCollection">WindowsInformationProtectionIPRangeCollection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1148,7 +1159,7 @@ Sets the enterprise IP ranges that define the computers in the enterprise networ
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionIPRangeCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionIPRangeCollection">WindowsInformationProtectionIPRangeCollection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The enterpriseIPRanges</p>
 </section>
@@ -1168,7 +1179,7 @@ Sets the enterprise IP ranges that define the computers in the enterprise networ
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">217</span>
+    <span class="phpdocumentor-element-found-in__line">231</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enterpriseIPRangesAreAuthoritative
@@ -1204,7 +1215,7 @@ Boolean value that tells the client to accept the configured list and not to use
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">247</span>
+    <span class="phpdocumentor-element-found-in__line">261</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enterpriseNetworkDomainNames
@@ -1212,7 +1223,7 @@ This is the list of domains that comprise the boundaries of the enterprise. Data
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getEnterpriseNetworkDomainNames</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getEnterpriseNetworkDomainNames</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1220,7 +1231,7 @@ This is the list of domains that comprise the boundaries of the enterprise. Data
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The enterpriseNetworkDomainNames</p>
 </section>
@@ -1240,7 +1251,7 @@ This is the list of domains that comprise the boundaries of the enterprise. Data
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">277</span>
+    <span class="phpdocumentor-element-found-in__line">298</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enterpriseProtectedDomainNames
@@ -1248,7 +1259,7 @@ List of enterprise domains to be protected</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getEnterpriseProtectedDomainNames</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getEnterpriseProtectedDomainNames</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1256,7 +1267,7 @@ List of enterprise domains to be protected</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The enterpriseProtectedDomainNames</p>
 </section>
@@ -1276,7 +1287,7 @@ List of enterprise domains to be protected</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">307</span>
+    <span class="phpdocumentor-element-found-in__line">335</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enterpriseProxiedDomains
@@ -1284,7 +1295,7 @@ Contains a list of Enterprise resource domains hosted in the cloud that need to 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getEnterpriseProxiedDomains</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getEnterpriseProxiedDomains</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionProxiedDomainCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionProxiedDomainCollection">WindowsInformationProtectionProxiedDomainCollection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1292,7 +1303,7 @@ Contains a list of Enterprise resource domains hosted in the cloud that need to 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionProxiedDomainCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionProxiedDomainCollection">WindowsInformationProtectionProxiedDomainCollection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The enterpriseProxiedDomains</p>
 </section>
@@ -1312,7 +1323,7 @@ Contains a list of Enterprise resource domains hosted in the cloud that need to 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">337</span>
+    <span class="phpdocumentor-element-found-in__line">372</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enterpriseProxyServers
@@ -1320,7 +1331,7 @@ This is a list of proxy servers. Any server not on this list is considered non-e
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getEnterpriseProxyServers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getEnterpriseProxyServers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1328,7 +1339,7 @@ This is a list of proxy servers. Any server not on this list is considered non-e
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The enterpriseProxyServers</p>
 </section>
@@ -1348,7 +1359,7 @@ This is a list of proxy servers. Any server not on this list is considered non-e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">366</span>
+    <span class="phpdocumentor-element-found-in__line">408</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enterpriseProxyServersAreAuthoritative
@@ -1384,7 +1395,7 @@ Boolean value that tells the client to accept the configured list of proxies and
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">720</span>
+    <span class="phpdocumentor-element-found-in__line">797</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the exemptAppLockerFiles
@@ -1392,7 +1403,7 @@ Another way to input exempt apps through xml files</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExemptAppLockerFiles</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getExemptAppLockerFiles</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1400,7 +1411,7 @@ Another way to input exempt apps through xml files</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The exemptAppLockerFiles</p>
 </section>
@@ -1420,7 +1431,7 @@ Another way to input exempt apps through xml files</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">396</span>
+    <span class="phpdocumentor-element-found-in__line">438</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the exemptApps
@@ -1428,7 +1439,7 @@ Exempt applications can also access enterprise data, but the data handled by tho
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExemptApps</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getExemptApps</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1436,7 +1447,7 @@ Exempt applications can also access enterprise data, but the data handled by tho
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The exemptApps</p>
 </section>
@@ -1456,7 +1467,7 @@ Exempt applications can also access enterprise data, but the data handled by tho
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">425</span>
+    <span class="phpdocumentor-element-found-in__line">474</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iconsVisible
@@ -1528,7 +1539,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">454</span>
+    <span class="phpdocumentor-element-found-in__line">503</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the indexingEncryptedStoresOrItemsBlocked
@@ -1564,7 +1575,7 @@ This switch is for the Windows Search Indexer, to allow or disallow indexing of 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">483</span>
+    <span class="phpdocumentor-element-found-in__line">532</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isAssigned
@@ -1636,7 +1647,7 @@ Last time the policy was modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">513</span>
+    <span class="phpdocumentor-element-found-in__line">562</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the neutralDomainResources
@@ -1644,7 +1655,7 @@ List of domain names that can used for work or personal resource</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getNeutralDomainResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getNeutralDomainResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1652,7 +1663,7 @@ List of domain names that can used for work or personal resource</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The neutralDomainResources</p>
 </section>
@@ -1742,7 +1753,7 @@ List of domain names that can used for work or personal resource</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">750</span>
+    <span class="phpdocumentor-element-found-in__line">834</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the protectedAppLockerFiles
@@ -1750,7 +1761,7 @@ Another way to input protected apps through xml files</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getProtectedAppLockerFiles</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getProtectedAppLockerFiles</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1758,7 +1769,7 @@ Another way to input protected apps through xml files</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The protectedAppLockerFiles</p>
 </section>
@@ -1778,7 +1789,7 @@ Another way to input protected apps through xml files</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">543</span>
+    <span class="phpdocumentor-element-found-in__line">599</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the protectedApps
@@ -1786,7 +1797,7 @@ Protected applications can access enterprise data and the data handled by those 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getProtectedApps</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getProtectedApps</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1794,7 +1805,7 @@ Protected applications can access enterprise data and the data handled by those 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The protectedApps</p>
 </section>
@@ -1814,7 +1825,7 @@ Protected applications can access enterprise data and the data handled by those 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">572</span>
+    <span class="phpdocumentor-element-found-in__line">635</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the protectionUnderLockConfigRequired
@@ -1850,7 +1861,7 @@ Specifies whether the protection under lock feature (also known as encrypt under
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">601</span>
+    <span class="phpdocumentor-element-found-in__line">664</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the revokeOnUnenrollDisabled
@@ -1886,7 +1897,7 @@ This policy controls whether to revoke the WIP keys when a device unenrolls from
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">630</span>
+    <span class="phpdocumentor-element-found-in__line">693</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the rightsManagementServicesTemplateId
@@ -1922,7 +1933,7 @@ TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">660</span>
+    <span class="phpdocumentor-element-found-in__line">723</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the smbAutoEncryptedFileExtensions
@@ -1930,7 +1941,7 @@ Specifies a list of file extensions, so that files with these extensions are enc
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSmbAutoEncryptedFileExtensions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSmbAutoEncryptedFileExtensions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1938,7 +1949,7 @@ Specifies a list of file extensions, so that files with these extensions are enc
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The smbAutoEncryptedFileExtensions</p>
 </section>
@@ -2030,7 +2041,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">707</span>
+    <span class="phpdocumentor-element-found-in__line">784</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the assignments
@@ -2038,7 +2049,7 @@ Navigation property to list of security groups targeted for policy.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TargetedManagedAppPolicyAssignment.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppPolicyAssignment">TargetedManagedAppPolicyAssignment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppPolicyAssignment.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppPolicyAssignment">TargetedManagedAppPolicyAssignment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2046,7 +2057,7 @@ Navigation property to list of security groups targeted for policy.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TargetedManagedAppPolicyAssignment.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppPolicyAssignment">TargetedManagedAppPolicyAssignment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TargetedManagedAppPolicyAssignment.html"><abbr title="\Microsoft\Graph\Model\TargetedManagedAppPolicyAssignment">TargetedManagedAppPolicyAssignment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The assignments</p>
@@ -2406,7 +2417,7 @@ Primary enterprise domain</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">175</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enterpriseInternalProxyServers
@@ -2414,7 +2425,7 @@ This is the comma-separated list of internal proxy servers. For example, &#039;1
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setEnterpriseInternalProxyServers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setEnterpriseInternalProxyServers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2422,7 +2433,7 @@ This is the comma-separated list of internal proxy servers. For example, &#039;1
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The enterpriseInternalProxyServers</p>
@@ -2453,7 +2464,7 @@ This is the comma-separated list of internal proxy servers. For example, &#039;1
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">205</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enterpriseIPRanges
@@ -2461,7 +2472,7 @@ Sets the enterprise IP ranges that define the computers in the enterprise networ
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setEnterpriseIPRanges</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionIPRangeCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionIPRangeCollection">WindowsInformationProtectionIPRangeCollection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setEnterpriseIPRanges</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionIPRangeCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionIPRangeCollection">WindowsInformationProtectionIPRangeCollection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2469,7 +2480,7 @@ Sets the enterprise IP ranges that define the computers in the enterprise networ
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionIPRangeCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionIPRangeCollection">WindowsInformationProtectionIPRangeCollection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionIPRangeCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionIPRangeCollection">WindowsInformationProtectionIPRangeCollection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The enterpriseIPRanges</p>
@@ -2500,7 +2511,7 @@ Sets the enterprise IP ranges that define the computers in the enterprise networ
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">234</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enterpriseIPRangesAreAuthoritative
@@ -2547,7 +2558,7 @@ Boolean value that tells the client to accept the configured list and not to use
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">264</span>
+    <span class="phpdocumentor-element-found-in__line">285</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enterpriseNetworkDomainNames
@@ -2555,7 +2566,7 @@ This is the list of domains that comprise the boundaries of the enterprise. Data
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setEnterpriseNetworkDomainNames</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setEnterpriseNetworkDomainNames</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2563,7 +2574,7 @@ This is the list of domains that comprise the boundaries of the enterprise. Data
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The enterpriseNetworkDomainNames</p>
@@ -2594,7 +2605,7 @@ This is the list of domains that comprise the boundaries of the enterprise. Data
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">294</span>
+    <span class="phpdocumentor-element-found-in__line">322</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enterpriseProtectedDomainNames
@@ -2602,7 +2613,7 @@ List of enterprise domains to be protected</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setEnterpriseProtectedDomainNames</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setEnterpriseProtectedDomainNames</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2610,7 +2621,7 @@ List of enterprise domains to be protected</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The enterpriseProtectedDomainNames</p>
@@ -2641,7 +2652,7 @@ List of enterprise domains to be protected</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">324</span>
+    <span class="phpdocumentor-element-found-in__line">359</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enterpriseProxiedDomains
@@ -2649,7 +2660,7 @@ Contains a list of Enterprise resource domains hosted in the cloud that need to 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setEnterpriseProxiedDomains</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionProxiedDomainCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionProxiedDomainCollection">WindowsInformationProtectionProxiedDomainCollection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setEnterpriseProxiedDomains</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionProxiedDomainCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionProxiedDomainCollection">WindowsInformationProtectionProxiedDomainCollection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2657,7 +2668,7 @@ Contains a list of Enterprise resource domains hosted in the cloud that need to 
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionProxiedDomainCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionProxiedDomainCollection">WindowsInformationProtectionProxiedDomainCollection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionProxiedDomainCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionProxiedDomainCollection">WindowsInformationProtectionProxiedDomainCollection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The enterpriseProxiedDomains</p>
@@ -2688,7 +2699,7 @@ Contains a list of Enterprise resource domains hosted in the cloud that need to 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">354</span>
+    <span class="phpdocumentor-element-found-in__line">396</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enterpriseProxyServers
@@ -2696,7 +2707,7 @@ This is a list of proxy servers. Any server not on this list is considered non-e
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setEnterpriseProxyServers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setEnterpriseProxyServers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2704,7 +2715,7 @@ This is a list of proxy servers. Any server not on this list is considered non-e
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The enterpriseProxyServers</p>
@@ -2735,7 +2746,7 @@ This is a list of proxy servers. Any server not on this list is considered non-e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">383</span>
+    <span class="phpdocumentor-element-found-in__line">425</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enterpriseProxyServersAreAuthoritative
@@ -2782,7 +2793,7 @@ Boolean value that tells the client to accept the configured list of proxies and
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">737</span>
+    <span class="phpdocumentor-element-found-in__line">821</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the exemptAppLockerFiles
@@ -2790,7 +2801,7 @@ Another way to input exempt apps through xml files</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setExemptAppLockerFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setExemptAppLockerFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2798,7 +2809,7 @@ Another way to input exempt apps through xml files</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The exemptAppLockerFiles</p>
@@ -2829,7 +2840,7 @@ Another way to input exempt apps through xml files</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">413</span>
+    <span class="phpdocumentor-element-found-in__line">462</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the exemptApps
@@ -2837,7 +2848,7 @@ Exempt applications can also access enterprise data, but the data handled by tho
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setExemptApps</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setExemptApps</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2845,7 +2856,7 @@ Exempt applications can also access enterprise data, but the data handled by tho
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The exemptApps</p>
@@ -2876,7 +2887,7 @@ Exempt applications can also access enterprise data, but the data handled by tho
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">442</span>
+    <span class="phpdocumentor-element-found-in__line">491</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iconsVisible
@@ -2970,7 +2981,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">471</span>
+    <span class="phpdocumentor-element-found-in__line">520</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the indexingEncryptedStoresOrItemsBlocked
@@ -3017,7 +3028,7 @@ This switch is for the Windows Search Indexer, to allow or disallow indexing of 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">500</span>
+    <span class="phpdocumentor-element-found-in__line">549</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isAssigned
@@ -3111,7 +3122,7 @@ Last time the policy was modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">530</span>
+    <span class="phpdocumentor-element-found-in__line">586</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the neutralDomainResources
@@ -3119,7 +3130,7 @@ List of domain names that can used for work or personal resource</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setNeutralDomainResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setNeutralDomainResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3127,7 +3138,7 @@ List of domain names that can used for work or personal resource</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The neutralDomainResources</p>
@@ -3204,7 +3215,7 @@ List of domain names that can used for work or personal resource</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">767</span>
+    <span class="phpdocumentor-element-found-in__line">858</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the protectedAppLockerFiles
@@ -3212,7 +3223,7 @@ Another way to input protected apps through xml files</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setProtectedAppLockerFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setProtectedAppLockerFiles</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3220,7 +3231,7 @@ Another way to input protected apps through xml files</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLockerFile.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLockerFile">WindowsInformationProtectionAppLockerFile</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The protectedAppLockerFiles</p>
@@ -3251,7 +3262,7 @@ Another way to input protected apps through xml files</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">560</span>
+    <span class="phpdocumentor-element-found-in__line">623</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the protectedApps
@@ -3259,7 +3270,7 @@ Protected applications can access enterprise data and the data handled by those 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setProtectedApps</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setProtectedApps</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3267,7 +3278,7 @@ Protected applications can access enterprise data and the data handled by those 
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionApp.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionApp">WindowsInformationProtectionApp</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The protectedApps</p>
@@ -3298,7 +3309,7 @@ Protected applications can access enterprise data and the data handled by those 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">589</span>
+    <span class="phpdocumentor-element-found-in__line">652</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the protectionUnderLockConfigRequired
@@ -3345,7 +3356,7 @@ Specifies whether the protection under lock feature (also known as encrypt under
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">618</span>
+    <span class="phpdocumentor-element-found-in__line">681</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the revokeOnUnenrollDisabled
@@ -3392,7 +3403,7 @@ This policy controls whether to revoke the WIP keys when a device unenrolls from
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">647</span>
+    <span class="phpdocumentor-element-found-in__line">710</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the rightsManagementServicesTemplateId
@@ -3439,7 +3450,7 @@ TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/WindowsInformationProtection.php"><a href="files/src-model-windowsinformationprotection.html"><abbr title="src/Model/WindowsInformationProtection.php">WindowsInformationProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">677</span>
+    <span class="phpdocumentor-element-found-in__line">747</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the smbAutoEncryptedFileExtensions
@@ -3447,7 +3458,7 @@ Specifies a list of file extensions, so that files with these extensions are enc
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSmbAutoEncryptedFileExtensions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSmbAutoEncryptedFileExtensions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtection">WindowsInformationProtection</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3455,7 +3466,7 @@ Specifies a list of file extensions, so that files with these extensions are enc
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionResourceCollection.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionResourceCollection">WindowsInformationProtectionResourceCollection</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The smbAutoEncryptedFileExtensions</p>

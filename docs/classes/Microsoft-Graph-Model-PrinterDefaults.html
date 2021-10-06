@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -215,7 +226,7 @@ The default duplex (double-sided) configuration to use when printing a document.
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-PrinterDefaults.html#method_getFinishings">getFinishings()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the finishings
 The default set of finishings to apply to print jobs. Valid values are described in the following table.</dd>
@@ -636,7 +647,7 @@ The default color mode to use when printing the document. Valid values are descr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">65</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the contentType
@@ -672,7 +683,7 @@ The default content (MIME) type to use when processing documents.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">94</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the copiesPerJob
@@ -708,7 +719,7 @@ The default number of copies printed per job.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the dpi
@@ -744,7 +755,7 @@ The default resolution in DPI to use when printing the job.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">151</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the duplexMode
@@ -780,7 +791,7 @@ The default duplex (double-sided) configuration to use when printing a document.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">185</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the finishings
@@ -788,7 +799,7 @@ The default set of finishings to apply to print jobs. Valid values are described
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFinishings</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getFinishings</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -796,7 +807,7 @@ The default set of finishings to apply to print jobs. Valid values are described
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The finishings</p>
 </section>
@@ -816,7 +827,7 @@ The default set of finishings to apply to print jobs. Valid values are described
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">215</span>
+    <span class="phpdocumentor-element-found-in__line">221</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the fitPdfToPage
@@ -888,7 +899,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">243</span>
+    <span class="phpdocumentor-element-found-in__line">249</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the inputBin
@@ -924,7 +935,7 @@ The default input bin that serves as the paper source.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">271</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaColor
@@ -960,7 +971,7 @@ The default media (such as paper) color to print the document on.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">299</span>
+    <span class="phpdocumentor-element-found-in__line">305</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaSize
@@ -996,7 +1007,7 @@ The default media size to use. Supports standard size names for ISO and ANSI med
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">327</span>
+    <span class="phpdocumentor-element-found-in__line">333</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaType
@@ -1032,7 +1043,7 @@ The default media (such as paper) type to print the document on.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">356</span>
+    <span class="phpdocumentor-element-found-in__line">362</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the multipageLayout
@@ -1103,7 +1114,7 @@ The default direction to lay out pages when multiple pages are being printed per
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">389</span>
+    <span class="phpdocumentor-element-found-in__line">396</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the orientation
@@ -1139,7 +1150,7 @@ The default orientation to use when printing the document. Valid values are desc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">421</span>
+    <span class="phpdocumentor-element-found-in__line">429</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the outputBin
@@ -1175,7 +1186,7 @@ The default output bin to place completed prints into. See the printer&#039;s ca
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">449</span>
+    <span class="phpdocumentor-element-found-in__line">457</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pagesPerSheet
@@ -1246,7 +1257,7 @@ The default number of document pages to print on each sheet.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">478</span>
+    <span class="phpdocumentor-element-found-in__line">486</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the quality
@@ -1282,7 +1293,7 @@ The default quality to use when printing the document. Valid values are describe
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">511</span>
+    <span class="phpdocumentor-element-found-in__line">520</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the scaling
@@ -1354,7 +1365,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the colorMode
@@ -1402,7 +1413,7 @@ The default color mode to use when printing the document. Valid values are descr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">82</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the contentType
@@ -1449,7 +1460,7 @@ The default content (MIME) type to use when processing documents.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">111</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the copiesPerJob
@@ -1496,7 +1507,7 @@ The default number of copies printed per job.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">139</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the dpi
@@ -1543,7 +1554,7 @@ The default resolution in DPI to use when printing the job.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">173</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the duplexMode
@@ -1591,7 +1602,7 @@ The default duplex (double-sided) configuration to use when printing a document.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">204</span>
+    <span class="phpdocumentor-element-found-in__line">210</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the finishings
@@ -1599,7 +1610,7 @@ The default set of finishings to apply to print jobs. Valid values are described
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setFinishings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterDefaults.html"><abbr title="\Microsoft\Graph\Model\PrinterDefaults">PrinterDefaults</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setFinishings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-PrinterDefaults.html"><abbr title="\Microsoft\Graph\Model\PrinterDefaults">PrinterDefaults</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1607,7 +1618,7 @@ The default set of finishings to apply to print jobs. Valid values are described
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-PrintFinishing.html"><abbr title="\Microsoft\Graph\Model\PrintFinishing">PrintFinishing</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the finishings</p>
@@ -1639,7 +1650,7 @@ The default set of finishings to apply to print jobs. Valid values are described
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">232</span>
+    <span class="phpdocumentor-element-found-in__line">238</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the fitPdfToPage
@@ -1733,7 +1744,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">260</span>
+    <span class="phpdocumentor-element-found-in__line">266</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the inputBin
@@ -1780,7 +1791,7 @@ The default input bin that serves as the paper source.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">288</span>
+    <span class="phpdocumentor-element-found-in__line">294</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaColor
@@ -1827,7 +1838,7 @@ The default media (such as paper) color to print the document on.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">316</span>
+    <span class="phpdocumentor-element-found-in__line">322</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaSize
@@ -1874,7 +1885,7 @@ The default media size to use. Supports standard size names for ISO and ANSI med
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">344</span>
+    <span class="phpdocumentor-element-found-in__line">350</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaType
@@ -1921,7 +1932,7 @@ The default media (such as paper) type to print the document on.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">377</span>
+    <span class="phpdocumentor-element-found-in__line">384</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the multipageLayout
@@ -2015,7 +2026,7 @@ The default direction to lay out pages when multiple pages are being printed per
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">410</span>
+    <span class="phpdocumentor-element-found-in__line">418</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the orientation
@@ -2063,7 +2074,7 @@ The default orientation to use when printing the document. Valid values are desc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">438</span>
+    <span class="phpdocumentor-element-found-in__line">446</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the outputBin
@@ -2110,7 +2121,7 @@ The default output bin to place completed prints into. See the printer&#039;s ca
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">466</span>
+    <span class="phpdocumentor-element-found-in__line">474</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pagesPerSheet
@@ -2157,7 +2168,7 @@ The default number of document pages to print on each sheet.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">499</span>
+    <span class="phpdocumentor-element-found-in__line">508</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the quality
@@ -2205,7 +2216,7 @@ The default quality to use when printing the document. Valid values are describe
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/PrinterDefaults.php"><a href="files/src-model-printerdefaults.html"><abbr title="src/Model/PrinterDefaults.php">PrinterDefaults.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">532</span>
+    <span class="phpdocumentor-element-found-in__line">542</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the scaling

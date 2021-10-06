@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -236,7 +247,7 @@ Properties that you can use to visualize the document in your experience. Read-o
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SharedInsight.html#method_getSharingHistory">getSharingHistory()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharingDetail.html"><abbr title="\Microsoft\Graph\Model\SharingDetail">SharingDetail</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the sharingHistory</dd>
 
@@ -492,7 +503,7 @@ Details about the shared item. Read only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SharedInsight.php"><a href="files/src-model-sharedinsight.html"><abbr title="src/Model/SharedInsight.php">SharedInsight.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">159</span>
+    <span class="phpdocumentor-element-found-in__line">166</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastSharedMethod</p>
@@ -597,7 +608,7 @@ Details about the shared item. Read only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SharedInsight.php"><a href="files/src-model-sharedinsight.html"><abbr title="src/Model/SharedInsight.php">SharedInsight.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">191</span>
+    <span class="phpdocumentor-element-found-in__line">198</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resource
@@ -712,7 +723,7 @@ Properties that you can use to visualize the document in your experience. Read-o
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSharingHistory</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSharingHistory</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharingDetail.html"><abbr title="\Microsoft\Graph\Model\SharingDetail">SharingDetail</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -720,7 +731,7 @@ Properties that you can use to visualize the document in your experience. Read-o
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharingDetail.html"><abbr title="\Microsoft\Graph\Model\SharingDetail">SharingDetail</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The sharingHistory</p>
 </section>
@@ -870,7 +881,7 @@ Details about the shared item. Read only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SharedInsight.php"><a href="files/src-model-sharedinsight.html"><abbr title="src/Model/SharedInsight.php">SharedInsight.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastSharedMethod</p>
@@ -962,7 +973,7 @@ Details about the shared item. Read only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SharedInsight.php"><a href="files/src-model-sharedinsight.html"><abbr title="src/Model/SharedInsight.php">SharedInsight.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">212</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resource
@@ -1103,14 +1114,14 @@ Properties that you can use to visualize the document in your experience. Read-o
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SharedInsight.php"><a href="files/src-model-sharedinsight.html"><abbr title="src/Model/SharedInsight.php">SharedInsight.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">148</span>
+    <span class="phpdocumentor-element-found-in__line">155</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sharingHistory</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSharingHistory</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SharingDetail.html"><abbr title="\Microsoft\Graph\Model\SharingDetail">SharingDetail</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SharedInsight.html"><abbr title="\Microsoft\Graph\Model\SharedInsight">SharedInsight</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSharingHistory</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharingDetail.html"><abbr title="\Microsoft\Graph\Model\SharingDetail">SharingDetail</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SharedInsight.html"><abbr title="\Microsoft\Graph\Model\SharedInsight">SharedInsight</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1118,7 +1129,7 @@ Properties that you can use to visualize the document in your experience. Read-o
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SharingDetail.html"><abbr title="\Microsoft\Graph\Model\SharingDetail">SharingDetail</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharingDetail.html"><abbr title="\Microsoft\Graph\Model\SharingDetail">SharingDetail</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The sharingHistory</p>

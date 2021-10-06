@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -207,7 +218,7 @@ Indicates whether or not to disable the launch of all apps from Windows Store th
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html#method_getAssignments">getAssignments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the assignments
 The list of assignments for the device configuration profile.</dd>
@@ -567,7 +578,7 @@ Indicates whether or not to Block the user from doing manual un-enrollment from 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html#method_getDeviceSettingStateSummaries">getDeviceSettingStateSummaries()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceSettingStateSummaries
 Device Configuration Setting State Device Summary</dd>
@@ -575,7 +586,7 @@ Device Configuration Setting State Device Summary</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html#method_getDeviceStatuses">getDeviceStatuses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceStatuses
 Device configuration installation status by device.</dd>
@@ -1709,7 +1720,7 @@ Indicates whether or not to Block the user from USB connection.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html#method_getUserStatuses">getUserStatuses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the userStatuses
 Device configuration installation status by user.</dd>
@@ -3872,7 +3883,7 @@ The list of assignments for the device configuration profile.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3880,7 +3891,7 @@ The list of assignments for the device configuration profile.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The assignments</p>
 </section>
@@ -5484,7 +5495,7 @@ Indicates whether or not to Block the user from doing manual un-enrollment from 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">217</span>
+    <span class="phpdocumentor-element-found-in__line">224</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceSettingStateSummaries
@@ -5492,7 +5503,7 @@ Device Configuration Setting State Device Summary</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceSettingStateSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceSettingStateSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -5500,7 +5511,7 @@ Device Configuration Setting State Device Summary</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceSettingStateSummaries</p>
 </section>
@@ -5520,7 +5531,7 @@ Device Configuration Setting State Device Summary</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">247</span>
+    <span class="phpdocumentor-element-found-in__line">261</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceStatuses
@@ -5528,7 +5539,7 @@ Device configuration installation status by device.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -5536,7 +5547,7 @@ Device configuration installation status by device.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceStatuses</p>
 </section>
@@ -5556,7 +5567,7 @@ Device configuration installation status by device.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">276</span>
+    <span class="phpdocumentor-element-found-in__line">297</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceStatusOverview
@@ -10630,7 +10641,7 @@ Indicates whether or not to Block the user from USB connection.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">310</span>
+    <span class="phpdocumentor-element-found-in__line">331</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userStatuses
@@ -10638,7 +10649,7 @@ Device configuration installation status by user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getUserStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getUserStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -10646,7 +10657,7 @@ Device configuration installation status by user.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The userStatuses</p>
 </section>
@@ -10666,7 +10677,7 @@ Device configuration installation status by user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">339</span>
+    <span class="phpdocumentor-element-found-in__line">367</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userStatusOverview
@@ -11682,7 +11693,7 @@ Indicates whether or not to disable the launch of all apps from Windows Store th
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">204</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the assignments
@@ -11690,7 +11701,7 @@ The list of assignments for the device configuration profile.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -11698,7 +11709,7 @@ The list of assignments for the device configuration profile.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationAssignment">DeviceConfigurationAssignment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The assignments</p>
@@ -13797,7 +13808,7 @@ Indicates whether or not to Block the user from doing manual un-enrollment from 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">234</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceSettingStateSummaries
@@ -13805,7 +13816,7 @@ Device Configuration Setting State Device Summary</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceSettingStateSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceSettingStateSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -13813,7 +13824,7 @@ Device Configuration Setting State Device Summary</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingStateDeviceSummary.html"><abbr title="\Microsoft\Graph\Model\SettingStateDeviceSummary">SettingStateDeviceSummary</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceSettingStateSummaries</p>
@@ -13844,7 +13855,7 @@ Device Configuration Setting State Device Summary</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">264</span>
+    <span class="phpdocumentor-element-found-in__line">285</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceStatuses
@@ -13852,7 +13863,7 @@ Device configuration installation status by device.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -13860,7 +13871,7 @@ Device configuration installation status by device.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationDeviceStatus">DeviceConfigurationDeviceStatus</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceStatuses</p>
@@ -13891,7 +13902,7 @@ Device configuration installation status by device.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">297</span>
+    <span class="phpdocumentor-element-found-in__line">318</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceStatusOverview
@@ -20470,7 +20481,7 @@ Indicates whether or not to Block the user from USB connection.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">327</span>
+    <span class="phpdocumentor-element-found-in__line">355</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userStatuses
@@ -20478,7 +20489,7 @@ Device configuration installation status by user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setUserStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setUserStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -20486,7 +20497,7 @@ Device configuration installation status by user.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfigurationUserStatus.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationUserStatus">DeviceConfigurationUserStatus</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The userStatuses</p>
@@ -20517,7 +20528,7 @@ Device configuration installation status by user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfiguration.php"><a href="files/src-model-deviceconfiguration.html"><abbr title="src/Model/DeviceConfiguration.php">DeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">360</span>
+    <span class="phpdocumentor-element-found-in__line">388</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userStatusOverview

@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -245,7 +256,7 @@ Localized/user friendly setting name that is being reported</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceConfigurationSettingState.html#method_getSources">getSources()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the sources
 Contributing policies</dd>
@@ -850,7 +861,7 @@ Contributing policies</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getSources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -858,7 +869,7 @@ Contributing policies</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The sources</p>
 </section>
@@ -878,7 +889,7 @@ Contributing policies</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">234</span>
+    <span class="phpdocumentor-element-found-in__line">238</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the state
@@ -914,7 +925,7 @@ The compliance state of the setting. Possible values are: unknown, notApplicable
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">266</span>
+    <span class="phpdocumentor-element-found-in__line">271</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userEmail
@@ -950,7 +961,7 @@ UserEmail</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">294</span>
+    <span class="phpdocumentor-element-found-in__line">299</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userId
@@ -986,7 +997,7 @@ UserId</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">322</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userName
@@ -1022,7 +1033,7 @@ UserName</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">350</span>
+    <span class="phpdocumentor-element-found-in__line">355</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
@@ -1469,7 +1480,7 @@ Localized/user friendly setting name that is being reported</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">222</span>
+    <span class="phpdocumentor-element-found-in__line">226</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the sources
@@ -1477,7 +1488,7 @@ Contributing policies</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationSettingState.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationSettingState">DeviceConfigurationSettingState</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceConfigurationSettingState.html"><abbr title="\Microsoft\Graph\Model\DeviceConfigurationSettingState">DeviceConfigurationSettingState</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1485,7 +1496,7 @@ Contributing policies</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SettingSource.html"><abbr title="\Microsoft\Graph\Model\SettingSource">SettingSource</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the sources</p>
@@ -1517,7 +1528,7 @@ Contributing policies</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">255</span>
+    <span class="phpdocumentor-element-found-in__line">260</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the state
@@ -1565,7 +1576,7 @@ The compliance state of the setting. Possible values are: unknown, notApplicable
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">283</span>
+    <span class="phpdocumentor-element-found-in__line">288</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userEmail
@@ -1612,7 +1623,7 @@ UserEmail</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">311</span>
+    <span class="phpdocumentor-element-found-in__line">316</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userId
@@ -1659,7 +1670,7 @@ UserId</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">339</span>
+    <span class="phpdocumentor-element-found-in__line">344</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userName
@@ -1706,7 +1717,7 @@ UserName</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceConfigurationSettingState.php"><a href="files/src-model-deviceconfigurationsettingstate.html"><abbr title="src/Model/DeviceConfigurationSettingState.php">DeviceConfigurationSettingState.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">367</span>
+    <span class="phpdocumentor-element-found-in__line">372</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName

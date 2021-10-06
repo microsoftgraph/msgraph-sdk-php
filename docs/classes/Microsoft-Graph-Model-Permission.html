@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -191,10 +202,24 @@ For user type permissions, the details of the users &amp;amp; applications for t
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Permission.html#method_getGrantedToIdentities">getGrantedToIdentities()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the grantedToIdentities
 For link type permissions, the details of the users to whom permission was granted. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-Permission.html#method_getGrantedToIdentitiesV2">getGrantedToIdentitiesV2()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>&gt;|null    </span>
+</dt>
+<dd>Gets the grantedToIdentitiesV2</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-Permission.html#method_getGrantedToV2">getGrantedToV2()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>|null    </span>
+</dt>
+<dd>Gets the grantedToV2</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Permission.html#method_getHasPassword">getHasPassword()</a>
@@ -297,6 +322,20 @@ For user type permissions, the details of the users &amp;amp; applications for t
 </dt>
 <dd>Sets the grantedToIdentities
 For link type permissions, the details of the users to whom permission was granted. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-Permission.html#method_setGrantedToIdentitiesV2">setGrantedToIdentitiesV2()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a>    </span>
+</dt>
+<dd>Sets the grantedToIdentitiesV2</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-Permission.html#method_setGrantedToV2">setGrantedToV2()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a>    </span>
+</dt>
+<dd>Sets the grantedToV2</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Permission.html#method_setHasPassword">setHasPassword()</a>
@@ -552,7 +591,7 @@ For link type permissions, the details of the users to whom permission was grant
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getGrantedToIdentities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getGrantedToIdentities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -560,9 +599,79 @@ For link type permissions, the details of the users to whom permission was grant
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The grantedToIdentities</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getGrantedToIdentitiesV2">
+        getGrantedToIdentitiesV2()
+        <a href="classes/Microsoft-Graph-Model-Permission.html#method_getGrantedToIdentitiesV2" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">136</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the grantedToIdentitiesV2</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getGrantedToIdentitiesV2</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The grantedToIdentitiesV2</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getGrantedToV2">
+        getGrantedToV2()
+        <a href="classes/Microsoft-Graph-Model-Permission.html#method_getGrantedToV2" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">170</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the grantedToV2</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getGrantedToV2</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The grantedToV2</p>
 </section>
 
     
@@ -580,7 +689,7 @@ For link type permissions, the details of the users to whom permission was grant
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">129</span>
+    <span class="phpdocumentor-element-found-in__line">202</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hasPassword
@@ -652,7 +761,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">158</span>
+    <span class="phpdocumentor-element-found-in__line">231</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the inheritedFrom
@@ -688,7 +797,7 @@ Provides a reference to the ancestor of the current permission, if it is inherit
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">191</span>
+    <span class="phpdocumentor-element-found-in__line">264</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the invitation
@@ -724,7 +833,7 @@ Details of any associated sharing invitation for this permission. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">224</span>
+    <span class="phpdocumentor-element-found-in__line">297</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the link
@@ -830,7 +939,7 @@ Provides the link details of the current permission, if it is a link type permis
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">257</span>
+    <span class="phpdocumentor-element-found-in__line">330</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roles
@@ -866,7 +975,7 @@ The type of permission, e.g. read. See below for the full list of roles. Read-on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">286</span>
+    <span class="phpdocumentor-element-found-in__line">359</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the shareId
@@ -1032,7 +1141,7 @@ For user type permissions, the details of the users &amp;amp; applications for t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">117</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the grantedToIdentities
@@ -1040,7 +1149,7 @@ For link type permissions, the details of the users to whom permission was grant
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setGrantedToIdentities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setGrantedToIdentities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1048,10 +1157,102 @@ For link type permissions, the details of the users to whom permission was grant
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IdentitySet.html"><abbr title="\Microsoft\Graph\Model\IdentitySet">IdentitySet</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The grantedToIdentities</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setGrantedToIdentitiesV2">
+        setGrantedToIdentitiesV2()
+        <a href="classes/Microsoft-Graph-Model-Permission.html#method_setGrantedToIdentitiesV2" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">159</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the grantedToIdentitiesV2</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setGrantedToIdentitiesV2</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The grantedToIdentitiesV2</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setGrantedToV2">
+        setGrantedToV2()
+        <a href="classes/Microsoft-Graph-Model-Permission.html#method_setGrantedToV2" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">190</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the grantedToV2</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setGrantedToV2</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Permission.html"><abbr title="\Microsoft\Graph\Model\Permission">Permission</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SharePointIdentitySet.html"><abbr title="\Microsoft\Graph\Model\SharePointIdentitySet">SharePointIdentitySet</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The grantedToV2</p>
 </section>
 
             </dd>
@@ -1079,7 +1280,7 @@ For link type permissions, the details of the users to whom permission was grant
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">146</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hasPassword
@@ -1173,7 +1374,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the inheritedFrom
@@ -1220,7 +1421,7 @@ Provides a reference to the ancestor of the current permission, if it is inherit
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">212</span>
+    <span class="phpdocumentor-element-found-in__line">285</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the invitation
@@ -1267,7 +1468,7 @@ Details of any associated sharing invitation for this permission. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">318</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the link
@@ -1360,7 +1561,7 @@ Provides the link details of the current permission, if it is a link type permis
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">274</span>
+    <span class="phpdocumentor-element-found-in__line">347</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roles
@@ -1407,7 +1608,7 @@ The type of permission, e.g. read. See below for the full list of roles. Read-on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Permission.php"><a href="files/src-model-permission.html"><abbr title="src/Model/Permission.php">Permission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">303</span>
+    <span class="phpdocumentor-element-found-in__line">376</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the shareId

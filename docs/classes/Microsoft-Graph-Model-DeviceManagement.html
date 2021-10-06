@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -183,7 +194,7 @@ Apple push notification certificate.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getComplianceManagementPartners">getComplianceManagementPartners()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\ComplianceManagementPartner">ComplianceManagementPartner</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the complianceManagementPartners
 The list of Compliance Management Partners configured by the tenant.</dd>
@@ -199,7 +210,7 @@ The Exchange on premises conditional access settings. On premises conditional ac
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getDetectedApps">getDetectedApps()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DetectedApp.html"><abbr title="\Microsoft\Graph\Model\DetectedApp">DetectedApp</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the detectedApps
 The list of detected apps associated with a device.</dd>
@@ -207,7 +218,7 @@ The list of detected apps associated with a device.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getDeviceCategories">getDeviceCategories()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCategory.html"><abbr title="\Microsoft\Graph\Model\DeviceCategory">DeviceCategory</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceCategories
 The list of device categories with the tenant.</dd>
@@ -215,7 +226,7 @@ The list of device categories with the tenant.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getDeviceCompliancePolicies">getDeviceCompliancePolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicy.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicy">DeviceCompliancePolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceCompliancePolicies
 The device compliance policies.</dd>
@@ -231,7 +242,7 @@ The device compliance state summary for this account.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getDeviceCompliancePolicySettingStateSummaries">getDeviceCompliancePolicySettingStateSummaries()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicySettingStateSummary.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicySettingStateSummary">DeviceCompliancePolicySettingStateSummary</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceCompliancePolicySettingStateSummaries
 The summary states of compliance policy settings for this account.</dd>
@@ -247,7 +258,7 @@ The device configuration device state summary for this account.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getDeviceConfigurations">getDeviceConfigurations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceConfigurations
 The device configurations.</dd>
@@ -255,7 +266,7 @@ The device configurations.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getDeviceEnrollmentConfigurations">getDeviceEnrollmentConfigurations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceEnrollmentConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceEnrollmentConfiguration">DeviceEnrollmentConfiguration</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceEnrollmentConfigurations
 The list of device enrollment configurations</dd>
@@ -263,7 +274,7 @@ The list of device enrollment configurations</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getDeviceManagementPartners">getDeviceManagementPartners()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementPartner">DeviceManagementPartner</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the deviceManagementPartners
 The list of Device Management Partners configured by the tenant.</dd>
@@ -271,7 +282,7 @@ The list of Device Management Partners configured by the tenant.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getExchangeConnectors">getExchangeConnectors()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementExchangeConnector.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementExchangeConnector">DeviceManagementExchangeConnector</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the exchangeConnectors
 The list of Exchange Connectors configured by the tenant.</dd>
@@ -287,7 +298,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getImportedWindowsAutopilotDeviceIdentities">getImportedWindowsAutopilotDeviceIdentities()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ImportedWindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentity">ImportedWindowsAutopilotDeviceIdentity</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the importedWindowsAutopilotDeviceIdentities
 Collection of imported Windows autopilot devices.</dd>
@@ -311,7 +322,7 @@ intuneBrand contains data which is used in customizing the appearance of the Com
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getIosUpdateStatuses">getIosUpdateStatuses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosUpdateDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\IosUpdateDeviceStatus">IosUpdateDeviceStatus</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the iosUpdateStatuses
 The IOS software update installation statuses for this account.</dd>
@@ -327,7 +338,7 @@ Device overview</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getManagedDevices">getManagedDevices()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDevice.html"><abbr title="\Microsoft\Graph\Model\ManagedDevice">ManagedDevice</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the managedDevices
 The list of managed devices.</dd>
@@ -335,7 +346,7 @@ The list of managed devices.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getMobileThreatDefenseConnectors">getMobileThreatDefenseConnectors()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileThreatDefenseConnector.html"><abbr title="\Microsoft\Graph\Model\MobileThreatDefenseConnector">MobileThreatDefenseConnector</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the mobileThreatDefenseConnectors
 The list of Mobile threat Defense connectors configured by the tenant.</dd>
@@ -343,7 +354,7 @@ The list of Mobile threat Defense connectors configured by the tenant.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getNotificationMessageTemplates">getNotificationMessageTemplates()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-NotificationMessageTemplate.html"><abbr title="\Microsoft\Graph\Model\NotificationMessageTemplate">NotificationMessageTemplate</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the notificationMessageTemplates
 The Notification Message Templates.</dd>
@@ -365,7 +376,7 @@ The Notification Message Templates.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getRemoteAssistancePartners">getRemoteAssistancePartners()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RemoteAssistancePartner.html"><abbr title="\Microsoft\Graph\Model\RemoteAssistancePartner">RemoteAssistancePartner</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the remoteAssistancePartners
 The remote assist partners.</dd>
@@ -381,7 +392,7 @@ Reports singleton</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getResourceOperations">getResourceOperations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ResourceOperation.html"><abbr title="\Microsoft\Graph\Model\ResourceOperation">ResourceOperation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the resourceOperations
 The Resource Operations.</dd>
@@ -389,7 +400,7 @@ The Resource Operations.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getRoleAssignments">getRoleAssignments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceAndAppManagementRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceAndAppManagementRoleAssignment">DeviceAndAppManagementRoleAssignment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the roleAssignments
 The Role Assignments.</dd>
@@ -397,7 +408,7 @@ The Role Assignments.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getRoleDefinitions">getRoleDefinitions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RoleDefinition.html"><abbr title="\Microsoft\Graph\Model\RoleDefinition">RoleDefinition</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the roleDefinitions
 The Role Definitions.</dd>
@@ -429,7 +440,7 @@ Tenant mobile device management subscription state. Possible values are: pending
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getTelecomExpenseManagementPartners">getTelecomExpenseManagementPartners()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TelecomExpenseManagementPartner.html"><abbr title="\Microsoft\Graph\Model\TelecomExpenseManagementPartner">TelecomExpenseManagementPartner</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the telecomExpenseManagementPartners
 The telecom expense management partners.</dd>
@@ -437,7 +448,7 @@ The telecom expense management partners.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getTermsAndConditions">getTermsAndConditions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TermsAndConditions.html"><abbr title="\Microsoft\Graph\Model\TermsAndConditions">TermsAndConditions</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the termsAndConditions
 The terms and conditions associated with device management of the company.</dd>
@@ -445,7 +456,7 @@ The terms and conditions associated with device management of the company.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getTroubleshootingEvents">getTroubleshootingEvents()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementTroubleshootingEvent.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementTroubleshootingEvent">DeviceManagementTroubleshootingEvent</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the troubleshootingEvents
 The list of troubleshooting events for the tenant.</dd>
@@ -453,7 +464,7 @@ The list of troubleshooting events for the tenant.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getWindowsAutopilotDeviceIdentities">getWindowsAutopilotDeviceIdentities()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\WindowsAutopilotDeviceIdentity">WindowsAutopilotDeviceIdentity</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the windowsAutopilotDeviceIdentities
 The Windows autopilot device identities contained collection.</dd>
@@ -461,7 +472,7 @@ The Windows autopilot device identities contained collection.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getWindowsInformationProtectionAppLearningSummaries">getWindowsInformationProtectionAppLearningSummaries()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLearningSummary">WindowsInformationProtectionAppLearningSummary</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the windowsInformationProtectionAppLearningSummaries
 The windows information protection app learning summaries.</dd>
@@ -469,7 +480,7 @@ The windows information protection app learning summaries.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceManagement.html#method_getWindowsInformationProtectionNetworkLearningSummaries">getWindowsInformationProtectionNetworkLearningSummaries()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionNetworkLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionNetworkLearningSummary">WindowsInformationProtectionNetworkLearningSummary</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the windowsInformationProtectionNetworkLearningSummaries
 The windows information protection network learning summaries.</dd>
@@ -888,7 +899,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">623</span>
+    <span class="phpdocumentor-element-found-in__line">700</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the applePushNotificationCertificate
@@ -924,7 +935,7 @@ Apple push notification certificate.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">446</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the complianceManagementPartners
@@ -932,7 +943,7 @@ The list of Compliance Management Partners configured by the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getComplianceManagementPartners</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getComplianceManagementPartners</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\ComplianceManagementPartner">ComplianceManagementPartner</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -940,7 +951,7 @@ The list of Compliance Management Partners configured by the tenant.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\ComplianceManagementPartner">ComplianceManagementPartner</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The complianceManagementPartners</p>
 </section>
@@ -960,7 +971,7 @@ The list of Compliance Management Partners configured by the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">440</span>
+    <span class="phpdocumentor-element-found-in__line">482</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the conditionalAccessSettings
@@ -996,7 +1007,7 @@ The Exchange on premises conditional access settings. On premises conditional ac
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">657</span>
+    <span class="phpdocumentor-element-found-in__line">734</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the detectedApps
@@ -1004,7 +1015,7 @@ The list of detected apps associated with a device.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDetectedApps</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDetectedApps</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DetectedApp.html"><abbr title="\Microsoft\Graph\Model\DetectedApp">DetectedApp</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1012,7 +1023,7 @@ The list of detected apps associated with a device.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DetectedApp.html"><abbr title="\Microsoft\Graph\Model\DetectedApp">DetectedApp</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The detectedApps</p>
 </section>
@@ -1032,7 +1043,7 @@ The list of detected apps associated with a device.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">474</span>
+    <span class="phpdocumentor-element-found-in__line">516</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceCategories
@@ -1040,7 +1051,7 @@ The list of device categories with the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceCategories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceCategories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCategory.html"><abbr title="\Microsoft\Graph\Model\DeviceCategory">DeviceCategory</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1048,7 +1059,7 @@ The list of device categories with the tenant.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCategory.html"><abbr title="\Microsoft\Graph\Model\DeviceCategory">DeviceCategory</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceCategories</p>
 </section>
@@ -1068,7 +1079,7 @@ The list of device categories with the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">192</span>
+    <span class="phpdocumentor-element-found-in__line">199</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceCompliancePolicies
@@ -1076,7 +1087,7 @@ The device compliance policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceCompliancePolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceCompliancePolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicy.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicy">DeviceCompliancePolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1084,7 +1095,7 @@ The device compliance policies.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicy.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicy">DeviceCompliancePolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceCompliancePolicies</p>
 </section>
@@ -1104,7 +1115,7 @@ The device compliance policies.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">221</span>
+    <span class="phpdocumentor-element-found-in__line">235</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceCompliancePolicyDeviceStateSummary
@@ -1140,7 +1151,7 @@ The device compliance state summary for this account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">255</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceCompliancePolicySettingStateSummaries
@@ -1148,7 +1159,7 @@ The summary states of compliance policy settings for this account.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceCompliancePolicySettingStateSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceCompliancePolicySettingStateSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicySettingStateSummary.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicySettingStateSummary">DeviceCompliancePolicySettingStateSummary</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1156,7 +1167,7 @@ The summary states of compliance policy settings for this account.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicySettingStateSummary.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicySettingStateSummary">DeviceCompliancePolicySettingStateSummary</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceCompliancePolicySettingStateSummaries</p>
 </section>
@@ -1176,7 +1187,7 @@ The summary states of compliance policy settings for this account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">284</span>
+    <span class="phpdocumentor-element-found-in__line">305</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceConfigurationDeviceStateSummaries
@@ -1212,7 +1223,7 @@ The device configuration device state summary for this account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">318</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceConfigurations
@@ -1220,7 +1231,7 @@ The device configurations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceConfigurations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceConfigurations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1228,7 +1239,7 @@ The device configurations.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceConfigurations</p>
 </section>
@@ -1248,7 +1259,7 @@ The device configurations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">504</span>
+    <span class="phpdocumentor-element-found-in__line">553</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceEnrollmentConfigurations
@@ -1256,7 +1267,7 @@ The list of device enrollment configurations</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceEnrollmentConfigurations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceEnrollmentConfigurations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceEnrollmentConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceEnrollmentConfiguration">DeviceEnrollmentConfiguration</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1264,7 +1275,7 @@ The list of device enrollment configurations</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceEnrollmentConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceEnrollmentConfiguration">DeviceEnrollmentConfiguration</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceEnrollmentConfigurations</p>
 </section>
@@ -1284,7 +1295,7 @@ The list of device enrollment configurations</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">534</span>
+    <span class="phpdocumentor-element-found-in__line">590</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceManagementPartners
@@ -1292,7 +1303,7 @@ The list of Device Management Partners configured by the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDeviceManagementPartners</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getDeviceManagementPartners</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementPartner">DeviceManagementPartner</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1300,7 +1311,7 @@ The list of Device Management Partners configured by the tenant.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementPartner">DeviceManagementPartner</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The deviceManagementPartners</p>
 </section>
@@ -1320,7 +1331,7 @@ The list of Device Management Partners configured by the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">564</span>
+    <span class="phpdocumentor-element-found-in__line">627</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the exchangeConnectors
@@ -1328,7 +1339,7 @@ The list of Exchange Connectors configured by the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExchangeConnectors</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getExchangeConnectors</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementExchangeConnector.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementExchangeConnector">DeviceManagementExchangeConnector</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1336,7 +1347,7 @@ The list of Exchange Connectors configured by the tenant.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementExchangeConnector.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementExchangeConnector">DeviceManagementExchangeConnector</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The exchangeConnectors</p>
 </section>
@@ -1392,7 +1403,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">750</span>
+    <span class="phpdocumentor-element-found-in__line">841</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the importedWindowsAutopilotDeviceIdentities
@@ -1400,7 +1411,7 @@ Collection of imported Windows autopilot devices.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getImportedWindowsAutopilotDeviceIdentities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getImportedWindowsAutopilotDeviceIdentities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ImportedWindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentity">ImportedWindowsAutopilotDeviceIdentity</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1408,7 +1419,7 @@ Collection of imported Windows autopilot devices.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ImportedWindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentity">ImportedWindowsAutopilotDeviceIdentity</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The importedWindowsAutopilotDeviceIdentities</p>
 </section>
@@ -1500,7 +1511,7 @@ intuneBrand contains data which is used in customizing the appearance of the Com
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">348</span>
+    <span class="phpdocumentor-element-found-in__line">376</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iosUpdateStatuses
@@ -1508,7 +1519,7 @@ The IOS software update installation statuses for this account.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getIosUpdateStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getIosUpdateStatuses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosUpdateDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\IosUpdateDeviceStatus">IosUpdateDeviceStatus</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1516,7 +1527,7 @@ The IOS software update installation statuses for this account.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosUpdateDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\IosUpdateDeviceStatus">IosUpdateDeviceStatus</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The iosUpdateStatuses</p>
 </section>
@@ -1536,7 +1547,7 @@ The IOS software update installation statuses for this account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">686</span>
+    <span class="phpdocumentor-element-found-in__line">770</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedDeviceOverview
@@ -1572,7 +1583,7 @@ Device overview</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">720</span>
+    <span class="phpdocumentor-element-found-in__line">804</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedDevices
@@ -1580,7 +1591,7 @@ The list of managed devices.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getManagedDevices</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getManagedDevices</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDevice.html"><abbr title="\Microsoft\Graph\Model\ManagedDevice">ManagedDevice</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1588,7 +1599,7 @@ The list of managed devices.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDevice.html"><abbr title="\Microsoft\Graph\Model\ManagedDevice">ManagedDevice</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The managedDevices</p>
 </section>
@@ -1608,7 +1619,7 @@ The list of managed devices.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">594</span>
+    <span class="phpdocumentor-element-found-in__line">664</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mobileThreatDefenseConnectors
@@ -1616,7 +1627,7 @@ The list of Mobile threat Defense connectors configured by the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMobileThreatDefenseConnectors</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMobileThreatDefenseConnectors</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileThreatDefenseConnector.html"><abbr title="\Microsoft\Graph\Model\MobileThreatDefenseConnector">MobileThreatDefenseConnector</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1624,7 +1635,7 @@ The list of Mobile threat Defense connectors configured by the tenant.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileThreatDefenseConnector.html"><abbr title="\Microsoft\Graph\Model\MobileThreatDefenseConnector">MobileThreatDefenseConnector</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The mobileThreatDefenseConnectors</p>
 </section>
@@ -1644,7 +1655,7 @@ The list of Mobile threat Defense connectors configured by the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">810</span>
+    <span class="phpdocumentor-element-found-in__line">915</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the notificationMessageTemplates
@@ -1652,7 +1663,7 @@ The Notification Message Templates.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getNotificationMessageTemplates</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getNotificationMessageTemplates</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-NotificationMessageTemplate.html"><abbr title="\Microsoft\Graph\Model\NotificationMessageTemplate">NotificationMessageTemplate</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1660,7 +1671,7 @@ The Notification Message Templates.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-NotificationMessageTemplate.html"><abbr title="\Microsoft\Graph\Model\NotificationMessageTemplate">NotificationMessageTemplate</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The notificationMessageTemplates</p>
 </section>
@@ -1750,7 +1761,7 @@ The Notification Message Templates.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">930</span>
+    <span class="phpdocumentor-element-found-in__line">1063</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the remoteAssistancePartners
@@ -1758,7 +1769,7 @@ The remote assist partners.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRemoteAssistancePartners</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getRemoteAssistancePartners</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RemoteAssistancePartner.html"><abbr title="\Microsoft\Graph\Model\RemoteAssistancePartner">RemoteAssistancePartner</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1766,7 +1777,7 @@ The remote assist partners.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RemoteAssistancePartner.html"><abbr title="\Microsoft\Graph\Model\RemoteAssistancePartner">RemoteAssistancePartner</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The remoteAssistancePartners</p>
 </section>
@@ -1786,7 +1797,7 @@ The remote assist partners.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">959</span>
+    <span class="phpdocumentor-element-found-in__line">1099</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the reports
@@ -1822,7 +1833,7 @@ Reports singleton</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">840</span>
+    <span class="phpdocumentor-element-found-in__line">952</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceOperations
@@ -1830,7 +1841,7 @@ The Resource Operations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getResourceOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getResourceOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ResourceOperation.html"><abbr title="\Microsoft\Graph\Model\ResourceOperation">ResourceOperation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1838,7 +1849,7 @@ The Resource Operations.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ResourceOperation.html"><abbr title="\Microsoft\Graph\Model\ResourceOperation">ResourceOperation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The resourceOperations</p>
 </section>
@@ -1858,7 +1869,7 @@ The Resource Operations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">870</span>
+    <span class="phpdocumentor-element-found-in__line">989</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleAssignments
@@ -1866,7 +1877,7 @@ The Role Assignments.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRoleAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getRoleAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceAndAppManagementRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceAndAppManagementRoleAssignment">DeviceAndAppManagementRoleAssignment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1874,7 +1885,7 @@ The Role Assignments.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceAndAppManagementRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceAndAppManagementRoleAssignment">DeviceAndAppManagementRoleAssignment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The roleAssignments</p>
 </section>
@@ -1894,7 +1905,7 @@ The Role Assignments.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">900</span>
+    <span class="phpdocumentor-element-found-in__line">1026</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleDefinitions
@@ -1902,7 +1913,7 @@ The Role Definitions.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRoleDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getRoleDefinitions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RoleDefinition.html"><abbr title="\Microsoft\Graph\Model\RoleDefinition">RoleDefinition</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1910,7 +1921,7 @@ The Role Definitions.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RoleDefinition.html"><abbr title="\Microsoft\Graph\Model\RoleDefinition">RoleDefinition</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The roleDefinitions</p>
 </section>
@@ -1966,7 +1977,7 @@ Account level settings.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">377</span>
+    <span class="phpdocumentor-element-found-in__line">412</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the softwareUpdateStatusSummary
@@ -2038,7 +2049,7 @@ Tenant mobile device management subscription state. Possible values are: pending
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">993</span>
+    <span class="phpdocumentor-element-found-in__line">1133</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the telecomExpenseManagementPartners
@@ -2046,7 +2057,7 @@ The telecom expense management partners.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTelecomExpenseManagementPartners</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTelecomExpenseManagementPartners</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TelecomExpenseManagementPartner.html"><abbr title="\Microsoft\Graph\Model\TelecomExpenseManagementPartner">TelecomExpenseManagementPartner</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2054,7 +2065,7 @@ The telecom expense management partners.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TelecomExpenseManagementPartner.html"><abbr title="\Microsoft\Graph\Model\TelecomExpenseManagementPartner">TelecomExpenseManagementPartner</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The telecomExpenseManagementPartners</p>
 </section>
@@ -2082,7 +2093,7 @@ The terms and conditions associated with device management of the company.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTermsAndConditions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTermsAndConditions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TermsAndConditions.html"><abbr title="\Microsoft\Graph\Model\TermsAndConditions">TermsAndConditions</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2090,7 +2101,7 @@ The terms and conditions associated with device management of the company.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TermsAndConditions.html"><abbr title="\Microsoft\Graph\Model\TermsAndConditions">TermsAndConditions</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The termsAndConditions</p>
 </section>
@@ -2110,7 +2121,7 @@ The terms and conditions associated with device management of the company.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1023</span>
+    <span class="phpdocumentor-element-found-in__line">1170</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the troubleshootingEvents
@@ -2118,7 +2129,7 @@ The list of troubleshooting events for the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTroubleshootingEvents</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTroubleshootingEvents</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementTroubleshootingEvent.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementTroubleshootingEvent">DeviceManagementTroubleshootingEvent</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2126,7 +2137,7 @@ The list of troubleshooting events for the tenant.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementTroubleshootingEvent.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementTroubleshootingEvent">DeviceManagementTroubleshootingEvent</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The troubleshootingEvents</p>
 </section>
@@ -2146,7 +2157,7 @@ The list of troubleshooting events for the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">780</span>
+    <span class="phpdocumentor-element-found-in__line">878</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the windowsAutopilotDeviceIdentities
@@ -2154,7 +2165,7 @@ The Windows autopilot device identities contained collection.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getWindowsAutopilotDeviceIdentities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getWindowsAutopilotDeviceIdentities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\WindowsAutopilotDeviceIdentity">WindowsAutopilotDeviceIdentity</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2162,7 +2173,7 @@ The Windows autopilot device identities contained collection.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\WindowsAutopilotDeviceIdentity">WindowsAutopilotDeviceIdentity</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The windowsAutopilotDeviceIdentities</p>
 </section>
@@ -2182,7 +2193,7 @@ The Windows autopilot device identities contained collection.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1053</span>
+    <span class="phpdocumentor-element-found-in__line">1207</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the windowsInformationProtectionAppLearningSummaries
@@ -2190,7 +2201,7 @@ The windows information protection app learning summaries.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getWindowsInformationProtectionAppLearningSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getWindowsInformationProtectionAppLearningSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLearningSummary">WindowsInformationProtectionAppLearningSummary</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2198,7 +2209,7 @@ The windows information protection app learning summaries.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLearningSummary">WindowsInformationProtectionAppLearningSummary</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The windowsInformationProtectionAppLearningSummaries</p>
 </section>
@@ -2218,7 +2229,7 @@ The windows information protection app learning summaries.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1083</span>
+    <span class="phpdocumentor-element-found-in__line">1244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the windowsInformationProtectionNetworkLearningSummaries
@@ -2226,7 +2237,7 @@ The windows information protection network learning summaries.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getWindowsInformationProtectionNetworkLearningSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getWindowsInformationProtectionNetworkLearningSummaries</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionNetworkLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionNetworkLearningSummary">WindowsInformationProtectionNetworkLearningSummary</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2234,7 +2245,7 @@ The windows information protection network learning summaries.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionNetworkLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionNetworkLearningSummary">WindowsInformationProtectionNetworkLearningSummary</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The windowsInformationProtectionNetworkLearningSummaries</p>
 </section>
@@ -2290,7 +2301,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">644</span>
+    <span class="phpdocumentor-element-found-in__line">721</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the applePushNotificationCertificate
@@ -2337,7 +2348,7 @@ Apple push notification certificate.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">428</span>
+    <span class="phpdocumentor-element-found-in__line">470</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the complianceManagementPartners
@@ -2345,7 +2356,7 @@ The list of Compliance Management Partners configured by the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setComplianceManagementPartners</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ComplianceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\ComplianceManagementPartner">ComplianceManagementPartner</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setComplianceManagementPartners</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\ComplianceManagementPartner">ComplianceManagementPartner</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2353,7 +2364,7 @@ The list of Compliance Management Partners configured by the tenant.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ComplianceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\ComplianceManagementPartner">ComplianceManagementPartner</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\ComplianceManagementPartner">ComplianceManagementPartner</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The complianceManagementPartners</p>
@@ -2384,7 +2395,7 @@ The list of Compliance Management Partners configured by the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">461</span>
+    <span class="phpdocumentor-element-found-in__line">503</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the conditionalAccessSettings
@@ -2431,7 +2442,7 @@ The Exchange on premises conditional access settings. On premises conditional ac
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">674</span>
+    <span class="phpdocumentor-element-found-in__line">758</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the detectedApps
@@ -2439,7 +2450,7 @@ The list of detected apps associated with a device.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDetectedApps</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DetectedApp.html"><abbr title="\Microsoft\Graph\Model\DetectedApp">DetectedApp</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDetectedApps</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DetectedApp.html"><abbr title="\Microsoft\Graph\Model\DetectedApp">DetectedApp</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2447,7 +2458,7 @@ The list of detected apps associated with a device.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DetectedApp.html"><abbr title="\Microsoft\Graph\Model\DetectedApp">DetectedApp</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DetectedApp.html"><abbr title="\Microsoft\Graph\Model\DetectedApp">DetectedApp</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The detectedApps</p>
@@ -2478,7 +2489,7 @@ The list of detected apps associated with a device.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">491</span>
+    <span class="phpdocumentor-element-found-in__line">540</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceCategories
@@ -2486,7 +2497,7 @@ The list of device categories with the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceCategories</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceCategory.html"><abbr title="\Microsoft\Graph\Model\DeviceCategory">DeviceCategory</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceCategories</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCategory.html"><abbr title="\Microsoft\Graph\Model\DeviceCategory">DeviceCategory</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2494,7 +2505,7 @@ The list of device categories with the tenant.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceCategory.html"><abbr title="\Microsoft\Graph\Model\DeviceCategory">DeviceCategory</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCategory.html"><abbr title="\Microsoft\Graph\Model\DeviceCategory">DeviceCategory</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceCategories</p>
@@ -2525,7 +2536,7 @@ The list of device categories with the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">209</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceCompliancePolicies
@@ -2533,7 +2544,7 @@ The device compliance policies.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceCompliancePolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicy.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicy">DeviceCompliancePolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceCompliancePolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicy.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicy">DeviceCompliancePolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2541,7 +2552,7 @@ The device compliance policies.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicy.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicy">DeviceCompliancePolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicy.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicy">DeviceCompliancePolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceCompliancePolicies</p>
@@ -2572,7 +2583,7 @@ The device compliance policies.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">242</span>
+    <span class="phpdocumentor-element-found-in__line">256</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceCompliancePolicyDeviceStateSummary
@@ -2619,7 +2630,7 @@ The device compliance state summary for this account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">272</span>
+    <span class="phpdocumentor-element-found-in__line">293</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceCompliancePolicySettingStateSummaries
@@ -2627,7 +2638,7 @@ The summary states of compliance policy settings for this account.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceCompliancePolicySettingStateSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicySettingStateSummary.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicySettingStateSummary">DeviceCompliancePolicySettingStateSummary</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceCompliancePolicySettingStateSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicySettingStateSummary.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicySettingStateSummary">DeviceCompliancePolicySettingStateSummary</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2635,7 +2646,7 @@ The summary states of compliance policy settings for this account.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicySettingStateSummary.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicySettingStateSummary">DeviceCompliancePolicySettingStateSummary</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceCompliancePolicySettingStateSummary.html"><abbr title="\Microsoft\Graph\Model\DeviceCompliancePolicySettingStateSummary">DeviceCompliancePolicySettingStateSummary</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceCompliancePolicySettingStateSummaries</p>
@@ -2666,7 +2677,7 @@ The summary states of compliance policy settings for this account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">305</span>
+    <span class="phpdocumentor-element-found-in__line">326</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceConfigurationDeviceStateSummaries
@@ -2713,7 +2724,7 @@ The device configuration device state summary for this account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">335</span>
+    <span class="phpdocumentor-element-found-in__line">363</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceConfigurations
@@ -2721,7 +2732,7 @@ The device configurations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceConfigurations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceConfigurations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2729,7 +2740,7 @@ The device configurations.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceConfiguration">DeviceConfiguration</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceConfigurations</p>
@@ -2760,7 +2771,7 @@ The device configurations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">521</span>
+    <span class="phpdocumentor-element-found-in__line">577</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceEnrollmentConfigurations
@@ -2768,7 +2779,7 @@ The list of device enrollment configurations</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceEnrollmentConfigurations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceEnrollmentConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceEnrollmentConfiguration">DeviceEnrollmentConfiguration</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceEnrollmentConfigurations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceEnrollmentConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceEnrollmentConfiguration">DeviceEnrollmentConfiguration</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2776,7 +2787,7 @@ The list of device enrollment configurations</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceEnrollmentConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceEnrollmentConfiguration">DeviceEnrollmentConfiguration</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceEnrollmentConfiguration.html"><abbr title="\Microsoft\Graph\Model\DeviceEnrollmentConfiguration">DeviceEnrollmentConfiguration</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceEnrollmentConfigurations</p>
@@ -2807,7 +2818,7 @@ The list of device enrollment configurations</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">551</span>
+    <span class="phpdocumentor-element-found-in__line">614</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceManagementPartners
@@ -2815,7 +2826,7 @@ The list of Device Management Partners configured by the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDeviceManagementPartners</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementPartner">DeviceManagementPartner</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDeviceManagementPartners</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementPartner">DeviceManagementPartner</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2823,7 +2834,7 @@ The list of Device Management Partners configured by the tenant.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementPartner">DeviceManagementPartner</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementPartner.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementPartner">DeviceManagementPartner</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The deviceManagementPartners</p>
@@ -2854,7 +2865,7 @@ The list of Device Management Partners configured by the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">581</span>
+    <span class="phpdocumentor-element-found-in__line">651</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the exchangeConnectors
@@ -2862,7 +2873,7 @@ The list of Exchange Connectors configured by the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setExchangeConnectors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceManagementExchangeConnector.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementExchangeConnector">DeviceManagementExchangeConnector</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setExchangeConnectors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementExchangeConnector.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementExchangeConnector">DeviceManagementExchangeConnector</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2870,7 +2881,7 @@ The list of Exchange Connectors configured by the tenant.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceManagementExchangeConnector.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementExchangeConnector">DeviceManagementExchangeConnector</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementExchangeConnector.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementExchangeConnector">DeviceManagementExchangeConnector</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The exchangeConnectors</p>
@@ -2948,7 +2959,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">767</span>
+    <span class="phpdocumentor-element-found-in__line">865</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the importedWindowsAutopilotDeviceIdentities
@@ -2956,7 +2967,7 @@ Collection of imported Windows autopilot devices.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setImportedWindowsAutopilotDeviceIdentities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ImportedWindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentity">ImportedWindowsAutopilotDeviceIdentity</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setImportedWindowsAutopilotDeviceIdentities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ImportedWindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentity">ImportedWindowsAutopilotDeviceIdentity</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2964,7 +2975,7 @@ Collection of imported Windows autopilot devices.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ImportedWindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentity">ImportedWindowsAutopilotDeviceIdentity</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ImportedWindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentity">ImportedWindowsAutopilotDeviceIdentity</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The importedWindowsAutopilotDeviceIdentities</p>
@@ -3089,7 +3100,7 @@ intuneBrand contains data which is used in customizing the appearance of the Com
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">365</span>
+    <span class="phpdocumentor-element-found-in__line">400</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iosUpdateStatuses
@@ -3097,7 +3108,7 @@ The IOS software update installation statuses for this account.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setIosUpdateStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IosUpdateDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\IosUpdateDeviceStatus">IosUpdateDeviceStatus</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setIosUpdateStatuses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosUpdateDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\IosUpdateDeviceStatus">IosUpdateDeviceStatus</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3105,7 +3116,7 @@ The IOS software update installation statuses for this account.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-IosUpdateDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\IosUpdateDeviceStatus">IosUpdateDeviceStatus</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-IosUpdateDeviceStatus.html"><abbr title="\Microsoft\Graph\Model\IosUpdateDeviceStatus">IosUpdateDeviceStatus</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The iosUpdateStatuses</p>
@@ -3136,7 +3147,7 @@ The IOS software update installation statuses for this account.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">707</span>
+    <span class="phpdocumentor-element-found-in__line">791</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedDeviceOverview
@@ -3183,7 +3194,7 @@ Device overview</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">737</span>
+    <span class="phpdocumentor-element-found-in__line">828</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedDevices
@@ -3191,7 +3202,7 @@ The list of managed devices.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setManagedDevices</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedDevice.html"><abbr title="\Microsoft\Graph\Model\ManagedDevice">ManagedDevice</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setManagedDevices</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDevice.html"><abbr title="\Microsoft\Graph\Model\ManagedDevice">ManagedDevice</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3199,7 +3210,7 @@ The list of managed devices.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ManagedDevice.html"><abbr title="\Microsoft\Graph\Model\ManagedDevice">ManagedDevice</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ManagedDevice.html"><abbr title="\Microsoft\Graph\Model\ManagedDevice">ManagedDevice</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The managedDevices</p>
@@ -3230,7 +3241,7 @@ The list of managed devices.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">611</span>
+    <span class="phpdocumentor-element-found-in__line">688</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mobileThreatDefenseConnectors
@@ -3238,7 +3249,7 @@ The list of Mobile threat Defense connectors configured by the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMobileThreatDefenseConnectors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileThreatDefenseConnector.html"><abbr title="\Microsoft\Graph\Model\MobileThreatDefenseConnector">MobileThreatDefenseConnector</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMobileThreatDefenseConnectors</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileThreatDefenseConnector.html"><abbr title="\Microsoft\Graph\Model\MobileThreatDefenseConnector">MobileThreatDefenseConnector</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3246,7 +3257,7 @@ The list of Mobile threat Defense connectors configured by the tenant.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileThreatDefenseConnector.html"><abbr title="\Microsoft\Graph\Model\MobileThreatDefenseConnector">MobileThreatDefenseConnector</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileThreatDefenseConnector.html"><abbr title="\Microsoft\Graph\Model\MobileThreatDefenseConnector">MobileThreatDefenseConnector</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The mobileThreatDefenseConnectors</p>
@@ -3277,7 +3288,7 @@ The list of Mobile threat Defense connectors configured by the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">827</span>
+    <span class="phpdocumentor-element-found-in__line">939</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the notificationMessageTemplates
@@ -3285,7 +3296,7 @@ The Notification Message Templates.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setNotificationMessageTemplates</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-NotificationMessageTemplate.html"><abbr title="\Microsoft\Graph\Model\NotificationMessageTemplate">NotificationMessageTemplate</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setNotificationMessageTemplates</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-NotificationMessageTemplate.html"><abbr title="\Microsoft\Graph\Model\NotificationMessageTemplate">NotificationMessageTemplate</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3293,7 +3304,7 @@ The Notification Message Templates.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-NotificationMessageTemplate.html"><abbr title="\Microsoft\Graph\Model\NotificationMessageTemplate">NotificationMessageTemplate</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-NotificationMessageTemplate.html"><abbr title="\Microsoft\Graph\Model\NotificationMessageTemplate">NotificationMessageTemplate</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The notificationMessageTemplates</p>
@@ -3370,7 +3381,7 @@ The Notification Message Templates.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">947</span>
+    <span class="phpdocumentor-element-found-in__line">1087</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the remoteAssistancePartners
@@ -3378,7 +3389,7 @@ The remote assist partners.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRemoteAssistancePartners</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-RemoteAssistancePartner.html"><abbr title="\Microsoft\Graph\Model\RemoteAssistancePartner">RemoteAssistancePartner</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRemoteAssistancePartners</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RemoteAssistancePartner.html"><abbr title="\Microsoft\Graph\Model\RemoteAssistancePartner">RemoteAssistancePartner</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3386,7 +3397,7 @@ The remote assist partners.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-RemoteAssistancePartner.html"><abbr title="\Microsoft\Graph\Model\RemoteAssistancePartner">RemoteAssistancePartner</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RemoteAssistancePartner.html"><abbr title="\Microsoft\Graph\Model\RemoteAssistancePartner">RemoteAssistancePartner</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The remoteAssistancePartners</p>
@@ -3417,7 +3428,7 @@ The remote assist partners.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">980</span>
+    <span class="phpdocumentor-element-found-in__line">1120</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the reports
@@ -3464,7 +3475,7 @@ Reports singleton</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">857</span>
+    <span class="phpdocumentor-element-found-in__line">976</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceOperations
@@ -3472,7 +3483,7 @@ The Resource Operations.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setResourceOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ResourceOperation.html"><abbr title="\Microsoft\Graph\Model\ResourceOperation">ResourceOperation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setResourceOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ResourceOperation.html"><abbr title="\Microsoft\Graph\Model\ResourceOperation">ResourceOperation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3480,7 +3491,7 @@ The Resource Operations.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ResourceOperation.html"><abbr title="\Microsoft\Graph\Model\ResourceOperation">ResourceOperation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ResourceOperation.html"><abbr title="\Microsoft\Graph\Model\ResourceOperation">ResourceOperation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The resourceOperations</p>
@@ -3511,7 +3522,7 @@ The Resource Operations.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">887</span>
+    <span class="phpdocumentor-element-found-in__line">1013</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleAssignments
@@ -3519,7 +3530,7 @@ The Role Assignments.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRoleAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceAndAppManagementRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceAndAppManagementRoleAssignment">DeviceAndAppManagementRoleAssignment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRoleAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceAndAppManagementRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceAndAppManagementRoleAssignment">DeviceAndAppManagementRoleAssignment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3527,7 +3538,7 @@ The Role Assignments.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceAndAppManagementRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceAndAppManagementRoleAssignment">DeviceAndAppManagementRoleAssignment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceAndAppManagementRoleAssignment.html"><abbr title="\Microsoft\Graph\Model\DeviceAndAppManagementRoleAssignment">DeviceAndAppManagementRoleAssignment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The roleAssignments</p>
@@ -3558,7 +3569,7 @@ The Role Assignments.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">917</span>
+    <span class="phpdocumentor-element-found-in__line">1050</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleDefinitions
@@ -3566,7 +3577,7 @@ The Role Definitions.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRoleDefinitions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-RoleDefinition.html"><abbr title="\Microsoft\Graph\Model\RoleDefinition">RoleDefinition</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRoleDefinitions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RoleDefinition.html"><abbr title="\Microsoft\Graph\Model\RoleDefinition">RoleDefinition</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3574,7 +3585,7 @@ The Role Definitions.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-RoleDefinition.html"><abbr title="\Microsoft\Graph\Model\RoleDefinition">RoleDefinition</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RoleDefinition.html"><abbr title="\Microsoft\Graph\Model\RoleDefinition">RoleDefinition</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The roleDefinitions</p>
@@ -3652,7 +3663,7 @@ Account level settings.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">398</span>
+    <span class="phpdocumentor-element-found-in__line">433</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the softwareUpdateStatusSummary
@@ -3746,7 +3757,7 @@ Tenant mobile device management subscription state. Possible values are: pending
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1010</span>
+    <span class="phpdocumentor-element-found-in__line">1157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the telecomExpenseManagementPartners
@@ -3754,7 +3765,7 @@ The telecom expense management partners.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTelecomExpenseManagementPartners</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TelecomExpenseManagementPartner.html"><abbr title="\Microsoft\Graph\Model\TelecomExpenseManagementPartner">TelecomExpenseManagementPartner</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTelecomExpenseManagementPartners</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TelecomExpenseManagementPartner.html"><abbr title="\Microsoft\Graph\Model\TelecomExpenseManagementPartner">TelecomExpenseManagementPartner</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3762,7 +3773,7 @@ The telecom expense management partners.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TelecomExpenseManagementPartner.html"><abbr title="\Microsoft\Graph\Model\TelecomExpenseManagementPartner">TelecomExpenseManagementPartner</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TelecomExpenseManagementPartner.html"><abbr title="\Microsoft\Graph\Model\TelecomExpenseManagementPartner">TelecomExpenseManagementPartner</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The telecomExpenseManagementPartners</p>
@@ -3793,7 +3804,7 @@ The telecom expense management partners.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">179</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the termsAndConditions
@@ -3801,7 +3812,7 @@ The terms and conditions associated with device management of the company.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTermsAndConditions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TermsAndConditions.html"><abbr title="\Microsoft\Graph\Model\TermsAndConditions">TermsAndConditions</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTermsAndConditions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TermsAndConditions.html"><abbr title="\Microsoft\Graph\Model\TermsAndConditions">TermsAndConditions</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3809,7 +3820,7 @@ The terms and conditions associated with device management of the company.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-TermsAndConditions.html"><abbr title="\Microsoft\Graph\Model\TermsAndConditions">TermsAndConditions</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-TermsAndConditions.html"><abbr title="\Microsoft\Graph\Model\TermsAndConditions">TermsAndConditions</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The termsAndConditions</p>
@@ -3840,7 +3851,7 @@ The terms and conditions associated with device management of the company.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1040</span>
+    <span class="phpdocumentor-element-found-in__line">1194</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the troubleshootingEvents
@@ -3848,7 +3859,7 @@ The list of troubleshooting events for the tenant.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTroubleshootingEvents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceManagementTroubleshootingEvent.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementTroubleshootingEvent">DeviceManagementTroubleshootingEvent</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTroubleshootingEvents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementTroubleshootingEvent.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementTroubleshootingEvent">DeviceManagementTroubleshootingEvent</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3856,7 +3867,7 @@ The list of troubleshooting events for the tenant.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DeviceManagementTroubleshootingEvent.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementTroubleshootingEvent">DeviceManagementTroubleshootingEvent</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DeviceManagementTroubleshootingEvent.html"><abbr title="\Microsoft\Graph\Model\DeviceManagementTroubleshootingEvent">DeviceManagementTroubleshootingEvent</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The troubleshootingEvents</p>
@@ -3887,7 +3898,7 @@ The list of troubleshooting events for the tenant.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">797</span>
+    <span class="phpdocumentor-element-found-in__line">902</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the windowsAutopilotDeviceIdentities
@@ -3895,7 +3906,7 @@ The Windows autopilot device identities contained collection.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setWindowsAutopilotDeviceIdentities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\WindowsAutopilotDeviceIdentity">WindowsAutopilotDeviceIdentity</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setWindowsAutopilotDeviceIdentities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\WindowsAutopilotDeviceIdentity">WindowsAutopilotDeviceIdentity</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3903,7 +3914,7 @@ The Windows autopilot device identities contained collection.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\WindowsAutopilotDeviceIdentity">WindowsAutopilotDeviceIdentity</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsAutopilotDeviceIdentity.html"><abbr title="\Microsoft\Graph\Model\WindowsAutopilotDeviceIdentity">WindowsAutopilotDeviceIdentity</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The windowsAutopilotDeviceIdentities</p>
@@ -3934,7 +3945,7 @@ The Windows autopilot device identities contained collection.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1070</span>
+    <span class="phpdocumentor-element-found-in__line">1231</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the windowsInformationProtectionAppLearningSummaries
@@ -3942,7 +3953,7 @@ The windows information protection app learning summaries.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setWindowsInformationProtectionAppLearningSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLearningSummary">WindowsInformationProtectionAppLearningSummary</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setWindowsInformationProtectionAppLearningSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLearningSummary">WindowsInformationProtectionAppLearningSummary</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3950,7 +3961,7 @@ The windows information protection app learning summaries.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLearningSummary">WindowsInformationProtectionAppLearningSummary</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionAppLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionAppLearningSummary">WindowsInformationProtectionAppLearningSummary</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The windowsInformationProtectionAppLearningSummaries</p>
@@ -3981,7 +3992,7 @@ The windows information protection app learning summaries.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DeviceManagement.php"><a href="files/src-model-devicemanagement.html"><abbr title="src/Model/DeviceManagement.php">DeviceManagement.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1100</span>
+    <span class="phpdocumentor-element-found-in__line">1268</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the windowsInformationProtectionNetworkLearningSummaries
@@ -3989,7 +4000,7 @@ The windows information protection network learning summaries.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setWindowsInformationProtectionNetworkLearningSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionNetworkLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionNetworkLearningSummary">WindowsInformationProtectionNetworkLearningSummary</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setWindowsInformationProtectionNetworkLearningSummaries</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionNetworkLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionNetworkLearningSummary">WindowsInformationProtectionNetworkLearningSummary</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DeviceManagement.html"><abbr title="\Microsoft\Graph\Model\DeviceManagement">DeviceManagement</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3997,7 +4008,7 @@ The windows information protection network learning summaries.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionNetworkLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionNetworkLearningSummary">WindowsInformationProtectionNetworkLearningSummary</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-WindowsInformationProtectionNetworkLearningSummary.html"><abbr title="\Microsoft\Graph\Model\WindowsInformationProtectionNetworkLearningSummary">WindowsInformationProtectionNetworkLearningSummary</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The windowsInformationProtectionNetworkLearningSummaries</p>

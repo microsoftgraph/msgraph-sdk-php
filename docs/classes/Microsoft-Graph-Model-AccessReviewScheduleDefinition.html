@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -215,7 +226,7 @@ Name of the access review series. Supports $select and $orderBy. Required on cre
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getFallbackReviewers">getFallbackReviewers()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the fallbackReviewers
 This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user&#039;s manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select.</dd>
@@ -239,7 +250,7 @@ This property is required when scoping a review to guest users&#039; access acro
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getInstances">getInstances()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the instances
 If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.</dd>
@@ -269,7 +280,7 @@ Timestamp when the access review series was last modified. Supports $select. Rea
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getReviewers">getReviewers()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the reviewers
 This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.</dd>
@@ -724,7 +735,7 @@ This collection of reviewer scopes is used to define the list of fallback review
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFallbackReviewers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getFallbackReviewers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -732,7 +743,7 @@ This collection of reviewer scopes is used to define the list of fallback review
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The fallbackReviewers</p>
 </section>
@@ -788,7 +799,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">216</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the instanceEnumerationScope
@@ -824,7 +835,7 @@ This property is required when scoping a review to guest users&#039; access acro
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">408</span>
+    <span class="phpdocumentor-element-found-in__line">422</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the instances
@@ -832,7 +843,7 @@ If the accessReviewScheduleDefinition is a recurring access review, instances re
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getInstances</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getInstances</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -840,7 +851,7 @@ If the accessReviewScheduleDefinition is a recurring access review, instances re
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The instances</p>
 </section>
@@ -860,7 +871,7 @@ If the accessReviewScheduleDefinition is a recurring access review, instances re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">249</span>
+    <span class="phpdocumentor-element-found-in__line">256</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastModifiedDateTime
@@ -966,7 +977,7 @@ Timestamp when the access review series was last modified. Supports $select. Rea
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">283</span>
+    <span class="phpdocumentor-element-found-in__line">290</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the reviewers
@@ -974,7 +985,7 @@ This collection of access review scopes is used to define who are the reviewers.
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getReviewers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getReviewers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -982,7 +993,7 @@ This collection of access review scopes is used to define who are the reviewers.
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The reviewers</p>
 </section>
@@ -1002,7 +1013,7 @@ This collection of access review scopes is used to define who are the reviewers.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">312</span>
+    <span class="phpdocumentor-element-found-in__line">326</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the scope
@@ -1038,7 +1049,7 @@ Defines the entities whose access is reviewed.  For supported scopes, see access
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">345</span>
+    <span class="phpdocumentor-element-found-in__line">359</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the settings
@@ -1074,7 +1085,7 @@ The settings for an access review series, see type definition below. Supports $s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">378</span>
+    <span class="phpdocumentor-element-found-in__line">392</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
@@ -1381,7 +1392,7 @@ Name of the access review series. Supports $select and $orderBy. Required on cre
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">204</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the fallbackReviewers
@@ -1389,7 +1400,7 @@ This collection of reviewer scopes is used to define the list of fallback review
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setFallbackReviewers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setFallbackReviewers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1397,7 +1408,7 @@ This collection of reviewer scopes is used to define the list of fallback review
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The fallbackReviewers</p>
@@ -1475,7 +1486,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">237</span>
+    <span class="phpdocumentor-element-found-in__line">244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the instanceEnumerationScope
@@ -1522,7 +1533,7 @@ This property is required when scoping a review to guest users&#039; access acro
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">425</span>
+    <span class="phpdocumentor-element-found-in__line">446</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the instances
@@ -1530,7 +1541,7 @@ If the accessReviewScheduleDefinition is a recurring access review, instances re
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setInstances</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setInstances</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1538,7 +1549,7 @@ If the accessReviewScheduleDefinition is a recurring access review, instances re
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewInstance.html"><abbr title="\Microsoft\Graph\Model\AccessReviewInstance">AccessReviewInstance</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The instances</p>
@@ -1569,7 +1580,7 @@ If the accessReviewScheduleDefinition is a recurring access review, instances re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">270</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastModifiedDateTime
@@ -1662,7 +1673,7 @@ Timestamp when the access review series was last modified. Supports $select. Rea
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">300</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the reviewers
@@ -1670,7 +1681,7 @@ This collection of access review scopes is used to define who are the reviewers.
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setReviewers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setReviewers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1678,7 +1689,7 @@ This collection of access review scopes is used to define who are the reviewers.
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewReviewerScope.html"><abbr title="\Microsoft\Graph\Model\AccessReviewReviewerScope">AccessReviewReviewerScope</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The reviewers</p>
@@ -1709,7 +1720,7 @@ This collection of access review scopes is used to define who are the reviewers.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">333</span>
+    <span class="phpdocumentor-element-found-in__line">347</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the scope
@@ -1756,7 +1767,7 @@ Defines the entities whose access is reviewed.  For supported scopes, see access
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">366</span>
+    <span class="phpdocumentor-element-found-in__line">380</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the settings
@@ -1803,7 +1814,7 @@ The settings for an access review series, see type definition below. Supports $s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">395</span>
+    <span class="phpdocumentor-element-found-in__line">409</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status

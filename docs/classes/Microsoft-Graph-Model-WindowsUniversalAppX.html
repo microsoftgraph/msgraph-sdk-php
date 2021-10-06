@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-MobileLobApp.html"><abbr title="\Microsoft\Graph\Model\MobileLobApp">MobileLobApp</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -191,7 +202,7 @@ The Windows device type(s) for which this app can run on. Possible values are: n
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-MobileApp.html#method_getAssignments">getAssignments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppAssignment.html"><abbr title="\Microsoft\Graph\Model\MobileAppAssignment">MobileAppAssignment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the assignments
 The list of group assignments for this mobile app.</dd>
@@ -199,7 +210,7 @@ The list of group assignments for this mobile app.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-MobileApp.html#method_getCategories">getCategories()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the categories
 The list of categories for this app.</dd>
@@ -215,7 +226,7 @@ The internal committed content version.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-MobileLobApp.html#method_getContentVersions">getContentVersions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppContent.html"><abbr title="\Microsoft\Graph\Model\MobileAppContent">MobileAppContent</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the contentVersions
 The list of content versions for this app.</dd>
@@ -840,7 +851,7 @@ The list of group assignments for this mobile app.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAssignments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppAssignment.html"><abbr title="\Microsoft\Graph\Model\MobileAppAssignment">MobileAppAssignment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -848,7 +859,7 @@ The list of group assignments for this mobile app.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppAssignment.html"><abbr title="\Microsoft\Graph\Model\MobileAppAssignment">MobileAppAssignment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The assignments</p>
 </section>
@@ -868,7 +879,7 @@ The list of group assignments for this mobile app.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MobileApp.php"><a href="files/src-model-mobileapp.html"><abbr title="src/Model/MobileApp.php">MobileApp.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">457</span>
+    <span class="phpdocumentor-element-found-in__line">464</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the categories
@@ -876,7 +887,7 @@ The list of categories for this app.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCategories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getCategories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -884,7 +895,7 @@ The list of categories for this app.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The categories</p>
 </section>
@@ -948,7 +959,7 @@ The list of content versions for this app.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getContentVersions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getContentVersions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppContent.html"><abbr title="\Microsoft\Graph\Model\MobileAppContent">MobileAppContent</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -956,7 +967,7 @@ The list of content versions for this app.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppContent.html"><abbr title="\Microsoft\Graph\Model\MobileAppContent">MobileAppContent</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The contentVersions</p>
 </section>
@@ -1968,7 +1979,7 @@ The Windows device type(s) for which this app can run on. Possible values are: n
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MobileApp.php"><a href="files/src-model-mobileapp.html"><abbr title="src/Model/MobileApp.php">MobileApp.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">444</span>
+    <span class="phpdocumentor-element-found-in__line">451</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the assignments
@@ -1976,7 +1987,7 @@ The list of group assignments for this mobile app.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileAppAssignment.html"><abbr title="\Microsoft\Graph\Model\MobileAppAssignment">MobileAppAssignment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAssignments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppAssignment.html"><abbr title="\Microsoft\Graph\Model\MobileAppAssignment">MobileAppAssignment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1984,7 +1995,7 @@ The list of group assignments for this mobile app.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileAppAssignment.html"><abbr title="\Microsoft\Graph\Model\MobileAppAssignment">MobileAppAssignment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppAssignment.html"><abbr title="\Microsoft\Graph\Model\MobileAppAssignment">MobileAppAssignment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The assignments</p>
@@ -2015,7 +2026,7 @@ The list of group assignments for this mobile app.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MobileApp.php"><a href="files/src-model-mobileapp.html"><abbr title="src/Model/MobileApp.php">MobileApp.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">474</span>
+    <span class="phpdocumentor-element-found-in__line">488</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the categories
@@ -2023,7 +2034,7 @@ The list of categories for this app.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCategories</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setCategories</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MobileApp.html"><abbr title="\Microsoft\Graph\Model\MobileApp">MobileApp</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2031,7 +2042,7 @@ The list of categories for this app.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppCategory.html"><abbr title="\Microsoft\Graph\Model\MobileAppCategory">MobileAppCategory</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The categories</p>
@@ -2109,7 +2120,7 @@ The internal committed content version.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/MobileLobApp.php"><a href="files/src-model-mobilelobapp.html"><abbr title="src/Model/MobileLobApp.php">MobileLobApp.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the contentVersions
@@ -2117,7 +2128,7 @@ The list of content versions for this app.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setContentVersions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileAppContent.html"><abbr title="\Microsoft\Graph\Model\MobileAppContent">MobileAppContent</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MobileLobApp.html"><abbr title="\Microsoft\Graph\Model\MobileLobApp">MobileLobApp</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setContentVersions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppContent.html"><abbr title="\Microsoft\Graph\Model\MobileAppContent">MobileAppContent</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-MobileLobApp.html"><abbr title="\Microsoft\Graph\Model\MobileLobApp">MobileLobApp</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2125,7 +2136,7 @@ The list of content versions for this app.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MobileAppContent.html"><abbr title="\Microsoft\Graph\Model\MobileAppContent">MobileAppContent</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MobileAppContent.html"><abbr title="\Microsoft\Graph\Model\MobileAppContent">MobileAppContent</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The contentVersions</p>

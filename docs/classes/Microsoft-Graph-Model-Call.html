@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -198,7 +209,7 @@ A unique identifier for all the participant calls in a conference or a unique id
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Call.html#method_getCallRoutes">getCallRoutes()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CallRoute.html"><abbr title="\Microsoft\Graph\Model\CallRoute">CallRoute</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the callRoutes
 The routing information on how the call was retargeted. Read-only.</dd>
@@ -276,7 +287,7 @@ The meeting information that&#039;s required for joining a meeting.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Call.html#method_getOperations">getOperations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CommsOperation.html"><abbr title="\Microsoft\Graph\Model\CommsOperation">CommsOperation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the operations
 Read-only. Nullable.</dd>
@@ -284,7 +295,7 @@ Read-only. Nullable.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Call.html#method_getParticipants">getParticipants()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Participant.html"><abbr title="\Microsoft\Graph\Model\Participant">Participant</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the participants
 Read-only. Nullable.</dd>
@@ -299,7 +310,7 @@ Read-only. Nullable.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Call.html#method_getRequestedModalities">getRequestedModalities()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Modality.html"><abbr title="\Microsoft\Graph\Model\Modality">Modality</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the requestedModalities</dd>
 
@@ -334,7 +345,7 @@ Read-only. Nullable.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Call.html#method_getTargets">getTargets()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-InvitationParticipantInfo.html"><abbr title="\Microsoft\Graph\Model\InvitationParticipantInfo">InvitationParticipantInfo</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the targets</dd>
 
@@ -775,7 +786,7 @@ The routing information on how the call was retargeted. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getCallRoutes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getCallRoutes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CallRoute.html"><abbr title="\Microsoft\Graph\Model\CallRoute">CallRoute</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -783,7 +794,7 @@ The routing information on how the call was retargeted. Read-only.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CallRoute.html"><abbr title="\Microsoft\Graph\Model\CallRoute">CallRoute</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The callRoutes</p>
 </section>
@@ -803,7 +814,7 @@ The routing information on how the call was retargeted. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">152</span>
+    <span class="phpdocumentor-element-found-in__line">159</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the chatInfo
@@ -839,7 +850,7 @@ The chat information. Required information for joining a meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">185</span>
+    <span class="phpdocumentor-element-found-in__line">192</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the direction
@@ -911,7 +922,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">218</span>
+    <span class="phpdocumentor-element-found-in__line">225</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the incomingContext
@@ -947,7 +958,7 @@ The context associated with an incoming call. Read-only. Server generated.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">251</span>
+    <span class="phpdocumentor-element-found-in__line">258</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaConfig
@@ -983,7 +994,7 @@ The media configuration. Required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">284</span>
+    <span class="phpdocumentor-element-found-in__line">291</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mediaState
@@ -1019,7 +1030,7 @@ Read-only. The call media state.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">317</span>
+    <span class="phpdocumentor-element-found-in__line">324</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the meetingInfo
@@ -1055,7 +1066,7 @@ The meeting information that&#039;s required for joining a meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">349</span>
+    <span class="phpdocumentor-element-found-in__line">356</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the myParticipantId</p>
@@ -1125,7 +1136,7 @@ The meeting information that&#039;s required for joining a meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">645</span>
+    <span class="phpdocumentor-element-found-in__line">666</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operations
@@ -1133,7 +1144,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getOperations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CommsOperation.html"><abbr title="\Microsoft\Graph\Model\CommsOperation">CommsOperation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1141,7 +1152,7 @@ Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CommsOperation.html"><abbr title="\Microsoft\Graph\Model\CommsOperation">CommsOperation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The operations</p>
 </section>
@@ -1161,7 +1172,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">675</span>
+    <span class="phpdocumentor-element-found-in__line">703</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the participants
@@ -1169,7 +1180,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getParticipants</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getParticipants</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Participant.html"><abbr title="\Microsoft\Graph\Model\Participant">Participant</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1177,7 +1188,7 @@ Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Participant.html"><abbr title="\Microsoft\Graph\Model\Participant">Participant</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The participants</p>
 </section>
@@ -1232,14 +1243,14 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">377</span>
+    <span class="phpdocumentor-element-found-in__line">384</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the requestedModalities</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRequestedModalities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getRequestedModalities</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Modality.html"><abbr title="\Microsoft\Graph\Model\Modality">Modality</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1247,7 +1258,7 @@ Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Modality.html"><abbr title="\Microsoft\Graph\Model\Modality">Modality</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The requestedModalities</p>
 </section>
@@ -1267,7 +1278,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">404</span>
+    <span class="phpdocumentor-element-found-in__line">418</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resultInfo</p>
@@ -1302,7 +1313,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">435</span>
+    <span class="phpdocumentor-element-found-in__line">449</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the source</p>
@@ -1337,7 +1348,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">466</span>
+    <span class="phpdocumentor-element-found-in__line">480</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the state</p>
@@ -1372,7 +1383,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">497</span>
+    <span class="phpdocumentor-element-found-in__line">511</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the subject</p>
@@ -1407,14 +1418,14 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">525</span>
+    <span class="phpdocumentor-element-found-in__line">539</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the targets</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTargets</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTargets</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-InvitationParticipantInfo.html"><abbr title="\Microsoft\Graph\Model\InvitationParticipantInfo">InvitationParticipantInfo</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1422,7 +1433,7 @@ Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-InvitationParticipantInfo.html"><abbr title="\Microsoft\Graph\Model\InvitationParticipantInfo">InvitationParticipantInfo</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The targets</p>
 </section>
@@ -1442,7 +1453,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">552</span>
+    <span class="phpdocumentor-element-found-in__line">573</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tenantId</p>
@@ -1477,7 +1488,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">579</span>
+    <span class="phpdocumentor-element-found-in__line">600</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the toneInfo</p>
@@ -1512,7 +1523,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">611</span>
+    <span class="phpdocumentor-element-found-in__line">632</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the transcription
@@ -1724,7 +1735,7 @@ A unique identifier for all the participant calls in a conference or a unique id
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">140</span>
+    <span class="phpdocumentor-element-found-in__line">147</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the callRoutes
@@ -1732,7 +1743,7 @@ The routing information on how the call was retargeted. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setCallRoutes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-CallRoute.html"><abbr title="\Microsoft\Graph\Model\CallRoute">CallRoute</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setCallRoutes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CallRoute.html"><abbr title="\Microsoft\Graph\Model\CallRoute">CallRoute</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1740,7 +1751,7 @@ The routing information on how the call was retargeted. Read-only.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-CallRoute.html"><abbr title="\Microsoft\Graph\Model\CallRoute">CallRoute</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CallRoute.html"><abbr title="\Microsoft\Graph\Model\CallRoute">CallRoute</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The callRoutes</p>
@@ -1771,7 +1782,7 @@ The routing information on how the call was retargeted. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">173</span>
+    <span class="phpdocumentor-element-found-in__line">180</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the chatInfo
@@ -1818,7 +1829,7 @@ The chat information. Required information for joining a meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">206</span>
+    <span class="phpdocumentor-element-found-in__line">213</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the direction
@@ -1912,7 +1923,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">239</span>
+    <span class="phpdocumentor-element-found-in__line">246</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the incomingContext
@@ -1959,7 +1970,7 @@ The context associated with an incoming call. Read-only. Server generated.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">272</span>
+    <span class="phpdocumentor-element-found-in__line">279</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaConfig
@@ -2006,7 +2017,7 @@ The media configuration. Required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">305</span>
+    <span class="phpdocumentor-element-found-in__line">312</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mediaState
@@ -2053,7 +2064,7 @@ Read-only. The call media state.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">338</span>
+    <span class="phpdocumentor-element-found-in__line">345</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the meetingInfo
@@ -2100,7 +2111,7 @@ The meeting information that&#039;s required for joining a meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">365</span>
+    <span class="phpdocumentor-element-found-in__line">372</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the myParticipantId</p>
@@ -2192,7 +2203,7 @@ The meeting information that&#039;s required for joining a meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">662</span>
+    <span class="phpdocumentor-element-found-in__line">690</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operations
@@ -2200,7 +2211,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-CommsOperation.html"><abbr title="\Microsoft\Graph\Model\CommsOperation">CommsOperation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOperations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CommsOperation.html"><abbr title="\Microsoft\Graph\Model\CommsOperation">CommsOperation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2208,7 +2219,7 @@ Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-CommsOperation.html"><abbr title="\Microsoft\Graph\Model\CommsOperation">CommsOperation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-CommsOperation.html"><abbr title="\Microsoft\Graph\Model\CommsOperation">CommsOperation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The operations</p>
@@ -2239,7 +2250,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">692</span>
+    <span class="phpdocumentor-element-found-in__line">727</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the participants
@@ -2247,7 +2258,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setParticipants</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Participant.html"><abbr title="\Microsoft\Graph\Model\Participant">Participant</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setParticipants</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Participant.html"><abbr title="\Microsoft\Graph\Model\Participant">Participant</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2255,7 +2266,7 @@ Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Participant.html"><abbr title="\Microsoft\Graph\Model\Participant">Participant</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Participant.html"><abbr title="\Microsoft\Graph\Model\Participant">Participant</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The participants</p>
@@ -2286,14 +2297,14 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">393</span>
+    <span class="phpdocumentor-element-found-in__line">407</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the requestedModalities</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRequestedModalities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Modality.html"><abbr title="\Microsoft\Graph\Model\Modality">Modality</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRequestedModalities</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Modality.html"><abbr title="\Microsoft\Graph\Model\Modality">Modality</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2301,7 +2312,7 @@ Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Modality.html"><abbr title="\Microsoft\Graph\Model\Modality">Modality</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Modality.html"><abbr title="\Microsoft\Graph\Model\Modality">Modality</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The requestedModalities</p>
@@ -2332,7 +2343,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">424</span>
+    <span class="phpdocumentor-element-found-in__line">438</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resultInfo</p>
@@ -2378,7 +2389,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">455</span>
+    <span class="phpdocumentor-element-found-in__line">469</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the source</p>
@@ -2424,7 +2435,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">486</span>
+    <span class="phpdocumentor-element-found-in__line">500</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the state</p>
@@ -2470,7 +2481,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">513</span>
+    <span class="phpdocumentor-element-found-in__line">527</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the subject</p>
@@ -2516,14 +2527,14 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">541</span>
+    <span class="phpdocumentor-element-found-in__line">562</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the targets</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTargets</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-InvitationParticipantInfo.html"><abbr title="\Microsoft\Graph\Model\InvitationParticipantInfo">InvitationParticipantInfo</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTargets</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-InvitationParticipantInfo.html"><abbr title="\Microsoft\Graph\Model\InvitationParticipantInfo">InvitationParticipantInfo</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Call.html"><abbr title="\Microsoft\Graph\Model\Call">Call</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2531,7 +2542,7 @@ Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-InvitationParticipantInfo.html"><abbr title="\Microsoft\Graph\Model\InvitationParticipantInfo">InvitationParticipantInfo</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-InvitationParticipantInfo.html"><abbr title="\Microsoft\Graph\Model\InvitationParticipantInfo">InvitationParticipantInfo</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The targets</p>
@@ -2562,7 +2573,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">568</span>
+    <span class="phpdocumentor-element-found-in__line">589</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tenantId</p>
@@ -2608,7 +2619,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">599</span>
+    <span class="phpdocumentor-element-found-in__line">620</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the toneInfo</p>
@@ -2654,7 +2665,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Call.php"><a href="files/src-model-call.html"><abbr title="src/Model/Call.php">Call.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">632</span>
+    <span class="phpdocumentor-element-found-in__line">653</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the transcription

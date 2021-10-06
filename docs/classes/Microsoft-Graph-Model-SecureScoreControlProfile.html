@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -199,7 +210,7 @@ GUID string for tenant ID.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SecureScoreControlProfile.html#method_getComplianceInformation">getComplianceInformation()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceInformation.html"><abbr title="\Microsoft\Graph\Model\ComplianceInformation">ComplianceInformation</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the complianceInformation
 The collection of compliance information associated with secure score control</dd>
@@ -215,7 +226,7 @@ Control action category (Identity, Data, Device, Apps, Infrastructure).</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SecureScoreControlProfile.html#method_getControlStateUpdates">getControlStateUpdates()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SecureScoreControlStateUpdate.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlStateUpdate">SecureScoreControlStateUpdate</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the controlStateUpdates
 Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).</dd>
@@ -746,7 +757,7 @@ The collection of compliance information associated with secure score control</p
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getComplianceInformation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getComplianceInformation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceInformation.html"><abbr title="\Microsoft\Graph\Model\ComplianceInformation">ComplianceInformation</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -754,7 +765,7 @@ The collection of compliance information associated with secure score control</p
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceInformation.html"><abbr title="\Microsoft\Graph\Model\ComplianceInformation">ComplianceInformation</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The complianceInformation</p>
 </section>
@@ -774,7 +785,7 @@ The collection of compliance information associated with secure score control</p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the controlCategory
@@ -810,7 +821,7 @@ Control action category (Identity, Data, Device, Apps, Infrastructure).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">180</span>
+    <span class="phpdocumentor-element-found-in__line">187</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the controlStateUpdates
@@ -818,7 +829,7 @@ Flag to indicate where the tenant has marked a control (ignore, thirdParty, revi
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getControlStateUpdates</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getControlStateUpdates</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SecureScoreControlStateUpdate.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlStateUpdate">SecureScoreControlStateUpdate</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -826,7 +837,7 @@ Flag to indicate where the tenant has marked a control (ignore, thirdParty, revi
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SecureScoreControlStateUpdate.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlStateUpdate">SecureScoreControlStateUpdate</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The controlStateUpdates</p>
 </section>
@@ -846,7 +857,7 @@ Flag to indicate where the tenant has marked a control (ignore, thirdParty, revi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">209</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deprecated
@@ -918,7 +929,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">238</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the implementationCost
@@ -954,7 +965,7 @@ Resource cost of implemmentating control (low, moderate, high).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">267</span>
+    <span class="phpdocumentor-element-found-in__line">281</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastModifiedDateTime
@@ -990,7 +1001,7 @@ Time at which the control profile entity was last modified. The Timestamp type r
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">300</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the maxScore
@@ -1096,7 +1107,7 @@ max attainable score for the control.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">329</span>
+    <span class="phpdocumentor-element-found-in__line">343</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the rank
@@ -1132,7 +1143,7 @@ Microsoft&#039;s stack ranking of control.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">358</span>
+    <span class="phpdocumentor-element-found-in__line">372</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the remediation
@@ -1168,7 +1179,7 @@ Description of what the control will help remediate.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">387</span>
+    <span class="phpdocumentor-element-found-in__line">401</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the remediationImpact
@@ -1204,7 +1215,7 @@ Description of the impact on users of the remediation.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">416</span>
+    <span class="phpdocumentor-element-found-in__line">430</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the service
@@ -1240,7 +1251,7 @@ Service that owns the control (Exchange, Sharepoint, Azure AD).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">445</span>
+    <span class="phpdocumentor-element-found-in__line">459</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the threats
@@ -1276,7 +1287,7 @@ List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltrati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">474</span>
+    <span class="phpdocumentor-element-found-in__line">488</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tier
@@ -1312,7 +1323,7 @@ Control tier (Core, Defense in Depth, Advanced.)</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">503</span>
+    <span class="phpdocumentor-element-found-in__line">517</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the title
@@ -1348,7 +1359,7 @@ Title of the control.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">532</span>
+    <span class="phpdocumentor-element-found-in__line">546</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userImpact
@@ -1384,7 +1395,7 @@ User impact of implementing control (low, moderate, high).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">560</span>
+    <span class="phpdocumentor-element-found-in__line">574</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the vendorInformation</p>
@@ -1596,7 +1607,7 @@ GUID string for tenant ID.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the complianceInformation
@@ -1604,7 +1615,7 @@ The collection of compliance information associated with secure score control</p
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setComplianceInformation</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ComplianceInformation.html"><abbr title="\Microsoft\Graph\Model\ComplianceInformation">ComplianceInformation</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SecureScoreControlProfile.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlProfile">SecureScoreControlProfile</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setComplianceInformation</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceInformation.html"><abbr title="\Microsoft\Graph\Model\ComplianceInformation">ComplianceInformation</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SecureScoreControlProfile.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlProfile">SecureScoreControlProfile</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1612,7 +1623,7 @@ The collection of compliance information associated with secure score control</p
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ComplianceInformation.html"><abbr title="\Microsoft\Graph\Model\ComplianceInformation">ComplianceInformation</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ComplianceInformation.html"><abbr title="\Microsoft\Graph\Model\ComplianceInformation">ComplianceInformation</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The complianceInformation</p>
@@ -1643,7 +1654,7 @@ The collection of compliance information associated with secure score control</p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">167</span>
+    <span class="phpdocumentor-element-found-in__line">174</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the controlCategory
@@ -1690,7 +1701,7 @@ Control action category (Identity, Data, Device, Apps, Infrastructure).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">197</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the controlStateUpdates
@@ -1698,7 +1709,7 @@ Flag to indicate where the tenant has marked a control (ignore, thirdParty, revi
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setControlStateUpdates</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SecureScoreControlStateUpdate.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlStateUpdate">SecureScoreControlStateUpdate</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SecureScoreControlProfile.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlProfile">SecureScoreControlProfile</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setControlStateUpdates</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SecureScoreControlStateUpdate.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlStateUpdate">SecureScoreControlStateUpdate</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SecureScoreControlProfile.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlProfile">SecureScoreControlProfile</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1706,7 +1717,7 @@ Flag to indicate where the tenant has marked a control (ignore, thirdParty, revi
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SecureScoreControlStateUpdate.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlStateUpdate">SecureScoreControlStateUpdate</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SecureScoreControlStateUpdate.html"><abbr title="\Microsoft\Graph\Model\SecureScoreControlStateUpdate">SecureScoreControlStateUpdate</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The controlStateUpdates</p>
@@ -1737,7 +1748,7 @@ Flag to indicate where the tenant has marked a control (ignore, thirdParty, revi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">226</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deprecated
@@ -1831,7 +1842,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">255</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the implementationCost
@@ -1878,7 +1889,7 @@ Resource cost of implemmentating control (low, moderate, high).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">288</span>
+    <span class="phpdocumentor-element-found-in__line">302</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastModifiedDateTime
@@ -1925,7 +1936,7 @@ Time at which the control profile entity was last modified. The Timestamp type r
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">317</span>
+    <span class="phpdocumentor-element-found-in__line">331</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the maxScore
@@ -2018,7 +2029,7 @@ max attainable score for the control.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">346</span>
+    <span class="phpdocumentor-element-found-in__line">360</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the rank
@@ -2065,7 +2076,7 @@ Microsoft&#039;s stack ranking of control.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">375</span>
+    <span class="phpdocumentor-element-found-in__line">389</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the remediation
@@ -2112,7 +2123,7 @@ Description of what the control will help remediate.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">404</span>
+    <span class="phpdocumentor-element-found-in__line">418</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the remediationImpact
@@ -2159,7 +2170,7 @@ Description of the impact on users of the remediation.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">433</span>
+    <span class="phpdocumentor-element-found-in__line">447</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the service
@@ -2206,7 +2217,7 @@ Service that owns the control (Exchange, Sharepoint, Azure AD).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">462</span>
+    <span class="phpdocumentor-element-found-in__line">476</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the threats
@@ -2253,7 +2264,7 @@ List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltrati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">491</span>
+    <span class="phpdocumentor-element-found-in__line">505</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tier
@@ -2300,7 +2311,7 @@ Control tier (Core, Defense in Depth, Advanced.)</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">520</span>
+    <span class="phpdocumentor-element-found-in__line">534</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the title
@@ -2347,7 +2358,7 @@ Title of the control.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">549</span>
+    <span class="phpdocumentor-element-found-in__line">563</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userImpact
@@ -2394,7 +2405,7 @@ User impact of implementing control (low, moderate, high).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SecureScoreControlProfile.php"><a href="files/src-model-securescorecontrolprofile.html"><abbr title="src/Model/SecureScoreControlProfile.php">SecureScoreControlProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">580</span>
+    <span class="phpdocumentor-element-found-in__line">594</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the vendorInformation</p>

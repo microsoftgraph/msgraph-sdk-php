@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-OutlookItem.html"><abbr title="\Microsoft\Graph\Model\OutlookItem">OutlookItem</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -183,15 +194,15 @@ True if the meeting organizer allows invitees to propose a new time when respond
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getAttachments">getAttachments()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the attachments
-The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.</dd>
+The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getAttendees">getAttendees()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attendee.html"><abbr title="\Microsoft\Graph\Model\Attendee">Attendee</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the attendees
 The collection of attendees for the event.</dd>
@@ -255,10 +266,10 @@ The date, time, and time zone that the event ends. By default, the end time is i
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getExtensions">getExtensions()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the extensions
-The collection of open extensions defined for the event. Read-only. Nullable.</dd>
+The collection of open extensions defined for the event. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getHasAttachments">getHasAttachments()</a>
@@ -297,64 +308,57 @@ Read-only.</dd>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Importance.html"><abbr title="\Microsoft\Graph\Model\Importance">Importance</abbr></a>|null    </span>
 </dt>
-<dd>Gets the importance
-The importance of the event. The possible values are: low, normal, high.</dd>
+<dd>Gets the importance</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getInstances">getInstances()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the instances
-The instances of the event. Navigation property. Read-only. Nullable.</dd>
+The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getIsAllDay">getIsAllDay()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the isAllDay
-Set to true if the event lasts all day.</dd>
+<dd>Gets the isAllDay</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getIsCancelled">getIsCancelled()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the isCancelled
-Set to true if the event has been canceled.</dd>
+<dd>Gets the isCancelled</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getIsDraft">getIsDraft()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the isDraft
-Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.</dd>
+<dd>Gets the isDraft</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getIsOnlineMeeting">getIsOnlineMeeting()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the isOnlineMeeting
-True if this event has online meeting information, false otherwise. Default is false. Optional.</dd>
+<dd>Gets the isOnlineMeeting</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getIsOrganizer">getIsOrganizer()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the isOrganizer
-Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.</dd>
+<dd>Gets the isOrganizer</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getIsReminderOn">getIsReminderOn()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the isReminderOn
-Set to true if an alert is set to remind the user of the event.</dd>
+<dd>Gets the isReminderOn</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-OutlookItem.html#method_getLastModifiedDateTime">getLastModifiedDateTime()</a>
@@ -369,21 +373,19 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Location.html"><abbr title="\Microsoft\Graph\Model\Location">Location</abbr></a>|null    </span>
 </dt>
-<dd>Gets the location
-The location of the event.</dd>
+<dd>Gets the location</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getLocations">getLocations()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Location.html"><abbr title="\Microsoft\Graph\Model\Location">Location</abbr></a>&gt;|null    </span>
 </dt>
-<dd>Gets the locations
-The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.</dd>
+<dd>Gets the locations</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getMultiValueExtendedProperties">getMultiValueExtendedProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the multiValueExtendedProperties
 The collection of multi-value extended properties defined for the event. Read-only. Nullable.</dd>
@@ -400,56 +402,49 @@ The collection of multi-value extended properties defined for the event. Read-on
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-OnlineMeetingInfo.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingInfo">OnlineMeetingInfo</abbr></a>|null    </span>
 </dt>
-<dd>Gets the onlineMeeting
-Details for an attendee to join the meeting online. Read-only.</dd>
+<dd>Gets the onlineMeeting</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getOnlineMeetingProvider">getOnlineMeetingProvider()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-OnlineMeetingProviderType.html"><abbr title="\Microsoft\Graph\Model\OnlineMeetingProviderType">OnlineMeetingProviderType</abbr></a>|null    </span>
 </dt>
-<dd>Gets the onlineMeetingProvider
-Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.</dd>
+<dd>Gets the onlineMeetingProvider</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getOnlineMeetingUrl">getOnlineMeetingUrl()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the onlineMeetingUrl
-A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.</dd>
+<dd>Gets the onlineMeetingUrl</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getOrganizer">getOrganizer()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Recipient.html"><abbr title="\Microsoft\Graph\Model\Recipient">Recipient</abbr></a>|null    </span>
 </dt>
-<dd>Gets the organizer
-The organizer of the event.</dd>
+<dd>Gets the organizer</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getOriginalEndTimeZone">getOriginalEndTimeZone()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the originalEndTimeZone
-The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.</dd>
+<dd>Gets the originalEndTimeZone</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getOriginalStart">getOriginalStart()</a>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
-<dd>Gets the originalStart
-The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z</dd>
+<dd>Gets the originalStart</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getOriginalStartTimeZone">getOriginalStartTimeZone()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the originalStartTimeZone
-The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.</dd>
+<dd>Gets the originalStartTimeZone</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -463,61 +458,54 @@ The start time zone that was set when the event was created. A value of tzone://
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-PatternedRecurrence.html"><abbr title="\Microsoft\Graph\Model\PatternedRecurrence">PatternedRecurrence</abbr></a>|null    </span>
 </dt>
-<dd>Gets the recurrence
-The recurrence pattern for the event.</dd>
+<dd>Gets the recurrence</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getReminderMinutesBeforeStart">getReminderMinutesBeforeStart()</a>
     <span>
                         &nbsp;: int|null    </span>
 </dt>
-<dd>Gets the reminderMinutesBeforeStart
-The number of minutes before the event start time that the reminder alert occurs.</dd>
+<dd>Gets the reminderMinutesBeforeStart</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getResponseRequested">getResponseRequested()</a>
     <span>
                         &nbsp;: bool|null    </span>
 </dt>
-<dd>Gets the responseRequested
-Default is true, which represents the organizer would like an invitee to send a response to the event.</dd>
+<dd>Gets the responseRequested</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getResponseStatus">getResponseStatus()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-ResponseStatus.html"><abbr title="\Microsoft\Graph\Model\ResponseStatus">ResponseStatus</abbr></a>|null    </span>
 </dt>
-<dd>Gets the responseStatus
-Indicates the type of response sent in response to an event message.</dd>
+<dd>Gets the responseStatus</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getSensitivity">getSensitivity()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Sensitivity.html"><abbr title="\Microsoft\Graph\Model\Sensitivity">Sensitivity</abbr></a>|null    </span>
 </dt>
-<dd>Gets the sensitivity
-The possible values are: normal, personal, private, confidential.</dd>
+<dd>Gets the sensitivity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getSeriesMasterId">getSeriesMasterId()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the seriesMasterId
-The ID for the recurring series master item, if this event is part of a recurring series.</dd>
+<dd>Gets the seriesMasterId</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getShowAs">getShowAs()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-FreeBusyStatus.html"><abbr title="\Microsoft\Graph\Model\FreeBusyStatus">FreeBusyStatus</abbr></a>|null    </span>
 </dt>
-<dd>Gets the showAs
-The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.</dd>
+<dd>Gets the showAs</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getSingleValueExtendedProperties">getSingleValueExtendedProperties()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the singleValueExtendedProperties
 The collection of single-value extended properties defined for the event. Read-only. Nullable.</dd>
@@ -527,40 +515,35 @@ The collection of single-value extended properties defined for the event. Read-o
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-DateTimeTimeZone.html"><abbr title="\Microsoft\Graph\Model\DateTimeTimeZone">DateTimeTimeZone</abbr></a>|null    </span>
 </dt>
-<dd>Gets the start
-The date, time, and time zone that the event starts. By default, the start time is in UTC.</dd>
+<dd>Gets the start</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getSubject">getSubject()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the subject
-The text of the event&#039;s subject line.</dd>
+<dd>Gets the subject</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getTransactionId">getTransactionId()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the transactionId
-A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client&#039;s prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.</dd>
+<dd>Gets the transactionId</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getType">getType()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-EventType.html"><abbr title="\Microsoft\Graph\Model\EventType">EventType</abbr></a>|null    </span>
 </dt>
-<dd>Gets the type
-The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.</dd>
+<dd>Gets the type</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_getWebLink">getWebLink()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the webLink
-The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.</dd>
+<dd>Gets the webLink</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -584,7 +567,7 @@ True if the meeting organizer allows invitees to propose a new time when respond
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
 <dd>Sets the attachments
-The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.</dd>
+The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setAttendees">setAttendees()</a>
@@ -656,7 +639,7 @@ The date, time, and time zone that the event ends. By default, the end time is i
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
 <dd>Sets the extensions
-The collection of open extensions defined for the event. Read-only. Nullable.</dd>
+The collection of open extensions defined for the event. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setHasAttachments">setHasAttachments()</a>
@@ -695,8 +678,7 @@ Read-only.</dd>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the importance
-The importance of the event. The possible values are: low, normal, high.</dd>
+<dd>Sets the importance</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setInstances">setInstances()</a>
@@ -704,55 +686,49 @@ The importance of the event. The possible values are: low, normal, high.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
 <dd>Sets the instances
-The instances of the event. Navigation property. Read-only. Nullable.</dd>
+The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setIsAllDay">setIsAllDay()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the isAllDay
-Set to true if the event lasts all day.</dd>
+<dd>Sets the isAllDay</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setIsCancelled">setIsCancelled()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the isCancelled
-Set to true if the event has been canceled.</dd>
+<dd>Sets the isCancelled</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setIsDraft">setIsDraft()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the isDraft
-Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.</dd>
+<dd>Sets the isDraft</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setIsOnlineMeeting">setIsOnlineMeeting()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the isOnlineMeeting
-True if this event has online meeting information, false otherwise. Default is false. Optional.</dd>
+<dd>Sets the isOnlineMeeting</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setIsOrganizer">setIsOrganizer()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the isOrganizer
-Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.</dd>
+<dd>Sets the isOrganizer</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setIsReminderOn">setIsReminderOn()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the isReminderOn
-Set to true if an alert is set to remind the user of the event.</dd>
+<dd>Sets the isReminderOn</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-OutlookItem.html#method_setLastModifiedDateTime">setLastModifiedDateTime()</a>
@@ -767,16 +743,14 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the location
-The location of the event.</dd>
+<dd>Sets the location</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setLocations">setLocations()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the locations
-The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.</dd>
+<dd>Sets the locations</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setMultiValueExtendedProperties">setMultiValueExtendedProperties()</a>
@@ -798,112 +772,98 @@ The collection of multi-value extended properties defined for the event. Read-on
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the onlineMeeting
-Details for an attendee to join the meeting online. Read-only.</dd>
+<dd>Sets the onlineMeeting</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setOnlineMeetingProvider">setOnlineMeetingProvider()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the onlineMeetingProvider
-Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.</dd>
+<dd>Sets the onlineMeetingProvider</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setOnlineMeetingUrl">setOnlineMeetingUrl()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the onlineMeetingUrl
-A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.</dd>
+<dd>Sets the onlineMeetingUrl</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setOrganizer">setOrganizer()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the organizer
-The organizer of the event.</dd>
+<dd>Sets the organizer</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setOriginalEndTimeZone">setOriginalEndTimeZone()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the originalEndTimeZone
-The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.</dd>
+<dd>Sets the originalEndTimeZone</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setOriginalStart">setOriginalStart()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the originalStart
-The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z</dd>
+<dd>Sets the originalStart</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setOriginalStartTimeZone">setOriginalStartTimeZone()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the originalStartTimeZone
-The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.</dd>
+<dd>Sets the originalStartTimeZone</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setRecurrence">setRecurrence()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the recurrence
-The recurrence pattern for the event.</dd>
+<dd>Sets the recurrence</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setReminderMinutesBeforeStart">setReminderMinutesBeforeStart()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the reminderMinutesBeforeStart
-The number of minutes before the event start time that the reminder alert occurs.</dd>
+<dd>Sets the reminderMinutesBeforeStart</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setResponseRequested">setResponseRequested()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the responseRequested
-Default is true, which represents the organizer would like an invitee to send a response to the event.</dd>
+<dd>Sets the responseRequested</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setResponseStatus">setResponseStatus()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the responseStatus
-Indicates the type of response sent in response to an event message.</dd>
+<dd>Sets the responseStatus</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setSensitivity">setSensitivity()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the sensitivity
-The possible values are: normal, personal, private, confidential.</dd>
+<dd>Sets the sensitivity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setSeriesMasterId">setSeriesMasterId()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the seriesMasterId
-The ID for the recurring series master item, if this event is part of a recurring series.</dd>
+<dd>Sets the seriesMasterId</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setShowAs">setShowAs()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the showAs
-The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.</dd>
+<dd>Sets the showAs</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setSingleValueExtendedProperties">setSingleValueExtendedProperties()</a>
@@ -918,40 +878,35 @@ The collection of single-value extended properties defined for the event. Read-o
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the start
-The date, time, and time zone that the event starts. By default, the start time is in UTC.</dd>
+<dd>Sets the start</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setSubject">setSubject()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the subject
-The text of the event&#039;s subject line.</dd>
+<dd>Sets the subject</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setTransactionId">setTransactionId()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the transactionId
-A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client&#039;s prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.</dd>
+<dd>Sets the transactionId</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setType">setType()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the type
-The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.</dd>
+<dd>Sets the type</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Event.html#method_setWebLink">setWebLink()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>    </span>
 </dt>
-<dd>Sets the webLink
-The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.</dd>
+<dd>Sets the webLink</dd>
 
         </dl>
 
@@ -1100,15 +1055,15 @@ True if the meeting organizer allows invitees to propose a new time when respond
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1136</span>
+    <span class="phpdocumentor-element-found-in__line">1094</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the attachments
-The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.</p>
+The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAttachments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAttachments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1116,7 +1071,7 @@ The collection of fileAttachment and itemAttachment attachments for the event. N
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The attachments</p>
 </section>
@@ -1144,7 +1099,7 @@ The collection of attendees for the event.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAttendees</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAttendees</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attendee.html"><abbr title="\Microsoft\Graph\Model\Attendee">Attendee</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1152,7 +1107,7 @@ The collection of attendees for the event.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attendee.html"><abbr title="\Microsoft\Graph\Model\Attendee">Attendee</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The attendees</p>
 </section>
@@ -1172,7 +1127,7 @@ The collection of attendees for the event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the body
@@ -1208,7 +1163,7 @@ The body of the message associated with the event. It can be in HTML or text for
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">125</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the bodyPreview
@@ -1244,7 +1199,7 @@ The preview of the message associated with the event. It is in text format.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1165</span>
+    <span class="phpdocumentor-element-found-in__line">1130</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the calendar
@@ -1388,7 +1343,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the end
@@ -1424,15 +1379,15 @@ The date, time, and time zone that the event ends. By default, the end time is i
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1199</span>
+    <span class="phpdocumentor-element-found-in__line">1164</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the extensions
-The collection of open extensions defined for the event. Read-only. Nullable.</p>
+The collection of open extensions defined for the event. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getExtensions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getExtensions</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1440,7 +1395,7 @@ The collection of open extensions defined for the event. Read-only. Nullable.</p
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The extensions</p>
 </section>
@@ -1460,7 +1415,7 @@ The collection of open extensions defined for the event. Read-only. Nullable.</p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">187</span>
+    <span class="phpdocumentor-element-found-in__line">194</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hasAttachments
@@ -1496,7 +1451,7 @@ Set to true if the event has attachments.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">216</span>
+    <span class="phpdocumentor-element-found-in__line">223</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hideAttendees
@@ -1532,7 +1487,7 @@ When set to true, each attendee only sees themselves in the meeting request and 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the iCalUId
@@ -1604,11 +1559,10 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">274</span>
+    <span class="phpdocumentor-element-found-in__line">280</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the importance
-The importance of the event. The possible values are: low, normal, high.</p>
+        <p class="phpdocumentor-summary">Gets the importance</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1640,15 +1594,15 @@ The importance of the event. The possible values are: low, normal, high.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1229</span>
+    <span class="phpdocumentor-element-found-in__line">1201</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the instances
-The instances of the event. Navigation property. Read-only. Nullable.</p>
+The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getInstances</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getInstances</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1656,7 +1610,7 @@ The instances of the event. Navigation property. Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The instances</p>
 </section>
@@ -1676,11 +1630,10 @@ The instances of the event. Navigation property. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">307</span>
+    <span class="phpdocumentor-element-found-in__line">311</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the isAllDay
-Set to true if the event lasts all day.</p>
+        <p class="phpdocumentor-summary">Gets the isAllDay</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1712,11 +1665,10 @@ Set to true if the event lasts all day.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">336</span>
+    <span class="phpdocumentor-element-found-in__line">338</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the isCancelled
-Set to true if the event has been canceled.</p>
+        <p class="phpdocumentor-summary">Gets the isCancelled</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1751,8 +1703,7 @@ Set to true if the event has been canceled.</p>
     <span class="phpdocumentor-element-found-in__line">365</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the isDraft
-Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.</p>
+        <p class="phpdocumentor-summary">Gets the isDraft</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1784,11 +1735,10 @@ Set to true if the user has updated the meeting in Outlook but has not sent the 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">394</span>
+    <span class="phpdocumentor-element-found-in__line">392</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the isOnlineMeeting
-True if this event has online meeting information, false otherwise. Default is false. Optional.</p>
+        <p class="phpdocumentor-summary">Gets the isOnlineMeeting</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1820,11 +1770,10 @@ True if this event has online meeting information, false otherwise. Default is f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">423</span>
+    <span class="phpdocumentor-element-found-in__line">419</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the isOrganizer
-Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.</p>
+        <p class="phpdocumentor-summary">Gets the isOrganizer</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1856,11 +1805,10 @@ Set to true if the calendar owner (specified by the owner property of the calend
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">452</span>
+    <span class="phpdocumentor-element-found-in__line">446</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the isReminderOn
-Set to true if an alert is set to remind the user of the event.</p>
+        <p class="phpdocumentor-summary">Gets the isReminderOn</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1928,11 +1876,10 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">481</span>
+    <span class="phpdocumentor-element-found-in__line">473</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the location
-The location of the event.</p>
+        <p class="phpdocumentor-summary">Gets the location</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1964,15 +1911,14 @@ The location of the event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">515</span>
+    <span class="phpdocumentor-element-found-in__line">505</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the locations
-The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.</p>
+        <p class="phpdocumentor-summary">Gets the locations</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getLocations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getLocations</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Location.html"><abbr title="\Microsoft\Graph\Model\Location">Location</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1980,7 +1926,7 @@ The locations where the event is held or attended from. The location and locatio
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Location.html"><abbr title="\Microsoft\Graph\Model\Location">Location</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The locations</p>
 </section>
@@ -2000,7 +1946,7 @@ The locations where the event is held or attended from. The location and locatio
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1259</span>
+    <span class="phpdocumentor-element-found-in__line">1238</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the multiValueExtendedProperties
@@ -2008,7 +1954,7 @@ The collection of multi-value extended properties defined for the event. Read-on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMultiValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMultiValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2016,7 +1962,7 @@ The collection of multi-value extended properties defined for the event. Read-on
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The multiValueExtendedProperties</p>
 </section>
@@ -2071,11 +2017,10 @@ The collection of multi-value extended properties defined for the event. Read-on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">544</span>
+    <span class="phpdocumentor-element-found-in__line">539</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the onlineMeeting
-Details for an attendee to join the meeting online. Read-only.</p>
+        <p class="phpdocumentor-summary">Gets the onlineMeeting</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2107,11 +2052,10 @@ Details for an attendee to join the meeting online. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">577</span>
+    <span class="phpdocumentor-element-found-in__line">570</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the onlineMeetingProvider
-Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.</p>
+        <p class="phpdocumentor-summary">Gets the onlineMeetingProvider</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2143,11 +2087,10 @@ Represents the online meeting service provider. The possible values are teamsFor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">610</span>
+    <span class="phpdocumentor-element-found-in__line">601</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the onlineMeetingUrl
-A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.</p>
+        <p class="phpdocumentor-summary">Gets the onlineMeetingUrl</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2179,11 +2122,10 @@ A URL for an online meeting. The property is set only when an organizer specifie
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">639</span>
+    <span class="phpdocumentor-element-found-in__line">628</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the organizer
-The organizer of the event.</p>
+        <p class="phpdocumentor-summary">Gets the organizer</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2215,11 +2157,10 @@ The organizer of the event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">672</span>
+    <span class="phpdocumentor-element-found-in__line">659</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the originalEndTimeZone
-The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.</p>
+        <p class="phpdocumentor-summary">Gets the originalEndTimeZone</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2251,11 +2192,10 @@ The end time zone that was set when the event was created. A value of tzone://Mi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">701</span>
+    <span class="phpdocumentor-element-found-in__line">686</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the originalStart
-The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z</p>
+        <p class="phpdocumentor-summary">Gets the originalStart</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2287,11 +2227,10 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">734</span>
+    <span class="phpdocumentor-element-found-in__line">717</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the originalStartTimeZone
-The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.</p>
+        <p class="phpdocumentor-summary">Gets the originalStartTimeZone</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2358,11 +2297,10 @@ The start time zone that was set when the event was created. A value of tzone://
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">763</span>
+    <span class="phpdocumentor-element-found-in__line">744</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the recurrence
-The recurrence pattern for the event.</p>
+        <p class="phpdocumentor-summary">Gets the recurrence</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2394,11 +2332,10 @@ The recurrence pattern for the event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">796</span>
+    <span class="phpdocumentor-element-found-in__line">775</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the reminderMinutesBeforeStart
-The number of minutes before the event start time that the reminder alert occurs.</p>
+        <p class="phpdocumentor-summary">Gets the reminderMinutesBeforeStart</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2430,11 +2367,10 @@ The number of minutes before the event start time that the reminder alert occurs
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">825</span>
+    <span class="phpdocumentor-element-found-in__line">802</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the responseRequested
-Default is true, which represents the organizer would like an invitee to send a response to the event.</p>
+        <p class="phpdocumentor-summary">Gets the responseRequested</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2466,11 +2402,10 @@ Default is true, which represents the organizer would like an invitee to send a 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">854</span>
+    <span class="phpdocumentor-element-found-in__line">829</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the responseStatus
-Indicates the type of response sent in response to an event message.</p>
+        <p class="phpdocumentor-summary">Gets the responseStatus</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2502,11 +2437,10 @@ Indicates the type of response sent in response to an event message.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">887</span>
+    <span class="phpdocumentor-element-found-in__line">860</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the sensitivity
-The possible values are: normal, personal, private, confidential.</p>
+        <p class="phpdocumentor-summary">Gets the sensitivity</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2538,11 +2472,10 @@ The possible values are: normal, personal, private, confidential.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">920</span>
+    <span class="phpdocumentor-element-found-in__line">891</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the seriesMasterId
-The ID for the recurring series master item, if this event is part of a recurring series.</p>
+        <p class="phpdocumentor-summary">Gets the seriesMasterId</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2574,11 +2507,10 @@ The ID for the recurring series master item, if this event is part of a recurrin
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">949</span>
+    <span class="phpdocumentor-element-found-in__line">918</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the showAs
-The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.</p>
+        <p class="phpdocumentor-summary">Gets the showAs</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2610,7 +2542,7 @@ The status to show. The possible values are: free, tentative, busy, oof, working
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1289</span>
+    <span class="phpdocumentor-element-found-in__line">1275</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the singleValueExtendedProperties
@@ -2618,7 +2550,7 @@ The collection of single-value extended properties defined for the event. Read-o
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSingleValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSingleValueExtendedProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2626,7 +2558,7 @@ The collection of single-value extended properties defined for the event. Read-o
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The singleValueExtendedProperties</p>
 </section>
@@ -2646,11 +2578,10 @@ The collection of single-value extended properties defined for the event. Read-o
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">982</span>
+    <span class="phpdocumentor-element-found-in__line">949</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the start
-The date, time, and time zone that the event starts. By default, the start time is in UTC.</p>
+        <p class="phpdocumentor-summary">Gets the start</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2682,11 +2613,10 @@ The date, time, and time zone that the event starts. By default, the start time 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1015</span>
+    <span class="phpdocumentor-element-found-in__line">980</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the subject
-The text of the event&#039;s subject line.</p>
+        <p class="phpdocumentor-summary">Gets the subject</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2718,11 +2648,10 @@ The text of the event&#039;s subject line.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1044</span>
+    <span class="phpdocumentor-element-found-in__line">1007</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the transactionId
-A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client&#039;s prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.</p>
+        <p class="phpdocumentor-summary">Gets the transactionId</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2754,11 +2683,10 @@ A custom identifier specified by a client app for the server to avoid redundant 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1073</span>
+    <span class="phpdocumentor-element-found-in__line">1034</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the type
-The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.</p>
+        <p class="phpdocumentor-summary">Gets the type</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2790,11 +2718,10 @@ The event type. The possible values are: singleInstance, occurrence, exception, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1106</span>
+    <span class="phpdocumentor-element-found-in__line">1065</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the webLink
-The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.</p>
+        <p class="phpdocumentor-summary">Gets the webLink</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2909,15 +2836,15 @@ True if the meeting organizer allows invitees to propose a new time when respond
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1153</span>
+    <span class="phpdocumentor-element-found-in__line">1118</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the attachments
-The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.</p>
+The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAttachments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAttachments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2925,7 +2852,7 @@ The collection of fileAttachment and itemAttachment attachments for the event. N
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attachment.html"><abbr title="\Microsoft\Graph\Model\Attachment">Attachment</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The attachments</p>
@@ -2956,7 +2883,7 @@ The collection of fileAttachment and itemAttachment attachments for the event. N
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the attendees
@@ -2964,7 +2891,7 @@ The collection of attendees for the event.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAttendees</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Attendee.html"><abbr title="\Microsoft\Graph\Model\Attendee">Attendee</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAttendees</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attendee.html"><abbr title="\Microsoft\Graph\Model\Attendee">Attendee</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2972,7 +2899,7 @@ The collection of attendees for the event.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Attendee.html"><abbr title="\Microsoft\Graph\Model\Attendee">Attendee</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Attendee.html"><abbr title="\Microsoft\Graph\Model\Attendee">Attendee</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The attendees</p>
@@ -3003,7 +2930,7 @@ The collection of attendees for the event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">113</span>
+    <span class="phpdocumentor-element-found-in__line">120</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the body
@@ -3050,7 +2977,7 @@ The body of the message associated with the event. It can be in HTML or text for
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">142</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the bodyPreview
@@ -3097,7 +3024,7 @@ The preview of the message associated with the event. It is in text format.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1186</span>
+    <span class="phpdocumentor-element-found-in__line">1151</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the calendar
@@ -3285,7 +3212,7 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">175</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the end
@@ -3332,15 +3259,15 @@ The date, time, and time zone that the event ends. By default, the end time is i
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1216</span>
+    <span class="phpdocumentor-element-found-in__line">1188</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the extensions
-The collection of open extensions defined for the event. Read-only. Nullable.</p>
+The collection of open extensions defined for the event. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setExtensions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setExtensions</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3348,7 +3275,7 @@ The collection of open extensions defined for the event. Read-only. Nullable.</p
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Extension.html"><abbr title="\Microsoft\Graph\Model\Extension">Extension</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The extensions</p>
@@ -3379,7 +3306,7 @@ The collection of open extensions defined for the event. Read-only. Nullable.</p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">204</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hasAttachments
@@ -3426,7 +3353,7 @@ Set to true if the event has attachments.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hideAttendees
@@ -3473,7 +3400,7 @@ When set to true, each attendee only sees themselves in the meeting request and 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">262</span>
+    <span class="phpdocumentor-element-found-in__line">269</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the iCalUId
@@ -3567,11 +3494,10 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">300</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the importance
-The importance of the event. The possible values are: low, normal, high.</p>
+        <p class="phpdocumentor-summary">Sets the importance</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3614,15 +3540,15 @@ The importance of the event. The possible values are: low, normal, high.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1246</span>
+    <span class="phpdocumentor-element-found-in__line">1225</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the instances
-The instances of the event. Navigation property. Read-only. Nullable.</p>
+The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setInstances</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setInstances</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3630,7 +3556,7 @@ The instances of the event. Navigation property. Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The instances</p>
@@ -3661,11 +3587,10 @@ The instances of the event. Navigation property. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">324</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the isAllDay
-Set to true if the event lasts all day.</p>
+        <p class="phpdocumentor-summary">Sets the isAllDay</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3708,11 +3633,10 @@ Set to true if the event lasts all day.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">353</span>
+    <span class="phpdocumentor-element-found-in__line">354</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the isCancelled
-Set to true if the event has been canceled.</p>
+        <p class="phpdocumentor-summary">Sets the isCancelled</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3755,11 +3679,10 @@ Set to true if the event has been canceled.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">382</span>
+    <span class="phpdocumentor-element-found-in__line">381</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the isDraft
-Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.</p>
+        <p class="phpdocumentor-summary">Sets the isDraft</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3802,11 +3725,10 @@ Set to true if the user has updated the meeting in Outlook but has not sent the 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">408</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the isOnlineMeeting
-True if this event has online meeting information, false otherwise. Default is false. Optional.</p>
+        <p class="phpdocumentor-summary">Sets the isOnlineMeeting</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3849,11 +3771,10 @@ True if this event has online meeting information, false otherwise. Default is f
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">440</span>
+    <span class="phpdocumentor-element-found-in__line">435</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the isOrganizer
-Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.</p>
+        <p class="phpdocumentor-summary">Sets the isOrganizer</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3896,11 +3817,10 @@ Set to true if the calendar owner (specified by the owner property of the calend
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">469</span>
+    <span class="phpdocumentor-element-found-in__line">462</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the isReminderOn
-Set to true if an alert is set to remind the user of the event.</p>
+        <p class="phpdocumentor-summary">Sets the isReminderOn</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3990,11 +3910,10 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">502</span>
+    <span class="phpdocumentor-element-found-in__line">493</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the location
-The location of the event.</p>
+        <p class="phpdocumentor-summary">Sets the location</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4037,15 +3956,14 @@ The location of the event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">532</span>
+    <span class="phpdocumentor-element-found-in__line">528</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the locations
-The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.</p>
+        <p class="phpdocumentor-summary">Sets the locations</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setLocations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Location.html"><abbr title="\Microsoft\Graph\Model\Location">Location</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setLocations</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Location.html"><abbr title="\Microsoft\Graph\Model\Location">Location</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -4053,7 +3971,7 @@ The locations where the event is held or attended from. The location and locatio
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-Location.html"><abbr title="\Microsoft\Graph\Model\Location">Location</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-Location.html"><abbr title="\Microsoft\Graph\Model\Location">Location</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The locations</p>
@@ -4084,7 +4002,7 @@ The locations where the event is held or attended from. The location and locatio
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1276</span>
+    <span class="phpdocumentor-element-found-in__line">1262</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the multiValueExtendedProperties
@@ -4092,7 +4010,7 @@ The collection of multi-value extended properties defined for the event. Read-on
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMultiValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMultiValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -4100,7 +4018,7 @@ The collection of multi-value extended properties defined for the event. Read-on
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-MultiValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\MultiValueLegacyExtendedProperty">MultiValueLegacyExtendedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The multiValueExtendedProperties</p>
@@ -4177,11 +4095,10 @@ The collection of multi-value extended properties defined for the event. Read-on
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">565</span>
+    <span class="phpdocumentor-element-found-in__line">559</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the onlineMeeting
-Details for an attendee to join the meeting online. Read-only.</p>
+        <p class="phpdocumentor-summary">Sets the onlineMeeting</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4224,11 +4141,10 @@ Details for an attendee to join the meeting online. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">598</span>
+    <span class="phpdocumentor-element-found-in__line">590</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the onlineMeetingProvider
-Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.</p>
+        <p class="phpdocumentor-summary">Sets the onlineMeetingProvider</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4271,11 +4187,10 @@ Represents the online meeting service provider. The possible values are teamsFor
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">627</span>
+    <span class="phpdocumentor-element-found-in__line">617</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the onlineMeetingUrl
-A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.</p>
+        <p class="phpdocumentor-summary">Sets the onlineMeetingUrl</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4318,11 +4233,10 @@ A URL for an online meeting. The property is set only when an organizer specifie
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">660</span>
+    <span class="phpdocumentor-element-found-in__line">648</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the organizer
-The organizer of the event.</p>
+        <p class="phpdocumentor-summary">Sets the organizer</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4365,11 +4279,10 @@ The organizer of the event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">689</span>
+    <span class="phpdocumentor-element-found-in__line">675</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the originalEndTimeZone
-The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.</p>
+        <p class="phpdocumentor-summary">Sets the originalEndTimeZone</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4412,11 +4325,10 @@ The end time zone that was set when the event was created. A value of tzone://Mi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">722</span>
+    <span class="phpdocumentor-element-found-in__line">706</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the originalStart
-The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z</p>
+        <p class="phpdocumentor-summary">Sets the originalStart</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4459,11 +4371,10 @@ The Timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">751</span>
+    <span class="phpdocumentor-element-found-in__line">733</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the originalStartTimeZone
-The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.</p>
+        <p class="phpdocumentor-summary">Sets the originalStartTimeZone</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4506,11 +4417,10 @@ The start time zone that was set when the event was created. A value of tzone://
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">784</span>
+    <span class="phpdocumentor-element-found-in__line">764</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the recurrence
-The recurrence pattern for the event.</p>
+        <p class="phpdocumentor-summary">Sets the recurrence</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4553,11 +4463,10 @@ The recurrence pattern for the event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">813</span>
+    <span class="phpdocumentor-element-found-in__line">791</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the reminderMinutesBeforeStart
-The number of minutes before the event start time that the reminder alert occurs.</p>
+        <p class="phpdocumentor-summary">Sets the reminderMinutesBeforeStart</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4600,11 +4509,10 @@ The number of minutes before the event start time that the reminder alert occurs
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">842</span>
+    <span class="phpdocumentor-element-found-in__line">818</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the responseRequested
-Default is true, which represents the organizer would like an invitee to send a response to the event.</p>
+        <p class="phpdocumentor-summary">Sets the responseRequested</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4647,11 +4555,10 @@ Default is true, which represents the organizer would like an invitee to send a 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">875</span>
+    <span class="phpdocumentor-element-found-in__line">849</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the responseStatus
-Indicates the type of response sent in response to an event message.</p>
+        <p class="phpdocumentor-summary">Sets the responseStatus</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4694,11 +4601,10 @@ Indicates the type of response sent in response to an event message.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">908</span>
+    <span class="phpdocumentor-element-found-in__line">880</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the sensitivity
-The possible values are: normal, personal, private, confidential.</p>
+        <p class="phpdocumentor-summary">Sets the sensitivity</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4741,11 +4647,10 @@ The possible values are: normal, personal, private, confidential.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">937</span>
+    <span class="phpdocumentor-element-found-in__line">907</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the seriesMasterId
-The ID for the recurring series master item, if this event is part of a recurring series.</p>
+        <p class="phpdocumentor-summary">Sets the seriesMasterId</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4788,11 +4693,10 @@ The ID for the recurring series master item, if this event is part of a recurrin
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">970</span>
+    <span class="phpdocumentor-element-found-in__line">938</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the showAs
-The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.</p>
+        <p class="phpdocumentor-summary">Sets the showAs</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4835,7 +4739,7 @@ The status to show. The possible values are: free, tentative, busy, oof, working
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1306</span>
+    <span class="phpdocumentor-element-found-in__line">1299</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the singleValueExtendedProperties
@@ -4843,7 +4747,7 @@ The collection of single-value extended properties defined for the event. Read-o
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSingleValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSingleValueExtendedProperties</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-Event.html"><abbr title="\Microsoft\Graph\Model\Event">Event</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -4851,7 +4755,7 @@ The collection of single-value extended properties defined for the event. Read-o
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SingleValueLegacyExtendedProperty.html"><abbr title="\Microsoft\Graph\Model\SingleValueLegacyExtendedProperty">SingleValueLegacyExtendedProperty</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The singleValueExtendedProperties</p>
@@ -4882,11 +4786,10 @@ The collection of single-value extended properties defined for the event. Read-o
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1003</span>
+    <span class="phpdocumentor-element-found-in__line">969</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the start
-The date, time, and time zone that the event starts. By default, the start time is in UTC.</p>
+        <p class="phpdocumentor-summary">Sets the start</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4929,11 +4832,10 @@ The date, time, and time zone that the event starts. By default, the start time 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1032</span>
+    <span class="phpdocumentor-element-found-in__line">996</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the subject
-The text of the event&#039;s subject line.</p>
+        <p class="phpdocumentor-summary">Sets the subject</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4976,11 +4878,10 @@ The text of the event&#039;s subject line.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1061</span>
+    <span class="phpdocumentor-element-found-in__line">1023</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the transactionId
-A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client&#039;s prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.</p>
+        <p class="phpdocumentor-summary">Sets the transactionId</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5023,11 +4924,10 @@ A custom identifier specified by a client app for the server to avoid redundant 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1094</span>
+    <span class="phpdocumentor-element-found-in__line">1054</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the type
-The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.</p>
+        <p class="phpdocumentor-summary">Sets the type</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5070,11 +4970,10 @@ The event type. The possible values are: singleInstance, occurrence, exception, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/Event.php"><a href="files/src-model-event.html"><abbr title="src/Model/Event.php">Event.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1123</span>
+    <span class="phpdocumentor-element-found-in__line">1081</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the webLink
-The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.</p>
+        <p class="phpdocumentor-summary">Sets the webLink</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

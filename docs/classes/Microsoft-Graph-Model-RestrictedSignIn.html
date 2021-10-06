@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-SignIn.html"><abbr title="\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -191,7 +202,7 @@ Unique GUID representing the app ID in the Azure Active Directory. Supports $fil
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SignIn.html#method_getAppliedConditionalAccessPolicies">getAppliedConditionalAccessPolicies()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppliedConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\AppliedConditionalAccessPolicy">AppliedConditionalAccessPolicy</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the appliedConditionalAccessPolicies
 A list of conditional access policies that are triggered by the corresponding sign-in activity.</dd>
@@ -309,7 +320,7 @@ Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-SignIn.html#method_getRiskEventTypes">getRiskEventTypes()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the riskEventTypes
 Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</dd>
@@ -790,7 +801,7 @@ A list of conditional access policies that are triggered by the corresponding si
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAppliedConditionalAccessPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAppliedConditionalAccessPolicies</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppliedConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\AppliedConditionalAccessPolicy">AppliedConditionalAccessPolicy</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -798,7 +809,7 @@ A list of conditional access policies that are triggered by the corresponding si
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppliedConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\AppliedConditionalAccessPolicy">AppliedConditionalAccessPolicy</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The appliedConditionalAccessPolicies</p>
 </section>
@@ -818,7 +829,7 @@ A list of conditional access policies that are triggered by the corresponding si
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the clientAppUsed
@@ -854,7 +865,7 @@ Identifies the legacy client used for sign-in activity.  Includes Browser, Excha
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the conditionalAccessStatus
@@ -890,7 +901,7 @@ Reports status of an activated conditional access policy. Possible values are: s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">183</span>
+    <span class="phpdocumentor-element-found-in__line">190</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the correlationId
@@ -926,7 +937,7 @@ The request ID sent from the client when the sign-in is initiated; used to troub
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">212</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdDateTime
@@ -962,7 +973,7 @@ Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceDetail
@@ -1034,7 +1045,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">278</span>
+    <span class="phpdocumentor-element-found-in__line">285</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the ipAddress
@@ -1070,7 +1081,7 @@ IP address of the client used to sign in. Supports $filter (eq and startsWith op
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">307</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isInteractive
@@ -1106,7 +1117,7 @@ Indicates if a sign-in is interactive or not.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">336</span>
+    <span class="phpdocumentor-element-found-in__line">343</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the location
@@ -1212,7 +1223,7 @@ Provides the city, state, and country code where the sign-in originated. Support
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">369</span>
+    <span class="phpdocumentor-element-found-in__line">376</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceDisplayName
@@ -1248,7 +1259,7 @@ Name of the resource the user signed into. Supports $filter (eq operator only).<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">398</span>
+    <span class="phpdocumentor-element-found-in__line">405</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceId
@@ -1284,7 +1295,7 @@ ID of the resource that the user signed into. Supports $filter (eq operator only
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">427</span>
+    <span class="phpdocumentor-element-found-in__line">434</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskDetail
@@ -1320,7 +1331,7 @@ Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">461</span>
+    <span class="phpdocumentor-element-found-in__line">468</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskEventTypes
@@ -1328,7 +1339,7 @@ Risk event types associated with the sign-in. The possible values are: unlikelyT
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRiskEventTypes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getRiskEventTypes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1336,7 +1347,7 @@ Risk event types associated with the sign-in. The possible values are: unlikelyT
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The riskEventTypes</p>
 </section>
@@ -1356,7 +1367,7 @@ Risk event types associated with the sign-in. The possible values are: unlikelyT
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">490</span>
+    <span class="phpdocumentor-element-found-in__line">504</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskEventTypesV2
@@ -1392,7 +1403,7 @@ The list of risk event types associated with the sign-in. Possible values: unlik
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">519</span>
+    <span class="phpdocumentor-element-found-in__line">533</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskLevelAggregated
@@ -1428,7 +1439,7 @@ Aggregated risk level. The possible values are: none, low, medium, high, hidden,
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">552</span>
+    <span class="phpdocumentor-element-found-in__line">566</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskLevelDuringSignIn
@@ -1464,7 +1475,7 @@ Risk level during sign-in. The possible values are: none, low, medium, high, hid
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">585</span>
+    <span class="phpdocumentor-element-found-in__line">599</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskState
@@ -1500,7 +1511,7 @@ Reports status of the risky user, sign-in, or a risk event. The possible values 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">618</span>
+    <span class="phpdocumentor-element-found-in__line">632</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
@@ -1571,7 +1582,7 @@ Sign-in status. Includes the error code and description of the error (in case of
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">651</span>
+    <span class="phpdocumentor-element-found-in__line">665</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userDisplayName
@@ -1607,7 +1618,7 @@ Display name of the user that initiated the sign-in. Supports $filter (eq and st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">680</span>
+    <span class="phpdocumentor-element-found-in__line">694</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userId
@@ -1643,7 +1654,7 @@ ID of the user that initiated the sign-in. Supports $filter (eq operator only).<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">709</span>
+    <span class="phpdocumentor-element-found-in__line">723</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
@@ -1809,7 +1820,7 @@ Unique GUID representing the app ID in the Azure Active Directory. Supports $fil
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">109</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appliedConditionalAccessPolicies
@@ -1817,7 +1828,7 @@ A list of conditional access policies that are triggered by the corresponding si
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAppliedConditionalAccessPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AppliedConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\AppliedConditionalAccessPolicy">AppliedConditionalAccessPolicy</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SignIn.html"><abbr title="\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAppliedConditionalAccessPolicies</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppliedConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\AppliedConditionalAccessPolicy">AppliedConditionalAccessPolicy</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SignIn.html"><abbr title="\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1825,7 +1836,7 @@ A list of conditional access policies that are triggered by the corresponding si
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AppliedConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\AppliedConditionalAccessPolicy">AppliedConditionalAccessPolicy</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AppliedConditionalAccessPolicy.html"><abbr title="\Microsoft\Graph\Model\AppliedConditionalAccessPolicy">AppliedConditionalAccessPolicy</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The appliedConditionalAccessPolicies</p>
@@ -1856,7 +1867,7 @@ A list of conditional access policies that are triggered by the corresponding si
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the clientAppUsed
@@ -1903,7 +1914,7 @@ Identifies the legacy client used for sign-in activity.  Includes Browser, Excha
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">178</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the conditionalAccessStatus
@@ -1950,7 +1961,7 @@ Reports status of an activated conditional access policy. Possible values are: s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">200</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the correlationId
@@ -1997,7 +2008,7 @@ The request ID sent from the client when the sign-in is initiated; used to troub
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdDateTime
@@ -2044,7 +2055,7 @@ Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">266</span>
+    <span class="phpdocumentor-element-found-in__line">273</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceDetail
@@ -2138,7 +2149,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">302</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ipAddress
@@ -2185,7 +2196,7 @@ IP address of the client used to sign in. Supports $filter (eq and startsWith op
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">324</span>
+    <span class="phpdocumentor-element-found-in__line">331</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isInteractive
@@ -2232,7 +2243,7 @@ Indicates if a sign-in is interactive or not.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">357</span>
+    <span class="phpdocumentor-element-found-in__line">364</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the location
@@ -2325,7 +2336,7 @@ Provides the city, state, and country code where the sign-in originated. Support
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">386</span>
+    <span class="phpdocumentor-element-found-in__line">393</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceDisplayName
@@ -2372,7 +2383,7 @@ Name of the resource the user signed into. Supports $filter (eq operator only).<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">415</span>
+    <span class="phpdocumentor-element-found-in__line">422</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceId
@@ -2419,7 +2430,7 @@ ID of the resource that the user signed into. Supports $filter (eq operator only
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">448</span>
+    <span class="phpdocumentor-element-found-in__line">455</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskDetail
@@ -2466,7 +2477,7 @@ Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">478</span>
+    <span class="phpdocumentor-element-found-in__line">492</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskEventTypes
@@ -2474,7 +2485,7 @@ Risk event types associated with the sign-in. The possible values are: unlikelyT
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRiskEventTypes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SignIn.html"><abbr title="\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRiskEventTypes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SignIn.html"><abbr title="\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2482,7 +2493,7 @@ Risk event types associated with the sign-in. The possible values are: unlikelyT
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The riskEventTypes</p>
@@ -2513,7 +2524,7 @@ Risk event types associated with the sign-in. The possible values are: unlikelyT
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">507</span>
+    <span class="phpdocumentor-element-found-in__line">521</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskEventTypesV2
@@ -2560,7 +2571,7 @@ The list of risk event types associated with the sign-in. Possible values: unlik
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">540</span>
+    <span class="phpdocumentor-element-found-in__line">554</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskLevelAggregated
@@ -2607,7 +2618,7 @@ Aggregated risk level. The possible values are: none, low, medium, high, hidden,
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">573</span>
+    <span class="phpdocumentor-element-found-in__line">587</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskLevelDuringSignIn
@@ -2654,7 +2665,7 @@ Risk level during sign-in. The possible values are: none, low, medium, high, hid
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">606</span>
+    <span class="phpdocumentor-element-found-in__line">620</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskState
@@ -2701,7 +2712,7 @@ Reports status of the risky user, sign-in, or a risk event. The possible values 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">639</span>
+    <span class="phpdocumentor-element-found-in__line">653</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status
@@ -2794,7 +2805,7 @@ Sign-in status. Includes the error code and description of the error (in case of
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">668</span>
+    <span class="phpdocumentor-element-found-in__line">682</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userDisplayName
@@ -2841,7 +2852,7 @@ Display name of the user that initiated the sign-in. Supports $filter (eq and st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">697</span>
+    <span class="phpdocumentor-element-found-in__line">711</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userId
@@ -2888,7 +2899,7 @@ ID of the user that initiated the sign-in. Supports $filter (eq operator only).<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SignIn.php"><a href="files/src-model-signin.html"><abbr title="src/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">726</span>
+    <span class="phpdocumentor-element-found-in__line">740</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName

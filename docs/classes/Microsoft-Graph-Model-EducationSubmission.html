@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -190,7 +201,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationSubmission.html#method_getOutcomes">getOutcomes()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationOutcome.html"><abbr title="\Microsoft\Graph\Model\EducationOutcome">EducationOutcome</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the outcomes
 Read-Write. Nullable.</dd>
@@ -213,7 +224,7 @@ Who this submission is assigned to.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationSubmission.html#method_getResources">getResources()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the resources
 Nullable.</dd>
@@ -269,7 +280,7 @@ Moment in time when the submission was moved into the submitted state. The Times
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationSubmission.html#method_getSubmittedResources">getSubmittedResources()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the submittedResources
 Read-only. Nullable.</dd>
@@ -599,7 +610,7 @@ Read-Write. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getOutcomes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getOutcomes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationOutcome.html"><abbr title="\Microsoft\Graph\Model\EducationOutcome">EducationOutcome</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -607,7 +618,7 @@ Read-Write. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationOutcome.html"><abbr title="\Microsoft\Graph\Model\EducationOutcome">EducationOutcome</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The outcomes</p>
 </section>
@@ -698,7 +709,7 @@ Who this submission is assigned to.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationSubmission.php"><a href="files/src-model-educationsubmission.html"><abbr title="src/Model/EducationSubmission.php">EducationSubmission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">357</span>
+    <span class="phpdocumentor-element-found-in__line">364</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resources
@@ -706,7 +717,7 @@ Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -714,7 +725,7 @@ Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The resources</p>
 </section>
@@ -950,7 +961,7 @@ Moment in time when the submission was moved into the submitted state. The Times
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationSubmission.php"><a href="files/src-model-educationsubmission.html"><abbr title="src/Model/EducationSubmission.php">EducationSubmission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">387</span>
+    <span class="phpdocumentor-element-found-in__line">401</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the submittedResources
@@ -958,7 +969,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSubmittedResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSubmittedResources</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -966,7 +977,7 @@ Read-only. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The submittedResources</p>
 </section>
@@ -1187,7 +1198,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationSubmission.php"><a href="files/src-model-educationsubmission.html"><abbr title="src/Model/EducationSubmission.php">EducationSubmission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">344</span>
+    <span class="phpdocumentor-element-found-in__line">351</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the outcomes
@@ -1195,7 +1206,7 @@ Read-Write. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setOutcomes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationOutcome.html"><abbr title="\Microsoft\Graph\Model\EducationOutcome">EducationOutcome</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setOutcomes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationOutcome.html"><abbr title="\Microsoft\Graph\Model\EducationOutcome">EducationOutcome</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1203,7 +1214,7 @@ Read-Write. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationOutcome.html"><abbr title="\Microsoft\Graph\Model\EducationOutcome">EducationOutcome</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationOutcome.html"><abbr title="\Microsoft\Graph\Model\EducationOutcome">EducationOutcome</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The outcomes</p>
@@ -1281,7 +1292,7 @@ Who this submission is assigned to.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationSubmission.php"><a href="files/src-model-educationsubmission.html"><abbr title="src/Model/EducationSubmission.php">EducationSubmission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">374</span>
+    <span class="phpdocumentor-element-found-in__line">388</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resources
@@ -1289,7 +1300,7 @@ Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1297,7 +1308,7 @@ Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The resources</p>
@@ -1610,7 +1621,7 @@ Moment in time when the submission was moved into the submitted state. The Times
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationSubmission.php"><a href="files/src-model-educationsubmission.html"><abbr title="src/Model/EducationSubmission.php">EducationSubmission.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">404</span>
+    <span class="phpdocumentor-element-found-in__line">425</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the submittedResources
@@ -1618,7 +1629,7 @@ Read-only. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSubmittedResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSubmittedResources</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationSubmission.html"><abbr title="\Microsoft\Graph\Model\EducationSubmission">EducationSubmission</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1626,7 +1637,7 @@ Read-only. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSubmissionResource.html"><abbr title="\Microsoft\Graph\Model\EducationSubmissionResource">EducationSubmissionResource</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The submittedResources</p>

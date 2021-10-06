@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -206,7 +217,7 @@ Read-only.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DirectoryRole.html#method_getMembers">getMembers()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the members
 Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.</dd>
@@ -236,7 +247,7 @@ The id of the directoryRoleTemplate that this role is based on. The property mus
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DirectoryRole.html#method_getScopedMembers">getScopedMembers()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ScopedRoleMembership.html"><abbr title="\Microsoft\Graph\Model\ScopedRoleMembership">ScopedRoleMembership</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the scopedMembers
 Members of this directory role that are scoped to administrative units. Read-only. Nullable.</dd>
@@ -573,7 +584,7 @@ Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getMembers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getMembers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -581,7 +592,7 @@ Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. 
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The members</p>
 </section>
@@ -707,7 +718,7 @@ The id of the directoryRoleTemplate that this role is based on. The property mus
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryRole.php"><a href="files/src-model-directoryrole.html"><abbr title="src/Model/DirectoryRole.php">DirectoryRole.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">151</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the scopedMembers
@@ -715,7 +726,7 @@ Members of this directory role that are scoped to administrative units. Read-onl
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getScopedMembers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getScopedMembers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ScopedRoleMembership.html"><abbr title="\Microsoft\Graph\Model\ScopedRoleMembership">ScopedRoleMembership</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -723,7 +734,7 @@ Members of this directory role that are scoped to administrative units. Read-onl
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ScopedRoleMembership.html"><abbr title="\Microsoft\Graph\Model\ScopedRoleMembership">ScopedRoleMembership</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The scopedMembers</p>
 </section>
@@ -966,7 +977,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryRole.php"><a href="files/src-model-directoryrole.html"><abbr title="src/Model/DirectoryRole.php">DirectoryRole.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the members
@@ -974,7 +985,7 @@ Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. 
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setMembers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DirectoryRole.html"><abbr title="\Microsoft\Graph\Model\DirectoryRole">DirectoryRole</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setMembers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DirectoryRole.html"><abbr title="\Microsoft\Graph\Model\DirectoryRole">DirectoryRole</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -982,7 +993,7 @@ Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. 
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-DirectoryObject.html"><abbr title="\Microsoft\Graph\Model\DirectoryObject">DirectoryObject</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The members</p>
@@ -1106,7 +1117,7 @@ The id of the directoryRoleTemplate that this role is based on. The property mus
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/DirectoryRole.php"><a href="files/src-model-directoryrole.html"><abbr title="src/Model/DirectoryRole.php">DirectoryRole.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">168</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the scopedMembers
@@ -1114,7 +1125,7 @@ Members of this directory role that are scoped to administrative units. Read-onl
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setScopedMembers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ScopedRoleMembership.html"><abbr title="\Microsoft\Graph\Model\ScopedRoleMembership">ScopedRoleMembership</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DirectoryRole.html"><abbr title="\Microsoft\Graph\Model\DirectoryRole">DirectoryRole</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setScopedMembers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ScopedRoleMembership.html"><abbr title="\Microsoft\Graph\Model\ScopedRoleMembership">ScopedRoleMembership</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-DirectoryRole.html"><abbr title="\Microsoft\Graph\Model\DirectoryRole">DirectoryRole</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1122,7 +1133,7 @@ Members of this directory role that are scoped to administrative units. Read-onl
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ScopedRoleMembership.html"><abbr title="\Microsoft\Graph\Model\ScopedRoleMembership">ScopedRoleMembership</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ScopedRoleMembership.html"><abbr title="\Microsoft\Graph\Model\ScopedRoleMembership">ScopedRoleMembership</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The scopedMembers</p>

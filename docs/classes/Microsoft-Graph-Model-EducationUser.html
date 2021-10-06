@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -90,6 +94,13 @@
         extends <a href="classes/Microsoft-Graph-Model-Entity.html"><abbr title="\Microsoft\Graph\Model\Entity">Entity</abbr></a>
     </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -183,7 +194,7 @@ True if the account is enabled; otherwise, false. This property is required when
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationUser.html#method_getAssignedLicenses">getAssignedLicenses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedLicense.html"><abbr title="\Microsoft\Graph\Model\AssignedLicense">AssignedLicense</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the assignedLicenses
 The licenses that are assigned to the user. Not nullable.</dd>
@@ -191,7 +202,7 @@ The licenses that are assigned to the user. Not nullable.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationUser.html#method_getAssignedPlans">getAssignedPlans()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the assignedPlans
 The plans that are assigned to the user. Read-only. Not nullable.</dd>
@@ -207,7 +218,7 @@ The telephone numbers for the user. Note: Although this is a string collection, 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationUser.html#method_getClasses">getClasses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the classes
 Classes to which the user belongs. Nullable.</dd>
@@ -372,7 +383,7 @@ Default role for a user. The user&#039;s role might be different in an individua
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationUser.html#method_getProvisionedPlans">getProvisionedPlans()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the provisionedPlans
 The plans that are provisioned for the user. Read-only. Not nullable.</dd>
@@ -395,14 +406,14 @@ Address where user lives.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationUser.html#method_getRubrics">getRubrics()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationRubric.html"><abbr title="\Microsoft\Graph\Model\EducationRubric">EducationRubric</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the rubrics</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationUser.html#method_getSchools">getSchools()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSchool.html"><abbr title="\Microsoft\Graph\Model\EducationSchool">EducationSchool</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the schools
 Schools to which the user belongs. Nullable.</dd>
@@ -434,7 +445,7 @@ The user&#039;s surname (family name or last name). Supports $filter.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-EducationUser.html#method_getTaughtClasses">getTaughtClasses()</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;|null    </span>
 </dt>
 <dd>Gets the taughtClasses
 Classes for which the user is a teacher.</dd>
@@ -942,7 +953,7 @@ The licenses that are assigned to the user. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAssignedLicenses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAssignedLicenses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedLicense.html"><abbr title="\Microsoft\Graph\Model\AssignedLicense">AssignedLicense</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -950,7 +961,7 @@ The licenses that are assigned to the user. Not nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedLicense.html"><abbr title="\Microsoft\Graph\Model\AssignedLicense">AssignedLicense</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The assignedLicenses</p>
 </section>
@@ -970,7 +981,7 @@ The licenses that are assigned to the user. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">93</span>
+    <span class="phpdocumentor-element-found-in__line">100</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the assignedPlans
@@ -978,7 +989,7 @@ The plans that are assigned to the user. Read-only. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAssignedPlans</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getAssignedPlans</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -986,7 +997,7 @@ The plans that are assigned to the user. Read-only. Not nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The assignedPlans</p>
 </section>
@@ -1006,7 +1017,7 @@ The plans that are assigned to the user. Read-only. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">122</span>
+    <span class="phpdocumentor-element-found-in__line">136</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the businessPhones
@@ -1042,7 +1053,7 @@ The telephone numbers for the user. Note: Although this is a string collection, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1000</span>
+    <span class="phpdocumentor-element-found-in__line">1028</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the classes
@@ -1050,7 +1061,7 @@ Classes to which the user belongs. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getClasses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getClasses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1058,7 +1069,7 @@ Classes to which the user belongs. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The classes</p>
 </section>
@@ -1078,7 +1089,7 @@ Classes to which the user belongs. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">151</span>
+    <span class="phpdocumentor-element-found-in__line">165</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdBy
@@ -1114,7 +1125,7 @@ Entity who created the user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">198</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the department
@@ -1150,7 +1161,7 @@ The name for the department in which the user works. Supports $filter.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">213</span>
+    <span class="phpdocumentor-element-found-in__line">227</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the displayName
@@ -1186,7 +1197,7 @@ The name displayed in the address book for the user. This is usually the combina
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">242</span>
+    <span class="phpdocumentor-element-found-in__line">256</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the externalSource
@@ -1222,7 +1233,7 @@ Where this user was created from. Possible values are: sis, manual.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">275</span>
+    <span class="phpdocumentor-element-found-in__line">289</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the externalSourceDetail
@@ -1258,7 +1269,7 @@ The name of the external source this resources was generated from.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">304</span>
+    <span class="phpdocumentor-element-found-in__line">318</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the givenName
@@ -1330,7 +1341,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">333</span>
+    <span class="phpdocumentor-element-found-in__line">347</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mail
@@ -1366,7 +1377,7 @@ The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-O
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">362</span>
+    <span class="phpdocumentor-element-found-in__line">376</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mailingAddress
@@ -1402,7 +1413,7 @@ Mail address of user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">395</span>
+    <span class="phpdocumentor-element-found-in__line">409</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mailNickname
@@ -1438,7 +1449,7 @@ The mail alias for the user. This property must be specified when a user is crea
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">424</span>
+    <span class="phpdocumentor-element-found-in__line">438</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the middleName
@@ -1474,7 +1485,7 @@ The middle name of user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">453</span>
+    <span class="phpdocumentor-element-found-in__line">467</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mobilePhone
@@ -1545,7 +1556,7 @@ The primary cellular telephone number for the user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">481</span>
+    <span class="phpdocumentor-element-found-in__line">495</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the officeLocation</p>
@@ -1580,7 +1591,7 @@ The primary cellular telephone number for the user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">509</span>
+    <span class="phpdocumentor-element-found-in__line">523</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesInfo
@@ -1616,7 +1627,7 @@ Additional information used to associate the Azure AD user with its Active Direc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">542</span>
+    <span class="phpdocumentor-element-found-in__line">556</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordPolicies
@@ -1652,7 +1663,7 @@ Specifies password policies for the user. This value is an enumeration with one 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">571</span>
+    <span class="phpdocumentor-element-found-in__line">585</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordProfile
@@ -1688,7 +1699,7 @@ Specifies the password profile for the user. The profile contains the user&#039;
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">604</span>
+    <span class="phpdocumentor-element-found-in__line">618</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the preferredLanguage
@@ -1724,7 +1735,7 @@ The preferred language for the user. Should follow ISO 639-1 Code; for example, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">633</span>
+    <span class="phpdocumentor-element-found-in__line">647</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the primaryRole
@@ -1795,7 +1806,7 @@ Default role for a user. The user&#039;s role might be different in an individua
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">667</span>
+    <span class="phpdocumentor-element-found-in__line">681</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the provisionedPlans
@@ -1803,7 +1814,7 @@ The plans that are provisioned for the user. Read-only. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getProvisionedPlans</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getProvisionedPlans</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1811,7 +1822,7 @@ The plans that are provisioned for the user. Read-only. Not nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The provisionedPlans</p>
 </section>
@@ -1831,7 +1842,7 @@ The plans that are provisioned for the user. Read-only. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">695</span>
+    <span class="phpdocumentor-element-found-in__line">716</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the refreshTokensValidFromDateTime</p>
@@ -1866,7 +1877,7 @@ The plans that are provisioned for the user. Read-only. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">727</span>
+    <span class="phpdocumentor-element-found-in__line">748</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the residenceAddress
@@ -1902,14 +1913,14 @@ Address where user lives.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">971</span>
+    <span class="phpdocumentor-element-found-in__line">992</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the rubrics</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRubrics</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getRubrics</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationRubric.html"><abbr title="\Microsoft\Graph\Model\EducationRubric">EducationRubric</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1917,7 +1928,7 @@ Address where user lives.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationRubric.html"><abbr title="\Microsoft\Graph\Model\EducationRubric">EducationRubric</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The rubrics</p>
 </section>
@@ -1937,7 +1948,7 @@ Address where user lives.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1030</span>
+    <span class="phpdocumentor-element-found-in__line">1065</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the schools
@@ -1945,7 +1956,7 @@ Schools to which the user belongs. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getSchools</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getSchools</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSchool.html"><abbr title="\Microsoft\Graph\Model\EducationSchool">EducationSchool</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1953,7 +1964,7 @@ Schools to which the user belongs. Nullable.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSchool.html"><abbr title="\Microsoft\Graph\Model\EducationSchool">EducationSchool</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The schools</p>
 </section>
@@ -1973,7 +1984,7 @@ Schools to which the user belongs. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">760</span>
+    <span class="phpdocumentor-element-found-in__line">781</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the showInAddressList
@@ -2009,7 +2020,7 @@ true if the Outlook global address list should contain this user, otherwise fals
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">789</span>
+    <span class="phpdocumentor-element-found-in__line">810</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the student
@@ -2045,7 +2056,7 @@ If the primary role is student, this block will contain student specific data.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">822</span>
+    <span class="phpdocumentor-element-found-in__line">843</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the surname
@@ -2081,7 +2092,7 @@ The user&#039;s surname (family name or last name). Supports $filter.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1060</span>
+    <span class="phpdocumentor-element-found-in__line">1102</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the taughtClasses
@@ -2089,7 +2100,7 @@ Classes for which the user is a teacher.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getTaughtClasses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+                <span class="phpdocumentor-signature__name">getTaughtClasses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2097,7 +2108,7 @@ Classes for which the user is a teacher.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The taughtClasses</p>
 </section>
@@ -2117,7 +2128,7 @@ Classes for which the user is a teacher.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">851</span>
+    <span class="phpdocumentor-element-found-in__line">872</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the teacher
@@ -2153,7 +2164,7 @@ If the primary role is teacher, this block will contain teacher specific data.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">884</span>
+    <span class="phpdocumentor-element-found-in__line">905</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the usageLocation
@@ -2189,7 +2200,7 @@ A two-letter country code (ISO standard 3166). Required for users who will be as
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1089</span>
+    <span class="phpdocumentor-element-found-in__line">1138</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the user
@@ -2225,7 +2236,7 @@ The directory user corresponding to this user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">913</span>
+    <span class="phpdocumentor-element-found-in__line">934</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
@@ -2261,7 +2272,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">942</span>
+    <span class="phpdocumentor-element-found-in__line">963</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userType
@@ -2380,7 +2391,7 @@ True if the account is enabled; otherwise, false. This property is required when
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the assignedLicenses
@@ -2388,7 +2399,7 @@ The licenses that are assigned to the user. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAssignedLicenses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AssignedLicense.html"><abbr title="\Microsoft\Graph\Model\AssignedLicense">AssignedLicense</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAssignedLicenses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedLicense.html"><abbr title="\Microsoft\Graph\Model\AssignedLicense">AssignedLicense</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2396,7 +2407,7 @@ The licenses that are assigned to the user. Not nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AssignedLicense.html"><abbr title="\Microsoft\Graph\Model\AssignedLicense">AssignedLicense</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedLicense.html"><abbr title="\Microsoft\Graph\Model\AssignedLicense">AssignedLicense</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The assignedLicenses</p>
@@ -2427,7 +2438,7 @@ The licenses that are assigned to the user. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the assignedPlans
@@ -2435,7 +2446,7 @@ The plans that are assigned to the user. Read-only. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAssignedPlans</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setAssignedPlans</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2443,7 +2454,7 @@ The plans that are assigned to the user. Read-only. Not nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AssignedPlan.html"><abbr title="\Microsoft\Graph\Model\AssignedPlan">AssignedPlan</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The assignedPlans</p>
@@ -2474,7 +2485,7 @@ The plans that are assigned to the user. Read-only. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">139</span>
+    <span class="phpdocumentor-element-found-in__line">153</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the businessPhones
@@ -2521,7 +2532,7 @@ The telephone numbers for the user. Note: Although this is a string collection, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1017</span>
+    <span class="phpdocumentor-element-found-in__line">1052</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the classes
@@ -2529,7 +2540,7 @@ Classes to which the user belongs. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setClasses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setClasses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -2537,7 +2548,7 @@ Classes to which the user belongs. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The classes</p>
@@ -2568,7 +2579,7 @@ Classes to which the user belongs. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">172</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdBy
@@ -2615,7 +2626,7 @@ Entity who created the user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">201</span>
+    <span class="phpdocumentor-element-found-in__line">215</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the department
@@ -2662,7 +2673,7 @@ The name for the department in which the user works. Supports $filter.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">230</span>
+    <span class="phpdocumentor-element-found-in__line">244</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the displayName
@@ -2709,7 +2720,7 @@ The name displayed in the address book for the user. This is usually the combina
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">263</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the externalSource
@@ -2756,7 +2767,7 @@ Where this user was created from. Possible values are: sis, manual.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">292</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the externalSourceDetail
@@ -2803,7 +2814,7 @@ The name of the external source this resources was generated from.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">321</span>
+    <span class="phpdocumentor-element-found-in__line">335</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the givenName
@@ -2897,7 +2908,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">350</span>
+    <span class="phpdocumentor-element-found-in__line">364</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mail
@@ -2944,7 +2955,7 @@ The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-O
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">383</span>
+    <span class="phpdocumentor-element-found-in__line">397</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mailingAddress
@@ -2991,7 +3002,7 @@ Mail address of user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">412</span>
+    <span class="phpdocumentor-element-found-in__line">426</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mailNickname
@@ -3038,7 +3049,7 @@ The mail alias for the user. This property must be specified when a user is crea
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">441</span>
+    <span class="phpdocumentor-element-found-in__line">455</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the middleName
@@ -3085,7 +3096,7 @@ The middle name of user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">470</span>
+    <span class="phpdocumentor-element-found-in__line">484</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mobilePhone
@@ -3178,7 +3189,7 @@ The primary cellular telephone number for the user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">497</span>
+    <span class="phpdocumentor-element-found-in__line">511</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the officeLocation</p>
@@ -3224,7 +3235,7 @@ The primary cellular telephone number for the user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">530</span>
+    <span class="phpdocumentor-element-found-in__line">544</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesInfo
@@ -3271,7 +3282,7 @@ Additional information used to associate the Azure AD user with its Active Direc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">559</span>
+    <span class="phpdocumentor-element-found-in__line">573</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordPolicies
@@ -3318,7 +3329,7 @@ Specifies password policies for the user. This value is an enumeration with one 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">592</span>
+    <span class="phpdocumentor-element-found-in__line">606</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordProfile
@@ -3365,7 +3376,7 @@ Specifies the password profile for the user. The profile contains the user&#039;
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">621</span>
+    <span class="phpdocumentor-element-found-in__line">635</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the preferredLanguage
@@ -3412,7 +3423,7 @@ The preferred language for the user. Should follow ISO 639-1 Code; for example, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">654</span>
+    <span class="phpdocumentor-element-found-in__line">668</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the primaryRole
@@ -3459,7 +3470,7 @@ Default role for a user. The user&#039;s role might be different in an individua
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">684</span>
+    <span class="phpdocumentor-element-found-in__line">705</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the provisionedPlans
@@ -3467,7 +3478,7 @@ The plans that are provisioned for the user. Read-only. Not nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setProvisionedPlans</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setProvisionedPlans</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3475,7 +3486,7 @@ The plans that are provisioned for the user. Read-only. Not nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-ProvisionedPlan.html"><abbr title="\Microsoft\Graph\Model\ProvisionedPlan">ProvisionedPlan</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The provisionedPlans</p>
@@ -3506,7 +3517,7 @@ The plans that are provisioned for the user. Read-only. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">715</span>
+    <span class="phpdocumentor-element-found-in__line">736</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the refreshTokensValidFromDateTime</p>
@@ -3552,7 +3563,7 @@ The plans that are provisioned for the user. Read-only. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">748</span>
+    <span class="phpdocumentor-element-found-in__line">769</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the residenceAddress
@@ -3599,14 +3610,14 @@ Address where user lives.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">987</span>
+    <span class="phpdocumentor-element-found-in__line">1015</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the rubrics</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRubrics</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationRubric.html"><abbr title="\Microsoft\Graph\Model\EducationRubric">EducationRubric</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRubrics</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationRubric.html"><abbr title="\Microsoft\Graph\Model\EducationRubric">EducationRubric</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3614,7 +3625,7 @@ Address where user lives.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationRubric.html"><abbr title="\Microsoft\Graph\Model\EducationRubric">EducationRubric</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationRubric.html"><abbr title="\Microsoft\Graph\Model\EducationRubric">EducationRubric</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The rubrics</p>
@@ -3645,7 +3656,7 @@ Address where user lives.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1047</span>
+    <span class="phpdocumentor-element-found-in__line">1089</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the schools
@@ -3653,7 +3664,7 @@ Schools to which the user belongs. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setSchools</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationSchool.html"><abbr title="\Microsoft\Graph\Model\EducationSchool">EducationSchool</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSchools</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSchool.html"><abbr title="\Microsoft\Graph\Model\EducationSchool">EducationSchool</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3661,7 +3672,7 @@ Schools to which the user belongs. Nullable.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationSchool.html"><abbr title="\Microsoft\Graph\Model\EducationSchool">EducationSchool</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationSchool.html"><abbr title="\Microsoft\Graph\Model\EducationSchool">EducationSchool</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The schools</p>
@@ -3692,7 +3703,7 @@ Schools to which the user belongs. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">777</span>
+    <span class="phpdocumentor-element-found-in__line">798</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the showInAddressList
@@ -3739,7 +3750,7 @@ true if the Outlook global address list should contain this user, otherwise fals
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">810</span>
+    <span class="phpdocumentor-element-found-in__line">831</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the student
@@ -3786,7 +3797,7 @@ If the primary role is student, this block will contain student specific data.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">839</span>
+    <span class="phpdocumentor-element-found-in__line">860</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the surname
@@ -3833,7 +3844,7 @@ The user&#039;s surname (family name or last name). Supports $filter.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1077</span>
+    <span class="phpdocumentor-element-found-in__line">1126</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the taughtClasses
@@ -3841,7 +3852,7 @@ Classes for which the user is a teacher.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setTaughtClasses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setTaughtClasses</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-EducationUser.html"><abbr title="\Microsoft\Graph\Model\EducationUser">EducationUser</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3849,7 +3860,7 @@ Classes for which the user is a teacher.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-EducationClass.html"><abbr title="\Microsoft\Graph\Model\EducationClass">EducationClass</abbr></a>&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The taughtClasses</p>
@@ -3880,7 +3891,7 @@ Classes for which the user is a teacher.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">872</span>
+    <span class="phpdocumentor-element-found-in__line">893</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the teacher
@@ -3927,7 +3938,7 @@ If the primary role is teacher, this block will contain teacher specific data.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">901</span>
+    <span class="phpdocumentor-element-found-in__line">922</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the usageLocation
@@ -3974,7 +3985,7 @@ A two-letter country code (ISO standard 3166). Required for users who will be as
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1110</span>
+    <span class="phpdocumentor-element-found-in__line">1159</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the user
@@ -4021,7 +4032,7 @@ The directory user corresponding to this user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">930</span>
+    <span class="phpdocumentor-element-found-in__line">951</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName
@@ -4068,7 +4079,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/EducationUser.php"><a href="files/src-model-educationuser.html"><abbr title="src/Model/EducationUser.php">EducationUser.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">959</span>
+    <span class="phpdocumentor-element-found-in__line">980</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userType
