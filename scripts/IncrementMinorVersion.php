@@ -3,28 +3,28 @@
  * Copyright (c) Microsoft Corporation.  All Rights Reserved.
  * Licensed under the MIT License.  See License in the project root
  * for license information.
- * 
+ *
  * Bumps up the minor version in src/Core/GraphConstants.php & README based on the latest published package version on Packagist
- * 
+ *
  * Assumptions:
  *  - Script is run from the repo root
  *  - Script is run on a Unix environment (affects file path separator to files)
  *  - Packagist returns tagged versions in descending order (latest release first)
 */
 
-const CONSTANTS_FILEPATH = "./src/Core/GraphConstants.php";
+const CONSTANTS_FILEPATH = "./src/GraphConstants.php";
 const SDK_VERSION_VAR_NAME = "SDK_VERSION"; # Name of version variable in GraphConstants.php
 const PACKAGIST_ENDPOINT = "https://packagist.org/packages/microsoft/microsoft-graph.json";
 const CONSTANTS_README_FILEPATH = "./README.md";
 
-function getLatestPackagistVersion(): string 
+function getLatestPackagistVersion(): string
 {
     $handle = curl_init();
     curl_setopt($handle, CURLOPT_URL, PACKAGIST_ENDPOINT);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($handle, CURLOPT_TIMEOUT, 100);
     curl_setopt($handle, CURLOPT_FAILONERROR, true);
-    
+
     echo "Fetching latest SDK version from " . PACKAGIST_ENDPOINT . "\n";
     $response = curl_exec($handle);
 
@@ -35,8 +35,8 @@ function getLatestPackagistVersion(): string
     curl_close($handle);
 
     $responseJson = json_decode($response, true);
-    if (!array_key_exists("package", $responseJson) 
-        || !array_key_exists("versions", $responseJson["package"]) 
+    if (!array_key_exists("package", $responseJson)
+        || !array_key_exists("versions", $responseJson["package"])
         || empty($responseJson["package"]["versions"])) {
 
         throw new Exception("Unable to find versions in the packagist response JSON: ". $responseJson);
@@ -53,7 +53,7 @@ function getLatestPackagistVersion(): string
     }
 }
 
-function incrementMinorVersion(string $version): string 
+function incrementMinorVersion(string $version): string
 {
     $splitVersion = explode(".", $version);
     # Increment minor version
@@ -63,7 +63,7 @@ function incrementMinorVersion(string $version): string
     return implode(".", $splitVersion);
 }
 
-function updateGraphConstants(string $version) 
+function updateGraphConstants(string $version)
 {
     $fileContents = file_get_contents(CONSTANTS_FILEPATH);
     if ($fileContents) {
