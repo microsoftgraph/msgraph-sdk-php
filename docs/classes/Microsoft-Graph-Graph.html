@@ -51,16 +51,20 @@
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
-                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/beta.html"><abbr title="\Beta">Beta</abbr></a></h4>
-                <ul class="phpdocumentor-list">
-                                            <li><a href="namespaces/beta-microsoft.html"><abbr title="\Beta\Microsoft">Microsoft</abbr></a></li>
-                                    </ul>
-                            <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
+                                                <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h4>
                 <ul class="phpdocumentor-list">
                                             <li><a href="namespaces/microsoft-graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
                                     </ul>
                         </section>
 
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Microsoft.html"><abbr title="\Microsoft">Microsoft</abbr></a></h3>
+                        <ul class="phpdocumentor-list">
+                                    <li><a href="packages/Microsoft-Graph.html"><abbr title="\Microsoft\Graph">Graph</abbr></a></li>
+                            </ul>
+                                <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Default.html"><abbr title="\Default">Default</abbr></a></h3>
+                        </section>
     
     <section class="phpdocumentor-sidebar__category">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
@@ -85,7 +89,17 @@
         <h2 class="phpdocumentor-content__title">
     Graph
 
+        <span class="phpdocumentor-element__extends">
+        extends <abbr title="\Microsoft\Graph\Http\AbstractGraphClient">AbstractGraphClient</abbr>
+    </span>
     
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft.html">Microsoft</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Microsoft-Graph.html">Graph</a></li>
+                            </ul>
+        </div>
     
     
     </h2>
@@ -93,7 +107,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 </aside>
 
             <p class="phpdocumentor-summary">Class Graph</p>
@@ -107,11 +121,11 @@
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">category</span>
+                    <span class="phpdocumentor-tag__name">copyright</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>Library</p>
+                                                 <section class="phpdocumentor-description"><p>2021 Microsoft Corporation</p>
 </section>
 
                                     </dd>
@@ -128,7 +142,7 @@
                     <span class="phpdocumentor-tag__name">link</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                                                        <a class="phpdocumentor-tag-link" href="https://graph.microsoft.io/"> https://graph.microsoft.io/ </a>
+                                                                                                        <a class="phpdocumentor-tag-link" href="https://developer.microsoft.com/graph"> https://developer.microsoft.com/graph </a>
                     
                                     </dd>
                         </dl>
@@ -144,97 +158,26 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Microsoft-Graph-Graph.html#property__accessToken">$_accessToken</a>
-    <span>
-                &nbsp;: string            </span>
-</dt>
-<dd>The access_token provided after authenticating
-with Microsoft Graph (required)</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Microsoft-Graph-Graph.html#property__apiVersion">$_apiVersion</a>
-    <span>
-                &nbsp;: string            </span>
-</dt>
-<dd>The api version to use (&quot;v1.0&quot;, &quot;beta&quot;)
-Default is &quot;v1.0&quot;</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Microsoft-Graph-Graph.html#property__baseUrl">$_baseUrl</a>
-    <span>
-                &nbsp;: string            </span>
-</dt>
-<dd>The base url to call
-Default is &quot;https://graph.microsoft.com&quot;</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Microsoft-Graph-Graph.html#property__proxyPort">$_proxyPort</a>
-    <span>
-                &nbsp;: string            </span>
-</dt>
-<dd>The port to use for proxy requests
-Null disables port forwarding</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Microsoft-Graph-Graph.html#property__proxyVerifySSL">$_proxyVerifySSL</a>
-    <span>
-                &nbsp;: bool            </span>
-</dt>
-<dd>Whether SSL verification should be used for proxy requests</dd>
-
-                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Graph.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Creates a new Graph object, which is used to call the Graph API</dd>
+<dd>Graph client constructor.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Graph.html#method_createCollectionRequest">createCollectionRequest()</a>
+    <a href="classes/Microsoft-Graph-Graph.html#method_getApiVersion">getApiVersion()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Http-GraphCollectionRequest.html"><abbr title="\Microsoft\Graph\Http\GraphCollectionRequest">GraphCollectionRequest</abbr></a>    </span>
+                        &nbsp;: string    </span>
 </dt>
-<dd>Creates a new collection request object with the given
-Graph information</dd>
+<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Graph.html#method_createRequest">createRequest()</a>
+    <a href="classes/Microsoft-Graph-Graph.html#method_getSdkVersion">getSdkVersion()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Http-GraphRequest.html"><abbr title="\Microsoft\Graph\Http\GraphRequest">GraphRequest</abbr></a>    </span>
+                        &nbsp;: string    </span>
 </dt>
-<dd>Creates a new request object with the given Graph information</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Graph.html#method_setAccessToken">setAccessToken()</a>
-    <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a>    </span>
-</dt>
-<dd>Sets the access token. A valid access token is required
-to run queries against Graph</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Graph.html#method_setApiVersion">setApiVersion()</a>
-    <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a>    </span>
-</dt>
-<dd>Sets the API version to use, e.g. &quot;beta&quot; (defaults to v1.0)</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Graph.html#method_setBaseUrl">setBaseUrl()</a>
-    <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a>    </span>
-</dt>
-<dd>Sets the Base URL to call (defaults to https://graph.microsoft.com)</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Graph.html#method_setProxyPort">setProxyPort()</a>
-    <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a>    </span>
-</dt>
-<dd>Sets the proxy port. This allows you
-to use tools such as Fiddler to view
-requests and responses made with Guzzle</dd>
+<dd></dd>
 
         </dl>
 
@@ -243,176 +186,6 @@ requests and responses made with Guzzle</dd>
         
 
         
-    <section class="phpdocumentor-properties">
-        <h3 class="phpdocumentor-elements__header" id="properties">
-            Properties
-            <a href="classes/Microsoft-Graph-Graph.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
-        </h3>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property__accessToken">
-        $_accessToken
-        <a href="classes/Microsoft-Graph-Graph.html#property__accessToken" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">40</span>
-</aside>
-
-        <p class="phpdocumentor-summary">The access_token provided after authenticating
-with Microsoft Graph (required)</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$_accessToken</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property__apiVersion">
-        $_apiVersion
-        <a href="classes/Microsoft-Graph-Graph.html#property__apiVersion" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">47</span>
-</aside>
-
-        <p class="phpdocumentor-summary">The api version to use (&quot;v1.0&quot;, &quot;beta&quot;)
-Default is &quot;v1.0&quot;</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$_apiVersion</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property__baseUrl">
-        $_baseUrl
-        <a href="classes/Microsoft-Graph-Graph.html#property__baseUrl" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">54</span>
-</aside>
-
-        <p class="phpdocumentor-summary">The base url to call
-Default is &quot;https://graph.microsoft.com&quot;</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$_baseUrl</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property__proxyPort">
-        $_proxyPort
-        <a href="classes/Microsoft-Graph-Graph.html#property__proxyPort" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">61</span>
-</aside>
-
-        <p class="phpdocumentor-summary">The port to use for proxy requests
-Null disables port forwarding</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$_proxyPort</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property__proxyVerifySSL">
-        $_proxyVerifySSL
-        <a href="classes/Microsoft-Graph-Graph.html#property__proxyVerifySSL" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">68</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Whether SSL verification should be used for proxy requests</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">bool</span>
-    <span class="phpdocumentor-signature__name">$_proxyVerifySSL</span>
-    </code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-
-</article>
-            </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
@@ -432,19 +205,56 @@ Null disables port forwarding</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">73</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Creates a new Graph object, which is used to call the Graph API</p>
+        <p class="phpdocumentor-summary">Graph client constructor.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nationalCloud</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NationalCloud::GLOBAL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Microsoft\Graph\Http\HttpClientInterface">HttpClientInterface</abbr>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$httpClient</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"></section>
 
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$nationalCloud</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">NationalCloud::GLOBAL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>if null defaults to &quot;https://graph.microsoft.com&quot;</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$httpClient</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Microsoft\Graph\Http\HttpClientInterface">HttpClientInterface</abbr>|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>if null creates default Guzzle client</p>
+</section>
+
+            </dd>
+            </dl>
+
     
-    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\InvalidArgumentException">InvalidArgumentException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if an invalid national cloud endpoint is passed</p>
+</section>
+
+                                    </dd>
+                        </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
@@ -459,47 +269,24 @@ Null disables port forwarding</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_createCollectionRequest">
-        createCollectionRequest()
-        <a href="classes/Microsoft-Graph-Graph.html#method_createCollectionRequest" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getApiVersion">
+        getApiVersion()
+        <a href="classes/Microsoft-Graph-Graph.html#method_getApiVersion" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">172</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Creates a new collection request object with the given
-Graph information</p>
-
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">createCollectionRequest</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$requestType</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$endpoint</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Http-GraphCollectionRequest.html"><abbr title="\Microsoft\Graph\Http\GraphCollectionRequest">GraphCollectionRequest</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">getApiVersion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
         <section class="phpdocumentor-description"></section>
 
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$requestType</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The HTTP method to use, e.g. &quot;GET&quot; or &quot;POST&quot;</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$endpoint</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The Graph endpoint to call</p>
-</section>
-
-            </dd>
-            </dl>
-
+    
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
@@ -507,22 +294,19 @@ Graph information</p>
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
+                    <span class="phpdocumentor-tag__name">inheritDoc</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><a href="classes/Microsoft-Graph-Exception-GraphException.html"><abbr title="\Microsoft\Graph\Exception\GraphException">GraphException</abbr></a></span>
-                                                            
+                                                                                
                                                  <section class="phpdocumentor-description"></section>
 
                                     </dd>
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Http-GraphCollectionRequest.html"><abbr title="\Microsoft\Graph\Http\GraphCollectionRequest">GraphCollectionRequest</abbr></a></span>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>The request object, which can be
-used to make queries against Graph</p>
-</section>
+            <section class="phpdocumentor-description"></section>
 
     
 </article>
@@ -532,46 +316,24 @@ used to make queries against Graph</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_createRequest">
-        createRequest()
-        <a href="classes/Microsoft-Graph-Graph.html#method_createRequest" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getSdkVersion">
+        getSdkVersion()
+        <a href="classes/Microsoft-Graph-Graph.html#method_getSdkVersion" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">148</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Creates a new request object with the given Graph information</p>
-
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">createRequest</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$requestType</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$endpoint</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Http-GraphRequest.html"><abbr title="\Microsoft\Graph\Http\GraphRequest">GraphRequest</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">getSdkVersion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
         <section class="phpdocumentor-description"></section>
 
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$requestType</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The HTTP method to use, e.g. &quot;GET&quot; or &quot;POST&quot;</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$endpoint</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The Graph endpoint to call</p>
-</section>
-
-            </dd>
-            </dl>
-
+    
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
@@ -579,221 +341,19 @@ used to make queries against Graph</p>
     </h5>
     <dl class="phpdocumentor-tag-list">
                                     <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
+                    <span class="phpdocumentor-tag__name">inheritDoc</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><a href="classes/Microsoft-Graph-Exception-GraphException.html"><abbr title="\Microsoft\Graph\Exception\GraphException">GraphException</abbr></a></span>
-                                                            
+                                                                                
                                                  <section class="phpdocumentor-description"></section>
 
                                     </dd>
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Http-GraphRequest.html"><abbr title="\Microsoft\Graph\Http\GraphRequest">GraphRequest</abbr></a></span>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>The request object, which can be used to
-make queries against Graph</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setAccessToken">
-        setAccessToken()
-        <a href="classes/Microsoft-Graph-Graph.html#method_setAccessToken" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">114</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Sets the access token. A valid access token is required
-to run queries against Graph</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAccessToken</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$accessToken</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a></span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$accessToken</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The user's access token, retrieved from
-MS auth</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>object</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setApiVersion">
-        setApiVersion()
-        <a href="classes/Microsoft-Graph-Graph.html#method_setApiVersion" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">99</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Sets the API version to use, e.g. &quot;beta&quot; (defaults to v1.0)</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setApiVersion</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$apiVersion</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a></span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$apiVersion</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The API version to use</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>object</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setBaseUrl">
-        setBaseUrl()
-        <a href="classes/Microsoft-Graph-Graph.html#method_setBaseUrl" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">86</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Sets the Base URL to call (defaults to https://graph.microsoft.com)</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setBaseUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$baseUrl</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a></span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$baseUrl</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The URL to call</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>object</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setProxyPort">
-        setProxyPort()
-        <a href="classes/Microsoft-Graph-Graph.html#method_setProxyPort" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Graph.php"><a href="files/src-graph.html"><abbr title="src/Graph.php">Graph.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">130</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Sets the proxy port. This allows you
-to use tools such as Fiddler to view
-requests and responses made with Guzzle</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setProxyPort</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$port</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$verifySSL</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a></span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$port</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$verifySSL</span>
-                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Whether SSL verification should be enabled</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Graph.html"><abbr title="\Microsoft\Graph\Graph">Graph</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>object</p>
-</section>
+            <section class="phpdocumentor-description"></section>
 
     
 </article>
