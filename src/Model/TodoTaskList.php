@@ -119,8 +119,8 @@ class TodoTaskList extends Entity
     */
     public function getWellknownListName()
     {
-        if (array_key_exists("wellknownListName", $this->_propDict)) {
-            if (is_a($this->_propDict["wellknownListName"], "\Microsoft\Graph\Model\WellknownListName") || is_null($this->_propDict["wellknownListName"])) {
+        if (array_key_exists("wellknownListName", $this->_propDict) && !is_null($this->_propDict["wellknownListName"])) {
+            if (is_a($this->_propDict["wellknownListName"], "\Microsoft\Graph\Model\WellknownListName")) {
                 return $this->_propDict["wellknownListName"];
             } else {
                 $this->_propDict["wellknownListName"] = new WellknownListName($this->_propDict["wellknownListName"]);
@@ -149,22 +149,29 @@ class TodoTaskList extends Entity
      * Gets the extensions
     * The collection of open extensions defined for the task list. Nullable.
      *
-     * @return array|null The extensions
+     * @return Extension[]|null The extensions
      */
     public function getExtensions()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
+        if (array_key_exists('extensions', $this->_propDict) && !is_null($this->_propDict['extensions'])) {
+            $extensions = [];
+            if (count($this->_propDict['extensions']) > 0 && is_a($this->_propDict['extensions'][0], 'Extension')) {
+                return $this->_propDict['extensions'];
+            }
+            foreach ($this->_propDict['extensions'] as $singleValue) {
+                $extensions []= new Extension($singleValue);
+            }
+            $this->_propDict['extensions'] = $extensions;
+            return $this->_propDict['extensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the extensions
     * The collection of open extensions defined for the task list. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return TodoTaskList
     */
@@ -179,22 +186,29 @@ class TodoTaskList extends Entity
      * Gets the tasks
     * The tasks in this task list. Read-only. Nullable.
      *
-     * @return array|null The tasks
+     * @return TodoTask[]|null The tasks
      */
     public function getTasks()
     {
-        if (array_key_exists("tasks", $this->_propDict)) {
-           return $this->_propDict["tasks"];
-        } else {
-            return null;
+        if (array_key_exists('tasks', $this->_propDict) && !is_null($this->_propDict['tasks'])) {
+            $tasks = [];
+            if (count($this->_propDict['tasks']) > 0 && is_a($this->_propDict['tasks'][0], 'TodoTask')) {
+                return $this->_propDict['tasks'];
+            }
+            foreach ($this->_propDict['tasks'] as $singleValue) {
+                $tasks []= new TodoTask($singleValue);
+            }
+            $this->_propDict['tasks'] = $tasks;
+            return $this->_propDict['tasks'];
         }
+        return null;
     }
     
     /** 
     * Sets the tasks
     * The tasks in this task list. Read-only. Nullable.
     *
-    * @param TodoTask $val The tasks
+    * @param TodoTask[] $val The tasks
     *
     * @return TodoTaskList
     */

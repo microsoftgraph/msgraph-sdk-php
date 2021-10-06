@@ -60,8 +60,8 @@ class Site extends BaseItem
     */
     public function getError()
     {
-        if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\PublicError") || is_null($this->_propDict["error"])) {
+        if (array_key_exists("error", $this->_propDict) && !is_null($this->_propDict["error"])) {
+            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\PublicError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new PublicError($this->_propDict["error"]);
@@ -92,8 +92,8 @@ class Site extends BaseItem
     */
     public function getRoot()
     {
-        if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\Root") || is_null($this->_propDict["root"])) {
+        if (array_key_exists("root", $this->_propDict) && !is_null($this->_propDict["root"])) {
+            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);
@@ -125,8 +125,8 @@ class Site extends BaseItem
     */
     public function getSharepointIds()
     {
-        if (array_key_exists("sharepointIds", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepointIds"], "\Microsoft\Graph\Model\SharepointIds") || is_null($this->_propDict["sharepointIds"])) {
+        if (array_key_exists("sharepointIds", $this->_propDict) && !is_null($this->_propDict["sharepointIds"])) {
+            if (is_a($this->_propDict["sharepointIds"], "\Microsoft\Graph\Model\SharepointIds")) {
                 return $this->_propDict["sharepointIds"];
             } else {
                 $this->_propDict["sharepointIds"] = new SharepointIds($this->_propDict["sharepointIds"]);
@@ -158,8 +158,8 @@ class Site extends BaseItem
     */
     public function getSiteCollection()
     {
-        if (array_key_exists("siteCollection", $this->_propDict)) {
-            if (is_a($this->_propDict["siteCollection"], "\Microsoft\Graph\Model\SiteCollection") || is_null($this->_propDict["siteCollection"])) {
+        if (array_key_exists("siteCollection", $this->_propDict) && !is_null($this->_propDict["siteCollection"])) {
+            if (is_a($this->_propDict["siteCollection"], "\Microsoft\Graph\Model\SiteCollection")) {
                 return $this->_propDict["siteCollection"];
             } else {
                 $this->_propDict["siteCollection"] = new SiteCollection($this->_propDict["siteCollection"]);
@@ -191,8 +191,8 @@ class Site extends BaseItem
     */
     public function getAnalytics()
     {
-        if (array_key_exists("analytics", $this->_propDict)) {
-            if (is_a($this->_propDict["analytics"], "\Microsoft\Graph\Model\ItemAnalytics") || is_null($this->_propDict["analytics"])) {
+        if (array_key_exists("analytics", $this->_propDict) && !is_null($this->_propDict["analytics"])) {
+            if (is_a($this->_propDict["analytics"], "\Microsoft\Graph\Model\ItemAnalytics")) {
                 return $this->_propDict["analytics"];
             } else {
                 $this->_propDict["analytics"] = new ItemAnalytics($this->_propDict["analytics"]);
@@ -221,22 +221,29 @@ class Site extends BaseItem
      * Gets the columns
     * The collection of column definitions reusable across lists under this site.
      *
-     * @return array|null The columns
+     * @return ColumnDefinition[]|null The columns
      */
     public function getColumns()
     {
-        if (array_key_exists("columns", $this->_propDict)) {
-           return $this->_propDict["columns"];
-        } else {
-            return null;
+        if (array_key_exists('columns', $this->_propDict) && !is_null($this->_propDict['columns'])) {
+            $columns = [];
+            if (count($this->_propDict['columns']) > 0 && is_a($this->_propDict['columns'][0], 'ColumnDefinition')) {
+                return $this->_propDict['columns'];
+            }
+            foreach ($this->_propDict['columns'] as $singleValue) {
+                $columns []= new ColumnDefinition($singleValue);
+            }
+            $this->_propDict['columns'] = $columns;
+            return $this->_propDict['columns'];
         }
+        return null;
     }
     
     /** 
     * Sets the columns
     * The collection of column definitions reusable across lists under this site.
     *
-    * @param ColumnDefinition $val The columns
+    * @param ColumnDefinition[] $val The columns
     *
     * @return Site
     */
@@ -251,22 +258,29 @@ class Site extends BaseItem
      * Gets the contentTypes
     * The collection of content types defined for this site.
      *
-     * @return array|null The contentTypes
+     * @return ContentType[]|null The contentTypes
      */
     public function getContentTypes()
     {
-        if (array_key_exists("contentTypes", $this->_propDict)) {
-           return $this->_propDict["contentTypes"];
-        } else {
-            return null;
+        if (array_key_exists('contentTypes', $this->_propDict) && !is_null($this->_propDict['contentTypes'])) {
+            $contentTypes = [];
+            if (count($this->_propDict['contentTypes']) > 0 && is_a($this->_propDict['contentTypes'][0], 'ContentType')) {
+                return $this->_propDict['contentTypes'];
+            }
+            foreach ($this->_propDict['contentTypes'] as $singleValue) {
+                $contentTypes []= new ContentType($singleValue);
+            }
+            $this->_propDict['contentTypes'] = $contentTypes;
+            return $this->_propDict['contentTypes'];
         }
+        return null;
     }
     
     /** 
     * Sets the contentTypes
     * The collection of content types defined for this site.
     *
-    * @param ContentType $val The contentTypes
+    * @param ContentType[] $val The contentTypes
     *
     * @return Site
     */
@@ -284,8 +298,8 @@ class Site extends BaseItem
     */
     public function getDrive()
     {
-        if (array_key_exists("drive", $this->_propDict)) {
-            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive") || is_null($this->_propDict["drive"])) {
+        if (array_key_exists("drive", $this->_propDict) && !is_null($this->_propDict["drive"])) {
+            if (is_a($this->_propDict["drive"], "\Microsoft\Graph\Model\Drive")) {
                 return $this->_propDict["drive"];
             } else {
                 $this->_propDict["drive"] = new Drive($this->_propDict["drive"]);
@@ -314,22 +328,29 @@ class Site extends BaseItem
      * Gets the drives
     * The collection of drives (document libraries) under this site.
      *
-     * @return array|null The drives
+     * @return Drive[]|null The drives
      */
     public function getDrives()
     {
-        if (array_key_exists("drives", $this->_propDict)) {
-           return $this->_propDict["drives"];
-        } else {
-            return null;
+        if (array_key_exists('drives', $this->_propDict) && !is_null($this->_propDict['drives'])) {
+            $drives = [];
+            if (count($this->_propDict['drives']) > 0 && is_a($this->_propDict['drives'][0], 'Drive')) {
+                return $this->_propDict['drives'];
+            }
+            foreach ($this->_propDict['drives'] as $singleValue) {
+                $drives []= new Drive($singleValue);
+            }
+            $this->_propDict['drives'] = $drives;
+            return $this->_propDict['drives'];
         }
+        return null;
     }
     
     /** 
     * Sets the drives
     * The collection of drives (document libraries) under this site.
     *
-    * @param Drive $val The drives
+    * @param Drive[] $val The drives
     *
     * @return Site
     */
@@ -344,22 +365,29 @@ class Site extends BaseItem
      * Gets the externalColumns
     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
      *
-     * @return array|null The externalColumns
+     * @return ColumnDefinition[]|null The externalColumns
      */
     public function getExternalColumns()
     {
-        if (array_key_exists("externalColumns", $this->_propDict)) {
-           return $this->_propDict["externalColumns"];
-        } else {
-            return null;
+        if (array_key_exists('externalColumns', $this->_propDict) && !is_null($this->_propDict['externalColumns'])) {
+            $externalColumns = [];
+            if (count($this->_propDict['externalColumns']) > 0 && is_a($this->_propDict['externalColumns'][0], 'ColumnDefinition')) {
+                return $this->_propDict['externalColumns'];
+            }
+            foreach ($this->_propDict['externalColumns'] as $singleValue) {
+                $externalColumns []= new ColumnDefinition($singleValue);
+            }
+            $this->_propDict['externalColumns'] = $externalColumns;
+            return $this->_propDict['externalColumns'];
         }
+        return null;
     }
     
     /** 
     * Sets the externalColumns
     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
     *
-    * @param ColumnDefinition $val The externalColumns
+    * @param ColumnDefinition[] $val The externalColumns
     *
     * @return Site
     */
@@ -374,22 +402,29 @@ class Site extends BaseItem
      * Gets the items
     * Used to address any item contained in this site. This collection can't be enumerated.
      *
-     * @return array|null The items
+     * @return BaseItem[]|null The items
      */
     public function getItems()
     {
-        if (array_key_exists("items", $this->_propDict)) {
-           return $this->_propDict["items"];
-        } else {
-            return null;
+        if (array_key_exists('items', $this->_propDict) && !is_null($this->_propDict['items'])) {
+            $items = [];
+            if (count($this->_propDict['items']) > 0 && is_a($this->_propDict['items'][0], 'BaseItem')) {
+                return $this->_propDict['items'];
+            }
+            foreach ($this->_propDict['items'] as $singleValue) {
+                $items []= new BaseItem($singleValue);
+            }
+            $this->_propDict['items'] = $items;
+            return $this->_propDict['items'];
         }
+        return null;
     }
     
     /** 
     * Sets the items
     * Used to address any item contained in this site. This collection can't be enumerated.
     *
-    * @param BaseItem $val The items
+    * @param BaseItem[] $val The items
     *
     * @return Site
     */
@@ -404,22 +439,29 @@ class Site extends BaseItem
      * Gets the lists
     * The collection of lists under this site.
      *
-     * @return array|null The lists
+     * @return GraphList[]|null The lists
      */
     public function getLists()
     {
-        if (array_key_exists("lists", $this->_propDict)) {
-           return $this->_propDict["lists"];
-        } else {
-            return null;
+        if (array_key_exists('lists', $this->_propDict) && !is_null($this->_propDict['lists'])) {
+            $lists = [];
+            if (count($this->_propDict['lists']) > 0 && is_a($this->_propDict['lists'][0], 'GraphList')) {
+                return $this->_propDict['lists'];
+            }
+            foreach ($this->_propDict['lists'] as $singleValue) {
+                $lists []= new GraphList($singleValue);
+            }
+            $this->_propDict['lists'] = $lists;
+            return $this->_propDict['lists'];
         }
+        return null;
     }
     
     /** 
     * Sets the lists
     * The collection of lists under this site.
     *
-    * @param GraphList $val The lists
+    * @param GraphList[] $val The lists
     *
     * @return Site
     */
@@ -434,22 +476,29 @@ class Site extends BaseItem
      * Gets the permissions
     * The permissions associated with the site. Nullable.
      *
-     * @return array|null The permissions
+     * @return Permission[]|null The permissions
      */
     public function getPermissions()
     {
-        if (array_key_exists("permissions", $this->_propDict)) {
-           return $this->_propDict["permissions"];
-        } else {
-            return null;
+        if (array_key_exists('permissions', $this->_propDict) && !is_null($this->_propDict['permissions'])) {
+            $permissions = [];
+            if (count($this->_propDict['permissions']) > 0 && is_a($this->_propDict['permissions'][0], 'Permission')) {
+                return $this->_propDict['permissions'];
+            }
+            foreach ($this->_propDict['permissions'] as $singleValue) {
+                $permissions []= new Permission($singleValue);
+            }
+            $this->_propDict['permissions'] = $permissions;
+            return $this->_propDict['permissions'];
         }
+        return null;
     }
     
     /** 
     * Sets the permissions
     * The permissions associated with the site. Nullable.
     *
-    * @param Permission $val The permissions
+    * @param Permission[] $val The permissions
     *
     * @return Site
     */
@@ -464,22 +513,29 @@ class Site extends BaseItem
      * Gets the sites
     * The collection of the sub-sites under this site.
      *
-     * @return array|null The sites
+     * @return Site[]|null The sites
      */
     public function getSites()
     {
-        if (array_key_exists("sites", $this->_propDict)) {
-           return $this->_propDict["sites"];
-        } else {
-            return null;
+        if (array_key_exists('sites', $this->_propDict) && !is_null($this->_propDict['sites'])) {
+            $sites = [];
+            if (count($this->_propDict['sites']) > 0 && is_a($this->_propDict['sites'][0], 'Site')) {
+                return $this->_propDict['sites'];
+            }
+            foreach ($this->_propDict['sites'] as $singleValue) {
+                $sites []= new Site($singleValue);
+            }
+            $this->_propDict['sites'] = $sites;
+            return $this->_propDict['sites'];
         }
+        return null;
     }
     
     /** 
     * Sets the sites
     * The collection of the sub-sites under this site.
     *
-    * @param Site $val The sites
+    * @param Site[] $val The sites
     *
     * @return Site
     */
@@ -497,8 +553,8 @@ class Site extends BaseItem
     */
     public function getTermStore()
     {
-        if (array_key_exists("termStore", $this->_propDict)) {
-            if (is_a($this->_propDict["termStore"], "\Microsoft\Graph\TermStore\Model\Store") || is_null($this->_propDict["termStore"])) {
+        if (array_key_exists("termStore", $this->_propDict) && !is_null($this->_propDict["termStore"])) {
+            if (is_a($this->_propDict["termStore"], "\Microsoft\Graph\TermStore\Model\Store")) {
                 return $this->_propDict["termStore"];
             } else {
                 $this->_propDict["termStore"] = new \Microsoft\Graph\TermStore\Model\Store($this->_propDict["termStore"]);
@@ -527,22 +583,29 @@ class Site extends BaseItem
      * Gets the termStores
     * The collection of termStores under this site.
      *
-     * @return array|null The termStores
+     * @return \Microsoft\Graph\TermStore\Model\Store[]|null The termStores
      */
     public function getTermStores()
     {
-        if (array_key_exists("termStores", $this->_propDict)) {
-           return $this->_propDict["termStores"];
-        } else {
-            return null;
+        if (array_key_exists('termStores', $this->_propDict) && !is_null($this->_propDict['termStores'])) {
+            $termStores = [];
+            if (count($this->_propDict['termStores']) > 0 && is_a($this->_propDict['termStores'][0], '\Microsoft\Graph\TermStore\Model\Store')) {
+                return $this->_propDict['termStores'];
+            }
+            foreach ($this->_propDict['termStores'] as $singleValue) {
+                $termStores []= new \Microsoft\Graph\TermStore\Model\Store($singleValue);
+            }
+            $this->_propDict['termStores'] = $termStores;
+            return $this->_propDict['termStores'];
         }
+        return null;
     }
     
     /** 
     * Sets the termStores
     * The collection of termStores under this site.
     *
-    * @param \Microsoft\Graph\TermStore\Model\Store $val The termStores
+    * @param \Microsoft\Graph\TermStore\Model\Store[] $val The termStores
     *
     * @return Site
     */
@@ -560,8 +623,8 @@ class Site extends BaseItem
     */
     public function getOnenote()
     {
-        if (array_key_exists("onenote", $this->_propDict)) {
-            if (is_a($this->_propDict["onenote"], "\Microsoft\Graph\Model\Onenote") || is_null($this->_propDict["onenote"])) {
+        if (array_key_exists("onenote", $this->_propDict) && !is_null($this->_propDict["onenote"])) {
+            if (is_a($this->_propDict["onenote"], "\Microsoft\Graph\Model\Onenote")) {
                 return $this->_propDict["onenote"];
             } else {
                 $this->_propDict["onenote"] = new Onenote($this->_propDict["onenote"]);

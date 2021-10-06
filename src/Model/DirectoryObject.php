@@ -31,8 +31,8 @@ class DirectoryObject extends Entity
     */
     public function getDeletedDateTime()
     {
-        if (array_key_exists("deletedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDateTime"], "\DateTime") || is_null($this->_propDict["deletedDateTime"])) {
+        if (array_key_exists("deletedDateTime", $this->_propDict) && !is_null($this->_propDict["deletedDateTime"])) {
+            if (is_a($this->_propDict["deletedDateTime"], "\DateTime")) {
                 return $this->_propDict["deletedDateTime"];
             } else {
                 $this->_propDict["deletedDateTime"] = new \DateTime($this->_propDict["deletedDateTime"]);

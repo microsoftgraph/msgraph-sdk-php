@@ -90,8 +90,8 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     */
     public function getAttestationLevel()
     {
-        if (array_key_exists("attestationLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["attestationLevel"], "\Microsoft\Graph\Model\AttestationLevel") || is_null($this->_propDict["attestationLevel"])) {
+        if (array_key_exists("attestationLevel", $this->_propDict) && !is_null($this->_propDict["attestationLevel"])) {
+            if (is_a($this->_propDict["attestationLevel"], "\Microsoft\Graph\Model\AttestationLevel")) {
                 return $this->_propDict["attestationLevel"];
             } else {
                 $this->_propDict["attestationLevel"] = new AttestationLevel($this->_propDict["attestationLevel"]);
@@ -123,8 +123,8 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);

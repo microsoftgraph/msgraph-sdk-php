@@ -60,8 +60,9 @@ class BitLockerRemovableDrivePolicy extends Entity
     */
     public function getEncryptionMethod()
     {
-        if (array_key_exists("encryptionMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["encryptionMethod"], "\Microsoft\Graph\Model\BitLockerEncryptionMethod") || is_null($this->_propDict["encryptionMethod"])) {
+        if (array_key_exists("encryptionMethod", $this->_propDict) && !is_null($this->_propDict["encryptionMethod"])) {
+     
+            if (is_a($this->_propDict["encryptionMethod"], "\Microsoft\Graph\Model\BitLockerEncryptionMethod")) {
                 return $this->_propDict["encryptionMethod"];
             } else {
                 $this->_propDict["encryptionMethod"] = new BitLockerEncryptionMethod($this->_propDict["encryptionMethod"]);

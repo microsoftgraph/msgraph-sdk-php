@@ -53,25 +53,29 @@ class AddIn extends Entity
     /**
     * Gets the addInProperties
     *
-    * @return KeyValue|null The addInProperties
+    * @return KeyValue[]|null The addInProperties
     */
     public function getAddInProperties()
     {
-        if (array_key_exists("properties", $this->_propDict)) {
-            if (is_a($this->_propDict["properties"], "\Microsoft\Graph\Model\KeyValue") || is_null($this->_propDict["properties"])) {
-                return $this->_propDict["properties"];
-            } else {
-                $this->_propDict["properties"] = new KeyValue($this->_propDict["properties"]);
-                return $this->_propDict["properties"];
+        if (array_key_exists("properties", $this->_propDict) && !is_null($this->_propDict["properties"])) {
+       
+            if (count($this->_propDict['properties']) > 0 && is_a($this->_propDict['properties'][0], 'KeyValue')) {
+               return $this->_propDict['properties'];
             }
-        }
+            $properties = [];
+            foreach ($this->_propDict['properties'] as $singleValue) {
+               $properties []= new KeyValue($singleValue);
+            }
+            $this->_propDict['properties'] = $properties;
+            return $this->_propDict['properties'];
+            }
         return null;
     }
 
     /**
     * Sets the addInProperties
     *
-    * @param KeyValue $val The value to assign to the properties
+    * @param KeyValue[] $val The value to assign to the properties
     *
     * @return AddIn The AddIn
     */

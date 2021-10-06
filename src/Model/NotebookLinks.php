@@ -32,8 +32,9 @@ class NotebookLinks extends Entity
     */
     public function getOneNoteClientUrl()
     {
-        if (array_key_exists("oneNoteClientUrl", $this->_propDict)) {
-            if (is_a($this->_propDict["oneNoteClientUrl"], "\Microsoft\Graph\Model\ExternalLink") || is_null($this->_propDict["oneNoteClientUrl"])) {
+        if (array_key_exists("oneNoteClientUrl", $this->_propDict) && !is_null($this->_propDict["oneNoteClientUrl"])) {
+     
+            if (is_a($this->_propDict["oneNoteClientUrl"], "\Microsoft\Graph\Model\ExternalLink")) {
                 return $this->_propDict["oneNoteClientUrl"];
             } else {
                 $this->_propDict["oneNoteClientUrl"] = new ExternalLink($this->_propDict["oneNoteClientUrl"]);
@@ -65,8 +66,9 @@ class NotebookLinks extends Entity
     */
     public function getOneNoteWebUrl()
     {
-        if (array_key_exists("oneNoteWebUrl", $this->_propDict)) {
-            if (is_a($this->_propDict["oneNoteWebUrl"], "\Microsoft\Graph\Model\ExternalLink") || is_null($this->_propDict["oneNoteWebUrl"])) {
+        if (array_key_exists("oneNoteWebUrl", $this->_propDict) && !is_null($this->_propDict["oneNoteWebUrl"])) {
+     
+            if (is_a($this->_propDict["oneNoteWebUrl"], "\Microsoft\Graph\Model\ExternalLink")) {
                 return $this->_propDict["oneNoteWebUrl"];
             } else {
                 $this->_propDict["oneNoteWebUrl"] = new ExternalLink($this->_propDict["oneNoteWebUrl"]);

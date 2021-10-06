@@ -58,22 +58,29 @@ class DeviceComplianceScheduledActionForRule extends Entity
      * Gets the scheduledActionConfigurations
     * The list of scheduled action configurations for this compliance policy.
      *
-     * @return array|null The scheduledActionConfigurations
+     * @return DeviceComplianceActionItem[]|null The scheduledActionConfigurations
      */
     public function getScheduledActionConfigurations()
     {
-        if (array_key_exists("scheduledActionConfigurations", $this->_propDict)) {
-           return $this->_propDict["scheduledActionConfigurations"];
-        } else {
-            return null;
+        if (array_key_exists('scheduledActionConfigurations', $this->_propDict) && !is_null($this->_propDict['scheduledActionConfigurations'])) {
+            $scheduledActionConfigurations = [];
+            if (count($this->_propDict['scheduledActionConfigurations']) > 0 && is_a($this->_propDict['scheduledActionConfigurations'][0], 'DeviceComplianceActionItem')) {
+                return $this->_propDict['scheduledActionConfigurations'];
+            }
+            foreach ($this->_propDict['scheduledActionConfigurations'] as $singleValue) {
+                $scheduledActionConfigurations []= new DeviceComplianceActionItem($singleValue);
+            }
+            $this->_propDict['scheduledActionConfigurations'] = $scheduledActionConfigurations;
+            return $this->_propDict['scheduledActionConfigurations'];
         }
+        return null;
     }
     
     /** 
     * Sets the scheduledActionConfigurations
     * The list of scheduled action configurations for this compliance policy.
     *
-    * @param DeviceComplianceActionItem $val The scheduledActionConfigurations
+    * @param DeviceComplianceActionItem[] $val The scheduledActionConfigurations
     *
     * @return DeviceComplianceScheduledActionForRule
     */

@@ -32,8 +32,8 @@ class DeviceEnrollmentConfiguration extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -123,8 +123,8 @@ class DeviceEnrollmentConfiguration extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -211,22 +211,29 @@ class DeviceEnrollmentConfiguration extends Entity
      * Gets the assignments
     * The list of group assignments for the device configuration profile
      *
-     * @return array|null The assignments
+     * @return EnrollmentConfigurationAssignment[]|null The assignments
      */
     public function getAssignments()
     {
-        if (array_key_exists("assignments", $this->_propDict)) {
-           return $this->_propDict["assignments"];
-        } else {
-            return null;
+        if (array_key_exists('assignments', $this->_propDict) && !is_null($this->_propDict['assignments'])) {
+            $assignments = [];
+            if (count($this->_propDict['assignments']) > 0 && is_a($this->_propDict['assignments'][0], 'EnrollmentConfigurationAssignment')) {
+                return $this->_propDict['assignments'];
+            }
+            foreach ($this->_propDict['assignments'] as $singleValue) {
+                $assignments []= new EnrollmentConfigurationAssignment($singleValue);
+            }
+            $this->_propDict['assignments'] = $assignments;
+            return $this->_propDict['assignments'];
         }
+        return null;
     }
     
     /** 
     * Sets the assignments
     * The list of group assignments for the device configuration profile
     *
-    * @param EnrollmentConfigurationAssignment $val The assignments
+    * @param EnrollmentConfigurationAssignment[] $val The assignments
     *
     * @return DeviceEnrollmentConfiguration
     */

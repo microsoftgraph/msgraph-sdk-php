@@ -256,8 +256,9 @@ class Photo extends Entity
     */
     public function getTakenDateTime()
     {
-        if (array_key_exists("takenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["takenDateTime"], "\DateTime") || is_null($this->_propDict["takenDateTime"])) {
+        if (array_key_exists("takenDateTime", $this->_propDict) && !is_null($this->_propDict["takenDateTime"])) {
+     
+            if (is_a($this->_propDict["takenDateTime"], "\DateTime")) {
                 return $this->_propDict["takenDateTime"];
             } else {
                 $this->_propDict["takenDateTime"] = new \DateTime($this->_propDict["takenDateTime"]);

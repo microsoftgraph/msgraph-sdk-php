@@ -32,8 +32,9 @@ class DomainState extends Entity
     */
     public function getLastActionDateTime()
     {
-        if (array_key_exists("lastActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime") || is_null($this->_propDict["lastActionDateTime"])) {
+        if (array_key_exists("lastActionDateTime", $this->_propDict) && !is_null($this->_propDict["lastActionDateTime"])) {
+     
+            if (is_a($this->_propDict["lastActionDateTime"], "\DateTime")) {
                 return $this->_propDict["lastActionDateTime"];
             } else {
                 $this->_propDict["lastActionDateTime"] = new \DateTime($this->_propDict["lastActionDateTime"]);

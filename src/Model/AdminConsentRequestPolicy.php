@@ -145,22 +145,29 @@ class AdminConsentRequestPolicy extends Entity
      * Gets the reviewers
     * The list of reviewers for the admin consent. Required.
      *
-     * @return array|null The reviewers
+     * @return AccessReviewReviewerScope[]|null The reviewers
      */
     public function getReviewers()
     {
-        if (array_key_exists("reviewers", $this->_propDict)) {
-           return $this->_propDict["reviewers"];
-        } else {
-            return null;
+        if (array_key_exists('reviewers', $this->_propDict) && !is_null($this->_propDict['reviewers'])) {
+            $reviewers = [];
+            if (count($this->_propDict['reviewers']) > 0 && is_a($this->_propDict['reviewers'][0], 'AccessReviewReviewerScope')) {
+                return $this->_propDict['reviewers'];
+            }
+            foreach ($this->_propDict['reviewers'] as $singleValue) {
+                $reviewers []= new AccessReviewReviewerScope($singleValue);
+            }
+            $this->_propDict['reviewers'] = $reviewers;
+            return $this->_propDict['reviewers'];
         }
+        return null;
     }
     
     /** 
     * Sets the reviewers
     * The list of reviewers for the admin consent. Required.
     *
-    * @param AccessReviewReviewerScope $val The reviewers
+    * @param AccessReviewReviewerScope[] $val The reviewers
     *
     * @return AdminConsentRequestPolicy
     */

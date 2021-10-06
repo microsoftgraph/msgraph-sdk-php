@@ -28,21 +28,28 @@ class CloudCommunications extends Entity
      /** 
      * Gets the calls
      *
-     * @return array|null The calls
+     * @return Call[]|null The calls
      */
     public function getCalls()
     {
-        if (array_key_exists("calls", $this->_propDict)) {
-           return $this->_propDict["calls"];
-        } else {
-            return null;
+        if (array_key_exists('calls', $this->_propDict) && !is_null($this->_propDict['calls'])) {
+            $calls = [];
+            if (count($this->_propDict['calls']) > 0 && is_a($this->_propDict['calls'][0], 'Call')) {
+                return $this->_propDict['calls'];
+            }
+            foreach ($this->_propDict['calls'] as $singleValue) {
+                $calls []= new Call($singleValue);
+            }
+            $this->_propDict['calls'] = $calls;
+            return $this->_propDict['calls'];
         }
+        return null;
     }
     
     /** 
     * Sets the calls
     *
-    * @param Call $val The calls
+    * @param Call[] $val The calls
     *
     * @return CloudCommunications
     */
@@ -56,21 +63,28 @@ class CloudCommunications extends Entity
      /** 
      * Gets the callRecords
      *
-     * @return array|null The callRecords
+     * @return \Microsoft\Graph\CallRecords\Model\CallRecord[]|null The callRecords
      */
     public function getCallRecords()
     {
-        if (array_key_exists("callRecords", $this->_propDict)) {
-           return $this->_propDict["callRecords"];
-        } else {
-            return null;
+        if (array_key_exists('callRecords', $this->_propDict) && !is_null($this->_propDict['callRecords'])) {
+            $callRecords = [];
+            if (count($this->_propDict['callRecords']) > 0 && is_a($this->_propDict['callRecords'][0], '\Microsoft\Graph\CallRecords\Model\CallRecord')) {
+                return $this->_propDict['callRecords'];
+            }
+            foreach ($this->_propDict['callRecords'] as $singleValue) {
+                $callRecords []= new \Microsoft\Graph\CallRecords\Model\CallRecord($singleValue);
+            }
+            $this->_propDict['callRecords'] = $callRecords;
+            return $this->_propDict['callRecords'];
         }
+        return null;
     }
     
     /** 
     * Sets the callRecords
     *
-    * @param \Microsoft\Graph\CallRecords\Model\CallRecord $val The callRecords
+    * @param \Microsoft\Graph\CallRecords\Model\CallRecord[] $val The callRecords
     *
     * @return CloudCommunications
     */
@@ -84,21 +98,28 @@ class CloudCommunications extends Entity
      /** 
      * Gets the onlineMeetings
      *
-     * @return array|null The onlineMeetings
+     * @return OnlineMeeting[]|null The onlineMeetings
      */
     public function getOnlineMeetings()
     {
-        if (array_key_exists("onlineMeetings", $this->_propDict)) {
-           return $this->_propDict["onlineMeetings"];
-        } else {
-            return null;
+        if (array_key_exists('onlineMeetings', $this->_propDict) && !is_null($this->_propDict['onlineMeetings'])) {
+            $onlineMeetings = [];
+            if (count($this->_propDict['onlineMeetings']) > 0 && is_a($this->_propDict['onlineMeetings'][0], 'OnlineMeeting')) {
+                return $this->_propDict['onlineMeetings'];
+            }
+            foreach ($this->_propDict['onlineMeetings'] as $singleValue) {
+                $onlineMeetings []= new OnlineMeeting($singleValue);
+            }
+            $this->_propDict['onlineMeetings'] = $onlineMeetings;
+            return $this->_propDict['onlineMeetings'];
         }
+        return null;
     }
     
     /** 
     * Sets the onlineMeetings
     *
-    * @param OnlineMeeting $val The onlineMeetings
+    * @param OnlineMeeting[] $val The onlineMeetings
     *
     * @return CloudCommunications
     */
@@ -112,21 +133,28 @@ class CloudCommunications extends Entity
      /** 
      * Gets the presences
      *
-     * @return array|null The presences
+     * @return Presence[]|null The presences
      */
     public function getPresences()
     {
-        if (array_key_exists("presences", $this->_propDict)) {
-           return $this->_propDict["presences"];
-        } else {
-            return null;
+        if (array_key_exists('presences', $this->_propDict) && !is_null($this->_propDict['presences'])) {
+            $presences = [];
+            if (count($this->_propDict['presences']) > 0 && is_a($this->_propDict['presences'][0], 'Presence')) {
+                return $this->_propDict['presences'];
+            }
+            foreach ($this->_propDict['presences'] as $singleValue) {
+                $presences []= new Presence($singleValue);
+            }
+            $this->_propDict['presences'] = $presences;
+            return $this->_propDict['presences'];
         }
+        return null;
     }
     
     /** 
     * Sets the presences
     *
-    * @param Presence $val The presences
+    * @param Presence[] $val The presences
     *
     * @return CloudCommunications
     */

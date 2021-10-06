@@ -32,8 +32,8 @@ class Group extends \Microsoft\Graph\Model\Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -152,8 +152,8 @@ class Group extends \Microsoft\Graph\Model\Entity
     */
     public function getScope()
     {
-        if (array_key_exists("scope", $this->_propDict)) {
-            if (is_a($this->_propDict["scope"], "\Microsoft\Graph\TermStore\Model\TermGroupScope") || is_null($this->_propDict["scope"])) {
+        if (array_key_exists("scope", $this->_propDict) && !is_null($this->_propDict["scope"])) {
+            if (is_a($this->_propDict["scope"], "\Microsoft\Graph\TermStore\Model\TermGroupScope")) {
                 return $this->_propDict["scope"];
             } else {
                 $this->_propDict["scope"] = new TermGroupScope($this->_propDict["scope"]);
@@ -182,22 +182,29 @@ class Group extends \Microsoft\Graph\Model\Entity
      * Gets the sets
     * All sets under the group in a term [store].
      *
-     * @return array|null The sets
+     * @return Set[]|null The sets
      */
     public function getSets()
     {
-        if (array_key_exists("sets", $this->_propDict)) {
-           return $this->_propDict["sets"];
-        } else {
-            return null;
+        if (array_key_exists('sets', $this->_propDict) && !is_null($this->_propDict['sets'])) {
+            $sets = [];
+            if (count($this->_propDict['sets']) > 0 && is_a($this->_propDict['sets'][0], 'Set')) {
+                return $this->_propDict['sets'];
+            }
+            foreach ($this->_propDict['sets'] as $singleValue) {
+                $sets []= new Set($singleValue);
+            }
+            $this->_propDict['sets'] = $sets;
+            return $this->_propDict['sets'];
         }
+        return null;
     }
     
     /** 
     * Sets the sets
     * All sets under the group in a term [store].
     *
-    * @param Set $val The sets
+    * @param Set[] $val The sets
     *
     * @return Group
     */

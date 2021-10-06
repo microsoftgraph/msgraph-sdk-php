@@ -32,8 +32,8 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -152,8 +152,8 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod
     */
     public function getDevice()
     {
-        if (array_key_exists("device", $this->_propDict)) {
-            if (is_a($this->_propDict["device"], "\Microsoft\Graph\Model\Device") || is_null($this->_propDict["device"])) {
+        if (array_key_exists("device", $this->_propDict) && !is_null($this->_propDict["device"])) {
+            if (is_a($this->_propDict["device"], "\Microsoft\Graph\Model\Device")) {
                 return $this->_propDict["device"];
             } else {
                 $this->_propDict["device"] = new Device($this->_propDict["device"]);

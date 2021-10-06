@@ -32,8 +32,8 @@ class IdentityApiConnector extends Entity
     */
     public function getAuthenticationConfiguration()
     {
-        if (array_key_exists("authenticationConfiguration", $this->_propDict)) {
-            if (is_a($this->_propDict["authenticationConfiguration"], "\Microsoft\Graph\Model\ApiAuthenticationConfigurationBase") || is_null($this->_propDict["authenticationConfiguration"])) {
+        if (array_key_exists("authenticationConfiguration", $this->_propDict) && !is_null($this->_propDict["authenticationConfiguration"])) {
+            if (is_a($this->_propDict["authenticationConfiguration"], "\Microsoft\Graph\Model\ApiAuthenticationConfigurationBase")) {
                 return $this->_propDict["authenticationConfiguration"];
             } else {
                 $this->_propDict["authenticationConfiguration"] = new ApiAuthenticationConfigurationBase($this->_propDict["authenticationConfiguration"]);

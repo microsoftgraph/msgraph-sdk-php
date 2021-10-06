@@ -88,8 +88,9 @@ class WindowsFirewallNetworkProfile extends Entity
     */
     public function getFirewallEnabled()
     {
-        if (array_key_exists("firewallEnabled", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallEnabled"], "\Microsoft\Graph\Model\StateManagementSetting") || is_null($this->_propDict["firewallEnabled"])) {
+        if (array_key_exists("firewallEnabled", $this->_propDict) && !is_null($this->_propDict["firewallEnabled"])) {
+     
+            if (is_a($this->_propDict["firewallEnabled"], "\Microsoft\Graph\Model\StateManagementSetting")) {
                 return $this->_propDict["firewallEnabled"];
             } else {
                 $this->_propDict["firewallEnabled"] = new StateManagementSetting($this->_propDict["firewallEnabled"]);

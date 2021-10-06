@@ -116,22 +116,29 @@ class SecureScoreControlProfile extends Entity
      * Gets the complianceInformation
     * The collection of compliance information associated with secure score control
      *
-     * @return array|null The complianceInformation
+     * @return ComplianceInformation[]|null The complianceInformation
      */
     public function getComplianceInformation()
     {
-        if (array_key_exists("complianceInformation", $this->_propDict)) {
-           return $this->_propDict["complianceInformation"];
-        } else {
-            return null;
+        if (array_key_exists('complianceInformation', $this->_propDict) && !is_null($this->_propDict['complianceInformation'])) {
+            $complianceInformation = [];
+            if (count($this->_propDict['complianceInformation']) > 0 && is_a($this->_propDict['complianceInformation'][0], 'ComplianceInformation')) {
+                return $this->_propDict['complianceInformation'];
+            }
+            foreach ($this->_propDict['complianceInformation'] as $singleValue) {
+                $complianceInformation []= new ComplianceInformation($singleValue);
+            }
+            $this->_propDict['complianceInformation'] = $complianceInformation;
+            return $this->_propDict['complianceInformation'];
         }
+        return null;
     }
     
     /** 
     * Sets the complianceInformation
     * The collection of compliance information associated with secure score control
     *
-    * @param ComplianceInformation $val The complianceInformation
+    * @param ComplianceInformation[] $val The complianceInformation
     *
     * @return SecureScoreControlProfile
     */
@@ -175,22 +182,29 @@ class SecureScoreControlProfile extends Entity
      * Gets the controlStateUpdates
     * Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
      *
-     * @return array|null The controlStateUpdates
+     * @return SecureScoreControlStateUpdate[]|null The controlStateUpdates
      */
     public function getControlStateUpdates()
     {
-        if (array_key_exists("controlStateUpdates", $this->_propDict)) {
-           return $this->_propDict["controlStateUpdates"];
-        } else {
-            return null;
+        if (array_key_exists('controlStateUpdates', $this->_propDict) && !is_null($this->_propDict['controlStateUpdates'])) {
+            $controlStateUpdates = [];
+            if (count($this->_propDict['controlStateUpdates']) > 0 && is_a($this->_propDict['controlStateUpdates'][0], 'SecureScoreControlStateUpdate')) {
+                return $this->_propDict['controlStateUpdates'];
+            }
+            foreach ($this->_propDict['controlStateUpdates'] as $singleValue) {
+                $controlStateUpdates []= new SecureScoreControlStateUpdate($singleValue);
+            }
+            $this->_propDict['controlStateUpdates'] = $controlStateUpdates;
+            return $this->_propDict['controlStateUpdates'];
         }
+        return null;
     }
     
     /** 
     * Sets the controlStateUpdates
     * Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
     *
-    * @param SecureScoreControlStateUpdate $val The controlStateUpdates
+    * @param SecureScoreControlStateUpdate[] $val The controlStateUpdates
     *
     * @return SecureScoreControlProfile
     */
@@ -266,8 +280,8 @@ class SecureScoreControlProfile extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -559,8 +573,8 @@ class SecureScoreControlProfile extends Entity
     */
     public function getVendorInformation()
     {
-        if (array_key_exists("vendorInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["vendorInformation"], "\Microsoft\Graph\Model\SecurityVendorInformation") || is_null($this->_propDict["vendorInformation"])) {
+        if (array_key_exists("vendorInformation", $this->_propDict) && !is_null($this->_propDict["vendorInformation"])) {
+            if (is_a($this->_propDict["vendorInformation"], "\Microsoft\Graph\Model\SecurityVendorInformation")) {
                 return $this->_propDict["vendorInformation"];
             } else {
                 $this->_propDict["vendorInformation"] = new SecurityVendorInformation($this->_propDict["vendorInformation"]);

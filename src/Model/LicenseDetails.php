@@ -29,22 +29,29 @@ class LicenseDetails extends Entity
      * Gets the servicePlans
     * Information about the service plans assigned with the license. Read-only, Not nullable
      *
-     * @return array|null The servicePlans
+     * @return ServicePlanInfo[]|null The servicePlans
      */
     public function getServicePlans()
     {
-        if (array_key_exists("servicePlans", $this->_propDict)) {
-           return $this->_propDict["servicePlans"];
-        } else {
-            return null;
+        if (array_key_exists('servicePlans', $this->_propDict) && !is_null($this->_propDict['servicePlans'])) {
+            $servicePlans = [];
+            if (count($this->_propDict['servicePlans']) > 0 && is_a($this->_propDict['servicePlans'][0], 'ServicePlanInfo')) {
+                return $this->_propDict['servicePlans'];
+            }
+            foreach ($this->_propDict['servicePlans'] as $singleValue) {
+                $servicePlans []= new ServicePlanInfo($singleValue);
+            }
+            $this->_propDict['servicePlans'] = $servicePlans;
+            return $this->_propDict['servicePlans'];
         }
+        return null;
     }
     
     /** 
     * Sets the servicePlans
     * Information about the service plans assigned with the license. Read-only, Not nullable
     *
-    * @param ServicePlanInfo $val The servicePlans
+    * @param ServicePlanInfo[] $val The servicePlans
     *
     * @return LicenseDetails
     */

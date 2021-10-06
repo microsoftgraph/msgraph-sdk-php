@@ -90,8 +90,8 @@ class Notebook extends OnenoteEntityHierarchyModel
     */
     public function getLinks()
     {
-        if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\NotebookLinks") || is_null($this->_propDict["links"])) {
+        if (array_key_exists("links", $this->_propDict) && !is_null($this->_propDict["links"])) {
+            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\NotebookLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new NotebookLinks($this->_propDict["links"]);
@@ -181,8 +181,8 @@ class Notebook extends OnenoteEntityHierarchyModel
     */
     public function getUserRole()
     {
-        if (array_key_exists("userRole", $this->_propDict)) {
-            if (is_a($this->_propDict["userRole"], "\Microsoft\Graph\Model\OnenoteUserRole") || is_null($this->_propDict["userRole"])) {
+        if (array_key_exists("userRole", $this->_propDict) && !is_null($this->_propDict["userRole"])) {
+            if (is_a($this->_propDict["userRole"], "\Microsoft\Graph\Model\OnenoteUserRole")) {
                 return $this->_propDict["userRole"];
             } else {
                 $this->_propDict["userRole"] = new OnenoteUserRole($this->_propDict["userRole"]);
@@ -211,22 +211,29 @@ class Notebook extends OnenoteEntityHierarchyModel
      * Gets the sectionGroups
     * The section groups in the notebook. Read-only. Nullable.
      *
-     * @return array|null The sectionGroups
+     * @return SectionGroup[]|null The sectionGroups
      */
     public function getSectionGroups()
     {
-        if (array_key_exists("sectionGroups", $this->_propDict)) {
-           return $this->_propDict["sectionGroups"];
-        } else {
-            return null;
+        if (array_key_exists('sectionGroups', $this->_propDict) && !is_null($this->_propDict['sectionGroups'])) {
+            $sectionGroups = [];
+            if (count($this->_propDict['sectionGroups']) > 0 && is_a($this->_propDict['sectionGroups'][0], 'SectionGroup')) {
+                return $this->_propDict['sectionGroups'];
+            }
+            foreach ($this->_propDict['sectionGroups'] as $singleValue) {
+                $sectionGroups []= new SectionGroup($singleValue);
+            }
+            $this->_propDict['sectionGroups'] = $sectionGroups;
+            return $this->_propDict['sectionGroups'];
         }
+        return null;
     }
     
     /** 
     * Sets the sectionGroups
     * The section groups in the notebook. Read-only. Nullable.
     *
-    * @param SectionGroup $val The sectionGroups
+    * @param SectionGroup[] $val The sectionGroups
     *
     * @return Notebook
     */
@@ -241,22 +248,29 @@ class Notebook extends OnenoteEntityHierarchyModel
      * Gets the sections
     * The sections in the notebook. Read-only. Nullable.
      *
-     * @return array|null The sections
+     * @return OnenoteSection[]|null The sections
      */
     public function getSections()
     {
-        if (array_key_exists("sections", $this->_propDict)) {
-           return $this->_propDict["sections"];
-        } else {
-            return null;
+        if (array_key_exists('sections', $this->_propDict) && !is_null($this->_propDict['sections'])) {
+            $sections = [];
+            if (count($this->_propDict['sections']) > 0 && is_a($this->_propDict['sections'][0], 'OnenoteSection')) {
+                return $this->_propDict['sections'];
+            }
+            foreach ($this->_propDict['sections'] as $singleValue) {
+                $sections []= new OnenoteSection($singleValue);
+            }
+            $this->_propDict['sections'] = $sections;
+            return $this->_propDict['sections'];
         }
+        return null;
     }
     
     /** 
     * Sets the sections
     * The sections in the notebook. Read-only. Nullable.
     *
-    * @param OnenoteSection $val The sections
+    * @param OnenoteSection[] $val The sections
     *
     * @return Notebook
     */

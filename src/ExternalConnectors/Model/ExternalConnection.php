@@ -32,8 +32,8 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
     */
     public function getConfiguration()
     {
-        if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "\Microsoft\Graph\ExternalConnectors\Model\Configuration") || is_null($this->_propDict["configuration"])) {
+        if (array_key_exists("configuration", $this->_propDict) && !is_null($this->_propDict["configuration"])) {
+            if (is_a($this->_propDict["configuration"], "\Microsoft\Graph\ExternalConnectors\Model\Configuration")) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new Configuration($this->_propDict["configuration"]);
@@ -123,8 +123,8 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\ExternalConnectors\Model\ConnectionState") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\ExternalConnectors\Model\ConnectionState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ConnectionState($this->_propDict["state"]);
@@ -152,21 +152,28 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
      /** 
      * Gets the groups
      *
-     * @return array|null The groups
+     * @return ExternalGroup[]|null The groups
      */
     public function getGroups()
     {
-        if (array_key_exists("groups", $this->_propDict)) {
-           return $this->_propDict["groups"];
-        } else {
-            return null;
+        if (array_key_exists('groups', $this->_propDict) && !is_null($this->_propDict['groups'])) {
+            $groups = [];
+            if (count($this->_propDict['groups']) > 0 && is_a($this->_propDict['groups'][0], 'ExternalGroup')) {
+                return $this->_propDict['groups'];
+            }
+            foreach ($this->_propDict['groups'] as $singleValue) {
+                $groups []= new ExternalGroup($singleValue);
+            }
+            $this->_propDict['groups'] = $groups;
+            return $this->_propDict['groups'];
         }
+        return null;
     }
     
     /** 
     * Sets the groups
     *
-    * @param ExternalGroup $val The groups
+    * @param ExternalGroup[] $val The groups
     *
     * @return ExternalConnection
     */
@@ -181,22 +188,29 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
      * Gets the items
     * Read-only. Nullable.
      *
-     * @return array|null The items
+     * @return ExternalItem[]|null The items
      */
     public function getItems()
     {
-        if (array_key_exists("items", $this->_propDict)) {
-           return $this->_propDict["items"];
-        } else {
-            return null;
+        if (array_key_exists('items', $this->_propDict) && !is_null($this->_propDict['items'])) {
+            $items = [];
+            if (count($this->_propDict['items']) > 0 && is_a($this->_propDict['items'][0], 'ExternalItem')) {
+                return $this->_propDict['items'];
+            }
+            foreach ($this->_propDict['items'] as $singleValue) {
+                $items []= new ExternalItem($singleValue);
+            }
+            $this->_propDict['items'] = $items;
+            return $this->_propDict['items'];
         }
+        return null;
     }
     
     /** 
     * Sets the items
     * Read-only. Nullable.
     *
-    * @param ExternalItem $val The items
+    * @param ExternalItem[] $val The items
     *
     * @return ExternalConnection
     */
@@ -211,22 +225,29 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
      * Gets the operations
     * Read-only. Nullable.
      *
-     * @return array|null The operations
+     * @return ConnectionOperation[]|null The operations
      */
     public function getOperations()
     {
-        if (array_key_exists("operations", $this->_propDict)) {
-           return $this->_propDict["operations"];
-        } else {
-            return null;
+        if (array_key_exists('operations', $this->_propDict) && !is_null($this->_propDict['operations'])) {
+            $operations = [];
+            if (count($this->_propDict['operations']) > 0 && is_a($this->_propDict['operations'][0], 'ConnectionOperation')) {
+                return $this->_propDict['operations'];
+            }
+            foreach ($this->_propDict['operations'] as $singleValue) {
+                $operations []= new ConnectionOperation($singleValue);
+            }
+            $this->_propDict['operations'] = $operations;
+            return $this->_propDict['operations'];
         }
+        return null;
     }
     
     /** 
     * Sets the operations
     * Read-only. Nullable.
     *
-    * @param ConnectionOperation $val The operations
+    * @param ConnectionOperation[] $val The operations
     *
     * @return ExternalConnection
     */
@@ -244,8 +265,8 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
     */
     public function getSchema()
     {
-        if (array_key_exists("schema", $this->_propDict)) {
-            if (is_a($this->_propDict["schema"], "\Microsoft\Graph\ExternalConnectors\Model\Schema") || is_null($this->_propDict["schema"])) {
+        if (array_key_exists("schema", $this->_propDict) && !is_null($this->_propDict["schema"])) {
+            if (is_a($this->_propDict["schema"], "\Microsoft\Graph\ExternalConnectors\Model\Schema")) {
                 return $this->_propDict["schema"];
             } else {
                 $this->_propDict["schema"] = new Schema($this->_propDict["schema"]);

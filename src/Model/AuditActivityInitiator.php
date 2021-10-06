@@ -32,8 +32,9 @@ class AuditActivityInitiator extends Entity
     */
     public function getApp()
     {
-        if (array_key_exists("app", $this->_propDict)) {
-            if (is_a($this->_propDict["app"], "\Microsoft\Graph\Model\AppIdentity") || is_null($this->_propDict["app"])) {
+        if (array_key_exists("app", $this->_propDict) && !is_null($this->_propDict["app"])) {
+     
+            if (is_a($this->_propDict["app"], "\Microsoft\Graph\Model\AppIdentity")) {
                 return $this->_propDict["app"];
             } else {
                 $this->_propDict["app"] = new AppIdentity($this->_propDict["app"]);
@@ -65,8 +66,9 @@ class AuditActivityInitiator extends Entity
     */
     public function getUser()
     {
-        if (array_key_exists("user", $this->_propDict)) {
-            if (is_a($this->_propDict["user"], "\Microsoft\Graph\Model\UserIdentity") || is_null($this->_propDict["user"])) {
+        if (array_key_exists("user", $this->_propDict) && !is_null($this->_propDict["user"])) {
+     
+            if (is_a($this->_propDict["user"], "\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["user"];
             } else {
                 $this->_propDict["user"] = new UserIdentity($this->_propDict["user"]);

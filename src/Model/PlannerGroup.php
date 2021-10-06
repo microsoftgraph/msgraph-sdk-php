@@ -29,22 +29,29 @@ class PlannerGroup extends Entity
      * Gets the plans
     * Read-only. Nullable. Returns the plannerPlans owned by the group.
      *
-     * @return array|null The plans
+     * @return PlannerPlan[]|null The plans
      */
     public function getPlans()
     {
-        if (array_key_exists("plans", $this->_propDict)) {
-           return $this->_propDict["plans"];
-        } else {
-            return null;
+        if (array_key_exists('plans', $this->_propDict) && !is_null($this->_propDict['plans'])) {
+            $plans = [];
+            if (count($this->_propDict['plans']) > 0 && is_a($this->_propDict['plans'][0], 'PlannerPlan')) {
+                return $this->_propDict['plans'];
+            }
+            foreach ($this->_propDict['plans'] as $singleValue) {
+                $plans []= new PlannerPlan($singleValue);
+            }
+            $this->_propDict['plans'] = $plans;
+            return $this->_propDict['plans'];
         }
+        return null;
     }
     
     /** 
     * Sets the plans
     * Read-only. Nullable. Returns the plannerPlans owned by the group.
     *
-    * @param PlannerPlan $val The plans
+    * @param PlannerPlan[] $val The plans
     *
     * @return PlannerGroup
     */

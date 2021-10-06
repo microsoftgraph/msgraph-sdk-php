@@ -32,8 +32,8 @@ class EducationSchool extends EducationOrganization
     */
     public function getAddress()
     {
-        if (array_key_exists("address", $this->_propDict)) {
-            if (is_a($this->_propDict["address"], "\Microsoft\Graph\Model\PhysicalAddress") || is_null($this->_propDict["address"])) {
+        if (array_key_exists("address", $this->_propDict) && !is_null($this->_propDict["address"])) {
+            if (is_a($this->_propDict["address"], "\Microsoft\Graph\Model\PhysicalAddress")) {
                 return $this->_propDict["address"];
             } else {
                 $this->_propDict["address"] = new PhysicalAddress($this->_propDict["address"]);
@@ -65,8 +65,8 @@ class EducationSchool extends EducationOrganization
     */
     public function getCreatedBy()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
+        if (array_key_exists("createdBy", $this->_propDict) && !is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -357,8 +357,8 @@ class EducationSchool extends EducationOrganization
     */
     public function getAdministrativeUnit()
     {
-        if (array_key_exists("administrativeUnit", $this->_propDict)) {
-            if (is_a($this->_propDict["administrativeUnit"], "\Microsoft\Graph\Model\AdministrativeUnit") || is_null($this->_propDict["administrativeUnit"])) {
+        if (array_key_exists("administrativeUnit", $this->_propDict) && !is_null($this->_propDict["administrativeUnit"])) {
+            if (is_a($this->_propDict["administrativeUnit"], "\Microsoft\Graph\Model\AdministrativeUnit")) {
                 return $this->_propDict["administrativeUnit"];
             } else {
                 $this->_propDict["administrativeUnit"] = new AdministrativeUnit($this->_propDict["administrativeUnit"]);
@@ -387,22 +387,29 @@ class EducationSchool extends EducationOrganization
      * Gets the classes
     * Classes taught at the school. Nullable.
      *
-     * @return array|null The classes
+     * @return EducationClass[]|null The classes
      */
     public function getClasses()
     {
-        if (array_key_exists("classes", $this->_propDict)) {
-           return $this->_propDict["classes"];
-        } else {
-            return null;
+        if (array_key_exists('classes', $this->_propDict) && !is_null($this->_propDict['classes'])) {
+            $classes = [];
+            if (count($this->_propDict['classes']) > 0 && is_a($this->_propDict['classes'][0], 'EducationClass')) {
+                return $this->_propDict['classes'];
+            }
+            foreach ($this->_propDict['classes'] as $singleValue) {
+                $classes []= new EducationClass($singleValue);
+            }
+            $this->_propDict['classes'] = $classes;
+            return $this->_propDict['classes'];
         }
+        return null;
     }
     
     /** 
     * Sets the classes
     * Classes taught at the school. Nullable.
     *
-    * @param EducationClass $val The classes
+    * @param EducationClass[] $val The classes
     *
     * @return EducationSchool
     */
@@ -417,22 +424,29 @@ class EducationSchool extends EducationOrganization
      * Gets the users
     * Users in the school. Nullable.
      *
-     * @return array|null The users
+     * @return EducationUser[]|null The users
      */
     public function getUsers()
     {
-        if (array_key_exists("users", $this->_propDict)) {
-           return $this->_propDict["users"];
-        } else {
-            return null;
+        if (array_key_exists('users', $this->_propDict) && !is_null($this->_propDict['users'])) {
+            $users = [];
+            if (count($this->_propDict['users']) > 0 && is_a($this->_propDict['users'][0], 'EducationUser')) {
+                return $this->_propDict['users'];
+            }
+            foreach ($this->_propDict['users'] as $singleValue) {
+                $users []= new EducationUser($singleValue);
+            }
+            $this->_propDict['users'] = $users;
+            return $this->_propDict['users'];
         }
+        return null;
     }
     
     /** 
     * Sets the users
     * Users in the school. Nullable.
     *
-    * @param EducationUser $val The users
+    * @param EducationUser[] $val The users
     *
     * @return EducationSchool
     */

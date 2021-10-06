@@ -32,8 +32,9 @@ class BroadcastMeetingSettings extends Entity
     */
     public function getAllowedAudience()
     {
-        if (array_key_exists("allowedAudience", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedAudience"], "\Microsoft\Graph\Model\BroadcastMeetingAudience") || is_null($this->_propDict["allowedAudience"])) {
+        if (array_key_exists("allowedAudience", $this->_propDict) && !is_null($this->_propDict["allowedAudience"])) {
+     
+            if (is_a($this->_propDict["allowedAudience"], "\Microsoft\Graph\Model\BroadcastMeetingAudience")) {
                 return $this->_propDict["allowedAudience"];
             } else {
                 $this->_propDict["allowedAudience"] = new BroadcastMeetingAudience($this->_propDict["allowedAudience"]);

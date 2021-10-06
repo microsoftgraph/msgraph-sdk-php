@@ -42,7 +42,7 @@ class ResourceAction extends Entity
     * Sets the allowedResourceActions
     * Allowed Actions
     *
-    * @param string $val The value of the allowedResourceActions
+    * @param string[] $val The value of the allowedResourceActions
     *
     * @return ResourceAction
     */
@@ -70,7 +70,7 @@ class ResourceAction extends Entity
     * Sets the notAllowedResourceActions
     * Not Allowed Actions.
     *
-    * @param string $val The value of the notAllowedResourceActions
+    * @param string[] $val The value of the notAllowedResourceActions
     *
     * @return ResourceAction
     */

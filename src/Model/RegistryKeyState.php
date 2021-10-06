@@ -32,8 +32,9 @@ class RegistryKeyState extends Entity
     */
     public function getHive()
     {
-        if (array_key_exists("hive", $this->_propDict)) {
-            if (is_a($this->_propDict["hive"], "\Microsoft\Graph\Model\RegistryHive") || is_null($this->_propDict["hive"])) {
+        if (array_key_exists("hive", $this->_propDict) && !is_null($this->_propDict["hive"])) {
+     
+            if (is_a($this->_propDict["hive"], "\Microsoft\Graph\Model\RegistryHive")) {
                 return $this->_propDict["hive"];
             } else {
                 $this->_propDict["hive"] = new RegistryHive($this->_propDict["hive"]);
@@ -177,8 +178,9 @@ class RegistryKeyState extends Entity
     */
     public function getOperation()
     {
-        if (array_key_exists("operation", $this->_propDict)) {
-            if (is_a($this->_propDict["operation"], "\Microsoft\Graph\Model\RegistryOperation") || is_null($this->_propDict["operation"])) {
+        if (array_key_exists("operation", $this->_propDict) && !is_null($this->_propDict["operation"])) {
+     
+            if (is_a($this->_propDict["operation"], "\Microsoft\Graph\Model\RegistryOperation")) {
                 return $this->_propDict["operation"];
             } else {
                 $this->_propDict["operation"] = new RegistryOperation($this->_propDict["operation"]);
@@ -294,8 +296,9 @@ class RegistryKeyState extends Entity
     */
     public function getValueType()
     {
-        if (array_key_exists("valueType", $this->_propDict)) {
-            if (is_a($this->_propDict["valueType"], "\Microsoft\Graph\Model\RegistryValueType") || is_null($this->_propDict["valueType"])) {
+        if (array_key_exists("valueType", $this->_propDict) && !is_null($this->_propDict["valueType"])) {
+     
+            if (is_a($this->_propDict["valueType"], "\Microsoft\Graph\Model\RegistryValueType")) {
                 return $this->_propDict["valueType"];
             } else {
                 $this->_propDict["valueType"] = new RegistryValueType($this->_propDict["valueType"]);

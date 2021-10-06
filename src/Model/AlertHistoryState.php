@@ -98,7 +98,7 @@ class AlertHistoryState extends Entity
     * Sets the comments
     * Comment entered by signed-in user.
     *
-    * @param string $val The value of the comments
+    * @param string[] $val The value of the comments
     *
     * @return AlertHistoryState
     */
@@ -116,8 +116,9 @@ class AlertHistoryState extends Entity
     */
     public function getFeedback()
     {
-        if (array_key_exists("feedback", $this->_propDict)) {
-            if (is_a($this->_propDict["feedback"], "\Microsoft\Graph\Model\AlertFeedback") || is_null($this->_propDict["feedback"])) {
+        if (array_key_exists("feedback", $this->_propDict) && !is_null($this->_propDict["feedback"])) {
+     
+            if (is_a($this->_propDict["feedback"], "\Microsoft\Graph\Model\AlertFeedback")) {
                 return $this->_propDict["feedback"];
             } else {
                 $this->_propDict["feedback"] = new AlertFeedback($this->_propDict["feedback"]);
@@ -149,8 +150,9 @@ class AlertHistoryState extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\AlertStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+     
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\AlertStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new AlertStatus($this->_propDict["status"]);
@@ -182,8 +184,9 @@ class AlertHistoryState extends Entity
     */
     public function getUpdatedDateTime()
     {
-        if (array_key_exists("updatedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["updatedDateTime"], "\DateTime") || is_null($this->_propDict["updatedDateTime"])) {
+        if (array_key_exists("updatedDateTime", $this->_propDict) && !is_null($this->_propDict["updatedDateTime"])) {
+     
+            if (is_a($this->_propDict["updatedDateTime"], "\DateTime")) {
                 return $this->_propDict["updatedDateTime"];
             } else {
                 $this->_propDict["updatedDateTime"] = new \DateTime($this->_propDict["updatedDateTime"]);

@@ -32,8 +32,8 @@ class Segment extends \Microsoft\Graph\Model\Entity
     */
     public function getCallee()
     {
-        if (array_key_exists("callee", $this->_propDict)) {
-            if (is_a($this->_propDict["callee"], "\Microsoft\Graph\CallRecords\Model\Endpoint") || is_null($this->_propDict["callee"])) {
+        if (array_key_exists("callee", $this->_propDict) && !is_null($this->_propDict["callee"])) {
+            if (is_a($this->_propDict["callee"], "\Microsoft\Graph\CallRecords\Model\Endpoint")) {
                 return $this->_propDict["callee"];
             } else {
                 $this->_propDict["callee"] = new Endpoint($this->_propDict["callee"]);
@@ -65,8 +65,8 @@ class Segment extends \Microsoft\Graph\Model\Entity
     */
     public function getCaller()
     {
-        if (array_key_exists("caller", $this->_propDict)) {
-            if (is_a($this->_propDict["caller"], "\Microsoft\Graph\CallRecords\Model\Endpoint") || is_null($this->_propDict["caller"])) {
+        if (array_key_exists("caller", $this->_propDict) && !is_null($this->_propDict["caller"])) {
+            if (is_a($this->_propDict["caller"], "\Microsoft\Graph\CallRecords\Model\Endpoint")) {
                 return $this->_propDict["caller"];
             } else {
                 $this->_propDict["caller"] = new Endpoint($this->_propDict["caller"]);
@@ -98,8 +98,8 @@ class Segment extends \Microsoft\Graph\Model\Entity
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -131,8 +131,8 @@ class Segment extends \Microsoft\Graph\Model\Entity
     */
     public function getFailureInfo()
     {
-        if (array_key_exists("failureInfo", $this->_propDict)) {
-            if (is_a($this->_propDict["failureInfo"], "\Microsoft\Graph\CallRecords\Model\FailureInfo") || is_null($this->_propDict["failureInfo"])) {
+        if (array_key_exists("failureInfo", $this->_propDict) && !is_null($this->_propDict["failureInfo"])) {
+            if (is_a($this->_propDict["failureInfo"], "\Microsoft\Graph\CallRecords\Model\FailureInfo")) {
                 return $this->_propDict["failureInfo"];
             } else {
                 $this->_propDict["failureInfo"] = new FailureInfo($this->_propDict["failureInfo"]);
@@ -161,22 +161,29 @@ class Segment extends \Microsoft\Graph\Model\Entity
      * Gets the media
     * Media associated with this segment.
      *
-     * @return array|null The media
+     * @return Media[]|null The media
      */
     public function getMedia()
     {
-        if (array_key_exists("media", $this->_propDict)) {
-           return $this->_propDict["media"];
-        } else {
-            return null;
+        if (array_key_exists('media', $this->_propDict) && !is_null($this->_propDict['media'])) {
+            $media = [];
+            if (count($this->_propDict['media']) > 0 && is_a($this->_propDict['media'][0], 'Media')) {
+                return $this->_propDict['media'];
+            }
+            foreach ($this->_propDict['media'] as $singleValue) {
+                $media []= new Media($singleValue);
+            }
+            $this->_propDict['media'] = $media;
+            return $this->_propDict['media'];
         }
+        return null;
     }
     
     /** 
     * Sets the media
     * Media associated with this segment.
     *
-    * @param Media $val The media
+    * @param Media[] $val The media
     *
     * @return Segment
     */
@@ -194,8 +201,8 @@ class Segment extends \Microsoft\Graph\Model\Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

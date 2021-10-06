@@ -32,8 +32,8 @@ class ConnectionOperation extends \Microsoft\Graph\Model\Entity
     */
     public function getError()
     {
-        if (array_key_exists("error", $this->_propDict)) {
-            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\PublicError") || is_null($this->_propDict["error"])) {
+        if (array_key_exists("error", $this->_propDict) && !is_null($this->_propDict["error"])) {
+            if (is_a($this->_propDict["error"], "\Microsoft\Graph\Model\PublicError")) {
                 return $this->_propDict["error"];
             } else {
                 $this->_propDict["error"] = new \Microsoft\Graph\Model\PublicError($this->_propDict["error"]);
@@ -65,8 +65,8 @@ class ConnectionOperation extends \Microsoft\Graph\Model\Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperationStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\ExternalConnectors\Model\ConnectionOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ConnectionOperationStatus($this->_propDict["status"]);

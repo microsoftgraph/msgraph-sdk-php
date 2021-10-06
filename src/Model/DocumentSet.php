@@ -28,18 +28,22 @@ class DocumentSet extends Entity
     * Gets the allowedContentTypes
     * Content types allowed in document set.
     *
-    * @return ContentTypeInfo|null The allowedContentTypes
+    * @return ContentTypeInfo[]|null The allowedContentTypes
     */
     public function getAllowedContentTypes()
     {
-        if (array_key_exists("allowedContentTypes", $this->_propDict)) {
-            if (is_a($this->_propDict["allowedContentTypes"], "\Microsoft\Graph\Model\ContentTypeInfo") || is_null($this->_propDict["allowedContentTypes"])) {
-                return $this->_propDict["allowedContentTypes"];
-            } else {
-                $this->_propDict["allowedContentTypes"] = new ContentTypeInfo($this->_propDict["allowedContentTypes"]);
-                return $this->_propDict["allowedContentTypes"];
+        if (array_key_exists("allowedContentTypes", $this->_propDict) && !is_null($this->_propDict["allowedContentTypes"])) {
+       
+            if (count($this->_propDict['allowedContentTypes']) > 0 && is_a($this->_propDict['allowedContentTypes'][0], 'ContentTypeInfo')) {
+               return $this->_propDict['allowedContentTypes'];
             }
-        }
+            $allowedContentTypes = [];
+            foreach ($this->_propDict['allowedContentTypes'] as $singleValue) {
+               $allowedContentTypes []= new ContentTypeInfo($singleValue);
+            }
+            $this->_propDict['allowedContentTypes'] = $allowedContentTypes;
+            return $this->_propDict['allowedContentTypes'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class DocumentSet extends Entity
     * Sets the allowedContentTypes
     * Content types allowed in document set.
     *
-    * @param ContentTypeInfo $val The value to assign to the allowedContentTypes
+    * @param ContentTypeInfo[] $val The value to assign to the allowedContentTypes
     *
     * @return DocumentSet The DocumentSet
     */
@@ -61,18 +65,22 @@ class DocumentSet extends Entity
     * Gets the defaultContents
     * Default contents of document set.
     *
-    * @return DocumentSetContent|null The defaultContents
+    * @return DocumentSetContent[]|null The defaultContents
     */
     public function getDefaultContents()
     {
-        if (array_key_exists("defaultContents", $this->_propDict)) {
-            if (is_a($this->_propDict["defaultContents"], "\Microsoft\Graph\Model\DocumentSetContent") || is_null($this->_propDict["defaultContents"])) {
-                return $this->_propDict["defaultContents"];
-            } else {
-                $this->_propDict["defaultContents"] = new DocumentSetContent($this->_propDict["defaultContents"]);
-                return $this->_propDict["defaultContents"];
+        if (array_key_exists("defaultContents", $this->_propDict) && !is_null($this->_propDict["defaultContents"])) {
+       
+            if (count($this->_propDict['defaultContents']) > 0 && is_a($this->_propDict['defaultContents'][0], 'DocumentSetContent')) {
+               return $this->_propDict['defaultContents'];
             }
-        }
+            $defaultContents = [];
+            foreach ($this->_propDict['defaultContents'] as $singleValue) {
+               $defaultContents []= new DocumentSetContent($singleValue);
+            }
+            $this->_propDict['defaultContents'] = $defaultContents;
+            return $this->_propDict['defaultContents'];
+            }
         return null;
     }
 
@@ -80,7 +88,7 @@ class DocumentSet extends Entity
     * Sets the defaultContents
     * Default contents of document set.
     *
-    * @param DocumentSetContent $val The value to assign to the defaultContents
+    * @param DocumentSetContent[] $val The value to assign to the defaultContents
     *
     * @return DocumentSet The DocumentSet
     */
@@ -177,25 +185,29 @@ class DocumentSet extends Entity
     /**
     * Gets the sharedColumns
     *
-    * @return ColumnDefinition|null The sharedColumns
+    * @return ColumnDefinition[]|null The sharedColumns
     */
     public function getSharedColumns()
     {
-        if (array_key_exists("sharedColumns", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedColumns"], "\Microsoft\Graph\Model\ColumnDefinition") || is_null($this->_propDict["sharedColumns"])) {
-                return $this->_propDict["sharedColumns"];
-            } else {
-                $this->_propDict["sharedColumns"] = new ColumnDefinition($this->_propDict["sharedColumns"]);
-                return $this->_propDict["sharedColumns"];
+        if (array_key_exists("sharedColumns", $this->_propDict) && !is_null($this->_propDict["sharedColumns"])) {
+       
+            if (count($this->_propDict['sharedColumns']) > 0 && is_a($this->_propDict['sharedColumns'][0], 'ColumnDefinition')) {
+               return $this->_propDict['sharedColumns'];
             }
-        }
+            $sharedColumns = [];
+            foreach ($this->_propDict['sharedColumns'] as $singleValue) {
+               $sharedColumns []= new ColumnDefinition($singleValue);
+            }
+            $this->_propDict['sharedColumns'] = $sharedColumns;
+            return $this->_propDict['sharedColumns'];
+            }
         return null;
     }
 
     /**
     * Sets the sharedColumns
     *
-    * @param ColumnDefinition $val The value to assign to the sharedColumns
+    * @param ColumnDefinition[] $val The value to assign to the sharedColumns
     *
     * @return DocumentSet The DocumentSet
     */
@@ -208,25 +220,29 @@ class DocumentSet extends Entity
     /**
     * Gets the welcomePageColumns
     *
-    * @return ColumnDefinition|null The welcomePageColumns
+    * @return ColumnDefinition[]|null The welcomePageColumns
     */
     public function getWelcomePageColumns()
     {
-        if (array_key_exists("welcomePageColumns", $this->_propDict)) {
-            if (is_a($this->_propDict["welcomePageColumns"], "\Microsoft\Graph\Model\ColumnDefinition") || is_null($this->_propDict["welcomePageColumns"])) {
-                return $this->_propDict["welcomePageColumns"];
-            } else {
-                $this->_propDict["welcomePageColumns"] = new ColumnDefinition($this->_propDict["welcomePageColumns"]);
-                return $this->_propDict["welcomePageColumns"];
+        if (array_key_exists("welcomePageColumns", $this->_propDict) && !is_null($this->_propDict["welcomePageColumns"])) {
+       
+            if (count($this->_propDict['welcomePageColumns']) > 0 && is_a($this->_propDict['welcomePageColumns'][0], 'ColumnDefinition')) {
+               return $this->_propDict['welcomePageColumns'];
             }
-        }
+            $welcomePageColumns = [];
+            foreach ($this->_propDict['welcomePageColumns'] as $singleValue) {
+               $welcomePageColumns []= new ColumnDefinition($singleValue);
+            }
+            $this->_propDict['welcomePageColumns'] = $welcomePageColumns;
+            return $this->_propDict['welcomePageColumns'];
+            }
         return null;
     }
 
     /**
     * Sets the welcomePageColumns
     *
-    * @param ColumnDefinition $val The value to assign to the welcomePageColumns
+    * @param ColumnDefinition[] $val The value to assign to the welcomePageColumns
     *
     * @return DocumentSet The DocumentSet
     */

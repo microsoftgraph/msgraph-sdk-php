@@ -26,7 +26,7 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).
+    * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, NOT, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
     *
     * @return bool|null The accountEnabled
     */
@@ -41,7 +41,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).
+    * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, NOT, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
     *
     * @param bool $val The accountEnabled
     *
@@ -58,22 +58,29 @@ class Device extends DirectoryObject
      * Gets the alternativeSecurityIds
     * For internal use only. Not nullable. Supports $filter (eq, NOT, ge, le).
      *
-     * @return array|null The alternativeSecurityIds
+     * @return AlternativeSecurityId[]|null The alternativeSecurityIds
      */
     public function getAlternativeSecurityIds()
     {
-        if (array_key_exists("alternativeSecurityIds", $this->_propDict)) {
-           return $this->_propDict["alternativeSecurityIds"];
-        } else {
-            return null;
+        if (array_key_exists('alternativeSecurityIds', $this->_propDict) && !is_null($this->_propDict['alternativeSecurityIds'])) {
+            $alternativeSecurityIds = [];
+            if (count($this->_propDict['alternativeSecurityIds']) > 0 && is_a($this->_propDict['alternativeSecurityIds'][0], 'AlternativeSecurityId')) {
+                return $this->_propDict['alternativeSecurityIds'];
+            }
+            foreach ($this->_propDict['alternativeSecurityIds'] as $singleValue) {
+                $alternativeSecurityIds []= new AlternativeSecurityId($singleValue);
+            }
+            $this->_propDict['alternativeSecurityIds'] = $alternativeSecurityIds;
+            return $this->_propDict['alternativeSecurityIds'];
         }
+        return null;
     }
     
     /** 
     * Sets the alternativeSecurityIds
     * For internal use only. Not nullable. Supports $filter (eq, NOT, ge, le).
     *
-    * @param AlternativeSecurityId $val The alternativeSecurityIds
+    * @param AlternativeSecurityId[] $val The alternativeSecurityIds
     *
     * @return Device
     */
@@ -91,8 +98,8 @@ class Device extends DirectoryObject
     */
     public function getApproximateLastSignInDateTime()
     {
-        if (array_key_exists("approximateLastSignInDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["approximateLastSignInDateTime"], "\DateTime") || is_null($this->_propDict["approximateLastSignInDateTime"])) {
+        if (array_key_exists("approximateLastSignInDateTime", $this->_propDict) && !is_null($this->_propDict["approximateLastSignInDateTime"])) {
+            if (is_a($this->_propDict["approximateLastSignInDateTime"], "\DateTime")) {
                 return $this->_propDict["approximateLastSignInDateTime"];
             } else {
                 $this->_propDict["approximateLastSignInDateTime"] = new \DateTime($this->_propDict["approximateLastSignInDateTime"]);
@@ -124,8 +131,8 @@ class Device extends DirectoryObject
     */
     public function getComplianceExpirationDateTime()
     {
-        if (array_key_exists("complianceExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceExpirationDateTime"])) {
+        if (array_key_exists("complianceExpirationDateTime", $this->_propDict) && !is_null($this->_propDict["complianceExpirationDateTime"])) {
+            if (is_a($this->_propDict["complianceExpirationDateTime"], "\DateTime")) {
                 return $this->_propDict["complianceExpirationDateTime"];
             } else {
                 $this->_propDict["complianceExpirationDateTime"] = new \DateTime($this->_propDict["complianceExpirationDateTime"]);
@@ -360,8 +367,8 @@ class Device extends DirectoryObject
     */
     public function getOnPremisesLastSyncDateTime()
     {
-        if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime") || is_null($this->_propDict["onPremisesLastSyncDateTime"])) {
+        if (array_key_exists("onPremisesLastSyncDateTime", $this->_propDict) && !is_null($this->_propDict["onPremisesLastSyncDateTime"])) {
+            if (is_a($this->_propDict["onPremisesLastSyncDateTime"], "\DateTime")) {
                 return $this->_propDict["onPremisesLastSyncDateTime"];
             } else {
                 $this->_propDict["onPremisesLastSyncDateTime"] = new \DateTime($this->_propDict["onPremisesLastSyncDateTime"]);
@@ -593,22 +600,29 @@ class Device extends DirectoryObject
      * Gets the memberOf
     * Groups that this device is a member of. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The memberOf
+     * @return DirectoryObject[]|null The memberOf
      */
     public function getMemberOf()
     {
-        if (array_key_exists("memberOf", $this->_propDict)) {
-           return $this->_propDict["memberOf"];
-        } else {
-            return null;
+        if (array_key_exists('memberOf', $this->_propDict) && !is_null($this->_propDict['memberOf'])) {
+            $memberOf = [];
+            if (count($this->_propDict['memberOf']) > 0 && is_a($this->_propDict['memberOf'][0], 'DirectoryObject')) {
+                return $this->_propDict['memberOf'];
+            }
+            foreach ($this->_propDict['memberOf'] as $singleValue) {
+                $memberOf []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['memberOf'] = $memberOf;
+            return $this->_propDict['memberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the memberOf
     * Groups that this device is a member of. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The memberOf
+    * @param DirectoryObject[] $val The memberOf
     *
     * @return Device
     */
@@ -623,22 +637,29 @@ class Device extends DirectoryObject
      * Gets the registeredOwners
     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The registeredOwners
+     * @return DirectoryObject[]|null The registeredOwners
      */
     public function getRegisteredOwners()
     {
-        if (array_key_exists("registeredOwners", $this->_propDict)) {
-           return $this->_propDict["registeredOwners"];
-        } else {
-            return null;
+        if (array_key_exists('registeredOwners', $this->_propDict) && !is_null($this->_propDict['registeredOwners'])) {
+            $registeredOwners = [];
+            if (count($this->_propDict['registeredOwners']) > 0 && is_a($this->_propDict['registeredOwners'][0], 'DirectoryObject')) {
+                return $this->_propDict['registeredOwners'];
+            }
+            foreach ($this->_propDict['registeredOwners'] as $singleValue) {
+                $registeredOwners []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['registeredOwners'] = $registeredOwners;
+            return $this->_propDict['registeredOwners'];
         }
+        return null;
     }
     
     /** 
     * Sets the registeredOwners
     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The registeredOwners
+    * @param DirectoryObject[] $val The registeredOwners
     *
     * @return Device
     */
@@ -653,22 +674,29 @@ class Device extends DirectoryObject
      * Gets the registeredUsers
     * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      *
-     * @return array|null The registeredUsers
+     * @return DirectoryObject[]|null The registeredUsers
      */
     public function getRegisteredUsers()
     {
-        if (array_key_exists("registeredUsers", $this->_propDict)) {
-           return $this->_propDict["registeredUsers"];
-        } else {
-            return null;
+        if (array_key_exists('registeredUsers', $this->_propDict) && !is_null($this->_propDict['registeredUsers'])) {
+            $registeredUsers = [];
+            if (count($this->_propDict['registeredUsers']) > 0 && is_a($this->_propDict['registeredUsers'][0], 'DirectoryObject')) {
+                return $this->_propDict['registeredUsers'];
+            }
+            foreach ($this->_propDict['registeredUsers'] as $singleValue) {
+                $registeredUsers []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['registeredUsers'] = $registeredUsers;
+            return $this->_propDict['registeredUsers'];
         }
+        return null;
     }
     
     /** 
     * Sets the registeredUsers
     * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
     *
-    * @param DirectoryObject $val The registeredUsers
+    * @param DirectoryObject[] $val The registeredUsers
     *
     * @return Device
     */
@@ -683,22 +711,29 @@ class Device extends DirectoryObject
      * Gets the transitiveMemberOf
     * Groups that the device is a member of. This operation is transitive. Supports $expand.
      *
-     * @return array|null The transitiveMemberOf
+     * @return DirectoryObject[]|null The transitiveMemberOf
      */
     public function getTransitiveMemberOf()
     {
-        if (array_key_exists("transitiveMemberOf", $this->_propDict)) {
-           return $this->_propDict["transitiveMemberOf"];
-        } else {
-            return null;
+        if (array_key_exists('transitiveMemberOf', $this->_propDict) && !is_null($this->_propDict['transitiveMemberOf'])) {
+            $transitiveMemberOf = [];
+            if (count($this->_propDict['transitiveMemberOf']) > 0 && is_a($this->_propDict['transitiveMemberOf'][0], 'DirectoryObject')) {
+                return $this->_propDict['transitiveMemberOf'];
+            }
+            foreach ($this->_propDict['transitiveMemberOf'] as $singleValue) {
+                $transitiveMemberOf []= new DirectoryObject($singleValue);
+            }
+            $this->_propDict['transitiveMemberOf'] = $transitiveMemberOf;
+            return $this->_propDict['transitiveMemberOf'];
         }
+        return null;
     }
     
     /** 
     * Sets the transitiveMemberOf
     * Groups that the device is a member of. This operation is transitive. Supports $expand.
     *
-    * @param DirectoryObject $val The transitiveMemberOf
+    * @param DirectoryObject[] $val The transitiveMemberOf
     *
     * @return Device
     */
@@ -713,22 +748,29 @@ class Device extends DirectoryObject
      * Gets the extensions
     * The collection of open extensions defined for the device. Read-only. Nullable.
      *
-     * @return array|null The extensions
+     * @return Extension[]|null The extensions
      */
     public function getExtensions()
     {
-        if (array_key_exists("extensions", $this->_propDict)) {
-           return $this->_propDict["extensions"];
-        } else {
-            return null;
+        if (array_key_exists('extensions', $this->_propDict) && !is_null($this->_propDict['extensions'])) {
+            $extensions = [];
+            if (count($this->_propDict['extensions']) > 0 && is_a($this->_propDict['extensions'][0], 'Extension')) {
+                return $this->_propDict['extensions'];
+            }
+            foreach ($this->_propDict['extensions'] as $singleValue) {
+                $extensions []= new Extension($singleValue);
+            }
+            $this->_propDict['extensions'] = $extensions;
+            return $this->_propDict['extensions'];
         }
+        return null;
     }
     
     /** 
     * Sets the extensions
     * The collection of open extensions defined for the device. Read-only. Nullable.
     *
-    * @param Extension $val The extensions
+    * @param Extension[] $val The extensions
     *
     * @return Device
     */

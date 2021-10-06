@@ -32,8 +32,9 @@ class ResponseStatus extends Entity
     */
     public function getResponse()
     {
-        if (array_key_exists("response", $this->_propDict)) {
-            if (is_a($this->_propDict["response"], "\Microsoft\Graph\Model\ResponseType") || is_null($this->_propDict["response"])) {
+        if (array_key_exists("response", $this->_propDict) && !is_null($this->_propDict["response"])) {
+     
+            if (is_a($this->_propDict["response"], "\Microsoft\Graph\Model\ResponseType")) {
                 return $this->_propDict["response"];
             } else {
                 $this->_propDict["response"] = new ResponseType($this->_propDict["response"]);
@@ -65,8 +66,9 @@ class ResponseStatus extends Entity
     */
     public function getTime()
     {
-        if (array_key_exists("time", $this->_propDict)) {
-            if (is_a($this->_propDict["time"], "\DateTime") || is_null($this->_propDict["time"])) {
+        if (array_key_exists("time", $this->_propDict) && !is_null($this->_propDict["time"])) {
+     
+            if (is_a($this->_propDict["time"], "\DateTime")) {
                 return $this->_propDict["time"];
             } else {
                 $this->_propDict["time"] = new \DateTime($this->_propDict["time"]);

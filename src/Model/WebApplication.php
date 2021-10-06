@@ -60,8 +60,9 @@ class WebApplication extends Entity
     */
     public function getImplicitGrantSettings()
     {
-        if (array_key_exists("implicitGrantSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["implicitGrantSettings"], "\Microsoft\Graph\Model\ImplicitGrantSettings") || is_null($this->_propDict["implicitGrantSettings"])) {
+        if (array_key_exists("implicitGrantSettings", $this->_propDict) && !is_null($this->_propDict["implicitGrantSettings"])) {
+     
+            if (is_a($this->_propDict["implicitGrantSettings"], "\Microsoft\Graph\Model\ImplicitGrantSettings")) {
                 return $this->_propDict["implicitGrantSettings"];
             } else {
                 $this->_propDict["implicitGrantSettings"] = new ImplicitGrantSettings($this->_propDict["implicitGrantSettings"]);
@@ -131,7 +132,7 @@ class WebApplication extends Entity
     * Sets the redirectUris
     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
     *
-    * @param string $val The value of the redirectUris
+    * @param string[] $val The value of the redirectUris
     *
     * @return WebApplication
     */

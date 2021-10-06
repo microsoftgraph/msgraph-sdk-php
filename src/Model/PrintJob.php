@@ -32,8 +32,8 @@ class PrintJob extends Entity
     */
     public function getConfiguration()
     {
-        if (array_key_exists("configuration", $this->_propDict)) {
-            if (is_a($this->_propDict["configuration"], "\Microsoft\Graph\Model\PrintJobConfiguration") || is_null($this->_propDict["configuration"])) {
+        if (array_key_exists("configuration", $this->_propDict) && !is_null($this->_propDict["configuration"])) {
+            if (is_a($this->_propDict["configuration"], "\Microsoft\Graph\Model\PrintJobConfiguration")) {
                 return $this->_propDict["configuration"];
             } else {
                 $this->_propDict["configuration"] = new PrintJobConfiguration($this->_propDict["configuration"]);
@@ -65,8 +65,8 @@ class PrintJob extends Entity
     */
     public function getCreatedBy()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\UserIdentity") || is_null($this->_propDict["createdBy"])) {
+        if (array_key_exists("createdBy", $this->_propDict) && !is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
@@ -98,8 +98,8 @@ class PrintJob extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -218,8 +218,8 @@ class PrintJob extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\PrintJobStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\PrintJobStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PrintJobStatus($this->_propDict["status"]);
@@ -248,22 +248,29 @@ class PrintJob extends Entity
      * Gets the documents
     * Read-only.
      *
-     * @return array|null The documents
+     * @return PrintDocument[]|null The documents
      */
     public function getDocuments()
     {
-        if (array_key_exists("documents", $this->_propDict)) {
-           return $this->_propDict["documents"];
-        } else {
-            return null;
+        if (array_key_exists('documents', $this->_propDict) && !is_null($this->_propDict['documents'])) {
+            $documents = [];
+            if (count($this->_propDict['documents']) > 0 && is_a($this->_propDict['documents'][0], 'PrintDocument')) {
+                return $this->_propDict['documents'];
+            }
+            foreach ($this->_propDict['documents'] as $singleValue) {
+                $documents []= new PrintDocument($singleValue);
+            }
+            $this->_propDict['documents'] = $documents;
+            return $this->_propDict['documents'];
         }
+        return null;
     }
     
     /** 
     * Sets the documents
     * Read-only.
     *
-    * @param PrintDocument $val The documents
+    * @param PrintDocument[] $val The documents
     *
     * @return PrintJob
     */
@@ -278,22 +285,29 @@ class PrintJob extends Entity
      * Gets the tasks
     * A list of printTasks that were triggered by this print job.
      *
-     * @return array|null The tasks
+     * @return PrintTask[]|null The tasks
      */
     public function getTasks()
     {
-        if (array_key_exists("tasks", $this->_propDict)) {
-           return $this->_propDict["tasks"];
-        } else {
-            return null;
+        if (array_key_exists('tasks', $this->_propDict) && !is_null($this->_propDict['tasks'])) {
+            $tasks = [];
+            if (count($this->_propDict['tasks']) > 0 && is_a($this->_propDict['tasks'][0], 'PrintTask')) {
+                return $this->_propDict['tasks'];
+            }
+            foreach ($this->_propDict['tasks'] as $singleValue) {
+                $tasks []= new PrintTask($singleValue);
+            }
+            $this->_propDict['tasks'] = $tasks;
+            return $this->_propDict['tasks'];
         }
+        return null;
     }
     
     /** 
     * Sets the tasks
     * A list of printTasks that were triggered by this print job.
     *
-    * @param PrintTask $val The tasks
+    * @param PrintTask[] $val The tasks
     *
     * @return PrintJob
     */

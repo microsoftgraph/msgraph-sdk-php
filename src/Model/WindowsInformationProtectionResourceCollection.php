@@ -70,7 +70,7 @@ class WindowsInformationProtectionResourceCollection extends Entity
     * Sets the resources
     * Collection of resources
     *
-    * @param string $val The value of the resources
+    * @param string[] $val The value of the resources
     *
     * @return WindowsInformationProtectionResourceCollection
     */

@@ -113,8 +113,9 @@ class ScoredEmailAddress extends Entity
     */
     public function getSelectionLikelihood()
     {
-        if (array_key_exists("selectionLikelihood", $this->_propDict)) {
-            if (is_a($this->_propDict["selectionLikelihood"], "\Microsoft\Graph\Model\SelectionLikelihoodInfo") || is_null($this->_propDict["selectionLikelihood"])) {
+        if (array_key_exists("selectionLikelihood", $this->_propDict) && !is_null($this->_propDict["selectionLikelihood"])) {
+     
+            if (is_a($this->_propDict["selectionLikelihood"], "\Microsoft\Graph\Model\SelectionLikelihoodInfo")) {
                 return $this->_propDict["selectionLikelihood"];
             } else {
                 $this->_propDict["selectionLikelihood"] = new SelectionLikelihoodInfo($this->_propDict["selectionLikelihood"]);

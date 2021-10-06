@@ -28,18 +28,22 @@ class ConditionalAccessPlatforms extends Entity
     * Gets the excludePlatforms
     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
     *
-    * @return ConditionalAccessDevicePlatform|null The excludePlatforms
+    * @return ConditionalAccessDevicePlatform[]|null The excludePlatforms
     */
     public function getExcludePlatforms()
     {
-        if (array_key_exists("excludePlatforms", $this->_propDict)) {
-            if (is_a($this->_propDict["excludePlatforms"], "\Microsoft\Graph\Model\ConditionalAccessDevicePlatform") || is_null($this->_propDict["excludePlatforms"])) {
-                return $this->_propDict["excludePlatforms"];
-            } else {
-                $this->_propDict["excludePlatforms"] = new ConditionalAccessDevicePlatform($this->_propDict["excludePlatforms"]);
-                return $this->_propDict["excludePlatforms"];
+        if (array_key_exists("excludePlatforms", $this->_propDict) && !is_null($this->_propDict["excludePlatforms"])) {
+       
+            if (count($this->_propDict['excludePlatforms']) > 0 && is_a($this->_propDict['excludePlatforms'][0], 'ConditionalAccessDevicePlatform')) {
+               return $this->_propDict['excludePlatforms'];
             }
-        }
+            $excludePlatforms = [];
+            foreach ($this->_propDict['excludePlatforms'] as $singleValue) {
+               $excludePlatforms []= new ConditionalAccessDevicePlatform($singleValue);
+            }
+            $this->_propDict['excludePlatforms'] = $excludePlatforms;
+            return $this->_propDict['excludePlatforms'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class ConditionalAccessPlatforms extends Entity
     * Sets the excludePlatforms
     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
     *
-    * @param ConditionalAccessDevicePlatform $val The value to assign to the excludePlatforms
+    * @param ConditionalAccessDevicePlatform[] $val The value to assign to the excludePlatforms
     *
     * @return ConditionalAccessPlatforms The ConditionalAccessPlatforms
     */
@@ -61,18 +65,22 @@ class ConditionalAccessPlatforms extends Entity
     * Gets the includePlatforms
     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
     *
-    * @return ConditionalAccessDevicePlatform|null The includePlatforms
+    * @return ConditionalAccessDevicePlatform[]|null The includePlatforms
     */
     public function getIncludePlatforms()
     {
-        if (array_key_exists("includePlatforms", $this->_propDict)) {
-            if (is_a($this->_propDict["includePlatforms"], "\Microsoft\Graph\Model\ConditionalAccessDevicePlatform") || is_null($this->_propDict["includePlatforms"])) {
-                return $this->_propDict["includePlatforms"];
-            } else {
-                $this->_propDict["includePlatforms"] = new ConditionalAccessDevicePlatform($this->_propDict["includePlatforms"]);
-                return $this->_propDict["includePlatforms"];
+        if (array_key_exists("includePlatforms", $this->_propDict) && !is_null($this->_propDict["includePlatforms"])) {
+       
+            if (count($this->_propDict['includePlatforms']) > 0 && is_a($this->_propDict['includePlatforms'][0], 'ConditionalAccessDevicePlatform')) {
+               return $this->_propDict['includePlatforms'];
             }
-        }
+            $includePlatforms = [];
+            foreach ($this->_propDict['includePlatforms'] as $singleValue) {
+               $includePlatforms []= new ConditionalAccessDevicePlatform($singleValue);
+            }
+            $this->_propDict['includePlatforms'] = $includePlatforms;
+            return $this->_propDict['includePlatforms'];
+            }
         return null;
     }
 
@@ -80,7 +88,7 @@ class ConditionalAccessPlatforms extends Entity
     * Sets the includePlatforms
     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
     *
-    * @param ConditionalAccessDevicePlatform $val The value to assign to the includePlatforms
+    * @param ConditionalAccessDevicePlatform[] $val The value to assign to the includePlatforms
     *
     * @return ConditionalAccessPlatforms The ConditionalAccessPlatforms
     */

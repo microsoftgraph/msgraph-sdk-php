@@ -32,8 +32,8 @@ class BaseItemVersion extends Entity
     */
     public function getLastModifiedBy()
     {
-        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["lastModifiedBy"])) {
+        if (array_key_exists("lastModifiedBy", $this->_propDict) && !is_null($this->_propDict["lastModifiedBy"])) {
+            if (is_a($this->_propDict["lastModifiedBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -65,8 +65,8 @@ class BaseItemVersion extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
@@ -98,8 +98,8 @@ class BaseItemVersion extends Entity
     */
     public function getPublication()
     {
-        if (array_key_exists("publication", $this->_propDict)) {
-            if (is_a($this->_propDict["publication"], "\Microsoft\Graph\Model\PublicationFacet") || is_null($this->_propDict["publication"])) {
+        if (array_key_exists("publication", $this->_propDict) && !is_null($this->_propDict["publication"])) {
+            if (is_a($this->_propDict["publication"], "\Microsoft\Graph\Model\PublicationFacet")) {
                 return $this->_propDict["publication"];
             } else {
                 $this->_propDict["publication"] = new PublicationFacet($this->_propDict["publication"]);

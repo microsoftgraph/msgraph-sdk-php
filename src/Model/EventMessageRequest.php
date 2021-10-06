@@ -60,8 +60,8 @@ class EventMessageRequest extends EventMessage
     */
     public function getMeetingRequestType()
     {
-        if (array_key_exists("meetingRequestType", $this->_propDict)) {
-            if (is_a($this->_propDict["meetingRequestType"], "\Microsoft\Graph\Model\MeetingRequestType") || is_null($this->_propDict["meetingRequestType"])) {
+        if (array_key_exists("meetingRequestType", $this->_propDict) && !is_null($this->_propDict["meetingRequestType"])) {
+            if (is_a($this->_propDict["meetingRequestType"], "\Microsoft\Graph\Model\MeetingRequestType")) {
                 return $this->_propDict["meetingRequestType"];
             } else {
                 $this->_propDict["meetingRequestType"] = new MeetingRequestType($this->_propDict["meetingRequestType"]);
@@ -92,8 +92,8 @@ class EventMessageRequest extends EventMessage
     */
     public function getPreviousEndDateTime()
     {
-        if (array_key_exists("previousEndDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["previousEndDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["previousEndDateTime"])) {
+        if (array_key_exists("previousEndDateTime", $this->_propDict) && !is_null($this->_propDict["previousEndDateTime"])) {
+            if (is_a($this->_propDict["previousEndDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["previousEndDateTime"];
             } else {
                 $this->_propDict["previousEndDateTime"] = new DateTimeTimeZone($this->_propDict["previousEndDateTime"]);
@@ -125,8 +125,8 @@ class EventMessageRequest extends EventMessage
     */
     public function getPreviousLocation()
     {
-        if (array_key_exists("previousLocation", $this->_propDict)) {
-            if (is_a($this->_propDict["previousLocation"], "\Microsoft\Graph\Model\Location") || is_null($this->_propDict["previousLocation"])) {
+        if (array_key_exists("previousLocation", $this->_propDict) && !is_null($this->_propDict["previousLocation"])) {
+            if (is_a($this->_propDict["previousLocation"], "\Microsoft\Graph\Model\Location")) {
                 return $this->_propDict["previousLocation"];
             } else {
                 $this->_propDict["previousLocation"] = new Location($this->_propDict["previousLocation"]);
@@ -158,8 +158,8 @@ class EventMessageRequest extends EventMessage
     */
     public function getPreviousStartDateTime()
     {
-        if (array_key_exists("previousStartDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["previousStartDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone") || is_null($this->_propDict["previousStartDateTime"])) {
+        if (array_key_exists("previousStartDateTime", $this->_propDict) && !is_null($this->_propDict["previousStartDateTime"])) {
+            if (is_a($this->_propDict["previousStartDateTime"], "\Microsoft\Graph\Model\DateTimeTimeZone")) {
                 return $this->_propDict["previousStartDateTime"];
             } else {
                 $this->_propDict["previousStartDateTime"] = new DateTimeTimeZone($this->_propDict["previousStartDateTime"]);

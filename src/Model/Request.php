@@ -61,8 +61,8 @@ class Request extends Entity
     */
     public function getCompletedDateTime()
     {
-        if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\DateTime") || is_null($this->_propDict["completedDateTime"])) {
+        if (array_key_exists("completedDateTime", $this->_propDict) && !is_null($this->_propDict["completedDateTime"])) {
+            if (is_a($this->_propDict["completedDateTime"], "\DateTime")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new \DateTime($this->_propDict["completedDateTime"]);
@@ -94,8 +94,8 @@ class Request extends Entity
     */
     public function getCreatedBy()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
+        if (array_key_exists("createdBy", $this->_propDict) && !is_null($this->_propDict["createdBy"])) {
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -127,8 +127,8 @@ class Request extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);

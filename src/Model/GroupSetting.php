@@ -87,22 +87,29 @@ class GroupSetting extends Entity
      * Gets the values
     * Collection of name value pairs. Must contain and set all the settings defined in the template.
      *
-     * @return array|null The values
+     * @return SettingValue[]|null The values
      */
     public function getValues()
     {
-        if (array_key_exists("values", $this->_propDict)) {
-           return $this->_propDict["values"];
-        } else {
-            return null;
+        if (array_key_exists('values', $this->_propDict) && !is_null($this->_propDict['values'])) {
+            $values = [];
+            if (count($this->_propDict['values']) > 0 && is_a($this->_propDict['values'][0], 'SettingValue')) {
+                return $this->_propDict['values'];
+            }
+            foreach ($this->_propDict['values'] as $singleValue) {
+                $values []= new SettingValue($singleValue);
+            }
+            $this->_propDict['values'] = $values;
+            return $this->_propDict['values'];
         }
+        return null;
     }
     
     /** 
     * Sets the values
     * Collection of name value pairs. Must contain and set all the settings defined in the template.
     *
-    * @param SettingValue $val The values
+    * @param SettingValue[] $val The values
     *
     * @return GroupSetting
     */

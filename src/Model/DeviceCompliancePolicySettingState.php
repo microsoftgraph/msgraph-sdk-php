@@ -196,18 +196,22 @@ class DeviceCompliancePolicySettingState extends Entity
     * Gets the sources
     * Contributing policies
     *
-    * @return SettingSource|null The sources
+    * @return SettingSource[]|null The sources
     */
     public function getSources()
     {
-        if (array_key_exists("sources", $this->_propDict)) {
-            if (is_a($this->_propDict["sources"], "\Microsoft\Graph\Model\SettingSource") || is_null($this->_propDict["sources"])) {
-                return $this->_propDict["sources"];
-            } else {
-                $this->_propDict["sources"] = new SettingSource($this->_propDict["sources"]);
-                return $this->_propDict["sources"];
+        if (array_key_exists("sources", $this->_propDict) && !is_null($this->_propDict["sources"])) {
+       
+            if (count($this->_propDict['sources']) > 0 && is_a($this->_propDict['sources'][0], 'SettingSource')) {
+               return $this->_propDict['sources'];
             }
-        }
+            $sources = [];
+            foreach ($this->_propDict['sources'] as $singleValue) {
+               $sources []= new SettingSource($singleValue);
+            }
+            $this->_propDict['sources'] = $sources;
+            return $this->_propDict['sources'];
+            }
         return null;
     }
 
@@ -215,7 +219,7 @@ class DeviceCompliancePolicySettingState extends Entity
     * Sets the sources
     * Contributing policies
     *
-    * @param SettingSource $val The value to assign to the sources
+    * @param SettingSource[] $val The value to assign to the sources
     *
     * @return DeviceCompliancePolicySettingState The DeviceCompliancePolicySettingState
     */
@@ -233,8 +237,9 @@ class DeviceCompliancePolicySettingState extends Entity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+     
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ComplianceStatus($this->_propDict["state"]);

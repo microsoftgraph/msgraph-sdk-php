@@ -348,22 +348,29 @@ class WorkbookRangeView extends Entity
      * Gets the rows
     * Represents a collection of range views associated with the range. Read-only. Read-only.
      *
-     * @return array|null The rows
+     * @return WorkbookRangeView[]|null The rows
      */
     public function getRows()
     {
-        if (array_key_exists("rows", $this->_propDict)) {
-           return $this->_propDict["rows"];
-        } else {
-            return null;
+        if (array_key_exists('rows', $this->_propDict) && !is_null($this->_propDict['rows'])) {
+            $rows = [];
+            if (count($this->_propDict['rows']) > 0 && is_a($this->_propDict['rows'][0], 'WorkbookRangeView')) {
+                return $this->_propDict['rows'];
+            }
+            foreach ($this->_propDict['rows'] as $singleValue) {
+                $rows []= new WorkbookRangeView($singleValue);
+            }
+            $this->_propDict['rows'] = $rows;
+            return $this->_propDict['rows'];
         }
+        return null;
     }
     
     /** 
     * Sets the rows
     * Represents a collection of range views associated with the range. Read-only. Read-only.
     *
-    * @param WorkbookRangeView $val The rows
+    * @param WorkbookRangeView[] $val The rows
     *
     * @return WorkbookRangeView
     */

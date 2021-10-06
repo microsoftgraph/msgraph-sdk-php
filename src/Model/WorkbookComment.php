@@ -87,22 +87,29 @@ class WorkbookComment extends Entity
      * Gets the replies
     * Read-only. Nullable.
      *
-     * @return array|null The replies
+     * @return WorkbookCommentReply[]|null The replies
      */
     public function getReplies()
     {
-        if (array_key_exists("replies", $this->_propDict)) {
-           return $this->_propDict["replies"];
-        } else {
-            return null;
+        if (array_key_exists('replies', $this->_propDict) && !is_null($this->_propDict['replies'])) {
+            $replies = [];
+            if (count($this->_propDict['replies']) > 0 && is_a($this->_propDict['replies'][0], 'WorkbookCommentReply')) {
+                return $this->_propDict['replies'];
+            }
+            foreach ($this->_propDict['replies'] as $singleValue) {
+                $replies []= new WorkbookCommentReply($singleValue);
+            }
+            $this->_propDict['replies'] = $replies;
+            return $this->_propDict['replies'];
         }
+        return null;
     }
     
     /** 
     * Sets the replies
     * Read-only. Nullable.
     *
-    * @param WorkbookCommentReply $val The replies
+    * @param WorkbookCommentReply[] $val The replies
     *
     * @return WorkbookComment
     */

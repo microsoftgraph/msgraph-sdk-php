@@ -87,22 +87,29 @@ class GroupSettingTemplate extends DirectoryObject
      * Gets the values
     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      *
-     * @return array|null The values
+     * @return SettingTemplateValue[]|null The values
      */
     public function getValues()
     {
-        if (array_key_exists("values", $this->_propDict)) {
-           return $this->_propDict["values"];
-        } else {
-            return null;
+        if (array_key_exists('values', $this->_propDict) && !is_null($this->_propDict['values'])) {
+            $values = [];
+            if (count($this->_propDict['values']) > 0 && is_a($this->_propDict['values'][0], 'SettingTemplateValue')) {
+                return $this->_propDict['values'];
+            }
+            foreach ($this->_propDict['values'] as $singleValue) {
+                $values []= new SettingTemplateValue($singleValue);
+            }
+            $this->_propDict['values'] = $values;
+            return $this->_propDict['values'];
         }
+        return null;
     }
     
     /** 
     * Sets the values
     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
     *
-    * @param SettingTemplateValue $val The values
+    * @param SettingTemplateValue[] $val The values
     *
     * @return GroupSettingTemplate
     */

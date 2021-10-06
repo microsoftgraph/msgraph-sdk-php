@@ -63,8 +63,8 @@ class GraphPrint implements \JsonSerializable
     */
     public function getSettings()
     {
-        if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\PrintSettings") || is_null($this->_propDict["settings"])) {
+        if (array_key_exists("settings", $this->_propDict) && !is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\PrintSettings")) {
                 return $this->_propDict["settings"];
             } else {
                 $this->_propDict["settings"] = new PrintSettings($this->_propDict["settings"]);
@@ -93,22 +93,29 @@ class GraphPrint implements \JsonSerializable
      * Gets the connectors
     * The list of available print connectors.
      *
-     * @return array|null The connectors
+     * @return PrintConnector[]|null The connectors
      */
     public function getConnectors()
     {
-        if (array_key_exists("connectors", $this->_propDict)) {
-           return $this->_propDict["connectors"];
-        } else {
-            return null;
+        if (array_key_exists('connectors', $this->_propDict) && !is_null($this->_propDict['connectors'])) {
+            $connectors = [];
+            if (count($this->_propDict['connectors']) > 0 && is_a($this->_propDict['connectors'][0], 'PrintConnector')) {
+                return $this->_propDict['connectors'];
+            }
+            foreach ($this->_propDict['connectors'] as $singleValue) {
+                $connectors []= new PrintConnector($singleValue);
+            }
+            $this->_propDict['connectors'] = $connectors;
+            return $this->_propDict['connectors'];
         }
+        return null;
     }
     
     /** 
     * Sets the connectors
     * The list of available print connectors.
     *
-    * @param PrintConnector $val The connectors
+    * @param PrintConnector[] $val The connectors
     *
     * @return GraphPrint
     */
@@ -123,22 +130,29 @@ class GraphPrint implements \JsonSerializable
      * Gets the operations
     * The list of print long running operations.
      *
-     * @return array|null The operations
+     * @return PrintOperation[]|null The operations
      */
     public function getOperations()
     {
-        if (array_key_exists("operations", $this->_propDict)) {
-           return $this->_propDict["operations"];
-        } else {
-            return null;
+        if (array_key_exists('operations', $this->_propDict) && !is_null($this->_propDict['operations'])) {
+            $operations = [];
+            if (count($this->_propDict['operations']) > 0 && is_a($this->_propDict['operations'][0], 'PrintOperation')) {
+                return $this->_propDict['operations'];
+            }
+            foreach ($this->_propDict['operations'] as $singleValue) {
+                $operations []= new PrintOperation($singleValue);
+            }
+            $this->_propDict['operations'] = $operations;
+            return $this->_propDict['operations'];
         }
+        return null;
     }
     
     /** 
     * Sets the operations
     * The list of print long running operations.
     *
-    * @param PrintOperation $val The operations
+    * @param PrintOperation[] $val The operations
     *
     * @return GraphPrint
     */
@@ -153,22 +167,29 @@ class GraphPrint implements \JsonSerializable
      * Gets the printers
     * The list of printers registered in the tenant.
      *
-     * @return array|null The printers
+     * @return Printer[]|null The printers
      */
     public function getPrinters()
     {
-        if (array_key_exists("printers", $this->_propDict)) {
-           return $this->_propDict["printers"];
-        } else {
-            return null;
+        if (array_key_exists('printers', $this->_propDict) && !is_null($this->_propDict['printers'])) {
+            $printers = [];
+            if (count($this->_propDict['printers']) > 0 && is_a($this->_propDict['printers'][0], 'Printer')) {
+                return $this->_propDict['printers'];
+            }
+            foreach ($this->_propDict['printers'] as $singleValue) {
+                $printers []= new Printer($singleValue);
+            }
+            $this->_propDict['printers'] = $printers;
+            return $this->_propDict['printers'];
         }
+        return null;
     }
     
     /** 
     * Sets the printers
     * The list of printers registered in the tenant.
     *
-    * @param Printer $val The printers
+    * @param Printer[] $val The printers
     *
     * @return GraphPrint
     */
@@ -183,22 +204,29 @@ class GraphPrint implements \JsonSerializable
      * Gets the services
     * The list of available Universal Print service endpoints.
      *
-     * @return array|null The services
+     * @return PrintService[]|null The services
      */
     public function getServices()
     {
-        if (array_key_exists("services", $this->_propDict)) {
-           return $this->_propDict["services"];
-        } else {
-            return null;
+        if (array_key_exists('services', $this->_propDict) && !is_null($this->_propDict['services'])) {
+            $services = [];
+            if (count($this->_propDict['services']) > 0 && is_a($this->_propDict['services'][0], 'PrintService')) {
+                return $this->_propDict['services'];
+            }
+            foreach ($this->_propDict['services'] as $singleValue) {
+                $services []= new PrintService($singleValue);
+            }
+            $this->_propDict['services'] = $services;
+            return $this->_propDict['services'];
         }
+        return null;
     }
     
     /** 
     * Sets the services
     * The list of available Universal Print service endpoints.
     *
-    * @param PrintService $val The services
+    * @param PrintService[] $val The services
     *
     * @return GraphPrint
     */
@@ -213,22 +241,29 @@ class GraphPrint implements \JsonSerializable
      * Gets the shares
     * The list of printer shares registered in the tenant.
      *
-     * @return array|null The shares
+     * @return PrinterShare[]|null The shares
      */
     public function getShares()
     {
-        if (array_key_exists("shares", $this->_propDict)) {
-           return $this->_propDict["shares"];
-        } else {
-            return null;
+        if (array_key_exists('shares', $this->_propDict) && !is_null($this->_propDict['shares'])) {
+            $shares = [];
+            if (count($this->_propDict['shares']) > 0 && is_a($this->_propDict['shares'][0], 'PrinterShare')) {
+                return $this->_propDict['shares'];
+            }
+            foreach ($this->_propDict['shares'] as $singleValue) {
+                $shares []= new PrinterShare($singleValue);
+            }
+            $this->_propDict['shares'] = $shares;
+            return $this->_propDict['shares'];
         }
+        return null;
     }
     
     /** 
     * Sets the shares
     * The list of printer shares registered in the tenant.
     *
-    * @param PrinterShare $val The shares
+    * @param PrinterShare[] $val The shares
     *
     * @return GraphPrint
     */
@@ -243,22 +278,29 @@ class GraphPrint implements \JsonSerializable
      * Gets the taskDefinitions
     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      *
-     * @return array|null The taskDefinitions
+     * @return PrintTaskDefinition[]|null The taskDefinitions
      */
     public function getTaskDefinitions()
     {
-        if (array_key_exists("taskDefinitions", $this->_propDict)) {
-           return $this->_propDict["taskDefinitions"];
-        } else {
-            return null;
+        if (array_key_exists('taskDefinitions', $this->_propDict) && !is_null($this->_propDict['taskDefinitions'])) {
+            $taskDefinitions = [];
+            if (count($this->_propDict['taskDefinitions']) > 0 && is_a($this->_propDict['taskDefinitions'][0], 'PrintTaskDefinition')) {
+                return $this->_propDict['taskDefinitions'];
+            }
+            foreach ($this->_propDict['taskDefinitions'] as $singleValue) {
+                $taskDefinitions []= new PrintTaskDefinition($singleValue);
+            }
+            $this->_propDict['taskDefinitions'] = $taskDefinitions;
+            return $this->_propDict['taskDefinitions'];
         }
+        return null;
     }
     
     /** 
     * Sets the taskDefinitions
     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
     *
-    * @param PrintTaskDefinition $val The taskDefinitions
+    * @param PrintTaskDefinition[] $val The taskDefinitions
     *
     * @return GraphPrint
     */
@@ -304,10 +346,22 @@ class GraphPrint implements \JsonSerializable
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, "\DateTime")) {
-                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+            if (is_a($val, '\DateTime')) {
+                $serializableProperties[$property] = $val->format(\DateTimeInterface::RFC3339);
+            } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
                 $serializableProperties[$property] = $val->value();
+            } else if (is_array($val)) {
+                $values = [];
+                if (count($val) > 0 && is_a($val[0], '\DateTime')) {
+                   foreach ($values as $propertyValue) {
+                       $values []= $propertyValue->format(\DateTimeInterface::RFC3339);
+                   }
+                } else if(count($val) > 0 && is_a($val[0], '\Microsoft\Graph\Core\Enum')) {
+                    foreach ($values as $propertyValue) {
+                       $values []= $propertyValue->value();
+                   }
+                }
+                $serializableProperties[$property] = $values;
             }
         }
         return $serializableProperties;

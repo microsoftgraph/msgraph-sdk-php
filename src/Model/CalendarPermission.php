@@ -29,22 +29,29 @@ class CalendarPermission extends Entity
      * Gets the allowedRoles
     * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      *
-     * @return array|null The allowedRoles
+     * @return CalendarRoleType[]|null The allowedRoles
      */
     public function getAllowedRoles()
     {
-        if (array_key_exists("allowedRoles", $this->_propDict)) {
-           return $this->_propDict["allowedRoles"];
-        } else {
-            return null;
+        if (array_key_exists('allowedRoles', $this->_propDict) && !is_null($this->_propDict['allowedRoles'])) {
+            $allowedRoles = [];
+            if (count($this->_propDict['allowedRoles']) > 0 && is_a($this->_propDict['allowedRoles'][0], 'CalendarRoleType')) {
+                return $this->_propDict['allowedRoles'];
+            }
+            foreach ($this->_propDict['allowedRoles'] as $singleValue) {
+                $allowedRoles []= new CalendarRoleType($singleValue);
+            }
+            $this->_propDict['allowedRoles'] = $allowedRoles;
+            return $this->_propDict['allowedRoles'];
         }
+        return null;
     }
     
     /** 
     * Sets the allowedRoles
     * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
     *
-    * @param CalendarRoleType $val The allowedRoles
+    * @param CalendarRoleType[] $val The allowedRoles
     *
     * @return CalendarPermission
     */
@@ -62,8 +69,8 @@ class CalendarPermission extends Entity
     */
     public function getEmailAddress()
     {
-        if (array_key_exists("emailAddress", $this->_propDict)) {
-            if (is_a($this->_propDict["emailAddress"], "\Microsoft\Graph\Model\EmailAddress") || is_null($this->_propDict["emailAddress"])) {
+        if (array_key_exists("emailAddress", $this->_propDict) && !is_null($this->_propDict["emailAddress"])) {
+            if (is_a($this->_propDict["emailAddress"], "\Microsoft\Graph\Model\EmailAddress")) {
                 return $this->_propDict["emailAddress"];
             } else {
                 $this->_propDict["emailAddress"] = new EmailAddress($this->_propDict["emailAddress"]);
@@ -153,8 +160,8 @@ class CalendarPermission extends Entity
     */
     public function getRole()
     {
-        if (array_key_exists("role", $this->_propDict)) {
-            if (is_a($this->_propDict["role"], "\Microsoft\Graph\Model\CalendarRoleType") || is_null($this->_propDict["role"])) {
+        if (array_key_exists("role", $this->_propDict) && !is_null($this->_propDict["role"])) {
+            if (is_a($this->_propDict["role"], "\Microsoft\Graph\Model\CalendarRoleType")) {
                 return $this->_propDict["role"];
             } else {
                 $this->_propDict["role"] = new CalendarRoleType($this->_propDict["role"]);

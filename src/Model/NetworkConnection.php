@@ -200,8 +200,9 @@ class NetworkConnection extends Entity
     */
     public function getDirection()
     {
-        if (array_key_exists("direction", $this->_propDict)) {
-            if (is_a($this->_propDict["direction"], "\Microsoft\Graph\Model\ConnectionDirection") || is_null($this->_propDict["direction"])) {
+        if (array_key_exists("direction", $this->_propDict) && !is_null($this->_propDict["direction"])) {
+     
+            if (is_a($this->_propDict["direction"], "\Microsoft\Graph\Model\ConnectionDirection")) {
                 return $this->_propDict["direction"];
             } else {
                 $this->_propDict["direction"] = new ConnectionDirection($this->_propDict["direction"]);
@@ -233,8 +234,9 @@ class NetworkConnection extends Entity
     */
     public function getDomainRegisteredDateTime()
     {
-        if (array_key_exists("domainRegisteredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["domainRegisteredDateTime"], "\DateTime") || is_null($this->_propDict["domainRegisteredDateTime"])) {
+        if (array_key_exists("domainRegisteredDateTime", $this->_propDict) && !is_null($this->_propDict["domainRegisteredDateTime"])) {
+     
+            if (is_a($this->_propDict["domainRegisteredDateTime"], "\DateTime")) {
                 return $this->_propDict["domainRegisteredDateTime"];
             } else {
                 $this->_propDict["domainRegisteredDateTime"] = new \DateTime($this->_propDict["domainRegisteredDateTime"]);
@@ -406,8 +408,9 @@ class NetworkConnection extends Entity
     */
     public function getProtocol()
     {
-        if (array_key_exists("protocol", $this->_propDict)) {
-            if (is_a($this->_propDict["protocol"], "\Microsoft\Graph\Model\SecurityNetworkProtocol") || is_null($this->_propDict["protocol"])) {
+        if (array_key_exists("protocol", $this->_propDict) && !is_null($this->_propDict["protocol"])) {
+     
+            if (is_a($this->_propDict["protocol"], "\Microsoft\Graph\Model\SecurityNetworkProtocol")) {
                 return $this->_propDict["protocol"];
             } else {
                 $this->_propDict["protocol"] = new SecurityNetworkProtocol($this->_propDict["protocol"]);
@@ -551,8 +554,9 @@ class NetworkConnection extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ConnectionStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+     
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ConnectionStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ConnectionStatus($this->_propDict["status"]);

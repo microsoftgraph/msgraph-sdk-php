@@ -32,8 +32,8 @@ class PlannerPlanDetails extends Entity
     */
     public function getCategoryDescriptions()
     {
-        if (array_key_exists("categoryDescriptions", $this->_propDict)) {
-            if (is_a($this->_propDict["categoryDescriptions"], "\Microsoft\Graph\Model\PlannerCategoryDescriptions") || is_null($this->_propDict["categoryDescriptions"])) {
+        if (array_key_exists("categoryDescriptions", $this->_propDict) && !is_null($this->_propDict["categoryDescriptions"])) {
+            if (is_a($this->_propDict["categoryDescriptions"], "\Microsoft\Graph\Model\PlannerCategoryDescriptions")) {
                 return $this->_propDict["categoryDescriptions"];
             } else {
                 $this->_propDict["categoryDescriptions"] = new PlannerCategoryDescriptions($this->_propDict["categoryDescriptions"]);
@@ -65,8 +65,8 @@ class PlannerPlanDetails extends Entity
     */
     public function getSharedWith()
     {
-        if (array_key_exists("sharedWith", $this->_propDict)) {
-            if (is_a($this->_propDict["sharedWith"], "\Microsoft\Graph\Model\PlannerUserIds") || is_null($this->_propDict["sharedWith"])) {
+        if (array_key_exists("sharedWith", $this->_propDict) && !is_null($this->_propDict["sharedWith"])) {
+            if (is_a($this->_propDict["sharedWith"], "\Microsoft\Graph\Model\PlannerUserIds")) {
                 return $this->_propDict["sharedWith"];
             } else {
                 $this->_propDict["sharedWith"] = new PlannerUserIds($this->_propDict["sharedWith"]);

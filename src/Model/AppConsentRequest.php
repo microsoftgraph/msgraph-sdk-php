@@ -87,22 +87,29 @@ class AppConsentRequest extends Entity
      * Gets the pendingScopes
     * A list of pending scopes waiting for approval. Required.
      *
-     * @return array|null The pendingScopes
+     * @return AppConsentRequestScope[]|null The pendingScopes
      */
     public function getPendingScopes()
     {
-        if (array_key_exists("pendingScopes", $this->_propDict)) {
-           return $this->_propDict["pendingScopes"];
-        } else {
-            return null;
+        if (array_key_exists('pendingScopes', $this->_propDict) && !is_null($this->_propDict['pendingScopes'])) {
+            $pendingScopes = [];
+            if (count($this->_propDict['pendingScopes']) > 0 && is_a($this->_propDict['pendingScopes'][0], 'AppConsentRequestScope')) {
+                return $this->_propDict['pendingScopes'];
+            }
+            foreach ($this->_propDict['pendingScopes'] as $singleValue) {
+                $pendingScopes []= new AppConsentRequestScope($singleValue);
+            }
+            $this->_propDict['pendingScopes'] = $pendingScopes;
+            return $this->_propDict['pendingScopes'];
         }
+        return null;
     }
     
     /** 
     * Sets the pendingScopes
     * A list of pending scopes waiting for approval. Required.
     *
-    * @param AppConsentRequestScope $val The pendingScopes
+    * @param AppConsentRequestScope[] $val The pendingScopes
     *
     * @return AppConsentRequest
     */
@@ -117,22 +124,29 @@ class AppConsentRequest extends Entity
      * Gets the userConsentRequests
     * A list of pending user consent requests.
      *
-     * @return array|null The userConsentRequests
+     * @return UserConsentRequest[]|null The userConsentRequests
      */
     public function getUserConsentRequests()
     {
-        if (array_key_exists("userConsentRequests", $this->_propDict)) {
-           return $this->_propDict["userConsentRequests"];
-        } else {
-            return null;
+        if (array_key_exists('userConsentRequests', $this->_propDict) && !is_null($this->_propDict['userConsentRequests'])) {
+            $userConsentRequests = [];
+            if (count($this->_propDict['userConsentRequests']) > 0 && is_a($this->_propDict['userConsentRequests'][0], 'UserConsentRequest')) {
+                return $this->_propDict['userConsentRequests'];
+            }
+            foreach ($this->_propDict['userConsentRequests'] as $singleValue) {
+                $userConsentRequests []= new UserConsentRequest($singleValue);
+            }
+            $this->_propDict['userConsentRequests'] = $userConsentRequests;
+            return $this->_propDict['userConsentRequests'];
         }
+        return null;
     }
     
     /** 
     * Sets the userConsentRequests
     * A list of pending user consent requests.
     *
-    * @param UserConsentRequest $val The userConsentRequests
+    * @param UserConsentRequest[] $val The userConsentRequests
     *
     * @return AppConsentRequest
     */

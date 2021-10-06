@@ -70,7 +70,7 @@ class AppliedConditionalAccessPolicy extends Entity
     * Sets the enforcedGrantControls
     * Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
     *
-    * @param string $val The value of the enforcedGrantControls
+    * @param string[] $val The value of the enforcedGrantControls
     *
     * @return AppliedConditionalAccessPolicy
     */
@@ -98,7 +98,7 @@ class AppliedConditionalAccessPolicy extends Entity
     * Sets the enforcedSessionControls
     * Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
     *
-    * @param string $val The value of the enforcedSessionControls
+    * @param string[] $val The value of the enforcedSessionControls
     *
     * @return AppliedConditionalAccessPolicy
     */
@@ -144,8 +144,9 @@ class AppliedConditionalAccessPolicy extends Entity
     */
     public function getResult()
     {
-        if (array_key_exists("result", $this->_propDict)) {
-            if (is_a($this->_propDict["result"], "\Microsoft\Graph\Model\AppliedConditionalAccessPolicyResult") || is_null($this->_propDict["result"])) {
+        if (array_key_exists("result", $this->_propDict) && !is_null($this->_propDict["result"])) {
+     
+            if (is_a($this->_propDict["result"], "\Microsoft\Graph\Model\AppliedConditionalAccessPolicyResult")) {
                 return $this->_propDict["result"];
             } else {
                 $this->_propDict["result"] = new AppliedConditionalAccessPolicyResult($this->_propDict["result"]);

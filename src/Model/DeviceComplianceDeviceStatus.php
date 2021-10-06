@@ -32,8 +32,8 @@ class DeviceComplianceDeviceStatus extends Entity
     */
     public function getComplianceGracePeriodExpirationDateTime()
     {
-        if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime") || is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
+        if (array_key_exists("complianceGracePeriodExpirationDateTime", $this->_propDict) && !is_null($this->_propDict["complianceGracePeriodExpirationDateTime"])) {
+            if (is_a($this->_propDict["complianceGracePeriodExpirationDateTime"], "\DateTime")) {
                 return $this->_propDict["complianceGracePeriodExpirationDateTime"];
             } else {
                 $this->_propDict["complianceGracePeriodExpirationDateTime"] = new \DateTime($this->_propDict["complianceGracePeriodExpirationDateTime"]);
@@ -123,8 +123,8 @@ class DeviceComplianceDeviceStatus extends Entity
     */
     public function getLastReportedDateTime()
     {
-        if (array_key_exists("lastReportedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime") || is_null($this->_propDict["lastReportedDateTime"])) {
+        if (array_key_exists("lastReportedDateTime", $this->_propDict) && !is_null($this->_propDict["lastReportedDateTime"])) {
+            if (is_a($this->_propDict["lastReportedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastReportedDateTime"];
             } else {
                 $this->_propDict["lastReportedDateTime"] = new \DateTime($this->_propDict["lastReportedDateTime"]);
@@ -156,8 +156,8 @@ class DeviceComplianceDeviceStatus extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ComplianceStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ComplianceStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ComplianceStatus($this->_propDict["status"]);

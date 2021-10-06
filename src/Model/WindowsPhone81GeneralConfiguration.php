@@ -177,8 +177,8 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     */
     public function getCompliantAppListType()
     {
-        if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "\Microsoft\Graph\Model\AppListType") || is_null($this->_propDict["compliantAppListType"])) {
+        if (array_key_exists("compliantAppListType", $this->_propDict) && !is_null($this->_propDict["compliantAppListType"])) {
+            if (is_a($this->_propDict["compliantAppListType"], "\Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -207,22 +207,29 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
      * Gets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
-     * @return array|null The compliantAppsList
+     * @return AppListItem[]|null The compliantAppsList
      */
     public function getCompliantAppsList()
     {
-        if (array_key_exists("compliantAppsList", $this->_propDict)) {
-           return $this->_propDict["compliantAppsList"];
-        } else {
-            return null;
+        if (array_key_exists('compliantAppsList', $this->_propDict) && !is_null($this->_propDict['compliantAppsList'])) {
+            $compliantAppsList = [];
+            if (count($this->_propDict['compliantAppsList']) > 0 && is_a($this->_propDict['compliantAppsList'][0], 'AppListItem')) {
+                return $this->_propDict['compliantAppsList'];
+            }
+            foreach ($this->_propDict['compliantAppsList'] as $singleValue) {
+                $compliantAppsList []= new AppListItem($singleValue);
+            }
+            $this->_propDict['compliantAppsList'] = $compliantAppsList;
+            return $this->_propDict['compliantAppsList'];
         }
+        return null;
     }
     
     /** 
     * Sets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
     *
-    * @param AppListItem $val The compliantAppsList
+    * @param AppListItem[] $val The compliantAppsList
     *
     * @return WindowsPhone81GeneralConfiguration
     */
@@ -588,8 +595,8 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration
     */
     public function getPasswordRequiredType()
     {
-        if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
+        if (array_key_exists("passwordRequiredType", $this->_propDict) && !is_null($this->_propDict["passwordRequiredType"])) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);

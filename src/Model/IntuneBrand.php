@@ -144,8 +144,9 @@ class IntuneBrand extends Entity
     */
     public function getDarkBackgroundLogo()
     {
-        if (array_key_exists("darkBackgroundLogo", $this->_propDict)) {
-            if (is_a($this->_propDict["darkBackgroundLogo"], "\Microsoft\Graph\Model\MimeContent") || is_null($this->_propDict["darkBackgroundLogo"])) {
+        if (array_key_exists("darkBackgroundLogo", $this->_propDict) && !is_null($this->_propDict["darkBackgroundLogo"])) {
+     
+            if (is_a($this->_propDict["darkBackgroundLogo"], "\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["darkBackgroundLogo"];
             } else {
                 $this->_propDict["darkBackgroundLogo"] = new MimeContent($this->_propDict["darkBackgroundLogo"]);
@@ -205,8 +206,9 @@ class IntuneBrand extends Entity
     */
     public function getLightBackgroundLogo()
     {
-        if (array_key_exists("lightBackgroundLogo", $this->_propDict)) {
-            if (is_a($this->_propDict["lightBackgroundLogo"], "\Microsoft\Graph\Model\MimeContent") || is_null($this->_propDict["lightBackgroundLogo"])) {
+        if (array_key_exists("lightBackgroundLogo", $this->_propDict) && !is_null($this->_propDict["lightBackgroundLogo"])) {
+     
+            if (is_a($this->_propDict["lightBackgroundLogo"], "\Microsoft\Graph\Model\MimeContent")) {
                 return $this->_propDict["lightBackgroundLogo"];
             } else {
                 $this->_propDict["lightBackgroundLogo"] = new MimeContent($this->_propDict["lightBackgroundLogo"]);
@@ -406,8 +408,9 @@ class IntuneBrand extends Entity
     */
     public function getThemeColor()
     {
-        if (array_key_exists("themeColor", $this->_propDict)) {
-            if (is_a($this->_propDict["themeColor"], "\Microsoft\Graph\Model\RgbColor") || is_null($this->_propDict["themeColor"])) {
+        if (array_key_exists("themeColor", $this->_propDict) && !is_null($this->_propDict["themeColor"])) {
+     
+            if (is_a($this->_propDict["themeColor"], "\Microsoft\Graph\Model\RgbColor")) {
                 return $this->_propDict["themeColor"];
             } else {
                 $this->_propDict["themeColor"] = new RgbColor($this->_propDict["themeColor"]);

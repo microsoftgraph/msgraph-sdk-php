@@ -61,8 +61,8 @@ class EducationAssignmentResource extends Entity
     */
     public function getResource()
     {
-        if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\EducationResource") || is_null($this->_propDict["resource"])) {
+        if (array_key_exists("resource", $this->_propDict) && !is_null($this->_propDict["resource"])) {
+            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\EducationResource")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new EducationResource($this->_propDict["resource"]);

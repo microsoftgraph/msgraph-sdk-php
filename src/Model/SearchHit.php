@@ -108,6 +108,34 @@ class SearchHit extends Entity
         return $this;
     }
     /**
+    * Gets the resultTemplateId
+    * ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+    *
+    * @return string|null The resultTemplateId
+    */
+    public function getResultTemplateId()
+    {
+        if (array_key_exists("resultTemplateId", $this->_propDict)) {
+            return $this->_propDict["resultTemplateId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resultTemplateId
+    * ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+    *
+    * @param string $val The value of the resultTemplateId
+    *
+    * @return SearchHit
+    */
+    public function setResultTemplateId($val)
+    {
+        $this->_propDict["resultTemplateId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the summary
     * A summary of the result, if a summary is available.
     *
@@ -143,8 +171,9 @@ class SearchHit extends Entity
     */
     public function getResource()
     {
-        if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\Entity") || is_null($this->_propDict["resource"])) {
+        if (array_key_exists("resource", $this->_propDict) && !is_null($this->_propDict["resource"])) {
+     
+            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\Entity")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new Entity($this->_propDict["resource"]);

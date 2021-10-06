@@ -508,8 +508,9 @@ class DeviceHealthAttestationState extends Entity
     */
     public function getIssuedDateTime()
     {
-        if (array_key_exists("issuedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["issuedDateTime"], "\DateTime") || is_null($this->_propDict["issuedDateTime"])) {
+        if (array_key_exists("issuedDateTime", $this->_propDict) && !is_null($this->_propDict["issuedDateTime"])) {
+     
+            if (is_a($this->_propDict["issuedDateTime"], "\DateTime")) {
                 return $this->_propDict["issuedDateTime"];
             } else {
                 $this->_propDict["issuedDateTime"] = new \DateTime($this->_propDict["issuedDateTime"]);

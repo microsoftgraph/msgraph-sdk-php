@@ -32,8 +32,8 @@ class PrinterBase extends Entity
     */
     public function getCapabilities()
     {
-        if (array_key_exists("capabilities", $this->_propDict)) {
-            if (is_a($this->_propDict["capabilities"], "\Microsoft\Graph\Model\PrinterCapabilities") || is_null($this->_propDict["capabilities"])) {
+        if (array_key_exists("capabilities", $this->_propDict) && !is_null($this->_propDict["capabilities"])) {
+            if (is_a($this->_propDict["capabilities"], "\Microsoft\Graph\Model\PrinterCapabilities")) {
                 return $this->_propDict["capabilities"];
             } else {
                 $this->_propDict["capabilities"] = new PrinterCapabilities($this->_propDict["capabilities"]);
@@ -65,8 +65,8 @@ class PrinterBase extends Entity
     */
     public function getDefaults()
     {
-        if (array_key_exists("defaults", $this->_propDict)) {
-            if (is_a($this->_propDict["defaults"], "\Microsoft\Graph\Model\PrinterDefaults") || is_null($this->_propDict["defaults"])) {
+        if (array_key_exists("defaults", $this->_propDict) && !is_null($this->_propDict["defaults"])) {
+            if (is_a($this->_propDict["defaults"], "\Microsoft\Graph\Model\PrinterDefaults")) {
                 return $this->_propDict["defaults"];
             } else {
                 $this->_propDict["defaults"] = new PrinterDefaults($this->_propDict["defaults"]);
@@ -156,8 +156,8 @@ class PrinterBase extends Entity
     */
     public function getLocation()
     {
-        if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\PrinterLocation") || is_null($this->_propDict["location"])) {
+        if (array_key_exists("location", $this->_propDict) && !is_null($this->_propDict["location"])) {
+            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\PrinterLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new PrinterLocation($this->_propDict["location"]);
@@ -247,8 +247,8 @@ class PrinterBase extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\PrinterStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\PrinterStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new PrinterStatus($this->_propDict["status"]);
@@ -277,22 +277,29 @@ class PrinterBase extends Entity
      * Gets the jobs
     * The list of jobs that are queued for printing by the printer/printerShare.
      *
-     * @return array|null The jobs
+     * @return PrintJob[]|null The jobs
      */
     public function getJobs()
     {
-        if (array_key_exists("jobs", $this->_propDict)) {
-           return $this->_propDict["jobs"];
-        } else {
-            return null;
+        if (array_key_exists('jobs', $this->_propDict) && !is_null($this->_propDict['jobs'])) {
+            $jobs = [];
+            if (count($this->_propDict['jobs']) > 0 && is_a($this->_propDict['jobs'][0], 'PrintJob')) {
+                return $this->_propDict['jobs'];
+            }
+            foreach ($this->_propDict['jobs'] as $singleValue) {
+                $jobs []= new PrintJob($singleValue);
+            }
+            $this->_propDict['jobs'] = $jobs;
+            return $this->_propDict['jobs'];
         }
+        return null;
     }
     
     /** 
     * Sets the jobs
     * The list of jobs that are queued for printing by the printer/printerShare.
     *
-    * @param PrintJob $val The jobs
+    * @param PrintJob[] $val The jobs
     *
     * @return PrinterBase
     */

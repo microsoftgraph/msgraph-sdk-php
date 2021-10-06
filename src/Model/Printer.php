@@ -90,8 +90,8 @@ class Printer extends PrinterBase
     */
     public function getLastSeenDateTime()
     {
-        if (array_key_exists("lastSeenDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime") || is_null($this->_propDict["lastSeenDateTime"])) {
+        if (array_key_exists("lastSeenDateTime", $this->_propDict) && !is_null($this->_propDict["lastSeenDateTime"])) {
+            if (is_a($this->_propDict["lastSeenDateTime"], "\DateTime")) {
                 return $this->_propDict["lastSeenDateTime"];
             } else {
                 $this->_propDict["lastSeenDateTime"] = new \DateTime($this->_propDict["lastSeenDateTime"]);
@@ -123,8 +123,8 @@ class Printer extends PrinterBase
     */
     public function getRegisteredDateTime()
     {
-        if (array_key_exists("registeredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["registeredDateTime"], "\DateTime") || is_null($this->_propDict["registeredDateTime"])) {
+        if (array_key_exists("registeredDateTime", $this->_propDict) && !is_null($this->_propDict["registeredDateTime"])) {
+            if (is_a($this->_propDict["registeredDateTime"], "\DateTime")) {
                 return $this->_propDict["registeredDateTime"];
             } else {
                 $this->_propDict["registeredDateTime"] = new \DateTime($this->_propDict["registeredDateTime"]);
@@ -153,22 +153,29 @@ class Printer extends PrinterBase
      * Gets the connectors
     * The connectors that are associated with the printer.
      *
-     * @return array|null The connectors
+     * @return PrintConnector[]|null The connectors
      */
     public function getConnectors()
     {
-        if (array_key_exists("connectors", $this->_propDict)) {
-           return $this->_propDict["connectors"];
-        } else {
-            return null;
+        if (array_key_exists('connectors', $this->_propDict) && !is_null($this->_propDict['connectors'])) {
+            $connectors = [];
+            if (count($this->_propDict['connectors']) > 0 && is_a($this->_propDict['connectors'][0], 'PrintConnector')) {
+                return $this->_propDict['connectors'];
+            }
+            foreach ($this->_propDict['connectors'] as $singleValue) {
+                $connectors []= new PrintConnector($singleValue);
+            }
+            $this->_propDict['connectors'] = $connectors;
+            return $this->_propDict['connectors'];
         }
+        return null;
     }
     
     /** 
     * Sets the connectors
     * The connectors that are associated with the printer.
     *
-    * @param PrintConnector $val The connectors
+    * @param PrintConnector[] $val The connectors
     *
     * @return Printer
     */
@@ -183,22 +190,29 @@ class Printer extends PrinterBase
      * Gets the shares
     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      *
-     * @return array|null The shares
+     * @return PrinterShare[]|null The shares
      */
     public function getShares()
     {
-        if (array_key_exists("shares", $this->_propDict)) {
-           return $this->_propDict["shares"];
-        } else {
-            return null;
+        if (array_key_exists('shares', $this->_propDict) && !is_null($this->_propDict['shares'])) {
+            $shares = [];
+            if (count($this->_propDict['shares']) > 0 && is_a($this->_propDict['shares'][0], 'PrinterShare')) {
+                return $this->_propDict['shares'];
+            }
+            foreach ($this->_propDict['shares'] as $singleValue) {
+                $shares []= new PrinterShare($singleValue);
+            }
+            $this->_propDict['shares'] = $shares;
+            return $this->_propDict['shares'];
         }
+        return null;
     }
     
     /** 
     * Sets the shares
     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
     *
-    * @param PrinterShare $val The shares
+    * @param PrinterShare[] $val The shares
     *
     * @return Printer
     */
@@ -213,22 +227,29 @@ class Printer extends PrinterBase
      * Gets the taskTriggers
     * A list of task triggers that are associated with the printer.
      *
-     * @return array|null The taskTriggers
+     * @return PrintTaskTrigger[]|null The taskTriggers
      */
     public function getTaskTriggers()
     {
-        if (array_key_exists("taskTriggers", $this->_propDict)) {
-           return $this->_propDict["taskTriggers"];
-        } else {
-            return null;
+        if (array_key_exists('taskTriggers', $this->_propDict) && !is_null($this->_propDict['taskTriggers'])) {
+            $taskTriggers = [];
+            if (count($this->_propDict['taskTriggers']) > 0 && is_a($this->_propDict['taskTriggers'][0], 'PrintTaskTrigger')) {
+                return $this->_propDict['taskTriggers'];
+            }
+            foreach ($this->_propDict['taskTriggers'] as $singleValue) {
+                $taskTriggers []= new PrintTaskTrigger($singleValue);
+            }
+            $this->_propDict['taskTriggers'] = $taskTriggers;
+            return $this->_propDict['taskTriggers'];
         }
+        return null;
     }
     
     /** 
     * Sets the taskTriggers
     * A list of task triggers that are associated with the printer.
     *
-    * @param PrintTaskTrigger $val The taskTriggers
+    * @param PrintTaskTrigger[] $val The taskTriggers
     *
     * @return Printer
     */

@@ -32,8 +32,8 @@ class ThumbnailSet extends Entity
     */
     public function getLarge()
     {
-        if (array_key_exists("large", $this->_propDict)) {
-            if (is_a($this->_propDict["large"], "\Microsoft\Graph\Model\Thumbnail") || is_null($this->_propDict["large"])) {
+        if (array_key_exists("large", $this->_propDict) && !is_null($this->_propDict["large"])) {
+            if (is_a($this->_propDict["large"], "\Microsoft\Graph\Model\Thumbnail")) {
                 return $this->_propDict["large"];
             } else {
                 $this->_propDict["large"] = new Thumbnail($this->_propDict["large"]);
@@ -65,8 +65,8 @@ class ThumbnailSet extends Entity
     */
     public function getMedium()
     {
-        if (array_key_exists("medium", $this->_propDict)) {
-            if (is_a($this->_propDict["medium"], "\Microsoft\Graph\Model\Thumbnail") || is_null($this->_propDict["medium"])) {
+        if (array_key_exists("medium", $this->_propDict) && !is_null($this->_propDict["medium"])) {
+            if (is_a($this->_propDict["medium"], "\Microsoft\Graph\Model\Thumbnail")) {
                 return $this->_propDict["medium"];
             } else {
                 $this->_propDict["medium"] = new Thumbnail($this->_propDict["medium"]);
@@ -98,8 +98,8 @@ class ThumbnailSet extends Entity
     */
     public function getSmall()
     {
-        if (array_key_exists("small", $this->_propDict)) {
-            if (is_a($this->_propDict["small"], "\Microsoft\Graph\Model\Thumbnail") || is_null($this->_propDict["small"])) {
+        if (array_key_exists("small", $this->_propDict) && !is_null($this->_propDict["small"])) {
+            if (is_a($this->_propDict["small"], "\Microsoft\Graph\Model\Thumbnail")) {
                 return $this->_propDict["small"];
             } else {
                 $this->_propDict["small"] = new Thumbnail($this->_propDict["small"]);
@@ -131,8 +131,8 @@ class ThumbnailSet extends Entity
     */
     public function getSource()
     {
-        if (array_key_exists("source", $this->_propDict)) {
-            if (is_a($this->_propDict["source"], "\Microsoft\Graph\Model\Thumbnail") || is_null($this->_propDict["source"])) {
+        if (array_key_exists("source", $this->_propDict) && !is_null($this->_propDict["source"])) {
+            if (is_a($this->_propDict["source"], "\Microsoft\Graph\Model\Thumbnail")) {
                 return $this->_propDict["source"];
             } else {
                 $this->_propDict["source"] = new Thumbnail($this->_propDict["source"]);

@@ -32,8 +32,9 @@ class UserFeedback extends \Microsoft\Graph\Model\Entity
     */
     public function getRating()
     {
-        if (array_key_exists("rating", $this->_propDict)) {
-            if (is_a($this->_propDict["rating"], "\Microsoft\Graph\CallRecords\Model\UserFeedbackRating") || is_null($this->_propDict["rating"])) {
+        if (array_key_exists("rating", $this->_propDict) && !is_null($this->_propDict["rating"])) {
+     
+            if (is_a($this->_propDict["rating"], "\Microsoft\Graph\CallRecords\Model\UserFeedbackRating")) {
                 return $this->_propDict["rating"];
             } else {
                 $this->_propDict["rating"] = new UserFeedbackRating($this->_propDict["rating"]);
@@ -93,8 +94,9 @@ class UserFeedback extends \Microsoft\Graph\Model\Entity
     */
     public function getTokens()
     {
-        if (array_key_exists("tokens", $this->_propDict)) {
-            if (is_a($this->_propDict["tokens"], "\Microsoft\Graph\CallRecords\Model\FeedbackTokenSet") || is_null($this->_propDict["tokens"])) {
+        if (array_key_exists("tokens", $this->_propDict) && !is_null($this->_propDict["tokens"])) {
+     
+            if (is_a($this->_propDict["tokens"], "\Microsoft\Graph\CallRecords\Model\FeedbackTokenSet")) {
                 return $this->_propDict["tokens"];
             } else {
                 $this->_propDict["tokens"] = new FeedbackTokenSet($this->_propDict["tokens"]);

@@ -119,8 +119,8 @@ class ApprovalStage extends Entity
     */
     public function getReviewedBy()
     {
-        if (array_key_exists("reviewedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedBy"], "\Microsoft\Graph\Model\Identity") || is_null($this->_propDict["reviewedBy"])) {
+        if (array_key_exists("reviewedBy", $this->_propDict) && !is_null($this->_propDict["reviewedBy"])) {
+            if (is_a($this->_propDict["reviewedBy"], "\Microsoft\Graph\Model\Identity")) {
                 return $this->_propDict["reviewedBy"];
             } else {
                 $this->_propDict["reviewedBy"] = new Identity($this->_propDict["reviewedBy"]);
@@ -152,8 +152,8 @@ class ApprovalStage extends Entity
     */
     public function getReviewedDateTime()
     {
-        if (array_key_exists("reviewedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["reviewedDateTime"], "\DateTime") || is_null($this->_propDict["reviewedDateTime"])) {
+        if (array_key_exists("reviewedDateTime", $this->_propDict) && !is_null($this->_propDict["reviewedDateTime"])) {
+            if (is_a($this->_propDict["reviewedDateTime"], "\DateTime")) {
                 return $this->_propDict["reviewedDateTime"];
             } else {
                 $this->_propDict["reviewedDateTime"] = new \DateTime($this->_propDict["reviewedDateTime"]);

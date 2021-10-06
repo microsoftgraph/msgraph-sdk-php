@@ -1,0 +1,122 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* SharePointIdentitySet File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright (c) Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @link      https://graph.microsoft.com
+*/
+namespace Microsoft\Graph\Model;
+/**
+* SharePointIdentitySet class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright (c) Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @link      https://graph.microsoft.com
+*/
+class SharePointIdentitySet extends IdentitySet
+{
+
+    /**
+    * Gets the group
+    *
+    * @return Identity|null The group
+    */
+    public function getGroup()
+    {
+        if (array_key_exists("group", $this->_propDict) && !is_null($this->_propDict["group"])) {
+     
+            if (is_a($this->_propDict["group"], "\Microsoft\Graph\Model\Identity")) {
+                return $this->_propDict["group"];
+            } else {
+                $this->_propDict["group"] = new Identity($this->_propDict["group"]);
+                return $this->_propDict["group"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the group
+    *
+    * @param Identity $val The value to assign to the group
+    *
+    * @return SharePointIdentitySet The SharePointIdentitySet
+    */
+    public function setGroup($val)
+    {
+        $this->_propDict["group"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the siteGroup
+    *
+    * @return SharePointIdentity|null The siteGroup
+    */
+    public function getSiteGroup()
+    {
+        if (array_key_exists("siteGroup", $this->_propDict) && !is_null($this->_propDict["siteGroup"])) {
+     
+            if (is_a($this->_propDict["siteGroup"], "\Microsoft\Graph\Model\SharePointIdentity")) {
+                return $this->_propDict["siteGroup"];
+            } else {
+                $this->_propDict["siteGroup"] = new SharePointIdentity($this->_propDict["siteGroup"]);
+                return $this->_propDict["siteGroup"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the siteGroup
+    *
+    * @param SharePointIdentity $val The value to assign to the siteGroup
+    *
+    * @return SharePointIdentitySet The SharePointIdentitySet
+    */
+    public function setSiteGroup($val)
+    {
+        $this->_propDict["siteGroup"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the siteUser
+    *
+    * @return SharePointIdentity|null The siteUser
+    */
+    public function getSiteUser()
+    {
+        if (array_key_exists("siteUser", $this->_propDict) && !is_null($this->_propDict["siteUser"])) {
+     
+            if (is_a($this->_propDict["siteUser"], "\Microsoft\Graph\Model\SharePointIdentity")) {
+                return $this->_propDict["siteUser"];
+            } else {
+                $this->_propDict["siteUser"] = new SharePointIdentity($this->_propDict["siteUser"]);
+                return $this->_propDict["siteUser"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the siteUser
+    *
+    * @param SharePointIdentity $val The value to assign to the siteUser
+    *
+    * @return SharePointIdentitySet The SharePointIdentitySet
+    */
+    public function setSiteUser($val)
+    {
+        $this->_propDict["siteUser"] = $val;
+         return $this;
+    }
+}

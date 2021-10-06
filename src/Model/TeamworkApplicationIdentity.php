@@ -32,8 +32,9 @@ class TeamworkApplicationIdentity extends Identity
     */
     public function getApplicationIdentityType()
     {
-        if (array_key_exists("applicationIdentityType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationIdentityType"], "\Microsoft\Graph\Model\TeamworkApplicationIdentityType") || is_null($this->_propDict["applicationIdentityType"])) {
+        if (array_key_exists("applicationIdentityType", $this->_propDict) && !is_null($this->_propDict["applicationIdentityType"])) {
+     
+            if (is_a($this->_propDict["applicationIdentityType"], "\Microsoft\Graph\Model\TeamworkApplicationIdentityType")) {
                 return $this->_propDict["applicationIdentityType"];
             } else {
                 $this->_propDict["applicationIdentityType"] = new TeamworkApplicationIdentityType($this->_propDict["applicationIdentityType"]);

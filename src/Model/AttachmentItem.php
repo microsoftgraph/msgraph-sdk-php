@@ -32,8 +32,9 @@ class AttachmentItem extends Entity
     */
     public function getAttachmentType()
     {
-        if (array_key_exists("attachmentType", $this->_propDict)) {
-            if (is_a($this->_propDict["attachmentType"], "\Microsoft\Graph\Model\AttachmentType") || is_null($this->_propDict["attachmentType"])) {
+        if (array_key_exists("attachmentType", $this->_propDict) && !is_null($this->_propDict["attachmentType"])) {
+     
+            if (is_a($this->_propDict["attachmentType"], "\Microsoft\Graph\Model\AttachmentType")) {
                 return $this->_propDict["attachmentType"];
             } else {
                 $this->_propDict["attachmentType"] = new AttachmentType($this->_propDict["attachmentType"]);

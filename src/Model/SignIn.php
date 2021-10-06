@@ -87,22 +87,29 @@ class SignIn extends Entity
      * Gets the appliedConditionalAccessPolicies
     * A list of conditional access policies that are triggered by the corresponding sign-in activity.
      *
-     * @return array|null The appliedConditionalAccessPolicies
+     * @return AppliedConditionalAccessPolicy[]|null The appliedConditionalAccessPolicies
      */
     public function getAppliedConditionalAccessPolicies()
     {
-        if (array_key_exists("appliedConditionalAccessPolicies", $this->_propDict)) {
-           return $this->_propDict["appliedConditionalAccessPolicies"];
-        } else {
-            return null;
+        if (array_key_exists('appliedConditionalAccessPolicies', $this->_propDict) && !is_null($this->_propDict['appliedConditionalAccessPolicies'])) {
+            $appliedConditionalAccessPolicies = [];
+            if (count($this->_propDict['appliedConditionalAccessPolicies']) > 0 && is_a($this->_propDict['appliedConditionalAccessPolicies'][0], 'AppliedConditionalAccessPolicy')) {
+                return $this->_propDict['appliedConditionalAccessPolicies'];
+            }
+            foreach ($this->_propDict['appliedConditionalAccessPolicies'] as $singleValue) {
+                $appliedConditionalAccessPolicies []= new AppliedConditionalAccessPolicy($singleValue);
+            }
+            $this->_propDict['appliedConditionalAccessPolicies'] = $appliedConditionalAccessPolicies;
+            return $this->_propDict['appliedConditionalAccessPolicies'];
         }
+        return null;
     }
     
     /** 
     * Sets the appliedConditionalAccessPolicies
     * A list of conditional access policies that are triggered by the corresponding sign-in activity.
     *
-    * @param AppliedConditionalAccessPolicy $val The appliedConditionalAccessPolicies
+    * @param AppliedConditionalAccessPolicy[] $val The appliedConditionalAccessPolicies
     *
     * @return SignIn
     */
@@ -149,8 +156,8 @@ class SignIn extends Entity
     */
     public function getConditionalAccessStatus()
     {
-        if (array_key_exists("conditionalAccessStatus", $this->_propDict)) {
-            if (is_a($this->_propDict["conditionalAccessStatus"], "\Microsoft\Graph\Model\ConditionalAccessStatus") || is_null($this->_propDict["conditionalAccessStatus"])) {
+        if (array_key_exists("conditionalAccessStatus", $this->_propDict) && !is_null($this->_propDict["conditionalAccessStatus"])) {
+            if (is_a($this->_propDict["conditionalAccessStatus"], "\Microsoft\Graph\Model\ConditionalAccessStatus")) {
                 return $this->_propDict["conditionalAccessStatus"];
             } else {
                 $this->_propDict["conditionalAccessStatus"] = new ConditionalAccessStatus($this->_propDict["conditionalAccessStatus"]);
@@ -211,8 +218,8 @@ class SignIn extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -244,8 +251,8 @@ class SignIn extends Entity
     */
     public function getDeviceDetail()
     {
-        if (array_key_exists("deviceDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceDetail"], "\Microsoft\Graph\Model\DeviceDetail") || is_null($this->_propDict["deviceDetail"])) {
+        if (array_key_exists("deviceDetail", $this->_propDict) && !is_null($this->_propDict["deviceDetail"])) {
+            if (is_a($this->_propDict["deviceDetail"], "\Microsoft\Graph\Model\DeviceDetail")) {
                 return $this->_propDict["deviceDetail"];
             } else {
                 $this->_propDict["deviceDetail"] = new DeviceDetail($this->_propDict["deviceDetail"]);
@@ -335,8 +342,8 @@ class SignIn extends Entity
     */
     public function getLocation()
     {
-        if (array_key_exists("location", $this->_propDict)) {
-            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\SignInLocation") || is_null($this->_propDict["location"])) {
+        if (array_key_exists("location", $this->_propDict) && !is_null($this->_propDict["location"])) {
+            if (is_a($this->_propDict["location"], "\Microsoft\Graph\Model\SignInLocation")) {
                 return $this->_propDict["location"];
             } else {
                 $this->_propDict["location"] = new SignInLocation($this->_propDict["location"]);
@@ -426,8 +433,8 @@ class SignIn extends Entity
     */
     public function getRiskDetail()
     {
-        if (array_key_exists("riskDetail", $this->_propDict)) {
-            if (is_a($this->_propDict["riskDetail"], "\Microsoft\Graph\Model\RiskDetail") || is_null($this->_propDict["riskDetail"])) {
+        if (array_key_exists("riskDetail", $this->_propDict) && !is_null($this->_propDict["riskDetail"])) {
+            if (is_a($this->_propDict["riskDetail"], "\Microsoft\Graph\Model\RiskDetail")) {
                 return $this->_propDict["riskDetail"];
             } else {
                 $this->_propDict["riskDetail"] = new RiskDetail($this->_propDict["riskDetail"]);
@@ -456,22 +463,29 @@ class SignIn extends Entity
      * Gets the riskEventTypes
     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
      *
-     * @return array|null The riskEventTypes
+     * @return RiskEventType[]|null The riskEventTypes
      */
     public function getRiskEventTypes()
     {
-        if (array_key_exists("riskEventTypes", $this->_propDict)) {
-           return $this->_propDict["riskEventTypes"];
-        } else {
-            return null;
+        if (array_key_exists('riskEventTypes', $this->_propDict) && !is_null($this->_propDict['riskEventTypes'])) {
+            $riskEventTypes = [];
+            if (count($this->_propDict['riskEventTypes']) > 0 && is_a($this->_propDict['riskEventTypes'][0], 'RiskEventType')) {
+                return $this->_propDict['riskEventTypes'];
+            }
+            foreach ($this->_propDict['riskEventTypes'] as $singleValue) {
+                $riskEventTypes []= new RiskEventType($singleValue);
+            }
+            $this->_propDict['riskEventTypes'] = $riskEventTypes;
+            return $this->_propDict['riskEventTypes'];
         }
+        return null;
     }
     
     /** 
     * Sets the riskEventTypes
     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
     *
-    * @param RiskEventType $val The riskEventTypes
+    * @param RiskEventType[] $val The riskEventTypes
     *
     * @return SignIn
     */
@@ -518,8 +532,8 @@ class SignIn extends Entity
     */
     public function getRiskLevelAggregated()
     {
-        if (array_key_exists("riskLevelAggregated", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevelAggregated"], "\Microsoft\Graph\Model\RiskLevel") || is_null($this->_propDict["riskLevelAggregated"])) {
+        if (array_key_exists("riskLevelAggregated", $this->_propDict) && !is_null($this->_propDict["riskLevelAggregated"])) {
+            if (is_a($this->_propDict["riskLevelAggregated"], "\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["riskLevelAggregated"];
             } else {
                 $this->_propDict["riskLevelAggregated"] = new RiskLevel($this->_propDict["riskLevelAggregated"]);
@@ -551,8 +565,8 @@ class SignIn extends Entity
     */
     public function getRiskLevelDuringSignIn()
     {
-        if (array_key_exists("riskLevelDuringSignIn", $this->_propDict)) {
-            if (is_a($this->_propDict["riskLevelDuringSignIn"], "\Microsoft\Graph\Model\RiskLevel") || is_null($this->_propDict["riskLevelDuringSignIn"])) {
+        if (array_key_exists("riskLevelDuringSignIn", $this->_propDict) && !is_null($this->_propDict["riskLevelDuringSignIn"])) {
+            if (is_a($this->_propDict["riskLevelDuringSignIn"], "\Microsoft\Graph\Model\RiskLevel")) {
                 return $this->_propDict["riskLevelDuringSignIn"];
             } else {
                 $this->_propDict["riskLevelDuringSignIn"] = new RiskLevel($this->_propDict["riskLevelDuringSignIn"]);
@@ -584,8 +598,8 @@ class SignIn extends Entity
     */
     public function getRiskState()
     {
-        if (array_key_exists("riskState", $this->_propDict)) {
-            if (is_a($this->_propDict["riskState"], "\Microsoft\Graph\Model\RiskState") || is_null($this->_propDict["riskState"])) {
+        if (array_key_exists("riskState", $this->_propDict) && !is_null($this->_propDict["riskState"])) {
+            if (is_a($this->_propDict["riskState"], "\Microsoft\Graph\Model\RiskState")) {
                 return $this->_propDict["riskState"];
             } else {
                 $this->_propDict["riskState"] = new RiskState($this->_propDict["riskState"]);
@@ -617,8 +631,8 @@ class SignIn extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\SignInStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\SignInStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new SignInStatus($this->_propDict["status"]);

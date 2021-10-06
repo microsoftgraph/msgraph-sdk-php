@@ -42,7 +42,7 @@ class ParentalControlSettings extends Entity
     * Sets the countriesBlockedForMinors
     * Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries specified in this list.
     *
-    * @param string $val The value of the countriesBlockedForMinors
+    * @param string[] $val The value of the countriesBlockedForMinors
     *
     * @return ParentalControlSettings
     */

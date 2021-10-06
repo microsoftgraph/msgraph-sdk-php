@@ -116,22 +116,29 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
      * Gets the appsHideList
     * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The appsHideList
+     * @return AppListItem[]|null The appsHideList
      */
     public function getAppsHideList()
     {
-        if (array_key_exists("appsHideList", $this->_propDict)) {
-           return $this->_propDict["appsHideList"];
-        } else {
-            return null;
+        if (array_key_exists('appsHideList', $this->_propDict) && !is_null($this->_propDict['appsHideList'])) {
+            $appsHideList = [];
+            if (count($this->_propDict['appsHideList']) > 0 && is_a($this->_propDict['appsHideList'][0], 'AppListItem')) {
+                return $this->_propDict['appsHideList'];
+            }
+            foreach ($this->_propDict['appsHideList'] as $singleValue) {
+                $appsHideList []= new AppListItem($singleValue);
+            }
+            $this->_propDict['appsHideList'] = $appsHideList;
+            return $this->_propDict['appsHideList'];
         }
+        return null;
     }
     
     /** 
     * Sets the appsHideList
     * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
     *
-    * @param AppListItem $val The appsHideList
+    * @param AppListItem[] $val The appsHideList
     *
     * @return AndroidGeneralDeviceConfiguration
     */
@@ -146,22 +153,29 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
      * Gets the appsInstallAllowList
     * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The appsInstallAllowList
+     * @return AppListItem[]|null The appsInstallAllowList
      */
     public function getAppsInstallAllowList()
     {
-        if (array_key_exists("appsInstallAllowList", $this->_propDict)) {
-           return $this->_propDict["appsInstallAllowList"];
-        } else {
-            return null;
+        if (array_key_exists('appsInstallAllowList', $this->_propDict) && !is_null($this->_propDict['appsInstallAllowList'])) {
+            $appsInstallAllowList = [];
+            if (count($this->_propDict['appsInstallAllowList']) > 0 && is_a($this->_propDict['appsInstallAllowList'][0], 'AppListItem')) {
+                return $this->_propDict['appsInstallAllowList'];
+            }
+            foreach ($this->_propDict['appsInstallAllowList'] as $singleValue) {
+                $appsInstallAllowList []= new AppListItem($singleValue);
+            }
+            $this->_propDict['appsInstallAllowList'] = $appsInstallAllowList;
+            return $this->_propDict['appsInstallAllowList'];
         }
+        return null;
     }
     
     /** 
     * Sets the appsInstallAllowList
     * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
     *
-    * @param AppListItem $val The appsInstallAllowList
+    * @param AppListItem[] $val The appsInstallAllowList
     *
     * @return AndroidGeneralDeviceConfiguration
     */
@@ -176,22 +190,29 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
      * Gets the appsLaunchBlockList
     * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The appsLaunchBlockList
+     * @return AppListItem[]|null The appsLaunchBlockList
      */
     public function getAppsLaunchBlockList()
     {
-        if (array_key_exists("appsLaunchBlockList", $this->_propDict)) {
-           return $this->_propDict["appsLaunchBlockList"];
-        } else {
-            return null;
+        if (array_key_exists('appsLaunchBlockList', $this->_propDict) && !is_null($this->_propDict['appsLaunchBlockList'])) {
+            $appsLaunchBlockList = [];
+            if (count($this->_propDict['appsLaunchBlockList']) > 0 && is_a($this->_propDict['appsLaunchBlockList'][0], 'AppListItem')) {
+                return $this->_propDict['appsLaunchBlockList'];
+            }
+            foreach ($this->_propDict['appsLaunchBlockList'] as $singleValue) {
+                $appsLaunchBlockList []= new AppListItem($singleValue);
+            }
+            $this->_propDict['appsLaunchBlockList'] = $appsLaunchBlockList;
+            return $this->_propDict['appsLaunchBlockList'];
         }
+        return null;
     }
     
     /** 
     * Sets the appsLaunchBlockList
     * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
     *
-    * @param AppListItem $val The appsLaunchBlockList
+    * @param AppListItem[] $val The appsLaunchBlockList
     *
     * @return AndroidGeneralDeviceConfiguration
     */
@@ -383,8 +404,8 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function getCompliantAppListType()
     {
-        if (array_key_exists("compliantAppListType", $this->_propDict)) {
-            if (is_a($this->_propDict["compliantAppListType"], "\Microsoft\Graph\Model\AppListType") || is_null($this->_propDict["compliantAppListType"])) {
+        if (array_key_exists("compliantAppListType", $this->_propDict) && !is_null($this->_propDict["compliantAppListType"])) {
+            if (is_a($this->_propDict["compliantAppListType"], "\Microsoft\Graph\Model\AppListType")) {
                 return $this->_propDict["compliantAppListType"];
             } else {
                 $this->_propDict["compliantAppListType"] = new AppListType($this->_propDict["compliantAppListType"]);
@@ -413,22 +434,29 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
      * Gets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
-     * @return array|null The compliantAppsList
+     * @return AppListItem[]|null The compliantAppsList
      */
     public function getCompliantAppsList()
     {
-        if (array_key_exists("compliantAppsList", $this->_propDict)) {
-           return $this->_propDict["compliantAppsList"];
-        } else {
-            return null;
+        if (array_key_exists('compliantAppsList', $this->_propDict) && !is_null($this->_propDict['compliantAppsList'])) {
+            $compliantAppsList = [];
+            if (count($this->_propDict['compliantAppsList']) > 0 && is_a($this->_propDict['compliantAppsList'][0], 'AppListItem')) {
+                return $this->_propDict['compliantAppsList'];
+            }
+            foreach ($this->_propDict['compliantAppsList'] as $singleValue) {
+                $compliantAppsList []= new AppListItem($singleValue);
+            }
+            $this->_propDict['compliantAppsList'] = $compliantAppsList;
+            return $this->_propDict['compliantAppsList'];
         }
+        return null;
     }
     
     /** 
     * Sets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
     *
-    * @param AppListItem $val The compliantAppsList
+    * @param AppListItem[] $val The compliantAppsList
     *
     * @return AndroidGeneralDeviceConfiguration
     */
@@ -588,22 +616,29 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
      * Gets the kioskModeApps
     * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
      *
-     * @return array|null The kioskModeApps
+     * @return AppListItem[]|null The kioskModeApps
      */
     public function getKioskModeApps()
     {
-        if (array_key_exists("kioskModeApps", $this->_propDict)) {
-           return $this->_propDict["kioskModeApps"];
-        } else {
-            return null;
+        if (array_key_exists('kioskModeApps', $this->_propDict) && !is_null($this->_propDict['kioskModeApps'])) {
+            $kioskModeApps = [];
+            if (count($this->_propDict['kioskModeApps']) > 0 && is_a($this->_propDict['kioskModeApps'][0], 'AppListItem')) {
+                return $this->_propDict['kioskModeApps'];
+            }
+            foreach ($this->_propDict['kioskModeApps'] as $singleValue) {
+                $kioskModeApps []= new AppListItem($singleValue);
+            }
+            $this->_propDict['kioskModeApps'] = $kioskModeApps;
+            return $this->_propDict['kioskModeApps'];
         }
+        return null;
     }
     
     /** 
     * Sets the kioskModeApps
     * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
     *
-    * @param AppListItem $val The kioskModeApps
+    * @param AppListItem[] $val The kioskModeApps
     *
     * @return AndroidGeneralDeviceConfiguration
     */
@@ -940,8 +975,8 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function getPasswordRequiredType()
     {
-        if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\AndroidRequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
+        if (array_key_exists("passwordRequiredType", $this->_propDict) && !is_null($this->_propDict["passwordRequiredType"])) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\AndroidRequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new AndroidRequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -1379,8 +1414,8 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration
     */
     public function getWebBrowserCookieSettings()
     {
-        if (array_key_exists("webBrowserCookieSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["webBrowserCookieSettings"], "\Microsoft\Graph\Model\WebBrowserCookieSettings") || is_null($this->_propDict["webBrowserCookieSettings"])) {
+        if (array_key_exists("webBrowserCookieSettings", $this->_propDict) && !is_null($this->_propDict["webBrowserCookieSettings"])) {
+            if (is_a($this->_propDict["webBrowserCookieSettings"], "\Microsoft\Graph\Model\WebBrowserCookieSettings")) {
                 return $this->_propDict["webBrowserCookieSettings"];
             } else {
                 $this->_propDict["webBrowserCookieSettings"] = new WebBrowserCookieSettings($this->_propDict["webBrowserCookieSettings"]);

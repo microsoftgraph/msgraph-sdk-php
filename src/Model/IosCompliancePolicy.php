@@ -61,8 +61,8 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     */
     public function getDeviceThreatProtectionRequiredSecurityLevel()
     {
-        if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Microsoft\Graph\Model\DeviceThreatProtectionLevel") || is_null($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"])) {
+        if (array_key_exists("deviceThreatProtectionRequiredSecurityLevel", $this->_propDict) && !is_null($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"])) {
+            if (is_a($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"], "\Microsoft\Graph\Model\DeviceThreatProtectionLevel")) {
                 return $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"];
             } else {
                 $this->_propDict["deviceThreatProtectionRequiredSecurityLevel"] = new DeviceThreatProtectionLevel($this->_propDict["deviceThreatProtectionRequiredSecurityLevel"]);
@@ -384,8 +384,8 @@ class IosCompliancePolicy extends DeviceCompliancePolicy
     */
     public function getPasscodeRequiredType()
     {
-        if (array_key_exists("passcodeRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passcodeRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType") || is_null($this->_propDict["passcodeRequiredType"])) {
+        if (array_key_exists("passcodeRequiredType", $this->_propDict) && !is_null($this->_propDict["passcodeRequiredType"])) {
+            if (is_a($this->_propDict["passcodeRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passcodeRequiredType"];
             } else {
                 $this->_propDict["passcodeRequiredType"] = new RequiredPasswordType($this->_propDict["passcodeRequiredType"]);

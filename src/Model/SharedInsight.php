@@ -32,8 +32,8 @@ class SharedInsight extends Entity
     */
     public function getLastShared()
     {
-        if (array_key_exists("lastShared", $this->_propDict)) {
-            if (is_a($this->_propDict["lastShared"], "\Microsoft\Graph\Model\SharingDetail") || is_null($this->_propDict["lastShared"])) {
+        if (array_key_exists("lastShared", $this->_propDict) && !is_null($this->_propDict["lastShared"])) {
+            if (is_a($this->_propDict["lastShared"], "\Microsoft\Graph\Model\SharingDetail")) {
                 return $this->_propDict["lastShared"];
             } else {
                 $this->_propDict["lastShared"] = new SharingDetail($this->_propDict["lastShared"]);
@@ -65,8 +65,8 @@ class SharedInsight extends Entity
     */
     public function getResourceReference()
     {
-        if (array_key_exists("resourceReference", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceReference"], "\Microsoft\Graph\Model\ResourceReference") || is_null($this->_propDict["resourceReference"])) {
+        if (array_key_exists("resourceReference", $this->_propDict) && !is_null($this->_propDict["resourceReference"])) {
+            if (is_a($this->_propDict["resourceReference"], "\Microsoft\Graph\Model\ResourceReference")) {
                 return $this->_propDict["resourceReference"];
             } else {
                 $this->_propDict["resourceReference"] = new ResourceReference($this->_propDict["resourceReference"]);
@@ -98,8 +98,8 @@ class SharedInsight extends Entity
     */
     public function getResourceVisualization()
     {
-        if (array_key_exists("resourceVisualization", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceVisualization"], "\Microsoft\Graph\Model\ResourceVisualization") || is_null($this->_propDict["resourceVisualization"])) {
+        if (array_key_exists("resourceVisualization", $this->_propDict) && !is_null($this->_propDict["resourceVisualization"])) {
+            if (is_a($this->_propDict["resourceVisualization"], "\Microsoft\Graph\Model\ResourceVisualization")) {
                 return $this->_propDict["resourceVisualization"];
             } else {
                 $this->_propDict["resourceVisualization"] = new ResourceVisualization($this->_propDict["resourceVisualization"]);
@@ -127,21 +127,28 @@ class SharedInsight extends Entity
      /** 
      * Gets the sharingHistory
      *
-     * @return array|null The sharingHistory
+     * @return SharingDetail[]|null The sharingHistory
      */
     public function getSharingHistory()
     {
-        if (array_key_exists("sharingHistory", $this->_propDict)) {
-           return $this->_propDict["sharingHistory"];
-        } else {
-            return null;
+        if (array_key_exists('sharingHistory', $this->_propDict) && !is_null($this->_propDict['sharingHistory'])) {
+            $sharingHistory = [];
+            if (count($this->_propDict['sharingHistory']) > 0 && is_a($this->_propDict['sharingHistory'][0], 'SharingDetail')) {
+                return $this->_propDict['sharingHistory'];
+            }
+            foreach ($this->_propDict['sharingHistory'] as $singleValue) {
+                $sharingHistory []= new SharingDetail($singleValue);
+            }
+            $this->_propDict['sharingHistory'] = $sharingHistory;
+            return $this->_propDict['sharingHistory'];
         }
+        return null;
     }
     
     /** 
     * Sets the sharingHistory
     *
-    * @param SharingDetail $val The sharingHistory
+    * @param SharingDetail[] $val The sharingHistory
     *
     * @return SharedInsight
     */
@@ -158,8 +165,8 @@ class SharedInsight extends Entity
     */
     public function getLastSharedMethod()
     {
-        if (array_key_exists("lastSharedMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["lastSharedMethod"], "\Microsoft\Graph\Model\Entity") || is_null($this->_propDict["lastSharedMethod"])) {
+        if (array_key_exists("lastSharedMethod", $this->_propDict) && !is_null($this->_propDict["lastSharedMethod"])) {
+            if (is_a($this->_propDict["lastSharedMethod"], "\Microsoft\Graph\Model\Entity")) {
                 return $this->_propDict["lastSharedMethod"];
             } else {
                 $this->_propDict["lastSharedMethod"] = new Entity($this->_propDict["lastSharedMethod"]);
@@ -190,8 +197,8 @@ class SharedInsight extends Entity
     */
     public function getResource()
     {
-        if (array_key_exists("resource", $this->_propDict)) {
-            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\Entity") || is_null($this->_propDict["resource"])) {
+        if (array_key_exists("resource", $this->_propDict) && !is_null($this->_propDict["resource"])) {
+            if (is_a($this->_propDict["resource"], "\Microsoft\Graph\Model\Entity")) {
                 return $this->_propDict["resource"];
             } else {
                 $this->_propDict["resource"] = new Entity($this->_propDict["resource"]);

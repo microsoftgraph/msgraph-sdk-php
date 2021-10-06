@@ -61,8 +61,8 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     */
     public function getLinks()
     {
-        if (array_key_exists("links", $this->_propDict)) {
-            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\SectionLinks") || is_null($this->_propDict["links"])) {
+        if (array_key_exists("links", $this->_propDict) && !is_null($this->_propDict["links"])) {
+            if (is_a($this->_propDict["links"], "\Microsoft\Graph\Model\SectionLinks")) {
                 return $this->_propDict["links"];
             } else {
                 $this->_propDict["links"] = new SectionLinks($this->_propDict["links"]);
@@ -120,22 +120,29 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
      * Gets the pages
     * The collection of pages in the section.  Read-only. Nullable.
      *
-     * @return array|null The pages
+     * @return OnenotePage[]|null The pages
      */
     public function getPages()
     {
-        if (array_key_exists("pages", $this->_propDict)) {
-           return $this->_propDict["pages"];
-        } else {
-            return null;
+        if (array_key_exists('pages', $this->_propDict) && !is_null($this->_propDict['pages'])) {
+            $pages = [];
+            if (count($this->_propDict['pages']) > 0 && is_a($this->_propDict['pages'][0], 'OnenotePage')) {
+                return $this->_propDict['pages'];
+            }
+            foreach ($this->_propDict['pages'] as $singleValue) {
+                $pages []= new OnenotePage($singleValue);
+            }
+            $this->_propDict['pages'] = $pages;
+            return $this->_propDict['pages'];
         }
+        return null;
     }
     
     /** 
     * Sets the pages
     * The collection of pages in the section.  Read-only. Nullable.
     *
-    * @param OnenotePage $val The pages
+    * @param OnenotePage[] $val The pages
     *
     * @return OnenoteSection
     */
@@ -153,8 +160,8 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     */
     public function getParentNotebook()
     {
-        if (array_key_exists("parentNotebook", $this->_propDict)) {
-            if (is_a($this->_propDict["parentNotebook"], "\Microsoft\Graph\Model\Notebook") || is_null($this->_propDict["parentNotebook"])) {
+        if (array_key_exists("parentNotebook", $this->_propDict) && !is_null($this->_propDict["parentNotebook"])) {
+            if (is_a($this->_propDict["parentNotebook"], "\Microsoft\Graph\Model\Notebook")) {
                 return $this->_propDict["parentNotebook"];
             } else {
                 $this->_propDict["parentNotebook"] = new Notebook($this->_propDict["parentNotebook"]);
@@ -186,8 +193,8 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
     */
     public function getParentSectionGroup()
     {
-        if (array_key_exists("parentSectionGroup", $this->_propDict)) {
-            if (is_a($this->_propDict["parentSectionGroup"], "\Microsoft\Graph\Model\SectionGroup") || is_null($this->_propDict["parentSectionGroup"])) {
+        if (array_key_exists("parentSectionGroup", $this->_propDict) && !is_null($this->_propDict["parentSectionGroup"])) {
+            if (is_a($this->_propDict["parentSectionGroup"], "\Microsoft\Graph\Model\SectionGroup")) {
                 return $this->_propDict["parentSectionGroup"];
             } else {
                 $this->_propDict["parentSectionGroup"] = new SectionGroup($this->_propDict["parentSectionGroup"]);

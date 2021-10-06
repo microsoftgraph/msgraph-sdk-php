@@ -32,8 +32,8 @@ class IosUpdateConfiguration extends DeviceConfiguration
     */
     public function getActiveHoursEnd()
     {
-        if (array_key_exists("activeHoursEnd", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursEnd"], "\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["activeHoursEnd"])) {
+        if (array_key_exists("activeHoursEnd", $this->_propDict) && !is_null($this->_propDict["activeHoursEnd"])) {
+            if (is_a($this->_propDict["activeHoursEnd"], "\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["activeHoursEnd"];
             } else {
                 $this->_propDict["activeHoursEnd"] = new TimeOfDay($this->_propDict["activeHoursEnd"]);
@@ -65,8 +65,8 @@ class IosUpdateConfiguration extends DeviceConfiguration
     */
     public function getActiveHoursStart()
     {
-        if (array_key_exists("activeHoursStart", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursStart"], "\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["activeHoursStart"])) {
+        if (array_key_exists("activeHoursStart", $this->_propDict) && !is_null($this->_propDict["activeHoursStart"])) {
+            if (is_a($this->_propDict["activeHoursStart"], "\Microsoft\Graph\Model\TimeOfDay")) {
                 return $this->_propDict["activeHoursStart"];
             } else {
                 $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
@@ -95,22 +95,29 @@ class IosUpdateConfiguration extends DeviceConfiguration
      * Gets the scheduledInstallDays
     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      *
-     * @return array|null The scheduledInstallDays
+     * @return DayOfWeek[]|null The scheduledInstallDays
      */
     public function getScheduledInstallDays()
     {
-        if (array_key_exists("scheduledInstallDays", $this->_propDict)) {
-           return $this->_propDict["scheduledInstallDays"];
-        } else {
-            return null;
+        if (array_key_exists('scheduledInstallDays', $this->_propDict) && !is_null($this->_propDict['scheduledInstallDays'])) {
+            $scheduledInstallDays = [];
+            if (count($this->_propDict['scheduledInstallDays']) > 0 && is_a($this->_propDict['scheduledInstallDays'][0], 'DayOfWeek')) {
+                return $this->_propDict['scheduledInstallDays'];
+            }
+            foreach ($this->_propDict['scheduledInstallDays'] as $singleValue) {
+                $scheduledInstallDays []= new DayOfWeek($singleValue);
+            }
+            $this->_propDict['scheduledInstallDays'] = $scheduledInstallDays;
+            return $this->_propDict['scheduledInstallDays'];
         }
+        return null;
     }
     
     /** 
     * Sets the scheduledInstallDays
     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
     *
-    * @param DayOfWeek $val The scheduledInstallDays
+    * @param DayOfWeek[] $val The scheduledInstallDays
     *
     * @return IosUpdateConfiguration
     */

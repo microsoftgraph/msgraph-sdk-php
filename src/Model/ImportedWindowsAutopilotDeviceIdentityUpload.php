@@ -32,8 +32,8 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     */
     public function getCreatedDateTimeUtc()
     {
-        if (array_key_exists("createdDateTimeUtc", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTimeUtc"], "\DateTime") || is_null($this->_propDict["createdDateTimeUtc"])) {
+        if (array_key_exists("createdDateTimeUtc", $this->_propDict) && !is_null($this->_propDict["createdDateTimeUtc"])) {
+            if (is_a($this->_propDict["createdDateTimeUtc"], "\DateTime")) {
                 return $this->_propDict["createdDateTimeUtc"];
             } else {
                 $this->_propDict["createdDateTimeUtc"] = new \DateTime($this->_propDict["createdDateTimeUtc"]);
@@ -65,8 +65,8 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityUploadStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\ImportedWindowsAutopilotDeviceIdentityUploadStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new ImportedWindowsAutopilotDeviceIdentityUploadStatus($this->_propDict["status"]);
@@ -95,22 +95,29 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
      * Gets the deviceIdentities
     * Collection of all Autopilot devices as a part of this upload.
      *
-     * @return array|null The deviceIdentities
+     * @return ImportedWindowsAutopilotDeviceIdentity[]|null The deviceIdentities
      */
     public function getDeviceIdentities()
     {
-        if (array_key_exists("deviceIdentities", $this->_propDict)) {
-           return $this->_propDict["deviceIdentities"];
-        } else {
-            return null;
+        if (array_key_exists('deviceIdentities', $this->_propDict) && !is_null($this->_propDict['deviceIdentities'])) {
+            $deviceIdentities = [];
+            if (count($this->_propDict['deviceIdentities']) > 0 && is_a($this->_propDict['deviceIdentities'][0], 'ImportedWindowsAutopilotDeviceIdentity')) {
+                return $this->_propDict['deviceIdentities'];
+            }
+            foreach ($this->_propDict['deviceIdentities'] as $singleValue) {
+                $deviceIdentities []= new ImportedWindowsAutopilotDeviceIdentity($singleValue);
+            }
+            $this->_propDict['deviceIdentities'] = $deviceIdentities;
+            return $this->_propDict['deviceIdentities'];
         }
+        return null;
     }
     
     /** 
     * Sets the deviceIdentities
     * Collection of all Autopilot devices as a part of this upload.
     *
-    * @param ImportedWindowsAutopilotDeviceIdentity $val The deviceIdentities
+    * @param ImportedWindowsAutopilotDeviceIdentity[] $val The deviceIdentities
     *
     * @return ImportedWindowsAutopilotDeviceIdentityUpload
     */

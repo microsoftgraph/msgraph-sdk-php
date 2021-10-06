@@ -32,8 +32,8 @@ class Relation extends \Microsoft\Graph\Model\Entity
     */
     public function getRelationship()
     {
-        if (array_key_exists("relationship", $this->_propDict)) {
-            if (is_a($this->_propDict["relationship"], "\Microsoft\Graph\TermStore\Model\RelationType") || is_null($this->_propDict["relationship"])) {
+        if (array_key_exists("relationship", $this->_propDict) && !is_null($this->_propDict["relationship"])) {
+            if (is_a($this->_propDict["relationship"], "\Microsoft\Graph\TermStore\Model\RelationType")) {
                 return $this->_propDict["relationship"];
             } else {
                 $this->_propDict["relationship"] = new RelationType($this->_propDict["relationship"]);
@@ -65,8 +65,8 @@ class Relation extends \Microsoft\Graph\Model\Entity
     */
     public function getFromTerm()
     {
-        if (array_key_exists("fromTerm", $this->_propDict)) {
-            if (is_a($this->_propDict["fromTerm"], "\Microsoft\Graph\TermStore\Model\Term") || is_null($this->_propDict["fromTerm"])) {
+        if (array_key_exists("fromTerm", $this->_propDict) && !is_null($this->_propDict["fromTerm"])) {
+            if (is_a($this->_propDict["fromTerm"], "\Microsoft\Graph\TermStore\Model\Term")) {
                 return $this->_propDict["fromTerm"];
             } else {
                 $this->_propDict["fromTerm"] = new Term($this->_propDict["fromTerm"]);
@@ -98,8 +98,8 @@ class Relation extends \Microsoft\Graph\Model\Entity
     */
     public function getSet()
     {
-        if (array_key_exists("set", $this->_propDict)) {
-            if (is_a($this->_propDict["set"], "\Microsoft\Graph\TermStore\Model\Set") || is_null($this->_propDict["set"])) {
+        if (array_key_exists("set", $this->_propDict) && !is_null($this->_propDict["set"])) {
+            if (is_a($this->_propDict["set"], "\Microsoft\Graph\TermStore\Model\Set")) {
                 return $this->_propDict["set"];
             } else {
                 $this->_propDict["set"] = new Set($this->_propDict["set"]);
@@ -131,8 +131,8 @@ class Relation extends \Microsoft\Graph\Model\Entity
     */
     public function getToTerm()
     {
-        if (array_key_exists("toTerm", $this->_propDict)) {
-            if (is_a($this->_propDict["toTerm"], "\Microsoft\Graph\TermStore\Model\Term") || is_null($this->_propDict["toTerm"])) {
+        if (array_key_exists("toTerm", $this->_propDict) && !is_null($this->_propDict["toTerm"])) {
+            if (is_a($this->_propDict["toTerm"], "\Microsoft\Graph\TermStore\Model\Term")) {
                 return $this->_propDict["toTerm"];
             } else {
                 $this->_propDict["toTerm"] = new Term($this->_propDict["toTerm"]);

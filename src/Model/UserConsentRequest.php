@@ -61,8 +61,8 @@ class UserConsentRequest extends Request
     */
     public function getApproval()
     {
-        if (array_key_exists("approval", $this->_propDict)) {
-            if (is_a($this->_propDict["approval"], "\Microsoft\Graph\Model\Approval") || is_null($this->_propDict["approval"])) {
+        if (array_key_exists("approval", $this->_propDict) && !is_null($this->_propDict["approval"])) {
+            if (is_a($this->_propDict["approval"], "\Microsoft\Graph\Model\Approval")) {
                 return $this->_propDict["approval"];
             } else {
                 $this->_propDict["approval"] = new Approval($this->_propDict["approval"]);

@@ -60,8 +60,9 @@ class OnPremisesProvisioningError extends Entity
     */
     public function getOccurredDateTime()
     {
-        if (array_key_exists("occurredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["occurredDateTime"], "\DateTime") || is_null($this->_propDict["occurredDateTime"])) {
+        if (array_key_exists("occurredDateTime", $this->_propDict) && !is_null($this->_propDict["occurredDateTime"])) {
+     
+            if (is_a($this->_propDict["occurredDateTime"], "\DateTime")) {
                 return $this->_propDict["occurredDateTime"];
             } else {
                 $this->_propDict["occurredDateTime"] = new \DateTime($this->_propDict["occurredDateTime"]);

@@ -126,7 +126,7 @@ class DefaultUserRolePermissions extends Entity
     * Sets the permissionGrantPoliciesAssigned
     * Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
     *
-    * @param string $val The value of the permissionGrantPoliciesAssigned
+    * @param string[] $val The value of the permissionGrantPoliciesAssigned
     *
     * @return DefaultUserRolePermissions
     */

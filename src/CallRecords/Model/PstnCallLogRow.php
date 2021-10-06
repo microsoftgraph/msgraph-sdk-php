@@ -32,8 +32,9 @@ class PstnCallLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getCallDurationSource()
     {
-        if (array_key_exists("callDurationSource", $this->_propDict)) {
-            if (is_a($this->_propDict["callDurationSource"], "\Microsoft\Graph\CallRecords\Model\PstnCallDurationSource") || is_null($this->_propDict["callDurationSource"])) {
+        if (array_key_exists("callDurationSource", $this->_propDict) && !is_null($this->_propDict["callDurationSource"])) {
+     
+            if (is_a($this->_propDict["callDurationSource"], "\Microsoft\Graph\CallRecords\Model\PstnCallDurationSource")) {
                 return $this->_propDict["callDurationSource"];
             } else {
                 $this->_propDict["callDurationSource"] = new PstnCallDurationSource($this->_propDict["callDurationSource"]);
@@ -177,8 +178,9 @@ class PstnCallLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getCharge()
     {
-        if (array_key_exists("charge", $this->_propDict)) {
-            if (is_a($this->_propDict["charge"], "\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["charge"])) {
+        if (array_key_exists("charge", $this->_propDict) && !is_null($this->_propDict["charge"])) {
+     
+            if (is_a($this->_propDict["charge"], "\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["charge"];
             } else {
                 $this->_propDict["charge"] = new \Microsoft\Graph\Model\Decimal($this->_propDict["charge"]);
@@ -238,8 +240,9 @@ class PstnCallLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getConnectionCharge()
     {
-        if (array_key_exists("connectionCharge", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionCharge"], "\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["connectionCharge"])) {
+        if (array_key_exists("connectionCharge", $this->_propDict) && !is_null($this->_propDict["connectionCharge"])) {
+     
+            if (is_a($this->_propDict["connectionCharge"], "\Microsoft\Graph\Model\Decimal")) {
                 return $this->_propDict["connectionCharge"];
             } else {
                 $this->_propDict["connectionCharge"] = new \Microsoft\Graph\Model\Decimal($this->_propDict["connectionCharge"]);
@@ -383,8 +386,9 @@ class PstnCallLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getEndDateTime()
     {
-        if (array_key_exists("endDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endDateTime"], "\DateTime") || is_null($this->_propDict["endDateTime"])) {
+        if (array_key_exists("endDateTime", $this->_propDict) && !is_null($this->_propDict["endDateTime"])) {
+     
+            if (is_a($this->_propDict["endDateTime"], "\DateTime")) {
                 return $this->_propDict["endDateTime"];
             } else {
                 $this->_propDict["endDateTime"] = new \DateTime($this->_propDict["endDateTime"]);
@@ -528,8 +532,9 @@ class PstnCallLogRow extends \Microsoft\Graph\Model\Entity
     */
     public function getStartDateTime()
     {
-        if (array_key_exists("startDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startDateTime"], "\DateTime") || is_null($this->_propDict["startDateTime"])) {
+        if (array_key_exists("startDateTime", $this->_propDict) && !is_null($this->_propDict["startDateTime"])) {
+     
+            if (is_a($this->_propDict["startDateTime"], "\DateTime")) {
                 return $this->_propDict["startDateTime"];
             } else {
                 $this->_propDict["startDateTime"] = new \DateTime($this->_propDict["startDateTime"]);

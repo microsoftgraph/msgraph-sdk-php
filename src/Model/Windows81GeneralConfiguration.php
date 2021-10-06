@@ -351,8 +351,8 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     */
     public function getBrowserInternetSecurityLevel()
     {
-        if (array_key_exists("browserInternetSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["browserInternetSecurityLevel"], "\Microsoft\Graph\Model\InternetSiteSecurityLevel") || is_null($this->_propDict["browserInternetSecurityLevel"])) {
+        if (array_key_exists("browserInternetSecurityLevel", $this->_propDict) && !is_null($this->_propDict["browserInternetSecurityLevel"])) {
+            if (is_a($this->_propDict["browserInternetSecurityLevel"], "\Microsoft\Graph\Model\InternetSiteSecurityLevel")) {
                 return $this->_propDict["browserInternetSecurityLevel"];
             } else {
                 $this->_propDict["browserInternetSecurityLevel"] = new InternetSiteSecurityLevel($this->_propDict["browserInternetSecurityLevel"]);
@@ -384,8 +384,8 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     */
     public function getBrowserIntranetSecurityLevel()
     {
-        if (array_key_exists("browserIntranetSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["browserIntranetSecurityLevel"], "\Microsoft\Graph\Model\SiteSecurityLevel") || is_null($this->_propDict["browserIntranetSecurityLevel"])) {
+        if (array_key_exists("browserIntranetSecurityLevel", $this->_propDict) && !is_null($this->_propDict["browserIntranetSecurityLevel"])) {
+            if (is_a($this->_propDict["browserIntranetSecurityLevel"], "\Microsoft\Graph\Model\SiteSecurityLevel")) {
                 return $this->_propDict["browserIntranetSecurityLevel"];
             } else {
                 $this->_propDict["browserIntranetSecurityLevel"] = new SiteSecurityLevel($this->_propDict["browserIntranetSecurityLevel"]);
@@ -562,8 +562,8 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     */
     public function getBrowserTrustedSitesSecurityLevel()
     {
-        if (array_key_exists("browserTrustedSitesSecurityLevel", $this->_propDict)) {
-            if (is_a($this->_propDict["browserTrustedSitesSecurityLevel"], "\Microsoft\Graph\Model\SiteSecurityLevel") || is_null($this->_propDict["browserTrustedSitesSecurityLevel"])) {
+        if (array_key_exists("browserTrustedSitesSecurityLevel", $this->_propDict) && !is_null($this->_propDict["browserTrustedSitesSecurityLevel"])) {
+            if (is_a($this->_propDict["browserTrustedSitesSecurityLevel"], "\Microsoft\Graph\Model\SiteSecurityLevel")) {
                 return $this->_propDict["browserTrustedSitesSecurityLevel"];
             } else {
                 $this->_propDict["browserTrustedSitesSecurityLevel"] = new SiteSecurityLevel($this->_propDict["browserTrustedSitesSecurityLevel"]);
@@ -827,8 +827,8 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     */
     public function getPasswordRequiredType()
     {
-        if (array_key_exists("passwordRequiredType", $this->_propDict)) {
-            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType") || is_null($this->_propDict["passwordRequiredType"])) {
+        if (array_key_exists("passwordRequiredType", $this->_propDict) && !is_null($this->_propDict["passwordRequiredType"])) {
+            if (is_a($this->_propDict["passwordRequiredType"], "\Microsoft\Graph\Model\RequiredPasswordType")) {
                 return $this->_propDict["passwordRequiredType"];
             } else {
                 $this->_propDict["passwordRequiredType"] = new RequiredPasswordType($this->_propDict["passwordRequiredType"]);
@@ -947,8 +947,8 @@ class Windows81GeneralConfiguration extends DeviceConfiguration
     */
     public function getUserAccountControlSettings()
     {
-        if (array_key_exists("userAccountControlSettings", $this->_propDict)) {
-            if (is_a($this->_propDict["userAccountControlSettings"], "\Microsoft\Graph\Model\WindowsUserAccountControlSettings") || is_null($this->_propDict["userAccountControlSettings"])) {
+        if (array_key_exists("userAccountControlSettings", $this->_propDict) && !is_null($this->_propDict["userAccountControlSettings"])) {
+            if (is_a($this->_propDict["userAccountControlSettings"], "\Microsoft\Graph\Model\WindowsUserAccountControlSettings")) {
                 return $this->_propDict["userAccountControlSettings"];
             } else {
                 $this->_propDict["userAccountControlSettings"] = new WindowsUserAccountControlSettings($this->_propDict["userAccountControlSettings"]);

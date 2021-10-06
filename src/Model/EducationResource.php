@@ -32,8 +32,9 @@ class EducationResource extends Entity
     */
     public function getCreatedBy()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["createdBy"])) {
+        if (array_key_exists("createdBy", $this->_propDict) && !is_null($this->_propDict["createdBy"])) {
+     
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new IdentitySet($this->_propDict["createdBy"]);
@@ -65,8 +66,9 @@ class EducationResource extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+     
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -126,8 +128,9 @@ class EducationResource extends Entity
     */
     public function getLastModifiedBy()
     {
-        if (array_key_exists("lastModifiedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedBy"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["lastModifiedBy"])) {
+        if (array_key_exists("lastModifiedBy", $this->_propDict) && !is_null($this->_propDict["lastModifiedBy"])) {
+     
+            if (is_a($this->_propDict["lastModifiedBy"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["lastModifiedBy"];
             } else {
                 $this->_propDict["lastModifiedBy"] = new IdentitySet($this->_propDict["lastModifiedBy"]);
@@ -159,8 +162,9 @@ class EducationResource extends Entity
     */
     public function getLastModifiedDateTime()
     {
-        if (array_key_exists("lastModifiedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime") || is_null($this->_propDict["lastModifiedDateTime"])) {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+     
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
                 return $this->_propDict["lastModifiedDateTime"];
             } else {
                 $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);

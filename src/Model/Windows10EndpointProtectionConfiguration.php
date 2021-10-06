@@ -177,8 +177,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getApplicationGuardBlockClipboardSharing()
     {
-        if (array_key_exists("applicationGuardBlockClipboardSharing", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationGuardBlockClipboardSharing"], "\Microsoft\Graph\Model\ApplicationGuardBlockClipboardSharingType") || is_null($this->_propDict["applicationGuardBlockClipboardSharing"])) {
+        if (array_key_exists("applicationGuardBlockClipboardSharing", $this->_propDict) && !is_null($this->_propDict["applicationGuardBlockClipboardSharing"])) {
+            if (is_a($this->_propDict["applicationGuardBlockClipboardSharing"], "\Microsoft\Graph\Model\ApplicationGuardBlockClipboardSharingType")) {
                 return $this->_propDict["applicationGuardBlockClipboardSharing"];
             } else {
                 $this->_propDict["applicationGuardBlockClipboardSharing"] = new ApplicationGuardBlockClipboardSharingType($this->_propDict["applicationGuardBlockClipboardSharing"]);
@@ -210,8 +210,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getApplicationGuardBlockFileTransfer()
     {
-        if (array_key_exists("applicationGuardBlockFileTransfer", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationGuardBlockFileTransfer"], "\Microsoft\Graph\Model\ApplicationGuardBlockFileTransferType") || is_null($this->_propDict["applicationGuardBlockFileTransfer"])) {
+        if (array_key_exists("applicationGuardBlockFileTransfer", $this->_propDict) && !is_null($this->_propDict["applicationGuardBlockFileTransfer"])) {
+            if (is_a($this->_propDict["applicationGuardBlockFileTransfer"], "\Microsoft\Graph\Model\ApplicationGuardBlockFileTransferType")) {
                 return $this->_propDict["applicationGuardBlockFileTransfer"];
             } else {
                 $this->_propDict["applicationGuardBlockFileTransfer"] = new ApplicationGuardBlockFileTransferType($this->_propDict["applicationGuardBlockFileTransfer"]);
@@ -330,8 +330,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getAppLockerApplicationControl()
     {
-        if (array_key_exists("appLockerApplicationControl", $this->_propDict)) {
-            if (is_a($this->_propDict["appLockerApplicationControl"], "\Microsoft\Graph\Model\AppLockerApplicationControlType") || is_null($this->_propDict["appLockerApplicationControl"])) {
+        if (array_key_exists("appLockerApplicationControl", $this->_propDict) && !is_null($this->_propDict["appLockerApplicationControl"])) {
+            if (is_a($this->_propDict["appLockerApplicationControl"], "\Microsoft\Graph\Model\AppLockerApplicationControlType")) {
                 return $this->_propDict["appLockerApplicationControl"];
             } else {
                 $this->_propDict["appLockerApplicationControl"] = new AppLockerApplicationControlType($this->_propDict["appLockerApplicationControl"]);
@@ -450,8 +450,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getBitLockerRemovableDrivePolicy()
     {
-        if (array_key_exists("bitLockerRemovableDrivePolicy", $this->_propDict)) {
-            if (is_a($this->_propDict["bitLockerRemovableDrivePolicy"], "\Microsoft\Graph\Model\BitLockerRemovableDrivePolicy") || is_null($this->_propDict["bitLockerRemovableDrivePolicy"])) {
+        if (array_key_exists("bitLockerRemovableDrivePolicy", $this->_propDict) && !is_null($this->_propDict["bitLockerRemovableDrivePolicy"])) {
+            if (is_a($this->_propDict["bitLockerRemovableDrivePolicy"], "\Microsoft\Graph\Model\BitLockerRemovableDrivePolicy")) {
                 return $this->_propDict["bitLockerRemovableDrivePolicy"];
             } else {
                 $this->_propDict["bitLockerRemovableDrivePolicy"] = new BitLockerRemovableDrivePolicy($this->_propDict["bitLockerRemovableDrivePolicy"]);
@@ -541,8 +541,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getDefenderExploitProtectionXml()
     {
-        if (array_key_exists("defenderExploitProtectionXml", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderExploitProtectionXml"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["defenderExploitProtectionXml"])) {
+        if (array_key_exists("defenderExploitProtectionXml", $this->_propDict) && !is_null($this->_propDict["defenderExploitProtectionXml"])) {
+            if (is_a($this->_propDict["defenderExploitProtectionXml"], "\GuzzleHttp\Psr7\Stream")) {
                 return $this->_propDict["defenderExploitProtectionXml"];
             } else {
                 $this->_propDict["defenderExploitProtectionXml"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["defenderExploitProtectionXml"]);
@@ -690,8 +690,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getFirewallCertificateRevocationListCheckMethod()
     {
-        if (array_key_exists("firewallCertificateRevocationListCheckMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallCertificateRevocationListCheckMethod"], "\Microsoft\Graph\Model\FirewallCertificateRevocationListCheckMethodType") || is_null($this->_propDict["firewallCertificateRevocationListCheckMethod"])) {
+        if (array_key_exists("firewallCertificateRevocationListCheckMethod", $this->_propDict) && !is_null($this->_propDict["firewallCertificateRevocationListCheckMethod"])) {
+            if (is_a($this->_propDict["firewallCertificateRevocationListCheckMethod"], "\Microsoft\Graph\Model\FirewallCertificateRevocationListCheckMethodType")) {
                 return $this->_propDict["firewallCertificateRevocationListCheckMethod"];
             } else {
                 $this->_propDict["firewallCertificateRevocationListCheckMethod"] = new FirewallCertificateRevocationListCheckMethodType($this->_propDict["firewallCertificateRevocationListCheckMethod"]);
@@ -897,8 +897,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getFirewallPacketQueueingMethod()
     {
-        if (array_key_exists("firewallPacketQueueingMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallPacketQueueingMethod"], "\Microsoft\Graph\Model\FirewallPacketQueueingMethodType") || is_null($this->_propDict["firewallPacketQueueingMethod"])) {
+        if (array_key_exists("firewallPacketQueueingMethod", $this->_propDict) && !is_null($this->_propDict["firewallPacketQueueingMethod"])) {
+            if (is_a($this->_propDict["firewallPacketQueueingMethod"], "\Microsoft\Graph\Model\FirewallPacketQueueingMethodType")) {
                 return $this->_propDict["firewallPacketQueueingMethod"];
             } else {
                 $this->_propDict["firewallPacketQueueingMethod"] = new FirewallPacketQueueingMethodType($this->_propDict["firewallPacketQueueingMethod"]);
@@ -930,8 +930,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getFirewallPreSharedKeyEncodingMethod()
     {
-        if (array_key_exists("firewallPreSharedKeyEncodingMethod", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallPreSharedKeyEncodingMethod"], "\Microsoft\Graph\Model\FirewallPreSharedKeyEncodingMethodType") || is_null($this->_propDict["firewallPreSharedKeyEncodingMethod"])) {
+        if (array_key_exists("firewallPreSharedKeyEncodingMethod", $this->_propDict) && !is_null($this->_propDict["firewallPreSharedKeyEncodingMethod"])) {
+            if (is_a($this->_propDict["firewallPreSharedKeyEncodingMethod"], "\Microsoft\Graph\Model\FirewallPreSharedKeyEncodingMethodType")) {
                 return $this->_propDict["firewallPreSharedKeyEncodingMethod"];
             } else {
                 $this->_propDict["firewallPreSharedKeyEncodingMethod"] = new FirewallPreSharedKeyEncodingMethodType($this->_propDict["firewallPreSharedKeyEncodingMethod"]);
@@ -963,8 +963,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getFirewallProfileDomain()
     {
-        if (array_key_exists("firewallProfileDomain", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallProfileDomain"], "\Microsoft\Graph\Model\WindowsFirewallNetworkProfile") || is_null($this->_propDict["firewallProfileDomain"])) {
+        if (array_key_exists("firewallProfileDomain", $this->_propDict) && !is_null($this->_propDict["firewallProfileDomain"])) {
+            if (is_a($this->_propDict["firewallProfileDomain"], "\Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
                 return $this->_propDict["firewallProfileDomain"];
             } else {
                 $this->_propDict["firewallProfileDomain"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfileDomain"]);
@@ -996,8 +996,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getFirewallProfilePrivate()
     {
-        if (array_key_exists("firewallProfilePrivate", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallProfilePrivate"], "\Microsoft\Graph\Model\WindowsFirewallNetworkProfile") || is_null($this->_propDict["firewallProfilePrivate"])) {
+        if (array_key_exists("firewallProfilePrivate", $this->_propDict) && !is_null($this->_propDict["firewallProfilePrivate"])) {
+            if (is_a($this->_propDict["firewallProfilePrivate"], "\Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
                 return $this->_propDict["firewallProfilePrivate"];
             } else {
                 $this->_propDict["firewallProfilePrivate"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfilePrivate"]);
@@ -1029,8 +1029,8 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     */
     public function getFirewallProfilePublic()
     {
-        if (array_key_exists("firewallProfilePublic", $this->_propDict)) {
-            if (is_a($this->_propDict["firewallProfilePublic"], "\Microsoft\Graph\Model\WindowsFirewallNetworkProfile") || is_null($this->_propDict["firewallProfilePublic"])) {
+        if (array_key_exists("firewallProfilePublic", $this->_propDict) && !is_null($this->_propDict["firewallProfilePublic"])) {
+            if (is_a($this->_propDict["firewallProfilePublic"], "\Microsoft\Graph\Model\WindowsFirewallNetworkProfile")) {
                 return $this->_propDict["firewallProfilePublic"];
             } else {
                 $this->_propDict["firewallProfilePublic"] = new WindowsFirewallNetworkProfile($this->_propDict["firewallProfilePublic"]);

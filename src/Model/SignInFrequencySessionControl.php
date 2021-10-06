@@ -32,8 +32,9 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl
     */
     public function getType()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\SigninFrequencyType") || is_null($this->_propDict["type"])) {
+        if (array_key_exists("type", $this->_propDict) && !is_null($this->_propDict["type"])) {
+     
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\SigninFrequencyType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new SigninFrequencyType($this->_propDict["type"]);

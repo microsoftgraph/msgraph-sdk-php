@@ -32,8 +32,8 @@ class Win32LobApp extends MobileLobApp
     */
     public function getApplicableArchitectures()
     {
-        if (array_key_exists("applicableArchitectures", $this->_propDict)) {
-            if (is_a($this->_propDict["applicableArchitectures"], "\Microsoft\Graph\Model\WindowsArchitecture") || is_null($this->_propDict["applicableArchitectures"])) {
+        if (array_key_exists("applicableArchitectures", $this->_propDict) && !is_null($this->_propDict["applicableArchitectures"])) {
+            if (is_a($this->_propDict["applicableArchitectures"], "\Microsoft\Graph\Model\WindowsArchitecture")) {
                 return $this->_propDict["applicableArchitectures"];
             } else {
                 $this->_propDict["applicableArchitectures"] = new WindowsArchitecture($this->_propDict["applicableArchitectures"]);
@@ -94,8 +94,8 @@ class Win32LobApp extends MobileLobApp
     */
     public function getInstallExperience()
     {
-        if (array_key_exists("installExperience", $this->_propDict)) {
-            if (is_a($this->_propDict["installExperience"], "\Microsoft\Graph\Model\Win32LobAppInstallExperience") || is_null($this->_propDict["installExperience"])) {
+        if (array_key_exists("installExperience", $this->_propDict) && !is_null($this->_propDict["installExperience"])) {
+            if (is_a($this->_propDict["installExperience"], "\Microsoft\Graph\Model\Win32LobAppInstallExperience")) {
                 return $this->_propDict["installExperience"];
             } else {
                 $this->_propDict["installExperience"] = new Win32LobAppInstallExperience($this->_propDict["installExperience"]);
@@ -272,8 +272,8 @@ class Win32LobApp extends MobileLobApp
     */
     public function getMsiInformation()
     {
-        if (array_key_exists("msiInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["msiInformation"], "\Microsoft\Graph\Model\Win32LobAppMsiInformation") || is_null($this->_propDict["msiInformation"])) {
+        if (array_key_exists("msiInformation", $this->_propDict) && !is_null($this->_propDict["msiInformation"])) {
+            if (is_a($this->_propDict["msiInformation"], "\Microsoft\Graph\Model\Win32LobAppMsiInformation")) {
                 return $this->_propDict["msiInformation"];
             } else {
                 $this->_propDict["msiInformation"] = new Win32LobAppMsiInformation($this->_propDict["msiInformation"]);
@@ -302,22 +302,29 @@ class Win32LobApp extends MobileLobApp
      * Gets the returnCodes
     * The return codes for post installation behavior.
      *
-     * @return array|null The returnCodes
+     * @return Win32LobAppReturnCode[]|null The returnCodes
      */
     public function getReturnCodes()
     {
-        if (array_key_exists("returnCodes", $this->_propDict)) {
-           return $this->_propDict["returnCodes"];
-        } else {
-            return null;
+        if (array_key_exists('returnCodes', $this->_propDict) && !is_null($this->_propDict['returnCodes'])) {
+            $returnCodes = [];
+            if (count($this->_propDict['returnCodes']) > 0 && is_a($this->_propDict['returnCodes'][0], 'Win32LobAppReturnCode')) {
+                return $this->_propDict['returnCodes'];
+            }
+            foreach ($this->_propDict['returnCodes'] as $singleValue) {
+                $returnCodes []= new Win32LobAppReturnCode($singleValue);
+            }
+            $this->_propDict['returnCodes'] = $returnCodes;
+            return $this->_propDict['returnCodes'];
         }
+        return null;
     }
     
     /** 
     * Sets the returnCodes
     * The return codes for post installation behavior.
     *
-    * @param Win32LobAppReturnCode $val The returnCodes
+    * @param Win32LobAppReturnCode[] $val The returnCodes
     *
     * @return Win32LobApp
     */
@@ -332,22 +339,29 @@ class Win32LobApp extends MobileLobApp
      * Gets the rules
     * The detection and requirement rules for this app.
      *
-     * @return array|null The rules
+     * @return Win32LobAppRule[]|null The rules
      */
     public function getRules()
     {
-        if (array_key_exists("rules", $this->_propDict)) {
-           return $this->_propDict["rules"];
-        } else {
-            return null;
+        if (array_key_exists('rules', $this->_propDict) && !is_null($this->_propDict['rules'])) {
+            $rules = [];
+            if (count($this->_propDict['rules']) > 0 && is_a($this->_propDict['rules'][0], 'Win32LobAppRule')) {
+                return $this->_propDict['rules'];
+            }
+            foreach ($this->_propDict['rules'] as $singleValue) {
+                $rules []= new Win32LobAppRule($singleValue);
+            }
+            $this->_propDict['rules'] = $rules;
+            return $this->_propDict['rules'];
         }
+        return null;
     }
     
     /** 
     * Sets the rules
     * The detection and requirement rules for this app.
     *
-    * @param Win32LobAppRule $val The rules
+    * @param Win32LobAppRule[] $val The rules
     *
     * @return Win32LobApp
     */

@@ -32,8 +32,9 @@ class MeetingParticipantInfo extends Entity
     */
     public function getIdentity()
     {
-        if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["identity"])) {
+        if (array_key_exists("identity", $this->_propDict) && !is_null($this->_propDict["identity"])) {
+     
+            if (is_a($this->_propDict["identity"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["identity"];
             } else {
                 $this->_propDict["identity"] = new IdentitySet($this->_propDict["identity"]);
@@ -65,8 +66,9 @@ class MeetingParticipantInfo extends Entity
     */
     public function getRole()
     {
-        if (array_key_exists("role", $this->_propDict)) {
-            if (is_a($this->_propDict["role"], "\Microsoft\Graph\Model\OnlineMeetingRole") || is_null($this->_propDict["role"])) {
+        if (array_key_exists("role", $this->_propDict) && !is_null($this->_propDict["role"])) {
+     
+            if (is_a($this->_propDict["role"], "\Microsoft\Graph\Model\OnlineMeetingRole")) {
                 return $this->_propDict["role"];
             } else {
                 $this->_propDict["role"] = new OnlineMeetingRole($this->_propDict["role"]);

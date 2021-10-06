@@ -32,8 +32,9 @@ class ParticipantEndpoint extends Endpoint
     */
     public function getFeedback()
     {
-        if (array_key_exists("feedback", $this->_propDict)) {
-            if (is_a($this->_propDict["feedback"], "\Microsoft\Graph\CallRecords\Model\UserFeedback") || is_null($this->_propDict["feedback"])) {
+        if (array_key_exists("feedback", $this->_propDict) && !is_null($this->_propDict["feedback"])) {
+     
+            if (is_a($this->_propDict["feedback"], "\Microsoft\Graph\CallRecords\Model\UserFeedback")) {
                 return $this->_propDict["feedback"];
             } else {
                 $this->_propDict["feedback"] = new UserFeedback($this->_propDict["feedback"]);
@@ -65,8 +66,9 @@ class ParticipantEndpoint extends Endpoint
     */
     public function getIdentity()
     {
-        if (array_key_exists("identity", $this->_propDict)) {
-            if (is_a($this->_propDict["identity"], "\Microsoft\Graph\Model\IdentitySet") || is_null($this->_propDict["identity"])) {
+        if (array_key_exists("identity", $this->_propDict) && !is_null($this->_propDict["identity"])) {
+     
+            if (is_a($this->_propDict["identity"], "\Microsoft\Graph\Model\IdentitySet")) {
                 return $this->_propDict["identity"];
             } else {
                 $this->_propDict["identity"] = new \Microsoft\Graph\Model\IdentitySet($this->_propDict["identity"]);

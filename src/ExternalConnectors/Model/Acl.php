@@ -32,8 +32,9 @@ class Acl extends \Microsoft\Graph\Model\Entity
     */
     public function getAccessType()
     {
-        if (array_key_exists("accessType", $this->_propDict)) {
-            if (is_a($this->_propDict["accessType"], "\Microsoft\Graph\ExternalConnectors\Model\AccessType") || is_null($this->_propDict["accessType"])) {
+        if (array_key_exists("accessType", $this->_propDict) && !is_null($this->_propDict["accessType"])) {
+     
+            if (is_a($this->_propDict["accessType"], "\Microsoft\Graph\ExternalConnectors\Model\AccessType")) {
                 return $this->_propDict["accessType"];
             } else {
                 $this->_propDict["accessType"] = new AccessType($this->_propDict["accessType"]);
@@ -65,8 +66,9 @@ class Acl extends \Microsoft\Graph\Model\Entity
     */
     public function getType()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\ExternalConnectors\Model\AclType") || is_null($this->_propDict["type"])) {
+        if (array_key_exists("type", $this->_propDict) && !is_null($this->_propDict["type"])) {
+     
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\ExternalConnectors\Model\AclType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new AclType($this->_propDict["type"]);

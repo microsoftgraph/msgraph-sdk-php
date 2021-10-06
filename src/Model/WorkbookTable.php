@@ -319,22 +319,29 @@ class WorkbookTable extends Entity
      * Gets the columns
     * Represents a collection of all the columns in the table. Read-only.
      *
-     * @return array|null The columns
+     * @return WorkbookTableColumn[]|null The columns
      */
     public function getColumns()
     {
-        if (array_key_exists("columns", $this->_propDict)) {
-           return $this->_propDict["columns"];
-        } else {
-            return null;
+        if (array_key_exists('columns', $this->_propDict) && !is_null($this->_propDict['columns'])) {
+            $columns = [];
+            if (count($this->_propDict['columns']) > 0 && is_a($this->_propDict['columns'][0], 'WorkbookTableColumn')) {
+                return $this->_propDict['columns'];
+            }
+            foreach ($this->_propDict['columns'] as $singleValue) {
+                $columns []= new WorkbookTableColumn($singleValue);
+            }
+            $this->_propDict['columns'] = $columns;
+            return $this->_propDict['columns'];
         }
+        return null;
     }
     
     /** 
     * Sets the columns
     * Represents a collection of all the columns in the table. Read-only.
     *
-    * @param WorkbookTableColumn $val The columns
+    * @param WorkbookTableColumn[] $val The columns
     *
     * @return WorkbookTable
     */
@@ -349,22 +356,29 @@ class WorkbookTable extends Entity
      * Gets the rows
     * Represents a collection of all the rows in the table. Read-only.
      *
-     * @return array|null The rows
+     * @return WorkbookTableRow[]|null The rows
      */
     public function getRows()
     {
-        if (array_key_exists("rows", $this->_propDict)) {
-           return $this->_propDict["rows"];
-        } else {
-            return null;
+        if (array_key_exists('rows', $this->_propDict) && !is_null($this->_propDict['rows'])) {
+            $rows = [];
+            if (count($this->_propDict['rows']) > 0 && is_a($this->_propDict['rows'][0], 'WorkbookTableRow')) {
+                return $this->_propDict['rows'];
+            }
+            foreach ($this->_propDict['rows'] as $singleValue) {
+                $rows []= new WorkbookTableRow($singleValue);
+            }
+            $this->_propDict['rows'] = $rows;
+            return $this->_propDict['rows'];
         }
+        return null;
     }
     
     /** 
     * Sets the rows
     * Represents a collection of all the rows in the table. Read-only.
     *
-    * @param WorkbookTableRow $val The rows
+    * @param WorkbookTableRow[] $val The rows
     *
     * @return WorkbookTable
     */
@@ -382,8 +396,8 @@ class WorkbookTable extends Entity
     */
     public function getSort()
     {
-        if (array_key_exists("sort", $this->_propDict)) {
-            if (is_a($this->_propDict["sort"], "\Microsoft\Graph\Model\WorkbookTableSort") || is_null($this->_propDict["sort"])) {
+        if (array_key_exists("sort", $this->_propDict) && !is_null($this->_propDict["sort"])) {
+            if (is_a($this->_propDict["sort"], "\Microsoft\Graph\Model\WorkbookTableSort")) {
                 return $this->_propDict["sort"];
             } else {
                 $this->_propDict["sort"] = new WorkbookTableSort($this->_propDict["sort"]);
@@ -415,8 +429,8 @@ class WorkbookTable extends Entity
     */
     public function getWorksheet()
     {
-        if (array_key_exists("worksheet", $this->_propDict)) {
-            if (is_a($this->_propDict["worksheet"], "\Microsoft\Graph\Model\WorkbookWorksheet") || is_null($this->_propDict["worksheet"])) {
+        if (array_key_exists("worksheet", $this->_propDict) && !is_null($this->_propDict["worksheet"])) {
+            if (is_a($this->_propDict["worksheet"], "\Microsoft\Graph\Model\WorkbookWorksheet")) {
                 return $this->_propDict["worksheet"];
             } else {
                 $this->_propDict["worksheet"] = new WorkbookWorksheet($this->_propDict["worksheet"]);

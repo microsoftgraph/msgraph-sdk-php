@@ -32,8 +32,9 @@ class WorkforceIntegrationEncryption extends Entity
     */
     public function getProtocol()
     {
-        if (array_key_exists("protocol", $this->_propDict)) {
-            if (is_a($this->_propDict["protocol"], "\Microsoft\Graph\Model\WorkforceIntegrationEncryptionProtocol") || is_null($this->_propDict["protocol"])) {
+        if (array_key_exists("protocol", $this->_propDict) && !is_null($this->_propDict["protocol"])) {
+     
+            if (is_a($this->_propDict["protocol"], "\Microsoft\Graph\Model\WorkforceIntegrationEncryptionProtocol")) {
                 return $this->_propDict["protocol"];
             } else {
                 $this->_propDict["protocol"] = new WorkforceIntegrationEncryptionProtocol($this->_propDict["protocol"]);

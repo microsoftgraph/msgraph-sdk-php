@@ -60,8 +60,9 @@ class ArchivedPrintJob extends Entity
     */
     public function getAcquiredDateTime()
     {
-        if (array_key_exists("acquiredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["acquiredDateTime"], "\DateTime") || is_null($this->_propDict["acquiredDateTime"])) {
+        if (array_key_exists("acquiredDateTime", $this->_propDict) && !is_null($this->_propDict["acquiredDateTime"])) {
+     
+            if (is_a($this->_propDict["acquiredDateTime"], "\DateTime")) {
                 return $this->_propDict["acquiredDateTime"];
             } else {
                 $this->_propDict["acquiredDateTime"] = new \DateTime($this->_propDict["acquiredDateTime"]);
@@ -93,8 +94,9 @@ class ArchivedPrintJob extends Entity
     */
     public function getCompletionDateTime()
     {
-        if (array_key_exists("completionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completionDateTime"], "\DateTime") || is_null($this->_propDict["completionDateTime"])) {
+        if (array_key_exists("completionDateTime", $this->_propDict) && !is_null($this->_propDict["completionDateTime"])) {
+     
+            if (is_a($this->_propDict["completionDateTime"], "\DateTime")) {
                 return $this->_propDict["completionDateTime"];
             } else {
                 $this->_propDict["completionDateTime"] = new \DateTime($this->_propDict["completionDateTime"]);
@@ -154,8 +156,9 @@ class ArchivedPrintJob extends Entity
     */
     public function getCreatedBy()
     {
-        if (array_key_exists("createdBy", $this->_propDict)) {
-            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\UserIdentity") || is_null($this->_propDict["createdBy"])) {
+        if (array_key_exists("createdBy", $this->_propDict) && !is_null($this->_propDict["createdBy"])) {
+     
+            if (is_a($this->_propDict["createdBy"], "\Microsoft\Graph\Model\UserIdentity")) {
                 return $this->_propDict["createdBy"];
             } else {
                 $this->_propDict["createdBy"] = new UserIdentity($this->_propDict["createdBy"]);
@@ -187,8 +190,9 @@ class ArchivedPrintJob extends Entity
     */
     public function getCreatedDateTime()
     {
-        if (array_key_exists("createdDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["createdDateTime"], "\DateTime") || is_null($this->_propDict["createdDateTime"])) {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+     
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
                 return $this->_propDict["createdDateTime"];
             } else {
                 $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
@@ -276,8 +280,9 @@ class ArchivedPrintJob extends Entity
     */
     public function getProcessingState()
     {
-        if (array_key_exists("processingState", $this->_propDict)) {
-            if (is_a($this->_propDict["processingState"], "\Microsoft\Graph\Model\PrintJobProcessingState") || is_null($this->_propDict["processingState"])) {
+        if (array_key_exists("processingState", $this->_propDict) && !is_null($this->_propDict["processingState"])) {
+     
+            if (is_a($this->_propDict["processingState"], "\Microsoft\Graph\Model\PrintJobProcessingState")) {
                 return $this->_propDict["processingState"];
             } else {
                 $this->_propDict["processingState"] = new PrintJobProcessingState($this->_propDict["processingState"]);

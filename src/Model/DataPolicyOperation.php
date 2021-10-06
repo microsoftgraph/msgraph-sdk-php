@@ -32,8 +32,8 @@ class DataPolicyOperation extends Entity
     */
     public function getCompletedDateTime()
     {
-        if (array_key_exists("completedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["completedDateTime"], "\DateTime") || is_null($this->_propDict["completedDateTime"])) {
+        if (array_key_exists("completedDateTime", $this->_propDict) && !is_null($this->_propDict["completedDateTime"])) {
+            if (is_a($this->_propDict["completedDateTime"], "\DateTime")) {
                 return $this->_propDict["completedDateTime"];
             } else {
                 $this->_propDict["completedDateTime"] = new \DateTime($this->_propDict["completedDateTime"]);
@@ -94,8 +94,8 @@ class DataPolicyOperation extends Entity
     */
     public function getStatus()
     {
-        if (array_key_exists("status", $this->_propDict)) {
-            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\DataPolicyOperationStatus") || is_null($this->_propDict["status"])) {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Model\DataPolicyOperationStatus")) {
                 return $this->_propDict["status"];
             } else {
                 $this->_propDict["status"] = new DataPolicyOperationStatus($this->_propDict["status"]);
@@ -156,8 +156,8 @@ class DataPolicyOperation extends Entity
     */
     public function getSubmittedDateTime()
     {
-        if (array_key_exists("submittedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["submittedDateTime"], "\DateTime") || is_null($this->_propDict["submittedDateTime"])) {
+        if (array_key_exists("submittedDateTime", $this->_propDict) && !is_null($this->_propDict["submittedDateTime"])) {
+            if (is_a($this->_propDict["submittedDateTime"], "\DateTime")) {
                 return $this->_propDict["submittedDateTime"];
             } else {
                 $this->_propDict["submittedDateTime"] = new \DateTime($this->_propDict["submittedDateTime"]);

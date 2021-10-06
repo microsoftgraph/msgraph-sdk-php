@@ -28,18 +28,22 @@ class AccessReviewScheduleSettings extends Entity
     * Gets the applyActions
     * Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.
     *
-    * @return AccessReviewApplyAction|null The applyActions
+    * @return AccessReviewApplyAction[]|null The applyActions
     */
     public function getApplyActions()
     {
-        if (array_key_exists("applyActions", $this->_propDict)) {
-            if (is_a($this->_propDict["applyActions"], "\Microsoft\Graph\Model\AccessReviewApplyAction") || is_null($this->_propDict["applyActions"])) {
-                return $this->_propDict["applyActions"];
-            } else {
-                $this->_propDict["applyActions"] = new AccessReviewApplyAction($this->_propDict["applyActions"]);
-                return $this->_propDict["applyActions"];
+        if (array_key_exists("applyActions", $this->_propDict) && !is_null($this->_propDict["applyActions"])) {
+       
+            if (count($this->_propDict['applyActions']) > 0 && is_a($this->_propDict['applyActions'][0], 'AccessReviewApplyAction')) {
+               return $this->_propDict['applyActions'];
             }
-        }
+            $applyActions = [];
+            foreach ($this->_propDict['applyActions'] as $singleValue) {
+               $applyActions []= new AccessReviewApplyAction($singleValue);
+            }
+            $this->_propDict['applyActions'] = $applyActions;
+            return $this->_propDict['applyActions'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class AccessReviewScheduleSettings extends Entity
     * Sets the applyActions
     * Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.
     *
-    * @param AccessReviewApplyAction $val The value to assign to the applyActions
+    * @param AccessReviewApplyAction[] $val The value to assign to the applyActions
     *
     * @return AccessReviewScheduleSettings The AccessReviewScheduleSettings
     */
@@ -261,8 +265,9 @@ class AccessReviewScheduleSettings extends Entity
     */
     public function getRecurrence()
     {
-        if (array_key_exists("recurrence", $this->_propDict)) {
-            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence") || is_null($this->_propDict["recurrence"])) {
+        if (array_key_exists("recurrence", $this->_propDict) && !is_null($this->_propDict["recurrence"])) {
+     
+            if (is_a($this->_propDict["recurrence"], "\Microsoft\Graph\Model\PatternedRecurrence")) {
                 return $this->_propDict["recurrence"];
             } else {
                 $this->_propDict["recurrence"] = new PatternedRecurrence($this->_propDict["recurrence"]);

@@ -112,8 +112,8 @@ class PrintUsage extends Entity
     */
     public function getUsageDate()
     {
-        if (array_key_exists("usageDate", $this->_propDict)) {
-            if (is_a($this->_propDict["usageDate"], "\DateTime") || is_null($this->_propDict["usageDate"])) {
+        if (array_key_exists("usageDate", $this->_propDict) && !is_null($this->_propDict["usageDate"])) {
+            if (is_a($this->_propDict["usageDate"], "\DateTime")) {
                 return $this->_propDict["usageDate"];
             } else {
                 $this->_propDict["usageDate"] = new \DateTime($this->_propDict["usageDate"]);

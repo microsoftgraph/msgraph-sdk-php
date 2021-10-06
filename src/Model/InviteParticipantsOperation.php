@@ -29,22 +29,29 @@ class InviteParticipantsOperation extends CommsOperation
      * Gets the participants
     * The participants to invite.
      *
-     * @return array|null The participants
+     * @return InvitationParticipantInfo[]|null The participants
      */
     public function getParticipants()
     {
-        if (array_key_exists("participants", $this->_propDict)) {
-           return $this->_propDict["participants"];
-        } else {
-            return null;
+        if (array_key_exists('participants', $this->_propDict) && !is_null($this->_propDict['participants'])) {
+            $participants = [];
+            if (count($this->_propDict['participants']) > 0 && is_a($this->_propDict['participants'][0], 'InvitationParticipantInfo')) {
+                return $this->_propDict['participants'];
+            }
+            foreach ($this->_propDict['participants'] as $singleValue) {
+                $participants []= new InvitationParticipantInfo($singleValue);
+            }
+            $this->_propDict['participants'] = $participants;
+            return $this->_propDict['participants'];
         }
+        return null;
     }
     
     /** 
     * Sets the participants
     * The participants to invite.
     *
-    * @param InvitationParticipantInfo $val The participants
+    * @param InvitationParticipantInfo[] $val The participants
     *
     * @return InviteParticipantsOperation
     */

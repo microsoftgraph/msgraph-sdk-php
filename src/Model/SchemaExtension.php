@@ -87,22 +87,29 @@ class SchemaExtension extends Entity
      * Gets the schemaExtensionProperties
     * The collection of property names and types that make up the schema extension definition.
      *
-     * @return array|null The schemaExtensionProperties
+     * @return ExtensionSchemaProperty[]|null The schemaExtensionProperties
      */
     public function getSchemaExtensionProperties()
     {
-        if (array_key_exists("properties", $this->_propDict)) {
-           return $this->_propDict["properties"];
-        } else {
-            return null;
+        if (array_key_exists('properties', $this->_propDict) && !is_null($this->_propDict['properties'])) {
+            $properties = [];
+            if (count($this->_propDict['properties']) > 0 && is_a($this->_propDict['properties'][0], 'ExtensionSchemaProperty')) {
+                return $this->_propDict['properties'];
+            }
+            foreach ($this->_propDict['properties'] as $singleValue) {
+                $properties []= new ExtensionSchemaProperty($singleValue);
+            }
+            $this->_propDict['properties'] = $properties;
+            return $this->_propDict['properties'];
         }
+        return null;
     }
     
     /** 
     * Sets the schemaExtensionProperties
     * The collection of property names and types that make up the schema extension definition.
     *
-    * @param ExtensionSchemaProperty $val The schemaExtensionProperties
+    * @param ExtensionSchemaProperty[] $val The schemaExtensionProperties
     *
     * @return SchemaExtension
     */

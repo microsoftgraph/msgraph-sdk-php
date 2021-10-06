@@ -61,8 +61,8 @@ class WindowsInformationProtectionAppLearningSummary extends Entity
     */
     public function getApplicationType()
     {
-        if (array_key_exists("applicationType", $this->_propDict)) {
-            if (is_a($this->_propDict["applicationType"], "\Microsoft\Graph\Model\ApplicationType") || is_null($this->_propDict["applicationType"])) {
+        if (array_key_exists("applicationType", $this->_propDict) && !is_null($this->_propDict["applicationType"])) {
+            if (is_a($this->_propDict["applicationType"], "\Microsoft\Graph\Model\ApplicationType")) {
                 return $this->_propDict["applicationType"];
             } else {
                 $this->_propDict["applicationType"] = new ApplicationType($this->_propDict["applicationType"]);

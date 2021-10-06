@@ -61,8 +61,8 @@ class Conversation extends Entity
     */
     public function getLastDeliveredDateTime()
     {
-        if (array_key_exists("lastDeliveredDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["lastDeliveredDateTime"], "\DateTime") || is_null($this->_propDict["lastDeliveredDateTime"])) {
+        if (array_key_exists("lastDeliveredDateTime", $this->_propDict) && !is_null($this->_propDict["lastDeliveredDateTime"])) {
+            if (is_a($this->_propDict["lastDeliveredDateTime"], "\DateTime")) {
                 return $this->_propDict["lastDeliveredDateTime"];
             } else {
                 $this->_propDict["lastDeliveredDateTime"] = new \DateTime($this->_propDict["lastDeliveredDateTime"]);
@@ -178,22 +178,29 @@ class Conversation extends Entity
      * Gets the threads
     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      *
-     * @return array|null The threads
+     * @return ConversationThread[]|null The threads
      */
     public function getThreads()
     {
-        if (array_key_exists("threads", $this->_propDict)) {
-           return $this->_propDict["threads"];
-        } else {
-            return null;
+        if (array_key_exists('threads', $this->_propDict) && !is_null($this->_propDict['threads'])) {
+            $threads = [];
+            if (count($this->_propDict['threads']) > 0 && is_a($this->_propDict['threads'][0], 'ConversationThread')) {
+                return $this->_propDict['threads'];
+            }
+            foreach ($this->_propDict['threads'] as $singleValue) {
+                $threads []= new ConversationThread($singleValue);
+            }
+            $this->_propDict['threads'] = $threads;
+            return $this->_propDict['threads'];
         }
+        return null;
     }
     
     /** 
     * Sets the threads
     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
     *
-    * @param ConversationThread $val The threads
+    * @param ConversationThread[] $val The threads
     *
     * @return Conversation
     */

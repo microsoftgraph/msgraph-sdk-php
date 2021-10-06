@@ -42,7 +42,7 @@ class AssignedLicense extends Entity
     * Sets the disabledPlans
     * A collection of the unique identifiers for plans that have been disabled.
     *
-    * @param string $val The value of the disabledPlans
+    * @param string[] $val The value of the disabledPlans
     *
     * @return AssignedLicense
     */

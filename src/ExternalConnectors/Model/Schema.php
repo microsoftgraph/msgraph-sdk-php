@@ -58,22 +58,29 @@ class Schema extends \Microsoft\Graph\Model\Entity
      * Gets the schemaProperties
     * The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
      *
-     * @return array|null The schemaProperties
+     * @return Property[]|null The schemaProperties
      */
     public function getSchemaProperties()
     {
-        if (array_key_exists("properties", $this->_propDict)) {
-           return $this->_propDict["properties"];
-        } else {
-            return null;
+        if (array_key_exists('properties', $this->_propDict) && !is_null($this->_propDict['properties'])) {
+            $properties = [];
+            if (count($this->_propDict['properties']) > 0 && is_a($this->_propDict['properties'][0], 'Property')) {
+                return $this->_propDict['properties'];
+            }
+            foreach ($this->_propDict['properties'] as $singleValue) {
+                $properties []= new Property($singleValue);
+            }
+            $this->_propDict['properties'] = $properties;
+            return $this->_propDict['properties'];
         }
+        return null;
     }
     
     /** 
     * Sets the schemaProperties
     * The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
     *
-    * @param Property $val The schemaProperties
+    * @param Property[] $val The schemaProperties
     *
     * @return Schema
     */

@@ -60,8 +60,9 @@ class SecurityResource extends Entity
     */
     public function getResourceType()
     {
-        if (array_key_exists("resourceType", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceType"], "\Microsoft\Graph\Model\SecurityResourceType") || is_null($this->_propDict["resourceType"])) {
+        if (array_key_exists("resourceType", $this->_propDict) && !is_null($this->_propDict["resourceType"])) {
+     
+            if (is_a($this->_propDict["resourceType"], "\Microsoft\Graph\Model\SecurityResourceType")) {
                 return $this->_propDict["resourceType"];
             } else {
                 $this->_propDict["resourceType"] = new SecurityResourceType($this->_propDict["resourceType"]);

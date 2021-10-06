@@ -90,8 +90,8 @@ class ContentType extends Entity
     */
     public function getDocumentSet()
     {
-        if (array_key_exists("documentSet", $this->_propDict)) {
-            if (is_a($this->_propDict["documentSet"], "\Microsoft\Graph\Model\DocumentSet") || is_null($this->_propDict["documentSet"])) {
+        if (array_key_exists("documentSet", $this->_propDict) && !is_null($this->_propDict["documentSet"])) {
+            if (is_a($this->_propDict["documentSet"], "\Microsoft\Graph\Model\DocumentSet")) {
                 return $this->_propDict["documentSet"];
             } else {
                 $this->_propDict["documentSet"] = new DocumentSet($this->_propDict["documentSet"]);
@@ -123,8 +123,8 @@ class ContentType extends Entity
     */
     public function getDocumentTemplate()
     {
-        if (array_key_exists("documentTemplate", $this->_propDict)) {
-            if (is_a($this->_propDict["documentTemplate"], "\Microsoft\Graph\Model\DocumentSetContent") || is_null($this->_propDict["documentTemplate"])) {
+        if (array_key_exists("documentTemplate", $this->_propDict) && !is_null($this->_propDict["documentTemplate"])) {
+            if (is_a($this->_propDict["documentTemplate"], "\Microsoft\Graph\Model\DocumentSetContent")) {
                 return $this->_propDict["documentTemplate"];
             } else {
                 $this->_propDict["documentTemplate"] = new DocumentSetContent($this->_propDict["documentTemplate"]);
@@ -214,8 +214,8 @@ class ContentType extends Entity
     */
     public function getInheritedFrom()
     {
-        if (array_key_exists("inheritedFrom", $this->_propDict)) {
-            if (is_a($this->_propDict["inheritedFrom"], "\Microsoft\Graph\Model\ItemReference") || is_null($this->_propDict["inheritedFrom"])) {
+        if (array_key_exists("inheritedFrom", $this->_propDict) && !is_null($this->_propDict["inheritedFrom"])) {
+            if (is_a($this->_propDict["inheritedFrom"], "\Microsoft\Graph\Model\ItemReference")) {
                 return $this->_propDict["inheritedFrom"];
             } else {
                 $this->_propDict["inheritedFrom"] = new ItemReference($this->_propDict["inheritedFrom"]);
@@ -305,8 +305,8 @@ class ContentType extends Entity
     */
     public function getOrder()
     {
-        if (array_key_exists("order", $this->_propDict)) {
-            if (is_a($this->_propDict["order"], "\Microsoft\Graph\Model\ContentTypeOrder") || is_null($this->_propDict["order"])) {
+        if (array_key_exists("order", $this->_propDict) && !is_null($this->_propDict["order"])) {
+            if (is_a($this->_propDict["order"], "\Microsoft\Graph\Model\ContentTypeOrder")) {
                 return $this->_propDict["order"];
             } else {
                 $this->_propDict["order"] = new ContentTypeOrder($this->_propDict["order"]);
@@ -454,8 +454,8 @@ class ContentType extends Entity
     */
     public function getBase()
     {
-        if (array_key_exists("base", $this->_propDict)) {
-            if (is_a($this->_propDict["base"], "\Microsoft\Graph\Model\ContentType") || is_null($this->_propDict["base"])) {
+        if (array_key_exists("base", $this->_propDict) && !is_null($this->_propDict["base"])) {
+            if (is_a($this->_propDict["base"], "\Microsoft\Graph\Model\ContentType")) {
                 return $this->_propDict["base"];
             } else {
                 $this->_propDict["base"] = new ContentType($this->_propDict["base"]);
@@ -484,22 +484,29 @@ class ContentType extends Entity
      * Gets the baseTypes
     * The collection of content types that are ancestors of this content type.
      *
-     * @return array|null The baseTypes
+     * @return ContentType[]|null The baseTypes
      */
     public function getBaseTypes()
     {
-        if (array_key_exists("baseTypes", $this->_propDict)) {
-           return $this->_propDict["baseTypes"];
-        } else {
-            return null;
+        if (array_key_exists('baseTypes', $this->_propDict) && !is_null($this->_propDict['baseTypes'])) {
+            $baseTypes = [];
+            if (count($this->_propDict['baseTypes']) > 0 && is_a($this->_propDict['baseTypes'][0], 'ContentType')) {
+                return $this->_propDict['baseTypes'];
+            }
+            foreach ($this->_propDict['baseTypes'] as $singleValue) {
+                $baseTypes []= new ContentType($singleValue);
+            }
+            $this->_propDict['baseTypes'] = $baseTypes;
+            return $this->_propDict['baseTypes'];
         }
+        return null;
     }
     
     /** 
     * Sets the baseTypes
     * The collection of content types that are ancestors of this content type.
     *
-    * @param ContentType $val The baseTypes
+    * @param ContentType[] $val The baseTypes
     *
     * @return ContentType
     */
@@ -514,22 +521,29 @@ class ContentType extends Entity
      * Gets the columnLinks
     * The collection of columns that are required by this content type.
      *
-     * @return array|null The columnLinks
+     * @return ColumnLink[]|null The columnLinks
      */
     public function getColumnLinks()
     {
-        if (array_key_exists("columnLinks", $this->_propDict)) {
-           return $this->_propDict["columnLinks"];
-        } else {
-            return null;
+        if (array_key_exists('columnLinks', $this->_propDict) && !is_null($this->_propDict['columnLinks'])) {
+            $columnLinks = [];
+            if (count($this->_propDict['columnLinks']) > 0 && is_a($this->_propDict['columnLinks'][0], 'ColumnLink')) {
+                return $this->_propDict['columnLinks'];
+            }
+            foreach ($this->_propDict['columnLinks'] as $singleValue) {
+                $columnLinks []= new ColumnLink($singleValue);
+            }
+            $this->_propDict['columnLinks'] = $columnLinks;
+            return $this->_propDict['columnLinks'];
         }
+        return null;
     }
     
     /** 
     * Sets the columnLinks
     * The collection of columns that are required by this content type.
     *
-    * @param ColumnLink $val The columnLinks
+    * @param ColumnLink[] $val The columnLinks
     *
     * @return ContentType
     */
@@ -544,22 +558,29 @@ class ContentType extends Entity
      * Gets the columnPositions
     * Column order information in a content type.
      *
-     * @return array|null The columnPositions
+     * @return ColumnDefinition[]|null The columnPositions
      */
     public function getColumnPositions()
     {
-        if (array_key_exists("columnPositions", $this->_propDict)) {
-           return $this->_propDict["columnPositions"];
-        } else {
-            return null;
+        if (array_key_exists('columnPositions', $this->_propDict) && !is_null($this->_propDict['columnPositions'])) {
+            $columnPositions = [];
+            if (count($this->_propDict['columnPositions']) > 0 && is_a($this->_propDict['columnPositions'][0], 'ColumnDefinition')) {
+                return $this->_propDict['columnPositions'];
+            }
+            foreach ($this->_propDict['columnPositions'] as $singleValue) {
+                $columnPositions []= new ColumnDefinition($singleValue);
+            }
+            $this->_propDict['columnPositions'] = $columnPositions;
+            return $this->_propDict['columnPositions'];
         }
+        return null;
     }
     
     /** 
     * Sets the columnPositions
     * Column order information in a content type.
     *
-    * @param ColumnDefinition $val The columnPositions
+    * @param ColumnDefinition[] $val The columnPositions
     *
     * @return ContentType
     */
@@ -574,22 +595,29 @@ class ContentType extends Entity
      * Gets the columns
     * The collection of column definitions for this contentType.
      *
-     * @return array|null The columns
+     * @return ColumnDefinition[]|null The columns
      */
     public function getColumns()
     {
-        if (array_key_exists("columns", $this->_propDict)) {
-           return $this->_propDict["columns"];
-        } else {
-            return null;
+        if (array_key_exists('columns', $this->_propDict) && !is_null($this->_propDict['columns'])) {
+            $columns = [];
+            if (count($this->_propDict['columns']) > 0 && is_a($this->_propDict['columns'][0], 'ColumnDefinition')) {
+                return $this->_propDict['columns'];
+            }
+            foreach ($this->_propDict['columns'] as $singleValue) {
+                $columns []= new ColumnDefinition($singleValue);
+            }
+            $this->_propDict['columns'] = $columns;
+            return $this->_propDict['columns'];
         }
+        return null;
     }
     
     /** 
     * Sets the columns
     * The collection of column definitions for this contentType.
     *
-    * @param ColumnDefinition $val The columns
+    * @param ColumnDefinition[] $val The columns
     *
     * @return ContentType
     */

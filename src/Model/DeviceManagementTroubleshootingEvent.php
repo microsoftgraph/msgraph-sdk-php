@@ -61,8 +61,8 @@ class DeviceManagementTroubleshootingEvent extends Entity
     */
     public function getEventDateTime()
     {
-        if (array_key_exists("eventDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["eventDateTime"], "\DateTime") || is_null($this->_propDict["eventDateTime"])) {
+        if (array_key_exists("eventDateTime", $this->_propDict) && !is_null($this->_propDict["eventDateTime"])) {
+            if (is_a($this->_propDict["eventDateTime"], "\DateTime")) {
                 return $this->_propDict["eventDateTime"];
             } else {
                 $this->_propDict["eventDateTime"] = new \DateTime($this->_propDict["eventDateTime"]);

@@ -61,8 +61,8 @@ class PrinterCreateOperation extends PrintOperation
     */
     public function getPrinter()
     {
-        if (array_key_exists("printer", $this->_propDict)) {
-            if (is_a($this->_propDict["printer"], "\Microsoft\Graph\Model\Printer") || is_null($this->_propDict["printer"])) {
+        if (array_key_exists("printer", $this->_propDict) && !is_null($this->_propDict["printer"])) {
+            if (is_a($this->_propDict["printer"], "\Microsoft\Graph\Model\Printer")) {
                 return $this->_propDict["printer"];
             } else {
                 $this->_propDict["printer"] = new Printer($this->_propDict["printer"]);

@@ -84,18 +84,22 @@ class IosNetworkUsageRule extends Entity
     * Gets the managedApps
     * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
     *
-    * @return AppListItem|null The managedApps
+    * @return AppListItem[]|null The managedApps
     */
     public function getManagedApps()
     {
-        if (array_key_exists("managedApps", $this->_propDict)) {
-            if (is_a($this->_propDict["managedApps"], "\Microsoft\Graph\Model\AppListItem") || is_null($this->_propDict["managedApps"])) {
-                return $this->_propDict["managedApps"];
-            } else {
-                $this->_propDict["managedApps"] = new AppListItem($this->_propDict["managedApps"]);
-                return $this->_propDict["managedApps"];
+        if (array_key_exists("managedApps", $this->_propDict) && !is_null($this->_propDict["managedApps"])) {
+       
+            if (count($this->_propDict['managedApps']) > 0 && is_a($this->_propDict['managedApps'][0], 'AppListItem')) {
+               return $this->_propDict['managedApps'];
             }
-        }
+            $managedApps = [];
+            foreach ($this->_propDict['managedApps'] as $singleValue) {
+               $managedApps []= new AppListItem($singleValue);
+            }
+            $this->_propDict['managedApps'] = $managedApps;
+            return $this->_propDict['managedApps'];
+            }
         return null;
     }
 
@@ -103,7 +107,7 @@ class IosNetworkUsageRule extends Entity
     * Sets the managedApps
     * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
     *
-    * @param AppListItem $val The value to assign to the managedApps
+    * @param AppListItem[] $val The value to assign to the managedApps
     *
     * @return IosNetworkUsageRule The IosNetworkUsageRule
     */

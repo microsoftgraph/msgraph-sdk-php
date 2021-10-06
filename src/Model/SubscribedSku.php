@@ -119,8 +119,8 @@ class SubscribedSku extends Entity
     */
     public function getPrepaidUnits()
     {
-        if (array_key_exists("prepaidUnits", $this->_propDict)) {
-            if (is_a($this->_propDict["prepaidUnits"], "\Microsoft\Graph\Model\LicenseUnitsDetail") || is_null($this->_propDict["prepaidUnits"])) {
+        if (array_key_exists("prepaidUnits", $this->_propDict) && !is_null($this->_propDict["prepaidUnits"])) {
+            if (is_a($this->_propDict["prepaidUnits"], "\Microsoft\Graph\Model\LicenseUnitsDetail")) {
                 return $this->_propDict["prepaidUnits"];
             } else {
                 $this->_propDict["prepaidUnits"] = new LicenseUnitsDetail($this->_propDict["prepaidUnits"]);
@@ -149,22 +149,29 @@ class SubscribedSku extends Entity
      * Gets the servicePlans
     * Information about the service plans that are available with the SKU. Not nullable
      *
-     * @return array|null The servicePlans
+     * @return ServicePlanInfo[]|null The servicePlans
      */
     public function getServicePlans()
     {
-        if (array_key_exists("servicePlans", $this->_propDict)) {
-           return $this->_propDict["servicePlans"];
-        } else {
-            return null;
+        if (array_key_exists('servicePlans', $this->_propDict) && !is_null($this->_propDict['servicePlans'])) {
+            $servicePlans = [];
+            if (count($this->_propDict['servicePlans']) > 0 && is_a($this->_propDict['servicePlans'][0], 'ServicePlanInfo')) {
+                return $this->_propDict['servicePlans'];
+            }
+            foreach ($this->_propDict['servicePlans'] as $singleValue) {
+                $servicePlans []= new ServicePlanInfo($singleValue);
+            }
+            $this->_propDict['servicePlans'] = $servicePlans;
+            return $this->_propDict['servicePlans'];
         }
+        return null;
     }
     
     /** 
     * Sets the servicePlans
     * Information about the service plans that are available with the SKU. Not nullable
     *
-    * @param ServicePlanInfo $val The servicePlans
+    * @param ServicePlanInfo[] $val The servicePlans
     *
     * @return SubscribedSku
     */

@@ -87,8 +87,9 @@ class TermColumn extends Entity
     */
     public function getParentTerm()
     {
-        if (array_key_exists("parentTerm", $this->_propDict)) {
-            if (is_a($this->_propDict["parentTerm"], "\Microsoft\Graph\TermStore\Model\Term") || is_null($this->_propDict["parentTerm"])) {
+        if (array_key_exists("parentTerm", $this->_propDict) && !is_null($this->_propDict["parentTerm"])) {
+     
+            if (is_a($this->_propDict["parentTerm"], "\Microsoft\Graph\TermStore\Model\Term")) {
                 return $this->_propDict["parentTerm"];
             } else {
                 $this->_propDict["parentTerm"] = new \Microsoft\Graph\TermStore\Model\Term($this->_propDict["parentTerm"]);
@@ -118,8 +119,9 @@ class TermColumn extends Entity
     */
     public function getTermSet()
     {
-        if (array_key_exists("termSet", $this->_propDict)) {
-            if (is_a($this->_propDict["termSet"], "\Microsoft\Graph\TermStore\Model\Set") || is_null($this->_propDict["termSet"])) {
+        if (array_key_exists("termSet", $this->_propDict) && !is_null($this->_propDict["termSet"])) {
+     
+            if (is_a($this->_propDict["termSet"], "\Microsoft\Graph\TermStore\Model\Set")) {
                 return $this->_propDict["termSet"];
             } else {
                 $this->_propDict["termSet"] = new \Microsoft\Graph\TermStore\Model\Set($this->_propDict["termSet"]);

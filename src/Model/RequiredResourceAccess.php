@@ -28,18 +28,22 @@ class RequiredResourceAccess extends Entity
     * Gets the resourceAccess
     * The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
     *
-    * @return ResourceAccess|null The resourceAccess
+    * @return ResourceAccess[]|null The resourceAccess
     */
     public function getResourceAccess()
     {
-        if (array_key_exists("resourceAccess", $this->_propDict)) {
-            if (is_a($this->_propDict["resourceAccess"], "\Microsoft\Graph\Model\ResourceAccess") || is_null($this->_propDict["resourceAccess"])) {
-                return $this->_propDict["resourceAccess"];
-            } else {
-                $this->_propDict["resourceAccess"] = new ResourceAccess($this->_propDict["resourceAccess"]);
-                return $this->_propDict["resourceAccess"];
+        if (array_key_exists("resourceAccess", $this->_propDict) && !is_null($this->_propDict["resourceAccess"])) {
+       
+            if (count($this->_propDict['resourceAccess']) > 0 && is_a($this->_propDict['resourceAccess'][0], 'ResourceAccess')) {
+               return $this->_propDict['resourceAccess'];
             }
-        }
+            $resourceAccess = [];
+            foreach ($this->_propDict['resourceAccess'] as $singleValue) {
+               $resourceAccess []= new ResourceAccess($singleValue);
+            }
+            $this->_propDict['resourceAccess'] = $resourceAccess;
+            return $this->_propDict['resourceAccess'];
+            }
         return null;
     }
 
@@ -47,7 +51,7 @@ class RequiredResourceAccess extends Entity
     * Sets the resourceAccess
     * The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
     *
-    * @param ResourceAccess $val The value to assign to the resourceAccess
+    * @param ResourceAccess[] $val The value to assign to the resourceAccess
     *
     * @return RequiredResourceAccess The RequiredResourceAccess
     */

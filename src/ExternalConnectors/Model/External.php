@@ -59,21 +59,28 @@ class External implements \JsonSerializable
      /** 
      * Gets the connections
      *
-     * @return array|null The connections
+     * @return ExternalConnection[]|null The connections
      */
     public function getConnections()
     {
-        if (array_key_exists("connections", $this->_propDict)) {
-           return $this->_propDict["connections"];
-        } else {
-            return null;
+        if (array_key_exists('connections', $this->_propDict) && !is_null($this->_propDict['connections'])) {
+            $connections = [];
+            if (count($this->_propDict['connections']) > 0 && is_a($this->_propDict['connections'][0], 'ExternalConnection')) {
+                return $this->_propDict['connections'];
+            }
+            foreach ($this->_propDict['connections'] as $singleValue) {
+                $connections []= new ExternalConnection($singleValue);
+            }
+            $this->_propDict['connections'] = $connections;
+            return $this->_propDict['connections'];
         }
+        return null;
     }
     
     /** 
     * Sets the connections
     *
-    * @param ExternalConnection $val The connections
+    * @param ExternalConnection[] $val The connections
     *
     * @return External
     */
@@ -119,10 +126,22 @@ class External implements \JsonSerializable
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, "\DateTime")) {
-                $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
-            } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
+            if (is_a($val, '\DateTime')) {
+                $serializableProperties[$property] = $val->format(\DateTimeInterface::RFC3339);
+            } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
                 $serializableProperties[$property] = $val->value();
+            } else if (is_array($val)) {
+                $values = [];
+                if (count($val) > 0 && is_a($val[0], '\DateTime')) {
+                   foreach ($values as $propertyValue) {
+                       $values []= $propertyValue->format(\DateTimeInterface::RFC3339);
+                   }
+                } else if(count($val) > 0 && is_a($val[0], '\Microsoft\Graph\Core\Enum')) {
+                    foreach ($values as $propertyValue) {
+                       $values []= $propertyValue->value();
+                   }
+                }
+                $serializableProperties[$property] = $values;
             }
         }
         return $serializableProperties;

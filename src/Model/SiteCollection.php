@@ -88,8 +88,9 @@ class SiteCollection extends Entity
     */
     public function getRoot()
     {
-        if (array_key_exists("root", $this->_propDict)) {
-            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\Root") || is_null($this->_propDict["root"])) {
+        if (array_key_exists("root", $this->_propDict) && !is_null($this->_propDict["root"])) {
+     
+            if (is_a($this->_propDict["root"], "\Microsoft\Graph\Model\Root")) {
                 return $this->_propDict["root"];
             } else {
                 $this->_propDict["root"] = new Root($this->_propDict["root"]);

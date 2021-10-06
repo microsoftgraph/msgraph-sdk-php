@@ -187,8 +187,9 @@ class MessageSecurityState extends Entity
     */
     public function getMessageReceivedDateTime()
     {
-        if (array_key_exists("messageReceivedDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["messageReceivedDateTime"], "\DateTime") || is_null($this->_propDict["messageReceivedDateTime"])) {
+        if (array_key_exists("messageReceivedDateTime", $this->_propDict) && !is_null($this->_propDict["messageReceivedDateTime"])) {
+     
+            if (is_a($this->_propDict["messageReceivedDateTime"], "\DateTime")) {
                 return $this->_propDict["messageReceivedDateTime"];
             } else {
                 $this->_propDict["messageReceivedDateTime"] = new \DateTime($this->_propDict["messageReceivedDateTime"]);

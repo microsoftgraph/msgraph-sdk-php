@@ -31,8 +31,8 @@ class InformationProtection extends Entity
     */
     public function getBitlocker()
     {
-        if (array_key_exists("bitlocker", $this->_propDict)) {
-            if (is_a($this->_propDict["bitlocker"], "\Microsoft\Graph\Model\Bitlocker") || is_null($this->_propDict["bitlocker"])) {
+        if (array_key_exists("bitlocker", $this->_propDict) && !is_null($this->_propDict["bitlocker"])) {
+            if (is_a($this->_propDict["bitlocker"], "\Microsoft\Graph\Model\Bitlocker")) {
                 return $this->_propDict["bitlocker"];
             } else {
                 $this->_propDict["bitlocker"] = new Bitlocker($this->_propDict["bitlocker"]);
@@ -59,21 +59,28 @@ class InformationProtection extends Entity
      /** 
      * Gets the threatAssessmentRequests
      *
-     * @return array|null The threatAssessmentRequests
+     * @return ThreatAssessmentRequest[]|null The threatAssessmentRequests
      */
     public function getThreatAssessmentRequests()
     {
-        if (array_key_exists("threatAssessmentRequests", $this->_propDict)) {
-           return $this->_propDict["threatAssessmentRequests"];
-        } else {
-            return null;
+        if (array_key_exists('threatAssessmentRequests', $this->_propDict) && !is_null($this->_propDict['threatAssessmentRequests'])) {
+            $threatAssessmentRequests = [];
+            if (count($this->_propDict['threatAssessmentRequests']) > 0 && is_a($this->_propDict['threatAssessmentRequests'][0], 'ThreatAssessmentRequest')) {
+                return $this->_propDict['threatAssessmentRequests'];
+            }
+            foreach ($this->_propDict['threatAssessmentRequests'] as $singleValue) {
+                $threatAssessmentRequests []= new ThreatAssessmentRequest($singleValue);
+            }
+            $this->_propDict['threatAssessmentRequests'] = $threatAssessmentRequests;
+            return $this->_propDict['threatAssessmentRequests'];
         }
+        return null;
     }
     
     /** 
     * Sets the threatAssessmentRequests
     *
-    * @param ThreatAssessmentRequest $val The threatAssessmentRequests
+    * @param ThreatAssessmentRequest[] $val The threatAssessmentRequests
     *
     * @return InformationProtection
     */

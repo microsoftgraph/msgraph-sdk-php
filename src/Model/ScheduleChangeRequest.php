@@ -31,8 +31,8 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     */
     public function getAssignedTo()
     {
-        if (array_key_exists("assignedTo", $this->_propDict)) {
-            if (is_a($this->_propDict["assignedTo"], "\Microsoft\Graph\Model\ScheduleChangeRequestActor") || is_null($this->_propDict["assignedTo"])) {
+        if (array_key_exists("assignedTo", $this->_propDict) && !is_null($this->_propDict["assignedTo"])) {
+            if (is_a($this->_propDict["assignedTo"], "\Microsoft\Graph\Model\ScheduleChangeRequestActor")) {
                 return $this->_propDict["assignedTo"];
             } else {
                 $this->_propDict["assignedTo"] = new ScheduleChangeRequestActor($this->_propDict["assignedTo"]);
@@ -62,8 +62,8 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     */
     public function getManagerActionDateTime()
     {
-        if (array_key_exists("managerActionDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["managerActionDateTime"], "\DateTime") || is_null($this->_propDict["managerActionDateTime"])) {
+        if (array_key_exists("managerActionDateTime", $this->_propDict) && !is_null($this->_propDict["managerActionDateTime"])) {
+            if (is_a($this->_propDict["managerActionDateTime"], "\DateTime")) {
                 return $this->_propDict["managerActionDateTime"];
             } else {
                 $this->_propDict["managerActionDateTime"] = new \DateTime($this->_propDict["managerActionDateTime"]);
@@ -147,8 +147,8 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     */
     public function getSenderDateTime()
     {
-        if (array_key_exists("senderDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["senderDateTime"], "\DateTime") || is_null($this->_propDict["senderDateTime"])) {
+        if (array_key_exists("senderDateTime", $this->_propDict) && !is_null($this->_propDict["senderDateTime"])) {
+            if (is_a($this->_propDict["senderDateTime"], "\DateTime")) {
                 return $this->_propDict["senderDateTime"];
             } else {
                 $this->_propDict["senderDateTime"] = new \DateTime($this->_propDict["senderDateTime"]);
@@ -232,8 +232,8 @@ class ScheduleChangeRequest extends ChangeTrackedEntity
     */
     public function getState()
     {
-        if (array_key_exists("state", $this->_propDict)) {
-            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ScheduleChangeState") || is_null($this->_propDict["state"])) {
+        if (array_key_exists("state", $this->_propDict) && !is_null($this->_propDict["state"])) {
+            if (is_a($this->_propDict["state"], "\Microsoft\Graph\Model\ScheduleChangeState")) {
                 return $this->_propDict["state"];
             } else {
                 $this->_propDict["state"] = new ScheduleChangeState($this->_propDict["state"]);

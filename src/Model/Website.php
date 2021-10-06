@@ -88,8 +88,9 @@ class Website extends Entity
     */
     public function getType()
     {
-        if (array_key_exists("type", $this->_propDict)) {
-            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\WebsiteType") || is_null($this->_propDict["type"])) {
+        if (array_key_exists("type", $this->_propDict) && !is_null($this->_propDict["type"])) {
+     
+            if (is_a($this->_propDict["type"], "\Microsoft\Graph\Model\WebsiteType")) {
                 return $this->_propDict["type"];
             } else {
                 $this->_propDict["type"] = new WebsiteType($this->_propDict["type"]);
