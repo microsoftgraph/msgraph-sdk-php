@@ -11,19 +11,19 @@ Users can begin developing immediately by connecting with the REST API directly 
 - An extra layer of error handling and intelligent defaults helps you debug your application
 
 ## Get started
-View the [getting started steps](https://github.com/microsoftgraph/msgraph-sdk-php#get-started-with-microsoft-graph) to make your first request with Graph.
+View the [getting started steps](../README.md#get-started-with-microsoft-graph) to make your first request with Graph.
 
 ## Using the SDK
-- [Usage Examples](https://github.com/microsoftgraph/msgraph-sdk-php/tree/dev/docs/Examples.md)
-- [Documentation](https://github.com/microsoftgraph/msgraph-sdk-php/tree/dev/docs/index.html)
+- [Usage Examples](Examples.md)
+- [Reference](index.html)
 
 To make calls to the Beta Microsoft Graph API, check out our [Microsoft Graph Beta SDK](https://packagist.org/packages/microsoft/microsoft-graph-beta).
 ## Support
-View the [contributions guidelines](https://github.com/microsoftgraph/msgraph-sdk-php/blob/main/CONTRIBUTING.md) for more information on submitting a pull request.
+View the [Contribution Guidelines](../CONTRIBUTING.md) for more information on submitting a pull request.
 
-Check out our [Frequently Asked Questions](https://github.com/microsoftgraph/msgraph-sdk-php/tree/dev/docs/FAQ.md).
+Check out our [Frequently Asked Questions](FAQ.md).
 
 Bugs are filed and monitored in [GitHub issues](https://github.com/microsoftgraph/msgraph-sdk-php/issues).
 
-You can also ask developers and the community Graph-related questions on [Microsoft Q&A](https://docs.microsoft.com/en-us/answers/topics/128347/microsoft-graph-sdk.html)
+You can also ask developers and the community Graph-related questions on [Microsoft Q&A](https://docs.microsoft.com/en-us/answers/topics/128347/microsoft-graph-sdk.html).
 
