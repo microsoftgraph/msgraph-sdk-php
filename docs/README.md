@@ -15,9 +15,13 @@ View the [getting started steps](../README.md#get-started-with-microsoft-graph) 
 
 ## Using the SDK
 - [Usage Examples](Examples.md)
-- [Reference](index.html)
+- [Model Reference](index.html)
 
 To make calls to the Beta Microsoft Graph API, check out our [Microsoft Graph Beta SDK](https://packagist.org/packages/microsoft/microsoft-graph-beta).
+
+This package primarily provides Microsoft Graph models. However, should you want to dig deeper into creation and configuration of the Graph client and making requests,
+please check out the [Microsoft Graph Core SDK](https://packagist.org/packages/microsoft/microsoft-graph-core). The Core SDK is included as a dependency of this package as well as the Microsoft Graph Beta SDK.
+
 ## Support
 View the [Contribution Guidelines](../CONTRIBUTING.md) for more information on submitting a pull request.
 
