@@ -142,11 +142,9 @@ Now you can hit a Visual Studio Code breakpoint in a test. Try this:
 
 ## Documentation and resources
 
-* [Documentation](https://github.com/microsoftgraph/msgraph-sdk-php/blob/master/docs/index.html)
+* [Documentation](docs/index.html)
 
-* [Wiki](https://github.com/microsoftgraph/msgraph-sdk-php/wiki)
-
-* [Examples](https://github.com/microsoftgraph/msgraph-sdk-php/wiki/Example-calls)
+* [Examples](docs/Examples.md)
 
 * [Microsoft Graph website](https://developer.microsoft.com/en-us/graph/)
 
@@ -156,7 +154,7 @@ View or log issues on the [Issues](https://github.com/microsoftgraph/msgraph-sdk
 
 ## Contribute
 
-Please read our [Contributing](https://github.com/microsoftgraph/msgraph-sdk-php/blob/master/CONTRIBUTING.md) guidelines carefully for advice on how to contribute to this repo.
+Please read our [Contributing](CONTRIBUTING.md) guidelines carefully for advice on how to contribute to this repo.
 
 ## Copyright and license
 
