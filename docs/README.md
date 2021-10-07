@@ -25,5 +25,5 @@ Check out our [Frequently Asked Questions](https://github.com/microsoftgraph/msg
 
 Bugs are filed and monitored in [GitHub issues](https://github.com/microsoftgraph/msgraph-sdk-php/issues).
 
-You can also ask developers and the community Graph-related questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoftgraph?sort=newest)
+You can also ask developers and the community Graph-related questions on [Microsoft Q&A](https://docs.microsoft.com/en-us/answers/topics/128347/microsoft-graph-sdk.html)
 
