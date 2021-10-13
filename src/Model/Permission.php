@@ -120,6 +120,65 @@ class Permission extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the grantedToIdentitiesV2
+     *
+     * @return array|null The grantedToIdentitiesV2
+     */
+    public function getGrantedToIdentitiesV2()
+    {
+        if (array_key_exists("grantedToIdentitiesV2", $this->_propDict)) {
+           return $this->_propDict["grantedToIdentitiesV2"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the grantedToIdentitiesV2
+    *
+    * @param SharePointIdentitySet $val The grantedToIdentitiesV2
+    *
+    * @return Permission
+    */
+    public function setGrantedToIdentitiesV2($val)
+    {
+        $this->_propDict["grantedToIdentitiesV2"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the grantedToV2
+    *
+    * @return SharePointIdentitySet|null The grantedToV2
+    */
+    public function getGrantedToV2()
+    {
+        if (array_key_exists("grantedToV2", $this->_propDict)) {
+            if (is_a($this->_propDict["grantedToV2"], "\Microsoft\Graph\Model\SharePointIdentitySet") || is_null($this->_propDict["grantedToV2"])) {
+                return $this->_propDict["grantedToV2"];
+            } else {
+                $this->_propDict["grantedToV2"] = new SharePointIdentitySet($this->_propDict["grantedToV2"]);
+                return $this->_propDict["grantedToV2"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the grantedToV2
+    *
+    * @param SharePointIdentitySet $val The grantedToV2
+    *
+    * @return Permission
+    */
+    public function setGrantedToV2($val)
+    {
+        $this->_propDict["grantedToV2"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the hasPassword
     * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.

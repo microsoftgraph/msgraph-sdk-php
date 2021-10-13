@@ -178,6 +178,39 @@ class OnlineMeeting extends Entity
     }
     
     /**
+    * Gets the attendeeReport
+    * The content stream of the attendee report of a live event. Read-only.
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The attendeeReport
+    */
+    public function getAttendeeReport()
+    {
+        if (array_key_exists("attendeeReport", $this->_propDict)) {
+            if (is_a($this->_propDict["attendeeReport"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["attendeeReport"])) {
+                return $this->_propDict["attendeeReport"];
+            } else {
+                $this->_propDict["attendeeReport"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["attendeeReport"]);
+                return $this->_propDict["attendeeReport"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the attendeeReport
+    * The content stream of the attendee report of a live event. Read-only.
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The attendeeReport
+    *
+    * @return OnlineMeeting
+    */
+    public function setAttendeeReport($val)
+    {
+        $this->_propDict["attendeeReport"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the audioConferencing
     * The phone access (dial-in) information for an online meeting. Read-only.
     *
@@ -554,6 +587,35 @@ class OnlineMeeting extends Entity
     public function setParticipants($val)
     {
         $this->_propDict["participants"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the recordAutomatically
+    * Indicates whether to record the meeting automatically.
+    *
+    * @return bool|null The recordAutomatically
+    */
+    public function getRecordAutomatically()
+    {
+        if (array_key_exists("recordAutomatically", $this->_propDict)) {
+            return $this->_propDict["recordAutomatically"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the recordAutomatically
+    * Indicates whether to record the meeting automatically.
+    *
+    * @param bool $val The recordAutomatically
+    *
+    * @return OnlineMeeting
+    */
+    public function setRecordAutomatically($val)
+    {
+        $this->_propDict["recordAutomatically"] = boolval($val);
         return $this;
     }
     

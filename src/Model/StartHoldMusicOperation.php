@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AuthenticatorAppFeatureSettings File
+* StartHoldMusicOperation File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* AuthenticatorAppFeatureSettings class
+* StartHoldMusicOperation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,10 +22,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AuthenticatorAppFeatureSettings extends Enum
+class StartHoldMusicOperation extends CommsOperation
 {
-    /**
-    * The Enum AuthenticatorAppFeatureSettings
-    */
-    const REQUIRE_NUMBER_MATCHING = "requireNumberMatching";
 }

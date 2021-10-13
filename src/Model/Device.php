@@ -26,7 +26,7 @@ class Device extends DirectoryObject
 {
     /**
     * Gets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).
+    * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, NOT, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
     *
     * @return bool|null The accountEnabled
     */
@@ -41,7 +41,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the accountEnabled
-    * true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).
+    * true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, NOT, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
     *
     * @param bool $val The accountEnabled
     *

@@ -724,7 +724,7 @@ class Application extends DirectoryObject
 
      /** 
      * Gets the requiredResourceAccess
-    * Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable. Supports $filter (eq, NOT, ge, le).
+    * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, NOT, ge, le).
      *
      * @return array|null The requiredResourceAccess
      */
@@ -739,7 +739,7 @@ class Application extends DirectoryObject
     
     /** 
     * Sets the requiredResourceAccess
-    * Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable. Supports $filter (eq, NOT, ge, le).
+    * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, NOT, ge, le).
     *
     * @param RequiredResourceAccess $val The requiredResourceAccess
     *
