@@ -27,15 +27,15 @@ class PasswordCredentialConfiguration extends Entity
     /**
     * Gets the maxLifetime
     *
-    * @return Duration|null The maxLifetime
+    * @return \DateInterval|null The maxLifetime
     */
     public function getMaxLifetime()
     {
         if (array_key_exists("maxLifetime", $this->_propDict)) {
-            if (is_a($this->_propDict["maxLifetime"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["maxLifetime"])) {
+            if (is_a($this->_propDict["maxLifetime"], "\DateInterval") || is_null($this->_propDict["maxLifetime"])) {
                 return $this->_propDict["maxLifetime"];
             } else {
-                $this->_propDict["maxLifetime"] = new Duration($this->_propDict["maxLifetime"]);
+                $this->_propDict["maxLifetime"] = new \DateInterval($this->_propDict["maxLifetime"]);
                 return $this->_propDict["maxLifetime"];
             }
         }
@@ -45,7 +45,7 @@ class PasswordCredentialConfiguration extends Entity
     /**
     * Sets the maxLifetime
     *
-    * @param Duration $val The value to assign to the maxLifetime
+    * @param \DateInterval $val The value to assign to the maxLifetime
     *
     * @return PasswordCredentialConfiguration The PasswordCredentialConfiguration
     */

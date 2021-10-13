@@ -25,6 +25,7 @@ class AssignedTrainingInfo extends Entity
 {
     /**
     * Gets the assignedUserCount
+    * Number of users who were assigned the training in an attack simulation and training campaign.
     *
     * @return int|null The assignedUserCount
     */
@@ -39,6 +40,7 @@ class AssignedTrainingInfo extends Entity
 
     /**
     * Sets the assignedUserCount
+    * Number of users who were assigned the training in an attack simulation and training campaign.
     *
     * @param int $val The value of the assignedUserCount
     *
@@ -51,6 +53,7 @@ class AssignedTrainingInfo extends Entity
     }
     /**
     * Gets the completedUserCount
+    * Number of users who completed the training in an attack simulation and training campaign.
     *
     * @return int|null The completedUserCount
     */
@@ -65,6 +68,7 @@ class AssignedTrainingInfo extends Entity
 
     /**
     * Sets the completedUserCount
+    * Number of users who completed the training in an attack simulation and training campaign.
     *
     * @param int $val The value of the completedUserCount
     *
@@ -77,6 +81,7 @@ class AssignedTrainingInfo extends Entity
     }
     /**
     * Gets the displayName
+    * Display name of the training in an attack simulation and training campaign.
     *
     * @return string|null The displayName
     */
@@ -91,6 +96,7 @@ class AssignedTrainingInfo extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the training in an attack simulation and training campaign.
     *
     * @param string $val The value of the displayName
     *

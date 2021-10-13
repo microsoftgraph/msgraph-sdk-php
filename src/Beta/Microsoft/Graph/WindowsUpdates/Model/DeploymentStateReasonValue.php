@@ -34,4 +34,5 @@ class DeploymentStateReasonValue extends Enum
     const PAUSED_BY_REQUEST = "pausedByRequest";
     const PAUSED_BY_MONITORING = "pausedByMonitoring";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const FAULTED_BY_CONTENT_OUTDATED = "faultedByContentOutdated";
 }

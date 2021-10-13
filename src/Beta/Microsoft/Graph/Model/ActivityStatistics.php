@@ -61,15 +61,15 @@ class ActivityStatistics extends Entity
     * Gets the duration
     * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
     *
-    * @return Duration|null The duration
+    * @return \DateInterval|null The duration
     */
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["duration"])) {
+            if (is_a($this->_propDict["duration"], "\DateInterval") || is_null($this->_propDict["duration"])) {
                 return $this->_propDict["duration"];
             } else {
-                $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
+                $this->_propDict["duration"] = new \DateInterval($this->_propDict["duration"]);
                 return $this->_propDict["duration"];
             }
         }
@@ -80,7 +80,7 @@ class ActivityStatistics extends Entity
     * Sets the duration
     * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
     *
-    * @param Duration $val The duration
+    * @param \DateInterval $val The duration
     *
     * @return ActivityStatistics
     */

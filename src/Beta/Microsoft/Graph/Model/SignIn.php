@@ -25,35 +25,6 @@ namespace Beta\Microsoft\Graph\Model;
 class SignIn extends Entity
 {
     /**
-    * Gets the alternateSignInName
-    * The alternate sign-in identity whenever you use phone number to sign-in. Supports $filter (eq and startsWith operators only).
-    *
-    * @return string|null The alternateSignInName
-    */
-    public function getAlternateSignInName()
-    {
-        if (array_key_exists("alternateSignInName", $this->_propDict)) {
-            return $this->_propDict["alternateSignInName"];
-        } else {
-            return null;
-        }
-    }
-    
-    /**
-    * Sets the alternateSignInName
-    * The alternate sign-in identity whenever you use phone number to sign-in. Supports $filter (eq and startsWith operators only).
-    *
-    * @param string $val The alternateSignInName
-    *
-    * @return SignIn
-    */
-    public function setAlternateSignInName($val)
-    {
-        $this->_propDict["alternateSignInName"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the appDisplayName
     * App name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
     *
@@ -227,6 +198,37 @@ class SignIn extends Entity
     public function setAuthenticationProcessingDetails($val)
     {
         $this->_propDict["authenticationProcessingDetails"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the authenticationProtocol
+    *
+    * @return ProtocolType|null The authenticationProtocol
+    */
+    public function getAuthenticationProtocol()
+    {
+        if (array_key_exists("authenticationProtocol", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationProtocol"], "\Beta\Microsoft\Graph\Model\ProtocolType") || is_null($this->_propDict["authenticationProtocol"])) {
+                return $this->_propDict["authenticationProtocol"];
+            } else {
+                $this->_propDict["authenticationProtocol"] = new ProtocolType($this->_propDict["authenticationProtocol"]);
+                return $this->_propDict["authenticationProtocol"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the authenticationProtocol
+    *
+    * @param ProtocolType $val The authenticationProtocol
+    *
+    * @return SignIn
+    */
+    public function setAuthenticationProtocol($val)
+    {
+        $this->_propDict["authenticationProtocol"] = $val;
         return $this;
     }
     
@@ -553,6 +555,64 @@ class SignIn extends Entity
     public function setHomeTenantId($val)
     {
         $this->_propDict["homeTenantId"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the homeTenantName
+    *
+    * @return string|null The homeTenantName
+    */
+    public function getHomeTenantName()
+    {
+        if (array_key_exists("homeTenantName", $this->_propDict)) {
+            return $this->_propDict["homeTenantName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the homeTenantName
+    *
+    * @param string $val The homeTenantName
+    *
+    * @return SignIn
+    */
+    public function setHomeTenantName($val)
+    {
+        $this->_propDict["homeTenantName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the incomingTokenType
+    *
+    * @return IncomingTokenType|null The incomingTokenType
+    */
+    public function getIncomingTokenType()
+    {
+        if (array_key_exists("incomingTokenType", $this->_propDict)) {
+            if (is_a($this->_propDict["incomingTokenType"], "\Beta\Microsoft\Graph\Model\IncomingTokenType") || is_null($this->_propDict["incomingTokenType"])) {
+                return $this->_propDict["incomingTokenType"];
+            } else {
+                $this->_propDict["incomingTokenType"] = new IncomingTokenType($this->_propDict["incomingTokenType"]);
+                return $this->_propDict["incomingTokenType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the incomingTokenType
+    *
+    * @param IncomingTokenType $val The incomingTokenType
+    *
+    * @return SignIn
+    */
+    public function setIncomingTokenType($val)
+    {
+        $this->_propDict["incomingTokenType"] = $val;
         return $this;
     }
     
@@ -966,36 +1026,6 @@ class SignIn extends Entity
     public function setRiskDetail($val)
     {
         $this->_propDict["riskDetail"] = $val;
-        return $this;
-    }
-    
-
-     /** 
-     * Gets the riskEventTypes
-    * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
-     *
-     * @return array|null The riskEventTypes
-     */
-    public function getRiskEventTypes()
-    {
-        if (array_key_exists("riskEventTypes", $this->_propDict)) {
-           return $this->_propDict["riskEventTypes"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the riskEventTypes
-    * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
-    *
-    * @param RiskEventType $val The riskEventTypes
-    *
-    * @return SignIn
-    */
-    public function setRiskEventTypes($val)
-    {
-        $this->_propDict["riskEventTypes"] = $val;
         return $this;
     }
     
@@ -1416,6 +1446,33 @@ class SignIn extends Entity
     public function setTokenIssuerType($val)
     {
         $this->_propDict["tokenIssuerType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the uniqueTokenIdentifier
+    *
+    * @return string|null The uniqueTokenIdentifier
+    */
+    public function getUniqueTokenIdentifier()
+    {
+        if (array_key_exists("uniqueTokenIdentifier", $this->_propDict)) {
+            return $this->_propDict["uniqueTokenIdentifier"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the uniqueTokenIdentifier
+    *
+    * @param string $val The uniqueTokenIdentifier
+    *
+    * @return SignIn
+    */
+    public function setUniqueTokenIdentifier($val)
+    {
+        $this->_propDict["uniqueTokenIdentifier"] = $val;
         return $this;
     }
     

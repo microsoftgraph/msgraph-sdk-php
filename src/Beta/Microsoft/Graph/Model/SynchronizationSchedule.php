@@ -61,15 +61,15 @@ class SynchronizationSchedule extends Entity
     * Gets the interval
     * The interval between synchronization iterations.
     *
-    * @return Duration|null The interval
+    * @return \DateInterval|null The interval
     */
     public function getInterval()
     {
         if (array_key_exists("interval", $this->_propDict)) {
-            if (is_a($this->_propDict["interval"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["interval"])) {
+            if (is_a($this->_propDict["interval"], "\DateInterval") || is_null($this->_propDict["interval"])) {
                 return $this->_propDict["interval"];
             } else {
-                $this->_propDict["interval"] = new Duration($this->_propDict["interval"]);
+                $this->_propDict["interval"] = new \DateInterval($this->_propDict["interval"]);
                 return $this->_propDict["interval"];
             }
         }
@@ -80,7 +80,7 @@ class SynchronizationSchedule extends Entity
     * Sets the interval
     * The interval between synchronization iterations.
     *
-    * @param Duration $val The value to assign to the interval
+    * @param \DateInterval $val The value to assign to the interval
     *
     * @return SynchronizationSchedule The SynchronizationSchedule
     */

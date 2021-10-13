@@ -856,7 +856,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
+    * The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
     *
     * @return \DateTime|null The lastPasswordChangeDateTime
     */
@@ -875,7 +875,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the lastPasswordChangeDateTime
-    * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
+    * The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
     *
     * @param \DateTime $val The lastPasswordChangeDateTime
     *
@@ -1840,7 +1840,7 @@ class User extends DirectoryObject
     
     /**
     * Gets the userType
-    * A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).
+    * A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
     *
     * @return string|null The userType
     */
@@ -1855,7 +1855,7 @@ class User extends DirectoryObject
     
     /**
     * Sets the userType
-    * A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).
+    * A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
     *
     * @param string $val The userType
     *

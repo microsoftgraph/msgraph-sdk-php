@@ -25,6 +25,7 @@ class SimulationEventsContent extends Entity
 {
     /**
     * Gets the compromisedRate
+    * Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
     *
     * @return float|null The compromisedRate
     */
@@ -39,6 +40,7 @@ class SimulationEventsContent extends Entity
 
     /**
     * Sets the compromisedRate
+    * Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
     *
     * @param float $val The value of the compromisedRate
     *
@@ -52,6 +54,7 @@ class SimulationEventsContent extends Entity
 
     /**
     * Gets the events
+    * List of simulation events in an attack simulation and training campaign.
     *
     * @return SimulationEvent|null The events
     */
@@ -70,6 +73,7 @@ class SimulationEventsContent extends Entity
 
     /**
     * Sets the events
+    * List of simulation events in an attack simulation and training campaign.
     *
     * @param SimulationEvent $val The value to assign to the events
     *

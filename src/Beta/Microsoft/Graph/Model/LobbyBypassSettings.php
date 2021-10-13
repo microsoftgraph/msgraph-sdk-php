@@ -54,7 +54,7 @@ class LobbyBypassSettings extends Entity
 
     /**
     * Gets the scope
-    * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Possible values are listed in the following table. Optional.
+    * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
     *
     * @return LobbyBypassScope|null The scope
     */
@@ -73,7 +73,7 @@ class LobbyBypassSettings extends Entity
 
     /**
     * Sets the scope
-    * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Possible values are listed in the following table. Optional.
+    * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
     *
     * @param LobbyBypassScope $val The value to assign to the scope
     *

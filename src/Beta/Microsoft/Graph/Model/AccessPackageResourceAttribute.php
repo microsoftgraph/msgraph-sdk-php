@@ -137,4 +137,56 @@ class AccessPackageResourceAttribute extends Entity
         $this->_propDict["id"] = $val;
         return $this;
     }
+    /**
+    * Gets the isEditable
+    *
+    * @return bool|null The isEditable
+    */
+    public function getIsEditable()
+    {
+        if (array_key_exists("isEditable", $this->_propDict)) {
+            return $this->_propDict["isEditable"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isEditable
+    *
+    * @param bool $val The value of the isEditable
+    *
+    * @return AccessPackageResourceAttribute
+    */
+    public function setIsEditable($val)
+    {
+        $this->_propDict["isEditable"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the isPersistedOnAssignmentRemoval
+    *
+    * @return bool|null The isPersistedOnAssignmentRemoval
+    */
+    public function getIsPersistedOnAssignmentRemoval()
+    {
+        if (array_key_exists("isPersistedOnAssignmentRemoval", $this->_propDict)) {
+            return $this->_propDict["isPersistedOnAssignmentRemoval"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isPersistedOnAssignmentRemoval
+    *
+    * @param bool $val The value of the isPersistedOnAssignmentRemoval
+    *
+    * @return AccessPackageResourceAttribute
+    */
+    public function setIsPersistedOnAssignmentRemoval($val)
+    {
+        $this->_propDict["isPersistedOnAssignmentRemoval"] = $val;
+        return $this;
+    }
 }

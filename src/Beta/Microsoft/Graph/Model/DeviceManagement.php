@@ -3915,39 +3915,6 @@ class DeviceManagement extends Entity
         return $this;
     }
     
-    /**
-    * Gets the reports
-    * Reports singleton
-    *
-    * @return DeviceManagementReports|null The reports
-    */
-    public function getReports()
-    {
-        if (array_key_exists("reports", $this->_propDict)) {
-            if (is_a($this->_propDict["reports"], "\Beta\Microsoft\Graph\Model\DeviceManagementReports") || is_null($this->_propDict["reports"])) {
-                return $this->_propDict["reports"];
-            } else {
-                $this->_propDict["reports"] = new DeviceManagementReports($this->_propDict["reports"]);
-                return $this->_propDict["reports"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the reports
-    * Reports singleton
-    *
-    * @param DeviceManagementReports $val The reports
-    *
-    * @return DeviceManagement
-    */
-    public function setReports($val)
-    {
-        $this->_propDict["reports"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the microsoftTunnelConfigurations
@@ -4341,6 +4308,39 @@ class DeviceManagement extends Entity
         return $this;
     }
     
+    /**
+    * Gets the reports
+    * Reports singleton
+    *
+    * @return DeviceManagementReports|null The reports
+    */
+    public function getReports()
+    {
+        if (array_key_exists("reports", $this->_propDict)) {
+            if (is_a($this->_propDict["reports"], "\Beta\Microsoft\Graph\Model\DeviceManagementReports") || is_null($this->_propDict["reports"])) {
+                return $this->_propDict["reports"];
+            } else {
+                $this->_propDict["reports"] = new DeviceManagementReports($this->_propDict["reports"]);
+                return $this->_propDict["reports"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the reports
+    * Reports singleton
+    *
+    * @param DeviceManagementReports $val The reports
+    *
+    * @return DeviceManagement
+    */
+    public function setReports($val)
+    {
+        $this->_propDict["reports"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the embeddedSIMActivationCodePools
@@ -4668,6 +4668,36 @@ class DeviceManagement extends Entity
     public function setWindowsInformationProtectionNetworkLearningSummaries($val)
     {
         $this->_propDict["windowsInformationProtectionNetworkLearningSummaries"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the certificateConnectorDetails
+    * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
+     *
+     * @return array|null The certificateConnectorDetails
+     */
+    public function getCertificateConnectorDetails()
+    {
+        if (array_key_exists("certificateConnectorDetails", $this->_propDict)) {
+           return $this->_propDict["certificateConnectorDetails"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the certificateConnectorDetails
+    * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
+    *
+    * @param CertificateConnectorDetails $val The certificateConnectorDetails
+    *
+    * @return DeviceManagement
+    */
+    public function setCertificateConnectorDetails($val)
+    {
+        $this->_propDict["certificateConnectorDetails"] = $val;
         return $this;
     }
     

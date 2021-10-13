@@ -26,6 +26,7 @@ class TrainingEventsContent extends Entity
 
     /**
     * Gets the assignedTrainingsInfos
+    * List of assigned trainings and their information in an attack simulation and training campaign.
     *
     * @return AssignedTrainingInfo|null The assignedTrainingsInfos
     */
@@ -44,6 +45,7 @@ class TrainingEventsContent extends Entity
 
     /**
     * Sets the assignedTrainingsInfos
+    * List of assigned trainings and their information in an attack simulation and training campaign.
     *
     * @param AssignedTrainingInfo $val The value to assign to the assignedTrainingsInfos
     *
@@ -56,6 +58,7 @@ class TrainingEventsContent extends Entity
     }
     /**
     * Gets the trainingsAssignedUserCount
+    * Number of users who were assigned trainings in an attack simulation and training campaign.
     *
     * @return int|null The trainingsAssignedUserCount
     */
@@ -70,6 +73,7 @@ class TrainingEventsContent extends Entity
 
     /**
     * Sets the trainingsAssignedUserCount
+    * Number of users who were assigned trainings in an attack simulation and training campaign.
     *
     * @param int $val The value of the trainingsAssignedUserCount
     *

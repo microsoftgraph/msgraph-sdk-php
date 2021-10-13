@@ -82,6 +82,7 @@ class Security extends Entity
     
     /**
     * Gets the attackSimulation
+    * Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
     *
     * @return AttackSimulationRoot|null The attackSimulation
     */
@@ -100,6 +101,7 @@ class Security extends Entity
     
     /**
     * Sets the attackSimulation
+    * Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
     *
     * @param AttackSimulationRoot $val The attackSimulation
     *

@@ -980,4 +980,35 @@ class OnlineMeeting extends Entity
         return $this;
     }
     
+    /**
+    * Gets the registration
+    *
+    * @return MeetingRegistration|null The registration
+    */
+    public function getRegistration()
+    {
+        if (array_key_exists("registration", $this->_propDict)) {
+            if (is_a($this->_propDict["registration"], "\Beta\Microsoft\Graph\Model\MeetingRegistration") || is_null($this->_propDict["registration"])) {
+                return $this->_propDict["registration"];
+            } else {
+                $this->_propDict["registration"] = new MeetingRegistration($this->_propDict["registration"]);
+                return $this->_propDict["registration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the registration
+    *
+    * @param MeetingRegistration $val The registration
+    *
+    * @return OnlineMeeting
+    */
+    public function setRegistration($val)
+    {
+        $this->_propDict["registration"] = $val;
+        return $this;
+    }
+    
 }

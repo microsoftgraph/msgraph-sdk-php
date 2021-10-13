@@ -26,6 +26,7 @@ class SimulationReportOverview extends Entity
 
     /**
     * Gets the recommendedActions
+    * List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
     *
     * @return RecommendedAction|null The recommendedActions
     */
@@ -44,6 +45,7 @@ class SimulationReportOverview extends Entity
 
     /**
     * Sets the recommendedActions
+    * List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
     *
     * @param RecommendedAction $val The value to assign to the recommendedActions
     *
@@ -56,6 +58,7 @@ class SimulationReportOverview extends Entity
     }
     /**
     * Gets the resolvedTargetsCount
+    * Number of valid users in the attack simulation and training campaign.
     *
     * @return int|null The resolvedTargetsCount
     */
@@ -70,6 +73,7 @@ class SimulationReportOverview extends Entity
 
     /**
     * Sets the resolvedTargetsCount
+    * Number of valid users in the attack simulation and training campaign.
     *
     * @param int $val The value of the resolvedTargetsCount
     *
@@ -83,6 +87,7 @@ class SimulationReportOverview extends Entity
 
     /**
     * Gets the simulationEventsContent
+    * Summary of simulation events in the attack simulation and training campaign.
     *
     * @return SimulationEventsContent|null The simulationEventsContent
     */
@@ -101,6 +106,7 @@ class SimulationReportOverview extends Entity
 
     /**
     * Sets the simulationEventsContent
+    * Summary of simulation events in the attack simulation and training campaign.
     *
     * @param SimulationEventsContent $val The value to assign to the simulationEventsContent
     *
@@ -114,6 +120,7 @@ class SimulationReportOverview extends Entity
 
     /**
     * Gets the trainingEventsContent
+    * Summary of assigned trainings in the attack simulation and training campaign.
     *
     * @return TrainingEventsContent|null The trainingEventsContent
     */
@@ -132,6 +139,7 @@ class SimulationReportOverview extends Entity
 
     /**
     * Sets the trainingEventsContent
+    * Summary of assigned trainings in the attack simulation and training campaign.
     *
     * @param TrainingEventsContent $val The value to assign to the trainingEventsContent
     *

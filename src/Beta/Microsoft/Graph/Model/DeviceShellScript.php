@@ -148,15 +148,15 @@ class DeviceShellScript extends Entity
     * Gets the executionFrequency
     * The interval for script to run. If not defined the script will run once
     *
-    * @return Duration|null The executionFrequency
+    * @return \DateInterval|null The executionFrequency
     */
     public function getExecutionFrequency()
     {
         if (array_key_exists("executionFrequency", $this->_propDict)) {
-            if (is_a($this->_propDict["executionFrequency"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["executionFrequency"])) {
+            if (is_a($this->_propDict["executionFrequency"], "\DateInterval") || is_null($this->_propDict["executionFrequency"])) {
                 return $this->_propDict["executionFrequency"];
             } else {
-                $this->_propDict["executionFrequency"] = new Duration($this->_propDict["executionFrequency"]);
+                $this->_propDict["executionFrequency"] = new \DateInterval($this->_propDict["executionFrequency"]);
                 return $this->_propDict["executionFrequency"];
             }
         }
@@ -167,7 +167,7 @@ class DeviceShellScript extends Entity
     * Sets the executionFrequency
     * The interval for script to run. If not defined the script will run once
     *
-    * @param Duration $val The executionFrequency
+    * @param \DateInterval $val The executionFrequency
     *
     * @return DeviceShellScript
     */

@@ -26,6 +26,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
 
     /**
     * Gets the attackSimulationUser
+    * User in an attack simulation and training campaign.
     *
     * @return AttackSimulationUser|null The attackSimulationUser
     */
@@ -44,6 +45,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
 
     /**
     * Sets the attackSimulationUser
+    * User in an attack simulation and training campaign.
     *
     * @param AttackSimulationUser $val The value to assign to the attackSimulationUser
     *
@@ -56,6 +58,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
     }
     /**
     * Gets the clickCount
+    * Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
     *
     * @return int|null The clickCount
     */
@@ -70,6 +73,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
 
     /**
     * Sets the clickCount
+    * Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
     *
     * @param int $val The value of the clickCount
     *
@@ -82,6 +86,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
     }
     /**
     * Gets the compromisedCount
+    * Number of compromising actions by the user in attack simulation and training campaigns.
     *
     * @return int|null The compromisedCount
     */
@@ -96,6 +101,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
 
     /**
     * Sets the compromisedCount
+    * Number of compromising actions by the user in attack simulation and training campaigns.
     *
     * @param int $val The value of the compromisedCount
     *
@@ -109,6 +115,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
 
     /**
     * Gets the latestSimulationDateTime
+    * Date and time of latest attack simulation and training campaign that the user was included in.
     *
     * @return \DateTime|null The latestSimulationDateTime
     */
@@ -127,6 +134,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
 
     /**
     * Sets the latestSimulationDateTime
+    * Date and time of latest attack simulation and training campaign that the user was included in.
     *
     * @param \DateTime $val The value to assign to the latestSimulationDateTime
     *
@@ -139,6 +147,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
     }
     /**
     * Gets the simulationCount
+    * Number of attack simulation and training campaigns that the user was included in.
     *
     * @return int|null The simulationCount
     */
@@ -153,6 +162,7 @@ class AttackSimulationSimulationUserCoverage extends Entity
 
     /**
     * Sets the simulationCount
+    * Number of attack simulation and training campaigns that the user was included in.
     *
     * @param int $val The value of the simulationCount
     *
