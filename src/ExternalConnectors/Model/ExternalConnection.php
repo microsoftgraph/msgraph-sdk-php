@@ -151,6 +151,7 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
 
      /** 
      * Gets the groups
+    * Read-only. Nullable.
      *
      * @return array|null The groups
      */
@@ -165,6 +166,7 @@ class ExternalConnection extends \Microsoft\Graph\Model\Entity
     
     /** 
     * Sets the groups
+    * Read-only. Nullable.
     *
     * @param ExternalGroup $val The groups
     *

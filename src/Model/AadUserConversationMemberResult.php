@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OrganizationalBranding File
+* AadUserConversationMemberResult File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
-
 /**
-* OrganizationalBranding class
+* AadUserConversationMemberResult class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,36 +21,34 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OrganizationalBranding extends OrganizationalBrandingProperties
+class AadUserConversationMemberResult extends ActionResultPart
 {
-
-     /** 
-     * Gets the localizations
-    * Add different branding based on a locale.
-     *
-     * @return array|null The localizations
-     */
-    public function getLocalizations()
+    /**
+    * Gets the userId
+    * The user object ID of the Azure AD user that was being added as part of the bulk operation.
+    *
+    * @return string|null The userId
+    */
+    public function getUserId()
     {
-        if (array_key_exists("localizations", $this->_propDict)) {
-           return $this->_propDict["localizations"];
+        if (array_key_exists("userId", $this->_propDict)) {
+            return $this->_propDict["userId"];
         } else {
             return null;
         }
     }
-    
-    /** 
-    * Sets the localizations
-    * Add different branding based on a locale.
+
+    /**
+    * Sets the userId
+    * The user object ID of the Azure AD user that was being added as part of the bulk operation.
     *
-    * @param OrganizationalBrandingLocalization $val The localizations
+    * @param string $val The value of the userId
     *
-    * @return OrganizationalBranding
+    * @return AadUserConversationMemberResult
     */
-    public function setLocalizations($val)
+    public function setUserId($val)
     {
-        $this->_propDict["localizations"] = $val;
+        $this->_propDict["userId"] = $val;
         return $this;
     }
-    
 }

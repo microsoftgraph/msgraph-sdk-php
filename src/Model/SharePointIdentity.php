@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* PolicyPlatformType File
+* SharePointIdentity File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* PolicyPlatformType class
+* SharePointIdentity class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PolicyPlatformType extends Enum
+class SharePointIdentity extends Identity
 {
     /**
-    * The Enum PolicyPlatformType
+    * Gets the loginName
+    *
+    * @return string|null The loginName
     */
-    const ANDROID = "android";
-    const ANDROID_FOR_WORK = "androidForWork";
-    const I_OS = "iOS";
-    const MAC_OS = "macOS";
-    const WINDOWS_PHONE81 = "windowsPhone81";
-    const WINDOWS81_AND_LATER = "windows81AndLater";
-    const WINDOWS10_AND_LATER = "windows10AndLater";
-    const ALL = "all";
+    public function getLoginName()
+    {
+        if (array_key_exists("loginName", $this->_propDict)) {
+            return $this->_propDict["loginName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the loginName
+    *
+    * @param string $val The value of the loginName
+    *
+    * @return SharePointIdentity
+    */
+    public function setLoginName($val)
+    {
+        $this->_propDict["loginName"] = $val;
+        return $this;
+    }
 }
