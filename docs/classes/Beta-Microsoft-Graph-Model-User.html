@@ -673,7 +673,7 @@ The Microsoft Teams teams that the user is a member of. Read-only. Nullable.</dd
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
 <dd>Gets the lastPasswordChangeDateTime
-The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</dd>
+The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-User.html#method_getLegalAgeGroupClassification">getLegalAgeGroupClassification()</a>
@@ -1257,7 +1257,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the userType
-A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).</dd>
+A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-User.html#method_getWindowsInformationProtectionDeviceRegistrations">getWindowsInformationProtectionDeviceRegistrations()</a>
@@ -1775,7 +1775,7 @@ The Microsoft Teams teams that the user is a member of. Read-only. Nullable.</dd
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-User.html"><abbr title="\Beta\Microsoft\Graph\Model\User">User</abbr></a>    </span>
 </dt>
 <dd>Sets the lastPasswordChangeDateTime
-The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</dd>
+The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-User.html#method_setLegalAgeGroupClassification">setLegalAgeGroupClassification()</a>
@@ -2352,7 +2352,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-User.html"><abbr title="\Beta\Microsoft\Graph\Model\User">User</abbr></a>    </span>
 </dt>
 <dd>Sets the userType
-A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).</dd>
+A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-User.html#method_setWindowsInformationProtectionDeviceRegistrations">setWindowsInformationProtectionDeviceRegistrations()</a>
@@ -4735,7 +4735,7 @@ The Microsoft Teams teams that the user is a member of. Read-only. Nullable.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastPasswordChangeDateTime
-The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</p>
+The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -7392,7 +7392,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userType
-A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).</p>
+A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -10451,7 +10451,7 @@ The Microsoft Teams teams that the user is a member of. Read-only. Nullable.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastPasswordChangeDateTime
-The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</p>
+The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -13876,7 +13876,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userType
-A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).</p>
+A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

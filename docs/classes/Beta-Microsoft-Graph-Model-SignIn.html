@@ -174,14 +174,6 @@ to the model</dd>
 <dd>Construct a new Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAlternateSignInName">getAlternateSignInName()</a>
-    <span>
-                        &nbsp;: string|null    </span>
-</dt>
-<dd>Gets the alternateSignInName
-The alternate sign-in identity whenever you use phone number to sign-in. Supports $filter (eq and startsWith operators only).</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAppDisplayName">getAppDisplayName()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -228,6 +220,13 @@ The authentication methods used. Possible values: SMS, Authenticator App, App Ve
 </dt>
 <dd>Gets the authenticationProcessingDetails
 Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAuthenticationProtocol">getAuthenticationProtocol()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ProtocolType.html"><abbr title="\Beta\Microsoft\Graph\Model\ProtocolType">ProtocolType</abbr></a>|null    </span>
+</dt>
+<dd>Gets the authenticationProtocol</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAuthenticationRequirement">getAuthenticationRequirement()</a>
@@ -313,12 +312,26 @@ Device information from where the sign-in occurred; includes device ID, operatin
 <dd>Gets the homeTenantId</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getHomeTenantName">getHomeTenantName()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the homeTenantName</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the id
 Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getIncomingTokenType">getIncomingTokenType()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-IncomingTokenType.html"><abbr title="\Beta\Microsoft\Graph\Model\IncomingTokenType">IncomingTokenType</abbr></a>|null    </span>
+</dt>
+<dd>Gets the incomingTokenType</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getIpAddress">getIpAddress()</a>
@@ -442,14 +455,6 @@ ID of the resource that the user signed into. Supports $filter (eq operator only
 Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getRiskEventTypes">getRiskEventTypes()</a>
-    <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
-</dt>
-<dd>Gets the riskEventTypes
-Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getRiskEventTypesV2">getRiskEventTypesV2()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -557,6 +562,13 @@ The name of the identity provider. For example, sts.microsoft.com. Supports $fil
 The type of identity provider. Possible values: AzureAD, ADFederationServices, or UnknownFutureValue.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getUniqueTokenIdentifier">getUniqueTokenIdentifier()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the uniqueTokenIdentifier</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getUserAgent">getUserAgent()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -602,14 +614,6 @@ User principal name of the user that initiated the sign-in. Supports $filter (eq
 </dt>
 <dd>Serializes the object by property array
 Manually serialize DateTime into RFC3339 format</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAlternateSignInName">setAlternateSignInName()</a>
-    <span>
-                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
-</dt>
-<dd>Sets the alternateSignInName
-The alternate sign-in identity whenever you use phone number to sign-in. Supports $filter (eq and startsWith operators only).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAppDisplayName">setAppDisplayName()</a>
@@ -658,6 +662,13 @@ The authentication methods used. Possible values: SMS, Authenticator App, App Ve
 </dt>
 <dd>Sets the authenticationProcessingDetails
 Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAuthenticationProtocol">setAuthenticationProtocol()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
+</dt>
+<dd>Sets the authenticationProtocol</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAuthenticationRequirement">setAuthenticationRequirement()</a>
@@ -743,12 +754,26 @@ Device information from where the sign-in occurred; includes device ID, operatin
 <dd>Sets the homeTenantId</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setHomeTenantName">setHomeTenantName()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
+</dt>
+<dd>Sets the homeTenantName</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Entity.html"><abbr title="\Beta\Microsoft\Graph\Model\Entity">Entity</abbr></a>    </span>
 </dt>
 <dd>Sets the id
 Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setIncomingTokenType">setIncomingTokenType()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
+</dt>
+<dd>Sets the incomingTokenType</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setIpAddress">setIpAddress()</a>
@@ -865,14 +890,6 @@ ID of the resource that the user signed into. Supports $filter (eq operator only
 Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq operator only).Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setRiskEventTypes">setRiskEventTypes()</a>
-    <span>
-                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
-</dt>
-<dd>Sets the riskEventTypes
-Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setRiskEventTypesV2">setRiskEventTypesV2()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
@@ -978,6 +995,13 @@ The name of the identity provider. For example, sts.microsoft.com. Supports $fil
 </dt>
 <dd>Sets the tokenIssuerType
 The type of identity provider. Possible values: AzureAD, ADFederationServices, or UnknownFutureValue.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setUniqueTokenIdentifier">setUniqueTokenIdentifier()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a>    </span>
+</dt>
+<dd>Sets the uniqueTokenIdentifier</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setUserAgent">setUserAgent()</a>
@@ -1122,42 +1146,6 @@ to the model</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getAlternateSignInName">
-        getAlternateSignInName()
-        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAlternateSignInName" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">33</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Gets the alternateSignInName
-The alternate sign-in identity whenever you use phone number to sign-in. Supports $filter (eq and startsWith operators only).</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getAlternateSignInName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string|null</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>The alternateSignInName</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_getAppDisplayName">
         getAppDisplayName()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAppDisplayName" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1165,7 +1153,7 @@ The alternate sign-in identity whenever you use phone number to sign-in. Support
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appDisplayName
@@ -1201,7 +1189,7 @@ App name displayed in the Azure Portal. Supports $filter (eq and startsWith oper
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">91</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appId
@@ -1237,7 +1225,7 @@ Unique GUID representing the app ID in the Azure Active Directory. Supports $fil
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">121</span>
+    <span class="phpdocumentor-element-found-in__line">92</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appliedConditionalAccessPolicies
@@ -1273,7 +1261,7 @@ A list of conditional access policies that are triggered by the corresponding si
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">151</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the authenticationDetails
@@ -1309,7 +1297,7 @@ The result of the authentication attempt and additional details on the authentic
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">180</span>
+    <span class="phpdocumentor-element-found-in__line">151</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the authenticationMethodsUsed
@@ -1345,7 +1333,7 @@ The authentication methods used. Possible values: SMS, Authenticator App, App Ve
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">210</span>
+    <span class="phpdocumentor-element-found-in__line">181</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the authenticationProcessingDetails
@@ -1374,6 +1362,41 @@ Additional authentication processing details, such as the agent name in case of 
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getAuthenticationProtocol">
+        getAuthenticationProtocol()
+        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAuthenticationProtocol" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">209</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the authenticationProtocol</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAuthenticationProtocol</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-ProtocolType.html"><abbr title="\Beta\Microsoft\Graph\Model\ProtocolType">ProtocolType</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-ProtocolType.html"><abbr title="\Beta\Microsoft\Graph\Model\ProtocolType">ProtocolType</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The authenticationProtocol</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getAuthenticationRequirement">
         getAuthenticationRequirement()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getAuthenticationRequirement" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1381,7 +1404,7 @@ Additional authentication processing details, such as the agent name in case of 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">239</span>
+    <span class="phpdocumentor-element-found-in__line">241</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the authenticationRequirement
@@ -1417,7 +1440,7 @@ This holds the highest level of authentication needed through all the sign-in st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">268</span>
+    <span class="phpdocumentor-element-found-in__line">270</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the authenticationRequirementPolicies</p>
@@ -1452,7 +1475,7 @@ This holds the highest level of authentication needed through all the sign-in st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">297</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the autonomousSystemNumber</p>
@@ -1487,7 +1510,7 @@ This holds the highest level of authentication needed through all the sign-in st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">323</span>
+    <span class="phpdocumentor-element-found-in__line">325</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the clientAppUsed
@@ -1523,7 +1546,7 @@ Identifies the legacy client used for sign-in activity.  Includes Browser, Excha
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">352</span>
+    <span class="phpdocumentor-element-found-in__line">354</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the conditionalAccessStatus
@@ -1559,7 +1582,7 @@ Reports status of an activated conditional access policy. Possible values are: s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">385</span>
+    <span class="phpdocumentor-element-found-in__line">387</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the correlationId
@@ -1595,7 +1618,7 @@ The request ID sent from the client when the sign-in is initiated; used to troub
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">414</span>
+    <span class="phpdocumentor-element-found-in__line">416</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdDateTime
@@ -1631,7 +1654,7 @@ Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">446</span>
+    <span class="phpdocumentor-element-found-in__line">448</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the crossTenantAccessType</p>
@@ -1666,7 +1689,7 @@ Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">478</span>
+    <span class="phpdocumentor-element-found-in__line">480</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceDetail
@@ -1702,7 +1725,7 @@ Device information from where the sign-in occurred; includes device ID, operatin
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">510</span>
+    <span class="phpdocumentor-element-found-in__line">512</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the flaggedForReview</p>
@@ -1737,7 +1760,7 @@ Device information from where the sign-in occurred; includes device ID, operatin
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">537</span>
+    <span class="phpdocumentor-element-found-in__line">539</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the homeTenantId</p>
@@ -1755,6 +1778,41 @@ Device information from where the sign-in occurred; includes device ID, operatin
     <span class="phpdocumentor-signature__response_type">string|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The homeTenantId</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getHomeTenantName">
+        getHomeTenantName()
+        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getHomeTenantName" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">566</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the homeTenantName</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getHomeTenantName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The homeTenantName</p>
 </section>
 
     
@@ -1801,6 +1859,41 @@ Read-only.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getIncomingTokenType">
+        getIncomingTokenType()
+        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getIncomingTokenType" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">593</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the incomingTokenType</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getIncomingTokenType</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IncomingTokenType.html"><abbr title="\Beta\Microsoft\Graph\Model\IncomingTokenType">IncomingTokenType</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IncomingTokenType.html"><abbr title="\Beta\Microsoft\Graph\Model\IncomingTokenType">IncomingTokenType</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The incomingTokenType</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getIpAddress">
         getIpAddress()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getIpAddress" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1808,7 +1901,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">565</span>
+    <span class="phpdocumentor-element-found-in__line">625</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the ipAddress
@@ -1844,7 +1937,7 @@ IP address of the client used to sign in. Supports $filter (eq and startsWith op
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">593</span>
+    <span class="phpdocumentor-element-found-in__line">653</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the ipAddressFromResourceProvider</p>
@@ -1879,7 +1972,7 @@ IP address of the client used to sign in. Supports $filter (eq and startsWith op
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">621</span>
+    <span class="phpdocumentor-element-found-in__line">681</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isInteractive
@@ -1915,7 +2008,7 @@ Indicates if a sign-in is interactive or not.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">649</span>
+    <span class="phpdocumentor-element-found-in__line">709</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isTenantRestricted</p>
@@ -1950,7 +2043,7 @@ Indicates if a sign-in is interactive or not.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">677</span>
+    <span class="phpdocumentor-element-found-in__line">737</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the location
@@ -1986,7 +2079,7 @@ Provides the city, state, and country code where the sign-in originated. Support
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">709</span>
+    <span class="phpdocumentor-element-found-in__line">769</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mfaDetail</p>
@@ -2021,7 +2114,7 @@ Provides the city, state, and country code where the sign-in originated. Support
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">742</span>
+    <span class="phpdocumentor-element-found-in__line">802</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the networkLocationDetails
@@ -2092,7 +2185,7 @@ The network location details including the type of network used and its names.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">771</span>
+    <span class="phpdocumentor-element-found-in__line">831</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the originalRequestId
@@ -2128,7 +2221,7 @@ The request identifier of the first request in the authentication sequence. Supp
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">799</span>
+    <span class="phpdocumentor-element-found-in__line">859</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the privateLinkDetails</p>
@@ -2163,7 +2256,7 @@ The request identifier of the first request in the authentication sequence. Supp
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">831</span>
+    <span class="phpdocumentor-element-found-in__line">891</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the processingTimeInMilliseconds
@@ -2234,7 +2327,7 @@ The request processing time in milliseconds in AD STS.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">860</span>
+    <span class="phpdocumentor-element-found-in__line">920</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceDisplayName
@@ -2270,7 +2363,7 @@ Name of the resource the user signed into. Supports $filter (eq operator only).<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">889</span>
+    <span class="phpdocumentor-element-found-in__line">949</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceId
@@ -2306,7 +2399,7 @@ ID of the resource that the user signed into. Supports $filter (eq operator only
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">917</span>
+    <span class="phpdocumentor-element-found-in__line">977</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the resourceTenantId</p>
@@ -2341,7 +2434,7 @@ ID of the resource that the user signed into. Supports $filter (eq operator only
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">945</span>
+    <span class="phpdocumentor-element-found-in__line">1005</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskDetail
@@ -2370,42 +2463,6 @@ Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getRiskEventTypes">
-        getRiskEventTypes()
-        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getRiskEventTypes" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">979</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Gets the riskEventTypes
-Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRiskEventTypes</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>The riskEventTypes</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_getRiskEventTypesV2">
         getRiskEventTypesV2()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getRiskEventTypesV2" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2413,7 +2470,7 @@ Risk event types associated with the sign-in. The possible values are: unlikelyT
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1008</span>
+    <span class="phpdocumentor-element-found-in__line">1038</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskEventTypesV2
@@ -2449,7 +2506,7 @@ The list of risk event types associated with the sign-in. Possible values: unlik
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1037</span>
+    <span class="phpdocumentor-element-found-in__line">1067</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskLevelAggregated
@@ -2485,7 +2542,7 @@ Aggregated risk level. The possible values are: none, low, medium, high, hidden,
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1070</span>
+    <span class="phpdocumentor-element-found-in__line">1100</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskLevelDuringSignIn
@@ -2521,7 +2578,7 @@ Risk level during sign-in. The possible values are: none, low, medium, high, hid
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1103</span>
+    <span class="phpdocumentor-element-found-in__line">1133</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the riskState
@@ -2557,7 +2614,7 @@ Reports status of the risky user, sign-in, or a risk event. The possible values 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1135</span>
+    <span class="phpdocumentor-element-found-in__line">1165</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the servicePrincipalCredentialKeyId</p>
@@ -2592,7 +2649,7 @@ Reports status of the risky user, sign-in, or a risk event. The possible values 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1162</span>
+    <span class="phpdocumentor-element-found-in__line">1192</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the servicePrincipalCredentialThumbprint</p>
@@ -2627,7 +2684,7 @@ Reports status of the risky user, sign-in, or a risk event. The possible values 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1190</span>
+    <span class="phpdocumentor-element-found-in__line">1220</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the servicePrincipalId
@@ -2663,7 +2720,7 @@ The application identifier used for sign-in. This field is populated when you ar
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1219</span>
+    <span class="phpdocumentor-element-found-in__line">1249</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the servicePrincipalName
@@ -2699,7 +2756,7 @@ The application name used for sign-in. This field is populated when you are sign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1247</span>
+    <span class="phpdocumentor-element-found-in__line">1277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the signInEventTypes</p>
@@ -2734,7 +2791,7 @@ The application name used for sign-in. This field is populated when you are sign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1274</span>
+    <span class="phpdocumentor-element-found-in__line">1304</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the signInIdentifier</p>
@@ -2769,7 +2826,7 @@ The application name used for sign-in. This field is populated when you are sign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1301</span>
+    <span class="phpdocumentor-element-found-in__line">1331</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the signInIdentifierType</p>
@@ -2804,7 +2861,7 @@ The application name used for sign-in. This field is populated when you are sign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1333</span>
+    <span class="phpdocumentor-element-found-in__line">1363</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
@@ -2840,7 +2897,7 @@ Sign-in status. Includes the error code and description of the error (in case of
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1366</span>
+    <span class="phpdocumentor-element-found-in__line">1396</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenIssuerName
@@ -2876,7 +2933,7 @@ The name of the identity provider. For example, sts.microsoft.com. Supports $fil
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1395</span>
+    <span class="phpdocumentor-element-found-in__line">1425</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenIssuerType
@@ -2905,6 +2962,41 @@ The type of identity provider. Possible values: AzureAD, ADFederationServices, o
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getUniqueTokenIdentifier">
+        getUniqueTokenIdentifier()
+        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getUniqueTokenIdentifier" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1457</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the uniqueTokenIdentifier</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getUniqueTokenIdentifier</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The uniqueTokenIdentifier</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getUserAgent">
         getUserAgent()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_getUserAgent" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2912,7 +3004,7 @@ The type of identity provider. Possible values: AzureAD, ADFederationServices, o
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1428</span>
+    <span class="phpdocumentor-element-found-in__line">1485</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userAgent
@@ -2948,7 +3040,7 @@ The user agent information related to sign-in. Supports $filter (eq and startsWi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1457</span>
+    <span class="phpdocumentor-element-found-in__line">1514</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userDisplayName
@@ -2984,7 +3076,7 @@ Display name of the user that initiated the sign-in. Supports $filter (eq and st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1486</span>
+    <span class="phpdocumentor-element-found-in__line">1543</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userId
@@ -3020,7 +3112,7 @@ ID of the user that initiated the sign-in. Supports $filter (eq operator only).<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1515</span>
+    <span class="phpdocumentor-element-found-in__line">1572</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
@@ -3056,7 +3148,7 @@ User principal name of the user that initiated the sign-in. Supports $filter (eq
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1543</span>
+    <span class="phpdocumentor-element-found-in__line">1600</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userType</p>
@@ -3120,53 +3212,6 @@ Manually serialize DateTime into RFC3339 format</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setAlternateSignInName">
-        setAlternateSignInName()
-        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAlternateSignInName" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">50</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Sets the alternateSignInName
-The alternate sign-in identity whenever you use phone number to sign-in. Supports $filter (eq and startsWith operators only).</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setAlternateSignInName</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The alternateSignInName</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_setAppDisplayName">
         setAppDisplayName()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAppDisplayName" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3174,7 +3219,7 @@ The alternate sign-in identity whenever you use phone number to sign-in. Support
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">79</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appDisplayName
@@ -3221,7 +3266,7 @@ App name displayed in the Azure Portal. Supports $filter (eq and startsWith oper
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">108</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appId
@@ -3268,7 +3313,7 @@ Unique GUID representing the app ID in the Azure Active Directory. Supports $fil
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">109</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appliedConditionalAccessPolicies
@@ -3315,7 +3360,7 @@ A list of conditional access policies that are triggered by the corresponding si
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">168</span>
+    <span class="phpdocumentor-element-found-in__line">139</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the authenticationDetails
@@ -3362,7 +3407,7 @@ The result of the authentication attempt and additional details on the authentic
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">197</span>
+    <span class="phpdocumentor-element-found-in__line">168</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the authenticationMethodsUsed
@@ -3409,7 +3454,7 @@ The authentication methods used. Possible values: SMS, Authenticator App, App Ve
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">227</span>
+    <span class="phpdocumentor-element-found-in__line">198</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the authenticationProcessingDetails
@@ -3449,6 +3494,52 @@ Additional authentication processing details, such as the agent name in case of 
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setAuthenticationProtocol">
+        setAuthenticationProtocol()
+        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAuthenticationProtocol" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">229</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the authenticationProtocol</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setAuthenticationProtocol</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-ProtocolType.html"><abbr title="\Beta\Microsoft\Graph\Model\ProtocolType">ProtocolType</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-ProtocolType.html"><abbr title="\Beta\Microsoft\Graph\Model\ProtocolType">ProtocolType</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The authenticationProtocol</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setAuthenticationRequirement">
         setAuthenticationRequirement()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setAuthenticationRequirement" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3456,7 +3547,7 @@ Additional authentication processing details, such as the agent name in case of 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">256</span>
+    <span class="phpdocumentor-element-found-in__line">258</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the authenticationRequirement
@@ -3503,7 +3594,7 @@ This holds the highest level of authentication needed through all the sign-in st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">284</span>
+    <span class="phpdocumentor-element-found-in__line">286</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the authenticationRequirementPolicies</p>
@@ -3549,7 +3640,7 @@ This holds the highest level of authentication needed through all the sign-in st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">311</span>
+    <span class="phpdocumentor-element-found-in__line">313</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the autonomousSystemNumber</p>
@@ -3595,7 +3686,7 @@ This holds the highest level of authentication needed through all the sign-in st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">340</span>
+    <span class="phpdocumentor-element-found-in__line">342</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the clientAppUsed
@@ -3642,7 +3733,7 @@ Identifies the legacy client used for sign-in activity.  Includes Browser, Excha
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">373</span>
+    <span class="phpdocumentor-element-found-in__line">375</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the conditionalAccessStatus
@@ -3689,7 +3780,7 @@ Reports status of an activated conditional access policy. Possible values are: s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">402</span>
+    <span class="phpdocumentor-element-found-in__line">404</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the correlationId
@@ -3736,7 +3827,7 @@ The request ID sent from the client when the sign-in is initiated; used to troub
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">435</span>
+    <span class="phpdocumentor-element-found-in__line">437</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdDateTime
@@ -3783,7 +3874,7 @@ Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">466</span>
+    <span class="phpdocumentor-element-found-in__line">468</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the crossTenantAccessType</p>
@@ -3829,7 +3920,7 @@ Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">499</span>
+    <span class="phpdocumentor-element-found-in__line">501</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceDetail
@@ -3876,7 +3967,7 @@ Device information from where the sign-in occurred; includes device ID, operatin
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">526</span>
+    <span class="phpdocumentor-element-found-in__line">528</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the flaggedForReview</p>
@@ -3922,7 +4013,7 @@ Device information from where the sign-in occurred; includes device ID, operatin
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">553</span>
+    <span class="phpdocumentor-element-found-in__line">555</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the homeTenantId</p>
@@ -3941,6 +4032,52 @@ Device information from where the sign-in occurred; includes device ID, operatin
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The homeTenantId</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setHomeTenantName">
+        setHomeTenantName()
+        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setHomeTenantName" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">582</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the homeTenantName</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setHomeTenantName</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The homeTenantName</p>
 </section>
 
             </dd>
@@ -4008,6 +4145,52 @@ Read-only.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setIncomingTokenType">
+        setIncomingTokenType()
+        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setIncomingTokenType" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">613</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the incomingTokenType</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIncomingTokenType</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-IncomingTokenType.html"><abbr title="\Beta\Microsoft\Graph\Model\IncomingTokenType">IncomingTokenType</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-IncomingTokenType.html"><abbr title="\Beta\Microsoft\Graph\Model\IncomingTokenType">IncomingTokenType</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The incomingTokenType</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setIpAddress">
         setIpAddress()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setIpAddress" class="headerlink"><i class="fas fa-link"></i></a>
@@ -4015,7 +4198,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">582</span>
+    <span class="phpdocumentor-element-found-in__line">642</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ipAddress
@@ -4062,7 +4245,7 @@ IP address of the client used to sign in. Supports $filter (eq and startsWith op
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">609</span>
+    <span class="phpdocumentor-element-found-in__line">669</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ipAddressFromResourceProvider</p>
@@ -4108,7 +4291,7 @@ IP address of the client used to sign in. Supports $filter (eq and startsWith op
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">638</span>
+    <span class="phpdocumentor-element-found-in__line">698</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isInteractive
@@ -4155,7 +4338,7 @@ Indicates if a sign-in is interactive or not.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">665</span>
+    <span class="phpdocumentor-element-found-in__line">725</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isTenantRestricted</p>
@@ -4201,7 +4384,7 @@ Indicates if a sign-in is interactive or not.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">698</span>
+    <span class="phpdocumentor-element-found-in__line">758</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the location
@@ -4248,7 +4431,7 @@ Provides the city, state, and country code where the sign-in originated. Support
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">729</span>
+    <span class="phpdocumentor-element-found-in__line">789</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mfaDetail</p>
@@ -4294,7 +4477,7 @@ Provides the city, state, and country code where the sign-in originated. Support
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">759</span>
+    <span class="phpdocumentor-element-found-in__line">819</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the networkLocationDetails
@@ -4387,7 +4570,7 @@ The network location details including the type of network used and its names.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">788</span>
+    <span class="phpdocumentor-element-found-in__line">848</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the originalRequestId
@@ -4434,7 +4617,7 @@ The request identifier of the first request in the authentication sequence. Supp
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">819</span>
+    <span class="phpdocumentor-element-found-in__line">879</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the privateLinkDetails</p>
@@ -4480,7 +4663,7 @@ The request identifier of the first request in the authentication sequence. Supp
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">848</span>
+    <span class="phpdocumentor-element-found-in__line">908</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the processingTimeInMilliseconds
@@ -4527,7 +4710,7 @@ The request processing time in milliseconds in AD STS.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">877</span>
+    <span class="phpdocumentor-element-found-in__line">937</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceDisplayName
@@ -4574,7 +4757,7 @@ Name of the resource the user signed into. Supports $filter (eq operator only).<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">906</span>
+    <span class="phpdocumentor-element-found-in__line">966</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceId
@@ -4621,7 +4804,7 @@ ID of the resource that the user signed into. Supports $filter (eq operator only
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">933</span>
+    <span class="phpdocumentor-element-found-in__line">993</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the resourceTenantId</p>
@@ -4667,7 +4850,7 @@ ID of the resource that the user signed into. Supports $filter (eq operator only
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">966</span>
+    <span class="phpdocumentor-element-found-in__line">1026</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskDetail
@@ -4707,53 +4890,6 @@ Provides the &#039;reason&#039; behind a specific state of a risky user, sign-in
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setRiskEventTypes">
-        setRiskEventTypes()
-        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setRiskEventTypes" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">996</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Sets the riskEventTypes
-Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRiskEventTypes</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Beta\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-RiskEventType.html"><abbr title="\Beta\Microsoft\Graph\Model\RiskEventType">RiskEventType</abbr></a></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The riskEventTypes</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"></section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_setRiskEventTypesV2">
         setRiskEventTypesV2()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setRiskEventTypesV2" class="headerlink"><i class="fas fa-link"></i></a>
@@ -4761,7 +4897,7 @@ Risk event types associated with the sign-in. The possible values are: unlikelyT
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1025</span>
+    <span class="phpdocumentor-element-found-in__line">1055</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskEventTypesV2
@@ -4808,7 +4944,7 @@ The list of risk event types associated with the sign-in. Possible values: unlik
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1058</span>
+    <span class="phpdocumentor-element-found-in__line">1088</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskLevelAggregated
@@ -4855,7 +4991,7 @@ Aggregated risk level. The possible values are: none, low, medium, high, hidden,
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1091</span>
+    <span class="phpdocumentor-element-found-in__line">1121</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskLevelDuringSignIn
@@ -4902,7 +5038,7 @@ Risk level during sign-in. The possible values are: none, low, medium, high, hid
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1124</span>
+    <span class="phpdocumentor-element-found-in__line">1154</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the riskState
@@ -4949,7 +5085,7 @@ Reports status of the risky user, sign-in, or a risk event. The possible values 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1151</span>
+    <span class="phpdocumentor-element-found-in__line">1181</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the servicePrincipalCredentialKeyId</p>
@@ -4995,7 +5131,7 @@ Reports status of the risky user, sign-in, or a risk event. The possible values 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1178</span>
+    <span class="phpdocumentor-element-found-in__line">1208</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the servicePrincipalCredentialThumbprint</p>
@@ -5041,7 +5177,7 @@ Reports status of the risky user, sign-in, or a risk event. The possible values 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1207</span>
+    <span class="phpdocumentor-element-found-in__line">1237</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the servicePrincipalId
@@ -5088,7 +5224,7 @@ The application identifier used for sign-in. This field is populated when you ar
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1236</span>
+    <span class="phpdocumentor-element-found-in__line">1266</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the servicePrincipalName
@@ -5135,7 +5271,7 @@ The application name used for sign-in. This field is populated when you are sign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1263</span>
+    <span class="phpdocumentor-element-found-in__line">1293</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the signInEventTypes</p>
@@ -5181,7 +5317,7 @@ The application name used for sign-in. This field is populated when you are sign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1290</span>
+    <span class="phpdocumentor-element-found-in__line">1320</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the signInIdentifier</p>
@@ -5227,7 +5363,7 @@ The application name used for sign-in. This field is populated when you are sign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1321</span>
+    <span class="phpdocumentor-element-found-in__line">1351</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the signInIdentifierType</p>
@@ -5273,7 +5409,7 @@ The application name used for sign-in. This field is populated when you are sign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1354</span>
+    <span class="phpdocumentor-element-found-in__line">1384</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status
@@ -5320,7 +5456,7 @@ Sign-in status. Includes the error code and description of the error (in case of
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1383</span>
+    <span class="phpdocumentor-element-found-in__line">1413</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenIssuerName
@@ -5367,7 +5503,7 @@ The name of the identity provider. For example, sts.microsoft.com. Supports $fil
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1416</span>
+    <span class="phpdocumentor-element-found-in__line">1446</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenIssuerType
@@ -5407,6 +5543,52 @@ The type of identity provider. Possible values: AzureAD, ADFederationServices, o
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setUniqueTokenIdentifier">
+        setUniqueTokenIdentifier()
+        <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setUniqueTokenIdentifier" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1473</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the uniqueTokenIdentifier</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setUniqueTokenIdentifier</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The uniqueTokenIdentifier</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-SignIn.html"><abbr title="\Beta\Microsoft\Graph\Model\SignIn">SignIn</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setUserAgent">
         setUserAgent()
         <a href="classes/Beta-Microsoft-Graph-Model-SignIn.html#method_setUserAgent" class="headerlink"><i class="fas fa-link"></i></a>
@@ -5414,7 +5596,7 @@ The type of identity provider. Possible values: AzureAD, ADFederationServices, o
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1445</span>
+    <span class="phpdocumentor-element-found-in__line">1502</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userAgent
@@ -5461,7 +5643,7 @@ The user agent information related to sign-in. Supports $filter (eq and startsWi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1474</span>
+    <span class="phpdocumentor-element-found-in__line">1531</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userDisplayName
@@ -5508,7 +5690,7 @@ Display name of the user that initiated the sign-in. Supports $filter (eq and st
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1503</span>
+    <span class="phpdocumentor-element-found-in__line">1560</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userId
@@ -5555,7 +5737,7 @@ ID of the user that initiated the sign-in. Supports $filter (eq operator only).<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1532</span>
+    <span class="phpdocumentor-element-found-in__line">1589</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName
@@ -5602,7 +5784,7 @@ User principal name of the user that initiated the sign-in. Supports $filter (eq
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/SignIn.php"><a href="files/src-beta-microsoft-graph-model-signin.html"><abbr title="src/Beta/Microsoft/Graph/Model/SignIn.php">SignIn.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1563</span>
+    <span class="phpdocumentor-element-found-in__line">1620</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userType</p>

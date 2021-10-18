@@ -174,12 +174,20 @@ to the model</dd>
 <dd>Construct a new Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getAccessReviewTimeoutBehavior">getAccessReviewTimeoutBehavior()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewTimeoutBehavior.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewTimeoutBehavior">AccessReviewTimeoutBehavior</abbr></a>|null    </span>
+</dt>
+<dd>Gets the accessReviewTimeoutBehavior
+The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getDurationInDays">getDurationInDays()</a>
     <span>
                         &nbsp;: int|null    </span>
 </dt>
 <dd>Gets the durationInDays
-The number of days to allow input from reviewers.</dd>
+The number of days within which reviewers should provide input.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -188,6 +196,22 @@ The number of days to allow input from reviewers.</dd>
 </dt>
 <dd>Gets the id
 Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getIsAccessRecommendationEnabled">getIsAccessRecommendationEnabled()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the isAccessRecommendationEnabled
+Specifies whether to display recommendations to the reviewer. The default value is true</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getIsApprovalJustificationRequired">getIsApprovalJustificationRequired()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the isApprovalJustificationRequired
+Specifies whether the reviewer must provide justification for the approval. The default value is true.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getIsEnabled">getIsEnabled()</a>
@@ -252,12 +276,20 @@ When the first review should start.</dd>
 Manually serialize DateTime into RFC3339 format</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setAccessReviewTimeoutBehavior">setAccessReviewTimeoutBehavior()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a>    </span>
+</dt>
+<dd>Sets the accessReviewTimeoutBehavior
+The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setDurationInDays">setDurationInDays()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a>    </span>
 </dt>
 <dd>Sets the durationInDays
-The number of days to allow input from reviewers.</dd>
+The number of days within which reviewers should provide input.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -266,6 +298,22 @@ The number of days to allow input from reviewers.</dd>
 </dt>
 <dd>Sets the id
 Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setIsAccessRecommendationEnabled">setIsAccessRecommendationEnabled()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a>    </span>
+</dt>
+<dd>Sets the isAccessRecommendationEnabled
+Specifies whether to display recommendations to the reviewer. The default value is true</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setIsApprovalJustificationRequired">setIsApprovalJustificationRequired()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a>    </span>
+</dt>
+<dd>Sets the isApprovalJustificationRequired
+Specifies whether the reviewer must provide justification for the approval. The default value is true.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setIsEnabled">setIsEnabled()</a>
@@ -418,6 +466,42 @@ to the model</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getAccessReviewTimeoutBehavior">
+        getAccessReviewTimeoutBehavior()
+        <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getAccessReviewTimeoutBehavior" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the accessReviewTimeoutBehavior
+The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAccessReviewTimeoutBehavior</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewTimeoutBehavior.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewTimeoutBehavior">AccessReviewTimeoutBehavior</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewTimeoutBehavior.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewTimeoutBehavior">AccessReviewTimeoutBehavior</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The accessReviewTimeoutBehavior</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getDurationInDays">
         getDurationInDays()
         <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getDurationInDays" class="headerlink"><i class="fas fa-link"></i></a>
@@ -425,11 +509,11 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the durationInDays
-The number of days to allow input from reviewers.</p>
+The number of days within which reviewers should provide input.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -490,6 +574,78 @@ Read-only.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getIsAccessRecommendationEnabled">
+        getIsAccessRecommendationEnabled()
+        <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getIsAccessRecommendationEnabled" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">93</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the isAccessRecommendationEnabled
+Specifies whether to display recommendations to the reviewer. The default value is true</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getIsAccessRecommendationEnabled</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The isAccessRecommendationEnabled</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getIsApprovalJustificationRequired">
+        getIsApprovalJustificationRequired()
+        <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getIsApprovalJustificationRequired" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">121</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the isApprovalJustificationRequired
+Specifies whether the reviewer must provide justification for the approval. The default value is true.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getIsApprovalJustificationRequired</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The isApprovalJustificationRequired</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getIsEnabled">
         getIsEnabled()
         <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_getIsEnabled" class="headerlink"><i class="fas fa-link"></i></a>
@@ -497,7 +653,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">60</span>
+    <span class="phpdocumentor-element-found-in__line">149</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isEnabled
@@ -603,7 +759,7 @@ If true, access reviews are required for assignments from this policy.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">88</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the recurrenceType
@@ -639,7 +795,7 @@ The interval for recurrence, such as monthly or quarterly.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">117</span>
+    <span class="phpdocumentor-element-found-in__line">206</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the reviewers
@@ -675,7 +831,7 @@ If the reviewerType is Reviewers, this collection specifies the users who will b
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">238</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the reviewerType
@@ -711,7 +867,7 @@ Who should be asked to do the review, either Self or Reviewers.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">178</span>
+    <span class="phpdocumentor-element-found-in__line">267</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startDateTime
@@ -776,6 +932,54 @@ Manually serialize DateTime into RFC3339 format</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setAccessReviewTimeoutBehavior">
+        setAccessReviewTimeoutBehavior()
+        <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setAccessReviewTimeoutBehavior" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">54</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the accessReviewTimeoutBehavior
+The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setAccessReviewTimeoutBehavior</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewTimeoutBehavior.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewTimeoutBehavior">AccessReviewTimeoutBehavior</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewTimeoutBehavior.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewTimeoutBehavior">AccessReviewTimeoutBehavior</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value to assign to the accessReviewTimeoutBehavior</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The AssignmentReviewSettings</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setDurationInDays">
         setDurationInDays()
         <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setDurationInDays" class="headerlink"><i class="fas fa-link"></i></a>
@@ -783,11 +987,11 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the durationInDays
-The number of days to allow input from reviewers.</p>
+The number of days within which reviewers should provide input.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -870,6 +1074,100 @@ Read-only.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setIsAccessRecommendationEnabled">
+        setIsAccessRecommendationEnabled()
+        <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setIsAccessRecommendationEnabled" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">110</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the isAccessRecommendationEnabled
+Specifies whether to display recommendations to the reviewer. The default value is true</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIsAccessRecommendationEnabled</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value of the isAccessRecommendationEnabled</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setIsApprovalJustificationRequired">
+        setIsApprovalJustificationRequired()
+        <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setIsApprovalJustificationRequired" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">138</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the isApprovalJustificationRequired
+Specifies whether the reviewer must provide justification for the approval. The default value is true.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIsApprovalJustificationRequired</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value of the isApprovalJustificationRequired</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AssignmentReviewSettings">AssignmentReviewSettings</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setIsEnabled">
         setIsEnabled()
         <a href="classes/Beta-Microsoft-Graph-Model-AssignmentReviewSettings.html#method_setIsEnabled" class="headerlink"><i class="fas fa-link"></i></a>
@@ -877,7 +1175,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">77</span>
+    <span class="phpdocumentor-element-found-in__line">166</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isEnabled
@@ -970,7 +1268,7 @@ If true, access reviews are required for assignments from this policy.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">105</span>
+    <span class="phpdocumentor-element-found-in__line">194</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the recurrenceType
@@ -1017,7 +1315,7 @@ The interval for recurrence, such as monthly or quarterly.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">138</span>
+    <span class="phpdocumentor-element-found-in__line">227</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the reviewers
@@ -1065,7 +1363,7 @@ If the reviewerType is Reviewers, this collection specifies the users who will b
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">166</span>
+    <span class="phpdocumentor-element-found-in__line">255</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the reviewerType
@@ -1112,7 +1410,7 @@ Who should be asked to do the review, either Self or Reviewers.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php"><a href="files/src-beta-microsoft-graph-model-assignmentreviewsettings.html"><abbr title="src/Beta/Microsoft/Graph/Model/AssignmentReviewSettings.php">AssignmentReviewSettings.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">199</span>
+    <span class="phpdocumentor-element-found-in__line">288</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startDateTime

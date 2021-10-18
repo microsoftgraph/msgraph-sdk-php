@@ -424,7 +424,7 @@ Identifies the info segments assigned to the group. Returned by default. Support
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the isAssignableToRole
-Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the memership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).</dd>
+Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_getIsFavorite">getIsFavorite()</a>
@@ -471,7 +471,7 @@ Specifies whether the group is mail-enabled. Required. Returned by default. Supp
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the mailNickname
-The mail alias for the group, unique in the organization. Required. These characters cannot be used in the mailNickName: @()/[]&#039;;:.&amp;amp;lt;&amp;amp;gt;,SPACE. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</dd>
+The mail alias for the group, unique in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following: @ () / [] &#039; ; : . &amp;amp;lt;&amp;amp;gt; , SPACE. Required. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_getMdmAppId">getMdmAppId()</a>
@@ -518,7 +518,7 @@ Indicates whether the dynamic membership processing is on or paused. Possible va
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MembershipRuleProcessingStatus.html"><abbr title="\Beta\Microsoft\Graph\Model\MembershipRuleProcessingStatus">MembershipRuleProcessingStatus</abbr></a>|null    </span>
 </dt>
 <dd>Gets the membershipRuleProcessingStatus
-Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Read-only.</dd>
+Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_getMembersWithLicenseErrors">getMembersWithLicenseErrors()</a>
@@ -612,7 +612,7 @@ true if this group is synced from an on-premises directory; false if this group 
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the owners
-The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable. Supports $expand.</dd>
+The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_getPermissionGrants">getPermissionGrants()</a>
@@ -652,7 +652,7 @@ Entry-point to Planner resource that might exist for a Unified Group.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the preferredDataLocation
-The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.</dd>
+The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator&#039;s preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see  OneDrive Online Multi-Geo. Nullable. Returned by default.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_getPreferredLanguage">getPreferredLanguage()</a>
@@ -660,7 +660,7 @@ The preferred data location for the group. For more information, see  OneDrive O
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the preferredLanguage
-The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example &#039;en-US&#039;. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</dd>
+The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
@@ -808,7 +808,7 @@ Count of new posts that have been delivered to the group&#039;s conversations si
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the visibility
-Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can&#039;t be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. See group visibility options to learn more. Returned by default. Nullable.</dd>
+Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can&#039;t be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -1069,7 +1069,7 @@ Identifies the info segments assigned to the group. Returned by default. Support
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Group.html"><abbr title="\Beta\Microsoft\Graph\Model\Group">Group</abbr></a>    </span>
 </dt>
 <dd>Sets the isAssignableToRole
-Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the memership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).</dd>
+Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_setIsFavorite">setIsFavorite()</a>
@@ -1116,7 +1116,7 @@ Specifies whether the group is mail-enabled. Required. Returned by default. Supp
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Group.html"><abbr title="\Beta\Microsoft\Graph\Model\Group">Group</abbr></a>    </span>
 </dt>
 <dd>Sets the mailNickname
-The mail alias for the group, unique in the organization. Required. These characters cannot be used in the mailNickName: @()/[]&#039;;:.&amp;amp;lt;&amp;amp;gt;,SPACE. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</dd>
+The mail alias for the group, unique in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following: @ () / [] &#039; ; : . &amp;amp;lt;&amp;amp;gt; , SPACE. Required. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_setMdmAppId">setMdmAppId()</a>
@@ -1163,7 +1163,7 @@ Indicates whether the dynamic membership processing is on or paused. Possible va
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Group.html"><abbr title="\Beta\Microsoft\Graph\Model\Group">Group</abbr></a>    </span>
 </dt>
 <dd>Sets the membershipRuleProcessingStatus
-Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Read-only.</dd>
+Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_setMembersWithLicenseErrors">setMembersWithLicenseErrors()</a>
@@ -1257,7 +1257,7 @@ true if this group is synced from an on-premises directory; false if this group 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Group.html"><abbr title="\Beta\Microsoft\Graph\Model\Group">Group</abbr></a>    </span>
 </dt>
 <dd>Sets the owners
-The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable. Supports $expand.</dd>
+The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner. Supports $expand.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_setPermissionGrants">setPermissionGrants()</a>
@@ -1297,7 +1297,7 @@ Entry-point to Planner resource that might exist for a Unified Group.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Group.html"><abbr title="\Beta\Microsoft\Graph\Model\Group">Group</abbr></a>    </span>
 </dt>
 <dd>Sets the preferredDataLocation
-The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.</dd>
+The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator&#039;s preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see  OneDrive Online Multi-Geo. Nullable. Returned by default.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_setPreferredLanguage">setPreferredLanguage()</a>
@@ -1305,7 +1305,7 @@ The preferred data location for the group. For more information, see  OneDrive O
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Group.html"><abbr title="\Beta\Microsoft\Graph\Model\Group">Group</abbr></a>    </span>
 </dt>
 <dd>Sets the preferredLanguage
-The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example &#039;en-US&#039;. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</dd>
+The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Group.html#method_setProxyAddresses">setProxyAddresses()</a>
@@ -1446,7 +1446,7 @@ Count of new posts that have been delivered to the group&#039;s conversations si
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Group.html"><abbr title="\Beta\Microsoft\Graph\Model\Group">Group</abbr></a>    </span>
 </dt>
 <dd>Sets the visibility
-Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can&#039;t be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. See group visibility options to learn more. Returned by default. Nullable.</dd>
+Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can&#039;t be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.</dd>
 
         </dl>
 
@@ -2676,7 +2676,7 @@ Identifies the info segments assigned to the group. Returned by default. Support
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isAssignableToRole
-Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the memership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).</p>
+Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2891,7 +2891,7 @@ Specifies whether the group is mail-enabled. Required. Returned by default. Supp
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mailNickname
-The mail alias for the group, unique in the organization. Required. These characters cannot be used in the mailNickName: @()/[]&#039;;:.&amp;amp;lt;&amp;amp;gt;,SPACE. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</p>
+The mail alias for the group, unique in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following: @ () / [] &#039; ; : . &amp;amp;lt;&amp;amp;gt; , SPACE. Required. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3106,7 +3106,7 @@ Indicates whether the dynamic membership processing is on or paused. Possible va
 </aside>
 
         <p class="phpdocumentor-summary">Gets the membershipRuleProcessingStatus
-Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Read-only.</p>
+Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3536,7 +3536,7 @@ true if this group is synced from an on-premises directory; false if this group 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the owners
-The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable. Supports $expand.</p>
+The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3716,7 +3716,7 @@ Entry-point to Planner resource that might exist for a Unified Group.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the preferredDataLocation
-The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.</p>
+The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator&#039;s preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see  OneDrive Online Multi-Geo. Nullable. Returned by default.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3752,7 +3752,7 @@ The preferred data location for the group. For more information, see  OneDrive O
 </aside>
 
         <p class="phpdocumentor-summary">Gets the preferredLanguage
-The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example &#039;en-US&#039;. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</p>
+The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4432,7 +4432,7 @@ Count of new posts that have been delivered to the group&#039;s conversations si
 </aside>
 
         <p class="phpdocumentor-summary">Gets the visibility
-Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can&#039;t be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. See group visibility options to learn more. Returned by default. Nullable.</p>
+Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can&#039;t be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -5958,7 +5958,7 @@ Identifies the info segments assigned to the group. Returned by default. Support
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isAssignableToRole
-Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the memership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).</p>
+Indicates whether this group can be assigned to an Azure Active Directory role or not. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -6239,7 +6239,7 @@ Specifies whether the group is mail-enabled. Required. Returned by default. Supp
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mailNickname
-The mail alias for the group, unique in the organization. Required. These characters cannot be used in the mailNickName: @()/[]&#039;;:.&amp;amp;lt;&amp;amp;gt;,SPACE. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</p>
+The mail alias for the group, unique in the organization. Maximum length is 64 characters. This property can contain only characters in the ASCII character set 0 - 127 except the following: @ () / [] &#039; ; : . &amp;amp;lt;&amp;amp;gt; , SPACE. Required. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -6520,7 +6520,7 @@ Indicates whether the dynamic membership processing is on or paused. Possible va
 </aside>
 
         <p class="phpdocumentor-summary">Sets the membershipRuleProcessingStatus
-Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Read-only.</p>
+Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -7082,7 +7082,7 @@ true if this group is synced from an on-premises directory; false if this group 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the owners
-The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable. Supports $expand.</p>
+The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. Nullable. If this property is not specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner. Supports $expand.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -7317,7 +7317,7 @@ Entry-point to Planner resource that might exist for a Unified Group.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the preferredDataLocation
-The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.</p>
+The preferred data location for the Microsoft 365 group. By default, the group inherits the group creator&#039;s preferred data location. To set this property, the calling user must be assigned one of the following Azure AD roles:  Global Administrator  User Account Administrator Directory Writer  Exchange Administrator  SharePoint Administrator  For more information about this property, see  OneDrive Online Multi-Geo. Nullable. Returned by default.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -7364,7 +7364,7 @@ The preferred data location for the group. For more information, see  OneDrive O
 </aside>
 
         <p class="phpdocumentor-summary">Sets the preferredLanguage
-The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example &#039;en-US&#039;. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</p>
+The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -8207,7 +8207,7 @@ Count of new posts that have been delivered to the group&#039;s conversations si
 </aside>
 
         <p class="phpdocumentor-summary">Sets the visibility
-Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can&#039;t be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. See group visibility options to learn more. Returned by default. Nullable.</p>
+Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can&#039;t be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
