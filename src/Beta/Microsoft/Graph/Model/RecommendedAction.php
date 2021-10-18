@@ -25,6 +25,7 @@ class RecommendedAction extends Entity
 {
     /**
     * Gets the actionWebUrl
+    * Web URL to the recommended action.
     *
     * @return string|null The actionWebUrl
     */
@@ -39,6 +40,7 @@ class RecommendedAction extends Entity
 
     /**
     * Sets the actionWebUrl
+    * Web URL to the recommended action.
     *
     * @param string $val The value of the actionWebUrl
     *
@@ -51,6 +53,7 @@ class RecommendedAction extends Entity
     }
     /**
     * Gets the potentialScoreImpact
+    * Potential improvement in security score of the tenant from the recommended action.
     *
     * @return float|null The potentialScoreImpact
     */
@@ -65,6 +68,7 @@ class RecommendedAction extends Entity
 
     /**
     * Sets the potentialScoreImpact
+    * Potential improvement in security score of the tenant from the recommended action.
     *
     * @param float $val The value of the potentialScoreImpact
     *
@@ -77,6 +81,7 @@ class RecommendedAction extends Entity
     }
     /**
     * Gets the title
+    * Title of the recommended action.
     *
     * @return string|null The title
     */
@@ -91,6 +96,7 @@ class RecommendedAction extends Entity
 
     /**
     * Sets the title
+    * Title of the recommended action.
     *
     * @param string $val The value of the title
     *

@@ -44,6 +44,9 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const ENDPOINT_CONNECTIVITY_CHECK_UNKNOWN_ERROR = "endpointConnectivityCheckUnknownError";
     const AZURE_AD_DEVICE_SYNC_CHECK_DEVICE_NOT_FOUND = "azureAdDeviceSyncCheckDeviceNotFound";
     const AZURE_AD_DEVICE_SYNC_CHECK_LONG_SYNC_CIRCLE = "azureAdDeviceSyncCheckLongSyncCircle";
+    const AZURE_AD_DEVICE_SYNC_CHECK_CONNECT_DISABLED = "azureAdDeviceSyncCheckConnectDisabled";
+    const AZURE_AD_DEVICE_SYNC_CHECK_DURATION_EXCEEDED = "azureAdDeviceSyncCheckDurationExceeded";
+    const AZURE_AD_DEVICE_SYNC_CHECK_TRANSIENT_SERVICE_ERROR = "azureAdDeviceSyncCheckTransientServiceError";
     const AZURE_AD_DEVICE_SYNC_CHECK_UNKNOWN_ERROR = "azureAdDeviceSyncCheckUnknownError";
     const RESOURCE_AVAILABILITY_CHECK_NO_SUBNET_IP = "resourceAvailabilityCheckNoSubnetIP";
     const RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_DISABLED = "resourceAvailabilityCheckSubscriptionDisabled";
@@ -52,11 +55,13 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_TRANSFERRED = "resourceAvailabilityCheckSubscriptionTransferred";
     const RESOURCE_AVAILABILITY_CHECK_GENERAL_SUBSCRIPTION_ERROR = "resourceAvailabilityCheckGeneralSubscriptionError";
     const RESOURCE_AVAILABILITY_CHECK_UNSUPPORTED_V_NET_REGION = "resourceAvailabilityCheckUnsupportedVNetRegion";
+    const RESOURCE_AVAILABILITY_CHECK_TRANSIENT_SERVICE_ERROR = "resourceAvailabilityCheckTransientServiceError";
     const RESOURCE_AVAILABILITY_CHECK_UNKNOWN_ERROR = "resourceAvailabilityCheckUnknownError";
     const PERMISSION_CHECK_NO_SUBSCRIPTION_READER_ROLE = "permissionCheckNoSubscriptionReaderRole";
     const PERMISSION_CHECK_NO_RESOURCE_GROUP_OWNER_ROLE = "permissionCheckNoResourceGroupOwnerRole";
     const PERMISSION_CHECK_NO_V_NET_CONTRIBUTOR_ROLE = "permissionCheckNoVNetContributorRole";
     const PERMISSION_CHECK_NO_RESOURCE_GROUP_NETWORK_CONTRIBUTOR_ROLE = "permissionCheckNoResourceGroupNetworkContributorRole";
+    const PERMISSION_CHECK_TRANSIENT_SERVICE_ERROR = "permissionCheckTransientServiceError";
     const PERMISSION_CHECK_UNKNOWN_ERROR = "permissionCheckUnknownError";
     const INTERNAL_SERVER_ERROR_DEPLOYMENT_CANCELED = "internalServerErrorDeploymentCanceled";
     const INTERNAL_SERVER_ERROR_ALLOCATE_RESOURCE_FAILED = "internalServerErrorAllocateResourceFailed";

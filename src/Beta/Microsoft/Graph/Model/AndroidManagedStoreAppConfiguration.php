@@ -54,6 +54,35 @@ class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppConfigur
     }
     
     /**
+    * Gets the connectedAppsEnabled
+    * Setting to specify whether to allow ConnectedApps experience for this app.
+    *
+    * @return bool|null The connectedAppsEnabled
+    */
+    public function getConnectedAppsEnabled()
+    {
+        if (array_key_exists("connectedAppsEnabled", $this->_propDict)) {
+            return $this->_propDict["connectedAppsEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the connectedAppsEnabled
+    * Setting to specify whether to allow ConnectedApps experience for this app.
+    *
+    * @param bool $val The connectedAppsEnabled
+    *
+    * @return AndroidManagedStoreAppConfiguration
+    */
+    public function setConnectedAppsEnabled($val)
+    {
+        $this->_propDict["connectedAppsEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the packageId
     * Android Enterprise app configuration package id.
     *

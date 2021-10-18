@@ -116,6 +116,33 @@ class BookingStaffMember extends BookingPerson
     }
     
     /**
+    * Gets the timeZone
+    *
+    * @return string|null The timeZone
+    */
+    public function getTimeZone()
+    {
+        if (array_key_exists("timeZone", $this->_propDict)) {
+            return $this->_propDict["timeZone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the timeZone
+    *
+    * @param string $val The timeZone
+    *
+    * @return BookingStaffMember
+    */
+    public function setTimeZone($val)
+    {
+        $this->_propDict["timeZone"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the useBusinessHours
     * True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
     *

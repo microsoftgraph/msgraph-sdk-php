@@ -25,6 +25,7 @@ class UserTrainingEventInfo extends Entity
 {
     /**
     * Gets the displayName
+    * Display name of the training.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the training.
     *
     * @param string $val The value of the displayName
     *
@@ -52,6 +54,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Gets the latestTrainingStatus
+    * Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, notCompleted, unknownFutureValue.
     *
     * @return TrainingStatus|null The latestTrainingStatus
     */
@@ -70,6 +73,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Sets the latestTrainingStatus
+    * Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, notCompleted, unknownFutureValue.
     *
     * @param TrainingStatus $val The value to assign to the latestTrainingStatus
     *
@@ -83,6 +87,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Gets the trainingAssignedProperties
+    * Event details of the training when it was assigned to the user.
     *
     * @return UserTrainingContentEventInfo|null The trainingAssignedProperties
     */
@@ -101,6 +106,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Sets the trainingAssignedProperties
+    * Event details of the training when it was assigned to the user.
     *
     * @param UserTrainingContentEventInfo $val The value to assign to the trainingAssignedProperties
     *
@@ -114,6 +120,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Gets the trainingCompletedProperties
+    * Event details of the training when it was completed by the user.
     *
     * @return UserTrainingContentEventInfo|null The trainingCompletedProperties
     */
@@ -132,6 +139,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Sets the trainingCompletedProperties
+    * Event details of the training when it was completed by the user.
     *
     * @param UserTrainingContentEventInfo $val The value to assign to the trainingCompletedProperties
     *
@@ -145,6 +153,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Gets the trainingUpdatedProperties
+    * Event details of the training when it was updated/in-progress by the user.
     *
     * @return UserTrainingContentEventInfo|null The trainingUpdatedProperties
     */
@@ -163,6 +172,7 @@ class UserTrainingEventInfo extends Entity
 
     /**
     * Sets the trainingUpdatedProperties
+    * Event details of the training when it was updated/in-progress by the user.
     *
     * @param UserTrainingContentEventInfo $val The value to assign to the trainingUpdatedProperties
     *

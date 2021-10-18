@@ -28,15 +28,15 @@ class GovernanceSchedule extends Entity
     * Gets the duration
     * The duration of a role assignment. It is in format of a TimeSpan.
     *
-    * @return Duration|null The duration
+    * @return \DateInterval|null The duration
     */
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["duration"])) {
+            if (is_a($this->_propDict["duration"], "\DateInterval") || is_null($this->_propDict["duration"])) {
                 return $this->_propDict["duration"];
             } else {
-                $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
+                $this->_propDict["duration"] = new \DateInterval($this->_propDict["duration"]);
                 return $this->_propDict["duration"];
             }
         }
@@ -47,7 +47,7 @@ class GovernanceSchedule extends Entity
     * Sets the duration
     * The duration of a role assignment. It is in format of a TimeSpan.
     *
-    * @param Duration $val The value to assign to the duration
+    * @param \DateInterval $val The value to assign to the duration
     *
     * @return GovernanceSchedule The GovernanceSchedule
     */

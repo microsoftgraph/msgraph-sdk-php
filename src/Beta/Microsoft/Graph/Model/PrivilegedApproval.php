@@ -27,15 +27,15 @@ class PrivilegedApproval extends Entity
     /**
     * Gets the approvalDuration
     *
-    * @return Duration|null The approvalDuration
+    * @return \DateInterval|null The approvalDuration
     */
     public function getApprovalDuration()
     {
         if (array_key_exists("approvalDuration", $this->_propDict)) {
-            if (is_a($this->_propDict["approvalDuration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["approvalDuration"])) {
+            if (is_a($this->_propDict["approvalDuration"], "\DateInterval") || is_null($this->_propDict["approvalDuration"])) {
                 return $this->_propDict["approvalDuration"];
             } else {
-                $this->_propDict["approvalDuration"] = new Duration($this->_propDict["approvalDuration"]);
+                $this->_propDict["approvalDuration"] = new \DateInterval($this->_propDict["approvalDuration"]);
                 return $this->_propDict["approvalDuration"];
             }
         }
@@ -45,7 +45,7 @@ class PrivilegedApproval extends Entity
     /**
     * Sets the approvalDuration
     *
-    * @param Duration $val The approvalDuration
+    * @param \DateInterval $val The approvalDuration
     *
     * @return PrivilegedApproval
     */

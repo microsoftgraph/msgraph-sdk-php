@@ -25,6 +25,7 @@ class RedirectUriSettings extends Entity
 {
     /**
     * Gets the index
+    * Identifies the specific URI within the redirectURIs collection in SAML SSO flows. Defaults to null. The index is unique across all the redirectUris for the application.
     *
     * @return int|null The index
     */
@@ -39,6 +40,7 @@ class RedirectUriSettings extends Entity
 
     /**
     * Sets the index
+    * Identifies the specific URI within the redirectURIs collection in SAML SSO flows. Defaults to null. The index is unique across all the redirectUris for the application.
     *
     * @param int $val The value of the index
     *
@@ -51,6 +53,7 @@ class RedirectUriSettings extends Entity
     }
     /**
     * Gets the uri
+    * Specifies the URI that tokens are sent to.
     *
     * @return string|null The uri
     */
@@ -65,6 +68,7 @@ class RedirectUriSettings extends Entity
 
     /**
     * Sets the uri
+    * Specifies the URI that tokens are sent to.
     *
     * @param string $val The value of the uri
     *

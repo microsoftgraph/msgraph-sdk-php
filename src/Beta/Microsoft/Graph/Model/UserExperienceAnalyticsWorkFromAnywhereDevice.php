@@ -286,6 +286,35 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     }
     
     /**
+    * Gets the deviceId
+    * The user experience work from anywhere device Id.
+    *
+    * @return string|null The deviceId
+    */
+    public function getDeviceId()
+    {
+        if (array_key_exists("deviceId", $this->_propDict)) {
+            return $this->_propDict["deviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the deviceId
+    * The user experience work from anywhere device Id.
+    *
+    * @param string $val The deviceId
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setDeviceId($val)
+    {
+        $this->_propDict["deviceId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the deviceName
     * The work from anywhere device's name.
     *
@@ -344,6 +373,35 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     public function setHealthStatus($val)
     {
         $this->_propDict["healthStatus"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the isCloudManagedGatewayEnabled
+    * The user experience work from anywhere device's Cloud Management Gateway for Configuration Manager is enabled.
+    *
+    * @return bool|null The isCloudManagedGatewayEnabled
+    */
+    public function getIsCloudManagedGatewayEnabled()
+    {
+        if (array_key_exists("isCloudManagedGatewayEnabled", $this->_propDict)) {
+            return $this->_propDict["isCloudManagedGatewayEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the isCloudManagedGatewayEnabled
+    * The user experience work from anywhere device's Cloud Management Gateway for Configuration Manager is enabled.
+    *
+    * @param bool $val The isCloudManagedGatewayEnabled
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setIsCloudManagedGatewayEnabled($val)
+    {
+        $this->_propDict["isCloudManagedGatewayEnabled"] = boolval($val);
         return $this;
     }
     
@@ -928,6 +986,35 @@ class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity
     public function setWindowsScore($val)
     {
         $this->_propDict["windowsScore"] = floatval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the workFromAnywhereScore
+    * The user experience work from anywhere per device overall score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @return float|null The workFromAnywhereScore
+    */
+    public function getWorkFromAnywhereScore()
+    {
+        if (array_key_exists("workFromAnywhereScore", $this->_propDict)) {
+            return $this->_propDict["workFromAnywhereScore"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the workFromAnywhereScore
+    * The user experience work from anywhere per device overall score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    *
+    * @param float $val The workFromAnywhereScore
+    *
+    * @return UserExperienceAnalyticsWorkFromAnywhereDevice
+    */
+    public function setWorkFromAnywhereScore($val)
+    {
+        $this->_propDict["workFromAnywhereScore"] = floatval($val);
         return $this;
     }
     

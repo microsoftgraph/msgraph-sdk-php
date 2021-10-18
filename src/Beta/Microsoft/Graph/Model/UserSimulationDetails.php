@@ -25,6 +25,7 @@ class UserSimulationDetails extends Entity
 {
     /**
     * Gets the assignedTrainingsCount
+    * Number of trainings assigned to a user in an attack simulation and training campaign.
     *
     * @return int|null The assignedTrainingsCount
     */
@@ -39,6 +40,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the assignedTrainingsCount
+    * Number of trainings assigned to a user in an attack simulation and training campaign.
     *
     * @param int $val The value of the assignedTrainingsCount
     *
@@ -51,6 +53,7 @@ class UserSimulationDetails extends Entity
     }
     /**
     * Gets the completedTrainingsCount
+    * Number of trainings completed by a user in an attack simulation and training campaign.
     *
     * @return int|null The completedTrainingsCount
     */
@@ -65,6 +68,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the completedTrainingsCount
+    * Number of trainings completed by a user in an attack simulation and training campaign.
     *
     * @param int $val The value of the completedTrainingsCount
     *
@@ -78,6 +82,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Gets the compromisedDateTime
+    * Date and time of the compromising online action by a user in an attack simulation and training campaign.
     *
     * @return \DateTime|null The compromisedDateTime
     */
@@ -96,6 +101,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the compromisedDateTime
+    * Date and time of the compromising online action by a user in an attack simulation and training campaign.
     *
     * @param \DateTime $val The value to assign to the compromisedDateTime
     *
@@ -108,6 +114,7 @@ class UserSimulationDetails extends Entity
     }
     /**
     * Gets the inProgressTrainingsCount
+    * Number of trainings in progress by a user in an attack simulation and training campaign.
     *
     * @return int|null The inProgressTrainingsCount
     */
@@ -122,6 +129,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the inProgressTrainingsCount
+    * Number of trainings in progress by a user in an attack simulation and training campaign.
     *
     * @param int $val The value of the inProgressTrainingsCount
     *
@@ -134,6 +142,7 @@ class UserSimulationDetails extends Entity
     }
     /**
     * Gets the isCompromised
+    * Flag representing if user was compromised in an attack simulation and training campaign.
     *
     * @return bool|null The isCompromised
     */
@@ -148,6 +157,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the isCompromised
+    * Flag representing if user was compromised in an attack simulation and training campaign.
     *
     * @param bool $val The value of the isCompromised
     *
@@ -161,6 +171,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Gets the reportedPhishDateTime
+    * Date and time when user reported delivered payload as phish in the attack simulation and training campaign.
     *
     * @return \DateTime|null The reportedPhishDateTime
     */
@@ -179,6 +190,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the reportedPhishDateTime
+    * Date and time when user reported delivered payload as phish in the attack simulation and training campaign.
     *
     * @param \DateTime $val The value to assign to the reportedPhishDateTime
     *
@@ -192,6 +204,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Gets the simulationEvents
+    * List of simulation events of a user in the attack simulation and training campaign.
     *
     * @return UserSimulationEventInfo|null The simulationEvents
     */
@@ -210,6 +223,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the simulationEvents
+    * List of simulation events of a user in the attack simulation and training campaign.
     *
     * @param UserSimulationEventInfo $val The value to assign to the simulationEvents
     *
@@ -223,6 +237,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Gets the simulationUser
+    * User in an attack simulation and training campaign.
     *
     * @return AttackSimulationUser|null The simulationUser
     */
@@ -241,6 +256,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the simulationUser
+    * User in an attack simulation and training campaign.
     *
     * @param AttackSimulationUser $val The value to assign to the simulationUser
     *
@@ -254,6 +270,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Gets the trainingEvents
+    * List of training events of a user in the attack simulation and training campaign.
     *
     * @return UserTrainingEventInfo|null The trainingEvents
     */
@@ -272,6 +289,7 @@ class UserSimulationDetails extends Entity
 
     /**
     * Sets the trainingEvents
+    * List of training events of a user in the attack simulation and training campaign.
     *
     * @param UserTrainingEventInfo $val The value to assign to the trainingEvents
     *

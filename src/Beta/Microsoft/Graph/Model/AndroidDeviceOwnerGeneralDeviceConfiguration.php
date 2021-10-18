@@ -2786,6 +2786,35 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
     
     /**
+    * Gets the securityDeveloperSettingsEnabled
+    * Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.
+    *
+    * @return bool|null The securityDeveloperSettingsEnabled
+    */
+    public function getSecurityDeveloperSettingsEnabled()
+    {
+        if (array_key_exists("securityDeveloperSettingsEnabled", $this->_propDict)) {
+            return $this->_propDict["securityDeveloperSettingsEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the securityDeveloperSettingsEnabled
+    * Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.
+    *
+    * @param bool $val The securityDeveloperSettingsEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setSecurityDeveloperSettingsEnabled($val)
+    {
+        $this->_propDict["securityDeveloperSettingsEnabled"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the securityRequireVerifyApps
     * Indicates whether or not verify apps is required.
     *

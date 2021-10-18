@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AuthenticatorAppContextType File
+* SharePointIdentity File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* AuthenticatorAppContextType class
+* SharePointIdentity class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AuthenticatorAppContextType extends Enum
+class SharePointIdentity extends Identity
 {
     /**
-    * The Enum AuthenticatorAppContextType
+    * Gets the loginName
+    *
+    * @return string|null The loginName
     */
-    const LOCATION = "location";
-    const APP = "app";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public function getLoginName()
+    {
+        if (array_key_exists("loginName", $this->_propDict)) {
+            return $this->_propDict["loginName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the loginName
+    *
+    * @param string $val The value of the loginName
+    *
+    * @return SharePointIdentity
+    */
+    public function setLoginName($val)
+    {
+        $this->_propDict["loginName"] = $val;
+        return $this;
+    }
 }

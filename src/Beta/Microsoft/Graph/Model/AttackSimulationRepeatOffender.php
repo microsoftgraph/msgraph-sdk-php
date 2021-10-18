@@ -26,6 +26,7 @@ class AttackSimulationRepeatOffender extends Entity
 
     /**
     * Gets the attackSimulationUser
+    * User in an attack simulation and training campaign.
     *
     * @return AttackSimulationUser|null The attackSimulationUser
     */
@@ -44,6 +45,7 @@ class AttackSimulationRepeatOffender extends Entity
 
     /**
     * Sets the attackSimulationUser
+    * User in an attack simulation and training campaign.
     *
     * @param AttackSimulationUser $val The value to assign to the attackSimulationUser
     *
@@ -56,6 +58,7 @@ class AttackSimulationRepeatOffender extends Entity
     }
     /**
     * Gets the repeatOffenceCount
+    * Number of repeat offences of the user in attack simulation and training campaigns.
     *
     * @return int|null The repeatOffenceCount
     */
@@ -70,6 +73,7 @@ class AttackSimulationRepeatOffender extends Entity
 
     /**
     * Sets the repeatOffenceCount
+    * Number of repeat offences of the user in attack simulation and training campaigns.
     *
     * @param int $val The value of the repeatOffenceCount
     *

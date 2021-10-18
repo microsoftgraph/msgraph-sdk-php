@@ -26,6 +26,7 @@ class AttackSimulationTrainingUserCoverage extends Entity
 
     /**
     * Gets the attackSimulationUser
+    * User in an attack simulation and training campaign.
     *
     * @return AttackSimulationUser|null The attackSimulationUser
     */
@@ -44,6 +45,7 @@ class AttackSimulationTrainingUserCoverage extends Entity
 
     /**
     * Sets the attackSimulationUser
+    * User in an attack simulation and training campaign.
     *
     * @param AttackSimulationUser $val The value to assign to the attackSimulationUser
     *
@@ -57,6 +59,7 @@ class AttackSimulationTrainingUserCoverage extends Entity
 
     /**
     * Gets the userTrainings
+    * List of assigned trainings' and their statuses for the user.
     *
     * @return UserTrainingStatusInfo|null The userTrainings
     */
@@ -75,6 +78,7 @@ class AttackSimulationTrainingUserCoverage extends Entity
 
     /**
     * Sets the userTrainings
+    * List of assigned trainings' and their statuses for the user.
     *
     * @param UserTrainingStatusInfo $val The value to assign to the userTrainings
     *

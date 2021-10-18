@@ -26,6 +26,7 @@ class CloudPcSupportedRegion extends Entity
 {
     /**
     * Gets the displayName
+    * The name for the supported region. Read-only.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class CloudPcSupportedRegion extends Entity
     
     /**
     * Sets the displayName
+    * The name for the supported region. Read-only.
     *
     * @param string $val The displayName
     *

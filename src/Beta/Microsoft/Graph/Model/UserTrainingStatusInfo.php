@@ -26,6 +26,7 @@ class UserTrainingStatusInfo extends Entity
 
     /**
     * Gets the assignedDateTime
+    * Date and time of assignment of the training to the user.
     *
     * @return \DateTime|null The assignedDateTime
     */
@@ -44,6 +45,7 @@ class UserTrainingStatusInfo extends Entity
 
     /**
     * Sets the assignedDateTime
+    * Date and time of assignment of the training to the user.
     *
     * @param \DateTime $val The value to assign to the assignedDateTime
     *
@@ -57,6 +59,7 @@ class UserTrainingStatusInfo extends Entity
 
     /**
     * Gets the completionDateTime
+    * Date and time of completion of the training by the user.
     *
     * @return \DateTime|null The completionDateTime
     */
@@ -75,6 +78,7 @@ class UserTrainingStatusInfo extends Entity
 
     /**
     * Sets the completionDateTime
+    * Date and time of completion of the training by the user.
     *
     * @param \DateTime $val The value to assign to the completionDateTime
     *
@@ -87,6 +91,7 @@ class UserTrainingStatusInfo extends Entity
     }
     /**
     * Gets the displayName
+    * Display name of the assigned training.
     *
     * @return string|null The displayName
     */
@@ -101,6 +106,7 @@ class UserTrainingStatusInfo extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the assigned training.
     *
     * @param string $val The value of the displayName
     *
@@ -114,6 +120,7 @@ class UserTrainingStatusInfo extends Entity
 
     /**
     * Gets the trainingStatus
+    * Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, notCompleted, unknownFutureValue.
     *
     * @return TrainingStatus|null The trainingStatus
     */
@@ -132,6 +139,7 @@ class UserTrainingStatusInfo extends Entity
 
     /**
     * Sets the trainingStatus
+    * Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, notCompleted, unknownFutureValue.
     *
     * @param TrainingStatus $val The value to assign to the trainingStatus
     *

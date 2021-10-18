@@ -32,4 +32,5 @@ class TokenIssuerType extends Enum
     const AZURE_AD = "azureAD";
     const AD_FEDERATION_SERVICES = "aDFederationServices";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const AZURE_AD_BACKUP_AUTH = "azureADBackupAuth";
 }

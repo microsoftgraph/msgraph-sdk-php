@@ -31,5 +31,7 @@ class AppCredentialRestrictionType extends Enum
     */
     const PASSWORD_ADDITION = "passwordAddition";
     const PASSWORD_LIFETIME = "passwordLifetime";
+    const SYMMETRIC_KEY_ADDITION = "symmetricKeyAddition";
+    const SYMMETRIC_KEY_LIFETIME = "symmetricKeyLifetime";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
