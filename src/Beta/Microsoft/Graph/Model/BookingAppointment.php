@@ -230,18 +230,45 @@ class BookingAppointment extends Entity
     }
     
     /**
+    * Gets the customerTimeZone
+    *
+    * @return string|null The customerTimeZone
+    */
+    public function getCustomerTimeZone()
+    {
+        if (array_key_exists("customerTimeZone", $this->_propDict)) {
+            return $this->_propDict["customerTimeZone"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the customerTimeZone
+    *
+    * @param string $val The customerTimeZone
+    *
+    * @return BookingAppointment
+    */
+    public function setCustomerTimeZone($val)
+    {
+        $this->_propDict["customerTimeZone"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the duration
     * The length of the appointment, denoted in ISO8601 format.
     *
-    * @return Duration|null The duration
+    * @return \DateInterval|null The duration
     */
     public function getDuration()
     {
         if (array_key_exists("duration", $this->_propDict)) {
-            if (is_a($this->_propDict["duration"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["duration"])) {
+            if (is_a($this->_propDict["duration"], "\DateInterval") || is_null($this->_propDict["duration"])) {
                 return $this->_propDict["duration"];
             } else {
-                $this->_propDict["duration"] = new Duration($this->_propDict["duration"]);
+                $this->_propDict["duration"] = new \DateInterval($this->_propDict["duration"]);
                 return $this->_propDict["duration"];
             }
         }
@@ -252,7 +279,7 @@ class BookingAppointment extends Entity
     * Sets the duration
     * The length of the appointment, denoted in ISO8601 format.
     *
-    * @param Duration $val The duration
+    * @param \DateInterval $val The duration
     *
     * @return BookingAppointment
     */
@@ -476,6 +503,33 @@ class BookingAppointment extends Entity
     }
     
     /**
+    * Gets the joinWebUrl
+    *
+    * @return string|null The joinWebUrl
+    */
+    public function getJoinWebUrl()
+    {
+        if (array_key_exists("joinWebUrl", $this->_propDict)) {
+            return $this->_propDict["joinWebUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the joinWebUrl
+    *
+    * @param string $val The joinWebUrl
+    *
+    * @return BookingAppointment
+    */
+    public function setJoinWebUrl($val)
+    {
+        $this->_propDict["joinWebUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the onlineMeetingUrl
     *
     * @return string|null The onlineMeetingUrl
@@ -535,15 +589,15 @@ class BookingAppointment extends Entity
     * Gets the postBuffer
     * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
     *
-    * @return Duration|null The postBuffer
+    * @return \DateInterval|null The postBuffer
     */
     public function getPostBuffer()
     {
         if (array_key_exists("postBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["postBuffer"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["postBuffer"])) {
+            if (is_a($this->_propDict["postBuffer"], "\DateInterval") || is_null($this->_propDict["postBuffer"])) {
                 return $this->_propDict["postBuffer"];
             } else {
-                $this->_propDict["postBuffer"] = new Duration($this->_propDict["postBuffer"]);
+                $this->_propDict["postBuffer"] = new \DateInterval($this->_propDict["postBuffer"]);
                 return $this->_propDict["postBuffer"];
             }
         }
@@ -554,7 +608,7 @@ class BookingAppointment extends Entity
     * Sets the postBuffer
     * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
     *
-    * @param Duration $val The postBuffer
+    * @param \DateInterval $val The postBuffer
     *
     * @return BookingAppointment
     */
@@ -568,15 +622,15 @@ class BookingAppointment extends Entity
     * Gets the preBuffer
     * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
     *
-    * @return Duration|null The preBuffer
+    * @return \DateInterval|null The preBuffer
     */
     public function getPreBuffer()
     {
         if (array_key_exists("preBuffer", $this->_propDict)) {
-            if (is_a($this->_propDict["preBuffer"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["preBuffer"])) {
+            if (is_a($this->_propDict["preBuffer"], "\DateInterval") || is_null($this->_propDict["preBuffer"])) {
                 return $this->_propDict["preBuffer"];
             } else {
-                $this->_propDict["preBuffer"] = new Duration($this->_propDict["preBuffer"]);
+                $this->_propDict["preBuffer"] = new \DateInterval($this->_propDict["preBuffer"]);
                 return $this->_propDict["preBuffer"];
             }
         }
@@ -587,7 +641,7 @@ class BookingAppointment extends Entity
     * Sets the preBuffer
     * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
     *
-    * @param Duration $val The preBuffer
+    * @param \DateInterval $val The preBuffer
     *
     * @return BookingAppointment
     */
@@ -835,6 +889,33 @@ class BookingAppointment extends Entity
     public function setServiceNotes($val)
     {
         $this->_propDict["serviceNotes"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the smsNotificationsEnabled
+    *
+    * @return bool|null The smsNotificationsEnabled
+    */
+    public function getSmsNotificationsEnabled()
+    {
+        if (array_key_exists("smsNotificationsEnabled", $this->_propDict)) {
+            return $this->_propDict["smsNotificationsEnabled"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the smsNotificationsEnabled
+    *
+    * @param bool $val The smsNotificationsEnabled
+    *
+    * @return BookingAppointment
+    */
+    public function setSmsNotificationsEnabled($val)
+    {
+        $this->_propDict["smsNotificationsEnabled"] = boolval($val);
         return $this;
     }
     

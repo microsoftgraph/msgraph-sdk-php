@@ -27,6 +27,7 @@ class AttackSimulationRoot extends Entity
 
      /** 
      * Gets the simulations
+    * Represent attack simulation and training campaign of a tenant.
      *
      * @return array|null The simulations
      */
@@ -41,6 +42,7 @@ class AttackSimulationRoot extends Entity
     
     /** 
     * Sets the simulations
+    * Represent attack simulation and training campaign of a tenant.
     *
     * @param Simulation $val The simulations
     *

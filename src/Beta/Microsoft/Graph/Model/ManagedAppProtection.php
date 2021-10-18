@@ -1031,15 +1031,15 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the periodBeforePinReset
     * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
     *
-    * @return Duration|null The periodBeforePinReset
+    * @return \DateInterval|null The periodBeforePinReset
     */
     public function getPeriodBeforePinReset()
     {
         if (array_key_exists("periodBeforePinReset", $this->_propDict)) {
-            if (is_a($this->_propDict["periodBeforePinReset"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodBeforePinReset"])) {
+            if (is_a($this->_propDict["periodBeforePinReset"], "\DateInterval") || is_null($this->_propDict["periodBeforePinReset"])) {
                 return $this->_propDict["periodBeforePinReset"];
             } else {
-                $this->_propDict["periodBeforePinReset"] = new Duration($this->_propDict["periodBeforePinReset"]);
+                $this->_propDict["periodBeforePinReset"] = new \DateInterval($this->_propDict["periodBeforePinReset"]);
                 return $this->_propDict["periodBeforePinReset"];
             }
         }
@@ -1050,7 +1050,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Sets the periodBeforePinReset
     * TimePeriod before the all-level pin must be reset if PinRequired is set to True.
     *
-    * @param Duration $val The periodBeforePinReset
+    * @param \DateInterval $val The periodBeforePinReset
     *
     * @return ManagedAppProtection
     */
@@ -1064,15 +1064,15 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the periodOfflineBeforeAccessCheck
     * The period after which access is checked when the device is not connected to the internet.
     *
-    * @return Duration|null The periodOfflineBeforeAccessCheck
+    * @return \DateInterval|null The periodOfflineBeforeAccessCheck
     */
     public function getPeriodOfflineBeforeAccessCheck()
     {
         if (array_key_exists("periodOfflineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOfflineBeforeAccessCheck"])) {
+            if (is_a($this->_propDict["periodOfflineBeforeAccessCheck"], "\DateInterval") || is_null($this->_propDict["periodOfflineBeforeAccessCheck"])) {
                 return $this->_propDict["periodOfflineBeforeAccessCheck"];
             } else {
-                $this->_propDict["periodOfflineBeforeAccessCheck"] = new Duration($this->_propDict["periodOfflineBeforeAccessCheck"]);
+                $this->_propDict["periodOfflineBeforeAccessCheck"] = new \DateInterval($this->_propDict["periodOfflineBeforeAccessCheck"]);
                 return $this->_propDict["periodOfflineBeforeAccessCheck"];
             }
         }
@@ -1083,7 +1083,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Sets the periodOfflineBeforeAccessCheck
     * The period after which access is checked when the device is not connected to the internet.
     *
-    * @param Duration $val The periodOfflineBeforeAccessCheck
+    * @param \DateInterval $val The periodOfflineBeforeAccessCheck
     *
     * @return ManagedAppProtection
     */
@@ -1097,15 +1097,15 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the periodOfflineBeforeWipeIsEnforced
     * The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
     *
-    * @return Duration|null The periodOfflineBeforeWipeIsEnforced
+    * @return \DateInterval|null The periodOfflineBeforeWipeIsEnforced
     */
     public function getPeriodOfflineBeforeWipeIsEnforced()
     {
         if (array_key_exists("periodOfflineBeforeWipeIsEnforced", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOfflineBeforeWipeIsEnforced"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOfflineBeforeWipeIsEnforced"])) {
+            if (is_a($this->_propDict["periodOfflineBeforeWipeIsEnforced"], "\DateInterval") || is_null($this->_propDict["periodOfflineBeforeWipeIsEnforced"])) {
                 return $this->_propDict["periodOfflineBeforeWipeIsEnforced"];
             } else {
-                $this->_propDict["periodOfflineBeforeWipeIsEnforced"] = new Duration($this->_propDict["periodOfflineBeforeWipeIsEnforced"]);
+                $this->_propDict["periodOfflineBeforeWipeIsEnforced"] = new \DateInterval($this->_propDict["periodOfflineBeforeWipeIsEnforced"]);
                 return $this->_propDict["periodOfflineBeforeWipeIsEnforced"];
             }
         }
@@ -1116,7 +1116,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Sets the periodOfflineBeforeWipeIsEnforced
     * The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
     *
-    * @param Duration $val The periodOfflineBeforeWipeIsEnforced
+    * @param \DateInterval $val The periodOfflineBeforeWipeIsEnforced
     *
     * @return ManagedAppProtection
     */
@@ -1130,15 +1130,15 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the periodOnlineBeforeAccessCheck
     * The period after which access is checked when the device is connected to the internet.
     *
-    * @return Duration|null The periodOnlineBeforeAccessCheck
+    * @return \DateInterval|null The periodOnlineBeforeAccessCheck
     */
     public function getPeriodOnlineBeforeAccessCheck()
     {
         if (array_key_exists("periodOnlineBeforeAccessCheck", $this->_propDict)) {
-            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["periodOnlineBeforeAccessCheck"])) {
+            if (is_a($this->_propDict["periodOnlineBeforeAccessCheck"], "\DateInterval") || is_null($this->_propDict["periodOnlineBeforeAccessCheck"])) {
                 return $this->_propDict["periodOnlineBeforeAccessCheck"];
             } else {
-                $this->_propDict["periodOnlineBeforeAccessCheck"] = new Duration($this->_propDict["periodOnlineBeforeAccessCheck"]);
+                $this->_propDict["periodOnlineBeforeAccessCheck"] = new \DateInterval($this->_propDict["periodOnlineBeforeAccessCheck"]);
                 return $this->_propDict["periodOnlineBeforeAccessCheck"];
             }
         }
@@ -1149,7 +1149,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Sets the periodOnlineBeforeAccessCheck
     * The period after which access is checked when the device is connected to the internet.
     *
-    * @param Duration $val The periodOnlineBeforeAccessCheck
+    * @param \DateInterval $val The periodOnlineBeforeAccessCheck
     *
     * @return ManagedAppProtection
     */
@@ -1225,15 +1225,15 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Gets the pinRequiredInsteadOfBiometricTimeout
     * Timeout in minutes for an app pin instead of non biometrics passcode
     *
-    * @return Duration|null The pinRequiredInsteadOfBiometricTimeout
+    * @return \DateInterval|null The pinRequiredInsteadOfBiometricTimeout
     */
     public function getPinRequiredInsteadOfBiometricTimeout()
     {
         if (array_key_exists("pinRequiredInsteadOfBiometricTimeout", $this->_propDict)) {
-            if (is_a($this->_propDict["pinRequiredInsteadOfBiometricTimeout"], "\Beta\Microsoft\Graph\Model\Duration") || is_null($this->_propDict["pinRequiredInsteadOfBiometricTimeout"])) {
+            if (is_a($this->_propDict["pinRequiredInsteadOfBiometricTimeout"], "\DateInterval") || is_null($this->_propDict["pinRequiredInsteadOfBiometricTimeout"])) {
                 return $this->_propDict["pinRequiredInsteadOfBiometricTimeout"];
             } else {
-                $this->_propDict["pinRequiredInsteadOfBiometricTimeout"] = new Duration($this->_propDict["pinRequiredInsteadOfBiometricTimeout"]);
+                $this->_propDict["pinRequiredInsteadOfBiometricTimeout"] = new \DateInterval($this->_propDict["pinRequiredInsteadOfBiometricTimeout"]);
                 return $this->_propDict["pinRequiredInsteadOfBiometricTimeout"];
             }
         }
@@ -1244,7 +1244,7 @@ class ManagedAppProtection extends ManagedAppPolicy
     * Sets the pinRequiredInsteadOfBiometricTimeout
     * Timeout in minutes for an app pin instead of non biometrics passcode
     *
-    * @param Duration $val The pinRequiredInsteadOfBiometricTimeout
+    * @param \DateInterval $val The pinRequiredInsteadOfBiometricTimeout
     *
     * @return ManagedAppProtection
     */

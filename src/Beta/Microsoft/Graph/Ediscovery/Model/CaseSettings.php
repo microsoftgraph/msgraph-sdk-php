@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Settings File
+* CaseSettings File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Ediscovery\Model;
 
 /**
-* Settings class
+* CaseSettings class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,10 @@ namespace Beta\Microsoft\Graph\Ediscovery\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Settings extends \Beta\Microsoft\Graph\Model\Entity
+class CaseSettings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the ocr
-    * The OCR (Optical Character Recognition) settings for the case.
     *
     * @return OcrSettings|null The ocr
     */
@@ -45,11 +44,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the ocr
-    * The OCR (Optical Character Recognition) settings for the case.
     *
     * @param OcrSettings $val The ocr
     *
-    * @return Settings
+    * @return CaseSettings
     */
     public function setOcr($val)
     {
@@ -59,7 +57,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the redundancyDetection
-    * The redundancy (near duplicate and email threading) detection settings for the case.
     *
     * @return RedundancyDetectionSettings|null The redundancyDetection
     */
@@ -78,11 +75,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the redundancyDetection
-    * The redundancy (near duplicate and email threading) detection settings for the case.
     *
     * @param RedundancyDetectionSettings $val The redundancyDetection
     *
-    * @return Settings
+    * @return CaseSettings
     */
     public function setRedundancyDetection($val)
     {
@@ -92,7 +88,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the topicModeling
-    * The Topic Modeling (Themes) settings for the case.
     *
     * @return TopicModelingSettings|null The topicModeling
     */
@@ -111,11 +106,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the topicModeling
-    * The Topic Modeling (Themes) settings for the case.
     *
     * @param TopicModelingSettings $val The topicModeling
     *
-    * @return Settings
+    * @return CaseSettings
     */
     public function setTopicModeling($val)
     {

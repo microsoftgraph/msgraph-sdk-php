@@ -26,6 +26,7 @@ class SimulationReport extends Entity
 
     /**
     * Gets the overview
+    * Overview of an attack simulation and training campaign.
     *
     * @return SimulationReportOverview|null The overview
     */
@@ -44,6 +45,7 @@ class SimulationReport extends Entity
 
     /**
     * Sets the overview
+    * Overview of an attack simulation and training campaign.
     *
     * @param SimulationReportOverview $val The value to assign to the overview
     *
@@ -57,6 +59,7 @@ class SimulationReport extends Entity
 
     /**
     * Gets the simulationUsers
+    * Represents users of a tenant and their online actions in an attack simulation and training campaign.
     *
     * @return UserSimulationDetails|null The simulationUsers
     */
@@ -75,6 +78,7 @@ class SimulationReport extends Entity
 
     /**
     * Sets the simulationUsers
+    * Represents users of a tenant and their online actions in an attack simulation and training campaign.
     *
     * @param UserSimulationDetails $val The value to assign to the simulationUsers
     *

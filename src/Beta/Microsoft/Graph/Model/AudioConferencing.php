@@ -81,7 +81,6 @@ class AudioConferencing extends Entity
     }
     /**
     * Gets the tollFreeNumber
-    * The toll-free number that connects to the Audio Conference Provider.
     *
     * @return string|null The tollFreeNumber
     */
@@ -96,7 +95,6 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the tollFreeNumber
-    * The toll-free number that connects to the Audio Conference Provider.
     *
     * @param string $val The value of the tollFreeNumber
     *
@@ -137,7 +135,6 @@ class AudioConferencing extends Entity
     }
     /**
     * Gets the tollNumber
-    * The toll number that connects to the Audio Conference Provider.
     *
     * @return string|null The tollNumber
     */
@@ -152,7 +149,6 @@ class AudioConferencing extends Entity
 
     /**
     * Sets the tollNumber
-    * The toll number that connects to the Audio Conference Provider.
     *
     * @param string $val The value of the tollNumber
     *

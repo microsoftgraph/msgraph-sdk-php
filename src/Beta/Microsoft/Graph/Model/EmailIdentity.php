@@ -25,6 +25,7 @@ class EmailIdentity extends Identity
 {
     /**
     * Gets the email
+    * Email address of the user.
     *
     * @return string|null The email
     */
@@ -39,6 +40,7 @@ class EmailIdentity extends Identity
 
     /**
     * Sets the email
+    * Email address of the user.
     *
     * @param string $val The value of the email
     *

@@ -25,6 +25,37 @@ class AppliedConditionalAccessPolicy extends Entity
 {
 
     /**
+    * Gets the authenticationStrength
+    *
+    * @return AuthenticationStrength|null The authenticationStrength
+    */
+    public function getAuthenticationStrength()
+    {
+        if (array_key_exists("authenticationStrength", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationStrength"], "\Beta\Microsoft\Graph\Model\AuthenticationStrength") || is_null($this->_propDict["authenticationStrength"])) {
+                return $this->_propDict["authenticationStrength"];
+            } else {
+                $this->_propDict["authenticationStrength"] = new AuthenticationStrength($this->_propDict["authenticationStrength"]);
+                return $this->_propDict["authenticationStrength"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authenticationStrength
+    *
+    * @param AuthenticationStrength $val The value to assign to the authenticationStrength
+    *
+    * @return AppliedConditionalAccessPolicy The AppliedConditionalAccessPolicy
+    */
+    public function setAuthenticationStrength($val)
+    {
+        $this->_propDict["authenticationStrength"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the conditionsNotSatisfied
     * Refers to the conditional access policy conditions that are not satisfied. Possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client.
     *

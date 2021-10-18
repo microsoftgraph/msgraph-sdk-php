@@ -89,4 +89,35 @@ class DeploymentSettings extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["rollout"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the safeguard
+    *
+    * @return SafeguardSettings|null The safeguard
+    */
+    public function getSafeguard()
+    {
+        if (array_key_exists("safeguard", $this->_propDict)) {
+            if (is_a($this->_propDict["safeguard"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\SafeguardSettings") || is_null($this->_propDict["safeguard"])) {
+                return $this->_propDict["safeguard"];
+            } else {
+                $this->_propDict["safeguard"] = new SafeguardSettings($this->_propDict["safeguard"]);
+                return $this->_propDict["safeguard"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the safeguard
+    *
+    * @param SafeguardSettings $val The value to assign to the safeguard
+    *
+    * @return DeploymentSettings The DeploymentSettings
+    */
+    public function setSafeguard($val)
+    {
+        $this->_propDict["safeguard"] = $val;
+         return $this;
+    }
 }

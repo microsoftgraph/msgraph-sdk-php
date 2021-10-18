@@ -25,6 +25,37 @@ class AppManagementConfiguration extends Entity
 {
 
     /**
+    * Gets the keyCredentials
+    *
+    * @return KeyCredentialConfiguration|null The keyCredentials
+    */
+    public function getKeyCredentials()
+    {
+        if (array_key_exists("keyCredentials", $this->_propDict)) {
+            if (is_a($this->_propDict["keyCredentials"], "\Beta\Microsoft\Graph\Model\KeyCredentialConfiguration") || is_null($this->_propDict["keyCredentials"])) {
+                return $this->_propDict["keyCredentials"];
+            } else {
+                $this->_propDict["keyCredentials"] = new KeyCredentialConfiguration($this->_propDict["keyCredentials"]);
+                return $this->_propDict["keyCredentials"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the keyCredentials
+    *
+    * @param KeyCredentialConfiguration $val The value to assign to the keyCredentials
+    *
+    * @return AppManagementConfiguration The AppManagementConfiguration
+    */
+    public function setKeyCredentials($val)
+    {
+        $this->_propDict["keyCredentials"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the passwordCredentials
     * Collection of password restrictions settings to be applied to an application or service principal
     *

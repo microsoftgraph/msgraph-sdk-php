@@ -25,6 +25,7 @@ class SimulationEvent extends Entity
 {
     /**
     * Gets the count
+    * Count of occurence of the simulation event in an attack simulation and training campaign.
     *
     * @return int|null The count
     */
@@ -39,6 +40,7 @@ class SimulationEvent extends Entity
 
     /**
     * Sets the count
+    * Count of occurence of the simulation event in an attack simulation and training campaign.
     *
     * @param int $val The value of the count
     *
@@ -51,6 +53,7 @@ class SimulationEvent extends Entity
     }
     /**
     * Gets the eventName
+    * Name of the simulation event in an attack simulation and training campaign.
     *
     * @return string|null The eventName
     */
@@ -65,6 +68,7 @@ class SimulationEvent extends Entity
 
     /**
     * Sets the eventName
+    * Name of the simulation event in an attack simulation and training campaign.
     *
     * @param string $val The value of the eventName
     *

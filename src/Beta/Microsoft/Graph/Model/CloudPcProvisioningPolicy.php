@@ -83,6 +83,37 @@ class CloudPcProvisioningPolicy extends Entity
     }
     
     /**
+    * Gets the domainJoinConfiguration
+    *
+    * @return CloudPcDomainJoinConfiguration|null The domainJoinConfiguration
+    */
+    public function getDomainJoinConfiguration()
+    {
+        if (array_key_exists("domainJoinConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["domainJoinConfiguration"], "\Beta\Microsoft\Graph\Model\CloudPcDomainJoinConfiguration") || is_null($this->_propDict["domainJoinConfiguration"])) {
+                return $this->_propDict["domainJoinConfiguration"];
+            } else {
+                $this->_propDict["domainJoinConfiguration"] = new CloudPcDomainJoinConfiguration($this->_propDict["domainJoinConfiguration"]);
+                return $this->_propDict["domainJoinConfiguration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the domainJoinConfiguration
+    *
+    * @param CloudPcDomainJoinConfiguration $val The domainJoinConfiguration
+    *
+    * @return CloudPcProvisioningPolicy
+    */
+    public function setDomainJoinConfiguration($val)
+    {
+        $this->_propDict["domainJoinConfiguration"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the imageDisplayName
     * The display name for the OS image you’re provisioning.
     *
@@ -170,6 +201,37 @@ class CloudPcProvisioningPolicy extends Entity
     public function setImageType($val)
     {
         $this->_propDict["imageType"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftManagedDesktop
+    *
+    * @return MicrosoftManagedDesktop|null The microsoftManagedDesktop
+    */
+    public function getMicrosoftManagedDesktop()
+    {
+        if (array_key_exists("microsoftManagedDesktop", $this->_propDict)) {
+            if (is_a($this->_propDict["microsoftManagedDesktop"], "\Beta\Microsoft\Graph\Model\MicrosoftManagedDesktop") || is_null($this->_propDict["microsoftManagedDesktop"])) {
+                return $this->_propDict["microsoftManagedDesktop"];
+            } else {
+                $this->_propDict["microsoftManagedDesktop"] = new MicrosoftManagedDesktop($this->_propDict["microsoftManagedDesktop"]);
+                return $this->_propDict["microsoftManagedDesktop"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the microsoftManagedDesktop
+    *
+    * @param MicrosoftManagedDesktop $val The microsoftManagedDesktop
+    *
+    * @return CloudPcProvisioningPolicy
+    */
+    public function setMicrosoftManagedDesktop($val)
+    {
+        $this->_propDict["microsoftManagedDesktop"] = $val;
         return $this;
     }
     
