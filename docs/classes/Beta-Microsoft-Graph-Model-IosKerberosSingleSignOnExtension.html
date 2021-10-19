@@ -247,6 +247,14 @@ Read-only.</dd>
 When true, this profile&#039;s realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_getManagedAppsInBundleIdACLIncluded">getManagedAppsInBundleIdACLIncluded()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the managedAppsInBundleIdACLIncluded
+When set to True, the Kerberos extension allows managed apps, and any apps entered with the app bundle ID to access the credential. When set to False, the Kerberos extension allows all apps to access the credential. Available for devices running iOS and iPadOS versions 14 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getODataType">getODataType()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -357,6 +365,14 @@ Gets or sets the case-sensitive realm name for this profile.</dd>
 Gets or sets whether to require authentication via Touch ID, Face ID, or a passcode to access the keychain entry.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_getSignInHelpText">getSignInHelpText()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the signInHelpText
+Text displayed to the user at the Kerberos sign in window. Available for devices running iOS and iPadOS versions 14 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_getUserPrincipalName">getUserPrincipalName()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -443,6 +459,14 @@ Read-only.</dd>
 </dt>
 <dd>Sets the isDefaultRealm
 When true, this profile&#039;s realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_setManagedAppsInBundleIdACLIncluded">setManagedAppsInBundleIdACLIncluded()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\IosKerberosSingleSignOnExtension">IosKerberosSingleSignOnExtension</abbr></a>    </span>
+</dt>
+<dd>Sets the managedAppsInBundleIdACLIncluded
+When set to True, the Kerberos extension allows managed apps, and any apps entered with the app bundle ID to access the credential. When set to False, the Kerberos extension allows all apps to access the credential. Available for devices running iOS and iPadOS versions 14 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setODataType">setODataType()</a>
@@ -546,6 +570,14 @@ Gets or sets the case-sensitive realm name for this profile.</dd>
 </dt>
 <dd>Sets the requireUserPresence
 Gets or sets whether to require authentication via Touch ID, Face ID, or a passcode to access the keychain entry.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_setSignInHelpText">setSignInHelpText()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\IosKerberosSingleSignOnExtension">IosKerberosSingleSignOnExtension</abbr></a>    </span>
+</dt>
+<dd>Sets the signInHelpText
+Text displayed to the user at the Kerberos sign in window. Available for devices running iOS and iPadOS versions 14 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_setUserPrincipalName">setUserPrincipalName()</a>
@@ -984,6 +1016,42 @@ When true, this profile&#039;s realm will be selected as the default. Necessary 
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getManagedAppsInBundleIdACLIncluded">
+        getManagedAppsInBundleIdACLIncluded()
+        <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_getManagedAppsInBundleIdACLIncluded" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">267</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the managedAppsInBundleIdACLIncluded
+When set to True, the Kerberos extension allows managed apps, and any apps entered with the app bundle ID to access the credential. When set to False, the Kerberos extension allows all apps to access the credential. Available for devices running iOS and iPadOS versions 14 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getManagedAppsInBundleIdACLIncluded</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The managedAppsInBundleIdACLIncluded</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getODataType">
         getODataType()
         <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getODataType" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1026,7 +1094,7 @@ When true, this profile&#039;s realm will be selected as the default. Necessary 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">267</span>
+    <span class="phpdocumentor-element-found-in__line">295</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordBlockModification
@@ -1062,7 +1130,7 @@ Enables or disables password changes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">295</span>
+    <span class="phpdocumentor-element-found-in__line">323</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordChangeUrl
@@ -1098,7 +1166,7 @@ Gets or sets the URL that the user will be sent to when they initiate a password
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">323</span>
+    <span class="phpdocumentor-element-found-in__line">351</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordEnableLocalSync
@@ -1134,7 +1202,7 @@ Enables or disables password syncing. This won&#039;t affect users logged in wit
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">351</span>
+    <span class="phpdocumentor-element-found-in__line">379</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordExpirationDays
@@ -1170,7 +1238,7 @@ Overrides the default password expiration in days. For most domains, this value 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">379</span>
+    <span class="phpdocumentor-element-found-in__line">407</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordExpirationNotificationDays
@@ -1206,7 +1274,7 @@ Gets or sets the number of days until the user is notified that their password w
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">407</span>
+    <span class="phpdocumentor-element-found-in__line">435</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinimumAgeDays
@@ -1242,7 +1310,7 @@ Gets or sets the minimum number of days until a user can change their password a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">435</span>
+    <span class="phpdocumentor-element-found-in__line">463</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordMinimumLength
@@ -1278,7 +1346,7 @@ Gets or sets the minimum length of a password.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">463</span>
+    <span class="phpdocumentor-element-found-in__line">491</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordPreviousPasswordBlockCount
@@ -1314,7 +1382,7 @@ Gets or sets the number of previous passwords to block.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">491</span>
+    <span class="phpdocumentor-element-found-in__line">519</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordRequireActiveDirectoryComplexity
@@ -1350,7 +1418,7 @@ Enables or disables whether passwords must meet Active Directory&#039;s complexi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">519</span>
+    <span class="phpdocumentor-element-found-in__line">547</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordRequirementsDescription
@@ -1421,7 +1489,7 @@ Gets or sets a description of the password complexity requirements.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">547</span>
+    <span class="phpdocumentor-element-found-in__line">575</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the realm
@@ -1457,7 +1525,7 @@ Gets or sets the case-sensitive realm name for this profile.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">575</span>
+    <span class="phpdocumentor-element-found-in__line">603</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the requireUserPresence
@@ -1486,6 +1554,42 @@ Gets or sets whether to require authentication via Touch ID, Face ID, or a passc
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getSignInHelpText">
+        getSignInHelpText()
+        <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_getSignInHelpText" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">631</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the signInHelpText
+Text displayed to the user at the Kerberos sign in window. Available for devices running iOS and iPadOS versions 14 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSignInHelpText</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The signInHelpText</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getUserPrincipalName">
         getUserPrincipalName()
         <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_getUserPrincipalName" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1493,7 +1597,7 @@ Gets or sets whether to require authentication via Touch ID, Face ID, or a passc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">603</span>
+    <span class="phpdocumentor-element-found-in__line">659</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
@@ -1981,6 +2085,53 @@ When true, this profile&#039;s realm will be selected as the default. Necessary 
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setManagedAppsInBundleIdACLIncluded">
+        setManagedAppsInBundleIdACLIncluded()
+        <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_setManagedAppsInBundleIdACLIncluded" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">284</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the managedAppsInBundleIdACLIncluded
+When set to True, the Kerberos extension allows managed apps, and any apps entered with the app bundle ID to access the credential. When set to False, the Kerberos extension allows all apps to access the credential. Available for devices running iOS and iPadOS versions 14 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setManagedAppsInBundleIdACLIncluded</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\IosKerberosSingleSignOnExtension">IosKerberosSingleSignOnExtension</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value of the managedAppsInBundleIdACLIncluded</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\IosKerberosSingleSignOnExtension">IosKerberosSingleSignOnExtension</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setODataType">
         setODataType()
         <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setODataType" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2034,7 +2185,7 @@ When true, this profile&#039;s realm will be selected as the default. Necessary 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">284</span>
+    <span class="phpdocumentor-element-found-in__line">312</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordBlockModification
@@ -2081,7 +2232,7 @@ Enables or disables password changes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">312</span>
+    <span class="phpdocumentor-element-found-in__line">340</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordChangeUrl
@@ -2128,7 +2279,7 @@ Gets or sets the URL that the user will be sent to when they initiate a password
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">340</span>
+    <span class="phpdocumentor-element-found-in__line">368</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordEnableLocalSync
@@ -2175,7 +2326,7 @@ Enables or disables password syncing. This won&#039;t affect users logged in wit
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">368</span>
+    <span class="phpdocumentor-element-found-in__line">396</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordExpirationDays
@@ -2222,7 +2373,7 @@ Overrides the default password expiration in days. For most domains, this value 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">396</span>
+    <span class="phpdocumentor-element-found-in__line">424</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordExpirationNotificationDays
@@ -2269,7 +2420,7 @@ Gets or sets the number of days until the user is notified that their password w
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">424</span>
+    <span class="phpdocumentor-element-found-in__line">452</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinimumAgeDays
@@ -2316,7 +2467,7 @@ Gets or sets the minimum number of days until a user can change their password a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">452</span>
+    <span class="phpdocumentor-element-found-in__line">480</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordMinimumLength
@@ -2363,7 +2514,7 @@ Gets or sets the minimum length of a password.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">480</span>
+    <span class="phpdocumentor-element-found-in__line">508</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordPreviousPasswordBlockCount
@@ -2410,7 +2561,7 @@ Gets or sets the number of previous passwords to block.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">508</span>
+    <span class="phpdocumentor-element-found-in__line">536</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordRequireActiveDirectoryComplexity
@@ -2457,7 +2608,7 @@ Enables or disables whether passwords must meet Active Directory&#039;s complexi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">536</span>
+    <span class="phpdocumentor-element-found-in__line">564</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordRequirementsDescription
@@ -2504,7 +2655,7 @@ Gets or sets a description of the password complexity requirements.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">564</span>
+    <span class="phpdocumentor-element-found-in__line">592</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the realm
@@ -2551,7 +2702,7 @@ Gets or sets the case-sensitive realm name for this profile.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">592</span>
+    <span class="phpdocumentor-element-found-in__line">620</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the requireUserPresence
@@ -2591,6 +2742,53 @@ Gets or sets whether to require authentication via Touch ID, Face ID, or a passc
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setSignInHelpText">
+        setSignInHelpText()
+        <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_setSignInHelpText" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">648</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the signInHelpText
+Text displayed to the user at the Kerberos sign in window. Available for devices running iOS and iPadOS versions 14 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSignInHelpText</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\IosKerberosSingleSignOnExtension">IosKerberosSingleSignOnExtension</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value of the signInHelpText</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\IosKerberosSingleSignOnExtension">IosKerberosSingleSignOnExtension</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setUserPrincipalName">
         setUserPrincipalName()
         <a href="classes/Beta-Microsoft-Graph-Model-IosKerberosSingleSignOnExtension.html#method_setUserPrincipalName" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2598,7 +2796,7 @@ Gets or sets whether to require authentication via Touch ID, Face ID, or a passc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-ioskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/IosKerberosSingleSignOnExtension.php">IosKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">620</span>
+    <span class="phpdocumentor-element-found-in__line">676</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName
