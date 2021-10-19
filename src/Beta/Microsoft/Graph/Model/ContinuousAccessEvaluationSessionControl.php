@@ -26,6 +26,7 @@ class ContinuousAccessEvaluationSessionControl extends Entity
 
     /**
     * Gets the mode
+    * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue.
     *
     * @return ContinuousAccessEvaluationMode|null The mode
     */
@@ -44,6 +45,7 @@ class ContinuousAccessEvaluationSessionControl extends Entity
 
     /**
     * Sets the mode
+    * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue.
     *
     * @param ContinuousAccessEvaluationMode $val The value to assign to the mode
     *

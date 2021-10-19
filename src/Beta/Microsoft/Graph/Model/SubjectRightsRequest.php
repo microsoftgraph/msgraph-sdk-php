@@ -26,6 +26,7 @@ class SubjectRightsRequest extends Entity
 {
     /**
     * Gets the assignedTo
+    * Identity that the request is assigned to.
     *
     * @return Identity|null The assignedTo
     */
@@ -44,6 +45,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the assignedTo
+    * Identity that the request is assigned to.
     *
     * @param Identity $val The assignedTo
     *
@@ -57,6 +59,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the closedDateTime
+    * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The closedDateTime
     */
@@ -75,6 +78,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the closedDateTime
+    * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The closedDateTime
     *
@@ -88,6 +92,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the createdBy
+    * Identity information for the entity that created the request.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -106,6 +111,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the createdBy
+    * Identity information for the entity that created the request.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -119,6 +125,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -137,6 +144,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -150,6 +158,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the dataSubject
+    * Information about the data subject.
     *
     * @return DataSubject|null The dataSubject
     */
@@ -168,6 +177,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the dataSubject
+    * Information about the data subject.
     *
     * @param DataSubject $val The dataSubject
     *
@@ -181,6 +191,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the dataSubjectType
+    * The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
     *
     * @return DataSubjectType|null The dataSubjectType
     */
@@ -199,6 +210,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the dataSubjectType
+    * The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
     *
     * @param DataSubjectType $val The dataSubjectType
     *
@@ -212,6 +224,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the description
+    * Description for the request.
     *
     * @return string|null The description
     */
@@ -226,6 +239,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the description
+    * Description for the request.
     *
     * @param string $val The description
     *
@@ -239,6 +253,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the displayName
+    * The name of the request.
     *
     * @return string|null The displayName
     */
@@ -253,6 +268,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the displayName
+    * The name of the request.
     *
     * @param string $val The displayName
     *
@@ -267,6 +283,7 @@ class SubjectRightsRequest extends Entity
 
      /** 
      * Gets the history
+    * Collection of history change events.
      *
      * @return array|null The history
      */
@@ -281,6 +298,7 @@ class SubjectRightsRequest extends Entity
     
     /** 
     * Sets the history
+    * Collection of history change events.
     *
     * @param SubjectRightsRequestHistory $val The history
     *
@@ -294,6 +312,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the insight
+    * Insight about the request.
     *
     * @return SubjectRightsRequestDetail|null The insight
     */
@@ -312,6 +331,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the insight
+    * Insight about the request.
     *
     * @param SubjectRightsRequestDetail $val The insight
     *
@@ -325,6 +345,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the internalDueDateTime
+    * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The internalDueDateTime
     */
@@ -343,6 +364,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the internalDueDateTime
+    * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The internalDueDateTime
     *
@@ -356,6 +378,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the lastModifiedBy
+    * Identity information for the entity that last modified the request.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -374,6 +397,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the lastModifiedBy
+    * Identity information for the entity that last modified the request.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -387,6 +411,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -405,6 +430,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -418,6 +444,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the regulations
+    * List of regulations that this request will fulfill.
     *
     * @return string|null The regulations
     */
@@ -432,6 +459,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the regulations
+    * List of regulations that this request will fulfill.
     *
     * @param string $val The regulations
     *
@@ -446,6 +474,7 @@ class SubjectRightsRequest extends Entity
 
      /** 
      * Gets the stages
+    * Information about the different stages for the request.
      *
      * @return array|null The stages
      */
@@ -460,6 +489,7 @@ class SubjectRightsRequest extends Entity
     
     /** 
     * Sets the stages
+    * Information about the different stages for the request.
     *
     * @param SubjectRightsRequestStageDetail $val The stages
     *
@@ -473,6 +503,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the status
+    * The status of the request.. Possible values are: active, closed, unknownFutureValue.
     *
     * @return SubjectRightsRequestStatus|null The status
     */
@@ -491,6 +522,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the status
+    * The status of the request.. Possible values are: active, closed, unknownFutureValue.
     *
     * @param SubjectRightsRequestStatus $val The status
     *
@@ -504,6 +536,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the type
+    * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
     *
     * @return SubjectRightsRequestType|null The type
     */
@@ -522,6 +555,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the type
+    * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
     *
     * @param SubjectRightsRequestType $val The type
     *
@@ -536,6 +570,7 @@ class SubjectRightsRequest extends Entity
 
      /** 
      * Gets the notes
+    * List of notes associcated with the request.
      *
      * @return array|null The notes
      */
@@ -550,6 +585,7 @@ class SubjectRightsRequest extends Entity
     
     /** 
     * Sets the notes
+    * List of notes associcated with the request.
     *
     * @param AuthoredNote $val The notes
     *
@@ -563,6 +599,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Gets the team
+    * Information about the Microsoft Teams team that was created for the request.
     *
     * @return Team|null The team
     */
@@ -581,6 +618,7 @@ class SubjectRightsRequest extends Entity
     
     /**
     * Sets the team
+    * Information about the Microsoft Teams team that was created for the request.
     *
     * @param Team $val The team
     *

@@ -87,7 +87,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the platform
-    * Platform setting can be applied on. Possible values are: none, macOS, windows10X, windows10.
+    * Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10.
     *
     * @return DeviceManagementConfigurationPlatforms|null The platform
     */
@@ -106,7 +106,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the platform
-    * Platform setting can be applied on. Possible values are: none, macOS, windows10X, windows10.
+    * Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10.
     *
     * @param DeviceManagementConfigurationPlatforms $val The value to assign to the platform
     *
@@ -120,7 +120,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Gets the technologies
-    * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
+    * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
     *
     * @return DeviceManagementConfigurationTechnologies|null The technologies
     */
@@ -139,7 +139,7 @@ class DeviceManagementConfigurationSettingApplicability extends Entity
 
     /**
     * Sets the technologies
-    * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
+    * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
     *
     * @param DeviceManagementConfigurationTechnologies $val The value to assign to the technologies
     *

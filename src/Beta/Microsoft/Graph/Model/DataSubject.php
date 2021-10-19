@@ -25,6 +25,7 @@ class DataSubject extends Entity
 {
     /**
     * Gets the email
+    * Email of the data subject.
     *
     * @return string|null The email
     */
@@ -39,6 +40,7 @@ class DataSubject extends Entity
 
     /**
     * Sets the email
+    * Email of the data subject.
     *
     * @param string $val The value of the email
     *
@@ -51,6 +53,7 @@ class DataSubject extends Entity
     }
     /**
     * Gets the firstName
+    * First name of the data subject.
     *
     * @return string|null The firstName
     */
@@ -65,6 +68,7 @@ class DataSubject extends Entity
 
     /**
     * Sets the firstName
+    * First name of the data subject.
     *
     * @param string $val The value of the firstName
     *
@@ -77,6 +81,7 @@ class DataSubject extends Entity
     }
     /**
     * Gets the lastName
+    * Last Name of the data subject.
     *
     * @return string|null The lastName
     */
@@ -91,6 +96,7 @@ class DataSubject extends Entity
 
     /**
     * Sets the lastName
+    * Last Name of the data subject.
     *
     * @param string $val The value of the lastName
     *
@@ -103,6 +109,7 @@ class DataSubject extends Entity
     }
     /**
     * Gets the residency
+    * The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
     *
     * @return string|null The residency
     */
@@ -117,6 +124,7 @@ class DataSubject extends Entity
 
     /**
     * Sets the residency
+    * The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
     *
     * @param string $val The value of the residency
     *
