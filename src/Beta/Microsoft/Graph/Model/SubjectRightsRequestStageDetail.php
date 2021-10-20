@@ -26,6 +26,7 @@ class SubjectRightsRequestStageDetail extends Entity
 
     /**
     * Gets the error
+    * Describes the error, if any, for the current stage.
     *
     * @return PublicError|null The error
     */
@@ -44,6 +45,7 @@ class SubjectRightsRequestStageDetail extends Entity
 
     /**
     * Sets the error
+    * Describes the error, if any, for the current stage.
     *
     * @param PublicError $val The value to assign to the error
     *
@@ -57,6 +59,7 @@ class SubjectRightsRequestStageDetail extends Entity
 
     /**
     * Gets the stage
+    * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
     *
     * @return SubjectRightsRequestStage|null The stage
     */
@@ -75,6 +78,7 @@ class SubjectRightsRequestStageDetail extends Entity
 
     /**
     * Sets the stage
+    * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
     *
     * @param SubjectRightsRequestStage $val The value to assign to the stage
     *
@@ -88,6 +92,7 @@ class SubjectRightsRequestStageDetail extends Entity
 
     /**
     * Gets the status
+    * Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
     *
     * @return SubjectRightsRequestStageStatus|null The status
     */
@@ -106,6 +111,7 @@ class SubjectRightsRequestStageDetail extends Entity
 
     /**
     * Sets the status
+    * Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
     *
     * @param SubjectRightsRequestStageStatus $val The value to assign to the status
     *

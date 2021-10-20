@@ -57,6 +57,7 @@ class Admin implements \JsonSerializable
     
     /**
     * Gets the serviceAnnouncement
+    * A container for service communications resources. Read-only.
     *
     * @return ServiceAnnouncement|null The serviceAnnouncement
     */
@@ -75,6 +76,7 @@ class Admin implements \JsonSerializable
     
     /**
     * Sets the serviceAnnouncement
+    * A container for service communications resources. Read-only.
     *
     * @param ServiceAnnouncement $val The serviceAnnouncement
     *
@@ -88,6 +90,7 @@ class Admin implements \JsonSerializable
     
     /**
     * Gets the windows
+    * A container for all Windows Update for Business deployment service functionality. Read-only.
     *
     * @return \Beta\Microsoft\Graph\WindowsUpdates\Model\Windows|null The windows
     */
@@ -106,6 +109,7 @@ class Admin implements \JsonSerializable
     
     /**
     * Sets the windows
+    * A container for all Windows Update for Business deployment service functionality. Read-only.
     *
     * @param \Beta\Microsoft\Graph\WindowsUpdates\Model\Windows $val The windows
     *

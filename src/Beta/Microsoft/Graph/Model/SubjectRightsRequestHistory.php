@@ -26,6 +26,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Gets the changedBy
+    * Identity of the user who changed the  subject rights request.
     *
     * @return IdentitySet|null The changedBy
     */
@@ -44,6 +45,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Sets the changedBy
+    * Identity of the user who changed the  subject rights request.
     *
     * @param IdentitySet $val The value to assign to the changedBy
     *
@@ -57,6 +59,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Gets the eventDateTime
+    * Data and time when the entity was changed.
     *
     * @return \DateTime|null The eventDateTime
     */
@@ -75,6 +78,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Sets the eventDateTime
+    * Data and time when the entity was changed.
     *
     * @param \DateTime $val The value to assign to the eventDateTime
     *
@@ -88,6 +92,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Gets the stage
+    * The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
     *
     * @return SubjectRightsRequestStage|null The stage
     */
@@ -106,6 +111,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Sets the stage
+    * The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
     *
     * @param SubjectRightsRequestStage $val The value to assign to the stage
     *
@@ -119,6 +125,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Gets the stageStatus
+    * The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
     *
     * @return SubjectRightsRequestStageStatus|null The stageStatus
     */
@@ -137,6 +144,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Sets the stageStatus
+    * The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
     *
     * @param SubjectRightsRequestStageStatus $val The value to assign to the stageStatus
     *
@@ -149,6 +157,7 @@ class SubjectRightsRequestHistory extends Entity
     }
     /**
     * Gets the type
+    * Type of history.
     *
     * @return string|null The type
     */
@@ -163,6 +172,7 @@ class SubjectRightsRequestHistory extends Entity
 
     /**
     * Sets the type
+    * Type of history.
     *
     * @param string $val The value of the type
     *

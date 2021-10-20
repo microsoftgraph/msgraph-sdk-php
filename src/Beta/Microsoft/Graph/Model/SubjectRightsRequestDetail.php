@@ -25,6 +25,7 @@ class SubjectRightsRequestDetail extends Entity
 {
     /**
     * Gets the excludedItemCount
+    * Count of items that are excluded from the request.
     *
     * @return int|null The excludedItemCount
     */
@@ -39,6 +40,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Sets the excludedItemCount
+    * Count of items that are excluded from the request.
     *
     * @param int $val The value of the excludedItemCount
     *
@@ -52,6 +54,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Gets the insightCounts
+    * Count of items per insight.
     *
     * @return KeyValuePair|null The insightCounts
     */
@@ -70,6 +73,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Sets the insightCounts
+    * Count of items per insight.
     *
     * @param KeyValuePair $val The value to assign to the insightCounts
     *
@@ -82,6 +86,7 @@ class SubjectRightsRequestDetail extends Entity
     }
     /**
     * Gets the itemCount
+    * Count of items found.
     *
     * @return int|null The itemCount
     */
@@ -96,6 +101,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Sets the itemCount
+    * Count of items found.
     *
     * @param int $val The value of the itemCount
     *
@@ -108,6 +114,7 @@ class SubjectRightsRequestDetail extends Entity
     }
     /**
     * Gets the itemNeedReview
+    * Count of item that need review.
     *
     * @return int|null The itemNeedReview
     */
@@ -122,6 +129,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Sets the itemNeedReview
+    * Count of item that need review.
     *
     * @param int $val The value of the itemNeedReview
     *
@@ -135,6 +143,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Gets the productItemCounts
+    * Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
     *
     * @return KeyValuePair|null The productItemCounts
     */
@@ -153,6 +162,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Sets the productItemCounts
+    * Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
     *
     * @param KeyValuePair $val The value to assign to the productItemCounts
     *
@@ -165,6 +175,7 @@ class SubjectRightsRequestDetail extends Entity
     }
     /**
     * Gets the signedOffItemCount
+    * Count of items signed off by the administrator.
     *
     * @return int|null The signedOffItemCount
     */
@@ -179,6 +190,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Sets the signedOffItemCount
+    * Count of items signed off by the administrator.
     *
     * @param int $val The value of the signedOffItemCount
     *
@@ -191,6 +203,7 @@ class SubjectRightsRequestDetail extends Entity
     }
     /**
     * Gets the totalItemSize
+    * Total item size in bytes.
     *
     * @return int|null The totalItemSize
     */
@@ -205,6 +218,7 @@ class SubjectRightsRequestDetail extends Entity
 
     /**
     * Sets the totalItemSize
+    * Total item size in bytes.
     *
     * @param int $val The value of the totalItemSize
     *
