@@ -175,7 +175,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Gets the enrollmentMode
-    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.
+    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice.
     *
     * @return AndroidDeviceOwnerEnrollmentMode|null The enrollmentMode
     */
@@ -194,7 +194,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Sets the enrollmentMode
-    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.
+    * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice.
     *
     * @param AndroidDeviceOwnerEnrollmentMode $val The enrollmentMode
     *
@@ -547,7 +547,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Gets the wifiSecurityType
-    * String that contains the wi-fi security type
+    * String that contains the wi-fi security type. Possible values are: none, wpa, wep.
     *
     * @return AospWifiSecurityType|null The wifiSecurityType
     */
@@ -566,7 +566,7 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     
     /**
     * Sets the wifiSecurityType
-    * String that contains the wi-fi security type
+    * String that contains the wi-fi security type. Possible values are: none, wpa, wep.
     *
     * @param AospWifiSecurityType $val The wifiSecurityType
     *

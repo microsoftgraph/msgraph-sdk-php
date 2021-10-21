@@ -26,6 +26,7 @@ class AuthoredNote extends Entity
 {
     /**
     * Gets the author
+    * Identity information about the note's author.
     *
     * @return Identity|null The author
     */
@@ -44,6 +45,7 @@ class AuthoredNote extends Entity
     
     /**
     * Sets the author
+    * Identity information about the note's author.
     *
     * @param Identity $val The author
     *
@@ -57,6 +59,7 @@ class AuthoredNote extends Entity
     
     /**
     * Gets the content
+    * The content of the note.
     *
     * @return ItemBody|null The content
     */
@@ -75,6 +78,7 @@ class AuthoredNote extends Entity
     
     /**
     * Sets the content
+    * The content of the note.
     *
     * @param ItemBody $val The content
     *
@@ -88,6 +92,7 @@ class AuthoredNote extends Entity
     
     /**
     * Gets the createdDateTime
+    * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +111,7 @@ class AuthoredNote extends Entity
     
     /**
     * Sets the createdDateTime
+    * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *

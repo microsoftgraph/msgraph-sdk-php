@@ -26,6 +26,7 @@ class MeetingRegistrationQuestion extends Entity
 {
     /**
     * Gets the answerInputType
+    * Answer input type of the custom registration question.
     *
     * @return AnswerInputType|null The answerInputType
     */
@@ -44,6 +45,7 @@ class MeetingRegistrationQuestion extends Entity
     
     /**
     * Sets the answerInputType
+    * Answer input type of the custom registration question.
     *
     * @param AnswerInputType $val The answerInputType
     *
@@ -57,6 +59,7 @@ class MeetingRegistrationQuestion extends Entity
     
     /**
     * Gets the answerOptions
+    * Answer options when answerInputType is radioButton.
     *
     * @return string|null The answerOptions
     */
@@ -71,6 +74,7 @@ class MeetingRegistrationQuestion extends Entity
     
     /**
     * Sets the answerOptions
+    * Answer options when answerInputType is radioButton.
     *
     * @param string $val The answerOptions
     *
@@ -84,6 +88,7 @@ class MeetingRegistrationQuestion extends Entity
     
     /**
     * Gets the displayName
+    * Display name of the custom registration question.
     *
     * @return string|null The displayName
     */
@@ -98,6 +103,7 @@ class MeetingRegistrationQuestion extends Entity
     
     /**
     * Sets the displayName
+    * Display name of the custom registration question.
     *
     * @param string $val The displayName
     *
@@ -111,6 +117,7 @@ class MeetingRegistrationQuestion extends Entity
     
     /**
     * Gets the isRequired
+    * Indicates whether the question is required. Default value is false.
     *
     * @return bool|null The isRequired
     */
@@ -125,6 +132,7 @@ class MeetingRegistrationQuestion extends Entity
     
     /**
     * Sets the isRequired
+    * Indicates whether the question is required. Default value is false.
     *
     * @param bool $val The isRequired
     *

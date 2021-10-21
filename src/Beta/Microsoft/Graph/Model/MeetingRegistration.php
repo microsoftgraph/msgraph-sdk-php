@@ -26,6 +26,7 @@ class MeetingRegistration extends Entity
 {
     /**
     * Gets the allowedRegistrant
+    * Specifies who can register for the meeting.
     *
     * @return MeetingAudience|null The allowedRegistrant
     */
@@ -44,6 +45,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Sets the allowedRegistrant
+    * Specifies who can register for the meeting.
     *
     * @param MeetingAudience $val The allowedRegistrant
     *
@@ -57,6 +59,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Gets the description
+    * The description of the meeting.
     *
     * @return string|null The description
     */
@@ -71,6 +74,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Sets the description
+    * The description of the meeting.
     *
     * @param string $val The description
     *
@@ -84,6 +88,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Gets the endDateTime
+    * The meeting end time in UTC.
     *
     * @return \DateTime|null The endDateTime
     */
@@ -102,6 +107,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Sets the endDateTime
+    * The meeting end time in UTC.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -115,6 +121,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Gets the registrationPageViewCount
+    * The number of times the registration page has been visited. Read-only.
     *
     * @return int|null The registrationPageViewCount
     */
@@ -129,6 +136,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Sets the registrationPageViewCount
+    * The number of times the registration page has been visited. Read-only.
     *
     * @param int $val The registrationPageViewCount
     *
@@ -142,6 +150,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Gets the registrationPageWebUrl
+    * The URL of the registration page. Read-only.
     *
     * @return string|null The registrationPageWebUrl
     */
@@ -156,6 +165,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Sets the registrationPageWebUrl
+    * The URL of the registration page. Read-only.
     *
     * @param string $val The registrationPageWebUrl
     *
@@ -170,6 +180,7 @@ class MeetingRegistration extends Entity
 
      /** 
      * Gets the speakers
+    * The meeting speaker's information.
      *
      * @return array|null The speakers
      */
@@ -184,6 +195,7 @@ class MeetingRegistration extends Entity
     
     /** 
     * Sets the speakers
+    * The meeting speaker's information.
     *
     * @param MeetingSpeaker $val The speakers
     *
@@ -197,6 +209,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Gets the startDateTime
+    * The meeting start time in UTC.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -215,6 +228,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Sets the startDateTime
+    * The meeting start time in UTC.
     *
     * @param \DateTime $val The startDateTime
     *
@@ -228,6 +242,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Gets the subject
+    * The subject of the meeting.
     *
     * @return string|null The subject
     */
@@ -242,6 +257,7 @@ class MeetingRegistration extends Entity
     
     /**
     * Sets the subject
+    * The subject of the meeting.
     *
     * @param string $val The subject
     *
@@ -256,6 +272,7 @@ class MeetingRegistration extends Entity
 
      /** 
      * Gets the customQuestions
+    * Custom registration questions.
      *
      * @return array|null The customQuestions
      */
@@ -270,6 +287,7 @@ class MeetingRegistration extends Entity
     
     /** 
     * Sets the customQuestions
+    * Custom registration questions.
     *
     * @param MeetingRegistrationQuestion $val The customQuestions
     *
@@ -284,6 +302,7 @@ class MeetingRegistration extends Entity
 
      /** 
      * Gets the registrants
+    * Registrants of the online meeting.
      *
      * @return array|null The registrants
      */
@@ -298,6 +317,7 @@ class MeetingRegistration extends Entity
     
     /** 
     * Sets the registrants
+    * Registrants of the online meeting.
     *
     * @param MeetingRegistrant $val The registrants
     *

@@ -92,6 +92,7 @@ class ConditionalAccessSessionControls extends Entity
 
     /**
     * Gets the continuousAccessEvaluation
+    * Session control for continuous access evaluation settings.
     *
     * @return ContinuousAccessEvaluationSessionControl|null The continuousAccessEvaluation
     */
@@ -110,6 +111,7 @@ class ConditionalAccessSessionControls extends Entity
 
     /**
     * Sets the continuousAccessEvaluation
+    * Session control for continuous access evaluation settings.
     *
     * @param ContinuousAccessEvaluationSessionControl $val The value to assign to the continuousAccessEvaluation
     *

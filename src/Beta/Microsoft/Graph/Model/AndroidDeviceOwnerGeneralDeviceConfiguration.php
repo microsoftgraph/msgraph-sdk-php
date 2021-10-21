@@ -1134,7 +1134,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
-    * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999
+    * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 0 to 9999999
     *
     * @return int|null The kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
     */
@@ -1149,7 +1149,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
-    * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999
+    * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 0 to 9999999
     *
     * @param int $val The kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
     *
@@ -1163,7 +1163,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Gets the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
-    * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999
+    * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 0 to 9999999
     *
     * @return int|null The kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
     */
@@ -1178,7 +1178,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     
     /**
     * Sets the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
-    * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999
+    * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 0 to 9999999
     *
     * @param int $val The kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
     *

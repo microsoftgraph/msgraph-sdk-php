@@ -951,6 +951,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the meetingAttendanceReport
+    * The attendance report of an online meeting. Read-only.
     *
     * @return MeetingAttendanceReport|null The meetingAttendanceReport
     */
@@ -969,6 +970,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the meetingAttendanceReport
+    * The attendance report of an online meeting. Read-only.
     *
     * @param MeetingAttendanceReport $val The meetingAttendanceReport
     *
@@ -982,6 +984,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the registration
+    * The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
     *
     * @return MeetingRegistration|null The registration
     */
@@ -1000,6 +1003,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the registration
+    * The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
     *
     * @param MeetingRegistration $val The registration
     *

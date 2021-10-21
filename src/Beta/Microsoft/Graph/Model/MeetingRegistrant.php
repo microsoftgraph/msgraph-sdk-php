@@ -27,6 +27,7 @@ class MeetingRegistrant extends Entity
 
      /** 
      * Gets the customQuestionAnswers
+    * The registrant's answer to custom questions.
      *
      * @return array|null The customQuestionAnswers
      */
@@ -41,6 +42,7 @@ class MeetingRegistrant extends Entity
     
     /** 
     * Sets the customQuestionAnswers
+    * The registrant's answer to custom questions.
     *
     * @param CustomQuestionAnswer $val The customQuestionAnswers
     *
@@ -54,6 +56,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Gets the email
+    * The email address of the registrant.
     *
     * @return string|null The email
     */
@@ -68,6 +71,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Sets the email
+    * The email address of the registrant.
     *
     * @param string $val The email
     *
@@ -81,6 +85,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Gets the firstName
+    * The first name of the registrant.
     *
     * @return string|null The firstName
     */
@@ -95,6 +100,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Sets the firstName
+    * The first name of the registrant.
     *
     * @param string $val The firstName
     *
@@ -108,6 +114,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Gets the joinWebUrl
+    * A unique web URL for the registrant to join the meeting. Read-only.
     *
     * @return string|null The joinWebUrl
     */
@@ -122,6 +129,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Sets the joinWebUrl
+    * A unique web URL for the registrant to join the meeting. Read-only.
     *
     * @param string $val The joinWebUrl
     *
@@ -135,6 +143,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Gets the lastName
+    * The last name of the registrant.
     *
     * @return string|null The lastName
     */
@@ -149,6 +158,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Sets the lastName
+    * The last name of the registrant.
     *
     * @param string $val The lastName
     *
@@ -162,6 +172,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Gets the registrationDateTime
+    * Time in UTC when the registrant registers for the meeting. Read-only.
     *
     * @return \DateTime|null The registrationDateTime
     */
@@ -180,6 +191,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Sets the registrationDateTime
+    * Time in UTC when the registrant registers for the meeting. Read-only.
     *
     * @param \DateTime $val The registrationDateTime
     *
@@ -193,6 +205,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Gets the status
+    * The registration status of the registrant. Read-only.
     *
     * @return MeetingRegistrantStatus|null The status
     */
@@ -211,6 +224,7 @@ class MeetingRegistrant extends Entity
     
     /**
     * Sets the status
+    * The registration status of the registrant. Read-only.
     *
     * @param MeetingRegistrantStatus $val The status
     *

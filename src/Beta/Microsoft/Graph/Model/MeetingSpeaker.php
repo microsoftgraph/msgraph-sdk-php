@@ -25,6 +25,7 @@ class MeetingSpeaker extends Entity
 {
     /**
     * Gets the bio
+    * Bio of the speaker.
     *
     * @return string|null The bio
     */
@@ -39,6 +40,7 @@ class MeetingSpeaker extends Entity
 
     /**
     * Sets the bio
+    * Bio of the speaker.
     *
     * @param string $val The value of the bio
     *
@@ -51,6 +53,7 @@ class MeetingSpeaker extends Entity
     }
     /**
     * Gets the displayName
+    * Display name of the speaker.
     *
     * @return string|null The displayName
     */
@@ -65,6 +68,7 @@ class MeetingSpeaker extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the speaker.
     *
     * @param string $val The value of the displayName
     *

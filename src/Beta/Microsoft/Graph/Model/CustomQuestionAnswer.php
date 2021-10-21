@@ -25,6 +25,7 @@ class CustomQuestionAnswer extends Entity
 {
     /**
     * Gets the displayName
+    * Display name of the custom registration question. Read-only.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class CustomQuestionAnswer extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the custom registration question. Read-only.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class CustomQuestionAnswer extends Entity
     }
     /**
     * Gets the questionId
+    * ID the custom registration question. Read-only.
     *
     * @return string|null The questionId
     */
@@ -65,6 +68,7 @@ class CustomQuestionAnswer extends Entity
 
     /**
     * Sets the questionId
+    * ID the custom registration question. Read-only.
     *
     * @param string $val The value of the questionId
     *
@@ -77,6 +81,7 @@ class CustomQuestionAnswer extends Entity
     }
     /**
     * Gets the value
+    * Answer to the custom registration question.
     *
     * @return string|null The value
     */
@@ -91,6 +96,7 @@ class CustomQuestionAnswer extends Entity
 
     /**
     * Sets the value
+    * Answer to the custom registration question.
     *
     * @param string $val The value of the value
     *
