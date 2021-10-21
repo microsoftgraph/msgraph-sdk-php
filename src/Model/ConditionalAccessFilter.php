@@ -59,7 +59,7 @@ class ConditionalAccessFilter extends Entity
     }
     /**
     * Gets the rule
-    * Rule syntax is similar to that used for membership rules for groups in Azure AD. For details, see rules with multiple expressions
+    * Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
     *
     * @return string|null The rule
     */
@@ -74,7 +74,7 @@ class ConditionalAccessFilter extends Entity
 
     /**
     * Sets the rule
-    * Rule syntax is similar to that used for membership rules for groups in Azure AD. For details, see rules with multiple expressions
+    * Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
     *
     * @param string $val The value of the rule
     *
