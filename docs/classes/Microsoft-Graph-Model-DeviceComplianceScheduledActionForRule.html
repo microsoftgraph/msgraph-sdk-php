@@ -200,7 +200,7 @@ Read-only.</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the ruleName
-Name of the rule which this scheduled action applies to.</dd>
+Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceComplianceScheduledActionForRule.html#method_getScheduledActionConfigurations">getScheduledActionConfigurations()</a>
@@ -208,7 +208,7 @@ Name of the rule which this scheduled action applies to.</dd>
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the scheduledActionConfigurations
-The list of scheduled action configurations for this compliance policy.</dd>
+The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -239,7 +239,7 @@ Read-only.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-DeviceComplianceScheduledActionForRule.html"><abbr title="\Microsoft\Graph\Model\DeviceComplianceScheduledActionForRule">DeviceComplianceScheduledActionForRule</abbr></a>    </span>
 </dt>
 <dd>Sets the ruleName
-Name of the rule which this scheduled action applies to.</dd>
+Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-DeviceComplianceScheduledActionForRule.html#method_setScheduledActionConfigurations">setScheduledActionConfigurations()</a>
@@ -247,7 +247,7 @@ Name of the rule which this scheduled action applies to.</dd>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-DeviceComplianceScheduledActionForRule.html"><abbr title="\Microsoft\Graph\Model\DeviceComplianceScheduledActionForRule">DeviceComplianceScheduledActionForRule</abbr></a>    </span>
 </dt>
 <dd>Sets the scheduledActionConfigurations
-The list of scheduled action configurations for this compliance policy.</dd>
+The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.</dd>
 
         </dl>
 
@@ -470,7 +470,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the ruleName
-Name of the rule which this scheduled action applies to.</p>
+Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -506,7 +506,7 @@ Name of the rule which this scheduled action applies to.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the scheduledActionConfigurations
-The list of scheduled action configurations for this compliance policy.</p>
+The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -671,7 +671,7 @@ Read-only.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ruleName
-Name of the rule which this scheduled action applies to.</p>
+Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -718,7 +718,7 @@ Name of the rule which this scheduled action applies to.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the scheduledActionConfigurations
-The list of scheduled action configurations for this compliance policy.</p>
+The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
