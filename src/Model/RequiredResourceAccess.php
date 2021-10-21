@@ -58,7 +58,7 @@ class RequiredResourceAccess extends Entity
     }
     /**
     * Gets the resourceAppId
-    * The unique identifier for the resource that the application requires access to.  This should be equal to the appId declared on the target resource application.
+    * The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
     *
     * @return string|null The resourceAppId
     */
@@ -73,7 +73,7 @@ class RequiredResourceAccess extends Entity
 
     /**
     * Sets the resourceAppId
-    * The unique identifier for the resource that the application requires access to.  This should be equal to the appId declared on the target resource application.
+    * The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
     *
     * @param string $val The value of the resourceAppId
     *
