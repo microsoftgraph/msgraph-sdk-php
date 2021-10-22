@@ -15,6 +15,7 @@ The following breaking changes were introduced in v2.0.0 with more detailed upgr
 - [Changes to Exception types thrown](#changes-to-exception-types-thrown-by-the-sdk)
 - [Deprecated support for Guzzle 6](#guzzle-6-deprecation).
 - [Introduced strongly typed method parameters and return type declarations where possible](#strongly-typed-method-parameters-and-return-types).
+- [Changes to the base `Enum` class](#changes-to-the-base-enum-class).
 
 ## Moved Beta models to the [Microsoft Graph Beta SDK](https://packagist.org/packages/microsoft/microsoft-graph-beta).
 In v1.x, we support models that match the [Microsoft Graph Beta API metadata](https://graph.microsoft.com/beta/$metadata).
@@ -181,6 +182,8 @@ Future model updates will however only be made on SDK versions >=2.0.0.
 Version 2 makes use of PHP 7's strong typing capabilities. The types chosen are aligned with what has been on v1.x's PHPDoc sections of
 various methods. Where there has been a breaking change, they have been outlined in previous sections of this guide.
 
+## Changes to the base Enum class
+`has()` and `toArray()` have been made static methods.
 
 # Bug Fixes
 Model getters expected to return a collection of entities now work as expected e.g. getting meeting attendees using v1.x of the SDK
