@@ -16,7 +16,7 @@ You can install the PHP SDK with Composer, either run `composer require microsof
 
 ### 1. Register your application
 
-Register your application to use the Microsoft Graph API by following the steps at [Register an an application with the Microsoft Identity platform](https://docs.microsoft.com/en-us/graph/auth-register-app-v2)
+Register your application to use the Microsoft Graph API by following the steps at [Register an an application with the Microsoft Identity platform](https://aka.ms/registerApplication)
 
 ### 2. Authenticate with the Microsoft Graph service
 
@@ -81,17 +81,15 @@ This sample will start you with a little Laravel project that helps you with reg
 
 ## Documentation and resources
 
-* [Documentation](https://github.com/microsoftgraph/msgraph-sdk-php/blob/master/docs/index.html)
+* [Documentation](docs/README.md)
 
-* [Wiki](https://github.com/microsoftgraph/msgraph-sdk-php/wiki)
+* [Examples](docs/Examples.md)
 
-* [Examples](https://github.com/microsoftgraph/msgraph-sdk-php/wiki/Example-calls)
-
-* [Microsoft Graph website](https://developer.microsoft.com/en-us/graph/)
+* [Microsoft Graph website](https://aka.ms/graph)
 
 ## Upgrading
 For detailed information on breaking changes, bug fixes and new functionality introduced during major upgrades, check out our
-[Upgrade Guide](https://github.com/microsoftgraph/msgraph-sdk-php/blob/feat/2.0.0/UPGRADING.md)
+[Upgrade Guide](UPGRADING.md)
 
 ## Develop
 
@@ -152,7 +150,7 @@ View or log issues on the [Issues](https://github.com/microsoftgraph/msgraph-sdk
 
 ## Contribute
 
-Please read our [Contributing](https://github.com/microsoftgraph/msgraph-sdk-php/blob/master/CONTRIBUTING.md) guidelines carefully for advice on how to contribute to this repo.
+Please read our [Contributing](CONTRIBUTING.md) guidelines carefully for advice on how to contribute to this repo.
 
 ## Copyright and license
 
