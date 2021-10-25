@@ -462,15 +462,15 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Gets the settings
     *
-    * @return Settings|null The settings
+    * @return CaseSettings|null The settings
     */
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Ediscovery\Model\Settings") || is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\Ediscovery\Model\CaseSettings") || is_null($this->_propDict["settings"])) {
                 return $this->_propDict["settings"];
             } else {
-                $this->_propDict["settings"] = new Settings($this->_propDict["settings"]);
+                $this->_propDict["settings"] = new CaseSettings($this->_propDict["settings"]);
                 return $this->_propDict["settings"];
             }
         }
@@ -480,7 +480,7 @@ class GraphCase extends \Beta\Microsoft\Graph\Model\Entity
     /**
     * Sets the settings
     *
-    * @param Settings $val The settings
+    * @param CaseSettings $val The settings
     *
     * @return GraphCase
     */

@@ -146,6 +146,34 @@ class ParticipantInfo extends Entity
         return $this;
     }
     /**
+    * Gets the participantId
+    * The participant ID of the participant. Read-only.
+    *
+    * @return string|null The participantId
+    */
+    public function getParticipantId()
+    {
+        if (array_key_exists("participantId", $this->_propDict)) {
+            return $this->_propDict["participantId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the participantId
+    * The participant ID of the participant. Read-only.
+    *
+    * @param string $val The value of the participantId
+    *
+    * @return ParticipantInfo
+    */
+    public function setParticipantId($val)
+    {
+        $this->_propDict["participantId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the platformId
     * The client platform ID of the participant. Read-only.
     *

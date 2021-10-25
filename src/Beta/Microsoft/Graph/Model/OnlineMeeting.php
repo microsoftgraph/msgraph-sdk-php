@@ -951,6 +951,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Gets the meetingAttendanceReport
+    * The attendance report of an online meeting. Read-only.
     *
     * @return MeetingAttendanceReport|null The meetingAttendanceReport
     */
@@ -969,6 +970,7 @@ class OnlineMeeting extends Entity
     
     /**
     * Sets the meetingAttendanceReport
+    * The attendance report of an online meeting. Read-only.
     *
     * @param MeetingAttendanceReport $val The meetingAttendanceReport
     *
@@ -977,6 +979,39 @@ class OnlineMeeting extends Entity
     public function setMeetingAttendanceReport($val)
     {
         $this->_propDict["meetingAttendanceReport"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the registration
+    * The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
+    *
+    * @return MeetingRegistration|null The registration
+    */
+    public function getRegistration()
+    {
+        if (array_key_exists("registration", $this->_propDict)) {
+            if (is_a($this->_propDict["registration"], "\Beta\Microsoft\Graph\Model\MeetingRegistration") || is_null($this->_propDict["registration"])) {
+                return $this->_propDict["registration"];
+            } else {
+                $this->_propDict["registration"] = new MeetingRegistration($this->_propDict["registration"]);
+                return $this->_propDict["registration"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the registration
+    * The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
+    *
+    * @param MeetingRegistration $val The registration
+    *
+    * @return OnlineMeeting
+    */
+    public function setRegistration($val)
+    {
+        $this->_propDict["registration"] = $val;
         return $this;
     }
     

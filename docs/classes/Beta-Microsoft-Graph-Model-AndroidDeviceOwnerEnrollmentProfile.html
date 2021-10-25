@@ -219,7 +219,7 @@ Total number of Android devices that have enrolled using this enrollment profile
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentMode.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentMode">AndroidDeviceOwnerEnrollmentMode</abbr></a>|null    </span>
 </dt>
 <dd>Gets the enrollmentMode
-The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.</dd>
+The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getEnrollmentTokenType">getEnrollmentTokenType()</a>
@@ -228,6 +228,14 @@ The enrollment mode of devices that use this enrollment profile. Possible values
 </dt>
 <dd>Gets the enrollmentTokenType
 The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getEnrollmentTokenUsageCount">getEnrollmentTokenUsageCount()</a>
+    <span>
+                        &nbsp;: int|null    </span>
+</dt>
+<dd>Gets the enrollmentTokenUsageCount
+Total number of AOSP devices that have enrolled using the current token.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -308,6 +316,38 @@ Date time the most recently created token will expire.</dd>
 Value of the most recently created token for this enrollment profile.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getWifiHidden">getWifiHidden()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the wifiHidden
+Boolean that indicates if hidden wifi networks are enabled</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getWifiPassword">getWifiPassword()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the wifiPassword
+String that contains the wi-fi login password</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getWifiSecurityType">getWifiSecurityType()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AospWifiSecurityType.html"><abbr title="\Beta\Microsoft\Graph\Model\AospWifiSecurityType">AospWifiSecurityType</abbr></a>|null    </span>
+</dt>
+<dd>Gets the wifiSecurityType
+String that contains the wi-fi security type. Possible values are: none, wpa, wep.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getWifiSsid">getWifiSsid()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the wifiSsid
+String that contains the wi-fi login ssid</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;    </span>
@@ -361,7 +401,7 @@ Total number of Android devices that have enrolled using this enrollment profile
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a>    </span>
 </dt>
 <dd>Sets the enrollmentMode
-The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.</dd>
+The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setEnrollmentTokenType">setEnrollmentTokenType()</a>
@@ -370,6 +410,14 @@ The enrollment mode of devices that use this enrollment profile. Possible values
 </dt>
 <dd>Sets the enrollmentTokenType
 The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setEnrollmentTokenUsageCount">setEnrollmentTokenUsageCount()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a>    </span>
+</dt>
+<dd>Sets the enrollmentTokenUsageCount
+Total number of AOSP devices that have enrolled using the current token.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -441,6 +489,38 @@ Date time the most recently created token will expire.</dd>
 </dt>
 <dd>Sets the tokenValue
 Value of the most recently created token for this enrollment profile.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setWifiHidden">setWifiHidden()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a>    </span>
+</dt>
+<dd>Sets the wifiHidden
+Boolean that indicates if hidden wifi networks are enabled</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setWifiPassword">setWifiPassword()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a>    </span>
+</dt>
+<dd>Sets the wifiPassword
+String that contains the wi-fi login password</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setWifiSecurityType">setWifiSecurityType()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a>    </span>
+</dt>
+<dd>Sets the wifiSecurityType
+String that contains the wi-fi security type. Possible values are: none, wpa, wep.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setWifiSsid">setWifiSsid()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a>    </span>
+</dt>
+<dd>Sets the wifiSsid
+String that contains the wi-fi login ssid</dd>
 
         </dl>
 
@@ -737,7 +817,7 @@ Total number of Android devices that have enrolled using this enrollment profile
 </aside>
 
         <p class="phpdocumentor-summary">Gets the enrollmentMode
-The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.</p>
+The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -798,6 +878,42 @@ The enrollment token type for an enrollment profile. Possible values are: defaul
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getEnrollmentTokenUsageCount">
+        getEnrollmentTokenUsageCount()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getEnrollmentTokenUsageCount" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">248</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the enrollmentTokenUsageCount
+Total number of AOSP devices that have enrolled using the current token.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getEnrollmentTokenUsageCount</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The enrollmentTokenUsageCount</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getId">
         getId()
         <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId" class="headerlink"><i class="fas fa-link"></i></a>
@@ -841,7 +957,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">248</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastModifiedDateTime
@@ -947,7 +1063,7 @@ Date time the enrollment profile was last modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">281</span>
+    <span class="phpdocumentor-element-found-in__line">310</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the qrCodeContent
@@ -983,7 +1099,7 @@ String used to generate a QR code for the token.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">310</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the qrCodeImage
@@ -1019,7 +1135,7 @@ String used to generate a QR code for the token.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">343</span>
+    <span class="phpdocumentor-element-found-in__line">372</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the roleScopeTagIds
@@ -1055,7 +1171,7 @@ List of Scope Tags for this Entity instance.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">372</span>
+    <span class="phpdocumentor-element-found-in__line">401</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenCreationDateTime
@@ -1091,7 +1207,7 @@ Date time the most recently created token was created.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">405</span>
+    <span class="phpdocumentor-element-found-in__line">434</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenExpirationDateTime
@@ -1127,7 +1243,7 @@ Date time the most recently created token will expire.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">438</span>
+    <span class="phpdocumentor-element-found-in__line">467</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenValue
@@ -1146,6 +1262,150 @@ Value of the most recently created token for this enrollment profile.</p>
     <span class="phpdocumentor-signature__response_type">string|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The tokenValue</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getWifiHidden">
+        getWifiHidden()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getWifiHidden" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">496</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the wifiHidden
+Boolean that indicates if hidden wifi networks are enabled</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getWifiHidden</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The wifiHidden</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getWifiPassword">
+        getWifiPassword()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getWifiPassword" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">525</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the wifiPassword
+String that contains the wi-fi login password</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getWifiPassword</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The wifiPassword</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getWifiSecurityType">
+        getWifiSecurityType()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getWifiSecurityType" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">554</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the wifiSecurityType
+String that contains the wi-fi security type. Possible values are: none, wpa, wep.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getWifiSecurityType</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AospWifiSecurityType.html"><abbr title="\Beta\Microsoft\Graph\Model\AospWifiSecurityType">AospWifiSecurityType</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AospWifiSecurityType.html"><abbr title="\Beta\Microsoft\Graph\Model\AospWifiSecurityType">AospWifiSecurityType</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The wifiSecurityType</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getWifiSsid">
+        getWifiSsid()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_getWifiSsid" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">587</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the wifiSsid
+String that contains the wi-fi login ssid</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getWifiSsid</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The wifiSsid</p>
 </section>
 
     
@@ -1438,7 +1698,7 @@ Total number of Android devices that have enrolled using this enrollment profile
 </aside>
 
         <p class="phpdocumentor-summary">Sets the enrollmentMode
-The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.</p>
+The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile, corporateOwnedAOSPUserlessDevice, corporateOwnedAOSPUserAssociatedDevice.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1521,6 +1781,53 @@ The enrollment token type for an enrollment profile. Possible values are: defaul
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setEnrollmentTokenUsageCount">
+        setEnrollmentTokenUsageCount()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setEnrollmentTokenUsageCount" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">265</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the enrollmentTokenUsageCount
+Total number of AOSP devices that have enrolled using the current token.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setEnrollmentTokenUsageCount</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The enrollmentTokenUsageCount</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setId">
         setId()
         <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1575,7 +1882,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">269</span>
+    <span class="phpdocumentor-element-found-in__line">298</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastModifiedDateTime
@@ -1668,7 +1975,7 @@ Date time the enrollment profile was last modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">298</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the qrCodeContent
@@ -1715,7 +2022,7 @@ String used to generate a QR code for the token.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">331</span>
+    <span class="phpdocumentor-element-found-in__line">360</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the qrCodeImage
@@ -1762,7 +2069,7 @@ String used to generate a QR code for the token.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">360</span>
+    <span class="phpdocumentor-element-found-in__line">389</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the roleScopeTagIds
@@ -1809,7 +2116,7 @@ List of Scope Tags for this Entity instance.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">393</span>
+    <span class="phpdocumentor-element-found-in__line">422</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenCreationDateTime
@@ -1856,7 +2163,7 @@ Date time the most recently created token was created.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">426</span>
+    <span class="phpdocumentor-element-found-in__line">455</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenExpirationDateTime
@@ -1903,7 +2210,7 @@ Date time the most recently created token will expire.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">455</span>
+    <span class="phpdocumentor-element-found-in__line">484</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenValue
@@ -1923,6 +2230,194 @@ Value of the most recently created token for this enrollment profile.</p>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The tokenValue</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setWifiHidden">
+        setWifiHidden()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setWifiHidden" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">513</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the wifiHidden
+Boolean that indicates if hidden wifi networks are enabled</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setWifiHidden</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The wifiHidden</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setWifiPassword">
+        setWifiPassword()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setWifiPassword" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">542</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the wifiPassword
+String that contains the wi-fi login password</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setWifiPassword</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The wifiPassword</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setWifiSecurityType">
+        setWifiSecurityType()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setWifiSecurityType" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">575</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the wifiSecurityType
+String that contains the wi-fi security type. Possible values are: none, wpa, wep.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setWifiSecurityType</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AospWifiSecurityType.html"><abbr title="\Beta\Microsoft\Graph\Model\AospWifiSecurityType">AospWifiSecurityType</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AospWifiSecurityType.html"><abbr title="\Beta\Microsoft\Graph\Model\AospWifiSecurityType">AospWifiSecurityType</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The wifiSecurityType</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setWifiSsid">
+        setWifiSsid()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html#method_setWifiSsid" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownerenrollmentprofile.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerEnrollmentProfile.php">AndroidDeviceOwnerEnrollmentProfile.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">604</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the wifiSsid
+String that contains the wi-fi login ssid</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setWifiSsid</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerEnrollmentProfile.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerEnrollmentProfile">AndroidDeviceOwnerEnrollmentProfile</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The wifiSsid</p>
 </section>
 
             </dd>

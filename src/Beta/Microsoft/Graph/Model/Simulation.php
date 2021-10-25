@@ -26,6 +26,7 @@ class Simulation extends Entity
 {
     /**
     * Gets the attackTechnique
+    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
     *
     * @return SimulationAttackTechnique|null The attackTechnique
     */
@@ -44,6 +45,7 @@ class Simulation extends Entity
     
     /**
     * Sets the attackTechnique
+    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
     *
     * @param SimulationAttackTechnique $val The attackTechnique
     *
@@ -57,6 +59,7 @@ class Simulation extends Entity
     
     /**
     * Gets the attackType
+    * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
     *
     * @return SimulationAttackType|null The attackType
     */
@@ -75,6 +78,7 @@ class Simulation extends Entity
     
     /**
     * Sets the attackType
+    * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
     *
     * @param SimulationAttackType $val The attackType
     *
@@ -88,6 +92,7 @@ class Simulation extends Entity
     
     /**
     * Gets the cleanupArtifacts
+    * Flag representing if artifacts were cleaned up in the attack simulation and training campaign.
     *
     * @return bool|null The cleanupArtifacts
     */
@@ -102,6 +107,7 @@ class Simulation extends Entity
     
     /**
     * Sets the cleanupArtifacts
+    * Flag representing if artifacts were cleaned up in the attack simulation and training campaign.
     *
     * @param bool $val The cleanupArtifacts
     *
@@ -115,6 +121,7 @@ class Simulation extends Entity
     
     /**
     * Gets the completionDateTime
+    * Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
     *
     * @return \DateTime|null The completionDateTime
     */
@@ -133,6 +140,7 @@ class Simulation extends Entity
     
     /**
     * Sets the completionDateTime
+    * Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
     *
     * @param \DateTime $val The completionDateTime
     *
@@ -146,6 +154,7 @@ class Simulation extends Entity
     
     /**
     * Gets the createdBy
+    * Identity of the user who created the attack simulation and training campaign.
     *
     * @return EmailIdentity|null The createdBy
     */
@@ -164,6 +173,7 @@ class Simulation extends Entity
     
     /**
     * Sets the createdBy
+    * Identity of the user who created the attack simulation and training campaign.
     *
     * @param EmailIdentity $val The createdBy
     *
@@ -177,6 +187,7 @@ class Simulation extends Entity
     
     /**
     * Gets the createdDateTime
+    * Date and time of creation of the attack simulation and training campaign.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -195,6 +206,7 @@ class Simulation extends Entity
     
     /**
     * Sets the createdDateTime
+    * Date and time of creation of the attack simulation and training campaign.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -208,6 +220,7 @@ class Simulation extends Entity
     
     /**
     * Gets the description
+    * Description of the attack simulation and training campaign.
     *
     * @return string|null The description
     */
@@ -222,6 +235,7 @@ class Simulation extends Entity
     
     /**
     * Sets the description
+    * Description of the attack simulation and training campaign.
     *
     * @param string $val The description
     *
@@ -235,6 +249,7 @@ class Simulation extends Entity
     
     /**
     * Gets the displayName
+    * Display name of the attack simulation and training campaign. Supports $filter and $orderby.
     *
     * @return string|null The displayName
     */
@@ -249,6 +264,7 @@ class Simulation extends Entity
     
     /**
     * Sets the displayName
+    * Display name of the attack simulation and training campaign. Supports $filter and $orderby.
     *
     * @param string $val The displayName
     *
@@ -262,6 +278,7 @@ class Simulation extends Entity
     
     /**
     * Gets the enableRegionTimezoneDelivery
+    * Flag representing whether to enable or disable timezone-aware delivery of phishing payload in the attack simulation and training campaign.
     *
     * @return bool|null The enableRegionTimezoneDelivery
     */
@@ -276,6 +293,7 @@ class Simulation extends Entity
     
     /**
     * Sets the enableRegionTimezoneDelivery
+    * Flag representing whether to enable or disable timezone-aware delivery of phishing payload in the attack simulation and training campaign.
     *
     * @param bool $val The enableRegionTimezoneDelivery
     *
@@ -289,6 +307,7 @@ class Simulation extends Entity
     
     /**
     * Gets the includeAllAccountTargets
+    * Flag representing inclusion of all the users of a tenant in the attack simulation and training campaign.
     *
     * @return bool|null The includeAllAccountTargets
     */
@@ -303,6 +322,7 @@ class Simulation extends Entity
     
     /**
     * Sets the includeAllAccountTargets
+    * Flag representing inclusion of all the users of a tenant in the attack simulation and training campaign.
     *
     * @param bool $val The includeAllAccountTargets
     *
@@ -316,6 +336,7 @@ class Simulation extends Entity
     
     /**
     * Gets the isAutomated
+    * Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
     *
     * @return bool|null The isAutomated
     */
@@ -330,6 +351,7 @@ class Simulation extends Entity
     
     /**
     * Sets the isAutomated
+    * Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
     *
     * @param bool $val The isAutomated
     *
@@ -343,6 +365,7 @@ class Simulation extends Entity
     
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who most recently modified the attack simulation and training campaign.
     *
     * @return EmailIdentity|null The lastModifiedBy
     */
@@ -361,6 +384,7 @@ class Simulation extends Entity
     
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who most recently modified the attack simulation and training campaign.
     *
     * @param EmailIdentity $val The lastModifiedBy
     *
@@ -374,6 +398,7 @@ class Simulation extends Entity
     
     /**
     * Gets the lastModifiedDateTime
+    * Date and time of the most recent modification of the attack simulation and training campaign.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -392,6 +417,7 @@ class Simulation extends Entity
     
     /**
     * Sets the lastModifiedDateTime
+    * Date and time of the most recent modification of the attack simulation and training campaign.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -405,6 +431,7 @@ class Simulation extends Entity
     
     /**
     * Gets the launchDateTime
+    * Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
     *
     * @return \DateTime|null The launchDateTime
     */
@@ -423,6 +450,7 @@ class Simulation extends Entity
     
     /**
     * Sets the launchDateTime
+    * Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
     *
     * @param \DateTime $val The launchDateTime
     *
@@ -436,6 +464,7 @@ class Simulation extends Entity
     
     /**
     * Gets the mode
+    * Mode of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: real, preview, unknownFutureValue.
     *
     * @return SimulationMode|null The mode
     */
@@ -454,6 +483,7 @@ class Simulation extends Entity
     
     /**
     * Sets the mode
+    * Mode of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: real, preview, unknownFutureValue.
     *
     * @param SimulationMode $val The mode
     *
@@ -467,6 +497,7 @@ class Simulation extends Entity
     
     /**
     * Gets the payloadDeliveryPlatform
+    * Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
     *
     * @return PayloadDeliveryPlatform|null The payloadDeliveryPlatform
     */
@@ -485,6 +516,7 @@ class Simulation extends Entity
     
     /**
     * Sets the payloadDeliveryPlatform
+    * Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
     *
     * @param PayloadDeliveryPlatform $val The payloadDeliveryPlatform
     *
@@ -498,6 +530,7 @@ class Simulation extends Entity
     
     /**
     * Gets the payloadSource
+    * Source of phishing payload in the attack simulation and training campaign. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @return PayloadSource|null The payloadSource
     */
@@ -516,6 +549,7 @@ class Simulation extends Entity
     
     /**
     * Sets the payloadSource
+    * Source of phishing payload in the attack simulation and training campaign. Possible values are: unknown, global, tenant, unknownFutureValue.
     *
     * @param PayloadSource $val The payloadSource
     *
@@ -529,6 +563,7 @@ class Simulation extends Entity
     
     /**
     * Gets the report
+    * Report of the attack simulation and training campaign.
     *
     * @return SimulationReport|null The report
     */
@@ -547,6 +582,7 @@ class Simulation extends Entity
     
     /**
     * Sets the report
+    * Report of the attack simulation and training campaign.
     *
     * @param SimulationReport $val The report
     *
@@ -560,6 +596,7 @@ class Simulation extends Entity
     
     /**
     * Gets the status
+    * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, inProgress, scheduled, completed, partiallyCompleted, failed, cancelled, excluded, deleted, included, unknownFutureValue.
     *
     * @return SimulationStatus|null The status
     */
@@ -578,6 +615,7 @@ class Simulation extends Entity
     
     /**
     * Sets the status
+    * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, inProgress, scheduled, completed, partiallyCompleted, failed, cancelled, excluded, deleted, included, unknownFutureValue.
     *
     * @param SimulationStatus $val The status
     *
@@ -591,6 +629,7 @@ class Simulation extends Entity
     
     /**
     * Gets the trainingAssignmentPreference
+    * Preference of the tenant admin to assign training to users in the attack simulation and training campaign. Possible values are: unknown, auto, manual, unknownFutureValue.
     *
     * @return TrainingAssignmentPreference|null The trainingAssignmentPreference
     */
@@ -609,6 +648,7 @@ class Simulation extends Entity
     
     /**
     * Sets the trainingAssignmentPreference
+    * Preference of the tenant admin to assign training to users in the attack simulation and training campaign. Possible values are: unknown, auto, manual, unknownFutureValue.
     *
     * @param TrainingAssignmentPreference $val The trainingAssignmentPreference
     *
@@ -622,6 +662,7 @@ class Simulation extends Entity
     
     /**
     * Gets the trainingContentPreference
+    * Preference of the tenant admin for the source of training content to assign to users in the attack simulation and training campaign. Possible values are: unknown, microsoft, custom, noTraining, unknownFutureValue.
     *
     * @return TrainingContentPreference|null The trainingContentPreference
     */
@@ -640,6 +681,7 @@ class Simulation extends Entity
     
     /**
     * Sets the trainingContentPreference
+    * Preference of the tenant admin for the source of training content to assign to users in the attack simulation and training campaign. Possible values are: unknown, microsoft, custom, noTraining, unknownFutureValue.
     *
     * @param TrainingContentPreference $val The trainingContentPreference
     *
@@ -653,6 +695,7 @@ class Simulation extends Entity
     
     /**
     * Gets the trainingDueDateTime
+    * Date and time before which the trainings need to be completed by users in the attack simulation and training campaign.
     *
     * @return \DateTime|null The trainingDueDateTime
     */
@@ -671,6 +714,7 @@ class Simulation extends Entity
     
     /**
     * Sets the trainingDueDateTime
+    * Date and time before which the trainings need to be completed by users in the attack simulation and training campaign.
     *
     * @param \DateTime $val The trainingDueDateTime
     *

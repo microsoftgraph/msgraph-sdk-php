@@ -234,7 +234,8 @@ Read-only.</dd>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the defaultRedirectUri</dd>
+<dd>Gets the defaultRedirectUri
+The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-DirectoryObject.html#method_getDeletedDateTime">getDeletedDateTime()</a>
@@ -430,7 +431,7 @@ The verified publisher domain for the application. Read-only. For more informati
                         &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
 </dt>
 <dd>Gets the requiredResourceAccess
-Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable. Supports $filter (eq, NOT, ge, le).</dd>
+Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, NOT, ge, le).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getSignInAudience">getSignInAudience()</a>
@@ -579,7 +580,8 @@ Read-only.</dd>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
-<dd>Sets the defaultRedirectUri</dd>
+<dd>Sets the defaultRedirectUri
+The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-DirectoryObject.html#method_setDeletedDateTime">setDeletedDateTime()</a>
@@ -768,7 +770,7 @@ The verified publisher domain for the application. Read-only. For more informati
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
 </dt>
 <dd>Sets the requiredResourceAccess
-Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable. Supports $filter (eq, NOT, ge, le).</dd>
+Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, NOT, ge, le).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setSignInAudience">setSignInAudience()</a>
@@ -1031,7 +1033,7 @@ The unique identifier for the application that is assigned to an application by 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">950</span>
+    <span class="phpdocumentor-element-found-in__line">952</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the appManagementPolicies
@@ -1103,7 +1105,7 @@ The collection of roles assigned to the application. With app role assignments, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1158</span>
+    <span class="phpdocumentor-element-found-in__line">1160</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the connectorGroup
@@ -1175,7 +1177,7 @@ The date and time the application was registered. The DateTimeOffset type repres
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">979</span>
+    <span class="phpdocumentor-element-found-in__line">981</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdOnBehalfOf
@@ -1211,10 +1213,11 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">157</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the defaultRedirectUri</p>
+        <p class="phpdocumentor-summary">Gets the defaultRedirectUri
+The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1281,7 +1284,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">185</span>
+    <span class="phpdocumentor-element-found-in__line">187</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the description
@@ -1317,7 +1320,7 @@ An optional description of the application. Supports $filter (eq, ne, NOT, ge, l
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">214</span>
+    <span class="phpdocumentor-element-found-in__line">216</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the disabledByMicrosoftStatus
@@ -1353,7 +1356,7 @@ Specifies whether Microsoft has disabled the registered application. Possible va
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">243</span>
+    <span class="phpdocumentor-element-found-in__line">245</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the displayName
@@ -1389,7 +1392,7 @@ The display name for the application. Supports $filter (eq, ne, NOT, ge, le, in,
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1013</span>
+    <span class="phpdocumentor-element-found-in__line">1015</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the extensionProperties
@@ -1425,7 +1428,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">272</span>
+    <span class="phpdocumentor-element-found-in__line">274</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the groupMembershipClaims
@@ -1461,7 +1464,7 @@ Configures the groups claim issued in a user or OAuth 2.0 access token that the 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1042</span>
+    <span class="phpdocumentor-element-found-in__line">1044</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the homeRealmDiscoveryPolicies</p>
@@ -1532,7 +1535,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">301</span>
+    <span class="phpdocumentor-element-found-in__line">303</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the identifierUris
@@ -1568,7 +1571,7 @@ The URIs that identify the application within its Azure AD tenant, or within a v
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">330</span>
+    <span class="phpdocumentor-element-found-in__line">332</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the info
@@ -1604,7 +1607,7 @@ Basic profile information of the application such as  app&#039;s marketing, supp
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">363</span>
+    <span class="phpdocumentor-element-found-in__line">365</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isDeviceOnlyAuthSupported
@@ -1640,7 +1643,7 @@ Specifies whether this application supports device authentication without a user
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">392</span>
+    <span class="phpdocumentor-element-found-in__line">394</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isFallbackPublicClient
@@ -1676,7 +1679,7 @@ Specifies the fallback application type as public client, such as an installed a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">422</span>
+    <span class="phpdocumentor-element-found-in__line">424</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the keyCredentials
@@ -1712,7 +1715,7 @@ The collection of key credentials associated with the application. Not nullable.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">451</span>
+    <span class="phpdocumentor-element-found-in__line">453</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the logo
@@ -1748,7 +1751,7 @@ The main logo for the application. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">484</span>
+    <span class="phpdocumentor-element-found-in__line">486</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the notes
@@ -1819,7 +1822,7 @@ Notes relevant for the management of the application.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">916</span>
+    <span class="phpdocumentor-element-found-in__line">918</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesPublishing
@@ -1855,7 +1858,7 @@ Represents the set of properties required for configuring Application Proxy for 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">513</span>
+    <span class="phpdocumentor-element-found-in__line">515</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the optionalClaims
@@ -1891,7 +1894,7 @@ Application developers can configure optional claims in their Azure AD applicati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1071</span>
+    <span class="phpdocumentor-element-found-in__line">1073</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the owners
@@ -1927,7 +1930,7 @@ Directory objects that are owners of the application. Read-only. Nullable. Suppo
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">546</span>
+    <span class="phpdocumentor-element-found-in__line">548</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the parentalControlSettings
@@ -1963,7 +1966,7 @@ Specifies parental control settings for an application.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">580</span>
+    <span class="phpdocumentor-element-found-in__line">582</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the passwordCredentials
@@ -2034,7 +2037,7 @@ The collection of password credentials associated with the application. Not null
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">609</span>
+    <span class="phpdocumentor-element-found-in__line">611</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the publicClient
@@ -2070,7 +2073,7 @@ Specifies settings for installed clients such as desktop or mobile devices.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">642</span>
+    <span class="phpdocumentor-element-found-in__line">644</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the publisherDomain
@@ -2106,11 +2109,11 @@ The verified publisher domain for the application. Read-only. For more informati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">672</span>
+    <span class="phpdocumentor-element-found-in__line">674</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the requiredResourceAccess
-Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable. Supports $filter (eq, NOT, ge, le).</p>
+Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, NOT, ge, le).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2142,7 +2145,7 @@ Specifies the resources that the application needs to access. This property also
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">701</span>
+    <span class="phpdocumentor-element-found-in__line">703</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the signInAudience
@@ -2178,7 +2181,7 @@ Specifies the Microsoft accounts that are supported for the current application.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">730</span>
+    <span class="phpdocumentor-element-found-in__line">732</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the spa
@@ -2214,7 +2217,7 @@ Specifies settings for a single-page application, including sign out URLs and re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1190</span>
+    <span class="phpdocumentor-element-found-in__line">1192</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the synchronization</p>
@@ -2249,7 +2252,7 @@ Specifies settings for a single-page application, including sign out URLs and re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">763</span>
+    <span class="phpdocumentor-element-found-in__line">765</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tags
@@ -2285,7 +2288,7 @@ Custom strings that can be used to categorize and identify the application. Not 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">792</span>
+    <span class="phpdocumentor-element-found-in__line">794</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenEncryptionKeyId
@@ -2321,7 +2324,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1100</span>
+    <span class="phpdocumentor-element-found-in__line">1102</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenIssuancePolicies</p>
@@ -2356,7 +2359,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1129</span>
+    <span class="phpdocumentor-element-found-in__line">1131</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenLifetimePolicies
@@ -2392,7 +2395,7 @@ The tokenLifetimePolicies assigned to this application. Supports $expand.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">821</span>
+    <span class="phpdocumentor-element-found-in__line">823</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the uniqueName
@@ -2428,7 +2431,7 @@ The unique identifier that can be assigned to an application as an alternative i
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">850</span>
+    <span class="phpdocumentor-element-found-in__line">852</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the verifiedPublisher
@@ -2464,7 +2467,7 @@ Specifies the verified publisher of the application.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">883</span>
+    <span class="phpdocumentor-element-found-in__line">885</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the web
@@ -2630,7 +2633,7 @@ The unique identifier for the application that is assigned to an application by 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">967</span>
+    <span class="phpdocumentor-element-found-in__line">969</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the appManagementPolicies
@@ -2724,7 +2727,7 @@ The collection of roles assigned to the application. With app role assignments, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1179</span>
+    <span class="phpdocumentor-element-found-in__line">1181</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the connectorGroup
@@ -2818,7 +2821,7 @@ The date and time the application was registered. The DateTimeOffset type repres
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1000</span>
+    <span class="phpdocumentor-element-found-in__line">1002</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdOnBehalfOf
@@ -2865,10 +2868,11 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">173</span>
+    <span class="phpdocumentor-element-found-in__line">175</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the defaultRedirectUri</p>
+        <p class="phpdocumentor-summary">Sets the defaultRedirectUri
+The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2957,7 +2961,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">202</span>
+    <span class="phpdocumentor-element-found-in__line">204</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the description
@@ -3004,7 +3008,7 @@ An optional description of the application. Supports $filter (eq, ne, NOT, ge, l
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">231</span>
+    <span class="phpdocumentor-element-found-in__line">233</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the disabledByMicrosoftStatus
@@ -3051,7 +3055,7 @@ Specifies whether Microsoft has disabled the registered application. Possible va
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">260</span>
+    <span class="phpdocumentor-element-found-in__line">262</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the displayName
@@ -3098,7 +3102,7 @@ The display name for the application. Supports $filter (eq, ne, NOT, ge, le, in,
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1030</span>
+    <span class="phpdocumentor-element-found-in__line">1032</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the extensionProperties
@@ -3145,7 +3149,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">289</span>
+    <span class="phpdocumentor-element-found-in__line">291</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the groupMembershipClaims
@@ -3192,7 +3196,7 @@ Configures the groups claim issued in a user or OAuth 2.0 access token that the 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1058</span>
+    <span class="phpdocumentor-element-found-in__line">1060</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the homeRealmDiscoveryPolicies</p>
@@ -3285,7 +3289,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">318</span>
+    <span class="phpdocumentor-element-found-in__line">320</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the identifierUris
@@ -3332,7 +3336,7 @@ The URIs that identify the application within its Azure AD tenant, or within a v
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">351</span>
+    <span class="phpdocumentor-element-found-in__line">353</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the info
@@ -3379,7 +3383,7 @@ Basic profile information of the application such as  app&#039;s marketing, supp
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">380</span>
+    <span class="phpdocumentor-element-found-in__line">382</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isDeviceOnlyAuthSupported
@@ -3426,7 +3430,7 @@ Specifies whether this application supports device authentication without a user
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">409</span>
+    <span class="phpdocumentor-element-found-in__line">411</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isFallbackPublicClient
@@ -3473,7 +3477,7 @@ Specifies the fallback application type as public client, such as an installed a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">439</span>
+    <span class="phpdocumentor-element-found-in__line">441</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the keyCredentials
@@ -3520,7 +3524,7 @@ The collection of key credentials associated with the application. Not nullable.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">472</span>
+    <span class="phpdocumentor-element-found-in__line">474</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the logo
@@ -3567,7 +3571,7 @@ The main logo for the application. Not nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">501</span>
+    <span class="phpdocumentor-element-found-in__line">503</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the notes
@@ -3660,7 +3664,7 @@ Notes relevant for the management of the application.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">937</span>
+    <span class="phpdocumentor-element-found-in__line">939</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesPublishing
@@ -3707,7 +3711,7 @@ Represents the set of properties required for configuring Application Proxy for 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">534</span>
+    <span class="phpdocumentor-element-found-in__line">536</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the optionalClaims
@@ -3754,7 +3758,7 @@ Application developers can configure optional claims in their Azure AD applicati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1088</span>
+    <span class="phpdocumentor-element-found-in__line">1090</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the owners
@@ -3801,7 +3805,7 @@ Directory objects that are owners of the application. Read-only. Nullable. Suppo
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">567</span>
+    <span class="phpdocumentor-element-found-in__line">569</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the parentalControlSettings
@@ -3848,7 +3852,7 @@ Specifies parental control settings for an application.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">597</span>
+    <span class="phpdocumentor-element-found-in__line">599</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the passwordCredentials
@@ -3895,7 +3899,7 @@ The collection of password credentials associated with the application. Not null
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">630</span>
+    <span class="phpdocumentor-element-found-in__line">632</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the publicClient
@@ -3942,7 +3946,7 @@ Specifies settings for installed clients such as desktop or mobile devices.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">659</span>
+    <span class="phpdocumentor-element-found-in__line">661</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the publisherDomain
@@ -3989,11 +3993,11 @@ The verified publisher domain for the application. Read-only. For more informati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">689</span>
+    <span class="phpdocumentor-element-found-in__line">691</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the requiredResourceAccess
-Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable. Supports $filter (eq, NOT, ge, le).</p>
+Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, NOT, ge, le).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4036,7 +4040,7 @@ Specifies the resources that the application needs to access. This property also
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">718</span>
+    <span class="phpdocumentor-element-found-in__line">720</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the signInAudience
@@ -4083,7 +4087,7 @@ Specifies the Microsoft accounts that are supported for the current application.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">751</span>
+    <span class="phpdocumentor-element-found-in__line">753</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the spa
@@ -4130,7 +4134,7 @@ Specifies settings for a single-page application, including sign out URLs and re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1210</span>
+    <span class="phpdocumentor-element-found-in__line">1212</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the synchronization</p>
@@ -4176,7 +4180,7 @@ Specifies settings for a single-page application, including sign out URLs and re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">780</span>
+    <span class="phpdocumentor-element-found-in__line">782</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tags
@@ -4223,7 +4227,7 @@ Custom strings that can be used to categorize and identify the application. Not 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">809</span>
+    <span class="phpdocumentor-element-found-in__line">811</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenEncryptionKeyId
@@ -4270,7 +4274,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1116</span>
+    <span class="phpdocumentor-element-found-in__line">1118</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenIssuancePolicies</p>
@@ -4316,7 +4320,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1146</span>
+    <span class="phpdocumentor-element-found-in__line">1148</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenLifetimePolicies
@@ -4363,7 +4367,7 @@ The tokenLifetimePolicies assigned to this application. Supports $expand.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">838</span>
+    <span class="phpdocumentor-element-found-in__line">840</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the uniqueName
@@ -4410,7 +4414,7 @@ The unique identifier that can be assigned to an application as an alternative i
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">871</span>
+    <span class="phpdocumentor-element-found-in__line">873</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the verifiedPublisher
@@ -4457,7 +4461,7 @@ Specifies the verified publisher of the application.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">904</span>
+    <span class="phpdocumentor-element-found-in__line">906</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the web

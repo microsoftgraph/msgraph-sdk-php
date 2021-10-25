@@ -571,7 +571,7 @@ Whether or not to automatically sign-out of MHS and Shared device mode applicati
                         &nbsp;: int|null    </span>
 </dt>
 <dd>Gets the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
-Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999</dd>
+Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 0 to 9999999</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_getKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds">getKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds()</a>
@@ -579,7 +579,7 @@ Number of seconds to give user notice before automatically signing them out for 
                         &nbsp;: int|null    </span>
 </dt>
 <dd>Gets the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
-Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999</dd>
+Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 0 to 9999999</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_getKioskModeManagedHomeScreenPinComplexity">getKioskModeManagedHomeScreenPinComplexity()</a>
@@ -1042,6 +1042,14 @@ Indicates whether or not to disable the capability to take screenshots.</dd>
 </dt>
 <dd>Gets the securityAllowDebuggingFeatures
 Indicates whether or not to block the user from enabling debugging features on the device.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_getSecurityDeveloperSettingsEnabled">getSecurityDeveloperSettingsEnabled()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the securityDeveloperSettingsEnabled
+Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_getSecurityRequireVerifyApps">getSecurityRequireVerifyApps()</a>
@@ -1705,7 +1713,7 @@ Whether or not to automatically sign-out of MHS and Shared device mode applicati
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerGeneralDeviceConfiguration">AndroidDeviceOwnerGeneralDeviceConfiguration</abbr></a>    </span>
 </dt>
 <dd>Sets the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
-Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999</dd>
+Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 0 to 9999999</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_setKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds">setKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds()</a>
@@ -1713,7 +1721,7 @@ Number of seconds to give user notice before automatically signing them out for 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerGeneralDeviceConfiguration">AndroidDeviceOwnerGeneralDeviceConfiguration</abbr></a>    </span>
 </dt>
 <dd>Sets the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
-Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999</dd>
+Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 0 to 9999999</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_setKioskModeManagedHomeScreenPinComplexity">setKioskModeManagedHomeScreenPinComplexity()</a>
@@ -2169,6 +2177,14 @@ Indicates whether or not to disable the capability to take screenshots.</dd>
 </dt>
 <dd>Sets the securityAllowDebuggingFeatures
 Indicates whether or not to block the user from enabling debugging features on the device.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_setSecurityDeveloperSettingsEnabled">setSecurityDeveloperSettingsEnabled()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerGeneralDeviceConfiguration">AndroidDeviceOwnerGeneralDeviceConfiguration</abbr></a>    </span>
+</dt>
+<dd>Sets the securityDeveloperSettingsEnabled
+Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_setSecurityRequireVerifyApps">setSecurityRequireVerifyApps()</a>
@@ -4305,7 +4321,7 @@ Whether or not to automatically sign-out of MHS and Shared device mode applicati
 </aside>
 
         <p class="phpdocumentor-summary">Gets the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
-Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999</p>
+Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 0 to 9999999</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4341,7 +4357,7 @@ Number of seconds to give user notice before automatically signing them out for 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
-Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999</p>
+Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 0 to 9999999</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -6452,6 +6468,42 @@ Indicates whether or not to block the user from enabling debugging features on t
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getSecurityDeveloperSettingsEnabled">
+        getSecurityDeveloperSettingsEnabled()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_getSecurityDeveloperSettingsEnabled" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">2794</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the securityDeveloperSettingsEnabled
+Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSecurityDeveloperSettingsEnabled</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The securityDeveloperSettingsEnabled</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getSecurityRequireVerifyApps">
         getSecurityRequireVerifyApps()
         <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_getSecurityRequireVerifyApps" class="headerlink"><i class="fas fa-link"></i></a>
@@ -6459,7 +6511,7 @@ Indicates whether or not to block the user from enabling debugging features on t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2794</span>
+    <span class="phpdocumentor-element-found-in__line">2823</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the securityRequireVerifyApps
@@ -6495,7 +6547,7 @@ Indicates whether or not verify apps is required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2823</span>
+    <span class="phpdocumentor-element-found-in__line">2852</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the statusBarBlocked
@@ -6531,7 +6583,7 @@ Indicates whether or the status bar is disabled, including notifications, quick 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2853</span>
+    <span class="phpdocumentor-element-found-in__line">2882</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the stayOnModes
@@ -6567,7 +6619,7 @@ List of modes in which the device&#039;s display will stay powered-on. This coll
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2882</span>
+    <span class="phpdocumentor-element-found-in__line">2911</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the storageAllowUsb
@@ -6603,7 +6655,7 @@ Indicates whether or not to allow USB mass storage.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2911</span>
+    <span class="phpdocumentor-element-found-in__line">2940</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the storageBlockExternalMedia
@@ -6639,7 +6691,7 @@ Indicates whether or not to block external media.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2940</span>
+    <span class="phpdocumentor-element-found-in__line">2969</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the storageBlockUsbFileTransfer
@@ -6711,7 +6763,7 @@ Indicates whether or not the underlying Device Configuration supports the assign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2969</span>
+    <span class="phpdocumentor-element-found-in__line">2998</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the systemUpdateInstallType
@@ -6747,7 +6799,7 @@ The type of system update configuration. Possible values are: deviceDefault, pos
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3002</span>
+    <span class="phpdocumentor-element-found-in__line">3031</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the systemUpdateWindowEndMinutesAfterMidnight
@@ -6783,7 +6835,7 @@ Indicates the number of minutes after midnight that the system update window end
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3031</span>
+    <span class="phpdocumentor-element-found-in__line">3060</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the systemUpdateWindowStartMinutesAfterMidnight
@@ -6819,7 +6871,7 @@ Indicates the number of minutes after midnight that the system update window sta
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3060</span>
+    <span class="phpdocumentor-element-found-in__line">3089</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the systemWindowsBlocked
@@ -6855,7 +6907,7 @@ Whether or not to block Android system prompt windows, like toasts, phone activi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3089</span>
+    <span class="phpdocumentor-element-found-in__line">3118</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the usersBlockAdd
@@ -6891,7 +6943,7 @@ Indicates whether or not adding users and profiles is disabled.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3118</span>
+    <span class="phpdocumentor-element-found-in__line">3147</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the usersBlockRemove
@@ -7035,7 +7087,7 @@ Version of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3147</span>
+    <span class="phpdocumentor-element-found-in__line">3176</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the volumeBlockAdjustment
@@ -7071,7 +7123,7 @@ Indicates whether or not adjusting the master volume is disabled.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3176</span>
+    <span class="phpdocumentor-element-found-in__line">3205</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the vpnAlwaysOnLockdownMode
@@ -7107,7 +7159,7 @@ If an always on VPN package name is specified, whether or not to lock network tr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3205</span>
+    <span class="phpdocumentor-element-found-in__line">3234</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the vpnAlwaysOnPackageIdentifier
@@ -7143,7 +7195,7 @@ Android app package name for app that will handle an always-on VPN connection.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3234</span>
+    <span class="phpdocumentor-element-found-in__line">3263</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wifiBlockEditConfigurations
@@ -7179,7 +7231,7 @@ Indicates whether or not to block the user from editing the wifi connection sett
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3263</span>
+    <span class="phpdocumentor-element-found-in__line">3292</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the wifiBlockEditPolicyDefinedConfigurations
@@ -7215,7 +7267,7 @@ Indicates whether or not to block the user from editing just the networks define
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3292</span>
+    <span class="phpdocumentor-element-found-in__line">3321</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordExpirationDays
@@ -7251,7 +7303,7 @@ Indicates the number of days that a work profile password can be set before it e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3321</span>
+    <span class="phpdocumentor-element-found-in__line">3350</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordMinimumLength
@@ -7287,7 +7339,7 @@ Indicates the minimum length of the work profile password. Valid values 4 to 16<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3350</span>
+    <span class="phpdocumentor-element-found-in__line">3379</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordMinimumLetterCharacters
@@ -7323,7 +7375,7 @@ Indicates the minimum number of letter characters required for the work profile 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3379</span>
+    <span class="phpdocumentor-element-found-in__line">3408</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordMinimumLowerCaseCharacters
@@ -7359,7 +7411,7 @@ Indicates the minimum number of lower-case characters required for the work prof
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3408</span>
+    <span class="phpdocumentor-element-found-in__line">3437</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordMinimumNonLetterCharacters
@@ -7395,7 +7447,7 @@ Indicates the minimum number of non-letter characters required for the work prof
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3437</span>
+    <span class="phpdocumentor-element-found-in__line">3466</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordMinimumNumericCharacters
@@ -7431,7 +7483,7 @@ Indicates the minimum number of numeric characters required for the work profile
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3466</span>
+    <span class="phpdocumentor-element-found-in__line">3495</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordMinimumSymbolCharacters
@@ -7467,7 +7519,7 @@ Indicates the minimum number of symbol characters required for the work profile 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3495</span>
+    <span class="phpdocumentor-element-found-in__line">3524</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordMinimumUpperCaseCharacters
@@ -7503,7 +7555,7 @@ Indicates the minimum number of upper-case letter characters required for the wo
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3524</span>
+    <span class="phpdocumentor-element-found-in__line">3553</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordPreviousPasswordCountToBlock
@@ -7539,7 +7591,7 @@ Indicates the length of the work profile password history, where the user will n
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3553</span>
+    <span class="phpdocumentor-element-found-in__line">3582</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordRequiredType
@@ -7575,7 +7627,7 @@ Indicates the minimum password quality required on the work profile password. Po
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3586</span>
+    <span class="phpdocumentor-element-found-in__line">3615</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset
@@ -9954,7 +10006,7 @@ Whether or not to automatically sign-out of MHS and Shared device mode applicati
 </aside>
 
         <p class="phpdocumentor-summary">Sets the kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds
-Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999</p>
+Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 0 to 9999999</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -10001,7 +10053,7 @@ Number of seconds to give user notice before automatically signing them out for 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds
-Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999</p>
+Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 0 to 9999999</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -12715,6 +12767,53 @@ Indicates whether or not to block the user from enabling debugging features on t
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setSecurityDeveloperSettingsEnabled">
+        setSecurityDeveloperSettingsEnabled()
+        <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_setSecurityDeveloperSettingsEnabled" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">2811</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the securityDeveloperSettingsEnabled
+Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSecurityDeveloperSettingsEnabled</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerGeneralDeviceConfiguration">AndroidDeviceOwnerGeneralDeviceConfiguration</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The securityDeveloperSettingsEnabled</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html"><abbr title="\Beta\Microsoft\Graph\Model\AndroidDeviceOwnerGeneralDeviceConfiguration">AndroidDeviceOwnerGeneralDeviceConfiguration</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setSecurityRequireVerifyApps">
         setSecurityRequireVerifyApps()
         <a href="classes/Beta-Microsoft-Graph-Model-AndroidDeviceOwnerGeneralDeviceConfiguration.html#method_setSecurityRequireVerifyApps" class="headerlink"><i class="fas fa-link"></i></a>
@@ -12722,7 +12821,7 @@ Indicates whether or not to block the user from enabling debugging features on t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2811</span>
+    <span class="phpdocumentor-element-found-in__line">2840</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the securityRequireVerifyApps
@@ -12769,7 +12868,7 @@ Indicates whether or not verify apps is required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2840</span>
+    <span class="phpdocumentor-element-found-in__line">2869</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the statusBarBlocked
@@ -12816,7 +12915,7 @@ Indicates whether or the status bar is disabled, including notifications, quick 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2870</span>
+    <span class="phpdocumentor-element-found-in__line">2899</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the stayOnModes
@@ -12863,7 +12962,7 @@ List of modes in which the device&#039;s display will stay powered-on. This coll
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2899</span>
+    <span class="phpdocumentor-element-found-in__line">2928</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the storageAllowUsb
@@ -12910,7 +13009,7 @@ Indicates whether or not to allow USB mass storage.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2928</span>
+    <span class="phpdocumentor-element-found-in__line">2957</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the storageBlockExternalMedia
@@ -12957,7 +13056,7 @@ Indicates whether or not to block external media.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2957</span>
+    <span class="phpdocumentor-element-found-in__line">2986</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the storageBlockUsbFileTransfer
@@ -13051,7 +13150,7 @@ Indicates whether or not the underlying Device Configuration supports the assign
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2990</span>
+    <span class="phpdocumentor-element-found-in__line">3019</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the systemUpdateInstallType
@@ -13098,7 +13197,7 @@ The type of system update configuration. Possible values are: deviceDefault, pos
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3019</span>
+    <span class="phpdocumentor-element-found-in__line">3048</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the systemUpdateWindowEndMinutesAfterMidnight
@@ -13145,7 +13244,7 @@ Indicates the number of minutes after midnight that the system update window end
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3048</span>
+    <span class="phpdocumentor-element-found-in__line">3077</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the systemUpdateWindowStartMinutesAfterMidnight
@@ -13192,7 +13291,7 @@ Indicates the number of minutes after midnight that the system update window sta
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3077</span>
+    <span class="phpdocumentor-element-found-in__line">3106</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the systemWindowsBlocked
@@ -13239,7 +13338,7 @@ Whether or not to block Android system prompt windows, like toasts, phone activi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3106</span>
+    <span class="phpdocumentor-element-found-in__line">3135</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the usersBlockAdd
@@ -13286,7 +13385,7 @@ Indicates whether or not adding users and profiles is disabled.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3135</span>
+    <span class="phpdocumentor-element-found-in__line">3164</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the usersBlockRemove
@@ -13474,7 +13573,7 @@ Version of the device configuration.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3164</span>
+    <span class="phpdocumentor-element-found-in__line">3193</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the volumeBlockAdjustment
@@ -13521,7 +13620,7 @@ Indicates whether or not adjusting the master volume is disabled.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3193</span>
+    <span class="phpdocumentor-element-found-in__line">3222</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the vpnAlwaysOnLockdownMode
@@ -13568,7 +13667,7 @@ If an always on VPN package name is specified, whether or not to lock network tr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3222</span>
+    <span class="phpdocumentor-element-found-in__line">3251</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the vpnAlwaysOnPackageIdentifier
@@ -13615,7 +13714,7 @@ Android app package name for app that will handle an always-on VPN connection.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3251</span>
+    <span class="phpdocumentor-element-found-in__line">3280</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wifiBlockEditConfigurations
@@ -13662,7 +13761,7 @@ Indicates whether or not to block the user from editing the wifi connection sett
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3280</span>
+    <span class="phpdocumentor-element-found-in__line">3309</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the wifiBlockEditPolicyDefinedConfigurations
@@ -13709,7 +13808,7 @@ Indicates whether or not to block the user from editing just the networks define
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3309</span>
+    <span class="phpdocumentor-element-found-in__line">3338</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordExpirationDays
@@ -13756,7 +13855,7 @@ Indicates the number of days that a work profile password can be set before it e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3338</span>
+    <span class="phpdocumentor-element-found-in__line">3367</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordMinimumLength
@@ -13803,7 +13902,7 @@ Indicates the minimum length of the work profile password. Valid values 4 to 16<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3367</span>
+    <span class="phpdocumentor-element-found-in__line">3396</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordMinimumLetterCharacters
@@ -13850,7 +13949,7 @@ Indicates the minimum number of letter characters required for the work profile 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3396</span>
+    <span class="phpdocumentor-element-found-in__line">3425</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordMinimumLowerCaseCharacters
@@ -13897,7 +13996,7 @@ Indicates the minimum number of lower-case characters required for the work prof
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3425</span>
+    <span class="phpdocumentor-element-found-in__line">3454</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordMinimumNonLetterCharacters
@@ -13944,7 +14043,7 @@ Indicates the minimum number of non-letter characters required for the work prof
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3454</span>
+    <span class="phpdocumentor-element-found-in__line">3483</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordMinimumNumericCharacters
@@ -13991,7 +14090,7 @@ Indicates the minimum number of numeric characters required for the work profile
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3483</span>
+    <span class="phpdocumentor-element-found-in__line">3512</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordMinimumSymbolCharacters
@@ -14038,7 +14137,7 @@ Indicates the minimum number of symbol characters required for the work profile 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3512</span>
+    <span class="phpdocumentor-element-found-in__line">3541</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordMinimumUpperCaseCharacters
@@ -14085,7 +14184,7 @@ Indicates the minimum number of upper-case letter characters required for the wo
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3541</span>
+    <span class="phpdocumentor-element-found-in__line">3570</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordPreviousPasswordCountToBlock
@@ -14132,7 +14231,7 @@ Indicates the length of the work profile password history, where the user will n
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3574</span>
+    <span class="phpdocumentor-element-found-in__line">3603</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordRequiredType
@@ -14179,7 +14278,7 @@ Indicates the minimum password quality required on the work profile password. Po
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php"><a href="files/src-beta-microsoft-graph-model-androiddeviceownergeneraldeviceconfiguration.html"><abbr title="src/Beta/Microsoft/Graph/Model/AndroidDeviceOwnerGeneralDeviceConfiguration.php">AndroidDeviceOwnerGeneralDeviceConfiguration.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3603</span>
+    <span class="phpdocumentor-element-found-in__line">3632</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the workProfilePasswordSignInFailureCountBeforeFactoryReset

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Settings File
+* CaseSettings File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Ediscovery\Model;
 
 /**
-* Settings class
+* CaseSettings class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Ediscovery\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Settings extends \Beta\Microsoft\Graph\Model\Entity
+class CaseSettings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the ocr
@@ -49,7 +49,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param OcrSettings $val The ocr
     *
-    * @return Settings
+    * @return CaseSettings
     */
     public function setOcr($val)
     {
@@ -82,7 +82,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param RedundancyDetectionSettings $val The redundancyDetection
     *
-    * @return Settings
+    * @return CaseSettings
     */
     public function setRedundancyDetection($val)
     {
@@ -115,7 +115,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     *
     * @param TopicModelingSettings $val The topicModeling
     *
-    * @return Settings
+    * @return CaseSettings
     */
     public function setTopicModeling($val)
     {

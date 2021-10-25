@@ -27,6 +27,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties
 
      /** 
      * Gets the localizations
+    * Add different branding based on a locale.
      *
      * @return array|null The localizations
      */
@@ -41,6 +42,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties
     
     /** 
     * Sets the localizations
+    * Add different branding based on a locale.
     *
     * @param OrganizationalBrandingLocalization $val The localizations
     *

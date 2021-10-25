@@ -213,7 +213,7 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     
     /**
     * Gets the platform
-    * The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
     *
     * @return DevicePlatformType|null The platform
     */
@@ -232,7 +232,7 @@ class AppleUserInitiatedEnrollmentProfile extends Entity
     
     /**
     * Sets the platform
-    * The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
     *
     * @param DevicePlatformType $val The platform
     *

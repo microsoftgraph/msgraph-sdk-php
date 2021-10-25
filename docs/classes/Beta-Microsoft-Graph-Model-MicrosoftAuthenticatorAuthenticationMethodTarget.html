@@ -182,12 +182,19 @@ to the model</dd>
 Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getFeatureSettings">getFeatureSettings()</a>
+    <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getDisplayAppInformationRequiredState">getDisplayAppInformationRequiredState()</a>
     <span>
-                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>|null    </span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null    </span>
 </dt>
-<dd>Gets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</dd>
+<dd>Gets the displayAppInformationRequiredState
+Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getDisplayLocationInformationRequiredState">getDisplayLocationInformationRequiredState()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null    </span>
+</dt>
+<dd>Gets the displayLocationInformationRequiredState</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
@@ -204,6 +211,14 @@ Read-only.</dd>
 </dt>
 <dd>Gets the isRegistrationRequired
 Determines if the user is enforced to register the authentication method.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getNumberMatchingRequiredState">getNumberMatchingRequiredState()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null    </span>
+</dt>
+<dd>Gets the numberMatchingRequiredState
+Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getODataType">getODataType()</a>
@@ -244,12 +259,19 @@ Manually serialize DateTime into RFC3339 format</dd>
 Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setFeatureSettings">setFeatureSettings()</a>
+    <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setDisplayAppInformationRequiredState">setDisplayAppInformationRequiredState()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a>    </span>
 </dt>
-<dd>Sets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</dd>
+<dd>Sets the displayAppInformationRequiredState
+Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setDisplayLocationInformationRequiredState">setDisplayLocationInformationRequiredState()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a>    </span>
+</dt>
+<dd>Sets the displayLocationInformationRequiredState</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -266,6 +288,14 @@ Read-only.</dd>
 </dt>
 <dd>Sets the isRegistrationRequired
 Determines if the user is enforced to register the authentication method.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setNumberMatchingRequiredState">setNumberMatchingRequiredState()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a>    </span>
+</dt>
+<dd>Sets the numberMatchingRequiredState
+Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setODataType">setODataType()</a>
@@ -422,9 +452,9 @@ Determines which types of notifications can be used for sign-in. Possible values
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getFeatureSettings">
-        getFeatureSettings()
-        <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getFeatureSettings" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getDisplayAppInformationRequiredState">
+        getDisplayAppInformationRequiredState()
+        <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getDisplayAppInformationRequiredState" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php"><a href="files/src-beta-microsoft-graph-model-microsoftauthenticatorauthenticationmethodtarget.html"><abbr title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php">MicrosoftAuthenticatorAuthenticationMethodTarget.php</abbr></a></abbr>
@@ -432,12 +462,12 @@ Determines which types of notifications can be used for sign-in. Possible values
     <span class="phpdocumentor-element-found-in__line">66</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</p>
+        <p class="phpdocumentor-summary">Gets the displayAppInformationRequiredState
+Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getFeatureSettings</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getDisplayAppInformationRequiredState</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -445,9 +475,44 @@ Determines what additional settings should be applied to Microsoft Authenticator
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>The featureSettings</p>
+            <section class="phpdocumentor-description"><p>The displayAppInformationRequiredState</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getDisplayLocationInformationRequiredState">
+        getDisplayLocationInformationRequiredState()
+        <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getDisplayLocationInformationRequiredState" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php"><a href="files/src-beta-microsoft-graph-model-microsoftauthenticatorauthenticationmethodtarget.html"><abbr title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php">MicrosoftAuthenticatorAuthenticationMethodTarget.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">98</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the displayLocationInformationRequiredState</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getDisplayLocationInformationRequiredState</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The displayLocationInformationRequiredState</p>
 </section>
 
     
@@ -520,6 +585,42 @@ Determines if the user is enforced to register the authentication method.</p>
     <span class="phpdocumentor-signature__response_type">bool|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The isRegistrationRequired</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getNumberMatchingRequiredState">
+        getNumberMatchingRequiredState()
+        <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_getNumberMatchingRequiredState" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php"><a href="files/src-beta-microsoft-graph-model-microsoftauthenticatorauthenticationmethodtarget.html"><abbr title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php">MicrosoftAuthenticatorAuthenticationMethodTarget.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">130</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the numberMatchingRequiredState
+Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getNumberMatchingRequiredState</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The numberMatchingRequiredState</p>
 </section>
 
     
@@ -719,9 +820,9 @@ Determines which types of notifications can be used for sign-in. Possible values
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setFeatureSettings">
-        setFeatureSettings()
-        <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setFeatureSettings" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setDisplayAppInformationRequiredState">
+        setDisplayAppInformationRequiredState()
+        <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setDisplayAppInformationRequiredState" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php"><a href="files/src-beta-microsoft-graph-model-microsoftauthenticatorauthenticationmethodtarget.html"><abbr title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php">MicrosoftAuthenticatorAuthenticationMethodTarget.php</abbr></a></abbr>
@@ -729,12 +830,12 @@ Determines which types of notifications can be used for sign-in. Possible values
     <span class="phpdocumentor-element-found-in__line">87</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the featureSettings
-Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).</p>
+        <p class="phpdocumentor-summary">Sets the displayAppInformationRequiredState
+Determines whether the user is shown additional context in their Authenticator app notification. In the body of the Authenticator notification, the user will be shown the app they are signing into along with the location that the authentication request originated from. Possible values are: enabled, disabled, default.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setFeatureSettings</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDisplayAppInformationRequiredState</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -742,10 +843,56 @@ Determines what additional settings should be applied to Microsoft Authenticator
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AuthenticatorAppFeatureSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticatorAppFeatureSettings">AuthenticatorAppFeatureSettings</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The featureSettings</p>
+                    <section class="phpdocumentor-description"><p>The displayAppInformationRequiredState</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setDisplayLocationInformationRequiredState">
+        setDisplayLocationInformationRequiredState()
+        <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setDisplayLocationInformationRequiredState" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php"><a href="files/src-beta-microsoft-graph-model-microsoftauthenticatorauthenticationmethodtarget.html"><abbr title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php">MicrosoftAuthenticatorAuthenticationMethodTarget.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">118</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the displayLocationInformationRequiredState</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setDisplayLocationInformationRequiredState</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The displayLocationInformationRequiredState</p>
 </section>
 
             </dd>
@@ -849,6 +996,53 @@ Determines if the user is enforced to register the authentication method.</p>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\AuthenticationMethodTarget">AuthenticationMethodTarget</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setNumberMatchingRequiredState">
+        setNumberMatchingRequiredState()
+        <a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html#method_setNumberMatchingRequiredState" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php"><a href="files/src-beta-microsoft-graph-model-microsoftauthenticatorauthenticationmethodtarget.html"><abbr title="src/Beta/Microsoft/Graph/Model/MicrosoftAuthenticatorAuthenticationMethodTarget.php">MicrosoftAuthenticatorAuthenticationMethodTarget.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">151</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the numberMatchingRequiredState
+Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setNumberMatchingRequiredState</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-AdvancedConfigState.html"><abbr title="\Beta\Microsoft\Graph\Model\AdvancedConfigState">AdvancedConfigState</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The numberMatchingRequiredState</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MicrosoftAuthenticatorAuthenticationMethodTarget.html"><abbr title="\Beta\Microsoft\Graph\Model\MicrosoftAuthenticatorAuthenticationMethodTarget">MicrosoftAuthenticatorAuthenticationMethodTarget</abbr></a></span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 

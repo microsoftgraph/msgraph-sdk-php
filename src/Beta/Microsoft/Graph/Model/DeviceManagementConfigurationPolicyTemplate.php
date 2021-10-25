@@ -204,7 +204,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Gets the platforms
-    * Platforms for this template. Possible values are: none, macOS, windows10X, windows10.
+    * Platforms for this template. Possible values are: none, android, iOS, macOS, windows10X, windows10.
     *
     * @return DeviceManagementConfigurationPlatforms|null The platforms
     */
@@ -223,7 +223,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Sets the platforms
-    * Platforms for this template. Possible values are: none, macOS, windows10X, windows10.
+    * Platforms for this template. Possible values are: none, android, iOS, macOS, windows10X, windows10.
     *
     * @param DeviceManagementConfigurationPlatforms $val The platforms
     *
@@ -266,7 +266,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Gets the technologies
-    * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
+    * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
     *
     * @return DeviceManagementConfigurationTechnologies|null The technologies
     */
@@ -285,7 +285,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Sets the technologies
-    * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
+    * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline, linuxMdm, unknownFutureValue.
     *
     * @param DeviceManagementConfigurationTechnologies $val The technologies
     *
@@ -299,7 +299,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Gets the templateFamily
-    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl.
+    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
     *
     * @return DeviceManagementConfigurationTemplateFamily|null The templateFamily
     */
@@ -318,7 +318,7 @@ class DeviceManagementConfigurationPolicyTemplate extends Entity
     
     /**
     * Sets the templateFamily
-    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl.
+    * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl, baseline.
     *
     * @param DeviceManagementConfigurationTemplateFamily $val The templateFamily
     *

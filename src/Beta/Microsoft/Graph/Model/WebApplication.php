@@ -169,6 +169,7 @@ class WebApplication extends Entity
 
     /**
     * Gets the redirectUriSettings
+    * Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
     *
     * @return RedirectUriSettings|null The redirectUriSettings
     */
@@ -187,6 +188,7 @@ class WebApplication extends Entity
 
     /**
     * Sets the redirectUriSettings
+    * Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
     *
     * @param RedirectUriSettings $val The value to assign to the redirectUriSettings
     *

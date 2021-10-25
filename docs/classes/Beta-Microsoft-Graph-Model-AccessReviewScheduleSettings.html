@@ -179,7 +179,7 @@ to the model</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewApplyAction.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewApplyAction">AccessReviewApplyAction</abbr></a>|null    </span>
 </dt>
 <dd>Gets the applyActions
-Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.</dd>
+Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html#method_getAutoApplyDecisionsEnabled">getAutoApplyDecisionsEnabled()</a>
@@ -187,7 +187,7 @@ Optional field. Describes the  actions to take once a review is complete. There 
                         &nbsp;: bool|null    </span>
 </dt>
 <dd>Gets the autoApplyDecisionsEnabled
-Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.</dd>
+Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html#method_getDefaultDecision">getDefaultDecision()</a>
@@ -254,7 +254,7 @@ Indicates whether emails are enabled or disabled. Default value is false.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html#method_getRecommendationLookBackDuration">getRecommendationLookBackDuration()</a>
     <span>
-                        &nbsp;: <abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null    </span>
+                        &nbsp;: <abbr title="\DateInterval">DateInterval</abbr>|null    </span>
 </dt>
 <dd>Gets the recommendationLookBackDuration
 Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. If not specified, the duration is 30 days.</dd>
@@ -297,7 +297,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScheduleSettings">AccessReviewScheduleSettings</abbr></a>    </span>
 </dt>
 <dd>Sets the applyActions
-Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.</dd>
+Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html#method_setAutoApplyDecisionsEnabled">setAutoApplyDecisionsEnabled()</a>
@@ -305,7 +305,7 @@ Optional field. Describes the  actions to take once a review is complete. There 
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScheduleSettings">AccessReviewScheduleSettings</abbr></a>    </span>
 </dt>
 <dd>Sets the autoApplyDecisionsEnabled
-Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.</dd>
+Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html#method_setDefaultDecision">setDefaultDecision()</a>
@@ -509,7 +509,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the applyActions
-Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.</p>
+Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -545,7 +545,7 @@ Optional field. Describes the  actions to take once a review is complete. There 
 </aside>
 
         <p class="phpdocumentor-summary">Gets the autoApplyDecisionsEnabled
-Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.</p>
+Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -871,7 +871,7 @@ Optional field. Indicates the time period of inactivity (with respect to the sta
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getRecommendationLookBackDuration</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span></code>
+                <span class="phpdocumentor-signature__name">getRecommendationLookBackDuration</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -879,7 +879,7 @@ Optional field. Indicates the time period of inactivity (with respect to the sta
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The recommendationLookBackDuration</p>
 </section>
@@ -1047,7 +1047,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the applyActions
-Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.</p>
+Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1095,7 +1095,7 @@ Optional field. Describes the  actions to take once a review is complete. There 
 </aside>
 
         <p class="phpdocumentor-summary">Sets the autoApplyDecisionsEnabled
-Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.</p>
+Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1474,7 +1474,7 @@ Optional field. Indicates the time period of inactivity (with respect to the sta
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setRecommendationLookBackDuration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScheduleSettings">AccessReviewScheduleSettings</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setRecommendationLookBackDuration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScheduleSettings">AccessReviewScheduleSettings</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1482,7 +1482,7 @@ Optional field. Indicates the time period of inactivity (with respect to the sta
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The value to assign to the recommendationLookBackDuration</p>

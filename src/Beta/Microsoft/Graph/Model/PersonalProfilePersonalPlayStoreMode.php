@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* AuthenticatorAppFeatureSettings File
+* PersonalProfilePersonalPlayStoreMode File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* AuthenticatorAppFeatureSettings class
+* PersonalProfilePersonalPlayStoreMode class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,10 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class AuthenticatorAppFeatureSettings extends Enum
+class PersonalProfilePersonalPlayStoreMode extends Enum
 {
     /**
-    * The Enum AuthenticatorAppFeatureSettings
+    * The Enum PersonalProfilePersonalPlayStoreMode
     */
-    const REQUIRE_NUMBER_MATCHING = "requireNumberMatching";
+    const NOT_CONFIGURED = "notConfigured";
+    const BLOCKED_APPS = "blockedApps";
+    const ALLOWED_APPS = "allowedApps";
 }

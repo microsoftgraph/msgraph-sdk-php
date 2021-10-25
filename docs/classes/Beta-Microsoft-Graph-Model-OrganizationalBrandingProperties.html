@@ -179,7 +179,7 @@ to the model</dd>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the backgroundColor
-Color that will appear in place of the background image in low-bandwidth connections. The primary color of your banner logo or your organization color is recommended to be used here. Specify this in hexadecimal (for example, white is #FFFFFF).</dd>
+Color that will appear in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_getBackgroundImage">getBackgroundImage()</a>
@@ -187,14 +187,15 @@ Color that will appear in place of the background image in low-bandwidth connect
                         &nbsp;: <abbr title="\GuzzleHttp\Psr7\Stream">Stream</abbr>|null    </span>
 </dt>
 <dd>Gets the backgroundImage
-Image that appears as the background of the sign in page. .png or .jpg not larger than 1920x1080 and smaller than 300kb. A smaller image will reduce bandwidth requirements and make page loads more performant.</dd>
+Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_getBackgroundImageRelativeUrl">getBackgroundImageRelativeUrl()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the backgroundImageRelativeUrl</dd>
+<dd>Gets the backgroundImageRelativeUrl
+A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_getBannerLogo">getBannerLogo()</a>
@@ -202,21 +203,23 @@ Image that appears as the background of the sign in page. .png or .jpg not large
                         &nbsp;: <abbr title="\GuzzleHttp\Psr7\Stream">Stream</abbr>|null    </span>
 </dt>
 <dd>Gets the bannerLogo
-A banner version of your company logo which appears appears on the sign-in page. .png or .jpg no larger than 36x245px. We recommend using a transparent image with no padding around the logo.</dd>
+A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_getBannerLogoRelativeUrl">getBannerLogoRelativeUrl()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the bannerLogoRelativeUrl</dd>
+<dd>Gets the bannerLogoRelativeUrl
+A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_getCdnList">getCdnList()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the cdnList</dd>
+<dd>Gets the cdnList
+A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_getCustomAccountResetCredentialsUrl">getCustomAccountResetCredentialsUrl()</a>
@@ -345,14 +348,15 @@ Text that appears at the bottom of the sign-in box. You can use this to communic
                         &nbsp;: <abbr title="\GuzzleHttp\Psr7\Stream">Stream</abbr>|null    </span>
 </dt>
 <dd>Gets the squareLogo
-Square version of your company logo. This appears in Windows 10 out-of-box (OOBE) experiences and when Windows Autopilot is enabled for deployment. .png or .jpg no larger than 240x240px and no more than 10kb in size. We recommend using a transparent image with no padding around the logo.</dd>
+A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_getSquareLogoRelativeUrl">getSquareLogoRelativeUrl()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the squareLogoRelativeUrl</dd>
+<dd>Gets the squareLogoRelativeUrl
+A relative url for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_getUsernameHintText">getUsernameHintText()</a>
@@ -360,7 +364,7 @@ Square version of your company logo. This appears in Windows 10 out-of-box (OOBE
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the usernameHintText
-String that shows as the hint in the username textbox on the sign in screen. This text must be Unicode, without links or code, and can&#039;t exceed 64 characters.</dd>
+String that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can&#039;t exceed 64 characters.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -376,7 +380,7 @@ Manually serialize DateTime into RFC3339 format</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
 <dd>Sets the backgroundColor
-Color that will appear in place of the background image in low-bandwidth connections. The primary color of your banner logo or your organization color is recommended to be used here. Specify this in hexadecimal (for example, white is #FFFFFF).</dd>
+Color that will appear in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_setBackgroundImage">setBackgroundImage()</a>
@@ -384,14 +388,15 @@ Color that will appear in place of the background image in low-bandwidth connect
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
 <dd>Sets the backgroundImage
-Image that appears as the background of the sign in page. .png or .jpg not larger than 1920x1080 and smaller than 300kb. A smaller image will reduce bandwidth requirements and make page loads more performant.</dd>
+Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_setBackgroundImageRelativeUrl">setBackgroundImageRelativeUrl()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
-<dd>Sets the backgroundImageRelativeUrl</dd>
+<dd>Sets the backgroundImageRelativeUrl
+A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_setBannerLogo">setBannerLogo()</a>
@@ -399,21 +404,23 @@ Image that appears as the background of the sign in page. .png or .jpg not large
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
 <dd>Sets the bannerLogo
-A banner version of your company logo which appears appears on the sign-in page. .png or .jpg no larger than 36x245px. We recommend using a transparent image with no padding around the logo.</dd>
+A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_setBannerLogoRelativeUrl">setBannerLogoRelativeUrl()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
-<dd>Sets the bannerLogoRelativeUrl</dd>
+<dd>Sets the bannerLogoRelativeUrl
+A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_setCdnList">setCdnList()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
-<dd>Sets the cdnList</dd>
+<dd>Sets the cdnList
+A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_setCustomAccountResetCredentialsUrl">setCustomAccountResetCredentialsUrl()</a>
@@ -535,14 +542,15 @@ Text that appears at the bottom of the sign-in box. You can use this to communic
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
 <dd>Sets the squareLogo
-Square version of your company logo. This appears in Windows 10 out-of-box (OOBE) experiences and when Windows Autopilot is enabled for deployment. .png or .jpg no larger than 240x240px and no more than 10kb in size. We recommend using a transparent image with no padding around the logo.</dd>
+A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_setSquareLogoRelativeUrl">setSquareLogoRelativeUrl()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
-<dd>Sets the squareLogoRelativeUrl</dd>
+<dd>Sets the squareLogoRelativeUrl
+A relative url for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html#method_setUsernameHintText">setUsernameHintText()</a>
@@ -550,7 +558,7 @@ Square version of your company logo. This appears in Windows 10 out-of-box (OOBE
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OrganizationalBrandingProperties.html"><abbr title="\Beta\Microsoft\Graph\Model\OrganizationalBrandingProperties">OrganizationalBrandingProperties</abbr></a>    </span>
 </dt>
 <dd>Sets the usernameHintText
-String that shows as the hint in the username textbox on the sign in screen. This text must be Unicode, without links or code, and can&#039;t exceed 64 characters.</dd>
+String that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can&#039;t exceed 64 characters.</dd>
 
         </dl>
 
@@ -667,7 +675,7 @@ to the model</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the backgroundColor
-Color that will appear in place of the background image in low-bandwidth connections. The primary color of your banner logo or your organization color is recommended to be used here. Specify this in hexadecimal (for example, white is #FFFFFF).</p>
+Color that will appear in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -703,7 +711,7 @@ Color that will appear in place of the background image in low-bandwidth connect
 </aside>
 
         <p class="phpdocumentor-summary">Gets the backgroundImage
-Image that appears as the background of the sign in page. .png or .jpg not larger than 1920x1080 and smaller than 300kb. A smaller image will reduce bandwidth requirements and make page loads more performant.</p>
+Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -735,10 +743,11 @@ Image that appears as the background of the sign in page. .png or .jpg not large
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">95</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the backgroundImageRelativeUrl</p>
+        <p class="phpdocumentor-summary">Gets the backgroundImageRelativeUrl
+A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -770,11 +779,11 @@ Image that appears as the background of the sign in page. .png or .jpg not large
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">122</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the bannerLogo
-A banner version of your company logo which appears appears on the sign-in page. .png or .jpg no larger than 36x245px. We recommend using a transparent image with no padding around the logo.</p>
+A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -806,10 +815,11 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">157</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the bannerLogoRelativeUrl</p>
+        <p class="phpdocumentor-summary">Gets the bannerLogoRelativeUrl
+A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -841,10 +851,11 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">181</span>
+    <span class="phpdocumentor-element-found-in__line">186</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the cdnList</p>
+        <p class="phpdocumentor-summary">Gets the cdnList
+A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -876,7 +887,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">208</span>
+    <span class="phpdocumentor-element-found-in__line">214</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customAccountResetCredentialsUrl</p>
@@ -911,7 +922,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">235</span>
+    <span class="phpdocumentor-element-found-in__line">241</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customCannotAccessYourAccountText</p>
@@ -946,7 +957,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">262</span>
+    <span class="phpdocumentor-element-found-in__line">268</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customCannotAccessYourAccountUrl</p>
@@ -981,7 +992,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">289</span>
+    <span class="phpdocumentor-element-found-in__line">295</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customForgotMyPasswordText</p>
@@ -1016,7 +1027,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">316</span>
+    <span class="phpdocumentor-element-found-in__line">322</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customPrivacyAndCookiesText</p>
@@ -1051,7 +1062,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">343</span>
+    <span class="phpdocumentor-element-found-in__line">349</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customPrivacyAndCookiesUrl</p>
@@ -1086,7 +1097,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">370</span>
+    <span class="phpdocumentor-element-found-in__line">376</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customResetItNowText</p>
@@ -1121,7 +1132,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">397</span>
+    <span class="phpdocumentor-element-found-in__line">403</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customTermsOfUseText</p>
@@ -1156,7 +1167,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">424</span>
+    <span class="phpdocumentor-element-found-in__line">430</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the customTermsOfUseUrl</p>
@@ -1191,7 +1202,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">451</span>
+    <span class="phpdocumentor-element-found-in__line">457</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the favicon</p>
@@ -1226,7 +1237,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">482</span>
+    <span class="phpdocumentor-element-found-in__line">488</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the faviconRelativeUrl</p>
@@ -1261,7 +1272,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">509</span>
+    <span class="phpdocumentor-element-found-in__line">515</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the headerBackgroundColor</p>
@@ -1332,7 +1343,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">536</span>
+    <span class="phpdocumentor-element-found-in__line">542</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the loginPageTextVisibilitySettings</p>
@@ -1437,7 +1448,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">568</span>
+    <span class="phpdocumentor-element-found-in__line">574</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the signInPageText
@@ -1473,11 +1484,11 @@ Text that appears at the bottom of the sign-in box. You can use this to communic
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">597</span>
+    <span class="phpdocumentor-element-found-in__line">603</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the squareLogo
-Square version of your company logo. This appears in Windows 10 out-of-box (OOBE) experiences and when Windows Autopilot is enabled for deployment. .png or .jpg no larger than 240x240px and no more than 10kb in size. We recommend using a transparent image with no padding around the logo.</p>
+A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1509,10 +1520,11 @@ Square version of your company logo. This appears in Windows 10 out-of-box (OOBE
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">629</span>
+    <span class="phpdocumentor-element-found-in__line">636</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the squareLogoRelativeUrl</p>
+        <p class="phpdocumentor-summary">Gets the squareLogoRelativeUrl
+A relative url for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1544,11 +1556,11 @@ Square version of your company logo. This appears in Windows 10 out-of-box (OOBE
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">657</span>
+    <span class="phpdocumentor-element-found-in__line">665</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the usernameHintText
-String that shows as the hint in the username textbox on the sign in screen. This text must be Unicode, without links or code, and can&#039;t exceed 64 characters.</p>
+String that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can&#039;t exceed 64 characters.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1620,7 +1632,7 @@ Manually serialize DateTime into RFC3339 format</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the backgroundColor
-Color that will appear in place of the background image in low-bandwidth connections. The primary color of your banner logo or your organization color is recommended to be used here. Specify this in hexadecimal (for example, white is #FFFFFF).</p>
+Color that will appear in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1667,7 +1679,7 @@ Color that will appear in place of the background image in low-bandwidth connect
 </aside>
 
         <p class="phpdocumentor-summary">Sets the backgroundImage
-Image that appears as the background of the sign in page. .png or .jpg not larger than 1920x1080 and smaller than 300kb. A smaller image will reduce bandwidth requirements and make page loads more performant.</p>
+Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1710,10 +1722,11 @@ Image that appears as the background of the sign in page. .png or .jpg not large
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">110</span>
+    <span class="phpdocumentor-element-found-in__line">112</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the backgroundImageRelativeUrl</p>
+        <p class="phpdocumentor-summary">Sets the backgroundImageRelativeUrl
+A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1756,11 +1769,11 @@ Image that appears as the background of the sign in page. .png or .jpg not large
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">143</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the bannerLogo
-A banner version of your company logo which appears appears on the sign-in page. .png or .jpg no larger than 36x245px. We recommend using a transparent image with no padding around the logo.</p>
+A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1803,10 +1816,11 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">170</span>
+    <span class="phpdocumentor-element-found-in__line">174</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the bannerLogoRelativeUrl</p>
+        <p class="phpdocumentor-summary">Sets the bannerLogoRelativeUrl
+A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1849,10 +1863,11 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">197</span>
+    <span class="phpdocumentor-element-found-in__line">203</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the cdnList</p>
+        <p class="phpdocumentor-summary">Sets the cdnList
+A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1895,7 +1910,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">224</span>
+    <span class="phpdocumentor-element-found-in__line">230</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customAccountResetCredentialsUrl</p>
@@ -1941,7 +1956,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">251</span>
+    <span class="phpdocumentor-element-found-in__line">257</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customCannotAccessYourAccountText</p>
@@ -1987,7 +2002,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">278</span>
+    <span class="phpdocumentor-element-found-in__line">284</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customCannotAccessYourAccountUrl</p>
@@ -2033,7 +2048,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">305</span>
+    <span class="phpdocumentor-element-found-in__line">311</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customForgotMyPasswordText</p>
@@ -2079,7 +2094,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">332</span>
+    <span class="phpdocumentor-element-found-in__line">338</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customPrivacyAndCookiesText</p>
@@ -2125,7 +2140,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">359</span>
+    <span class="phpdocumentor-element-found-in__line">365</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customPrivacyAndCookiesUrl</p>
@@ -2171,7 +2186,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">386</span>
+    <span class="phpdocumentor-element-found-in__line">392</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customResetItNowText</p>
@@ -2217,7 +2232,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">413</span>
+    <span class="phpdocumentor-element-found-in__line">419</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customTermsOfUseText</p>
@@ -2263,7 +2278,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">440</span>
+    <span class="phpdocumentor-element-found-in__line">446</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the customTermsOfUseUrl</p>
@@ -2309,7 +2324,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">471</span>
+    <span class="phpdocumentor-element-found-in__line">477</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the favicon</p>
@@ -2355,7 +2370,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">498</span>
+    <span class="phpdocumentor-element-found-in__line">504</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the faviconRelativeUrl</p>
@@ -2401,7 +2416,7 @@ A banner version of your company logo which appears appears on the sign-in page.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">525</span>
+    <span class="phpdocumentor-element-found-in__line">531</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the headerBackgroundColor</p>
@@ -2494,7 +2509,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">556</span>
+    <span class="phpdocumentor-element-found-in__line">562</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the loginPageTextVisibilitySettings</p>
@@ -2586,7 +2601,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">585</span>
+    <span class="phpdocumentor-element-found-in__line">591</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the signInPageText
@@ -2633,11 +2648,11 @@ Text that appears at the bottom of the sign-in box. You can use this to communic
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">618</span>
+    <span class="phpdocumentor-element-found-in__line">624</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the squareLogo
-Square version of your company logo. This appears in Windows 10 out-of-box (OOBE) experiences and when Windows Autopilot is enabled for deployment. .png or .jpg no larger than 240x240px and no more than 10kb in size. We recommend using a transparent image with no padding around the logo.</p>
+A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2680,10 +2695,11 @@ Square version of your company logo. This appears in Windows 10 out-of-box (OOBE
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">645</span>
+    <span class="phpdocumentor-element-found-in__line">653</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the squareLogoRelativeUrl</p>
+        <p class="phpdocumentor-summary">Sets the squareLogoRelativeUrl
+A relative url for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -2726,11 +2742,11 @@ Square version of your company logo. This appears in Windows 10 out-of-box (OOBE
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php"><a href="files/src-beta-microsoft-graph-model-organizationalbrandingproperties.html"><abbr title="src/Beta/Microsoft/Graph/Model/OrganizationalBrandingProperties.php">OrganizationalBrandingProperties.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">674</span>
+    <span class="phpdocumentor-element-found-in__line">682</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the usernameHintText
-String that shows as the hint in the username textbox on the sign in screen. This text must be Unicode, without links or code, and can&#039;t exceed 64 characters.</p>
+String that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can&#039;t exceed 64 characters.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

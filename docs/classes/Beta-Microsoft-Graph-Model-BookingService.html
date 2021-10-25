@@ -183,7 +183,7 @@ to the model</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getDefaultDuration">getDefaultDuration()</a>
     <span>
-                        &nbsp;: <abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null    </span>
+                        &nbsp;: <abbr title="\DateInterval">DateInterval</abbr>|null    </span>
 </dt>
 <dd>Gets the defaultDuration
 The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.</dd>
@@ -277,7 +277,7 @@ Additional information about this service.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getPostBuffer">getPostBuffer()</a>
     <span>
-                        &nbsp;: <abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null    </span>
+                        &nbsp;: <abbr title="\DateInterval">DateInterval</abbr>|null    </span>
 </dt>
 <dd>Gets the postBuffer
 The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.</dd>
@@ -285,7 +285,7 @@ The time to buffer after an appointment for this service ends, and before the ne
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getPreBuffer">getPreBuffer()</a>
     <span>
-                        &nbsp;: <abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null    </span>
+                        &nbsp;: <abbr title="\DateInterval">DateInterval</abbr>|null    </span>
 </dt>
 <dd>Gets the preBuffer
 The time to buffer before an appointment for this service can start.</dd>
@@ -306,12 +306,27 @@ The time to buffer before an appointment for this service can start.</dd>
 The set of policies that determine how appointments for this type of service should be created and managed.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getSmsNotificationsEnabled">getSmsNotificationsEnabled()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the smsNotificationsEnabled</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getStaffMemberIds">getStaffMemberIds()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the staffMemberIds
 Represents those staff members who provide this service.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getWebUrl">getWebUrl()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the webUrl
+The URL of the booking service.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -447,12 +462,27 @@ The time to buffer before an appointment for this service can start.</dd>
 The set of policies that determine how appointments for this type of service should be created and managed.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_setSmsNotificationsEnabled">setSmsNotificationsEnabled()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a>    </span>
+</dt>
+<dd>Sets the smsNotificationsEnabled</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_setStaffMemberIds">setStaffMemberIds()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a>    </span>
 </dt>
 <dd>Sets the staffMemberIds
 Represents those staff members who provide this service.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_setWebUrl">setWebUrl()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a>    </span>
+</dt>
+<dd>Sets the webUrl
+The URL of the booking service.</dd>
 
         </dl>
 
@@ -608,7 +638,7 @@ The default length of the service, represented in numbers of days, hours, minute
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getDefaultDuration</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span></code>
+                <span class="phpdocumentor-signature__name">getDefaultDuration</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -616,7 +646,7 @@ The default length of the service, represented in numbers of days, hours, minute
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The defaultDuration</p>
 </section>
@@ -1038,7 +1068,7 @@ The time to buffer after an appointment for this service ends, and before the ne
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPostBuffer</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span></code>
+                <span class="phpdocumentor-signature__name">getPostBuffer</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1046,7 +1076,7 @@ The time to buffer after an appointment for this service ends, and before the ne
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The postBuffer</p>
 </section>
@@ -1074,7 +1104,7 @@ The time to buffer before an appointment for this service can start.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getPreBuffer</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span></code>
+                <span class="phpdocumentor-signature__name">getPreBuffer</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1082,7 +1112,7 @@ The time to buffer before an appointment for this service can start.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>|null</span>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The preBuffer</p>
 </section>
@@ -1166,6 +1196,41 @@ The set of policies that determine how appointments for this type of service sho
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getSmsNotificationsEnabled">
+        getSmsNotificationsEnabled()
+        <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getSmsNotificationsEnabled" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/BookingService.php"><a href="files/src-beta-microsoft-graph-model-bookingservice.html"><abbr title="src/Beta/Microsoft/Graph/Model/BookingService.php">BookingService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">430</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the smsNotificationsEnabled</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSmsNotificationsEnabled</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The smsNotificationsEnabled</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getStaffMemberIds">
         getStaffMemberIds()
         <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getStaffMemberIds" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1173,7 +1238,7 @@ The set of policies that determine how appointments for this type of service sho
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/BookingService.php"><a href="files/src-beta-microsoft-graph-model-bookingservice.html"><abbr title="src/Beta/Microsoft/Graph/Model/BookingService.php">BookingService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">431</span>
+    <span class="phpdocumentor-element-found-in__line">458</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the staffMemberIds
@@ -1192,6 +1257,42 @@ Represents those staff members who provide this service.</p>
     <span class="phpdocumentor-signature__response_type">string|null</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The staffMemberIds</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getWebUrl">
+        getWebUrl()
+        <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_getWebUrl" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/BookingService.php"><a href="files/src-beta-microsoft-graph-model-bookingservice.html"><abbr title="src/Beta/Microsoft/Graph/Model/BookingService.php">BookingService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">487</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the webUrl
+The URL of the booking service.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getWebUrl</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The webUrl</p>
 </section>
 
     
@@ -1299,7 +1400,7 @@ The default length of the service, represented in numbers of days, hours, minute
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setDefaultDuration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setDefaultDuration</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1307,7 +1408,7 @@ The default length of the service, represented in numbers of days, hours, minute
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The defaultDuration</p>
@@ -1861,7 +1962,7 @@ The time to buffer after an appointment for this service ends, and before the ne
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPostBuffer</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPostBuffer</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1869,7 +1970,7 @@ The time to buffer after an appointment for this service ends, and before the ne
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The postBuffer</p>
@@ -1908,7 +2009,7 @@ The time to buffer before an appointment for this service can start.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setPreBuffer</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setPreBuffer</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1916,7 +2017,7 @@ The time to buffer before an appointment for this service can start.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Beta\Microsoft\Graph\Model\Duration">Duration</abbr></span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The preBuffer</p>
@@ -1987,6 +2088,52 @@ The set of policies that determine how appointments for this type of service sho
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setSmsNotificationsEnabled">
+        setSmsNotificationsEnabled()
+        <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_setSmsNotificationsEnabled" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/BookingService.php"><a href="files/src-beta-microsoft-graph-model-bookingservice.html"><abbr title="src/Beta/Microsoft/Graph/Model/BookingService.php">BookingService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">446</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the smsNotificationsEnabled</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setSmsNotificationsEnabled</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The smsNotificationsEnabled</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setStaffMemberIds">
         setStaffMemberIds()
         <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_setStaffMemberIds" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1994,7 +2141,7 @@ The set of policies that determine how appointments for this type of service sho
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/BookingService.php"><a href="files/src-beta-microsoft-graph-model-bookingservice.html"><abbr title="src/Beta/Microsoft/Graph/Model/BookingService.php">BookingService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">448</span>
+    <span class="phpdocumentor-element-found-in__line">475</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the staffMemberIds
@@ -2014,6 +2161,53 @@ Represents those staff members who provide this service.</p>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>The staffMemberIds</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setWebUrl">
+        setWebUrl()
+        <a href="classes/Beta-Microsoft-Graph-Model-BookingService.html#method_setWebUrl" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/BookingService.php"><a href="files/src-beta-microsoft-graph-model-bookingservice.html"><abbr title="src/Beta/Microsoft/Graph/Model/BookingService.php">BookingService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">504</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the webUrl
+The URL of the booking service.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setWebUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-BookingService.html"><abbr title="\Beta\Microsoft\Graph\Model\BookingService">BookingService</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The webUrl</p>
 </section>
 
             </dd>
