@@ -519,6 +519,39 @@ class ManagedAppProtection extends ManagedAppPolicy
     }
     
     /**
+    * Gets the gracePeriodToBlockAppsDuringOffClockHours
+    * A grace period before blocking app access during off clock hours.
+    *
+    * @return \DateInterval|null The gracePeriodToBlockAppsDuringOffClockHours
+    */
+    public function getGracePeriodToBlockAppsDuringOffClockHours()
+    {
+        if (array_key_exists("gracePeriodToBlockAppsDuringOffClockHours", $this->_propDict)) {
+            if (is_a($this->_propDict["gracePeriodToBlockAppsDuringOffClockHours"], "\DateInterval") || is_null($this->_propDict["gracePeriodToBlockAppsDuringOffClockHours"])) {
+                return $this->_propDict["gracePeriodToBlockAppsDuringOffClockHours"];
+            } else {
+                $this->_propDict["gracePeriodToBlockAppsDuringOffClockHours"] = new \DateInterval($this->_propDict["gracePeriodToBlockAppsDuringOffClockHours"]);
+                return $this->_propDict["gracePeriodToBlockAppsDuringOffClockHours"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the gracePeriodToBlockAppsDuringOffClockHours
+    * A grace period before blocking app access during off clock hours.
+    *
+    * @param \DateInterval $val The gracePeriodToBlockAppsDuringOffClockHours
+    *
+    * @return ManagedAppProtection
+    */
+    public function setGracePeriodToBlockAppsDuringOffClockHours($val)
+    {
+        $this->_propDict["gracePeriodToBlockAppsDuringOffClockHours"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the managedBrowser
     * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
     *

@@ -26,6 +26,7 @@ class CloudPcServicePlan extends Entity
 {
     /**
     * Gets the displayName
+    * The name for the service plan. Read-only.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Sets the displayName
+    * The name for the service plan. Read-only.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Gets the ramInGB
+    * The size of the RAM in GB. Read-only.
     *
     * @return int|null The ramInGB
     */
@@ -67,6 +70,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Sets the ramInGB
+    * The size of the RAM in GB. Read-only.
     *
     * @param int $val The ramInGB
     *
@@ -80,6 +84,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Gets the storageInGB
+    * The size of the OS Disk in GB. Read-only.
     *
     * @return int|null The storageInGB
     */
@@ -94,6 +99,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Sets the storageInGB
+    * The size of the OS Disk in GB. Read-only.
     *
     * @param int $val The storageInGB
     *
@@ -107,6 +113,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Gets the type
+    * The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
     *
     * @return CloudPcServicePlanType|null The type
     */
@@ -125,6 +132,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Sets the type
+    * The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
     *
     * @param CloudPcServicePlanType $val The type
     *
@@ -138,6 +146,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Gets the userProfileInGB
+    * The size of the user profile disk in GB. Read-only.
     *
     * @return int|null The userProfileInGB
     */
@@ -152,6 +161,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Sets the userProfileInGB
+    * The size of the user profile disk in GB. Read-only.
     *
     * @param int $val The userProfileInGB
     *
@@ -165,6 +175,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Gets the vCpuCount
+    * The number of vCPUs. Read-only.
     *
     * @return int|null The vCpuCount
     */
@@ -179,6 +190,7 @@ class CloudPcServicePlan extends Entity
     
     /**
     * Sets the vCpuCount
+    * The number of vCPUs. Read-only.
     *
     * @param int $val The vCpuCount
     *

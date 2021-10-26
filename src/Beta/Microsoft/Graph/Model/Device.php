@@ -412,6 +412,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the extensionAttributes
+    * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, NOT, startsWith).
     *
     * @return OnPremisesExtensionAttributes|null The extensionAttributes
     */
@@ -430,6 +431,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the extensionAttributes
+    * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, NOT, startsWith).
     *
     * @param OnPremisesExtensionAttributes $val The extensionAttributes
     *

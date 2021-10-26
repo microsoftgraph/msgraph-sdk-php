@@ -90,7 +90,7 @@ class PasswordCredentialConfiguration extends Entity
 
     /**
     * Gets the restrictionType
-    * The type of restriction being applied. Possible values are passwordAddition or passwordLifetime. Each value of restrictionType can be used only once per policy.
+    * The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
     *
     * @return AppCredentialRestrictionType|null The restrictionType
     */
@@ -109,7 +109,7 @@ class PasswordCredentialConfiguration extends Entity
 
     /**
     * Sets the restrictionType
-    * The type of restriction being applied. Possible values are passwordAddition or passwordLifetime. Each value of restrictionType can be used only once per policy.
+    * The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
     *
     * @param AppCredentialRestrictionType $val The value to assign to the restrictionType
     *

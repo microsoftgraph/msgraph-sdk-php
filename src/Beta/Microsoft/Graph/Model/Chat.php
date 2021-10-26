@@ -26,7 +26,7 @@ class Chat extends Entity
 {
     /**
     * Gets the chatType
-    * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
+    * Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
     *
     * @return ChatType|null The chatType
     */
@@ -45,7 +45,7 @@ class Chat extends Entity
     
     /**
     * Sets the chatType
-    * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
+    * Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
     *
     * @param ChatType $val The chatType
     *

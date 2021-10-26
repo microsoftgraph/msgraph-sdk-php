@@ -235,7 +235,7 @@ class IosPkcsCertificateProfile extends IosCertificateProfileBase
 
      /** 
      * Gets the managedDeviceCertificateStates
-    * Certificate state for devices
+    * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      *
      * @return array|null The managedDeviceCertificateStates
      */
@@ -250,7 +250,7 @@ class IosPkcsCertificateProfile extends IosCertificateProfileBase
     
     /** 
     * Sets the managedDeviceCertificateStates
-    * Certificate state for devices
+    * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
     *
     * @param ManagedDeviceCertificateState $val The managedDeviceCertificateStates
     *

@@ -91,37 +91,6 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     }
     
     /**
-    * Gets the displayLocationInformationRequiredState
-    *
-    * @return AdvancedConfigState|null The displayLocationInformationRequiredState
-    */
-    public function getDisplayLocationInformationRequiredState()
-    {
-        if (array_key_exists("displayLocationInformationRequiredState", $this->_propDict)) {
-            if (is_a($this->_propDict["displayLocationInformationRequiredState"], "\Beta\Microsoft\Graph\Model\AdvancedConfigState") || is_null($this->_propDict["displayLocationInformationRequiredState"])) {
-                return $this->_propDict["displayLocationInformationRequiredState"];
-            } else {
-                $this->_propDict["displayLocationInformationRequiredState"] = new AdvancedConfigState($this->_propDict["displayLocationInformationRequiredState"]);
-                return $this->_propDict["displayLocationInformationRequiredState"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the displayLocationInformationRequiredState
-    *
-    * @param AdvancedConfigState $val The displayLocationInformationRequiredState
-    *
-    * @return MicrosoftAuthenticatorAuthenticationMethodTarget
-    */
-    public function setDisplayLocationInformationRequiredState($val)
-    {
-        $this->_propDict["displayLocationInformationRequiredState"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the numberMatchingRequiredState
     * Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.
     *

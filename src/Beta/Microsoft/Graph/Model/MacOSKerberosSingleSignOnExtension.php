@@ -651,6 +651,34 @@ class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtension
         return $this;
     }
     /**
+    * Gets the preferredKDCs
+    * Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+    *
+    * @return string|null The preferredKDCs
+    */
+    public function getPreferredKDCs()
+    {
+        if (array_key_exists("preferredKDCs", $this->_propDict)) {
+            return $this->_propDict["preferredKDCs"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the preferredKDCs
+    * Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+    *
+    * @param string $val The value of the preferredKDCs
+    *
+    * @return MacOSKerberosSingleSignOnExtension
+    */
+    public function setPreferredKDCs($val)
+    {
+        $this->_propDict["preferredKDCs"] = $val;
+        return $this;
+    }
+    /**
     * Gets the realm
     * Gets or sets the case-sensitive realm name for this profile.
     *
@@ -736,7 +764,7 @@ class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtension
     }
     /**
     * Gets the singleSignOnExtensionPreferredKDCs
-    * Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+    * Soon to be deprecated.
     *
     * @return string|null The singleSignOnExtensionPreferredKDCs
     */
@@ -751,7 +779,7 @@ class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtension
 
     /**
     * Sets the singleSignOnExtensionPreferredKDCs
-    * Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+    * Soon to be deprecated.
     *
     * @param string $val The value of the singleSignOnExtensionPreferredKDCs
     *
@@ -791,8 +819,36 @@ class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtension
         return $this;
     }
     /**
-    * Gets the usernameLableCustom
+    * Gets the usernameLabelCustom
     * This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.
+    *
+    * @return string|null The usernameLabelCustom
+    */
+    public function getUsernameLabelCustom()
+    {
+        if (array_key_exists("usernameLabelCustom", $this->_propDict)) {
+            return $this->_propDict["usernameLabelCustom"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the usernameLabelCustom
+    * This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.
+    *
+    * @param string $val The value of the usernameLabelCustom
+    *
+    * @return MacOSKerberosSingleSignOnExtension
+    */
+    public function setUsernameLabelCustom($val)
+    {
+        $this->_propDict["usernameLabelCustom"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the usernameLableCustom
+    * Soon to be deprecated.
     *
     * @return string|null The usernameLableCustom
     */
@@ -807,7 +863,7 @@ class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtension
 
     /**
     * Sets the usernameLableCustom
-    * This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.
+    * Soon to be deprecated.
     *
     * @param string $val The value of the usernameLableCustom
     *

@@ -205,6 +205,7 @@ class VirtualEndpoint extends Entity
 
      /** 
      * Gets the servicePlans
+    * Cloud PC service plans.
      *
      * @return array|null The servicePlans
      */
@@ -219,6 +220,7 @@ class VirtualEndpoint extends Entity
     
     /** 
     * Sets the servicePlans
+    * Cloud PC service plans.
     *
     * @param CloudPcServicePlan $val The servicePlans
     *
