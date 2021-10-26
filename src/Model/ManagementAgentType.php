@@ -42,5 +42,4 @@ class ManagementAgentType extends Enum
     const GOOGLE_CLOUD_DEVICE_POLICY_CONTROLLER = "googleCloudDevicePolicyController";
     const MICROSOFT365_MANAGED_MDM = "microsoft365ManagedMdm";
     const MS_SENSE = "msSense";
-    const INTUNE_AOSP = "intuneAosp";
 }

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Compliance File
+* Privacy File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Microsoft\Graph\Model;
 
 /**
-* Compliance class
+* Privacy class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Compliance implements \JsonSerializable
+class Privacy implements \JsonSerializable
 {
     /**
     * The array of properties available
@@ -33,7 +33,7 @@ class Compliance implements \JsonSerializable
     protected $_propDict;
     
     /**
-    * Construct a new Compliance
+    * Construct a new Privacy
     *
     * @param array $propDict A list of properties to set
     */
@@ -46,7 +46,7 @@ class Compliance implements \JsonSerializable
     }
 
     /**
-    * Gets the property dictionary of the Compliance
+    * Gets the property dictionary of the Privacy
     *
     * @return array The list of properties
     */
@@ -55,34 +55,31 @@ class Compliance implements \JsonSerializable
         return $this->_propDict;
     }
     
-    /**
-    * Gets the ediscovery
-    *
-    * @return \Microsoft\Graph\Ediscovery\Model\Ediscoveryroot|null The ediscovery
-    */
-    public function getEdiscovery()
+
+     /** 
+     * Gets the subjectRightsRequests
+     *
+     * @return array|null The subjectRightsRequests
+     */
+    public function getSubjectRightsRequests()
     {
-        if (array_key_exists("ediscovery", $this->_propDict)) {
-            if (is_a($this->_propDict["ediscovery"], "\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot") || is_null($this->_propDict["ediscovery"])) {
-                return $this->_propDict["ediscovery"];
-            } else {
-                $this->_propDict["ediscovery"] = new \Microsoft\Graph\Ediscovery\Model\Ediscoveryroot($this->_propDict["ediscovery"]);
-                return $this->_propDict["ediscovery"];
-            }
+        if (array_key_exists("subjectRightsRequests", $this->_propDict)) {
+           return $this->_propDict["subjectRightsRequests"];
+        } else {
+            return null;
         }
-        return null;
     }
     
-    /**
-    * Sets the ediscovery
+    /** 
+    * Sets the subjectRightsRequests
     *
-    * @param \Microsoft\Graph\Ediscovery\Model\Ediscoveryroot $val The ediscovery
+    * @param SubjectRightsRequest $val The subjectRightsRequests
     *
-    * @return Compliance
+    * @return Privacy
     */
-    public function setEdiscovery($val)
+    public function setSubjectRightsRequests($val)
     {
-        $this->_propDict["ediscovery"] = $val;
+        $this->_propDict["subjectRightsRequests"] = $val;
         return $this;
     }
     
@@ -104,7 +101,7 @@ class Compliance implements \JsonSerializable
     *
     * @param string $val The ODataType
     *
-    * @return Compliance
+    * @return Privacy
     */
     public function setODataType($val)
     {
