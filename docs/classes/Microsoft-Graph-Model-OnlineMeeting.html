@@ -224,6 +224,14 @@ Specifies the mode of meeting chat.</dd>
 Indicates whether Teams reactions are enabled for the meeting.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_getAttendeeReport">getAttendeeReport()</a>
+    <span>
+                        &nbsp;: <abbr title="\GuzzleHttp\Psr7\Stream">Stream</abbr>|null    </span>
+</dt>
+<dd>Gets the attendeeReport
+The content stream of the attendee report of a live event. Read-only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_getAudioConferencing">getAudioConferencing()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-AudioConferencing.html"><abbr title="\Microsoft\Graph\Model\AudioConferencing">AudioConferencing</abbr></a>|null    </span>
@@ -342,6 +350,14 @@ The participants associated with the online meeting.  This includes the organize
 <dd>Gets the property dictionary of the Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_getRecordAutomatically">getRecordAutomatically()</a>
+    <span>
+                        &nbsp;: bool|null    </span>
+</dt>
+<dd>Gets the recordAutomatically
+Indicates whether to record the meeting automatically.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_getStartDateTime">getStartDateTime()</a>
     <span>
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
@@ -412,6 +428,14 @@ Specifies the mode of meeting chat.</dd>
 </dt>
 <dd>Sets the allowTeamworkReactions
 Indicates whether Teams reactions are enabled for the meeting.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_setAttendeeReport">setAttendeeReport()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
+</dt>
+<dd>Sets the attendeeReport
+The content stream of the attendee report of a live event. Read-only.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_setAudioConferencing">setAudioConferencing()</a>
@@ -523,6 +547,14 @@ Specifies which participants can bypass the meeting   lobby.</dd>
 </dt>
 <dd>Sets the participants
 The participants associated with the online meeting.  This includes the organizer and the attendees.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_setRecordAutomatically">setRecordAutomatically()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a>    </span>
+</dt>
+<dd>Sets the recordAutomatically
+Indicates whether to record the meeting automatically.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_setStartDateTime">setStartDateTime()</a>
@@ -832,6 +864,42 @@ Indicates whether Teams reactions are enabled for the meeting.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getAttendeeReport">
+        getAttendeeReport()
+        <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_getAttendeeReport" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">186</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the attendeeReport
+The content stream of the attendee report of a live event. Read-only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAttendeeReport</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\GuzzleHttp\Psr7\Stream">Stream</abbr>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\GuzzleHttp\Psr7\Stream">Stream</abbr>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The attendeeReport</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getAudioConferencing">
         getAudioConferencing()
         <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_getAudioConferencing" class="headerlink"><i class="fas fa-link"></i></a>
@@ -839,7 +907,7 @@ Indicates whether Teams reactions are enabled for the meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">186</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the audioConferencing
@@ -875,7 +943,7 @@ The phone access (dial-in) information for an online meeting. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">219</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the broadcastSettings
@@ -911,7 +979,7 @@ Settings related to a live event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">252</span>
+    <span class="phpdocumentor-element-found-in__line">285</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the chatInfo
@@ -947,7 +1015,7 @@ The chat information associated with this online meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">285</span>
+    <span class="phpdocumentor-element-found-in__line">318</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the creationDateTime
@@ -983,7 +1051,7 @@ The meeting creation time in UTC. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">318</span>
+    <span class="phpdocumentor-element-found-in__line">351</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the endDateTime
@@ -1019,7 +1087,7 @@ The meeting end time in UTC.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">351</span>
+    <span class="phpdocumentor-element-found-in__line">384</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the externalId
@@ -1091,7 +1159,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">380</span>
+    <span class="phpdocumentor-element-found-in__line">413</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isBroadcast
@@ -1127,7 +1195,7 @@ Indicates if this is a live event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">409</span>
+    <span class="phpdocumentor-element-found-in__line">442</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isEntryExitAnnounced
@@ -1163,7 +1231,7 @@ Indicates whether to announce when callers join or leave.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">438</span>
+    <span class="phpdocumentor-element-found-in__line">471</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the joinInformation
@@ -1199,7 +1267,7 @@ The join information in the language and locale variant specified in the Accept-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">471</span>
+    <span class="phpdocumentor-element-found-in__line">504</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the joinWebUrl
@@ -1235,7 +1303,7 @@ The join URL of the online meeting. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">500</span>
+    <span class="phpdocumentor-element-found-in__line">533</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lobbyBypassSettings
@@ -1306,7 +1374,7 @@ Specifies which participants can bypass the meeting   lobby.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">533</span>
+    <span class="phpdocumentor-element-found-in__line">566</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the participants
@@ -1370,6 +1438,42 @@ The participants associated with the online meeting.  This includes the organize
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getRecordAutomatically">
+        getRecordAutomatically()
+        <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_getRecordAutomatically" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">599</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the recordAutomatically
+Indicates whether to record the meeting automatically.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getRecordAutomatically</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The recordAutomatically</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getStartDateTime">
         getStartDateTime()
         <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_getStartDateTime" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1377,7 +1481,7 @@ The participants associated with the online meeting.  This includes the organize
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">566</span>
+    <span class="phpdocumentor-element-found-in__line">628</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the startDateTime
@@ -1413,7 +1517,7 @@ The meeting start time in UTC.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">599</span>
+    <span class="phpdocumentor-element-found-in__line">661</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the subject
@@ -1449,7 +1553,7 @@ The subject of the online meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">628</span>
+    <span class="phpdocumentor-element-found-in__line">690</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the videoTeleconferenceId
@@ -1749,6 +1853,53 @@ Indicates whether Teams reactions are enabled for the meeting.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setAttendeeReport">
+        setAttendeeReport()
+        <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_setAttendeeReport" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">207</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the attendeeReport
+The content stream of the attendee report of a live event. Read-only.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setAttendeeReport</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\GuzzleHttp\Psr7\Stream">Stream</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\GuzzleHttp\Psr7\Stream">Stream</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The attendeeReport</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setAudioConferencing">
         setAudioConferencing()
         <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_setAudioConferencing" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1756,7 +1907,7 @@ Indicates whether Teams reactions are enabled for the meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">207</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the audioConferencing
@@ -1803,7 +1954,7 @@ The phone access (dial-in) information for an online meeting. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">240</span>
+    <span class="phpdocumentor-element-found-in__line">273</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the broadcastSettings
@@ -1850,7 +2001,7 @@ Settings related to a live event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">273</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the chatInfo
@@ -1897,7 +2048,7 @@ The chat information associated with this online meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">306</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the creationDateTime
@@ -1944,7 +2095,7 @@ The meeting creation time in UTC. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">339</span>
+    <span class="phpdocumentor-element-found-in__line">372</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the endDateTime
@@ -1991,7 +2142,7 @@ The meeting end time in UTC.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">368</span>
+    <span class="phpdocumentor-element-found-in__line">401</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the externalId
@@ -2085,7 +2236,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">397</span>
+    <span class="phpdocumentor-element-found-in__line">430</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isBroadcast
@@ -2132,7 +2283,7 @@ Indicates if this is a live event.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">426</span>
+    <span class="phpdocumentor-element-found-in__line">459</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isEntryExitAnnounced
@@ -2179,7 +2330,7 @@ Indicates whether to announce when callers join or leave.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">459</span>
+    <span class="phpdocumentor-element-found-in__line">492</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the joinInformation
@@ -2226,7 +2377,7 @@ The join information in the language and locale variant specified in the Accept-
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">488</span>
+    <span class="phpdocumentor-element-found-in__line">521</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the joinWebUrl
@@ -2273,7 +2424,7 @@ The join URL of the online meeting. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">521</span>
+    <span class="phpdocumentor-element-found-in__line">554</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lobbyBypassSettings
@@ -2366,7 +2517,7 @@ Specifies which participants can bypass the meeting   lobby.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">554</span>
+    <span class="phpdocumentor-element-found-in__line">587</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the participants
@@ -2406,6 +2557,53 @@ The participants associated with the online meeting.  This includes the organize
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setRecordAutomatically">
+        setRecordAutomatically()
+        <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_setRecordAutomatically" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">616</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the recordAutomatically
+Indicates whether to record the meeting automatically.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setRecordAutomatically</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The recordAutomatically</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-OnlineMeeting.html"><abbr title="\Microsoft\Graph\Model\OnlineMeeting">OnlineMeeting</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setStartDateTime">
         setStartDateTime()
         <a href="classes/Microsoft-Graph-Model-OnlineMeeting.html#method_setStartDateTime" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2413,7 +2611,7 @@ The participants associated with the online meeting.  This includes the organize
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">587</span>
+    <span class="phpdocumentor-element-found-in__line">649</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the startDateTime
@@ -2460,7 +2658,7 @@ The meeting start time in UTC.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">616</span>
+    <span class="phpdocumentor-element-found-in__line">678</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the subject
@@ -2507,7 +2705,7 @@ The subject of the online meeting.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/OnlineMeeting.php"><a href="files/src-model-onlinemeeting.html"><abbr title="src/Model/OnlineMeeting.php">OnlineMeeting.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">645</span>
+    <span class="phpdocumentor-element-found-in__line">707</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the videoTeleconferenceId
