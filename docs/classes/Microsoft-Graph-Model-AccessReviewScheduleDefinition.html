@@ -184,6 +184,14 @@ to the model</dd>
 <dd>Construct a new Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getAdditionalNotificationRecipients">getAdditionalNotificationRecipients()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewNotificationRecipientItem.html"><abbr title="\Microsoft\Graph\Model\AccessReviewNotificationRecipientItem">AccessReviewNotificationRecipientItem</abbr></a>&gt;|null    </span>
+</dt>
+<dd>Gets the additionalNotificationRecipients
+Defines the list of additional users or group members to be notified of the access review progress.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getCreatedBy">getCreatedBy()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-UserIdentity.html"><abbr title="\Microsoft\Graph\Model\UserIdentity">UserIdentity</abbr></a>|null    </span>
@@ -316,6 +324,14 @@ This read-only field specifies the status of an access review. The typical state
 </dt>
 <dd>Serializes the object by property array
 Manually serialize DateTime into RFC3339 format</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_setAdditionalNotificationRecipients">setAdditionalNotificationRecipients()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a>    </span>
+</dt>
+<dd>Sets the additionalNotificationRecipients
+Defines the list of additional users or group members to be notified of the access review progress.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_setCreatedBy">setCreatedBy()</a>
@@ -540,6 +556,42 @@ to the model</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getAdditionalNotificationRecipients">
+        getAdditionalNotificationRecipients()
+        <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getAdditionalNotificationRecipients" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">34</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the additionalNotificationRecipients
+Defines the list of additional users or group members to be notified of the access review progress.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAdditionalNotificationRecipients</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewNotificationRecipientItem.html"><abbr title="\Microsoft\Graph\Model\AccessReviewNotificationRecipientItem">AccessReviewNotificationRecipientItem</abbr></a>&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewNotificationRecipientItem.html"><abbr title="\Microsoft\Graph\Model\AccessReviewNotificationRecipientItem">AccessReviewNotificationRecipientItem</abbr></a>&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The additionalNotificationRecipients</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getCreatedBy">
         getCreatedBy()
         <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_getCreatedBy" class="headerlink"><i class="fas fa-link"></i></a>
@@ -547,7 +599,7 @@ to the model</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdBy
@@ -583,7 +635,7 @@ User who created this review. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">103</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the createdDateTime
@@ -619,7 +671,7 @@ Timestamp when the access review series was created. Supports $select and $order
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">99</span>
+    <span class="phpdocumentor-element-found-in__line">136</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the descriptionForAdmins
@@ -655,7 +707,7 @@ Description provided by review creators to provide more context of the review to
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">128</span>
+    <span class="phpdocumentor-element-found-in__line">165</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the descriptionForReviewers
@@ -691,7 +743,7 @@ Description provided  by review creators to provide more context of the review t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">157</span>
+    <span class="phpdocumentor-element-found-in__line">194</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the displayName
@@ -727,7 +779,7 @@ Name of the access review series. Supports $select and $orderBy. Required on cre
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">187</span>
+    <span class="phpdocumentor-element-found-in__line">224</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the fallbackReviewers
@@ -799,7 +851,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">223</span>
+    <span class="phpdocumentor-element-found-in__line">260</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the instanceEnumerationScope
@@ -835,7 +887,7 @@ This property is required when scoping a review to guest users&#039; access acro
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">422</span>
+    <span class="phpdocumentor-element-found-in__line">459</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the instances
@@ -871,7 +923,7 @@ If the accessReviewScheduleDefinition is a recurring access review, instances re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">256</span>
+    <span class="phpdocumentor-element-found-in__line">293</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastModifiedDateTime
@@ -977,7 +1029,7 @@ Timestamp when the access review series was last modified. Supports $select. Rea
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">290</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the reviewers
@@ -1013,7 +1065,7 @@ This collection of access review scopes is used to define who are the reviewers.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">326</span>
+    <span class="phpdocumentor-element-found-in__line">363</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the scope
@@ -1049,7 +1101,7 @@ Defines the entities whose access is reviewed.  For supported scopes, see access
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">359</span>
+    <span class="phpdocumentor-element-found-in__line">396</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the settings
@@ -1085,7 +1137,7 @@ The settings for an access review series, see type definition below. Supports $s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">392</span>
+    <span class="phpdocumentor-element-found-in__line">429</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
@@ -1150,6 +1202,53 @@ Manually serialize DateTime into RFC3339 format</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setAdditionalNotificationRecipients">
+        setAdditionalNotificationRecipients()
+        <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_setAdditionalNotificationRecipients" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">58</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the additionalNotificationRecipients
+Defines the list of additional users or group members to be notified of the access review progress.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setAdditionalNotificationRecipients</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewNotificationRecipientItem.html"><abbr title="\Microsoft\Graph\Model\AccessReviewNotificationRecipientItem">AccessReviewNotificationRecipientItem</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-AccessReviewNotificationRecipientItem.html"><abbr title="\Microsoft\Graph\Model\AccessReviewNotificationRecipientItem">AccessReviewNotificationRecipientItem</abbr></a>&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The additionalNotificationRecipients</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html"><abbr title="\Microsoft\Graph\Model\AccessReviewScheduleDefinition">AccessReviewScheduleDefinition</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setCreatedBy">
         setCreatedBy()
         <a href="classes/Microsoft-Graph-Model-AccessReviewScheduleDefinition.html#method_setCreatedBy" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1157,7 +1256,7 @@ Manually serialize DateTime into RFC3339 format</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdBy
@@ -1204,7 +1303,7 @@ User who created this review. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">87</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the createdDateTime
@@ -1251,7 +1350,7 @@ Timestamp when the access review series was created. Supports $select and $order
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">116</span>
+    <span class="phpdocumentor-element-found-in__line">153</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the descriptionForAdmins
@@ -1298,7 +1397,7 @@ Description provided by review creators to provide more context of the review to
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">145</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the descriptionForReviewers
@@ -1345,7 +1444,7 @@ Description provided  by review creators to provide more context of the review t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">174</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the displayName
@@ -1392,7 +1491,7 @@ Name of the access review series. Supports $select and $orderBy. Required on cre
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">211</span>
+    <span class="phpdocumentor-element-found-in__line">248</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the fallbackReviewers
@@ -1486,7 +1585,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">244</span>
+    <span class="phpdocumentor-element-found-in__line">281</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the instanceEnumerationScope
@@ -1533,7 +1632,7 @@ This property is required when scoping a review to guest users&#039; access acro
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">446</span>
+    <span class="phpdocumentor-element-found-in__line">483</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the instances
@@ -1580,7 +1679,7 @@ If the accessReviewScheduleDefinition is a recurring access review, instances re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">277</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastModifiedDateTime
@@ -1673,7 +1772,7 @@ Timestamp when the access review series was last modified. Supports $select. Rea
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">314</span>
+    <span class="phpdocumentor-element-found-in__line">351</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the reviewers
@@ -1720,7 +1819,7 @@ This collection of access review scopes is used to define who are the reviewers.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">347</span>
+    <span class="phpdocumentor-element-found-in__line">384</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the scope
@@ -1767,7 +1866,7 @@ Defines the entities whose access is reviewed.  For supported scopes, see access
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">380</span>
+    <span class="phpdocumentor-element-found-in__line">417</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the settings
@@ -1814,7 +1913,7 @@ The settings for an access review series, see type definition below. Supports $s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/AccessReviewScheduleDefinition.php"><a href="files/src-model-accessreviewscheduledefinition.html"><abbr title="src/Model/AccessReviewScheduleDefinition.php">AccessReviewScheduleDefinition.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">409</span>
+    <span class="phpdocumentor-element-found-in__line">446</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status
