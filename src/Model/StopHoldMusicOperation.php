@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Dictionary File
+* StopHoldMusicOperation File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
+
 /**
-* Dictionary class
+* StopHoldMusicOperation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +22,6 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Dictionary extends Entity
+class StopHoldMusicOperation extends CommsOperation
 {
 }

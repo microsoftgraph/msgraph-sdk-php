@@ -57,6 +57,7 @@ class Admin implements \JsonSerializable
     
     /**
     * Gets the serviceAnnouncement
+    * A container for service communications resources. Read-only.
     *
     * @return ServiceAnnouncement|null The serviceAnnouncement
     */
@@ -75,6 +76,7 @@ class Admin implements \JsonSerializable
     
     /**
     * Sets the serviceAnnouncement
+    * A container for service communications resources. Read-only.
     *
     * @param ServiceAnnouncement $val The serviceAnnouncement
     *
