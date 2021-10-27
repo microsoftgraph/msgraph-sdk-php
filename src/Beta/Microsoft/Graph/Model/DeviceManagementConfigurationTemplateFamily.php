@@ -37,4 +37,5 @@ class DeviceManagementConfigurationTemplateFamily extends Enum
     const ENDPOINT_SECURITY_ATTACK_SURFACE_REDUCTION = "endpointSecurityAttackSurfaceReduction";
     const ENDPOINT_SECURITY_ACCOUNT_PROTECTION = "endpointSecurityAccountProtection";
     const ENDPOINT_SECURITY_APPLICATION_CONTROL = "endpointSecurityApplicationControl";
+    const BASELINE = "baseline";
 }

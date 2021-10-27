@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceManagementConfigurationCategory extends Entity
 {
     /**
+    * Gets the categoryDescription
+    * Description of the category header
+    *
+    * @return string|null The categoryDescription
+    */
+    public function getCategoryDescription()
+    {
+        if (array_key_exists("categoryDescription", $this->_propDict)) {
+            return $this->_propDict["categoryDescription"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the categoryDescription
+    * Description of the category header
+    *
+    * @param string $val The categoryDescription
+    *
+    * @return DeviceManagementConfigurationCategory
+    */
+    public function setCategoryDescription($val)
+    {
+        $this->_propDict["categoryDescription"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the childCategoryIds
     * List of child ids of the category.
     *
@@ -262,7 +291,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Gets the settingUsage
-    * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration.
+    * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration, compliance.
     *
     * @return DeviceManagementConfigurationSettingUsage|null The settingUsage
     */
@@ -281,7 +310,7 @@ class DeviceManagementConfigurationCategory extends Entity
     
     /**
     * Sets the settingUsage
-    * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration.
+    * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration, compliance.
     *
     * @param DeviceManagementConfigurationSettingUsage $val The settingUsage
     *

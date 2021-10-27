@@ -89,7 +89,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Gets the connectionType
-    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect.
+    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect, unknownFutureValue, microsoftTunnel.
     *
     * @return Windows10VpnConnectionType|null The connectionType
     */
@@ -108,7 +108,7 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     
     /**
     * Sets the connectionType
-    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect.
+    * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect, unknownFutureValue, microsoftTunnel.
     *
     * @param Windows10VpnConnectionType $val The connectionType
     *
@@ -416,6 +416,35 @@ class Windows10VpnConfiguration extends WindowsVpnConfiguration
     public function setEnableSplitTunneling($val)
     {
         $this->_propDict["enableSplitTunneling"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the microsoftTunnelSiteId
+    * ID of the Microsoft Tunnel site associated with the VPN profile.
+    *
+    * @return string|null The microsoftTunnelSiteId
+    */
+    public function getMicrosoftTunnelSiteId()
+    {
+        if (array_key_exists("microsoftTunnelSiteId", $this->_propDict)) {
+            return $this->_propDict["microsoftTunnelSiteId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the microsoftTunnelSiteId
+    * ID of the Microsoft Tunnel site associated with the VPN profile.
+    *
+    * @param string $val The microsoftTunnelSiteId
+    *
+    * @return Windows10VpnConfiguration
+    */
+    public function setMicrosoftTunnelSiteId($val)
+    {
+        $this->_propDict["microsoftTunnelSiteId"] = $val;
         return $this;
     }
     

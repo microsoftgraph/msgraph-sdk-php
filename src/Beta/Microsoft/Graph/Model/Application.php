@@ -1037,6 +1037,36 @@ class Application extends DirectoryObject
     
 
      /** 
+     * Gets the federatedIdentityCredentials
+    * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     *
+     * @return array|null The federatedIdentityCredentials
+     */
+    public function getFederatedIdentityCredentials()
+    {
+        if (array_key_exists("federatedIdentityCredentials", $this->_propDict)) {
+           return $this->_propDict["federatedIdentityCredentials"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the federatedIdentityCredentials
+    * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+    *
+    * @param FederatedIdentityCredential $val The federatedIdentityCredentials
+    *
+    * @return Application
+    */
+    public function setFederatedIdentityCredentials($val)
+    {
+        $this->_propDict["federatedIdentityCredentials"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the homeRealmDiscoveryPolicies
      *
      * @return array|null The homeRealmDiscoveryPolicies

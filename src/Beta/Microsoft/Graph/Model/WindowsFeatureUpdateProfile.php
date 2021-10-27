@@ -268,6 +268,39 @@ class WindowsFeatureUpdateProfile extends Entity
         return $this;
     }
     
+    /**
+    * Gets the rolloutSettings
+    * The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
+    *
+    * @return WindowsUpdateRolloutSettings|null The rolloutSettings
+    */
+    public function getRolloutSettings()
+    {
+        if (array_key_exists("rolloutSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["rolloutSettings"], "\Beta\Microsoft\Graph\Model\WindowsUpdateRolloutSettings") || is_null($this->_propDict["rolloutSettings"])) {
+                return $this->_propDict["rolloutSettings"];
+            } else {
+                $this->_propDict["rolloutSettings"] = new WindowsUpdateRolloutSettings($this->_propDict["rolloutSettings"]);
+                return $this->_propDict["rolloutSettings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the rolloutSettings
+    * The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
+    *
+    * @param WindowsUpdateRolloutSettings $val The rolloutSettings
+    *
+    * @return WindowsFeatureUpdateProfile
+    */
+    public function setRolloutSettings($val)
+    {
+        $this->_propDict["rolloutSettings"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the assignments

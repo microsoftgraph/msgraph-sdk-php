@@ -319,7 +319,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Gets the consoleAccessDisabled
-    * Whether the Other user will disregard use of the `&amp;gt;console&amp;gt; special user name.
+    * Whether the Other user will disregard use of the console special user name.
     *
     * @return bool|null The consoleAccessDisabled
     */
@@ -334,7 +334,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
     
     /**
     * Sets the consoleAccessDisabled
-    * Whether the Other user will disregard use of the `&amp;gt;console&amp;gt; special user name.
+    * Whether the Other user will disregard use of the console special user name.
     *
     * @param bool $val The consoleAccessDisabled
     *

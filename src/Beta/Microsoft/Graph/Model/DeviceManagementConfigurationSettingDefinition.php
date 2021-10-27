@@ -445,7 +445,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     
     /**
     * Gets the settingUsage
-    * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
+    * Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
     *
     * @return DeviceManagementConfigurationSettingUsage|null The settingUsage
     */
@@ -464,7 +464,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     
     /**
     * Sets the settingUsage
-    * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
+    * Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
     *
     * @param DeviceManagementConfigurationSettingUsage $val The settingUsage
     *

@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the allowWindows11Upgrade
+    * Allow eligible Windows 10 devices to upgrade to the latest version of Windows 11.
+    *
+    * @return bool|null The allowWindows11Upgrade
+    */
+    public function getAllowWindows11Upgrade()
+    {
+        if (array_key_exists("allowWindows11Upgrade", $this->_propDict)) {
+            return $this->_propDict["allowWindows11Upgrade"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the allowWindows11Upgrade
+    * Allow eligible Windows 10 devices to upgrade to the latest version of Windows 11.
+    *
+    * @param bool $val The allowWindows11Upgrade
+    *
+    * @return WindowsUpdateForBusinessConfiguration
+    */
+    public function setAllowWindows11Upgrade($val)
+    {
+        $this->_propDict["allowWindows11Upgrade"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the automaticUpdateMode
     * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
     *
@@ -1106,7 +1135,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the deviceUpdateStates
-    * Windows update for business configuration device states.
+    * Windows update for business configuration device states. This collection can contain a maximum of 500 elements.
      *
      * @return array|null The deviceUpdateStates
      */
@@ -1121,7 +1150,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the deviceUpdateStates
-    * Windows update for business configuration device states.
+    * Windows update for business configuration device states. This collection can contain a maximum of 500 elements.
     *
     * @param WindowsUpdateState $val The deviceUpdateStates
     *

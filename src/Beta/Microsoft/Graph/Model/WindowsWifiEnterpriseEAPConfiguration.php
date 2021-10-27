@@ -809,7 +809,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
 
      /** 
      * Gets the rootCertificatesForServerValidation
-    * Specify root certificate for server validation.
+    * Specify root certificate for server validation. This collection can contain a maximum of 500 elements.
      *
      * @return array|null The rootCertificatesForServerValidation
      */
@@ -824,7 +824,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     
     /** 
     * Sets the rootCertificatesForServerValidation
-    * Specify root certificate for server validation.
+    * Specify root certificate for server validation. This collection can contain a maximum of 500 elements.
     *
     * @param Windows81TrustedRootCertificate $val The rootCertificatesForServerValidation
     *
