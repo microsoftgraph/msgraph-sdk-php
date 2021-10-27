@@ -349,6 +349,13 @@ Endpoints available for discovery. Services like Sharepoint populate this proper
 Deprecated. Don&#039;t use.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html#method_getFederatedIdentityCredentials">getFederatedIdentityCredentials()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+</dt>
+<dd>Gets the federatedIdentityCredentials</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html#method_getHomepage">getHomepage()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -804,6 +811,13 @@ Endpoints available for discovery. Services like Sharepoint populate this proper
 </dt>
 <dd>Sets the errorUrl
 Deprecated. Don&#039;t use.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html#method_setFederatedIdentityCredentials">setFederatedIdentityCredentials()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Beta\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a>    </span>
+</dt>
+<dd>Sets the federatedIdentityCredentials</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html#method_setHomepage">setHomepage()</a>
@@ -1967,6 +1981,41 @@ Deprecated. Don&#039;t use.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getFederatedIdentityCredentials">
+        getFederatedIdentityCredentials()
+        <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html#method_getFederatedIdentityCredentials" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1306</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the federatedIdentityCredentials</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getFederatedIdentityCredentials</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The federatedIdentityCredentials</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getHomepage">
         getHomepage()
         <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html#method_getHomepage" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2010,7 +2059,7 @@ Home page or landing page of the application.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1307</span>
+    <span class="phpdocumentor-element-found-in__line">1335</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the homeRealmDiscoveryPolicies
@@ -2154,7 +2203,7 @@ The collection of key credentials associated with the service principal. Not nul
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1336</span>
+    <span class="phpdocumentor-element-found-in__line">1364</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the licenseDetails</p>
@@ -2261,7 +2310,7 @@ Specifies the URL that will be used by Microsoft&#039;s authorization service to
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1365</span>
+    <span class="phpdocumentor-element-found-in__line">1393</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the memberOf
@@ -2369,7 +2418,7 @@ Specifies the list of email addresses where Azure AD sends a notification when t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1395</span>
+    <span class="phpdocumentor-element-found-in__line">1423</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the oauth2PermissionGrants
@@ -2440,7 +2489,7 @@ Delegated permission grants authorizing this service principal to access an API 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1425</span>
+    <span class="phpdocumentor-element-found-in__line">1453</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the ownedObjects
@@ -2476,7 +2525,7 @@ Directory objects that are owned by this service principal. Read-only. Nullable.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1455</span>
+    <span class="phpdocumentor-element-found-in__line">1483</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the owners
@@ -3014,7 +3063,7 @@ Specifies the Microsoft accounts that are supported for the current application.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1571</span>
+    <span class="phpdocumentor-element-found-in__line">1599</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the synchronization</p>
@@ -3121,7 +3170,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1485</span>
+    <span class="phpdocumentor-element-found-in__line">1513</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenIssuancePolicies
@@ -3157,7 +3206,7 @@ The tokenIssuancePolicies assigned to this service principal.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1515</span>
+    <span class="phpdocumentor-element-found-in__line">1543</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenLifetimePolicies
@@ -3193,7 +3242,7 @@ The tokenLifetimePolicies assigned to this service principal.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1544</span>
+    <span class="phpdocumentor-element-found-in__line">1572</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the transitiveMemberOf</p>
@@ -4290,6 +4339,52 @@ Deprecated. Don&#039;t use.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setFederatedIdentityCredentials">
+        setFederatedIdentityCredentials()
+        <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html#method_setFederatedIdentityCredentials" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1322</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the federatedIdentityCredentials</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setFederatedIdentityCredentials</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-FederatedIdentityCredential.html"><abbr title="\Beta\Microsoft\Graph\Model\FederatedIdentityCredential">FederatedIdentityCredential</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Beta\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-FederatedIdentityCredential.html"><abbr title="\Beta\Microsoft\Graph\Model\FederatedIdentityCredential">FederatedIdentityCredential</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The federatedIdentityCredentials</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html"><abbr title="\Beta\Microsoft\Graph\Model\ServicePrincipal">ServicePrincipal</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setHomepage">
         setHomepage()
         <a href="classes/Beta-Microsoft-Graph-Model-ServicePrincipal.html#method_setHomepage" class="headerlink"><i class="fas fa-link"></i></a>
@@ -4344,7 +4439,7 @@ Home page or landing page of the application.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1324</span>
+    <span class="phpdocumentor-element-found-in__line">1352</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the homeRealmDiscoveryPolicies
@@ -4532,7 +4627,7 @@ The collection of key credentials associated with the service principal. Not nul
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1352</span>
+    <span class="phpdocumentor-element-found-in__line">1380</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the licenseDetails</p>
@@ -4672,7 +4767,7 @@ Specifies the URL that will be used by Microsoft&#039;s authorization service to
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1382</span>
+    <span class="phpdocumentor-element-found-in__line">1410</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the memberOf
@@ -4813,7 +4908,7 @@ Specifies the list of email addresses where Azure AD sends a notification when t
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1412</span>
+    <span class="phpdocumentor-element-found-in__line">1440</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the oauth2PermissionGrants
@@ -4906,7 +5001,7 @@ Delegated permission grants authorizing this service principal to access an API 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1442</span>
+    <span class="phpdocumentor-element-found-in__line">1470</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the ownedObjects
@@ -4953,7 +5048,7 @@ Directory objects that are owned by this service principal. Read-only. Nullable.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1472</span>
+    <span class="phpdocumentor-element-found-in__line">1500</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the owners
@@ -5610,7 +5705,7 @@ Specifies the Microsoft accounts that are supported for the current application.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1591</span>
+    <span class="phpdocumentor-element-found-in__line">1619</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the synchronization</p>
@@ -5750,7 +5845,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1502</span>
+    <span class="phpdocumentor-element-found-in__line">1530</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenIssuancePolicies
@@ -5797,7 +5892,7 @@ The tokenIssuancePolicies assigned to this service principal.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1532</span>
+    <span class="phpdocumentor-element-found-in__line">1560</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenLifetimePolicies
@@ -5844,7 +5939,7 @@ The tokenLifetimePolicies assigned to this service principal.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php"><a href="files/src-beta-microsoft-graph-model-serviceprincipal.html"><abbr title="src/Beta/Microsoft/Graph/Model/ServicePrincipal.php">ServicePrincipal.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1560</span>
+    <span class="phpdocumentor-element-found-in__line">1588</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the transitiveMemberOf</p>

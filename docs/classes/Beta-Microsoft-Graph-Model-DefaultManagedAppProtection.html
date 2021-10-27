@@ -574,6 +574,14 @@ Defines if open-in operation is supported from the managed app to the filesharin
 Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-ManagedAppProtection.html#method_getGracePeriodToBlockAppsDuringOffClockHours">getGracePeriodToBlockAppsDuringOffClockHours()</a>
+    <span>
+                        &nbsp;: <abbr title="\DateInterval">DateInterval</abbr>|null    </span>
+</dt>
+<dd>Gets the gracePeriodToBlockAppsDuringOffClockHours
+A grace period before blocking app access during off clock hours.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -1378,6 +1386,14 @@ Defines if open-in operation is supported from the managed app to the filesharin
 </dt>
 <dd>Sets the fingerprintBlocked
 Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-ManagedAppProtection.html#method_setGracePeriodToBlockAppsDuringOffClockHours">setGracePeriodToBlockAppsDuringOffClockHours()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-ManagedAppProtection.html"><abbr title="\Beta\Microsoft\Graph\Model\ManagedAppProtection">ManagedAppProtection</abbr></a>    </span>
+</dt>
+<dd>Sets the gracePeriodToBlockAppsDuringOffClockHours
+A grace period before blocking app access during off clock hours.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -3674,6 +3690,42 @@ Indicates whether use of the fingerprint reader is allowed in place of a pin if 
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getGracePeriodToBlockAppsDuringOffClockHours">
+        getGracePeriodToBlockAppsDuringOffClockHours()
+        <a href="classes/Beta-Microsoft-Graph-Model-ManagedAppProtection.html#method_getGracePeriodToBlockAppsDuringOffClockHours" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">527</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the gracePeriodToBlockAppsDuringOffClockHours
+A grace period before blocking app access during off clock hours.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getGracePeriodToBlockAppsDuringOffClockHours</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\DateInterval">DateInterval</abbr>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The gracePeriodToBlockAppsDuringOffClockHours</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getId">
         getId()
         <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getId" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3753,7 +3805,7 @@ Last time the policy was modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">527</span>
+    <span class="phpdocumentor-element-found-in__line">560</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedBrowser
@@ -3789,7 +3841,7 @@ Indicates in which managed browser(s) that internet links should be opened. When
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">560</span>
+    <span class="phpdocumentor-element-found-in__line">593</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedBrowserToOpenLinksRequired
@@ -3825,7 +3877,7 @@ Indicates whether internet links should be opened in the managed browser app, or
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">589</span>
+    <span class="phpdocumentor-element-found-in__line">622</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the maximumAllowedDeviceThreatLevel
@@ -3861,7 +3913,7 @@ Maximum allowed device threat level, as reported by the MTD app. Possible values
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">622</span>
+    <span class="phpdocumentor-element-found-in__line">655</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the maximumPinRetries
@@ -3897,7 +3949,7 @@ Maximum number of incorrect pin retry attempts before the managed app is either 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">651</span>
+    <span class="phpdocumentor-element-found-in__line">684</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the maximumRequiredOsVersion
@@ -3933,7 +3985,7 @@ Versions bigger than the specified version will block the managed app from acces
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">680</span>
+    <span class="phpdocumentor-element-found-in__line">713</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the maximumWarningOsVersion
@@ -3969,7 +4021,7 @@ Versions bigger than the specified version will block the managed app from acces
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">709</span>
+    <span class="phpdocumentor-element-found-in__line">742</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the maximumWipeOsVersion
@@ -4005,7 +4057,7 @@ Versions bigger than the specified version will block the managed app from acces
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">738</span>
+    <span class="phpdocumentor-element-found-in__line">771</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the minimumPinLength
@@ -4041,7 +4093,7 @@ Minimum pin length required for an app-level pin if PinRequired is set to True</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">767</span>
+    <span class="phpdocumentor-element-found-in__line">800</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the minimumRequiredAppVersion
@@ -4113,7 +4165,7 @@ Minimum version of the Company portal that must be installed on the device or ap
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">796</span>
+    <span class="phpdocumentor-element-found-in__line">829</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the minimumRequiredOsVersion
@@ -4221,7 +4273,7 @@ Versions less than the specified version will block the managed app from accessi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">825</span>
+    <span class="phpdocumentor-element-found-in__line">858</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the minimumWarningAppVersion
@@ -4293,7 +4345,7 @@ Minimum version of the Company portal that must be installed on the device or th
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">854</span>
+    <span class="phpdocumentor-element-found-in__line">887</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the minimumWarningOsVersion
@@ -4365,7 +4417,7 @@ Define the oldest recommended Android security patch level a user can have for s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">883</span>
+    <span class="phpdocumentor-element-found-in__line">916</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the minimumWipeAppVersion
@@ -4437,7 +4489,7 @@ Minimum version of the Company portal that must be installed on the device or th
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">912</span>
+    <span class="phpdocumentor-element-found-in__line">945</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the minimumWipeOsVersion
@@ -4545,7 +4597,7 @@ Versions less than the specified version will block the managed app from accessi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">941</span>
+    <span class="phpdocumentor-element-found-in__line">974</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the mobileThreatDefenseRemediationAction
@@ -4581,7 +4633,7 @@ Determines what action to take if the mobile threat defense threat threshold isn
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">974</span>
+    <span class="phpdocumentor-element-found-in__line">1007</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the notificationRestriction
@@ -4652,7 +4704,7 @@ Specify app notification restriction. Possible values are: allow, blockOrganizat
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1007</span>
+    <span class="phpdocumentor-element-found-in__line">1040</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the organizationalCredentialsRequired
@@ -4688,7 +4740,7 @@ Indicates whether organizational credentials are required for app use.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1036</span>
+    <span class="phpdocumentor-element-found-in__line">1069</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the periodBeforePinReset
@@ -4724,7 +4776,7 @@ TimePeriod before the all-level pin must be reset if PinRequired is set to True.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1069</span>
+    <span class="phpdocumentor-element-found-in__line">1102</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the periodOfflineBeforeAccessCheck
@@ -4760,7 +4812,7 @@ The period after which access is checked when the device is not connected to the
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1102</span>
+    <span class="phpdocumentor-element-found-in__line">1135</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the periodOfflineBeforeWipeIsEnforced
@@ -4796,7 +4848,7 @@ The amount of time an app is allowed to remain disconnected from the internet be
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1135</span>
+    <span class="phpdocumentor-element-found-in__line">1168</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the periodOnlineBeforeAccessCheck
@@ -4832,7 +4884,7 @@ The period after which access is checked when the device is connected to the int
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1168</span>
+    <span class="phpdocumentor-element-found-in__line">1201</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pinCharacterSet
@@ -4868,7 +4920,7 @@ Character set which may be used for an app-level pin if PinRequired is set to Tr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1201</span>
+    <span class="phpdocumentor-element-found-in__line">1234</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pinRequired
@@ -4904,7 +4956,7 @@ Indicates whether an app-level pin is required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1230</span>
+    <span class="phpdocumentor-element-found-in__line">1263</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the pinRequiredInsteadOfBiometricTimeout
@@ -4940,7 +4992,7 @@ Timeout in minutes for an app pin instead of non biometrics passcode</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1263</span>
+    <span class="phpdocumentor-element-found-in__line">1296</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the previousPinBlockCount
@@ -4976,7 +5028,7 @@ Requires a pin to be unique from the number specified in this property.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1292</span>
+    <span class="phpdocumentor-element-found-in__line">1325</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the printBlocked
@@ -5227,7 +5279,7 @@ List of Scope Tags for this Entity instance.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1321</span>
+    <span class="phpdocumentor-element-found-in__line">1354</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the saveAsBlocked
@@ -5299,7 +5351,7 @@ Indicates whether screen capture is blocked. (Android only)</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1350</span>
+    <span class="phpdocumentor-element-found-in__line">1383</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the simplePinBlocked
@@ -7858,6 +7910,53 @@ Indicates whether use of the fingerprint reader is allowed in place of a pin if 
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setGracePeriodToBlockAppsDuringOffClockHours">
+        setGracePeriodToBlockAppsDuringOffClockHours()
+        <a href="classes/Beta-Microsoft-Graph-Model-ManagedAppProtection.html#method_setGracePeriodToBlockAppsDuringOffClockHours" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">548</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the gracePeriodToBlockAppsDuringOffClockHours
+A grace period before blocking app access during off clock hours.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setGracePeriodToBlockAppsDuringOffClockHours</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-ManagedAppProtection.html"><abbr title="\Beta\Microsoft\Graph\Model\ManagedAppProtection">ManagedAppProtection</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateInterval">DateInterval</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The gracePeriodToBlockAppsDuringOffClockHours</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-ManagedAppProtection.html"><abbr title="\Beta\Microsoft\Graph\Model\ManagedAppProtection">ManagedAppProtection</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setId">
         setId()
         <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_setId" class="headerlink"><i class="fas fa-link"></i></a>
@@ -7959,7 +8058,7 @@ Last time the policy was modified.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">548</span>
+    <span class="phpdocumentor-element-found-in__line">581</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedBrowser
@@ -8006,7 +8105,7 @@ Indicates in which managed browser(s) that internet links should be opened. When
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">577</span>
+    <span class="phpdocumentor-element-found-in__line">610</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedBrowserToOpenLinksRequired
@@ -8053,7 +8152,7 @@ Indicates whether internet links should be opened in the managed browser app, or
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">610</span>
+    <span class="phpdocumentor-element-found-in__line">643</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the maximumAllowedDeviceThreatLevel
@@ -8100,7 +8199,7 @@ Maximum allowed device threat level, as reported by the MTD app. Possible values
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">639</span>
+    <span class="phpdocumentor-element-found-in__line">672</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the maximumPinRetries
@@ -8147,7 +8246,7 @@ Maximum number of incorrect pin retry attempts before the managed app is either 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">668</span>
+    <span class="phpdocumentor-element-found-in__line">701</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the maximumRequiredOsVersion
@@ -8194,7 +8293,7 @@ Versions bigger than the specified version will block the managed app from acces
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">697</span>
+    <span class="phpdocumentor-element-found-in__line">730</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the maximumWarningOsVersion
@@ -8241,7 +8340,7 @@ Versions bigger than the specified version will block the managed app from acces
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">726</span>
+    <span class="phpdocumentor-element-found-in__line">759</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the maximumWipeOsVersion
@@ -8288,7 +8387,7 @@ Versions bigger than the specified version will block the managed app from acces
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">755</span>
+    <span class="phpdocumentor-element-found-in__line">788</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the minimumPinLength
@@ -8335,7 +8434,7 @@ Minimum pin length required for an app-level pin if PinRequired is set to True</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">784</span>
+    <span class="phpdocumentor-element-found-in__line">817</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the minimumRequiredAppVersion
@@ -8429,7 +8528,7 @@ Minimum version of the Company portal that must be installed on the device or ap
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">813</span>
+    <span class="phpdocumentor-element-found-in__line">846</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the minimumRequiredOsVersion
@@ -8570,7 +8669,7 @@ Versions less than the specified version will block the managed app from accessi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">842</span>
+    <span class="phpdocumentor-element-found-in__line">875</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the minimumWarningAppVersion
@@ -8664,7 +8763,7 @@ Minimum version of the Company portal that must be installed on the device or th
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">871</span>
+    <span class="phpdocumentor-element-found-in__line">904</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the minimumWarningOsVersion
@@ -8758,7 +8857,7 @@ Define the oldest recommended Android security patch level a user can have for s
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">900</span>
+    <span class="phpdocumentor-element-found-in__line">933</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the minimumWipeAppVersion
@@ -8852,7 +8951,7 @@ Minimum version of the Company portal that must be installed on the device or th
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">929</span>
+    <span class="phpdocumentor-element-found-in__line">962</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the minimumWipeOsVersion
@@ -8993,7 +9092,7 @@ Versions less than the specified version will block the managed app from accessi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">962</span>
+    <span class="phpdocumentor-element-found-in__line">995</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the mobileThreatDefenseRemediationAction
@@ -9040,7 +9139,7 @@ Determines what action to take if the mobile threat defense threat threshold isn
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">995</span>
+    <span class="phpdocumentor-element-found-in__line">1028</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the notificationRestriction
@@ -9133,7 +9232,7 @@ Specify app notification restriction. Possible values are: allow, blockOrganizat
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1024</span>
+    <span class="phpdocumentor-element-found-in__line">1057</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the organizationalCredentialsRequired
@@ -9180,7 +9279,7 @@ Indicates whether organizational credentials are required for app use.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1057</span>
+    <span class="phpdocumentor-element-found-in__line">1090</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the periodBeforePinReset
@@ -9227,7 +9326,7 @@ TimePeriod before the all-level pin must be reset if PinRequired is set to True.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1090</span>
+    <span class="phpdocumentor-element-found-in__line">1123</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the periodOfflineBeforeAccessCheck
@@ -9274,7 +9373,7 @@ The period after which access is checked when the device is not connected to the
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1123</span>
+    <span class="phpdocumentor-element-found-in__line">1156</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the periodOfflineBeforeWipeIsEnforced
@@ -9321,7 +9420,7 @@ The amount of time an app is allowed to remain disconnected from the internet be
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1156</span>
+    <span class="phpdocumentor-element-found-in__line">1189</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the periodOnlineBeforeAccessCheck
@@ -9368,7 +9467,7 @@ The period after which access is checked when the device is connected to the int
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1189</span>
+    <span class="phpdocumentor-element-found-in__line">1222</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pinCharacterSet
@@ -9415,7 +9514,7 @@ Character set which may be used for an app-level pin if PinRequired is set to Tr
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1218</span>
+    <span class="phpdocumentor-element-found-in__line">1251</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pinRequired
@@ -9462,7 +9561,7 @@ Indicates whether an app-level pin is required.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1251</span>
+    <span class="phpdocumentor-element-found-in__line">1284</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the pinRequiredInsteadOfBiometricTimeout
@@ -9509,7 +9608,7 @@ Timeout in minutes for an app pin instead of non biometrics passcode</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1280</span>
+    <span class="phpdocumentor-element-found-in__line">1313</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the previousPinBlockCount
@@ -9556,7 +9655,7 @@ Requires a pin to be unique from the number specified in this property.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1309</span>
+    <span class="phpdocumentor-element-found-in__line">1342</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the printBlocked
@@ -9838,7 +9937,7 @@ List of Scope Tags for this Entity instance.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1338</span>
+    <span class="phpdocumentor-element-found-in__line">1371</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the saveAsBlocked
@@ -9932,7 +10031,7 @@ Indicates whether screen capture is blocked. (Android only)</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php"><a href="files/src-beta-microsoft-graph-model-managedappprotection.html"><abbr title="src/Beta/Microsoft/Graph/Model/ManagedAppProtection.php">ManagedAppProtection.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1367</span>
+    <span class="phpdocumentor-element-found-in__line">1400</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the simplePinBlocked
