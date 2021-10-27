@@ -271,7 +271,7 @@ class DeviceManagementReusablePolicySetting extends Entity
 
      /** 
      * Gets the referencingConfigurationPolicies
-    * configuration policies referencing the current reusable setting
+    * configuration policies referencing the current reusable setting. This property is read-only.
      *
      * @return array|null The referencingConfigurationPolicies
      */
@@ -286,7 +286,7 @@ class DeviceManagementReusablePolicySetting extends Entity
     
     /** 
     * Sets the referencingConfigurationPolicies
-    * configuration policies referencing the current reusable setting
+    * configuration policies referencing the current reusable setting. This property is read-only.
     *
     * @param DeviceManagementConfigurationPolicy $val The referencingConfigurationPolicies
     *

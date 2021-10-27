@@ -257,7 +257,7 @@ Indicates whether emails are enabled or disabled. Default value is false.</dd>
                         &nbsp;: <abbr title="\DateInterval">DateInterval</abbr>|null    </span>
 </dt>
 <dd>Gets the recommendationLookBackDuration
-Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. If not specified, the duration is 30 days.</dd>
+Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html#method_getRecommendationsEnabled">getRecommendationsEnabled()</a>
@@ -368,7 +368,7 @@ Indicates whether emails are enabled or disabled. Default value is false.</dd>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html"><abbr title="\Beta\Microsoft\Graph\Model\AccessReviewScheduleSettings">AccessReviewScheduleSettings</abbr></a>    </span>
 </dt>
 <dd>Sets the recommendationLookBackDuration
-Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. If not specified, the duration is 30 days.</dd>
+Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-AccessReviewScheduleSettings.html#method_setRecommendationsEnabled">setRecommendationsEnabled()</a>
@@ -867,7 +867,7 @@ Indicates whether emails are enabled or disabled. Default value is false.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the recommendationLookBackDuration
-Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. If not specified, the duration is 30 days.</p>
+Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1470,7 +1470,7 @@ Indicates whether emails are enabled or disabled. Default value is false.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the recommendationLookBackDuration
-Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. If not specified, the duration is 30 days.</p>
+Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

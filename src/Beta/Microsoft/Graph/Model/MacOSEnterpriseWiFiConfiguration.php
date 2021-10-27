@@ -283,7 +283,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
 
      /** 
      * Gets the rootCertificatesForServerValidation
-    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
+    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
      *
      * @return array|null The rootCertificatesForServerValidation
      */
@@ -298,7 +298,7 @@ class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration
     
     /** 
     * Sets the rootCertificatesForServerValidation
-    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
+    * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
     *
     * @param MacOSTrustedRootCertificate $val The rootCertificatesForServerValidation
     *

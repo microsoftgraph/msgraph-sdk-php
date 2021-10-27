@@ -56,6 +56,37 @@ class Compliance implements \JsonSerializable
     }
     
     /**
+    * Gets the ediscovery
+    *
+    * @return \Microsoft\Graph\Ediscovery\Model\Ediscoveryroot|null The ediscovery
+    */
+    public function getEdiscovery()
+    {
+        if (array_key_exists("ediscovery", $this->_propDict)) {
+            if (is_a($this->_propDict["ediscovery"], "\Microsoft\Graph\Ediscovery\Model\Ediscoveryroot") || is_null($this->_propDict["ediscovery"])) {
+                return $this->_propDict["ediscovery"];
+            } else {
+                $this->_propDict["ediscovery"] = new \Microsoft\Graph\Ediscovery\Model\Ediscoveryroot($this->_propDict["ediscovery"]);
+                return $this->_propDict["ediscovery"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the ediscovery
+    *
+    * @param \Microsoft\Graph\Ediscovery\Model\Ediscoveryroot $val The ediscovery
+    *
+    * @return Compliance
+    */
+    public function setEdiscovery($val)
+    {
+        $this->_propDict["ediscovery"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ODataType
     *
     * @return string|null The ODataType

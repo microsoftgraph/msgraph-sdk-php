@@ -149,6 +149,39 @@ class UserExperienceAnalyticsBaseline extends Entity
     }
     
     /**
+    * Gets the batteryHealthMetrics
+    * The user experience analytics battery health metrics.
+    *
+    * @return UserExperienceAnalyticsCategory|null The batteryHealthMetrics
+    */
+    public function getBatteryHealthMetrics()
+    {
+        if (array_key_exists("batteryHealthMetrics", $this->_propDict)) {
+            if (is_a($this->_propDict["batteryHealthMetrics"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsCategory") || is_null($this->_propDict["batteryHealthMetrics"])) {
+                return $this->_propDict["batteryHealthMetrics"];
+            } else {
+                $this->_propDict["batteryHealthMetrics"] = new UserExperienceAnalyticsCategory($this->_propDict["batteryHealthMetrics"]);
+                return $this->_propDict["batteryHealthMetrics"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the batteryHealthMetrics
+    * The user experience analytics battery health metrics.
+    *
+    * @param UserExperienceAnalyticsCategory $val The batteryHealthMetrics
+    *
+    * @return UserExperienceAnalyticsBaseline
+    */
+    public function setBatteryHealthMetrics($val)
+    {
+        $this->_propDict["batteryHealthMetrics"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the bestPracticesMetrics
     * The user experience analytics best practices metrics.
     *

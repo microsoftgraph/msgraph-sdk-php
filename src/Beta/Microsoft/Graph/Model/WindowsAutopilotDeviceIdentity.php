@@ -146,7 +146,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Gets the deploymentProfileAssignmentDetailedStatus
-    * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported.
+    * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported, surfaceHub2SProfileNotSupported, unknownFutureValue.
     *
     * @return WindowsAutopilotProfileAssignmentDetailedStatus|null The deploymentProfileAssignmentDetailedStatus
     */
@@ -165,7 +165,7 @@ class WindowsAutopilotDeviceIdentity extends Entity
     
     /**
     * Sets the deploymentProfileAssignmentDetailedStatus
-    * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported.
+    * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported, surfaceHub2SProfileNotSupported, unknownFutureValue.
     *
     * @param WindowsAutopilotProfileAssignmentDetailedStatus $val The deploymentProfileAssignmentDetailedStatus
     *
