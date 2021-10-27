@@ -429,39 +429,6 @@ class Team extends Entity
         return $this;
     }
     
-    /**
-    * Gets the schedule
-    * The schedule of shifts for this team.
-    *
-    * @return Schedule|null The schedule
-    */
-    public function getSchedule()
-    {
-        if (array_key_exists("schedule", $this->_propDict) && !is_null($this->_propDict["schedule"])) {
-            if (is_a($this->_propDict["schedule"], "\Microsoft\Graph\Model\Schedule")) {
-                return $this->_propDict["schedule"];
-            } else {
-                $this->_propDict["schedule"] = new Schedule($this->_propDict["schedule"]);
-                return $this->_propDict["schedule"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the schedule
-    * The schedule of shifts for this team.
-    *
-    * @param Schedule $val The schedule
-    *
-    * @return Team
-    */
-    public function setSchedule($val)
-    {
-        $this->_propDict["schedule"] = $val;
-        return $this;
-    }
-    
 
      /** 
      * Gets the channels
@@ -704,6 +671,39 @@ class Team extends Entity
     public function setTemplate($val)
     {
         $this->_propDict["template"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the schedule
+    * The schedule of shifts for this team.
+    *
+    * @return Schedule|null The schedule
+    */
+    public function getSchedule()
+    {
+        if (array_key_exists("schedule", $this->_propDict) && !is_null($this->_propDict["schedule"])) {
+            if (is_a($this->_propDict["schedule"], "\Microsoft\Graph\Model\Schedule")) {
+                return $this->_propDict["schedule"];
+            } else {
+                $this->_propDict["schedule"] = new Schedule($this->_propDict["schedule"]);
+                return $this->_propDict["schedule"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the schedule
+    * The schedule of shifts for this team.
+    *
+    * @param Schedule $val The schedule
+    *
+    * @return Team
+    */
+    public function setSchedule($val)
+    {
+        $this->_propDict["schedule"] = $val;
         return $this;
     }
     
