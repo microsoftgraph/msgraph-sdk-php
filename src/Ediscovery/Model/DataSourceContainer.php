@@ -1,0 +1,219 @@
+<?php
+/**
+* Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+* 
+* DataSourceContainer File
+* PHP version 7
+*
+* @category  Library
+* @package   Microsoft.Graph
+* @copyright (c) Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @link      https://graph.microsoft.com
+*/
+namespace Microsoft\Graph\Ediscovery\Model;
+
+/**
+* DataSourceContainer class
+*
+* @category  Model
+* @package   Microsoft.Graph
+* @copyright (c) Microsoft Corporation. All rights reserved.
+* @license   https://opensource.org/licenses/MIT MIT License
+* @link      https://graph.microsoft.com
+*/
+class DataSourceContainer extends \Microsoft\Graph\Model\Entity
+{
+    /**
+    * Gets the createdDateTime
+    * Created date and time of the dataSourceContainer entity.
+    *
+    * @return \DateTime|null The createdDateTime
+    */
+    public function getCreatedDateTime()
+    {
+        if (array_key_exists("createdDateTime", $this->_propDict) && !is_null($this->_propDict["createdDateTime"])) {
+            if (is_a($this->_propDict["createdDateTime"], "\DateTime")) {
+                return $this->_propDict["createdDateTime"];
+            } else {
+                $this->_propDict["createdDateTime"] = new \DateTime($this->_propDict["createdDateTime"]);
+                return $this->_propDict["createdDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the createdDateTime
+    * Created date and time of the dataSourceContainer entity.
+    *
+    * @param \DateTime $val The createdDateTime
+    *
+    * @return DataSourceContainer
+    */
+    public function setCreatedDateTime($val)
+    {
+        $this->_propDict["createdDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the displayName
+    * Display name of the dataSourceContainer entity.
+    *
+    * @return string|null The displayName
+    */
+    public function getDisplayName()
+    {
+        if (array_key_exists("displayName", $this->_propDict)) {
+            return $this->_propDict["displayName"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the displayName
+    * Display name of the dataSourceContainer entity.
+    *
+    * @param string $val The displayName
+    *
+    * @return DataSourceContainer
+    */
+    public function setDisplayName($val)
+    {
+        $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastModifiedDateTime
+    * Last modified date and time of the dataSourceContainer.
+    *
+    * @return \DateTime|null The lastModifiedDateTime
+    */
+    public function getLastModifiedDateTime()
+    {
+        if (array_key_exists("lastModifiedDateTime", $this->_propDict) && !is_null($this->_propDict["lastModifiedDateTime"])) {
+            if (is_a($this->_propDict["lastModifiedDateTime"], "\DateTime")) {
+                return $this->_propDict["lastModifiedDateTime"];
+            } else {
+                $this->_propDict["lastModifiedDateTime"] = new \DateTime($this->_propDict["lastModifiedDateTime"]);
+                return $this->_propDict["lastModifiedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastModifiedDateTime
+    * Last modified date and time of the dataSourceContainer.
+    *
+    * @param \DateTime $val The lastModifiedDateTime
+    *
+    * @return DataSourceContainer
+    */
+    public function setLastModifiedDateTime($val)
+    {
+        $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the releasedDateTime
+    * Date and time that the dataSourceContainer was released from the case.
+    *
+    * @return \DateTime|null The releasedDateTime
+    */
+    public function getReleasedDateTime()
+    {
+        if (array_key_exists("releasedDateTime", $this->_propDict) && !is_null($this->_propDict["releasedDateTime"])) {
+            if (is_a($this->_propDict["releasedDateTime"], "\DateTime")) {
+                return $this->_propDict["releasedDateTime"];
+            } else {
+                $this->_propDict["releasedDateTime"] = new \DateTime($this->_propDict["releasedDateTime"]);
+                return $this->_propDict["releasedDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the releasedDateTime
+    * Date and time that the dataSourceContainer was released from the case.
+    *
+    * @param \DateTime $val The releasedDateTime
+    *
+    * @return DataSourceContainer
+    */
+    public function setReleasedDateTime($val)
+    {
+        $this->_propDict["releasedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the status
+    * Latest status of the dataSourceContainer. Possible values are: Active, Released.
+    *
+    * @return DataSourceContainerStatus|null The status
+    */
+    public function getStatus()
+    {
+        if (array_key_exists("status", $this->_propDict) && !is_null($this->_propDict["status"])) {
+            if (is_a($this->_propDict["status"], "\Microsoft\Graph\Ediscovery\Model\DataSourceContainerStatus")) {
+                return $this->_propDict["status"];
+            } else {
+                $this->_propDict["status"] = new DataSourceContainerStatus($this->_propDict["status"]);
+                return $this->_propDict["status"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the status
+    * Latest status of the dataSourceContainer. Possible values are: Active, Released.
+    *
+    * @param DataSourceContainerStatus $val The status
+    *
+    * @return DataSourceContainer
+    */
+    public function setStatus($val)
+    {
+        $this->_propDict["status"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastIndexOperation
+    *
+    * @return CaseIndexOperation|null The lastIndexOperation
+    */
+    public function getLastIndexOperation()
+    {
+        if (array_key_exists("lastIndexOperation", $this->_propDict) && !is_null($this->_propDict["lastIndexOperation"])) {
+            if (is_a($this->_propDict["lastIndexOperation"], "\Microsoft\Graph\Ediscovery\Model\CaseIndexOperation")) {
+                return $this->_propDict["lastIndexOperation"];
+            } else {
+                $this->_propDict["lastIndexOperation"] = new CaseIndexOperation($this->_propDict["lastIndexOperation"]);
+                return $this->_propDict["lastIndexOperation"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastIndexOperation
+    *
+    * @param CaseIndexOperation $val The lastIndexOperation
+    *
+    * @return DataSourceContainer
+    */
+    public function setLastIndexOperation($val)
+    {
+        $this->_propDict["lastIndexOperation"] = $val;
+        return $this;
+    }
+    
+}

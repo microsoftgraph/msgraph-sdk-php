@@ -24,6 +24,43 @@ namespace Microsoft\Graph\Model;
 */
 class AccessReviewScheduleDefinition extends Entity
 {
+
+     /** 
+     * Gets the additionalNotificationRecipients
+    * Defines the list of additional users or group members to be notified of the access review progress.
+     *
+     * @return AccessReviewNotificationRecipientItem[]|null The additionalNotificationRecipients
+     */
+    public function getAdditionalNotificationRecipients()
+    {
+        if (array_key_exists('additionalNotificationRecipients', $this->_propDict) && !is_null($this->_propDict['additionalNotificationRecipients'])) {
+            $additionalNotificationRecipients = [];
+            if (count($this->_propDict['additionalNotificationRecipients']) > 0 && is_a($this->_propDict['additionalNotificationRecipients'][0], 'AccessReviewNotificationRecipientItem')) {
+                return $this->_propDict['additionalNotificationRecipients'];
+            }
+            foreach ($this->_propDict['additionalNotificationRecipients'] as $singleValue) {
+                $additionalNotificationRecipients []= new AccessReviewNotificationRecipientItem($singleValue);
+            }
+            $this->_propDict['additionalNotificationRecipients'] = $additionalNotificationRecipients;
+            return $this->_propDict['additionalNotificationRecipients'];
+        }
+        return null;
+    }
+    
+    /** 
+    * Sets the additionalNotificationRecipients
+    * Defines the list of additional users or group members to be notified of the access review progress.
+    *
+    * @param AccessReviewNotificationRecipientItem[] $val The additionalNotificationRecipients
+    *
+    * @return AccessReviewScheduleDefinition
+    */
+    public function setAdditionalNotificationRecipients($val)
+    {
+        $this->_propDict["additionalNotificationRecipients"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the createdBy
     * User who created this review. Read-only.
