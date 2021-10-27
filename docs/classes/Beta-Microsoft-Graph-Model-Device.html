@@ -297,7 +297,8 @@ Enrollment type of the device. This property is set by Intune. Possible values a
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-OnPremisesExtensionAttributes.html"><abbr title="\Beta\Microsoft\Graph\Model\OnPremisesExtensionAttributes">OnPremisesExtensionAttributes</abbr></a>|null    </span>
 </dt>
-<dd>Gets the extensionAttributes</dd>
+<dd>Gets the extensionAttributes
+Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, NOT, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Device.html#method_getExtensions">getExtensions()</a>
@@ -661,7 +662,8 @@ Enrollment type of the device. This property is set by Intune. Possible values a
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Device.html"><abbr title="\Beta\Microsoft\Graph\Model\Device">Device</abbr></a>    </span>
 </dt>
-<dd>Sets the extensionAttributes</dd>
+<dd>Sets the extensionAttributes
+Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, NOT, startsWith).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Device.html#method_setExtensions">setExtensions()</a>
@@ -1105,7 +1107,7 @@ The timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1219</span>
+    <span class="phpdocumentor-element-found-in__line">1221</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the commands
@@ -1536,10 +1538,11 @@ Enrollment type of the device. This property is set by Intune. Possible values a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">418</span>
+    <span class="phpdocumentor-element-found-in__line">419</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the extensionAttributes</p>
+        <p class="phpdocumentor-summary">Gets the extensionAttributes
+Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, NOT, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1571,7 +1574,7 @@ Enrollment type of the device. This property is set by Intune. Possible values a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1189</span>
+    <span class="phpdocumentor-element-found-in__line">1191</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the extensions
@@ -1607,7 +1610,7 @@ The collection of open extensions defined for the device. Read-only. Nullable.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">450</span>
+    <span class="phpdocumentor-element-found-in__line">452</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the hostnames
@@ -1679,7 +1682,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">479</span>
+    <span class="phpdocumentor-element-found-in__line">481</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isCompliant
@@ -1715,7 +1718,7 @@ true if the device complies with Mobile Device Management (MDM) policies; otherw
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">508</span>
+    <span class="phpdocumentor-element-found-in__line">510</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isManaged
@@ -1751,7 +1754,7 @@ true if the device is managed by a Mobile Device Management (MDM) app; otherwise
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">537</span>
+    <span class="phpdocumentor-element-found-in__line">539</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the isRooted
@@ -1787,7 +1790,7 @@ true if device is rooted; false if device is jail-broken. This can only be updat
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">864</span>
+    <span class="phpdocumentor-element-found-in__line">866</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the kind
@@ -1823,7 +1826,7 @@ Form factor of device. Only returned if user signs in with a Microsoft account a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">566</span>
+    <span class="phpdocumentor-element-found-in__line">568</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managementType
@@ -1859,7 +1862,7 @@ Management channel of the device.  This property is set by Intune. Possible valu
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">893</span>
+    <span class="phpdocumentor-element-found-in__line">895</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the manufacturer
@@ -1895,7 +1898,7 @@ Manufacturer of the device. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1069</span>
+    <span class="phpdocumentor-element-found-in__line">1071</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the memberOf
@@ -1931,7 +1934,7 @@ Groups that this device is a member of. Read-only. Nullable. Supports $expand.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">922</span>
+    <span class="phpdocumentor-element-found-in__line">924</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the model
@@ -1967,7 +1970,7 @@ Model of the device. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">951</span>
+    <span class="phpdocumentor-element-found-in__line">953</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the name
@@ -2038,7 +2041,7 @@ Friendly name of a device. Only returned if user signs in with a Microsoft accou
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">595</span>
+    <span class="phpdocumentor-element-found-in__line">597</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesLastSyncDateTime
@@ -2074,7 +2077,7 @@ The last time at which the object was synced with the on-premises directory. The
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">628</span>
+    <span class="phpdocumentor-element-found-in__line">630</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onPremisesSyncEnabled
@@ -2110,7 +2113,7 @@ true if this object is synced from an on-premises directory; false if this objec
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">657</span>
+    <span class="phpdocumentor-element-found-in__line">659</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operatingSystem
@@ -2146,7 +2149,7 @@ The type of operating system on the device. Required. Supports $filter (eq, ne, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">686</span>
+    <span class="phpdocumentor-element-found-in__line">688</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the operatingSystemVersion
@@ -2182,7 +2185,7 @@ The version of the operating system on the device. Required. Supports $filter (e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">715</span>
+    <span class="phpdocumentor-element-found-in__line">717</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the physicalIds
@@ -2218,7 +2221,7 @@ For internal use only. Not nullable. Supports $filter (eq, NOT, ge, le, startsWi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">980</span>
+    <span class="phpdocumentor-element-found-in__line">982</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the platform
@@ -2254,7 +2257,7 @@ Platform of device. Only returned if user signs in with a Microsoft account as p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">744</span>
+    <span class="phpdocumentor-element-found-in__line">746</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the profileType
@@ -2325,7 +2328,7 @@ The profile type of the device. Possible values: RegisteredDevice (default), Sec
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1099</span>
+    <span class="phpdocumentor-element-found-in__line">1101</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the registeredOwners
@@ -2361,7 +2364,7 @@ The user that cloud joined the device or registered their personal device. The r
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1129</span>
+    <span class="phpdocumentor-element-found-in__line">1131</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the registeredUsers
@@ -2397,7 +2400,7 @@ Collection of registered users of the device. For cloud joined devices and regis
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">773</span>
+    <span class="phpdocumentor-element-found-in__line">775</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the registrationDateTime
@@ -2433,7 +2436,7 @@ Date and time of when the device was registered. The timestamp type represents d
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1009</span>
+    <span class="phpdocumentor-element-found-in__line">1011</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the status
@@ -2469,7 +2472,7 @@ Device is online or offline. Only returned if user signs in with a Microsoft acc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">806</span>
+    <span class="phpdocumentor-element-found-in__line">808</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the systemLabels
@@ -2505,7 +2508,7 @@ List of labels applied to the device by the system.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1159</span>
+    <span class="phpdocumentor-element-found-in__line">1161</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the transitiveMemberOf
@@ -2541,7 +2544,7 @@ Groups that the device is a member of. This operation is transitive. Supports $e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">835</span>
+    <span class="phpdocumentor-element-found-in__line">837</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the trustType
@@ -2577,7 +2580,7 @@ Type of trust for the joined device. Read-only. Possible values:  Workplace (ind
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1039</span>
+    <span class="phpdocumentor-element-found-in__line">1041</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the usageRights
@@ -2790,7 +2793,7 @@ The timestamp type represents date and time information using ISO 8601 format an
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1236</span>
+    <span class="phpdocumentor-element-found-in__line">1238</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the commands
@@ -3353,10 +3356,11 @@ Enrollment type of the device. This property is set by Intune. Possible values a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">438</span>
+    <span class="phpdocumentor-element-found-in__line">440</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the extensionAttributes</p>
+        <p class="phpdocumentor-summary">Sets the extensionAttributes
+Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, NOT, startsWith).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3399,7 +3403,7 @@ Enrollment type of the device. This property is set by Intune. Possible values a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1206</span>
+    <span class="phpdocumentor-element-found-in__line">1208</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the extensions
@@ -3446,7 +3450,7 @@ The collection of open extensions defined for the device. Read-only. Nullable.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">467</span>
+    <span class="phpdocumentor-element-found-in__line">469</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the hostnames
@@ -3540,7 +3544,7 @@ Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">496</span>
+    <span class="phpdocumentor-element-found-in__line">498</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isCompliant
@@ -3587,7 +3591,7 @@ true if the device complies with Mobile Device Management (MDM) policies; otherw
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">525</span>
+    <span class="phpdocumentor-element-found-in__line">527</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isManaged
@@ -3634,7 +3638,7 @@ true if the device is managed by a Mobile Device Management (MDM) app; otherwise
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">554</span>
+    <span class="phpdocumentor-element-found-in__line">556</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the isRooted
@@ -3681,7 +3685,7 @@ true if device is rooted; false if device is jail-broken. This can only be updat
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">881</span>
+    <span class="phpdocumentor-element-found-in__line">883</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the kind
@@ -3728,7 +3732,7 @@ Form factor of device. Only returned if user signs in with a Microsoft account a
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">583</span>
+    <span class="phpdocumentor-element-found-in__line">585</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managementType
@@ -3775,7 +3779,7 @@ Management channel of the device.  This property is set by Intune. Possible valu
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">910</span>
+    <span class="phpdocumentor-element-found-in__line">912</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the manufacturer
@@ -3822,7 +3826,7 @@ Manufacturer of the device. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1086</span>
+    <span class="phpdocumentor-element-found-in__line">1088</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the memberOf
@@ -3869,7 +3873,7 @@ Groups that this device is a member of. Read-only. Nullable. Supports $expand.</
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">939</span>
+    <span class="phpdocumentor-element-found-in__line">941</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the model
@@ -3916,7 +3920,7 @@ Model of the device. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">968</span>
+    <span class="phpdocumentor-element-found-in__line">970</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the name
@@ -4009,7 +4013,7 @@ Friendly name of a device. Only returned if user signs in with a Microsoft accou
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">616</span>
+    <span class="phpdocumentor-element-found-in__line">618</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesLastSyncDateTime
@@ -4056,7 +4060,7 @@ The last time at which the object was synced with the on-premises directory. The
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">645</span>
+    <span class="phpdocumentor-element-found-in__line">647</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onPremisesSyncEnabled
@@ -4103,7 +4107,7 @@ true if this object is synced from an on-premises directory; false if this objec
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">674</span>
+    <span class="phpdocumentor-element-found-in__line">676</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operatingSystem
@@ -4150,7 +4154,7 @@ The type of operating system on the device. Required. Supports $filter (eq, ne, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">703</span>
+    <span class="phpdocumentor-element-found-in__line">705</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the operatingSystemVersion
@@ -4197,7 +4201,7 @@ The version of the operating system on the device. Required. Supports $filter (e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">732</span>
+    <span class="phpdocumentor-element-found-in__line">734</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the physicalIds
@@ -4244,7 +4248,7 @@ For internal use only. Not nullable. Supports $filter (eq, NOT, ge, le, startsWi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">997</span>
+    <span class="phpdocumentor-element-found-in__line">999</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the platform
@@ -4291,7 +4295,7 @@ Platform of device. Only returned if user signs in with a Microsoft account as p
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">761</span>
+    <span class="phpdocumentor-element-found-in__line">763</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the profileType
@@ -4338,7 +4342,7 @@ The profile type of the device. Possible values: RegisteredDevice (default), Sec
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1116</span>
+    <span class="phpdocumentor-element-found-in__line">1118</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the registeredOwners
@@ -4385,7 +4389,7 @@ The user that cloud joined the device or registered their personal device. The r
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1146</span>
+    <span class="phpdocumentor-element-found-in__line">1148</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the registeredUsers
@@ -4432,7 +4436,7 @@ Collection of registered users of the device. For cloud joined devices and regis
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">794</span>
+    <span class="phpdocumentor-element-found-in__line">796</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the registrationDateTime
@@ -4479,7 +4483,7 @@ Date and time of when the device was registered. The timestamp type represents d
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1026</span>
+    <span class="phpdocumentor-element-found-in__line">1028</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the status
@@ -4526,7 +4530,7 @@ Device is online or offline. Only returned if user signs in with a Microsoft acc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">823</span>
+    <span class="phpdocumentor-element-found-in__line">825</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the systemLabels
@@ -4573,7 +4577,7 @@ List of labels applied to the device by the system.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1176</span>
+    <span class="phpdocumentor-element-found-in__line">1178</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the transitiveMemberOf
@@ -4620,7 +4624,7 @@ Groups that the device is a member of. This operation is transitive. Supports $e
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">852</span>
+    <span class="phpdocumentor-element-found-in__line">854</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the trustType
@@ -4667,7 +4671,7 @@ Type of trust for the joined device. Read-only. Possible values:  Workplace (ind
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Device.php"><a href="files/src-beta-microsoft-graph-model-device.html"><abbr title="src/Beta/Microsoft/Graph/Model/Device.php">Device.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1056</span>
+    <span class="phpdocumentor-element-found-in__line">1058</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the usageRights

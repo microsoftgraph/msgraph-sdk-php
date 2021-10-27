@@ -277,6 +277,14 @@ The display name for the application. Supports $filter (eq, ne, NOT, ge, le, in,
 Read-only. Nullable.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getFederatedIdentityCredentials">getFederatedIdentityCredentials()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;|null    </span>
+</dt>
+<dd>Gets the federatedIdentityCredentials
+Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getGroupMembershipClaims">getGroupMembershipClaims()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -621,6 +629,14 @@ The display name for the application. Supports $filter (eq, ne, NOT, ge, le, in,
 </dt>
 <dd>Sets the extensionProperties
 Read-only. Nullable.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setFederatedIdentityCredentials">setFederatedIdentityCredentials()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a>    </span>
+</dt>
+<dd>Sets the federatedIdentityCredentials
+Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setGroupMembershipClaims">setGroupMembershipClaims()</a>
@@ -1105,7 +1121,7 @@ The collection of roles assigned to the application. With app role assignments, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1160</span>
+    <span class="phpdocumentor-element-found-in__line">1190</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the connectorGroup
@@ -1421,6 +1437,42 @@ Read-only. Nullable.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getFederatedIdentityCredentials">
+        getFederatedIdentityCredentials()
+        <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getFederatedIdentityCredentials" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1045</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the federatedIdentityCredentials
+Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getFederatedIdentityCredentials</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The federatedIdentityCredentials</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getGroupMembershipClaims">
         getGroupMembershipClaims()
         <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_getGroupMembershipClaims" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1464,7 +1516,7 @@ Configures the groups claim issued in a user or OAuth 2.0 access token that the 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1044</span>
+    <span class="phpdocumentor-element-found-in__line">1074</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the homeRealmDiscoveryPolicies</p>
@@ -1894,7 +1946,7 @@ Application developers can configure optional claims in their Azure AD applicati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1073</span>
+    <span class="phpdocumentor-element-found-in__line">1103</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the owners
@@ -2217,7 +2269,7 @@ Specifies settings for a single-page application, including sign out URLs and re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1192</span>
+    <span class="phpdocumentor-element-found-in__line">1222</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the synchronization</p>
@@ -2324,7 +2376,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1102</span>
+    <span class="phpdocumentor-element-found-in__line">1132</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenIssuancePolicies</p>
@@ -2359,7 +2411,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1131</span>
+    <span class="phpdocumentor-element-found-in__line">1161</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tokenLifetimePolicies
@@ -2727,7 +2779,7 @@ The collection of roles assigned to the application. With app role assignments, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1181</span>
+    <span class="phpdocumentor-element-found-in__line">1211</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the connectorGroup
@@ -3142,6 +3194,53 @@ Read-only. Nullable.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setFederatedIdentityCredentials">
+        setFederatedIdentityCredentials()
+        <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setFederatedIdentityCredentials" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1062</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the federatedIdentityCredentials
+Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setFederatedIdentityCredentials</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-FederatedIdentityCredential.html"><abbr title="\Beta\Microsoft\Graph\Model\FederatedIdentityCredential">FederatedIdentityCredential</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Beta-Microsoft-Graph-Model-FederatedIdentityCredential.html"><abbr title="\Beta\Microsoft\Graph\Model\FederatedIdentityCredential">FederatedIdentityCredential</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The federatedIdentityCredentials</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-Application.html"><abbr title="\Beta\Microsoft\Graph\Model\Application">Application</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setGroupMembershipClaims">
         setGroupMembershipClaims()
         <a href="classes/Beta-Microsoft-Graph-Model-Application.html#method_setGroupMembershipClaims" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3196,7 +3295,7 @@ Configures the groups claim issued in a user or OAuth 2.0 access token that the 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1060</span>
+    <span class="phpdocumentor-element-found-in__line">1090</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the homeRealmDiscoveryPolicies</p>
@@ -3758,7 +3857,7 @@ Application developers can configure optional claims in their Azure AD applicati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1090</span>
+    <span class="phpdocumentor-element-found-in__line">1120</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the owners
@@ -4134,7 +4233,7 @@ Specifies settings for a single-page application, including sign out URLs and re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1212</span>
+    <span class="phpdocumentor-element-found-in__line">1242</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the synchronization</p>
@@ -4274,7 +4373,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1118</span>
+    <span class="phpdocumentor-element-found-in__line">1148</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenIssuancePolicies</p>
@@ -4320,7 +4419,7 @@ Specifies the keyId of a public key from the keyCredentials collection. When con
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/Application.php"><a href="files/src-beta-microsoft-graph-model-application.html"><abbr title="src/Beta/Microsoft/Graph/Model/Application.php">Application.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1148</span>
+    <span class="phpdocumentor-element-found-in__line">1178</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tokenLifetimePolicies

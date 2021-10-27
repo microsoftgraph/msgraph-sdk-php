@@ -366,6 +366,14 @@ Enables or disables whether passwords must meet Active Directory&#039;s complexi
 Gets or sets a description of the password complexity requirements.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_getPreferredKDCs">getPreferredKDCs()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the preferredKDCs
+Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getProperties">getProperties()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;    </span>
@@ -402,7 +410,7 @@ Text displayed to the user at the Kerberos sign in window. Available for devices
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the singleSignOnExtensionPreferredKDCs
-Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.</dd>
+Soon to be deprecated.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_getTlsForLDAPRequired">getTlsForLDAPRequired()</a>
@@ -413,12 +421,20 @@ Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use 
 When set to True, LDAP connections are required to use Transport Layer Security (TLS). Available for devices running macOS versions 11 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_getUsernameLabelCustom">getUsernameLabelCustom()</a>
+    <span>
+                        &nbsp;: string|null    </span>
+</dt>
+<dd>Gets the usernameLabelCustom
+This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_getUsernameLableCustom">getUsernameLableCustom()</a>
     <span>
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the usernameLableCustom
-This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.</dd>
+Soon to be deprecated.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_getUserPrincipalName">getUserPrincipalName()</a>
@@ -636,6 +652,14 @@ Enables or disables whether passwords must meet Active Directory&#039;s complexi
 Gets or sets a description of the password complexity requirements.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setPreferredKDCs">setPreferredKDCs()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a>    </span>
+</dt>
+<dd>Sets the preferredKDCs
+Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setRealm">setRealm()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a>    </span>
@@ -665,7 +689,7 @@ Text displayed to the user at the Kerberos sign in window. Available for devices
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a>    </span>
 </dt>
 <dd>Sets the singleSignOnExtensionPreferredKDCs
-Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.</dd>
+Soon to be deprecated.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setTlsForLDAPRequired">setTlsForLDAPRequired()</a>
@@ -676,12 +700,20 @@ Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use 
 When set to True, LDAP connections are required to use Transport Layer Security (TLS). Available for devices running macOS versions 11 and later.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setUsernameLabelCustom">setUsernameLabelCustom()</a>
+    <span>
+                        &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a>    </span>
+</dt>
+<dd>Sets the usernameLabelCustom
+This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setUsernameLableCustom">setUsernameLableCustom()</a>
     <span>
                         &nbsp;: <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a>    </span>
 </dt>
 <dd>Sets the usernameLableCustom
-This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.</dd>
+Soon to be deprecated.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setUserPrincipalName">setUserPrincipalName()</a>
@@ -1667,6 +1699,42 @@ Gets or sets a description of the password complexity requirements.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getPreferredKDCs">
+        getPreferredKDCs()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_getPreferredKDCs" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">659</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the preferredKDCs
+Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getPreferredKDCs</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The preferredKDCs</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getProperties">
         getProperties()
         <a href="classes/Beta-Microsoft-Graph-Model-Entity.html#method_getProperties" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1709,7 +1777,7 @@ Gets or sets a description of the password complexity requirements.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">659</span>
+    <span class="phpdocumentor-element-found-in__line">687</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the realm
@@ -1745,7 +1813,7 @@ Gets or sets the case-sensitive realm name for this profile.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">687</span>
+    <span class="phpdocumentor-element-found-in__line">715</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the requireUserPresence
@@ -1781,7 +1849,7 @@ Gets or sets whether to require authentication via Touch ID, Face ID, or a passc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">715</span>
+    <span class="phpdocumentor-element-found-in__line">743</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the signInHelpText
@@ -1817,11 +1885,11 @@ Text displayed to the user at the Kerberos sign in window. Available for devices
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">743</span>
+    <span class="phpdocumentor-element-found-in__line">771</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the singleSignOnExtensionPreferredKDCs
-Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.</p>
+Soon to be deprecated.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1853,7 +1921,7 @@ Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">771</span>
+    <span class="phpdocumentor-element-found-in__line">799</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the tlsForLDAPRequired
@@ -1882,6 +1950,42 @@ When set to True, LDAP connections are required to use Transport Layer Security 
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getUsernameLabelCustom">
+        getUsernameLabelCustom()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_getUsernameLabelCustom" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">827</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the usernameLabelCustom
+This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getUsernameLabelCustom</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The usernameLabelCustom</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getUsernameLableCustom">
         getUsernameLableCustom()
         <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_getUsernameLableCustom" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1889,11 +1993,11 @@ When set to True, LDAP connections are required to use Transport Layer Security 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">799</span>
+    <span class="phpdocumentor-element-found-in__line">855</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the usernameLableCustom
-This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.</p>
+Soon to be deprecated.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -1925,7 +2029,7 @@ This label replaces the user name shown in the Kerberos extension. You can enter
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">827</span>
+    <span class="phpdocumentor-element-found-in__line">883</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userPrincipalName
@@ -1961,7 +2065,7 @@ Gets or sets the principle user name to use for this profile. The realm name doe
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">855</span>
+    <span class="phpdocumentor-element-found-in__line">911</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userSetupDelayed
@@ -3153,6 +3257,53 @@ Gets or sets a description of the password complexity requirements.</p>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setPreferredKDCs">
+        setPreferredKDCs()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setPreferredKDCs" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">676</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the preferredKDCs
+Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setPreferredKDCs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value of the preferredKDCs</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setRealm">
         setRealm()
         <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setRealm" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3160,7 +3311,7 @@ Gets or sets a description of the password complexity requirements.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">676</span>
+    <span class="phpdocumentor-element-found-in__line">704</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the realm
@@ -3207,7 +3358,7 @@ Gets or sets the case-sensitive realm name for this profile.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">704</span>
+    <span class="phpdocumentor-element-found-in__line">732</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the requireUserPresence
@@ -3254,7 +3405,7 @@ Gets or sets whether to require authentication via Touch ID, Face ID, or a passc
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">732</span>
+    <span class="phpdocumentor-element-found-in__line">760</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the signInHelpText
@@ -3301,11 +3452,11 @@ Text displayed to the user at the Kerberos sign in window. Available for devices
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">760</span>
+    <span class="phpdocumentor-element-found-in__line">788</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the singleSignOnExtensionPreferredKDCs
-Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.</p>
+Soon to be deprecated.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3348,7 +3499,7 @@ Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">788</span>
+    <span class="phpdocumentor-element-found-in__line">816</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the tlsForLDAPRequired
@@ -3388,6 +3539,53 @@ When set to True, LDAP connections are required to use Transport Layer Security 
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setUsernameLabelCustom">
+        setUsernameLabelCustom()
+        <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setUsernameLabelCustom" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">844</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the usernameLabelCustom
+This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setUsernameLabelCustom</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value of the usernameLabelCustom</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html"><abbr title="\Beta\Microsoft\Graph\Model\MacOSKerberosSingleSignOnExtension">MacOSKerberosSingleSignOnExtension</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setUsernameLableCustom">
         setUsernameLableCustom()
         <a href="classes/Beta-Microsoft-Graph-Model-MacOSKerberosSingleSignOnExtension.html#method_setUsernameLableCustom" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3395,11 +3593,11 @@ When set to True, LDAP connections are required to use Transport Layer Security 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">816</span>
+    <span class="phpdocumentor-element-found-in__line">872</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the usernameLableCustom
-This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.</p>
+Soon to be deprecated.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3442,7 +3640,7 @@ This label replaces the user name shown in the Kerberos extension. You can enter
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">844</span>
+    <span class="phpdocumentor-element-found-in__line">900</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userPrincipalName
@@ -3489,7 +3687,7 @@ Gets or sets the principle user name to use for this profile. The realm name doe
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php"><a href="files/src-beta-microsoft-graph-model-macoskerberossinglesignonextension.html"><abbr title="src/Beta/Microsoft/Graph/Model/MacOSKerberosSingleSignOnExtension.php">MacOSKerberosSingleSignOnExtension.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">872</span>
+    <span class="phpdocumentor-element-found-in__line">928</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userSetupDelayed
