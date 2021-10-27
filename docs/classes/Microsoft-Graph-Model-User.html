@@ -617,7 +617,7 @@ The Microsoft Teams teams that the user is a member of. Read-only. Nullable.</dd
                         &nbsp;: <abbr title="\DateTime">DateTime</abbr>|null    </span>
 </dt>
 <dd>Gets the lastPasswordChangeDateTime
-The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</dd>
+The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-User.html#method_getLegalAgeGroupClassification">getLegalAgeGroupClassification()</a>
@@ -1123,7 +1123,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
                         &nbsp;: string|null    </span>
 </dt>
 <dd>Gets the userType
-A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).</dd>
+A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -1567,7 +1567,7 @@ The Microsoft Teams teams that the user is a member of. Read-only. Nullable.</dd
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-User.html"><abbr title="\Microsoft\Graph\Model\User">User</abbr></a>    </span>
 </dt>
 <dd>Sets the lastPasswordChangeDateTime
-The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</dd>
+The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-User.html#method_setLegalAgeGroupClassification">setLegalAgeGroupClassification()</a>
@@ -2066,7 +2066,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-User.html"><abbr title="\Microsoft\Graph\Model\User">User</abbr></a>    </span>
 </dt>
 <dd>Sets the userType
-A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).</dd>
+A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?</dd>
 
         </dl>
 
@@ -2323,7 +2323,7 @@ Sets the age group of the user. Allowed values: null, minor, notAdult and adult.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3211</span>
+    <span class="phpdocumentor-element-found-in__line">3141</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the agreementAcceptances
@@ -3184,7 +3184,7 @@ The limit on the maximum number of devices that the user is permitted to enroll.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3322</span>
+    <span class="phpdocumentor-element-found-in__line">3252</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the deviceManagementTroubleshootingEvents
@@ -3292,7 +3292,7 @@ The name displayed in the address book for the user. This is usually the combina
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3068</span>
+    <span class="phpdocumentor-element-found-in__line">2998</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the drive
@@ -3328,7 +3328,7 @@ The user&#039;s OneDrive. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3102</span>
+    <span class="phpdocumentor-element-found-in__line">3032</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the drives
@@ -3544,7 +3544,7 @@ The user&#039;s events. Default is to show Events under the Default Calendar. Re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3174</span>
+    <span class="phpdocumentor-element-found-in__line">3104</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the extensions
@@ -3688,7 +3688,7 @@ The fax number of the user. Returned only on $select. Supports $filter (eq, ne, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3138</span>
+    <span class="phpdocumentor-element-found-in__line">3068</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the followedSites</p>
@@ -3939,7 +3939,7 @@ Relevance classification of the user&#039;s messages based on explicit designati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3391</span>
+    <span class="phpdocumentor-element-found-in__line">3321</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the insights
@@ -4123,7 +4123,7 @@ The Microsoft Teams teams that the user is a member of. Read-only. Nullable.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the lastPasswordChangeDateTime
-The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</p>
+The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -4407,7 +4407,7 @@ The mail alias for the user. This property must be specified when a user is crea
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3285</span>
+    <span class="phpdocumentor-element-found-in__line">3215</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedAppRegistrations
@@ -4443,7 +4443,7 @@ Zero or more managed app registrations that belong to the user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3248</span>
+    <span class="phpdocumentor-element-found-in__line">3178</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the managedDevices
@@ -4765,7 +4765,7 @@ The office location in the user&#039;s place of business. Returned by default. S
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3457</span>
+    <span class="phpdocumentor-element-found-in__line">3387</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the onenote
@@ -5485,7 +5485,7 @@ People that are relevant to the user. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">2998</span>
+    <span class="phpdocumentor-element-found-in__line">3420</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the photo
@@ -5521,7 +5521,7 @@ The user&#039;s profile photo. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3032</span>
+    <span class="phpdocumentor-element-found-in__line">3454</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the photos
@@ -5557,7 +5557,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3358</span>
+    <span class="phpdocumentor-element-found-in__line">3288</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the planner
@@ -5987,7 +5987,7 @@ The scoped-role administrative unit memberships for this user. Read-only. Nullab
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3424</span>
+    <span class="phpdocumentor-element-found-in__line">3354</span>
 </aside>
 
         <p class="phpdocumentor-summary">Gets the settings
@@ -6422,7 +6422,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
 </aside>
 
         <p class="phpdocumentor-summary">Gets the userType
-A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).</p>
+A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -6678,7 +6678,7 @@ Sets the age group of the user. Allowed values: null, minor, notAdult and adult.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3235</span>
+    <span class="phpdocumentor-element-found-in__line">3165</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the agreementAcceptances
@@ -7803,7 +7803,7 @@ The limit on the maximum number of devices that the user is permitted to enroll.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3346</span>
+    <span class="phpdocumentor-element-found-in__line">3276</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the deviceManagementTroubleshootingEvents
@@ -7944,7 +7944,7 @@ The name displayed in the address book for the user. This is usually the combina
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3089</span>
+    <span class="phpdocumentor-element-found-in__line">3019</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the drive
@@ -7991,7 +7991,7 @@ The user&#039;s OneDrive. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3126</span>
+    <span class="phpdocumentor-element-found-in__line">3056</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the drives
@@ -8273,7 +8273,7 @@ The user&#039;s events. Default is to show Events under the Default Calendar. Re
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3198</span>
+    <span class="phpdocumentor-element-found-in__line">3128</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the extensions
@@ -8461,7 +8461,7 @@ The fax number of the user. Returned only on $select. Supports $filter (eq, ne, 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3161</span>
+    <span class="phpdocumentor-element-found-in__line">3091</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the followedSites</p>
@@ -8789,7 +8789,7 @@ Relevance classification of the user&#039;s messages based on explicit designati
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3412</span>
+    <span class="phpdocumentor-element-found-in__line">3342</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the insights
@@ -9028,7 +9028,7 @@ The Microsoft Teams teams that the user is a member of. Read-only. Nullable.</p>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the lastPasswordChangeDateTime
-The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</p>
+The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -9400,7 +9400,7 @@ The mail alias for the user. This property must be specified when a user is crea
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3309</span>
+    <span class="phpdocumentor-element-found-in__line">3239</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedAppRegistrations
@@ -9447,7 +9447,7 @@ Zero or more managed app registrations that belong to the user.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3272</span>
+    <span class="phpdocumentor-element-found-in__line">3202</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the managedDevices
@@ -9868,7 +9868,7 @@ The office location in the user&#039;s place of business. Returned by default. S
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3478</span>
+    <span class="phpdocumentor-element-found-in__line">3408</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the onenote
@@ -10808,7 +10808,7 @@ People that are relevant to the user. Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3019</span>
+    <span class="phpdocumentor-element-found-in__line">3441</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the photo
@@ -10855,7 +10855,7 @@ The user&#039;s profile photo. Read-only.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3056</span>
+    <span class="phpdocumentor-element-found-in__line">3478</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the photos
@@ -10902,7 +10902,7 @@ Read-only. Nullable.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3379</span>
+    <span class="phpdocumentor-element-found-in__line">3309</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the planner
@@ -11418,7 +11418,7 @@ The scoped-role administrative unit memberships for this user. Read-only. Nullab
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/User.php"><a href="files/src-model-user.html"><abbr title="src/Model/User.php">User.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">3445</span>
+    <span class="phpdocumentor-element-found-in__line">3375</span>
 </aside>
 
         <p class="phpdocumentor-summary">Sets the settings
@@ -11985,7 +11985,7 @@ The user principal name (UPN) of the user. The UPN is an Internet-style login na
 </aside>
 
         <p class="phpdocumentor-summary">Sets the userType
-A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).</p>
+A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

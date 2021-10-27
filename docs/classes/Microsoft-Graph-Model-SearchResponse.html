@@ -184,6 +184,14 @@ to the model</dd>
 <dd>Construct a new Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_getHitsContainers">getHitsContainers()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html"><abbr title="\Microsoft\Graph\Model\SearchHitsContainer">SearchHitsContainer</abbr></a>&gt;|null    </span>
+</dt>
+<dd>Gets the hitsContainers
+A collection of search results.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_getId">getId()</a>
     <span>
                         &nbsp;: string|null    </span>
@@ -206,20 +214,12 @@ Read-only.</dd>
 <dd>Gets the property dictionary of the Entity</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_getQueryAlterationResponse">getQueryAlterationResponse()</a>
+    <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_getSearchTerms">getSearchTerms()</a>
     <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-AlterationResponse.html"><abbr title="\Microsoft\Graph\Model\AlterationResponse">AlterationResponse</abbr></a>|null    </span>
+                        &nbsp;: string|null    </span>
 </dt>
-<dd>Gets the queryAlterationResponse
-Provides details of query alteration response for spelling correction.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_getValue">getValue()</a>
-    <span>
-                        &nbsp;: array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchResultSet.html"><abbr title="\Microsoft\Graph\Model\SearchResultSet">SearchResultSet</abbr></a>&gt;|null    </span>
-</dt>
-<dd>Gets the value
-Represents results from a search query, and the terms used for the query.</dd>
+<dd>Gets the searchTerms
+Contains the search terms sent in the initial search query.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_jsonSerialize">jsonSerialize()</a>
@@ -228,6 +228,14 @@ Represents results from a search query, and the terms used for the query.</dd>
 </dt>
 <dd>Serializes the object by property array
 Manually serialize DateTime into RFC3339 format</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_setHitsContainers">setHitsContainers()</a>
+    <span>
+                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a>    </span>
+</dt>
+<dd>Sets the hitsContainers
+A collection of search results.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Microsoft-Graph-Model-Entity.html#method_setId">setId()</a>
@@ -245,20 +253,12 @@ Read-only.</dd>
 <dd>Sets the ODataType</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_setQueryAlterationResponse">setQueryAlterationResponse()</a>
+    <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_setSearchTerms">setSearchTerms()</a>
     <span>
                         &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a>    </span>
 </dt>
-<dd>Sets the queryAlterationResponse
-Provides details of query alteration response for spelling correction.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_setValue">setValue()</a>
-    <span>
-                        &nbsp;: <a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a>    </span>
-</dt>
-<dd>Sets the value
-Represents results from a search query, and the terms used for the query.</dd>
+<dd>Sets the searchTerms
+Contains the search terms sent in the initial search query.</dd>
 
         </dl>
 
@@ -355,6 +355,42 @@ to the model</p>
     <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getHitsContainers">
+        getHitsContainers()
+        <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_getHitsContainers" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchResponse.php"><a href="files/src-model-searchresponse.html"><abbr title="src/Model/SearchResponse.php">SearchResponse.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Gets the hitsContainers
+A collection of search results.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getHitsContainers</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html"><abbr title="\Microsoft\Graph\Model\SearchHitsContainer">SearchHitsContainer</abbr></a>&gt;|null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html"><abbr title="\Microsoft\Graph\Model\SearchHitsContainer">SearchHitsContainer</abbr></a>&gt;|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The hitsContainers</p>
+</section>
 
     
 </article>
@@ -470,22 +506,22 @@ Read-only.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getQueryAlterationResponse">
-        getQueryAlterationResponse()
-        <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_getQueryAlterationResponse" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getSearchTerms">
+        getSearchTerms()
+        <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_getSearchTerms" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchResponse.php"><a href="files/src-model-searchresponse.html"><abbr title="src/Model/SearchResponse.php">SearchResponse.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">69</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Gets the queryAlterationResponse
-Provides details of query alteration response for spelling correction.</p>
+        <p class="phpdocumentor-summary">Gets the searchTerms
+Contains the search terms sent in the initial search query.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getQueryAlterationResponse</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AlterationResponse.html"><abbr title="\Microsoft\Graph\Model\AlterationResponse">AlterationResponse</abbr></a>|null</span></code>
+                <span class="phpdocumentor-signature__name">getSearchTerms</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -493,45 +529,9 @@ Provides details of query alteration response for spelling correction.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-AlterationResponse.html"><abbr title="\Microsoft\Graph\Model\AlterationResponse">AlterationResponse</abbr></a>|null</span>
+    <span class="phpdocumentor-signature__response_type">string|null</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>The queryAlterationResponse</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getValue">
-        getValue()
-        <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_getValue" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchResponse.php"><a href="files/src-model-searchresponse.html"><abbr title="src/Model/SearchResponse.php">SearchResponse.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">67</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Gets the value
-Represents results from a search query, and the terms used for the query.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getValue</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchResultSet.html"><abbr title="\Microsoft\Graph\Model\SearchResultSet">SearchResultSet</abbr></a>&gt;|null</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchResultSet.html"><abbr title="\Microsoft\Graph\Model\SearchResultSet">SearchResultSet</abbr></a>&gt;|null</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>The value</p>
+            <section class="phpdocumentor-description"><p>The searchTerms</p>
 </section>
 
     
@@ -568,6 +568,54 @@ Manually serialize DateTime into RFC3339 format</p>
     <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
             &mdash;
             <section class="phpdocumentor-description"><p>The list of properties</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setHitsContainers">
+        setHitsContainers()
+        <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_setHitsContainers" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchResponse.php"><a href="files/src-model-searchresponse.html"><abbr title="src/Model/SearchResponse.php">SearchResponse.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">58</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Sets the hitsContainers
+A collection of search results.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setHitsContainers</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html"><abbr title="\Microsoft\Graph\Model\SearchHitsContainer">SearchHitsContainer</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$val</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchHitsContainer.html"><abbr title="\Microsoft\Graph\Model\SearchHitsContainer">SearchHitsContainer</abbr></a>&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value to assign to the hitsContainers</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The SearchResponse</p>
 </section>
 
     
@@ -671,22 +719,22 @@ Read-only.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setQueryAlterationResponse">
-        setQueryAlterationResponse()
-        <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_setQueryAlterationResponse" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setSearchTerms">
+        setSearchTerms()
+        <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_setSearchTerms" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchResponse.php"><a href="files/src-model-searchresponse.html"><abbr title="src/Model/SearchResponse.php">SearchResponse.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">86</span>
 </aside>
 
-        <p class="phpdocumentor-summary">Sets the queryAlterationResponse
-Provides details of query alteration response for spelling correction.</p>
+        <p class="phpdocumentor-summary">Sets the searchTerms
+Contains the search terms sent in the initial search query.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setQueryAlterationResponse</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AlterationResponse.html"><abbr title="\Microsoft\Graph\Model\AlterationResponse">AlterationResponse</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">setSearchTerms</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -694,10 +742,10 @@ Provides details of query alteration response for spelling correction.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Microsoft-Graph-Model-AlterationResponse.html"><abbr title="\Microsoft\Graph\Model\AlterationResponse">AlterationResponse</abbr></a></span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The value to assign to the queryAlterationResponse</p>
+                    <section class="phpdocumentor-description"><p>The value of the searchTerms</p>
 </section>
 
             </dd>
@@ -708,56 +756,7 @@ Provides details of query alteration response for spelling correction.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a></span>
             &mdash;
-            <section class="phpdocumentor-description"><p>The SearchResponse</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setValue">
-        setValue()
-        <a href="classes/Microsoft-Graph-Model-SearchResponse.html#method_setValue" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Model/SearchResponse.php"><a href="files/src-model-searchresponse.html"><abbr title="src/Model/SearchResponse.php">SearchResponse.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">92</span>
-</aside>
-
-        <p class="phpdocumentor-summary">Sets the value
-Represents results from a search query, and the terms used for the query.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">setValue</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchResultSet.html"><abbr title="\Microsoft\Graph\Model\SearchResultSet">SearchResultSet</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$val</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a></span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$val</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Microsoft-Graph-Model-SearchResultSet.html"><abbr title="\Microsoft\Graph\Model\SearchResultSet">SearchResultSet</abbr></a>&gt;</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The value to assign to the value</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type"><a href="classes/Microsoft-Graph-Model-SearchResponse.html"><abbr title="\Microsoft\Graph\Model\SearchResponse">SearchResponse</abbr></a></span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>The SearchResponse</p>
-</section>
+            <section class="phpdocumentor-description"></section>
 
     
 </article>
