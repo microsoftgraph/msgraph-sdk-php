@@ -103,7 +103,6 @@ Other breaking changes:
 ### Setting and fetching headers
 Version 2 changes the array structure when setting and getting headers:
 - `addHeaders()` and `getHeaders()` both receive and return `array<string, string|string[]>`.
-- `addHeaders()` throws an `InvalidArgumentException` if you attempt to overwrite the `SdkVersion` header value.
 - When adding headers, version 2 will not pass your Graph Authorization tokens to a non-Graph base URL.
 
 ### Setting return types
