@@ -24,7 +24,7 @@ Version 2 removes our Beta models from the current package to allow us to adhere
 from merging breaking Beta model updates weekly. Users of the Beta models can now use the Beta SDK via `composer require microsoft/microsoft-graph-beta` or requiring it in your `composer.json`:
 ```php
  "require": {
-    "microsoft/microsoft-graph-beta": "^2.0.0-preview"
+    "microsoft/microsoft-graph-beta": "^2.0.0-RC1"
 }
 ```
 Moving forward, the current package (`microsoft/microsoft-graph`) will only contain v1 models that match the [Microsoft Graph v1 API metadata](https://graph.microsoft.com/v1.0/$metadata)
