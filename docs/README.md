@@ -15,7 +15,7 @@ View the [getting started steps](../README.md#get-started-with-microsoft-graph) 
 
 ## Using the SDK
 - [Usage Examples](Examples.md)
-- [Model Reference](index.html)
+- [API Reference](https://github.com/microsoftgraph/msgraph-sdk-php-core/blob/dev/docs/index.html)
 
 To make calls to the Beta Microsoft Graph API, check out our [Microsoft Graph Beta SDK](https://packagist.org/packages/microsoft/microsoft-graph-beta).
 
