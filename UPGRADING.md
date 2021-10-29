@@ -21,9 +21,17 @@ The following breaking changes were introduced in v2.0.0 with more detailed upgr
 In v1.x, we support models that match the [Microsoft Graph Beta API metadata](https://graph.microsoft.com/beta/$metadata).
 
 Version 2 removes our Beta models from the current package to allow us to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) by preventing us
-from merging breaking Beta model updates weekly. Users of the Beta models can now use the Beta SDK via `composer require microsoft/microsoft-graph-beta` or requiring it in your `composer.json`:
+from merging breaking Beta model updates weekly. Users of the Beta models can now use the Beta SDK by requiring it in your `composer.json`:
 ```php
  "require": {
+    "microsoft/microsoft-graph-beta": "^2.0.0-RC1",
+    "microsoft/microsoft-graph-core": "@RC"
+}
+```
+OR
+```php
+"minimum-stability": "RC"
+"require": {
     "microsoft/microsoft-graph-beta": "^2.0.0-RC1"
 }
 ```
