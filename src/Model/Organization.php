@@ -143,7 +143,7 @@ class Organization extends DirectoryObject
     
     /**
     * Gets the countryLetterCode
-    * Country/region abbreviation for the organization.
+    * Country or region abbreviation for the organization in ISO 3166-2 format.
     *
     * @return string|null The countryLetterCode
     */
@@ -158,7 +158,7 @@ class Organization extends DirectoryObject
     
     /**
     * Sets the countryLetterCode
-    * Country/region abbreviation for the organization.
+    * Country or region abbreviation for the organization in ISO 3166-2 format.
     *
     * @param string $val The countryLetterCode
     *

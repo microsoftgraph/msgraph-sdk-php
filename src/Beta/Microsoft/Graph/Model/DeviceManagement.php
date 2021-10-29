@@ -1370,6 +1370,96 @@ class DeviceManagement extends Entity
     
 
      /** 
+     * Gets the complianceCategories
+    * List of all compliance categories
+     *
+     * @return array|null The complianceCategories
+     */
+    public function getComplianceCategories()
+    {
+        if (array_key_exists("complianceCategories", $this->_propDict)) {
+           return $this->_propDict["complianceCategories"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the complianceCategories
+    * List of all compliance categories
+    *
+    * @param DeviceManagementConfigurationCategory $val The complianceCategories
+    *
+    * @return DeviceManagement
+    */
+    public function setComplianceCategories($val)
+    {
+        $this->_propDict["complianceCategories"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the compliancePolicies
+    * List of all compliance policies
+     *
+     * @return array|null The compliancePolicies
+     */
+    public function getCompliancePolicies()
+    {
+        if (array_key_exists("compliancePolicies", $this->_propDict)) {
+           return $this->_propDict["compliancePolicies"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the compliancePolicies
+    * List of all compliance policies
+    *
+    * @param DeviceManagementCompliancePolicy $val The compliancePolicies
+    *
+    * @return DeviceManagement
+    */
+    public function setCompliancePolicies($val)
+    {
+        $this->_propDict["compliancePolicies"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the complianceSettings
+    * List of all ComplianceSettings
+     *
+     * @return array|null The complianceSettings
+     */
+    public function getComplianceSettings()
+    {
+        if (array_key_exists("complianceSettings", $this->_propDict)) {
+           return $this->_propDict["complianceSettings"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the complianceSettings
+    * List of all ComplianceSettings
+    *
+    * @param DeviceManagementConfigurationSettingDefinition $val The complianceSettings
+    *
+    * @return DeviceManagement
+    */
+    public function setComplianceSettings($val)
+    {
+        $this->_propDict["complianceSettings"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the configurationCategories
     * List of all Configuration Categories
      *
@@ -2760,6 +2850,252 @@ class DeviceManagement extends Entity
     public function setUserExperienceAnalyticsBaselines($val)
     {
         $this->_propDict["userExperienceAnalyticsBaselines"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsBatteryHealthAppImpact
+    * User Experience Analytics Battery Health App Impact
+     *
+     * @return array|null The userExperienceAnalyticsBatteryHealthAppImpact
+     */
+    public function getUserExperienceAnalyticsBatteryHealthAppImpact()
+    {
+        if (array_key_exists("userExperienceAnalyticsBatteryHealthAppImpact", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsBatteryHealthAppImpact"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsBatteryHealthAppImpact
+    * User Experience Analytics Battery Health App Impact
+    *
+    * @param UserExperienceAnalyticsBatteryHealthAppImpact $val The userExperienceAnalyticsBatteryHealthAppImpact
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBatteryHealthAppImpact($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBatteryHealthAppImpact"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userExperienceAnalyticsBatteryHealthCapacityDetails
+    * User Experience Analytics Battery Health Capacity Details
+    *
+    * @return UserExperienceAnalyticsBatteryHealthCapacityDetails|null The userExperienceAnalyticsBatteryHealthCapacityDetails
+    */
+    public function getUserExperienceAnalyticsBatteryHealthCapacityDetails()
+    {
+        if (array_key_exists("userExperienceAnalyticsBatteryHealthCapacityDetails", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsBatteryHealthCapacityDetails"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsBatteryHealthCapacityDetails") || is_null($this->_propDict["userExperienceAnalyticsBatteryHealthCapacityDetails"])) {
+                return $this->_propDict["userExperienceAnalyticsBatteryHealthCapacityDetails"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsBatteryHealthCapacityDetails"] = new UserExperienceAnalyticsBatteryHealthCapacityDetails($this->_propDict["userExperienceAnalyticsBatteryHealthCapacityDetails"]);
+                return $this->_propDict["userExperienceAnalyticsBatteryHealthCapacityDetails"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userExperienceAnalyticsBatteryHealthCapacityDetails
+    * User Experience Analytics Battery Health Capacity Details
+    *
+    * @param UserExperienceAnalyticsBatteryHealthCapacityDetails $val The userExperienceAnalyticsBatteryHealthCapacityDetails
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBatteryHealthCapacityDetails($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBatteryHealthCapacityDetails"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsBatteryHealthDeviceAppImpact
+    * User Experience Analytics Battery Health Device App Impact
+     *
+     * @return array|null The userExperienceAnalyticsBatteryHealthDeviceAppImpact
+     */
+    public function getUserExperienceAnalyticsBatteryHealthDeviceAppImpact()
+    {
+        if (array_key_exists("userExperienceAnalyticsBatteryHealthDeviceAppImpact", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsBatteryHealthDeviceAppImpact"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsBatteryHealthDeviceAppImpact
+    * User Experience Analytics Battery Health Device App Impact
+    *
+    * @param UserExperienceAnalyticsBatteryHealthDeviceAppImpact $val The userExperienceAnalyticsBatteryHealthDeviceAppImpact
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBatteryHealthDeviceAppImpact($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBatteryHealthDeviceAppImpact"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsBatteryHealthDevicePerformance
+    * User Experience Analytics Battery Health Device Performance
+     *
+     * @return array|null The userExperienceAnalyticsBatteryHealthDevicePerformance
+     */
+    public function getUserExperienceAnalyticsBatteryHealthDevicePerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsBatteryHealthDevicePerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsBatteryHealthDevicePerformance"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsBatteryHealthDevicePerformance
+    * User Experience Analytics Battery Health Device Performance
+    *
+    * @param UserExperienceAnalyticsBatteryHealthDevicePerformance $val The userExperienceAnalyticsBatteryHealthDevicePerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBatteryHealthDevicePerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBatteryHealthDevicePerformance"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+    * User Experience Analytics Battery Health Device Runtime History
+     *
+     * @return array|null The userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     */
+    public function getUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory()
+    {
+        if (array_key_exists("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+    * User Experience Analytics Battery Health Device Runtime History
+    *
+    * @param UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory $val The userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsBatteryHealthModelPerformance
+    * User Experience Analytics Battery Health Model Performance
+     *
+     * @return array|null The userExperienceAnalyticsBatteryHealthModelPerformance
+     */
+    public function getUserExperienceAnalyticsBatteryHealthModelPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsBatteryHealthModelPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsBatteryHealthModelPerformance"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsBatteryHealthModelPerformance
+    * User Experience Analytics Battery Health Model Performance
+    *
+    * @param UserExperienceAnalyticsBatteryHealthModelPerformance $val The userExperienceAnalyticsBatteryHealthModelPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBatteryHealthModelPerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBatteryHealthModelPerformance"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the userExperienceAnalyticsBatteryHealthOsPerformance
+    * User Experience Analytics Battery Health Os Performance
+     *
+     * @return array|null The userExperienceAnalyticsBatteryHealthOsPerformance
+     */
+    public function getUserExperienceAnalyticsBatteryHealthOsPerformance()
+    {
+        if (array_key_exists("userExperienceAnalyticsBatteryHealthOsPerformance", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsBatteryHealthOsPerformance"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the userExperienceAnalyticsBatteryHealthOsPerformance
+    * User Experience Analytics Battery Health Os Performance
+    *
+    * @param UserExperienceAnalyticsBatteryHealthOsPerformance $val The userExperienceAnalyticsBatteryHealthOsPerformance
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBatteryHealthOsPerformance($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBatteryHealthOsPerformance"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the userExperienceAnalyticsBatteryHealthRuntimeDetails
+    * User Experience Analytics Battery Health Runtime Details
+    *
+    * @return UserExperienceAnalyticsBatteryHealthRuntimeDetails|null The userExperienceAnalyticsBatteryHealthRuntimeDetails
+    */
+    public function getUserExperienceAnalyticsBatteryHealthRuntimeDetails()
+    {
+        if (array_key_exists("userExperienceAnalyticsBatteryHealthRuntimeDetails", $this->_propDict)) {
+            if (is_a($this->_propDict["userExperienceAnalyticsBatteryHealthRuntimeDetails"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsBatteryHealthRuntimeDetails") || is_null($this->_propDict["userExperienceAnalyticsBatteryHealthRuntimeDetails"])) {
+                return $this->_propDict["userExperienceAnalyticsBatteryHealthRuntimeDetails"];
+            } else {
+                $this->_propDict["userExperienceAnalyticsBatteryHealthRuntimeDetails"] = new UserExperienceAnalyticsBatteryHealthRuntimeDetails($this->_propDict["userExperienceAnalyticsBatteryHealthRuntimeDetails"]);
+                return $this->_propDict["userExperienceAnalyticsBatteryHealthRuntimeDetails"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the userExperienceAnalyticsBatteryHealthRuntimeDetails
+    * User Experience Analytics Battery Health Runtime Details
+    *
+    * @param UserExperienceAnalyticsBatteryHealthRuntimeDetails $val The userExperienceAnalyticsBatteryHealthRuntimeDetails
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsBatteryHealthRuntimeDetails($val)
+    {
+        $this->_propDict["userExperienceAnalyticsBatteryHealthRuntimeDetails"] = $val;
         return $this;
     }
     

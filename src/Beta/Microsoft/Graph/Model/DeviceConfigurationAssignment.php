@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceConfigurationAssignment extends Entity
 {
     /**
+    * Gets the intent
+    * The admin intent to apply or remove the profile. This property is read-only. Possible values are: apply, remove.
+    *
+    * @return DeviceConfigAssignmentIntent|null The intent
+    */
+    public function getIntent()
+    {
+        if (array_key_exists("intent", $this->_propDict)) {
+            if (is_a($this->_propDict["intent"], "\Beta\Microsoft\Graph\Model\DeviceConfigAssignmentIntent") || is_null($this->_propDict["intent"])) {
+                return $this->_propDict["intent"];
+            } else {
+                $this->_propDict["intent"] = new DeviceConfigAssignmentIntent($this->_propDict["intent"]);
+                return $this->_propDict["intent"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the intent
+    * The admin intent to apply or remove the profile. This property is read-only. Possible values are: apply, remove.
+    *
+    * @param DeviceConfigAssignmentIntent $val The intent
+    *
+    * @return DeviceConfigurationAssignment
+    */
+    public function setIntent($val)
+    {
+        $this->_propDict["intent"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the source
     * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
     *

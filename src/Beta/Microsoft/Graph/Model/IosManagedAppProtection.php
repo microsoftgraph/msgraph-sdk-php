@@ -266,6 +266,35 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     }
     
     /**
+    * Gets the exemptedUniversalLinks
+    * A list of custom urls that are allowed to invocate an unmanaged app
+    *
+    * @return string|null The exemptedUniversalLinks
+    */
+    public function getExemptedUniversalLinks()
+    {
+        if (array_key_exists("exemptedUniversalLinks", $this->_propDict)) {
+            return $this->_propDict["exemptedUniversalLinks"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the exemptedUniversalLinks
+    * A list of custom urls that are allowed to invocate an unmanaged app
+    *
+    * @param string $val The exemptedUniversalLinks
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setExemptedUniversalLinks($val)
+    {
+        $this->_propDict["exemptedUniversalLinks"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the faceIdBlocked
     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
     *
@@ -320,6 +349,35 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     public function setFilterOpenInToOnlyManagedApps($val)
     {
         $this->_propDict["filterOpenInToOnlyManagedApps"] = boolval($val);
+        return $this;
+    }
+    
+    /**
+    * Gets the managedUniversalLinks
+    * A list of custom urls that are allowed to invocate a managed app
+    *
+    * @return string|null The managedUniversalLinks
+    */
+    public function getManagedUniversalLinks()
+    {
+        if (array_key_exists("managedUniversalLinks", $this->_propDict)) {
+            return $this->_propDict["managedUniversalLinks"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the managedUniversalLinks
+    * A list of custom urls that are allowed to invocate a managed app
+    *
+    * @param string $val The managedUniversalLinks
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setManagedUniversalLinks($val)
+    {
+        $this->_propDict["managedUniversalLinks"] = $val;
         return $this;
     }
     

@@ -8445,7 +8445,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
 
      /** 
      * Gets the privacyAccessControls
-    * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category.
+    * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category. This collection can contain a maximum of 500 elements.
      *
      * @return array|null The privacyAccessControls
      */
@@ -8460,7 +8460,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     
     /** 
     * Sets the privacyAccessControls
-    * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category.
+    * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category. This collection can contain a maximum of 500 elements.
     *
     * @param WindowsPrivacyDataAccessControlItem $val The privacyAccessControls
     *
