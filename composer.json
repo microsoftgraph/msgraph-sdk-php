@@ -13,7 +13,7 @@
 	],
 	"require": {
 		"php": "^8.0 || ^7.3",
-		"microsoft/microsoft-graph-core": "dev-dev",
+		"microsoft/microsoft-graph-core": "2.0.0-RC1",
 		"ext-json": "*"
 	},
 	"require-dev": {
