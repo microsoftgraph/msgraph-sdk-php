@@ -231,6 +231,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the customerTimeZone
+    * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
     *
     * @return string|null The customerTimeZone
     */
@@ -245,6 +246,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the customerTimeZone
+    * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
     *
     * @param string $val The customerTimeZone
     *
@@ -477,6 +479,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the isLocationOnline
+    * True indicates that the appointment will be held online. Default value is false.
     *
     * @return bool|null The isLocationOnline
     */
@@ -491,6 +494,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the isLocationOnline
+    * True indicates that the appointment will be held online. Default value is false.
     *
     * @param bool $val The isLocationOnline
     *
@@ -504,6 +508,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the joinWebUrl
+    * The URL of the online meeting for the appointment.
     *
     * @return string|null The joinWebUrl
     */
@@ -518,6 +523,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the joinWebUrl
+    * The URL of the online meeting for the appointment.
     *
     * @param string $val The joinWebUrl
     *
@@ -894,6 +900,7 @@ class BookingAppointment extends Entity
     
     /**
     * Gets the smsNotificationsEnabled
+    * True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
     *
     * @return bool|null The smsNotificationsEnabled
     */
@@ -908,6 +915,7 @@ class BookingAppointment extends Entity
     
     /**
     * Sets the smsNotificationsEnabled
+    * True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
     *
     * @param bool $val The smsNotificationsEnabled
     *

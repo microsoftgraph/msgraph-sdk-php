@@ -117,6 +117,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Gets the timeZone
+    * The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
     *
     * @return string|null The timeZone
     */
@@ -131,6 +132,7 @@ class BookingStaffMember extends BookingPerson
     
     /**
     * Sets the timeZone
+    * The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
     *
     * @param string $val The timeZone
     *
