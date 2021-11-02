@@ -91,11 +91,11 @@ class IosNetworkUsageRule extends Entity
         if (array_key_exists("managedApps", $this->_propDict) && !is_null($this->_propDict["managedApps"])) {
        
             if (count($this->_propDict['managedApps']) > 0 && is_a($this->_propDict['managedApps'][0], 'AppListItem')) {
-               return $this->_propDict['managedApps'];
+                return $this->_propDict['managedApps'];
             }
             $managedApps = [];
             foreach ($this->_propDict['managedApps'] as $singleValue) {
-               $managedApps []= new AppListItem($singleValue);
+                $managedApps []= new AppListItem($singleValue);
             }
             $this->_propDict['managedApps'] = $managedApps;
             return $this->_propDict['managedApps'];

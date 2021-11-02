@@ -187,11 +187,11 @@ class PrinterDefaults extends Entity
         if (array_key_exists("finishings", $this->_propDict) && !is_null($this->_propDict["finishings"])) {
        
             if (count($this->_propDict['finishings']) > 0 && is_a($this->_propDict['finishings'][0], 'PrintFinishing')) {
-               return $this->_propDict['finishings'];
+                return $this->_propDict['finishings'];
             }
             $finishings = [];
             foreach ($this->_propDict['finishings'] as $singleValue) {
-               $finishings []= new PrintFinishing($singleValue);
+                $finishings []= new PrintFinishing($singleValue);
             }
             $this->_propDict['finishings'] = $finishings;
             return $this->_propDict['finishings'];

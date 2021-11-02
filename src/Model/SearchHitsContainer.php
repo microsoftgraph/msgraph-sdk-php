@@ -35,11 +35,11 @@ class SearchHitsContainer extends Entity
         if (array_key_exists("aggregations", $this->_propDict) && !is_null($this->_propDict["aggregations"])) {
        
             if (count($this->_propDict['aggregations']) > 0 && is_a($this->_propDict['aggregations'][0], 'SearchAggregation')) {
-               return $this->_propDict['aggregations'];
+                return $this->_propDict['aggregations'];
             }
             $aggregations = [];
             foreach ($this->_propDict['aggregations'] as $singleValue) {
-               $aggregations []= new SearchAggregation($singleValue);
+                $aggregations []= new SearchAggregation($singleValue);
             }
             $this->_propDict['aggregations'] = $aggregations;
             return $this->_propDict['aggregations'];
@@ -72,11 +72,11 @@ class SearchHitsContainer extends Entity
         if (array_key_exists("hits", $this->_propDict) && !is_null($this->_propDict["hits"])) {
        
             if (count($this->_propDict['hits']) > 0 && is_a($this->_propDict['hits'][0], 'SearchHit')) {
-               return $this->_propDict['hits'];
+                return $this->_propDict['hits'];
             }
             $hits = [];
             foreach ($this->_propDict['hits'] as $singleValue) {
-               $hits []= new SearchHit($singleValue);
+                $hits []= new SearchHit($singleValue);
             }
             $this->_propDict['hits'] = $hits;
             return $this->_propDict['hits'];

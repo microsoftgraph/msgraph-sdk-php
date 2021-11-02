@@ -35,11 +35,11 @@ class RequiredResourceAccess extends Entity
         if (array_key_exists("resourceAccess", $this->_propDict) && !is_null($this->_propDict["resourceAccess"])) {
        
             if (count($this->_propDict['resourceAccess']) > 0 && is_a($this->_propDict['resourceAccess'][0], 'ResourceAccess')) {
-               return $this->_propDict['resourceAccess'];
+                return $this->_propDict['resourceAccess'];
             }
             $resourceAccess = [];
             foreach ($this->_propDict['resourceAccess'] as $singleValue) {
-               $resourceAccess []= new ResourceAccess($singleValue);
+                $resourceAccess []= new ResourceAccess($singleValue);
             }
             $this->_propDict['resourceAccess'] = $resourceAccess;
             return $this->_propDict['resourceAccess'];

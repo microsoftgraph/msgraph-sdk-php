@@ -69,11 +69,11 @@ class ShiftAvailability extends Entity
         if (array_key_exists("timeSlots", $this->_propDict) && !is_null($this->_propDict["timeSlots"])) {
        
             if (count($this->_propDict['timeSlots']) > 0 && is_a($this->_propDict['timeSlots'][0], 'TimeRange')) {
-               return $this->_propDict['timeSlots'];
+                return $this->_propDict['timeSlots'];
             }
             $timeSlots = [];
             foreach ($this->_propDict['timeSlots'] as $singleValue) {
-               $timeSlots []= new TimeRange($singleValue);
+                $timeSlots []= new TimeRange($singleValue);
             }
             $this->_propDict['timeSlots'] = $timeSlots;
             return $this->_propDict['timeSlots'];

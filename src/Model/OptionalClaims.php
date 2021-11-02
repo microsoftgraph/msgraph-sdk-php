@@ -35,11 +35,11 @@ class OptionalClaims extends Entity
         if (array_key_exists("accessToken", $this->_propDict) && !is_null($this->_propDict["accessToken"])) {
        
             if (count($this->_propDict['accessToken']) > 0 && is_a($this->_propDict['accessToken'][0], 'OptionalClaim')) {
-               return $this->_propDict['accessToken'];
+                return $this->_propDict['accessToken'];
             }
             $accessToken = [];
             foreach ($this->_propDict['accessToken'] as $singleValue) {
-               $accessToken []= new OptionalClaim($singleValue);
+                $accessToken []= new OptionalClaim($singleValue);
             }
             $this->_propDict['accessToken'] = $accessToken;
             return $this->_propDict['accessToken'];
@@ -72,11 +72,11 @@ class OptionalClaims extends Entity
         if (array_key_exists("idToken", $this->_propDict) && !is_null($this->_propDict["idToken"])) {
        
             if (count($this->_propDict['idToken']) > 0 && is_a($this->_propDict['idToken'][0], 'OptionalClaim')) {
-               return $this->_propDict['idToken'];
+                return $this->_propDict['idToken'];
             }
             $idToken = [];
             foreach ($this->_propDict['idToken'] as $singleValue) {
-               $idToken []= new OptionalClaim($singleValue);
+                $idToken []= new OptionalClaim($singleValue);
             }
             $this->_propDict['idToken'] = $idToken;
             return $this->_propDict['idToken'];
@@ -109,11 +109,11 @@ class OptionalClaims extends Entity
         if (array_key_exists("saml2Token", $this->_propDict) && !is_null($this->_propDict["saml2Token"])) {
        
             if (count($this->_propDict['saml2Token']) > 0 && is_a($this->_propDict['saml2Token'][0], 'OptionalClaim')) {
-               return $this->_propDict['saml2Token'];
+                return $this->_propDict['saml2Token'];
             }
             $saml2Token = [];
             foreach ($this->_propDict['saml2Token'] as $singleValue) {
-               $saml2Token []= new OptionalClaim($singleValue);
+                $saml2Token []= new OptionalClaim($singleValue);
             }
             $this->_propDict['saml2Token'] = $saml2Token;
             return $this->_propDict['saml2Token'];

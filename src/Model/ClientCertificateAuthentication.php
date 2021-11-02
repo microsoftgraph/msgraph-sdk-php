@@ -46,11 +46,11 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
         if (array_key_exists("certificateList", $this->_propDict) && !is_null($this->_propDict["certificateList"])) {
        
             if (count($this->_propDict['certificateList']) > 0 && is_a($this->_propDict['certificateList'][0], 'Pkcs12CertificateInformation')) {
-               return $this->_propDict['certificateList'];
+                return $this->_propDict['certificateList'];
             }
             $certificateList = [];
             foreach ($this->_propDict['certificateList'] as $singleValue) {
-               $certificateList []= new Pkcs12CertificateInformation($singleValue);
+                $certificateList []= new Pkcs12CertificateInformation($singleValue);
             }
             $this->_propDict['certificateList'] = $certificateList;
             return $this->_propDict['certificateList'];

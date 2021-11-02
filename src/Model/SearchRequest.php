@@ -63,11 +63,11 @@ class SearchRequest extends Entity
         if (array_key_exists("aggregations", $this->_propDict) && !is_null($this->_propDict["aggregations"])) {
        
             if (count($this->_propDict['aggregations']) > 0 && is_a($this->_propDict['aggregations'][0], 'AggregationOption')) {
-               return $this->_propDict['aggregations'];
+                return $this->_propDict['aggregations'];
             }
             $aggregations = [];
             foreach ($this->_propDict['aggregations'] as $singleValue) {
-               $aggregations []= new AggregationOption($singleValue);
+                $aggregations []= new AggregationOption($singleValue);
             }
             $this->_propDict['aggregations'] = $aggregations;
             return $this->_propDict['aggregations'];
@@ -156,11 +156,11 @@ class SearchRequest extends Entity
         if (array_key_exists("entityTypes", $this->_propDict) && !is_null($this->_propDict["entityTypes"])) {
        
             if (count($this->_propDict['entityTypes']) > 0 && is_a($this->_propDict['entityTypes'][0], 'EntityType')) {
-               return $this->_propDict['entityTypes'];
+                return $this->_propDict['entityTypes'];
             }
             $entityTypes = [];
             foreach ($this->_propDict['entityTypes'] as $singleValue) {
-               $entityTypes []= new EntityType($singleValue);
+                $entityTypes []= new EntityType($singleValue);
             }
             $this->_propDict['entityTypes'] = $entityTypes;
             return $this->_propDict['entityTypes'];
@@ -311,11 +311,11 @@ class SearchRequest extends Entity
         if (array_key_exists("sortProperties", $this->_propDict) && !is_null($this->_propDict["sortProperties"])) {
        
             if (count($this->_propDict['sortProperties']) > 0 && is_a($this->_propDict['sortProperties'][0], 'SortProperty')) {
-               return $this->_propDict['sortProperties'];
+                return $this->_propDict['sortProperties'];
             }
             $sortProperties = [];
             foreach ($this->_propDict['sortProperties'] as $singleValue) {
-               $sortProperties []= new SortProperty($singleValue);
+                $sortProperties []= new SortProperty($singleValue);
             }
             $this->_propDict['sortProperties'] = $sortProperties;
             return $this->_propDict['sortProperties'];

@@ -63,11 +63,11 @@ class IosHomeScreenPage extends Entity
         if (array_key_exists("icons", $this->_propDict) && !is_null($this->_propDict["icons"])) {
        
             if (count($this->_propDict['icons']) > 0 && is_a($this->_propDict['icons'][0], 'IosHomeScreenItem')) {
-               return $this->_propDict['icons'];
+                return $this->_propDict['icons'];
             }
             $icons = [];
             foreach ($this->_propDict['icons'] as $singleValue) {
-               $icons []= new IosHomeScreenItem($singleValue);
+                $icons []= new IosHomeScreenItem($singleValue);
             }
             $this->_propDict['icons'] = $icons;
             return $this->_propDict['icons'];

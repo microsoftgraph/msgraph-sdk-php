@@ -35,11 +35,11 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
         if (array_key_exists("principalScopes", $this->_propDict) && !is_null($this->_propDict["principalScopes"])) {
        
             if (count($this->_propDict['principalScopes']) > 0 && is_a($this->_propDict['principalScopes'][0], 'AccessReviewScope')) {
-               return $this->_propDict['principalScopes'];
+                return $this->_propDict['principalScopes'];
             }
             $principalScopes = [];
             foreach ($this->_propDict['principalScopes'] as $singleValue) {
-               $principalScopes []= new AccessReviewScope($singleValue);
+                $principalScopes []= new AccessReviewScope($singleValue);
             }
             $this->_propDict['principalScopes'] = $principalScopes;
             return $this->_propDict['principalScopes'];
@@ -72,11 +72,11 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope
         if (array_key_exists("resourceScopes", $this->_propDict) && !is_null($this->_propDict["resourceScopes"])) {
        
             if (count($this->_propDict['resourceScopes']) > 0 && is_a($this->_propDict['resourceScopes'][0], 'AccessReviewScope')) {
-               return $this->_propDict['resourceScopes'];
+                return $this->_propDict['resourceScopes'];
             }
             $resourceScopes = [];
             foreach ($this->_propDict['resourceScopes'] as $singleValue) {
-               $resourceScopes []= new AccessReviewScope($singleValue);
+                $resourceScopes []= new AccessReviewScope($singleValue);
             }
             $this->_propDict['resourceScopes'] = $resourceScopes;
             return $this->_propDict['resourceScopes'];

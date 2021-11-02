@@ -175,11 +175,11 @@ class Property extends \Microsoft\Graph\Model\Entity
         if (array_key_exists("labels", $this->_propDict) && !is_null($this->_propDict["labels"])) {
        
             if (count($this->_propDict['labels']) > 0 && is_a($this->_propDict['labels'][0], 'Label')) {
-               return $this->_propDict['labels'];
+                return $this->_propDict['labels'];
             }
             $labels = [];
             foreach ($this->_propDict['labels'] as $singleValue) {
-               $labels []= new Label($singleValue);
+                $labels []= new Label($singleValue);
             }
             $this->_propDict['labels'] = $labels;
             return $this->_propDict['labels'];

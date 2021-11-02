@@ -35,11 +35,11 @@ class ComplianceInformation extends Entity
         if (array_key_exists("certificationControls", $this->_propDict) && !is_null($this->_propDict["certificationControls"])) {
        
             if (count($this->_propDict['certificationControls']) > 0 && is_a($this->_propDict['certificationControls'][0], 'CertificationControl')) {
-               return $this->_propDict['certificationControls'];
+                return $this->_propDict['certificationControls'];
             }
             $certificationControls = [];
             foreach ($this->_propDict['certificationControls'] as $singleValue) {
-               $certificationControls []= new CertificationControl($singleValue);
+                $certificationControls []= new CertificationControl($singleValue);
             }
             $this->_propDict['certificationControls'] = $certificationControls;
             return $this->_propDict['certificationControls'];

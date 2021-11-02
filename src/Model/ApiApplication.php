@@ -91,11 +91,11 @@ class ApiApplication extends Entity
         if (array_key_exists("oauth2PermissionScopes", $this->_propDict) && !is_null($this->_propDict["oauth2PermissionScopes"])) {
        
             if (count($this->_propDict['oauth2PermissionScopes']) > 0 && is_a($this->_propDict['oauth2PermissionScopes'][0], 'PermissionScope')) {
-               return $this->_propDict['oauth2PermissionScopes'];
+                return $this->_propDict['oauth2PermissionScopes'];
             }
             $oauth2PermissionScopes = [];
             foreach ($this->_propDict['oauth2PermissionScopes'] as $singleValue) {
-               $oauth2PermissionScopes []= new PermissionScope($singleValue);
+                $oauth2PermissionScopes []= new PermissionScope($singleValue);
             }
             $this->_propDict['oauth2PermissionScopes'] = $oauth2PermissionScopes;
             return $this->_propDict['oauth2PermissionScopes'];
@@ -128,11 +128,11 @@ class ApiApplication extends Entity
         if (array_key_exists("preAuthorizedApplications", $this->_propDict) && !is_null($this->_propDict["preAuthorizedApplications"])) {
        
             if (count($this->_propDict['preAuthorizedApplications']) > 0 && is_a($this->_propDict['preAuthorizedApplications'][0], 'PreAuthorizedApplication')) {
-               return $this->_propDict['preAuthorizedApplications'];
+                return $this->_propDict['preAuthorizedApplications'];
             }
             $preAuthorizedApplications = [];
             foreach ($this->_propDict['preAuthorizedApplications'] as $singleValue) {
-               $preAuthorizedApplications []= new PreAuthorizedApplication($singleValue);
+                $preAuthorizedApplications []= new PreAuthorizedApplication($singleValue);
             }
             $this->_propDict['preAuthorizedApplications'] = $preAuthorizedApplications;
             return $this->_propDict['preAuthorizedApplications'];

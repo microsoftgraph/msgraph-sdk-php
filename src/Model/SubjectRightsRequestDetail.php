@@ -63,11 +63,11 @@ class SubjectRightsRequestDetail extends Entity
         if (array_key_exists("insightCounts", $this->_propDict) && !is_null($this->_propDict["insightCounts"])) {
        
             if (count($this->_propDict['insightCounts']) > 0 && is_a($this->_propDict['insightCounts'][0], 'KeyValuePair')) {
-               return $this->_propDict['insightCounts'];
+                return $this->_propDict['insightCounts'];
             }
             $insightCounts = [];
             foreach ($this->_propDict['insightCounts'] as $singleValue) {
-               $insightCounts []= new KeyValuePair($singleValue);
+                $insightCounts []= new KeyValuePair($singleValue);
             }
             $this->_propDict['insightCounts'] = $insightCounts;
             return $this->_propDict['insightCounts'];
@@ -156,11 +156,11 @@ class SubjectRightsRequestDetail extends Entity
         if (array_key_exists("productItemCounts", $this->_propDict) && !is_null($this->_propDict["productItemCounts"])) {
        
             if (count($this->_propDict['productItemCounts']) > 0 && is_a($this->_propDict['productItemCounts'][0], 'KeyValuePair')) {
-               return $this->_propDict['productItemCounts'];
+                return $this->_propDict['productItemCounts'];
             }
             $productItemCounts = [];
             foreach ($this->_propDict['productItemCounts'] as $singleValue) {
-               $productItemCounts []= new KeyValuePair($singleValue);
+                $productItemCounts []= new KeyValuePair($singleValue);
             }
             $this->_propDict['productItemCounts'] = $productItemCounts;
             return $this->_propDict['productItemCounts'];

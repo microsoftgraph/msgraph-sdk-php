@@ -339,11 +339,11 @@ class MailTips extends Entity
         if (array_key_exists("recipientSuggestions", $this->_propDict) && !is_null($this->_propDict["recipientSuggestions"])) {
        
             if (count($this->_propDict['recipientSuggestions']) > 0 && is_a($this->_propDict['recipientSuggestions'][0], 'Recipient')) {
-               return $this->_propDict['recipientSuggestions'];
+                return $this->_propDict['recipientSuggestions'];
             }
             $recipientSuggestions = [];
             foreach ($this->_propDict['recipientSuggestions'] as $singleValue) {
-               $recipientSuggestions []= new Recipient($singleValue);
+                $recipientSuggestions []= new Recipient($singleValue);
             }
             $this->_propDict['recipientSuggestions'] = $recipientSuggestions;
             return $this->_propDict['recipientSuggestions'];

@@ -35,11 +35,11 @@ class RolePermission extends Entity
         if (array_key_exists("resourceActions", $this->_propDict) && !is_null($this->_propDict["resourceActions"])) {
        
             if (count($this->_propDict['resourceActions']) > 0 && is_a($this->_propDict['resourceActions'][0], 'ResourceAction')) {
-               return $this->_propDict['resourceActions'];
+                return $this->_propDict['resourceActions'];
             }
             $resourceActions = [];
             foreach ($this->_propDict['resourceActions'] as $singleValue) {
-               $resourceActions []= new ResourceAction($singleValue);
+                $resourceActions []= new ResourceAction($singleValue);
             }
             $this->_propDict['resourceActions'] = $resourceActions;
             return $this->_propDict['resourceActions'];

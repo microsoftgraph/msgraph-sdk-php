@@ -35,11 +35,11 @@ class SearchAggregation extends Entity
         if (array_key_exists("buckets", $this->_propDict) && !is_null($this->_propDict["buckets"])) {
        
             if (count($this->_propDict['buckets']) > 0 && is_a($this->_propDict['buckets'][0], 'SearchBucket')) {
-               return $this->_propDict['buckets'];
+                return $this->_propDict['buckets'];
             }
             $buckets = [];
             foreach ($this->_propDict['buckets'] as $singleValue) {
-               $buckets []= new SearchBucket($singleValue);
+                $buckets []= new SearchBucket($singleValue);
             }
             $this->_propDict['buckets'] = $buckets;
             return $this->_propDict['buckets'];

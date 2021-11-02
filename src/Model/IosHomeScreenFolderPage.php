@@ -35,11 +35,11 @@ class IosHomeScreenFolderPage extends Entity
         if (array_key_exists("apps", $this->_propDict) && !is_null($this->_propDict["apps"])) {
        
             if (count($this->_propDict['apps']) > 0 && is_a($this->_propDict['apps'][0], 'IosHomeScreenApp')) {
-               return $this->_propDict['apps'];
+                return $this->_propDict['apps'];
             }
             $apps = [];
             foreach ($this->_propDict['apps'] as $singleValue) {
-               $apps []= new IosHomeScreenApp($singleValue);
+                $apps []= new IosHomeScreenApp($singleValue);
             }
             $this->_propDict['apps'] = $apps;
             return $this->_propDict['apps'];

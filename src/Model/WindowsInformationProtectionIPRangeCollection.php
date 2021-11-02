@@ -63,11 +63,11 @@ class WindowsInformationProtectionIPRangeCollection extends Entity
         if (array_key_exists("ranges", $this->_propDict) && !is_null($this->_propDict["ranges"])) {
        
             if (count($this->_propDict['ranges']) > 0 && is_a($this->_propDict['ranges'][0], 'IpRange')) {
-               return $this->_propDict['ranges'];
+                return $this->_propDict['ranges'];
             }
             $ranges = [];
             foreach ($this->_propDict['ranges'] as $singleValue) {
-               $ranges []= new IpRange($singleValue);
+                $ranges []= new IpRange($singleValue);
             }
             $this->_propDict['ranges'] = $ranges;
             return $this->_propDict['ranges'];

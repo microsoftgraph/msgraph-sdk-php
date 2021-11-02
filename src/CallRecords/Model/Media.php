@@ -199,11 +199,11 @@ class Media extends \Microsoft\Graph\Model\Entity
         if (array_key_exists("streams", $this->_propDict) && !is_null($this->_propDict["streams"])) {
        
             if (count($this->_propDict['streams']) > 0 && is_a($this->_propDict['streams'][0], 'MediaStream')) {
-               return $this->_propDict['streams'];
+                return $this->_propDict['streams'];
             }
             $streams = [];
             foreach ($this->_propDict['streams'] as $singleValue) {
-               $streams []= new MediaStream($singleValue);
+                $streams []= new MediaStream($singleValue);
             }
             $this->_propDict['streams'] = $streams;
             return $this->_propDict['streams'];

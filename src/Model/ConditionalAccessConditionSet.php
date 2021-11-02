@@ -69,11 +69,11 @@ class ConditionalAccessConditionSet extends Entity
         if (array_key_exists("clientAppTypes", $this->_propDict) && !is_null($this->_propDict["clientAppTypes"])) {
        
             if (count($this->_propDict['clientAppTypes']) > 0 && is_a($this->_propDict['clientAppTypes'][0], 'ConditionalAccessClientApp')) {
-               return $this->_propDict['clientAppTypes'];
+                return $this->_propDict['clientAppTypes'];
             }
             $clientAppTypes = [];
             foreach ($this->_propDict['clientAppTypes'] as $singleValue) {
-               $clientAppTypes []= new ConditionalAccessClientApp($singleValue);
+                $clientAppTypes []= new ConditionalAccessClientApp($singleValue);
             }
             $this->_propDict['clientAppTypes'] = $clientAppTypes;
             return $this->_propDict['clientAppTypes'];
@@ -208,11 +208,11 @@ class ConditionalAccessConditionSet extends Entity
         if (array_key_exists("signInRiskLevels", $this->_propDict) && !is_null($this->_propDict["signInRiskLevels"])) {
        
             if (count($this->_propDict['signInRiskLevels']) > 0 && is_a($this->_propDict['signInRiskLevels'][0], 'RiskLevel')) {
-               return $this->_propDict['signInRiskLevels'];
+                return $this->_propDict['signInRiskLevels'];
             }
             $signInRiskLevels = [];
             foreach ($this->_propDict['signInRiskLevels'] as $singleValue) {
-               $signInRiskLevels []= new RiskLevel($singleValue);
+                $signInRiskLevels []= new RiskLevel($singleValue);
             }
             $this->_propDict['signInRiskLevels'] = $signInRiskLevels;
             return $this->_propDict['signInRiskLevels'];
@@ -245,11 +245,11 @@ class ConditionalAccessConditionSet extends Entity
         if (array_key_exists("userRiskLevels", $this->_propDict) && !is_null($this->_propDict["userRiskLevels"])) {
        
             if (count($this->_propDict['userRiskLevels']) > 0 && is_a($this->_propDict['userRiskLevels'][0], 'RiskLevel')) {
-               return $this->_propDict['userRiskLevels'];
+                return $this->_propDict['userRiskLevels'];
             }
             $userRiskLevels = [];
             foreach ($this->_propDict['userRiskLevels'] as $singleValue) {
-               $userRiskLevels []= new RiskLevel($singleValue);
+                $userRiskLevels []= new RiskLevel($singleValue);
             }
             $this->_propDict['userRiskLevels'] = $userRiskLevels;
             return $this->_propDict['userRiskLevels'];

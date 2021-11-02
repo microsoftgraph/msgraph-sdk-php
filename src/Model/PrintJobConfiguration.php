@@ -221,11 +221,11 @@ class PrintJobConfiguration extends Entity
         if (array_key_exists("finishings", $this->_propDict) && !is_null($this->_propDict["finishings"])) {
        
             if (count($this->_propDict['finishings']) > 0 && is_a($this->_propDict['finishings'][0], 'PrintFinishing')) {
-               return $this->_propDict['finishings'];
+                return $this->_propDict['finishings'];
             }
             $finishings = [];
             foreach ($this->_propDict['finishings'] as $singleValue) {
-               $finishings []= new PrintFinishing($singleValue);
+                $finishings []= new PrintFinishing($singleValue);
             }
             $this->_propDict['finishings'] = $finishings;
             return $this->_propDict['finishings'];
@@ -498,11 +498,11 @@ class PrintJobConfiguration extends Entity
         if (array_key_exists("pageRanges", $this->_propDict) && !is_null($this->_propDict["pageRanges"])) {
        
             if (count($this->_propDict['pageRanges']) > 0 && is_a($this->_propDict['pageRanges'][0], 'IntegerRange')) {
-               return $this->_propDict['pageRanges'];
+                return $this->_propDict['pageRanges'];
             }
             $pageRanges = [];
             foreach ($this->_propDict['pageRanges'] as $singleValue) {
-               $pageRanges []= new IntegerRange($singleValue);
+                $pageRanges []= new IntegerRange($singleValue);
             }
             $this->_propDict['pageRanges'] = $pageRanges;
             return $this->_propDict['pageRanges'];

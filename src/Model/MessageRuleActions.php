@@ -119,11 +119,11 @@ class MessageRuleActions extends Entity
         if (array_key_exists("forwardAsAttachmentTo", $this->_propDict) && !is_null($this->_propDict["forwardAsAttachmentTo"])) {
        
             if (count($this->_propDict['forwardAsAttachmentTo']) > 0 && is_a($this->_propDict['forwardAsAttachmentTo'][0], 'Recipient')) {
-               return $this->_propDict['forwardAsAttachmentTo'];
+                return $this->_propDict['forwardAsAttachmentTo'];
             }
             $forwardAsAttachmentTo = [];
             foreach ($this->_propDict['forwardAsAttachmentTo'] as $singleValue) {
-               $forwardAsAttachmentTo []= new Recipient($singleValue);
+                $forwardAsAttachmentTo []= new Recipient($singleValue);
             }
             $this->_propDict['forwardAsAttachmentTo'] = $forwardAsAttachmentTo;
             return $this->_propDict['forwardAsAttachmentTo'];
@@ -156,11 +156,11 @@ class MessageRuleActions extends Entity
         if (array_key_exists("forwardTo", $this->_propDict) && !is_null($this->_propDict["forwardTo"])) {
        
             if (count($this->_propDict['forwardTo']) > 0 && is_a($this->_propDict['forwardTo'][0], 'Recipient')) {
-               return $this->_propDict['forwardTo'];
+                return $this->_propDict['forwardTo'];
             }
             $forwardTo = [];
             foreach ($this->_propDict['forwardTo'] as $singleValue) {
-               $forwardTo []= new Recipient($singleValue);
+                $forwardTo []= new Recipient($singleValue);
             }
             $this->_propDict['forwardTo'] = $forwardTo;
             return $this->_propDict['forwardTo'];
@@ -311,11 +311,11 @@ class MessageRuleActions extends Entity
         if (array_key_exists("redirectTo", $this->_propDict) && !is_null($this->_propDict["redirectTo"])) {
        
             if (count($this->_propDict['redirectTo']) > 0 && is_a($this->_propDict['redirectTo'][0], 'Recipient')) {
-               return $this->_propDict['redirectTo'];
+                return $this->_propDict['redirectTo'];
             }
             $redirectTo = [];
             foreach ($this->_propDict['redirectTo'] as $singleValue) {
-               $redirectTo []= new Recipient($singleValue);
+                $redirectTo []= new Recipient($singleValue);
             }
             $this->_propDict['redirectTo'] = $redirectTo;
             return $this->_propDict['redirectTo'];

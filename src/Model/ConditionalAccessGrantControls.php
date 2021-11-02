@@ -35,11 +35,11 @@ class ConditionalAccessGrantControls extends Entity
         if (array_key_exists("builtInControls", $this->_propDict) && !is_null($this->_propDict["builtInControls"])) {
        
             if (count($this->_propDict['builtInControls']) > 0 && is_a($this->_propDict['builtInControls'][0], 'ConditionalAccessGrantControl')) {
-               return $this->_propDict['builtInControls'];
+                return $this->_propDict['builtInControls'];
             }
             $builtInControls = [];
             foreach ($this->_propDict['builtInControls'] as $singleValue) {
-               $builtInControls []= new ConditionalAccessGrantControl($singleValue);
+                $builtInControls []= new ConditionalAccessGrantControl($singleValue);
             }
             $this->_propDict['builtInControls'] = $builtInControls;
             return $this->_propDict['builtInControls'];

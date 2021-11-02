@@ -35,11 +35,11 @@ class MeetingParticipants extends Entity
         if (array_key_exists("attendees", $this->_propDict) && !is_null($this->_propDict["attendees"])) {
        
             if (count($this->_propDict['attendees']) > 0 && is_a($this->_propDict['attendees'][0], 'MeetingParticipantInfo')) {
-               return $this->_propDict['attendees'];
+                return $this->_propDict['attendees'];
             }
             $attendees = [];
             foreach ($this->_propDict['attendees'] as $singleValue) {
-               $attendees []= new MeetingParticipantInfo($singleValue);
+                $attendees []= new MeetingParticipantInfo($singleValue);
             }
             $this->_propDict['attendees'] = $attendees;
             return $this->_propDict['attendees'];

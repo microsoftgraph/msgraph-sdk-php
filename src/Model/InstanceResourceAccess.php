@@ -34,11 +34,11 @@ class InstanceResourceAccess extends Entity
         if (array_key_exists("permissions", $this->_propDict) && !is_null($this->_propDict["permissions"])) {
        
             if (count($this->_propDict['permissions']) > 0 && is_a($this->_propDict['permissions'][0], 'ResourcePermission')) {
-               return $this->_propDict['permissions'];
+                return $this->_propDict['permissions'];
             }
             $permissions = [];
             foreach ($this->_propDict['permissions'] as $singleValue) {
-               $permissions []= new ResourcePermission($singleValue);
+                $permissions []= new ResourcePermission($singleValue);
             }
             $this->_propDict['permissions'] = $permissions;
             return $this->_propDict['permissions'];

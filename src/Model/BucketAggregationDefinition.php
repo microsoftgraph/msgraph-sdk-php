@@ -119,11 +119,11 @@ class BucketAggregationDefinition extends Entity
         if (array_key_exists("ranges", $this->_propDict) && !is_null($this->_propDict["ranges"])) {
        
             if (count($this->_propDict['ranges']) > 0 && is_a($this->_propDict['ranges'][0], 'BucketAggregationRange')) {
-               return $this->_propDict['ranges'];
+                return $this->_propDict['ranges'];
             }
             $ranges = [];
             foreach ($this->_propDict['ranges'] as $singleValue) {
-               $ranges []= new BucketAggregationRange($singleValue);
+                $ranges []= new BucketAggregationRange($singleValue);
             }
             $this->_propDict['ranges'] = $ranges;
             return $this->_propDict['ranges'];

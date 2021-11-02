@@ -35,11 +35,11 @@ class MeetingTimeSuggestion extends Entity
         if (array_key_exists("attendeeAvailability", $this->_propDict) && !is_null($this->_propDict["attendeeAvailability"])) {
        
             if (count($this->_propDict['attendeeAvailability']) > 0 && is_a($this->_propDict['attendeeAvailability'][0], 'AttendeeAvailability')) {
-               return $this->_propDict['attendeeAvailability'];
+                return $this->_propDict['attendeeAvailability'];
             }
             $attendeeAvailability = [];
             foreach ($this->_propDict['attendeeAvailability'] as $singleValue) {
-               $attendeeAvailability []= new AttendeeAvailability($singleValue);
+                $attendeeAvailability []= new AttendeeAvailability($singleValue);
             }
             $this->_propDict['attendeeAvailability'] = $attendeeAvailability;
             return $this->_propDict['attendeeAvailability'];
@@ -100,11 +100,11 @@ class MeetingTimeSuggestion extends Entity
         if (array_key_exists("locations", $this->_propDict) && !is_null($this->_propDict["locations"])) {
        
             if (count($this->_propDict['locations']) > 0 && is_a($this->_propDict['locations'][0], 'Location')) {
-               return $this->_propDict['locations'];
+                return $this->_propDict['locations'];
             }
             $locations = [];
             foreach ($this->_propDict['locations'] as $singleValue) {
-               $locations []= new Location($singleValue);
+                $locations []= new Location($singleValue);
             }
             $this->_propDict['locations'] = $locations;
             return $this->_propDict['locations'];
