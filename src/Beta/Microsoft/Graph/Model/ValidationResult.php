@@ -25,6 +25,7 @@ class ValidationResult extends Entity
 {
     /**
     * Gets the message
+    * The string containing the reason for why the rule passed or not. Read-only. Not nullable.
     *
     * @return string|null The message
     */
@@ -39,6 +40,7 @@ class ValidationResult extends Entity
 
     /**
     * Sets the message
+    * The string containing the reason for why the rule passed or not. Read-only. Not nullable.
     *
     * @param string $val The value of the message
     *
@@ -51,6 +53,7 @@ class ValidationResult extends Entity
     }
     /**
     * Gets the ruleName
+    * The string containing the name of the password validation rule that the action was validated against. Read-only. Not nullable.
     *
     * @return string|null The ruleName
     */
@@ -65,6 +68,7 @@ class ValidationResult extends Entity
 
     /**
     * Sets the ruleName
+    * The string containing the name of the password validation rule that the action was validated against. Read-only. Not nullable.
     *
     * @param string $val The value of the ruleName
     *
@@ -77,6 +81,7 @@ class ValidationResult extends Entity
     }
     /**
     * Gets the validationPassed
+    * Whether the password passed or failed the validation rule. Read-only. Not nullable.
     *
     * @return bool|null The validationPassed
     */
@@ -91,6 +96,7 @@ class ValidationResult extends Entity
 
     /**
     * Sets the validationPassed
+    * Whether the password passed or failed the validation rule. Read-only. Not nullable.
     *
     * @param bool $val The value of the validationPassed
     *

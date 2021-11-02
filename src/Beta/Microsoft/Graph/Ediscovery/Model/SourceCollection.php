@@ -26,7 +26,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the contentQuery
-    * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery.  You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016
+    * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016.
     *
     * @return string|null The contentQuery
     */
@@ -41,7 +41,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the contentQuery
-    * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery.  You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016
+    * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016.
     *
     * @param string $val The contentQuery
     *
@@ -121,7 +121,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the dataSourceScopes
-    * When specified, the collection will span across a service for an entire workload. Possible values are: none,allTenantMailboxes,allTenantSites,allCaseCustodians,allCaseNoncustodialDataSources.
+    * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
     *
     * @return DataSourceScopes|null The dataSourceScopes
     */
@@ -140,7 +140,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the dataSourceScopes
-    * When specified, the collection will span across a service for an entire workload. Possible values are: none,allTenantMailboxes,allTenantSites,allCaseCustodians,allCaseNoncustodialDataSources.
+    * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
     *
     * @param DataSourceScopes $val The dataSourceScopes
     *
@@ -154,7 +154,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the description
-    * The description of the sourceCollection
+    * The description of the sourceCollection.
     *
     * @return string|null The description
     */
@@ -169,7 +169,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the description
-    * The description of the sourceCollection
+    * The description of the sourceCollection.
     *
     * @param string $val The description
     *
@@ -183,7 +183,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Gets the displayName
-    * The display name of the sourceCollection
+    * The display name of the sourceCollection.
     *
     * @return string|null The displayName
     */
@@ -198,7 +198,7 @@ class SourceCollection extends \Beta\Microsoft\Graph\Model\Entity
     
     /**
     * Sets the displayName
-    * The display name of the sourceCollection
+    * The display name of the sourceCollection.
     *
     * @param string $val The displayName
     *

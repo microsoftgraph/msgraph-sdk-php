@@ -26,7 +26,7 @@ class BroadcastMeetingSettings extends Entity
 
     /**
     * Gets the allowedAudience
-    * Defines who can join the live event. Possible values are listed in the following table.
+    * Defines who can join the Teams live event. Possible values are listed in the following table.
     *
     * @return BroadcastMeetingAudience|null The allowedAudience
     */
@@ -45,7 +45,7 @@ class BroadcastMeetingSettings extends Entity
 
     /**
     * Sets the allowedAudience
-    * Defines who can join the live event. Possible values are listed in the following table.
+    * Defines who can join the Teams live event. Possible values are listed in the following table.
     *
     * @param BroadcastMeetingAudience $val The value to assign to the allowedAudience
     *
@@ -58,7 +58,7 @@ class BroadcastMeetingSettings extends Entity
     }
     /**
     * Gets the isAttendeeReportEnabled
-    * Indicates whether attendee report is enabled for this live event. Default value is false.
+    * Indicates whether attendee report is enabled for this Teams live event. Default value is false.
     *
     * @return bool|null The isAttendeeReportEnabled
     */
@@ -73,7 +73,7 @@ class BroadcastMeetingSettings extends Entity
 
     /**
     * Sets the isAttendeeReportEnabled
-    * Indicates whether attendee report is enabled for this live event. Default value is false.
+    * Indicates whether attendee report is enabled for this Teams live event. Default value is false.
     *
     * @param bool $val The value of the isAttendeeReportEnabled
     *
@@ -86,7 +86,7 @@ class BroadcastMeetingSettings extends Entity
     }
     /**
     * Gets the isQuestionAndAnswerEnabled
-    * Indicates whether Q&amp;A is enabled for this live event. Default value is false.
+    * Indicates whether Q&amp;A is enabled for this Teams live event. Default value is false.
     *
     * @return bool|null The isQuestionAndAnswerEnabled
     */
@@ -101,7 +101,7 @@ class BroadcastMeetingSettings extends Entity
 
     /**
     * Sets the isQuestionAndAnswerEnabled
-    * Indicates whether Q&amp;A is enabled for this live event. Default value is false.
+    * Indicates whether Q&amp;A is enabled for this Teams live event. Default value is false.
     *
     * @param bool $val The value of the isQuestionAndAnswerEnabled
     *
@@ -114,7 +114,7 @@ class BroadcastMeetingSettings extends Entity
     }
     /**
     * Gets the isRecordingEnabled
-    * Indicates whether recording is enabled for this live event. Default value is false.
+    * Indicates whether recording is enabled for this Teams live event. Default value is false.
     *
     * @return bool|null The isRecordingEnabled
     */
@@ -129,7 +129,7 @@ class BroadcastMeetingSettings extends Entity
 
     /**
     * Sets the isRecordingEnabled
-    * Indicates whether recording is enabled for this live event. Default value is false.
+    * Indicates whether recording is enabled for this Teams live event. Default value is false.
     *
     * @param bool $val The value of the isRecordingEnabled
     *
@@ -142,7 +142,7 @@ class BroadcastMeetingSettings extends Entity
     }
     /**
     * Gets the isVideoOnDemandEnabled
-    * Indicates whether video on demand is enabled for this live event. Default value is false.
+    * Indicates whether video on demand is enabled for this Teams live event. Default value is false.
     *
     * @return bool|null The isVideoOnDemandEnabled
     */
@@ -157,7 +157,7 @@ class BroadcastMeetingSettings extends Entity
 
     /**
     * Sets the isVideoOnDemandEnabled
-    * Indicates whether video on demand is enabled for this live event. Default value is false.
+    * Indicates whether video on demand is enabled for this Teams live event. Default value is false.
     *
     * @param bool $val The value of the isVideoOnDemandEnabled
     *
