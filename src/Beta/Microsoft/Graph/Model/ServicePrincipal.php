@@ -350,6 +350,37 @@ class ServicePrincipal extends DirectoryObject
     }
     
     /**
+    * Gets the customSecurityAttributes
+    *
+    * @return CustomSecurityAttributeValue|null The customSecurityAttributes
+    */
+    public function getCustomSecurityAttributes()
+    {
+        if (array_key_exists("customSecurityAttributes", $this->_propDict)) {
+            if (is_a($this->_propDict["customSecurityAttributes"], "\Beta\Microsoft\Graph\Model\CustomSecurityAttributeValue") || is_null($this->_propDict["customSecurityAttributes"])) {
+                return $this->_propDict["customSecurityAttributes"];
+            } else {
+                $this->_propDict["customSecurityAttributes"] = new CustomSecurityAttributeValue($this->_propDict["customSecurityAttributes"]);
+                return $this->_propDict["customSecurityAttributes"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the customSecurityAttributes
+    *
+    * @param CustomSecurityAttributeValue $val The customSecurityAttributes
+    *
+    * @return ServicePrincipal
+    */
+    public function setCustomSecurityAttributes($val)
+    {
+        $this->_propDict["customSecurityAttributes"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
     *

@@ -416,36 +416,6 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
 
      /** 
-     * Gets the riskyUsers
-    * The collection of users flagged for risk across managed tenants.
-     *
-     * @return array|null The riskyUsers
-     */
-    public function getRiskyUsers()
-    {
-        if (array_key_exists("riskyUsers", $this->_propDict)) {
-           return $this->_propDict["riskyUsers"];
-        } else {
-            return null;
-        }
-    }
-    
-    /** 
-    * Sets the riskyUsers
-    * The collection of users flagged for risk across managed tenants.
-    *
-    * @param RiskyUser $val The riskyUsers
-    *
-    * @return ManagedTenant
-    */
-    public function setRiskyUsers($val)
-    {
-        $this->_propDict["riskyUsers"] = $val;
-        return $this;
-    }
-    
-
-     /** 
      * Gets the tenantGroups
     * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      *

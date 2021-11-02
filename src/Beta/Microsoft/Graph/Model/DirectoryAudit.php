@@ -355,4 +355,31 @@ class DirectoryAudit extends Entity
         return $this;
     }
     
+    /**
+    * Gets the userAgent
+    *
+    * @return string|null The userAgent
+    */
+    public function getUserAgent()
+    {
+        if (array_key_exists("userAgent", $this->_propDict)) {
+            return $this->_propDict["userAgent"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the userAgent
+    *
+    * @param string $val The userAgent
+    *
+    * @return DirectoryAudit
+    */
+    public function setUserAgent($val)
+    {
+        $this->_propDict["userAgent"] = $val;
+        return $this;
+    }
+    
 }
