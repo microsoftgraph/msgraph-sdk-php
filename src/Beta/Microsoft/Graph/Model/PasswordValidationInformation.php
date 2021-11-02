@@ -25,6 +25,7 @@ class PasswordValidationInformation extends Entity
 {
     /**
     * Gets the isValid
+    * Specifies whether the password is valid based on the calculation of the results in the validationResults property. Not nullable. Read-only.
     *
     * @return bool|null The isValid
     */
@@ -39,6 +40,7 @@ class PasswordValidationInformation extends Entity
 
     /**
     * Sets the isValid
+    * Specifies whether the password is valid based on the calculation of the results in the validationResults property. Not nullable. Read-only.
     *
     * @param bool $val The value of the isValid
     *
@@ -52,6 +54,7 @@ class PasswordValidationInformation extends Entity
 
     /**
     * Gets the validationResults
+    * The list of password validation rules and whether the password passed those rules. Not nullable. Read-only.
     *
     * @return ValidationResult|null The validationResults
     */
@@ -70,6 +73,7 @@ class PasswordValidationInformation extends Entity
 
     /**
     * Sets the validationResults
+    * The list of password validation rules and whether the password passed those rules. Not nullable. Read-only.
     *
     * @param ValidationResult $val The value to assign to the validationResults
     *
