@@ -35,11 +35,11 @@ class InvitedUserMessageInfo extends Entity
         if (array_key_exists("ccRecipients", $this->_propDict) && !is_null($this->_propDict["ccRecipients"])) {
        
             if (count($this->_propDict['ccRecipients']) > 0 && is_a($this->_propDict['ccRecipients'][0], 'Recipient')) {
-               return $this->_propDict['ccRecipients'];
+                return $this->_propDict['ccRecipients'];
             }
             $ccRecipients = [];
             foreach ($this->_propDict['ccRecipients'] as $singleValue) {
-               $ccRecipients []= new Recipient($singleValue);
+                $ccRecipients []= new Recipient($singleValue);
             }
             $this->_propDict['ccRecipients'] = $ccRecipients;
             return $this->_propDict['ccRecipients'];

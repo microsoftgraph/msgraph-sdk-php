@@ -35,11 +35,11 @@ class SearchResponse extends Entity
         if (array_key_exists("hitsContainers", $this->_propDict) && !is_null($this->_propDict["hitsContainers"])) {
        
             if (count($this->_propDict['hitsContainers']) > 0 && is_a($this->_propDict['hitsContainers'][0], 'SearchHitsContainer')) {
-               return $this->_propDict['hitsContainers'];
+                return $this->_propDict['hitsContainers'];
             }
             $hitsContainers = [];
             foreach ($this->_propDict['hitsContainers'] as $singleValue) {
-               $hitsContainers []= new SearchHitsContainer($singleValue);
+                $hitsContainers []= new SearchHitsContainer($singleValue);
             }
             $this->_propDict['hitsContainers'] = $hitsContainers;
             return $this->_propDict['hitsContainers'];

@@ -125,11 +125,11 @@ class ScheduleInformation extends Entity
         if (array_key_exists("scheduleItems", $this->_propDict) && !is_null($this->_propDict["scheduleItems"])) {
        
             if (count($this->_propDict['scheduleItems']) > 0 && is_a($this->_propDict['scheduleItems'][0], 'ScheduleItem')) {
-               return $this->_propDict['scheduleItems'];
+                return $this->_propDict['scheduleItems'];
             }
             $scheduleItems = [];
             foreach ($this->_propDict['scheduleItems'] as $singleValue) {
-               $scheduleItems []= new ScheduleItem($singleValue);
+                $scheduleItems []= new ScheduleItem($singleValue);
             }
             $this->_propDict['scheduleItems'] = $scheduleItems;
             return $this->_propDict['scheduleItems'];

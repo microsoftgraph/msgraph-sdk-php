@@ -63,11 +63,11 @@ class ColumnValidation extends Entity
         if (array_key_exists("descriptions", $this->_propDict) && !is_null($this->_propDict["descriptions"])) {
        
             if (count($this->_propDict['descriptions']) > 0 && is_a($this->_propDict['descriptions'][0], 'DisplayNameLocalization')) {
-               return $this->_propDict['descriptions'];
+                return $this->_propDict['descriptions'];
             }
             $descriptions = [];
             foreach ($this->_propDict['descriptions'] as $singleValue) {
-               $descriptions []= new DisplayNameLocalization($singleValue);
+                $descriptions []= new DisplayNameLocalization($singleValue);
             }
             $this->_propDict['descriptions'] = $descriptions;
             return $this->_propDict['descriptions'];

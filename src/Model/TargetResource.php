@@ -125,11 +125,11 @@ class TargetResource extends Entity
         if (array_key_exists("modifiedProperties", $this->_propDict) && !is_null($this->_propDict["modifiedProperties"])) {
        
             if (count($this->_propDict['modifiedProperties']) > 0 && is_a($this->_propDict['modifiedProperties'][0], 'ModifiedProperty')) {
-               return $this->_propDict['modifiedProperties'];
+                return $this->_propDict['modifiedProperties'];
             }
             $modifiedProperties = [];
             foreach ($this->_propDict['modifiedProperties'] as $singleValue) {
-               $modifiedProperties []= new ModifiedProperty($singleValue);
+                $modifiedProperties []= new ModifiedProperty($singleValue);
             }
             $this->_propDict['modifiedProperties'] = $modifiedProperties;
             return $this->_propDict['modifiedProperties'];

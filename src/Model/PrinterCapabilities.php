@@ -91,11 +91,11 @@ class PrinterCapabilities extends Entity
         if (array_key_exists("colorModes", $this->_propDict) && !is_null($this->_propDict["colorModes"])) {
        
             if (count($this->_propDict['colorModes']) > 0 && is_a($this->_propDict['colorModes'][0], 'PrintColorMode')) {
-               return $this->_propDict['colorModes'];
+                return $this->_propDict['colorModes'];
             }
             $colorModes = [];
             foreach ($this->_propDict['colorModes'] as $singleValue) {
-               $colorModes []= new PrintColorMode($singleValue);
+                $colorModes []= new PrintColorMode($singleValue);
             }
             $this->_propDict['colorModes'] = $colorModes;
             return $this->_propDict['colorModes'];
@@ -218,11 +218,11 @@ class PrinterCapabilities extends Entity
         if (array_key_exists("duplexModes", $this->_propDict) && !is_null($this->_propDict["duplexModes"])) {
        
             if (count($this->_propDict['duplexModes']) > 0 && is_a($this->_propDict['duplexModes'][0], 'PrintDuplexMode')) {
-               return $this->_propDict['duplexModes'];
+                return $this->_propDict['duplexModes'];
             }
             $duplexModes = [];
             foreach ($this->_propDict['duplexModes'] as $singleValue) {
-               $duplexModes []= new PrintDuplexMode($singleValue);
+                $duplexModes []= new PrintDuplexMode($singleValue);
             }
             $this->_propDict['duplexModes'] = $duplexModes;
             return $this->_propDict['duplexModes'];
@@ -255,11 +255,11 @@ class PrinterCapabilities extends Entity
         if (array_key_exists("feedOrientations", $this->_propDict) && !is_null($this->_propDict["feedOrientations"])) {
        
             if (count($this->_propDict['feedOrientations']) > 0 && is_a($this->_propDict['feedOrientations'][0], 'PrinterFeedOrientation')) {
-               return $this->_propDict['feedOrientations'];
+                return $this->_propDict['feedOrientations'];
             }
             $feedOrientations = [];
             foreach ($this->_propDict['feedOrientations'] as $singleValue) {
-               $feedOrientations []= new PrinterFeedOrientation($singleValue);
+                $feedOrientations []= new PrinterFeedOrientation($singleValue);
             }
             $this->_propDict['feedOrientations'] = $feedOrientations;
             return $this->_propDict['feedOrientations'];
@@ -292,11 +292,11 @@ class PrinterCapabilities extends Entity
         if (array_key_exists("finishings", $this->_propDict) && !is_null($this->_propDict["finishings"])) {
        
             if (count($this->_propDict['finishings']) > 0 && is_a($this->_propDict['finishings'][0], 'PrintFinishing')) {
-               return $this->_propDict['finishings'];
+                return $this->_propDict['finishings'];
             }
             $finishings = [];
             foreach ($this->_propDict['finishings'] as $singleValue) {
-               $finishings []= new PrintFinishing($singleValue);
+                $finishings []= new PrintFinishing($singleValue);
             }
             $this->_propDict['finishings'] = $finishings;
             return $this->_propDict['finishings'];
@@ -525,11 +525,11 @@ class PrinterCapabilities extends Entity
         if (array_key_exists("multipageLayouts", $this->_propDict) && !is_null($this->_propDict["multipageLayouts"])) {
        
             if (count($this->_propDict['multipageLayouts']) > 0 && is_a($this->_propDict['multipageLayouts'][0], 'PrintMultipageLayout')) {
-               return $this->_propDict['multipageLayouts'];
+                return $this->_propDict['multipageLayouts'];
             }
             $multipageLayouts = [];
             foreach ($this->_propDict['multipageLayouts'] as $singleValue) {
-               $multipageLayouts []= new PrintMultipageLayout($singleValue);
+                $multipageLayouts []= new PrintMultipageLayout($singleValue);
             }
             $this->_propDict['multipageLayouts'] = $multipageLayouts;
             return $this->_propDict['multipageLayouts'];
@@ -562,11 +562,11 @@ class PrinterCapabilities extends Entity
         if (array_key_exists("orientations", $this->_propDict) && !is_null($this->_propDict["orientations"])) {
        
             if (count($this->_propDict['orientations']) > 0 && is_a($this->_propDict['orientations'][0], 'PrintOrientation')) {
-               return $this->_propDict['orientations'];
+                return $this->_propDict['orientations'];
             }
             $orientations = [];
             foreach ($this->_propDict['orientations'] as $singleValue) {
-               $orientations []= new PrintOrientation($singleValue);
+                $orientations []= new PrintOrientation($singleValue);
             }
             $this->_propDict['orientations'] = $orientations;
             return $this->_propDict['orientations'];
@@ -655,11 +655,11 @@ class PrinterCapabilities extends Entity
         if (array_key_exists("qualities", $this->_propDict) && !is_null($this->_propDict["qualities"])) {
        
             if (count($this->_propDict['qualities']) > 0 && is_a($this->_propDict['qualities'][0], 'PrintQuality')) {
-               return $this->_propDict['qualities'];
+                return $this->_propDict['qualities'];
             }
             $qualities = [];
             foreach ($this->_propDict['qualities'] as $singleValue) {
-               $qualities []= new PrintQuality($singleValue);
+                $qualities []= new PrintQuality($singleValue);
             }
             $this->_propDict['qualities'] = $qualities;
             return $this->_propDict['qualities'];
@@ -720,11 +720,11 @@ class PrinterCapabilities extends Entity
         if (array_key_exists("scalings", $this->_propDict) && !is_null($this->_propDict["scalings"])) {
        
             if (count($this->_propDict['scalings']) > 0 && is_a($this->_propDict['scalings'][0], 'PrintScaling')) {
-               return $this->_propDict['scalings'];
+                return $this->_propDict['scalings'];
             }
             $scalings = [];
             foreach ($this->_propDict['scalings'] as $singleValue) {
-               $scalings []= new PrintScaling($singleValue);
+                $scalings []= new PrintScaling($singleValue);
             }
             $this->_propDict['scalings'] = $scalings;
             return $this->_propDict['scalings'];

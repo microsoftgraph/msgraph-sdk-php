@@ -35,11 +35,11 @@ class WorkingHours extends Entity
         if (array_key_exists("daysOfWeek", $this->_propDict) && !is_null($this->_propDict["daysOfWeek"])) {
        
             if (count($this->_propDict['daysOfWeek']) > 0 && is_a($this->_propDict['daysOfWeek'][0], 'DayOfWeek')) {
-               return $this->_propDict['daysOfWeek'];
+                return $this->_propDict['daysOfWeek'];
             }
             $daysOfWeek = [];
             foreach ($this->_propDict['daysOfWeek'] as $singleValue) {
-               $daysOfWeek []= new DayOfWeek($singleValue);
+                $daysOfWeek []= new DayOfWeek($singleValue);
             }
             $this->_propDict['daysOfWeek'] = $daysOfWeek;
             return $this->_propDict['daysOfWeek'];

@@ -91,11 +91,11 @@ class OnlineMeetingInfo extends Entity
         if (array_key_exists("phones", $this->_propDict) && !is_null($this->_propDict["phones"])) {
        
             if (count($this->_propDict['phones']) > 0 && is_a($this->_propDict['phones'][0], 'Phone')) {
-               return $this->_propDict['phones'];
+                return $this->_propDict['phones'];
             }
             $phones = [];
             foreach ($this->_propDict['phones'] as $singleValue) {
-               $phones []= new Phone($singleValue);
+                $phones []= new Phone($singleValue);
             }
             $this->_propDict['phones'] = $phones;
             return $this->_propDict['phones'];

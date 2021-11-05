@@ -63,11 +63,11 @@ class PrinterStatus extends Entity
         if (array_key_exists("details", $this->_propDict) && !is_null($this->_propDict["details"])) {
        
             if (count($this->_propDict['details']) > 0 && is_a($this->_propDict['details'][0], 'PrinterProcessingStateDetail')) {
-               return $this->_propDict['details'];
+                return $this->_propDict['details'];
             }
             $details = [];
             foreach ($this->_propDict['details'] as $singleValue) {
-               $details []= new PrinterProcessingStateDetail($singleValue);
+                $details []= new PrinterProcessingStateDetail($singleValue);
             }
             $this->_propDict['details'] = $details;
             return $this->_propDict['details'];

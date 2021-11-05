@@ -46,11 +46,11 @@ class IosHomeScreenFolder extends IosHomeScreenItem
         if (array_key_exists("pages", $this->_propDict) && !is_null($this->_propDict["pages"])) {
        
             if (count($this->_propDict['pages']) > 0 && is_a($this->_propDict['pages'][0], 'IosHomeScreenFolderPage')) {
-               return $this->_propDict['pages'];
+                return $this->_propDict['pages'];
             }
             $pages = [];
             foreach ($this->_propDict['pages'] as $singleValue) {
-               $pages []= new IosHomeScreenFolderPage($singleValue);
+                $pages []= new IosHomeScreenFolderPage($singleValue);
             }
             $this->_propDict['pages'] = $pages;
             return $this->_propDict['pages'];

@@ -35,11 +35,11 @@ class ConditionalAccessPlatforms extends Entity
         if (array_key_exists("excludePlatforms", $this->_propDict) && !is_null($this->_propDict["excludePlatforms"])) {
        
             if (count($this->_propDict['excludePlatforms']) > 0 && is_a($this->_propDict['excludePlatforms'][0], 'ConditionalAccessDevicePlatform')) {
-               return $this->_propDict['excludePlatforms'];
+                return $this->_propDict['excludePlatforms'];
             }
             $excludePlatforms = [];
             foreach ($this->_propDict['excludePlatforms'] as $singleValue) {
-               $excludePlatforms []= new ConditionalAccessDevicePlatform($singleValue);
+                $excludePlatforms []= new ConditionalAccessDevicePlatform($singleValue);
             }
             $this->_propDict['excludePlatforms'] = $excludePlatforms;
             return $this->_propDict['excludePlatforms'];
@@ -72,11 +72,11 @@ class ConditionalAccessPlatforms extends Entity
         if (array_key_exists("includePlatforms", $this->_propDict) && !is_null($this->_propDict["includePlatforms"])) {
        
             if (count($this->_propDict['includePlatforms']) > 0 && is_a($this->_propDict['includePlatforms'][0], 'ConditionalAccessDevicePlatform')) {
-               return $this->_propDict['includePlatforms'];
+                return $this->_propDict['includePlatforms'];
             }
             $includePlatforms = [];
             foreach ($this->_propDict['includePlatforms'] as $singleValue) {
-               $includePlatforms []= new ConditionalAccessDevicePlatform($singleValue);
+                $includePlatforms []= new ConditionalAccessDevicePlatform($singleValue);
             }
             $this->_propDict['includePlatforms'] = $includePlatforms;
             return $this->_propDict['includePlatforms'];

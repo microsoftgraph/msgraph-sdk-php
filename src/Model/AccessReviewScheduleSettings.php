@@ -35,11 +35,11 @@ class AccessReviewScheduleSettings extends Entity
         if (array_key_exists("applyActions", $this->_propDict) && !is_null($this->_propDict["applyActions"])) {
        
             if (count($this->_propDict['applyActions']) > 0 && is_a($this->_propDict['applyActions'][0], 'AccessReviewApplyAction')) {
-               return $this->_propDict['applyActions'];
+                return $this->_propDict['applyActions'];
             }
             $applyActions = [];
             foreach ($this->_propDict['applyActions'] as $singleValue) {
-               $applyActions []= new AccessReviewApplyAction($singleValue);
+                $applyActions []= new AccessReviewApplyAction($singleValue);
             }
             $this->_propDict['applyActions'] = $applyActions;
             return $this->_propDict['applyActions'];

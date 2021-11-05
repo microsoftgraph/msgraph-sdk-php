@@ -68,11 +68,11 @@ class TimeConstraint extends Entity
         if (array_key_exists("timeSlots", $this->_propDict) && !is_null($this->_propDict["timeSlots"])) {
        
             if (count($this->_propDict['timeSlots']) > 0 && is_a($this->_propDict['timeSlots'][0], 'TimeSlot')) {
-               return $this->_propDict['timeSlots'];
+                return $this->_propDict['timeSlots'];
             }
             $timeSlots = [];
             foreach ($this->_propDict['timeSlots'] as $singleValue) {
-               $timeSlots []= new TimeSlot($singleValue);
+                $timeSlots []= new TimeSlot($singleValue);
             }
             $this->_propDict['timeSlots'] = $timeSlots;
             return $this->_propDict['timeSlots'];

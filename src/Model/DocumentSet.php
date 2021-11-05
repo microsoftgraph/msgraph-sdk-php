@@ -35,11 +35,11 @@ class DocumentSet extends Entity
         if (array_key_exists("allowedContentTypes", $this->_propDict) && !is_null($this->_propDict["allowedContentTypes"])) {
        
             if (count($this->_propDict['allowedContentTypes']) > 0 && is_a($this->_propDict['allowedContentTypes'][0], 'ContentTypeInfo')) {
-               return $this->_propDict['allowedContentTypes'];
+                return $this->_propDict['allowedContentTypes'];
             }
             $allowedContentTypes = [];
             foreach ($this->_propDict['allowedContentTypes'] as $singleValue) {
-               $allowedContentTypes []= new ContentTypeInfo($singleValue);
+                $allowedContentTypes []= new ContentTypeInfo($singleValue);
             }
             $this->_propDict['allowedContentTypes'] = $allowedContentTypes;
             return $this->_propDict['allowedContentTypes'];
@@ -72,11 +72,11 @@ class DocumentSet extends Entity
         if (array_key_exists("defaultContents", $this->_propDict) && !is_null($this->_propDict["defaultContents"])) {
        
             if (count($this->_propDict['defaultContents']) > 0 && is_a($this->_propDict['defaultContents'][0], 'DocumentSetContent')) {
-               return $this->_propDict['defaultContents'];
+                return $this->_propDict['defaultContents'];
             }
             $defaultContents = [];
             foreach ($this->_propDict['defaultContents'] as $singleValue) {
-               $defaultContents []= new DocumentSetContent($singleValue);
+                $defaultContents []= new DocumentSetContent($singleValue);
             }
             $this->_propDict['defaultContents'] = $defaultContents;
             return $this->_propDict['defaultContents'];
@@ -192,11 +192,11 @@ class DocumentSet extends Entity
         if (array_key_exists("sharedColumns", $this->_propDict) && !is_null($this->_propDict["sharedColumns"])) {
        
             if (count($this->_propDict['sharedColumns']) > 0 && is_a($this->_propDict['sharedColumns'][0], 'ColumnDefinition')) {
-               return $this->_propDict['sharedColumns'];
+                return $this->_propDict['sharedColumns'];
             }
             $sharedColumns = [];
             foreach ($this->_propDict['sharedColumns'] as $singleValue) {
-               $sharedColumns []= new ColumnDefinition($singleValue);
+                $sharedColumns []= new ColumnDefinition($singleValue);
             }
             $this->_propDict['sharedColumns'] = $sharedColumns;
             return $this->_propDict['sharedColumns'];
@@ -227,11 +227,11 @@ class DocumentSet extends Entity
         if (array_key_exists("welcomePageColumns", $this->_propDict) && !is_null($this->_propDict["welcomePageColumns"])) {
        
             if (count($this->_propDict['welcomePageColumns']) > 0 && is_a($this->_propDict['welcomePageColumns'][0], 'ColumnDefinition')) {
-               return $this->_propDict['welcomePageColumns'];
+                return $this->_propDict['welcomePageColumns'];
             }
             $welcomePageColumns = [];
             foreach ($this->_propDict['welcomePageColumns'] as $singleValue) {
-               $welcomePageColumns []= new ColumnDefinition($singleValue);
+                $welcomePageColumns []= new ColumnDefinition($singleValue);
             }
             $this->_propDict['welcomePageColumns'] = $welcomePageColumns;
             return $this->_propDict['welcomePageColumns'];

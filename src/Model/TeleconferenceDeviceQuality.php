@@ -259,11 +259,11 @@ class TeleconferenceDeviceQuality extends Entity
         if (array_key_exists("mediaQualityList", $this->_propDict) && !is_null($this->_propDict["mediaQualityList"])) {
        
             if (count($this->_propDict['mediaQualityList']) > 0 && is_a($this->_propDict['mediaQualityList'][0], 'TeleconferenceDeviceMediaQuality')) {
-               return $this->_propDict['mediaQualityList'];
+                return $this->_propDict['mediaQualityList'];
             }
             $mediaQualityList = [];
             foreach ($this->_propDict['mediaQualityList'] as $singleValue) {
-               $mediaQualityList []= new TeleconferenceDeviceMediaQuality($singleValue);
+                $mediaQualityList []= new TeleconferenceDeviceMediaQuality($singleValue);
             }
             $this->_propDict['mediaQualityList'] = $mediaQualityList;
             return $this->_propDict['mediaQualityList'];

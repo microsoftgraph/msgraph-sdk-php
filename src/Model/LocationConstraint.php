@@ -63,11 +63,11 @@ class LocationConstraint extends Entity
         if (array_key_exists("locations", $this->_propDict) && !is_null($this->_propDict["locations"])) {
        
             if (count($this->_propDict['locations']) > 0 && is_a($this->_propDict['locations'][0], 'LocationConstraintItem')) {
-               return $this->_propDict['locations'];
+                return $this->_propDict['locations'];
             }
             $locations = [];
             foreach ($this->_propDict['locations'] as $singleValue) {
-               $locations []= new LocationConstraintItem($singleValue);
+                $locations []= new LocationConstraintItem($singleValue);
             }
             $this->_propDict['locations'] = $locations;
             return $this->_propDict['locations'];

@@ -119,11 +119,11 @@ class MessageRulePredicates extends Entity
         if (array_key_exists("fromAddresses", $this->_propDict) && !is_null($this->_propDict["fromAddresses"])) {
        
             if (count($this->_propDict['fromAddresses']) > 0 && is_a($this->_propDict['fromAddresses'][0], 'Recipient')) {
-               return $this->_propDict['fromAddresses'];
+                return $this->_propDict['fromAddresses'];
             }
             $fromAddresses = [];
             foreach ($this->_propDict['fromAddresses'] as $singleValue) {
-               $fromAddresses []= new Recipient($singleValue);
+                $fromAddresses []= new Recipient($singleValue);
             }
             $this->_propDict['fromAddresses'] = $fromAddresses;
             return $this->_propDict['fromAddresses'];
@@ -762,11 +762,11 @@ class MessageRulePredicates extends Entity
         if (array_key_exists("sentToAddresses", $this->_propDict) && !is_null($this->_propDict["sentToAddresses"])) {
        
             if (count($this->_propDict['sentToAddresses']) > 0 && is_a($this->_propDict['sentToAddresses'][0], 'Recipient')) {
-               return $this->_propDict['sentToAddresses'];
+                return $this->_propDict['sentToAddresses'];
             }
             $sentToAddresses = [];
             foreach ($this->_propDict['sentToAddresses'] as $singleValue) {
-               $sentToAddresses []= new Recipient($singleValue);
+                $sentToAddresses []= new Recipient($singleValue);
             }
             $this->_propDict['sentToAddresses'] = $sentToAddresses;
             return $this->_propDict['sentToAddresses'];

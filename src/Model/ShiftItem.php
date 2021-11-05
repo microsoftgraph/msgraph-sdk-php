@@ -35,11 +35,11 @@ class ShiftItem extends ScheduleEntity
         if (array_key_exists("activities", $this->_propDict) && !is_null($this->_propDict["activities"])) {
        
             if (count($this->_propDict['activities']) > 0 && is_a($this->_propDict['activities'][0], 'ShiftActivity')) {
-               return $this->_propDict['activities'];
+                return $this->_propDict['activities'];
             }
             $activities = [];
             foreach ($this->_propDict['activities'] as $singleValue) {
-               $activities []= new ShiftActivity($singleValue);
+                $activities []= new ShiftActivity($singleValue);
             }
             $this->_propDict['activities'] = $activities;
             return $this->_propDict['activities'];

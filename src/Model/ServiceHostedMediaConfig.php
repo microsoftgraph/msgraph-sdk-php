@@ -46,11 +46,11 @@ class ServiceHostedMediaConfig extends MediaConfig
         if (array_key_exists("preFetchMedia", $this->_propDict) && !is_null($this->_propDict["preFetchMedia"])) {
        
             if (count($this->_propDict['preFetchMedia']) > 0 && is_a($this->_propDict['preFetchMedia'][0], 'MediaInfo')) {
-               return $this->_propDict['preFetchMedia'];
+                return $this->_propDict['preFetchMedia'];
             }
             $preFetchMedia = [];
             foreach ($this->_propDict['preFetchMedia'] as $singleValue) {
-               $preFetchMedia []= new MediaInfo($singleValue);
+                $preFetchMedia []= new MediaInfo($singleValue);
             }
             $this->_propDict['preFetchMedia'] = $preFetchMedia;
             return $this->_propDict['preFetchMedia'];

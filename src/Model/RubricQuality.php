@@ -35,11 +35,11 @@ class RubricQuality extends Entity
         if (array_key_exists("criteria", $this->_propDict) && !is_null($this->_propDict["criteria"])) {
        
             if (count($this->_propDict['criteria']) > 0 && is_a($this->_propDict['criteria'][0], 'RubricCriterion')) {
-               return $this->_propDict['criteria'];
+                return $this->_propDict['criteria'];
             }
             $criteria = [];
             foreach ($this->_propDict['criteria'] as $singleValue) {
-               $criteria []= new RubricCriterion($singleValue);
+                $criteria []= new RubricCriterion($singleValue);
             }
             $this->_propDict['criteria'] = $criteria;
             return $this->_propDict['criteria'];
