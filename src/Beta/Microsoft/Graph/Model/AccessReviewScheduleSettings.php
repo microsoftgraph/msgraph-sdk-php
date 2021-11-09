@@ -226,6 +226,37 @@ class AccessReviewScheduleSettings extends Entity
     }
 
     /**
+    * Gets the recommendationInsightSettings
+    *
+    * @return AccessReviewRecommendationInsightSetting|null The recommendationInsightSettings
+    */
+    public function getRecommendationInsightSettings()
+    {
+        if (array_key_exists("recommendationInsightSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["recommendationInsightSettings"], "\Beta\Microsoft\Graph\Model\AccessReviewRecommendationInsightSetting") || is_null($this->_propDict["recommendationInsightSettings"])) {
+                return $this->_propDict["recommendationInsightSettings"];
+            } else {
+                $this->_propDict["recommendationInsightSettings"] = new AccessReviewRecommendationInsightSetting($this->_propDict["recommendationInsightSettings"]);
+                return $this->_propDict["recommendationInsightSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recommendationInsightSettings
+    *
+    * @param AccessReviewRecommendationInsightSetting $val The value to assign to the recommendationInsightSettings
+    *
+    * @return AccessReviewScheduleSettings The AccessReviewScheduleSettings
+    */
+    public function setRecommendationInsightSettings($val)
+    {
+        $this->_propDict["recommendationInsightSettings"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the recommendationLookBackDuration
     * Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
     *
