@@ -17,7 +17,7 @@ const SDK_VERSION_VAR_NAME = "SDK_VERSION"; # Name of version variable in GraphC
 const PACKAGIST_ENDPOINT = "https://packagist.org/packages/microsoft/microsoft-graph.json";
 const CONSTANTS_README_FILEPATH = "./README.md";
 
-function getLatestPackagistVersion(): string
+function getLatestMinorPackagistVersion(string $majorVersion): string
 {
     $handle = curl_init();
     curl_setopt($handle, CURLOPT_URL, PACKAGIST_ENDPOINT);
@@ -46,9 +46,12 @@ function getLatestPackagistVersion(): string
     foreach ($versions as $version => $versionMetadata) {
         # Ignore branch versions
         if (!preg_match('/^dev-.*|.*-dev$/', $version)) {
-            # First non-branch version is the latest based on payload structure
-            echo "Latest packagist version: {$version}\n";
-            return $version;
+            $split = explode('.', $version);
+            if (!empty($split) && $split[0] === $majorVersion) {
+                # Non-branch versions are returned in descending order.
+                echo "Latest packagist version: {$version}\n";
+                return $version;
+            }
         }
     }
 }
@@ -107,7 +110,9 @@ function updateReadMe(string $version)
     throw new Exception("Could not read README.md at " . CONSTANTS_README_FILEPATH);
 }
 
-$version = incrementMinorVersion(getCurrentSdkVersion());
+$currentSdkVersion = getCurrentSdkVersion();
+$currentMajorVersion = explode('.', $currentSdkVersion)[0];
+$version = incrementMinorVersion(getLatestMinorPackagistVersion($currentMajorVersion));
 echo "Version after minor increment: {$version}\n";
 updateGraphConstants($version);
 updateReadMe($version);
