@@ -32,5 +32,6 @@ class ManagementCategory extends Enum
     const CUSTOM = "custom";
     const DEVICES = "devices";
     const IDENTITY = "identity";
+    const DATA = "data";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

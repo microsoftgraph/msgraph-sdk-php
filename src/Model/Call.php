@@ -637,6 +637,36 @@ class Call extends Entity
     
 
      /** 
+     * Gets the audioRoutingGroups
+    * Read-only. Nullable.
+     *
+     * @return array|null The audioRoutingGroups
+     */
+    public function getAudioRoutingGroups()
+    {
+        if (array_key_exists("audioRoutingGroups", $this->_propDict)) {
+           return $this->_propDict["audioRoutingGroups"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the audioRoutingGroups
+    * Read-only. Nullable.
+    *
+    * @param AudioRoutingGroup $val The audioRoutingGroups
+    *
+    * @return Call
+    */
+    public function setAudioRoutingGroups($val)
+    {
+        $this->_propDict["audioRoutingGroups"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the operations
     * Read-only. Nullable.
      *

@@ -245,6 +245,39 @@ class ChatMessage extends Entity
     }
     
     /**
+    * Gets the eventDetail
+    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+    *
+    * @return EventMessageDetail|null The eventDetail
+    */
+    public function getEventDetail()
+    {
+        if (array_key_exists("eventDetail", $this->_propDict)) {
+            if (is_a($this->_propDict["eventDetail"], "\Microsoft\Graph\Model\EventMessageDetail") || is_null($this->_propDict["eventDetail"])) {
+                return $this->_propDict["eventDetail"];
+            } else {
+                $this->_propDict["eventDetail"] = new EventMessageDetail($this->_propDict["eventDetail"]);
+                return $this->_propDict["eventDetail"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the eventDetail
+    * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+    *
+    * @param EventMessageDetail $val The eventDetail
+    *
+    * @return ChatMessage
+    */
+    public function setEventDetail($val)
+    {
+        $this->_propDict["eventDetail"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the from
     * Details of the sender of the chat message. Can only be set during migration.
     *

@@ -84,6 +84,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Gets the domainJoinConfiguration
+    * Specifies how Cloud PCs will join Azure Active Directory.
     *
     * @return CloudPcDomainJoinConfiguration|null The domainJoinConfiguration
     */
@@ -102,6 +103,7 @@ class CloudPcProvisioningPolicy extends Entity
     
     /**
     * Sets the domainJoinConfiguration
+    * Specifies how Cloud PCs will join Azure Active Directory.
     *
     * @param CloudPcDomainJoinConfiguration $val The domainJoinConfiguration
     *

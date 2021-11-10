@@ -118,37 +118,6 @@ class IdentityGovernance implements \JsonSerializable
     }
     
     /**
-    * Gets the entitlementManagement
-    *
-    * @return EntitlementManagement|null The entitlementManagement
-    */
-    public function getEntitlementManagement()
-    {
-        if (array_key_exists("entitlementManagement", $this->_propDict)) {
-            if (is_a($this->_propDict["entitlementManagement"], "\Microsoft\Graph\Model\EntitlementManagement") || is_null($this->_propDict["entitlementManagement"])) {
-                return $this->_propDict["entitlementManagement"];
-            } else {
-                $this->_propDict["entitlementManagement"] = new EntitlementManagement($this->_propDict["entitlementManagement"]);
-                return $this->_propDict["entitlementManagement"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the entitlementManagement
-    *
-    * @param EntitlementManagement $val The entitlementManagement
-    *
-    * @return IdentityGovernance
-    */
-    public function setEntitlementManagement($val)
-    {
-        $this->_propDict["entitlementManagement"] = $val;
-        return $this;
-    }
-    
-    /**
     * Gets the termsOfUse
     *
     * @return TermsOfUseContainer|null The termsOfUse
@@ -176,6 +145,37 @@ class IdentityGovernance implements \JsonSerializable
     public function setTermsOfUse($val)
     {
         $this->_propDict["termsOfUse"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the entitlementManagement
+    *
+    * @return EntitlementManagement|null The entitlementManagement
+    */
+    public function getEntitlementManagement()
+    {
+        if (array_key_exists("entitlementManagement", $this->_propDict)) {
+            if (is_a($this->_propDict["entitlementManagement"], "\Microsoft\Graph\Model\EntitlementManagement") || is_null($this->_propDict["entitlementManagement"])) {
+                return $this->_propDict["entitlementManagement"];
+            } else {
+                $this->_propDict["entitlementManagement"] = new EntitlementManagement($this->_propDict["entitlementManagement"]);
+                return $this->_propDict["entitlementManagement"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the entitlementManagement
+    *
+    * @param EntitlementManagement $val The entitlementManagement
+    *
+    * @return IdentityGovernance
+    */
+    public function setEntitlementManagement($val)
+    {
+        $this->_propDict["entitlementManagement"] = $val;
         return $this;
     }
     

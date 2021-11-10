@@ -52,4 +52,175 @@ class EntitlementManagement extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the accessPackages
+     *
+     * @return array|null The accessPackages
+     */
+    public function getAccessPackages()
+    {
+        if (array_key_exists("accessPackages", $this->_propDict)) {
+           return $this->_propDict["accessPackages"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the accessPackages
+    *
+    * @param AccessPackage $val The accessPackages
+    *
+    * @return EntitlementManagement
+    */
+    public function setAccessPackages($val)
+    {
+        $this->_propDict["accessPackages"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the assignmentRequests
+     *
+     * @return array|null The assignmentRequests
+     */
+    public function getAssignmentRequests()
+    {
+        if (array_key_exists("assignmentRequests", $this->_propDict)) {
+           return $this->_propDict["assignmentRequests"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignmentRequests
+    *
+    * @param AccessPackageAssignmentRequest $val The assignmentRequests
+    *
+    * @return EntitlementManagement
+    */
+    public function setAssignmentRequests($val)
+    {
+        $this->_propDict["assignmentRequests"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the assignments
+     *
+     * @return array|null The assignments
+     */
+    public function getAssignments()
+    {
+        if (array_key_exists("assignments", $this->_propDict)) {
+           return $this->_propDict["assignments"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the assignments
+    *
+    * @param AccessPackageAssignment $val The assignments
+    *
+    * @return EntitlementManagement
+    */
+    public function setAssignments($val)
+    {
+        $this->_propDict["assignments"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the catalogs
+     *
+     * @return array|null The catalogs
+     */
+    public function getCatalogs()
+    {
+        if (array_key_exists("catalogs", $this->_propDict)) {
+           return $this->_propDict["catalogs"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the catalogs
+    *
+    * @param AccessPackageCatalog $val The catalogs
+    *
+    * @return EntitlementManagement
+    */
+    public function setCatalogs($val)
+    {
+        $this->_propDict["catalogs"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the connectedOrganizations
+     *
+     * @return array|null The connectedOrganizations
+     */
+    public function getConnectedOrganizations()
+    {
+        if (array_key_exists("connectedOrganizations", $this->_propDict)) {
+           return $this->_propDict["connectedOrganizations"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the connectedOrganizations
+    *
+    * @param ConnectedOrganization $val The connectedOrganizations
+    *
+    * @return EntitlementManagement
+    */
+    public function setConnectedOrganizations($val)
+    {
+        $this->_propDict["connectedOrganizations"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the settings
+    *
+    * @return EntitlementManagementSettings|null The settings
+    */
+    public function getSettings()
+    {
+        if (array_key_exists("settings", $this->_propDict)) {
+            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\EntitlementManagementSettings") || is_null($this->_propDict["settings"])) {
+                return $this->_propDict["settings"];
+            } else {
+                $this->_propDict["settings"] = new EntitlementManagementSettings($this->_propDict["settings"]);
+                return $this->_propDict["settings"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the settings
+    *
+    * @param EntitlementManagementSettings $val The settings
+    *
+    * @return EntitlementManagement
+    */
+    public function setSettings($val)
+    {
+        $this->_propDict["settings"] = $val;
+        return $this;
+    }
+    
 }

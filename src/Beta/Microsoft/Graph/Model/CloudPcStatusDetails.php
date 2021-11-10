@@ -26,7 +26,7 @@ class CloudPcStatusDetails extends Entity
 
     /**
     * Gets the additionalInformation
-    * Any additional information about the cloud PC status.
+    * Any additional information about the Cloud PC status.
     *
     * @return KeyValuePair|null The additionalInformation
     */
@@ -45,7 +45,7 @@ class CloudPcStatusDetails extends Entity
 
     /**
     * Sets the additionalInformation
-    * Any additional information about the cloud PC status.
+    * Any additional information about the Cloud PC status.
     *
     * @param KeyValuePair $val The value to assign to the additionalInformation
     *
@@ -58,7 +58,7 @@ class CloudPcStatusDetails extends Entity
     }
     /**
     * Gets the code
-    * The code associated with the cloud PC status.
+    * The code associated with the Cloud PC status.
     *
     * @return string|null The code
     */
@@ -73,7 +73,7 @@ class CloudPcStatusDetails extends Entity
 
     /**
     * Sets the code
-    * The code associated with the cloud PC status.
+    * The code associated with the Cloud PC status.
     *
     * @param string $val The value of the code
     *

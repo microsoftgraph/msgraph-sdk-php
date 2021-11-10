@@ -144,6 +144,33 @@ class ManagementAction extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     
+    /**
+    * Gets the referenceTemplateVersion
+    *
+    * @return int|null The referenceTemplateVersion
+    */
+    public function getReferenceTemplateVersion()
+    {
+        if (array_key_exists("referenceTemplateVersion", $this->_propDict)) {
+            return $this->_propDict["referenceTemplateVersion"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the referenceTemplateVersion
+    *
+    * @param int $val The referenceTemplateVersion
+    *
+    * @return ManagementAction
+    */
+    public function setReferenceTemplateVersion($val)
+    {
+        $this->_propDict["referenceTemplateVersion"] = intval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the workloadActions

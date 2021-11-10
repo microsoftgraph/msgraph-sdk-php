@@ -107,6 +107,32 @@ class Setting extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["overwriteAllowed"] = $val;
         return $this;
     }
+    /**
+    * Gets the settingId
+    *
+    * @return string|null The settingId
+    */
+    public function getSettingId()
+    {
+        if (array_key_exists("settingId", $this->_propDict)) {
+            return $this->_propDict["settingId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the settingId
+    *
+    * @param string $val The value of the settingId
+    *
+    * @return Setting
+    */
+    public function setSettingId($val)
+    {
+        $this->_propDict["settingId"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the valueType
