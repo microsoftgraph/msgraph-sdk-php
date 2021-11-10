@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* LongRunningOperationStatus File
+* ManagementProvider File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\ManagedTenants\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* LongRunningOperationStatus class
+* ManagementProvider class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class LongRunningOperationStatus extends Enum
+class ManagementProvider extends Enum
 {
     /**
-    * The Enum LongRunningOperationStatus
+    * The Enum ManagementProvider
     */
-    const NOT_STARTED = "notStarted";
-    const RUNNING = "running";
-    const SUCCEEDED = "succeeded";
-    const FAILED = "failed";
+    const MICROSOFT = "microsoft";
+    const COMMUNITY = "community";
+    const INDIRECT_PROVIDER = "indirectProvider";
+    const SELF = "self";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

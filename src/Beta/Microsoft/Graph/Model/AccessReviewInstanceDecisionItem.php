@@ -458,4 +458,32 @@ class AccessReviewInstanceDecisionItem extends Entity
         return $this;
     }
     
+
+     /** 
+     * Gets the insights
+     *
+     * @return array|null The insights
+     */
+    public function getInsights()
+    {
+        if (array_key_exists("insights", $this->_propDict)) {
+           return $this->_propDict["insights"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the insights
+    *
+    * @param GovernanceInsight $val The insights
+    *
+    * @return AccessReviewInstanceDecisionItem
+    */
+    public function setInsights($val)
+    {
+        $this->_propDict["insights"] = $val;
+        return $this;
+    }
+    
 }

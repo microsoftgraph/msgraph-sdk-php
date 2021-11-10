@@ -386,6 +386,34 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     
 
      /** 
+     * Gets the managementTemplateCollections
+     *
+     * @return array|null The managementTemplateCollections
+     */
+    public function getManagementTemplateCollections()
+    {
+        if (array_key_exists("managementTemplateCollections", $this->_propDict)) {
+           return $this->_propDict["managementTemplateCollections"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementTemplateCollections
+    *
+    * @param ManagementTemplateCollection $val The managementTemplateCollections
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementTemplateCollections($val)
+    {
+        $this->_propDict["managementTemplateCollections"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the managementTemplates
     * The collection of baseline management templates across managed tenants.
      *
@@ -411,6 +439,62 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     public function setManagementTemplates($val)
     {
         $this->_propDict["managementTemplates"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managementTemplateSteps
+     *
+     * @return array|null The managementTemplateSteps
+     */
+    public function getManagementTemplateSteps()
+    {
+        if (array_key_exists("managementTemplateSteps", $this->_propDict)) {
+           return $this->_propDict["managementTemplateSteps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementTemplateSteps
+    *
+    * @param ManagementTemplateStep $val The managementTemplateSteps
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementTemplateSteps($val)
+    {
+        $this->_propDict["managementTemplateSteps"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managementTemplateStepVersions
+     *
+     * @return array|null The managementTemplateStepVersions
+     */
+    public function getManagementTemplateStepVersions()
+    {
+        if (array_key_exists("managementTemplateStepVersions", $this->_propDict)) {
+           return $this->_propDict["managementTemplateStepVersions"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementTemplateStepVersions
+    *
+    * @param ManagementTemplateStepVersion $val The managementTemplateStepVersions
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementTemplateStepVersions($val)
+    {
+        $this->_propDict["managementTemplateStepVersions"] = $val;
         return $this;
     }
     

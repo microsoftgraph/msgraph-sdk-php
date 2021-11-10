@@ -145,6 +145,33 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     
+    /**
+    * Gets the version
+    *
+    * @return int|null The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the version
+    *
+    * @param int $val The version
+    *
+    * @return ManagementTemplate
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = intval($val);
+        return $this;
+    }
+    
 
      /** 
      * Gets the workloadActions
@@ -172,6 +199,62 @@ class ManagementTemplate extends \Beta\Microsoft\Graph\Model\Entity
     public function setWorkloadActions($val)
     {
         $this->_propDict["workloadActions"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managementTemplateCollections
+     *
+     * @return array|null The managementTemplateCollections
+     */
+    public function getManagementTemplateCollections()
+    {
+        if (array_key_exists("managementTemplateCollections", $this->_propDict)) {
+           return $this->_propDict["managementTemplateCollections"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementTemplateCollections
+    *
+    * @param ManagementTemplateCollection $val The managementTemplateCollections
+    *
+    * @return ManagementTemplate
+    */
+    public function setManagementTemplateCollections($val)
+    {
+        $this->_propDict["managementTemplateCollections"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the managementTemplateSteps
+     *
+     * @return array|null The managementTemplateSteps
+     */
+    public function getManagementTemplateSteps()
+    {
+        if (array_key_exists("managementTemplateSteps", $this->_propDict)) {
+           return $this->_propDict["managementTemplateSteps"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the managementTemplateSteps
+    *
+    * @param ManagementTemplateStep $val The managementTemplateSteps
+    *
+    * @return ManagementTemplate
+    */
+    public function setManagementTemplateSteps($val)
+    {
+        $this->_propDict["managementTemplateSteps"] = $val;
         return $this;
     }
     

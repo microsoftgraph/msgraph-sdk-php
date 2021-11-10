@@ -112,6 +112,84 @@ class WorkloadActionDeploymentStatus extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["error"] = $val;
          return $this;
     }
+    /**
+    * Gets the excludeGroups
+    *
+    * @return string|null The excludeGroups
+    */
+    public function getExcludeGroups()
+    {
+        if (array_key_exists("excludeGroups", $this->_propDict)) {
+            return $this->_propDict["excludeGroups"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the excludeGroups
+    *
+    * @param string $val The value of the excludeGroups
+    *
+    * @return WorkloadActionDeploymentStatus
+    */
+    public function setExcludeGroups($val)
+    {
+        $this->_propDict["excludeGroups"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the includeAllUsers
+    *
+    * @return bool|null The includeAllUsers
+    */
+    public function getIncludeAllUsers()
+    {
+        if (array_key_exists("includeAllUsers", $this->_propDict)) {
+            return $this->_propDict["includeAllUsers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeAllUsers
+    *
+    * @param bool $val The value of the includeAllUsers
+    *
+    * @return WorkloadActionDeploymentStatus
+    */
+    public function setIncludeAllUsers($val)
+    {
+        $this->_propDict["includeAllUsers"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the includeGroups
+    *
+    * @return string|null The includeGroups
+    */
+    public function getIncludeGroups()
+    {
+        if (array_key_exists("includeGroups", $this->_propDict)) {
+            return $this->_propDict["includeGroups"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the includeGroups
+    *
+    * @param string $val The value of the includeGroups
+    *
+    * @return WorkloadActionDeploymentStatus
+    */
+    public function setIncludeGroups($val)
+    {
+        $this->_propDict["includeGroups"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the lastDeploymentDateTime
