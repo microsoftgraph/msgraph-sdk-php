@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ChatMessageType File
+* AccessPackageAssignmentState File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ChatMessageType class
+* AccessPackageAssignmentState class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ChatMessageType extends Enum
+class AccessPackageAssignmentState extends Enum
 {
     /**
-    * The Enum ChatMessageType
+    * The Enum AccessPackageAssignmentState
     */
-    const MESSAGE = "message";
-    const CHAT_EVENT = "chatEvent";
-    const TYPING = "typing";
+    const DELIVERING = "delivering";
+    const PARTIALLY_DELIVERED = "partiallyDelivered";
+    const DELIVERED = "delivered";
+    const EXPIRED = "expired";
+    const DELIVERY_FAILED = "deliveryFailed";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const SYSTEM_EVENT_MESSAGE = "systemEventMessage";
 }

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ChatMessageType File
+* AccessPackageCatalogType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ChatMessageType class
+* AccessPackageCatalogType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ChatMessageType extends Enum
+class AccessPackageCatalogType extends Enum
 {
     /**
-    * The Enum ChatMessageType
+    * The Enum AccessPackageCatalogType
     */
-    const MESSAGE = "message";
-    const CHAT_EVENT = "chatEvent";
-    const TYPING = "typing";
+    const USER_MANAGED = "userManaged";
+    const SERVICE_DEFAULT = "serviceDefault";
+    const SERVICE_MANAGED = "serviceManaged";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const SYSTEM_EVENT_MESSAGE = "systemEventMessage";
 }

@@ -171,6 +171,39 @@ class AuthenticationMethodsPolicy extends Entity
         return $this;
     }
     
+    /**
+    * Gets the registrationEnforcement
+    * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
+    *
+    * @return RegistrationEnforcement|null The registrationEnforcement
+    */
+    public function getRegistrationEnforcement()
+    {
+        if (array_key_exists("registrationEnforcement", $this->_propDict)) {
+            if (is_a($this->_propDict["registrationEnforcement"], "\Microsoft\Graph\Model\RegistrationEnforcement") || is_null($this->_propDict["registrationEnforcement"])) {
+                return $this->_propDict["registrationEnforcement"];
+            } else {
+                $this->_propDict["registrationEnforcement"] = new RegistrationEnforcement($this->_propDict["registrationEnforcement"]);
+                return $this->_propDict["registrationEnforcement"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the registrationEnforcement
+    * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
+    *
+    * @param RegistrationEnforcement $val The registrationEnforcement
+    *
+    * @return AuthenticationMethodsPolicy
+    */
+    public function setRegistrationEnforcement($val)
+    {
+        $this->_propDict["registrationEnforcement"] = $val;
+        return $this;
+    }
+    
 
      /** 
      * Gets the authenticationMethodConfigurations

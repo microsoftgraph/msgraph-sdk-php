@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ChatMessageType File
+* AccessPackageRequestType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ChatMessageType class
+* AccessPackageRequestType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,21 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ChatMessageType extends Enum
+class AccessPackageRequestType extends Enum
 {
     /**
-    * The Enum ChatMessageType
+    * The Enum AccessPackageRequestType
     */
-    const MESSAGE = "message";
-    const CHAT_EVENT = "chatEvent";
-    const TYPING = "typing";
+    const NOT_SPECIFIED = "notSpecified";
+    const USER_ADD = "userAdd";
+    const USER_UPDATE = "userUpdate";
+    const USER_REMOVE = "userRemove";
+    const ADMIN_ADD = "adminAdd";
+    const ADMIN_UPDATE = "adminUpdate";
+    const ADMIN_REMOVE = "adminRemove";
+    const SYSTEM_ADD = "systemAdd";
+    const SYSTEM_UPDATE = "systemUpdate";
+    const SYSTEM_REMOVE = "systemRemove";
+    const ON_BEHALF_ADD = "onBehalfAdd";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const SYSTEM_EVENT_MESSAGE = "systemEventMessage";
 }
