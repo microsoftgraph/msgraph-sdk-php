@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class InviteParticipantsOperation extends CommsOperation
 {
 
-     /** 
+     /**
      * Gets the participants
     * The participants to invite.
      *
@@ -46,8 +46,8 @@ class InviteParticipantsOperation extends CommsOperation
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the participants
     * The participants to invite.
     *
@@ -60,5 +60,5 @@ class InviteParticipantsOperation extends CommsOperation
         $this->_propDict["participants"] = $val;
         return $this;
     }
-    
+
 }

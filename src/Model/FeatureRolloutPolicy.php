@@ -38,7 +38,7 @@ class FeatureRolloutPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * A description for this feature rollout policy.
@@ -52,7 +52,7 @@ class FeatureRolloutPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for this  feature rollout policy.
@@ -67,7 +67,7 @@ class FeatureRolloutPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for this  feature rollout policy.
@@ -81,7 +81,7 @@ class FeatureRolloutPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the feature
     * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
@@ -100,7 +100,7 @@ class FeatureRolloutPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the feature
     * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
@@ -114,7 +114,7 @@ class FeatureRolloutPolicy extends Entity
         $this->_propDict["feature"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isAppliedToOrganization
     * Indicates whether this feature rollout policy should be applied to the entire organization.
@@ -129,7 +129,7 @@ class FeatureRolloutPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isAppliedToOrganization
     * Indicates whether this feature rollout policy should be applied to the entire organization.
@@ -143,7 +143,7 @@ class FeatureRolloutPolicy extends Entity
         $this->_propDict["isAppliedToOrganization"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * Indicates whether the feature rollout is enabled.
@@ -158,7 +158,7 @@ class FeatureRolloutPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Indicates whether the feature rollout is enabled.
@@ -172,9 +172,9 @@ class FeatureRolloutPolicy extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appliesTo
     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
      *
@@ -195,8 +195,8 @@ class FeatureRolloutPolicy extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the appliesTo
     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
     *
@@ -209,5 +209,5 @@ class FeatureRolloutPolicy extends Entity
         $this->_propDict["appliesTo"] = $val;
         return $this;
     }
-    
+
 }

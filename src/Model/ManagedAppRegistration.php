@@ -42,7 +42,7 @@ class ManagedAppRegistration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the appIdentifier
     * The app package Identifier
@@ -56,7 +56,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["appIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applicationVersion
     * App version
@@ -71,7 +71,7 @@ class ManagedAppRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applicationVersion
     * App version
@@ -85,7 +85,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["applicationVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Date and time of creation
@@ -104,7 +104,7 @@ class ManagedAppRegistration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Date and time of creation
@@ -118,7 +118,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Host device name
@@ -133,7 +133,7 @@ class ManagedAppRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Host device name
@@ -147,7 +147,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceTag
     * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
@@ -162,7 +162,7 @@ class ManagedAppRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceTag
     * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
@@ -176,7 +176,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["deviceTag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceType
     * Host device type
@@ -191,7 +191,7 @@ class ManagedAppRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceType
     * Host device type
@@ -205,9 +205,9 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["deviceType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the flaggedReasons
     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      *
@@ -228,8 +228,8 @@ class ManagedAppRegistration extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the flaggedReasons
     * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
     *
@@ -242,7 +242,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["flaggedReasons"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncDateTime
     * Date and time of last the app synced with management service.
@@ -261,7 +261,7 @@ class ManagedAppRegistration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncDateTime
     * Date and time of last the app synced with management service.
@@ -275,7 +275,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managementSdkVersion
     * App management SDK version
@@ -290,7 +290,7 @@ class ManagedAppRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managementSdkVersion
     * App management SDK version
@@ -304,7 +304,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["managementSdkVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the platformVersion
     * Operating System version
@@ -319,7 +319,7 @@ class ManagedAppRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the platformVersion
     * Operating System version
@@ -333,7 +333,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["platformVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The user Id to who this app registration belongs.
@@ -348,7 +348,7 @@ class ManagedAppRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The user Id to who this app registration belongs.
@@ -362,7 +362,7 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the entity.
@@ -377,7 +377,7 @@ class ManagedAppRegistration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the entity.
@@ -391,9 +391,9 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appliedPolicies
     * Zero or more policys already applied on the registered app when it last synchronized with managment service.
      *
@@ -414,8 +414,8 @@ class ManagedAppRegistration extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the appliedPolicies
     * Zero or more policys already applied on the registered app when it last synchronized with managment service.
     *
@@ -428,9 +428,9 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["appliedPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the intendedPolicies
     * Zero or more policies admin intended for the app as of now.
      *
@@ -451,8 +451,8 @@ class ManagedAppRegistration extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the intendedPolicies
     * Zero or more policies admin intended for the app as of now.
     *
@@ -465,9 +465,9 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["intendedPolicies"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
     * Zero or more long running operations triggered on the app registration.
      *
@@ -488,8 +488,8 @@ class ManagedAppRegistration extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     * Zero or more long running operations triggered on the app registration.
     *
@@ -502,5 +502,5 @@ class ManagedAppRegistration extends Entity
         $this->_propDict["operations"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * A description of the policy. Read-only.
@@ -52,7 +52,7 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the policy. Read-only.
@@ -67,7 +67,7 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the policy. Read-only.
@@ -81,7 +81,7 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time of the last update to the policy. Read-only.
@@ -100,7 +100,7 @@ class AuthenticationMethodsPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time of the last update to the policy. Read-only.
@@ -114,7 +114,7 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyVersion
     * The version of the policy in use. Read-only.
@@ -129,7 +129,7 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the policyVersion
     * The version of the policy in use. Read-only.
@@ -143,7 +143,7 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["policyVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reconfirmationInDays
     *
@@ -157,7 +157,7 @@ class AuthenticationMethodsPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reconfirmationInDays
     *
@@ -170,9 +170,42 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["reconfirmationInDays"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+    /**
+    * Gets the registrationEnforcement
+    * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
+    *
+    * @return RegistrationEnforcement|null The registrationEnforcement
+    */
+    public function getRegistrationEnforcement()
+    {
+        if (array_key_exists("registrationEnforcement", $this->_propDict) && !is_null($this->_propDict["registrationEnforcement"])) {
+            if (is_a($this->_propDict["registrationEnforcement"], "\Microsoft\Graph\Model\RegistrationEnforcement")) {
+                return $this->_propDict["registrationEnforcement"];
+            } else {
+                $this->_propDict["registrationEnforcement"] = new RegistrationEnforcement($this->_propDict["registrationEnforcement"]);
+                return $this->_propDict["registrationEnforcement"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the registrationEnforcement
+    * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
+    *
+    * @param RegistrationEnforcement $val The registrationEnforcement
+    *
+    * @return AuthenticationMethodsPolicy
+    */
+    public function setRegistrationEnforcement($val)
+    {
+        $this->_propDict["registrationEnforcement"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the authenticationMethodConfigurations
     * Represents the settings for each authentication method.
      *
@@ -193,8 +226,8 @@ class AuthenticationMethodsPolicy extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the authenticationMethodConfigurations
     * Represents the settings for each authentication method.
     *
@@ -207,5 +240,5 @@ class AuthenticationMethodsPolicy extends Entity
         $this->_propDict["authenticationMethodConfigurations"] = $val;
         return $this;
     }
-    
+
 }

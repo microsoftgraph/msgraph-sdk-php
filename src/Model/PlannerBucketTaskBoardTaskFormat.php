@@ -38,7 +38,7 @@ class PlannerBucketTaskBoardTaskFormat extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the orderHint
     * Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.
@@ -52,5 +52,5 @@ class PlannerBucketTaskBoardTaskFormat extends Entity
         $this->_propDict["orderHint"] = $val;
         return $this;
     }
-    
+
 }

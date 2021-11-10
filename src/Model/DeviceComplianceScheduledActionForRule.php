@@ -38,7 +38,7 @@ class DeviceComplianceScheduledActionForRule extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ruleName
     * Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
@@ -52,9 +52,9 @@ class DeviceComplianceScheduledActionForRule extends Entity
         $this->_propDict["ruleName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the scheduledActionConfigurations
     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      *
@@ -75,8 +75,8 @@ class DeviceComplianceScheduledActionForRule extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the scheduledActionConfigurations
     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
     *
@@ -89,5 +89,5 @@ class DeviceComplianceScheduledActionForRule extends Entity
         $this->_propDict["scheduledActionConfigurations"] = $val;
         return $this;
     }
-    
+
 }

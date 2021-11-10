@@ -42,7 +42,7 @@ class AddToReviewSetOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewSet
     * The review set to which items matching the source collection query are added to.
@@ -56,7 +56,7 @@ class AddToReviewSetOperation extends CaseOperation
         $this->_propDict["reviewSet"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceCollection
     * The sourceCollection that items are being added from.
@@ -75,7 +75,7 @@ class AddToReviewSetOperation extends CaseOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the sourceCollection
     * The sourceCollection that items are being added from.
@@ -89,5 +89,5 @@ class AddToReviewSetOperation extends CaseOperation
         $this->_propDict["sourceCollection"] = $val;
         return $this;
     }
-    
+
 }

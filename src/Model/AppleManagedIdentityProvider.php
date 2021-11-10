@@ -38,7 +38,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateData
     * The certificate data which is a long string of text from the certificate, can be null.
@@ -52,7 +52,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase
         $this->_propDict["certificateData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the developerId
     * The Apple developer identifier. Required.
@@ -67,7 +67,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the developerId
     * The Apple developer identifier. Required.
@@ -81,7 +81,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase
         $this->_propDict["developerId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the keyId
     * The Apple key identifier. Required.
@@ -96,7 +96,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the keyId
     * The Apple key identifier. Required.
@@ -110,7 +110,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase
         $this->_propDict["keyId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serviceId
     * The Apple service identifier. Required.
@@ -125,7 +125,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the serviceId
     * The Apple service identifier. Required.
@@ -139,5 +139,5 @@ class AppleManagedIdentityProvider extends IdentityProviderBase
         $this->_propDict["serviceId"] = $val;
         return $this;
     }
-    
+
 }

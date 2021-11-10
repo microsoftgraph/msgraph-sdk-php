@@ -42,7 +42,7 @@ class IosStoreApp extends MobileApp
         }
         return null;
     }
-    
+
     /**
     * Sets the applicableDeviceType
     * The iOS architecture for which this app can run on.
@@ -56,7 +56,7 @@ class IosStoreApp extends MobileApp
         $this->_propDict["applicableDeviceType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appStoreUrl
     * The Apple App Store URL
@@ -71,7 +71,7 @@ class IosStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreUrl
     * The Apple App Store URL
@@ -85,7 +85,7 @@ class IosStoreApp extends MobileApp
         $this->_propDict["appStoreUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bundleId
     * The Identity Name.
@@ -100,7 +100,7 @@ class IosStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the bundleId
     * The Identity Name.
@@ -114,7 +114,7 @@ class IosStoreApp extends MobileApp
         $this->_propDict["bundleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -133,7 +133,7 @@ class IosStoreApp extends MobileApp
         }
         return null;
     }
-    
+
     /**
     * Sets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -147,5 +147,5 @@ class IosStoreApp extends MobileApp
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
         return $this;
     }
-    
+
 }

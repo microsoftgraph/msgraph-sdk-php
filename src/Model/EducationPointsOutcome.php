@@ -42,7 +42,7 @@ class EducationPointsOutcome extends EducationOutcome
         }
         return null;
     }
-    
+
     /**
     * Sets the points
     * The numeric grade the teacher has given the student for this assignment.
@@ -56,7 +56,7 @@ class EducationPointsOutcome extends EducationOutcome
         $this->_propDict["points"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publishedPoints
     * A copy of the points property that is made when the grade is released to the student.
@@ -75,7 +75,7 @@ class EducationPointsOutcome extends EducationOutcome
         }
         return null;
     }
-    
+
     /**
     * Sets the publishedPoints
     * A copy of the points property that is made when the grade is released to the student.
@@ -89,5 +89,5 @@ class EducationPointsOutcome extends EducationOutcome
         $this->_propDict["publishedPoints"] = $val;
         return $this;
     }
-    
+
 }

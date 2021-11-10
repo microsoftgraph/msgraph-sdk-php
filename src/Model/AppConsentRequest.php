@@ -38,7 +38,7 @@ class AppConsentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
@@ -52,7 +52,7 @@ class AppConsentRequest extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appId
     * The identifier of the application. Required. Supports $filter (eq only) and $orderby.
@@ -67,7 +67,7 @@ class AppConsentRequest extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appId
     * The identifier of the application. Required. Supports $filter (eq only) and $orderby.
@@ -81,9 +81,9 @@ class AppConsentRequest extends Entity
         $this->_propDict["appId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the pendingScopes
     * A list of pending scopes waiting for approval. Required.
      *
@@ -104,8 +104,8 @@ class AppConsentRequest extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the pendingScopes
     * A list of pending scopes waiting for approval. Required.
     *
@@ -118,9 +118,9 @@ class AppConsentRequest extends Entity
         $this->_propDict["pendingScopes"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userConsentRequests
     * A list of pending user consent requests.
      *
@@ -141,8 +141,8 @@ class AppConsentRequest extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the userConsentRequests
     * A list of pending user consent requests.
     *
@@ -155,5 +155,5 @@ class AppConsentRequest extends Entity
         $this->_propDict["userConsentRequests"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class WorkbookFilter extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the criteria
     * The currently applied filter on the given column. Read-only.
@@ -56,5 +56,5 @@ class WorkbookFilter extends Entity
         $this->_propDict["criteria"] = $val;
         return $this;
     }
-    
+
 }

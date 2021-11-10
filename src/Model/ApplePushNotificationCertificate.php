@@ -38,7 +38,7 @@ class ApplePushNotificationCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appleIdentifier
     * Apple Id of the account used to create the MDM push certificate.
@@ -52,7 +52,7 @@ class ApplePushNotificationCertificate extends Entity
         $this->_propDict["appleIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificate
     * Not yet documented
@@ -67,7 +67,7 @@ class ApplePushNotificationCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificate
     * Not yet documented
@@ -81,7 +81,7 @@ class ApplePushNotificationCertificate extends Entity
         $this->_propDict["certificate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the certificateSerialNumber
     * Certificate serial number. This property is read-only.
@@ -96,7 +96,7 @@ class ApplePushNotificationCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the certificateSerialNumber
     * Certificate serial number. This property is read-only.
@@ -110,7 +110,7 @@ class ApplePushNotificationCertificate extends Entity
         $this->_propDict["certificateSerialNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * The expiration date and time for Apple push notification certificate.
@@ -129,7 +129,7 @@ class ApplePushNotificationCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * The expiration date and time for Apple push notification certificate.
@@ -143,7 +143,7 @@ class ApplePushNotificationCertificate extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last modified date and time for Apple push notification certificate.
@@ -162,7 +162,7 @@ class ApplePushNotificationCertificate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last modified date and time for Apple push notification certificate.
@@ -176,7 +176,7 @@ class ApplePushNotificationCertificate extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the topicIdentifier
     * Topic Id.
@@ -191,7 +191,7 @@ class ApplePushNotificationCertificate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the topicIdentifier
     * Topic Id.
@@ -205,5 +205,5 @@ class ApplePushNotificationCertificate extends Entity
         $this->_propDict["topicIdentifier"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class AccessReviewSet extends Entity
 {
 
-     /** 
+     /**
      * Gets the definitions
      *
      * @return AccessReviewScheduleDefinition[]|null The definitions
@@ -45,8 +45,8 @@ class AccessReviewSet extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the definitions
     *
     * @param AccessReviewScheduleDefinition[] $val The definitions
@@ -58,5 +58,5 @@ class AccessReviewSet extends Entity
         $this->_propDict["definitions"] = $val;
         return $this;
     }
-    
+
 }

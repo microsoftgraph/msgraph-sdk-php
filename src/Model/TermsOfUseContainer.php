@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class TermsOfUseContainer extends Entity
 {
 
-     /** 
+     /**
      * Gets the agreementAcceptances
      *
      * @return AgreementAcceptance[]|null The agreementAcceptances
@@ -45,8 +45,8 @@ class TermsOfUseContainer extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the agreementAcceptances
     *
     * @param AgreementAcceptance[] $val The agreementAcceptances
@@ -58,9 +58,9 @@ class TermsOfUseContainer extends Entity
         $this->_propDict["agreementAcceptances"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the agreements
      *
      * @return Agreement[]|null The agreements
@@ -80,8 +80,8 @@ class TermsOfUseContainer extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the agreements
     *
     * @param Agreement[] $val The agreements
@@ -93,5 +93,5 @@ class TermsOfUseContainer extends Entity
         $this->_propDict["agreements"] = $val;
         return $this;
     }
-    
+
 }

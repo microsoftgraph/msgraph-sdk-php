@@ -42,7 +42,7 @@ class WorkbookChartSeriesFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fill
     * Represents the fill format of a chart series, which includes background formating information. Read-only.
@@ -56,7 +56,7 @@ class WorkbookChartSeriesFormat extends Entity
         $this->_propDict["fill"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the line
     * Represents line formatting. Read-only.
@@ -75,7 +75,7 @@ class WorkbookChartSeriesFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the line
     * Represents line formatting. Read-only.
@@ -89,5 +89,5 @@ class WorkbookChartSeriesFormat extends Entity
         $this->_propDict["line"] = $val;
         return $this;
     }
-    
+
 }

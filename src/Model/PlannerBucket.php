@@ -38,7 +38,7 @@ class PlannerBucket extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Name of the bucket.
@@ -52,7 +52,7 @@ class PlannerBucket extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the orderHint
     * Hint used to order items of this type in a list view. The format is defined as outlined here.
@@ -67,7 +67,7 @@ class PlannerBucket extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the orderHint
     * Hint used to order items of this type in a list view. The format is defined as outlined here.
@@ -81,7 +81,7 @@ class PlannerBucket extends Entity
         $this->_propDict["orderHint"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the planId
     * Plan ID to which the bucket belongs.
@@ -96,7 +96,7 @@ class PlannerBucket extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the planId
     * Plan ID to which the bucket belongs.
@@ -110,9 +110,9 @@ class PlannerBucket extends Entity
         $this->_propDict["planId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tasks
     * Read-only. Nullable. The collection of tasks in the bucket.
      *
@@ -133,8 +133,8 @@ class PlannerBucket extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the tasks
     * Read-only. Nullable. The collection of tasks in the bucket.
     *
@@ -147,5 +147,5 @@ class PlannerBucket extends Entity
         $this->_propDict["tasks"] = $val;
         return $this;
     }
-    
+
 }

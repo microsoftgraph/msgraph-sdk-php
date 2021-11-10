@@ -42,7 +42,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         }
         return null;
     }
-    
+
     /**
     * Sets the authenticationMode
     * Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.
@@ -56,5 +56,5 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
         $this->_propDict["authenticationMode"] = $val;
         return $this;
     }
-    
+
 }

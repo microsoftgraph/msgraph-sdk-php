@@ -42,7 +42,7 @@ class ThreatAssessmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     * The threat category. Possible values are: spam, phishing, malware.
@@ -56,7 +56,7 @@ class ThreatAssessmentRequest extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentType
     * The content type of threat assessment. Possible values are: mail, url, file.
@@ -75,7 +75,7 @@ class ThreatAssessmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the contentType
     * The content type of threat assessment. Possible values are: mail, url, file.
@@ -89,7 +89,7 @@ class ThreatAssessmentRequest extends Entity
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * The threat assessment request creator.
@@ -108,7 +108,7 @@ class ThreatAssessmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The threat assessment request creator.
@@ -122,7 +122,7 @@ class ThreatAssessmentRequest extends Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -141,7 +141,7 @@ class ThreatAssessmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -155,7 +155,7 @@ class ThreatAssessmentRequest extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expectedAssessment
     * The expected assessment from submitter. Possible values are: block, unblock.
@@ -174,7 +174,7 @@ class ThreatAssessmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expectedAssessment
     * The expected assessment from submitter. Possible values are: block, unblock.
@@ -188,7 +188,7 @@ class ThreatAssessmentRequest extends Entity
         $this->_propDict["expectedAssessment"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestSource
     * The source of the threat assessment request. Possible values are: administrator.
@@ -207,7 +207,7 @@ class ThreatAssessmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestSource
     * The source of the threat assessment request. Possible values are: administrator.
@@ -221,7 +221,7 @@ class ThreatAssessmentRequest extends Entity
         $this->_propDict["requestSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The assessment process status. Possible values are: pending, completed.
@@ -240,7 +240,7 @@ class ThreatAssessmentRequest extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The assessment process status. Possible values are: pending, completed.
@@ -254,9 +254,9 @@ class ThreatAssessmentRequest extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the results
     * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      *
@@ -277,8 +277,8 @@ class ThreatAssessmentRequest extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the results
     * A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
     *
@@ -291,5 +291,5 @@ class ThreatAssessmentRequest extends Entity
         $this->_propDict["results"] = $val;
         return $this;
     }
-    
+
 }

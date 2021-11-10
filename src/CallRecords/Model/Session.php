@@ -42,7 +42,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the callee
     * Endpoint that answered the session.
@@ -56,7 +56,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         $this->_propDict["callee"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the caller
     * Endpoint that initiated the session.
@@ -75,7 +75,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the caller
     * Endpoint that initiated the session.
@@ -89,7 +89,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         $this->_propDict["caller"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDateTime
     * UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -108,7 +108,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -122,7 +122,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the failureInfo
     * Failure information associated with the session if the session failed.
@@ -141,7 +141,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the failureInfo
     * Failure information associated with the session if the session failed.
@@ -155,9 +155,9 @@ class Session extends \Microsoft\Graph\Model\Entity
         $this->_propDict["failureInfo"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the modalities
     * List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      *
@@ -178,8 +178,8 @@ class Session extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the modalities
     * List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
     *
@@ -192,7 +192,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         $this->_propDict["modalities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -211,7 +211,7 @@ class Session extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -225,9 +225,9 @@ class Session extends \Microsoft\Graph\Model\Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the segments
     * The list of segments involved in the session. Read-only. Nullable.
      *
@@ -248,8 +248,8 @@ class Session extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the segments
     * The list of segments involved in the session. Read-only. Nullable.
     *
@@ -262,5 +262,5 @@ class Session extends \Microsoft\Graph\Model\Entity
         $this->_propDict["segments"] = $val;
         return $this;
     }
-    
+
 }

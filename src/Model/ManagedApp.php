@@ -42,7 +42,7 @@ class ManagedApp extends MobileApp
         }
         return null;
     }
-    
+
     /**
     * Sets the appAvailability
     * The Application's availability. Possible values are: global, lineOfBusiness.
@@ -56,7 +56,7 @@ class ManagedApp extends MobileApp
         $this->_propDict["appAvailability"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The Application's version.
@@ -71,7 +71,7 @@ class ManagedApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The Application's version.
@@ -85,5 +85,5 @@ class ManagedApp extends MobileApp
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

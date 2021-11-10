@@ -42,7 +42,7 @@ class ReviewSet extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The user who created the review set. Read-only.
@@ -56,7 +56,7 @@ class ReviewSet extends \Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -75,7 +75,7 @@ class ReviewSet extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The datetime when the review set was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -89,7 +89,7 @@ class ReviewSet extends \Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The review set name. The name is unique with a maximum limit of 64 characters.
@@ -104,7 +104,7 @@ class ReviewSet extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The review set name. The name is unique with a maximum limit of 64 characters.
@@ -118,9 +118,9 @@ class ReviewSet extends \Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the queries
     * Read-only. Nullable.
      *
@@ -141,8 +141,8 @@ class ReviewSet extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the queries
     * Read-only. Nullable.
     *
@@ -155,5 +155,5 @@ class ReviewSet extends \Microsoft\Graph\Model\Entity
         $this->_propDict["queries"] = $val;
         return $this;
     }
-    
+
 }

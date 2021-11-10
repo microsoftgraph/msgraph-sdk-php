@@ -42,7 +42,7 @@ class WorkbookOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the error
     * The error returned by the operation.
@@ -56,7 +56,7 @@ class WorkbookOperation extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceLocation
     * The resource URI for the result.
@@ -71,7 +71,7 @@ class WorkbookOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceLocation
     * The resource URI for the result.
@@ -85,7 +85,7 @@ class WorkbookOperation extends Entity
         $this->_propDict["resourceLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
@@ -104,7 +104,7 @@ class WorkbookOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
@@ -118,5 +118,5 @@ class WorkbookOperation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

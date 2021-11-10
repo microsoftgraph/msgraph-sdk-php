@@ -42,7 +42,7 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the body
     * The contents of the post. This is a default property. This property can be null.
@@ -56,7 +56,7 @@ class Post extends OutlookItem
         $this->_propDict["body"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the conversationId
     * Unique ID of the conversation. Read-only.
@@ -71,7 +71,7 @@ class Post extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the conversationId
     * Unique ID of the conversation. Read-only.
@@ -85,7 +85,7 @@ class Post extends OutlookItem
         $this->_propDict["conversationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the conversationThreadId
     * Unique ID of the conversation thread. Read-only.
@@ -100,7 +100,7 @@ class Post extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the conversationThreadId
     * Unique ID of the conversation thread. Read-only.
@@ -114,7 +114,7 @@ class Post extends OutlookItem
         $this->_propDict["conversationThreadId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the from
     * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
@@ -133,7 +133,7 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the from
     * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
@@ -147,7 +147,7 @@ class Post extends OutlookItem
         $this->_propDict["from"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hasAttachments
     * Indicates whether the post has at least one attachment. This is a default property.
@@ -162,7 +162,7 @@ class Post extends OutlookItem
             return null;
         }
     }
-    
+
     /**
     * Sets the hasAttachments
     * Indicates whether the post has at least one attachment. This is a default property.
@@ -176,9 +176,9 @@ class Post extends OutlookItem
         $this->_propDict["hasAttachments"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the newParticipants
     * Conversation participants that were added to the thread as part of this post.
      *
@@ -199,8 +199,8 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the newParticipants
     * Conversation participants that were added to the thread as part of this post.
     *
@@ -213,7 +213,7 @@ class Post extends OutlookItem
         $this->_propDict["newParticipants"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the receivedDateTime
     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -232,7 +232,7 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the receivedDateTime
     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -246,7 +246,7 @@ class Post extends OutlookItem
         $this->_propDict["receivedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sender
     * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
@@ -265,7 +265,7 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the sender
     * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
@@ -279,9 +279,9 @@ class Post extends OutlookItem
         $this->_propDict["sender"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the attachments
     * Read-only. Nullable. Supports $expand.
      *
@@ -302,8 +302,8 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the attachments
     * Read-only. Nullable. Supports $expand.
     *
@@ -316,9 +316,9 @@ class Post extends OutlookItem
         $this->_propDict["attachments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the extensions
     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
      *
@@ -339,8 +339,8 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the extensions
     * The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
     *
@@ -353,7 +353,7 @@ class Post extends OutlookItem
         $this->_propDict["extensions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the inReplyTo
     * Read-only. Supports $expand.
@@ -372,7 +372,7 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
+
     /**
     * Sets the inReplyTo
     * Read-only. Supports $expand.
@@ -386,9 +386,9 @@ class Post extends OutlookItem
         $this->_propDict["inReplyTo"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      *
@@ -409,8 +409,8 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the multiValueExtendedProperties
     * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
     *
@@ -423,9 +423,9 @@ class Post extends OutlookItem
         $this->_propDict["multiValueExtendedProperties"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the post. Read-only. Nullable.
      *
@@ -446,8 +446,8 @@ class Post extends OutlookItem
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the singleValueExtendedProperties
     * The collection of single-value extended properties defined for the post. Read-only. Nullable.
     *
@@ -460,5 +460,5 @@ class Post extends OutlookItem
         $this->_propDict["singleValueExtendedProperties"] = $val;
         return $this;
     }
-    
+
 }

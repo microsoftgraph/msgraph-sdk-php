@@ -31,7 +31,7 @@ class GraphPrint implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new GraphPrint
     *
@@ -54,7 +54,7 @@ class GraphPrint implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
+
     /**
     * Gets the settings
     * Tenant-wide settings for the Universal Print service.
@@ -73,7 +73,7 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * Tenant-wide settings for the Universal Print service.
@@ -87,9 +87,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the connectors
     * The list of available print connectors.
      *
@@ -110,8 +110,8 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the connectors
     * The list of available print connectors.
     *
@@ -124,9 +124,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["connectors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
     * The list of print long running operations.
      *
@@ -147,8 +147,8 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     * The list of print long running operations.
     *
@@ -161,9 +161,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["operations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the printers
     * The list of printers registered in the tenant.
      *
@@ -184,8 +184,8 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the printers
     * The list of printers registered in the tenant.
     *
@@ -198,9 +198,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["printers"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the services
     * The list of available Universal Print service endpoints.
      *
@@ -221,8 +221,8 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the services
     * The list of available Universal Print service endpoints.
     *
@@ -235,9 +235,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["services"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the shares
     * The list of printer shares registered in the tenant.
      *
@@ -258,8 +258,8 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the shares
     * The list of printer shares registered in the tenant.
     *
@@ -272,9 +272,9 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["shares"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the taskDefinitions
     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      *
@@ -295,8 +295,8 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the taskDefinitions
     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
     *
@@ -309,7 +309,7 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["taskDefinitions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -322,7 +322,7 @@ class GraphPrint implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -335,7 +335,7 @@ class GraphPrint implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format
@@ -346,24 +346,32 @@ class GraphPrint implements \JsonSerializable
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, '\DateTime')) {
-                $serializableProperties[$property] = $val->format(\DateTimeInterface::RFC3339);
-            } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
-                $serializableProperties[$property] = $val->value();
-            } else if (is_array($val)) {
-                $values = [];
-                if (count($val) > 0 && is_a($val[0], '\DateTime')) {
-                   foreach ($values as $propertyValue) {
-                       $values []= $propertyValue->format(\DateTimeInterface::RFC3339);
-                   }
-                } else if(count($val) > 0 && is_a($val[0], '\Microsoft\Graph\Core\Enum')) {
-                    foreach ($values as $propertyValue) {
-                       $values []= $propertyValue->value();
-                   }
-                }
-                $serializableProperties[$property] = $values;
+            if (is_array($val) && !empty($val)) {
+                $serializableProperties[$property] = array_map(function ($element) {
+                    return $this->serializeUniqueTypes($element);
+                }, $val);
+                continue;
             }
+            $serializableProperties[$property] = $this->serializeUniqueTypes($val);
         }
         return $serializableProperties;
+    }
+
+    /**
+    * Returns serialized value of \DateTime, \Microsoft\Graph\Core\Enum & \Microsoft\Graph\Entity types
+    *
+    * @return mixed
+    **/
+    private function serializeUniqueTypes($val)
+    {
+        if (is_a($val, '\DateTime')) {
+            return $val->format(\DateTimeInterface::RFC3339);
+        } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
+            return $val->value();
+        } else if (is_a($val, "\Entity")) {
+            return $val->jsonSerialize();
+        } else {
+            return $val;
+        }
     }
 }

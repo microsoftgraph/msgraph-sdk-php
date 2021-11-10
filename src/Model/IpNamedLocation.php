@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class IpNamedLocation extends NamedLocation
 {
 
-     /** 
+     /**
      * Gets the ipRanges
     * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
      *
@@ -46,8 +46,8 @@ class IpNamedLocation extends NamedLocation
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the ipRanges
     * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
     *
@@ -60,7 +60,7 @@ class IpNamedLocation extends NamedLocation
         $this->_propDict["ipRanges"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isTrusted
     * true if this location is explicitly trusted. Optional. Default value is false.
@@ -75,7 +75,7 @@ class IpNamedLocation extends NamedLocation
             return null;
         }
     }
-    
+
     /**
     * Sets the isTrusted
     * true if this location is explicitly trusted. Optional. Default value is false.
@@ -89,5 +89,5 @@ class IpNamedLocation extends NamedLocation
         $this->_propDict["isTrusted"] = boolval($val);
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation
         }
         return null;
     }
-    
+
     /**
     * Sets the chat
     * The chat between the user and Teams app.
@@ -56,5 +56,5 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation
         $this->_propDict["chat"] = $val;
         return $this;
     }
-    
+
 }

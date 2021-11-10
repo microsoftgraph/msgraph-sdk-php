@@ -42,7 +42,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activityDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -56,7 +56,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["activityDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the changeId
     * Unique ID of this change in this cycle.
@@ -71,7 +71,7 @@ class ProvisioningObjectSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the changeId
     * Unique ID of this change in this cycle.
@@ -85,7 +85,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["changeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the cycleId
     * Unique ID per job iteration.
@@ -100,7 +100,7 @@ class ProvisioningObjectSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the cycleId
     * Unique ID per job iteration.
@@ -114,7 +114,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["cycleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the durationInMilliseconds
     * Indicates how long this provisioning action took to finish. Measured in milliseconds.
@@ -129,7 +129,7 @@ class ProvisioningObjectSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the durationInMilliseconds
     * Indicates how long this provisioning action took to finish. Measured in milliseconds.
@@ -143,7 +143,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["durationInMilliseconds"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the initiatedBy
     * Details of who initiated this provisioning.
@@ -162,7 +162,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the initiatedBy
     * Details of who initiated this provisioning.
@@ -176,7 +176,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["initiatedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the jobId
     * The unique ID for the whole provisioning job.
@@ -191,7 +191,7 @@ class ProvisioningObjectSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the jobId
     * The unique ID for the whole provisioning job.
@@ -205,9 +205,9 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["jobId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the modifiedProperties
     * Details of each property that was modified in this provisioning action on this object.
      *
@@ -228,8 +228,8 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the modifiedProperties
     * Details of each property that was modified in this provisioning action on this object.
     *
@@ -242,7 +242,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["modifiedProperties"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the provisioningAction
     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
@@ -261,7 +261,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the provisioningAction
     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
@@ -275,7 +275,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["provisioningAction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the provisioningStatusInfo
     * Details of provisioning status.
@@ -294,7 +294,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the provisioningStatusInfo
     * Details of provisioning status.
@@ -308,9 +308,9 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["provisioningStatusInfo"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the provisioningSteps
     * Details of each step in provisioning.
      *
@@ -331,8 +331,8 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the provisioningSteps
     * Details of each step in provisioning.
     *
@@ -345,7 +345,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["provisioningSteps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the servicePrincipal
     * Represents the service principal used for provisioning.
@@ -364,7 +364,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the servicePrincipal
     * Represents the service principal used for provisioning.
@@ -378,7 +378,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["servicePrincipal"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceIdentity
     * Details of source object being provisioned.
@@ -397,7 +397,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sourceIdentity
     * Details of source object being provisioned.
@@ -411,7 +411,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["sourceIdentity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceSystem
     * Details of source system of the object being provisioned.
@@ -430,7 +430,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sourceSystem
     * Details of source system of the object being provisioned.
@@ -444,7 +444,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["sourceSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetIdentity
     * Details of target object being provisioned.
@@ -463,7 +463,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the targetIdentity
     * Details of target object being provisioned.
@@ -477,7 +477,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["targetIdentity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetSystem
     * Details of target system of the object being provisioned.
@@ -496,7 +496,7 @@ class ProvisioningObjectSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the targetSystem
     * Details of target system of the object being provisioned.
@@ -510,7 +510,7 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["targetSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     * Unique Azure AD tenant ID.
@@ -525,7 +525,7 @@ class ProvisioningObjectSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     * Unique Azure AD tenant ID.
@@ -539,5 +539,5 @@ class ProvisioningObjectSummary extends Entity
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
 }

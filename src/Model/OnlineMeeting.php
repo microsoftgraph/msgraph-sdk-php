@@ -38,7 +38,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the allowAttendeeToEnableCamera
     * Indicates whether attendees can turn on their camera.
@@ -52,7 +52,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["allowAttendeeToEnableCamera"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the allowAttendeeToEnableMic
     * Indicates whether attendees can turn on their microphone.
@@ -67,7 +67,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the allowAttendeeToEnableMic
     * Indicates whether attendees can turn on their microphone.
@@ -81,7 +81,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["allowAttendeeToEnableMic"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the allowedPresenters
     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
@@ -100,7 +100,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the allowedPresenters
     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
@@ -114,7 +114,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["allowedPresenters"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the allowMeetingChat
     * Specifies the mode of meeting chat.
@@ -133,7 +133,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the allowMeetingChat
     * Specifies the mode of meeting chat.
@@ -147,7 +147,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["allowMeetingChat"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the allowTeamworkReactions
     * Indicates whether Teams reactions are enabled for the meeting.
@@ -162,7 +162,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the allowTeamworkReactions
     * Indicates whether Teams reactions are enabled for the meeting.
@@ -176,7 +176,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["allowTeamworkReactions"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the attendeeReport
     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
@@ -195,7 +195,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the attendeeReport
     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
@@ -209,7 +209,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["attendeeReport"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the audioConferencing
     * The phone access (dial-in) information for an online meeting. Read-only.
@@ -228,7 +228,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the audioConferencing
     * The phone access (dial-in) information for an online meeting. Read-only.
@@ -242,7 +242,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["audioConferencing"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the broadcastSettings
     * Settings related to a live event.
@@ -261,7 +261,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the broadcastSettings
     * Settings related to a live event.
@@ -275,7 +275,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["broadcastSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the chatInfo
     * The chat information associated with this online meeting.
@@ -294,7 +294,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the chatInfo
     * The chat information associated with this online meeting.
@@ -308,7 +308,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["chatInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the creationDateTime
     * The meeting creation time in UTC. Read-only.
@@ -327,7 +327,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the creationDateTime
     * The meeting creation time in UTC. Read-only.
@@ -341,7 +341,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDateTime
     * The meeting end time in UTC.
@@ -360,7 +360,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * The meeting end time in UTC.
@@ -374,7 +374,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalId
     * The external ID. A custom ID. Optional.
@@ -389,7 +389,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalId
     * The external ID. A custom ID. Optional.
@@ -403,7 +403,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["externalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isBroadcast
     * Indicates if this is a Teams live event.
@@ -418,7 +418,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isBroadcast
     * Indicates if this is a Teams live event.
@@ -432,7 +432,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["isBroadcast"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isEntryExitAnnounced
     * Indicates whether to announce when callers join or leave.
@@ -447,7 +447,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEntryExitAnnounced
     * Indicates whether to announce when callers join or leave.
@@ -461,7 +461,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["isEntryExitAnnounced"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the joinInformation
     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
@@ -480,7 +480,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the joinInformation
     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
@@ -494,7 +494,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["joinInformation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the joinWebUrl
     * The join URL of the online meeting. Read-only.
@@ -509,7 +509,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the joinWebUrl
     * The join URL of the online meeting. Read-only.
@@ -523,7 +523,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["joinWebUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lobbyBypassSettings
     * Specifies which participants can bypass the meeting   lobby.
@@ -542,7 +542,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lobbyBypassSettings
     * Specifies which participants can bypass the meeting   lobby.
@@ -556,7 +556,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["lobbyBypassSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the participants
     * The participants associated with the online meeting.  This includes the organizer and the attendees.
@@ -575,7 +575,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the participants
     * The participants associated with the online meeting.  This includes the organizer and the attendees.
@@ -589,7 +589,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["participants"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recordAutomatically
     * Indicates whether to record the meeting automatically.
@@ -604,7 +604,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the recordAutomatically
     * Indicates whether to record the meeting automatically.
@@ -618,7 +618,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["recordAutomatically"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * The meeting start time in UTC.
@@ -637,7 +637,7 @@ class OnlineMeeting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * The meeting start time in UTC.
@@ -651,7 +651,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subject
     * The subject of the online meeting.
@@ -666,7 +666,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subject
     * The subject of the online meeting.
@@ -680,7 +680,7 @@ class OnlineMeeting extends Entity
         $this->_propDict["subject"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the videoTeleconferenceId
     * The video teleconferencing ID. Read-only.
@@ -695,7 +695,7 @@ class OnlineMeeting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the videoTeleconferenceId
     * The video teleconferencing ID. Read-only.
@@ -709,5 +709,5 @@ class OnlineMeeting extends Entity
         $this->_propDict["videoTeleconferenceId"] = $val;
         return $this;
     }
-    
+
 }

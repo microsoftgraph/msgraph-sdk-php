@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Directory extends Entity
 {
 
-     /** 
+     /**
      * Gets the administrativeUnits
     * Conceptual container for user and group directory objects.
      *
@@ -46,8 +46,8 @@ class Directory extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the administrativeUnits
     * Conceptual container for user and group directory objects.
     *
@@ -60,9 +60,9 @@ class Directory extends Entity
         $this->_propDict["administrativeUnits"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deletedItems
     * Recently deleted items. Read-only. Nullable.
      *
@@ -83,8 +83,8 @@ class Directory extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the deletedItems
     * Recently deleted items. Read-only. Nullable.
     *
@@ -97,5 +97,5 @@ class Directory extends Entity
         $this->_propDict["deletedItems"] = $val;
         return $this;
     }
-    
+
 }

@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class DeviceManagementReports extends Entity
 {
 
-     /** 
+     /**
      * Gets the exportJobs
     * Entity representing a job to export a report
      *
@@ -46,8 +46,8 @@ class DeviceManagementReports extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the exportJobs
     * Entity representing a job to export a report
     *
@@ -60,5 +60,5 @@ class DeviceManagementReports extends Entity
         $this->_propDict["exportJobs"] = $val;
         return $this;
     }
-    
+
 }

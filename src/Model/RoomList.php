@@ -38,7 +38,7 @@ class RoomList extends Place
             return null;
         }
     }
-    
+
     /**
     * Sets the emailAddress
     * The email address of the room list.
@@ -52,9 +52,9 @@ class RoomList extends Place
         $this->_propDict["emailAddress"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the rooms
     * Read-only. Nullable.
      *
@@ -75,8 +75,8 @@ class RoomList extends Place
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the rooms
     * Read-only. Nullable.
     *
@@ -89,5 +89,5 @@ class RoomList extends Place
         $this->_propDict["rooms"] = $val;
         return $this;
     }
-    
+
 }

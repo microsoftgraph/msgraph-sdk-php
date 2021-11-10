@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class ManagedAppConfiguration extends ManagedAppPolicy
 {
 
-     /** 
+     /**
      * Gets the customSettings
     * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
      *
@@ -46,8 +46,8 @@ class ManagedAppConfiguration extends ManagedAppPolicy
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the customSettings
     * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
     *
@@ -60,5 +60,5 @@ class ManagedAppConfiguration extends ManagedAppPolicy
         $this->_propDict["customSettings"] = $val;
         return $this;
     }
-    
+
 }

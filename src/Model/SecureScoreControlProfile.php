@@ -38,7 +38,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the actionType
     * Control action type (Config, Review, Behavior).
@@ -52,7 +52,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["actionType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the actionUrl
     * URL to where the control can be actioned.
@@ -67,7 +67,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the actionUrl
     * URL to where the control can be actioned.
@@ -81,7 +81,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["actionUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureTenantId
     * GUID string for tenant ID.
@@ -96,7 +96,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     * GUID string for tenant ID.
@@ -110,9 +110,9 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the complianceInformation
     * The collection of compliance information associated with secure score control
      *
@@ -133,8 +133,8 @@ class SecureScoreControlProfile extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the complianceInformation
     * The collection of compliance information associated with secure score control
     *
@@ -147,7 +147,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["complianceInformation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the controlCategory
     * Control action category (Identity, Data, Device, Apps, Infrastructure).
@@ -162,7 +162,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the controlCategory
     * Control action category (Identity, Data, Device, Apps, Infrastructure).
@@ -176,9 +176,9 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["controlCategory"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the controlStateUpdates
     * Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
      *
@@ -199,8 +199,8 @@ class SecureScoreControlProfile extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the controlStateUpdates
     * Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
     *
@@ -213,7 +213,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["controlStateUpdates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deprecated
     * Flag to indicate if a control is depreciated.
@@ -228,7 +228,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deprecated
     * Flag to indicate if a control is depreciated.
@@ -242,7 +242,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["deprecated"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the implementationCost
     * Resource cost of implemmentating control (low, moderate, high).
@@ -257,7 +257,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the implementationCost
     * Resource cost of implemmentating control (low, moderate, high).
@@ -271,7 +271,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["implementationCost"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Time at which the control profile entity was last modified. The Timestamp type represents date and time
@@ -290,7 +290,7 @@ class SecureScoreControlProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Time at which the control profile entity was last modified. The Timestamp type represents date and time
@@ -304,7 +304,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the maxScore
     * max attainable score for the control.
@@ -319,7 +319,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the maxScore
     * max attainable score for the control.
@@ -333,7 +333,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["maxScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the rank
     * Microsoft's stack ranking of control.
@@ -348,7 +348,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rank
     * Microsoft's stack ranking of control.
@@ -362,7 +362,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["rank"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remediation
     * Description of what the control will help remediate.
@@ -377,7 +377,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remediation
     * Description of what the control will help remediate.
@@ -391,7 +391,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["remediation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the remediationImpact
     * Description of the impact on users of the remediation.
@@ -406,7 +406,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remediationImpact
     * Description of the impact on users of the remediation.
@@ -420,7 +420,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["remediationImpact"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the service
     * Service that owns the control (Exchange, Sharepoint, Azure AD).
@@ -435,7 +435,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the service
     * Service that owns the control (Exchange, Sharepoint, Azure AD).
@@ -449,7 +449,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["service"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the threats
     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
@@ -464,7 +464,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the threats
     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
@@ -478,7 +478,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["threats"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tier
     * Control tier (Core, Defense in Depth, Advanced.)
@@ -493,7 +493,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tier
     * Control tier (Core, Defense in Depth, Advanced.)
@@ -507,7 +507,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["tier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the title
     * Title of the control.
@@ -522,7 +522,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the title
     * Title of the control.
@@ -536,7 +536,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userImpact
     * User impact of implementing control (low, moderate, high).
@@ -551,7 +551,7 @@ class SecureScoreControlProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userImpact
     * User impact of implementing control (low, moderate, high).
@@ -565,7 +565,7 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["userImpact"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorInformation
     *
@@ -583,7 +583,7 @@ class SecureScoreControlProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the vendorInformation
     *
@@ -596,5 +596,5 @@ class SecureScoreControlProfile extends Entity
         $this->_propDict["vendorInformation"] = $val;
         return $this;
     }
-    
+
 }

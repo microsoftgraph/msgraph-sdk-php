@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class ServiceAnnouncementBase extends Entity
 {
 
-     /** 
+     /**
      * Gets the details
     * Additional details about service event. This property doesn't support filters.
      *
@@ -46,8 +46,8 @@ class ServiceAnnouncementBase extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the details
     * Additional details about service event. This property doesn't support filters.
     *
@@ -60,7 +60,7 @@ class ServiceAnnouncementBase extends Entity
         $this->_propDict["details"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDateTime
     * The end time of the service event.
@@ -79,7 +79,7 @@ class ServiceAnnouncementBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * The end time of the service event.
@@ -93,7 +93,7 @@ class ServiceAnnouncementBase extends Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The last modified time of the service event.
@@ -112,7 +112,7 @@ class ServiceAnnouncementBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The last modified time of the service event.
@@ -126,7 +126,7 @@ class ServiceAnnouncementBase extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * The start time of the service event.
@@ -145,7 +145,7 @@ class ServiceAnnouncementBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * The start time of the service event.
@@ -159,7 +159,7 @@ class ServiceAnnouncementBase extends Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the title
     * The title of the service event.
@@ -174,7 +174,7 @@ class ServiceAnnouncementBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the title
     * The title of the service event.
@@ -188,5 +188,5 @@ class ServiceAnnouncementBase extends Entity
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
+
 }

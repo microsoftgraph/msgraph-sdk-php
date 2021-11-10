@@ -38,7 +38,7 @@ class UserFlowLanguageConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The language name to display. This property is read-only.
@@ -52,7 +52,7 @@ class UserFlowLanguageConfiguration extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * Indicates whether the language is enabled within the user flow.
@@ -67,7 +67,7 @@ class UserFlowLanguageConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Indicates whether the language is enabled within the user flow.
@@ -81,9 +81,9 @@ class UserFlowLanguageConfiguration extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the defaultPages
     * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
      *
@@ -104,8 +104,8 @@ class UserFlowLanguageConfiguration extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the defaultPages
     * Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
     *
@@ -118,9 +118,9 @@ class UserFlowLanguageConfiguration extends Entity
         $this->_propDict["defaultPages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the overridesPages
     * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
      *
@@ -141,8 +141,8 @@ class UserFlowLanguageConfiguration extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the overridesPages
     * Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
     *
@@ -155,5 +155,5 @@ class UserFlowLanguageConfiguration extends Entity
         $this->_propDict["overridesPages"] = $val;
         return $this;
     }
-    
+
 }

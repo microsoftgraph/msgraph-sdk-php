@@ -38,7 +38,7 @@ class AuthenticationMethodTarget extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isRegistrationRequired
     * Determines if the user is enforced to register the authentication method.
@@ -52,7 +52,7 @@ class AuthenticationMethodTarget extends Entity
         $this->_propDict["isRegistrationRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the targetType
     * Possible values are: user, group.
@@ -71,7 +71,7 @@ class AuthenticationMethodTarget extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the targetType
     * Possible values are: user, group.
@@ -85,5 +85,5 @@ class AuthenticationMethodTarget extends Entity
         $this->_propDict["targetType"] = $val;
         return $this;
     }
-    
+
 }

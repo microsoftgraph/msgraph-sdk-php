@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class PlannerGroup extends Entity
 {
 
-     /** 
+     /**
      * Gets the plans
     * Read-only. Nullable. Returns the plannerPlans owned by the group.
      *
@@ -46,8 +46,8 @@ class PlannerGroup extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the plans
     * Read-only. Nullable. Returns the plannerPlans owned by the group.
     *
@@ -60,5 +60,5 @@ class PlannerGroup extends Entity
         $this->_propDict["plans"] = $val;
         return $this;
     }
-    
+
 }

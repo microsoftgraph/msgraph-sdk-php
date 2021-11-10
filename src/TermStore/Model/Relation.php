@@ -42,7 +42,7 @@ class Relation extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the relationship
     * The type of relation. Possible values are: pin, reuse.
@@ -56,7 +56,7 @@ class Relation extends \Microsoft\Graph\Model\Entity
         $this->_propDict["relationship"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fromTerm
     * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
@@ -75,7 +75,7 @@ class Relation extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fromTerm
     * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
@@ -89,7 +89,7 @@ class Relation extends \Microsoft\Graph\Model\Entity
         $this->_propDict["fromTerm"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the set
     * The [set] in which the relation is relevant.
@@ -108,7 +108,7 @@ class Relation extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the set
     * The [set] in which the relation is relevant.
@@ -122,7 +122,7 @@ class Relation extends \Microsoft\Graph\Model\Entity
         $this->_propDict["set"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the toTerm
     * The to [term] of the relation. The term to which the relationship is defined.
@@ -141,7 +141,7 @@ class Relation extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the toTerm
     * The to [term] of the relation. The term to which the relationship is defined.
@@ -155,5 +155,5 @@ class Relation extends \Microsoft\Graph\Model\Entity
         $this->_propDict["toTerm"] = $val;
         return $this;
     }
-    
+
 }

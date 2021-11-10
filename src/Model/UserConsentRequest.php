@@ -38,7 +38,7 @@ class UserConsentRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the reason
     * The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
@@ -52,7 +52,7 @@ class UserConsentRequest extends Request
         $this->_propDict["reason"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the approval
     * Approval decisions associated with a request.
@@ -71,7 +71,7 @@ class UserConsentRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the approval
     * Approval decisions associated with a request.
@@ -85,5 +85,5 @@ class UserConsentRequest extends Request
         $this->_propDict["approval"] = $val;
         return $this;
     }
-    
+
 }

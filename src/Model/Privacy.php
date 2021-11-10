@@ -31,7 +31,7 @@ class Privacy implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new Privacy
     *
@@ -54,9 +54,9 @@ class Privacy implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the subjectRightsRequests
      *
      * @return SubjectRightsRequest[]|null The subjectRightsRequests
@@ -76,8 +76,8 @@ class Privacy implements \JsonSerializable
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the subjectRightsRequests
     *
     * @param SubjectRightsRequest[] $val The subjectRightsRequests
@@ -89,7 +89,7 @@ class Privacy implements \JsonSerializable
         $this->_propDict["subjectRightsRequests"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -102,7 +102,7 @@ class Privacy implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -115,7 +115,7 @@ class Privacy implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format
@@ -126,24 +126,32 @@ class Privacy implements \JsonSerializable
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, '\DateTime')) {
-                $serializableProperties[$property] = $val->format(\DateTimeInterface::RFC3339);
-            } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
-                $serializableProperties[$property] = $val->value();
-            } else if (is_array($val)) {
-                $values = [];
-                if (count($val) > 0 && is_a($val[0], '\DateTime')) {
-                   foreach ($values as $propertyValue) {
-                       $values []= $propertyValue->format(\DateTimeInterface::RFC3339);
-                   }
-                } else if(count($val) > 0 && is_a($val[0], '\Microsoft\Graph\Core\Enum')) {
-                    foreach ($values as $propertyValue) {
-                       $values []= $propertyValue->value();
-                   }
-                }
-                $serializableProperties[$property] = $values;
+            if (is_array($val) && !empty($val)) {
+                $serializableProperties[$property] = array_map(function ($element) {
+                    return $this->serializeUniqueTypes($element);
+                }, $val);
+                continue;
             }
+            $serializableProperties[$property] = $this->serializeUniqueTypes($val);
         }
         return $serializableProperties;
+    }
+
+    /**
+    * Returns serialized value of \DateTime, \Microsoft\Graph\Core\Enum & \Microsoft\Graph\Entity types
+    *
+    * @return mixed
+    **/
+    private function serializeUniqueTypes($val)
+    {
+        if (is_a($val, '\DateTime')) {
+            return $val->format(\DateTimeInterface::RFC3339);
+        } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
+            return $val->value();
+        } else if (is_a($val, "\Entity")) {
+            return $val->jsonSerialize();
+        } else {
+            return $val;
+        }
     }
 }

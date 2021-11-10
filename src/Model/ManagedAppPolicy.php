@@ -42,7 +42,7 @@ class ManagedAppPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the policy was created.
@@ -56,7 +56,7 @@ class ManagedAppPolicy extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The policy's description.
@@ -71,7 +71,7 @@ class ManagedAppPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The policy's description.
@@ -85,7 +85,7 @@ class ManagedAppPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Policy display name.
@@ -100,7 +100,7 @@ class ManagedAppPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Policy display name.
@@ -114,7 +114,7 @@ class ManagedAppPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last time the policy was modified.
@@ -133,7 +133,7 @@ class ManagedAppPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last time the policy was modified.
@@ -147,7 +147,7 @@ class ManagedAppPolicy extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the entity.
@@ -162,7 +162,7 @@ class ManagedAppPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the entity.
@@ -176,5 +176,5 @@ class ManagedAppPolicy extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

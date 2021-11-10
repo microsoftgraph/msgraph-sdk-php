@@ -42,7 +42,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         }
         return null;
     }
-    
+
     /**
     * Sets the classification
     * The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
@@ -56,7 +56,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["classification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the feature
     * The feature name of the service issue.
@@ -71,7 +71,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
             return null;
         }
     }
-    
+
     /**
     * Sets the feature
     * The feature name of the service issue.
@@ -85,7 +85,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["feature"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the featureGroup
     * The feature group name of the service issue.
@@ -100,7 +100,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
             return null;
         }
     }
-    
+
     /**
     * Sets the featureGroup
     * The feature group name of the service issue.
@@ -114,7 +114,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["featureGroup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the impactDescription
     * The description of the service issue impact.
@@ -129,7 +129,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
             return null;
         }
     }
-    
+
     /**
     * Sets the impactDescription
     * The description of the service issue impact.
@@ -143,7 +143,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["impactDescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isResolved
     * Indicates whether the issue is resolved.
@@ -158,7 +158,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
             return null;
         }
     }
-    
+
     /**
     * Sets the isResolved
     * Indicates whether the issue is resolved.
@@ -172,7 +172,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["isResolved"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the origin
     * Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
@@ -191,7 +191,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         }
         return null;
     }
-    
+
     /**
     * Sets the origin
     * Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
@@ -205,9 +205,9 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["origin"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the posts
     * Collection of historical posts for the service issue.
      *
@@ -228,8 +228,8 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the posts
     * Collection of historical posts for the service issue.
     *
@@ -242,7 +242,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["posts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the service
     * Indicates the service affected by the issue.
@@ -257,7 +257,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
             return null;
         }
     }
-    
+
     /**
     * Sets the service
     * Indicates the service affected by the issue.
@@ -271,7 +271,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["service"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
@@ -290,7 +290,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
@@ -304,5 +304,5 @@ class ServiceHealthIssue extends ServiceAnnouncementBase
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

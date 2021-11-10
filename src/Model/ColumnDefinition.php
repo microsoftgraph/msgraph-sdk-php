@@ -42,7 +42,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the boolean
     * This column stores boolean values.
@@ -56,7 +56,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["boolean"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the calculated
     * This column's data is calculated based on other columns.
@@ -75,7 +75,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the calculated
     * This column's data is calculated based on other columns.
@@ -89,7 +89,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["calculated"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the choice
     * This column stores data from a list of choices.
@@ -108,7 +108,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the choice
     * This column stores data from a list of choices.
@@ -122,7 +122,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["choice"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the columnGroup
     * For site columns, the name of the group this column belongs to. Helps organize related columns.
@@ -137,7 +137,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the columnGroup
     * For site columns, the name of the group this column belongs to. Helps organize related columns.
@@ -151,7 +151,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["columnGroup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentApprovalStatus
     * This column stores content approval status.
@@ -170,7 +170,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the contentApprovalStatus
     * This column stores content approval status.
@@ -184,7 +184,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["contentApprovalStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the currency
     * This column stores currency values.
@@ -203,7 +203,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the currency
     * This column stores currency values.
@@ -217,7 +217,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["currency"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dateTime
     * This column stores DateTime values.
@@ -236,7 +236,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dateTime
     * This column stores DateTime values.
@@ -250,7 +250,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["dateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultValue
     * The default value for this column.
@@ -269,7 +269,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultValue
     * The default value for this column.
@@ -283,7 +283,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["defaultValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The user-facing description of the column.
@@ -298,7 +298,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The user-facing description of the column.
@@ -312,7 +312,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The user-facing name of the column.
@@ -327,7 +327,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The user-facing name of the column.
@@ -341,7 +341,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enforceUniqueValues
     * If true, no two list items may have the same value for this column.
@@ -356,7 +356,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enforceUniqueValues
     * If true, no two list items may have the same value for this column.
@@ -370,7 +370,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["enforceUniqueValues"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the geolocation
     * This column stores a geolocation.
@@ -389,7 +389,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the geolocation
     * This column stores a geolocation.
@@ -403,7 +403,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["geolocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hidden
     * Specifies whether the column is displayed in the user interface.
@@ -418,7 +418,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the hidden
     * Specifies whether the column is displayed in the user interface.
@@ -432,7 +432,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["hidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hyperlinkOrPicture
     * This column stores hyperlink or picture values.
@@ -451,7 +451,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the hyperlinkOrPicture
     * This column stores hyperlink or picture values.
@@ -465,7 +465,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["hyperlinkOrPicture"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the indexed
     * Specifies whether the column values can be used for sorting and searching.
@@ -480,7 +480,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the indexed
     * Specifies whether the column values can be used for sorting and searching.
@@ -494,7 +494,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["indexed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isDeletable
     * Indicates whether this column can be deleted.
@@ -509,7 +509,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDeletable
     * Indicates whether this column can be deleted.
@@ -523,7 +523,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["isDeletable"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isReorderable
     * Indicates whether values in the column can be reordered. Read-only.
@@ -538,7 +538,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isReorderable
     * Indicates whether values in the column can be reordered. Read-only.
@@ -552,7 +552,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["isReorderable"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isSealed
     * Specifies whether the column can be changed.
@@ -567,7 +567,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isSealed
     * Specifies whether the column can be changed.
@@ -581,7 +581,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["isSealed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lookup
     * This column's data is looked up from another source in the site.
@@ -600,7 +600,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lookup
     * This column's data is looked up from another source in the site.
@@ -614,7 +614,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["lookup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
@@ -629,7 +629,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
@@ -643,7 +643,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     * This column stores number values.
@@ -662,7 +662,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the number
     * This column stores number values.
@@ -676,7 +676,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the personOrGroup
     * This column stores Person or Group values.
@@ -695,7 +695,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the personOrGroup
     * This column stores Person or Group values.
@@ -709,7 +709,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["personOrGroup"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the propagateChanges
     * If 'true', changes to this column will be propagated to lists that implement the column.
@@ -724,7 +724,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the propagateChanges
     * If 'true', changes to this column will be propagated to lists that implement the column.
@@ -738,7 +738,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["propagateChanges"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the readOnly
     * Specifies whether the column values can be modified.
@@ -753,7 +753,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the readOnly
     * Specifies whether the column values can be modified.
@@ -767,7 +767,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["readOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the required
     * Specifies whether the column value isn't optional.
@@ -782,7 +782,7 @@ class ColumnDefinition extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the required
     * Specifies whether the column value isn't optional.
@@ -796,7 +796,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["required"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the term
     * This column stores taxonomy terms.
@@ -815,7 +815,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the term
     * This column stores taxonomy terms.
@@ -829,7 +829,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["term"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the text
     * This column stores text values.
@@ -848,7 +848,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the text
     * This column stores text values.
@@ -862,7 +862,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["text"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the thumbnail
     * This column stores thumbnail values.
@@ -881,7 +881,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the thumbnail
     * This column stores thumbnail values.
@@ -895,7 +895,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["thumbnail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * For site columns, the type of column. Read-only.
@@ -914,7 +914,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     * For site columns, the type of column. Read-only.
@@ -928,7 +928,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the validation
     * This column stores validation formula and message for the column.
@@ -947,7 +947,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the validation
     * This column stores validation formula and message for the column.
@@ -961,7 +961,7 @@ class ColumnDefinition extends Entity
         $this->_propDict["validation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceColumn
     * The source column for the content type column.
@@ -980,7 +980,7 @@ class ColumnDefinition extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sourceColumn
     * The source column for the content type column.
@@ -994,5 +994,5 @@ class ColumnDefinition extends Entity
         $this->_propDict["sourceColumn"] = $val;
         return $this;
     }
-    
+
 }

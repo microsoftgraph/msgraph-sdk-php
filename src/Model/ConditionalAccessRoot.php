@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class ConditionalAccessRoot extends Entity
 {
 
-     /** 
+     /**
      * Gets the namedLocations
     * Read-only. Nullable. Returns a collection of the specified named locations.
      *
@@ -46,8 +46,8 @@ class ConditionalAccessRoot extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the namedLocations
     * Read-only. Nullable. Returns a collection of the specified named locations.
     *
@@ -60,9 +60,9 @@ class ConditionalAccessRoot extends Entity
         $this->_propDict["namedLocations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the policies
     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      *
@@ -83,8 +83,8 @@ class ConditionalAccessRoot extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the policies
     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
     *
@@ -97,5 +97,5 @@ class ConditionalAccessRoot extends Entity
         $this->_propDict["policies"] = $val;
         return $this;
     }
-    
+
 }
