@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* LongRunningOperationStatus File
+* TenantOnboardingEligibilityReason File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\ManagedTenants\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* LongRunningOperationStatus class
+* TenantOnboardingEligibilityReason class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class LongRunningOperationStatus extends Enum
+class TenantOnboardingEligibilityReason extends Enum
 {
     /**
-    * The Enum LongRunningOperationStatus
+    * The Enum TenantOnboardingEligibilityReason
     */
-    const NOT_STARTED = "notStarted";
-    const RUNNING = "running";
-    const SUCCEEDED = "succeeded";
-    const FAILED = "failed";
+    const NONE = "none";
+    const CONTRACT_TYPE = "contractType";
+    const DELEGATED_ADMIN_PRIVILEGES = "delegatedAdminPrivileges";
+    const USERS_COUNT = "usersCount";
+    const LICENSE = "license";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

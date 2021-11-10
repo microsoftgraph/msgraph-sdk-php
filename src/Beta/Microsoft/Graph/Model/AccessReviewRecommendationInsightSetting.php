@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* LongRunningOperationStatus File
+* AccessReviewRecommendationInsightSetting File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* LongRunningOperationStatus class
+* AccessReviewRecommendationInsightSetting class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class LongRunningOperationStatus extends Enum
+class AccessReviewRecommendationInsightSetting extends Entity
 {
-    /**
-    * The Enum LongRunningOperationStatus
-    */
-    const NOT_STARTED = "notStarted";
-    const RUNNING = "running";
-    const SUCCEEDED = "succeeded";
-    const FAILED = "failed";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

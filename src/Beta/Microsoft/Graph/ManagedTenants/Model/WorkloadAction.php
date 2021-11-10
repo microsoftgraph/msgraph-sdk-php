@@ -141,6 +141,32 @@ class WorkloadAction extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     /**
+    * Gets the licenses
+    *
+    * @return string|null The licenses
+    */
+    public function getLicenses()
+    {
+        if (array_key_exists("licenses", $this->_propDict)) {
+            return $this->_propDict["licenses"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the licenses
+    *
+    * @param string $val The value of the licenses
+    *
+    * @return WorkloadAction
+    */
+    public function setLicenses($val)
+    {
+        $this->_propDict["licenses"] = $val;
+        return $this;
+    }
+    /**
     * Gets the service
     * The service associated with workload action. Optional. Read-only.
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcStatusDetails File
+* GraphAPIErrorDetails File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\ManagedTenants\Model;
 /**
-* CloudPcStatusDetails class
+* GraphAPIErrorDetails class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,44 +21,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcStatusDetails extends Entity
+class GraphAPIErrorDetails extends \Beta\Microsoft\Graph\Model\Entity
 {
-
-    /**
-    * Gets the additionalInformation
-    * Any additional information about the Cloud PC status.
-    *
-    * @return KeyValuePair|null The additionalInformation
-    */
-    public function getAdditionalInformation()
-    {
-        if (array_key_exists("additionalInformation", $this->_propDict)) {
-            if (is_a($this->_propDict["additionalInformation"], "\Beta\Microsoft\Graph\Model\KeyValuePair") || is_null($this->_propDict["additionalInformation"])) {
-                return $this->_propDict["additionalInformation"];
-            } else {
-                $this->_propDict["additionalInformation"] = new KeyValuePair($this->_propDict["additionalInformation"]);
-                return $this->_propDict["additionalInformation"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the additionalInformation
-    * Any additional information about the Cloud PC status.
-    *
-    * @param KeyValuePair $val The value to assign to the additionalInformation
-    *
-    * @return CloudPcStatusDetails The CloudPcStatusDetails
-    */
-    public function setAdditionalInformation($val)
-    {
-        $this->_propDict["additionalInformation"] = $val;
-         return $this;
-    }
     /**
     * Gets the code
-    * The code associated with the Cloud PC status.
     *
     * @return string|null The code
     */
@@ -73,11 +39,10 @@ class CloudPcStatusDetails extends Entity
 
     /**
     * Sets the code
-    * The code associated with the Cloud PC status.
     *
     * @param string $val The value of the code
     *
-    * @return CloudPcStatusDetails
+    * @return GraphAPIErrorDetails
     */
     public function setCode($val)
     {
@@ -86,7 +51,6 @@ class CloudPcStatusDetails extends Entity
     }
     /**
     * Gets the message
-    * The status message.
     *
     * @return string|null The message
     */
@@ -101,11 +65,10 @@ class CloudPcStatusDetails extends Entity
 
     /**
     * Sets the message
-    * The status message.
     *
     * @param string $val The value of the message
     *
-    * @return CloudPcStatusDetails
+    * @return GraphAPIErrorDetails
     */
     public function setMessage($val)
     {

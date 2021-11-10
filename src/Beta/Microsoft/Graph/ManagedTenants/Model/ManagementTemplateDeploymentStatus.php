@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* LongRunningOperationStatus File
+* ManagementTemplateDeploymentStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\ManagedTenants\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* LongRunningOperationStatus class
+* ManagementTemplateDeploymentStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,19 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class LongRunningOperationStatus extends Enum
+class ManagementTemplateDeploymentStatus extends Enum
 {
     /**
-    * The Enum LongRunningOperationStatus
+    * The Enum ManagementTemplateDeploymentStatus
     */
-    const NOT_STARTED = "notStarted";
-    const RUNNING = "running";
-    const SUCCEEDED = "succeeded";
-    const FAILED = "failed";
+    const TO_ADDRESS = "toAddress";
+    const COMPLETED = "completed";
+    const ERROR = "error";
+    const TIME_OUT = "timeOut";
+    const IN_PROGRESS = "inProgress";
+    const PLANNED = "planned";
+    const RESOLVED_BY3RD_PARTY = "resolvedBy3rdParty";
+    const RESOLVED_THROUGH_ALTERNATE_MITIGATION = "resolvedThroughAlternateMitigation";
+    const RISK_ACCEPTED = "riskAccepted";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
