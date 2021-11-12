@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class InferenceClassification extends Entity
 {
 
-     /** 
+     /**
      * Gets the overrides
     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      *
@@ -46,8 +46,8 @@ class InferenceClassification extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the overrides
     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
     *
@@ -60,5 +60,5 @@ class InferenceClassification extends Entity
         $this->_propDict["overrides"] = $val;
         return $this;
     }
-    
+
 }

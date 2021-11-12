@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class AgreementFileLocalization extends AgreementFileProperties
 {
 
-     /** 
+     /**
      * Gets the versions
      *
      * @return AgreementFileVersion[]|null The versions
@@ -45,8 +45,8 @@ class AgreementFileLocalization extends AgreementFileProperties
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the versions
     *
     * @param AgreementFileVersion[] $val The versions
@@ -58,5 +58,5 @@ class AgreementFileLocalization extends AgreementFileProperties
         $this->_propDict["versions"] = $val;
         return $this;
     }
-    
+
 }

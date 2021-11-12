@@ -38,7 +38,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentQuery
     * KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
@@ -52,7 +52,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["contentQuery"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdBy
     * The user who created the legal hold.
@@ -71,7 +71,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdBy
     * The user who created the legal hold.
@@ -85,7 +85,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["createdBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time the legal hold was created.
@@ -104,7 +104,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the legal hold was created.
@@ -118,7 +118,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The legal hold description.
@@ -133,7 +133,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The legal hold description.
@@ -147,7 +147,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name of the legal hold.
@@ -162,7 +162,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the legal hold.
@@ -176,7 +176,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errors
     * Lists any errors that happened while placing the hold.
@@ -191,7 +191,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errors
     * Lists any errors that happened while placing the hold.
@@ -205,7 +205,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["errors"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * Indicates whether the hold is enabled and actively holding content.
@@ -220,7 +220,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Indicates whether the hold is enabled and actively holding content.
@@ -234,7 +234,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     * the user who last modified the legal hold.
@@ -253,7 +253,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     * the user who last modified the legal hold.
@@ -267,7 +267,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the legal hold was last modified.
@@ -286,7 +286,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the legal hold was last modified.
@@ -300,7 +300,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
@@ -319,7 +319,7 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
@@ -333,9 +333,9 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the siteSources
     * Data source entity for SharePoint sites associated with the legal hold.
      *
@@ -356,8 +356,8 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the siteSources
     * Data source entity for SharePoint sites associated with the legal hold.
     *
@@ -370,9 +370,9 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["siteSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userSources
     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
      *
@@ -393,8 +393,8 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the userSources
     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
     *
@@ -407,5 +407,5 @@ class LegalHold extends \Microsoft\Graph\Model\Entity
         $this->_propDict["userSources"] = $val;
         return $this;
     }
-    
+
 }

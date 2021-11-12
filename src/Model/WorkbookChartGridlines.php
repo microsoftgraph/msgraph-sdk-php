@@ -38,7 +38,7 @@ class WorkbookChartGridlines extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the visible
     * Boolean value representing if the axis gridlines are visible or not.
@@ -52,7 +52,7 @@ class WorkbookChartGridlines extends Entity
         $this->_propDict["visible"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Represents the formatting of chart gridlines. Read-only.
@@ -71,7 +71,7 @@ class WorkbookChartGridlines extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Represents the formatting of chart gridlines. Read-only.
@@ -85,5 +85,5 @@ class WorkbookChartGridlines extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
 }

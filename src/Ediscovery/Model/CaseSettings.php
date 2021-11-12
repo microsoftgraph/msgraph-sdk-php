@@ -42,7 +42,7 @@ class CaseSettings extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the ocr
     * The OCR (Optical Character Recognition) settings for the case.
@@ -56,7 +56,7 @@ class CaseSettings extends \Microsoft\Graph\Model\Entity
         $this->_propDict["ocr"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the redundancyDetection
     * The redundancy (near duplicate and email threading) detection settings for the case.
@@ -75,7 +75,7 @@ class CaseSettings extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the redundancyDetection
     * The redundancy (near duplicate and email threading) detection settings for the case.
@@ -89,7 +89,7 @@ class CaseSettings extends \Microsoft\Graph\Model\Entity
         $this->_propDict["redundancyDetection"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the topicModeling
     * The Topic Modeling (Themes) settings for the case.
@@ -108,7 +108,7 @@ class CaseSettings extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the topicModeling
     * The Topic Modeling (Themes) settings for the case.
@@ -122,5 +122,5 @@ class CaseSettings extends \Microsoft\Graph\Model\Entity
         $this->_propDict["topicModeling"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class TeamsAsyncOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the attemptsCount
     * Number of times the operation was attempted before being marked successful or failed.
@@ -52,7 +52,7 @@ class TeamsAsyncOperation extends Entity
         $this->_propDict["attemptsCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Time when the operation was created.
@@ -71,7 +71,7 @@ class TeamsAsyncOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Time when the operation was created.
@@ -85,7 +85,7 @@ class TeamsAsyncOperation extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the error
     * Any error that causes the async operation to fail.
@@ -104,7 +104,7 @@ class TeamsAsyncOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the error
     * Any error that causes the async operation to fail.
@@ -118,7 +118,7 @@ class TeamsAsyncOperation extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastActionDateTime
     * Time when the async operation was last updated.
@@ -137,7 +137,7 @@ class TeamsAsyncOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActionDateTime
     * Time when the async operation was last updated.
@@ -151,7 +151,7 @@ class TeamsAsyncOperation extends Entity
         $this->_propDict["lastActionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the operationType
     * Denotes which type of operation is being described.
@@ -170,7 +170,7 @@ class TeamsAsyncOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the operationType
     * Denotes which type of operation is being described.
@@ -184,7 +184,7 @@ class TeamsAsyncOperation extends Entity
         $this->_propDict["operationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Operation status.
@@ -203,7 +203,7 @@ class TeamsAsyncOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Operation status.
@@ -217,7 +217,7 @@ class TeamsAsyncOperation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetResourceId
     * The ID of the object that's created or modified as result of this async operation, typically a team.
@@ -232,7 +232,7 @@ class TeamsAsyncOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetResourceId
     * The ID of the object that's created or modified as result of this async operation, typically a team.
@@ -246,7 +246,7 @@ class TeamsAsyncOperation extends Entity
         $this->_propDict["targetResourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetResourceLocation
     * The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
@@ -261,7 +261,7 @@ class TeamsAsyncOperation extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetResourceLocation
     * The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
@@ -275,5 +275,5 @@ class TeamsAsyncOperation extends Entity
         $this->_propDict["targetResourceLocation"] = $val;
         return $this;
     }
-    
+
 }

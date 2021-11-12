@@ -42,7 +42,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTimeUtc
     * DateTime when the entity is created.
@@ -56,7 +56,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
         $this->_propDict["createdDateTimeUtc"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Upload status.
@@ -75,7 +75,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Upload status.
@@ -89,9 +89,9 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceIdentities
     * Collection of all Autopilot devices as a part of this upload.
      *
@@ -112,8 +112,8 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the deviceIdentities
     * Collection of all Autopilot devices as a part of this upload.
     *
@@ -126,5 +126,5 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity
         $this->_propDict["deviceIdentities"] = $val;
         return $this;
     }
-    
+
 }

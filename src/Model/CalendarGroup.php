@@ -38,7 +38,7 @@ class CalendarGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the changeKey
     * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
@@ -52,7 +52,7 @@ class CalendarGroup extends Entity
         $this->_propDict["changeKey"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the classId
     * The class identifier. Read-only.
@@ -67,7 +67,7 @@ class CalendarGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the classId
     * The class identifier. Read-only.
@@ -81,7 +81,7 @@ class CalendarGroup extends Entity
         $this->_propDict["classId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The group name.
@@ -96,7 +96,7 @@ class CalendarGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The group name.
@@ -110,9 +110,9 @@ class CalendarGroup extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the calendars
     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
      *
@@ -133,8 +133,8 @@ class CalendarGroup extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the calendars
     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
     *
@@ -147,5 +147,5 @@ class CalendarGroup extends Entity
         $this->_propDict["calendars"] = $val;
         return $this;
     }
-    
+
 }

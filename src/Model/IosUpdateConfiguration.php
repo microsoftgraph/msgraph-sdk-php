@@ -42,7 +42,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the activeHoursEnd
     * Active Hours End (active hours mean the time window when updates install should not happen)
@@ -56,7 +56,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
         $this->_propDict["activeHoursEnd"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activeHoursStart
     * Active Hours Start (active hours mean the time window when updates install should not happen)
@@ -75,7 +75,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the activeHoursStart
     * Active Hours Start (active hours mean the time window when updates install should not happen)
@@ -89,9 +89,9 @@ class IosUpdateConfiguration extends DeviceConfiguration
         $this->_propDict["activeHoursStart"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the scheduledInstallDays
     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      *
@@ -112,8 +112,8 @@ class IosUpdateConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the scheduledInstallDays
     * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
     *
@@ -126,7 +126,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
         $this->_propDict["scheduledInstallDays"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the utcTimeOffsetInMinutes
     * UTC Time Offset indicated in minutes
@@ -141,7 +141,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the utcTimeOffsetInMinutes
     * UTC Time Offset indicated in minutes
@@ -155,5 +155,5 @@ class IosUpdateConfiguration extends DeviceConfiguration
         $this->_propDict["utcTimeOffsetInMinutes"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class ItemAnalytics extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the allTime
     *
@@ -54,9 +54,9 @@ class ItemAnalytics extends Entity
         $this->_propDict["allTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the itemActivityStats
      *
      * @return ItemActivityStat[]|null The itemActivityStats
@@ -76,8 +76,8 @@ class ItemAnalytics extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the itemActivityStats
     *
     * @param ItemActivityStat[] $val The itemActivityStats
@@ -89,7 +89,7 @@ class ItemAnalytics extends Entity
         $this->_propDict["itemActivityStats"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSevenDays
     *
@@ -107,7 +107,7 @@ class ItemAnalytics extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSevenDays
     *
@@ -120,5 +120,5 @@ class ItemAnalytics extends Entity
         $this->_propDict["lastSevenDays"] = $val;
         return $this;
     }
-    
+
 }

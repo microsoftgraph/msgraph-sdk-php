@@ -38,7 +38,7 @@ class SingleValueLegacyExtendedProperty extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the value
     * A property value.
@@ -52,5 +52,5 @@ class SingleValueLegacyExtendedProperty extends Entity
         $this->_propDict["value"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class TermsAndConditions extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the acceptanceStatement
     * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
@@ -52,7 +52,7 @@ class TermsAndConditions extends Entity
         $this->_propDict["acceptanceStatement"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bodyText
     * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
@@ -67,7 +67,7 @@ class TermsAndConditions extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the bodyText
     * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&amp;C policy.
@@ -81,7 +81,7 @@ class TermsAndConditions extends Entity
         $this->_propDict["bodyText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * DateTime the object was created.
@@ -100,7 +100,7 @@ class TermsAndConditions extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * DateTime the object was created.
@@ -114,7 +114,7 @@ class TermsAndConditions extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Administrator-supplied description of the T&amp;C policy.
@@ -129,7 +129,7 @@ class TermsAndConditions extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Administrator-supplied description of the T&amp;C policy.
@@ -143,7 +143,7 @@ class TermsAndConditions extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Administrator-supplied name for the T&amp;C policy.
@@ -158,7 +158,7 @@ class TermsAndConditions extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Administrator-supplied name for the T&amp;C policy.
@@ -172,7 +172,7 @@ class TermsAndConditions extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -191,7 +191,7 @@ class TermsAndConditions extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -205,7 +205,7 @@ class TermsAndConditions extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the title
     * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C policy.
@@ -220,7 +220,7 @@ class TermsAndConditions extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the title
     * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C policy.
@@ -234,7 +234,7 @@ class TermsAndConditions extends Entity
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&amp;C policy.
@@ -249,7 +249,7 @@ class TermsAndConditions extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&amp;C policy.
@@ -263,9 +263,9 @@ class TermsAndConditions extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the acceptanceStatuses
     * The list of acceptance statuses for this T&amp;C policy.
      *
@@ -286,8 +286,8 @@ class TermsAndConditions extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the acceptanceStatuses
     * The list of acceptance statuses for this T&amp;C policy.
     *
@@ -300,9 +300,9 @@ class TermsAndConditions extends Entity
         $this->_propDict["acceptanceStatuses"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of assignments for this T&amp;C policy.
      *
@@ -323,8 +323,8 @@ class TermsAndConditions extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of assignments for this T&amp;C policy.
     *
@@ -337,5 +337,5 @@ class TermsAndConditions extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

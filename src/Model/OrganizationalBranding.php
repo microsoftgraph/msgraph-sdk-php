@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class OrganizationalBranding extends OrganizationalBrandingProperties
 {
 
-     /** 
+     /**
      * Gets the localizations
     * Add different branding based on a locale.
      *
@@ -46,8 +46,8 @@ class OrganizationalBranding extends OrganizationalBrandingProperties
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the localizations
     * Add different branding based on a locale.
     *
@@ -60,5 +60,5 @@ class OrganizationalBranding extends OrganizationalBrandingProperties
         $this->_propDict["localizations"] = $val;
         return $this;
     }
-    
+
 }

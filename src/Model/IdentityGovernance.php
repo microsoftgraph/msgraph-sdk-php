@@ -31,7 +31,7 @@ class IdentityGovernance implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new IdentityGovernance
     *
@@ -54,7 +54,7 @@ class IdentityGovernance implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
+
     /**
     * Gets the accessReviews
     *
@@ -72,7 +72,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the accessReviews
     *
@@ -85,7 +85,7 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["accessReviews"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appConsent
     *
@@ -103,7 +103,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the appConsent
     *
@@ -116,38 +116,7 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["appConsent"] = $val;
         return $this;
     }
-    
-    /**
-    * Gets the entitlementManagement
-    *
-    * @return EntitlementManagement|null The entitlementManagement
-    */
-    public function getEntitlementManagement()
-    {
-        if (array_key_exists("entitlementManagement", $this->_propDict) && !is_null($this->_propDict["entitlementManagement"])) {
-            if (is_a($this->_propDict["entitlementManagement"], "\Microsoft\Graph\Model\EntitlementManagement")) {
-                return $this->_propDict["entitlementManagement"];
-            } else {
-                $this->_propDict["entitlementManagement"] = new EntitlementManagement($this->_propDict["entitlementManagement"]);
-                return $this->_propDict["entitlementManagement"];
-            }
-        }
-        return null;
-    }
-    
-    /**
-    * Sets the entitlementManagement
-    *
-    * @param EntitlementManagement $val The entitlementManagement
-    *
-    * @return IdentityGovernance
-    */
-    public function setEntitlementManagement($val)
-    {
-        $this->_propDict["entitlementManagement"] = $val;
-        return $this;
-    }
-    
+
     /**
     * Gets the termsOfUse
     *
@@ -165,7 +134,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the termsOfUse
     *
@@ -178,7 +147,38 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["termsOfUse"] = $val;
         return $this;
     }
-    
+
+    /**
+    * Gets the entitlementManagement
+    *
+    * @return EntitlementManagement|null The entitlementManagement
+    */
+    public function getEntitlementManagement()
+    {
+        if (array_key_exists("entitlementManagement", $this->_propDict) && !is_null($this->_propDict["entitlementManagement"])) {
+            if (is_a($this->_propDict["entitlementManagement"], "\Microsoft\Graph\Model\EntitlementManagement")) {
+                return $this->_propDict["entitlementManagement"];
+            } else {
+                $this->_propDict["entitlementManagement"] = new EntitlementManagement($this->_propDict["entitlementManagement"]);
+                return $this->_propDict["entitlementManagement"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the entitlementManagement
+    *
+    * @param EntitlementManagement $val The entitlementManagement
+    *
+    * @return IdentityGovernance
+    */
+    public function setEntitlementManagement($val)
+    {
+        $this->_propDict["entitlementManagement"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the ODataType
     *
@@ -191,7 +191,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -204,7 +204,7 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format
@@ -215,24 +215,32 @@ class IdentityGovernance implements \JsonSerializable
     {
         $serializableProperties = $this->getProperties();
         foreach ($serializableProperties as $property => $val) {
-            if (is_a($val, '\DateTime')) {
-                $serializableProperties[$property] = $val->format(\DateTimeInterface::RFC3339);
-            } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
-                $serializableProperties[$property] = $val->value();
-            } else if (is_array($val)) {
-                $values = [];
-                if (count($val) > 0 && is_a($val[0], '\DateTime')) {
-                   foreach ($values as $propertyValue) {
-                       $values []= $propertyValue->format(\DateTimeInterface::RFC3339);
-                   }
-                } else if(count($val) > 0 && is_a($val[0], '\Microsoft\Graph\Core\Enum')) {
-                    foreach ($values as $propertyValue) {
-                       $values []= $propertyValue->value();
-                   }
-                }
-                $serializableProperties[$property] = $values;
+            if (is_array($val) && !empty($val)) {
+                $serializableProperties[$property] = array_map(function ($element) {
+                    return $this->serializeUniqueTypes($element);
+                }, $val);
+                continue;
             }
+            $serializableProperties[$property] = $this->serializeUniqueTypes($val);
         }
         return $serializableProperties;
+    }
+
+    /**
+    * Returns serialized value of \DateTime, \Microsoft\Graph\Core\Enum & \Microsoft\Graph\Entity types
+    *
+    * @return mixed
+    **/
+    private function serializeUniqueTypes($val)
+    {
+        if (is_a($val, '\DateTime')) {
+            return $val->format(\DateTimeInterface::RFC3339);
+        } else if (is_a($val, '\Microsoft\Graph\Core\Enum')) {
+            return $val->value();
+        } else if (is_a($val, "\Entity")) {
+            return $val->jsonSerialize();
+        } else {
+            return $val;
+        }
     }
 }

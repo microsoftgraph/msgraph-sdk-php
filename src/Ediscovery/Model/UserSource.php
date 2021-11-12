@@ -38,7 +38,7 @@ class UserSource extends DataSource
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     * Email address of the user's mailbox.
@@ -52,7 +52,7 @@ class UserSource extends DataSource
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the includedSources
     * Specifies which sources are included in this group. Possible values are: mailbox, site.
@@ -71,7 +71,7 @@ class UserSource extends DataSource
         }
         return null;
     }
-    
+
     /**
     * Sets the includedSources
     * Specifies which sources are included in this group. Possible values are: mailbox, site.
@@ -85,5 +85,5 @@ class UserSource extends DataSource
         $this->_propDict["includedSources"] = $val;
         return $this;
     }
-    
+
 }

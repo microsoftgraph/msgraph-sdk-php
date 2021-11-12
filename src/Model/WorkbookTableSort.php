@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class WorkbookTableSort extends Entity
 {
 
-     /** 
+     /**
      * Gets the fields
     * Represents the current conditions used to last sort the table. Read-only.
      *
@@ -46,8 +46,8 @@ class WorkbookTableSort extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the fields
     * Represents the current conditions used to last sort the table. Read-only.
     *
@@ -60,7 +60,7 @@ class WorkbookTableSort extends Entity
         $this->_propDict["fields"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the matchCase
     * Represents whether the casing impacted the last sort of the table. Read-only.
@@ -75,7 +75,7 @@ class WorkbookTableSort extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the matchCase
     * Represents whether the casing impacted the last sort of the table. Read-only.
@@ -89,7 +89,7 @@ class WorkbookTableSort extends Entity
         $this->_propDict["matchCase"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the method
     * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
@@ -104,7 +104,7 @@ class WorkbookTableSort extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the method
     * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
@@ -118,5 +118,5 @@ class WorkbookTableSort extends Entity
         $this->_propDict["method"] = $val;
         return $this;
     }
-    
+
 }

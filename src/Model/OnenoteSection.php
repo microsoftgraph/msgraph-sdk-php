@@ -38,7 +38,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefault
     * Indicates whether this is the user's default section. Read-only.
@@ -52,7 +52,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the links
     * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
@@ -71,7 +71,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         }
         return null;
     }
-    
+
     /**
     * Sets the links
     * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
@@ -85,7 +85,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         $this->_propDict["links"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the pagesUrl
     * The pages endpoint where you can get details for all the pages in the section. Read-only.
@@ -100,7 +100,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
             return null;
         }
     }
-    
+
     /**
     * Sets the pagesUrl
     * The pages endpoint where you can get details for all the pages in the section. Read-only.
@@ -114,9 +114,9 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         $this->_propDict["pagesUrl"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the pages
     * The collection of pages in the section.  Read-only. Nullable.
      *
@@ -137,8 +137,8 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the pages
     * The collection of pages in the section.  Read-only. Nullable.
     *
@@ -151,7 +151,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         $this->_propDict["pages"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentNotebook
     * The notebook that contains the section.  Read-only.
@@ -170,7 +170,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         }
         return null;
     }
-    
+
     /**
     * Sets the parentNotebook
     * The notebook that contains the section.  Read-only.
@@ -184,7 +184,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         $this->_propDict["parentNotebook"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentSectionGroup
     * The section group that contains the section.  Read-only.
@@ -203,7 +203,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         }
         return null;
     }
-    
+
     /**
     * Sets the parentSectionGroup
     * The section group that contains the section.  Read-only.
@@ -217,5 +217,5 @@ class OnenoteSection extends OnenoteEntityHierarchyModel
         $this->_propDict["parentSectionGroup"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class TargetedManagedAppPolicyAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * Identifier for deployment to a group or app
@@ -56,5 +56,5 @@ class TargetedManagedAppPolicyAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class DeviceCompliancePolicyAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * Target for the compliance policy assignment.
@@ -56,5 +56,5 @@ class DeviceCompliancePolicyAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class Agreement extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement.
@@ -52,7 +52,7 @@ class Agreement extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isPerDeviceAcceptanceRequired
     * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so.
@@ -67,7 +67,7 @@ class Agreement extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isPerDeviceAcceptanceRequired
     * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so.
@@ -81,7 +81,7 @@ class Agreement extends Entity
         $this->_propDict["isPerDeviceAcceptanceRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isViewingBeforeAcceptanceRequired
     * Indicates whether the user has to expand the agreement before accepting.
@@ -96,7 +96,7 @@ class Agreement extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isViewingBeforeAcceptanceRequired
     * Indicates whether the user has to expand the agreement before accepting.
@@ -110,7 +110,7 @@ class Agreement extends Entity
         $this->_propDict["isViewingBeforeAcceptanceRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the termsExpiration
     * Expiration schedule and frequency of agreement for all users.
@@ -129,7 +129,7 @@ class Agreement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the termsExpiration
     * Expiration schedule and frequency of agreement for all users.
@@ -143,7 +143,7 @@ class Agreement extends Entity
         $this->_propDict["termsExpiration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userReacceptRequiredFrequency
     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
@@ -162,7 +162,7 @@ class Agreement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userReacceptRequiredFrequency
     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
@@ -176,9 +176,9 @@ class Agreement extends Entity
         $this->_propDict["userReacceptRequiredFrequency"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the acceptances
     * Read-only. Information about acceptances of this agreement.
      *
@@ -199,8 +199,8 @@ class Agreement extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the acceptances
     * Read-only. Information about acceptances of this agreement.
     *
@@ -213,7 +213,7 @@ class Agreement extends Entity
         $this->_propDict["acceptances"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the file
     * Default PDF linked to this agreement.
@@ -232,7 +232,7 @@ class Agreement extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the file
     * Default PDF linked to this agreement.
@@ -246,9 +246,9 @@ class Agreement extends Entity
         $this->_propDict["file"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the files
     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
      *
@@ -269,8 +269,8 @@ class Agreement extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the files
     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead.
     *
@@ -283,5 +283,5 @@ class Agreement extends Entity
         $this->_propDict["files"] = $val;
         return $this;
     }
-    
+
 }

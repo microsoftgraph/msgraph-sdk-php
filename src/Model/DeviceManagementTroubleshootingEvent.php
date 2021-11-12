@@ -38,7 +38,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the correlationId
     * Id used for tracing the failure in the service.
@@ -52,7 +52,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
         $this->_propDict["correlationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eventDateTime
     * Time when the event occurred .
@@ -71,7 +71,7 @@ class DeviceManagementTroubleshootingEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the eventDateTime
     * Time when the event occurred .
@@ -85,5 +85,5 @@ class DeviceManagementTroubleshootingEvent extends Entity
         $this->_propDict["eventDateTime"] = $val;
         return $this;
     }
-    
+
 }

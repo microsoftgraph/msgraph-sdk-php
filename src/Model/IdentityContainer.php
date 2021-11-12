@@ -42,7 +42,7 @@ class IdentityContainer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the conditionalAccess
     * the entry point for the Conditional Access (CA) object model.
@@ -56,9 +56,9 @@ class IdentityContainer extends Entity
         $this->_propDict["conditionalAccess"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the apiConnectors
     * Represents entry point for API connectors.
      *
@@ -79,8 +79,8 @@ class IdentityContainer extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the apiConnectors
     * Represents entry point for API connectors.
     *
@@ -93,9 +93,9 @@ class IdentityContainer extends Entity
         $this->_propDict["apiConnectors"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the b2xUserFlows
     * Represents entry point for B2X/self-service sign-up identity userflows.
      *
@@ -116,8 +116,8 @@ class IdentityContainer extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the b2xUserFlows
     * Represents entry point for B2X/self-service sign-up identity userflows.
     *
@@ -130,9 +130,9 @@ class IdentityContainer extends Entity
         $this->_propDict["b2xUserFlows"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the identityProviders
     * Represents entry point for identity provider base.
      *
@@ -153,8 +153,8 @@ class IdentityContainer extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the identityProviders
     * Represents entry point for identity provider base.
     *
@@ -167,9 +167,9 @@ class IdentityContainer extends Entity
         $this->_propDict["identityProviders"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userFlowAttributes
     * Represents entry point for identity userflow attributes.
      *
@@ -190,8 +190,8 @@ class IdentityContainer extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the userFlowAttributes
     * Represents entry point for identity userflow attributes.
     *
@@ -204,5 +204,5 @@ class IdentityContainer extends Entity
         $this->_propDict["userFlowAttributes"] = $val;
         return $this;
     }
-    
+
 }

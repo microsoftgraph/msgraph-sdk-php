@@ -38,7 +38,7 @@ class UserActivity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activationUrl
     * Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
@@ -52,7 +52,7 @@ class UserActivity extends Entity
         $this->_propDict["activationUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activitySourceHost
     * Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
@@ -67,7 +67,7 @@ class UserActivity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activitySourceHost
     * Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
@@ -81,7 +81,7 @@ class UserActivity extends Entity
         $this->_propDict["activitySourceHost"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appActivityId
     * Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
@@ -96,7 +96,7 @@ class UserActivity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appActivityId
     * Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
@@ -110,7 +110,7 @@ class UserActivity extends Entity
         $this->_propDict["appActivityId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appDisplayName
     * Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
@@ -125,7 +125,7 @@ class UserActivity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appDisplayName
     * Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
@@ -139,7 +139,7 @@ class UserActivity extends Entity
         $this->_propDict["appDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentInfo
     * Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
@@ -154,7 +154,7 @@ class UserActivity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentInfo
     * Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
@@ -168,7 +168,7 @@ class UserActivity extends Entity
         $this->_propDict["contentInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentUrl
     * Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
@@ -183,7 +183,7 @@ class UserActivity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentUrl
     * Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
@@ -197,7 +197,7 @@ class UserActivity extends Entity
         $this->_propDict["contentUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * Set by the server. DateTime in UTC when the object was created on the server.
@@ -216,7 +216,7 @@ class UserActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Set by the server. DateTime in UTC when the object was created on the server.
@@ -230,7 +230,7 @@ class UserActivity extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDateTime
     * Set by the server. DateTime in UTC when the object expired on the server.
@@ -249,7 +249,7 @@ class UserActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDateTime
     * Set by the server. DateTime in UTC when the object expired on the server.
@@ -263,7 +263,7 @@ class UserActivity extends Entity
         $this->_propDict["expirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fallbackUrl
     * Optional. URL used to launch the activity in a web-based app, if available.
@@ -278,7 +278,7 @@ class UserActivity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fallbackUrl
     * Optional. URL used to launch the activity in a web-based app, if available.
@@ -292,7 +292,7 @@ class UserActivity extends Entity
         $this->_propDict["fallbackUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Set by the server. DateTime in UTC when the object was modified on the server.
@@ -311,7 +311,7 @@ class UserActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Set by the server. DateTime in UTC when the object was modified on the server.
@@ -325,7 +325,7 @@ class UserActivity extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -344,7 +344,7 @@ class UserActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
@@ -358,7 +358,7 @@ class UserActivity extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userTimezone
     * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
@@ -373,7 +373,7 @@ class UserActivity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userTimezone
     * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
@@ -387,7 +387,7 @@ class UserActivity extends Entity
         $this->_propDict["userTimezone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the visualElements
     * Required. The object containing information to render the activity in the UX.
@@ -406,7 +406,7 @@ class UserActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the visualElements
     * Required. The object containing information to render the activity in the UX.
@@ -420,9 +420,9 @@ class UserActivity extends Entity
         $this->_propDict["visualElements"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the historyItems
     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      *
@@ -443,8 +443,8 @@ class UserActivity extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the historyItems
     * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
     *
@@ -457,5 +457,5 @@ class UserActivity extends Entity
         $this->_propDict["historyItems"] = $val;
         return $this;
     }
-    
+
 }

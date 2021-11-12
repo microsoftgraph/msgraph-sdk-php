@@ -38,7 +38,7 @@ class PrinterShare extends PrinterBase
             return null;
         }
     }
-    
+
     /**
     * Sets the allowAllUsers
     * If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
@@ -52,7 +52,7 @@ class PrinterShare extends PrinterBase
         $this->_propDict["allowAllUsers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The DateTimeOffset when the printer share was created. Read-only.
@@ -71,7 +71,7 @@ class PrinterShare extends PrinterBase
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The DateTimeOffset when the printer share was created. Read-only.
@@ -85,9 +85,9 @@ class PrinterShare extends PrinterBase
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the allowedGroups
     * The groups whose users have access to print using the printer.
      *
@@ -108,8 +108,8 @@ class PrinterShare extends PrinterBase
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the allowedGroups
     * The groups whose users have access to print using the printer.
     *
@@ -122,9 +122,9 @@ class PrinterShare extends PrinterBase
         $this->_propDict["allowedGroups"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the allowedUsers
     * The users who have access to print using the printer.
      *
@@ -145,8 +145,8 @@ class PrinterShare extends PrinterBase
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the allowedUsers
     * The users who have access to print using the printer.
     *
@@ -159,7 +159,7 @@ class PrinterShare extends PrinterBase
         $this->_propDict["allowedUsers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the printer
     * The printer that this printer share is related to.
@@ -178,7 +178,7 @@ class PrinterShare extends PrinterBase
         }
         return null;
     }
-    
+
     /**
     * Sets the printer
     * The printer that this printer share is related to.
@@ -192,5 +192,5 @@ class PrinterShare extends PrinterBase
         $this->_propDict["printer"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class WorkbookChartTitle extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the overlay
     * Boolean value representing if the chart title will overlay the chart or not.
@@ -52,7 +52,7 @@ class WorkbookChartTitle extends Entity
         $this->_propDict["overlay"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the text
     * Represents the title text of a chart.
@@ -67,7 +67,7 @@ class WorkbookChartTitle extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the text
     * Represents the title text of a chart.
@@ -81,7 +81,7 @@ class WorkbookChartTitle extends Entity
         $this->_propDict["text"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the visible
     * A boolean value the represents the visibility of a chart title object.
@@ -96,7 +96,7 @@ class WorkbookChartTitle extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the visible
     * A boolean value the represents the visibility of a chart title object.
@@ -110,7 +110,7 @@ class WorkbookChartTitle extends Entity
         $this->_propDict["visible"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
@@ -129,7 +129,7 @@ class WorkbookChartTitle extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
@@ -143,5 +143,5 @@ class WorkbookChartTitle extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
 }

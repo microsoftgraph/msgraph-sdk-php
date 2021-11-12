@@ -42,7 +42,7 @@ class OnenoteResource extends OnenoteEntityBaseModel
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * The content stream
@@ -56,7 +56,7 @@ class OnenoteResource extends OnenoteEntityBaseModel
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentUrl
     * The URL for downloading the content
@@ -71,7 +71,7 @@ class OnenoteResource extends OnenoteEntityBaseModel
             return null;
         }
     }
-    
+
     /**
     * Sets the contentUrl
     * The URL for downloading the content
@@ -85,5 +85,5 @@ class OnenoteResource extends OnenoteEntityBaseModel
         $this->_propDict["contentUrl"] = $val;
         return $this;
     }
-    
+
 }

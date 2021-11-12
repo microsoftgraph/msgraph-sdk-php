@@ -38,7 +38,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the identityUserFlowAttribute within a user flow.
@@ -52,7 +52,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isOptional
     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
@@ -67,7 +67,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isOptional
     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
@@ -81,7 +81,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
         $this->_propDict["isOptional"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the requiresVerification
     * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
@@ -96,7 +96,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the requiresVerification
     * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
@@ -110,9 +110,9 @@ class IdentityUserFlowAttributeAssignment extends Entity
         $this->_propDict["requiresVerification"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userAttributeValues
     * The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
      *
@@ -133,8 +133,8 @@ class IdentityUserFlowAttributeAssignment extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the userAttributeValues
     * The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
     *
@@ -147,7 +147,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
         $this->_propDict["userAttributeValues"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userInputType
     * The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
@@ -166,7 +166,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userInputType
     * The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
@@ -180,7 +180,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
         $this->_propDict["userInputType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userAttribute
     * The user attribute that you want to add to your user flow.
@@ -199,7 +199,7 @@ class IdentityUserFlowAttributeAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userAttribute
     * The user attribute that you want to add to your user flow.
@@ -213,5 +213,5 @@ class IdentityUserFlowAttributeAssignment extends Entity
         $this->_propDict["userAttribute"] = $val;
         return $this;
     }
-    
+
 }

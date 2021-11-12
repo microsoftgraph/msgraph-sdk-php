@@ -41,7 +41,7 @@ class AgreementFileProperties extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -54,7 +54,7 @@ class AgreementFileProperties extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -68,7 +68,7 @@ class AgreementFileProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -81,7 +81,7 @@ class AgreementFileProperties extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileData
     *
@@ -99,7 +99,7 @@ class AgreementFileProperties extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the fileData
     *
@@ -112,7 +112,7 @@ class AgreementFileProperties extends Entity
         $this->_propDict["fileData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileName
     *
@@ -126,7 +126,7 @@ class AgreementFileProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fileName
     *
@@ -139,7 +139,7 @@ class AgreementFileProperties extends Entity
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDefault
     *
@@ -153,7 +153,7 @@ class AgreementFileProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefault
     *
@@ -166,7 +166,7 @@ class AgreementFileProperties extends Entity
         $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isMajorVersion
     *
@@ -180,7 +180,7 @@ class AgreementFileProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isMajorVersion
     *
@@ -193,7 +193,7 @@ class AgreementFileProperties extends Entity
         $this->_propDict["isMajorVersion"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the language
     *
@@ -207,7 +207,7 @@ class AgreementFileProperties extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the language
     *
@@ -220,5 +220,5 @@ class AgreementFileProperties extends Entity
         $this->_propDict["language"] = $val;
         return $this;
     }
-    
+
 }

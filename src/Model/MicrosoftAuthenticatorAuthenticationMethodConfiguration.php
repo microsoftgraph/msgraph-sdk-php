@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration
 {
 
-     /** 
+     /**
      * Gets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
      *
@@ -46,8 +46,8 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
     *
@@ -60,5 +60,5 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
         $this->_propDict["includeTargets"] = $val;
         return $this;
     }
-    
+
 }

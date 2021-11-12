@@ -42,7 +42,7 @@ class EducationAssignmentDefaults extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the addedStudentAction
     * Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
@@ -56,7 +56,7 @@ class EducationAssignmentDefaults extends Entity
         $this->_propDict["addedStudentAction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dueTime
     * Class-level default value for due time field. Default value is 23:59:00.
@@ -75,7 +75,7 @@ class EducationAssignmentDefaults extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the dueTime
     * Class-level default value for due time field. Default value is 23:59:00.
@@ -89,7 +89,7 @@ class EducationAssignmentDefaults extends Entity
         $this->_propDict["dueTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationChannelUrl
     * Default Teams channel to which notifications will be sent. Default value is null.
@@ -104,7 +104,7 @@ class EducationAssignmentDefaults extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationChannelUrl
     * Default Teams channel to which notifications will be sent. Default value is null.
@@ -118,5 +118,5 @@ class EducationAssignmentDefaults extends Entity
         $this->_propDict["notificationChannelUrl"] = $val;
         return $this;
     }
-    
+
 }

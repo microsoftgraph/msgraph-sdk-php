@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class ServiceAnnouncement extends Entity
 {
 
-     /** 
+     /**
      * Gets the healthOverviews
     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
@@ -46,8 +46,8 @@ class ServiceAnnouncement extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the healthOverviews
     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
@@ -60,9 +60,9 @@ class ServiceAnnouncement extends Entity
         $this->_propDict["healthOverviews"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the issues
     * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
@@ -83,8 +83,8 @@ class ServiceAnnouncement extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the issues
     * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
@@ -97,9 +97,9 @@ class ServiceAnnouncement extends Entity
         $this->_propDict["issues"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the messages
     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      *
@@ -120,8 +120,8 @@ class ServiceAnnouncement extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the messages
     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
     *
@@ -134,5 +134,5 @@ class ServiceAnnouncement extends Entity
         $this->_propDict["messages"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class TeamsAppInstallation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the teamsApp
     * The app that is installed.
@@ -56,7 +56,7 @@ class TeamsAppInstallation extends Entity
         $this->_propDict["teamsApp"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the teamsAppDefinition
     * The details of this version of the app.
@@ -75,7 +75,7 @@ class TeamsAppInstallation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the teamsAppDefinition
     * The details of this version of the app.
@@ -89,5 +89,5 @@ class TeamsAppInstallation extends Entity
         $this->_propDict["teamsAppDefinition"] = $val;
         return $this;
     }
-    
+
 }

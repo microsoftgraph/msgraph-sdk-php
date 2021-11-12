@@ -42,7 +42,7 @@ class PrintTaskTrigger extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the event
     * The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
@@ -56,7 +56,7 @@ class PrintTaskTrigger extends Entity
         $this->_propDict["event"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the definition
     * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
@@ -75,7 +75,7 @@ class PrintTaskTrigger extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the definition
     * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
@@ -89,5 +89,5 @@ class PrintTaskTrigger extends Entity
         $this->_propDict["definition"] = $val;
         return $this;
     }
-    
+
 }

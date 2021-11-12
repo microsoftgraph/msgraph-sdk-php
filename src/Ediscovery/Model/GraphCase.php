@@ -42,7 +42,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the closedBy
     * The user who closed the case.
@@ -56,7 +56,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["closedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the closedDateTime
     * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -75,7 +75,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the closedDateTime
     * The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -89,7 +89,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["closedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -108,7 +108,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -122,7 +122,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * The case description.
@@ -137,7 +137,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The case description.
@@ -151,7 +151,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The case name.
@@ -166,7 +166,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The case name.
@@ -180,7 +180,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalId
     * The external case number for customer reference.
@@ -195,7 +195,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalId
     * The external case number for customer reference.
@@ -209,7 +209,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["externalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedBy
     * The last user who modified the entity.
@@ -228,7 +228,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedBy
     * The last user who modified the entity.
@@ -242,7 +242,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -261,7 +261,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -275,7 +275,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
@@ -294,7 +294,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
@@ -308,9 +308,9 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the custodians
     * Returns a list of case custodian objects for this case.  Nullable.
      *
@@ -331,8 +331,8 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the custodians
     * Returns a list of case custodian objects for this case.  Nullable.
     *
@@ -345,9 +345,9 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["custodians"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the legalHolds
     * Returns a list of case legalHold objects for this case.  Nullable.
      *
@@ -368,8 +368,8 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the legalHolds
     * Returns a list of case legalHold objects for this case.  Nullable.
     *
@@ -382,9 +382,9 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["legalHolds"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the noncustodialDataSources
     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      *
@@ -405,8 +405,8 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the noncustodialDataSources
     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
     *
@@ -419,9 +419,9 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["noncustodialDataSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the operations
     * Returns a list of case operation objects for this case. Nullable.
      *
@@ -442,8 +442,8 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the operations
     * Returns a list of case operation objects for this case. Nullable.
     *
@@ -456,9 +456,9 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["operations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the reviewSets
     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
      *
@@ -479,8 +479,8 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the reviewSets
     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
     *
@@ -493,7 +493,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["reviewSets"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     *
@@ -511,7 +511,7 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     *
@@ -524,9 +524,9 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sourceCollections
     * Returns a list of sourceCollection objects associated with this case.
      *
@@ -547,8 +547,8 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the sourceCollections
     * Returns a list of sourceCollection objects associated with this case.
     *
@@ -561,9 +561,9 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["sourceCollections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tags
     * Returns a list of tag objects associated to this case.
      *
@@ -584,8 +584,8 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the tags
     * Returns a list of tag objects associated to this case.
     *
@@ -598,5 +598,5 @@ class GraphCase extends \Microsoft\Graph\Model\Entity
         $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
 }

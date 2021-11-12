@@ -38,7 +38,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection
             return null;
         }
     }
-    
+
     /**
     * Sets the isAssigned
     * Indicates if the policy is deployed to any inclusion groups or not.
@@ -52,9 +52,9 @@ class TargetedManagedAppProtection extends ManagedAppProtection
         $this->_propDict["isAssigned"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *
@@ -75,8 +75,8 @@ class TargetedManagedAppProtection extends ManagedAppProtection
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
     *
@@ -89,5 +89,5 @@ class TargetedManagedAppProtection extends ManagedAppProtection
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

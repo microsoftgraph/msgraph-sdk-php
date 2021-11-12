@@ -38,7 +38,7 @@ class ExternalGroup extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description of the external group. Optional.
@@ -52,7 +52,7 @@ class ExternalGroup extends \Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The friendly name of the external group. Optional.
@@ -67,7 +67,7 @@ class ExternalGroup extends \Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The friendly name of the external group. Optional.
@@ -81,9 +81,9 @@ class ExternalGroup extends \Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the members
     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      *
@@ -104,8 +104,8 @@ class ExternalGroup extends \Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the members
     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
     *
@@ -118,5 +118,5 @@ class ExternalGroup extends \Microsoft\Graph\Model\Entity
         $this->_propDict["members"] = $val;
         return $this;
     }
-    
+
 }

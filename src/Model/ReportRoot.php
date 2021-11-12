@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class ReportRoot extends Entity
 {
 
-     /** 
+     /**
      * Gets the dailyPrintUsageByPrinter
      *
      * @return PrintUsageByPrinter[]|null The dailyPrintUsageByPrinter
@@ -45,8 +45,8 @@ class ReportRoot extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the dailyPrintUsageByPrinter
     *
     * @param PrintUsageByPrinter[] $val The dailyPrintUsageByPrinter
@@ -58,9 +58,9 @@ class ReportRoot extends Entity
         $this->_propDict["dailyPrintUsageByPrinter"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the dailyPrintUsageByUser
      *
      * @return PrintUsageByUser[]|null The dailyPrintUsageByUser
@@ -80,8 +80,8 @@ class ReportRoot extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the dailyPrintUsageByUser
     *
     * @param PrintUsageByUser[] $val The dailyPrintUsageByUser
@@ -93,9 +93,9 @@ class ReportRoot extends Entity
         $this->_propDict["dailyPrintUsageByUser"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the monthlyPrintUsageByPrinter
      *
      * @return PrintUsageByPrinter[]|null The monthlyPrintUsageByPrinter
@@ -115,8 +115,8 @@ class ReportRoot extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the monthlyPrintUsageByPrinter
     *
     * @param PrintUsageByPrinter[] $val The monthlyPrintUsageByPrinter
@@ -128,9 +128,9 @@ class ReportRoot extends Entity
         $this->_propDict["monthlyPrintUsageByPrinter"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the monthlyPrintUsageByUser
      *
      * @return PrintUsageByUser[]|null The monthlyPrintUsageByUser
@@ -150,8 +150,8 @@ class ReportRoot extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the monthlyPrintUsageByUser
     *
     * @param PrintUsageByUser[] $val The monthlyPrintUsageByUser
@@ -163,5 +163,5 @@ class ReportRoot extends Entity
         $this->_propDict["monthlyPrintUsageByUser"] = $val;
         return $this;
     }
-    
+
 }

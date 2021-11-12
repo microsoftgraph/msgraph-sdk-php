@@ -42,7 +42,7 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the capabilities
     * The capabilities of the printer/printerShare.
@@ -56,7 +56,7 @@ class PrinterBase extends Entity
         $this->_propDict["capabilities"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaults
     * The default print settings of printer/printerShare.
@@ -75,7 +75,7 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaults
     * The default print settings of printer/printerShare.
@@ -89,7 +89,7 @@ class PrinterBase extends Entity
         $this->_propDict["defaults"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the printer/printerShare.
@@ -104,7 +104,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the printer/printerShare.
@@ -118,7 +118,7 @@ class PrinterBase extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isAcceptingJobs
     * Whether the printer/printerShare is currently accepting new print jobs.
@@ -133,7 +133,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isAcceptingJobs
     * Whether the printer/printerShare is currently accepting new print jobs.
@@ -147,7 +147,7 @@ class PrinterBase extends Entity
         $this->_propDict["isAcceptingJobs"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the location
     * The physical and/or organizational location of the printer/printerShare.
@@ -166,7 +166,7 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the location
     * The physical and/or organizational location of the printer/printerShare.
@@ -180,7 +180,7 @@ class PrinterBase extends Entity
         $this->_propDict["location"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     * The manufacturer of the printer/printerShare.
@@ -195,7 +195,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     * The manufacturer of the printer/printerShare.
@@ -209,7 +209,7 @@ class PrinterBase extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     * The model name of the printer/printerShare.
@@ -224,7 +224,7 @@ class PrinterBase extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * The model name of the printer/printerShare.
@@ -238,7 +238,7 @@ class PrinterBase extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The processing status of the printer/printerShare, including any errors.
@@ -257,7 +257,7 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The processing status of the printer/printerShare, including any errors.
@@ -271,9 +271,9 @@ class PrinterBase extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the jobs
     * The list of jobs that are queued for printing by the printer/printerShare.
      *
@@ -294,8 +294,8 @@ class PrinterBase extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the jobs
     * The list of jobs that are queued for printing by the printer/printerShare.
     *
@@ -308,5 +308,5 @@ class PrinterBase extends Entity
         $this->_propDict["jobs"] = $val;
         return $this;
     }
-    
+
 }

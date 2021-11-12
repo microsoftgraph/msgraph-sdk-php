@@ -38,7 +38,7 @@ class WorkbookChartAxis extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the majorUnit
     * Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
@@ -52,7 +52,7 @@ class WorkbookChartAxis extends Entity
         $this->_propDict["majorUnit"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the maximum
     * Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -67,7 +67,7 @@ class WorkbookChartAxis extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the maximum
     * Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -81,7 +81,7 @@ class WorkbookChartAxis extends Entity
         $this->_propDict["maximum"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimum
     * Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -96,7 +96,7 @@ class WorkbookChartAxis extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the minimum
     * Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
@@ -110,7 +110,7 @@ class WorkbookChartAxis extends Entity
         $this->_propDict["minimum"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minorUnit
     * Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
@@ -125,7 +125,7 @@ class WorkbookChartAxis extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the minorUnit
     * Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
@@ -139,7 +139,7 @@ class WorkbookChartAxis extends Entity
         $this->_propDict["minorUnit"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Represents the formatting of a chart object, which includes line and font formatting. Read-only.
@@ -158,7 +158,7 @@ class WorkbookChartAxis extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Represents the formatting of a chart object, which includes line and font formatting. Read-only.
@@ -172,7 +172,7 @@ class WorkbookChartAxis extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the majorGridlines
     * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
@@ -191,7 +191,7 @@ class WorkbookChartAxis extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the majorGridlines
     * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
@@ -205,7 +205,7 @@ class WorkbookChartAxis extends Entity
         $this->_propDict["majorGridlines"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minorGridlines
     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
@@ -224,7 +224,7 @@ class WorkbookChartAxis extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the minorGridlines
     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
@@ -238,7 +238,7 @@ class WorkbookChartAxis extends Entity
         $this->_propDict["minorGridlines"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the title
     * Represents the axis title. Read-only.
@@ -257,7 +257,7 @@ class WorkbookChartAxis extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the title
     * Represents the axis title. Read-only.
@@ -271,5 +271,5 @@ class WorkbookChartAxis extends Entity
         $this->_propDict["title"] = $val;
         return $this;
     }
-    
+
 }

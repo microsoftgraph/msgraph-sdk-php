@@ -42,7 +42,7 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         }
         return null;
     }
-    
+
     /**
     * Sets the allowExternalIdToUseEmailOtp
     * Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who did not use public preview will automatically have email OTP enabled beginning in October 2021.
@@ -56,9 +56,9 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         $this->_propDict["allowExternalIdToUseEmailOtp"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
      *
@@ -79,8 +79,8 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the includeTargets
     * A collection of users or groups who are enabled to use the authentication method.
     *
@@ -93,5 +93,5 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
         $this->_propDict["includeTargets"] = $val;
         return $this;
     }
-    
+
 }

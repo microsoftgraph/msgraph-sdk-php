@@ -25,7 +25,7 @@ namespace Microsoft\Graph\Model;
 class Bitlocker extends Entity
 {
 
-     /** 
+     /**
      * Gets the recoveryKeys
     * The recovery keys associated with the bitlocker entity.
      *
@@ -46,8 +46,8 @@ class Bitlocker extends Entity
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the recoveryKeys
     * The recovery keys associated with the bitlocker entity.
     *
@@ -60,5 +60,5 @@ class Bitlocker extends Entity
         $this->_propDict["recoveryKeys"] = $val;
         return $this;
     }
-    
+
 }

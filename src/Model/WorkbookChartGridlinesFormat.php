@@ -42,7 +42,7 @@ class WorkbookChartGridlinesFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the line
     * Represents chart line formatting. Read-only.
@@ -56,5 +56,5 @@ class WorkbookChartGridlinesFormat extends Entity
         $this->_propDict["line"] = $val;
         return $this;
     }
-    
+
 }

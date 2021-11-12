@@ -42,7 +42,7 @@ class UsedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastUsed
     * Information about when the item was last viewed or modified by the user. Read only.
@@ -56,7 +56,7 @@ class UsedInsight extends Entity
         $this->_propDict["lastUsed"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceReference
     * Reference properties of the used document, such as the url and type of the document. Read-only
@@ -75,7 +75,7 @@ class UsedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resourceReference
     * Reference properties of the used document, such as the url and type of the document. Read-only
@@ -89,7 +89,7 @@ class UsedInsight extends Entity
         $this->_propDict["resourceReference"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceVisualization
     * Properties that you can use to visualize the document in your experience. Read-only
@@ -108,7 +108,7 @@ class UsedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resourceVisualization
     * Properties that you can use to visualize the document in your experience. Read-only
@@ -122,7 +122,7 @@ class UsedInsight extends Entity
         $this->_propDict["resourceVisualization"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
@@ -141,7 +141,7 @@ class UsedInsight extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
@@ -155,5 +155,5 @@ class UsedInsight extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
 }

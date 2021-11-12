@@ -38,7 +38,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the accountBlockModification
     * Indicates whether or not to allow account modification when the device is in supervised mode.
@@ -52,7 +52,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["accountBlockModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the activationLockAllowWhenSupervised
     * Indicates whether or not to allow activation lock when the device is in the supervised mode.
@@ -67,7 +67,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the activationLockAllowWhenSupervised
     * Indicates whether or not to allow activation lock when the device is in the supervised mode.
@@ -81,7 +81,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["activationLockAllowWhenSupervised"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the airDropBlocked
     * Indicates whether or not to allow AirDrop when the device is in supervised mode.
@@ -96,7 +96,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the airDropBlocked
     * Indicates whether or not to allow AirDrop when the device is in supervised mode.
@@ -110,7 +110,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["airDropBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the airDropForceUnmanagedDropTarget
     * Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
@@ -125,7 +125,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the airDropForceUnmanagedDropTarget
     * Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
@@ -139,7 +139,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["airDropForceUnmanagedDropTarget"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the airPlayForcePairingPasswordForOutgoingRequests
     * Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
@@ -154,7 +154,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the airPlayForcePairingPasswordForOutgoingRequests
     * Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
@@ -168,7 +168,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["airPlayForcePairingPasswordForOutgoingRequests"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appleNewsBlocked
     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
@@ -183,7 +183,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appleNewsBlocked
     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
@@ -197,7 +197,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appleNewsBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appleWatchBlockPairing
     * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
@@ -212,7 +212,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appleWatchBlockPairing
     * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
@@ -226,7 +226,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appleWatchBlockPairing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appleWatchForceWristDetection
     * Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
@@ -241,7 +241,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appleWatchForceWristDetection
     * Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
@@ -255,9 +255,9 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appleWatchForceWristDetection"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appsSingleAppModeList
     * Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
      *
@@ -278,8 +278,8 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the appsSingleAppModeList
     * Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
     *
@@ -292,7 +292,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appsSingleAppModeList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appStoreBlockAutomaticDownloads
     * Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
@@ -307,7 +307,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreBlockAutomaticDownloads
     * Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
@@ -321,7 +321,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appStoreBlockAutomaticDownloads"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appStoreBlocked
     * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
@@ -336,7 +336,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreBlocked
     * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
@@ -350,7 +350,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appStoreBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appStoreBlockInAppPurchases
     * Indicates whether or not to block the user from making in app purchases.
@@ -365,7 +365,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreBlockInAppPurchases
     * Indicates whether or not to block the user from making in app purchases.
@@ -379,7 +379,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appStoreBlockInAppPurchases"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appStoreBlockUIAppInstallation
     * Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
@@ -394,7 +394,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreBlockUIAppInstallation
     * Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
@@ -408,7 +408,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appStoreBlockUIAppInstallation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the appStoreRequirePassword
     * Indicates whether or not to require a password when using the app store.
@@ -423,7 +423,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreRequirePassword
     * Indicates whether or not to require a password when using the app store.
@@ -437,9 +437,9 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appStoreRequirePassword"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appsVisibilityList
     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
      *
@@ -460,8 +460,8 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the appsVisibilityList
     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
     *
@@ -474,7 +474,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appsVisibilityList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appsVisibilityListType
     * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -493,7 +493,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the appsVisibilityListType
     * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -507,7 +507,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["appsVisibilityListType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the bluetoothBlockModification
     * Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
@@ -522,7 +522,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the bluetoothBlockModification
     * Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
@@ -536,7 +536,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["bluetoothBlockModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cameraBlocked
     * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
@@ -551,7 +551,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cameraBlocked
     * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
@@ -565,7 +565,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cameraBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockDataRoaming
     * Indicates whether or not to block data roaming.
@@ -580,7 +580,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockDataRoaming
     * Indicates whether or not to block data roaming.
@@ -594,7 +594,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockDataRoaming"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockGlobalBackgroundFetchWhileRoaming
     * Indicates whether or not to block global background fetch while roaming.
@@ -609,7 +609,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockGlobalBackgroundFetchWhileRoaming
     * Indicates whether or not to block global background fetch while roaming.
@@ -623,7 +623,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockGlobalBackgroundFetchWhileRoaming"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockPerAppDataModification
     * Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
@@ -638,7 +638,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockPerAppDataModification
     * Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
@@ -652,7 +652,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockPerAppDataModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockPersonalHotspot
     * Indicates whether or not to block Personal Hotspot.
@@ -667,7 +667,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockPersonalHotspot
     * Indicates whether or not to block Personal Hotspot.
@@ -681,7 +681,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockPersonalHotspot"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the cellularBlockVoiceRoaming
     * Indicates whether or not to block voice roaming.
@@ -696,7 +696,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the cellularBlockVoiceRoaming
     * Indicates whether or not to block voice roaming.
@@ -710,7 +710,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["cellularBlockVoiceRoaming"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the certificatesBlockUntrustedTlsCertificates
     * Indicates whether or not to block untrusted TLS certificates.
@@ -725,7 +725,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the certificatesBlockUntrustedTlsCertificates
     * Indicates whether or not to block untrusted TLS certificates.
@@ -739,7 +739,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["certificatesBlockUntrustedTlsCertificates"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the classroomAppBlockRemoteScreenObservation
     * Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
@@ -754,7 +754,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the classroomAppBlockRemoteScreenObservation
     * Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
@@ -768,7 +768,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["classroomAppBlockRemoteScreenObservation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the classroomAppForceUnpromptedScreenObservation
     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
@@ -783,7 +783,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the classroomAppForceUnpromptedScreenObservation
     * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
@@ -797,7 +797,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["classroomAppForceUnpromptedScreenObservation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the compliantAppListType
     * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -816,7 +816,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the compliantAppListType
     * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
@@ -830,9 +830,9 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["compliantAppListType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *
@@ -853,8 +853,8 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the compliantAppsList
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
     *
@@ -867,7 +867,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["compliantAppsList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the configurationProfileBlockChanges
     * Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
@@ -882,7 +882,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the configurationProfileBlockChanges
     * Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
@@ -896,7 +896,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["configurationProfileBlockChanges"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the definitionLookupBlocked
     * Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
@@ -911,7 +911,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the definitionLookupBlocked
     * Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
@@ -925,7 +925,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["definitionLookupBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceBlockEnableRestrictions
     * Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
@@ -940,7 +940,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceBlockEnableRestrictions
     * Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
@@ -954,7 +954,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["deviceBlockEnableRestrictions"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceBlockEraseContentAndSettings
     * Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
@@ -969,7 +969,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceBlockEraseContentAndSettings
     * Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
@@ -983,7 +983,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["deviceBlockEraseContentAndSettings"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceBlockNameModification
     * Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
@@ -998,7 +998,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceBlockNameModification
     * Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
@@ -1012,7 +1012,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["deviceBlockNameModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the diagnosticDataBlockSubmission
     * Indicates whether or not to block diagnostic data submission.
@@ -1027,7 +1027,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the diagnosticDataBlockSubmission
     * Indicates whether or not to block diagnostic data submission.
@@ -1041,7 +1041,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["diagnosticDataBlockSubmission"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the diagnosticDataBlockSubmissionModification
     * Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
@@ -1056,7 +1056,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the diagnosticDataBlockSubmissionModification
     * Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
@@ -1070,7 +1070,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["diagnosticDataBlockSubmissionModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the documentsBlockManagedDocumentsInUnmanagedApps
     * Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
@@ -1085,7 +1085,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the documentsBlockManagedDocumentsInUnmanagedApps
     * Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
@@ -1099,7 +1099,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["documentsBlockManagedDocumentsInUnmanagedApps"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the documentsBlockUnmanagedDocumentsInManagedApps
     * Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
@@ -1114,7 +1114,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the documentsBlockUnmanagedDocumentsInManagedApps
     * Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
@@ -1128,7 +1128,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["documentsBlockUnmanagedDocumentsInManagedApps"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the emailInDomainSuffixes
     * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
@@ -1143,7 +1143,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the emailInDomainSuffixes
     * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
@@ -1157,7 +1157,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["emailInDomainSuffixes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enterpriseAppBlockTrust
     * Indicates whether or not to block the user from trusting an enterprise app.
@@ -1172,7 +1172,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the enterpriseAppBlockTrust
     * Indicates whether or not to block the user from trusting an enterprise app.
@@ -1186,7 +1186,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["enterpriseAppBlockTrust"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enterpriseAppBlockTrustModification
     * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
@@ -1201,7 +1201,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the enterpriseAppBlockTrustModification
     * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
@@ -1215,7 +1215,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["enterpriseAppBlockTrustModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the faceTimeBlocked
     * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
@@ -1230,7 +1230,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the faceTimeBlocked
     * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
@@ -1244,7 +1244,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["faceTimeBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the findMyFriendsBlocked
     * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
@@ -1259,7 +1259,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the findMyFriendsBlocked
     * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
@@ -1273,7 +1273,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["findMyFriendsBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the gameCenterBlocked
     * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
@@ -1288,7 +1288,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the gameCenterBlocked
     * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
@@ -1302,7 +1302,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["gameCenterBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the gamingBlockGameCenterFriends
     * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
@@ -1317,7 +1317,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the gamingBlockGameCenterFriends
     * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
@@ -1331,7 +1331,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["gamingBlockGameCenterFriends"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the gamingBlockMultiplayer
     * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
@@ -1346,7 +1346,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the gamingBlockMultiplayer
     * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
@@ -1360,7 +1360,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["gamingBlockMultiplayer"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the hostPairingBlocked
     * indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
@@ -1375,7 +1375,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the hostPairingBlocked
     * indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
@@ -1389,7 +1389,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["hostPairingBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iBooksStoreBlocked
     * Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
@@ -1404,7 +1404,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iBooksStoreBlocked
     * Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
@@ -1418,7 +1418,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iBooksStoreBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iBooksStoreBlockErotica
     * Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
@@ -1433,7 +1433,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iBooksStoreBlockErotica
     * Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
@@ -1447,7 +1447,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iBooksStoreBlockErotica"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockActivityContinuation
     * Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
@@ -1462,7 +1462,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockActivityContinuation
     * Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
@@ -1476,7 +1476,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockActivityContinuation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockBackup
     * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
@@ -1491,7 +1491,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockBackup
     * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
@@ -1505,7 +1505,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockBackup"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockDocumentSync
     * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
@@ -1520,7 +1520,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockDocumentSync
     * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
@@ -1534,7 +1534,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockDocumentSync"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockManagedAppsSync
     * Indicates whether or not to block Managed Apps Cloud Sync.
@@ -1549,7 +1549,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockManagedAppsSync
     * Indicates whether or not to block Managed Apps Cloud Sync.
@@ -1563,7 +1563,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockManagedAppsSync"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockPhotoLibrary
     * Indicates whether or not to block iCloud Photo Library.
@@ -1578,7 +1578,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockPhotoLibrary
     * Indicates whether or not to block iCloud Photo Library.
@@ -1592,7 +1592,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockPhotoLibrary"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockPhotoStreamSync
     * Indicates whether or not to block iCloud Photo Stream Sync.
@@ -1607,7 +1607,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockPhotoStreamSync
     * Indicates whether or not to block iCloud Photo Stream Sync.
@@ -1621,7 +1621,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockPhotoStreamSync"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudBlockSharedPhotoStream
     * Indicates whether or not to block Shared Photo Stream.
@@ -1636,7 +1636,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudBlockSharedPhotoStream
     * Indicates whether or not to block Shared Photo Stream.
@@ -1650,7 +1650,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudBlockSharedPhotoStream"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iCloudRequireEncryptedBackup
     * Indicates whether or not to require backups to iCloud be encrypted.
@@ -1665,7 +1665,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iCloudRequireEncryptedBackup
     * Indicates whether or not to require backups to iCloud be encrypted.
@@ -1679,7 +1679,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iCloudRequireEncryptedBackup"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iTunesBlockExplicitContent
     * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
@@ -1694,7 +1694,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iTunesBlockExplicitContent
     * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
@@ -1708,7 +1708,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iTunesBlockExplicitContent"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iTunesBlockMusicService
     * Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
@@ -1723,7 +1723,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iTunesBlockMusicService
     * Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
@@ -1737,7 +1737,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iTunesBlockMusicService"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iTunesBlockRadio
     * Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
@@ -1752,7 +1752,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the iTunesBlockRadio
     * Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
@@ -1766,7 +1766,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["iTunesBlockRadio"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keyboardBlockAutoCorrect
     * Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
@@ -1781,7 +1781,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the keyboardBlockAutoCorrect
     * Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
@@ -1795,7 +1795,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["keyboardBlockAutoCorrect"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keyboardBlockDictation
     * Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
@@ -1810,7 +1810,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the keyboardBlockDictation
     * Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
@@ -1824,7 +1824,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["keyboardBlockDictation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keyboardBlockPredictive
     * Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
@@ -1839,7 +1839,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the keyboardBlockPredictive
     * Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
@@ -1853,7 +1853,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["keyboardBlockPredictive"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keyboardBlockShortcuts
     * Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
@@ -1868,7 +1868,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the keyboardBlockShortcuts
     * Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
@@ -1882,7 +1882,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["keyboardBlockShortcuts"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the keyboardBlockSpellCheck
     * Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
@@ -1897,7 +1897,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the keyboardBlockSpellCheck
     * Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
@@ -1911,7 +1911,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["keyboardBlockSpellCheck"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowAssistiveSpeak
     * Indicates whether or not to allow assistive speak while in kiosk mode.
@@ -1926,7 +1926,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowAssistiveSpeak
     * Indicates whether or not to allow assistive speak while in kiosk mode.
@@ -1940,7 +1940,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowAssistiveSpeak"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowAssistiveTouchSettings
     * Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
@@ -1955,7 +1955,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowAssistiveTouchSettings
     * Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
@@ -1969,7 +1969,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowAssistiveTouchSettings"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowAutoLock
     * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
@@ -1984,7 +1984,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowAutoLock
     * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
@@ -1998,7 +1998,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowAutoLock"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowColorInversionSettings
     * Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
@@ -2013,7 +2013,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowColorInversionSettings
     * Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
@@ -2027,7 +2027,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowColorInversionSettings"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowRingerSwitch
     * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
@@ -2042,7 +2042,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowRingerSwitch
     * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
@@ -2056,7 +2056,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowRingerSwitch"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowScreenRotation
     * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
@@ -2071,7 +2071,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowScreenRotation
     * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
@@ -2085,7 +2085,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowScreenRotation"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowSleepButton
     * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
@@ -2100,7 +2100,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowSleepButton
     * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
@@ -2114,7 +2114,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowSleepButton"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowTouchscreen
     * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
@@ -2129,7 +2129,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowTouchscreen
     * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
@@ -2143,7 +2143,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowTouchscreen"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowVoiceOverSettings
     * Indicates whether or not to allow access to the voice over settings while in kiosk mode.
@@ -2158,7 +2158,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowVoiceOverSettings
     * Indicates whether or not to allow access to the voice over settings while in kiosk mode.
@@ -2172,7 +2172,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowVoiceOverSettings"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowVolumeButtons
     * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
@@ -2187,7 +2187,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowVolumeButtons
     * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
@@ -2201,7 +2201,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowVolumeButtons"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAllowZoomSettings
     * Indicates whether or not to allow access to the zoom settings while in kiosk mode.
@@ -2216,7 +2216,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAllowZoomSettings
     * Indicates whether or not to allow access to the zoom settings while in kiosk mode.
@@ -2230,7 +2230,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAllowZoomSettings"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeAppStoreUrl
     * URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
@@ -2245,7 +2245,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeAppStoreUrl
     * URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
@@ -2259,7 +2259,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeAppStoreUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeBuiltInAppId
     * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
@@ -2274,7 +2274,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeBuiltInAppId
     * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
@@ -2288,7 +2288,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeBuiltInAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeManagedAppId
     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
@@ -2303,7 +2303,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeManagedAppId
     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
@@ -2317,7 +2317,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeManagedAppId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeRequireAssistiveTouch
     * Indicates whether or not to require assistive touch while in kiosk mode.
@@ -2332,7 +2332,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeRequireAssistiveTouch
     * Indicates whether or not to require assistive touch while in kiosk mode.
@@ -2346,7 +2346,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeRequireAssistiveTouch"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeRequireColorInversion
     * Indicates whether or not to require color inversion while in kiosk mode.
@@ -2361,7 +2361,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeRequireColorInversion
     * Indicates whether or not to require color inversion while in kiosk mode.
@@ -2375,7 +2375,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeRequireColorInversion"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeRequireMonoAudio
     * Indicates whether or not to require mono audio while in kiosk mode.
@@ -2390,7 +2390,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeRequireMonoAudio
     * Indicates whether or not to require mono audio while in kiosk mode.
@@ -2404,7 +2404,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeRequireMonoAudio"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeRequireVoiceOver
     * Indicates whether or not to require voice over while in kiosk mode.
@@ -2419,7 +2419,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeRequireVoiceOver
     * Indicates whether or not to require voice over while in kiosk mode.
@@ -2433,7 +2433,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeRequireVoiceOver"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskModeRequireZoom
     * Indicates whether or not to require zoom while in kiosk mode.
@@ -2448,7 +2448,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskModeRequireZoom
     * Indicates whether or not to require zoom while in kiosk mode.
@@ -2462,7 +2462,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["kioskModeRequireZoom"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lockScreenBlockControlCenter
     * Indicates whether or not to block the user from using control center on the lock screen.
@@ -2477,7 +2477,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the lockScreenBlockControlCenter
     * Indicates whether or not to block the user from using control center on the lock screen.
@@ -2491,7 +2491,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["lockScreenBlockControlCenter"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lockScreenBlockNotificationView
     * Indicates whether or not to block the user from using the notification view on the lock screen.
@@ -2506,7 +2506,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the lockScreenBlockNotificationView
     * Indicates whether or not to block the user from using the notification view on the lock screen.
@@ -2520,7 +2520,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["lockScreenBlockNotificationView"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lockScreenBlockPassbook
     * Indicates whether or not to block the user from using passbook when the device is locked.
@@ -2535,7 +2535,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the lockScreenBlockPassbook
     * Indicates whether or not to block the user from using passbook when the device is locked.
@@ -2549,7 +2549,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["lockScreenBlockPassbook"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lockScreenBlockTodayView
     * Indicates whether or not to block the user from using the Today View on the lock screen.
@@ -2564,7 +2564,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the lockScreenBlockTodayView
     * Indicates whether or not to block the user from using the Today View on the lock screen.
@@ -2578,7 +2578,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["lockScreenBlockTodayView"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingApps
     * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
@@ -2597,7 +2597,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingApps
     * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
@@ -2611,7 +2611,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingAustralia
     * Media content rating settings for Australia
@@ -2630,7 +2630,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingAustralia
     * Media content rating settings for Australia
@@ -2644,7 +2644,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingAustralia"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingCanada
     * Media content rating settings for Canada
@@ -2663,7 +2663,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingCanada
     * Media content rating settings for Canada
@@ -2677,7 +2677,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingCanada"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingFrance
     * Media content rating settings for France
@@ -2696,7 +2696,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingFrance
     * Media content rating settings for France
@@ -2710,7 +2710,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingFrance"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingGermany
     * Media content rating settings for Germany
@@ -2729,7 +2729,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingGermany
     * Media content rating settings for Germany
@@ -2743,7 +2743,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingGermany"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingIreland
     * Media content rating settings for Ireland
@@ -2762,7 +2762,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingIreland
     * Media content rating settings for Ireland
@@ -2776,7 +2776,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingIreland"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingJapan
     * Media content rating settings for Japan
@@ -2795,7 +2795,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingJapan
     * Media content rating settings for Japan
@@ -2809,7 +2809,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingJapan"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingNewZealand
     * Media content rating settings for New Zealand
@@ -2828,7 +2828,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingNewZealand
     * Media content rating settings for New Zealand
@@ -2842,7 +2842,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingNewZealand"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingUnitedKingdom
     * Media content rating settings for United Kingdom
@@ -2861,7 +2861,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingUnitedKingdom
     * Media content rating settings for United Kingdom
@@ -2875,7 +2875,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingUnitedKingdom"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the mediaContentRatingUnitedStates
     * Media content rating settings for United States
@@ -2894,7 +2894,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the mediaContentRatingUnitedStates
     * Media content rating settings for United States
@@ -2908,7 +2908,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["mediaContentRatingUnitedStates"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the messagesBlocked
     * Indicates whether or not to block the user from using the Messages app on the supervised device.
@@ -2923,7 +2923,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the messagesBlocked
     * Indicates whether or not to block the user from using the Messages app on the supervised device.
@@ -2937,9 +2937,9 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["messagesBlocked"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the networkUsageRules
     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
      *
@@ -2960,8 +2960,8 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the networkUsageRules
     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
     *
@@ -2974,7 +2974,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["networkUsageRules"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the notificationsBlockSettingsModification
     * Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
@@ -2989,7 +2989,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the notificationsBlockSettingsModification
     * Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
@@ -3003,7 +3003,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["notificationsBlockSettingsModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeBlockFingerprintModification
     * Block modification of registered Touch ID fingerprints when in supervised mode.
@@ -3018,7 +3018,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeBlockFingerprintModification
     * Block modification of registered Touch ID fingerprints when in supervised mode.
@@ -3032,7 +3032,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeBlockFingerprintModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeBlockFingerprintUnlock
     * Indicates whether or not to block fingerprint unlock.
@@ -3047,7 +3047,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeBlockFingerprintUnlock
     * Indicates whether or not to block fingerprint unlock.
@@ -3061,7 +3061,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeBlockFingerprintUnlock"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeBlockModification
     * Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
@@ -3076,7 +3076,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeBlockModification
     * Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
@@ -3090,7 +3090,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeBlockModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeBlockSimple
     * Indicates whether or not to block simple passcodes.
@@ -3105,7 +3105,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeBlockSimple
     * Indicates whether or not to block simple passcodes.
@@ -3119,7 +3119,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeBlockSimple"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeExpirationDays
     * Number of days before the passcode expires. Valid values 1 to 65535
@@ -3134,7 +3134,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeExpirationDays
     * Number of days before the passcode expires. Valid values 1 to 65535
@@ -3148,7 +3148,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeExpirationDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeMinimumCharacterSetCount
     * Number of character sets a passcode must contain. Valid values 0 to 4
@@ -3163,7 +3163,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeMinimumCharacterSetCount
     * Number of character sets a passcode must contain. Valid values 0 to 4
@@ -3177,7 +3177,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeMinimumCharacterSetCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeMinimumLength
     * Minimum length of passcode. Valid values 4 to 14
@@ -3192,7 +3192,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeMinimumLength
     * Minimum length of passcode. Valid values 4 to 14
@@ -3206,7 +3206,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeMinimumLength"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a passcode is required.
@@ -3221,7 +3221,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeMinutesOfInactivityBeforeLock
     * Minutes of inactivity before a passcode is required.
@@ -3235,7 +3235,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeMinutesOfInactivityBeforeLock"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeMinutesOfInactivityBeforeScreenTimeout
     * Minutes of inactivity before the screen times out.
@@ -3250,7 +3250,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeMinutesOfInactivityBeforeScreenTimeout
     * Minutes of inactivity before the screen times out.
@@ -3264,7 +3264,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeMinutesOfInactivityBeforeScreenTimeout"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodePreviousPasscodeBlockCount
     * Number of previous passcodes to block. Valid values 1 to 24
@@ -3279,7 +3279,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodePreviousPasscodeBlockCount
     * Number of previous passcodes to block. Valid values 1 to 24
@@ -3293,7 +3293,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodePreviousPasscodeBlockCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeRequired
     * Indicates whether or not to require a passcode.
@@ -3308,7 +3308,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeRequired
     * Indicates whether or not to require a passcode.
@@ -3322,7 +3322,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the passcodeRequiredType
     * Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -3341,7 +3341,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the passcodeRequiredType
     * Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
@@ -3355,7 +3355,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeRequiredType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the passcodeSignInFailureCountBeforeWipe
     * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
@@ -3370,7 +3370,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the passcodeSignInFailureCountBeforeWipe
     * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
@@ -3384,7 +3384,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["passcodeSignInFailureCountBeforeWipe"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the podcastsBlocked
     * Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
@@ -3399,7 +3399,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the podcastsBlocked
     * Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
@@ -3413,7 +3413,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["podcastsBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the safariBlockAutofill
     * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
@@ -3428,7 +3428,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariBlockAutofill
     * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
@@ -3442,7 +3442,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariBlockAutofill"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the safariBlocked
     * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
@@ -3457,7 +3457,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariBlocked
     * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
@@ -3471,7 +3471,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the safariBlockJavaScript
     * Indicates whether or not to block JavaScript in Safari.
@@ -3486,7 +3486,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariBlockJavaScript
     * Indicates whether or not to block JavaScript in Safari.
@@ -3500,7 +3500,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariBlockJavaScript"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the safariBlockPopups
     * Indicates whether or not to block popups in Safari.
@@ -3515,7 +3515,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariBlockPopups
     * Indicates whether or not to block popups in Safari.
@@ -3529,7 +3529,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariBlockPopups"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the safariCookieSettings
     * Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
@@ -3548,7 +3548,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the safariCookieSettings
     * Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
@@ -3562,7 +3562,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariCookieSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the safariManagedDomains
     * URLs matching the patterns listed here will be considered managed.
@@ -3577,7 +3577,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariManagedDomains
     * URLs matching the patterns listed here will be considered managed.
@@ -3591,7 +3591,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariManagedDomains"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the safariPasswordAutoFillDomains
     * Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
@@ -3606,7 +3606,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariPasswordAutoFillDomains
     * Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
@@ -3620,7 +3620,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariPasswordAutoFillDomains"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the safariRequireFraudWarning
     * Indicates whether or not to require fraud warning in Safari.
@@ -3635,7 +3635,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the safariRequireFraudWarning
     * Indicates whether or not to require fraud warning in Safari.
@@ -3649,7 +3649,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["safariRequireFraudWarning"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the screenCaptureBlocked
     * Indicates whether or not to block the user from taking Screenshots.
@@ -3664,7 +3664,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the screenCaptureBlocked
     * Indicates whether or not to block the user from taking Screenshots.
@@ -3678,7 +3678,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["screenCaptureBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the siriBlocked
     * Indicates whether or not to block the user from using Siri.
@@ -3693,7 +3693,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the siriBlocked
     * Indicates whether or not to block the user from using Siri.
@@ -3707,7 +3707,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["siriBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the siriBlockedWhenLocked
     * Indicates whether or not to block the user from using Siri when locked.
@@ -3722,7 +3722,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the siriBlockedWhenLocked
     * Indicates whether or not to block the user from using Siri when locked.
@@ -3736,7 +3736,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["siriBlockedWhenLocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the siriBlockUserGeneratedContent
     * Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
@@ -3751,7 +3751,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the siriBlockUserGeneratedContent
     * Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
@@ -3765,7 +3765,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["siriBlockUserGeneratedContent"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the siriRequireProfanityFilter
     * Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
@@ -3780,7 +3780,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the siriRequireProfanityFilter
     * Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
@@ -3794,7 +3794,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["siriRequireProfanityFilter"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the spotlightBlockInternetResults
     * Indicates whether or not to block Spotlight search from returning internet results on supervised device.
@@ -3809,7 +3809,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the spotlightBlockInternetResults
     * Indicates whether or not to block Spotlight search from returning internet results on supervised device.
@@ -3823,7 +3823,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["spotlightBlockInternetResults"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the voiceDialingBlocked
     * Indicates whether or not to block voice dialing.
@@ -3838,7 +3838,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the voiceDialingBlocked
     * Indicates whether or not to block voice dialing.
@@ -3852,7 +3852,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["voiceDialingBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the wallpaperBlockModification
     * Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
@@ -3867,7 +3867,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the wallpaperBlockModification
     * Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
@@ -3881,7 +3881,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["wallpaperBlockModification"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the wiFiConnectOnlyToConfiguredNetworks
     * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
@@ -3896,7 +3896,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the wiFiConnectOnlyToConfiguredNetworks
     * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
@@ -3910,5 +3910,5 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration
         $this->_propDict["wiFiConnectOnlyToConfiguredNetworks"] = boolval($val);
         return $this;
     }
-    
+
 }

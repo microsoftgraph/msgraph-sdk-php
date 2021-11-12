@@ -42,7 +42,7 @@ class Custodian extends DataSourceContainer
         }
         return null;
     }
-    
+
     /**
     * Sets the acknowledgedDateTime
     * Date and time the custodian acknowledged a hold notification.
@@ -56,7 +56,7 @@ class Custodian extends DataSourceContainer
         $this->_propDict["acknowledgedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applyHoldToSources
     * Identifies whether a custodian's sources were placed on hold during creation.
@@ -71,7 +71,7 @@ class Custodian extends DataSourceContainer
             return null;
         }
     }
-    
+
     /**
     * Sets the applyHoldToSources
     * Identifies whether a custodian's sources were placed on hold during creation.
@@ -85,7 +85,7 @@ class Custodian extends DataSourceContainer
         $this->_propDict["applyHoldToSources"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the email
     * Email address of the custodian.
@@ -100,7 +100,7 @@ class Custodian extends DataSourceContainer
             return null;
         }
     }
-    
+
     /**
     * Sets the email
     * Email address of the custodian.
@@ -114,9 +114,9 @@ class Custodian extends DataSourceContainer
         $this->_propDict["email"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the siteSources
     * Data source entity for SharePoint sites associated with the custodian.
      *
@@ -137,8 +137,8 @@ class Custodian extends DataSourceContainer
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the siteSources
     * Data source entity for SharePoint sites associated with the custodian.
     *
@@ -151,9 +151,9 @@ class Custodian extends DataSourceContainer
         $this->_propDict["siteSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the unifiedGroupSources
     * Data source entity for groups associated with the custodian.
      *
@@ -174,8 +174,8 @@ class Custodian extends DataSourceContainer
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the unifiedGroupSources
     * Data source entity for groups associated with the custodian.
     *
@@ -188,9 +188,9 @@ class Custodian extends DataSourceContainer
         $this->_propDict["unifiedGroupSources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userSources
     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      *
@@ -211,8 +211,8 @@ class Custodian extends DataSourceContainer
         }
         return null;
     }
-    
-    /** 
+
+    /**
     * Sets the userSources
     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
     *
@@ -225,5 +225,5 @@ class Custodian extends DataSourceContainer
         $this->_propDict["userSources"] = $val;
         return $this;
     }
-    
+
 }

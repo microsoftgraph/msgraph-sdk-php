@@ -42,7 +42,7 @@ class TimeOff extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the draftTimeOff
     * The draft version of this timeOff that is viewable by managers. Required.
@@ -56,7 +56,7 @@ class TimeOff extends ChangeTrackedEntity
         $this->_propDict["draftTimeOff"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharedTimeOff
     * The shared version of this timeOff that is viewable by both employees and managers. Required.
@@ -75,7 +75,7 @@ class TimeOff extends ChangeTrackedEntity
         }
         return null;
     }
-    
+
     /**
     * Sets the sharedTimeOff
     * The shared version of this timeOff that is viewable by both employees and managers. Required.
@@ -89,7 +89,7 @@ class TimeOff extends ChangeTrackedEntity
         $this->_propDict["sharedTimeOff"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * ID of the user assigned to the timeOff. Required.
@@ -104,7 +104,7 @@ class TimeOff extends ChangeTrackedEntity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * ID of the user assigned to the timeOff. Required.
@@ -118,5 +118,5 @@ class TimeOff extends ChangeTrackedEntity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
 }
