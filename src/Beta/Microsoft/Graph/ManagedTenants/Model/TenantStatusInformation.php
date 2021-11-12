@@ -246,6 +246,37 @@ class TenantStatusInformation extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the tenantOnboardingEligibilityReason
+    *
+    * @return TenantOnboardingEligibilityReason|null The tenantOnboardingEligibilityReason
+    */
+    public function getTenantOnboardingEligibilityReason()
+    {
+        if (array_key_exists("tenantOnboardingEligibilityReason", $this->_propDict)) {
+            if (is_a($this->_propDict["tenantOnboardingEligibilityReason"], "\Beta\Microsoft\Graph\ManagedTenants\Model\TenantOnboardingEligibilityReason") || is_null($this->_propDict["tenantOnboardingEligibilityReason"])) {
+                return $this->_propDict["tenantOnboardingEligibilityReason"];
+            } else {
+                $this->_propDict["tenantOnboardingEligibilityReason"] = new TenantOnboardingEligibilityReason($this->_propDict["tenantOnboardingEligibilityReason"]);
+                return $this->_propDict["tenantOnboardingEligibilityReason"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the tenantOnboardingEligibilityReason
+    *
+    * @param TenantOnboardingEligibilityReason $val The value to assign to the tenantOnboardingEligibilityReason
+    *
+    * @return TenantStatusInformation The TenantStatusInformation
+    */
+    public function setTenantOnboardingEligibilityReason($val)
+    {
+        $this->_propDict["tenantOnboardingEligibilityReason"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the workloadStatuses
     * The collection of workload statues for the managed tenant. Optional. Read-only.
     *

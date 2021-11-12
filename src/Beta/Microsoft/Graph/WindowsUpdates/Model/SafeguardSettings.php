@@ -26,6 +26,7 @@ class SafeguardSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the disabledSafeguardProfiles
+    * List of safeguards to ignore per device.
     *
     * @return SafeguardProfile|null The disabledSafeguardProfiles
     */
@@ -44,6 +45,7 @@ class SafeguardSettings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the disabledSafeguardProfiles
+    * List of safeguards to ignore per device.
     *
     * @param SafeguardProfile $val The value to assign to the disabledSafeguardProfiles
     *

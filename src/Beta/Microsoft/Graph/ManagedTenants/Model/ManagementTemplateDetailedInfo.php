@@ -112,4 +112,30 @@ class ManagementTemplateDetailedInfo extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managementTemplateId"] = $val;
         return $this;
     }
+    /**
+    * Gets the version
+    *
+    * @return int|null The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the version
+    *
+    * @param int $val The value of the version
+    *
+    * @return ManagementTemplateDetailedInfo
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = $val;
+        return $this;
+    }
 }

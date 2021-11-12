@@ -89,6 +89,39 @@ class RoleManagement implements \JsonSerializable
     }
     
     /**
+    * Gets the entitlementManagement
+    * The RbacApplication for Entitlement Management
+    *
+    * @return RbacApplication|null The entitlementManagement
+    */
+    public function getEntitlementManagement()
+    {
+        if (array_key_exists("entitlementManagement", $this->_propDict)) {
+            if (is_a($this->_propDict["entitlementManagement"], "\Microsoft\Graph\Model\RbacApplication") || is_null($this->_propDict["entitlementManagement"])) {
+                return $this->_propDict["entitlementManagement"];
+            } else {
+                $this->_propDict["entitlementManagement"] = new RbacApplication($this->_propDict["entitlementManagement"]);
+                return $this->_propDict["entitlementManagement"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the entitlementManagement
+    * The RbacApplication for Entitlement Management
+    *
+    * @param RbacApplication $val The entitlementManagement
+    *
+    * @return RoleManagement
+    */
+    public function setEntitlementManagement($val)
+    {
+        $this->_propDict["entitlementManagement"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the ODataType
     *
     * @return string|null The ODataType
@@ -128,6 +161,8 @@ class RoleManagement implements \JsonSerializable
                 $serializableProperties[$property] = $val->format(\DateTime::RFC3339);
             } else if (is_a($val, "\Microsoft\Graph\Core\Enum")) {
                 $serializableProperties[$property] = $val->value();
+            } else if (is_a($val, "\Entity")) {
+                $serializableProperties[$property] = $val->jsonSerialize();
             }
         }
         return $serializableProperties;
