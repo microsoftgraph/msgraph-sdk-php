@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CaseOperationStatus File
+* ContactRelationship File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Ediscovery\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CaseOperationStatus class
+* ContactRelationship class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,17 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CaseOperationStatus extends Enum
+class ContactRelationship extends Enum
 {
     /**
-    * The Enum CaseOperationStatus
+    * The Enum ContactRelationship
     */
-    const NOT_STARTED = "notStarted";
-    const SUBMISSION_FAILED = "submissionFailed";
-    const RUNNING = "running";
-    const SUCCEEDED = "succeeded";
-    const PARTIALLY_SUCCEEDED = "partiallySucceeded";
-    const FAILED = "failed";
+    const PARENT = "parent";
+    const RELATIVE = "relative";
+    const AIDE = "aide";
+    const DOCTOR = "doctor";
+    const GUARDIAN = "guardian";
+    const CHILD = "child";
+    const OTHER = "other";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
