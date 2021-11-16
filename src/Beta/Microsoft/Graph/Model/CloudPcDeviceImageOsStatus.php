@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcDeviceImageStatusDetails File
+* CloudPcDeviceImageOsStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CloudPcDeviceImageStatusDetails class
+* CloudPcDeviceImageOsStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcDeviceImageStatusDetails extends Enum
+class CloudPcDeviceImageOsStatus extends Enum
 {
     /**
-    * The Enum CloudPcDeviceImageStatusDetails
+    * The Enum CloudPcDeviceImageOsStatus
     */
-    const INTERNAL_SERVER_ERROR = "internalServerError";
-    const SOURCE_IMAGE_NOT_FOUND = "sourceImageNotFound";
-    const OS_VERSION_NOT_SUPPORTED = "osVersionNotSupported";
-    const SOURCE_IMAGE_INVALID = "sourceImageInvalid";
-    const SOURCE_IMAGE_NOT_GENERALIZED = "sourceImageNotGeneralized";
+    const SUPPORTED = "supported";
+    const SUPPORTED_WITH_WARNING = "supportedWithWarning";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

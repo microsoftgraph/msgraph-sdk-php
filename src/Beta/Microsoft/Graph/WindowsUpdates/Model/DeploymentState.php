@@ -59,7 +59,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the requestedValue
-    * Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused.
+    * Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused, unknownFutureValue.
     *
     * @return RequestedDeploymentStateValue|null The requestedValue
     */
@@ -78,7 +78,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the requestedValue
-    * Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused.
+    * Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused, unknownFutureValue.
     *
     * @param RequestedDeploymentStateValue $val The value to assign to the requestedValue
     *
@@ -92,7 +92,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the value
-    * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused. Read-only.
+    * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused, unknownFutureValue. Read-only.
     *
     * @return DeploymentStateValue|null The value
     */
@@ -111,7 +111,7 @@ class DeploymentState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the value
-    * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused. Read-only.
+    * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused, unknownFutureValue. Read-only.
     *
     * @param DeploymentStateValue $val The value to assign to the value
     *

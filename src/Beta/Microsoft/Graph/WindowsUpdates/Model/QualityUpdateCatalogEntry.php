@@ -55,7 +55,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
     
     /**
     * Gets the qualityUpdateClassification
-    * The classification on the quality update. Supports a subset of the values for qualityUpdateClassification. Possible values are: all, security, nonSecurity. Read-only.
+    * The classification on the quality update. Possible values are: all, security, nonSecurity, unknownFutureValue. Read-only.
     *
     * @return QualityUpdateClassification|null The qualityUpdateClassification
     */
@@ -74,7 +74,7 @@ class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry
     
     /**
     * Sets the qualityUpdateClassification
-    * The classification on the quality update. Supports a subset of the values for qualityUpdateClassification. Possible values are: all, security, nonSecurity. Read-only.
+    * The classification on the quality update. Possible values are: all, security, nonSecurity, unknownFutureValue. Read-only.
     *
     * @param QualityUpdateClassification $val The qualityUpdateClassification
     *
