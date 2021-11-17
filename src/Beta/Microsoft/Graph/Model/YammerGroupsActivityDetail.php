@@ -108,15 +108,15 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["lastActivityDate"])) {
                 return $this->_propDict["lastActivityDate"];
             } else {
-                $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
+                $this->_propDict["lastActivityDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["lastActivityDate"]);
                 return $this->_propDict["lastActivityDate"];
             }
         }
@@ -126,7 +126,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Sets the lastActivityDate
     *
-    * @param \DateTime $val The lastActivityDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The lastActivityDate
     *
     * @return YammerGroupsActivityDetail
     */
@@ -355,15 +355,15 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                $this->_propDict["reportRefreshDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["reportRefreshDate"]);
                 return $this->_propDict["reportRefreshDate"];
             }
         }
@@ -373,7 +373,7 @@ class YammerGroupsActivityDetail extends Entity
     /**
     * Sets the reportRefreshDate
     *
-    * @param \DateTime $val The reportRefreshDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The reportRefreshDate
     *
     * @return YammerGroupsActivityDetail
     */

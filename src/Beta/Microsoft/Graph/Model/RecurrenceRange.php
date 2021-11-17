@@ -28,15 +28,15 @@ class RecurrenceRange extends Entity
     * Gets the endDate
     * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
     *
-    * @return \DateTime|null The endDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The endDate
     */
     public function getEndDate()
     {
         if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "\DateTime") || is_null($this->_propDict["endDate"])) {
+            if (is_a($this->_propDict["endDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["endDate"])) {
                 return $this->_propDict["endDate"];
             } else {
-                $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
+                $this->_propDict["endDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["endDate"]);
                 return $this->_propDict["endDate"];
             }
         }
@@ -47,7 +47,7 @@ class RecurrenceRange extends Entity
     * Sets the endDate
     * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
     *
-    * @param \DateTime $val The value to assign to the endDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the endDate
     *
     * @return RecurrenceRange The RecurrenceRange
     */
@@ -117,15 +117,15 @@ class RecurrenceRange extends Entity
     * Gets the startDate
     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
     *
-    * @return \DateTime|null The startDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The startDate
     */
     public function getStartDate()
     {
         if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "\DateTime") || is_null($this->_propDict["startDate"])) {
+            if (is_a($this->_propDict["startDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["startDate"])) {
                 return $this->_propDict["startDate"];
             } else {
-                $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
+                $this->_propDict["startDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["startDate"]);
                 return $this->_propDict["startDate"];
             }
         }
@@ -136,7 +136,7 @@ class RecurrenceRange extends Entity
     * Sets the startDate
     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
     *
-    * @param \DateTime $val The value to assign to the startDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the startDate
     *
     * @return RecurrenceRange The RecurrenceRange
     */

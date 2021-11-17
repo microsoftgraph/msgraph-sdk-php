@@ -28,15 +28,15 @@ class UpdateWindow extends Entity
     * Gets the updateWindowEndTime
     * End of a time window during which agents can receive updates
     *
-    * @return TimeOfDay|null The updateWindowEndTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The updateWindowEndTime
     */
     public function getUpdateWindowEndTime()
     {
         if (array_key_exists("updateWindowEndTime", $this->_propDict)) {
-            if (is_a($this->_propDict["updateWindowEndTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["updateWindowEndTime"])) {
+            if (is_a($this->_propDict["updateWindowEndTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["updateWindowEndTime"])) {
                 return $this->_propDict["updateWindowEndTime"];
             } else {
-                $this->_propDict["updateWindowEndTime"] = new TimeOfDay($this->_propDict["updateWindowEndTime"]);
+                $this->_propDict["updateWindowEndTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["updateWindowEndTime"]);
                 return $this->_propDict["updateWindowEndTime"];
             }
         }
@@ -47,7 +47,7 @@ class UpdateWindow extends Entity
     * Sets the updateWindowEndTime
     * End of a time window during which agents can receive updates
     *
-    * @param TimeOfDay $val The value to assign to the updateWindowEndTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the updateWindowEndTime
     *
     * @return UpdateWindow The UpdateWindow
     */
@@ -61,15 +61,15 @@ class UpdateWindow extends Entity
     * Gets the updateWindowStartTime
     * Start of a time window during which agents can receive updates
     *
-    * @return TimeOfDay|null The updateWindowStartTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The updateWindowStartTime
     */
     public function getUpdateWindowStartTime()
     {
         if (array_key_exists("updateWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["updateWindowStartTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["updateWindowStartTime"])) {
+            if (is_a($this->_propDict["updateWindowStartTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["updateWindowStartTime"])) {
                 return $this->_propDict["updateWindowStartTime"];
             } else {
-                $this->_propDict["updateWindowStartTime"] = new TimeOfDay($this->_propDict["updateWindowStartTime"]);
+                $this->_propDict["updateWindowStartTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["updateWindowStartTime"]);
                 return $this->_propDict["updateWindowStartTime"];
             }
         }
@@ -80,7 +80,7 @@ class UpdateWindow extends Entity
     * Sets the updateWindowStartTime
     * Start of a time window during which agents can receive updates
     *
-    * @param TimeOfDay $val The value to assign to the updateWindowStartTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the updateWindowStartTime
     *
     * @return UpdateWindow The UpdateWindow
     */

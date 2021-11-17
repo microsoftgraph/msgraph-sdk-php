@@ -90,15 +90,15 @@ class EducationSynchronizationProfile extends Entity
     * Gets the expirationDate
     * The date the profile should be considered expired and cease syncing. When null. the profile will never expire. (optional)
     *
-    * @return \DateTime|null The expirationDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The expirationDate
     */
     public function getExpirationDate()
     {
         if (array_key_exists("expirationDate", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDate"], "\DateTime") || is_null($this->_propDict["expirationDate"])) {
+            if (is_a($this->_propDict["expirationDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["expirationDate"])) {
                 return $this->_propDict["expirationDate"];
             } else {
-                $this->_propDict["expirationDate"] = new \DateTime($this->_propDict["expirationDate"]);
+                $this->_propDict["expirationDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["expirationDate"]);
                 return $this->_propDict["expirationDate"];
             }
         }
@@ -109,7 +109,7 @@ class EducationSynchronizationProfile extends Entity
     * Sets the expirationDate
     * The date the profile should be considered expired and cease syncing. When null. the profile will never expire. (optional)
     *
-    * @param \DateTime $val The expirationDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The expirationDate
     *
     * @return EducationSynchronizationProfile
     */

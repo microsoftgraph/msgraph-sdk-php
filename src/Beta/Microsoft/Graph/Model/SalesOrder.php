@@ -274,31 +274,27 @@ class SalesOrder extends Entity
     /**
     * Gets the discountAmount
     *
-    * @return Decimal|null The discountAmount
+    * @return float|null The discountAmount
     */
     public function getDiscountAmount()
     {
         if (array_key_exists("discountAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["discountAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["discountAmount"])) {
-                return $this->_propDict["discountAmount"];
-            } else {
-                $this->_propDict["discountAmount"] = new Decimal($this->_propDict["discountAmount"]);
-                return $this->_propDict["discountAmount"];
-            }
+            return $this->_propDict["discountAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the discountAmount
     *
-    * @param Decimal $val The discountAmount
+    * @param float $val The discountAmount
     *
     * @return SalesOrder
     */
     public function setDiscountAmount($val)
     {
-        $this->_propDict["discountAmount"] = $val;
+        $this->_propDict["discountAmount"] = floatval($val);
         return $this;
     }
     
@@ -471,15 +467,15 @@ class SalesOrder extends Entity
     /**
     * Gets the orderDate
     *
-    * @return \DateTime|null The orderDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The orderDate
     */
     public function getOrderDate()
     {
         if (array_key_exists("orderDate", $this->_propDict)) {
-            if (is_a($this->_propDict["orderDate"], "\DateTime") || is_null($this->_propDict["orderDate"])) {
+            if (is_a($this->_propDict["orderDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["orderDate"])) {
                 return $this->_propDict["orderDate"];
             } else {
-                $this->_propDict["orderDate"] = new \DateTime($this->_propDict["orderDate"]);
+                $this->_propDict["orderDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["orderDate"]);
                 return $this->_propDict["orderDate"];
             }
         }
@@ -489,7 +485,7 @@ class SalesOrder extends Entity
     /**
     * Sets the orderDate
     *
-    * @param \DateTime $val The orderDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The orderDate
     *
     * @return SalesOrder
     */
@@ -610,15 +606,15 @@ class SalesOrder extends Entity
     /**
     * Gets the requestedDeliveryDate
     *
-    * @return \DateTime|null The requestedDeliveryDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The requestedDeliveryDate
     */
     public function getRequestedDeliveryDate()
     {
         if (array_key_exists("requestedDeliveryDate", $this->_propDict)) {
-            if (is_a($this->_propDict["requestedDeliveryDate"], "\DateTime") || is_null($this->_propDict["requestedDeliveryDate"])) {
+            if (is_a($this->_propDict["requestedDeliveryDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["requestedDeliveryDate"])) {
                 return $this->_propDict["requestedDeliveryDate"];
             } else {
-                $this->_propDict["requestedDeliveryDate"] = new \DateTime($this->_propDict["requestedDeliveryDate"]);
+                $this->_propDict["requestedDeliveryDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["requestedDeliveryDate"]);
                 return $this->_propDict["requestedDeliveryDate"];
             }
         }
@@ -628,7 +624,7 @@ class SalesOrder extends Entity
     /**
     * Sets the requestedDeliveryDate
     *
-    * @param \DateTime $val The requestedDeliveryDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The requestedDeliveryDate
     *
     * @return SalesOrder
     */
@@ -811,93 +807,81 @@ class SalesOrder extends Entity
     /**
     * Gets the totalAmountExcludingTax
     *
-    * @return Decimal|null The totalAmountExcludingTax
+    * @return float|null The totalAmountExcludingTax
     */
     public function getTotalAmountExcludingTax()
     {
         if (array_key_exists("totalAmountExcludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["totalAmountExcludingTax"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["totalAmountExcludingTax"])) {
-                return $this->_propDict["totalAmountExcludingTax"];
-            } else {
-                $this->_propDict["totalAmountExcludingTax"] = new Decimal($this->_propDict["totalAmountExcludingTax"]);
-                return $this->_propDict["totalAmountExcludingTax"];
-            }
+            return $this->_propDict["totalAmountExcludingTax"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the totalAmountExcludingTax
     *
-    * @param Decimal $val The totalAmountExcludingTax
+    * @param float $val The totalAmountExcludingTax
     *
     * @return SalesOrder
     */
     public function setTotalAmountExcludingTax($val)
     {
-        $this->_propDict["totalAmountExcludingTax"] = $val;
+        $this->_propDict["totalAmountExcludingTax"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the totalAmountIncludingTax
     *
-    * @return Decimal|null The totalAmountIncludingTax
+    * @return float|null The totalAmountIncludingTax
     */
     public function getTotalAmountIncludingTax()
     {
         if (array_key_exists("totalAmountIncludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["totalAmountIncludingTax"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["totalAmountIncludingTax"])) {
-                return $this->_propDict["totalAmountIncludingTax"];
-            } else {
-                $this->_propDict["totalAmountIncludingTax"] = new Decimal($this->_propDict["totalAmountIncludingTax"]);
-                return $this->_propDict["totalAmountIncludingTax"];
-            }
+            return $this->_propDict["totalAmountIncludingTax"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the totalAmountIncludingTax
     *
-    * @param Decimal $val The totalAmountIncludingTax
+    * @param float $val The totalAmountIncludingTax
     *
     * @return SalesOrder
     */
     public function setTotalAmountIncludingTax($val)
     {
-        $this->_propDict["totalAmountIncludingTax"] = $val;
+        $this->_propDict["totalAmountIncludingTax"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the totalTaxAmount
     *
-    * @return Decimal|null The totalTaxAmount
+    * @return float|null The totalTaxAmount
     */
     public function getTotalTaxAmount()
     {
         if (array_key_exists("totalTaxAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["totalTaxAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["totalTaxAmount"])) {
-                return $this->_propDict["totalTaxAmount"];
-            } else {
-                $this->_propDict["totalTaxAmount"] = new Decimal($this->_propDict["totalTaxAmount"]);
-                return $this->_propDict["totalTaxAmount"];
-            }
+            return $this->_propDict["totalTaxAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the totalTaxAmount
     *
-    * @param Decimal $val The totalTaxAmount
+    * @param float $val The totalTaxAmount
     *
     * @return SalesOrder
     */
     public function setTotalTaxAmount($val)
     {
-        $this->_propDict["totalTaxAmount"] = $val;
+        $this->_propDict["totalTaxAmount"] = floatval($val);
         return $this;
     }
     

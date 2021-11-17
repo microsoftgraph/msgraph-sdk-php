@@ -231,15 +231,15 @@ class MicrosoftTunnelSite extends Entity
     * Gets the upgradeWindowEndTime
     * The site's upgrade window end time of day
     *
-    * @return TimeOfDay|null The upgradeWindowEndTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The upgradeWindowEndTime
     */
     public function getUpgradeWindowEndTime()
     {
         if (array_key_exists("upgradeWindowEndTime", $this->_propDict)) {
-            if (is_a($this->_propDict["upgradeWindowEndTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["upgradeWindowEndTime"])) {
+            if (is_a($this->_propDict["upgradeWindowEndTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["upgradeWindowEndTime"])) {
                 return $this->_propDict["upgradeWindowEndTime"];
             } else {
-                $this->_propDict["upgradeWindowEndTime"] = new TimeOfDay($this->_propDict["upgradeWindowEndTime"]);
+                $this->_propDict["upgradeWindowEndTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["upgradeWindowEndTime"]);
                 return $this->_propDict["upgradeWindowEndTime"];
             }
         }
@@ -250,7 +250,7 @@ class MicrosoftTunnelSite extends Entity
     * Sets the upgradeWindowEndTime
     * The site's upgrade window end time of day
     *
-    * @param TimeOfDay $val The upgradeWindowEndTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The upgradeWindowEndTime
     *
     * @return MicrosoftTunnelSite
     */
@@ -264,15 +264,15 @@ class MicrosoftTunnelSite extends Entity
     * Gets the upgradeWindowStartTime
     * The site's upgrade window start time of day
     *
-    * @return TimeOfDay|null The upgradeWindowStartTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The upgradeWindowStartTime
     */
     public function getUpgradeWindowStartTime()
     {
         if (array_key_exists("upgradeWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["upgradeWindowStartTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["upgradeWindowStartTime"])) {
+            if (is_a($this->_propDict["upgradeWindowStartTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["upgradeWindowStartTime"])) {
                 return $this->_propDict["upgradeWindowStartTime"];
             } else {
-                $this->_propDict["upgradeWindowStartTime"] = new TimeOfDay($this->_propDict["upgradeWindowStartTime"]);
+                $this->_propDict["upgradeWindowStartTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["upgradeWindowStartTime"]);
                 return $this->_propDict["upgradeWindowStartTime"];
             }
         }
@@ -283,7 +283,7 @@ class MicrosoftTunnelSite extends Entity
     * Sets the upgradeWindowStartTime
     * The site's upgrade window start time of day
     *
-    * @param TimeOfDay $val The upgradeWindowStartTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The upgradeWindowStartTime
     *
     * @return MicrosoftTunnelSite
     */

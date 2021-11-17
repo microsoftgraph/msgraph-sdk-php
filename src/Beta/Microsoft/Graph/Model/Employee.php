@@ -58,15 +58,15 @@ class Employee extends Entity
     /**
     * Gets the birthDate
     *
-    * @return \DateTime|null The birthDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The birthDate
     */
     public function getBirthDate()
     {
         if (array_key_exists("birthDate", $this->_propDict)) {
-            if (is_a($this->_propDict["birthDate"], "\DateTime") || is_null($this->_propDict["birthDate"])) {
+            if (is_a($this->_propDict["birthDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["birthDate"])) {
                 return $this->_propDict["birthDate"];
             } else {
-                $this->_propDict["birthDate"] = new \DateTime($this->_propDict["birthDate"]);
+                $this->_propDict["birthDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["birthDate"]);
                 return $this->_propDict["birthDate"];
             }
         }
@@ -76,7 +76,7 @@ class Employee extends Entity
     /**
     * Sets the birthDate
     *
-    * @param \DateTime $val The birthDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The birthDate
     *
     * @return Employee
     */
@@ -143,15 +143,15 @@ class Employee extends Entity
     /**
     * Gets the employmentDate
     *
-    * @return \DateTime|null The employmentDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The employmentDate
     */
     public function getEmploymentDate()
     {
         if (array_key_exists("employmentDate", $this->_propDict)) {
-            if (is_a($this->_propDict["employmentDate"], "\DateTime") || is_null($this->_propDict["employmentDate"])) {
+            if (is_a($this->_propDict["employmentDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["employmentDate"])) {
                 return $this->_propDict["employmentDate"];
             } else {
-                $this->_propDict["employmentDate"] = new \DateTime($this->_propDict["employmentDate"]);
+                $this->_propDict["employmentDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["employmentDate"]);
                 return $this->_propDict["employmentDate"];
             }
         }
@@ -161,7 +161,7 @@ class Employee extends Entity
     /**
     * Sets the employmentDate
     *
-    * @param \DateTime $val The employmentDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The employmentDate
     *
     * @return Employee
     */
@@ -475,15 +475,15 @@ class Employee extends Entity
     /**
     * Gets the terminationDate
     *
-    * @return \DateTime|null The terminationDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The terminationDate
     */
     public function getTerminationDate()
     {
         if (array_key_exists("terminationDate", $this->_propDict)) {
-            if (is_a($this->_propDict["terminationDate"], "\DateTime") || is_null($this->_propDict["terminationDate"])) {
+            if (is_a($this->_propDict["terminationDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["terminationDate"])) {
                 return $this->_propDict["terminationDate"];
             } else {
-                $this->_propDict["terminationDate"] = new \DateTime($this->_propDict["terminationDate"]);
+                $this->_propDict["terminationDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["terminationDate"]);
                 return $this->_propDict["terminationDate"];
             }
         }
@@ -493,7 +493,7 @@ class Employee extends Entity
     /**
     * Sets the terminationDate
     *
-    * @param \DateTime $val The terminationDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The terminationDate
     *
     * @return Employee
     */

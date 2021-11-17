@@ -28,15 +28,15 @@ class RgbColor extends Entity
     * Gets the b
     * Blue value
     *
-    * @return Byte|null The b
+    * @return \Microsoft\Graph\Core\Models\Byte|null The b
     */
     public function getB()
     {
         if (array_key_exists("b", $this->_propDict)) {
-            if (is_a($this->_propDict["b"], "\Beta\Microsoft\Graph\Model\Byte") || is_null($this->_propDict["b"])) {
+            if (is_a($this->_propDict["b"], "\Microsoft\Graph\Core\Models\Byte") || is_null($this->_propDict["b"])) {
                 return $this->_propDict["b"];
             } else {
-                $this->_propDict["b"] = new Byte($this->_propDict["b"]);
+                $this->_propDict["b"] = new \Microsoft\Graph\Core\Models\Byte($this->_propDict["b"]);
                 return $this->_propDict["b"];
             }
         }
@@ -47,7 +47,7 @@ class RgbColor extends Entity
     * Sets the b
     * Blue value
     *
-    * @param Byte $val The value to assign to the b
+    * @param \Microsoft\Graph\Core\Models\Byte $val The value to assign to the b
     *
     * @return RgbColor The RgbColor
     */
@@ -61,15 +61,15 @@ class RgbColor extends Entity
     * Gets the g
     * Green value
     *
-    * @return Byte|null The g
+    * @return \Microsoft\Graph\Core\Models\Byte|null The g
     */
     public function getG()
     {
         if (array_key_exists("g", $this->_propDict)) {
-            if (is_a($this->_propDict["g"], "\Beta\Microsoft\Graph\Model\Byte") || is_null($this->_propDict["g"])) {
+            if (is_a($this->_propDict["g"], "\Microsoft\Graph\Core\Models\Byte") || is_null($this->_propDict["g"])) {
                 return $this->_propDict["g"];
             } else {
-                $this->_propDict["g"] = new Byte($this->_propDict["g"]);
+                $this->_propDict["g"] = new \Microsoft\Graph\Core\Models\Byte($this->_propDict["g"]);
                 return $this->_propDict["g"];
             }
         }
@@ -80,7 +80,7 @@ class RgbColor extends Entity
     * Sets the g
     * Green value
     *
-    * @param Byte $val The value to assign to the g
+    * @param \Microsoft\Graph\Core\Models\Byte $val The value to assign to the g
     *
     * @return RgbColor The RgbColor
     */
@@ -94,15 +94,15 @@ class RgbColor extends Entity
     * Gets the r
     * Red value
     *
-    * @return Byte|null The r
+    * @return \Microsoft\Graph\Core\Models\Byte|null The r
     */
     public function getR()
     {
         if (array_key_exists("r", $this->_propDict)) {
-            if (is_a($this->_propDict["r"], "\Beta\Microsoft\Graph\Model\Byte") || is_null($this->_propDict["r"])) {
+            if (is_a($this->_propDict["r"], "\Microsoft\Graph\Core\Models\Byte") || is_null($this->_propDict["r"])) {
                 return $this->_propDict["r"];
             } else {
-                $this->_propDict["r"] = new Byte($this->_propDict["r"]);
+                $this->_propDict["r"] = new \Microsoft\Graph\Core\Models\Byte($this->_propDict["r"]);
                 return $this->_propDict["r"];
             }
         }
@@ -113,7 +113,7 @@ class RgbColor extends Entity
     * Sets the r
     * Red value
     *
-    * @param Byte $val The value to assign to the r
+    * @param \Microsoft\Graph\Core\Models\Byte $val The value to assign to the r
     *
     * @return RgbColor The RgbColor
     */

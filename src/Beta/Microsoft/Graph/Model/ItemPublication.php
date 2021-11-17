@@ -86,15 +86,15 @@ class ItemPublication extends ItemFacet
     * Gets the publishedDate
     * The date that the publication was published.
     *
-    * @return \DateTime|null The publishedDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The publishedDate
     */
     public function getPublishedDate()
     {
         if (array_key_exists("publishedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["publishedDate"], "\DateTime") || is_null($this->_propDict["publishedDate"])) {
+            if (is_a($this->_propDict["publishedDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["publishedDate"])) {
                 return $this->_propDict["publishedDate"];
             } else {
-                $this->_propDict["publishedDate"] = new \DateTime($this->_propDict["publishedDate"]);
+                $this->_propDict["publishedDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["publishedDate"]);
                 return $this->_propDict["publishedDate"];
             }
         }
@@ -105,7 +105,7 @@ class ItemPublication extends ItemFacet
     * Sets the publishedDate
     * The date that the publication was published.
     *
-    * @param \DateTime $val The publishedDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The publishedDate
     *
     * @return ItemPublication
     */

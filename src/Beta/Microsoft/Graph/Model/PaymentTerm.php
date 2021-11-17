@@ -108,31 +108,27 @@ class PaymentTerm extends Entity
     /**
     * Gets the discountPercent
     *
-    * @return Decimal|null The discountPercent
+    * @return float|null The discountPercent
     */
     public function getDiscountPercent()
     {
         if (array_key_exists("discountPercent", $this->_propDict)) {
-            if (is_a($this->_propDict["discountPercent"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["discountPercent"])) {
-                return $this->_propDict["discountPercent"];
-            } else {
-                $this->_propDict["discountPercent"] = new Decimal($this->_propDict["discountPercent"]);
-                return $this->_propDict["discountPercent"];
-            }
+            return $this->_propDict["discountPercent"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the discountPercent
     *
-    * @param Decimal $val The discountPercent
+    * @param float $val The discountPercent
     *
     * @return PaymentTerm
     */
     public function setDiscountPercent($val)
     {
-        $this->_propDict["discountPercent"] = $val;
+        $this->_propDict["discountPercent"] = floatval($val);
         return $this;
     }
     

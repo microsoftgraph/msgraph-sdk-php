@@ -28,15 +28,15 @@ class BookingWorkTimeSlot extends Entity
     * Gets the end
     * The time of the day when work stops. For example, 17:00:00.0000000.
     *
-    * @return TimeOfDay|null The end
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The end
     */
     public function getEnd()
     {
         if (array_key_exists("end", $this->_propDict)) {
-            if (is_a($this->_propDict["end"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["end"])) {
+            if (is_a($this->_propDict["end"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["end"])) {
                 return $this->_propDict["end"];
             } else {
-                $this->_propDict["end"] = new TimeOfDay($this->_propDict["end"]);
+                $this->_propDict["end"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["end"]);
                 return $this->_propDict["end"];
             }
         }
@@ -47,7 +47,7 @@ class BookingWorkTimeSlot extends Entity
     * Sets the end
     * The time of the day when work stops. For example, 17:00:00.0000000.
     *
-    * @param TimeOfDay $val The value to assign to the end
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the end
     *
     * @return BookingWorkTimeSlot The BookingWorkTimeSlot
     */
@@ -61,15 +61,15 @@ class BookingWorkTimeSlot extends Entity
     * Gets the start
     * The time of the day when work starts. For example, 08:00:00.0000000.
     *
-    * @return TimeOfDay|null The start
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The start
     */
     public function getStart()
     {
         if (array_key_exists("start", $this->_propDict)) {
-            if (is_a($this->_propDict["start"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["start"])) {
+            if (is_a($this->_propDict["start"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["start"])) {
                 return $this->_propDict["start"];
             } else {
-                $this->_propDict["start"] = new TimeOfDay($this->_propDict["start"]);
+                $this->_propDict["start"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["start"]);
                 return $this->_propDict["start"];
             }
         }
@@ -80,7 +80,7 @@ class BookingWorkTimeSlot extends Entity
     * Sets the start
     * The time of the day when work starts. For example, 08:00:00.0000000.
     *
-    * @param TimeOfDay $val The value to assign to the start
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the start
     *
     * @return BookingWorkTimeSlot The BookingWorkTimeSlot
     */

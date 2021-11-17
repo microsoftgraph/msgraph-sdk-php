@@ -57,15 +57,15 @@ class CloudPcGalleryImage extends Entity
     * Gets the endDate
     * The date in which this image is no longer within long-term support. The Cloud PC will continue to provide short-term support. Read-only.
     *
-    * @return \DateTime|null The endDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The endDate
     */
     public function getEndDate()
     {
         if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "\DateTime") || is_null($this->_propDict["endDate"])) {
+            if (is_a($this->_propDict["endDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["endDate"])) {
                 return $this->_propDict["endDate"];
             } else {
-                $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
+                $this->_propDict["endDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["endDate"]);
                 return $this->_propDict["endDate"];
             }
         }
@@ -76,7 +76,7 @@ class CloudPcGalleryImage extends Entity
     * Sets the endDate
     * The date in which this image is no longer within long-term support. The Cloud PC will continue to provide short-term support. Read-only.
     *
-    * @param \DateTime $val The endDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The endDate
     *
     * @return CloudPcGalleryImage
     */
@@ -90,15 +90,15 @@ class CloudPcGalleryImage extends Entity
     * Gets the expirationDate
     * The date when the image is no longer available. Read-only.
     *
-    * @return \DateTime|null The expirationDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The expirationDate
     */
     public function getExpirationDate()
     {
         if (array_key_exists("expirationDate", $this->_propDict)) {
-            if (is_a($this->_propDict["expirationDate"], "\DateTime") || is_null($this->_propDict["expirationDate"])) {
+            if (is_a($this->_propDict["expirationDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["expirationDate"])) {
                 return $this->_propDict["expirationDate"];
             } else {
-                $this->_propDict["expirationDate"] = new \DateTime($this->_propDict["expirationDate"]);
+                $this->_propDict["expirationDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["expirationDate"]);
                 return $this->_propDict["expirationDate"];
             }
         }
@@ -109,7 +109,7 @@ class CloudPcGalleryImage extends Entity
     * Sets the expirationDate
     * The date when the image is no longer available. Read-only.
     *
-    * @param \DateTime $val The expirationDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The expirationDate
     *
     * @return CloudPcGalleryImage
     */
@@ -326,15 +326,15 @@ class CloudPcGalleryImage extends Entity
     * Gets the startDate
     * The date when the image becomes available. Read-only.
     *
-    * @return \DateTime|null The startDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The startDate
     */
     public function getStartDate()
     {
         if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "\DateTime") || is_null($this->_propDict["startDate"])) {
+            if (is_a($this->_propDict["startDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["startDate"])) {
                 return $this->_propDict["startDate"];
             } else {
-                $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
+                $this->_propDict["startDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["startDate"]);
                 return $this->_propDict["startDate"];
             }
         }
@@ -345,7 +345,7 @@ class CloudPcGalleryImage extends Entity
     * Sets the startDate
     * The date when the image becomes available. Read-only.
     *
-    * @param \DateTime $val The startDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The startDate
     *
     * @return CloudPcGalleryImage
     */

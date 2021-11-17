@@ -421,15 +421,15 @@ class SharedPCConfiguration extends DeviceConfiguration
     * Gets the maintenanceStartTime
     * Specifies the daily start time of maintenance hour.
     *
-    * @return TimeOfDay|null The maintenanceStartTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The maintenanceStartTime
     */
     public function getMaintenanceStartTime()
     {
         if (array_key_exists("maintenanceStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceStartTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["maintenanceStartTime"])) {
+            if (is_a($this->_propDict["maintenanceStartTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["maintenanceStartTime"])) {
                 return $this->_propDict["maintenanceStartTime"];
             } else {
-                $this->_propDict["maintenanceStartTime"] = new TimeOfDay($this->_propDict["maintenanceStartTime"]);
+                $this->_propDict["maintenanceStartTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["maintenanceStartTime"]);
                 return $this->_propDict["maintenanceStartTime"];
             }
         }
@@ -440,7 +440,7 @@ class SharedPCConfiguration extends DeviceConfiguration
     * Sets the maintenanceStartTime
     * Specifies the daily start time of maintenance hour.
     *
-    * @param TimeOfDay $val The maintenanceStartTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The maintenanceStartTime
     *
     * @return SharedPCConfiguration
     */

@@ -39,15 +39,15 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
     * Gets the activeHoursEnd
     * Active Hours End
     *
-    * @return TimeOfDay|null The activeHoursEnd
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The activeHoursEnd
     */
     public function getActiveHoursEnd()
     {
         if (array_key_exists("activeHoursEnd", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursEnd"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["activeHoursEnd"])) {
+            if (is_a($this->_propDict["activeHoursEnd"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["activeHoursEnd"])) {
                 return $this->_propDict["activeHoursEnd"];
             } else {
-                $this->_propDict["activeHoursEnd"] = new TimeOfDay($this->_propDict["activeHoursEnd"]);
+                $this->_propDict["activeHoursEnd"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["activeHoursEnd"]);
                 return $this->_propDict["activeHoursEnd"];
             }
         }
@@ -58,7 +58,7 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
     * Sets the activeHoursEnd
     * Active Hours End
     *
-    * @param TimeOfDay $val The value to assign to the activeHoursEnd
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the activeHoursEnd
     *
     * @return WindowsUpdateActiveHoursInstall The WindowsUpdateActiveHoursInstall
     */
@@ -72,15 +72,15 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
     * Gets the activeHoursStart
     * Active Hours Start
     *
-    * @return TimeOfDay|null The activeHoursStart
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The activeHoursStart
     */
     public function getActiveHoursStart()
     {
         if (array_key_exists("activeHoursStart", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursStart"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["activeHoursStart"])) {
+            if (is_a($this->_propDict["activeHoursStart"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["activeHoursStart"])) {
                 return $this->_propDict["activeHoursStart"];
             } else {
-                $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
+                $this->_propDict["activeHoursStart"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["activeHoursStart"]);
                 return $this->_propDict["activeHoursStart"];
             }
         }
@@ -91,7 +91,7 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType
     * Sets the activeHoursStart
     * Active Hours Start
     *
-    * @param TimeOfDay $val The value to assign to the activeHoursStart
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the activeHoursStart
     *
     * @return WindowsUpdateActiveHoursInstall The WindowsUpdateActiveHoursInstall
     */

@@ -202,15 +202,15 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Gets the maintenanceWindowStartTime
     * Maintenance window start time for device updates.
     *
-    * @return TimeOfDay|null The maintenanceWindowStartTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The maintenanceWindowStartTime
     */
     public function getMaintenanceWindowStartTime()
     {
         if (array_key_exists("maintenanceWindowStartTime", $this->_propDict)) {
-            if (is_a($this->_propDict["maintenanceWindowStartTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["maintenanceWindowStartTime"])) {
+            if (is_a($this->_propDict["maintenanceWindowStartTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["maintenanceWindowStartTime"])) {
                 return $this->_propDict["maintenanceWindowStartTime"];
             } else {
-                $this->_propDict["maintenanceWindowStartTime"] = new TimeOfDay($this->_propDict["maintenanceWindowStartTime"]);
+                $this->_propDict["maintenanceWindowStartTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["maintenanceWindowStartTime"]);
                 return $this->_propDict["maintenanceWindowStartTime"];
             }
         }
@@ -221,7 +221,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration
     * Sets the maintenanceWindowStartTime
     * Maintenance window start time for device updates.
     *
-    * @param TimeOfDay $val The maintenanceWindowStartTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The maintenanceWindowStartTime
     *
     * @return Windows10TeamGeneralConfiguration
     */

@@ -54,62 +54,54 @@ class SalesQuoteLine extends Entity
     /**
     * Gets the amountExcludingTax
     *
-    * @return Decimal|null The amountExcludingTax
+    * @return float|null The amountExcludingTax
     */
     public function getAmountExcludingTax()
     {
         if (array_key_exists("amountExcludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["amountExcludingTax"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["amountExcludingTax"])) {
-                return $this->_propDict["amountExcludingTax"];
-            } else {
-                $this->_propDict["amountExcludingTax"] = new Decimal($this->_propDict["amountExcludingTax"]);
-                return $this->_propDict["amountExcludingTax"];
-            }
+            return $this->_propDict["amountExcludingTax"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the amountExcludingTax
     *
-    * @param Decimal $val The amountExcludingTax
+    * @param float $val The amountExcludingTax
     *
     * @return SalesQuoteLine
     */
     public function setAmountExcludingTax($val)
     {
-        $this->_propDict["amountExcludingTax"] = $val;
+        $this->_propDict["amountExcludingTax"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the amountIncludingTax
     *
-    * @return Decimal|null The amountIncludingTax
+    * @return float|null The amountIncludingTax
     */
     public function getAmountIncludingTax()
     {
         if (array_key_exists("amountIncludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["amountIncludingTax"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["amountIncludingTax"])) {
-                return $this->_propDict["amountIncludingTax"];
-            } else {
-                $this->_propDict["amountIncludingTax"] = new Decimal($this->_propDict["amountIncludingTax"]);
-                return $this->_propDict["amountIncludingTax"];
-            }
+            return $this->_propDict["amountIncludingTax"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the amountIncludingTax
     *
-    * @param Decimal $val The amountIncludingTax
+    * @param float $val The amountIncludingTax
     *
     * @return SalesQuoteLine
     */
     public function setAmountIncludingTax($val)
     {
-        $this->_propDict["amountIncludingTax"] = $val;
+        $this->_propDict["amountIncludingTax"] = floatval($val);
         return $this;
     }
     
@@ -143,31 +135,27 @@ class SalesQuoteLine extends Entity
     /**
     * Gets the discountAmount
     *
-    * @return Decimal|null The discountAmount
+    * @return float|null The discountAmount
     */
     public function getDiscountAmount()
     {
         if (array_key_exists("discountAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["discountAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["discountAmount"])) {
-                return $this->_propDict["discountAmount"];
-            } else {
-                $this->_propDict["discountAmount"] = new Decimal($this->_propDict["discountAmount"]);
-                return $this->_propDict["discountAmount"];
-            }
+            return $this->_propDict["discountAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the discountAmount
     *
-    * @param Decimal $val The discountAmount
+    * @param float $val The discountAmount
     *
     * @return SalesQuoteLine
     */
     public function setDiscountAmount($val)
     {
-        $this->_propDict["discountAmount"] = $val;
+        $this->_propDict["discountAmount"] = floatval($val);
         return $this;
     }
     
@@ -201,31 +189,27 @@ class SalesQuoteLine extends Entity
     /**
     * Gets the discountPercent
     *
-    * @return Decimal|null The discountPercent
+    * @return float|null The discountPercent
     */
     public function getDiscountPercent()
     {
         if (array_key_exists("discountPercent", $this->_propDict)) {
-            if (is_a($this->_propDict["discountPercent"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["discountPercent"])) {
-                return $this->_propDict["discountPercent"];
-            } else {
-                $this->_propDict["discountPercent"] = new Decimal($this->_propDict["discountPercent"]);
-                return $this->_propDict["discountPercent"];
-            }
+            return $this->_propDict["discountPercent"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the discountPercent
     *
-    * @param Decimal $val The discountPercent
+    * @param float $val The discountPercent
     *
     * @return SalesQuoteLine
     */
     public function setDiscountPercent($val)
     {
-        $this->_propDict["discountPercent"] = $val;
+        $this->_propDict["discountPercent"] = floatval($val);
         return $this;
     }
     
@@ -313,124 +297,108 @@ class SalesQuoteLine extends Entity
     /**
     * Gets the netAmount
     *
-    * @return Decimal|null The netAmount
+    * @return float|null The netAmount
     */
     public function getNetAmount()
     {
         if (array_key_exists("netAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["netAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["netAmount"])) {
-                return $this->_propDict["netAmount"];
-            } else {
-                $this->_propDict["netAmount"] = new Decimal($this->_propDict["netAmount"]);
-                return $this->_propDict["netAmount"];
-            }
+            return $this->_propDict["netAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the netAmount
     *
-    * @param Decimal $val The netAmount
+    * @param float $val The netAmount
     *
     * @return SalesQuoteLine
     */
     public function setNetAmount($val)
     {
-        $this->_propDict["netAmount"] = $val;
+        $this->_propDict["netAmount"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the netAmountIncludingTax
     *
-    * @return Decimal|null The netAmountIncludingTax
+    * @return float|null The netAmountIncludingTax
     */
     public function getNetAmountIncludingTax()
     {
         if (array_key_exists("netAmountIncludingTax", $this->_propDict)) {
-            if (is_a($this->_propDict["netAmountIncludingTax"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["netAmountIncludingTax"])) {
-                return $this->_propDict["netAmountIncludingTax"];
-            } else {
-                $this->_propDict["netAmountIncludingTax"] = new Decimal($this->_propDict["netAmountIncludingTax"]);
-                return $this->_propDict["netAmountIncludingTax"];
-            }
+            return $this->_propDict["netAmountIncludingTax"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the netAmountIncludingTax
     *
-    * @param Decimal $val The netAmountIncludingTax
+    * @param float $val The netAmountIncludingTax
     *
     * @return SalesQuoteLine
     */
     public function setNetAmountIncludingTax($val)
     {
-        $this->_propDict["netAmountIncludingTax"] = $val;
+        $this->_propDict["netAmountIncludingTax"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the netTaxAmount
     *
-    * @return Decimal|null The netTaxAmount
+    * @return float|null The netTaxAmount
     */
     public function getNetTaxAmount()
     {
         if (array_key_exists("netTaxAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["netTaxAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["netTaxAmount"])) {
-                return $this->_propDict["netTaxAmount"];
-            } else {
-                $this->_propDict["netTaxAmount"] = new Decimal($this->_propDict["netTaxAmount"]);
-                return $this->_propDict["netTaxAmount"];
-            }
+            return $this->_propDict["netTaxAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the netTaxAmount
     *
-    * @param Decimal $val The netTaxAmount
+    * @param float $val The netTaxAmount
     *
     * @return SalesQuoteLine
     */
     public function setNetTaxAmount($val)
     {
-        $this->_propDict["netTaxAmount"] = $val;
+        $this->_propDict["netTaxAmount"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the quantity
     *
-    * @return Decimal|null The quantity
+    * @return float|null The quantity
     */
     public function getQuantity()
     {
         if (array_key_exists("quantity", $this->_propDict)) {
-            if (is_a($this->_propDict["quantity"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["quantity"])) {
-                return $this->_propDict["quantity"];
-            } else {
-                $this->_propDict["quantity"] = new Decimal($this->_propDict["quantity"]);
-                return $this->_propDict["quantity"];
-            }
+            return $this->_propDict["quantity"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the quantity
     *
-    * @param Decimal $val The quantity
+    * @param float $val The quantity
     *
     * @return SalesQuoteLine
     */
     public function setQuantity($val)
     {
-        $this->_propDict["quantity"] = $val;
+        $this->_propDict["quantity"] = floatval($val);
         return $this;
     }
     
@@ -491,62 +459,54 @@ class SalesQuoteLine extends Entity
     /**
     * Gets the taxPercent
     *
-    * @return Decimal|null The taxPercent
+    * @return float|null The taxPercent
     */
     public function getTaxPercent()
     {
         if (array_key_exists("taxPercent", $this->_propDict)) {
-            if (is_a($this->_propDict["taxPercent"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["taxPercent"])) {
-                return $this->_propDict["taxPercent"];
-            } else {
-                $this->_propDict["taxPercent"] = new Decimal($this->_propDict["taxPercent"]);
-                return $this->_propDict["taxPercent"];
-            }
+            return $this->_propDict["taxPercent"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the taxPercent
     *
-    * @param Decimal $val The taxPercent
+    * @param float $val The taxPercent
     *
     * @return SalesQuoteLine
     */
     public function setTaxPercent($val)
     {
-        $this->_propDict["taxPercent"] = $val;
+        $this->_propDict["taxPercent"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the totalTaxAmount
     *
-    * @return Decimal|null The totalTaxAmount
+    * @return float|null The totalTaxAmount
     */
     public function getTotalTaxAmount()
     {
         if (array_key_exists("totalTaxAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["totalTaxAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["totalTaxAmount"])) {
-                return $this->_propDict["totalTaxAmount"];
-            } else {
-                $this->_propDict["totalTaxAmount"] = new Decimal($this->_propDict["totalTaxAmount"]);
-                return $this->_propDict["totalTaxAmount"];
-            }
+            return $this->_propDict["totalTaxAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the totalTaxAmount
     *
-    * @param Decimal $val The totalTaxAmount
+    * @param float $val The totalTaxAmount
     *
     * @return SalesQuoteLine
     */
     public function setTotalTaxAmount($val)
     {
-        $this->_propDict["totalTaxAmount"] = $val;
+        $this->_propDict["totalTaxAmount"] = floatval($val);
         return $this;
     }
     
@@ -580,31 +540,27 @@ class SalesQuoteLine extends Entity
     /**
     * Gets the unitPrice
     *
-    * @return Decimal|null The unitPrice
+    * @return float|null The unitPrice
     */
     public function getUnitPrice()
     {
         if (array_key_exists("unitPrice", $this->_propDict)) {
-            if (is_a($this->_propDict["unitPrice"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["unitPrice"])) {
-                return $this->_propDict["unitPrice"];
-            } else {
-                $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
-                return $this->_propDict["unitPrice"];
-            }
+            return $this->_propDict["unitPrice"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the unitPrice
     *
-    * @param Decimal $val The unitPrice
+    * @param float $val The unitPrice
     *
     * @return SalesQuoteLine
     */
     public function setUnitPrice($val)
     {
-        $this->_propDict["unitPrice"] = $val;
+        $this->_propDict["unitPrice"] = floatval($val);
         return $this;
     }
     

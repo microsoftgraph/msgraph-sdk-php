@@ -58,31 +58,27 @@ class Vendor extends Entity
     /**
     * Gets the balance
     *
-    * @return Decimal|null The balance
+    * @return float|null The balance
     */
     public function getBalance()
     {
         if (array_key_exists("balance", $this->_propDict)) {
-            if (is_a($this->_propDict["balance"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["balance"])) {
-                return $this->_propDict["balance"];
-            } else {
-                $this->_propDict["balance"] = new Decimal($this->_propDict["balance"]);
-                return $this->_propDict["balance"];
-            }
+            return $this->_propDict["balance"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the balance
     *
-    * @param Decimal $val The balance
+    * @param float $val The balance
     *
     * @return Vendor
     */
     public function setBalance($val)
     {
-        $this->_propDict["balance"] = $val;
+        $this->_propDict["balance"] = floatval($val);
         return $this;
     }
     

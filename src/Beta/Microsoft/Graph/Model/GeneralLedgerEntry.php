@@ -81,62 +81,54 @@ class GeneralLedgerEntry extends Entity
     /**
     * Gets the creditAmount
     *
-    * @return Decimal|null The creditAmount
+    * @return float|null The creditAmount
     */
     public function getCreditAmount()
     {
         if (array_key_exists("creditAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["creditAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["creditAmount"])) {
-                return $this->_propDict["creditAmount"];
-            } else {
-                $this->_propDict["creditAmount"] = new Decimal($this->_propDict["creditAmount"]);
-                return $this->_propDict["creditAmount"];
-            }
+            return $this->_propDict["creditAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the creditAmount
     *
-    * @param Decimal $val The creditAmount
+    * @param float $val The creditAmount
     *
     * @return GeneralLedgerEntry
     */
     public function setCreditAmount($val)
     {
-        $this->_propDict["creditAmount"] = $val;
+        $this->_propDict["creditAmount"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the debitAmount
     *
-    * @return Decimal|null The debitAmount
+    * @return float|null The debitAmount
     */
     public function getDebitAmount()
     {
         if (array_key_exists("debitAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["debitAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["debitAmount"])) {
-                return $this->_propDict["debitAmount"];
-            } else {
-                $this->_propDict["debitAmount"] = new Decimal($this->_propDict["debitAmount"]);
-                return $this->_propDict["debitAmount"];
-            }
+            return $this->_propDict["debitAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the debitAmount
     *
-    * @param Decimal $val The debitAmount
+    * @param float $val The debitAmount
     *
     * @return GeneralLedgerEntry
     */
     public function setDebitAmount($val)
     {
-        $this->_propDict["debitAmount"] = $val;
+        $this->_propDict["debitAmount"] = floatval($val);
         return $this;
     }
     
@@ -255,15 +247,15 @@ class GeneralLedgerEntry extends Entity
     /**
     * Gets the postingDate
     *
-    * @return \DateTime|null The postingDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The postingDate
     */
     public function getPostingDate()
     {
         if (array_key_exists("postingDate", $this->_propDict)) {
-            if (is_a($this->_propDict["postingDate"], "\DateTime") || is_null($this->_propDict["postingDate"])) {
+            if (is_a($this->_propDict["postingDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["postingDate"])) {
                 return $this->_propDict["postingDate"];
             } else {
-                $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
+                $this->_propDict["postingDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["postingDate"]);
                 return $this->_propDict["postingDate"];
             }
         }
@@ -273,7 +265,7 @@ class GeneralLedgerEntry extends Entity
     /**
     * Sets the postingDate
     *
-    * @param \DateTime $val The postingDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The postingDate
     *
     * @return GeneralLedgerEntry
     */

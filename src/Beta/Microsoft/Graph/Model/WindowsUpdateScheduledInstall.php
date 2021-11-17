@@ -72,15 +72,15 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     * Gets the scheduledInstallTime
     * Scheduled Install Time during day
     *
-    * @return TimeOfDay|null The scheduledInstallTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The scheduledInstallTime
     */
     public function getScheduledInstallTime()
     {
         if (array_key_exists("scheduledInstallTime", $this->_propDict)) {
-            if (is_a($this->_propDict["scheduledInstallTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["scheduledInstallTime"])) {
+            if (is_a($this->_propDict["scheduledInstallTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["scheduledInstallTime"])) {
                 return $this->_propDict["scheduledInstallTime"];
             } else {
-                $this->_propDict["scheduledInstallTime"] = new TimeOfDay($this->_propDict["scheduledInstallTime"]);
+                $this->_propDict["scheduledInstallTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["scheduledInstallTime"]);
                 return $this->_propDict["scheduledInstallTime"];
             }
         }
@@ -91,7 +91,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType
     * Sets the scheduledInstallTime
     * Scheduled Install Time during day
     *
-    * @param TimeOfDay $val The value to assign to the scheduledInstallTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the scheduledInstallTime
     *
     * @return WindowsUpdateScheduledInstall The WindowsUpdateScheduledInstall
     */

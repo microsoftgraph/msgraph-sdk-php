@@ -28,15 +28,15 @@ class EducationStudent extends Entity
     * Gets the birthDate
     * Birth date of the student.
     *
-    * @return \DateTime|null The birthDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The birthDate
     */
     public function getBirthDate()
     {
         if (array_key_exists("birthDate", $this->_propDict)) {
-            if (is_a($this->_propDict["birthDate"], "\DateTime") || is_null($this->_propDict["birthDate"])) {
+            if (is_a($this->_propDict["birthDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["birthDate"])) {
                 return $this->_propDict["birthDate"];
             } else {
-                $this->_propDict["birthDate"] = new \DateTime($this->_propDict["birthDate"]);
+                $this->_propDict["birthDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["birthDate"]);
                 return $this->_propDict["birthDate"];
             }
         }
@@ -47,7 +47,7 @@ class EducationStudent extends Entity
     * Sets the birthDate
     * Birth date of the student.
     *
-    * @param \DateTime $val The value to assign to the birthDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the birthDate
     *
     * @return EducationStudent The EducationStudent
     */

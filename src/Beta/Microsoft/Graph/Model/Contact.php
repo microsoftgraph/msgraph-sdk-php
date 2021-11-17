@@ -846,15 +846,15 @@ class Contact extends OutlookItem
     /**
     * Gets the weddingAnniversary
     *
-    * @return \DateTime|null The weddingAnniversary
+    * @return \Microsoft\Graph\Core\Models\Date|null The weddingAnniversary
     */
     public function getWeddingAnniversary()
     {
         if (array_key_exists("weddingAnniversary", $this->_propDict)) {
-            if (is_a($this->_propDict["weddingAnniversary"], "\DateTime") || is_null($this->_propDict["weddingAnniversary"])) {
+            if (is_a($this->_propDict["weddingAnniversary"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["weddingAnniversary"])) {
                 return $this->_propDict["weddingAnniversary"];
             } else {
-                $this->_propDict["weddingAnniversary"] = new \DateTime($this->_propDict["weddingAnniversary"]);
+                $this->_propDict["weddingAnniversary"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["weddingAnniversary"]);
                 return $this->_propDict["weddingAnniversary"];
             }
         }
@@ -864,7 +864,7 @@ class Contact extends OutlookItem
     /**
     * Sets the weddingAnniversary
     *
-    * @param \DateTime $val The weddingAnniversary
+    * @param \Microsoft\Graph\Core\Models\Date $val The weddingAnniversary
     *
     * @return Contact
     */

@@ -135,31 +135,27 @@ class Item extends Entity
     /**
     * Gets the inventory
     *
-    * @return Decimal|null The inventory
+    * @return float|null The inventory
     */
     public function getInventory()
     {
         if (array_key_exists("inventory", $this->_propDict)) {
-            if (is_a($this->_propDict["inventory"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["inventory"])) {
-                return $this->_propDict["inventory"];
-            } else {
-                $this->_propDict["inventory"] = new Decimal($this->_propDict["inventory"]);
-                return $this->_propDict["inventory"];
-            }
+            return $this->_propDict["inventory"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the inventory
     *
-    * @param Decimal $val The inventory
+    * @param float $val The inventory
     *
     * @return Item
     */
     public function setInventory($val)
     {
-        $this->_propDict["inventory"] = $val;
+        $this->_propDict["inventory"] = floatval($val);
         return $this;
     }
     
@@ -386,62 +382,54 @@ class Item extends Entity
     /**
     * Gets the unitCost
     *
-    * @return Decimal|null The unitCost
+    * @return float|null The unitCost
     */
     public function getUnitCost()
     {
         if (array_key_exists("unitCost", $this->_propDict)) {
-            if (is_a($this->_propDict["unitCost"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["unitCost"])) {
-                return $this->_propDict["unitCost"];
-            } else {
-                $this->_propDict["unitCost"] = new Decimal($this->_propDict["unitCost"]);
-                return $this->_propDict["unitCost"];
-            }
+            return $this->_propDict["unitCost"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the unitCost
     *
-    * @param Decimal $val The unitCost
+    * @param float $val The unitCost
     *
     * @return Item
     */
     public function setUnitCost($val)
     {
-        $this->_propDict["unitCost"] = $val;
+        $this->_propDict["unitCost"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the unitPrice
     *
-    * @return Decimal|null The unitPrice
+    * @return float|null The unitPrice
     */
     public function getUnitPrice()
     {
         if (array_key_exists("unitPrice", $this->_propDict)) {
-            if (is_a($this->_propDict["unitPrice"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["unitPrice"])) {
-                return $this->_propDict["unitPrice"];
-            } else {
-                $this->_propDict["unitPrice"] = new Decimal($this->_propDict["unitPrice"]);
-                return $this->_propDict["unitPrice"];
-            }
+            return $this->_propDict["unitPrice"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the unitPrice
     *
-    * @param Decimal $val The unitPrice
+    * @param float $val The unitPrice
     *
     * @return Item
     */
     public function setUnitPrice($val)
     {
-        $this->_propDict["unitPrice"] = $val;
+        $this->_propDict["unitPrice"] = floatval($val);
         return $this;
     }
     

@@ -1754,15 +1754,15 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     * Gets the defenderScheduledQuickScanTime
     * The time to perform a daily quick scan.
     *
-    * @return TimeOfDay|null The defenderScheduledQuickScanTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The defenderScheduledQuickScanTime
     */
     public function getDefenderScheduledQuickScanTime()
     {
         if (array_key_exists("defenderScheduledQuickScanTime", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScheduledQuickScanTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["defenderScheduledQuickScanTime"])) {
+            if (is_a($this->_propDict["defenderScheduledQuickScanTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["defenderScheduledQuickScanTime"])) {
                 return $this->_propDict["defenderScheduledQuickScanTime"];
             } else {
-                $this->_propDict["defenderScheduledQuickScanTime"] = new TimeOfDay($this->_propDict["defenderScheduledQuickScanTime"]);
+                $this->_propDict["defenderScheduledQuickScanTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["defenderScheduledQuickScanTime"]);
                 return $this->_propDict["defenderScheduledQuickScanTime"];
             }
         }
@@ -1773,7 +1773,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     * Sets the defenderScheduledQuickScanTime
     * The time to perform a daily quick scan.
     *
-    * @param TimeOfDay $val The defenderScheduledQuickScanTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The defenderScheduledQuickScanTime
     *
     * @return Windows10GeneralConfiguration
     */
@@ -1787,15 +1787,15 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     * Gets the defenderScheduledScanTime
     * The defender time for the system scan.
     *
-    * @return TimeOfDay|null The defenderScheduledScanTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The defenderScheduledScanTime
     */
     public function getDefenderScheduledScanTime()
     {
         if (array_key_exists("defenderScheduledScanTime", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScheduledScanTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["defenderScheduledScanTime"])) {
+            if (is_a($this->_propDict["defenderScheduledScanTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["defenderScheduledScanTime"])) {
                 return $this->_propDict["defenderScheduledScanTime"];
             } else {
-                $this->_propDict["defenderScheduledScanTime"] = new TimeOfDay($this->_propDict["defenderScheduledScanTime"]);
+                $this->_propDict["defenderScheduledScanTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["defenderScheduledScanTime"]);
                 return $this->_propDict["defenderScheduledScanTime"];
             }
         }
@@ -1806,7 +1806,7 @@ class Windows10GeneralConfiguration extends DeviceConfiguration
     * Sets the defenderScheduledScanTime
     * The defender time for the system scan.
     *
-    * @param TimeOfDay $val The defenderScheduledScanTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The defenderScheduledScanTime
     *
     * @return Windows10GeneralConfiguration
     */

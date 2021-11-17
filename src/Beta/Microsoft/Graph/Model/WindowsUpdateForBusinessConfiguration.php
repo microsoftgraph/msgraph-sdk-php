@@ -483,15 +483,15 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the featureUpdatesPauseStartDate
     * Feature Updates Pause start date. This property is read-only.
     *
-    * @return \DateTime|null The featureUpdatesPauseStartDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The featureUpdatesPauseStartDate
     */
     public function getFeatureUpdatesPauseStartDate()
     {
         if (array_key_exists("featureUpdatesPauseStartDate", $this->_propDict)) {
-            if (is_a($this->_propDict["featureUpdatesPauseStartDate"], "\DateTime") || is_null($this->_propDict["featureUpdatesPauseStartDate"])) {
+            if (is_a($this->_propDict["featureUpdatesPauseStartDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["featureUpdatesPauseStartDate"])) {
                 return $this->_propDict["featureUpdatesPauseStartDate"];
             } else {
-                $this->_propDict["featureUpdatesPauseStartDate"] = new \DateTime($this->_propDict["featureUpdatesPauseStartDate"]);
+                $this->_propDict["featureUpdatesPauseStartDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["featureUpdatesPauseStartDate"]);
                 return $this->_propDict["featureUpdatesPauseStartDate"];
             }
         }
@@ -502,7 +502,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Sets the featureUpdatesPauseStartDate
     * Feature Updates Pause start date. This property is read-only.
     *
-    * @param \DateTime $val The featureUpdatesPauseStartDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The featureUpdatesPauseStartDate
     *
     * @return WindowsUpdateForBusinessConfiguration
     */
@@ -822,15 +822,15 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Gets the qualityUpdatesPauseStartDate
     * Quality Updates Pause start date. This property is read-only.
     *
-    * @return \DateTime|null The qualityUpdatesPauseStartDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The qualityUpdatesPauseStartDate
     */
     public function getQualityUpdatesPauseStartDate()
     {
         if (array_key_exists("qualityUpdatesPauseStartDate", $this->_propDict)) {
-            if (is_a($this->_propDict["qualityUpdatesPauseStartDate"], "\DateTime") || is_null($this->_propDict["qualityUpdatesPauseStartDate"])) {
+            if (is_a($this->_propDict["qualityUpdatesPauseStartDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["qualityUpdatesPauseStartDate"])) {
                 return $this->_propDict["qualityUpdatesPauseStartDate"];
             } else {
-                $this->_propDict["qualityUpdatesPauseStartDate"] = new \DateTime($this->_propDict["qualityUpdatesPauseStartDate"]);
+                $this->_propDict["qualityUpdatesPauseStartDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["qualityUpdatesPauseStartDate"]);
                 return $this->_propDict["qualityUpdatesPauseStartDate"];
             }
         }
@@ -841,7 +841,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration
     * Sets the qualityUpdatesPauseStartDate
     * Quality Updates Pause start date. This property is read-only.
     *
-    * @param \DateTime $val The qualityUpdatesPauseStartDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The qualityUpdatesPauseStartDate
     *
     * @return WindowsUpdateForBusinessConfiguration
     */

@@ -115,15 +115,15 @@ class Office365ActiveUserCounts extends Entity
     * Gets the reportDate
     * The date on which a number of users were active.
     *
-    * @return \DateTime|null The reportDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The reportDate
     */
     public function getReportDate()
     {
         if (array_key_exists("reportDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportDate"], "\DateTime") || is_null($this->_propDict["reportDate"])) {
+            if (is_a($this->_propDict["reportDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["reportDate"])) {
                 return $this->_propDict["reportDate"];
             } else {
-                $this->_propDict["reportDate"] = new \DateTime($this->_propDict["reportDate"]);
+                $this->_propDict["reportDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["reportDate"]);
                 return $this->_propDict["reportDate"];
             }
         }
@@ -134,7 +134,7 @@ class Office365ActiveUserCounts extends Entity
     * Sets the reportDate
     * The date on which a number of users were active.
     *
-    * @param \DateTime $val The reportDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The reportDate
     *
     * @return Office365ActiveUserCounts
     */
@@ -177,15 +177,15 @@ class Office365ActiveUserCounts extends Entity
     * Gets the reportRefreshDate
     * The latest date of the content.
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                $this->_propDict["reportRefreshDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["reportRefreshDate"]);
                 return $this->_propDict["reportRefreshDate"];
             }
         }
@@ -196,7 +196,7 @@ class Office365ActiveUserCounts extends Entity
     * Sets the reportRefreshDate
     * The latest date of the content.
     *
-    * @param \DateTime $val The reportRefreshDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The reportRefreshDate
     *
     * @return Office365ActiveUserCounts
     */

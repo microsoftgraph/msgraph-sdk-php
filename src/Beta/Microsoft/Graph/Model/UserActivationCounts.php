@@ -112,15 +112,15 @@ class UserActivationCounts extends Entity
     * Gets the lastActivatedDate
     * The date of the latest activation.
     *
-    * @return \DateTime|null The lastActivatedDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The lastActivatedDate
     */
     public function getLastActivatedDate()
     {
         if (array_key_exists("lastActivatedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivatedDate"], "\DateTime") || is_null($this->_propDict["lastActivatedDate"])) {
+            if (is_a($this->_propDict["lastActivatedDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["lastActivatedDate"])) {
                 return $this->_propDict["lastActivatedDate"];
             } else {
-                $this->_propDict["lastActivatedDate"] = new \DateTime($this->_propDict["lastActivatedDate"]);
+                $this->_propDict["lastActivatedDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["lastActivatedDate"]);
                 return $this->_propDict["lastActivatedDate"];
             }
         }
@@ -131,7 +131,7 @@ class UserActivationCounts extends Entity
     * Sets the lastActivatedDate
     * The date of the latest activation.
     *
-    * @param \DateTime $val The value to assign to the lastActivatedDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the lastActivatedDate
     *
     * @return UserActivationCounts The UserActivationCounts
     */

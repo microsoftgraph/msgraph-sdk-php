@@ -28,15 +28,15 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the activeHoursEnd
     * Active Hours End (active hours mean the time window when updates install should not happen)
     *
-    * @return TimeOfDay|null The activeHoursEnd
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The activeHoursEnd
     */
     public function getActiveHoursEnd()
     {
         if (array_key_exists("activeHoursEnd", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursEnd"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["activeHoursEnd"])) {
+            if (is_a($this->_propDict["activeHoursEnd"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["activeHoursEnd"])) {
                 return $this->_propDict["activeHoursEnd"];
             } else {
-                $this->_propDict["activeHoursEnd"] = new TimeOfDay($this->_propDict["activeHoursEnd"]);
+                $this->_propDict["activeHoursEnd"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["activeHoursEnd"]);
                 return $this->_propDict["activeHoursEnd"];
             }
         }
@@ -47,7 +47,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Sets the activeHoursEnd
     * Active Hours End (active hours mean the time window when updates install should not happen)
     *
-    * @param TimeOfDay $val The activeHoursEnd
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The activeHoursEnd
     *
     * @return IosUpdateConfiguration
     */
@@ -61,15 +61,15 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Gets the activeHoursStart
     * Active Hours Start (active hours mean the time window when updates install should not happen)
     *
-    * @return TimeOfDay|null The activeHoursStart
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The activeHoursStart
     */
     public function getActiveHoursStart()
     {
         if (array_key_exists("activeHoursStart", $this->_propDict)) {
-            if (is_a($this->_propDict["activeHoursStart"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["activeHoursStart"])) {
+            if (is_a($this->_propDict["activeHoursStart"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["activeHoursStart"])) {
                 return $this->_propDict["activeHoursStart"];
             } else {
-                $this->_propDict["activeHoursStart"] = new TimeOfDay($this->_propDict["activeHoursStart"]);
+                $this->_propDict["activeHoursStart"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["activeHoursStart"]);
                 return $this->_propDict["activeHoursStart"];
             }
         }
@@ -80,7 +80,7 @@ class IosUpdateConfiguration extends DeviceConfiguration
     * Sets the activeHoursStart
     * Active Hours Start (active hours mean the time window when updates install should not happen)
     *
-    * @param TimeOfDay $val The activeHoursStart
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The activeHoursStart
     *
     * @return IosUpdateConfiguration
     */

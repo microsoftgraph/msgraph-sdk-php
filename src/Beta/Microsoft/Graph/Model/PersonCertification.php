@@ -115,15 +115,15 @@ class PersonCertification extends ItemFacet
     * Gets the endDate
     * The date that the certification expires.
     *
-    * @return \DateTime|null The endDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The endDate
     */
     public function getEndDate()
     {
         if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "\DateTime") || is_null($this->_propDict["endDate"])) {
+            if (is_a($this->_propDict["endDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["endDate"])) {
                 return $this->_propDict["endDate"];
             } else {
-                $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
+                $this->_propDict["endDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["endDate"]);
                 return $this->_propDict["endDate"];
             }
         }
@@ -134,7 +134,7 @@ class PersonCertification extends ItemFacet
     * Sets the endDate
     * The date that the certification expires.
     *
-    * @param \DateTime $val The endDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The endDate
     *
     * @return PersonCertification
     */
@@ -148,15 +148,15 @@ class PersonCertification extends ItemFacet
     * Gets the issuedDate
     * The date that the certification was issued.
     *
-    * @return \DateTime|null The issuedDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The issuedDate
     */
     public function getIssuedDate()
     {
         if (array_key_exists("issuedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["issuedDate"], "\DateTime") || is_null($this->_propDict["issuedDate"])) {
+            if (is_a($this->_propDict["issuedDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["issuedDate"])) {
                 return $this->_propDict["issuedDate"];
             } else {
-                $this->_propDict["issuedDate"] = new \DateTime($this->_propDict["issuedDate"]);
+                $this->_propDict["issuedDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["issuedDate"]);
                 return $this->_propDict["issuedDate"];
             }
         }
@@ -167,7 +167,7 @@ class PersonCertification extends ItemFacet
     * Sets the issuedDate
     * The date that the certification was issued.
     *
-    * @param \DateTime $val The issuedDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The issuedDate
     *
     * @return PersonCertification
     */
@@ -239,15 +239,15 @@ class PersonCertification extends ItemFacet
     * Gets the startDate
     * The date that the certification became valid.
     *
-    * @return \DateTime|null The startDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The startDate
     */
     public function getStartDate()
     {
         if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "\DateTime") || is_null($this->_propDict["startDate"])) {
+            if (is_a($this->_propDict["startDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["startDate"])) {
                 return $this->_propDict["startDate"];
             } else {
-                $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
+                $this->_propDict["startDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["startDate"]);
                 return $this->_propDict["startDate"];
             }
         }
@@ -258,7 +258,7 @@ class PersonCertification extends ItemFacet
     * Sets the startDate
     * The date that the certification became valid.
     *
-    * @param \DateTime $val The startDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The startDate
     *
     * @return PersonCertification
     */

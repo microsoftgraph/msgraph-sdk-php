@@ -56,15 +56,15 @@ class EducationTerm extends Entity
     * Gets the endDate
     * End of the term.
     *
-    * @return \DateTime|null The endDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The endDate
     */
     public function getEndDate()
     {
         if (array_key_exists("endDate", $this->_propDict)) {
-            if (is_a($this->_propDict["endDate"], "\DateTime") || is_null($this->_propDict["endDate"])) {
+            if (is_a($this->_propDict["endDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["endDate"])) {
                 return $this->_propDict["endDate"];
             } else {
-                $this->_propDict["endDate"] = new \DateTime($this->_propDict["endDate"]);
+                $this->_propDict["endDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["endDate"]);
                 return $this->_propDict["endDate"];
             }
         }
@@ -75,7 +75,7 @@ class EducationTerm extends Entity
     * Sets the endDate
     * End of the term.
     *
-    * @param \DateTime $val The value to assign to the endDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the endDate
     *
     * @return EducationTerm The EducationTerm
     */
@@ -117,15 +117,15 @@ class EducationTerm extends Entity
     * Gets the startDate
     * Start of the term.
     *
-    * @return \DateTime|null The startDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The startDate
     */
     public function getStartDate()
     {
         if (array_key_exists("startDate", $this->_propDict)) {
-            if (is_a($this->_propDict["startDate"], "\DateTime") || is_null($this->_propDict["startDate"])) {
+            if (is_a($this->_propDict["startDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["startDate"])) {
                 return $this->_propDict["startDate"];
             } else {
-                $this->_propDict["startDate"] = new \DateTime($this->_propDict["startDate"]);
+                $this->_propDict["startDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["startDate"]);
                 return $this->_propDict["startDate"];
             }
         }
@@ -136,7 +136,7 @@ class EducationTerm extends Entity
     * Sets the startDate
     * Start of the term.
     *
-    * @param \DateTime $val The value to assign to the startDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the startDate
     *
     * @return EducationTerm The EducationTerm
     */

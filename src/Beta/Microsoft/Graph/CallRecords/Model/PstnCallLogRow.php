@@ -168,38 +168,33 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["callType"] = $val;
         return $this;
     }
-
     /**
     * Gets the charge
     * Amount of money or cost of the call that is charged to your account.
     *
-    * @return \Beta\Microsoft\Graph\Model\Decimal|null The charge
+    * @return float|null The charge
     */
     public function getCharge()
     {
         if (array_key_exists("charge", $this->_propDict)) {
-            if (is_a($this->_propDict["charge"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["charge"])) {
-                return $this->_propDict["charge"];
-            } else {
-                $this->_propDict["charge"] = new \Beta\Microsoft\Graph\Model\Decimal($this->_propDict["charge"]);
-                return $this->_propDict["charge"];
-            }
+            return $this->_propDict["charge"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
     * Sets the charge
     * Amount of money or cost of the call that is charged to your account.
     *
-    * @param \Beta\Microsoft\Graph\Model\Decimal $val The value to assign to the charge
+    * @param float $val The value of the charge
     *
-    * @return PstnCallLogRow The PstnCallLogRow
+    * @return PstnCallLogRow
     */
     public function setCharge($val)
     {
         $this->_propDict["charge"] = $val;
-         return $this;
+        return $this;
     }
     /**
     * Gets the conferenceId
@@ -229,38 +224,33 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["conferenceId"] = $val;
         return $this;
     }
-
     /**
     * Gets the connectionCharge
     * Connection fee price.
     *
-    * @return \Beta\Microsoft\Graph\Model\Decimal|null The connectionCharge
+    * @return float|null The connectionCharge
     */
     public function getConnectionCharge()
     {
         if (array_key_exists("connectionCharge", $this->_propDict)) {
-            if (is_a($this->_propDict["connectionCharge"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["connectionCharge"])) {
-                return $this->_propDict["connectionCharge"];
-            } else {
-                $this->_propDict["connectionCharge"] = new \Beta\Microsoft\Graph\Model\Decimal($this->_propDict["connectionCharge"]);
-                return $this->_propDict["connectionCharge"];
-            }
+            return $this->_propDict["connectionCharge"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
     * Sets the connectionCharge
     * Connection fee price.
     *
-    * @param \Beta\Microsoft\Graph\Model\Decimal $val The value to assign to the connectionCharge
+    * @param float $val The value of the connectionCharge
     *
-    * @return PstnCallLogRow The PstnCallLogRow
+    * @return PstnCallLogRow
     */
     public function setConnectionCharge($val)
     {
         $this->_propDict["connectionCharge"] = $val;
-         return $this;
+        return $this;
     }
     /**
     * Gets the currency

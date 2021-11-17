@@ -89,15 +89,15 @@ class PositionDetail extends Entity
     * Gets the endMonthYear
     * When the position ended.
     *
-    * @return \DateTime|null The endMonthYear
+    * @return \Microsoft\Graph\Core\Models\Date|null The endMonthYear
     */
     public function getEndMonthYear()
     {
         if (array_key_exists("endMonthYear", $this->_propDict)) {
-            if (is_a($this->_propDict["endMonthYear"], "\DateTime") || is_null($this->_propDict["endMonthYear"])) {
+            if (is_a($this->_propDict["endMonthYear"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["endMonthYear"])) {
                 return $this->_propDict["endMonthYear"];
             } else {
-                $this->_propDict["endMonthYear"] = new \DateTime($this->_propDict["endMonthYear"]);
+                $this->_propDict["endMonthYear"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["endMonthYear"]);
                 return $this->_propDict["endMonthYear"];
             }
         }
@@ -108,7 +108,7 @@ class PositionDetail extends Entity
     * Sets the endMonthYear
     * When the position ended.
     *
-    * @param \DateTime $val The value to assign to the endMonthYear
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the endMonthYear
     *
     * @return PositionDetail The PositionDetail
     */
@@ -178,15 +178,15 @@ class PositionDetail extends Entity
     * Gets the startMonthYear
     * The start month and year of the position.
     *
-    * @return \DateTime|null The startMonthYear
+    * @return \Microsoft\Graph\Core\Models\Date|null The startMonthYear
     */
     public function getStartMonthYear()
     {
         if (array_key_exists("startMonthYear", $this->_propDict)) {
-            if (is_a($this->_propDict["startMonthYear"], "\DateTime") || is_null($this->_propDict["startMonthYear"])) {
+            if (is_a($this->_propDict["startMonthYear"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["startMonthYear"])) {
                 return $this->_propDict["startMonthYear"];
             } else {
-                $this->_propDict["startMonthYear"] = new \DateTime($this->_propDict["startMonthYear"]);
+                $this->_propDict["startMonthYear"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["startMonthYear"]);
                 return $this->_propDict["startMonthYear"];
             }
         }
@@ -197,7 +197,7 @@ class PositionDetail extends Entity
     * Sets the startMonthYear
     * The start month and year of the position.
     *
-    * @param \DateTime $val The value to assign to the startMonthYear
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the startMonthYear
     *
     * @return PositionDetail The PositionDetail
     */

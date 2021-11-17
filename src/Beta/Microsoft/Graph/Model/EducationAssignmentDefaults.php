@@ -94,15 +94,15 @@ class EducationAssignmentDefaults extends Entity
     * Gets the dueTime
     * Class-level default value for due time field. Default value is 23:59:00.
     *
-    * @return TimeOfDay|null The dueTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The dueTime
     */
     public function getDueTime()
     {
         if (array_key_exists("dueTime", $this->_propDict)) {
-            if (is_a($this->_propDict["dueTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["dueTime"])) {
+            if (is_a($this->_propDict["dueTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["dueTime"])) {
                 return $this->_propDict["dueTime"];
             } else {
-                $this->_propDict["dueTime"] = new TimeOfDay($this->_propDict["dueTime"]);
+                $this->_propDict["dueTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["dueTime"]);
                 return $this->_propDict["dueTime"];
             }
         }
@@ -113,7 +113,7 @@ class EducationAssignmentDefaults extends Entity
     * Sets the dueTime
     * Class-level default value for due time field. Default value is 23:59:00.
     *
-    * @param TimeOfDay $val The dueTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The dueTime
     *
     * @return EducationAssignmentDefaults
     */

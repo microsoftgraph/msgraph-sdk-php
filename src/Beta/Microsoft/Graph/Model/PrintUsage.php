@@ -108,15 +108,15 @@ class PrintUsage extends Entity
     /**
     * Gets the usageDate
     *
-    * @return \DateTime|null The usageDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The usageDate
     */
     public function getUsageDate()
     {
         if (array_key_exists("usageDate", $this->_propDict)) {
-            if (is_a($this->_propDict["usageDate"], "\DateTime") || is_null($this->_propDict["usageDate"])) {
+            if (is_a($this->_propDict["usageDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["usageDate"])) {
                 return $this->_propDict["usageDate"];
             } else {
-                $this->_propDict["usageDate"] = new \DateTime($this->_propDict["usageDate"]);
+                $this->_propDict["usageDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["usageDate"]);
                 return $this->_propDict["usageDate"];
             }
         }
@@ -126,7 +126,7 @@ class PrintUsage extends Entity
     /**
     * Sets the usageDate
     *
-    * @param \DateTime $val The usageDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The usageDate
     *
     * @return PrintUsage
     */

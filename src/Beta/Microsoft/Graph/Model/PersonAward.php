@@ -86,15 +86,15 @@ class PersonAward extends ItemFacet
     * Gets the issuedDate
     * The date that the award or honor was granted.
     *
-    * @return \DateTime|null The issuedDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The issuedDate
     */
     public function getIssuedDate()
     {
         if (array_key_exists("issuedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["issuedDate"], "\DateTime") || is_null($this->_propDict["issuedDate"])) {
+            if (is_a($this->_propDict["issuedDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["issuedDate"])) {
                 return $this->_propDict["issuedDate"];
             } else {
-                $this->_propDict["issuedDate"] = new \DateTime($this->_propDict["issuedDate"]);
+                $this->_propDict["issuedDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["issuedDate"]);
                 return $this->_propDict["issuedDate"];
             }
         }
@@ -105,7 +105,7 @@ class PersonAward extends ItemFacet
     * Sets the issuedDate
     * The date that the award or honor was granted.
     *
-    * @param \DateTime $val The issuedDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The issuedDate
     *
     * @return PersonAward
     */

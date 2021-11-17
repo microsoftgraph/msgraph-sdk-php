@@ -28,15 +28,15 @@ class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedule
     * Gets the time
     * At what time the script is scheduled to run. This collection can contain a maximum of 20 elements.
     *
-    * @return TimeOfDay|null The time
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The time
     */
     public function getTime()
     {
         if (array_key_exists("time", $this->_propDict)) {
-            if (is_a($this->_propDict["time"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["time"])) {
+            if (is_a($this->_propDict["time"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["time"])) {
                 return $this->_propDict["time"];
             } else {
-                $this->_propDict["time"] = new TimeOfDay($this->_propDict["time"]);
+                $this->_propDict["time"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["time"]);
                 return $this->_propDict["time"];
             }
         }
@@ -47,7 +47,7 @@ class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedule
     * Sets the time
     * At what time the script is scheduled to run. This collection can contain a maximum of 20 elements.
     *
-    * @param TimeOfDay $val The value to assign to the time
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the time
     *
     * @return DeviceHealthScriptTimeSchedule The DeviceHealthScriptTimeSchedule
     */

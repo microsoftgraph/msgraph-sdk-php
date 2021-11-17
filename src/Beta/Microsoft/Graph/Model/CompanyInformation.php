@@ -85,15 +85,15 @@ class CompanyInformation extends Entity
     /**
     * Gets the currentFiscalYearStartDate
     *
-    * @return \DateTime|null The currentFiscalYearStartDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The currentFiscalYearStartDate
     */
     public function getCurrentFiscalYearStartDate()
     {
         if (array_key_exists("currentFiscalYearStartDate", $this->_propDict)) {
-            if (is_a($this->_propDict["currentFiscalYearStartDate"], "\DateTime") || is_null($this->_propDict["currentFiscalYearStartDate"])) {
+            if (is_a($this->_propDict["currentFiscalYearStartDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["currentFiscalYearStartDate"])) {
                 return $this->_propDict["currentFiscalYearStartDate"];
             } else {
-                $this->_propDict["currentFiscalYearStartDate"] = new \DateTime($this->_propDict["currentFiscalYearStartDate"]);
+                $this->_propDict["currentFiscalYearStartDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["currentFiscalYearStartDate"]);
                 return $this->_propDict["currentFiscalYearStartDate"];
             }
         }
@@ -103,7 +103,7 @@ class CompanyInformation extends Entity
     /**
     * Sets the currentFiscalYearStartDate
     *
-    * @param \DateTime $val The currentFiscalYearStartDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The currentFiscalYearStartDate
     *
     * @return CompanyInformation
     */

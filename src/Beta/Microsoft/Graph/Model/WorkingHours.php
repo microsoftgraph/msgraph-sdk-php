@@ -61,15 +61,15 @@ class WorkingHours extends Entity
     * Gets the endTime
     * The time of the day that the user stops working.
     *
-    * @return TimeOfDay|null The endTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The endTime
     */
     public function getEndTime()
     {
         if (array_key_exists("endTime", $this->_propDict)) {
-            if (is_a($this->_propDict["endTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["endTime"])) {
+            if (is_a($this->_propDict["endTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["endTime"])) {
                 return $this->_propDict["endTime"];
             } else {
-                $this->_propDict["endTime"] = new TimeOfDay($this->_propDict["endTime"]);
+                $this->_propDict["endTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["endTime"]);
                 return $this->_propDict["endTime"];
             }
         }
@@ -80,7 +80,7 @@ class WorkingHours extends Entity
     * Sets the endTime
     * The time of the day that the user stops working.
     *
-    * @param TimeOfDay $val The value to assign to the endTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the endTime
     *
     * @return WorkingHours The WorkingHours
     */
@@ -94,15 +94,15 @@ class WorkingHours extends Entity
     * Gets the startTime
     * The time of the day that the user starts working.
     *
-    * @return TimeOfDay|null The startTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The startTime
     */
     public function getStartTime()
     {
         if (array_key_exists("startTime", $this->_propDict)) {
-            if (is_a($this->_propDict["startTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["startTime"])) {
+            if (is_a($this->_propDict["startTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["startTime"])) {
                 return $this->_propDict["startTime"];
             } else {
-                $this->_propDict["startTime"] = new TimeOfDay($this->_propDict["startTime"]);
+                $this->_propDict["startTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["startTime"]);
                 return $this->_propDict["startTime"];
             }
         }
@@ -113,7 +113,7 @@ class WorkingHours extends Entity
     * Sets the startTime
     * The time of the day that the user starts working.
     *
-    * @param TimeOfDay $val The value to assign to the startTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The value to assign to the startTime
     *
     * @return WorkingHours The WorkingHours
     */

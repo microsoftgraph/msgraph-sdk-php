@@ -81,31 +81,27 @@ class JournalLine extends Entity
     /**
     * Gets the amount
     *
-    * @return Decimal|null The amount
+    * @return float|null The amount
     */
     public function getAmount()
     {
         if (array_key_exists("amount", $this->_propDict)) {
-            if (is_a($this->_propDict["amount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["amount"])) {
-                return $this->_propDict["amount"];
-            } else {
-                $this->_propDict["amount"] = new Decimal($this->_propDict["amount"]);
-                return $this->_propDict["amount"];
-            }
+            return $this->_propDict["amount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the amount
     *
-    * @param Decimal $val The amount
+    * @param float $val The amount
     *
     * @return JournalLine
     */
     public function setAmount($val)
     {
-        $this->_propDict["amount"] = $val;
+        $this->_propDict["amount"] = floatval($val);
         return $this;
     }
     
@@ -305,15 +301,15 @@ class JournalLine extends Entity
     /**
     * Gets the postingDate
     *
-    * @return \DateTime|null The postingDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The postingDate
     */
     public function getPostingDate()
     {
         if (array_key_exists("postingDate", $this->_propDict)) {
-            if (is_a($this->_propDict["postingDate"], "\DateTime") || is_null($this->_propDict["postingDate"])) {
+            if (is_a($this->_propDict["postingDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["postingDate"])) {
                 return $this->_propDict["postingDate"];
             } else {
-                $this->_propDict["postingDate"] = new \DateTime($this->_propDict["postingDate"]);
+                $this->_propDict["postingDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["postingDate"]);
                 return $this->_propDict["postingDate"];
             }
         }
@@ -323,7 +319,7 @@ class JournalLine extends Entity
     /**
     * Sets the postingDate
     *
-    * @param \DateTime $val The postingDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The postingDate
     *
     * @return JournalLine
     */

@@ -2683,15 +2683,15 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the defenderScheduledQuickScanTime
     * Selects the time of day that the Windows Defender quick scan should run. For example, a value of 0=12:00AM, a value of 60=1:00AM, a value of 120=2:00, and so on, up to a value of 1380=11:00PM. The default value is 120
     *
-    * @return TimeOfDay|null The defenderScheduledQuickScanTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The defenderScheduledQuickScanTime
     */
     public function getDefenderScheduledQuickScanTime()
     {
         if (array_key_exists("defenderScheduledQuickScanTime", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScheduledQuickScanTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["defenderScheduledQuickScanTime"])) {
+            if (is_a($this->_propDict["defenderScheduledQuickScanTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["defenderScheduledQuickScanTime"])) {
                 return $this->_propDict["defenderScheduledQuickScanTime"];
             } else {
-                $this->_propDict["defenderScheduledQuickScanTime"] = new TimeOfDay($this->_propDict["defenderScheduledQuickScanTime"]);
+                $this->_propDict["defenderScheduledQuickScanTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["defenderScheduledQuickScanTime"]);
                 return $this->_propDict["defenderScheduledQuickScanTime"];
             }
         }
@@ -2702,7 +2702,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     * Sets the defenderScheduledQuickScanTime
     * Selects the time of day that the Windows Defender quick scan should run. For example, a value of 0=12:00AM, a value of 60=1:00AM, a value of 120=2:00, and so on, up to a value of 1380=11:00PM. The default value is 120
     *
-    * @param TimeOfDay $val The defenderScheduledQuickScanTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The defenderScheduledQuickScanTime
     *
     * @return Windows10EndpointProtectionConfiguration
     */
@@ -2749,15 +2749,15 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     * Gets the defenderScheduledScanTime
     * Selects the time of day that the Windows Defender scan should run.
     *
-    * @return TimeOfDay|null The defenderScheduledScanTime
+    * @return \Microsoft\Graph\Core\Models\TimeOfDay|null The defenderScheduledScanTime
     */
     public function getDefenderScheduledScanTime()
     {
         if (array_key_exists("defenderScheduledScanTime", $this->_propDict)) {
-            if (is_a($this->_propDict["defenderScheduledScanTime"], "\Beta\Microsoft\Graph\Model\TimeOfDay") || is_null($this->_propDict["defenderScheduledScanTime"])) {
+            if (is_a($this->_propDict["defenderScheduledScanTime"], "\Microsoft\Graph\Core\Models\TimeOfDay") || is_null($this->_propDict["defenderScheduledScanTime"])) {
                 return $this->_propDict["defenderScheduledScanTime"];
             } else {
-                $this->_propDict["defenderScheduledScanTime"] = new TimeOfDay($this->_propDict["defenderScheduledScanTime"]);
+                $this->_propDict["defenderScheduledScanTime"] = new \Microsoft\Graph\Core\Models\TimeOfDay($this->_propDict["defenderScheduledScanTime"]);
                 return $this->_propDict["defenderScheduledScanTime"];
             }
         }
@@ -2768,7 +2768,7 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration
     * Sets the defenderScheduledScanTime
     * Selects the time of day that the Windows Defender scan should run.
     *
-    * @param TimeOfDay $val The defenderScheduledScanTime
+    * @param \Microsoft\Graph\Core\Models\TimeOfDay $val The defenderScheduledScanTime
     *
     * @return Windows10EndpointProtectionConfiguration
     */

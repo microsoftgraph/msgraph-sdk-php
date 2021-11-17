@@ -27,15 +27,15 @@ class AgedAccountsPayable extends Entity
     /**
     * Gets the agedAsOfDate
     *
-    * @return \DateTime|null The agedAsOfDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The agedAsOfDate
     */
     public function getAgedAsOfDate()
     {
         if (array_key_exists("agedAsOfDate", $this->_propDict)) {
-            if (is_a($this->_propDict["agedAsOfDate"], "\DateTime") || is_null($this->_propDict["agedAsOfDate"])) {
+            if (is_a($this->_propDict["agedAsOfDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["agedAsOfDate"])) {
                 return $this->_propDict["agedAsOfDate"];
             } else {
-                $this->_propDict["agedAsOfDate"] = new \DateTime($this->_propDict["agedAsOfDate"]);
+                $this->_propDict["agedAsOfDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["agedAsOfDate"]);
                 return $this->_propDict["agedAsOfDate"];
             }
         }
@@ -45,7 +45,7 @@ class AgedAccountsPayable extends Entity
     /**
     * Sets the agedAsOfDate
     *
-    * @param \DateTime $val The agedAsOfDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The agedAsOfDate
     *
     * @return AgedAccountsPayable
     */
@@ -58,31 +58,27 @@ class AgedAccountsPayable extends Entity
     /**
     * Gets the balanceDue
     *
-    * @return Decimal|null The balanceDue
+    * @return float|null The balanceDue
     */
     public function getBalanceDue()
     {
         if (array_key_exists("balanceDue", $this->_propDict)) {
-            if (is_a($this->_propDict["balanceDue"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["balanceDue"])) {
-                return $this->_propDict["balanceDue"];
-            } else {
-                $this->_propDict["balanceDue"] = new Decimal($this->_propDict["balanceDue"]);
-                return $this->_propDict["balanceDue"];
-            }
+            return $this->_propDict["balanceDue"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the balanceDue
     *
-    * @param Decimal $val The balanceDue
+    * @param float $val The balanceDue
     *
     * @return AgedAccountsPayable
     */
     public function setBalanceDue($val)
     {
-        $this->_propDict["balanceDue"] = $val;
+        $this->_propDict["balanceDue"] = floatval($val);
         return $this;
     }
     
@@ -116,31 +112,27 @@ class AgedAccountsPayable extends Entity
     /**
     * Gets the currentAmount
     *
-    * @return Decimal|null The currentAmount
+    * @return float|null The currentAmount
     */
     public function getCurrentAmount()
     {
         if (array_key_exists("currentAmount", $this->_propDict)) {
-            if (is_a($this->_propDict["currentAmount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["currentAmount"])) {
-                return $this->_propDict["currentAmount"];
-            } else {
-                $this->_propDict["currentAmount"] = new Decimal($this->_propDict["currentAmount"]);
-                return $this->_propDict["currentAmount"];
-            }
+            return $this->_propDict["currentAmount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the currentAmount
     *
-    * @param Decimal $val The currentAmount
+    * @param float $val The currentAmount
     *
     * @return AgedAccountsPayable
     */
     public function setCurrentAmount($val)
     {
-        $this->_propDict["currentAmount"] = $val;
+        $this->_propDict["currentAmount"] = floatval($val);
         return $this;
     }
     
@@ -174,93 +166,81 @@ class AgedAccountsPayable extends Entity
     /**
     * Gets the period1Amount
     *
-    * @return Decimal|null The period1Amount
+    * @return float|null The period1Amount
     */
     public function getPeriod1Amount()
     {
         if (array_key_exists("period1Amount", $this->_propDict)) {
-            if (is_a($this->_propDict["period1Amount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["period1Amount"])) {
-                return $this->_propDict["period1Amount"];
-            } else {
-                $this->_propDict["period1Amount"] = new Decimal($this->_propDict["period1Amount"]);
-                return $this->_propDict["period1Amount"];
-            }
+            return $this->_propDict["period1Amount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the period1Amount
     *
-    * @param Decimal $val The period1Amount
+    * @param float $val The period1Amount
     *
     * @return AgedAccountsPayable
     */
     public function setPeriod1Amount($val)
     {
-        $this->_propDict["period1Amount"] = $val;
+        $this->_propDict["period1Amount"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the period2Amount
     *
-    * @return Decimal|null The period2Amount
+    * @return float|null The period2Amount
     */
     public function getPeriod2Amount()
     {
         if (array_key_exists("period2Amount", $this->_propDict)) {
-            if (is_a($this->_propDict["period2Amount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["period2Amount"])) {
-                return $this->_propDict["period2Amount"];
-            } else {
-                $this->_propDict["period2Amount"] = new Decimal($this->_propDict["period2Amount"]);
-                return $this->_propDict["period2Amount"];
-            }
+            return $this->_propDict["period2Amount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the period2Amount
     *
-    * @param Decimal $val The period2Amount
+    * @param float $val The period2Amount
     *
     * @return AgedAccountsPayable
     */
     public function setPeriod2Amount($val)
     {
-        $this->_propDict["period2Amount"] = $val;
+        $this->_propDict["period2Amount"] = floatval($val);
         return $this;
     }
     
     /**
     * Gets the period3Amount
     *
-    * @return Decimal|null The period3Amount
+    * @return float|null The period3Amount
     */
     public function getPeriod3Amount()
     {
         if (array_key_exists("period3Amount", $this->_propDict)) {
-            if (is_a($this->_propDict["period3Amount"], "\Beta\Microsoft\Graph\Model\Decimal") || is_null($this->_propDict["period3Amount"])) {
-                return $this->_propDict["period3Amount"];
-            } else {
-                $this->_propDict["period3Amount"] = new Decimal($this->_propDict["period3Amount"]);
-                return $this->_propDict["period3Amount"];
-            }
+            return $this->_propDict["period3Amount"];
+        } else {
+            return null;
         }
-        return null;
     }
     
     /**
     * Sets the period3Amount
     *
-    * @param Decimal $val The period3Amount
+    * @param float $val The period3Amount
     *
     * @return AgedAccountsPayable
     */
     public function setPeriod3Amount($val)
     {
-        $this->_propDict["period3Amount"] = $val;
+        $this->_propDict["period3Amount"] = floatval($val);
         return $this;
     }
     

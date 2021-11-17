@@ -54,15 +54,15 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the deletedDate
     *
-    * @return \DateTime|null The deletedDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The deletedDate
     */
     public function getDeletedDate()
     {
         if (array_key_exists("deletedDate", $this->_propDict)) {
-            if (is_a($this->_propDict["deletedDate"], "\DateTime") || is_null($this->_propDict["deletedDate"])) {
+            if (is_a($this->_propDict["deletedDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["deletedDate"])) {
                 return $this->_propDict["deletedDate"];
             } else {
-                $this->_propDict["deletedDate"] = new \DateTime($this->_propDict["deletedDate"]);
+                $this->_propDict["deletedDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["deletedDate"]);
                 return $this->_propDict["deletedDate"];
             }
         }
@@ -72,7 +72,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Sets the deletedDate
     *
-    * @param \DateTime $val The deletedDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The deletedDate
     *
     * @return SkypeForBusinessActivityUserDetail
     */
@@ -112,15 +112,15 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the lastActivityDate
     *
-    * @return \DateTime|null The lastActivityDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The lastActivityDate
     */
     public function getLastActivityDate()
     {
         if (array_key_exists("lastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["lastActivityDate"], "\DateTime") || is_null($this->_propDict["lastActivityDate"])) {
+            if (is_a($this->_propDict["lastActivityDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["lastActivityDate"])) {
                 return $this->_propDict["lastActivityDate"];
             } else {
-                $this->_propDict["lastActivityDate"] = new \DateTime($this->_propDict["lastActivityDate"]);
+                $this->_propDict["lastActivityDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["lastActivityDate"]);
                 return $this->_propDict["lastActivityDate"];
             }
         }
@@ -130,7 +130,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Sets the lastActivityDate
     *
-    * @param \DateTime $val The lastActivityDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The lastActivityDate
     *
     * @return SkypeForBusinessActivityUserDetail
     */
@@ -359,15 +359,15 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the organizedConferenceLastActivityDate
     *
-    * @return \DateTime|null The organizedConferenceLastActivityDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The organizedConferenceLastActivityDate
     */
     public function getOrganizedConferenceLastActivityDate()
     {
         if (array_key_exists("organizedConferenceLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["organizedConferenceLastActivityDate"], "\DateTime") || is_null($this->_propDict["organizedConferenceLastActivityDate"])) {
+            if (is_a($this->_propDict["organizedConferenceLastActivityDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["organizedConferenceLastActivityDate"])) {
                 return $this->_propDict["organizedConferenceLastActivityDate"];
             } else {
-                $this->_propDict["organizedConferenceLastActivityDate"] = new \DateTime($this->_propDict["organizedConferenceLastActivityDate"]);
+                $this->_propDict["organizedConferenceLastActivityDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["organizedConferenceLastActivityDate"]);
                 return $this->_propDict["organizedConferenceLastActivityDate"];
             }
         }
@@ -377,7 +377,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Sets the organizedConferenceLastActivityDate
     *
-    * @param \DateTime $val The organizedConferenceLastActivityDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The organizedConferenceLastActivityDate
     *
     * @return SkypeForBusinessActivityUserDetail
     */
@@ -552,15 +552,15 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the participatedConferenceLastActivityDate
     *
-    * @return \DateTime|null The participatedConferenceLastActivityDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The participatedConferenceLastActivityDate
     */
     public function getParticipatedConferenceLastActivityDate()
     {
         if (array_key_exists("participatedConferenceLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["participatedConferenceLastActivityDate"], "\DateTime") || is_null($this->_propDict["participatedConferenceLastActivityDate"])) {
+            if (is_a($this->_propDict["participatedConferenceLastActivityDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["participatedConferenceLastActivityDate"])) {
                 return $this->_propDict["participatedConferenceLastActivityDate"];
             } else {
-                $this->_propDict["participatedConferenceLastActivityDate"] = new \DateTime($this->_propDict["participatedConferenceLastActivityDate"]);
+                $this->_propDict["participatedConferenceLastActivityDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["participatedConferenceLastActivityDate"]);
                 return $this->_propDict["participatedConferenceLastActivityDate"];
             }
         }
@@ -570,7 +570,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Sets the participatedConferenceLastActivityDate
     *
-    * @param \DateTime $val The participatedConferenceLastActivityDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The participatedConferenceLastActivityDate
     *
     * @return SkypeForBusinessActivityUserDetail
     */
@@ -745,15 +745,15 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the peerToPeerLastActivityDate
     *
-    * @return \DateTime|null The peerToPeerLastActivityDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The peerToPeerLastActivityDate
     */
     public function getPeerToPeerLastActivityDate()
     {
         if (array_key_exists("peerToPeerLastActivityDate", $this->_propDict)) {
-            if (is_a($this->_propDict["peerToPeerLastActivityDate"], "\DateTime") || is_null($this->_propDict["peerToPeerLastActivityDate"])) {
+            if (is_a($this->_propDict["peerToPeerLastActivityDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["peerToPeerLastActivityDate"])) {
                 return $this->_propDict["peerToPeerLastActivityDate"];
             } else {
-                $this->_propDict["peerToPeerLastActivityDate"] = new \DateTime($this->_propDict["peerToPeerLastActivityDate"]);
+                $this->_propDict["peerToPeerLastActivityDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["peerToPeerLastActivityDate"]);
                 return $this->_propDict["peerToPeerLastActivityDate"];
             }
         }
@@ -763,7 +763,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Sets the peerToPeerLastActivityDate
     *
-    * @param \DateTime $val The peerToPeerLastActivityDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The peerToPeerLastActivityDate
     *
     * @return SkypeForBusinessActivityUserDetail
     */
@@ -857,15 +857,15 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Gets the reportRefreshDate
     *
-    * @return \DateTime|null The reportRefreshDate
+    * @return \Microsoft\Graph\Core\Models\Date|null The reportRefreshDate
     */
     public function getReportRefreshDate()
     {
         if (array_key_exists("reportRefreshDate", $this->_propDict)) {
-            if (is_a($this->_propDict["reportRefreshDate"], "\DateTime") || is_null($this->_propDict["reportRefreshDate"])) {
+            if (is_a($this->_propDict["reportRefreshDate"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["reportRefreshDate"])) {
                 return $this->_propDict["reportRefreshDate"];
             } else {
-                $this->_propDict["reportRefreshDate"] = new \DateTime($this->_propDict["reportRefreshDate"]);
+                $this->_propDict["reportRefreshDate"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["reportRefreshDate"]);
                 return $this->_propDict["reportRefreshDate"];
             }
         }
@@ -875,7 +875,7 @@ class SkypeForBusinessActivityUserDetail extends Entity
     /**
     * Sets the reportRefreshDate
     *
-    * @param \DateTime $val The reportRefreshDate
+    * @param \Microsoft\Graph\Core\Models\Date $val The reportRefreshDate
     *
     * @return SkypeForBusinessActivityUserDetail
     */

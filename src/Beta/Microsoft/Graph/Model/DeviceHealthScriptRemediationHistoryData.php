@@ -28,15 +28,15 @@ class DeviceHealthScriptRemediationHistoryData extends Entity
     * Gets the date
     * The date on which devices were remediated by the device health script.
     *
-    * @return \DateTime|null The date
+    * @return \Microsoft\Graph\Core\Models\Date|null The date
     */
     public function getDate()
     {
         if (array_key_exists("date", $this->_propDict)) {
-            if (is_a($this->_propDict["date"], "\DateTime") || is_null($this->_propDict["date"])) {
+            if (is_a($this->_propDict["date"], "\Microsoft\Graph\Core\Models\Date") || is_null($this->_propDict["date"])) {
                 return $this->_propDict["date"];
             } else {
-                $this->_propDict["date"] = new \DateTime($this->_propDict["date"]);
+                $this->_propDict["date"] = new \Microsoft\Graph\Core\Models\Date($this->_propDict["date"]);
                 return $this->_propDict["date"];
             }
         }
@@ -47,7 +47,7 @@ class DeviceHealthScriptRemediationHistoryData extends Entity
     * Sets the date
     * The date on which devices were remediated by the device health script.
     *
-    * @param \DateTime $val The value to assign to the date
+    * @param \Microsoft\Graph\Core\Models\Date $val The value to assign to the date
     *
     * @return DeviceHealthScriptRemediationHistoryData The DeviceHealthScriptRemediationHistoryData
     */
