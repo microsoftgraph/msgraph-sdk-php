@@ -26,7 +26,7 @@ class SafeguardProfile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the category
-    * Specifies the category of safeguards. The possible values are: likelyIssues.
+    * Specifies the category of safeguards. The possible values are: likelyIssues, unknownFutureValue.
     *
     * @return SafeguardCategory|null The category
     */
@@ -45,7 +45,7 @@ class SafeguardProfile extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
-    * Specifies the category of safeguards. The possible values are: likelyIssues.
+    * Specifies the category of safeguards. The possible values are: likelyIssues, unknownFutureValue.
     *
     * @param SafeguardCategory $val The value to assign to the category
     *

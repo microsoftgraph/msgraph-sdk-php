@@ -26,7 +26,7 @@ class DeploymentStateReason extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the value
-    * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Read-only.
+    * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: faultedByContentOutdated. Read-only.
     *
     * @return DeploymentStateReasonValue|null The value
     */
@@ -45,7 +45,7 @@ class DeploymentStateReason extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the value
-    * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Read-only.
+    * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: faultedByContentOutdated. Read-only.
     *
     * @param DeploymentStateReasonValue $val The value to assign to the value
     *

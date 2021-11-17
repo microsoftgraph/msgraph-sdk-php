@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcDeviceImageStatusDetails File
+* TenantReference File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* CloudPcDeviceImageStatusDetails class
+* TenantReference class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +22,33 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcDeviceImageStatusDetails extends Enum
+class TenantReference extends DirectoryObject
 {
     /**
-    * The Enum CloudPcDeviceImageStatusDetails
+    * Gets the tenantId
+    *
+    * @return string|null The tenantId
     */
-    const INTERNAL_SERVER_ERROR = "internalServerError";
-    const SOURCE_IMAGE_NOT_FOUND = "sourceImageNotFound";
-    const OS_VERSION_NOT_SUPPORTED = "osVersionNotSupported";
-    const SOURCE_IMAGE_INVALID = "sourceImageInvalid";
-    const SOURCE_IMAGE_NOT_GENERALIZED = "sourceImageNotGeneralized";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public function getTenantId()
+    {
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the tenantId
+    *
+    * @param string $val The tenantId
+    *
+    * @return TenantReference
+    */
+    public function setTenantId($val)
+    {
+        $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+    
 }

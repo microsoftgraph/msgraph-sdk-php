@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ItemInsightsSettings File
+* InsightsSettings File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* ItemInsightsSettings class
+* InsightsSettings class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ItemInsightsSettings extends Entity
+class InsightsSettings extends Entity
 {
     /**
     * Gets the disabledForGroup
-    * The ID of an Azure AD group, of which the members' item insights are disabled. Default is empty. Optional.
     *
     * @return string|null The disabledForGroup
     */
@@ -41,11 +40,10 @@ class ItemInsightsSettings extends Entity
     
     /**
     * Sets the disabledForGroup
-    * The ID of an Azure AD group, of which the members' item insights are disabled. Default is empty. Optional.
     *
     * @param string $val The disabledForGroup
     *
-    * @return ItemInsightsSettings
+    * @return InsightsSettings
     */
     public function setDisabledForGroup($val)
     {
@@ -55,7 +53,6 @@ class ItemInsightsSettings extends Entity
     
     /**
     * Gets the isEnabledInOrganization
-    * true if organization item insights are enabled; false if organization item insights are disabled for all users without exceptions. Default is true. Optional.
     *
     * @return bool|null The isEnabledInOrganization
     */
@@ -70,11 +67,10 @@ class ItemInsightsSettings extends Entity
     
     /**
     * Sets the isEnabledInOrganization
-    * true if organization item insights are enabled; false if organization item insights are disabled for all users without exceptions. Default is true. Optional.
     *
     * @param bool $val The isEnabledInOrganization
     *
-    * @return ItemInsightsSettings
+    * @return InsightsSettings
     */
     public function setIsEnabledInOrganization($val)
     {
