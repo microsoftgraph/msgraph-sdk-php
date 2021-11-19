@@ -140,7 +140,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the completedDateTime
-    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The completedDateTime
     */
@@ -159,7 +159,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the completedDateTime
-    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The completedDateTime
     *
@@ -173,7 +173,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the createdDateTime
-    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -192,7 +192,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the createdDateTime
-    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -239,7 +239,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the lastActionDateTime
-    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastActionDateTime
     */
@@ -258,7 +258,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the lastActionDateTime
-    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+    * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastActionDateTime
     *
@@ -302,7 +302,7 @@ class SecurityAction extends Entity
 
      /** 
      * Gets the parameters
-    * Collection of parameters (key-value pairs) necessary to invoke the action, e.g. URL or fileHash to block, etc.). Required
+    * Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
      *
      * @return array|null The parameters
      */
@@ -317,7 +317,7 @@ class SecurityAction extends Entity
     
     /** 
     * Sets the parameters
-    * Collection of parameters (key-value pairs) necessary to invoke the action, e.g. URL or fileHash to block, etc.). Required
+    * Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
     *
     * @param KeyValuePair $val The parameters
     *
@@ -423,7 +423,7 @@ class SecurityAction extends Entity
     
     /**
     * Gets the vendorInformation
-    * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (e.g. vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
+    * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
     *
     * @return SecurityVendorInformation|null The vendorInformation
     */
@@ -442,7 +442,7 @@ class SecurityAction extends Entity
     
     /**
     * Sets the vendorInformation
-    * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (e.g. vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
+    * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
     *
     * @param SecurityVendorInformation $val The vendorInformation
     *

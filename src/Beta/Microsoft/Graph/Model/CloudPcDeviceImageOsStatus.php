@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CaseAction File
+* CloudPcDeviceImageOsStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Ediscovery\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CaseAction class
+* CloudPcDeviceImageOsStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,16 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CaseAction extends Enum
+class CloudPcDeviceImageOsStatus extends Enum
 {
     /**
-    * The Enum CaseAction
+    * The Enum CloudPcDeviceImageOsStatus
     */
-    const CONTENT_EXPORT = "contentExport";
-    const APPLY_TAGS = "applyTags";
-    const CONVERT_TO_PDF = "convertToPdf";
-    const INDEX = "index";
-    const ESTIMATE_STATISTICS = "estimateStatistics";
-    const ADD_TO_REVIEW_SET = "addToReviewSet";
+    const SUPPORTED = "supported";
+    const SUPPORTED_WITH_WARNING = "supportedWithWarning";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

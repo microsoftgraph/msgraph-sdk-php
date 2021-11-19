@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Ediscoveryroot File
+* TenantReference File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Ediscovery\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 /**
-* Ediscoveryroot class
+* TenantReference class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,33 +22,32 @@ namespace Microsoft\Graph\Ediscovery\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Ediscoveryroot extends \Microsoft\Graph\Model\Entity
+class TenantReference extends DirectoryObject
 {
-
-     /** 
-     * Gets the cases
-     *
-     * @return array|null The cases
-     */
-    public function getCases()
+    /**
+    * Gets the tenantId
+    *
+    * @return string|null The tenantId
+    */
+    public function getTenantId()
     {
-        if (array_key_exists("cases", $this->_propDict)) {
-           return $this->_propDict["cases"];
+        if (array_key_exists("tenantId", $this->_propDict)) {
+            return $this->_propDict["tenantId"];
         } else {
             return null;
         }
     }
     
-    /** 
-    * Sets the cases
+    /**
+    * Sets the tenantId
     *
-    * @param GraphCase $val The cases
+    * @param string $val The tenantId
     *
-    * @return Ediscoveryroot
+    * @return TenantReference
     */
-    public function setCases($val)
+    public function setTenantId($val)
     {
-        $this->_propDict["cases"] = $val;
+        $this->_propDict["tenantId"] = $val;
         return $this;
     }
     

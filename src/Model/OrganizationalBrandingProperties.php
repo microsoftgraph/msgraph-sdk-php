@@ -87,6 +87,35 @@ class OrganizationalBrandingProperties extends Entity
     }
     
     /**
+    * Gets the backgroundImageRelativeUrl
+    * A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+    *
+    * @return string|null The backgroundImageRelativeUrl
+    */
+    public function getBackgroundImageRelativeUrl()
+    {
+        if (array_key_exists("backgroundImageRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["backgroundImageRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the backgroundImageRelativeUrl
+    * A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+    *
+    * @param string $val The backgroundImageRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setBackgroundImageRelativeUrl($val)
+    {
+        $this->_propDict["backgroundImageRelativeUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the bannerLogo
     * A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
     *
@@ -116,6 +145,64 @@ class OrganizationalBrandingProperties extends Entity
     public function setBannerLogo($val)
     {
         $this->_propDict["bannerLogo"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the bannerLogoRelativeUrl
+    * A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
+    *
+    * @return string|null The bannerLogoRelativeUrl
+    */
+    public function getBannerLogoRelativeUrl()
+    {
+        if (array_key_exists("bannerLogoRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["bannerLogoRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the bannerLogoRelativeUrl
+    * A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
+    *
+    * @param string $val The bannerLogoRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setBannerLogoRelativeUrl($val)
+    {
+        $this->_propDict["bannerLogoRelativeUrl"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the cdnList
+    * A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.
+    *
+    * @return string|null The cdnList
+    */
+    public function getCdnList()
+    {
+        if (array_key_exists("cdnList", $this->_propDict)) {
+            return $this->_propDict["cdnList"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the cdnList
+    * A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.
+    *
+    * @param string $val The cdnList
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCdnList($val)
+    {
+        $this->_propDict["cdnList"] = $val;
         return $this;
     }
     
@@ -178,6 +265,35 @@ class OrganizationalBrandingProperties extends Entity
     public function setSquareLogo($val)
     {
         $this->_propDict["squareLogo"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the squareLogoRelativeUrl
+    * A relative url for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+    *
+    * @return string|null The squareLogoRelativeUrl
+    */
+    public function getSquareLogoRelativeUrl()
+    {
+        if (array_key_exists("squareLogoRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["squareLogoRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the squareLogoRelativeUrl
+    * A relative url for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+    *
+    * @param string $val The squareLogoRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setSquareLogoRelativeUrl($val)
+    {
+        $this->_propDict["squareLogoRelativeUrl"] = $val;
         return $this;
     }
     

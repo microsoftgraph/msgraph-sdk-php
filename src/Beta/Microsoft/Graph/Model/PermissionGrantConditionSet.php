@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class PermissionGrantConditionSet extends Entity
 {
     /**
+    * Gets the certifiedClientApplicationsOnly
+    *
+    * @return bool|null The certifiedClientApplicationsOnly
+    */
+    public function getCertifiedClientApplicationsOnly()
+    {
+        if (array_key_exists("certifiedClientApplicationsOnly", $this->_propDict)) {
+            return $this->_propDict["certifiedClientApplicationsOnly"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the certifiedClientApplicationsOnly
+    *
+    * @param bool $val The certifiedClientApplicationsOnly
+    *
+    * @return PermissionGrantConditionSet
+    */
+    public function setCertifiedClientApplicationsOnly($val)
+    {
+        $this->_propDict["certifiedClientApplicationsOnly"] = boolval($val);
+        return $this;
+    }
+    
+    /**
     * Gets the clientApplicationIds
     * A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all.
     *

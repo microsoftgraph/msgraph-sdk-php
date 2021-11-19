@@ -172,6 +172,62 @@ class Directory extends Entity
     
 
      /** 
+     * Gets the inboundSharedUserProfiles
+     *
+     * @return array|null The inboundSharedUserProfiles
+     */
+    public function getInboundSharedUserProfiles()
+    {
+        if (array_key_exists("inboundSharedUserProfiles", $this->_propDict)) {
+           return $this->_propDict["inboundSharedUserProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the inboundSharedUserProfiles
+    *
+    * @param InboundSharedUserProfile $val The inboundSharedUserProfiles
+    *
+    * @return Directory
+    */
+    public function setInboundSharedUserProfiles($val)
+    {
+        $this->_propDict["inboundSharedUserProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
+     * Gets the outboundSharedUserProfiles
+     *
+     * @return array|null The outboundSharedUserProfiles
+     */
+    public function getOutboundSharedUserProfiles()
+    {
+        if (array_key_exists("outboundSharedUserProfiles", $this->_propDict)) {
+           return $this->_propDict["outboundSharedUserProfiles"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the outboundSharedUserProfiles
+    *
+    * @param OutboundSharedUserProfile $val The outboundSharedUserProfiles
+    *
+    * @return Directory
+    */
+    public function setOutboundSharedUserProfiles($val)
+    {
+        $this->_propDict["outboundSharedUserProfiles"] = $val;
+        return $this;
+    }
+    
+
+     /** 
      * Gets the sharedEmailDomains
      *
      * @return array|null The sharedEmailDomains

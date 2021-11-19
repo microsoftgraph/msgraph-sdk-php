@@ -24,6 +24,36 @@ namespace Microsoft\Graph\Model;
 */
 class EducationUser extends Entity
 {
+
+     /** 
+     * Gets the relatedContacts
+    * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+     *
+     * @return array|null The relatedContacts
+     */
+    public function getRelatedContacts()
+    {
+        if (array_key_exists("relatedContacts", $this->_propDict)) {
+           return $this->_propDict["relatedContacts"];
+        } else {
+            return null;
+        }
+    }
+    
+    /** 
+    * Sets the relatedContacts
+    * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+    *
+    * @param RelatedContact $val The relatedContacts
+    *
+    * @return EducationUser
+    */
+    public function setRelatedContacts($val)
+    {
+        $this->_propDict["relatedContacts"] = $val;
+        return $this;
+    }
+    
     /**
     * Gets the accountEnabled
     * True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
