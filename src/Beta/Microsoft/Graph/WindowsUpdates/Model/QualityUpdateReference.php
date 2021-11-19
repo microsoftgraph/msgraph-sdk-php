@@ -26,7 +26,7 @@ class QualityUpdateReference extends WindowsUpdateReference
 
     /**
     * Gets the classification
-    * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security.
+    * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security, unknownFutureValue.
     *
     * @return QualityUpdateClassification|null The classification
     */
@@ -45,7 +45,7 @@ class QualityUpdateReference extends WindowsUpdateReference
 
     /**
     * Sets the classification
-    * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security.
+    * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security, unknownFutureValue.
     *
     * @param QualityUpdateClassification $val The value to assign to the classification
     *

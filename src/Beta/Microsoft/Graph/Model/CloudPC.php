@@ -25,6 +25,33 @@ namespace Beta\Microsoft\Graph\Model;
 class CloudPC extends Entity
 {
     /**
+    * Gets the aadDeviceId
+    *
+    * @return string|null The aadDeviceId
+    */
+    public function getAadDeviceId()
+    {
+        if (array_key_exists("aadDeviceId", $this->_propDict)) {
+            return $this->_propDict["aadDeviceId"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the aadDeviceId
+    *
+    * @param string $val The aadDeviceId
+    *
+    * @return CloudPC
+    */
+    public function setAadDeviceId($val)
+    {
+        $this->_propDict["aadDeviceId"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the displayName
     * The Cloud PC display name.
     *
@@ -116,6 +143,37 @@ class CloudPC extends Entity
     }
     
     /**
+    * Gets the lastLoginResult
+    *
+    * @return CloudPcLoginResult|null The lastLoginResult
+    */
+    public function getLastLoginResult()
+    {
+        if (array_key_exists("lastLoginResult", $this->_propDict)) {
+            if (is_a($this->_propDict["lastLoginResult"], "\Beta\Microsoft\Graph\Model\CloudPcLoginResult") || is_null($this->_propDict["lastLoginResult"])) {
+                return $this->_propDict["lastLoginResult"];
+            } else {
+                $this->_propDict["lastLoginResult"] = new CloudPcLoginResult($this->_propDict["lastLoginResult"]);
+                return $this->_propDict["lastLoginResult"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastLoginResult
+    *
+    * @param CloudPcLoginResult $val The lastLoginResult
+    *
+    * @return CloudPC
+    */
+    public function setLastLoginResult($val)
+    {
+        $this->_propDict["lastLoginResult"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastModifiedDateTime
     * The Cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
@@ -145,6 +203,37 @@ class CloudPC extends Entity
     public function setLastModifiedDateTime($val)
     {
         $this->_propDict["lastModifiedDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the lastRemoteActionResult
+    *
+    * @return CloudPcRemoteActionResult|null The lastRemoteActionResult
+    */
+    public function getLastRemoteActionResult()
+    {
+        if (array_key_exists("lastRemoteActionResult", $this->_propDict)) {
+            if (is_a($this->_propDict["lastRemoteActionResult"], "\Beta\Microsoft\Graph\Model\CloudPcRemoteActionResult") || is_null($this->_propDict["lastRemoteActionResult"])) {
+                return $this->_propDict["lastRemoteActionResult"];
+            } else {
+                $this->_propDict["lastRemoteActionResult"] = new CloudPcRemoteActionResult($this->_propDict["lastRemoteActionResult"]);
+                return $this->_propDict["lastRemoteActionResult"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastRemoteActionResult
+    *
+    * @param CloudPcRemoteActionResult $val The lastRemoteActionResult
+    *
+    * @return CloudPC
+    */
+    public function setLastRemoteActionResult($val)
+    {
+        $this->_propDict["lastRemoteActionResult"] = $val;
         return $this;
     }
     
@@ -348,6 +437,37 @@ class CloudPC extends Entity
     public function setServicePlanName($val)
     {
         $this->_propDict["servicePlanName"] = $val;
+        return $this;
+    }
+    
+    /**
+    * Gets the servicePlanType
+    *
+    * @return CloudPcServicePlanType|null The servicePlanType
+    */
+    public function getServicePlanType()
+    {
+        if (array_key_exists("servicePlanType", $this->_propDict)) {
+            if (is_a($this->_propDict["servicePlanType"], "\Beta\Microsoft\Graph\Model\CloudPcServicePlanType") || is_null($this->_propDict["servicePlanType"])) {
+                return $this->_propDict["servicePlanType"];
+            } else {
+                $this->_propDict["servicePlanType"] = new CloudPcServicePlanType($this->_propDict["servicePlanType"]);
+                return $this->_propDict["servicePlanType"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the servicePlanType
+    *
+    * @param CloudPcServicePlanType $val The servicePlanType
+    *
+    * @return CloudPC
+    */
+    public function setServicePlanType($val)
+    {
+        $this->_propDict["servicePlanType"] = $val;
         return $this;
     }
     
