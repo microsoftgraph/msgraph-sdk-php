@@ -85,7 +85,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the approximateLastSignInDateTime
-    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, NOT, ge, le) and $orderBy.
+    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, NOT, ge, le, and eq on null values) and $orderBy.
     *
     * @return \DateTime|null The approximateLastSignInDateTime
     */
@@ -104,7 +104,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the approximateLastSignInDateTime
-    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, NOT, ge, le) and $orderBy.
+    * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, NOT, ge, le, and eq on null values) and $orderBy.
     *
     * @param \DateTime $val The approximateLastSignInDateTime
     *
@@ -238,7 +238,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the displayName
-    * The display name for the device. Required. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
+    * The display name for the device. Required. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
     *
     * @return string|null The displayName
     */
@@ -253,7 +253,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the displayName
-    * The display name for the device. Required. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
+    * The display name for the device. Required. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
     *
     * @param string $val The displayName
     *
@@ -387,7 +387,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, NOT, in).
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, NOT, in, and eq on null values).
     *
     * @return bool|null The onPremisesSyncEnabled
     */
@@ -402,7 +402,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the onPremisesSyncEnabled
-    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, NOT, in).
+    * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, NOT, in, and eq on null values).
     *
     * @param bool $val The onPremisesSyncEnabled
     *
@@ -416,7 +416,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystem
-    * The type of operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
+    * The type of operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith, and eq on null values).
     *
     * @return string|null The operatingSystem
     */
@@ -431,7 +431,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystem
-    * The type of operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
+    * The type of operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith, and eq on null values).
     *
     * @param string $val The operatingSystem
     *
@@ -445,7 +445,7 @@ class Device extends DirectoryObject
     
     /**
     * Gets the operatingSystemVersion
-    * The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
+    * The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith, and eq on null values).
     *
     * @return string|null The operatingSystemVersion
     */
@@ -460,7 +460,7 @@ class Device extends DirectoryObject
     
     /**
     * Sets the operatingSystemVersion
-    * The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
+    * The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith, and eq on null values).
     *
     * @param string $val The operatingSystemVersion
     *
