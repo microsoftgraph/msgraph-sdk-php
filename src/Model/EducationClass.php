@@ -55,7 +55,7 @@ class EducationClass extends Entity
 
     /**
     * Gets the course
-    * Course information for the class
+    * Course information for the class.
     *
     * @return EducationCourse|null The course
     */
@@ -74,7 +74,7 @@ class EducationClass extends Entity
 
     /**
     * Sets the course
-    * Course information for the class
+    * Course information for the class.
     *
     * @param EducationCourse $val The course
     *
