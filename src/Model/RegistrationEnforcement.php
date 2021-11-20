@@ -26,7 +26,7 @@ class RegistrationEnforcement extends Entity
 
     /**
     * Gets the authenticationMethodsRegistrationCampaign
-    * Run campaigns to remind users to setup targeted authentication methods.
+    * Run campaigns to remind users to set up targeted authentication methods.
     *
     * @return AuthenticationMethodsRegistrationCampaign|null The authenticationMethodsRegistrationCampaign
     */
@@ -46,7 +46,7 @@ class RegistrationEnforcement extends Entity
 
     /**
     * Sets the authenticationMethodsRegistrationCampaign
-    * Run campaigns to remind users to setup targeted authentication methods.
+    * Run campaigns to remind users to set up targeted authentication methods.
     *
     * @param AuthenticationMethodsRegistrationCampaign $val The value to assign to the authenticationMethodsRegistrationCampaign
     *
