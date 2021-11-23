@@ -38,7 +38,7 @@ class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureAdDeviceId
     * Azure Active Directory Device Id
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity
         $this->_propDict["azureAdDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * The tenant attach device's name.
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * The tenant attach device's name.
@@ -81,5 +81,5 @@ class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
 }

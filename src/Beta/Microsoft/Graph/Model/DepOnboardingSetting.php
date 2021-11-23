@@ -38,7 +38,7 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appleIdentifier
     * The Apple ID used to obtain the current token.
@@ -52,7 +52,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["appleIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dataSharingConsentGranted
     * Consent granted for data sharing with Apple Dep Service
@@ -67,7 +67,7 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the dataSharingConsentGranted
     * Consent granted for data sharing with Apple Dep Service
@@ -81,7 +81,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["dataSharingConsentGranted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * When the service was onboarded.
@@ -100,7 +100,7 @@ class DepOnboardingSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * When the service was onboarded.
@@ -114,7 +114,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSuccessfulSyncDateTime
     * When the service last syned with Intune
@@ -133,7 +133,7 @@ class DepOnboardingSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSuccessfulSyncDateTime
     * When the service last syned with Intune
@@ -147,7 +147,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["lastSuccessfulSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncErrorCode
     * Error code reported by Apple during last dep sync.
@@ -162,7 +162,7 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lastSyncErrorCode
     * Error code reported by Apple during last dep sync.
@@ -176,7 +176,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["lastSyncErrorCode"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncTriggeredDateTime
     * When Intune last requested a sync.
@@ -195,7 +195,7 @@ class DepOnboardingSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncTriggeredDateTime
     * When Intune last requested a sync.
@@ -209,7 +209,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["lastSyncTriggeredDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -224,7 +224,7 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -238,7 +238,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shareTokenWithSchoolDataSyncService
     * Whether or not the Dep token sharing is enabled with the School Data Sync service.
@@ -253,7 +253,7 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the shareTokenWithSchoolDataSyncService
     * Whether or not the Dep token sharing is enabled with the School Data Sync service.
@@ -267,7 +267,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["shareTokenWithSchoolDataSyncService"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncedDeviceCount
     * Gets synced device count
@@ -282,7 +282,7 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the syncedDeviceCount
     * Gets synced device count
@@ -296,7 +296,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["syncedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the tokenExpirationDateTime
     * When the token will expire.
@@ -315,7 +315,7 @@ class DepOnboardingSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tokenExpirationDateTime
     * When the token will expire.
@@ -329,7 +329,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["tokenExpirationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tokenName
     * Friendly Name for Dep Token
@@ -344,7 +344,7 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tokenName
     * Friendly Name for Dep Token
@@ -358,7 +358,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["tokenName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tokenType
     * Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
@@ -377,7 +377,7 @@ class DepOnboardingSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the tokenType
     * Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
@@ -391,7 +391,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["tokenType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultIosEnrollmentProfile
     * Default iOS Enrollment Profile
@@ -410,7 +410,7 @@ class DepOnboardingSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultIosEnrollmentProfile
     * Default iOS Enrollment Profile
@@ -424,7 +424,7 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["defaultIosEnrollmentProfile"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultMacOsEnrollmentProfile
     * Default MacOs Enrollment Profile
@@ -443,7 +443,7 @@ class DepOnboardingSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the defaultMacOsEnrollmentProfile
     * Default MacOs Enrollment Profile
@@ -457,9 +457,9 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["defaultMacOsEnrollmentProfile"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the enrollmentProfiles
     * The enrollment profiles.
      *
@@ -473,12 +473,12 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the enrollmentProfiles
     * The enrollment profiles.
     *
-    * @param EnrollmentProfile $val The enrollmentProfiles
+    * @param EnrollmentProfile[] $val The enrollmentProfiles
     *
     * @return DepOnboardingSetting
     */
@@ -487,9 +487,9 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["enrollmentProfiles"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the importedAppleDeviceIdentities
     * The imported Apple device identities.
      *
@@ -503,12 +503,12 @@ class DepOnboardingSetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the importedAppleDeviceIdentities
     * The imported Apple device identities.
     *
-    * @param ImportedAppleDeviceIdentity $val The importedAppleDeviceIdentities
+    * @param ImportedAppleDeviceIdentity[] $val The importedAppleDeviceIdentities
     *
     * @return DepOnboardingSetting
     */
@@ -517,5 +517,5 @@ class DepOnboardingSetting extends Entity
         $this->_propDict["importedAppleDeviceIdentities"] = $val;
         return $this;
     }
-    
+
 }

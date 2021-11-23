@@ -38,7 +38,7 @@ class DeviceManagementScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorDeviceCount
     * Error device count.
@@ -52,7 +52,7 @@ class DeviceManagementScriptRunSummary extends Entity
         $this->_propDict["errorDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the errorUserCount
     * Error user count.
@@ -67,7 +67,7 @@ class DeviceManagementScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorUserCount
     * Error user count.
@@ -81,7 +81,7 @@ class DeviceManagementScriptRunSummary extends Entity
         $this->_propDict["errorUserCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the successDeviceCount
     * Success device count.
@@ -96,7 +96,7 @@ class DeviceManagementScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successDeviceCount
     * Success device count.
@@ -110,7 +110,7 @@ class DeviceManagementScriptRunSummary extends Entity
         $this->_propDict["successDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the successUserCount
     * Success user count.
@@ -125,7 +125,7 @@ class DeviceManagementScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successUserCount
     * Success user count.
@@ -139,5 +139,5 @@ class DeviceManagementScriptRunSummary extends Entity
         $this->_propDict["successUserCount"] = intval($val);
         return $this;
     }
-    
+
 }

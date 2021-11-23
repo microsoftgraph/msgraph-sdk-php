@@ -38,7 +38,7 @@ class PrivilegedRole extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * Role name.
@@ -52,9 +52,9 @@ class PrivilegedRole extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The assignments for this role. Read-only. Nullable.
      *
@@ -68,12 +68,12 @@ class PrivilegedRole extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The assignments for this role. Read-only. Nullable.
     *
-    * @param PrivilegedRoleAssignment $val The assignments
+    * @param PrivilegedRoleAssignment[] $val The assignments
     *
     * @return PrivilegedRole
     */
@@ -82,7 +82,7 @@ class PrivilegedRole extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     * The settings for this role. Read-only. Nullable.
@@ -101,7 +101,7 @@ class PrivilegedRole extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * The settings for this role. Read-only. Nullable.
@@ -115,7 +115,7 @@ class PrivilegedRole extends Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the summary
     * The summary information for this role. Read-only. Nullable.
@@ -134,7 +134,7 @@ class PrivilegedRole extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the summary
     * The summary information for this role. Read-only. Nullable.
@@ -148,5 +148,5 @@ class PrivilegedRole extends Entity
         $this->_propDict["summary"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class ProgramControl extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the controlId
     * The controlId of the control, in particular the identifier of an access review. Required on create.
@@ -52,7 +52,7 @@ class ProgramControl extends Entity
         $this->_propDict["controlId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the controlTypeId
     * The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
@@ -67,7 +67,7 @@ class ProgramControl extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the controlTypeId
     * The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
@@ -81,7 +81,7 @@ class ProgramControl extends Entity
         $this->_propDict["controlTypeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The creation date and time of the program control.
@@ -100,7 +100,7 @@ class ProgramControl extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The creation date and time of the program control.
@@ -114,7 +114,7 @@ class ProgramControl extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the control.
@@ -129,7 +129,7 @@ class ProgramControl extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the control.
@@ -143,7 +143,7 @@ class ProgramControl extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the owner
     * The user who created the program control.
@@ -162,7 +162,7 @@ class ProgramControl extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the owner
     * The user who created the program control.
@@ -176,7 +176,7 @@ class ProgramControl extends Entity
         $this->_propDict["owner"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the programId
     * The programId of the program this control is a part of. Required on create.
@@ -191,7 +191,7 @@ class ProgramControl extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the programId
     * The programId of the program this control is a part of. Required on create.
@@ -205,7 +205,7 @@ class ProgramControl extends Entity
         $this->_propDict["programId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resource
     * The resource, a group or an app, targeted by this program control's access review.
@@ -224,7 +224,7 @@ class ProgramControl extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the resource
     * The resource, a group or an app, targeted by this program control's access review.
@@ -238,7 +238,7 @@ class ProgramControl extends Entity
         $this->_propDict["resource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The life cycle status of the control.
@@ -253,7 +253,7 @@ class ProgramControl extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     * The life cycle status of the control.
@@ -267,7 +267,7 @@ class ProgramControl extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the program
     * The program this control is part of.
@@ -286,7 +286,7 @@ class ProgramControl extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the program
     * The program this control is part of.
@@ -300,5 +300,5 @@ class ProgramControl extends Entity
         $this->_propDict["program"] = $val;
         return $this;
     }
-    
+
 }

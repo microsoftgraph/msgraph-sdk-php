@@ -31,7 +31,7 @@ class RoleManagement implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new RoleManagement
     *
@@ -54,7 +54,7 @@ class RoleManagement implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
+
     /**
     * Gets the directory
     * Read-only. Nullable.
@@ -73,7 +73,7 @@ class RoleManagement implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the directory
     * Read-only. Nullable.
@@ -87,7 +87,7 @@ class RoleManagement implements \JsonSerializable
         $this->_propDict["directory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the cloudPC
     *
@@ -105,7 +105,7 @@ class RoleManagement implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the cloudPC
     *
@@ -118,7 +118,7 @@ class RoleManagement implements \JsonSerializable
         $this->_propDict["cloudPC"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the entitlementManagement
     * The RbacApplication for Entitlement Management
@@ -137,7 +137,7 @@ class RoleManagement implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the entitlementManagement
     * The RbacApplication for Entitlement Management
@@ -151,7 +151,7 @@ class RoleManagement implements \JsonSerializable
         $this->_propDict["entitlementManagement"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceManagement
     * The RbacApplication for Device Management
@@ -170,7 +170,7 @@ class RoleManagement implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceManagement
     * The RbacApplication for Device Management
@@ -184,7 +184,7 @@ class RoleManagement implements \JsonSerializable
         $this->_propDict["deviceManagement"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -197,7 +197,7 @@ class RoleManagement implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -210,7 +210,7 @@ class RoleManagement implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

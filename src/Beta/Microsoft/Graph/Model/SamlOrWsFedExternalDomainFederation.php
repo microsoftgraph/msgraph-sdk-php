@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider
 {
 
-     /** 
+     /**
      * Gets the domains
     * Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
      *
@@ -39,12 +39,12 @@ class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the domains
     * Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
     *
-    * @param ExternalDomainName $val The domains
+    * @param ExternalDomainName[] $val The domains
     *
     * @return SamlOrWsFedExternalDomainFederation
     */
@@ -53,5 +53,5 @@ class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider
         $this->_propDict["domains"] = $val;
         return $this;
     }
-    
+
 }

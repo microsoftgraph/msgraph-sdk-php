@@ -42,7 +42,7 @@ class DeviceCompliancePolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * DateTime the object was created.
@@ -56,7 +56,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Admin provided description of the Device Configuration.
@@ -71,7 +71,7 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Admin provided description of the Device Configuration.
@@ -85,7 +85,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Admin provided name of the device configuration.
@@ -100,7 +100,7 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Admin provided name of the device configuration.
@@ -114,7 +114,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -133,7 +133,7 @@ class DeviceCompliancePolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -147,7 +147,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -162,7 +162,7 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
@@ -176,7 +176,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["roleScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the device configuration.
@@ -191,7 +191,7 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the device configuration.
@@ -205,9 +205,9 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The collection of assignments for this compliance policy.
      *
@@ -221,12 +221,12 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The collection of assignments for this compliance policy.
     *
-    * @param DeviceCompliancePolicyAssignment $val The assignments
+    * @param DeviceCompliancePolicyAssignment[] $val The assignments
     *
     * @return DeviceCompliancePolicy
     */
@@ -235,9 +235,9 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceSettingStateSummaries
     * Compliance Setting State Device Summary
      *
@@ -251,12 +251,12 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceSettingStateSummaries
     * Compliance Setting State Device Summary
     *
-    * @param SettingStateDeviceSummary $val The deviceSettingStateSummaries
+    * @param SettingStateDeviceSummary[] $val The deviceSettingStateSummaries
     *
     * @return DeviceCompliancePolicy
     */
@@ -265,9 +265,9 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["deviceSettingStateSummaries"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deviceStatuses
     * List of DeviceComplianceDeviceStatus.
      *
@@ -281,12 +281,12 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deviceStatuses
     * List of DeviceComplianceDeviceStatus.
     *
-    * @param DeviceComplianceDeviceStatus $val The deviceStatuses
+    * @param DeviceComplianceDeviceStatus[] $val The deviceStatuses
     *
     * @return DeviceCompliancePolicy
     */
@@ -295,7 +295,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["deviceStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceStatusOverview
     * Device compliance devices status overview
@@ -314,7 +314,7 @@ class DeviceCompliancePolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceStatusOverview
     * Device compliance devices status overview
@@ -328,9 +328,9 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["deviceStatusOverview"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the scheduledActionsForRule
     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      *
@@ -344,12 +344,12 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the scheduledActionsForRule
     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
     *
-    * @param DeviceComplianceScheduledActionForRule $val The scheduledActionsForRule
+    * @param DeviceComplianceScheduledActionForRule[] $val The scheduledActionsForRule
     *
     * @return DeviceCompliancePolicy
     */
@@ -358,9 +358,9 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["scheduledActionsForRule"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userStatuses
     * List of DeviceComplianceUserStatus.
      *
@@ -374,12 +374,12 @@ class DeviceCompliancePolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userStatuses
     * List of DeviceComplianceUserStatus.
     *
-    * @param DeviceComplianceUserStatus $val The userStatuses
+    * @param DeviceComplianceUserStatus[] $val The userStatuses
     *
     * @return DeviceCompliancePolicy
     */
@@ -388,7 +388,7 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["userStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userStatusOverview
     * Device compliance users status overview
@@ -407,7 +407,7 @@ class DeviceCompliancePolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userStatusOverview
     * Device compliance users status overview
@@ -421,5 +421,5 @@ class DeviceCompliancePolicy extends Entity
         $this->_propDict["userStatusOverview"] = $val;
         return $this;
     }
-    
+
 }

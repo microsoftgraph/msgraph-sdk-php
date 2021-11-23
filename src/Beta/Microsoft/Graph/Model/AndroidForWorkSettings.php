@@ -42,7 +42,7 @@ class AndroidForWorkSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the bindStatus
     * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
@@ -56,7 +56,7 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["bindStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceOwnerManagementEnabled
     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
@@ -71,7 +71,7 @@ class AndroidForWorkSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceOwnerManagementEnabled
     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
@@ -85,7 +85,7 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["deviceOwnerManagementEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentTarget
     * Indicates which users can enroll devices in Android for Work device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
@@ -104,7 +104,7 @@ class AndroidForWorkSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentTarget
     * Indicates which users can enroll devices in Android for Work device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
@@ -118,7 +118,7 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["enrollmentTarget"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastAppSyncDateTime
     * Last completion time for app sync
@@ -137,7 +137,7 @@ class AndroidForWorkSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastAppSyncDateTime
     * Last completion time for app sync
@@ -151,7 +151,7 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["lastAppSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastAppSyncStatus
     * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
@@ -170,7 +170,7 @@ class AndroidForWorkSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastAppSyncStatus
     * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
@@ -184,7 +184,7 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["lastAppSyncStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last modification time for Android for Work settings
@@ -203,7 +203,7 @@ class AndroidForWorkSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last modification time for Android for Work settings
@@ -217,7 +217,7 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ownerOrganizationName
     * Organization name used when onboarding Android for Work
@@ -232,7 +232,7 @@ class AndroidForWorkSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ownerOrganizationName
     * Organization name used when onboarding Android for Work
@@ -246,7 +246,7 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["ownerOrganizationName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ownerUserPrincipalName
     * Owner UPN that created the enterprise
@@ -261,7 +261,7 @@ class AndroidForWorkSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ownerUserPrincipalName
     * Owner UPN that created the enterprise
@@ -275,7 +275,7 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["ownerUserPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetGroupIds
     * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
@@ -290,7 +290,7 @@ class AndroidForWorkSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetGroupIds
     * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
@@ -304,5 +304,5 @@ class AndroidForWorkSettings extends Entity
         $this->_propDict["targetGroupIds"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * Specifies what content to deploy. Cannot be changed. Returned by default.
@@ -56,7 +56,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time the deployment was created. Returned by default. Read-only.
@@ -75,7 +75,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the deployment was created. Returned by default. Read-only.
@@ -89,7 +89,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the deployment was last modified. Returned by default. Read-only.
@@ -108,7 +108,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the deployment was last modified. Returned by default. Read-only.
@@ -122,7 +122,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settings
     * Settings specified on the specific deployment governing how to deploy content. Returned by default.
@@ -141,7 +141,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * Settings specified on the specific deployment governing how to deploy content. Returned by default.
@@ -155,7 +155,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * Execution status of the deployment. Returned by default.
@@ -174,7 +174,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * Execution status of the deployment. Returned by default.
@@ -188,7 +188,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the audience
     * Specifies the audience to which content is deployed.
@@ -207,7 +207,7 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the audience
     * Specifies the audience to which content is deployed.
@@ -221,5 +221,5 @@ class Deployment extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["audience"] = $val;
         return $this;
     }
-    
+
 }

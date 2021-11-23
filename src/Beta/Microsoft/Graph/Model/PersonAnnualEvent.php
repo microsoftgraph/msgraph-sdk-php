@@ -41,7 +41,7 @@ class PersonAnnualEvent extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the date
     *
@@ -54,7 +54,7 @@ class PersonAnnualEvent extends ItemFacet
         $this->_propDict["date"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -68,7 +68,7 @@ class PersonAnnualEvent extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -81,7 +81,7 @@ class PersonAnnualEvent extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     *
@@ -99,7 +99,7 @@ class PersonAnnualEvent extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     *
@@ -112,5 +112,5 @@ class PersonAnnualEvent extends ItemFacet
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
 }

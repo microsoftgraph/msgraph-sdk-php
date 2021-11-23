@@ -42,7 +42,7 @@ class B2cIdentityUserFlow extends IdentityUserFlow
         }
         return null;
     }
-    
+
     /**
     * Sets the apiConnectorConfiguration
     * Configuration for enabling an API connector for use as part of the user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
@@ -56,7 +56,7 @@ class B2cIdentityUserFlow extends IdentityUserFlow
         $this->_propDict["apiConnectorConfiguration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the defaultLanguageTag
     * Indicates the default language of the b2cIdentityUserFlow that is used when no ui_locale tag is specified in the request. This field is RFC 5646 compliant.
@@ -71,7 +71,7 @@ class B2cIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
+
     /**
     * Sets the defaultLanguageTag
     * Indicates the default language of the b2cIdentityUserFlow that is used when no ui_locale tag is specified in the request. This field is RFC 5646 compliant.
@@ -85,7 +85,7 @@ class B2cIdentityUserFlow extends IdentityUserFlow
         $this->_propDict["defaultLanguageTag"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isLanguageCustomizationEnabled
     * The property that determines whether language customization is enabled within the B2C user flow. Language customization is not enabled by default for B2C user flows.
@@ -100,7 +100,7 @@ class B2cIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
+
     /**
     * Sets the isLanguageCustomizationEnabled
     * The property that determines whether language customization is enabled within the B2C user flow. Language customization is not enabled by default for B2C user flows.
@@ -114,9 +114,9 @@ class B2cIdentityUserFlow extends IdentityUserFlow
         $this->_propDict["isLanguageCustomizationEnabled"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the identityProviders
      *
      * @return array|null The identityProviders
@@ -129,11 +129,11 @@ class B2cIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the identityProviders
     *
-    * @param IdentityProvider $val The identityProviders
+    * @param IdentityProvider[] $val The identityProviders
     *
     * @return B2cIdentityUserFlow
     */
@@ -142,9 +142,9 @@ class B2cIdentityUserFlow extends IdentityUserFlow
         $this->_propDict["identityProviders"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the languages
     * The languages supported for customization within the user flow. Language customization is not enabled by default in B2C user flows.
      *
@@ -158,12 +158,12 @@ class B2cIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the languages
     * The languages supported for customization within the user flow. Language customization is not enabled by default in B2C user flows.
     *
-    * @param UserFlowLanguageConfiguration $val The languages
+    * @param UserFlowLanguageConfiguration[] $val The languages
     *
     * @return B2cIdentityUserFlow
     */
@@ -172,9 +172,9 @@ class B2cIdentityUserFlow extends IdentityUserFlow
         $this->_propDict["languages"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userAttributeAssignments
     * The user attribute assignments included in the user flow.
      *
@@ -188,12 +188,12 @@ class B2cIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userAttributeAssignments
     * The user attribute assignments included in the user flow.
     *
-    * @param IdentityUserFlowAttributeAssignment $val The userAttributeAssignments
+    * @param IdentityUserFlowAttributeAssignment[] $val The userAttributeAssignments
     *
     * @return B2cIdentityUserFlow
     */
@@ -202,9 +202,9 @@ class B2cIdentityUserFlow extends IdentityUserFlow
         $this->_propDict["userAttributeAssignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the userFlowIdentityProviders
      *
      * @return array|null The userFlowIdentityProviders
@@ -217,11 +217,11 @@ class B2cIdentityUserFlow extends IdentityUserFlow
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the userFlowIdentityProviders
     *
-    * @param IdentityProviderBase $val The userFlowIdentityProviders
+    * @param IdentityProviderBase[] $val The userFlowIdentityProviders
     *
     * @return B2cIdentityUserFlow
     */
@@ -230,5 +230,5 @@ class B2cIdentityUserFlow extends IdentityUserFlow
         $this->_propDict["userFlowIdentityProviders"] = $val;
         return $this;
     }
-    
+
 }

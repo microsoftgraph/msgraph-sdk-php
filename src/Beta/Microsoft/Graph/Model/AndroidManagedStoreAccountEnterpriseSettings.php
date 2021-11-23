@@ -38,7 +38,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the androidDeviceOwnerFullyManagedEnrollmentEnabled
     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
@@ -52,7 +52,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["androidDeviceOwnerFullyManagedEnrollmentEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the bindStatus
     * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
@@ -71,7 +71,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the bindStatus
     * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
@@ -85,9 +85,9 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["bindStatus"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the companyCodes
     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
      *
@@ -101,12 +101,12 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the companyCodes
     * Company codes for AndroidManagedStoreAccountEnterpriseSettings
     *
-    * @param AndroidEnrollmentCompanyCode $val The companyCodes
+    * @param AndroidEnrollmentCompanyCode[] $val The companyCodes
     *
     * @return AndroidManagedStoreAccountEnterpriseSettings
     */
@@ -115,7 +115,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["companyCodes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceOwnerManagementEnabled
     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
@@ -130,7 +130,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceOwnerManagementEnabled
     * Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
@@ -144,7 +144,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["deviceOwnerManagementEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the enrollmentTarget
     * Indicates which users can enroll devices in Android Enterprise device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
@@ -163,7 +163,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the enrollmentTarget
     * Indicates which users can enroll devices in Android Enterprise device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
@@ -177,7 +177,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["enrollmentTarget"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastAppSyncDateTime
     * Last completion time for app sync
@@ -196,7 +196,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastAppSyncDateTime
     * Last completion time for app sync
@@ -210,7 +210,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["lastAppSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastAppSyncStatus
     * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
@@ -229,7 +229,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastAppSyncStatus
     * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
@@ -243,7 +243,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["lastAppSyncStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last modification time for Android enterprise settings
@@ -262,7 +262,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last modification time for Android enterprise settings
@@ -276,7 +276,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedGooglePlayInitialScopeTagIds
     * Initial scope tags for MGP apps
@@ -291,7 +291,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedGooglePlayInitialScopeTagIds
     * Initial scope tags for MGP apps
@@ -305,7 +305,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["managedGooglePlayInitialScopeTagIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ownerOrganizationName
     * Organization name used when onboarding Android Enterprise
@@ -320,7 +320,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ownerOrganizationName
     * Organization name used when onboarding Android Enterprise
@@ -334,7 +334,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["ownerOrganizationName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ownerUserPrincipalName
     * Owner UPN that created the enterprise
@@ -349,7 +349,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ownerUserPrincipalName
     * Owner UPN that created the enterprise
@@ -363,7 +363,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["ownerUserPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetGroupIds
     * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
@@ -378,7 +378,7 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetGroupIds
     * Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
@@ -392,5 +392,5 @@ class AndroidManagedStoreAccountEnterpriseSettings extends Entity
         $this->_propDict["targetGroupIds"] = $val;
         return $this;
     }
-    
+
 }

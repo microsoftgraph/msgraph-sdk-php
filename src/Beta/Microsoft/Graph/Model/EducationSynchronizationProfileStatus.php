@@ -38,7 +38,7 @@ class EducationSynchronizationProfileStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCount
     * Number of errors during synchronization.
@@ -52,7 +52,7 @@ class EducationSynchronizationProfileStatus extends Entity
         $this->_propDict["errorCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastActivityDateTime
     * Represents the time when most recent changes were observed in profile.
@@ -71,7 +71,7 @@ class EducationSynchronizationProfileStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastActivityDateTime
     * Represents the time when most recent changes were observed in profile.
@@ -85,7 +85,7 @@ class EducationSynchronizationProfileStatus extends Entity
         $this->_propDict["lastActivityDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSynchronizationDateTime
     * Represents the time of the most recent successful  synchronization.
@@ -104,7 +104,7 @@ class EducationSynchronizationProfileStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSynchronizationDateTime
     * Represents the time of the most recent successful  synchronization.
@@ -118,7 +118,7 @@ class EducationSynchronizationProfileStatus extends Entity
         $this->_propDict["lastSynchronizationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
@@ -137,7 +137,7 @@ class EducationSynchronizationProfileStatus extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
@@ -151,7 +151,7 @@ class EducationSynchronizationProfileStatus extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the statusMessage
     * Status message for the current profile's synchronization stage.
@@ -166,7 +166,7 @@ class EducationSynchronizationProfileStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the statusMessage
     * Status message for the current profile's synchronization stage.
@@ -180,5 +180,5 @@ class EducationSynchronizationProfileStatus extends Entity
         $this->_propDict["statusMessage"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class AuthenticationListener extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the priority
     * The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high.
@@ -52,7 +52,7 @@ class AuthenticationListener extends Entity
         $this->_propDict["priority"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sourceFilter
     * Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
@@ -71,7 +71,7 @@ class AuthenticationListener extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the sourceFilter
     * Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
@@ -85,5 +85,5 @@ class AuthenticationListener extends Entity
         $this->_propDict["sourceFilter"] = $val;
         return $this;
     }
-    
+
 }

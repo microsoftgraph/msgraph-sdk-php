@@ -38,7 +38,7 @@ class TeamsAppIcon extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * The web URL that can be used for downloading the image.
@@ -52,7 +52,7 @@ class TeamsAppIcon extends Entity
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the hostedContent
     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
@@ -71,7 +71,7 @@ class TeamsAppIcon extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the hostedContent
     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
@@ -85,5 +85,5 @@ class TeamsAppIcon extends Entity
         $this->_propDict["hostedContent"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class UserCredentialUsageDetails extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the authMethod
     * Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword,unknownFutureValue
@@ -56,7 +56,7 @@ class UserCredentialUsageDetails extends Entity
         $this->_propDict["authMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the eventDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -75,7 +75,7 @@ class UserCredentialUsageDetails extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the eventDateTime
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -89,7 +89,7 @@ class UserCredentialUsageDetails extends Entity
         $this->_propDict["eventDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the failureReason
     * Provides the failure reason for the corresponding reset or registration workflow.
@@ -104,7 +104,7 @@ class UserCredentialUsageDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the failureReason
     * Provides the failure reason for the corresponding reset or registration workflow.
@@ -118,7 +118,7 @@ class UserCredentialUsageDetails extends Entity
         $this->_propDict["failureReason"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the feature
     * Possible values are: registration, reset, unknownFutureValue.
@@ -137,7 +137,7 @@ class UserCredentialUsageDetails extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the feature
     * Possible values are: registration, reset, unknownFutureValue.
@@ -151,7 +151,7 @@ class UserCredentialUsageDetails extends Entity
         $this->_propDict["feature"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isSuccess
     * Indicates success or failure of the workflow.
@@ -166,7 +166,7 @@ class UserCredentialUsageDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isSuccess
     * Indicates success or failure of the workflow.
@@ -180,7 +180,7 @@ class UserCredentialUsageDetails extends Entity
         $this->_propDict["isSuccess"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userDisplayName
     * User name of the user performing the reset or registration workflow.
@@ -195,7 +195,7 @@ class UserCredentialUsageDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userDisplayName
     * User name of the user performing the reset or registration workflow.
@@ -209,7 +209,7 @@ class UserCredentialUsageDetails extends Entity
         $this->_propDict["userDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User principal name of the user performing the reset or registration workflow.
@@ -224,7 +224,7 @@ class UserCredentialUsageDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User principal name of the user performing the reset or registration workflow.
@@ -238,5 +238,5 @@ class UserCredentialUsageDetails extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

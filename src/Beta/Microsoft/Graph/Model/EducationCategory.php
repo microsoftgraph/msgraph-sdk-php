@@ -38,7 +38,7 @@ class EducationCategory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Unique identifier for the category.
@@ -52,5 +52,5 @@ class EducationCategory extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

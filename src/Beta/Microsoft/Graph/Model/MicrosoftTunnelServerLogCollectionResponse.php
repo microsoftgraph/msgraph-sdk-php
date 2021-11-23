@@ -42,7 +42,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDateTime
     * The end time of the logs collected
@@ -56,7 +56,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         $this->_propDict["endDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expiryDateTime
     * The time when the log collection is expired
@@ -75,7 +75,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expiryDateTime
     * The time when the log collection is expired
@@ -89,7 +89,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         $this->_propDict["expiryDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the requestDateTime
     * The time when the log collection was requested
@@ -108,7 +108,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the requestDateTime
     * The time when the log collection was requested
@@ -122,7 +122,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         $this->_propDict["requestDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serverId
     * ID of the server the log collection is requested upon
@@ -137,7 +137,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serverId
     * ID of the server the log collection is requested upon
@@ -151,7 +151,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         $this->_propDict["serverId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sizeInBytes
     * The size of the logs in bytes
@@ -166,7 +166,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sizeInBytes
     * The size of the logs in bytes
@@ -180,7 +180,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         $this->_propDict["sizeInBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the startDateTime
     * The start time of the logs collected
@@ -199,7 +199,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDateTime
     * The start time of the logs collected
@@ -213,7 +213,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         $this->_propDict["startDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of log collection. Possible values are: pending, completed, failed.
@@ -232,7 +232,7 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of log collection. Possible values are: pending, completed, failed.
@@ -246,5 +246,5 @@ class MicrosoftTunnelServerLogCollectionResponse extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

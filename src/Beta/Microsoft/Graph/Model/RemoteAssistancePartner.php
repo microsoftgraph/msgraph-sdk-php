@@ -38,7 +38,7 @@ class RemoteAssistancePartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the partner.
@@ -52,7 +52,7 @@ class RemoteAssistancePartner extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastConnectionDateTime
     * Timestamp of the last request sent to Intune by the TEM partner.
@@ -71,7 +71,7 @@ class RemoteAssistancePartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastConnectionDateTime
     * Timestamp of the last request sent to Intune by the TEM partner.
@@ -85,7 +85,7 @@ class RemoteAssistancePartner extends Entity
         $this->_propDict["lastConnectionDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onboardingRequestExpiryDateTime
     * When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires.
@@ -104,7 +104,7 @@ class RemoteAssistancePartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the onboardingRequestExpiryDateTime
     * When the OnboardingStatus is Onboarding, This is the date time when the onboarding request expires.
@@ -118,7 +118,7 @@ class RemoteAssistancePartner extends Entity
         $this->_propDict["onboardingRequestExpiryDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onboardingStatus
     * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
@@ -137,7 +137,7 @@ class RemoteAssistancePartner extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the onboardingStatus
     * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
@@ -151,7 +151,7 @@ class RemoteAssistancePartner extends Entity
         $this->_propDict["onboardingStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onboardingUrl
     * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
@@ -166,7 +166,7 @@ class RemoteAssistancePartner extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the onboardingUrl
     * URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
@@ -180,5 +180,5 @@ class RemoteAssistancePartner extends Entity
         $this->_propDict["onboardingUrl"] = $val;
         return $this;
     }
-    
+
 }

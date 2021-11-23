@@ -38,7 +38,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the azureRightsManagementServicesAllowed
     * Specifies whether to allow Azure RMS encryption for WIP
@@ -52,7 +52,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["azureRightsManagementServicesAllowed"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the dataRecoveryCertificate
     * Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS)
@@ -71,7 +71,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         }
         return null;
     }
-    
+
     /**
     * Sets the dataRecoveryCertificate
     * Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS)
@@ -85,7 +85,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["dataRecoveryCertificate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enforcementLevel
     * WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock.
@@ -104,7 +104,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         }
         return null;
     }
-    
+
     /**
     * Sets the enforcementLevel
     * WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock.
@@ -118,7 +118,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enforcementLevel"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enterpriseDomain
     * Primary enterprise domain
@@ -133,7 +133,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the enterpriseDomain
     * Primary enterprise domain
@@ -147,9 +147,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseDomain"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the enterpriseInternalProxyServers
     * This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
      *
@@ -163,12 +163,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the enterpriseInternalProxyServers
     * This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
     *
-    * @param WindowsInformationProtectionResourceCollection $val The enterpriseInternalProxyServers
+    * @param WindowsInformationProtectionResourceCollection[] $val The enterpriseInternalProxyServers
     *
     * @return WindowsInformationProtection
     */
@@ -177,9 +177,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseInternalProxyServers"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the enterpriseIPRanges
     * Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to
      *
@@ -193,12 +193,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the enterpriseIPRanges
     * Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to
     *
-    * @param WindowsInformationProtectionIPRangeCollection $val The enterpriseIPRanges
+    * @param WindowsInformationProtectionIPRangeCollection[] $val The enterpriseIPRanges
     *
     * @return WindowsInformationProtection
     */
@@ -207,7 +207,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseIPRanges"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enterpriseIPRangesAreAuthoritative
     * Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false
@@ -222,7 +222,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the enterpriseIPRangesAreAuthoritative
     * Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false
@@ -236,9 +236,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseIPRangesAreAuthoritative"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the enterpriseNetworkDomainNames
     * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
      *
@@ -252,12 +252,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the enterpriseNetworkDomainNames
     * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
     *
-    * @param WindowsInformationProtectionResourceCollection $val The enterpriseNetworkDomainNames
+    * @param WindowsInformationProtectionResourceCollection[] $val The enterpriseNetworkDomainNames
     *
     * @return WindowsInformationProtection
     */
@@ -266,9 +266,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseNetworkDomainNames"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the enterpriseProtectedDomainNames
     * List of enterprise domains to be protected
      *
@@ -282,12 +282,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the enterpriseProtectedDomainNames
     * List of enterprise domains to be protected
     *
-    * @param WindowsInformationProtectionResourceCollection $val The enterpriseProtectedDomainNames
+    * @param WindowsInformationProtectionResourceCollection[] $val The enterpriseProtectedDomainNames
     *
     * @return WindowsInformationProtection
     */
@@ -296,9 +296,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseProtectedDomainNames"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the enterpriseProxiedDomains
     * Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
      *
@@ -312,12 +312,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the enterpriseProxiedDomains
     * Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
     *
-    * @param WindowsInformationProtectionProxiedDomainCollection $val The enterpriseProxiedDomains
+    * @param WindowsInformationProtectionProxiedDomainCollection[] $val The enterpriseProxiedDomains
     *
     * @return WindowsInformationProtection
     */
@@ -326,9 +326,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseProxiedDomains"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the enterpriseProxyServers
     * This is a list of proxy servers. Any server not on this list is considered non-enterprise
      *
@@ -342,12 +342,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the enterpriseProxyServers
     * This is a list of proxy servers. Any server not on this list is considered non-enterprise
     *
-    * @param WindowsInformationProtectionResourceCollection $val The enterpriseProxyServers
+    * @param WindowsInformationProtectionResourceCollection[] $val The enterpriseProxyServers
     *
     * @return WindowsInformationProtection
     */
@@ -356,7 +356,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseProxyServers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enterpriseProxyServersAreAuthoritative
     * Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies. Default is false
@@ -371,7 +371,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the enterpriseProxyServersAreAuthoritative
     * Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies. Default is false
@@ -385,9 +385,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["enterpriseProxyServersAreAuthoritative"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the exemptApps
     * Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
      *
@@ -401,12 +401,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the exemptApps
     * Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
     *
-    * @param WindowsInformationProtectionApp $val The exemptApps
+    * @param WindowsInformationProtectionApp[] $val The exemptApps
     *
     * @return WindowsInformationProtection
     */
@@ -415,7 +415,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["exemptApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the iconsVisible
     * Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
@@ -430,7 +430,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the iconsVisible
     * Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
@@ -444,7 +444,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["iconsVisible"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the indexingEncryptedStoresOrItemsBlocked
     * This switch is for the Windows Search Indexer, to allow or disallow indexing of items
@@ -459,7 +459,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the indexingEncryptedStoresOrItemsBlocked
     * This switch is for the Windows Search Indexer, to allow or disallow indexing of items
@@ -473,7 +473,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["indexingEncryptedStoresOrItemsBlocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isAssigned
     * Indicates if the policy is deployed to any inclusion groups or not.
@@ -488,7 +488,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the isAssigned
     * Indicates if the policy is deployed to any inclusion groups or not.
@@ -502,9 +502,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["isAssigned"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the neutralDomainResources
     * List of domain names that can used for work or personal resource
      *
@@ -518,12 +518,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the neutralDomainResources
     * List of domain names that can used for work or personal resource
     *
-    * @param WindowsInformationProtectionResourceCollection $val The neutralDomainResources
+    * @param WindowsInformationProtectionResourceCollection[] $val The neutralDomainResources
     *
     * @return WindowsInformationProtection
     */
@@ -532,9 +532,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["neutralDomainResources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the protectedApps
     * Protected applications can access enterprise data and the data handled by those applications are protected with encryption
      *
@@ -548,12 +548,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the protectedApps
     * Protected applications can access enterprise data and the data handled by those applications are protected with encryption
     *
-    * @param WindowsInformationProtectionApp $val The protectedApps
+    * @param WindowsInformationProtectionApp[] $val The protectedApps
     *
     * @return WindowsInformationProtection
     */
@@ -562,7 +562,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["protectedApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the protectionUnderLockConfigRequired
     * Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured
@@ -577,7 +577,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the protectionUnderLockConfigRequired
     * Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured
@@ -591,7 +591,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["protectionUnderLockConfigRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the revokeOnUnenrollDisabled
     * This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
@@ -606,7 +606,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the revokeOnUnenrollDisabled
     * This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
@@ -620,7 +620,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["revokeOnUnenrollDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the rightsManagementServicesTemplateId
     * TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
@@ -635,7 +635,7 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
+
     /**
     * Sets the rightsManagementServicesTemplateId
     * TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
@@ -649,9 +649,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["rightsManagementServicesTemplateId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the smbAutoEncryptedFileExtensions
     * Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
      *
@@ -665,12 +665,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the smbAutoEncryptedFileExtensions
     * Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
     *
-    * @param WindowsInformationProtectionResourceCollection $val The smbAutoEncryptedFileExtensions
+    * @param WindowsInformationProtectionResourceCollection[] $val The smbAutoEncryptedFileExtensions
     *
     * @return WindowsInformationProtection
     */
@@ -679,9 +679,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["smbAutoEncryptedFileExtensions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * Navigation property to list of security groups targeted for policy.
      *
@@ -695,12 +695,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * Navigation property to list of security groups targeted for policy.
     *
-    * @param TargetedManagedAppPolicyAssignment $val The assignments
+    * @param TargetedManagedAppPolicyAssignment[] $val The assignments
     *
     * @return WindowsInformationProtection
     */
@@ -709,9 +709,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the exemptAppLockerFiles
     * Another way to input exempt apps through xml files
      *
@@ -725,12 +725,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the exemptAppLockerFiles
     * Another way to input exempt apps through xml files
     *
-    * @param WindowsInformationProtectionAppLockerFile $val The exemptAppLockerFiles
+    * @param WindowsInformationProtectionAppLockerFile[] $val The exemptAppLockerFiles
     *
     * @return WindowsInformationProtection
     */
@@ -739,9 +739,9 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["exemptAppLockerFiles"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the protectedAppLockerFiles
     * Another way to input protected apps through xml files
      *
@@ -755,12 +755,12 @@ class WindowsInformationProtection extends ManagedAppPolicy
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the protectedAppLockerFiles
     * Another way to input protected apps through xml files
     *
-    * @param WindowsInformationProtectionAppLockerFile $val The protectedAppLockerFiles
+    * @param WindowsInformationProtectionAppLockerFile[] $val The protectedAppLockerFiles
     *
     * @return WindowsInformationProtection
     */
@@ -769,5 +769,5 @@ class WindowsInformationProtection extends ManagedAppPolicy
         $this->_propDict["protectedAppLockerFiles"] = $val;
         return $this;
     }
-    
+
 }

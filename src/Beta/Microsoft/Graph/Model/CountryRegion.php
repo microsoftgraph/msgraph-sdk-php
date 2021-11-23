@@ -37,7 +37,7 @@ class CountryRegion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the addressFormat
     *
@@ -50,7 +50,7 @@ class CountryRegion extends Entity
         $this->_propDict["addressFormat"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the code
     *
@@ -64,7 +64,7 @@ class CountryRegion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the code
     *
@@ -77,7 +77,7 @@ class CountryRegion extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -91,7 +91,7 @@ class CountryRegion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -104,7 +104,7 @@ class CountryRegion extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -122,7 +122,7 @@ class CountryRegion extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -135,5 +135,5 @@ class CountryRegion extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
 }

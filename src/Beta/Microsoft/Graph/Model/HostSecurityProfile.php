@@ -37,7 +37,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureSubscriptionId
     *
@@ -50,7 +50,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["azureSubscriptionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureTenantId
     *
@@ -64,7 +64,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     *
@@ -77,7 +77,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the firstSeenDateTime
     *
@@ -95,7 +95,7 @@ class HostSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the firstSeenDateTime
     *
@@ -108,7 +108,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["firstSeenDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fqdn
     *
@@ -122,7 +122,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fqdn
     *
@@ -135,7 +135,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["fqdn"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isAzureAdJoined
     *
@@ -149,7 +149,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isAzureAdJoined
     *
@@ -162,7 +162,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["isAzureAdJoined"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isAzureAdRegistered
     *
@@ -176,7 +176,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isAzureAdRegistered
     *
@@ -189,7 +189,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["isAzureAdRegistered"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isHybridAzureDomainJoined
     *
@@ -203,7 +203,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isHybridAzureDomainJoined
     *
@@ -216,7 +216,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["isHybridAzureDomainJoined"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastSeenDateTime
     *
@@ -234,7 +234,7 @@ class HostSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSeenDateTime
     *
@@ -247,9 +247,9 @@ class HostSecurityProfile extends Entity
         $this->_propDict["lastSeenDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the logonUsers
      *
      * @return array|null The logonUsers
@@ -262,11 +262,11 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the logonUsers
     *
-    * @param LogonUser $val The logonUsers
+    * @param LogonUser[] $val The logonUsers
     *
     * @return HostSecurityProfile
     */
@@ -275,7 +275,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["logonUsers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the netBiosName
     *
@@ -289,7 +289,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the netBiosName
     *
@@ -302,9 +302,9 @@ class HostSecurityProfile extends Entity
         $this->_propDict["netBiosName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the networkInterfaces
      *
      * @return array|null The networkInterfaces
@@ -317,11 +317,11 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the networkInterfaces
     *
-    * @param NetworkInterface $val The networkInterfaces
+    * @param NetworkInterface[] $val The networkInterfaces
     *
     * @return HostSecurityProfile
     */
@@ -330,7 +330,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["networkInterfaces"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the os
     *
@@ -344,7 +344,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the os
     *
@@ -357,7 +357,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["os"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     *
@@ -371,7 +371,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     *
@@ -384,7 +384,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentHost
     *
@@ -398,7 +398,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the parentHost
     *
@@ -411,7 +411,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["parentHost"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the relatedHostIds
     *
@@ -425,7 +425,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the relatedHostIds
     *
@@ -438,7 +438,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["relatedHostIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskScore
     *
@@ -452,7 +452,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the riskScore
     *
@@ -465,7 +465,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["riskScore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tags
     *
@@ -479,7 +479,7 @@ class HostSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tags
     *
@@ -492,7 +492,7 @@ class HostSecurityProfile extends Entity
         $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorInformation
     *
@@ -510,7 +510,7 @@ class HostSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the vendorInformation
     *
@@ -523,5 +523,5 @@ class HostSecurityProfile extends Entity
         $this->_propDict["vendorInformation"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the action
     * Represents the type of the operation on the role eligibility assignment. The possible values are: AdminAssign: For administrators to assign role eligibility to users or groups to roles.AdminExtend: For administrators to extend expiring assignments.AdminUpdate: For administrators to change existing role assignments.AdminRenew: For administrators to renew expired assignments.AdminRemove: For administrators to remove users or groups from eligible roles.UserAdd: For users to activate their eligible assignments.UserExtend: For users to request to extend their expiring eligible assignments.UserRemove: For users to deactivate their active eligible assignments.UserRenew: For users to request to renew their expired eligible assignments.
@@ -52,7 +52,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["action"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appScopeId
     * Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
@@ -67,7 +67,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the appScopeId
     * Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
@@ -81,7 +81,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["appScopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the directoryScopeId
     * Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
@@ -96,7 +96,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the directoryScopeId
     * Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
@@ -110,7 +110,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["directoryScopeId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isValidationOnly
     * A boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
@@ -125,7 +125,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the isValidationOnly
     * A boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
@@ -139,7 +139,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["isValidationOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the justification
     * A message provided by users and administrators when create the request about why it is needed.
@@ -154,7 +154,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the justification
     * A message provided by users and administrators when create the request about why it is needed.
@@ -168,7 +168,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["justification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principalId
     * Identifier of the principal to which the assignment is being granted to. For example, a user or a group. For groups, they must be assignable to roles, that is, the isAssignableToRole of the group property set to true.
@@ -183,7 +183,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the principalId
     * Identifier of the principal to which the assignment is being granted to. For example, a user or a group. For groups, they must be assignable to roles, that is, the isAssignableToRole of the group property set to true.
@@ -197,7 +197,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["principalId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinitionId
     * Identifier of the unifiedRoleDefinition the assignment is for. Read only.
@@ -212,7 +212,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the roleDefinitionId
     * Identifier of the unifiedRoleDefinition the assignment is for. Read only.
@@ -226,7 +226,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scheduleInfo
     * The schedule object of the role assignment request.
@@ -245,7 +245,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the scheduleInfo
     * The schedule object of the role assignment request.
@@ -259,7 +259,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["scheduleInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetScheduleId
     * The time period for which the eligibility assignment is valid.
@@ -274,7 +274,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
             return null;
         }
     }
-    
+
     /**
     * Sets the targetScheduleId
     * The time period for which the eligibility assignment is valid.
@@ -288,7 +288,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["targetScheduleId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ticketInfo
     * The details of the ticket number and ticket system that is attached to the role assignment request.
@@ -307,7 +307,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the ticketInfo
     * The details of the ticket number and ticket system that is attached to the role assignment request.
@@ -321,7 +321,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["ticketInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appScope
     * Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.
@@ -340,7 +340,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the appScope
     * Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.
@@ -354,7 +354,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["appScope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the directoryScope
     * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
@@ -373,7 +373,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the directoryScope
     * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
@@ -387,7 +387,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["directoryScope"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the principal
     * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
@@ -406,7 +406,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the principal
     * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
@@ -420,7 +420,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["principal"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinition
     * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
@@ -439,7 +439,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the roleDefinition
     * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
@@ -453,7 +453,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["roleDefinition"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the targetSchedule
     * Property indicating the schedule for an eligible role assignment.
@@ -472,7 +472,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         }
         return null;
     }
-    
+
     /**
     * Sets the targetSchedule
     * Property indicating the schedule for an eligible role assignment.
@@ -486,5 +486,5 @@ class UnifiedRoleEligibilityScheduleRequest extends Request
         $this->_propDict["targetSchedule"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class ManagedMobileLobApp extends ManagedApp
             return null;
         }
     }
-    
+
     /**
     * Sets the committedContentVersion
     * The internal committed content version.
@@ -52,7 +52,7 @@ class ManagedMobileLobApp extends ManagedApp
         $this->_propDict["committedContentVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fileName
     * The name of the main Lob application file.
@@ -67,7 +67,7 @@ class ManagedMobileLobApp extends ManagedApp
             return null;
         }
     }
-    
+
     /**
     * Sets the fileName
     * The name of the main Lob application file.
@@ -81,7 +81,7 @@ class ManagedMobileLobApp extends ManagedApp
         $this->_propDict["fileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the size
     * The total size, including all uploaded files.
@@ -96,7 +96,7 @@ class ManagedMobileLobApp extends ManagedApp
             return null;
         }
     }
-    
+
     /**
     * Sets the size
     * The total size, including all uploaded files.
@@ -110,9 +110,9 @@ class ManagedMobileLobApp extends ManagedApp
         $this->_propDict["size"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the contentVersions
     * The list of content versions for this app.
      *
@@ -126,12 +126,12 @@ class ManagedMobileLobApp extends ManagedApp
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the contentVersions
     * The list of content versions for this app.
     *
-    * @param MobileAppContent $val The contentVersions
+    * @param MobileAppContent[] $val The contentVersions
     *
     * @return ManagedMobileLobApp
     */
@@ -140,5 +140,5 @@ class ManagedMobileLobApp extends ManagedApp
         $this->_propDict["contentVersions"] = $val;
         return $this;
     }
-    
+
 }

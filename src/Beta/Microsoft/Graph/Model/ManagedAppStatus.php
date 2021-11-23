@@ -38,7 +38,7 @@ class ManagedAppStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Friendly name of the status report.
@@ -52,7 +52,7 @@ class ManagedAppStatus extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the entity.
@@ -67,7 +67,7 @@ class ManagedAppStatus extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the entity.
@@ -81,5 +81,5 @@ class ManagedAppStatus extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

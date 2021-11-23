@@ -41,7 +41,7 @@ class ConnectionOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the error
     *
@@ -54,7 +54,7 @@ class ConnectionOperation extends Entity
         $this->_propDict["error"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     *
@@ -72,7 +72,7 @@ class ConnectionOperation extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     *
@@ -85,5 +85,5 @@ class ConnectionOperation extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

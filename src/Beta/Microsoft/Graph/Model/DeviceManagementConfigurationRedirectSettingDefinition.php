@@ -38,7 +38,7 @@ class DeviceManagementConfigurationRedirectSettingDefinition extends DeviceManag
             return null;
         }
     }
-    
+
     /**
     * Sets the deepLink
     * A deep link that points to the specific location in the Intune console where feature support must be managed from.
@@ -52,7 +52,7 @@ class DeviceManagementConfigurationRedirectSettingDefinition extends DeviceManag
         $this->_propDict["deepLink"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the redirectMessage
     * A message that explains that clicking the link will redirect the user to a supported page to manage the settings.
@@ -67,7 +67,7 @@ class DeviceManagementConfigurationRedirectSettingDefinition extends DeviceManag
             return null;
         }
     }
-    
+
     /**
     * Sets the redirectMessage
     * A message that explains that clicking the link will redirect the user to a supported page to manage the settings.
@@ -81,7 +81,7 @@ class DeviceManagementConfigurationRedirectSettingDefinition extends DeviceManag
         $this->_propDict["redirectMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the redirectReason
     * Indicates the reason for redirecting the user to an alternative location in the console.  For example: WiFi profiles are not supported in the settings catalog and must be created with a template policy.
@@ -96,7 +96,7 @@ class DeviceManagementConfigurationRedirectSettingDefinition extends DeviceManag
             return null;
         }
     }
-    
+
     /**
     * Sets the redirectReason
     * Indicates the reason for redirecting the user to an alternative location in the console.  For example: WiFi profiles are not supported in the settings catalog and must be created with a template policy.
@@ -110,5 +110,5 @@ class DeviceManagementConfigurationRedirectSettingDefinition extends DeviceManag
         $this->_propDict["redirectReason"] = $val;
         return $this;
     }
-    
+
 }

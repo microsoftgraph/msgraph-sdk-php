@@ -42,7 +42,7 @@ class RoleScopeTagAutoAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The auto-assignment target for the specific Role Scope Tag.
@@ -56,5 +56,5 @@ class RoleScopeTagAutoAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

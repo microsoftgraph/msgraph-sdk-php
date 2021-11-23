@@ -31,7 +31,7 @@ class AppCatalogs implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new AppCatalogs
     *
@@ -54,9 +54,9 @@ class AppCatalogs implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the teamsApps
      *
      * @return array|null The teamsApps
@@ -69,11 +69,11 @@ class AppCatalogs implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the teamsApps
     *
-    * @param TeamsApp $val The teamsApps
+    * @param TeamsApp[] $val The teamsApps
     *
     * @return AppCatalogs
     */
@@ -82,7 +82,7 @@ class AppCatalogs implements \JsonSerializable
         $this->_propDict["teamsApps"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -95,7 +95,7 @@ class AppCatalogs implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -108,7 +108,7 @@ class AppCatalogs implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

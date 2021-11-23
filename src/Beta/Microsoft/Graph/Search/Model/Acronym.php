@@ -37,7 +37,7 @@ class Acronym extends SearchAnswer
             return null;
         }
     }
-    
+
     /**
     * Sets the standsFor
     *
@@ -50,7 +50,7 @@ class Acronym extends SearchAnswer
         $this->_propDict["standsFor"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     *
@@ -68,7 +68,7 @@ class Acronym extends SearchAnswer
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     *
@@ -81,5 +81,5 @@ class Acronym extends SearchAnswer
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
 }

@@ -31,7 +31,7 @@ class CommsApplication implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new CommsApplication
     *
@@ -54,9 +54,9 @@ class CommsApplication implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the calls
      *
      * @return array|null The calls
@@ -69,11 +69,11 @@ class CommsApplication implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the calls
     *
-    * @param Call $val The calls
+    * @param Call[] $val The calls
     *
     * @return CommsApplication
     */
@@ -82,9 +82,9 @@ class CommsApplication implements \JsonSerializable
         $this->_propDict["calls"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the onlineMeetings
      *
      * @return array|null The onlineMeetings
@@ -97,11 +97,11 @@ class CommsApplication implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the onlineMeetings
     *
-    * @param OnlineMeeting $val The onlineMeetings
+    * @param OnlineMeeting[] $val The onlineMeetings
     *
     * @return CommsApplication
     */
@@ -110,7 +110,7 @@ class CommsApplication implements \JsonSerializable
         $this->_propDict["onlineMeetings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -123,7 +123,7 @@ class CommsApplication implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -136,7 +136,7 @@ class CommsApplication implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

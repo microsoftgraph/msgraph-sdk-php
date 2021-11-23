@@ -38,7 +38,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the batteryAgeInDays
     * Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         $this->_propDict["batteryAgeInDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceBatteryHealthScore
     * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceBatteryHealthScore
     * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         $this->_propDict["deviceBatteryHealthScore"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceId
     * The unique identifier of the device, Intune DeviceID.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The unique identifier of the device, Intune DeviceID.
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Device friendly name.
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Device friendly name.
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the estimatedRuntimeInMinutes
     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the estimatedRuntimeInMinutes
     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         $this->_propDict["estimatedRuntimeInMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the healthStatus
     * The overall battery health status of the device.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the healthStatus
     * The overall battery health status of the device.
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         $this->_propDict["healthStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the maxCapacityPercentage
     * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values -2147483648 to 2147483647
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the maxCapacityPercentage
     * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values -2147483648 to 2147483647
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         $this->_propDict["maxCapacityPercentage"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the model
     * The model name of the device.
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * The model name of the device.
@@ -255,5 +255,5 @@ class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
 }

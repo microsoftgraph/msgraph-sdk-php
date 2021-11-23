@@ -38,7 +38,7 @@ class OnPremisesAgentGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the onPremisesAgentGroup.
@@ -52,7 +52,7 @@ class OnPremisesAgentGroup extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isDefault
     * Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
@@ -67,7 +67,7 @@ class OnPremisesAgentGroup extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isDefault
     * Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
@@ -81,7 +81,7 @@ class OnPremisesAgentGroup extends Entity
         $this->_propDict["isDefault"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the publishingType
     * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
@@ -100,7 +100,7 @@ class OnPremisesAgentGroup extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the publishingType
     * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
@@ -114,9 +114,9 @@ class OnPremisesAgentGroup extends Entity
         $this->_propDict["publishingType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the agents
     * List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      *
@@ -130,12 +130,12 @@ class OnPremisesAgentGroup extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the agents
     * List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
     *
-    * @param OnPremisesAgent $val The agents
+    * @param OnPremisesAgent[] $val The agents
     *
     * @return OnPremisesAgentGroup
     */
@@ -144,9 +144,9 @@ class OnPremisesAgentGroup extends Entity
         $this->_propDict["agents"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the publishedResources
     * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      *
@@ -160,12 +160,12 @@ class OnPremisesAgentGroup extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the publishedResources
     * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
     *
-    * @param PublishedResource $val The publishedResources
+    * @param PublishedResource[] $val The publishedResources
     *
     * @return OnPremisesAgentGroup
     */
@@ -174,5 +174,5 @@ class OnPremisesAgentGroup extends Entity
         $this->_propDict["publishedResources"] = $val;
         return $this;
     }
-    
+
 }

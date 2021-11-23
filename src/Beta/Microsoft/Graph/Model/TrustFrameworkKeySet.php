@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class TrustFrameworkKeySet extends Entity
 {
 
-     /** 
+     /**
      * Gets the keys
     * A collection of the keys.
      *
@@ -39,12 +39,12 @@ class TrustFrameworkKeySet extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the keys
     * A collection of the keys.
     *
-    * @param TrustFrameworkKey $val The keys
+    * @param TrustFrameworkKey[] $val The keys
     *
     * @return TrustFrameworkKeySet
     */
@@ -53,5 +53,5 @@ class TrustFrameworkKeySet extends Entity
         $this->_propDict["keys"] = $val;
         return $this;
     }
-    
+
 }

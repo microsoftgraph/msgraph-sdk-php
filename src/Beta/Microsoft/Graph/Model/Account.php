@@ -37,7 +37,7 @@ class Account extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the blocked
     *
@@ -50,7 +50,7 @@ class Account extends Entity
         $this->_propDict["blocked"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the category
     *
@@ -64,7 +64,7 @@ class Account extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the category
     *
@@ -77,7 +77,7 @@ class Account extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -91,7 +91,7 @@ class Account extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -104,7 +104,7 @@ class Account extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -122,7 +122,7 @@ class Account extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -135,7 +135,7 @@ class Account extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the number
     *
@@ -149,7 +149,7 @@ class Account extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the number
     *
@@ -162,7 +162,7 @@ class Account extends Entity
         $this->_propDict["number"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the subCategory
     *
@@ -176,7 +176,7 @@ class Account extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the subCategory
     *
@@ -189,5 +189,5 @@ class Account extends Entity
         $this->_propDict["subCategory"] = $val;
         return $this;
     }
-    
+
 }

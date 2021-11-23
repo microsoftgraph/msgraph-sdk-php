@@ -38,7 +38,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the compliantDeviceCount
     * The number of devices with a compliant status. Required. Read-only.
@@ -52,7 +52,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["compliantDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the configManagerDeviceCount
     * The number of devices manged by Configuration Manager. Required. Read-only.
@@ -67,7 +67,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the configManagerDeviceCount
     * The number of devices manged by Configuration Manager. Required. Read-only.
@@ -81,7 +81,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["configManagerDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the countDateTime
     * The date and time compliance snapshot was performed. Required. Read-only.
@@ -96,7 +96,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the countDateTime
     * The date and time compliance snapshot was performed. Required. Read-only.
@@ -110,7 +110,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["countDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorDeviceCount
     * The number of devices with an error status. Required. Read-only.
@@ -125,7 +125,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorDeviceCount
     * The number of devices with an error status. Required. Read-only.
@@ -139,7 +139,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["errorDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the inGracePeriodDeviceCount
     * The number of devices that are in a grace period status. Required. Read-only.
@@ -154,7 +154,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the inGracePeriodDeviceCount
     * The number of devices that are in a grace period status. Required. Read-only.
@@ -168,7 +168,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["inGracePeriodDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the noncompliantDeviceCount
     * The number of devices that are in a non-compliant status. Required. Read-only.
@@ -183,7 +183,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the noncompliantDeviceCount
     * The number of devices that are in a non-compliant status. Required. Read-only.
@@ -197,7 +197,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["noncompliantDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the tenantDisplayName
     * The display name for the managed tenant. Optional. Read-only.
@@ -212,7 +212,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantDisplayName
     * The display name for the managed tenant. Optional. Read-only.
@@ -226,7 +226,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -241,7 +241,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -255,7 +255,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unknownDeviceCount
     * The number of devices in an unknown status. Required. Read-only.
@@ -270,7 +270,7 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the unknownDeviceCount
     * The number of devices in an unknown status. Required. Read-only.
@@ -284,5 +284,5 @@ class ManagedDeviceComplianceTrend extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["unknownDeviceCount"] = intval($val);
         return $this;
     }
-    
+
 }

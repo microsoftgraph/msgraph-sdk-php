@@ -38,7 +38,7 @@ class WebApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appUrl
     * The web app URL. This property cannot be PATCHed.
@@ -52,7 +52,7 @@ class WebApp extends MobileApp
         $this->_propDict["appUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the useManagedBrowser
     * Whether or not to use managed browser. This property is only applicable for Android and IOS.
@@ -67,7 +67,7 @@ class WebApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the useManagedBrowser
     * Whether or not to use managed browser. This property is only applicable for Android and IOS.
@@ -81,5 +81,5 @@ class WebApp extends MobileApp
         $this->_propDict["useManagedBrowser"] = boolval($val);
         return $this;
     }
-    
+
 }

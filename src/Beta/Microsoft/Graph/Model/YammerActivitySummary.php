@@ -37,7 +37,7 @@ class YammerActivitySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the liked
     *
@@ -50,7 +50,7 @@ class YammerActivitySummary extends Entity
         $this->_propDict["liked"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the posted
     *
@@ -64,7 +64,7 @@ class YammerActivitySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the posted
     *
@@ -77,7 +77,7 @@ class YammerActivitySummary extends Entity
         $this->_propDict["posted"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the read
     *
@@ -91,7 +91,7 @@ class YammerActivitySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the read
     *
@@ -104,7 +104,7 @@ class YammerActivitySummary extends Entity
         $this->_propDict["read"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportDate
     *
@@ -122,7 +122,7 @@ class YammerActivitySummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportDate
     *
@@ -135,7 +135,7 @@ class YammerActivitySummary extends Entity
         $this->_propDict["reportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -149,7 +149,7 @@ class YammerActivitySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -162,7 +162,7 @@ class YammerActivitySummary extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -180,7 +180,7 @@ class YammerActivitySummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -193,5 +193,5 @@ class YammerActivitySummary extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
 }

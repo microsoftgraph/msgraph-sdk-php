@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AttackSimulationRoot extends Entity
 {
 
-     /** 
+     /**
      * Gets the simulations
     * Represent attack simulation and training campaign of a tenant.
      *
@@ -39,12 +39,12 @@ class AttackSimulationRoot extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the simulations
     * Represent attack simulation and training campaign of a tenant.
     *
-    * @param Simulation $val The simulations
+    * @param Simulation[] $val The simulations
     *
     * @return AttackSimulationRoot
     */
@@ -53,5 +53,5 @@ class AttackSimulationRoot extends Entity
         $this->_propDict["simulations"] = $val;
         return $this;
     }
-    
+
 }

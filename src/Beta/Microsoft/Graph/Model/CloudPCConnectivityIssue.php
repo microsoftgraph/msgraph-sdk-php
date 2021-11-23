@@ -38,7 +38,7 @@ class CloudPCConnectivityIssue extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The Intune DeviceId of the device the connection is associated with.
@@ -52,7 +52,7 @@ class CloudPCConnectivityIssue extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorCode
     * The error code of the connectivity issue.
@@ -67,7 +67,7 @@ class CloudPCConnectivityIssue extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorCode
     * The error code of the connectivity issue.
@@ -81,7 +81,7 @@ class CloudPCConnectivityIssue extends Entity
         $this->_propDict["errorCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorDateTime
     * The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
@@ -100,7 +100,7 @@ class CloudPCConnectivityIssue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the errorDateTime
     * The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
@@ -114,7 +114,7 @@ class CloudPCConnectivityIssue extends Entity
         $this->_propDict["errorDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the errorDescription
     * The detailed description of what went wrong.
@@ -129,7 +129,7 @@ class CloudPCConnectivityIssue extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the errorDescription
     * The detailed description of what went wrong.
@@ -143,7 +143,7 @@ class CloudPCConnectivityIssue extends Entity
         $this->_propDict["errorDescription"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recommendedAction
     * The recommended action to fix the corresponding error.
@@ -158,7 +158,7 @@ class CloudPCConnectivityIssue extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the recommendedAction
     * The recommended action to fix the corresponding error.
@@ -172,7 +172,7 @@ class CloudPCConnectivityIssue extends Entity
         $this->_propDict["recommendedAction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The unique id of user who initialize the connection.
@@ -187,7 +187,7 @@ class CloudPCConnectivityIssue extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The unique id of user who initialize the connection.
@@ -201,5 +201,5 @@ class CloudPCConnectivityIssue extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
 }

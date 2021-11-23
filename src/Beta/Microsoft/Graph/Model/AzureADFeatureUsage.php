@@ -37,7 +37,7 @@ class AzureADFeatureUsage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the featureName
     *
@@ -50,7 +50,7 @@ class AzureADFeatureUsage extends Entity
         $this->_propDict["featureName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the snapshotDateTime
     *
@@ -68,7 +68,7 @@ class AzureADFeatureUsage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the snapshotDateTime
     *
@@ -81,7 +81,7 @@ class AzureADFeatureUsage extends Entity
         $this->_propDict["snapshotDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usage
     *
@@ -95,7 +95,7 @@ class AzureADFeatureUsage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the usage
     *
@@ -108,5 +108,5 @@ class AzureADFeatureUsage extends Entity
         $this->_propDict["usage"] = intval($val);
         return $this;
     }
-    
+
 }

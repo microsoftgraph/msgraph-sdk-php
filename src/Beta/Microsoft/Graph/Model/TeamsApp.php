@@ -38,7 +38,7 @@ class TeamsApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
@@ -52,7 +52,7 @@ class TeamsApp extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the distributionMethod
     * The method of distribution for the app. Read-only.
@@ -71,7 +71,7 @@ class TeamsApp extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the distributionMethod
     * The method of distribution for the app. Read-only.
@@ -85,7 +85,7 @@ class TeamsApp extends Entity
         $this->_propDict["distributionMethod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the externalId
     * The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
@@ -100,7 +100,7 @@ class TeamsApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the externalId
     * The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
@@ -114,9 +114,9 @@ class TeamsApp extends Entity
         $this->_propDict["externalId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appDefinitions
     * The details for each version of the app.
      *
@@ -130,12 +130,12 @@ class TeamsApp extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appDefinitions
     * The details for each version of the app.
     *
-    * @param TeamsAppDefinition $val The appDefinitions
+    * @param TeamsAppDefinition[] $val The appDefinitions
     *
     * @return TeamsApp
     */
@@ -144,5 +144,5 @@ class TeamsApp extends Entity
         $this->_propDict["appDefinitions"] = $val;
         return $this;
     }
-    
+
 }

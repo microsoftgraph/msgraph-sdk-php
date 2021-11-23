@@ -38,7 +38,7 @@ class UserExperienceAnalyticsModelScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appReliabilityScore
     * The user experience analytics model app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsModelScores extends Entity
         $this->_propDict["appReliabilityScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the endpointAnalyticsScore
     * The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsModelScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the endpointAnalyticsScore
     * The user experience analytics model score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsModelScores extends Entity
         $this->_propDict["endpointAnalyticsScore"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the healthStatus
     * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
@@ -100,7 +100,7 @@ class UserExperienceAnalyticsModelScores extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the healthStatus
     * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
@@ -114,7 +114,7 @@ class UserExperienceAnalyticsModelScores extends Entity
         $this->_propDict["healthStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     * A unique identifier of the user experience analytics model scores: device manufacturer.
@@ -129,7 +129,7 @@ class UserExperienceAnalyticsModelScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     * A unique identifier of the user experience analytics model scores: device manufacturer.
@@ -143,7 +143,7 @@ class UserExperienceAnalyticsModelScores extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the model
     * A unique identifier of the user experience analytics model scores: device model.
@@ -158,7 +158,7 @@ class UserExperienceAnalyticsModelScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the model
     * A unique identifier of the user experience analytics model scores: device model.
@@ -172,7 +172,7 @@ class UserExperienceAnalyticsModelScores extends Entity
         $this->_propDict["model"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modelDeviceCount
     * The user experience analytics model device count. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
@@ -187,7 +187,7 @@ class UserExperienceAnalyticsModelScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the modelDeviceCount
     * The user experience analytics model device count. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
@@ -201,7 +201,7 @@ class UserExperienceAnalyticsModelScores extends Entity
         $this->_propDict["modelDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the startupPerformanceScore
     * The user experience analytics model startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -216,7 +216,7 @@ class UserExperienceAnalyticsModelScores extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the startupPerformanceScore
     * The user experience analytics model startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -230,5 +230,5 @@ class UserExperienceAnalyticsModelScores extends Entity
         $this->_propDict["startupPerformanceScore"] = floatval($val);
         return $this;
     }
-    
+
 }

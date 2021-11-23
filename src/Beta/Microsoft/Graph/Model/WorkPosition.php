@@ -38,7 +38,7 @@ class WorkPosition extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the categories
     * Categories that the user has associated with this position.
@@ -52,9 +52,9 @@ class WorkPosition extends ItemFacet
         $this->_propDict["categories"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the colleagues
     * Colleagues that are associated with this position.
      *
@@ -68,12 +68,12 @@ class WorkPosition extends ItemFacet
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the colleagues
     * Colleagues that are associated with this position.
     *
-    * @param RelatedPerson $val The colleagues
+    * @param RelatedPerson[] $val The colleagues
     *
     * @return WorkPosition
     */
@@ -82,7 +82,7 @@ class WorkPosition extends ItemFacet
         $this->_propDict["colleagues"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the detail
     * Contains detailed information about the position.
@@ -101,7 +101,7 @@ class WorkPosition extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the detail
     * Contains detailed information about the position.
@@ -115,7 +115,7 @@ class WorkPosition extends ItemFacet
         $this->_propDict["detail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isCurrent
     * Denotes whether or not the position is current.
@@ -130,7 +130,7 @@ class WorkPosition extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the isCurrent
     * Denotes whether or not the position is current.
@@ -144,7 +144,7 @@ class WorkPosition extends ItemFacet
         $this->_propDict["isCurrent"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the manager
     * Contains detail of the user's manager in this position.
@@ -163,7 +163,7 @@ class WorkPosition extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the manager
     * Contains detail of the user's manager in this position.
@@ -177,5 +177,5 @@ class WorkPosition extends ItemFacet
         $this->_propDict["manager"] = $val;
         return $this;
     }
-    
+
 }

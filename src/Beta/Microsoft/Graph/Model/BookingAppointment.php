@@ -37,7 +37,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the additionalInformation
     *
@@ -50,7 +50,7 @@ class BookingAppointment extends Entity
         $this->_propDict["additionalInformation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerEmailAddress
     * The SMTP address of the bookingCustomer who is booking the appointment.
@@ -65,7 +65,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerEmailAddress
     * The SMTP address of the bookingCustomer who is booking the appointment.
@@ -79,7 +79,7 @@ class BookingAppointment extends Entity
         $this->_propDict["customerEmailAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerId
     * If CustomerId is not specified when an appointment is created then a new customer is created based on the appointment customer information. Once set, the customerId should be considered immutable.
@@ -94,7 +94,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerId
     * If CustomerId is not specified when an appointment is created then a new customer is created based on the appointment customer information. Once set, the customerId should be considered immutable.
@@ -108,7 +108,7 @@ class BookingAppointment extends Entity
         $this->_propDict["customerId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerLocation
     * Represents location information for the bookingCustomer who is booking the appointment.
@@ -127,7 +127,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the customerLocation
     * Represents location information for the bookingCustomer who is booking the appointment.
@@ -141,7 +141,7 @@ class BookingAppointment extends Entity
         $this->_propDict["customerLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerName
     * The customer's name.
@@ -156,7 +156,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerName
     * The customer's name.
@@ -170,7 +170,7 @@ class BookingAppointment extends Entity
         $this->_propDict["customerName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerNotes
     * The value of this property is only available when reading an individual booking appointment by id. Its value can only be set when creating a new appointment with a new customer, ie, without specifying a CustomerId. After that, the property is computed from the customer represented by CustomerId.
@@ -185,7 +185,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerNotes
     * The value of this property is only available when reading an individual booking appointment by id. Its value can only be set when creating a new appointment with a new customer, ie, without specifying a CustomerId. After that, the property is computed from the customer represented by CustomerId.
@@ -199,7 +199,7 @@ class BookingAppointment extends Entity
         $this->_propDict["customerNotes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerPhone
     * The customer's phone number.
@@ -214,7 +214,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerPhone
     * The customer's phone number.
@@ -228,7 +228,7 @@ class BookingAppointment extends Entity
         $this->_propDict["customerPhone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customerTimeZone
     * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
@@ -243,7 +243,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the customerTimeZone
     * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
@@ -257,7 +257,7 @@ class BookingAppointment extends Entity
         $this->_propDict["customerTimeZone"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the duration
     * The length of the appointment, denoted in ISO8601 format.
@@ -276,7 +276,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the duration
     * The length of the appointment, denoted in ISO8601 format.
@@ -290,7 +290,7 @@ class BookingAppointment extends Entity
         $this->_propDict["duration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the end
     * The date, time, and time zone that the appointment ends.
@@ -309,7 +309,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the end
     * The date, time, and time zone that the appointment ends.
@@ -323,7 +323,7 @@ class BookingAppointment extends Entity
         $this->_propDict["end"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceAmount
     * The billed amount on the invoice.
@@ -338,7 +338,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the invoiceAmount
     * The billed amount on the invoice.
@@ -352,7 +352,7 @@ class BookingAppointment extends Entity
         $this->_propDict["invoiceAmount"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the invoiceDate
     * The date, time, and time zone of the invoice for this appointment.
@@ -371,7 +371,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the invoiceDate
     * The date, time, and time zone of the invoice for this appointment.
@@ -385,7 +385,7 @@ class BookingAppointment extends Entity
         $this->_propDict["invoiceDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceId
     * The ID of the invoice.
@@ -400,7 +400,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the invoiceId
     * The ID of the invoice.
@@ -414,7 +414,7 @@ class BookingAppointment extends Entity
         $this->_propDict["invoiceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceStatus
     * The status of the invoice. Possible values are: draft, reviewing, open, canceled, paid, corrective.
@@ -433,7 +433,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the invoiceStatus
     * The status of the invoice. Possible values are: draft, reviewing, open, canceled, paid, corrective.
@@ -447,7 +447,7 @@ class BookingAppointment extends Entity
         $this->_propDict["invoiceStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceUrl
     * The URL of the invoice in Microsoft Bookings.
@@ -462,7 +462,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the invoiceUrl
     * The URL of the invoice in Microsoft Bookings.
@@ -476,7 +476,7 @@ class BookingAppointment extends Entity
         $this->_propDict["invoiceUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isLocationOnline
     * True indicates that the appointment will be held online. Default value is false.
@@ -491,7 +491,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isLocationOnline
     * True indicates that the appointment will be held online. Default value is false.
@@ -505,7 +505,7 @@ class BookingAppointment extends Entity
         $this->_propDict["isLocationOnline"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the joinWebUrl
     * The URL of the online meeting for the appointment.
@@ -520,7 +520,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the joinWebUrl
     * The URL of the online meeting for the appointment.
@@ -534,7 +534,7 @@ class BookingAppointment extends Entity
         $this->_propDict["joinWebUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onlineMeetingUrl
     *
@@ -548,7 +548,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the onlineMeetingUrl
     *
@@ -561,7 +561,7 @@ class BookingAppointment extends Entity
         $this->_propDict["onlineMeetingUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the optOutOfCustomerEmail
     * True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
@@ -576,7 +576,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the optOutOfCustomerEmail
     * True indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
@@ -590,7 +590,7 @@ class BookingAppointment extends Entity
         $this->_propDict["optOutOfCustomerEmail"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the postBuffer
     * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
@@ -609,7 +609,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the postBuffer
     * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
@@ -623,7 +623,7 @@ class BookingAppointment extends Entity
         $this->_propDict["postBuffer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the preBuffer
     * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
@@ -642,7 +642,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the preBuffer
     * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
@@ -656,7 +656,7 @@ class BookingAppointment extends Entity
         $this->_propDict["preBuffer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the price
     * The regular price for an appointment for the specified bookingService.
@@ -671,7 +671,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the price
     * The regular price for an appointment for the specified bookingService.
@@ -685,7 +685,7 @@ class BookingAppointment extends Entity
         $this->_propDict["price"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the priceType
     * A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
@@ -704,7 +704,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the priceType
     * A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
@@ -718,9 +718,9 @@ class BookingAppointment extends Entity
         $this->_propDict["priceType"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the reminders
     * The value of this property is only available when reading an individual booking appointment by id.
      *
@@ -734,12 +734,12 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the reminders
     * The value of this property is only available when reading an individual booking appointment by id.
     *
-    * @param BookingReminder $val The reminders
+    * @param BookingReminder[] $val The reminders
     *
     * @return BookingAppointment
     */
@@ -748,7 +748,7 @@ class BookingAppointment extends Entity
         $this->_propDict["reminders"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the selfServiceAppointmentId
     * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
@@ -763,7 +763,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the selfServiceAppointmentId
     * An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
@@ -777,7 +777,7 @@ class BookingAppointment extends Entity
         $this->_propDict["selfServiceAppointmentId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serviceId
     * The ID of the bookingService associated with this appointment.
@@ -792,7 +792,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serviceId
     * The ID of the bookingService associated with this appointment.
@@ -806,7 +806,7 @@ class BookingAppointment extends Entity
         $this->_propDict["serviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serviceLocation
     * The location where the service is delivered.
@@ -825,7 +825,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the serviceLocation
     * The location where the service is delivered.
@@ -839,7 +839,7 @@ class BookingAppointment extends Entity
         $this->_propDict["serviceLocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serviceName
     * This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the service id.
@@ -854,7 +854,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serviceName
     * This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the service id.
@@ -868,7 +868,7 @@ class BookingAppointment extends Entity
         $this->_propDict["serviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the serviceNotes
     * The value of this property is only available when reading an individual booking appointment by id.
@@ -883,7 +883,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the serviceNotes
     * The value of this property is only available when reading an individual booking appointment by id.
@@ -897,7 +897,7 @@ class BookingAppointment extends Entity
         $this->_propDict["serviceNotes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the smsNotificationsEnabled
     * True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
@@ -912,7 +912,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the smsNotificationsEnabled
     * True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
@@ -926,7 +926,7 @@ class BookingAppointment extends Entity
         $this->_propDict["smsNotificationsEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the staffMemberIds
     * The ID of each bookingStaffMember who is scheduled in this appointment.
@@ -941,7 +941,7 @@ class BookingAppointment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the staffMemberIds
     * The ID of each bookingStaffMember who is scheduled in this appointment.
@@ -955,7 +955,7 @@ class BookingAppointment extends Entity
         $this->_propDict["staffMemberIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the start
     * The date, time, and time zone that the appointment begins.
@@ -974,7 +974,7 @@ class BookingAppointment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the start
     * The date, time, and time zone that the appointment begins.
@@ -988,5 +988,5 @@ class BookingAppointment extends Entity
         $this->_propDict["start"] = $val;
         return $this;
     }
-    
+
 }

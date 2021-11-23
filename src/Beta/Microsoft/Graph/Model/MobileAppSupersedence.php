@@ -38,7 +38,7 @@ class MobileAppSupersedence extends MobileAppRelationship
             return null;
         }
     }
-    
+
     /**
     * Sets the supersededAppCount
     * The total number of apps directly or indirectly superseded by the child app.
@@ -52,7 +52,7 @@ class MobileAppSupersedence extends MobileAppRelationship
         $this->_propDict["supersededAppCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the supersedenceType
     * The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
@@ -71,7 +71,7 @@ class MobileAppSupersedence extends MobileAppRelationship
         }
         return null;
     }
-    
+
     /**
     * Sets the supersedenceType
     * The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
@@ -85,7 +85,7 @@ class MobileAppSupersedence extends MobileAppRelationship
         $this->_propDict["supersedenceType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the supersedingAppCount
     * The total number of apps directly or indirectly superseding the parent app.
@@ -100,7 +100,7 @@ class MobileAppSupersedence extends MobileAppRelationship
             return null;
         }
     }
-    
+
     /**
     * Sets the supersedingAppCount
     * The total number of apps directly or indirectly superseding the parent app.
@@ -114,5 +114,5 @@ class MobileAppSupersedence extends MobileAppRelationship
         $this->_propDict["supersedingAppCount"] = intval($val);
         return $this;
     }
-    
+
 }

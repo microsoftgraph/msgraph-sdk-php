@@ -38,7 +38,7 @@ class TermsAndConditionsGroupAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetGroupId
     * Unique identifier of a group that the T&amp;C policy is assigned to.
@@ -52,7 +52,7 @@ class TermsAndConditionsGroupAssignment extends Entity
         $this->_propDict["targetGroupId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the termsAndConditions
     * Navigation link to the terms and conditions that are assigned.
@@ -71,7 +71,7 @@ class TermsAndConditionsGroupAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the termsAndConditions
     * Navigation link to the terms and conditions that are assigned.
@@ -85,5 +85,5 @@ class TermsAndConditionsGroupAssignment extends Entity
         $this->_propDict["termsAndConditions"] = $val;
         return $this;
     }
-    
+
 }

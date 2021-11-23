@@ -38,7 +38,7 @@ class CloudPcServicePlan extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name for the service plan. Read-only.
@@ -52,7 +52,7 @@ class CloudPcServicePlan extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ramInGB
     * The size of the RAM in GB. Read-only.
@@ -67,7 +67,7 @@ class CloudPcServicePlan extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the ramInGB
     * The size of the RAM in GB. Read-only.
@@ -81,7 +81,7 @@ class CloudPcServicePlan extends Entity
         $this->_propDict["ramInGB"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the storageInGB
     * The size of the OS Disk in GB. Read-only.
@@ -96,7 +96,7 @@ class CloudPcServicePlan extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the storageInGB
     * The size of the OS Disk in GB. Read-only.
@@ -110,7 +110,7 @@ class CloudPcServicePlan extends Entity
         $this->_propDict["storageInGB"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
@@ -129,7 +129,7 @@ class CloudPcServicePlan extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     * The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
@@ -143,7 +143,7 @@ class CloudPcServicePlan extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userProfileInGB
     * The size of the user profile disk in GB. Read-only.
@@ -158,7 +158,7 @@ class CloudPcServicePlan extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userProfileInGB
     * The size of the user profile disk in GB. Read-only.
@@ -172,7 +172,7 @@ class CloudPcServicePlan extends Entity
         $this->_propDict["userProfileInGB"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the vCpuCount
     * The number of vCPUs. Read-only.
@@ -187,7 +187,7 @@ class CloudPcServicePlan extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the vCpuCount
     * The number of vCPUs. Read-only.
@@ -201,5 +201,5 @@ class CloudPcServicePlan extends Entity
         $this->_propDict["vCpuCount"] = intval($val);
         return $this;
     }
-    
+
 }

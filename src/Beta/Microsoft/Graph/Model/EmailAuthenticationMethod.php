@@ -38,7 +38,7 @@ class EmailAuthenticationMethod extends AuthenticationMethod
             return null;
         }
     }
-    
+
     /**
     * Sets the emailAddress
     * The email address registered to this user.
@@ -52,5 +52,5 @@ class EmailAuthenticationMethod extends AuthenticationMethod
         $this->_propDict["emailAddress"] = $val;
         return $this;
     }
-    
+
 }

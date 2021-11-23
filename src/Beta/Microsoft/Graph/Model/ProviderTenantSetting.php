@@ -37,7 +37,7 @@ class ProviderTenantSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     *
@@ -50,7 +50,7 @@ class ProviderTenantSetting extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enabled
     *
@@ -64,7 +64,7 @@ class ProviderTenantSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enabled
     *
@@ -77,7 +77,7 @@ class ProviderTenantSetting extends Entity
         $this->_propDict["enabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -95,7 +95,7 @@ class ProviderTenantSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -108,7 +108,7 @@ class ProviderTenantSetting extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the provider
     *
@@ -122,7 +122,7 @@ class ProviderTenantSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the provider
     *
@@ -135,7 +135,7 @@ class ProviderTenantSetting extends Entity
         $this->_propDict["provider"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendor
     *
@@ -149,7 +149,7 @@ class ProviderTenantSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the vendor
     *
@@ -162,5 +162,5 @@ class ProviderTenantSetting extends Entity
         $this->_propDict["vendor"] = $val;
         return $this;
     }
-    
+
 }

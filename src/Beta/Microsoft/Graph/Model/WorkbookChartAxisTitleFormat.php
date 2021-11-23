@@ -42,7 +42,7 @@ class WorkbookChartAxisTitleFormat extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the font
     * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
@@ -56,5 +56,5 @@ class WorkbookChartAxisTitleFormat extends Entity
         $this->_propDict["font"] = $val;
         return $this;
     }
-    
+
 }

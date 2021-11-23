@@ -38,7 +38,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the edgeKioskEnablePublicBrowsing
     * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
@@ -52,7 +52,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["edgeKioskEnablePublicBrowsing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskBrowserBlockedUrlExceptions
     * Specify URLs that the kiosk browser is allowed to navigate to
@@ -67,7 +67,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskBrowserBlockedUrlExceptions
     * Specify URLs that the kiosk browser is allowed to navigate to
@@ -81,7 +81,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["kioskBrowserBlockedUrlExceptions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the kioskBrowserBlockedURLs
     * Specify URLs that the kiosk browsers should not navigate to
@@ -96,7 +96,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskBrowserBlockedURLs
     * Specify URLs that the kiosk browsers should not navigate to
@@ -110,7 +110,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["kioskBrowserBlockedURLs"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the kioskBrowserDefaultUrl
     * Specify the default URL the browser should navigate to on launch.
@@ -125,7 +125,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskBrowserDefaultUrl
     * Specify the default URL the browser should navigate to on launch.
@@ -139,7 +139,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["kioskBrowserDefaultUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the kioskBrowserEnableEndSessionButton
     * Enable the kiosk browser's end session button. By default, the end session button is disabled.
@@ -154,7 +154,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskBrowserEnableEndSessionButton
     * Enable the kiosk browser's end session button. By default, the end session button is disabled.
@@ -168,7 +168,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["kioskBrowserEnableEndSessionButton"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskBrowserEnableHomeButton
     * Enable the kiosk browser's home button. By default, the home button is disabled.
@@ -183,7 +183,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskBrowserEnableHomeButton
     * Enable the kiosk browser's home button. By default, the home button is disabled.
@@ -197,7 +197,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["kioskBrowserEnableHomeButton"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskBrowserEnableNavigationButtons
     * Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
@@ -212,7 +212,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskBrowserEnableNavigationButtons
     * Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
@@ -226,7 +226,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["kioskBrowserEnableNavigationButtons"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the kioskBrowserRestartOnIdleTimeInMinutes
     * Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
@@ -241,7 +241,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the kioskBrowserRestartOnIdleTimeInMinutes
     * Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
@@ -255,9 +255,9 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["kioskBrowserRestartOnIdleTimeInMinutes"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the kioskProfiles
     * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
      *
@@ -271,12 +271,12 @@ class WindowsKioskConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the kioskProfiles
     * This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
     *
-    * @param WindowsKioskProfile $val The kioskProfiles
+    * @param WindowsKioskProfile[] $val The kioskProfiles
     *
     * @return WindowsKioskConfiguration
     */
@@ -285,7 +285,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["kioskProfiles"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windowsKioskForceUpdateSchedule
     * force update schedule for Kiosk devices.
@@ -304,7 +304,7 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the windowsKioskForceUpdateSchedule
     * force update schedule for Kiosk devices.
@@ -318,5 +318,5 @@ class WindowsKioskConfiguration extends DeviceConfiguration
         $this->_propDict["windowsKioskForceUpdateSchedule"] = $val;
         return $this;
     }
-    
+
 }

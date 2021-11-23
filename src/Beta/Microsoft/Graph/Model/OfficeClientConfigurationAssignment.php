@@ -42,7 +42,7 @@ class OfficeClientConfigurationAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The target assignment defined by the admin.
@@ -56,5 +56,5 @@ class OfficeClientConfigurationAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

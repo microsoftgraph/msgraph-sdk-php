@@ -42,7 +42,7 @@ class InvokeUserFlowListener extends AuthenticationListener
         }
         return null;
     }
-    
+
     /**
     * Sets the userFlow
     * The user flow that is invoked when this action executes.
@@ -56,5 +56,5 @@ class InvokeUserFlowListener extends AuthenticationListener
         $this->_propDict["userFlow"] = $val;
         return $this;
     }
-    
+
 }

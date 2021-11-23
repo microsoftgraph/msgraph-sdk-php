@@ -42,7 +42,7 @@ class SiteSource extends DataSource
         }
         return null;
     }
-    
+
     /**
     * Sets the site
     * The SharePoint site associated with the siteSource.
@@ -56,5 +56,5 @@ class SiteSource extends DataSource
         $this->_propDict["site"] = $val;
         return $this;
     }
-    
+
 }

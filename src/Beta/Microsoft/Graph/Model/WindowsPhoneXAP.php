@@ -38,7 +38,7 @@ class WindowsPhoneXAP extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the identityVersion
     * The identity version.
@@ -52,7 +52,7 @@ class WindowsPhoneXAP extends MobileLobApp
         $this->_propDict["identityVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -71,7 +71,7 @@ class WindowsPhoneXAP extends MobileLobApp
         }
         return null;
     }
-    
+
     /**
     * Sets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -85,7 +85,7 @@ class WindowsPhoneXAP extends MobileLobApp
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the productIdentifier
     * The Product Identifier.
@@ -100,7 +100,7 @@ class WindowsPhoneXAP extends MobileLobApp
             return null;
         }
     }
-    
+
     /**
     * Sets the productIdentifier
     * The Product Identifier.
@@ -114,5 +114,5 @@ class WindowsPhoneXAP extends MobileLobApp
         $this->_propDict["productIdentifier"] = $val;
         return $this;
     }
-    
+
 }

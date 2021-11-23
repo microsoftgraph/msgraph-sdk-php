@@ -38,7 +38,7 @@ class AuthenticationContextClassReference extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * A short explanation of the policies that are enforced by authenticationContextClassReference. This value should be used to provide secondary text to describe the authentication context class reference when building user facing admin experiences. For example, selection UX.
@@ -52,7 +52,7 @@ class AuthenticationContextClassReference extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name is the friendly name of the authenticationContextClassReference. This value should be used to identify the authentication context class reference when building user facing admin experiences. For example, selection UX.
@@ -67,7 +67,7 @@ class AuthenticationContextClassReference extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name is the friendly name of the authenticationContextClassReference. This value should be used to identify the authentication context class reference when building user facing admin experiences. For example, selection UX.
@@ -81,7 +81,7 @@ class AuthenticationContextClassReference extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isAvailable
     * Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it is set to false it should not be shown in admin UX experiences because the value is not currently available for selection.
@@ -96,7 +96,7 @@ class AuthenticationContextClassReference extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isAvailable
     * Indicates whether the authenticationContextClassReference has been published by the security admin and is ready for use by apps. When it is set to false it should not be shown in admin UX experiences because the value is not currently available for selection.
@@ -110,5 +110,5 @@ class AuthenticationContextClassReference extends Entity
         $this->_propDict["isAvailable"] = boolval($val);
         return $this;
     }
-    
+
 }

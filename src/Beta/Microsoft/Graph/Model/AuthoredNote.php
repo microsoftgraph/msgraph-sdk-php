@@ -42,7 +42,7 @@ class AuthoredNote extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the author
     * Identity information about the note's author.
@@ -56,7 +56,7 @@ class AuthoredNote extends Entity
         $this->_propDict["author"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the content
     * The content of the note.
@@ -75,7 +75,7 @@ class AuthoredNote extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     * The content of the note.
@@ -89,7 +89,7 @@ class AuthoredNote extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -108,7 +108,7 @@ class AuthoredNote extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -122,5 +122,5 @@ class AuthoredNote extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
 }

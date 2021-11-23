@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class OfficeClientConfiguration extends Entity
 {
 
-     /** 
+     /**
      * Gets the checkinStatuses
     * List of office Client check-in status.
      *
@@ -39,12 +39,12 @@ class OfficeClientConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the checkinStatuses
     * List of office Client check-in status.
     *
-    * @param OfficeClientCheckinStatus $val The checkinStatuses
+    * @param OfficeClientCheckinStatus[] $val The checkinStatuses
     *
     * @return OfficeClientConfiguration
     */
@@ -53,7 +53,7 @@ class OfficeClientConfiguration extends Entity
         $this->_propDict["checkinStatuses"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Not yet documented
@@ -68,7 +68,7 @@ class OfficeClientConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Not yet documented
@@ -82,7 +82,7 @@ class OfficeClientConfiguration extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Admin provided description of the office client configuration policy.
@@ -97,7 +97,7 @@ class OfficeClientConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Admin provided description of the office client configuration policy.
@@ -111,7 +111,7 @@ class OfficeClientConfiguration extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the policyPayload
     * Policy settings JSON string in binary format, these values cannot be changed by the user.
@@ -130,7 +130,7 @@ class OfficeClientConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the policyPayload
     * Policy settings JSON string in binary format, these values cannot be changed by the user.
@@ -144,7 +144,7 @@ class OfficeClientConfiguration extends Entity
         $this->_propDict["policyPayload"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the priority
     * Priority value should be unique value for each policy under a tenant and will be used for conflict resolution, lower values mean priority is high.
@@ -159,7 +159,7 @@ class OfficeClientConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the priority
     * Priority value should be unique value for each policy under a tenant and will be used for conflict resolution, lower values mean priority is high.
@@ -173,7 +173,7 @@ class OfficeClientConfiguration extends Entity
         $this->_propDict["priority"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the userCheckinSummary
     * User check-in summary for the policy.
@@ -192,7 +192,7 @@ class OfficeClientConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userCheckinSummary
     * User check-in summary for the policy.
@@ -206,7 +206,7 @@ class OfficeClientConfiguration extends Entity
         $this->_propDict["userCheckinSummary"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPreferencePayload
     * Preference settings JSON string in binary format, these values can be overridden by the user.
@@ -225,7 +225,7 @@ class OfficeClientConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the userPreferencePayload
     * Preference settings JSON string in binary format, these values can be overridden by the user.
@@ -239,9 +239,9 @@ class OfficeClientConfiguration extends Entity
         $this->_propDict["userPreferencePayload"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * The list of group assignments for the policy.
      *
@@ -255,12 +255,12 @@ class OfficeClientConfiguration extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * The list of group assignments for the policy.
     *
-    * @param OfficeClientConfigurationAssignment $val The assignments
+    * @param OfficeClientConfigurationAssignment[] $val The assignments
     *
     * @return OfficeClientConfiguration
     */
@@ -269,5 +269,5 @@ class OfficeClientConfiguration extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

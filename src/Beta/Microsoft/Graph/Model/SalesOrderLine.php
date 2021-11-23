@@ -37,7 +37,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accountId
     *
@@ -50,7 +50,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["accountId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the amountExcludingTax
     *
@@ -68,7 +68,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the amountExcludingTax
     *
@@ -81,7 +81,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["amountExcludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the amountIncludingTax
     *
@@ -99,7 +99,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the amountIncludingTax
     *
@@ -112,7 +112,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["amountIncludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -126,7 +126,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -139,7 +139,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountAmount
     *
@@ -157,7 +157,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discountAmount
     *
@@ -170,7 +170,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["discountAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountAppliedBeforeTax
     *
@@ -184,7 +184,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the discountAppliedBeforeTax
     *
@@ -197,7 +197,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["discountAppliedBeforeTax"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the discountPercent
     *
@@ -215,7 +215,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discountPercent
     *
@@ -228,7 +228,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["discountPercent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the documentId
     *
@@ -242,7 +242,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the documentId
     *
@@ -255,7 +255,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["documentId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceDiscountAllocation
     *
@@ -273,7 +273,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the invoiceDiscountAllocation
     *
@@ -286,7 +286,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["invoiceDiscountAllocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoicedQuantity
     *
@@ -304,7 +304,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the invoicedQuantity
     *
@@ -317,7 +317,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["invoicedQuantity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceQuantity
     *
@@ -335,7 +335,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the invoiceQuantity
     *
@@ -348,7 +348,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["invoiceQuantity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the itemId
     *
@@ -362,7 +362,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the itemId
     *
@@ -375,7 +375,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["itemId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lineType
     *
@@ -389,7 +389,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lineType
     *
@@ -402,7 +402,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["lineType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the netAmount
     *
@@ -420,7 +420,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the netAmount
     *
@@ -433,7 +433,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["netAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the netAmountIncludingTax
     *
@@ -451,7 +451,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the netAmountIncludingTax
     *
@@ -464,7 +464,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["netAmountIncludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the netTaxAmount
     *
@@ -482,7 +482,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the netTaxAmount
     *
@@ -495,7 +495,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["netTaxAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the quantity
     *
@@ -513,7 +513,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the quantity
     *
@@ -526,7 +526,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["quantity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sequence
     *
@@ -540,7 +540,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sequence
     *
@@ -553,7 +553,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["sequence"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the shipmentDate
     *
@@ -571,7 +571,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the shipmentDate
     *
@@ -584,7 +584,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["shipmentDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shippedQuantity
     *
@@ -602,7 +602,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the shippedQuantity
     *
@@ -615,7 +615,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["shippedQuantity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shipQuantity
     *
@@ -633,7 +633,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the shipQuantity
     *
@@ -646,7 +646,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["shipQuantity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxCode
     *
@@ -660,7 +660,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxCode
     *
@@ -673,7 +673,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["taxCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxPercent
     *
@@ -691,7 +691,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the taxPercent
     *
@@ -704,7 +704,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["taxPercent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalTaxAmount
     *
@@ -722,7 +722,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the totalTaxAmount
     *
@@ -735,7 +735,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["totalTaxAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unitOfMeasureId
     *
@@ -749,7 +749,7 @@ class SalesOrderLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the unitOfMeasureId
     *
@@ -762,7 +762,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["unitOfMeasureId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unitPrice
     *
@@ -780,7 +780,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the unitPrice
     *
@@ -793,7 +793,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["unitPrice"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the account
     *
@@ -811,7 +811,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the account
     *
@@ -824,7 +824,7 @@ class SalesOrderLine extends Entity
         $this->_propDict["account"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the item
     *
@@ -842,7 +842,7 @@ class SalesOrderLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the item
     *
@@ -855,5 +855,5 @@ class SalesOrderLine extends Entity
         $this->_propDict["item"] = $val;
         return $this;
     }
-    
+
 }

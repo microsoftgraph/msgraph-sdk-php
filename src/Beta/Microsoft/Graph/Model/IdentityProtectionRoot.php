@@ -31,7 +31,7 @@ class IdentityProtectionRoot implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new IdentityProtectionRoot
     *
@@ -54,9 +54,9 @@ class IdentityProtectionRoot implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the riskDetections
      *
      * @return array|null The riskDetections
@@ -69,11 +69,11 @@ class IdentityProtectionRoot implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the riskDetections
     *
-    * @param RiskDetection $val The riskDetections
+    * @param RiskDetection[] $val The riskDetections
     *
     * @return IdentityProtectionRoot
     */
@@ -82,9 +82,9 @@ class IdentityProtectionRoot implements \JsonSerializable
         $this->_propDict["riskDetections"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the riskyUsers
      *
      * @return array|null The riskyUsers
@@ -97,11 +97,11 @@ class IdentityProtectionRoot implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the riskyUsers
     *
-    * @param RiskyUser $val The riskyUsers
+    * @param RiskyUser[] $val The riskyUsers
     *
     * @return IdentityProtectionRoot
     */
@@ -110,7 +110,7 @@ class IdentityProtectionRoot implements \JsonSerializable
         $this->_propDict["riskyUsers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -123,7 +123,7 @@ class IdentityProtectionRoot implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -136,7 +136,7 @@ class IdentityProtectionRoot implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

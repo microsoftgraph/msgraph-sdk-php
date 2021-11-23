@@ -38,7 +38,7 @@ class AndroidManagedAppRegistration extends ManagedAppRegistration
             return null;
         }
     }
-    
+
     /**
     * Sets the patchVersion
     * The patch version for the current android app registration
@@ -52,5 +52,5 @@ class AndroidManagedAppRegistration extends ManagedAppRegistration
         $this->_propDict["patchVersion"] = $val;
         return $this;
     }
-    
+
 }

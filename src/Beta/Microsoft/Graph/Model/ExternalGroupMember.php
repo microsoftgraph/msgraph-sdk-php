@@ -41,7 +41,7 @@ class ExternalGroupMember extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the identitySource
     *
@@ -54,7 +54,7 @@ class ExternalGroupMember extends Entity
         $this->_propDict["identitySource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     *
@@ -72,7 +72,7 @@ class ExternalGroupMember extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the type
     *
@@ -85,5 +85,5 @@ class ExternalGroupMember extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
 }

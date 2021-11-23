@@ -38,7 +38,7 @@ class UserSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contributionToContentDiscoveryAsOrganizationDisabled
     * Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
@@ -52,7 +52,7 @@ class UserSettings extends Entity
         $this->_propDict["contributionToContentDiscoveryAsOrganizationDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contributionToContentDiscoveryDisabled
     * When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
@@ -67,7 +67,7 @@ class UserSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contributionToContentDiscoveryDisabled
     * When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
@@ -81,7 +81,7 @@ class UserSettings extends Entity
         $this->_propDict["contributionToContentDiscoveryDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the itemInsights
     * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
@@ -100,7 +100,7 @@ class UserSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the itemInsights
     * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
@@ -114,7 +114,7 @@ class UserSettings extends Entity
         $this->_propDict["itemInsights"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the regionalAndLanguageSettings
     * The user's preferences for languages, regional locale and date/time formatting.
@@ -133,7 +133,7 @@ class UserSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the regionalAndLanguageSettings
     * The user's preferences for languages, regional locale and date/time formatting.
@@ -147,7 +147,7 @@ class UserSettings extends Entity
         $this->_propDict["regionalAndLanguageSettings"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the shiftPreferences
     * The shift preferences for the user.
@@ -166,7 +166,7 @@ class UserSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the shiftPreferences
     * The shift preferences for the user.
@@ -180,5 +180,5 @@ class UserSettings extends Entity
         $this->_propDict["shiftPreferences"] = $val;
         return $this;
     }
-    
+
 }

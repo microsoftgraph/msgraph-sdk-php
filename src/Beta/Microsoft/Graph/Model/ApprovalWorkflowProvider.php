@@ -37,7 +37,7 @@ class ApprovalWorkflowProvider extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -50,9 +50,9 @@ class ApprovalWorkflowProvider extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the businessFlows
      *
      * @return array|null The businessFlows
@@ -65,11 +65,11 @@ class ApprovalWorkflowProvider extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the businessFlows
     *
-    * @param BusinessFlow $val The businessFlows
+    * @param BusinessFlow[] $val The businessFlows
     *
     * @return ApprovalWorkflowProvider
     */
@@ -78,9 +78,9 @@ class ApprovalWorkflowProvider extends Entity
         $this->_propDict["businessFlows"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the businessFlowsWithRequestsAwaitingMyDecision
      *
      * @return array|null The businessFlowsWithRequestsAwaitingMyDecision
@@ -93,11 +93,11 @@ class ApprovalWorkflowProvider extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the businessFlowsWithRequestsAwaitingMyDecision
     *
-    * @param BusinessFlow $val The businessFlowsWithRequestsAwaitingMyDecision
+    * @param BusinessFlow[] $val The businessFlowsWithRequestsAwaitingMyDecision
     *
     * @return ApprovalWorkflowProvider
     */
@@ -106,9 +106,9 @@ class ApprovalWorkflowProvider extends Entity
         $this->_propDict["businessFlowsWithRequestsAwaitingMyDecision"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the policyTemplates
      *
      * @return array|null The policyTemplates
@@ -121,11 +121,11 @@ class ApprovalWorkflowProvider extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the policyTemplates
     *
-    * @param GovernancePolicyTemplate $val The policyTemplates
+    * @param GovernancePolicyTemplate[] $val The policyTemplates
     *
     * @return ApprovalWorkflowProvider
     */
@@ -134,5 +134,5 @@ class ApprovalWorkflowProvider extends Entity
         $this->_propDict["policyTemplates"] = $val;
         return $this;
     }
-    
+
 }

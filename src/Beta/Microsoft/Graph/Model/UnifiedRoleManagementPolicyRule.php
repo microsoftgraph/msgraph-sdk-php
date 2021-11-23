@@ -42,7 +42,7 @@ class UnifiedRoleManagementPolicyRule extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The target for the policy rule.
@@ -56,5 +56,5 @@ class UnifiedRoleManagementPolicyRule extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

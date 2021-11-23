@@ -38,7 +38,7 @@ class CloudPcAuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activity
     * Friendly name of the activity. Optional.
@@ -52,7 +52,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["activity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityDateTime
     * The date time in UTC when the activity was performed. Read-only.
@@ -71,7 +71,7 @@ class CloudPcAuditEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activityDateTime
     * The date time in UTC when the activity was performed. Read-only.
@@ -85,7 +85,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["activityDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityOperationType
     * The HTTP operation type of the activity. Possible values include create, delete, patch and other. Read-only.
@@ -104,7 +104,7 @@ class CloudPcAuditEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activityOperationType
     * The HTTP operation type of the activity. Possible values include create, delete, patch and other. Read-only.
@@ -118,7 +118,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["activityOperationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityResult
     * The result of the activity. Read-only.
@@ -137,7 +137,7 @@ class CloudPcAuditEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activityResult
     * The result of the activity. Read-only.
@@ -151,7 +151,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["activityResult"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityType
     * The type of activity that was performed. Read-only.
@@ -166,7 +166,7 @@ class CloudPcAuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activityType
     * The type of activity that was performed. Read-only.
@@ -180,7 +180,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["activityType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the actor
     * Azure AD user and application associated with the audit event. Read-only.
@@ -199,7 +199,7 @@ class CloudPcAuditEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the actor
     * Azure AD user and application associated with the audit event. Read-only.
@@ -213,7 +213,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["actor"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the category
     * Audit category. Read-only.
@@ -232,7 +232,7 @@ class CloudPcAuditEvent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     * Audit category. Read-only.
@@ -246,7 +246,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the componentName
     * Component name. Read-only.
@@ -261,7 +261,7 @@ class CloudPcAuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the componentName
     * Component name. Read-only.
@@ -275,7 +275,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["componentName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the correlationId
     * The client request identifier, used to correlate activity within the system. Read-only.
@@ -290,7 +290,7 @@ class CloudPcAuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the correlationId
     * The client request identifier, used to correlate activity within the system. Read-only.
@@ -304,7 +304,7 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["correlationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Event display name. Read-only.
@@ -319,7 +319,7 @@ class CloudPcAuditEvent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Event display name. Read-only.
@@ -333,9 +333,9 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the resources
     * List of cloudPcAuditResource objects. Read-only.
      *
@@ -349,12 +349,12 @@ class CloudPcAuditEvent extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the resources
     * List of cloudPcAuditResource objects. Read-only.
     *
-    * @param CloudPcAuditResource $val The resources
+    * @param CloudPcAuditResource[] $val The resources
     *
     * @return CloudPcAuditEvent
     */
@@ -363,5 +363,5 @@ class CloudPcAuditEvent extends Entity
         $this->_propDict["resources"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class EmbeddedSIMDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The time the embedded SIM device status was created. Generated service side.
@@ -56,7 +56,7 @@ class EmbeddedSIMDeviceState extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceName
     * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
@@ -71,7 +71,7 @@ class EmbeddedSIMDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceName
     * Device name to which the subscription was provisioned e.g. DESKTOP-JOE
@@ -85,7 +85,7 @@ class EmbeddedSIMDeviceState extends Entity
         $this->_propDict["deviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSyncDateTime
     * The time the embedded SIM device last checked in. Updated service side.
@@ -104,7 +104,7 @@ class EmbeddedSIMDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSyncDateTime
     * The time the embedded SIM device last checked in. Updated service side.
@@ -118,7 +118,7 @@ class EmbeddedSIMDeviceState extends Entity
         $this->_propDict["lastSyncDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the modifiedDateTime
     * The time the embedded SIM device status was last modified. Updated service side.
@@ -137,7 +137,7 @@ class EmbeddedSIMDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the modifiedDateTime
     * The time the embedded SIM device status was last modified. Updated service side.
@@ -151,7 +151,7 @@ class EmbeddedSIMDeviceState extends Entity
         $this->_propDict["modifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the state
     * The state of the profile operation applied to the device. Possible values are: notEvaluated, failed, installing, installed, deleting, error, deleted, removedByUser.
@@ -170,7 +170,7 @@ class EmbeddedSIMDeviceState extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the state
     * The state of the profile operation applied to the device. Possible values are: notEvaluated, failed, installing, installed, deleting, error, deleted, removedByUser.
@@ -184,7 +184,7 @@ class EmbeddedSIMDeviceState extends Entity
         $this->_propDict["state"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the stateDetails
     * String description of the provisioning state.
@@ -199,7 +199,7 @@ class EmbeddedSIMDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the stateDetails
     * String description of the provisioning state.
@@ -213,7 +213,7 @@ class EmbeddedSIMDeviceState extends Entity
         $this->_propDict["stateDetails"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the universalIntegratedCircuitCardIdentifier
     * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
@@ -228,7 +228,7 @@ class EmbeddedSIMDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the universalIntegratedCircuitCardIdentifier
     * The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
@@ -242,7 +242,7 @@ class EmbeddedSIMDeviceState extends Entity
         $this->_propDict["universalIntegratedCircuitCardIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userName
     * Username which the subscription was provisioned to e.g. joe@contoso.com
@@ -257,7 +257,7 @@ class EmbeddedSIMDeviceState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userName
     * Username which the subscription was provisioned to e.g. joe@contoso.com
@@ -271,5 +271,5 @@ class EmbeddedSIMDeviceState extends Entity
         $this->_propDict["userName"] = $val;
         return $this;
     }
-    
+
 }

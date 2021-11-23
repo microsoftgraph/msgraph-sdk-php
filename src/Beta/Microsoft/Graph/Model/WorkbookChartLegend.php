@@ -38,7 +38,7 @@ class WorkbookChartLegend extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the overlay
     * Boolean value for whether the chart legend should overlap with the main body of the chart.
@@ -52,7 +52,7 @@ class WorkbookChartLegend extends Entity
         $this->_propDict["overlay"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the position
     * Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
@@ -67,7 +67,7 @@ class WorkbookChartLegend extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the position
     * Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
@@ -81,7 +81,7 @@ class WorkbookChartLegend extends Entity
         $this->_propDict["position"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the visible
     * A boolean value the represents the visibility of a ChartLegend object.
@@ -96,7 +96,7 @@ class WorkbookChartLegend extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the visible
     * A boolean value the represents the visibility of a ChartLegend object.
@@ -110,7 +110,7 @@ class WorkbookChartLegend extends Entity
         $this->_propDict["visible"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the format
     * Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
@@ -129,7 +129,7 @@ class WorkbookChartLegend extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the format
     * Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
@@ -143,5 +143,5 @@ class WorkbookChartLegend extends Entity
         $this->_propDict["format"] = $val;
         return $this;
     }
-    
+
 }

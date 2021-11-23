@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class BookingCustomer extends BookingPerson
 {
 
-     /** 
+     /**
      * Gets the addresses
     * Addresses associated with the customer, including home, business and other addresses.
      *
@@ -39,12 +39,12 @@ class BookingCustomer extends BookingPerson
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the addresses
     * Addresses associated with the customer, including home, business and other addresses.
     *
-    * @param PhysicalAddress $val The addresses
+    * @param PhysicalAddress[] $val The addresses
     *
     * @return BookingCustomer
     */
@@ -53,9 +53,9 @@ class BookingCustomer extends BookingPerson
         $this->_propDict["addresses"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the phones
     * Phone numbers associated with the customer, including home, business and mobile numbers.
      *
@@ -69,12 +69,12 @@ class BookingCustomer extends BookingPerson
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the phones
     * Phone numbers associated with the customer, including home, business and mobile numbers.
     *
-    * @param Phone $val The phones
+    * @param Phone[] $val The phones
     *
     * @return BookingCustomer
     */
@@ -83,5 +83,5 @@ class BookingCustomer extends BookingPerson
         $this->_propDict["phones"] = $val;
         return $this;
     }
-    
+
 }

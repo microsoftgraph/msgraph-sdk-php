@@ -38,7 +38,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeDevices
     * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
         $this->_propDict["activeDevices"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the batteryCapacityFair
     * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values -2147483648 to 2147483647
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the batteryCapacityFair
     * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values -2147483648 to 2147483647
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
         $this->_propDict["batteryCapacityFair"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the batteryCapacityGood
     * Number of devices whose battery maximum capacity is greater than 80%. Valid values -2147483648 to 2147483647
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the batteryCapacityGood
     * Number of devices whose battery maximum capacity is greater than 80%. Valid values -2147483648 to 2147483647
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
         $this->_propDict["batteryCapacityGood"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the batteryCapacityPoor
     * Number of devices whose battery maximum capacity is lesser than 50%. Valid values -2147483648 to 2147483647
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the batteryCapacityPoor
     * Number of devices whose battery maximum capacity is lesser than 50%. Valid values -2147483648 to 2147483647
@@ -139,5 +139,5 @@ class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity
         $this->_propDict["batteryCapacityPoor"] = intval($val);
         return $this;
     }
-    
+
 }

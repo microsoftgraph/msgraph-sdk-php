@@ -42,7 +42,7 @@ class CloudPcUserSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the setting was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
@@ -56,7 +56,7 @@ class CloudPcUserSetting extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The setting name displayed in the user interface.
@@ -71,7 +71,7 @@ class CloudPcUserSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The setting name displayed in the user interface.
@@ -85,7 +85,7 @@ class CloudPcUserSetting extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
@@ -104,7 +104,7 @@ class CloudPcUserSetting extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
@@ -118,7 +118,7 @@ class CloudPcUserSetting extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the localAdminEnabled
     * Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
@@ -133,7 +133,7 @@ class CloudPcUserSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the localAdminEnabled
     * Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
@@ -147,7 +147,7 @@ class CloudPcUserSetting extends Entity
         $this->_propDict["localAdminEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the selfServiceEnabled
     * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
@@ -162,7 +162,7 @@ class CloudPcUserSetting extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the selfServiceEnabled
     * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
@@ -176,9 +176,9 @@ class CloudPcUserSetting extends Entity
         $this->_propDict["selfServiceEnabled"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      *
@@ -192,12 +192,12 @@ class CloudPcUserSetting extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
     *
-    * @param CloudPcUserSettingAssignment $val The assignments
+    * @param CloudPcUserSettingAssignment[] $val The assignments
     *
     * @return CloudPcUserSetting
     */
@@ -206,5 +206,5 @@ class CloudPcUserSetting extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

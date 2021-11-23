@@ -38,7 +38,7 @@ class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The unique identifier of the device, Intune DeviceID or SCCM device id.
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the estimatedRuntimeInMinutes
     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the estimatedRuntimeInMinutes
     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity
         $this->_propDict["estimatedRuntimeInMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the runtimeDateTime
     * The datetime for the instance of runtime history.
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the runtimeDateTime
     * The datetime for the instance of runtime history.
@@ -110,5 +110,5 @@ class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity
         $this->_propDict["runtimeDateTime"] = $val;
         return $this;
     }
-    
+
 }

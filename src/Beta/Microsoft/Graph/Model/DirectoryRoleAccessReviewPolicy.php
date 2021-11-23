@@ -41,7 +41,7 @@ class DirectoryRoleAccessReviewPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     *
@@ -54,5 +54,5 @@ class DirectoryRoleAccessReviewPolicy extends Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
+
 }

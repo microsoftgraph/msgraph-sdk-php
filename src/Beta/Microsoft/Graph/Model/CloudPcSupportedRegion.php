@@ -38,7 +38,7 @@ class CloudPcSupportedRegion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name for the supported region. Read-only.
@@ -52,5 +52,5 @@ class CloudPcSupportedRegion extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

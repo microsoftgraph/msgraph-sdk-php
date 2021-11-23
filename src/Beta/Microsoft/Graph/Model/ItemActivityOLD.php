@@ -41,7 +41,7 @@ class ItemActivityOLD extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the action
     *
@@ -54,7 +54,7 @@ class ItemActivityOLD extends Entity
         $this->_propDict["action"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the actor
     *
@@ -72,7 +72,7 @@ class ItemActivityOLD extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the actor
     *
@@ -85,7 +85,7 @@ class ItemActivityOLD extends Entity
         $this->_propDict["actor"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the times
     *
@@ -103,7 +103,7 @@ class ItemActivityOLD extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the times
     *
@@ -116,7 +116,7 @@ class ItemActivityOLD extends Entity
         $this->_propDict["times"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the driveItem
     *
@@ -134,7 +134,7 @@ class ItemActivityOLD extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the driveItem
     *
@@ -147,7 +147,7 @@ class ItemActivityOLD extends Entity
         $this->_propDict["driveItem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the listItem
     *
@@ -165,7 +165,7 @@ class ItemActivityOLD extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the listItem
     *
@@ -178,5 +178,5 @@ class ItemActivityOLD extends Entity
         $this->_propDict["listItem"] = $val;
         return $this;
     }
-    
+
 }

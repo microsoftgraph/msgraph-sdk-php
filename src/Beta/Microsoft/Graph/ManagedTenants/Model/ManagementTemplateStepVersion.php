@@ -41,7 +41,7 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the configurationAction
     *
@@ -54,7 +54,7 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["configurationAction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the validationAction
     *
@@ -72,7 +72,7 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the validationAction
     *
@@ -85,7 +85,7 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["validationAction"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     *
@@ -99,7 +99,7 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     *
@@ -112,9 +112,9 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deployments
      *
      * @return array|null The deployments
@@ -127,11 +127,11 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deployments
     *
-    * @param ManagementTemplateStepDeployment $val The deployments
+    * @param ManagementTemplateStepDeployment[] $val The deployments
     *
     * @return ManagementTemplateStepVersion
     */
@@ -140,7 +140,7 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["deployments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the templateStep
     *
@@ -158,7 +158,7 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the templateStep
     *
@@ -171,5 +171,5 @@ class ManagementTemplateStepVersion extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["templateStep"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class Windows extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the updates
     * Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only.
@@ -56,5 +56,5 @@ class Windows extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["updates"] = $val;
         return $this;
     }
-    
+
 }

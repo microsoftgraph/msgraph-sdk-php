@@ -31,7 +31,7 @@ class IdentityGovernance implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new IdentityGovernance
     *
@@ -54,7 +54,7 @@ class IdentityGovernance implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
+
     /**
     * Gets the accessReviews
     *
@@ -72,7 +72,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the accessReviews
     *
@@ -85,7 +85,7 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["accessReviews"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appConsent
     *
@@ -103,7 +103,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the appConsent
     *
@@ -116,7 +116,7 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["appConsent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the termsOfUse
     *
@@ -134,7 +134,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the termsOfUse
     *
@@ -147,7 +147,7 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["termsOfUse"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the entitlementManagement
     *
@@ -165,7 +165,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the entitlementManagement
     *
@@ -178,7 +178,7 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["entitlementManagement"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -191,7 +191,7 @@ class IdentityGovernance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -204,7 +204,7 @@ class IdentityGovernance implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

@@ -38,7 +38,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the osCheckFailedPercentage
     * The percentage of devices for which OS check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["osCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the processor64BitCheckFailedPercentage
     * The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the processor64BitCheckFailedPercentage
     * The percentage of devices for which processor hardware 64-bit architecture check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["processor64BitCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the processorCoreCountCheckFailedPercentage
     * The percentage of devices for which processor hardware core count check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the processorCoreCountCheckFailedPercentage
     * The percentage of devices for which processor hardware core count check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["processorCoreCountCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the processorFamilyCheckFailedPercentage
     * The percentage of devices for which processor hardware family check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the processorFamilyCheckFailedPercentage
     * The percentage of devices for which processor hardware family check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["processorFamilyCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the processorSpeedCheckFailedPercentage
     * The percentage of devices for which processor hardware speed check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the processorSpeedCheckFailedPercentage
     * The percentage of devices for which processor hardware speed check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["processorSpeedCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the ramCheckFailedPercentage
     * The percentage of devices for which RAM hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the ramCheckFailedPercentage
     * The percentage of devices for which RAM hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -197,7 +197,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["ramCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the secureBootCheckFailedPercentage
     * The percentage of devices for which secure boot hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -212,7 +212,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the secureBootCheckFailedPercentage
     * The percentage of devices for which secure boot hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -226,7 +226,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["secureBootCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the storageCheckFailedPercentage
     * The percentage of devices for which storage hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -241,7 +241,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the storageCheckFailedPercentage
     * The percentage of devices for which storage hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -255,7 +255,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["storageCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalDeviceCount
     * The count of total devices in an organization. Valid values -2147483648 to 2147483647
@@ -270,7 +270,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the totalDeviceCount
     * The count of total devices in an organization. Valid values -2147483648 to 2147483647
@@ -284,7 +284,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["totalDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the tpmCheckFailedPercentage
     * The percentage of devices for which Trusted Platform Module (TPM) hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -299,7 +299,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the tpmCheckFailedPercentage
     * The percentage of devices for which Trusted Platform Module (TPM) hardware check has failed. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
@@ -313,7 +313,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["tpmCheckFailedPercentage"] = floatval($val);
         return $this;
     }
-    
+
     /**
     * Gets the upgradeEligibleDeviceCount
     * The count of devices in an organization eligible for windows upgrade. Valid values -2147483648 to 2147483647
@@ -328,7 +328,7 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
             return null;
         }
     }
-    
+
     /**
     * Sets the upgradeEligibleDeviceCount
     * The count of devices in an organization eligible for windows upgrade. Valid values -2147483648 to 2147483647
@@ -342,5 +342,5 @@ class UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric extends Ent
         $this->_propDict["upgradeEligibleDeviceCount"] = intval($val);
         return $this;
     }
-    
+
 }

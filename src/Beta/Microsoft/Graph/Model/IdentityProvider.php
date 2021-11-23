@@ -38,7 +38,7 @@ class IdentityProvider extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the clientId
     * The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
@@ -52,7 +52,7 @@ class IdentityProvider extends Entity
         $this->_propDict["clientId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the clientSecret
     * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
@@ -67,7 +67,7 @@ class IdentityProvider extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the clientSecret
     * The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
@@ -81,7 +81,7 @@ class IdentityProvider extends Entity
         $this->_propDict["clientSecret"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The display name of the identity provider. Not nullable.
@@ -96,7 +96,7 @@ class IdentityProvider extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The display name of the identity provider. Not nullable.
@@ -110,7 +110,7 @@ class IdentityProvider extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the type
     * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
@@ -125,7 +125,7 @@ class IdentityProvider extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the type
     * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
@@ -139,5 +139,5 @@ class IdentityProvider extends Entity
         $this->_propDict["type"] = $val;
         return $this;
     }
-    
+
 }

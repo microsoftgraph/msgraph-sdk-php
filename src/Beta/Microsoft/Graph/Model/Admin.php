@@ -31,7 +31,7 @@ class Admin implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new Admin
     *
@@ -54,7 +54,7 @@ class Admin implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
+
     /**
     * Gets the serviceAnnouncement
     * A container for service communications resources. Read-only.
@@ -73,7 +73,7 @@ class Admin implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the serviceAnnouncement
     * A container for service communications resources. Read-only.
@@ -87,7 +87,7 @@ class Admin implements \JsonSerializable
         $this->_propDict["serviceAnnouncement"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windows
     * A container for all Windows Update for Business deployment service functionality. Read-only.
@@ -106,7 +106,7 @@ class Admin implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the windows
     * A container for all Windows Update for Business deployment service functionality. Read-only.
@@ -120,7 +120,7 @@ class Admin implements \JsonSerializable
         $this->_propDict["windows"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -133,7 +133,7 @@ class Admin implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -146,7 +146,7 @@ class Admin implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

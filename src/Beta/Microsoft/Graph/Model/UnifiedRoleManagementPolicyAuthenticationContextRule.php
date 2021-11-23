@@ -38,7 +38,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
             return null;
         }
     }
-    
+
     /**
     * Sets the claimValue
     * Value of the authentication context claim.
@@ -52,7 +52,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
         $this->_propDict["claimValue"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * Indicates if the setting is enabled.
@@ -67,7 +67,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * Indicates if the setting is enabled.
@@ -81,5 +81,5 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class ParticipantJoiningNotification extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the call
     *
@@ -54,5 +54,5 @@ class ParticipantJoiningNotification extends Entity
         $this->_propDict["call"] = $val;
         return $this;
     }
-    
+
 }

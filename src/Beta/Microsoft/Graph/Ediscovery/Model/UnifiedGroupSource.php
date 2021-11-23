@@ -42,7 +42,7 @@ class UnifiedGroupSource extends DataSource
         }
         return null;
     }
-    
+
     /**
     * Sets the includedSources
     * Specifies which sources are included in this group. Possible values are: mailbox, site.
@@ -56,7 +56,7 @@ class UnifiedGroupSource extends DataSource
         $this->_propDict["includedSources"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the group
     * The group associated with the unifiedGroupSource.
@@ -75,7 +75,7 @@ class UnifiedGroupSource extends DataSource
         }
         return null;
     }
-    
+
     /**
     * Sets the group
     * The group associated with the unifiedGroupSource.
@@ -89,5 +89,5 @@ class UnifiedGroupSource extends DataSource
         $this->_propDict["group"] = $val;
         return $this;
     }
-    
+
 }

@@ -42,7 +42,7 @@ class ItemAddress extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the detail
     * Details about the address itself.
@@ -56,7 +56,7 @@ class ItemAddress extends ItemFacet
         $this->_propDict["detail"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Friendly name the user has assigned to this address.
@@ -71,7 +71,7 @@ class ItemAddress extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Friendly name the user has assigned to this address.
@@ -85,7 +85,7 @@ class ItemAddress extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the geoCoordinates
     * The geocoordinates of the address.
@@ -104,7 +104,7 @@ class ItemAddress extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the geoCoordinates
     * The geocoordinates of the address.
@@ -118,5 +118,5 @@ class ItemAddress extends ItemFacet
         $this->_propDict["geoCoordinates"] = $val;
         return $this;
     }
-    
+
 }

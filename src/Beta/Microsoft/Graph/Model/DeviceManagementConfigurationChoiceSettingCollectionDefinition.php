@@ -38,7 +38,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
             return null;
         }
     }
-    
+
     /**
     * Sets the maximumCount
     * Maximum number of choices in the collection. Valid values 1 to 100
@@ -52,7 +52,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
         $this->_propDict["maximumCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the minimumCount
     * Minimum number of choices in the collection. Valid values 1 to 100
@@ -67,7 +67,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
             return null;
         }
     }
-    
+
     /**
     * Sets the minimumCount
     * Minimum number of choices in the collection. Valid values 1 to 100
@@ -81,5 +81,5 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
         $this->_propDict["minimumCount"] = intval($val);
         return $this;
     }
-    
+
 }

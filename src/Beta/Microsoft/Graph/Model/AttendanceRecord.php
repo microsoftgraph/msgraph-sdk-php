@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * AttendanceRecord File
 * PHP version 7
 *
@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class AttendanceRecord extends Entity
 {
 
-     /** 
+     /**
      * Gets the attendanceIntervals
     * List of time periods between joining and leaving.
      *
@@ -39,12 +39,12 @@ class AttendanceRecord extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the attendanceIntervals
     * List of time periods between joining and leaving.
     *
-    * @param AttendanceInterval $val The attendanceIntervals
+    * @param AttendanceInterval[] $val The attendanceIntervals
     *
     * @return AttendanceRecord
     */
@@ -53,7 +53,6 @@ class AttendanceRecord extends Entity
         $this->_propDict["attendanceIntervals"] = $val;
         return $this;
     }
-    
     /**
     * Gets the emailAddress
     * Email address.
@@ -68,7 +67,7 @@ class AttendanceRecord extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the emailAddress
     * Email address.
@@ -82,7 +81,7 @@ class AttendanceRecord extends Entity
         $this->_propDict["emailAddress"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the identity
     * Identifier, such as display name.
@@ -101,7 +100,7 @@ class AttendanceRecord extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the identity
     * Identifier, such as display name.
@@ -115,7 +114,6 @@ class AttendanceRecord extends Entity
         $this->_propDict["identity"] = $val;
         return $this;
     }
-    
     /**
     * Gets the role
     * Role of the attendee. Possible values are None, Attendee, Presenter, and Organizer.
@@ -130,7 +128,7 @@ class AttendanceRecord extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the role
     * Role of the attendee. Possible values are None, Attendee, Presenter, and Organizer.
@@ -144,7 +142,6 @@ class AttendanceRecord extends Entity
         $this->_propDict["role"] = $val;
         return $this;
     }
-    
     /**
     * Gets the totalAttendanceInSeconds
     * Total duration of the attendances in seconds.
@@ -159,7 +156,7 @@ class AttendanceRecord extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalAttendanceInSeconds
     * Total duration of the attendances in seconds.
@@ -173,5 +170,4 @@ class AttendanceRecord extends Entity
         $this->_propDict["totalAttendanceInSeconds"] = intval($val);
         return $this;
     }
-    
 }

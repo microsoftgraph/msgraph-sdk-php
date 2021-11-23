@@ -38,7 +38,7 @@ class AndroidStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appIdentifier
     * The Identity Name.
@@ -52,7 +52,7 @@ class AndroidStoreApp extends MobileApp
         $this->_propDict["appIdentifier"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the appStoreUrl
     * The Android app store URL.
@@ -67,7 +67,7 @@ class AndroidStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreUrl
     * The Android app store URL.
@@ -81,7 +81,7 @@ class AndroidStoreApp extends MobileApp
         $this->_propDict["appStoreUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -100,7 +100,7 @@ class AndroidStoreApp extends MobileApp
         }
         return null;
     }
-    
+
     /**
     * Sets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
@@ -114,7 +114,7 @@ class AndroidStoreApp extends MobileApp
         $this->_propDict["minimumSupportedOperatingSystem"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the packageId
     * The package identifier.
@@ -129,7 +129,7 @@ class AndroidStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the packageId
     * The package identifier.
@@ -143,5 +143,5 @@ class AndroidStoreApp extends MobileApp
         $this->_propDict["packageId"] = $val;
         return $this;
     }
-    
+
 }

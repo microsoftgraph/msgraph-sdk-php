@@ -37,7 +37,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the androidPhone
     *
@@ -50,7 +50,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["androidPhone"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iPad
     *
@@ -64,7 +64,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the iPad
     *
@@ -77,7 +77,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["iPad"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iPhone
     *
@@ -91,7 +91,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the iPhone
     *
@@ -104,7 +104,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["iPhone"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -118,7 +118,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -131,7 +131,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -149,7 +149,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -162,7 +162,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the windows
     *
@@ -176,7 +176,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windows
     *
@@ -189,7 +189,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["windows"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the windowsPhone
     *
@@ -203,7 +203,7 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windowsPhone
     *
@@ -216,5 +216,5 @@ class SkypeForBusinessDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["windowsPhone"] = intval($val);
         return $this;
     }
-    
+
 }

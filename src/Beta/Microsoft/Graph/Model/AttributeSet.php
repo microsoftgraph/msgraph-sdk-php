@@ -38,7 +38,7 @@ class AttributeSet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later.
@@ -52,7 +52,7 @@ class AttributeSet extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the maxAttributesPerSet
     * Maximum number of custom security attributes that can be defined in this attribute set. Default value is null. If not specified, the administrator can add up to the maximum of 500 active attributes per tenant. Can be changed later.
@@ -67,7 +67,7 @@ class AttributeSet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the maxAttributesPerSet
     * Maximum number of custom security attributes that can be defined in this attribute set. Default value is null. If not specified, the administrator can add up to the maximum of 500 active attributes per tenant. Can be changed later.
@@ -81,5 +81,5 @@ class AttributeSet extends Entity
         $this->_propDict["maxAttributesPerSet"] = intval($val);
         return $this;
     }
-    
+
 }

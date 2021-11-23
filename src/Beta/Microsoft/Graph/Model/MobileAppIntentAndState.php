@@ -38,7 +38,7 @@ class MobileAppIntentAndState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceIdentifier
     * Device identifier created or collected by Intune.
@@ -52,9 +52,9 @@ class MobileAppIntentAndState extends Entity
         $this->_propDict["managedDeviceIdentifier"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the mobileAppList
     * The list of payload intents and states for the tenant.
      *
@@ -68,12 +68,12 @@ class MobileAppIntentAndState extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the mobileAppList
     * The list of payload intents and states for the tenant.
     *
-    * @param MobileAppIntentAndStateDetail $val The mobileAppList
+    * @param MobileAppIntentAndStateDetail[] $val The mobileAppList
     *
     * @return MobileAppIntentAndState
     */
@@ -82,7 +82,7 @@ class MobileAppIntentAndState extends Entity
         $this->_propDict["mobileAppList"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * Identifier for the user that tried to enroll the device.
@@ -97,7 +97,7 @@ class MobileAppIntentAndState extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * Identifier for the user that tried to enroll the device.
@@ -111,5 +111,5 @@ class MobileAppIntentAndState extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
 }
