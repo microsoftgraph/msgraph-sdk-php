@@ -25,6 +25,7 @@ class ChatViewpoint extends Entity
 {
     /**
     * Gets the isHidden
+    * Indicates whether the chat is hidden for the current user.
     *
     * @return bool|null The isHidden
     */
@@ -39,6 +40,7 @@ class ChatViewpoint extends Entity
 
     /**
     * Sets the isHidden
+    * Indicates whether the chat is hidden for the current user.
     *
     * @param bool $val The value of the isHidden
     *
@@ -52,7 +54,7 @@ class ChatViewpoint extends Entity
 
     /**
     * Gets the lastMessageReadDateTime
-    * Represents the dateTime up until which the calling user has read chatMessages in a specific chat.
+    * Represents the dateTime up until which the current user has read chatMessages in a specific chat.
     *
     * @return \DateTime|null The lastMessageReadDateTime
     */
@@ -71,7 +73,7 @@ class ChatViewpoint extends Entity
 
     /**
     * Sets the lastMessageReadDateTime
-    * Represents the dateTime up until which the calling user has read chatMessages in a specific chat.
+    * Represents the dateTime up until which the current user has read chatMessages in a specific chat.
     *
     * @param \DateTime $val The value to assign to the lastMessageReadDateTime
     *

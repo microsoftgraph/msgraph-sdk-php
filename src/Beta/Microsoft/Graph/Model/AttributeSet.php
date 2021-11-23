@@ -26,6 +26,7 @@ class AttributeSet extends Entity
 {
     /**
     * Gets the description
+    * Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class AttributeSet extends Entity
     
     /**
     * Sets the description
+    * Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class AttributeSet extends Entity
     
     /**
     * Gets the maxAttributesPerSet
+    * Maximum number of custom security attributes that can be defined in this attribute set. Default value is null. If not specified, the administrator can add up to the maximum of 500 active attributes per tenant. Can be changed later.
     *
     * @return int|null The maxAttributesPerSet
     */
@@ -67,6 +70,7 @@ class AttributeSet extends Entity
     
     /**
     * Sets the maxAttributesPerSet
+    * Maximum number of custom security attributes that can be defined in this attribute set. Default value is null. If not specified, the administrator can add up to the maximum of 500 active attributes per tenant. Can be changed later.
     *
     * @param int $val The maxAttributesPerSet
     *
