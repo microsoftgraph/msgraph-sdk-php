@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class ExactMatchDataStore extends ExactMatchDataStoreBase
 {
 
-     /** 
+     /**
      * Gets the sessions
      *
      * @return array|null The sessions
@@ -38,11 +38,11 @@ class ExactMatchDataStore extends ExactMatchDataStoreBase
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sessions
     *
-    * @param ExactMatchSession $val The sessions
+    * @param ExactMatchSession[] $val The sessions
     *
     * @return ExactMatchDataStore
     */
@@ -51,5 +51,5 @@ class ExactMatchDataStore extends ExactMatchDataStoreBase
         $this->_propDict["sessions"] = $val;
         return $this;
     }
-    
+
 }

@@ -37,7 +37,7 @@ class PurchaseInvoiceLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the accountId
     *
@@ -50,7 +50,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["accountId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the amountExcludingTax
     *
@@ -68,7 +68,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the amountExcludingTax
     *
@@ -81,7 +81,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["amountExcludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the amountIncludingTax
     *
@@ -99,7 +99,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the amountIncludingTax
     *
@@ -112,7 +112,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["amountIncludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -126,7 +126,7 @@ class PurchaseInvoiceLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -139,7 +139,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountAmount
     *
@@ -157,7 +157,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discountAmount
     *
@@ -170,7 +170,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["discountAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discountAppliedBeforeTax
     *
@@ -184,7 +184,7 @@ class PurchaseInvoiceLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the discountAppliedBeforeTax
     *
@@ -197,7 +197,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["discountAppliedBeforeTax"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the discountPercent
     *
@@ -215,7 +215,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the discountPercent
     *
@@ -228,7 +228,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["discountPercent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the documentId
     *
@@ -242,7 +242,7 @@ class PurchaseInvoiceLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the documentId
     *
@@ -255,7 +255,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["documentId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expectedReceiptDate
     *
@@ -273,7 +273,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expectedReceiptDate
     *
@@ -286,7 +286,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["expectedReceiptDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the invoiceDiscountAllocation
     *
@@ -304,7 +304,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the invoiceDiscountAllocation
     *
@@ -317,7 +317,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["invoiceDiscountAllocation"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the itemId
     *
@@ -331,7 +331,7 @@ class PurchaseInvoiceLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the itemId
     *
@@ -344,7 +344,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["itemId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lineType
     *
@@ -358,7 +358,7 @@ class PurchaseInvoiceLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lineType
     *
@@ -371,7 +371,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["lineType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the netAmount
     *
@@ -389,7 +389,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the netAmount
     *
@@ -402,7 +402,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["netAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the netAmountIncludingTax
     *
@@ -420,7 +420,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the netAmountIncludingTax
     *
@@ -433,7 +433,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["netAmountIncludingTax"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the netTaxAmount
     *
@@ -451,7 +451,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the netTaxAmount
     *
@@ -464,7 +464,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["netTaxAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the quantity
     *
@@ -482,7 +482,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the quantity
     *
@@ -495,7 +495,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["quantity"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sequence
     *
@@ -509,7 +509,7 @@ class PurchaseInvoiceLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sequence
     *
@@ -522,7 +522,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["sequence"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the taxCode
     *
@@ -536,7 +536,7 @@ class PurchaseInvoiceLine extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the taxCode
     *
@@ -549,7 +549,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["taxCode"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the taxPercent
     *
@@ -567,7 +567,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the taxPercent
     *
@@ -580,7 +580,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["taxPercent"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalTaxAmount
     *
@@ -598,7 +598,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the totalTaxAmount
     *
@@ -611,7 +611,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["totalTaxAmount"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the unitCost
     *
@@ -629,7 +629,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the unitCost
     *
@@ -642,7 +642,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["unitCost"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the account
     *
@@ -660,7 +660,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the account
     *
@@ -673,7 +673,7 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["account"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the item
     *
@@ -691,7 +691,7 @@ class PurchaseInvoiceLine extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the item
     *
@@ -704,5 +704,5 @@ class PurchaseInvoiceLine extends Entity
         $this->_propDict["item"] = $val;
         return $this;
     }
-    
+
 }

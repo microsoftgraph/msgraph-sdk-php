@@ -38,7 +38,7 @@ class RoleAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the Role Assignment.
@@ -52,7 +52,7 @@ class RoleAssignment extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display or friendly name of the role Assignment.
@@ -67,7 +67,7 @@ class RoleAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display or friendly name of the role Assignment.
@@ -81,7 +81,7 @@ class RoleAssignment extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the resourceScopes
     * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
@@ -96,7 +96,7 @@ class RoleAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the resourceScopes
     * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
@@ -110,7 +110,7 @@ class RoleAssignment extends Entity
         $this->_propDict["resourceScopes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopeMembers
     * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
@@ -125,7 +125,7 @@ class RoleAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the scopeMembers
     * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
@@ -139,7 +139,7 @@ class RoleAssignment extends Entity
         $this->_propDict["scopeMembers"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scopeType
     * Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty. Possible values are: resourceScope, allDevices, allLicensedUsers, allDevicesAndLicensedUsers.
@@ -158,7 +158,7 @@ class RoleAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the scopeType
     * Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty. Possible values are: resourceScope, allDevices, allLicensedUsers, allDevicesAndLicensedUsers.
@@ -172,7 +172,7 @@ class RoleAssignment extends Entity
         $this->_propDict["scopeType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the roleDefinition
     * Role definition this assignment is part of.
@@ -191,7 +191,7 @@ class RoleAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the roleDefinition
     * Role definition this assignment is part of.
@@ -205,5 +205,5 @@ class RoleAssignment extends Entity
         $this->_propDict["roleDefinition"] = $val;
         return $this;
     }
-    
+
 }

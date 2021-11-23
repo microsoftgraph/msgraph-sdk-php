@@ -42,7 +42,7 @@ class ItemActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the access
     * An item was accessed.
@@ -56,7 +56,7 @@ class ItemActivity extends Entity
         $this->_propDict["access"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activityDateTime
     * Details about when the activity took place. Read-only.
@@ -75,7 +75,7 @@ class ItemActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the activityDateTime
     * Details about when the activity took place. Read-only.
@@ -89,7 +89,7 @@ class ItemActivity extends Entity
         $this->_propDict["activityDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the actor
     * Identity of who performed the action. Read-only.
@@ -108,7 +108,7 @@ class ItemActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the actor
     * Identity of who performed the action. Read-only.
@@ -122,7 +122,7 @@ class ItemActivity extends Entity
         $this->_propDict["actor"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the driveItem
     * Exposes the driveItem that was the target of this activity.
@@ -141,7 +141,7 @@ class ItemActivity extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the driveItem
     * Exposes the driveItem that was the target of this activity.
@@ -155,5 +155,5 @@ class ItemActivity extends Entity
         $this->_propDict["driveItem"] = $val;
         return $this;
     }
-    
+
 }

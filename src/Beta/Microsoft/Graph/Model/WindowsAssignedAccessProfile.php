@@ -38,7 +38,7 @@ class WindowsAssignedAccessProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the appUserModelIds
     * These are the only Windows Store Apps that will be available to launch from the Start menu.
@@ -52,7 +52,7 @@ class WindowsAssignedAccessProfile extends Entity
         $this->_propDict["appUserModelIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the desktopAppPaths
     * These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch.
@@ -67,7 +67,7 @@ class WindowsAssignedAccessProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the desktopAppPaths
     * These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch.
@@ -81,7 +81,7 @@ class WindowsAssignedAccessProfile extends Entity
         $this->_propDict["desktopAppPaths"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the profileName
     * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
@@ -96,7 +96,7 @@ class WindowsAssignedAccessProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the profileName
     * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
@@ -110,7 +110,7 @@ class WindowsAssignedAccessProfile extends Entity
         $this->_propDict["profileName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the showTaskBar
     * This setting allows the admin to specify whether the Task Bar is shown or not.
@@ -125,7 +125,7 @@ class WindowsAssignedAccessProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the showTaskBar
     * This setting allows the admin to specify whether the Task Bar is shown or not.
@@ -139,7 +139,7 @@ class WindowsAssignedAccessProfile extends Entity
         $this->_propDict["showTaskBar"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the startMenuLayoutXml
     * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
@@ -158,7 +158,7 @@ class WindowsAssignedAccessProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startMenuLayoutXml
     * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
@@ -172,7 +172,7 @@ class WindowsAssignedAccessProfile extends Entity
         $this->_propDict["startMenuLayoutXml"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userAccounts
     * The user accounts that will be locked to this kiosk configuration.
@@ -187,7 +187,7 @@ class WindowsAssignedAccessProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userAccounts
     * The user accounts that will be locked to this kiosk configuration.
@@ -201,5 +201,5 @@ class WindowsAssignedAccessProfile extends Entity
         $this->_propDict["userAccounts"] = $val;
         return $this;
     }
-    
+
 }

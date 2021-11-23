@@ -42,7 +42,7 @@ class PlayPromptOperation extends CommsOperation
         }
         return null;
     }
-    
+
     /**
     * Sets the completionReason
     * Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
@@ -56,5 +56,5 @@ class PlayPromptOperation extends CommsOperation
         $this->_propDict["completionReason"] = $val;
         return $this;
     }
-    
+
 }

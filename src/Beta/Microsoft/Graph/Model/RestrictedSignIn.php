@@ -37,7 +37,7 @@ class RestrictedSignIn extends SignIn
             return null;
         }
     }
-    
+
     /**
     * Sets the targetTenantId
     *
@@ -50,5 +50,5 @@ class RestrictedSignIn extends SignIn
         $this->_propDict["targetTenantId"] = $val;
         return $this;
     }
-    
+
 }

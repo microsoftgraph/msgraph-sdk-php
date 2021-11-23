@@ -42,7 +42,7 @@ class UserAnalytics extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settings
     * The current settings for a user to use the analytics API.
@@ -56,9 +56,9 @@ class UserAnalytics extends Entity
         $this->_propDict["settings"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the activityStatistics
     * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
      *
@@ -72,12 +72,12 @@ class UserAnalytics extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the activityStatistics
     * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
     *
-    * @param ActivityStatistics $val The activityStatistics
+    * @param ActivityStatistics[] $val The activityStatistics
     *
     * @return UserAnalytics
     */
@@ -86,5 +86,5 @@ class UserAnalytics extends Entity
         $this->_propDict["activityStatistics"] = $val;
         return $this;
     }
-    
+
 }

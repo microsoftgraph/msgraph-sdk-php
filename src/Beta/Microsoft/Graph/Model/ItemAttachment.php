@@ -42,7 +42,7 @@ class ItemAttachment extends Attachment
         }
         return null;
     }
-    
+
     /**
     * Sets the item
     * The attached message or event. Navigation property.
@@ -56,5 +56,5 @@ class ItemAttachment extends Attachment
         $this->_propDict["item"] = $val;
         return $this;
     }
-    
+
 }

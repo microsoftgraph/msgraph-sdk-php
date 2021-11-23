@@ -38,7 +38,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the connectionName
     * Connection name displayed to the user.
@@ -52,7 +52,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         $this->_propDict["connectionName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
@@ -71,7 +71,7 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
@@ -85,9 +85,9 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         $this->_propDict["customXml"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      *
@@ -101,12 +101,12 @@ class WindowsVpnConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the servers
     * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
     *
-    * @param VpnServer $val The servers
+    * @param VpnServer[] $val The servers
     *
     * @return WindowsVpnConfiguration
     */
@@ -115,5 +115,5 @@ class WindowsVpnConfiguration extends DeviceConfiguration
         $this->_propDict["servers"] = $val;
         return $this;
     }
-    
+
 }

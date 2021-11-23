@@ -38,7 +38,7 @@ class Windows10XWifiConfiguration extends DeviceManagementResourceAccessProfileB
             return null;
         }
     }
-    
+
     /**
     * Sets the authenticationCertificateId
     * ID to the Authentication Certificate
@@ -52,7 +52,7 @@ class Windows10XWifiConfiguration extends DeviceManagementResourceAccessProfileB
         $this->_propDict["authenticationCertificateId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
@@ -71,7 +71,7 @@ class Windows10XWifiConfiguration extends DeviceManagementResourceAccessProfileB
         }
         return null;
     }
-    
+
     /**
     * Sets the customXml
     * Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
@@ -85,7 +85,7 @@ class Windows10XWifiConfiguration extends DeviceManagementResourceAccessProfileB
         $this->_propDict["customXml"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the customXmlFileName
     * Custom Xml file name.
@@ -100,7 +100,7 @@ class Windows10XWifiConfiguration extends DeviceManagementResourceAccessProfileB
             return null;
         }
     }
-    
+
     /**
     * Sets the customXmlFileName
     * Custom Xml file name.
@@ -114,5 +114,5 @@ class Windows10XWifiConfiguration extends DeviceManagementResourceAccessProfileB
         $this->_propDict["customXmlFileName"] = $val;
         return $this;
     }
-    
+
 }

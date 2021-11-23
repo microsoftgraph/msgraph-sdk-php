@@ -42,7 +42,7 @@ class AccessReviewReviewer extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date when the reviewer was added for the access review.
@@ -56,7 +56,7 @@ class AccessReviewReviewer extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of reviewer.
@@ -71,7 +71,7 @@ class AccessReviewReviewer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of reviewer.
@@ -85,7 +85,7 @@ class AccessReviewReviewer extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     * User principal name of the user.
@@ -100,7 +100,7 @@ class AccessReviewReviewer extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     * User principal name of the user.
@@ -114,5 +114,5 @@ class AccessReviewReviewer extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
 }

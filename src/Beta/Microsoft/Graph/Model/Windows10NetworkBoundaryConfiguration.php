@@ -42,7 +42,7 @@ class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the windowsNetworkIsolationPolicy
     * Windows Network Isolation Policy
@@ -56,5 +56,5 @@ class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration
         $this->_propDict["windowsNetworkIsolationPolicy"] = $val;
         return $this;
     }
-    
+
 }

@@ -41,7 +41,7 @@ class ExactMatchUploadAgent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the creationDateTime
     *
@@ -54,7 +54,7 @@ class ExactMatchUploadAgent extends Entity
         $this->_propDict["creationDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     *
@@ -68,7 +68,7 @@ class ExactMatchUploadAgent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     *
@@ -81,5 +81,5 @@ class ExactMatchUploadAgent extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
 }

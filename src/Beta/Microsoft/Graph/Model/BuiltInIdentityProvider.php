@@ -38,7 +38,7 @@ class BuiltInIdentityProvider extends IdentityProviderBase
             return null;
         }
     }
-    
+
     /**
     * Sets the identityProviderType
     * The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
@@ -52,5 +52,5 @@ class BuiltInIdentityProvider extends IdentityProviderBase
         $this->_propDict["identityProviderType"] = $val;
         return $this;
     }
-    
+
 }

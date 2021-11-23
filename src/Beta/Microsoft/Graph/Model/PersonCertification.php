@@ -38,7 +38,7 @@ class PersonCertification extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the certificationId
     * The referenceable identifier for the certification.
@@ -52,7 +52,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["certificationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the certification.
@@ -67,7 +67,7 @@ class PersonCertification extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the certification.
@@ -81,7 +81,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Title of the certification.
@@ -96,7 +96,7 @@ class PersonCertification extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Title of the certification.
@@ -110,7 +110,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDate
     * The date that the certification expires.
@@ -129,7 +129,7 @@ class PersonCertification extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the endDate
     * The date that the certification expires.
@@ -143,7 +143,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["endDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuedDate
     * The date that the certification was issued.
@@ -162,7 +162,7 @@ class PersonCertification extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the issuedDate
     * The date that the certification was issued.
@@ -176,7 +176,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["issuedDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuingAuthority
     * Authority which granted the certification.
@@ -191,7 +191,7 @@ class PersonCertification extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the issuingAuthority
     * Authority which granted the certification.
@@ -205,7 +205,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["issuingAuthority"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the issuingCompany
     * Company which granted the certification.
@@ -220,7 +220,7 @@ class PersonCertification extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the issuingCompany
     * Company which granted the certification.
@@ -234,7 +234,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["issuingCompany"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDate
     * The date that the certification became valid.
@@ -253,7 +253,7 @@ class PersonCertification extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the startDate
     * The date that the certification became valid.
@@ -267,7 +267,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["startDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the thumbnailUrl
     * URL referencing a thumbnail of the certification.
@@ -282,7 +282,7 @@ class PersonCertification extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the thumbnailUrl
     * URL referencing a thumbnail of the certification.
@@ -296,7 +296,7 @@ class PersonCertification extends ItemFacet
         $this->_propDict["thumbnailUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * URL referencing the certification.
@@ -311,7 +311,7 @@ class PersonCertification extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * URL referencing the certification.
@@ -325,5 +325,5 @@ class PersonCertification extends ItemFacet
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

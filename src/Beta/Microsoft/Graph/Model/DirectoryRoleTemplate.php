@@ -38,7 +38,7 @@ class DirectoryRoleTemplate extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The description to set for the directory role. Read-only.
@@ -52,7 +52,7 @@ class DirectoryRoleTemplate extends DirectoryObject
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name to set for the directory role. Read-only.
@@ -67,7 +67,7 @@ class DirectoryRoleTemplate extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name to set for the directory role. Read-only.
@@ -81,5 +81,5 @@ class DirectoryRoleTemplate extends DirectoryObject
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

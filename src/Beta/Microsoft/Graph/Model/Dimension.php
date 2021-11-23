@@ -37,7 +37,7 @@ class Dimension extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the code
     *
@@ -50,7 +50,7 @@ class Dimension extends Entity
         $this->_propDict["code"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -64,7 +64,7 @@ class Dimension extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -77,7 +77,7 @@ class Dimension extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -95,7 +95,7 @@ class Dimension extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -108,9 +108,9 @@ class Dimension extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the dimensionValues
      *
      * @return array|null The dimensionValues
@@ -123,11 +123,11 @@ class Dimension extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the dimensionValues
     *
-    * @param DimensionValue $val The dimensionValues
+    * @param DimensionValue[] $val The dimensionValues
     *
     * @return Dimension
     */
@@ -136,5 +136,5 @@ class Dimension extends Entity
         $this->_propDict["dimensionValues"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class DeviceConfigurationGroupAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the excludeGroup
     * Indicates if this group is should be excluded. Defaults that the group should be included
@@ -52,7 +52,7 @@ class DeviceConfigurationGroupAssignment extends Entity
         $this->_propDict["excludeGroup"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the targetGroupId
     * The Id of the AAD group we are targeting the device configuration to.
@@ -67,7 +67,7 @@ class DeviceConfigurationGroupAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the targetGroupId
     * The Id of the AAD group we are targeting the device configuration to.
@@ -81,7 +81,7 @@ class DeviceConfigurationGroupAssignment extends Entity
         $this->_propDict["targetGroupId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deviceConfiguration
     * The navigation link to the Device Configuration being targeted.
@@ -100,7 +100,7 @@ class DeviceConfigurationGroupAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deviceConfiguration
     * The navigation link to the Device Configuration being targeted.
@@ -114,5 +114,5 @@ class DeviceConfigurationGroupAssignment extends Entity
         $this->_propDict["deviceConfiguration"] = $val;
         return $this;
     }
-    
+
 }

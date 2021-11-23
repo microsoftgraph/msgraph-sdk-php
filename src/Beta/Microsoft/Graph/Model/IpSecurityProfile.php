@@ -37,7 +37,7 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activityGroupNames
     *
@@ -50,7 +50,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["activityGroupNames"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the address
     *
@@ -64,7 +64,7 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the address
     *
@@ -77,7 +77,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["address"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureSubscriptionId
     *
@@ -91,7 +91,7 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureSubscriptionId
     *
@@ -104,7 +104,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["azureSubscriptionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureTenantId
     *
@@ -118,7 +118,7 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     *
@@ -131,7 +131,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the countHits
     *
@@ -145,7 +145,7 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the countHits
     *
@@ -158,7 +158,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["countHits"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the countHosts
     *
@@ -172,7 +172,7 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the countHosts
     *
@@ -185,7 +185,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["countHosts"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the firstSeenDateTime
     *
@@ -203,7 +203,7 @@ class IpSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the firstSeenDateTime
     *
@@ -216,9 +216,9 @@ class IpSecurityProfile extends Entity
         $this->_propDict["firstSeenDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the ipCategories
      *
      * @return array|null The ipCategories
@@ -231,11 +231,11 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the ipCategories
     *
-    * @param IpCategory $val The ipCategories
+    * @param IpCategory[] $val The ipCategories
     *
     * @return IpSecurityProfile
     */
@@ -244,9 +244,9 @@ class IpSecurityProfile extends Entity
         $this->_propDict["ipCategories"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the ipReferenceData
      *
      * @return array|null The ipReferenceData
@@ -259,11 +259,11 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the ipReferenceData
     *
-    * @param IpReferenceData $val The ipReferenceData
+    * @param IpReferenceData[] $val The ipReferenceData
     *
     * @return IpSecurityProfile
     */
@@ -272,7 +272,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["ipReferenceData"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastSeenDateTime
     *
@@ -290,7 +290,7 @@ class IpSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastSeenDateTime
     *
@@ -303,7 +303,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["lastSeenDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskScore
     *
@@ -317,7 +317,7 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the riskScore
     *
@@ -330,7 +330,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["riskScore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tags
     *
@@ -344,7 +344,7 @@ class IpSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tags
     *
@@ -357,7 +357,7 @@ class IpSecurityProfile extends Entity
         $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorInformation
     *
@@ -375,7 +375,7 @@ class IpSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the vendorInformation
     *
@@ -388,5 +388,5 @@ class IpSecurityProfile extends Entity
         $this->_propDict["vendorInformation"] = $val;
         return $this;
     }
-    
+
 }

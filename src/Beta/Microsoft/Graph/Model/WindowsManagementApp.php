@@ -38,7 +38,7 @@ class WindowsManagementApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the availableVersion
     * Windows management app available version.
@@ -52,7 +52,7 @@ class WindowsManagementApp extends Entity
         $this->_propDict["availableVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedInstaller
     * Managed Installer Status. Possible values are: disabled, enabled.
@@ -71,7 +71,7 @@ class WindowsManagementApp extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the managedInstaller
     * Managed Installer Status. Possible values are: disabled, enabled.
@@ -85,7 +85,7 @@ class WindowsManagementApp extends Entity
         $this->_propDict["managedInstaller"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedInstallerConfiguredDateTime
     * Managed Installer Configured Date Time
@@ -100,7 +100,7 @@ class WindowsManagementApp extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedInstallerConfiguredDateTime
     * Managed Installer Configured Date Time
@@ -114,9 +114,9 @@ class WindowsManagementApp extends Entity
         $this->_propDict["managedInstallerConfiguredDateTime"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the healthStates
     * The list of health states for installed Windows management app.
      *
@@ -130,12 +130,12 @@ class WindowsManagementApp extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the healthStates
     * The list of health states for installed Windows management app.
     *
-    * @param WindowsManagementAppHealthState $val The healthStates
+    * @param WindowsManagementAppHealthState[] $val The healthStates
     *
     * @return WindowsManagementApp
     */
@@ -144,5 +144,5 @@ class WindowsManagementApp extends Entity
         $this->_propDict["healthStates"] = $val;
         return $this;
     }
-    
+
 }

@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * MeetingAttendanceReport File
 * PHP version 7
 *
@@ -42,7 +42,7 @@ class MeetingAttendanceReport extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the meetingEndDateTime
     * UTC time when the meeting ended. Read-only.
@@ -56,7 +56,7 @@ class MeetingAttendanceReport extends Entity
         $this->_propDict["meetingEndDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the meetingStartDateTime
     * UTC time when the meeting started. Read-only.
@@ -75,7 +75,7 @@ class MeetingAttendanceReport extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the meetingStartDateTime
     * UTC time when the meeting started. Read-only.
@@ -89,7 +89,7 @@ class MeetingAttendanceReport extends Entity
         $this->_propDict["meetingStartDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the totalParticipantCount
     * Total number of participants. Read-only.
@@ -104,7 +104,7 @@ class MeetingAttendanceReport extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalParticipantCount
     * Total number of participants. Read-only.
@@ -118,9 +118,9 @@ class MeetingAttendanceReport extends Entity
         $this->_propDict["totalParticipantCount"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the attendanceRecords
     * List of attendance records of an attendance report. Read-only.
      *
@@ -134,12 +134,12 @@ class MeetingAttendanceReport extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the attendanceRecords
     * List of attendance records of an attendance report. Read-only.
     *
-    * @param AttendanceRecord $val The attendanceRecords
+    * @param AttendanceRecord[] $val The attendanceRecords
     *
     * @return MeetingAttendanceReport
     */
@@ -148,5 +148,4 @@ class MeetingAttendanceReport extends Entity
         $this->_propDict["attendanceRecords"] = $val;
         return $this;
     }
-    
 }

@@ -37,7 +37,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the androidPhone
     *
@@ -50,7 +50,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["androidPhone"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iPad
     *
@@ -64,7 +64,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the iPad
     *
@@ -77,7 +77,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["iPad"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the iPhone
     *
@@ -91,7 +91,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the iPhone
     *
@@ -104,7 +104,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["iPhone"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the other
     *
@@ -118,7 +118,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the other
     *
@@ -131,7 +131,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["other"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the reportPeriod
     *
@@ -145,7 +145,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reportPeriod
     *
@@ -158,7 +158,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["reportPeriod"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     *
@@ -176,7 +176,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     *
@@ -189,7 +189,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the web
     *
@@ -203,7 +203,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the web
     *
@@ -216,7 +216,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["web"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the windowsPhone
     *
@@ -230,7 +230,7 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the windowsPhone
     *
@@ -243,5 +243,5 @@ class YammerDeviceUsageDistributionUserCounts extends Entity
         $this->_propDict["windowsPhone"] = intval($val);
         return $this;
     }
-    
+
 }

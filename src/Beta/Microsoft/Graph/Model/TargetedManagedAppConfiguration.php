@@ -42,7 +42,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the appGroupType
     * Public Apps selection: group or individual
@@ -56,7 +56,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         $this->_propDict["appGroupType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deployedAppCount
     * Count of apps to which the current policy is deployed.
@@ -71,7 +71,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the deployedAppCount
     * Count of apps to which the current policy is deployed.
@@ -85,7 +85,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         $this->_propDict["deployedAppCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the isAssigned
     * Indicates if the policy is deployed to any inclusion groups or not.
@@ -100,7 +100,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the isAssigned
     * Indicates if the policy is deployed to any inclusion groups or not.
@@ -114,9 +114,9 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         $this->_propDict["isAssigned"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the apps
     * List of apps to which the policy is deployed.
      *
@@ -130,12 +130,12 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the apps
     * List of apps to which the policy is deployed.
     *
-    * @param ManagedMobileApp $val The apps
+    * @param ManagedMobileApp[] $val The apps
     *
     * @return TargetedManagedAppConfiguration
     */
@@ -144,9 +144,9 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         $this->_propDict["apps"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *
@@ -160,12 +160,12 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
     *
-    * @param TargetedManagedAppPolicyAssignment $val The assignments
+    * @param TargetedManagedAppPolicyAssignment[] $val The assignments
     *
     * @return TargetedManagedAppConfiguration
     */
@@ -174,7 +174,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
@@ -193,7 +193,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the deploymentSummary
     * Navigation property to deployment summary of the configuration.
@@ -207,5 +207,5 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration
         $this->_propDict["deploymentSummary"] = $val;
         return $this;
     }
-    
+
 }

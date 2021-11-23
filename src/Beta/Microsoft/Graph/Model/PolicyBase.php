@@ -38,7 +38,7 @@ class PolicyBase extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description for this policy. Required.
@@ -52,7 +52,7 @@ class PolicyBase extends DirectoryObject
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name for this policy. Required.
@@ -67,7 +67,7 @@ class PolicyBase extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name for this policy. Required.
@@ -81,5 +81,5 @@ class PolicyBase extends DirectoryObject
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
 }

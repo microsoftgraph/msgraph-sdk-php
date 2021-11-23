@@ -38,7 +38,7 @@ class UnsupportedGroupPolicyExtension extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the extensionType
     * ExtensionType of the unsupported extension.
@@ -52,7 +52,7 @@ class UnsupportedGroupPolicyExtension extends Entity
         $this->_propDict["extensionType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the namespaceUrl
     * Namespace Url of the unsupported extension.
@@ -67,7 +67,7 @@ class UnsupportedGroupPolicyExtension extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the namespaceUrl
     * Namespace Url of the unsupported extension.
@@ -81,7 +81,7 @@ class UnsupportedGroupPolicyExtension extends Entity
         $this->_propDict["namespaceUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the nodeName
     * Node name of the unsupported extension.
@@ -96,7 +96,7 @@ class UnsupportedGroupPolicyExtension extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the nodeName
     * Node name of the unsupported extension.
@@ -110,7 +110,7 @@ class UnsupportedGroupPolicyExtension extends Entity
         $this->_propDict["nodeName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the settingScope
     * Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
@@ -129,7 +129,7 @@ class UnsupportedGroupPolicyExtension extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the settingScope
     * Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
@@ -143,5 +143,5 @@ class UnsupportedGroupPolicyExtension extends Entity
         $this->_propDict["settingScope"] = $val;
         return $this;
     }
-    
+
 }

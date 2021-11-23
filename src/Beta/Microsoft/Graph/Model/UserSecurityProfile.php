@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class UserSecurityProfile extends Entity
 {
 
-     /** 
+     /**
      * Gets the accounts
      *
      * @return array|null The accounts
@@ -38,11 +38,11 @@ class UserSecurityProfile extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the accounts
     *
-    * @param UserAccount $val The accounts
+    * @param UserAccount[] $val The accounts
     *
     * @return UserSecurityProfile
     */
@@ -51,7 +51,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["accounts"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureSubscriptionId
     *
@@ -65,7 +65,7 @@ class UserSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureSubscriptionId
     *
@@ -78,7 +78,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["azureSubscriptionId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the azureTenantId
     *
@@ -92,7 +92,7 @@ class UserSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the azureTenantId
     *
@@ -105,7 +105,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["azureTenantId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     *
@@ -123,7 +123,7 @@ class UserSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     *
@@ -136,7 +136,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     *
@@ -150,7 +150,7 @@ class UserSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     *
@@ -163,7 +163,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     *
@@ -181,7 +181,7 @@ class UserSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     *
@@ -194,7 +194,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the riskScore
     *
@@ -208,7 +208,7 @@ class UserSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the riskScore
     *
@@ -221,7 +221,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["riskScore"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tags
     *
@@ -235,7 +235,7 @@ class UserSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tags
     *
@@ -248,7 +248,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["tags"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userPrincipalName
     *
@@ -262,7 +262,7 @@ class UserSecurityProfile extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userPrincipalName
     *
@@ -275,7 +275,7 @@ class UserSecurityProfile extends Entity
         $this->_propDict["userPrincipalName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the vendorInformation
     *
@@ -293,7 +293,7 @@ class UserSecurityProfile extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the vendorInformation
     *
@@ -306,5 +306,5 @@ class UserSecurityProfile extends Entity
         $this->_propDict["vendorInformation"] = $val;
         return $this;
     }
-    
+
 }

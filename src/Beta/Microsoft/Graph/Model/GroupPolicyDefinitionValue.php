@@ -42,7 +42,7 @@ class GroupPolicyDefinitionValue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the configurationType
     * Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
@@ -56,7 +56,7 @@ class GroupPolicyDefinitionValue extends Entity
         $this->_propDict["configurationType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the createdDateTime
     * The date and time the object was created.
@@ -75,7 +75,7 @@ class GroupPolicyDefinitionValue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * The date and time the object was created.
@@ -89,7 +89,7 @@ class GroupPolicyDefinitionValue extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the enabled
     * Enables or disables the associated group policy definition.
@@ -104,7 +104,7 @@ class GroupPolicyDefinitionValue extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the enabled
     * Enables or disables the associated group policy definition.
@@ -118,7 +118,7 @@ class GroupPolicyDefinitionValue extends Entity
         $this->_propDict["enabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -137,7 +137,7 @@ class GroupPolicyDefinitionValue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * The date and time the entity was last modified.
@@ -151,7 +151,7 @@ class GroupPolicyDefinitionValue extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the definition
     * The associated group policy definition with the value.
@@ -170,7 +170,7 @@ class GroupPolicyDefinitionValue extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the definition
     * The associated group policy definition with the value.
@@ -184,9 +184,9 @@ class GroupPolicyDefinitionValue extends Entity
         $this->_propDict["definition"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the presentationValues
     * The associated group policy presentation values with the definition value.
      *
@@ -200,12 +200,12 @@ class GroupPolicyDefinitionValue extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the presentationValues
     * The associated group policy presentation values with the definition value.
     *
-    * @param GroupPolicyPresentationValue $val The presentationValues
+    * @param GroupPolicyPresentationValue[] $val The presentationValues
     *
     * @return GroupPolicyDefinitionValue
     */
@@ -214,5 +214,5 @@ class GroupPolicyDefinitionValue extends Entity
         $this->_propDict["presentationValues"] = $val;
         return $this;
     }
-    
+
 }

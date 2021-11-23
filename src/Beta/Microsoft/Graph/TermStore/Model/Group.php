@@ -42,7 +42,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Date and time of group creation. Read-only.
@@ -56,7 +56,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description giving details on the term usage.
@@ -71,7 +71,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description giving details on the term usage.
@@ -85,7 +85,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Name of group.
@@ -100,7 +100,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Name of group.
@@ -114,7 +114,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the parentSiteId
     * Id of the parent site of this group.
@@ -129,7 +129,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the parentSiteId
     * Id of the parent site of this group.
@@ -143,7 +143,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["parentSiteId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scope
     * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
@@ -162,7 +162,7 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the scope
     * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
@@ -176,9 +176,9 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["scope"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sets
     * All sets under the group in a term [store].
      *
@@ -192,12 +192,12 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sets
     * All sets under the group in a term [store].
     *
-    * @param Set $val The sets
+    * @param Set[] $val The sets
     *
     * @return Group
     */
@@ -206,5 +206,5 @@ class Group extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["sets"] = $val;
         return $this;
     }
-    
+
 }

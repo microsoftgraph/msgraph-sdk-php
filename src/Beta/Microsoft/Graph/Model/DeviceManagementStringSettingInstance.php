@@ -38,7 +38,7 @@ class DeviceManagementStringSettingInstance extends DeviceManagementSettingInsta
             return null;
         }
     }
-    
+
     /**
     * Sets the value
     * The string value
@@ -52,5 +52,5 @@ class DeviceManagementStringSettingInstance extends DeviceManagementSettingInsta
         $this->_propDict["value"] = $val;
         return $this;
     }
-    
+
 }

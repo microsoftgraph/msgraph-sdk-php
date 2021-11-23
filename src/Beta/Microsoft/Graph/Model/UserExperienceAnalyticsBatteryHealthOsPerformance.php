@@ -38,7 +38,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activeDevices
     * Number of active devices for that os version. Valid values -2147483648 to 2147483647
@@ -52,7 +52,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
         $this->_propDict["activeDevices"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the averageBatteryAgeInDays
     * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values -2147483648 to 2147483647
@@ -67,7 +67,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the averageBatteryAgeInDays
     * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values -2147483648 to 2147483647
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
         $this->_propDict["averageBatteryAgeInDays"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the averageEstimatedRuntimeInMinutes
     * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values -2147483648 to 2147483647
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the averageEstimatedRuntimeInMinutes
     * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values -2147483648 to 2147483647
@@ -110,7 +110,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
         $this->_propDict["averageEstimatedRuntimeInMinutes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the averageMaxCapacityPercentage
     * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
@@ -125,7 +125,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the averageMaxCapacityPercentage
     * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
         $this->_propDict["averageMaxCapacityPercentage"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the osBuildNumber
     * Build number of the operating system.
@@ -154,7 +154,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osBuildNumber
     * Build number of the operating system.
@@ -168,7 +168,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
         $this->_propDict["osBuildNumber"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the osVersion
     * Version of the operating system.
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the osVersion
     * Version of the operating system.
@@ -197,5 +197,5 @@ class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity
         $this->_propDict["osVersion"] = $val;
         return $this;
     }
-    
+
 }

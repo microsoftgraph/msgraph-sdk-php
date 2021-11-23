@@ -42,7 +42,7 @@ class DeviceSetupConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * DateTime the object was created.
@@ -56,7 +56,7 @@ class DeviceSetupConfiguration extends Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Admin provided description of the Device Configuration.
@@ -71,7 +71,7 @@ class DeviceSetupConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Admin provided description of the Device Configuration.
@@ -85,7 +85,7 @@ class DeviceSetupConfiguration extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Admin provided name of the device configuration.
@@ -100,7 +100,7 @@ class DeviceSetupConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Admin provided name of the device configuration.
@@ -114,7 +114,7 @@ class DeviceSetupConfiguration extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -133,7 +133,7 @@ class DeviceSetupConfiguration extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * DateTime the object was last modified.
@@ -147,7 +147,7 @@ class DeviceSetupConfiguration extends Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * Version of the device configuration.
@@ -162,7 +162,7 @@ class DeviceSetupConfiguration extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * Version of the device configuration.
@@ -176,5 +176,5 @@ class DeviceSetupConfiguration extends Entity
         $this->_propDict["version"] = intval($val);
         return $this;
     }
-    
+
 }

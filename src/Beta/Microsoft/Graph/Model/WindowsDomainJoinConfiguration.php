@@ -38,7 +38,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the activeDirectoryDomainName
     * Active Directory domain name to join.
@@ -52,7 +52,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
         $this->_propDict["activeDirectoryDomainName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the computerNameStaticPrefix
     * Fixed prefix to be used for computer name.
@@ -67,7 +67,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the computerNameStaticPrefix
     * Fixed prefix to be used for computer name.
@@ -81,7 +81,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
         $this->_propDict["computerNameStaticPrefix"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the computerNameSuffixRandomCharCount
     * Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
@@ -96,7 +96,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the computerNameSuffixRandomCharCount
     * Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
@@ -110,7 +110,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
         $this->_propDict["computerNameSuffixRandomCharCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the organizationalUnit
     * Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
@@ -125,7 +125,7 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the organizationalUnit
     * Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
@@ -139,9 +139,9 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
         $this->_propDict["organizationalUnit"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the networkAccessConfigurations
     * Reference to device configurations required for network connectivity
      *
@@ -155,12 +155,12 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the networkAccessConfigurations
     * Reference to device configurations required for network connectivity
     *
-    * @param DeviceConfiguration $val The networkAccessConfigurations
+    * @param DeviceConfiguration[] $val The networkAccessConfigurations
     *
     * @return WindowsDomainJoinConfiguration
     */
@@ -169,5 +169,5 @@ class WindowsDomainJoinConfiguration extends DeviceConfiguration
         $this->_propDict["networkAccessConfigurations"] = $val;
         return $this;
     }
-    
+
 }

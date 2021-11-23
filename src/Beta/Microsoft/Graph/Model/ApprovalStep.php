@@ -38,7 +38,7 @@ class ApprovalStep extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assignedToMe
     * Indicates whether the step is assigned to the calling user to review. Read-only.
@@ -52,7 +52,7 @@ class ApprovalStep extends Entity
         $this->_propDict["assignedToMe"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The label provided by the policy creator to identify an approval step. Read-only.
@@ -67,7 +67,7 @@ class ApprovalStep extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The label provided by the policy creator to identify an approval step. Read-only.
@@ -81,7 +81,7 @@ class ApprovalStep extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the justification
     * The justification associated with the approval step decision.
@@ -96,7 +96,7 @@ class ApprovalStep extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the justification
     * The justification associated with the approval step decision.
@@ -110,7 +110,7 @@ class ApprovalStep extends Entity
         $this->_propDict["justification"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedBy
     * The identifier of the reviewer. Read-only.
@@ -129,7 +129,7 @@ class ApprovalStep extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedBy
     * The identifier of the reviewer. Read-only.
@@ -143,7 +143,7 @@ class ApprovalStep extends Entity
         $this->_propDict["reviewedBy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewedDateTime
     * The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -162,7 +162,7 @@ class ApprovalStep extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reviewedDateTime
     * The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -176,7 +176,7 @@ class ApprovalStep extends Entity
         $this->_propDict["reviewedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reviewResult
     * The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
@@ -191,7 +191,7 @@ class ApprovalStep extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the reviewResult
     * The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
@@ -205,7 +205,7 @@ class ApprovalStep extends Entity
         $this->_propDict["reviewResult"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The step status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
@@ -220,7 +220,7 @@ class ApprovalStep extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the status
     * The step status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
@@ -234,5 +234,5 @@ class ApprovalStep extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

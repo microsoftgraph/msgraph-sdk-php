@@ -38,7 +38,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
@@ -52,7 +52,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The value is always Continuous Access Evaluation. Read-only.
@@ -67,7 +67,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The value is always Continuous Access Evaluation. Read-only.
@@ -81,7 +81,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the groups
     * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty. Read-only.
@@ -96,7 +96,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the groups
     * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty. Read-only.
@@ -110,7 +110,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
         $this->_propDict["groups"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isEnabled
     * true to indicate whether continuous access evaluation should be performed; otherwise false. Read-only.
@@ -125,7 +125,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isEnabled
     * true to indicate whether continuous access evaluation should be performed; otherwise false. Read-only.
@@ -139,7 +139,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
         $this->_propDict["isEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the migrate
     * true to indicate that the continuous access evaluation policy settings should be or has been migrated to the conditional access policy.
@@ -154,7 +154,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the migrate
     * true to indicate that the continuous access evaluation policy settings should be or has been migrated to the conditional access policy.
@@ -168,7 +168,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
         $this->_propDict["migrate"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the users
     * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty. Read-only.
@@ -183,7 +183,7 @@ class ContinuousAccessEvaluationPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the users
     * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty. Read-only.
@@ -197,5 +197,5 @@ class ContinuousAccessEvaluationPolicy extends Entity
         $this->_propDict["users"] = $val;
         return $this;
     }
-    
+
 }

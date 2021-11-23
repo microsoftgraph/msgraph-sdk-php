@@ -42,7 +42,7 @@ class PlannerTaskDetails extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the checklist
     * The collection of checklist items on the task.
@@ -56,7 +56,7 @@ class PlannerTaskDetails extends PlannerDelta
         $this->_propDict["checklist"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the task
@@ -71,7 +71,7 @@ class PlannerTaskDetails extends PlannerDelta
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the task
@@ -85,7 +85,7 @@ class PlannerTaskDetails extends PlannerDelta
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the previewType
     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
@@ -104,7 +104,7 @@ class PlannerTaskDetails extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the previewType
     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
@@ -118,7 +118,7 @@ class PlannerTaskDetails extends PlannerDelta
         $this->_propDict["previewType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the references
     * The collection of references on the task.
@@ -137,7 +137,7 @@ class PlannerTaskDetails extends PlannerDelta
         }
         return null;
     }
-    
+
     /**
     * Sets the references
     * The collection of references on the task.
@@ -151,5 +151,5 @@ class PlannerTaskDetails extends PlannerDelta
         $this->_propDict["references"] = $val;
         return $this;
     }
-    
+
 }

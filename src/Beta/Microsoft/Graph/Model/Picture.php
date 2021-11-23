@@ -41,7 +41,7 @@ class Picture extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the content
     *
@@ -54,7 +54,7 @@ class Picture extends Entity
         $this->_propDict["content"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentType
     *
@@ -68,7 +68,7 @@ class Picture extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentType
     *
@@ -81,7 +81,7 @@ class Picture extends Entity
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the height
     *
@@ -95,7 +95,7 @@ class Picture extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the height
     *
@@ -108,7 +108,7 @@ class Picture extends Entity
         $this->_propDict["height"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the width
     *
@@ -122,7 +122,7 @@ class Picture extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the width
     *
@@ -135,5 +135,5 @@ class Picture extends Entity
         $this->_propDict["width"] = intval($val);
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceId
     * The device ID.
@@ -52,7 +52,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["deviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The name of the report
@@ -67,7 +67,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The name of the report
@@ -81,7 +81,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the failedUpdateCount
     * Number of failed updates on the device
@@ -96,7 +96,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the failedUpdateCount
     * Number of failed updates on the device
@@ -110,7 +110,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["failedUpdateCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastUpdatedDateTime
     * Last date time the report for this device was updated.
@@ -129,7 +129,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastUpdatedDateTime
     * Last date time the report for this device was updated.
@@ -143,7 +143,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["lastUpdatedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the successfulUpdateCount
     * Number of successful updates on the device
@@ -158,7 +158,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the successfulUpdateCount
     * Number of successful updates on the device
@@ -172,7 +172,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["successfulUpdateCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the totalUpdateCount
     * Number of total updates on the device
@@ -187,7 +187,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the totalUpdateCount
     * Number of total updates on the device
@@ -201,7 +201,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["totalUpdateCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the updateCategory
     * Software update type. Possible values are: critical, configurationDataFile, firmware, other.
@@ -220,7 +220,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the updateCategory
     * Software update type. Possible values are: critical, configurationDataFile, firmware, other.
@@ -234,7 +234,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["updateCategory"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The user ID.
@@ -249,7 +249,7 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The user ID.
@@ -263,9 +263,9 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the updateStateSummaries
     * Summary of the update states.
      *
@@ -279,12 +279,12 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the updateStateSummaries
     * Summary of the update states.
     *
-    * @param MacOSSoftwareUpdateStateSummary $val The updateStateSummaries
+    * @param MacOSSoftwareUpdateStateSummary[] $val The updateStateSummaries
     *
     * @return MacOSSoftwareUpdateCategorySummary
     */
@@ -293,5 +293,5 @@ class MacOSSoftwareUpdateCategorySummary extends Entity
         $this->_propDict["updateStateSummaries"] = $val;
         return $this;
     }
-    
+
 }

@@ -38,7 +38,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the detectionScriptErrorDeviceCount
     * Number of devices on which the detection script execution encountered an error and did not complete
@@ -52,7 +52,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["detectionScriptErrorDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the detectionScriptNotApplicableDeviceCount
     * Number of devices for which the detection script was not applicable
@@ -67,7 +67,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the detectionScriptNotApplicableDeviceCount
     * Number of devices for which the detection script was not applicable
@@ -81,7 +81,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["detectionScriptNotApplicableDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the detectionScriptPendingDeviceCount
     * Number of devices which have not yet run the latest version of the device health script
@@ -96,7 +96,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the detectionScriptPendingDeviceCount
     * Number of devices which have not yet run the latest version of the device health script
@@ -110,7 +110,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["detectionScriptPendingDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the issueDetectedDeviceCount
     * Number of devices for which the detection script found an issue
@@ -125,7 +125,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issueDetectedDeviceCount
     * Number of devices for which the detection script found an issue
@@ -139,7 +139,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["issueDetectedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the issueRemediatedCumulativeDeviceCount
     * Number of devices that were remediated over the last 30 days
@@ -154,7 +154,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issueRemediatedCumulativeDeviceCount
     * Number of devices that were remediated over the last 30 days
@@ -168,7 +168,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["issueRemediatedCumulativeDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the issueRemediatedDeviceCount
     * Number of devices for which the remediation script was able to resolve the detected issue
@@ -183,7 +183,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issueRemediatedDeviceCount
     * Number of devices for which the remediation script was able to resolve the detected issue
@@ -197,7 +197,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["issueRemediatedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the issueReoccurredDeviceCount
     * Number of devices for which the remediation script executed successfully but failed to resolve the detected issue
@@ -212,7 +212,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the issueReoccurredDeviceCount
     * Number of devices for which the remediation script executed successfully but failed to resolve the detected issue
@@ -226,7 +226,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["issueReoccurredDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastScriptRunDateTime
     * Last run time for the script across all devices
@@ -245,7 +245,7 @@ class DeviceHealthScriptRunSummary extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastScriptRunDateTime
     * Last run time for the script across all devices
@@ -259,7 +259,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["lastScriptRunDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the noIssueDetectedDeviceCount
     * Number of devices for which the detection script did not find an issue and the device is healthy
@@ -274,7 +274,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the noIssueDetectedDeviceCount
     * Number of devices for which the detection script did not find an issue and the device is healthy
@@ -288,7 +288,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["noIssueDetectedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remediationScriptErrorDeviceCount
     * Number of devices for which the remediation script execution encountered an error and did not complete
@@ -303,7 +303,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remediationScriptErrorDeviceCount
     * Number of devices for which the remediation script execution encountered an error and did not complete
@@ -317,7 +317,7 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["remediationScriptErrorDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remediationSkippedDeviceCount
     * Number of devices for which remediation was skipped
@@ -332,7 +332,7 @@ class DeviceHealthScriptRunSummary extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the remediationSkippedDeviceCount
     * Number of devices for which remediation was skipped
@@ -346,5 +346,5 @@ class DeviceHealthScriptRunSummary extends Entity
         $this->_propDict["remediationSkippedDeviceCount"] = intval($val);
         return $this;
     }
-    
+
 }

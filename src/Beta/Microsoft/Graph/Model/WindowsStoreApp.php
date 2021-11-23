@@ -38,7 +38,7 @@ class WindowsStoreApp extends MobileApp
             return null;
         }
     }
-    
+
     /**
     * Sets the appStoreUrl
     * The Windows app store URL.
@@ -52,5 +52,5 @@ class WindowsStoreApp extends MobileApp
         $this->_propDict["appStoreUrl"] = $val;
         return $this;
     }
-    
+
 }

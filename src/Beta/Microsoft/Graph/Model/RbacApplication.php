@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class RbacApplication extends Entity
 {
 
-     /** 
+     /**
      * Gets the resourceNamespaces
      *
      * @return array|null The resourceNamespaces
@@ -38,11 +38,11 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the resourceNamespaces
     *
-    * @param UnifiedRbacResourceNamespace $val The resourceNamespaces
+    * @param UnifiedRbacResourceNamespace[] $val The resourceNamespaces
     *
     * @return RbacApplication
     */
@@ -51,9 +51,9 @@ class RbacApplication extends Entity
         $this->_propDict["resourceNamespaces"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignments
     * Resource to grant access to users or groups.
      *
@@ -67,12 +67,12 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignments
     * Resource to grant access to users or groups.
     *
-    * @param UnifiedRoleAssignment $val The roleAssignments
+    * @param UnifiedRoleAssignment[] $val The roleAssignments
     *
     * @return RbacApplication
     */
@@ -81,9 +81,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleAssignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleDefinitions
     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
      *
@@ -97,12 +97,12 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleDefinitions
     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
     *
-    * @param UnifiedRoleDefinition $val The roleDefinitions
+    * @param UnifiedRoleDefinition[] $val The roleDefinitions
     *
     * @return RbacApplication
     */
@@ -111,9 +111,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignmentApprovals
      *
      * @return array|null The roleAssignmentApprovals
@@ -126,11 +126,11 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignmentApprovals
     *
-    * @param Approval $val The roleAssignmentApprovals
+    * @param Approval[] $val The roleAssignmentApprovals
     *
     * @return RbacApplication
     */
@@ -139,9 +139,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleAssignmentApprovals"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignmentScheduleInstances
      *
      * @return array|null The roleAssignmentScheduleInstances
@@ -154,11 +154,11 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignmentScheduleInstances
     *
-    * @param UnifiedRoleAssignmentScheduleInstance $val The roleAssignmentScheduleInstances
+    * @param UnifiedRoleAssignmentScheduleInstance[] $val The roleAssignmentScheduleInstances
     *
     * @return RbacApplication
     */
@@ -167,9 +167,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleAssignmentScheduleInstances"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignmentScheduleRequests
      *
      * @return array|null The roleAssignmentScheduleRequests
@@ -182,11 +182,11 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignmentScheduleRequests
     *
-    * @param UnifiedRoleAssignmentScheduleRequest $val The roleAssignmentScheduleRequests
+    * @param UnifiedRoleAssignmentScheduleRequest[] $val The roleAssignmentScheduleRequests
     *
     * @return RbacApplication
     */
@@ -195,9 +195,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleAssignmentScheduleRequests"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignmentSchedules
      *
      * @return array|null The roleAssignmentSchedules
@@ -210,11 +210,11 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignmentSchedules
     *
-    * @param UnifiedRoleAssignmentSchedule $val The roleAssignmentSchedules
+    * @param UnifiedRoleAssignmentSchedule[] $val The roleAssignmentSchedules
     *
     * @return RbacApplication
     */
@@ -223,9 +223,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleAssignmentSchedules"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleEligibilityScheduleInstances
      *
      * @return array|null The roleEligibilityScheduleInstances
@@ -238,11 +238,11 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleEligibilityScheduleInstances
     *
-    * @param UnifiedRoleEligibilityScheduleInstance $val The roleEligibilityScheduleInstances
+    * @param UnifiedRoleEligibilityScheduleInstance[] $val The roleEligibilityScheduleInstances
     *
     * @return RbacApplication
     */
@@ -251,9 +251,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleEligibilityScheduleInstances"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleEligibilityScheduleRequests
      *
      * @return array|null The roleEligibilityScheduleRequests
@@ -266,11 +266,11 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleEligibilityScheduleRequests
     *
-    * @param UnifiedRoleEligibilityScheduleRequest $val The roleEligibilityScheduleRequests
+    * @param UnifiedRoleEligibilityScheduleRequest[] $val The roleEligibilityScheduleRequests
     *
     * @return RbacApplication
     */
@@ -279,9 +279,9 @@ class RbacApplication extends Entity
         $this->_propDict["roleEligibilityScheduleRequests"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleEligibilitySchedules
      *
      * @return array|null The roleEligibilitySchedules
@@ -294,11 +294,11 @@ class RbacApplication extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleEligibilitySchedules
     *
-    * @param UnifiedRoleEligibilitySchedule $val The roleEligibilitySchedules
+    * @param UnifiedRoleEligibilitySchedule[] $val The roleEligibilitySchedules
     *
     * @return RbacApplication
     */
@@ -307,5 +307,5 @@ class RbacApplication extends Entity
         $this->_propDict["roleEligibilitySchedules"] = $val;
         return $this;
     }
-    
+
 }

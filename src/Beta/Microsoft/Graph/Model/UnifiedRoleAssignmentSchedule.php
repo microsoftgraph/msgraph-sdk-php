@@ -38,7 +38,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
             return null;
         }
     }
-    
+
     /**
     * Sets the assignmentType
     * Type of the assignment. It can either be Assigned or Activated.
@@ -52,7 +52,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         $this->_propDict["assignmentType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the memberType
     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
@@ -67,7 +67,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
             return null;
         }
     }
-    
+
     /**
     * Sets the memberType
     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
@@ -81,7 +81,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         $this->_propDict["memberType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the scheduleInfo
     * The schedule object of the role assignment request.
@@ -100,7 +100,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         }
         return null;
     }
-    
+
     /**
     * Sets the scheduleInfo
     * The schedule object of the role assignment request.
@@ -114,7 +114,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         $this->_propDict["scheduleInfo"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the activatedUsing
     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
@@ -133,7 +133,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         }
         return null;
     }
-    
+
     /**
     * Sets the activatedUsing
     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
@@ -147,5 +147,5 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase
         $this->_propDict["activatedUsing"] = $val;
         return $this;
     }
-    
+
 }

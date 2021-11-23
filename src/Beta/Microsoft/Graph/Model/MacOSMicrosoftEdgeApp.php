@@ -42,7 +42,7 @@ class MacOSMicrosoftEdgeApp extends MobileApp
         }
         return null;
     }
-    
+
     /**
     * Sets the channel
     * The channel to install on target devices. Possible values are: dev, beta, stable.
@@ -56,5 +56,5 @@ class MacOSMicrosoftEdgeApp extends MobileApp
         $this->_propDict["channel"] = $val;
         return $this;
     }
-    
+
 }

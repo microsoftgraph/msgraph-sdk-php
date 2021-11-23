@@ -42,7 +42,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the createdDateTime
     * Created date and time of the dataSourceContainer entity.
@@ -56,7 +56,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["createdDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name of the dataSourceContainer entity.
@@ -71,7 +71,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the dataSourceContainer entity.
@@ -85,7 +85,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastModifiedDateTime
     * Last modified date and time of the dataSourceContainer.
@@ -104,7 +104,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastModifiedDateTime
     * Last modified date and time of the dataSourceContainer.
@@ -118,7 +118,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastModifiedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the releasedDateTime
     * Date and time that the dataSourceContainer was released from the case.
@@ -137,7 +137,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the releasedDateTime
     * Date and time that the dataSourceContainer was released from the case.
@@ -151,7 +151,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["releasedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * Latest status of the dataSourceContainer. Possible values are: Active, Released.
@@ -170,7 +170,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * Latest status of the dataSourceContainer. Possible values are: Active, Released.
@@ -184,7 +184,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastIndexOperation
     *
@@ -202,7 +202,7 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastIndexOperation
     *
@@ -215,5 +215,5 @@ class DataSourceContainer extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastIndexOperation"] = $val;
         return $this;
     }
-    
+
 }

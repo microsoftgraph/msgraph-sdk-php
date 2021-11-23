@@ -42,7 +42,7 @@ class MobileAppDependency extends MobileAppRelationship
         }
         return null;
     }
-    
+
     /**
     * Sets the dependencyType
     * The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
@@ -56,7 +56,7 @@ class MobileAppDependency extends MobileAppRelationship
         $this->_propDict["dependencyType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the dependentAppCount
     * The total number of apps that directly or indirectly depend on the parent app.
@@ -71,7 +71,7 @@ class MobileAppDependency extends MobileAppRelationship
             return null;
         }
     }
-    
+
     /**
     * Sets the dependentAppCount
     * The total number of apps that directly or indirectly depend on the parent app.
@@ -85,7 +85,7 @@ class MobileAppDependency extends MobileAppRelationship
         $this->_propDict["dependentAppCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the dependsOnAppCount
     * The total number of apps the child app directly or indirectly depends on.
@@ -100,7 +100,7 @@ class MobileAppDependency extends MobileAppRelationship
             return null;
         }
     }
-    
+
     /**
     * Sets the dependsOnAppCount
     * The total number of apps the child app directly or indirectly depends on.
@@ -114,5 +114,5 @@ class MobileAppDependency extends MobileAppRelationship
         $this->_propDict["dependsOnAppCount"] = intval($val);
         return $this;
     }
-    
+
 }

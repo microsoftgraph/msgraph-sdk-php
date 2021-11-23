@@ -38,7 +38,7 @@ class WindowsDriverUpdateInventory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applicableDeviceCount
     * The number of devices for which this driver is applicable.
@@ -52,7 +52,7 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["applicableDeviceCount"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the approvalStatus
     * The approval status for this driver. Possible values are: needsReview, declined, approved, suspended.
@@ -71,7 +71,7 @@ class WindowsDriverUpdateInventory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the approvalStatus
     * The approval status for this driver. Possible values are: needsReview, declined, approved, suspended.
@@ -85,7 +85,7 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["approvalStatus"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the category
     * The category for this driver. Possible values are: recommended, previouslyApproved, other.
@@ -104,7 +104,7 @@ class WindowsDriverUpdateInventory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the category
     * The category for this driver. Possible values are: recommended, previouslyApproved, other.
@@ -118,7 +118,7 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["category"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the deployDateTime
     * The date time when a driver should be deployed if approvalStatus is approved.
@@ -137,7 +137,7 @@ class WindowsDriverUpdateInventory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the deployDateTime
     * The date time when a driver should be deployed if approvalStatus is approved.
@@ -151,7 +151,7 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["deployDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the driverClass
     * The class of the driver.
@@ -166,7 +166,7 @@ class WindowsDriverUpdateInventory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the driverClass
     * The class of the driver.
@@ -180,7 +180,7 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["driverClass"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the manufacturer
     * The manufacturer of the driver.
@@ -195,7 +195,7 @@ class WindowsDriverUpdateInventory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the manufacturer
     * The manufacturer of the driver.
@@ -209,7 +209,7 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["manufacturer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the name
     * The name of the driver.
@@ -224,7 +224,7 @@ class WindowsDriverUpdateInventory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the name
     * The name of the driver.
@@ -238,7 +238,7 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["name"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the releaseDateTime
     * The release date time of the driver.
@@ -257,7 +257,7 @@ class WindowsDriverUpdateInventory extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the releaseDateTime
     * The release date time of the driver.
@@ -271,7 +271,7 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["releaseDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the version
     * The version of the driver.
@@ -286,7 +286,7 @@ class WindowsDriverUpdateInventory extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the version
     * The version of the driver.
@@ -300,5 +300,5 @@ class WindowsDriverUpdateInventory extends Entity
         $this->_propDict["version"] = $val;
         return $this;
     }
-    
+
 }

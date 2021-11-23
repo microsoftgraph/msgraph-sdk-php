@@ -38,7 +38,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the adminShowHostInfo
     * Whether to show admin host information on the login window.
@@ -52,9 +52,9 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["adminShowHostInfo"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the appAssociatedDomains
     * Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
      *
@@ -68,12 +68,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the appAssociatedDomains
     * Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
     *
-    * @param MacOSAssociatedDomainsItem $val The appAssociatedDomains
+    * @param MacOSAssociatedDomainsItem[] $val The appAssociatedDomains
     *
     * @return MacOSDeviceFeaturesConfiguration
     */
@@ -82,9 +82,9 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["appAssociatedDomains"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the associatedDomains
     * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      *
@@ -98,12 +98,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the associatedDomains
     * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
     *
-    * @param KeyValuePair $val The associatedDomains
+    * @param KeyValuePair[] $val The associatedDomains
     *
     * @return MacOSDeviceFeaturesConfiguration
     */
@@ -112,7 +112,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["associatedDomains"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the authorizedUsersListHidden
     * Whether to show the name and password dialog or a list of users on the login window.
@@ -127,7 +127,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the authorizedUsersListHidden
     * Whether to show the name and password dialog or a list of users on the login window.
@@ -141,7 +141,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["authorizedUsersListHidden"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the authorizedUsersListHideAdminUsers
     * Whether to hide admin users in the authorized users list on the login window.
@@ -156,7 +156,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the authorizedUsersListHideAdminUsers
     * Whether to hide admin users in the authorized users list on the login window.
@@ -170,7 +170,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["authorizedUsersListHideAdminUsers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the authorizedUsersListHideLocalUsers
     * Whether to show only network and system users in the authorized users list on the login window.
@@ -185,7 +185,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the authorizedUsersListHideLocalUsers
     * Whether to show only network and system users in the authorized users list on the login window.
@@ -199,7 +199,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["authorizedUsersListHideLocalUsers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the authorizedUsersListHideMobileAccounts
     * Whether to hide mobile users in the authorized users list on the login window.
@@ -214,7 +214,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the authorizedUsersListHideMobileAccounts
     * Whether to hide mobile users in the authorized users list on the login window.
@@ -228,7 +228,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["authorizedUsersListHideMobileAccounts"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the authorizedUsersListIncludeNetworkUsers
     * Whether to show network users in the authorized users list on the login window.
@@ -243,7 +243,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the authorizedUsersListIncludeNetworkUsers
     * Whether to show network users in the authorized users list on the login window.
@@ -257,7 +257,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["authorizedUsersListIncludeNetworkUsers"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the authorizedUsersListShowOtherManagedUsers
     * Whether to show other users in the authorized users list on the login window.
@@ -272,7 +272,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the authorizedUsersListShowOtherManagedUsers
     * Whether to show other users in the authorized users list on the login window.
@@ -286,9 +286,9 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["authorizedUsersListShowOtherManagedUsers"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the autoLaunchItems
     * List of applications, files, folders, and other items to launch when the user logs in. This collection can contain a maximum of 500 elements.
      *
@@ -302,12 +302,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the autoLaunchItems
     * List of applications, files, folders, and other items to launch when the user logs in. This collection can contain a maximum of 500 elements.
     *
-    * @param MacOSLaunchItem $val The autoLaunchItems
+    * @param MacOSLaunchItem[] $val The autoLaunchItems
     *
     * @return MacOSDeviceFeaturesConfiguration
     */
@@ -316,7 +316,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["autoLaunchItems"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the consoleAccessDisabled
     * Whether the Other user will disregard use of the console special user name.
@@ -331,7 +331,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the consoleAccessDisabled
     * Whether the Other user will disregard use of the console special user name.
@@ -345,7 +345,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["consoleAccessDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingBlockDeletion
     * Prevents content caches from purging content to free up disk space for other apps.
@@ -360,7 +360,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingBlockDeletion
     * Prevents content caches from purging content to free up disk space for other apps.
@@ -374,9 +374,9 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingBlockDeletion"] = boolval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the contentCachingClientListenRanges
     * A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements.
      *
@@ -390,12 +390,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the contentCachingClientListenRanges
     * A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements.
     *
-    * @param IpRange $val The contentCachingClientListenRanges
+    * @param IpRange[] $val The contentCachingClientListenRanges
     *
     * @return MacOSDeviceFeaturesConfiguration
     */
@@ -404,7 +404,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingClientListenRanges"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingClientPolicy
     * Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback.
@@ -423,7 +423,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         }
         return null;
     }
-    
+
     /**
     * Sets the contentCachingClientPolicy
     * Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback.
@@ -437,7 +437,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingClientPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingDataPath
     * The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data
@@ -452,7 +452,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingDataPath
     * The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data
@@ -466,7 +466,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingDataPath"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingDisableConnectionSharing
     * Disables internet connection sharing.
@@ -481,7 +481,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingDisableConnectionSharing
     * Disables internet connection sharing.
@@ -495,7 +495,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingDisableConnectionSharing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingEnabled
     * Enables content caching and prevents it from being disabled by the user.
@@ -510,7 +510,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingEnabled
     * Enables content caching and prevents it from being disabled by the user.
@@ -524,7 +524,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingForceConnectionSharing
     * Forces internet connection sharing. contentCachingDisableConnectionSharing overrides this setting.
@@ -539,7 +539,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingForceConnectionSharing
     * Forces internet connection sharing. contentCachingDisableConnectionSharing overrides this setting.
@@ -553,7 +553,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingForceConnectionSharing"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingKeepAwake
     * Prevent the device from sleeping if content caching is enabled.
@@ -568,7 +568,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingKeepAwake
     * Prevent the device from sleeping if content caching is enabled.
@@ -582,7 +582,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingKeepAwake"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingLogClientIdentities
     * Enables logging of IP addresses and ports of clients that request cached content.
@@ -597,7 +597,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingLogClientIdentities
     * Enables logging of IP addresses and ports of clients that request cached content.
@@ -611,7 +611,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingLogClientIdentities"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingMaxSizeBytes
     * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
@@ -626,7 +626,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingMaxSizeBytes
     * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
@@ -640,7 +640,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingMaxSizeBytes"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingParents
     * A list of IP addresses representing parent content caches.
@@ -655,7 +655,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingParents
     * A list of IP addresses representing parent content caches.
@@ -669,7 +669,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingParents"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingParentSelectionPolicy
     * Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable.
@@ -688,7 +688,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         }
         return null;
     }
-    
+
     /**
     * Sets the contentCachingParentSelectionPolicy
     * Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable.
@@ -702,9 +702,9 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingParentSelectionPolicy"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the contentCachingPeerFilterRanges
     * A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements.
      *
@@ -718,12 +718,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the contentCachingPeerFilterRanges
     * A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements.
     *
-    * @param IpRange $val The contentCachingPeerFilterRanges
+    * @param IpRange[] $val The contentCachingPeerFilterRanges
     *
     * @return MacOSDeviceFeaturesConfiguration
     */
@@ -732,9 +732,9 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingPeerFilterRanges"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the contentCachingPeerListenRanges
     * A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements.
      *
@@ -748,12 +748,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the contentCachingPeerListenRanges
     * A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements.
     *
-    * @param IpRange $val The contentCachingPeerListenRanges
+    * @param IpRange[] $val The contentCachingPeerListenRanges
     *
     * @return MacOSDeviceFeaturesConfiguration
     */
@@ -762,7 +762,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingPeerListenRanges"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingPeerPolicy
     * Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks.
@@ -781,7 +781,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         }
         return null;
     }
-    
+
     /**
     * Sets the contentCachingPeerPolicy
     * Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks.
@@ -795,7 +795,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingPeerPolicy"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingPort
     * Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535
@@ -810,7 +810,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingPort
     * Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535
@@ -824,9 +824,9 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingPort"] = intval($val);
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the contentCachingPublicRanges
     * A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
      *
@@ -840,12 +840,12 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the contentCachingPublicRanges
     * A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
     *
-    * @param IpRange $val The contentCachingPublicRanges
+    * @param IpRange[] $val The contentCachingPublicRanges
     *
     * @return MacOSDeviceFeaturesConfiguration
     */
@@ -854,7 +854,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingPublicRanges"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingShowAlerts
     * Display content caching alerts as system notifications.
@@ -869,7 +869,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the contentCachingShowAlerts
     * Display content caching alerts as system notifications.
@@ -883,7 +883,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingShowAlerts"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the contentCachingType
     * Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly.
@@ -902,7 +902,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         }
         return null;
     }
-    
+
     /**
     * Sets the contentCachingType
     * Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly.
@@ -916,7 +916,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["contentCachingType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the loginWindowText
     * Custom text to be displayed on the login window.
@@ -931,7 +931,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the loginWindowText
     * Custom text to be displayed on the login window.
@@ -945,7 +945,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["loginWindowText"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the logOutDisabledWhileLoggedIn
     * Whether the Log Out menu item on the login window will be disabled while the user is logged in.
@@ -960,7 +960,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the logOutDisabledWhileLoggedIn
     * Whether the Log Out menu item on the login window will be disabled while the user is logged in.
@@ -974,7 +974,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["logOutDisabledWhileLoggedIn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the macOSSingleSignOnExtension
     * Gets or sets a single sign-on extension profile.
@@ -993,7 +993,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         }
         return null;
     }
-    
+
     /**
     * Sets the macOSSingleSignOnExtension
     * Gets or sets a single sign-on extension profile.
@@ -1007,7 +1007,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["macOSSingleSignOnExtension"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the powerOffDisabledWhileLoggedIn
     * Whether the Power Off menu item on the login window will be disabled while the user is logged in.
@@ -1022,7 +1022,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the powerOffDisabledWhileLoggedIn
     * Whether the Power Off menu item on the login window will be disabled while the user is logged in.
@@ -1036,7 +1036,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["powerOffDisabledWhileLoggedIn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restartDisabled
     * Whether to hide the Restart button item on the login window.
@@ -1051,7 +1051,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the restartDisabled
     * Whether to hide the Restart button item on the login window.
@@ -1065,7 +1065,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["restartDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the restartDisabledWhileLoggedIn
     * Whether the Restart menu item on the login window will be disabled while the user is logged in.
@@ -1080,7 +1080,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the restartDisabledWhileLoggedIn
     * Whether the Restart menu item on the login window will be disabled while the user is logged in.
@@ -1094,7 +1094,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["restartDisabledWhileLoggedIn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the screenLockDisableImmediate
     * Whether to disable the immediate screen lock functions.
@@ -1109,7 +1109,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the screenLockDisableImmediate
     * Whether to disable the immediate screen lock functions.
@@ -1123,7 +1123,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["screenLockDisableImmediate"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the shutDownDisabled
     * Whether to hide the Shut Down button item on the login window.
@@ -1138,7 +1138,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the shutDownDisabled
     * Whether to hide the Shut Down button item on the login window.
@@ -1152,7 +1152,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["shutDownDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the shutDownDisabledWhileLoggedIn
     * Whether the Shut Down menu item on the login window will be disabled while the user is logged in.
@@ -1167,7 +1167,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the shutDownDisabledWhileLoggedIn
     * Whether the Shut Down menu item on the login window will be disabled while the user is logged in.
@@ -1181,7 +1181,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["shutDownDisabledWhileLoggedIn"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the singleSignOnExtension
     * Gets or sets a single sign-on extension profile. Deprecated: use MacOSSingleSignOnExtension instead.
@@ -1200,7 +1200,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         }
         return null;
     }
-    
+
     /**
     * Sets the singleSignOnExtension
     * Gets or sets a single sign-on extension profile. Deprecated: use MacOSSingleSignOnExtension instead.
@@ -1214,7 +1214,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["singleSignOnExtension"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sleepDisabled
     * Whether to hide the Sleep menu item on the login window.
@@ -1229,7 +1229,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
             return null;
         }
     }
-    
+
     /**
     * Sets the sleepDisabled
     * Whether to hide the Sleep menu item on the login window.
@@ -1243,7 +1243,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["sleepDisabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the singleSignOnExtensionPkinitCertificate
     * PKINIT Certificate for the authentication with single sign-on extensions.
@@ -1262,7 +1262,7 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         }
         return null;
     }
-    
+
     /**
     * Sets the singleSignOnExtensionPkinitCertificate
     * PKINIT Certificate for the authentication with single sign-on extensions.
@@ -1276,5 +1276,5 @@ class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationB
         $this->_propDict["singleSignOnExtensionPkinitCertificate"] = $val;
         return $this;
     }
-    
+
 }

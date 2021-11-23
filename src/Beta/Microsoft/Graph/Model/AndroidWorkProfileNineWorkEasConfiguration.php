@@ -38,7 +38,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
             return null;
         }
     }
-    
+
     /**
     * Sets the syncCalendar
     * Toggles syncing the calendar. If set to false the calendar is turned off on the device.
@@ -52,7 +52,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
         $this->_propDict["syncCalendar"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncContacts
     * Toggles syncing contacts. If set to false contacts are turned off on the device.
@@ -67,7 +67,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
             return null;
         }
     }
-    
+
     /**
     * Sets the syncContacts
     * Toggles syncing contacts. If set to false contacts are turned off on the device.
@@ -81,7 +81,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
         $this->_propDict["syncContacts"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the syncTasks
     * Toggles syncing tasks. If set to false tasks are turned off on the device.
@@ -96,7 +96,7 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
             return null;
         }
     }
-    
+
     /**
     * Sets the syncTasks
     * Toggles syncing tasks. If set to false tasks are turned off on the device.
@@ -110,5 +110,5 @@ class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfileEasEm
         $this->_propDict["syncTasks"] = boolval($val);
         return $this;
     }
-    
+
 }

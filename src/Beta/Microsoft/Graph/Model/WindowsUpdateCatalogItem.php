@@ -38,7 +38,7 @@ class WindowsUpdateCatalogItem extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the catalog item.
@@ -52,7 +52,7 @@ class WindowsUpdateCatalogItem extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endOfSupportDate
     * The last supported date for a catalog item
@@ -71,7 +71,7 @@ class WindowsUpdateCatalogItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endOfSupportDate
     * The last supported date for a catalog item
@@ -85,7 +85,7 @@ class WindowsUpdateCatalogItem extends Entity
         $this->_propDict["endOfSupportDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the releaseDateTime
     * The date the catalog item was released
@@ -104,7 +104,7 @@ class WindowsUpdateCatalogItem extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the releaseDateTime
     * The date the catalog item was released
@@ -118,5 +118,5 @@ class WindowsUpdateCatalogItem extends Entity
         $this->_propDict["releaseDateTime"] = $val;
         return $this;
     }
-    
+
 }

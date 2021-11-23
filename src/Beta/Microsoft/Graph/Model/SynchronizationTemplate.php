@@ -38,7 +38,7 @@ class SynchronizationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applicationId
     * Identifier of the application this template belongs to.
@@ -52,7 +52,7 @@ class SynchronizationTemplate extends Entity
         $this->_propDict["applicationId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the default
     * true if this template is recommended to be the default for the application.
@@ -67,7 +67,7 @@ class SynchronizationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the default
     * true if this template is recommended to be the default for the application.
@@ -81,7 +81,7 @@ class SynchronizationTemplate extends Entity
         $this->_propDict["default"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the description
     * Description of the template.
@@ -96,7 +96,7 @@ class SynchronizationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Description of the template.
@@ -110,7 +110,7 @@ class SynchronizationTemplate extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the discoverable
     * true if this template should appear in the collection of templates available for the application instance (service principal).
@@ -125,7 +125,7 @@ class SynchronizationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the discoverable
     * true if this template should appear in the collection of templates available for the application instance (service principal).
@@ -139,7 +139,7 @@ class SynchronizationTemplate extends Entity
         $this->_propDict["discoverable"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the factoryTag
     * One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
@@ -154,7 +154,7 @@ class SynchronizationTemplate extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the factoryTag
     * One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
@@ -168,9 +168,9 @@ class SynchronizationTemplate extends Entity
         $this->_propDict["factoryTag"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the metadata
     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      *
@@ -184,12 +184,12 @@ class SynchronizationTemplate extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the metadata
     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
     *
-    * @param MetadataEntry $val The metadata
+    * @param MetadataEntry[] $val The metadata
     *
     * @return SynchronizationTemplate
     */
@@ -198,7 +198,7 @@ class SynchronizationTemplate extends Entity
         $this->_propDict["metadata"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the schema
     * Default synchronization schema for the jobs based on this template.
@@ -217,7 +217,7 @@ class SynchronizationTemplate extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the schema
     * Default synchronization schema for the jobs based on this template.
@@ -231,5 +231,5 @@ class SynchronizationTemplate extends Entity
         $this->_propDict["schema"] = $val;
         return $this;
     }
-    
+
 }

@@ -1,7 +1,7 @@
 <?php
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-* 
+*
 * Directory File
 * PHP version 7
 *
@@ -25,7 +25,7 @@ namespace Beta\Microsoft\Graph\Model;
 class Directory extends Entity
 {
 
-     /** 
+     /**
      * Gets the impactedResources
      *
      * @return array|null The impactedResources
@@ -38,11 +38,11 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the impactedResources
     *
-    * @param RecommendationResource $val The impactedResources
+    * @param RecommendationResource[] $val The impactedResources
     *
     * @return Directory
     */
@@ -51,9 +51,9 @@ class Directory extends Entity
         $this->_propDict["impactedResources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the recommendations
      *
      * @return array|null The recommendations
@@ -66,11 +66,11 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the recommendations
     *
-    * @param Recommendation $val The recommendations
+    * @param Recommendation[] $val The recommendations
     *
     * @return Directory
     */
@@ -79,9 +79,9 @@ class Directory extends Entity
         $this->_propDict["recommendations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the administrativeUnits
     * Conceptual container for user and group directory objects.
      *
@@ -95,12 +95,12 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the administrativeUnits
     * Conceptual container for user and group directory objects.
     *
-    * @param AdministrativeUnit $val The administrativeUnits
+    * @param AdministrativeUnit[] $val The administrativeUnits
     *
     * @return Directory
     */
@@ -109,9 +109,9 @@ class Directory extends Entity
         $this->_propDict["administrativeUnits"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the attributeSets
     * Group of related custom security attribute definitions.
      *
@@ -125,12 +125,12 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the attributeSets
     * Group of related custom security attribute definitions.
     *
-    * @param AttributeSet $val The attributeSets
+    * @param AttributeSet[] $val The attributeSets
     *
     * @return Directory
     */
@@ -139,9 +139,9 @@ class Directory extends Entity
         $this->_propDict["attributeSets"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the customSecurityAttributeDefinitions
     * Schema of a custom security attributes (key-value pairs).
      *
@@ -155,12 +155,12 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the customSecurityAttributeDefinitions
     * Schema of a custom security attributes (key-value pairs).
     *
-    * @param CustomSecurityAttributeDefinition $val The customSecurityAttributeDefinitions
+    * @param CustomSecurityAttributeDefinition[] $val The customSecurityAttributeDefinitions
     *
     * @return Directory
     */
@@ -169,9 +169,9 @@ class Directory extends Entity
         $this->_propDict["customSecurityAttributeDefinitions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the deletedItems
     * Recently deleted items. Read-only. Nullable.
      *
@@ -185,12 +185,12 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the deletedItems
     * Recently deleted items. Read-only. Nullable.
     *
-    * @param DirectoryObject $val The deletedItems
+    * @param DirectoryObject[] $val The deletedItems
     *
     * @return Directory
     */
@@ -199,9 +199,9 @@ class Directory extends Entity
         $this->_propDict["deletedItems"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the federationConfigurations
     * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      *
@@ -215,12 +215,12 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the federationConfigurations
     * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
     *
-    * @param IdentityProviderBase $val The federationConfigurations
+    * @param IdentityProviderBase[] $val The federationConfigurations
     *
     * @return Directory
     */
@@ -229,9 +229,9 @@ class Directory extends Entity
         $this->_propDict["federationConfigurations"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the inboundSharedUserProfiles
      *
      * @return array|null The inboundSharedUserProfiles
@@ -244,11 +244,11 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the inboundSharedUserProfiles
     *
-    * @param InboundSharedUserProfile $val The inboundSharedUserProfiles
+    * @param InboundSharedUserProfile[] $val The inboundSharedUserProfiles
     *
     * @return Directory
     */
@@ -257,9 +257,9 @@ class Directory extends Entity
         $this->_propDict["inboundSharedUserProfiles"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the outboundSharedUserProfiles
      *
      * @return array|null The outboundSharedUserProfiles
@@ -272,11 +272,11 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the outboundSharedUserProfiles
     *
-    * @param OutboundSharedUserProfile $val The outboundSharedUserProfiles
+    * @param OutboundSharedUserProfile[] $val The outboundSharedUserProfiles
     *
     * @return Directory
     */
@@ -285,9 +285,9 @@ class Directory extends Entity
         $this->_propDict["outboundSharedUserProfiles"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the sharedEmailDomains
      *
      * @return array|null The sharedEmailDomains
@@ -300,11 +300,11 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the sharedEmailDomains
     *
-    * @param SharedEmailDomain $val The sharedEmailDomains
+    * @param SharedEmailDomain[] $val The sharedEmailDomains
     *
     * @return Directory
     */
@@ -313,9 +313,9 @@ class Directory extends Entity
         $this->_propDict["sharedEmailDomains"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the featureRolloutPolicies
     * Nullable.
      *
@@ -329,12 +329,12 @@ class Directory extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the featureRolloutPolicies
     * Nullable.
     *
-    * @param FeatureRolloutPolicy $val The featureRolloutPolicies
+    * @param FeatureRolloutPolicy[] $val The featureRolloutPolicies
     *
     * @return Directory
     */
@@ -343,5 +343,5 @@ class Directory extends Entity
         $this->_propDict["featureRolloutPolicies"] = $val;
         return $this;
     }
-    
+
 }

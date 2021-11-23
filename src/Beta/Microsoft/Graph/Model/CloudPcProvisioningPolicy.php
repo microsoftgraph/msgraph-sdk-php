@@ -38,7 +38,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * The provisioning policy description.
@@ -52,7 +52,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * The display name for the provisioning policy.
@@ -67,7 +67,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name for the provisioning policy.
@@ -81,7 +81,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the domainJoinConfiguration
     * Specifies how Cloud PCs will join Azure Active Directory.
@@ -100,7 +100,7 @@ class CloudPcProvisioningPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the domainJoinConfiguration
     * Specifies how Cloud PCs will join Azure Active Directory.
@@ -114,7 +114,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["domainJoinConfiguration"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imageDisplayName
     * The display name for the OS image you’re provisioning.
@@ -129,7 +129,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the imageDisplayName
     * The display name for the OS image you’re provisioning.
@@ -143,7 +143,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["imageDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imageId
     * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os.
@@ -158,7 +158,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the imageId
     * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os.
@@ -172,7 +172,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["imageId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the imageType
     * The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom.
@@ -191,7 +191,7 @@ class CloudPcProvisioningPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the imageType
     * The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom.
@@ -205,7 +205,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["imageType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the microsoftManagedDesktop
     *
@@ -223,7 +223,7 @@ class CloudPcProvisioningPolicy extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the microsoftManagedDesktop
     *
@@ -236,7 +236,7 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["microsoftManagedDesktop"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the onPremisesConnectionId
     * The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
@@ -251,7 +251,7 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the onPremisesConnectionId
     * The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
@@ -265,9 +265,9 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["onPremisesConnectionId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the assignments
     * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
      *
@@ -281,12 +281,12 @@ class CloudPcProvisioningPolicy extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the assignments
     * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
     *
-    * @param CloudPcProvisioningPolicyAssignment $val The assignments
+    * @param CloudPcProvisioningPolicyAssignment[] $val The assignments
     *
     * @return CloudPcProvisioningPolicy
     */
@@ -295,5 +295,5 @@ class CloudPcProvisioningPolicy extends Entity
         $this->_propDict["assignments"] = $val;
         return $this;
     }
-    
+
 }

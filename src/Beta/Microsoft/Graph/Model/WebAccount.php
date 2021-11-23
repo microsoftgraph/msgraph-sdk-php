@@ -38,7 +38,7 @@ class WebAccount extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the description
     * Contains the description the user has provided for the account on the service being referenced.
@@ -52,7 +52,7 @@ class WebAccount extends ItemFacet
         $this->_propDict["description"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the service
     * Contains basic detail about the service that is being associated.
@@ -71,7 +71,7 @@ class WebAccount extends ItemFacet
         }
         return null;
     }
-    
+
     /**
     * Sets the service
     * Contains basic detail about the service that is being associated.
@@ -85,7 +85,7 @@ class WebAccount extends ItemFacet
         $this->_propDict["service"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the statusMessage
     * Contains a status message from the cloud service if provided or synchronized.
@@ -100,7 +100,7 @@ class WebAccount extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the statusMessage
     * Contains a status message from the cloud service if provided or synchronized.
@@ -114,7 +114,7 @@ class WebAccount extends ItemFacet
         $this->_propDict["statusMessage"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the thumbnailUrl
     *
@@ -128,7 +128,7 @@ class WebAccount extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the thumbnailUrl
     *
@@ -141,7 +141,7 @@ class WebAccount extends ItemFacet
         $this->_propDict["thumbnailUrl"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userId
     * The user name  displayed for the webaccount.
@@ -156,7 +156,7 @@ class WebAccount extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     * The user name  displayed for the webaccount.
@@ -170,7 +170,7 @@ class WebAccount extends ItemFacet
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the webUrl
     * Contains a link to the user's profile on the cloud service if one exists.
@@ -185,7 +185,7 @@ class WebAccount extends ItemFacet
             return null;
         }
     }
-    
+
     /**
     * Sets the webUrl
     * Contains a link to the user's profile on the cloud service if one exists.
@@ -199,5 +199,5 @@ class WebAccount extends ItemFacet
         $this->_propDict["webUrl"] = $val;
         return $this;
     }
-    
+
 }

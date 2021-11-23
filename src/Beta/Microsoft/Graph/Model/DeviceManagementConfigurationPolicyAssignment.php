@@ -42,7 +42,7 @@ class DeviceManagementConfigurationPolicyAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the source
     * The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets.
@@ -56,7 +56,7 @@ class DeviceManagementConfigurationPolicyAssignment extends Entity
         $this->_propDict["source"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sourceId
     * The identifier of the source of the assignment.
@@ -71,7 +71,7 @@ class DeviceManagementConfigurationPolicyAssignment extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sourceId
     * The identifier of the source of the assignment.
@@ -85,7 +85,7 @@ class DeviceManagementConfigurationPolicyAssignment extends Entity
         $this->_propDict["sourceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the target
     * The assignment target for the DeviceManagementConfigurationPolicy.
@@ -104,7 +104,7 @@ class DeviceManagementConfigurationPolicyAssignment extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the target
     * The assignment target for the DeviceManagementConfigurationPolicy.
@@ -118,5 +118,5 @@ class DeviceManagementConfigurationPolicyAssignment extends Entity
         $this->_propDict["target"] = $val;
         return $this;
     }
-    
+
 }

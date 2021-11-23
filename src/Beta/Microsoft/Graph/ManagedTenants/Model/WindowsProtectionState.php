@@ -38,7 +38,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the antiMalwareVersion
     * The anti-malware version for the managed device. Optional. Read-only.
@@ -52,7 +52,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["antiMalwareVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the attentionRequired
     * A flag indicating whether attention is required for the managed device. Optional. Read-only.
@@ -67,7 +67,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the attentionRequired
     * A flag indicating whether attention is required for the managed device. Optional. Read-only.
@@ -81,7 +81,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["attentionRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the deviceDeleted
     * A flag indicating whether the managed device has been deleted. Optional. Read-only.
@@ -96,7 +96,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the deviceDeleted
     * A flag indicating whether the managed device has been deleted. Optional. Read-only.
@@ -110,7 +110,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["deviceDeleted"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the devicePropertyRefreshDateTime
     * The date and time the device property has been refreshed. Optional. Read-only.
@@ -129,7 +129,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the devicePropertyRefreshDateTime
     * The date and time the device property has been refreshed. Optional. Read-only.
@@ -143,7 +143,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["devicePropertyRefreshDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the engineVersion
     * The anti-virus engine version for the managed device. Optional. Read-only.
@@ -158,7 +158,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the engineVersion
     * The anti-virus engine version for the managed device. Optional. Read-only.
@@ -172,7 +172,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["engineVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the fullScanOverdue
     * A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
@@ -187,7 +187,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fullScanOverdue
     * A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
@@ -201,7 +201,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["fullScanOverdue"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the fullScanRequired
     * A flag indicating whether full scan is overdue for the managed device. Optional. Read-only.
@@ -216,7 +216,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the fullScanRequired
     * A flag indicating whether full scan is overdue for the managed device. Optional. Read-only.
@@ -230,7 +230,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["fullScanRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the lastFullScanDateTime
     * The date and time a full scan was completed. Optional. Read-only.
@@ -249,7 +249,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastFullScanDateTime
     * The date and time a full scan was completed. Optional. Read-only.
@@ -263,7 +263,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastFullScanDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastFullScanSignatureVersion
     * The version anti-malware version used to perform the last full scan. Optional. Read-only.
@@ -278,7 +278,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lastFullScanSignatureVersion
     * The version anti-malware version used to perform the last full scan. Optional. Read-only.
@@ -292,7 +292,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastFullScanSignatureVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastQuickScanDateTime
     * The date and time a quick scan was completed. Optional. Read-only.
@@ -311,7 +311,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastQuickScanDateTime
     * The date and time a quick scan was completed. Optional. Read-only.
@@ -325,7 +325,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastQuickScanDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastQuickScanSignatureVersion
     * The version anti-malware version used to perform the last full scan. Optional. Read-only.
@@ -340,7 +340,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the lastQuickScanSignatureVersion
     * The version anti-malware version used to perform the last full scan. Optional. Read-only.
@@ -354,7 +354,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastQuickScanSignatureVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastRefreshedDateTime
     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -373,7 +373,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastRefreshedDateTime
     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -387,7 +387,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastRefreshedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the lastReportedDateTime
     * The date and time the protection state was last reported for the managed device. Optional. Read-only.
@@ -406,7 +406,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the lastReportedDateTime
     * The date and time the protection state was last reported for the managed device. Optional. Read-only.
@@ -420,7 +420,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["lastReportedDateTime"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the malwareProtectionEnabled
     * A flag indicating whether malware protection is enabled for the managed device. Optional. Read-only.
@@ -435,7 +435,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the malwareProtectionEnabled
     * A flag indicating whether malware protection is enabled for the managed device. Optional. Read-only.
@@ -449,7 +449,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["malwareProtectionEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceHealthState
     * The health state for the managed device. Optional. Read-only.
@@ -464,7 +464,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceHealthState
     * The health state for the managed device. Optional. Read-only.
@@ -478,7 +478,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managedDeviceHealthState"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceId
     * The unique identifier for the managed device. Optional. Read-only.
@@ -493,7 +493,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceId
     * The unique identifier for the managed device. Optional. Read-only.
@@ -507,7 +507,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managedDeviceId"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the managedDeviceName
     * The display name for the managed device. Optional. Read-only.
@@ -522,7 +522,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the managedDeviceName
     * The display name for the managed device. Optional. Read-only.
@@ -536,7 +536,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["managedDeviceName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the networkInspectionSystemEnabled
     * A flag indicating whether the network inspection system is enabled. Optional. Read-only.
@@ -551,7 +551,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the networkInspectionSystemEnabled
     * A flag indicating whether the network inspection system is enabled. Optional. Read-only.
@@ -565,7 +565,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["networkInspectionSystemEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the quickScanOverdue
     * A flag indicating weather a quick scan is overdue. Optional. Read-only.
@@ -580,7 +580,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the quickScanOverdue
     * A flag indicating weather a quick scan is overdue. Optional. Read-only.
@@ -594,7 +594,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["quickScanOverdue"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the realTimeProtectionEnabled
     * A flag indicating whether real time protection is enabled. Optional. Read-only.
@@ -609,7 +609,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the realTimeProtectionEnabled
     * A flag indicating whether real time protection is enabled. Optional. Read-only.
@@ -623,7 +623,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["realTimeProtectionEnabled"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the rebootRequired
     * A flag indicating whether a reboot is required. Optional. Read-only.
@@ -638,7 +638,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the rebootRequired
     * A flag indicating whether a reboot is required. Optional. Read-only.
@@ -652,7 +652,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["rebootRequired"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the signatureUpdateOverdue
     * A flag indicating whether an signature update is overdue. Optional. Read-only.
@@ -667,7 +667,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the signatureUpdateOverdue
     * A flag indicating whether an signature update is overdue. Optional. Read-only.
@@ -681,7 +681,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["signatureUpdateOverdue"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the signatureVersion
     * The signature version for the managed device. Optional. Read-only.
@@ -696,7 +696,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the signatureVersion
     * The signature version for the managed device. Optional. Read-only.
@@ -710,7 +710,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["signatureVersion"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantDisplayName
     * The display name for the managed tenant. Optional. Read-only.
@@ -725,7 +725,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantDisplayName
     * The display name for the managed tenant. Optional. Read-only.
@@ -739,7 +739,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the tenantId
     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -754,7 +754,7 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the tenantId
     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -768,5 +768,5 @@ class WindowsProtectionState extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["tenantId"] = $val;
         return $this;
     }
-    
+
 }

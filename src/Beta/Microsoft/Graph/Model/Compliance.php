@@ -31,7 +31,7 @@ class Compliance implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new Compliance
     *
@@ -54,7 +54,7 @@ class Compliance implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
+
     /**
     * Gets the ediscovery
     *
@@ -72,7 +72,7 @@ class Compliance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ediscovery
     *
@@ -85,7 +85,7 @@ class Compliance implements \JsonSerializable
         $this->_propDict["ediscovery"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -98,7 +98,7 @@ class Compliance implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -111,7 +111,7 @@ class Compliance implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

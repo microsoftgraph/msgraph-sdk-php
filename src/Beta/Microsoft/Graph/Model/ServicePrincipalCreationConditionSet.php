@@ -37,7 +37,7 @@ class ServicePrincipalCreationConditionSet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applicationIds
     *
@@ -50,7 +50,7 @@ class ServicePrincipalCreationConditionSet extends Entity
         $this->_propDict["applicationIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applicationPublisherIds
     *
@@ -64,7 +64,7 @@ class ServicePrincipalCreationConditionSet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applicationPublisherIds
     *
@@ -77,7 +77,7 @@ class ServicePrincipalCreationConditionSet extends Entity
         $this->_propDict["applicationPublisherIds"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the applicationsFromVerifiedPublisherOnly
     *
@@ -91,7 +91,7 @@ class ServicePrincipalCreationConditionSet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applicationsFromVerifiedPublisherOnly
     *
@@ -104,7 +104,7 @@ class ServicePrincipalCreationConditionSet extends Entity
         $this->_propDict["applicationsFromVerifiedPublisherOnly"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the applicationTenantIds
     *
@@ -118,7 +118,7 @@ class ServicePrincipalCreationConditionSet extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the applicationTenantIds
     *
@@ -131,5 +131,5 @@ class ServicePrincipalCreationConditionSet extends Entity
         $this->_propDict["applicationTenantIds"] = $val;
         return $this;
     }
-    
+
 }

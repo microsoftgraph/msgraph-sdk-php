@@ -42,7 +42,7 @@ class TeamworkHostedContent extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the contentBytes
     * Write only. Bytes for the hosted content (such as images).
@@ -56,7 +56,7 @@ class TeamworkHostedContent extends Entity
         $this->_propDict["contentBytes"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the contentType
     * Write only. Content type. sicj as image/png, image/jpg.
@@ -71,7 +71,7 @@ class TeamworkHostedContent extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the contentType
     * Write only. Content type. sicj as image/png, image/jpg.
@@ -85,5 +85,5 @@ class TeamworkHostedContent extends Entity
         $this->_propDict["contentType"] = $val;
         return $this;
     }
-    
+
 }

@@ -31,7 +31,7 @@ class Financials implements \JsonSerializable
     * @var array $_propDict
     */
     protected $_propDict;
-    
+
     /**
     * Construct a new Financials
     *
@@ -54,9 +54,9 @@ class Financials implements \JsonSerializable
     {
         return $this->_propDict;
     }
-    
 
-     /** 
+
+     /**
      * Gets the companies
      *
      * @return array|null The companies
@@ -69,11 +69,11 @@ class Financials implements \JsonSerializable
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the companies
     *
-    * @param Company $val The companies
+    * @param Company[] $val The companies
     *
     * @return Financials
     */
@@ -82,7 +82,7 @@ class Financials implements \JsonSerializable
         $this->_propDict["companies"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the ODataType
     *
@@ -95,7 +95,7 @@ class Financials implements \JsonSerializable
         }
         return null;
     }
-    
+
     /**
     * Sets the ODataType
     *
@@ -108,7 +108,7 @@ class Financials implements \JsonSerializable
         $this->_propDict["@odata.type"] = $val;
         return $this;
     }
-    
+
     /**
     * Serializes the object by property array
     * Manually serialize DateTime into RFC3339 format

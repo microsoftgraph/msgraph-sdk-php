@@ -38,7 +38,7 @@ class CloudPcGalleryImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The official display name of the gallery image. Read-only.
@@ -52,7 +52,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the endDate
     * The date in which this image is no longer within long-term support. The Cloud PC will continue to provide short-term support. Read-only.
@@ -71,7 +71,7 @@ class CloudPcGalleryImage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the endDate
     * The date in which this image is no longer within long-term support. The Cloud PC will continue to provide short-term support. Read-only.
@@ -85,7 +85,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["endDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the expirationDate
     * The date when the image is no longer available. Read-only.
@@ -104,7 +104,7 @@ class CloudPcGalleryImage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the expirationDate
     * The date when the image is no longer available. Read-only.
@@ -118,7 +118,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["expirationDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the offer
     * The offer name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
@@ -133,7 +133,7 @@ class CloudPcGalleryImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the offer
     * The offer name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
@@ -147,7 +147,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["offer"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the offerDisplayName
     * The official display offer name of the gallery image. For example, Windows 10 Enterprise + OS Optimizations. Read-only.
@@ -162,7 +162,7 @@ class CloudPcGalleryImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the offerDisplayName
     * The official display offer name of the gallery image. For example, Windows 10 Enterprise + OS Optimizations. Read-only.
@@ -176,7 +176,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["offerDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the publisher
     * The publisher name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
@@ -191,7 +191,7 @@ class CloudPcGalleryImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the publisher
     * The publisher name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
@@ -205,7 +205,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["publisher"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the recommendedSku
     * Recommended Cloud PC SKU for this gallery image. Read-only.
@@ -220,7 +220,7 @@ class CloudPcGalleryImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the recommendedSku
     * Recommended Cloud PC SKU for this gallery image. Read-only.
@@ -234,7 +234,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["recommendedSku"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sizeInGB
     * The size of this image in gigabytes. Read-only.
@@ -249,7 +249,7 @@ class CloudPcGalleryImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sizeInGB
     * The size of this image in gigabytes. Read-only.
@@ -263,7 +263,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["sizeInGB"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the sku
     * The SKU name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
@@ -278,7 +278,7 @@ class CloudPcGalleryImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sku
     * The SKU name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
@@ -292,7 +292,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["sku"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the skuDisplayName
     * The official display stock keeping unit (SKU) name of this gallery image. For example, 2004. Read-only.
@@ -307,7 +307,7 @@ class CloudPcGalleryImage extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the skuDisplayName
     * The official display stock keeping unit (SKU) name of this gallery image. For example, 2004. Read-only.
@@ -321,7 +321,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["skuDisplayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the startDate
     * The date when the image becomes available. Read-only.
@@ -340,7 +340,7 @@ class CloudPcGalleryImage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the startDate
     * The date when the image becomes available. Read-only.
@@ -354,7 +354,7 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["startDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the status
     * The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. Read-only.
@@ -373,7 +373,7 @@ class CloudPcGalleryImage extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the status
     * The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. Read-only.
@@ -387,5 +387,5 @@ class CloudPcGalleryImage extends Entity
         $this->_propDict["status"] = $val;
         return $this;
     }
-    
+
 }

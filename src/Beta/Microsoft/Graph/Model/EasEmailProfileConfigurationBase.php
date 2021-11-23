@@ -38,7 +38,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
             return null;
         }
     }
-    
+
     /**
     * Sets the customDomainName
     * Custom domain name value used while generating an email profile before installing on the device.
@@ -52,7 +52,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
         $this->_propDict["customDomainName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the userDomainNameSource
     * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
@@ -71,7 +71,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the userDomainNameSource
     * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
@@ -85,7 +85,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
         $this->_propDict["userDomainNameSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usernameAADSource
     * Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
@@ -104,7 +104,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the usernameAADSource
     * Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
@@ -118,7 +118,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
         $this->_propDict["usernameAADSource"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the usernameSource
     * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
@@ -137,7 +137,7 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
         }
         return null;
     }
-    
+
     /**
     * Sets the usernameSource
     * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
@@ -151,5 +151,5 @@ class EasEmailProfileConfigurationBase extends DeviceConfiguration
         $this->_propDict["usernameSource"] = $val;
         return $this;
     }
-    
+
 }

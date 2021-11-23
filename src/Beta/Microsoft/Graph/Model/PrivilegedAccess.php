@@ -38,7 +38,7 @@ class PrivilegedAccess extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * The display name of the provider managed by PIM.
@@ -52,9 +52,9 @@ class PrivilegedAccess extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the resources
     * A collection of resources for the provider.
      *
@@ -68,12 +68,12 @@ class PrivilegedAccess extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the resources
     * A collection of resources for the provider.
     *
-    * @param GovernanceResource $val The resources
+    * @param GovernanceResource[] $val The resources
     *
     * @return PrivilegedAccess
     */
@@ -82,9 +82,9 @@ class PrivilegedAccess extends Entity
         $this->_propDict["resources"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignmentRequests
     * A collection of role assignment requests for the provider.
      *
@@ -98,12 +98,12 @@ class PrivilegedAccess extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignmentRequests
     * A collection of role assignment requests for the provider.
     *
-    * @param GovernanceRoleAssignmentRequest $val The roleAssignmentRequests
+    * @param GovernanceRoleAssignmentRequest[] $val The roleAssignmentRequests
     *
     * @return PrivilegedAccess
     */
@@ -112,9 +112,9 @@ class PrivilegedAccess extends Entity
         $this->_propDict["roleAssignmentRequests"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleAssignments
     * A collection of role assignments for the provider.
      *
@@ -128,12 +128,12 @@ class PrivilegedAccess extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleAssignments
     * A collection of role assignments for the provider.
     *
-    * @param GovernanceRoleAssignment $val The roleAssignments
+    * @param GovernanceRoleAssignment[] $val The roleAssignments
     *
     * @return PrivilegedAccess
     */
@@ -142,9 +142,9 @@ class PrivilegedAccess extends Entity
         $this->_propDict["roleAssignments"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleDefinitions
     * A collection of role defintions for the provider.
      *
@@ -158,12 +158,12 @@ class PrivilegedAccess extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleDefinitions
     * A collection of role defintions for the provider.
     *
-    * @param GovernanceRoleDefinition $val The roleDefinitions
+    * @param GovernanceRoleDefinition[] $val The roleDefinitions
     *
     * @return PrivilegedAccess
     */
@@ -172,9 +172,9 @@ class PrivilegedAccess extends Entity
         $this->_propDict["roleDefinitions"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the roleSettings
     * A collection of role settings for the provider.
      *
@@ -188,12 +188,12 @@ class PrivilegedAccess extends Entity
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the roleSettings
     * A collection of role settings for the provider.
     *
-    * @param GovernanceRoleSetting $val The roleSettings
+    * @param GovernanceRoleSetting[] $val The roleSettings
     *
     * @return PrivilegedAccess
     */
@@ -202,5 +202,5 @@ class PrivilegedAccess extends Entity
         $this->_propDict["roleSettings"] = $val;
         return $this;
     }
-    
+
 }

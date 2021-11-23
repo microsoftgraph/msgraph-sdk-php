@@ -38,7 +38,7 @@ class RemoteAssistanceSettings extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the allowSessionsToUnenrolledDevices
     * Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
@@ -52,7 +52,7 @@ class RemoteAssistanceSettings extends Entity
         $this->_propDict["allowSessionsToUnenrolledDevices"] = boolval($val);
         return $this;
     }
-    
+
     /**
     * Gets the remoteAssistanceState
     * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default. Possible values are: notConfigured, disabled, enabled.
@@ -71,7 +71,7 @@ class RemoteAssistanceSettings extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the remoteAssistanceState
     * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default. Possible values are: notConfigured, disabled, enabled.
@@ -85,5 +85,5 @@ class RemoteAssistanceSettings extends Entity
         $this->_propDict["remoteAssistanceState"] = $val;
         return $this;
     }
-    
+
 }

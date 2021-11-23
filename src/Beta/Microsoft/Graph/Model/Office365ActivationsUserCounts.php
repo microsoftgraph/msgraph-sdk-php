@@ -38,7 +38,7 @@ class Office365ActivationsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the activated
     * The number of users who have activated the product.
@@ -52,7 +52,7 @@ class Office365ActivationsUserCounts extends Entity
         $this->_propDict["activated"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the assigned
     * The number of users have been assigned for the product license.
@@ -67,7 +67,7 @@ class Office365ActivationsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the assigned
     * The number of users have been assigned for the product license.
@@ -81,7 +81,7 @@ class Office365ActivationsUserCounts extends Entity
         $this->_propDict["assigned"] = intval($val);
         return $this;
     }
-    
+
     /**
     * Gets the productType
     * The product type such as 'Microsoft 365 ProPlus' or 'Project Client'.
@@ -96,7 +96,7 @@ class Office365ActivationsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the productType
     * The product type such as 'Microsoft 365 ProPlus' or 'Project Client'.
@@ -110,7 +110,7 @@ class Office365ActivationsUserCounts extends Entity
         $this->_propDict["productType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the reportRefreshDate
     * The latest date of the content.
@@ -129,7 +129,7 @@ class Office365ActivationsUserCounts extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the reportRefreshDate
     * The latest date of the content.
@@ -143,7 +143,7 @@ class Office365ActivationsUserCounts extends Entity
         $this->_propDict["reportRefreshDate"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the sharedComputerActivation
     * The number of users who have used the product on a shared computer.
@@ -158,7 +158,7 @@ class Office365ActivationsUserCounts extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the sharedComputerActivation
     * The number of users who have used the product on a shared computer.
@@ -172,5 +172,5 @@ class Office365ActivationsUserCounts extends Entity
         $this->_propDict["sharedComputerActivation"] = intval($val);
         return $this;
     }
-    
+
 }

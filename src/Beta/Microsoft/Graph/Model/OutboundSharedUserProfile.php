@@ -37,7 +37,7 @@ class OutboundSharedUserProfile extends DirectoryObject
             return null;
         }
     }
-    
+
     /**
     * Sets the userId
     *
@@ -50,9 +50,9 @@ class OutboundSharedUserProfile extends DirectoryObject
         $this->_propDict["userId"] = $val;
         return $this;
     }
-    
 
-     /** 
+
+     /**
      * Gets the tenants
      *
      * @return array|null The tenants
@@ -65,11 +65,11 @@ class OutboundSharedUserProfile extends DirectoryObject
             return null;
         }
     }
-    
-    /** 
+
+    /**
     * Sets the tenants
     *
-    * @param TenantReference $val The tenants
+    * @param TenantReference[] $val The tenants
     *
     * @return OutboundSharedUserProfile
     */
@@ -78,5 +78,5 @@ class OutboundSharedUserProfile extends DirectoryObject
         $this->_propDict["tenants"] = $val;
         return $this;
     }
-    
+
 }

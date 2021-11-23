@@ -41,7 +41,7 @@ class DlpEvaluatePoliciesJobResponse extends JobResponseBase
         }
         return null;
     }
-    
+
     /**
     * Sets the result
     *
@@ -54,5 +54,5 @@ class DlpEvaluatePoliciesJobResponse extends JobResponseBase
         $this->_propDict["result"] = $val;
         return $this;
     }
-    
+
 }

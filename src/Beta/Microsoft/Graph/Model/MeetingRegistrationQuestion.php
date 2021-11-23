@@ -42,7 +42,7 @@ class MeetingRegistrationQuestion extends Entity
         }
         return null;
     }
-    
+
     /**
     * Sets the answerInputType
     * Answer input type of the custom registration question.
@@ -56,7 +56,7 @@ class MeetingRegistrationQuestion extends Entity
         $this->_propDict["answerInputType"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the answerOptions
     * Answer options when answerInputType is radioButton.
@@ -71,7 +71,7 @@ class MeetingRegistrationQuestion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the answerOptions
     * Answer options when answerInputType is radioButton.
@@ -85,7 +85,7 @@ class MeetingRegistrationQuestion extends Entity
         $this->_propDict["answerOptions"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the displayName
     * Display name of the custom registration question.
@@ -100,7 +100,7 @@ class MeetingRegistrationQuestion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the displayName
     * Display name of the custom registration question.
@@ -114,7 +114,7 @@ class MeetingRegistrationQuestion extends Entity
         $this->_propDict["displayName"] = $val;
         return $this;
     }
-    
+
     /**
     * Gets the isRequired
     * Indicates whether the question is required. Default value is false.
@@ -129,7 +129,7 @@ class MeetingRegistrationQuestion extends Entity
             return null;
         }
     }
-    
+
     /**
     * Sets the isRequired
     * Indicates whether the question is required. Default value is false.
@@ -143,5 +143,5 @@ class MeetingRegistrationQuestion extends Entity
         $this->_propDict["isRequired"] = boolval($val);
         return $this;
     }
-    
+
 }
